@@ -267,7 +267,7 @@ def plot_keyword_heatmap(
     species: List[str],
     ontology_keywords: List[List[str]],
     out_path: Path,
-    top_n: int = 12,
+    top_n: int = 20,
 ) -> None:
     # build species x keyword count
     species_set = sorted(set(species))
@@ -303,7 +303,7 @@ def plot_keyword_heatmap_binned(
     species: List[str],
     ontology_keywords: List[List[str]],
     out_path: Path,
-    top_n: int = 12,
+    top_n: int = 20,
 ) -> None:
     """Binned heatmap with fixed colors: 0=white,1=green,2-5=red,>5=blue."""
     species_set = sorted(set(species))
@@ -325,10 +325,10 @@ def plot_keyword_heatmap_binned(
 
     # bin values
     bins = np.zeros_like(mat)
-    bins[mat == 0] = 0   # white
-    bins[mat == 1] = 1   # green
+    bins[mat == 0] = 0  # white
+    bins[mat == 1] = 1  # green
     bins[(mat >= 2) & (mat <= 5)] = 2  # red
-    bins[mat > 5] = 3    # blue
+    bins[mat > 5] = 3  # blue
 
     # custom colormap
     from matplotlib.colors import ListedColormap
@@ -402,7 +402,9 @@ def generate_all_plots(
     plot_keyword_heatmap(species, ontology_keywords, outputs["keyword_heatmap"])
 
     outputs["keyword_heatmap_bin"] = out_dir / "keyword_heatmap_bin.png"
-    plot_keyword_heatmap_binned(species, ontology_keywords, outputs["keyword_heatmap_bin"])
+    plot_keyword_heatmap_binned(
+        species, ontology_keywords, outputs["keyword_heatmap_bin"]
+    )
 
     for name, path in outputs.items():
         print(f"Saved {name}: {path}")
@@ -413,6 +415,8 @@ def run_interactive(
     json_path: Path | str = "database.json",
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2",
     cache: Path | str = ".embedding_cache.json",
+    width: int | None = None,
+    height: int | None = None,
 ):
     """
     Return a Plotly FigureWidget with click-to-connect behavior.
@@ -457,6 +461,7 @@ def run_interactive(
         text=[f"{c} ({s})" for c, s in zip(call_names, species)],
         hoverinfo="text",
         showlegend=False,
+        uid="scatter",
     )
     # one line trace per species for colored/transparent connections
     line_traces = [
@@ -469,6 +474,7 @@ def run_interactive(
             hoverinfo="skip",
             showlegend=False,
             name=f"{sp} connection",
+            uid=f"line-{sp}",
         )
         for sp in species_unique
     ]
@@ -481,6 +487,7 @@ def run_interactive(
         textposition="top center",
         hoverinfo="skip",
         showlegend=False,
+        uid="labels",
     )
 
     # legend-only markers for species color key
@@ -493,6 +500,7 @@ def run_interactive(
             name=sp,
             hoverinfo="skip",
             showlegend=True,
+            uid=f"legend-{sp}",
         )
         for sp in species_unique
     ]
@@ -504,8 +512,15 @@ def run_interactive(
             xaxis_title="UMAP-1",
             yaxis_title="UMAP-2",
             showlegend=True,
+            width=width,
+            height=height,
         ),
     )
+
+    # Ensure every trace has a uid (avoids ipywidgets KeyError on state diffs)
+    for i, trace in enumerate(fig.data):
+        if trace.uid is None:
+            trace.uid = f"trace-{i}"
 
     species_arr = np.array(species)
     semantic = np.array(semantic_embeds)
