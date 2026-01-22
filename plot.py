@@ -299,6 +299,54 @@ def plot_keyword_heatmap(
     plt.close()
 
 
+def plot_keyword_heatmap_binned(
+    species: List[str],
+    ontology_keywords: List[List[str]],
+    out_path: Path,
+    top_n: int = 12,
+) -> None:
+    """Binned heatmap with fixed colors: 0=white,1=green,2-5=red,>5=blue."""
+    species_set = sorted(set(species))
+    counter = defaultdict(Counter)
+    for sp, kws in zip(species, ontology_keywords):
+        counter[sp].update(kws or [])
+
+    total = Counter()
+    for sp in species_set:
+        total.update(counter[sp])
+    keywords = [kw for kw, _ in total.most_common(top_n)]
+    if not keywords:
+        return
+
+    mat = np.zeros((len(species_set), len(keywords)), dtype=int)
+    for i, sp in enumerate(species_set):
+        for j, kw in enumerate(keywords):
+            mat[i, j] = counter[sp][kw]
+
+    # bin values
+    bins = np.zeros_like(mat)
+    bins[mat == 0] = 0   # white
+    bins[mat == 1] = 1   # green
+    bins[(mat >= 2) & (mat <= 5)] = 2  # red
+    bins[mat > 5] = 3    # blue
+
+    # custom colormap
+    from matplotlib.colors import ListedColormap
+
+    cmap = ListedColormap(["white", "green", "red", "blue"])
+
+    plt.figure(figsize=(1.2 * len(keywords) + 2, 0.6 * len(species_set) + 2))
+    im = plt.imshow(bins, aspect="auto", cmap=cmap, vmin=0, vmax=3)
+    cbar = plt.colorbar(im, ticks=[0, 1, 2, 3])
+    cbar.ax.set_yticklabels(["0 calls", "1 call", "2–5 calls", ">5 calls"])
+    plt.xticks(range(len(keywords)), keywords, rotation=60, ha="right")
+    plt.yticks(range(len(species_set)), species_set)
+    plt.title(f"Binned keyword counts per species (top {top_n})")
+    plt.tight_layout()
+    plt.savefig(out_path, dpi=300)
+    plt.close()
+
+
 def generate_all_plots(
     json_path: Path | str = "database.json",
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2",
@@ -352,6 +400,9 @@ def generate_all_plots(
 
     outputs["keyword_heatmap"] = out_dir / "keyword_heatmap.png"
     plot_keyword_heatmap(species, ontology_keywords, outputs["keyword_heatmap"])
+
+    outputs["keyword_heatmap_bin"] = out_dir / "keyword_heatmap_bin.png"
+    plot_keyword_heatmap_binned(species, ontology_keywords, outputs["keyword_heatmap_bin"])
 
     for name, path in outputs.items():
         print(f"Saved {name}: {path}")
