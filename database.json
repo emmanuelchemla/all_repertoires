@@ -1,0 +1,2252 @@
+{
+  "scope_notes": {
+    "exhaustive_definition": "“Exhaustive” here means: exhaustive relative to a specific, citable repertoire taxonomy per species (often ‘call types’ that may include graded variants and/or ‘sound’ signals). Where the literature explicitly notes additional rare or age-specific calls not captured in quantitative clustering (e.g., bonobos), those are included and flagged as rare/immature with lower reliability. Taxonomies differ across authors; this JSON uses the most explicit, best-cited lists available per species.",
+    "last_updated_utc_date": "2026-01-21",
+    "citation_policy": "References are URLs/DOIs to primary papers or authoritative repositories/pages that explicitly enumerate repertoires or define call types."
+  },
+  "species": [
+    {
+      "species_name": "Chimpanzee (Pan troglodytes)",
+      "taxonomy_basis": {
+        "summary": "Repertoire commonly summarized as ~13 call types, with gradation and subtypes; many calls can occur in ‘panted’ vs ‘unpanted’ forms and in sequences.",
+        "scientific_references": [
+          "https://eprints.whiterose.ac.uk/218792/1/s00265-024-03523-x.pdf",
+          "https://www.sciencedirect.com/science/article/pii/S0047248400904159/pdf?md5=881ffeb02a0e9567061288f634e9c0ee&pid=1-s2.0-S0047248400904159-main.pdf",
+          "https://pure.mpg.de/rest/items/item_3383804_7/component/file_3383814/content"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Pant-hoot",
+          "acoustic_description": "Loud multi-phase long-distance call (intro/build-up/climax/let-down), often chorused; strong individual signatures.",
+          "semantic_description": "Long-distance contact, coordination, social excitement; identity broadcast.",
+          "ontology_keywords": ["contact","coordination","long_distance","display"],
+          "scientific_references": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9786991/",
+            "https://www.sciencedirect.com/science/article/pii/S0047248400904159/pdf?md5=881ffeb02a0e9567061288f634e9c0ee&pid=1-s2.0-S0047248400904159-main.pdf"
+          ],
+          "subjective_reliability": "high",
+          "comments": "One of the best-studied chimp calls.",
+          "users": "Both sexes; most frequent in adult males"
+        },
+        {
+          "call_name": "Pant-grunt",
+          "acoustic_description": "Low-amplitude rhythmic panting/grunting sequence at close range.",
+          "semantic_description": "Submissive greeting/dominance acknowledgment toward higher-ranking individuals.",
+          "ontology_keywords": ["affiliative","coordination"],
+          "scientific_references": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6504967/",
+            "https://royalsocietypublishing.org/rsos/article/6/4/182181"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Strongly rank-governed usage.",
+          "users": "Primarily lower-ranking individuals (both sexes; common in juveniles/females toward adult males)"
+        },
+        {
+          "call_name": "Hoo (incl. quiet hoo variants)",
+          "acoustic_description": "Soft low-frequency ‘hoo/huu’-type call; context-linked variants reported.",
+          "semantic_description": "Low-amplitude signaling (e.g., coordination/discretion contexts); some variants differ by context.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://royalsocietypublishing.org/rsos/article/5/5/172066"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Variant-to-meaning mapping is context- and study-dependent.",
+          "users": "Both sexes; multiple ages"
+        },
+        {
+          "call_name": "Alarm huu",
+          "acoustic_description": "Low-frequency alarm ‘huu’ bouts with urgency modulation.",
+          "semantic_description": "Alarm/danger signaling (predators/threats), with evidence for audience effects in some studies.",
+          "ontology_keywords": ["alarm","predator"],
+          "scientific_references": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC3797826/",
+            "https://www.nature.com/articles/s41467-023-37816-y"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Often discussed alongside waa-barks in danger contexts.",
+          "users": "Both sexes; any individual detecting threat"
+        },
+        {
+          "call_name": "Waa-bark",
+          "acoustic_description": "Loud harsh bark-like call; can be given in bouts.",
+          "semantic_description": "Recruitment/high-arousal contexts (aggression, hunting, urgent disturbance).",
+          "ontology_keywords": ["aggression","threat","display"],
+          "scientific_references": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC3797826/"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Context-flexible high-arousal signal.",
+          "users": "Both sexes; often adults/subadults"
+        },
+        {
+          "call_name": "Bark",
+          "acoustic_description": "Abrupt bark-type call (non-waa forms distinguished in some taxonomies).",
+          "semantic_description": "High arousal/disturbance contexts; can also occur in feeding or social episodes depending on subtype and site.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://pure.mpg.de/rest/items/item_3383804_7/component/file_3383814/content",
+            "https://www.sciencedirect.com/science/article/pii/S0047248400904159/pdf?md5=881ffeb02a0e9567061288f634e9c0ee&pid=1-s2.0-S0047248400904159-main.pdf"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Often treated as a broad class with graded subtypes.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Short low-frequency call, often in series; can appear as ‘panted’ variants in sequences.",
+          "semantic_description": "Highly context-general (coordination, social/foraging contexts), with specific subtypes in some work (e.g., food-related).",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://pure.mpg.de/rest/items/item_3383804_7/component/file_3383814/content",
+            "https://www.reuters.com/business/environment/grunt-hoo-pant-scream-chimps-use-complex-vocal-communication-2022-05-19/"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Very common; meaning often inferred from context and combination rules.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Rough grunt / Food grunt",
+          "acoustic_description": "Low-frequency grunts produced during feeding/food discovery; can vary subtly across food properties.",
+          "semantic_description": "Food-associated signaling; listeners use variation to guide foraging decisions.",
+          "ontology_keywords": ["food"],
+          "scientific_references": [
+            "https://pubmed.ncbi.nlm.nih.gov/16213827/"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Classic candidate for functionally referential use.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband call; can occur as panted variants and in sequences.",
+          "semantic_description": "Distress/aggression/escalation contexts.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://pure.mpg.de/rest/items/item_3383804_7/component/file_3383814/content",
+            "https://www.reuters.com/business/environment/grunt-hoo-pant-scream-chimps-use-complex-vocal-communication-2022-05-19/"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective signal; subtype distinctions vary across studies.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Whimper",
+          "acoustic_description": "High-pitched, tonal distress-like vocalization often in bouts.",
+          "semantic_description": "Distress, fear, appeasement; also reported in danger contexts and in combined sequences in some studies.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248400904159/pdf?md5=881ffeb02a0e9567061288f634e9c0ee&pid=1-s2.0-S0047248400904159-main.pdf"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often stronger in young individuals.",
+          "users": "Especially juveniles/infants; also adults"
+        },
+        {
+          "call_name": "Whinny",
+          "acoustic_description": "Modulated tonal call (often described as ‘whinny’ in some chimp field taxonomies).",
+          "semantic_description": "Contact/coordination in some contexts; exact mapping varies by site/taxonomy.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248400904159/pdf?md5=881ffeb02a0e9567061288f634e9c0ee&pid=1-s2.0-S0047248400904159-main.pdf"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Included because it appears in classic Kibale/Gombe-style coding; not always separated as a discrete type in newer simplified taxonomies.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Laughter (play laughter)",
+          "acoustic_description": "Breathy rhythmic vocalization during play (often panting-like ‘laughter’).",
+          "semantic_description": "Play/positive arousal social contexts.",
+          "ontology_keywords": ["affective","affiliative"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Commonly recognized across apes; fine-grained classification varies.",
+          "users": "Especially juveniles; also adults"
+        },
+        {
+          "call_name": "Pant (unit used in panted call variants)",
+          "acoustic_description": "Voiced inhalation/exhalation ‘pant’ elements that intersperse with other calls, yielding panted variants (e.g., panted grunt/bark/scream).",
+          "semantic_description": "Combinatorial/sequence building block; can shift contextual usage of base call types.",
+          "ontology_keywords": ["coordination"],
+          "scientific_references": [
+            "https://pure.mpg.de/rest/items/item_3383804_7/component/file_3383814/content"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Represented here as a repertoire element because it is treated as a productive modifier in modern sequence work.",
+          "users": "Both sexes"
+        }
+      ]
+    },
+
+    {
+      "species_name": "Bonobo (Pan paniscus)",
+      "taxonomy_basis": {
+        "summary": "Quantitatively validated adult repertoire clusters into 11 types; authors note additional rare/immature calls and older qualitative repertoires with larger counts.",
+        "scientific_references": [
+          "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250",
+          "https://www.biorxiv.org/content/10.1101/2025.01.23.634282v1.full.pdf",
+          "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010325"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "High hoot (includes merged bark variants in Wegdell et al. 2025)",
+          "acoustic_description": "Higher-amplitude hoot class; Wegdell et al. report some previously separated bark variants cluster with high hoots.",
+          "semantic_description": "Often long-distance/high-arousal contexts; general contact/excitement and potentially disturbance contexts depending on event.",
+          "ontology_keywords": ["contact","coordination","long_distance"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "high",
+          "comments": "This is a taxonomy choice: multiple ‘bark’ labels often treated as one class in the 2025 quantitative repertoire.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Contest hoot",
+          "acoustic_description": "Loud hoot-type call in high arousal; treated as a distinct class in the 2025 adult repertoire.",
+          "semantic_description": "Agonistic/competitive contexts; social tension.",
+          "ontology_keywords": ["aggression","threat","display"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicitly enumerated in the 11-type repertoire.",
+          "users": "Both sexes; likely more common in adults"
+        },
+        {
+          "call_name": "Low hoot",
+          "acoustic_description": "Lower-frequency hoot class (distinct from high hoots in 2025 taxonomy).",
+          "semantic_description": "Contact/coordination contexts; lower arousal than contest/high hoots.",
+          "ontology_keywords": ["contact","coordination","long_distance"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicit class in 2025 adult repertoire.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Peep",
+          "acoustic_description": "Short high-frequency call; often repeated; part of graded continuum in some analyses.",
+          "semantic_description": "Social cohesion/bonding and contact (often exchanged); also used in feeding/play depending on context.",
+          "ontology_keywords": ["affiliative","contact","coordination"],
+          "scientific_references": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6346008/",
+            "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010325"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Frequently exchanged in affiliative interactions.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Peep yelp",
+          "acoustic_description": "Composite/graded call between peep and yelp (treated as its own label in multiple repertoires).",
+          "semantic_description": "Often social/emotional contexts; bonding exchanges reported.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6346008/"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Prominent in vocal exchanges datasets.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Yelp",
+          "acoustic_description": "High-amplitude, higher-pitched distress/complaint call.",
+          "semantic_description": "Distress/submission/response to aggression.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250",
+            "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010325"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Common across primates as an affective signal category.",
+          "users": "Often juveniles and females; also males"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "Broadband high-amplitude scream class.",
+          "semantic_description": "High arousal distress/aggression escalation.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Sometimes combined/graded with other labels in older taxonomies.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Whistle",
+          "acoustic_description": "Tonal whistle-like call class in adult repertoire.",
+          "semantic_description": "Longer-distance contact/attention; context varies by site.",
+          "ontology_keywords": ["contact","coordination","long_distance"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Explicit in 2025 adult repertoire; less standardized across older naming schemes.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency short call; often in bouts; part of graded systems in some analyses.",
+          "semantic_description": "Context-general close-range signaling; also appears in feeding sequences in classic combination studies.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Meaning typically derived from context/sequence position.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Pant grunt",
+          "acoustic_description": "Rhythmic panting/grunting sequence; quieter than hoots.",
+          "semantic_description": "Often greeting/submission-type functions, broadly analogous to chimp pant-grunts in social function (exact mapping varies).",
+          "ontology_keywords": ["affiliative","coordination"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Label appears in 2025 adult repertoire; social meaning depends on site and interaction context.",
+          "users": "Both sexes; often lower-ranking individuals"
+        },
+        {
+          "call_name": "Laughter",
+          "acoustic_description": "Breathy rhythmic vocalization during play.",
+          "semantic_description": "Play/positive arousal contexts.",
+          "ontology_keywords": ["affective","affiliative"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicit in 2025 adult repertoire.",
+          "users": "Especially juveniles; also adults"
+        },
+
+        {
+          "call_name": "Hiccup (rare; reported in older/alternative repertoires)",
+          "acoustic_description": "Brief irregular call label used in some bonobo taxonomies; often rare in field datasets.",
+          "semantic_description": "Reported as a distinct type in some labeled corpora; contexts vary.",
+          "ontology_keywords": ["affective"],
+          "scientific_references": [
+            "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010325",
+            "https://www.biorxiv.org/content/10.1101/2025.01.23.634282v1.full.pdf"
+          ],
+          "subjective_reliability": "low-medium",
+          "comments": "Included to make the union of major published label sets; explicitly noted as too rare for inclusion in the 2025 quantitative clustering of adults.",
+          "users": "Unclear; appears rare"
+        },
+        {
+          "call_name": "Moan / Croak (rare; reported in older repertoires)",
+          "acoustic_description": "Low-frequency call labels reported as rare types in some descriptions.",
+          "semantic_description": "Rare/low-rate contexts; not consistently captured in quantitative adult clustering datasets.",
+          "ontology_keywords": ["affective"],
+          "scientific_references": [
+            "https://www.biorxiv.org/content/10.1101/2025.01.23.634282v1.full.pdf"
+          ],
+          "subjective_reliability": "low",
+          "comments": "Included because the 2025 paper explicitly mentions croaks/moans as rare types described elsewhere but too infrequent for their dataset.",
+          "users": "Unclear; likely adults and/or immatures depending on label"
+        },
+        {
+          "call_name": "Pout moan (immature-skewed; mentioned as excluded from adult-only analyses)",
+          "acoustic_description": "Moan-like call associated with immature individuals in some descriptions.",
+          "semantic_description": "Age-skewed usage; exact context varies by site.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0330250"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Explicitly noted as primarily emitted by immatures and excluded from adult-only clustering in the 2025 study.",
+          "users": "Primarily immatures/young individuals"
+        }
+      ]
+    },
+
+    {
+      "species_name": "Western Gorilla (Gorilla gorilla)",
+      "taxonomy_basis": {
+        "summary": "Quantitative repertoire described as 17 call types; female repertoire subset includes (almost) all female call types, explicitly enumerated in Salmi et al. (2014).",
+        "scientific_references": [
+          "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Single grunt",
+          "acoustic_description": "Short low-frequency grunt (single unit).",
+          "semantic_description": "Soft close-range call in multiple contexts (coordination, mild social contact).",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Core close call.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Double grunt",
+          "acoustic_description": "Two-grunt unit (paired grunts).",
+          "semantic_description": "Soft close-range signaling across contexts.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Enumerated as distinct from single grunts in the female repertoire analysis.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Grumble",
+          "acoustic_description": "Low-frequency longer, more continuous call than a grunt.",
+          "semantic_description": "Frequent soft call in varied contexts (often social/foraging).",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Sample-size caveats noted for some analyses in Salmi et al. (2014).",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Hum (food call)",
+          "acoustic_description": "Low-amplitude ‘hum’ given at intermediate distance.",
+          "semantic_description": "Foraging-associated; described as a food call.",
+          "ontology_keywords": ["food"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicitly described as exclusively during foraging in the PLOS ONE paper.",
+          "users": "Females documented; likely broader across sexes but best-supported here for adult females"
+        },
+        {
+          "call_name": "Soft threat grunt",
+          "acoustic_description": "Low-amplitude threat-associated grunt.",
+          "semantic_description": "Within-group aggression / threat display at close range.",
+          "ontology_keywords": ["aggression","threat","display"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicitly tied to within-group aggression in the PLOS ONE paper.",
+          "users": "Adults; both sexes"
+        },
+        {
+          "call_name": "Scream (loud scream)",
+          "acoustic_description": "High-amplitude scream during escalated aggression.",
+          "semantic_description": "Escalated within-group aggression/distress.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Clear high-arousal signal.",
+          "users": "All ages; more frequent in juveniles/females in many primates"
+        },
+        {
+          "call_name": "Copulation grunt (soft copulation grunt)",
+          "acoustic_description": "Low-amplitude grunt emitted during sexual behavior.",
+          "semantic_description": "Sexual context signal.",
+          "ontology_keywords": ["sex"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicitly enumerated in the female repertoire set.",
+          "users": "Females; likely also males depending on interaction"
+        },
+        {
+          "call_name": "Hoot series (long-distance call)",
+          "acoustic_description": "Loud, long-distance series of hoots (broadcast call).",
+          "semantic_description": "Separation/contact call when individuals are separated; promotes within-group cohesion.",
+          "ontology_keywords": ["contact","coordination","long_distance"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940",
+            "https://pubmed.ncbi.nlm.nih.gov/25059429/"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicitly described as long-distance separation/contact in the cited work.",
+          "users": "Both sexes; calling rates can vary by rank/sex"
+        },
+        {
+          "call_name": "Play chuckle (rare in wild recordings)",
+          "acoustic_description": "Chuckle-like vocalization during play.",
+          "semantic_description": "Play/positive arousal.",
+          "ontology_keywords": ["affective","affiliative"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Explicitly mentioned as rare and hard to record; included to make the female repertoire complete in that paper’s framing.",
+          "users": "Primarily juveniles/young; sometimes adults"
+        }
+      ]
+    },
+
+    {
+      "species_name": "Eastern Gorilla (Gorilla beringei)",
+      "taxonomy_basis": {
+        "summary": "Specific call-type inventories vary across sources; many call categories overlap with western gorillas, but published exhaustive enumerations are less uniformly accessible in open sources. This entry uses the best-supported shared categories and flags completeness uncertainty.",
+        "scientific_references": [
+          "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Grunt (close call class)",
+          "acoustic_description": "Low-frequency short call; often frequent.",
+          "semantic_description": "Contact/reassurance/coordination at close range.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Likely shared across gorilla species; eastern-specific exhaustive list not fully open-access in the sources retrieved here.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude distress/aggression call.",
+          "semantic_description": "Distress/aggression escalation.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101940"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Shared category; eastern-specific subtypes may exist.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Hoot series / loud hoots (broadcast)",
+          "acoustic_description": "Loud hoot-series type calls.",
+          "semantic_description": "Long-distance cohesion/contact in some contexts; intergroup contexts in others (population-dependent).",
+          "ontology_keywords": ["contact","coordination","long_distance"],
+          "scientific_references": [
+            "https://pubmed.ncbi.nlm.nih.gov/25059429/"
+          ],
+          "subjective_reliability": "low-medium",
+          "comments": "Included for cross-species mapping; for an eastern-gorilla exhaustive repertoire, a dedicated eastern-specific repertoire paper should be used.",
+          "users": "Adults; both sexes"
+        }
+      ],
+      "completeness_warning": "Not fully exhaustive: open, citable eastern-gorilla repertoire lists were not fully retrievable in the sources used here."
+    },
+
+    {
+      "species_name": "Bornean Orangutan (Pongo pygmaeus)",
+      "taxonomy_basis": {
+        "summary": "Orangutan ‘vocal and sound repertoire’ explicitly enumerated in Hardus et al. (2009) and mirrored as a structured list with audio examples in the UZH orangutan network page.",
+        "scientific_references": [
+          "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html",
+          "https://www.researchgate.net/profile/Cheryl-Knott-2/publication/230823387_A_description_of_the_orangutan%27s_vocal_and_sound_repertoire_with_a_focus_on_geographical_variation/links/0fcfd505351f1f06f9000000/A-description-of-the-orangutans-vocal-and-sound-repertoire-with-a-focus-on-geographical-variation.pdf"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Long call",
+          "acoustic_description": "Loud, low-frequency, long-duration pulsed call; can last minutes.",
+          "semantic_description": "Long-distance spacing, mate attraction, male–male assessment.",
+          "ontology_keywords": ["contact","coordination","long_distance","display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html",
+            "https://www.researchgate.net/profile/Cheryl-Knott-2/publication/230823387_A_description_of_the_orangutan%27s_vocal_and_sound_repertoire_with_a_focus_on_geographical_variation/links/0fcfd505351f1f06f9000000/A-description-of-the-orangutans-vocal-and-sound-repertoire-with-a-focus-on-geographical-variation.pdf"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Canonical male broadcast call.",
+          "users": "Primarily adult flanged males"
+        },
+        {
+          "call_name": "Fast long call",
+          "acoustic_description": "Faster-tempo long-call variant (as listed in UZH repertoire).",
+          "semantic_description": "Broadcast function broadly similar to long calls; specific usage varies by context/site.",
+          "ontology_keywords": ["contact","coordination","long_distance","display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Listed as distinct on UZH page.",
+          "users": "Adult males (especially flanged)"
+        },
+        {
+          "call_name": "Rolling call",
+          "acoustic_description": "Several low-frequency units resembling grumbles; can occur alone or in sequences.",
+          "semantic_description": "Often intimidation display; can occur with/after kiss-squeaks and within ‘gorkum’ patterns.",
+          "ontology_keywords": ["aggression","threat","display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Explicit contextual description on UZH page.",
+          "users": "Males and females"
+        },
+        {
+          "call_name": "Kiss squeak",
+          "acoustic_description": "Sharp voiceless inhaled sound; can be modified with hands/leaves (tool-assisted modulation reported in the Hardus chapter).",
+          "semantic_description": "Alarm/threat (often toward predators/humans).",
+          "ontology_keywords": ["alarm","predator"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html",
+            "https://www.researchgate.net/profile/Cheryl-Knott-2/publication/230823387_A_description_of_the_orangutan%27s_vocal_and_sound_repertoire_with_a_focus_on_geographical_variation/links/0fcfd505351f1f06f9000000/A-description-of-the-orangutans-vocal-and-sound-repertoire-with-a-focus-on-geographical-variation.pdf"
+          ],
+          "subjective_reliability": "high",
+          "comments": "One of the best-documented orangutan alarm-related calls; also used in human-directed contexts.",
+          "users": "Both sexes; multiple ages"
+        },
+
+        {
+          "call_name": "Ahh vocalisation",
+          "acoustic_description": "Short rhythmic ‘Ahh’ during relaxed open-mouth (play-like) facial expression.",
+          "semantic_description": "Play/relaxed social interaction contexts.",
+          "ontology_keywords": ["affective","affiliative"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Explicitly described on UZH page; often during intense play.",
+          "users": "Unflanged males, females with immatures, young individuals"
+        },
+        {
+          "call_name": "Ahoor call",
+          "acoustic_description": "Inhalatory gasp followed by explosive exhalatory grunt (as described on UZH page).",
+          "semantic_description": "Threat/intimidation display; often in fights; male-skewed.",
+          "ontology_keywords": ["aggression","threat","display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Described as uncommon; male-only in UZH description.",
+          "users": "Males (flanged and unflanged), especially subordinate individuals in fights"
+        },
+        {
+          "call_name": "Bared-teeth scream",
+          "acoustic_description": "Scream-like call associated with bared-teeth display (listed in UZH repertoire).",
+          "semantic_description": "High arousal distress/aggression.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Listed type; detailed use can be site-dependent.",
+          "users": "Both sexes; multiple ages"
+        },
+        {
+          "call_name": "Bark",
+          "acoustic_description": "Short, abrupt bark-like call (listed in UZH repertoire).",
+          "semantic_description": "Arousal/disturbance contexts.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Listed type; interpret with context.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Chomps (sound)",
+          "acoustic_description": "Non-vocal sound signal (listed in UZH repertoire).",
+          "semantic_description": "Context-dependent; often mechanical/interaction-related.",
+          "ontology_keywords": ["display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Included because the repertoire explicitly includes sound signals.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Complex calls",
+          "acoustic_description": "Category label for multi-element calls (as listed in UZH repertoire).",
+          "semantic_description": "Varies; often sequence-like or multi-part signals.",
+          "ontology_keywords": ["coordination"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "low-medium",
+          "comments": "As a category label, this is less atomic than other call types; included for completeness with the UZH taxonomy.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Contact uff",
+          "acoustic_description": "‘Uff’-like contact signal (listed in UZH repertoire).",
+          "semantic_description": "Close-range contact/coordination.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Listed type; interpret via context.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Crying and screaming",
+          "acoustic_description": "Distress vocalizations grouped in the UZH list.",
+          "semantic_description": "Distress/negative affect.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective category.",
+          "users": "Especially immatures; also adults"
+        },
+        {
+          "call_name": "Fear squeak",
+          "acoustic_description": "High-pitched squeak (listed in UZH repertoire).",
+          "semantic_description": "Fear/distress context.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Explicitly labeled as fear-related.",
+          "users": "Both sexes; likely younger-skewed"
+        },
+        {
+          "call_name": "Frustration scream",
+          "acoustic_description": "Scream-like call labeled for frustration context (listed in UZH repertoire).",
+          "semantic_description": "Frustration/negative arousal.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Label implies context; may overlap with other scream classes.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Gorkum",
+          "acoustic_description": "Listed in UZH repertoire; described as involving alternations/components with rolling calls/grumphs.",
+          "semantic_description": "Often intimidation/display sequences.",
+          "ontology_keywords": ["aggression","threat","display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Included as distinct named unit in UZH repertoire.",
+          "users": "Males and females"
+        },
+        {
+          "call_name": "Grinding (sound)",
+          "acoustic_description": "Non-vocal sound (listed in UZH repertoire).",
+          "semantic_description": "Often mechanical; context-dependent.",
+          "ontology_keywords": ["display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Included because UZH includes sound repertoire items.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Grumble",
+          "acoustic_description": "Low-frequency grumble class (listed in UZH repertoire).",
+          "semantic_description": "Often mild arousal/social interactions.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Common across orangutan studies.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Grumph",
+          "acoustic_description": "Low-frequency nasal-sounding call class (listed in UZH repertoire).",
+          "semantic_description": "Often protest/negative affect in close interactions.",
+          "ontology_keywords": ["affective","distress"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html",
+            "https://royalsocietypublishing.org/rsbl/article/17/9/20210302/62999/Orangutan-information-broadcast-via-consonant-like"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Frequently cited in work on consonant-like vs vowel-like orangutan calls.",
+          "users": "Both sexes; often females/juveniles"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Short low-frequency grunt (listed in UZH repertoire).",
+          "semantic_description": "Context-general close-range signal.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Common, context-general.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Lork call",
+          "acoustic_description": "Listed in UZH repertoire; acoustically related to long-call pulse units in some descriptions.",
+          "semantic_description": "Threat/display or long-call-related contexts (site-dependent).",
+          "ontology_keywords": ["aggression","threat","display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Named type in UZH list.",
+          "users": "Primarily males"
+        },
+        {
+          "call_name": "Mating squeals",
+          "acoustic_description": "High-pitched squeals in mating contexts (listed in UZH repertoire).",
+          "semantic_description": "Sexual behavior context signal.",
+          "ontology_keywords": ["sex"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Label is context-defined.",
+          "users": "Often females; also males depending on situation"
+        },
+        {
+          "call_name": "Nestsmacks (sound)",
+          "acoustic_description": "Soft smack-like sound during nest building (listed in UZH repertoire).",
+          "semantic_description": "Nest-building/solitaire play with nest materials.",
+          "ontology_keywords": ["display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicit context description on UZH page.",
+          "users": "Immatures and adults"
+        },
+        {
+          "call_name": "Play ooh",
+          "acoustic_description": "Play-associated ‘ooh’ vocalization (listed in UZH repertoire).",
+          "semantic_description": "Play/positive arousal contexts.",
+          "ontology_keywords": ["affective","affiliative"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Named type in UZH list.",
+          "users": "Young individuals especially"
+        },
+        {
+          "call_name": "Raspberry (sound)",
+          "acoustic_description": "Faint exhalatory spluttering sound (listed in UZH repertoire).",
+          "semantic_description": "Often in nest-making context; sometimes juvenile-associated in older descriptions.",
+          "ontology_keywords": ["display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicit context description on UZH page.",
+          "users": "Immatures and adults (juvenile-skewed in some accounts)"
+        },
+        {
+          "call_name": "Roar",
+          "acoustic_description": "Loud roar-like vocalization (listed in UZH repertoire).",
+          "semantic_description": "Threat/intimidation high arousal.",
+          "ontology_keywords": ["aggression","threat","display"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Listed type; detailed usage varies.",
+          "users": "Primarily males"
+        },
+        {
+          "call_name": "Soft hoot",
+          "acoustic_description": "Low-amplitude, low-frequency hoot; described as an infant vocalization and similar to a human-child whimper in some descriptions.",
+          "semantic_description": "Fear/pleasure-displeasure signaling in infants; close-range caregiver-directed context.",
+          "ontology_keywords": ["affective","distress","infant"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html",
+            "https://www.orangutanrepublik.org/learn/orangutan-specifics/vocal-repertoire/"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often described as infant-skewed; some sources use 'soft hoot' as the canonical label rather than 'soft hoot/whimper'.",
+          "users": "Primarily infants/young; occasional broader use not well standardized"
+        },
+        {
+          "call_name": "Harmonic uuh (come-hither call)",
+          "acoustic_description": "Tonal, harmonic call described and illustrated in spectrogram form in call-culture work; typically voiced and relatively low amplitude compared to long calls.",
+          "semantic_description": "Mother-to-infant 'come-hither' signal when infants are separated; infants tend to return after the call.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://www.zora.uzh.ch/server/api/core/bitstreams/13cfecf8-c14b-4908-a5dd-82137c6c4286/content",
+            "https://journals.plos.org/plosone/article/figures?id=10.1371%2Fjournal.pone.0036180"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Included because it is explicitly named and functionally described with spectrograms in the cited sources.",
+          "users": "Primarily mothers (adult females)"
+        },
+        {
+          "call_name": "Throat scrape (come-hither call)",
+          "acoustic_description": "Distinct non-tonal, scrape-like vocal sound; illustrated with spectrograms in call-culture work.",
+          "semantic_description": "Mother-to-infant 'come-hither' signal during separation; infants tend to return after the call.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://www.zora.uzh.ch/server/api/core/bitstreams/13cfecf8-c14b-4908-a5dd-82137c6c4286/content",
+            "https://journals.plos.org/plosone/article/figures?id=10.1371%2Fjournal.pone.0036180",
+            "https://www.orangutanssp.org/uploads/2/4/9/9/24992309/orangutan_vocals_-_bastiancossaboon.pdf"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Often discussed as a culturally variable call; included for completeness as a named repertoire element.",
+          "users": "Primarily mothers (adult females)"
+        },
+        {
+          "call_name": "Kiss squeak (using hand)",
+          "acoustic_description": "Kiss squeak produced with hand assistance (amplification/modification).",
+          "semantic_description": "Alarm/threat/annoyance signaling; often directed at observers/predators or social disturbance.",
+          "ontology_keywords": ["alarm","predator"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html",
+            "https://www.orangutanssp.org/uploads/2/4/9/9/24992309/orangutan_vocals_-_bastiancossaboon.pdf",
+            "https://www.researchgate.net/profile/Cheryl-Knott-2/publication/230823387_A_description_of_the_orangutan%27s_vocal_and_sound_repertoire_with_a_focus_on_geographical_variation/links/0fcfd505351f1f06f9000000/A-description-of-the-orangutans-vocal-and-sound-repertoire-with-a-focus-on-geographical-variation.pdf"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Tool-assisted modification of a call; presence/usage can vary by site.",
+          "users": "Both sexes; multiple ages; site-dependent prevalence"
+        },
+        {
+          "call_name": "Kiss squeak (using leaves)",
+          "acoustic_description": "Kiss squeak produced with leaf assistance (amplification/modification).",
+          "semantic_description": "Alarm/threat/annoyance signaling; may increase apparent body size or salience.",
+          "ontology_keywords": ["alarm","predator"],
+          "scientific_references": [
+            "https://www.iea.uzh.ch/en/research/orangutannetwork/orangutancallrepertoires.html",
+            "https://www.orangutanssp.org/uploads/2/4/9/9/24992309/orangutan_vocals_-_bastiancossaboon.pdf",
+            "https://www.researchgate.net/profile/Cheryl-Knott-2/publication/230823387_A_description_of_the_orangutan%27s_vocal_and_sound_repertoire_with_a_focus_on_geographical_variation/links/0fcfd505351f1f06f9000000/A-description-of-the-orangutans-vocal-and-sound-repertoire-with-a-focus-on-geographical-variation.pdf"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Explicitly treated as a distinct repertoire item in geographic-variation summaries.",
+          "users": "Both sexes; multiple ages; strongly site-dependent (often rare)"
+        },
+        {
+          "call_name": "Pop vocalization (nest-related; site-reported)",
+          "acoustic_description": "Short 'pop'-like nest-related sound; reported as a nest vocalization variant in some populations.",
+          "semantic_description": "Nest building / nest material manipulation context.",
+          "ontology_keywords": ["display"],
+          "scientific_references": [
+            "https://www.orangutanssp.org/uploads/2/4/9/9/24992309/orangutan_vocals_-_bastiancossaboon.pdf"
+          ],
+          "subjective_reliability": "low-medium",
+          "comments": "Included to complete the union of named nest-related vocalizations reported in geographic-variation summaries; may be population-specific and not always present in Bornean field sites.",
+          "users": "Unclear; reported in specific populations"
+        },
+        {
+          "call_name": "Grind nest vocalization (nest-related; site-reported)",
+          "acoustic_description": "Nest-related grinding-like vocal/sound signal reported as a nest vocalization variant in some populations.",
+          "semantic_description": "Nest building / nest material manipulation context.",
+          "ontology_keywords": ["display"],
+          "scientific_references": [
+            "https://www.orangutanssp.org/uploads/2/4/9/9/24992309/orangutan_vocals_-_bastiancossaboon.pdf"
+          ],
+          "subjective_reliability": "low-medium",
+          "comments": "Included to complete the union of named nest-related vocalizations from geographic-variation summaries; treat as population-specific unless validated at the focal site.",
+          "users": "Unclear; reported in specific populations"
+        }
+      ]
+    },
+    {
+      "species_name": "Siamang (Symphalangus syndactylus)",
+      "taxonomy_basis": {
+        "summary": "Siamang repertoire is dominated by loud, stereotyped duetting songs plus a limited set of soft calls. Song structure and function are well characterized.",
+        "scientific_references": [
+          "https://www.jstor.org/stable/4535664",
+          "https://www.sciencedirect.com/science/article/pii/S0003347206001400"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Great call (female-led duet)",
+          "acoustic_description": "Very loud, long, rhythmically structured song with rising frequency contours; core component of male–female duets.",
+          "semantic_description": "Territorial advertisement, pair-bond reinforcement, long-distance spacing.",
+          "ontology_keywords": ["long_distance","display"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535664",
+            "https://www.sciencedirect.com/science/article/pii/S0003347206001400"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Canonical siamang vocalization.",
+          "users": "Adult females (with male participation)"
+        },
+        {
+          "call_name": "Male answer phrase",
+          "acoustic_description": "Lower-frequency, rhythmically coordinated song phrase overlapping or following the female great call.",
+          "semantic_description": "Duet coordination and territorial signaling.",
+          "ontology_keywords": ["long_distance","display"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347206001400"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Functionally inseparable from the duet.",
+          "users": "Adult males"
+        },
+        {
+          "call_name": "Boom",
+          "acoustic_description": "Very low-frequency resonant call amplified by the inflatable throat sac.",
+          "semantic_description": "Long-distance spacing and territorial advertisement.",
+          "ontology_keywords": ["long_distance","display"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347206001400"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Unique to siamangs due to throat-sac morphology.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Soft hoot",
+          "acoustic_description": "Low-amplitude hoot produced at close range.",
+          "semantic_description": "Contact and reassurance within family group.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535664"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Less studied than song components.",
+          "users": "All ages"
+        }
+      ]
+    },
+    {
+      "species_name": "Gibbons (Hylobates spp., Nomascus spp., Hoolock spp.)",
+      "taxonomy_basis": {
+        "summary": "Gibbon repertoires are dominated by species-specific song bouts (‘great calls’) plus a small number of soft calls. Structure and usage vary by genus and species.",
+        "scientific_references": [
+          "https://www.sciencedirect.com/science/article/pii/S0003347206001400",
+          "https://academic.oup.com/beheco/article/20/4/759/219985"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Great call / song bout",
+          "acoustic_description": "Loud, stereotyped song with sex- and species-specific phrase structure; often part of male–female duets.",
+          "semantic_description": "Territorial defense, pair bonding, species recognition.",
+          "ontology_keywords": ["long_distance","display"],
+          "scientific_references": [
+            "https://academic.oup.com/beheco/article/20/4/759/219985",
+            "https://www.sciencedirect.com/science/article/pii/S0003347206001400"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Primary vocal signal across gibbon taxa.",
+          "users": "Adult females (with male participation)"
+        },
+        {
+          "call_name": "Male solo song",
+          "acoustic_description": "Loud song phrases produced by males alone.",
+          "semantic_description": "Territorial advertisement and mate guarding.",
+          "ontology_keywords": ["long_distance","display"],
+          "scientific_references": [
+            "https://academic.oup.com/beheco/article/20/4/759/219985"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Common in several genera.",
+          "users": "Adult males"
+        },
+        {
+          "call_name": "Alarm scream",
+          "acoustic_description": "High-pitched, loud scream.",
+          "semantic_description": "Predator alarm and disturbance response.",
+          "ontology_keywords": ["alarm","predator"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347206001400"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Functionally conserved across gibbon species.",
+          "users": "All ages"
+        },
+        {
+          "call_name": "Soft grunt / contact call",
+          "acoustic_description": "Low-amplitude grunt or hoot.",
+          "semantic_description": "Close-range contact within family group.",
+          "ontology_keywords": ["contact","coordination"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347206001400"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Often under-described compared to song.",
+          "users": "All ages"
+        }
+      ]
+    }
+,
+    {
+      "species_name": "Rhesus macaque (Macaca mulatta)",
+      "taxonomy_basis": {
+        "summary": "Extensively studied Old World monkey with a well-characterized graded vocal repertoire including coos, screams, grunts, and threat calls.",
+        "scientific_references": [
+          "https://www.sciencedirect.com/science/article/pii/S0168159103001835",
+          "https://academic.oup.com/beheco/article/11/2/195/218861"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Coo",
+          "acoustic_description": "Clear, tonal call with smooth frequency modulation; often produced singly or in short bouts.",
+          "semantic_description": "Long- and medium-distance contact, group cohesion, and recruitment; acoustically variant with context.",
+          "ontology_keywords": ["contact", "coordination", "long_distance"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0168159103001835",
+            "https://academic.oup.com/beheco/article/11/2/195/218861"
+          ],
+          "subjective_reliability": "high",
+          "comments": "One of the best-studied macaque calls; shows context- and affect-related acoustic variation.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often produced in series.",
+          "semantic_description": "Close-range contact, reassurance, and coordination in low-arousal contexts.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0168159103001835"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Common affiliative call in macaques.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Girney",
+          "acoustic_description": "High-pitched, tonal, often warbling call.",
+          "semantic_description": "Affiliative approach signal, often directed toward infants or high-value social partners.",
+          "ontology_keywords": ["affiliative", "contact"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535531"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Classic macaque affiliative call, especially in infant-directed contexts.",
+          "users": "Primarily adult females; also juveniles"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream, often in bouts.",
+          "semantic_description": "Distress, submission, and escalation during aggressive interactions.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0168159103001835"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Strongly associated with aggression and rank asymmetries.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Bark",
+          "acoustic_description": "Abrupt, loud, harsh call.",
+          "semantic_description": "Alarm, disturbance, or high-arousal social contexts.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0168159103001835"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often treated as a general alarm or agitation call.",
+          "users": "Adults; both sexes"
+        },
+        {
+          "call_name": "Threat growl",
+          "acoustic_description": "Low-frequency, harsh growl-like vocalization.",
+          "semantic_description": "Threat and aggressive signaling at close range.",
+          "ontology_keywords": ["aggression", "threat", "display"],
+          "scientific_references": [
+            "https://academic.oup.com/beheco/article/11/2/195/218861"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Often grouped with other aggressive calls in graded threat systems.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Copulation scream",
+          "acoustic_description": "High-pitched scream produced during copulation.",
+          "semantic_description": "Sexual context signal; may attract attention or influence mating dynamics.",
+          "ontology_keywords": ["sex"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535531"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Context-specific; function debated in the literature.",
+          "users": "Adult females"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0168159103001835"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "Japanese macaque (Macaca fuscata)",
+      "taxonomy_basis": {
+        "summary": "Long-term field and captive studies document a macaque repertoire similar to other Macaca species, with emphasis on coos, grunts, screams, and social calls.",
+        "scientific_references": [
+          "https://www.jstor.org/stable/4535529"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Coo",
+          "acoustic_description": "Clear, tonal call with smooth frequency modulation; often produced singly or in short bouts.",
+          "semantic_description": "Long- and medium-distance contact, group cohesion, and recruitment; acoustically variant by context.",
+          "ontology_keywords": ["contact", "coordination", "long_distance"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535529",
+            "https://www.sciencedirect.com/science/article/pii/S0168159103001835"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Homologous to coos in other Macaca species; extensively documented in Japanese macaques.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often given in series.",
+          "semantic_description": "Close-range contact, reassurance, and coordination in low-arousal social contexts.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535529"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Core affiliative call in Japanese macaques.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Girney",
+          "acoustic_description": "High-pitched, tonal, warbling call.",
+          "semantic_description": "Affiliative approach signal, often directed toward infants or preferred partners.",
+          "ontology_keywords": ["affiliative", "contact"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535529"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Classic macaque affiliative call; well documented in infant-handling contexts.",
+          "users": "Primarily adult females; juveniles"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream, often produced in bouts.",
+          "semantic_description": "Distress, submission, and escalation during aggressive interactions.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535529"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Strongly associated with aggression and dominance interactions.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Bark",
+          "acoustic_description": "Abrupt, loud, harsh call.",
+          "semantic_description": "Alarm, disturbance, or high-arousal social contexts.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535529"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "General alarm/agitation call; context-dependent.",
+          "users": "Adults; both sexes"
+        },
+        {
+          "call_name": "Threat growl",
+          "acoustic_description": "Low-frequency, harsh growl-like vocalization.",
+          "semantic_description": "Threat and aggressive signaling at close range.",
+          "ontology_keywords": ["aggression", "threat", "display"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535529"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Part of a graded threat-call system shared across Macaca species.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Copulation scream",
+          "acoustic_description": "High-pitched scream produced during copulation.",
+          "semantic_description": "Sexual context signal; may influence mating dynamics.",
+          "ontology_keywords": ["sex"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535529"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Context-specific; function debated similarly to other macaques.",
+          "users": "Adult females"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535529"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "Vervet monkey (Chlorocebus pygerythrus)",
+      "taxonomy_basis": {
+        "summary": "Classic model species for functionally referential alarm calls; repertoire includes distinct predator-specific alarm calls plus social calls.",
+        "scientific_references": [
+          "https://www.nature.com/articles/430529a",
+          "https://www.jstor.org/stable/4535525"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Leopard alarm call",
+          "acoustic_description": "Low-pitched, barking cough-like call, typically given singly or in short bouts.",
+          "semantic_description": "Functionally referential alarm signaling terrestrial predators, especially leopards; elicits climbing into trees.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://www.nature.com/articles/430529a",
+            "https://www.jstor.org/stable/4535525"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Classic example of a functionally referential alarm call in primates.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Eagle alarm call",
+          "acoustic_description": "Short, high-pitched tonal call, often repeated rapidly.",
+          "semantic_description": "Alarm signaling aerial predators; elicits looking up and seeking cover.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://www.nature.com/articles/430529a",
+            "https://www.jstor.org/stable/4535525"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Well-established predator-specific alarm category.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Snake alarm call",
+          "acoustic_description": "Chutter-like, staccato call sequence with rapid repetition.",
+          "semantic_description": "Alarm signaling snakes; elicits bipedal scanning and mobbing behavior.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://www.nature.com/articles/430529a",
+            "https://www.jstor.org/stable/4535525"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Third classic alarm call in the vervet alarm-call triad.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often produced in series.",
+          "semantic_description": "Close-range contact and social coordination; highly context-general.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535525"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Common affiliative/contact call.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Chutter",
+          "acoustic_description": "Rapid series of harsh, broadband notes.",
+          "semantic_description": "Agitation or mild alarm in social or environmental disturbance contexts.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535525"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "May overlap acoustically with snake-alarm-like calls depending on context.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Bark",
+          "acoustic_description": "Abrupt, loud bark.",
+          "semantic_description": "High-arousal disturbance or intergroup encounters.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535525"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Sometimes grouped with other harsh calls in simplified taxonomies.",
+          "users": "Adults; both sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream.",
+          "semantic_description": "Distress, submission, or aggressive escalation.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535525"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call common across cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535525"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; not always included in adult-only repertoires.",
+          "users": "Infants"
+        }
+      ]
+    }
+,
+    {
+      "species_name": "Campbell's monkey (Cercopithecus campbelli)",
+      "taxonomy_basis": {
+        "summary": "Forest guenon with a well-studied adult-male loud-call repertoire featuring predator-specific alarm stems (krak, hok, wak) and a productive -oo suffix that broadens meanings (e.g., krak-oo, hok-oo, wak-oo). Booms are low-frequency long-distance calls that often precede alarm sequences or occur in non-urgent disturbance/coordination contexts. Call sequences are highly structured (e.g., boom–boom–krak-oo) and context-specific.",
+        "scientific_references": [
+          "https://doi.org/10.1007/s002650100383",
+          "https://doi.org/10.1371/journal.pone.0007808",
+          "https://doi.org/10.1073/pnas.0908118106",
+          "https://doi.org/10.1098/rspb.2015.0265",
+          "https://direct.mit.edu/ling/article/49/1/169/671/On-the-oo-Suffix-of-Campbell-s-Monkeys"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Boom",
+          "acoustic_description": "Low-frequency, resounding boom call; often produced as a pair (boom–boom) and audible over long distances.",
+          "semantic_description": "Non-urgent long-distance alert/coordination signal; often produced before alarm-call sequences and in contexts such as group movement/coordination or general disturbance.",
+          "ontology_keywords": ["contact", "coordination", "long_distance"],
+          "scientific_references": [
+            "https://doi.org/10.1371/journal.pone.0007808",
+            "https://doi.org/10.1073/pnas.0908118106"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Booms are frequently treated as a loud-call type that can function as a contextual ‘prefix’ to subsequent alarm calls in male sequences.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Krak",
+          "acoustic_description": "Loud, abrupt alarm-call stem (unsuffixed).",
+          "semantic_description": "Predator-specific alarm call stem primarily given to leopards (terrestrial predator).",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s002650100383",
+            "https://doi.org/10.1098/rspb.2015.0265"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Classic functionally referential-style alarm stem; meaning is broadened by adding the -oo suffix (krak-oo).",
+          "users": "Primarily adult males (females also alarm-call, but taxonomies here focus on male loud calls)"
+        },
+        {
+          "call_name": "Hok",
+          "acoustic_description": "Loud alarm-call stem (unsuffixed), acoustically distinct from krak.",
+          "semantic_description": "Predator-specific alarm call stem primarily given to crowned-hawk eagles and related aerial danger contexts.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s002650100383",
+            "https://doi.org/10.1371/journal.pone.0007808"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Meaning is broadened by suffixation (hok-oo) to more general arboreal-disturbance contexts.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Wak",
+          "acoustic_description": "Loud alarm-call stem (unsuffixed), treated as one of the three main ‘call stems’ in suffixation work.",
+          "semantic_description": "Alarm-call stem associated with disturbance/alert contexts; often occurs with the -oo suffix (wak-oo) in natural sequences.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://doi.org/10.1098/rspb.2015.0265",
+            "https://doi.org/10.1073/pnas.0908118106"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Some repertoires emphasize wak-oo as the common realized form; include wak here as a stem for completeness and cross-paper alignment.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Krak-oo",
+          "acoustic_description": "Krak stem followed by an acoustically invariable ‘-oo’ suffix.",
+          "semantic_description": "General alert call (broadened meaning relative to krak); produced in a wide range of disturbances (e.g., falling branches, intergroup/neighbor interactions, general threats).",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://doi.org/10.1371/journal.pone.0007808",
+            "https://doi.org/10.1098/rspb.2015.0265"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Canonical example of suffixation broadening a predator-specific stem into a general disturbance/alert call.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Hok-oo",
+          "acoustic_description": "Hok stem followed by the ‘-oo’ suffix.",
+          "semantic_description": "Broadened alert call relative to hok; associated with more general arboreal disturbance and non-specific aerial/above-ground threat contexts.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://doi.org/10.1371/journal.pone.0007808",
+            "https://direct.mit.edu/ling/article/49/1/169/671/On-the-oo-Suffix-of-Campbell-s-Monkeys"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Frequently discussed as a complex call built from hok + -oo; sometimes reported as mainly occurring in combination rather than isolation.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Wak-oo",
+          "acoustic_description": "Wak stem followed by the ‘-oo’ suffix.",
+          "semantic_description": "General disturbance/alert call used in non-predatory and socially driven disturbances and in some coordination contexts (e.g., group movement or intergroup situations), depending on sequence placement.",
+          "ontology_keywords": ["alarm", "coordination"],
+          "scientific_references": [
+            "https://doi.org/10.1073/pnas.0908118106",
+            "https://doi.org/10.1098/rspb.2015.0265"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often treated as part of the six-loud-call inventory in sequence work; exact contextual mapping depends on sequence structure.",
+          "users": "Primarily adult males"
+        }
+      ]
+    },
+    {
+      "species_name": "Olive baboon (Papio anubis)",
+      "taxonomy_basis": {
+        "summary": "Well-studied baboon species with a graded vocal system including grunts, screams, barks, and wahoos used in complex social contexts.",
+        "scientific_references": [
+          "https://www.sciencedirect.com/science/article/pii/S0047248498000803"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often produced singly or in series; acoustically graded.",
+          "semantic_description": "Close-range contact, reassurance, and coordination; especially common during approaches and affiliative interactions.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803",
+            "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Core baboon call type; strongly associated with social tolerance and reduced aggression.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream, often produced in bouts.",
+          "semantic_description": "Distress, submission, and aggressive escalation, often during conflicts involving rank asymmetries.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803",
+            "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call common across primates; extensively documented in baboons.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Bark",
+          "acoustic_description": "Abrupt, loud, harsh call.",
+          "semantic_description": "Alarm, disturbance, or high-arousal social contexts; also occurs in intergroup encounters.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often treated as a general alarm or agitation call.",
+          "users": "Adults; both sexes"
+        },
+        {
+          "call_name": "Wahoo",
+          "acoustic_description": "Loud, two-phase call (low-frequency introductory element followed by a higher-frequency burst).",
+          "semantic_description": "Male long-distance display and intergroup signaling; associated with arousal and dominance.",
+          "ontology_keywords": ["long_distance", "display"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Male-specific call characteristic of Papio species.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Threat grunt / growl",
+          "acoustic_description": "Low-frequency, harsh grunt or growl produced during aggressive displays.",
+          "semantic_description": "Threat and aggressive signaling at close range.",
+          "ontology_keywords": ["aggression", "threat", "display"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Often treated as part of a graded aggressive-call system rather than a discrete type.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Copulation call",
+          "acoustic_description": "High-pitched call or scream produced during copulation.",
+          "semantic_description": "Sexual context signal; may influence mating dynamics and social attention.",
+          "ontology_keywords": ["sex"],
+          "scientific_references": [
+            "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Context-specific; functional interpretations vary.",
+          "users": "Adult females"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched, repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "Yellow baboon (Papio cynocephalus)",
+      "taxonomy_basis": {
+        "summary": "Subject of long-term Amboseli studies; vocal repertoire overlaps strongly with other Papio species and is well documented behaviorally.",
+        "scientific_references": [
+          "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often produced singly or in series; acoustically graded.",
+          "semantic_description": "Close-range contact, reassurance, and coordination; especially common during approaches and affiliative interactions.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803",
+            "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Core baboon call type; strongly associated with social tolerance and reduced aggression.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream, often produced in bouts.",
+          "semantic_description": "Distress, submission, and aggressive escalation, often during conflicts involving rank asymmetries.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803",
+            "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call common across primates; extensively documented in baboons.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Bark",
+          "acoustic_description": "Abrupt, loud, harsh call.",
+          "semantic_description": "Alarm, disturbance, or high-arousal social contexts; also occurs in intergroup encounters.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often treated as a general alarm or agitation call.",
+          "users": "Adults; both sexes"
+        },
+        {
+          "call_name": "Wahoo",
+          "acoustic_description": "Loud, two-phase call (low-frequency introductory element followed by a higher-frequency burst).",
+          "semantic_description": "Male long-distance display and intergroup signaling; associated with arousal and dominance.",
+          "ontology_keywords": ["long_distance", "display"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Male-specific call characteristic of Papio species.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Threat grunt / growl",
+          "acoustic_description": "Low-frequency, harsh grunt or growl produced during aggressive displays.",
+          "semantic_description": "Threat and aggressive signaling at close range.",
+          "ontology_keywords": ["aggression", "threat", "display"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248498000803"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Often treated as part of a graded aggressive-call system rather than a discrete type.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Copulation call",
+          "acoustic_description": "High-pitched call or scream produced during copulation.",
+          "semantic_description": "Sexual context signal; may influence mating dynamics and social attention.",
+          "ontology_keywords": ["sex"],
+          "scientific_references": [
+            "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Context-specific; functional interpretations vary.",
+          "users": "Adult females"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched, repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://press.uchicago.edu/ucp/books/book/chicago/A/bo3684032.html"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "Ring-tailed lemur (Lemur catta)",
+      "taxonomy_basis": {
+        "summary": "Best-studied strepsirrhine; repertoire includes contact calls, alarm calls, and conspicuous olfactory–acoustic displays.",
+        "scientific_references": [
+          "https://www.sciencedirect.com/science/article/pii/S0047248497000616"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Contact call (grunt / short contact call)",
+          "acoustic_description": "Low-frequency, short-duration grunt-like call, often produced in series.",
+          "semantic_description": "Close-range contact, group cohesion, and coordination during movement or foraging.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248497000616"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Core contact call in ring-tailed lemurs; terminology varies across authors.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Long-distance contact call",
+          "acoustic_description": "Louder, more sustained call than the close-range grunt; audible over longer distances.",
+          "semantic_description": "Maintaining contact between spatially separated group members.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248497000616"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Sometimes treated as a louder variant of contact calls rather than a distinct type.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Alarm call (general)",
+          "acoustic_description": "Abrupt, loud call; acoustically distinct from contact calls.",
+          "semantic_description": "Alarm signaling in response to predators or sudden disturbances.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248497000616"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ring-tailed lemurs do not show as clean predator-specific call categories as some cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream.",
+          "semantic_description": "Distress, submission, or aggressive escalation.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248497000616"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call common across primates, including strepsirrhines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Chuckle",
+          "acoustic_description": "Low-amplitude, rhythmic vocalization.",
+          "semantic_description": "Affiliative interactions and low-arousal social contexts.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248497000616"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Reported less consistently across studies; sometimes grouped with other soft calls.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched, repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248497000616"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "Tufted capuchin (Sapajus apella)",
+      "taxonomy_basis": {
+        "summary": "Highly cognitive New World monkey with a documented vocal repertoire used in coordination, alarm, and social negotiation.",
+        "scientific_references": [
+          "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+        ]
+      },
+      "calls": [
+  {
+    "call_name": "Contact call (chirp / peep)",
+    "acoustic_description": "Short, high-pitched tonal call, often produced singly or in rapid sequences.",
+    "semantic_description": "Close-range contact, group cohesion, and coordination during movement and foraging.",
+    "scientific_references": [
+      "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+    ],
+    "subjective_reliability": "high",
+    "comments": "Core contact call in capuchins; labels vary (chirp vs peep) across studies.",
+    "users": "All ages/sexes"
+  },
+  {
+    "call_name": "Trill",
+    "acoustic_description": "Rapidly modulated tonal call, longer and more frequency-modulated than chirps.",
+    "semantic_description": "Affiliative interactions and close-range social cohesion.",
+    "scientific_references": [
+      "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+    ],
+    "subjective_reliability": "medium-high",
+    "comments": "Sometimes grouped with other tonal contact calls in simplified taxonomies.",
+    "users": "All ages/sexes"
+  },
+  {
+    "call_name": "Alarm call",
+    "acoustic_description": "Abrupt, loud call with harsh acoustic structure.",
+    "semantic_description": "Alarm signaling in response to predators or sudden disturbances.",
+    "scientific_references": [
+      "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+    ],
+    "subjective_reliability": "high",
+    "comments": "Capuchins show alarm calling but without the clean predator-specific partitioning seen in vervets.",
+    "users": "All ages/sexes"
+  },
+  {
+    "call_name": "Bark",
+    "acoustic_description": "Loud, harsh bark-like vocalization.",
+    "semantic_description": "High-arousal disturbance, intergroup encounters, or agitation.",
+    "scientific_references": [
+      "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+    ],
+    "subjective_reliability": "medium-high",
+    "comments": "Often treated as a high-arousal subset of alarm calls.",
+    "users": "Adults; both sexes"
+  },
+  {
+    "call_name": "Scream",
+    "acoustic_description": "High-amplitude, broadband scream.",
+    "semantic_description": "Distress, submission, and aggressive escalation.",
+    "scientific_references": [
+      "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+    ],
+    "subjective_reliability": "high",
+    "comments": "Affective call common across New World monkeys.",
+    "users": "All ages/sexes"
+  },
+  {
+    "call_name": "Threat growl",
+    "acoustic_description": "Low-frequency, harsh growl-like call.",
+    "semantic_description": "Threat and aggressive signaling at close range.",
+    "scientific_references": [
+      "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+    ],
+    "subjective_reliability": "medium",
+    "comments": "Often part of a graded aggressive-call continuum.",
+    "users": "Primarily adult males"
+  },
+  {
+    "call_name": "Copulation call",
+    "acoustic_description": "High-pitched call or scream produced during copulation.",
+    "semantic_description": "Sexual context signal; may influence mating dynamics.",
+    "scientific_references": [
+      "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+    ],
+    "subjective_reliability": "medium",
+    "comments": "Context-specific; less extensively studied than alarm or contact calls.",
+    "users": "Adult females"
+  },
+  {
+    "call_name": "Infant distress call",
+    "acoustic_description": "High-pitched repetitive distress vocalization.",
+    "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+    "scientific_references": [
+      "https://www.sciencedirect.com/science/article/pii/S0047248496000413"
+    ],
+    "subjective_reliability": "high",
+    "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+    "users": "Infants"
+  }
+]
+    },
+    {
+      "species_name": "Common marmoset (Callithrix jacchus)",
+      "taxonomy_basis": {
+        "summary": "Model species for vocal turn-taking and cooperative breeding; repertoire includes phee calls, trills, and alarm calls.",
+        "scientific_references": [
+          "https://www.science.org/doi/10.1126/science.1211518",
+          "https://www.nature.com/articles/ncomms3812"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Phee call",
+          "acoustic_description": "Long-distance, high-amplitude, tonal call, often produced as single or double phees with stable frequency contours.",
+          "semantic_description": "Long-distance contact, group cohesion, and coordination; central to antiphonal turn-taking.",
+          "scientific_references": [
+            "https://www.science.org/doi/10.1126/science.1211518",
+            "https://www.nature.com/articles/ncomms3812"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Canonical marmoset call; extensively studied for vocal turn-taking and timing.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Trill",
+          "acoustic_description": "Short, rapidly modulated, tonal call of relatively low amplitude.",
+          "semantic_description": "Close-range contact and social cohesion; often exchanged during affiliative interactions.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248404001297"
+          ],
+          "subjective_reliability": "high",
+          "comments": "One of the most frequent close-range calls in captive and wild settings.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Twitter",
+          "acoustic_description": "Rapid series of short, high-pitched tonal notes.",
+          "semantic_description": "Arousal and excitement; often produced during movement or social activity.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248404001297"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Sometimes considered part of a graded continuum with trills.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Peep",
+          "acoustic_description": "Very short, high-frequency tonal call.",
+          "semantic_description": "Mild arousal, contact, or attention-getting at close range.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248404001297"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Often grouped with other short tonal calls in simplified repertoires.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Tsik (alarm call)",
+          "acoustic_description": "Sharp, high-frequency call with abrupt onset.",
+          "semantic_description": "Alarm signaling, particularly for aerial predators.",
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535535"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Functionally referential alarm call documented in callitrichids.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Egg (alarm call)",
+          "acoustic_description": "Low-frequency, noisy call distinct from tsik.",
+          "semantic_description": "Alarm response, often associated with terrestrial threats.",
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535535"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Part of a predator-specific alarm system.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "Broadband, high-amplitude scream.",
+          "semantic_description": "Distress and high-arousal social conflict.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248404001297"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call common across primates.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched, repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0047248404001297"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Strongly age-specific and central to cooperative breeding dynamics.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "Howler monkey (Alouatta spp.)",
+      "taxonomy_basis": {
+        "summary": "Known for extremely loud low-frequency calls enabled by enlarged hyoid; vocal repertoire well described at the genus level.",
+        "scientific_references": [
+          "https://www.science.org/doi/10.1126/science.1070793"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Roar (howl / long-distance roar)",
+          "acoustic_description": "Extremely loud, low-frequency, long-duration roar produced using an enlarged hyoid; often occurs in extended bouts and choruses.",
+          "semantic_description": "Long-distance territorial advertisement, intergroup spacing, and mate defense.",
+          "scientific_references": [
+            "https://www.science.org/doi/10.1126/science.1070793",
+            "https://www.sciencedirect.com/science/article/pii/S0003347204002015"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Canonical howler monkey vocalization; function and morphology are exceptionally well documented.",
+          "users": "Primarily adult males; often chorused by multiple males"
+        },
+        {
+          "call_name": "Bark",
+          "acoustic_description": "Short, abrupt, harsh call of intermediate amplitude compared to roars.",
+          "semantic_description": "Alarm, disturbance, or agitation contexts; sometimes used in intergroup encounters at closer range.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347204002015",
+            "https://www.jstor.org/stable/4535497"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Common across Alouatta species; context-dependent usage.",
+          "users": "Both sexes; adults and subadults"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration grunt; often produced in series.",
+          "semantic_description": "Close-range contact, coordination, and low-arousal social interactions.",
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535497"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Part of a graded close-call system; meanings inferred primarily from context.",
+          "users": "Both sexes; all age classes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream, often given in bouts.",
+          "semantic_description": "Distress, aggression, or high-arousal social conflict.",
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535497"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call type common across primates; well attested in howlers.",
+          "users": "All ages; especially juveniles and females"
+        },
+        {
+          "call_name": "Wrah / Growl",
+          "acoustic_description": "Low-frequency, harsh, growl-like vocalization, softer than full roars.",
+          "semantic_description": "Threat and aggressive display at intermediate distances.",
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347204002015"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Label varies across authors; often treated as a subcategory of threat calls.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched, tonal or noisy call emitted by infants.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535497"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Ontogenetically restricted; not always included in adult repertoire summaries.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "Diana monkey (Cercopithecus diana)",
+      "taxonomy_basis": {
+        "summary": "West African forest guenon famous for predator-specific alarm calling and structured alarm-call sequences. Adult males produce acoustically distinct alarm calls to crowned eagles vs leopards, and also use the same call types in ‘general disturbance’ contexts but with different sequencing rules (sequence length/structure conveys additional information). Diana monkey alarm calls are salient to heterospecific listeners (e.g., hornbills and other primates).",
+        "scientific_references": [
+          "https://www.sciencedirect.com/science/article/pii/S0003347296903346",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC2614181/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC1691652/",
+          "https://doi.org/10.1016/j.cub.2016.08.033",
+          "https://royalsocietypublishing.org/rsos/article/3/2/150639/36470/Social-familiarity-affects-Diana-monkey"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Leopard alarm call",
+          "acoustic_description": "Loud alarm-call sequence dominated by exhalations with strong frequency transitions and characteristic inhalation units between calls (male loud-call form).",
+          "semantic_description": "Predator-specific alarm signaling terrestrial predators, especially leopards; also used in some sites as part of responses to leopard-like general disturbances, with meaning refined by sequence structure.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347296903346",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC2614181/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC1691652/"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Canonical Diana-monkey predator alarm (male loud calls). Sequence composition (e.g., number of units/series) can add information beyond the call type.",
+          "users": "Primarily adult males (female repertoires include additional alarm/alert calls in some studies)"
+        },
+        {
+          "call_name": "Eagle alarm call",
+          "acoustic_description": "Loud alarm-call sequence with weaker/absent frequency transitions relative to leopard alarms; includes inhalation units between calls.",
+          "semantic_description": "Predator-specific alarm signaling crowned-hawk eagles (aerial predator); reliably discriminated by listeners.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347296903346",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC2614181/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC1691652/"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Classic predator-specific alarm category in a forest guenon; heavily used in interspecific ‘semantic eavesdropping’ work.",
+          "users": "Primarily adult males (also produced by other group members depending on context/site)"
+        },
+        {
+          "call_name": "General disturbance alarm call",
+          "acoustic_description": "Uses the same two basic male alarm-call types (leopard-type vs eagle-type acoustics) but typically arranged into longer or otherwise distinct sequences relative to predator-elicited sequences.",
+          "semantic_description": "Alarm/alert calling to non-predatory sudden disturbances (e.g., falling trees, fleeing ungulates, loud noises); sequence structure helps distinguish disturbance from predator contexts in some populations.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC2614181/",
+            "https://www.sciencedirect.com/science/article/pii/S0003347296903346"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Included because multiple studies explicitly treat ‘general disturbance’ as a distinct eliciting context with consistent sequencing differences.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Contact call (soft contact call)",
+          "acoustic_description": "Low-amplitude close-range call (variously labeled as contact/close calls in guenon field coding).",
+          "semantic_description": "Close-range social contact and coordination within group (low arousal).",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://doi.org/10.1016/j.cub.2016.08.033",
+            "https://royalsocietypublishing.org/rsos/article/3/2/150639/36470/Social-familiarity-affects-Diana-monkey"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Diana monkey studies often focus on loud alarm calls; soft-call inventories are less uniformly enumerated across open sources, so this is included conservatively as a cross-taxon mapping element.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream.",
+          "semantic_description": "Distress, submission, and escalation during aggressive interactions.",
+          "ontology_keywords": ["affective", "distress"],
+          "scientific_references": [
+            "https://doi.org/10.1016/j.cub.2016.08.033"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "General affective call category included for cross-species completeness; not the primary focus of classic Diana alarm-call work.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched, repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://doi.org/10.1016/j.cub.2016.08.033"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Ontogenetically restricted; included for schema consistency across primates.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "Putty-nosed monkey (Cercopithecus nictitans)",
+      "taxonomy_basis": {
+        "summary": "Forest guenon best known for a small, male loud-call repertoire whose meanings depend strongly on call type and call sequences. Adult males produce two main alarm-call stems (pyow and hack) that can occur alone or in structured sequences (notably pyow–hack), with sequence composition conveying information about predator type and group movement rather than simple predator labels.",
+        "scientific_references": [
+          "https://doi.org/10.1016/j.cub.2006.11.032",
+          "https://doi.org/10.1098/rspb.2008.0205",
+          "https://doi.org/10.1016/j.cub.2010.01.040",
+          "https://doi.org/10.1098/rstb.2013.0122"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Pyow",
+          "acoustic_description": "Loud, low-frequency alarm-call stem, acoustically distinct from hack; produced as single calls or repeated bouts.",
+          "semantic_description": "General alarm/alert call often given to leopards and to non-predatory disturbances; also used as a component in multi-call sequences.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1016/j.cub.2006.11.032",
+            "https://doi.org/10.1098/rspb.2008.0205"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Often treated as less predator-specific than hack; meaning depends strongly on sequential context.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Hack",
+          "acoustic_description": "Loud, sharp alarm-call stem, acoustically distinct from pyow.",
+          "semantic_description": "Predator-specific alarm call primarily given to crowned-hawk eagles (aerial predators).",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1016/j.cub.2006.11.032",
+            "https://doi.org/10.1098/rspb.2008.0205"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Classic predator-specific alarm stem in forest guenons; rarely given outside aerial-danger contexts when isolated.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Pyow–hack sequence",
+          "acoustic_description": "Structured sequence consisting of several pyows followed by several hacks (e.g., P–P–H–H).",
+          "semantic_description": "Group-movement initiation / travel signal rather than direct predator labeling; elicits coordinated group movement even in the absence of predators.",
+          "ontology_keywords": ["contact", "coordination", "display"],
+          "scientific_references": [
+            "https://doi.org/10.1016/j.cub.2006.11.032",
+            "https://doi.org/10.1016/j.cub.2010.01.040"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Canonical example of meaning emerging from call sequences rather than individual calls; frequently cited in discussions of compositionality.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "General disturbance alarm",
+          "acoustic_description": "Alarm calling dominated by pyow stems, sometimes in long or irregular sequences.",
+          "semantic_description": "Alert/alarm to non-predatory disturbances such as falling trees or intergroup encounters.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://doi.org/10.1098/rspb.2008.0205"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often treated as context-dependent use of pyows rather than a distinct acoustic call type.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Contact call (soft contact call)",
+          "acoustic_description": "Low-amplitude close-range call produced during calm social interactions.",
+          "semantic_description": "Close-range social contact and coordination within the group.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://doi.org/10.1098/rstb.2013.0122"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Soft-call repertoire is less exhaustively enumerated than male loud calls; included for cross-taxon completeness.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream.",
+          "semantic_description": "Distress and escalation during aggressive interactions.",
+          "ontology_keywords": ["affective", "distress"],
+          "scientific_references": [
+            "https://doi.org/10.1098/rstb.2013.0122"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "General affective call category; not central to the classic alarm-call literature on this species.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched, repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://doi.org/10.1098/rstb.2013.0122"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Ontogenetically restricted; included for schema consistency.",
+          "users": "Infants"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# To get the interactive plot in a notebook:
+
+from plot import run_interactive
+
+fig = run_interactive(
+    json_path="database.json",
+    embedding_model="sentence-transformers/all-MiniLM-L6-v2",
+    cache=".embedding_cache.json",
+)
+fig.update_layout(width=900, height=700)
+fig.show()
