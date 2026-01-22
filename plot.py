@@ -28,6 +28,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from umap import UMAP
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 
 
 def load_calls(json_path: Path) -> List[Dict[str, object]]:
@@ -103,13 +104,13 @@ def embed_texts(
     return np.array(vectors, dtype=np.float32), cache
 
 
-def reduce_umap(embeddings: np.ndarray) -> np.ndarray:
-    reducer = UMAP(random_state=42)
+def reduce_umap(embeddings: np.ndarray, n_components: int = 2) -> np.ndarray:
+    reducer = UMAP(random_state=42, n_components=n_components)
     return reducer.fit_transform(embeddings)
 
 
 def plot_umap(embeddings: np.ndarray, species: List[str], out_path: Path) -> None:
-    coords = reduce_umap(embeddings)
+    coords = reduce_umap(embeddings, n_components=2)
 
     species_set = sorted(set(species))
     palette = plt.cm.get_cmap("tab20", len(species_set))
@@ -134,6 +135,35 @@ def plot_umap(embeddings: np.ndarray, species: List[str], out_path: Path) -> Non
     plt.tight_layout()
     plt.savefig(out_path, dpi=300)
     plt.close()
+
+
+def plot_umap_3d(embeddings: np.ndarray, species: List[str], out_path: Path) -> None:
+    coords = reduce_umap(embeddings, n_components=3)
+    species_set = sorted(set(species))
+    palette = plt.cm.get_cmap("tab20", len(species_set))
+    color_map = {sp: palette(i) for i, sp in enumerate(species_set)}
+
+    fig = plt.figure(figsize=(10, 7))
+    ax = fig.add_subplot(111, projection="3d")
+    for sp in species_set:
+        mask = [s == sp for s in species]
+        ax.scatter(
+            coords[mask, 0],
+            coords[mask, 1],
+            coords[mask, 2],
+            color=color_map[sp],
+            label=sp,
+            s=30,
+            alpha=0.8,
+        )
+    ax.set_title("UMAP of Acoustic Descriptions (3D)")
+    ax.set_xlabel("UMAP-1")
+    ax.set_ylabel("UMAP-2")
+    ax.set_zlabel("UMAP-3")
+    ax.legend(fontsize="small", loc="upper left", bbox_to_anchor=(1.02, 1))
+    fig.tight_layout()
+    fig.savefig(out_path, dpi=300)
+    plt.close(fig)
 
 
 def run(
@@ -227,6 +257,61 @@ def plot_semantic_with_keywords(
     plt.tight_layout()
     plt.savefig(out_path, dpi=300)
     plt.close()
+
+
+def plot_semantic_with_keywords_3d(
+    semantic_embeds: np.ndarray,
+    species: List[str],
+    call_names: List[str],
+    ontology_keywords: List[List[str]],
+    encoder: SentenceTransformer,
+    reducer: UMAP,
+    out_path: Path,
+):
+    coords = reducer.transform(semantic_embeds)
+    color_map = _color_map(species)
+
+    fig = plt.figure(figsize=(10, 7))
+    ax = fig.add_subplot(111, projection="3d")
+    for sp in sorted(set(species)):
+        mask = [s == sp for s in species]
+        ax.scatter(
+            coords[mask, 0],
+            coords[mask, 1],
+            coords[mask, 2],
+            color=color_map[sp],
+            label=sp,
+            s=30,
+            alpha=0.8,
+        )
+
+    all_keywords = sorted({kw for kws in ontology_keywords for kw in (kws or [])})
+    if all_keywords:
+        kw_embeds = encoder.encode(
+            all_keywords, convert_to_numpy=True, normalize_embeddings=True
+        )
+        kw_coords = reducer.transform(kw_embeds)
+        ax.scatter(
+            kw_coords[:, 0],
+            kw_coords[:, 1],
+            kw_coords[:, 2],
+            marker="^",
+            c="black",
+            s=50,
+            alpha=0.8,
+            label="Ontology keyword",
+        )
+        for (x, y, z), kw in zip(kw_coords, all_keywords):
+            ax.text(x, y, z, kw, fontsize=7)
+
+    ax.set_title("UMAP of Semantic Descriptions with Ontology Keywords (3D)")
+    ax.set_xlabel("UMAP-1")
+    ax.set_ylabel("UMAP-2")
+    ax.set_zlabel("UMAP-3")
+    ax.legend(fontsize="small", loc="upper left", bbox_to_anchor=(1.02, 1))
+    fig.tight_layout()
+    fig.savefig(out_path, dpi=300)
+    plt.close(fig)
 
 
 def plot_calls_per_species(species: List[str], out_path: Path) -> None:
@@ -373,13 +458,17 @@ def generate_all_plots(
     acoustic_embeds, _ = embed_texts(acoustic_texts, embedding_model, cache, encoder)
     semantic_embeds, _ = embed_texts(semantic_texts, embedding_model, cache, encoder)
 
-    # shared reducer for semantic projections (so keywords align)
-    reducer = UMAP(random_state=42)
-    reducer.fit(semantic_embeds)
+    # reducers
+    reducer2d = UMAP(random_state=42, n_components=2)
+    reducer2d.fit(semantic_embeds)
+    reducer3d = UMAP(random_state=42, n_components=3)
+    reducer3d.fit(semantic_embeds)
 
     outputs: Dict[str, Path] = {}
     outputs["acoustic_umap"] = out_dir / "acoustic_umap.png"
     plot_umap(acoustic_embeds, species, outputs["acoustic_umap"])
+    outputs["acoustic_umap3d"] = out_dir / "acoustic_umap3d.png"
+    plot_umap_3d(acoustic_embeds, species, outputs["acoustic_umap3d"])
 
     outputs["semantic_umap"] = out_dir / "semantic_umap.png"
     plot_semantic_with_keywords(
@@ -388,8 +477,18 @@ def generate_all_plots(
         call_names,
         ontology_keywords,
         encoder,
-        reducer,
+        reducer2d,
         outputs["semantic_umap"],
+    )
+    outputs["semantic_umap3d"] = out_dir / "semantic_umap3d.png"
+    plot_semantic_with_keywords_3d(
+        semantic_embeds,
+        species,
+        call_names,
+        ontology_keywords,
+        encoder,
+        reducer3d,
+        outputs["semantic_umap3d"],
     )
 
     outputs["calls_per_species"] = out_dir / "calls_per_species.png"
@@ -417,6 +516,7 @@ def run_interactive(
     cache: Path | str = ".embedding_cache.json",
     width: int | None = None,
     height: int | None = None,
+    n_components: int = 2,
 ):
     """
     Return a Plotly FigureWidget with click-to-connect behavior.
@@ -443,7 +543,7 @@ def run_interactive(
     acoustic_embeds, _ = embed_texts(acoustic_texts, embedding_model, cache, encoder)
     semantic_embeds, _ = embed_texts(semantic_texts, embedding_model, cache, encoder)
 
-    coords = reduce_umap(acoustic_embeds)
+    coords = reduce_umap(acoustic_embeds, n_components=n_components)
 
     species_unique = sorted(set(species))
     species_to_idx = {sp: np.where(np.array(species) == sp)[0] for sp in species_unique}
@@ -453,68 +553,75 @@ def run_interactive(
     }
     colors = [color_map[s] for s in species]
 
-    scatter = go.Scatter(
+    is_3d = n_components == 3
+    ScatterCls = go.Scatter3d if is_3d else go.Scatter
+    scatter_kwargs = dict(
         x=coords[:, 0],
         y=coords[:, 1],
         mode="markers",
-        marker=dict(color=colors, size=8, opacity=0.8),
+        marker=dict(color=colors, size=4 if is_3d else 8, opacity=0.8),
         text=[f"{c} ({s})" for c, s in zip(call_names, species)],
         hoverinfo="text",
         showlegend=False,
         uid="scatter",
     )
+    if is_3d:
+        scatter_kwargs["z"] = coords[:, 2]
+    scatter = ScatterCls(**scatter_kwargs)
     # one line trace per species for colored/transparent connections
-    line_traces = [
-        go.Scatter(
-            x=[],
-            y=[],
-            mode="lines",
-            line=dict(color=color_map[sp], width=2),
-            opacity=0.45,
-            hoverinfo="skip",
-            showlegend=False,
-            name=f"{sp} connection",
-            uid=f"line-{sp}",
+    line_traces = []
+    for sp in species_unique:
+        line_kwargs = dict(
+            x=[], y=[], mode="lines", line=dict(color=color_map[sp], width=2), opacity=0.45,
+            hoverinfo="skip", showlegend=False, name=f"{sp} connection", uid=f"line-{sp}",
         )
-        for sp in species_unique
-    ]
-    label_trace = go.Scatter(
-        x=[],
-        y=[],
-        mode="markers+text",
-        marker=dict(color="black", size=1),
-        text=[],
-        textposition="top center",
-        hoverinfo="skip",
-        showlegend=False,
-        uid="labels",
+        if is_3d:
+            line_kwargs["z"] = []
+            line_kwargs["mode"] = "lines"
+            line_traces.append(go.Scatter3d(**line_kwargs))
+        else:
+            line_traces.append(go.Scatter(**line_kwargs))
+
+    label_kwargs = dict(
+        x=[], y=[], mode="markers+text", marker=dict(color="black", size=1),
+        text=[], textposition="top center", hoverinfo="skip", showlegend=False, uid="labels",
     )
+    if is_3d:
+        label_kwargs["z"] = []
+        label_trace = go.Scatter3d(**label_kwargs)
+    else:
+        label_trace = go.Scatter(**label_kwargs)
 
     # legend-only markers for species color key
-    legend_traces = [
-        go.Scatter(
-            x=[None],
-            y=[None],
-            mode="markers",
-            marker=dict(color=color_map[sp], size=8),
-            name=sp,
-            hoverinfo="skip",
-            showlegend=True,
-            uid=f"legend-{sp}",
+    legend_traces = []
+    for sp in species_unique:
+        leg_kwargs = dict(
+            x=[None], y=[None], mode="markers", marker=dict(color=color_map[sp], size=8),
+            name=sp, hoverinfo="skip", showlegend=True, uid=f"legend-{sp}",
         )
-        for sp in species_unique
-    ]
+        if is_3d:
+            leg_kwargs["z"] = [None]
+            legend_traces.append(go.Scatter3d(**leg_kwargs))
+        else:
+            legend_traces.append(go.Scatter(**leg_kwargs))
 
-    fig = go.FigureWidget(
-        data=[scatter, *line_traces, label_trace, *legend_traces],
-        layout=go.Layout(
-            title="UMAP of Acoustic Descriptions (interactive)",
+    layout = go.Layout(
+        title="UMAP of Acoustic Descriptions (interactive)",
+        xaxis_title="UMAP-1",
+        yaxis_title="UMAP-2",
+        showlegend=True,
+        width=width,
+        height=height,
+    )
+    if is_3d:
+        layout.scene = dict(
             xaxis_title="UMAP-1",
             yaxis_title="UMAP-2",
-            showlegend=True,
-            width=width,
-            height=height,
-        ),
+            zaxis_title="UMAP-3",
+        )
+    fig = go.FigureWidget(
+        data=[scatter, *line_traces, label_trace, *legend_traces],
+        layout=layout,
     )
 
     # Ensure every trace has a uid (avoids ipywidgets KeyError on state diffs)
@@ -529,10 +636,15 @@ def run_interactive(
 
     def on_click(trace, points, state):
         if not points.point_inds:
-            # clear all line traces
             for i in range(len(species_unique)):
-                fig.data[line_start + i].update(x=[], y=[])
-            fig.data[label_idx].update(x=[], y=[], text=[])
+                if is_3d:
+                    fig.data[line_start + i].update(x=[], y=[], z=[])
+                else:
+                    fig.data[line_start + i].update(x=[], y=[])
+            if is_3d:
+                fig.data[label_idx].update(x=[], y=[], z=[], text=[])
+            else:
+                fig.data[label_idx].update(x=[], y=[], text=[])
             return
 
         idx = points.point_inds[0]
@@ -540,16 +652,22 @@ def run_interactive(
 
         label_x: List[float] = []
         label_y: List[float] = []
+        label_z: List[float] = []
         label_texts: List[str] = []
 
-        # always include the clicked call's label
+        # clicked call label
         label_x.append(coords[idx, 0])
         label_y.append(coords[idx, 1])
+        if is_3d:
+            label_z.append(coords[idx, 2])
         label_texts.append(call_names[idx])
 
         # clear existing lines first
         for i in range(len(species_unique)):
-            fig.data[line_start + i].update(x=[], y=[])
+            if is_3d:
+                fig.data[line_start + i].update(x=[], y=[], z=[])
+            else:
+                fig.data[line_start + i].update(x=[], y=[])
 
         for sp in species_unique:
             if sp == base_species:
@@ -561,17 +679,29 @@ def run_interactive(
             nn_idx = candidates[dists.argmin()]
 
             # line segment for this species
-            fig.data[line_start + species_unique.index(sp)].update(
-                x=[coords[idx, 0], coords[nn_idx, 0]],
-                y=[coords[idx, 1], coords[nn_idx, 1]],
-            )
+            if is_3d:
+                fig.data[line_start + species_unique.index(sp)].update(
+                    x=[coords[idx, 0], coords[nn_idx, 0]],
+                    y=[coords[idx, 1], coords[nn_idx, 1]],
+                    z=[coords[idx, 2], coords[nn_idx, 2]],
+                )
+            else:
+                fig.data[line_start + species_unique.index(sp)].update(
+                    x=[coords[idx, 0], coords[nn_idx, 0]],
+                    y=[coords[idx, 1], coords[nn_idx, 1]],
+                )
 
             # labels for neighbor
             label_x.append(coords[nn_idx, 0])
             label_y.append(coords[nn_idx, 1])
+            if is_3d:
+                label_z.append(coords[nn_idx, 2])
             label_texts.append(call_names[nn_idx])
 
-        fig.data[label_idx].update(x=label_x, y=label_y, text=label_texts)
+        if is_3d:
+            fig.data[label_idx].update(x=label_x, y=label_y, z=label_z, text=label_texts)
+        else:
+            fig.data[label_idx].update(x=label_x, y=label_y, text=label_texts)
 
     fig.data[0].on_click(on_click)
     return fig
