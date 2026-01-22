@@ -1,0 +1,26 @@
+# General
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+.DS_Store
+.env
+.venv
+env/
+venv/
+.idea/
+.vscode/
+.mypy_cache/
+.pytest_cache/
+*.log
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# Project outputs
+plots/
+.embedding_cache.json
