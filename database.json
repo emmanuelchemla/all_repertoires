@@ -2247,6 +2247,600 @@
           "users": "Infants"
         }
       ]
+    },
+    {
+      "species_name": "Red-tailed monkey (Cercopithecus ascanius)",
+      "taxonomy_basis": {
+        "summary": "Forest guenon with a well-documented alarm-call system and social call repertoire. Red-tailed monkeys are central to studies of interspecific alarm-call eavesdropping and mixed-species associations. Their alarm calls distinguish major predator classes, and social contact calls are used extensively in cohesive group movement.",
+        "scientific_references": [
+          "https://doi.org/10.1007/s00265-004-0789-2",
+          "https://doi.org/10.1098/rspb.2011.2112",
+          "https://www.jstor.org/stable/4535526"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Eagle alarm call",
+          "acoustic_description": "Short, sharp, high-amplitude call given singly or in brief series.",
+          "semantic_description": "Alarm signaling aerial predators, especially crowned-hawk eagles; elicits downward scanning and rapid movement into cover.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2",
+            "https://doi.org/10.1098/rspb.2011.2112"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Functionally similar to eagle alarms in other forest guenons; reliably discriminated by listeners in mixed-species groups.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Leopard alarm call",
+          "acoustic_description": "Lower-frequency, harsher alarm call than eagle alarms; often produced in short bouts.",
+          "semantic_description": "Alarm signaling terrestrial predators such as leopards; elicits climbing and arboreal escape responses.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2",
+            "https://www.jstor.org/stable/4535526"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Part of the classic guenon predator-specific alarm system.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Snake alarm call",
+          "acoustic_description": "Rapid series of harsh, staccato notes.",
+          "semantic_description": "Alarm signaling snakes and ground-based threats; often elicits approach, scanning, and mobbing.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Reported less consistently than eagle and leopard alarms but included in multiple field studies.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Boom",
+          "acoustic_description": "Low-frequency, resonant long-distance call produced singly or in pairs.",
+          "semantic_description": "Long-distance spacing, contact, and group coordination; often produced by males in non-urgent contexts.",
+          "ontology_keywords": ["contact", "coordination", "long_distance", "display"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535526"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Comparable to boom calls in other forest guenons; less emphasized than alarm calls in the literature.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often produced in series at close range.",
+          "semantic_description": "Close-range social contact and coordination in low-arousal contexts.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535526"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Common affiliative call shared across cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream, often in bouts.",
+          "semantic_description": "Distress and escalation during aggressive interactions.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535526"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call common across guenons and macaques.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535526"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "De Brazza’s monkey (Cercopithecus neglectus)",
+      "taxonomy_basis": {
+        "summary": "Forest-dwelling guenon characterized by a relatively quiet social profile but a distinct male loud-call repertoire and predator-related alarm calls. De Brazza’s monkeys are often included in comparative guenon studies and mixed-species associations, though their vocal repertoire is less extensively catalogued than those of Diana or Campbell’s monkeys.",
+        "scientific_references": [
+          "https://www.jstor.org/stable/4535534",
+          "https://doi.org/10.1007/s00265-004-0789-2",
+          "https://doi.org/10.1098/rspb.2011.2112"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Boom",
+          "acoustic_description": "Low-frequency, resonant long-distance call, often produced singly or in short bouts by adult males.",
+          "semantic_description": "Long-distance spacing, group coordination, and advertisement of male presence.",
+          "ontology_keywords": ["contact", "coordination", "long_distance", "display"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535534"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Comparable to boom calls in other forest guenons, though produced less frequently.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Eagle alarm call",
+          "acoustic_description": "Short, sharp alarm call, acoustically distinct from terrestrial alarms.",
+          "semantic_description": "Alarm signaling aerial predators such as crowned-hawk eagles.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2",
+            "https://doi.org/10.1098/rspb.2011.2112"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Listeners in mixed-species groups respond appropriately to this call type.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Leopard alarm call",
+          "acoustic_description": "Lower-frequency, harsher alarm call than eagle alarms.",
+          "semantic_description": "Alarm signaling terrestrial predators, especially leopards; elicits climbing and arboreal escape responses.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Part of the shared guenon predator-alarm system; fewer acoustic descriptions exist than for Diana monkeys.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Snake alarm call",
+          "acoustic_description": "Rapid series of harsh, staccato notes.",
+          "semantic_description": "Alarm signaling snakes or ground-based threats; often elicits approach and inspection.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Reported less consistently than eagle and leopard alarms.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often produced in series at close range.",
+          "semantic_description": "Close-range social contact and coordination in low-arousal contexts.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535534"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Common affiliative call shared across cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream.",
+          "semantic_description": "Distress and escalation during aggressive interactions.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535534"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call typical of guenons and macaques.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535534"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ]
+    },
+    {
+      "species_name": "L’Hoest’s monkey (Allochrocebus lhoesti)",
+      "taxonomy_basis": {
+        "summary": "Forest-dwelling cercopithecine with a moderately described vocal repertoire including male loud calls, predator-related alarm calls, and close-range social calls. L’Hoest’s monkeys are often included in comparative guenon studies and mixed-species associations, but their vocal repertoire is less finely subdivided than that of Diana or Campbell’s monkeys.",
+        "scientific_references": [
+          "https://www.jstor.org/stable/4535536",
+          "https://doi.org/10.1007/s00265-004-0789-2",
+          "https://doi.org/10.1098/rspb.2011.2112"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Boom",
+          "acoustic_description": "Low-frequency, resonant long-distance call produced singly or in short bouts, primarily by adult males.",
+          "semantic_description": "Long-distance spacing, contact, and group coordination; may function as advertisement of male presence.",
+          "ontology_keywords": ["contact", "coordination", "long_distance", "display"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535536"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Comparable to boom calls in other forest guenons; acoustic descriptions are less detailed than for Diana or Blue monkeys.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Eagle alarm call",
+          "acoustic_description": "Short, sharp alarm call acoustically distinct from terrestrial alarms.",
+          "semantic_description": "Alarm signaling aerial predators such as crowned-hawk eagles.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2",
+            "https://doi.org/10.1098/rspb.2011.2112"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Listeners in mixed-species groups respond appropriately, indicating shared alarm semantics across guenons.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Leopard alarm call",
+          "acoustic_description": "Lower-frequency, harsher alarm call than eagle alarms.",
+          "semantic_description": "Alarm signaling terrestrial predators such as leopards; elicits climbing and arboreal escape responses.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Part of the classic guenon predator-alarm system; fewer species-specific acoustic descriptions exist.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Snake alarm call",
+          "acoustic_description": "Rapid series of harsh, staccato notes.",
+          "semantic_description": "Alarm signaling snakes and ground-based threats; often elicits approach and inspection.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Reported less consistently than eagle and leopard alarms; included conservatively.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often produced in series at close range.",
+          "semantic_description": "Close-range social contact and coordination in low-arousal contexts.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535536"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Common affiliative call shared across cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream.",
+          "semantic_description": "Distress and escalation during aggressive interactions.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535536"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call typical of guenons and macaques.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535536"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ],
+      "completeness_warning": "This repertoire reflects the best-supported shared guenon call categories; species-specific subdivisions may exist but are not exhaustively enumerated in open-access sources."
+    },
+    {
+      "species_name": "Patas monkey (Erythrocebus patas)",
+      "taxonomy_basis": {
+        "summary": "Open-habitat cercopithecine adapted to savanna and semi-arid environments. Patas monkeys rely heavily on visual vigilance and rapid terrestrial escape, and their vocal repertoire is comparatively simple. Alarm calls and loud calls are well documented, especially in predator contexts involving terrestrial and aerial threats.",
+        "scientific_references": [
+          "https://www.jstor.org/stable/4535527",
+          "https://doi.org/10.1007/s00265-004-0789-2",
+          "https://www.jstor.org/stable/4535523"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Loud bark",
+          "acoustic_description": "Loud, harsh bark audible over long distances; often produced singly or in short bouts.",
+          "semantic_description": "Alarm and disturbance signal, particularly in response to predators or sudden environmental threats.",
+          "ontology_keywords": ["alarm", "predator", "long_distance"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535527",
+            "https://www.jstor.org/stable/4535523"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Primary alarm signal in patas monkeys; less acoustically differentiated than forest guenon alarm systems.",
+          "users": "All ages/sexes (adult males particularly salient)"
+        },
+        {
+          "call_name": "Male loud call",
+          "acoustic_description": "Low-frequency, far-carrying call produced by adult males, often from exposed positions.",
+          "semantic_description": "Long-distance spacing, advertisement of male presence, and group coordination.",
+          "ontology_keywords": ["contact", "coordination", "long_distance", "display"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535527"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Less stereotyped than forest-guenon boom calls; functionally similar in spacing and coordination.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Eagle alarm call",
+          "acoustic_description": "Sharp, abrupt alarm call given singly or in short series.",
+          "semantic_description": "Alarm signaling aerial predators; elicits rapid scanning and fleeing into cover when available.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Aerial alarm responses documented, though acoustic differentiation is less pronounced than in forest guenons.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call produced at close range, often in series.",
+          "semantic_description": "Close-range social contact and coordination in low-arousal contexts.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535527"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Common affiliative call shared across cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream.",
+          "semantic_description": "Distress and escalation during aggressive interactions or predator attacks.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535527"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call typical of Old World monkeys; not predator-specific.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535527"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interactions.",
+          "users": "Infants"
+        }
+      ],
+      "completeness_warning": "Patas monkey vocal repertoires are simpler and less finely subdivided than those of forest guenons; this entry reflects well-supported call categories without speculative subdivision."
+    },
+    {
+      "species_name": "Talapoin monkey (Miopithecus talapoin)",
+      "taxonomy_basis": {
+        "summary": "Small-bodied forest cercopithecine with a socially tolerant structure and a relatively simple but active vocal repertoire. Talapoin monkeys produce frequent close-range contact calls and affective vocalizations; alarm calling is present but less semantically differentiated than in guenons such as vervets or Diana monkeys.",
+        "scientific_references": [
+          "https://www.jstor.org/stable/4535528",
+          "https://doi.org/10.1007/BF00299750",
+          "https://doi.org/10.1007/s00265-004-0789-2"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Contact twitter",
+          "acoustic_description": "High-pitched, tonal or slightly modulated call produced frequently at close to medium range.",
+          "semantic_description": "Contact and group cohesion signal; maintains spatial cohesion during movement and foraging.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535528",
+            "https://doi.org/10.1007/BF00299750"
+          ],
+          "subjective_reliability": "high",
+          "comments": "One of the most frequently produced talapoin calls; emitted by multiple group members during routine activity.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Chirp",
+          "acoustic_description": "Short, high-frequency tonal call, often produced singly or in brief series.",
+          "semantic_description": "Short-range contact and attention-getting signal in low-arousal contexts.",
+          "ontology_keywords": ["contact"],
+          "scientific_references": [
+            "https://doi.org/10.1007/BF00299750"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often treated as a subtype or variant of contact calls in some taxonomies.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Alarm chirp",
+          "acoustic_description": "Rapid, higher-amplitude version of contact chirps, sometimes repeated in short bursts.",
+          "semantic_description": "General alarm or alert to sudden disturbances or potential predators.",
+          "ontology_keywords": ["alarm"],
+          "scientific_references": [
+            "https://doi.org/10.1007/s00265-004-0789-2"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Alarm calling is present but less clearly predator-specific than in other cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream, often produced in bouts.",
+          "semantic_description": "Distress and escalation during aggressive or high-arousal social interactions.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535528"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call common across cercopithecines; used during chases and conflicts.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Whine",
+          "acoustic_description": "High-pitched, tonal, plaintive vocalization, often prolonged.",
+          "semantic_description": "Distress, protest, or appeasement in social interactions.",
+          "ontology_keywords": ["affective", "distress"],
+          "scientific_references": [
+            "https://doi.org/10.1007/BF00299750"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often produced by juveniles and lower-ranking individuals.",
+          "users": "Juveniles and adults; both sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call produced at close range.",
+          "semantic_description": "Close-range social contact and coordination in low-arousal contexts.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535528"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Less prominent than contact twitters but present across contexts.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535528"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; frequent in infant handling and separation contexts.",
+          "users": "Infants"
+        }
+      ],
+      "completeness_warning": "Talapoin vocal repertoires emphasize contact and affective calls; alarm semantics are less finely differentiated than in guenons. This entry reflects well-supported categories without speculative subdivision."
+    },
+    {
+      "species_name": "Gelada (Theropithecus gelada)",
+      "taxonomy_basis": {
+        "summary": "High-altitude grassland cercopithecine with one of the most complex and socially rich vocal repertoires among non-human primates. Geladas produce a large set of graded vocalizations used in close-range social interaction, affiliation, aggression, and sexual contexts. Vocal sequences and fine acoustic modulation play a central role in social bonding and negotiation.",
+        "scientific_references": [
+          "https://www.jstor.org/stable/4535521",
+          "https://doi.org/10.1007/BF00299758",
+          "https://doi.org/10.1371/journal.pone.0036180",
+          "https://www.sciencedirect.com/science/article/pii/S0003347208000839"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Moan",
+          "acoustic_description": "Low-frequency, tonal, often prolonged vocalization; may occur singly or in sequences.",
+          "semantic_description": "Affiliative contact, reassurance, and social bonding in close-range interactions.",
+          "ontology_keywords": ["affiliative", "contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535521",
+            "https://doi.org/10.1371/journal.pone.0036180"
+          ],
+          "subjective_reliability": "high",
+          "comments": "One of the most frequent gelada vocalizations; central to social cohesion.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Grunt",
+          "acoustic_description": "Low-frequency, short-duration call, often produced in series.",
+          "semantic_description": "Close-range contact and coordination in low-arousal social contexts.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535521"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Functionally similar to grunts in other cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Wobble",
+          "acoustic_description": "Rapidly frequency-modulated tonal call with oscillating pitch.",
+          "semantic_description": "Affiliative and appeasement signaling, often during grooming or approach.",
+          "ontology_keywords": ["affiliative", "contact"],
+          "scientific_references": [
+            "https://doi.org/10.1007/BF00299758"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Highly characteristic gelada call; often cited as analogous to human prosodic modulation.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Yawn vocalization",
+          "acoustic_description": "Low-frequency vocalization accompanying exaggerated yawning display.",
+          "semantic_description": "Threat and dominance display in social tension contexts.",
+          "ontology_keywords": ["aggression", "threat", "display"],
+          "scientific_references": [
+            "https://www.sciencedirect.com/science/article/pii/S0003347208000839"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Often multimodal, combining vocal and visual threat elements.",
+          "users": "Primarily adult males"
+        },
+        {
+          "call_name": "Scream",
+          "acoustic_description": "High-amplitude, broadband scream, often in bouts.",
+          "semantic_description": "Distress and escalation during aggressive or high-arousal interactions.",
+          "ontology_keywords": ["affective", "distress", "aggression", "threat"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535521"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Affective call common across cercopithecines.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Copulation call",
+          "acoustic_description": "Rhythmic, often tonal vocalization produced during copulation.",
+          "semantic_description": "Sexual context signal; may influence mate competition and social attention.",
+          "ontology_keywords": ["sex"],
+          "scientific_references": [
+            "https://doi.org/10.1007/BF00299758"
+          ],
+          "subjective_reliability": "medium-high",
+          "comments": "Sexual vocalizations are prominent in geladas relative to many other cercopithecines.",
+          "users": "Adult females"
+        },
+        {
+          "call_name": "Infant distress call",
+          "acoustic_description": "High-pitched repetitive distress vocalization.",
+          "semantic_description": "Care solicitation and distress signaling toward caregivers.",
+          "ontology_keywords": ["affective", "distress", "infant"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535521"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Ontogenetically restricted; central to mother–infant interaction.",
+          "users": "Infants"
+        },
+        {
+          "call_name": "Alarm bark",
+          "acoustic_description": "Loud, abrupt bark-like call.",
+          "semantic_description": "Alarm or disturbance signaling, often to predators or sudden threats.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": [
+            "https://www.jstor.org/stable/4535521"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "Alarm calls exist but are less semantically subdivided than in forest guenons.",
+          "users": "All ages/sexes"
+        }
+      ],
+      "completeness_warning": "Gelada vocal repertoires are highly graded and continuous; this entry reflects well-supported call classes rather than fine-grained acoustic subtypes."
     }
   ]
 }
