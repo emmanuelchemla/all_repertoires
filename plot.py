@@ -572,8 +572,15 @@ def run_interactive(
     line_traces = []
     for sp in species_unique:
         line_kwargs = dict(
-            x=[], y=[], mode="lines", line=dict(color=color_map[sp], width=2), opacity=0.45,
-            hoverinfo="skip", showlegend=False, name=f"{sp} connection", uid=f"line-{sp}",
+            x=[],
+            y=[],
+            mode="lines",
+            line=dict(color=color_map[sp], width=2),
+            opacity=0.45,
+            hoverinfo="skip",
+            showlegend=False,
+            name=f"{sp} connection",
+            uid=f"line-{sp}",
         )
         if is_3d:
             line_kwargs["z"] = []
@@ -583,8 +590,15 @@ def run_interactive(
             line_traces.append(go.Scatter(**line_kwargs))
 
     label_kwargs = dict(
-        x=[], y=[], mode="markers+text", marker=dict(color="black", size=1),
-        text=[], textposition="top center", hoverinfo="skip", showlegend=False, uid="labels",
+        x=[],
+        y=[],
+        mode="markers+text",
+        marker=dict(color="black", size=1),
+        text=[],
+        textposition="top center",
+        hoverinfo="skip",
+        showlegend=False,
+        uid="labels",
     )
     if is_3d:
         label_kwargs["z"] = []
@@ -596,8 +610,14 @@ def run_interactive(
     legend_traces = []
     for sp in species_unique:
         leg_kwargs = dict(
-            x=[None], y=[None], mode="markers", marker=dict(color=color_map[sp], size=8),
-            name=sp, hoverinfo="skip", showlegend=True, uid=f"legend-{sp}",
+            x=[None],
+            y=[None],
+            mode="markers",
+            marker=dict(color=color_map[sp], size=8),
+            name=sp,
+            hoverinfo="skip",
+            showlegend=True,
+            uid=f"legend-{sp}",
         )
         if is_3d:
             leg_kwargs["z"] = [None]
@@ -699,7 +719,9 @@ def run_interactive(
             label_texts.append(call_names[nn_idx])
 
         if is_3d:
-            fig.data[label_idx].update(x=label_x, y=label_y, z=label_z, text=label_texts)
+            fig.data[label_idx].update(
+                x=label_x, y=label_y, z=label_z, text=label_texts
+            )
         else:
             fig.data[label_idx].update(x=label_x, y=label_y, text=label_texts)
 
