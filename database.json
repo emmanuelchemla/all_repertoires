@@ -7,6 +7,10 @@
   "species": [
     {
       "species_name": "Carolina chickadee (Poecile carolinensis)",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Paridae",
+      "genus": "Poecile",
       "taxonomy_basis": {
         "summary": "Small North American parid songbird best known for its complex chick-a-dee call system, in which the number and structure of terminal 'dee' notes encode information about predator size, threat level, and urgency. Carolina chickadees are a classic model for graded alarm signaling, combinatorial structure, and socially mediated information transfer in birds.",
         "scientific_references": [
@@ -74,6 +78,10 @@
     },
     {
       "species_name": "Meerkat (Suricata suricatta)",
+      "class": "Mammalia",
+      "order": "Carnivora",
+      "family": "Herpestidae",
+      "genus": "Suricata",
       "taxonomy_basis": {
         "summary": "Cooperatively breeding mongooses from southern Africa with one of the most intensively studied mammalian alarm-call systems. Meerkats produce distinct alarm call types that encode predator class (aerial vs terrestrial) and urgency, alongside a broader repertoire of contact, recruitment, aggression, and affective calls. Their alarm calls are a canonical example of functionally referential communication in mammals.",
         "scientific_references": [
@@ -173,6 +181,10 @@
     },
     {
       "species_name": "Spotted hyena (Crocuta crocuta)",
+      "class": "Mammalia",
+      "order": "Carnivora",
+      "family": "Hyaenidae",
+      "genus": "Crocuta",
       "taxonomy_basis": {
         "summary": "Highly social carnivore living in large, complex clans with a rich vocal repertoire used for long-distance coordination, individual identification, dominance interactions, and affective expression. Spotted hyenas are best known for their 'laugh' or giggle vocalizations, which encode information about individual identity, age, and social rank. Their vocal system is one of the most intensively studied mammalian examples of individual identity signaling and graded affective communication.",
         "scientific_references": [
@@ -270,6 +282,10 @@
     },
     {
       "species_name": "Poison dart frogs (Dendrobatidae; various genera)",
+      "class": "Amphibia",
+      "order": "Anura",
+      "family": "Dendrobatidae",
+      "genus": null,
       "taxonomy_basis": {
         "summary": "Neotropical frogs with highly diverse and species-specific acoustic repertoires, often used as models for studies of sexual selection and speciation. Calls are primarily produced by males and are used for mate attraction, territory defense, and species recognition. Many species produce both advertisement and aggressive calls, with fine-scale variation reflecting microhabitat and social context.",
         "scientific_references": [
@@ -309,6 +325,10 @@
     },
     {
       "species_name": "Green tree frog (Hyla cinerea)",
+      "class": "Amphibia",
+      "order": "Anura",
+      "family": "Hylidae",
+      "genus": "Hyla",
       "taxonomy_basis": {
         "summary": "North American hylid frog with a well-studied, stereotyped vocal repertoire. Males produce advertisement calls to attract females and defend territories, with additional aggressive and encounter calls in social contexts. Call structure is influenced by environmental and social factors.",
         "scientific_references": [
@@ -346,6 +366,10 @@
     },
     {
       "species_name": "Túngara frog (Engystomops pustulosus)",
+      "class": "Amphibia",
+      "order": "Anura",
+      "family": "Leptodactylidae",
+      "genus": "Engystomops",
       "taxonomy_basis": {
         "summary": "Neotropical frog with a classic model system for sexual selection and signal evolution. Males produce complex multi-note 'whine–chuck' calls; call complexity and structure are subject to strong female choice and predation pressure. Aggressive and release calls are also described.",
         "scientific_references": [
@@ -393,6 +417,10 @@
     },
     {
       "species_name": "American bullfrog (Lithobates catesbeianus)",
+      "class": "Amphibia",
+      "order": "Anura",
+      "family": "Ranidae",
+      "genus": "Lithobates",
       "taxonomy_basis": {
         "summary": "Large North American ranid frog with one of the most intensively studied anuran acoustic signaling systems. Male bullfrogs produce loud, low-frequency advertisement calls used for mate attraction and territorial spacing, as well as graded aggressive and distress calls. Call frequency, amplitude, and rate encode body size and dominance, making this species a classic model for amplitude-based dominance signaling and spacing in chorusing animals.",
         "scientific_references": [
@@ -471,6 +499,10 @@
     },
     {
       "species_name": "African savanna elephant (Loxodonta africana)",
+      "class": "Mammalia",
+      "order": "Proboscidea",
+      "family": "Elephantidae",
+      "genus": "Loxodonta",
       "taxonomy_basis": {
         "summary": "Large-brained, fission–fusion social mammal with a rich, predominantly low-frequency vocal repertoire used for long-distance contact, coordination, and social regulation. African elephants produce infrasonic rumbles that can propagate through air and as seismic components through the ground, supporting long-range communication. They also produce higher-frequency calls (e.g., trumpets, roars, barks) associated with arousal, aggression, disturbance, and distress. Some alarm rumbles show context-specific acoustic modifications (e.g., differentiating bees vs humans).",
         "scientific_references": [
@@ -609,6 +641,10 @@
     },
     {
       "species_name": "Gray wolf (Canis lupus)",
+      "class": "Mammalia",
+      "order": "Carnivora",
+      "family": "Canidae",
+      "genus": "Canis",
       "taxonomy_basis": {
         "summary": "Highly social canid with a well-studied vocal repertoire used for long-distance coordination, territorial advertisement, social bonding, aggression, and affective expression. Gray wolf vocal communication integrates howls, barks, growls, whines, and yelps, often combined with body posture and facial expression. Howling is central to pack cohesion, spacing between packs, and group identity, while close-range calls regulate fine-scale social interactions.",
         "scientific_references": [
@@ -688,6 +724,10 @@
     },
     {
       "species_name": "Egyptian fruit bat (Rousettus aegyptiacus)",
+      "class": "Mammalia",
+      "order": "Chiroptera",
+      "family": "Pteropodidae",
+      "genus": "Rousettus",
       "taxonomy_basis": {
         "summary": "Highly social megabat notable for combining vocal communication with active biosonar (tongue-click echolocation). Egyptian fruit bats produce a rich repertoire of social vocalizations used for aggression, affiliation, mother–infant interactions, mating, and group coordination. Recent work shows that many social calls are individually distinctive and context-specific, making this species a key model for studying vocal communication, individual identity, and social complexity in bats.",
         "scientific_references": [
@@ -762,6 +802,10 @@
     },
     {
       "species_name": "Greater sac-winged bat (Saccopteryx bilineata)",
+      "class": "Mammalia",
+      "order": "Chiroptera",
+      "family": "Emballonuridae",
+      "genus": "Saccopteryx",
       "taxonomy_basis": {
         "summary": "Neotropical emballonurid bat well known for complex, learned vocal communication. Greater sac-winged bats produce rich repertoires of social calls used in territorial defense, courtship, group cohesion, and mother–infant interactions. Juveniles learn territorial songs and social calls from adult tutors, making this species one of the best-documented non-human mammalian models of vocal learning outside cetaceans and humans.",
         "scientific_references": [
@@ -845,6 +889,10 @@
     },
     {
       "species_name": "Zebra finch (Taeniopygia guttata)",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Estrildidae",
+      "genus": "Taeniopygia",
       "taxonomy_basis": {
         "summary": "Estrildid finch native to Australia, widely used as a model in neuroethology of vocal learning and song production. Zebra finch song is highly stereotyped, with males producing a single, fixed motif learned from tutors, making the species a key system for studying sensorimotor learning and neural control of vocal behavior.",
         "scientific_references": [
@@ -934,6 +982,10 @@
     },
     {
       "species_name": "Bengalese finch (Lonchura striata domestica)",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Estrildidae",
+      "genus": "Lonchura",
       "taxonomy_basis": {
         "summary": "Domesticated estrildid songbird derived from the white-rumped munia, widely used as a model for complex song syntax and vocal variability. Male Bengalese finches produce learned songs composed of syllables arranged in probabilistic, branching sequences rather than fixed motifs, making the species central to studies of syntactic structure, variability, and neural control of vocal sequencing.",
         "scientific_references": [
@@ -1023,6 +1075,10 @@
     },
     {
       "species_name": "Japanese tit (Parus minor)",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Paridae",
+      "genus": "Parus",
       "taxonomy_basis": {
         "summary": "Small passerine songbird widely studied for compositional syntax in vocal communication. Japanese tits produce discrete call notes that can be combined into ordered sequences with rule-based meanings, such that receivers interpret call sequences compositionally rather than as unanalyzed wholes. This species provides one of the clearest non-human examples of syntactic structure in natural communication.",
         "scientific_references": [
@@ -1094,6 +1150,10 @@
     },
     {
       "species_name": "Plain-tailed wren (Pheugopedius euophrys)",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Troglodytidae",
+      "genus": "Pheugopedius",
       "taxonomy_basis": {
         "summary": "Neotropical passerine famous for precisely coordinated antiphonal duetting between males and females. Plain-tailed wrens produce songs in which the sexes alternate syllables with millisecond-level timing, creating a single, coherent song perceived by receivers as a unified vocal display. This species is a canonical model for duet-based coordination, temporal precision, and joint vocal production in animals.",
         "scientific_references": [
@@ -1147,6 +1207,10 @@
     },
     {
       "species_name": "White-browed sparrow-weaver (Plocepasser mahali)",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Ploceidae",
+      "genus": "Plocepasser",
       "taxonomy_basis": {
         "summary": "Cooperatively breeding African passerine well known for precise vocal turn-taking, antiphonal calling, and group-level coordination. White-browed sparrow-weavers produce a limited but well-studied repertoire of contact, duet-like, and alarm calls that are exchanged according to strict temporal rules. This species is a canonical model for turn-taking, conversational timing, and coordination in animal communication, independent of complex song syntax.",
         "scientific_references": [
@@ -1208,6 +1272,10 @@
     },
     {
       "species_name": "Chestnut-crowned babbler (Pomatostomus ruficeps)",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Pomatostomidae",
+      "genus": "Pomatostomus",
       "taxonomy_basis": {
         "summary": "Cooperatively breeding Australian passerine notable for sophisticated vocal coordination, turn-taking, and socially structured call usage. Chestnut-crowned babblers produce a small but well-studied repertoire of contact and social calls, including antiphonal vocal exchanges that support group cohesion and coordinated movement. This species is a key model for studying turn-taking and conversational rules in non-human animals.",
         "scientific_references": [
@@ -1265,6 +1333,10 @@
     },
     {
       "species_name": "European starling (Sturnus vulgaris)",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Sturnidae",
+      "genus": "Sturnus",
       "taxonomy_basis": {
         "summary": "Highly social oscine songbird with an exceptionally large and complex song repertoire. Male European starlings produce long, continuous song bouts composed of heterogeneous phrase types arranged in structured sequences. Songs include both species-typical motifs and imitative elements learned from conspecifics and heterospecifics, making starlings a key model for hierarchical sequencing, long-range temporal organization, and vocal learning beyond fixed motifs.",
         "scientific_references": [
@@ -1356,6 +1428,10 @@
     },
     {
       "species_name": "African grey parrot (Psittacus erithacus)",
+      "class": "Aves",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Psittacus",
       "taxonomy_basis": {
         "summary": "Large-brained psittacine bird renowned for advanced vocal learning, imitation, and context-sensitive use of learned labels. African grey parrots can acquire human words and conspecific calls, and in experimental settings demonstrate referential use of vocal labels for objects, colors, numbers, and social partners. Their natural vocal repertoire combines learned contact calls, social calls, alarm calls, and affective vocalizations, embedded in a highly interactive communicative system.",
         "scientific_references": [
