@@ -1225,6 +1225,46 @@ def run_dash_app(
         className="app-root",
         children=[
             html.Div(
+                className="hero",
+                children=[
+                    html.H1("All repertoires", className="hero__title"),
+                    html.Div(
+                        [
+                            html.P(
+                                "This page is an interactive explorer of a cross-species database of animal vocal repertoires.",
+                                className="hero__paragraph",
+                            ),
+                            html.P(
+                                "Each point in the UMAP corresponds to a specific call type, embedded based on its acoustic description. "
+                                "Colors indicate species.",
+                                className="hero__paragraph",
+                            ),
+                            html.P(
+                                "How to use the interface:",
+                                className="hero__paragraph hero__paragraph--lead",
+                            ),
+                            html.Ul(
+                                [
+                                    html.Li(
+                                        "Use the taxonomy panel on the left to filter species or higher taxonomic groups."
+                                    ),
+                                    html.Li(
+                                        "Hover over points to inspect individual calls."
+                                    ),
+                                    html.Li(
+                                        "Click a point to select a call and view its nearest semantic translations in other species below."
+                                    ),
+                                    html.Li(
+                                        "In the Translations panel, check whether translations map back to the original call (back-translation)."
+                                    ),
+                                ],
+                                className="hero__list",
+                            ),
+                        ],
+                    ),
+                ],
+            ),
+            html.Div(
                 className="app-row",
                 children=[
                     # Left: taxonomy tree (click to filter)
