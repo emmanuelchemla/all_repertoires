@@ -1483,18 +1483,47 @@ def run_dash_app(
 
         selected_card = _render_call_card(calls_all[clicked_idx])
 
-        # Translation cards ordered by closeness, with similarity/distance labels
+        # Translation cards ordered by closeness, with similarity + back-translation check
         trans_cards = []
+
+        # Candidates for back-translation: calls in the original (base) species within current view
+        base_candidates = [i for i in idxs if species_all[i] == base_species]
+
         for dist, nn_idx in neighbors:
-            # semantic_embeds are normalized, so we can convert L2 distance to cosine similarity
-            # dist^2 = 2 - 2*cos => cos = 1 - dist^2/2
+            # Similarity between selected call and the translation (embeddings are normalized)
             cos_sim = 1.0 - (dist * dist) / 2.0
-            metric = f"sim={cos_sim:.3f} (d={dist:.3f})"
+
+            # Back-translation: from the translation back into the original species
+            bt_idx = None
+            bt_sim = None
+            if base_candidates:
+                bt_dists = _np.linalg.norm(
+                    semantic_embeds[base_candidates] - semantic_embeds[nn_idx], axis=1
+                )
+                j_bt = int(bt_dists.argmin())
+                bt_idx = base_candidates[j_bt]
+                bt_dist = float(bt_dists[j_bt])
+                bt_sim = 1.0 - (bt_dist * bt_dist) / 2.0
+
+            if bt_idx is not None:
+                bt_call_name = str(calls_all[bt_idx].get("call_name", ""))
+                icon = "✅" if int(bt_idx) == int(clicked_idx) else "❌"
+                back_line = f"Back-translation: {icon} {bt_call_name} (similarity: {bt_sim:.3f})"
+            else:
+                back_line = "Back-translation: (none)"
+
             trans_cards.append(
                 html.Div(
                     className="translation-card",
                     children=[
-                        html.Div(metric, className="subtle translation-metric"),
+                        html.Div(
+                            f"Similarlity: {cos_sim:.3f}",
+                            className="subtle translation-metric",
+                        ),
+                        html.Div(
+                            back_line,
+                            className="subtle translation-metric",
+                        ),
                         _render_call_card(calls_all[nn_idx]),
                     ],
                 )
