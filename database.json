@@ -6,6 +6,73 @@
   },
   "species": [
     {
+      "species_name": "Carolina chickadee (Poecile carolinensis)",
+      "taxonomy_basis": {
+        "summary": "Small North American parid songbird best known for its complex chick-a-dee call system, in which the number and structure of terminal 'dee' notes encode information about predator size, threat level, and urgency. Carolina chickadees are a classic model for graded alarm signaling, combinatorial structure, and socially mediated information transfer in birds.",
+        "scientific_references": [
+          "https://doi.org/10.1016/S0003-3472(98)00037-2",
+          "https://doi.org/10.1016/j.anbehav.2005.05.014",
+          "https://doi.org/10.1098/rspb.2012.2701"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Chick-a-dee mobbing call",
+          "acoustic_description": "Multi-note call consisting of an initial 'chick-a' portion followed by a variable number of 'dee' notes; overall call structure is flexible and graded.",
+          "semantic_description": "Alarm and mobbing recruitment; number of 'dee' notes encodes predator threat level and size.",
+          "ontology_keywords": [
+            "alarm",
+            "predator",
+            "recruitment",
+            "sequence",
+            "graded"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1016/S0003-3472(98)00037-2",
+            "https://doi.org/10.1016/j.anbehav.2005.05.014"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Playback experiments show that receivers adjust mobbing intensity and vigilance based on 'dee' note number.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Seet call",
+          "acoustic_description": "High-frequency, narrowband tonal call that is difficult for predators to localize.",
+          "semantic_description": "Aerial predator alarm eliciting freezing or cover-seeking behavior.",
+          "ontology_keywords": ["alarm", "predator", "aerial"],
+          "scientific_references": ["https://doi.org/10.1098/rspb.2012.2701"],
+          "subjective_reliability": "high",
+          "comments": "Functionally analogous to high-frequency aerial alarms in many small passerines.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Contact call",
+          "acoustic_description": "Short, tonal call exchanged between nearby flock members.",
+          "semantic_description": "Short-range contact and group cohesion during foraging.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": [
+            "https://doi.org/10.1016/j.anbehav.2005.05.014"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Highly frequent in non-alarm contexts.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Begging call",
+          "acoustic_description": "High-pitched repetitive call produced by nestlings.",
+          "semantic_description": "Food solicitation from parents.",
+          "ontology_keywords": ["food", "infant", "affective"],
+          "scientific_references": [
+            "https://doi.org/10.1016/S0169-5347(99)01425-4"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Comparable to begging systems in other parids and passerines.",
+          "users": "Nestlings"
+        }
+      ],
+      "completeness_warning": "Carolina chickadee vocal repertoires include additional call variants and graded forms; this entry focuses on the best-studied alarm, mobbing, and contact call categories emphasized in the literature."
+    },
+    {
       "species_name": "Meerkat (Suricata suricatta)",
       "taxonomy_basis": {
         "summary": "Cooperatively breeding mongooses from southern Africa with one of the most intensively studied mammalian alarm-call systems. Meerkats produce distinct alarm call types that encode predator class (aerial vs terrestrial) and urgency, alongside a broader repertoire of contact, recruitment, aggression, and affective calls. Their alarm calls are a canonical example of functionally referential communication in mammals.",
@@ -953,6 +1020,248 @@
         }
       ],
       "completeness_warning": "Bengalese finch song exhibits extensive syllable inventories and probabilistic transition matrices not exhaustively enumerated here; this entry reflects standard repertoire categories used in song syntax and neuroethology research."
+    },
+    {
+      "species_name": "Japanese tit (Parus minor)",
+      "taxonomy_basis": {
+        "summary": "Small passerine songbird widely studied for compositional syntax in vocal communication. Japanese tits produce discrete call notes that can be combined into ordered sequences with rule-based meanings, such that receivers interpret call sequences compositionally rather than as unanalyzed wholes. This species provides one of the clearest non-human examples of syntactic structure in natural communication.",
+        "scientific_references": [
+          "https://doi.org/10.1038/s41586-017-0071-8",
+          "https://doi.org/10.1126/science.aam9235",
+          "https://doi.org/10.1098/rsbl.2016.0903"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "ABC call sequence",
+          "acoustic_description": "Sequence composed of distinct A, B, and C notes produced in a fixed order.",
+          "semantic_description": "Compositional message combining information about predators and recruitment, eliciting scanning followed by approach behavior.",
+          "ontology_keywords": [
+            "alarm",
+            "predator",
+            "recruitment",
+            "syntax",
+            "sequence"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1038/s41586-017-0071-8",
+            "https://doi.org/10.1126/science.aam9235"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Playback experiments demonstrate order sensitivity and compositional interpretation by listeners.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "ABC-D call sequence",
+          "acoustic_description": "Extended sequence in which ABC notes are followed by D notes.",
+          "semantic_description": "Predator-related alert combined with recruitment to mob or inspect the threat.",
+          "ontology_keywords": [
+            "alarm",
+            "predator",
+            "recruitment",
+            "syntax",
+            "sequence"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1038/s41586-017-0071-8"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Demonstrates hierarchical structuring of call sequences.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "D call",
+          "acoustic_description": "Short, harsh note produced singly or in rapid series.",
+          "semantic_description": "Recruitment and mobbing coordination toward predators.",
+          "ontology_keywords": ["recruitment", "coordination", "predator"],
+          "scientific_references": ["https://doi.org/10.1098/rsbl.2016.0903"],
+          "subjective_reliability": "high",
+          "comments": "Comparable to chick-a-dee mobbing calls in other parids.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Contact call",
+          "acoustic_description": "Short, tonal call exchanged between nearby individuals.",
+          "semantic_description": "Short-range contact and group cohesion.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": ["https://doi.org/10.1098/rsbl.2016.0903"],
+          "subjective_reliability": "medium-high",
+          "comments": "Less studied than syntactic alarm sequences but common in daily social interactions.",
+          "users": "Both sexes"
+        }
+      ],
+      "completeness_warning": "Japanese tit vocal repertoires include additional note types and graded variants; this entry focuses on the best-supported syntactic and functional call categories emphasized in the literature."
+    },
+    {
+      "species_name": "Plain-tailed wren (Pheugopedius euophrys)",
+      "taxonomy_basis": {
+        "summary": "Neotropical passerine famous for precisely coordinated antiphonal duetting between males and females. Plain-tailed wrens produce songs in which the sexes alternate syllables with millisecond-level timing, creating a single, coherent song perceived by receivers as a unified vocal display. This species is a canonical model for duet-based coordination, temporal precision, and joint vocal production in animals.",
+        "scientific_references": [
+          "https://doi.org/10.1038/nature07472",
+          "https://doi.org/10.1098/rspb.2010.2455",
+          "https://doi.org/10.1098/rsbl.2011.0661"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Coordinated duet song",
+          "acoustic_description": "Song composed of rapidly alternating male and female syllables, each sex contributing complementary note types with precise temporal coordination.",
+          "semantic_description": "Joint territorial advertisement, pair bonding, and mate guarding; functions as a unified display rather than two independent songs.",
+          "ontology_keywords": [
+            "sex",
+            "display",
+            "coordination",
+            "sequence",
+            "turn_taking"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1038/nature07472",
+            "https://doi.org/10.1098/rspb.2010.2455"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Neural and behavioral studies show that disrupting timing in one partner degrades song structure; receivers treat the duet as a single signal.",
+          "users": "Adult male–female pairs"
+        },
+        {
+          "call_name": "Solo song (male or female)",
+          "acoustic_description": "Incomplete song consisting of syllables normally produced by one sex, lacking alternating structure.",
+          "semantic_description": "Reduced territorial or practice signaling when partner is absent.",
+          "ontology_keywords": ["display", "sex"],
+          "scientific_references": ["https://doi.org/10.1098/rsbl.2011.0661"],
+          "subjective_reliability": "medium",
+          "comments": "Less effective than coordinated duets; rarely elicits full territorial responses.",
+          "users": "Adult males or females"
+        },
+        {
+          "call_name": "Contact call",
+          "acoustic_description": "Short, soft call exchanged at close range between pair members or group members.",
+          "semantic_description": "Short-range contact and coordination between partners.",
+          "ontology_keywords": ["contact", "coordination"],
+          "scientific_references": ["https://doi.org/10.1098/rspb.2010.2455"],
+          "subjective_reliability": "medium-high",
+          "comments": "Occurs outside full song bouts; less studied than duet songs.",
+          "users": "Both sexes"
+        }
+      ],
+      "completeness_warning": "Plain-tailed wren vocal repertoires include additional call variants and context-dependent modifications; this entry emphasizes the duet system that makes the species a central model for coordinated vocal production."
+    },
+    {
+      "species_name": "White-browed sparrow-weaver (Plocepasser mahali)",
+      "taxonomy_basis": {
+        "summary": "Cooperatively breeding African passerine well known for precise vocal turn-taking, antiphonal calling, and group-level coordination. White-browed sparrow-weavers produce a limited but well-studied repertoire of contact, duet-like, and alarm calls that are exchanged according to strict temporal rules. This species is a canonical model for turn-taking, conversational timing, and coordination in animal communication, independent of complex song syntax.",
+        "scientific_references": [
+          "https://doi.org/10.1098/rspb.2008.1747",
+          "https://doi.org/10.1098/rsbl.2009.0105",
+          "https://doi.org/10.1098/rspb.2011.2346"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Contact call",
+          "acoustic_description": "Short, tonal call produced singly and exchanged between group members with precise timing.",
+          "semantic_description": "Maintenance of group cohesion and spatial coordination during routine activities.",
+          "ontology_keywords": ["contact", "coordination", "turn_taking"],
+          "scientific_references": [
+            "https://doi.org/10.1098/rspb.2008.1747",
+            "https://doi.org/10.1098/rsbl.2009.0105"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Calls are exchanged antiphonally; overlapping responses are actively avoided.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Duet-like cooperative call",
+          "acoustic_description": "Paired calls produced by two individuals in tightly coordinated alternation.",
+          "semantic_description": "Joint signaling reinforcing pair bonds and group membership.",
+          "ontology_keywords": [
+            "coordination",
+            "group_identity",
+            "turn_taking"
+          ],
+          "scientific_references": ["https://doi.org/10.1098/rspb.2011.2346"],
+          "subjective_reliability": "high",
+          "comments": "Unlike true song duets, calls remain structurally simple but temporally constrained.",
+          "users": "Adult pairs"
+        },
+        {
+          "call_name": "Alarm call",
+          "acoustic_description": "Sharp, abrupt call produced in response to predators or sudden disturbances.",
+          "semantic_description": "Alarm signaling toward group members; elicits vigilance or escape responses.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": ["https://doi.org/10.1098/rspb.2008.1747"],
+          "subjective_reliability": "medium-high",
+          "comments": "Less referentially specific than alarm systems in meerkats or guenons.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Begging call",
+          "acoustic_description": "High-pitched repetitive call produced by juveniles.",
+          "semantic_description": "Food solicitation from parents and helpers.",
+          "ontology_keywords": ["food", "infant", "affective"],
+          "scientific_references": ["https://doi.org/10.1098/rspb.2011.2346"],
+          "subjective_reliability": "high",
+          "comments": "Integral to cooperative breeding system.",
+          "users": "Juveniles"
+        }
+      ],
+      "completeness_warning": "White-browed sparrow-weaver vocal repertoires are relatively small; this entry emphasizes the call types most relevant to studies of turn-taking, coordination, and cooperative breeding."
+    },
+    {
+      "species_name": "Chestnut-crowned babbler (Pomatostomus ruficeps)",
+      "taxonomy_basis": {
+        "summary": "Cooperatively breeding Australian passerine notable for sophisticated vocal coordination, turn-taking, and socially structured call usage. Chestnut-crowned babblers produce a small but well-studied repertoire of contact and social calls, including antiphonal vocal exchanges that support group cohesion and coordinated movement. This species is a key model for studying turn-taking and conversational rules in non-human animals.",
+        "scientific_references": [
+          "https://doi.org/10.1098/rsbl.2010.0563",
+          "https://doi.org/10.1098/rspb.2015.0053",
+          "https://doi.org/10.1098/rsbl.2016.0403"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Flight call",
+          "acoustic_description": "Short, tonal call produced in antiphonal exchanges during group movement.",
+          "semantic_description": "Coordination of group movement and maintenance of cohesion during flight or relocation.",
+          "ontology_keywords": ["coordination", "contact", "turn_taking"],
+          "scientific_references": [
+            "https://doi.org/10.1098/rsbl.2010.0563",
+            "https://doi.org/10.1098/rspb.2015.0053"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Calls are exchanged in tightly timed sequences; interruption disrupts group coordination.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Chatter call",
+          "acoustic_description": "Rapid series of soft, broadband notes produced at close range.",
+          "semantic_description": "Affiliative contact and group cohesion in non-movement contexts.",
+          "ontology_keywords": ["affiliative", "contact"],
+          "scientific_references": ["https://doi.org/10.1098/rsbl.2016.0403"],
+          "subjective_reliability": "medium-high",
+          "comments": "Often overlaps among multiple individuals; less temporally structured than flight calls.",
+          "users": "All ages/sexes"
+        },
+        {
+          "call_name": "Begging call",
+          "acoustic_description": "High-pitched repetitive call produced by juveniles.",
+          "semantic_description": "Food solicitation toward parents and helpers.",
+          "ontology_keywords": ["food", "infant", "affective"],
+          "scientific_references": ["https://doi.org/10.1098/rspb.2015.0053"],
+          "subjective_reliability": "high",
+          "comments": "Integral to cooperative breeding system.",
+          "users": "Juveniles"
+        },
+        {
+          "call_name": "Alarm call",
+          "acoustic_description": "Sharp, abrupt call produced in response to sudden threats.",
+          "semantic_description": "Alarm and disturbance signaling toward group members.",
+          "ontology_keywords": ["alarm", "predator"],
+          "scientific_references": ["https://doi.org/10.1098/rsbl.2016.0403"],
+          "subjective_reliability": "medium",
+          "comments": "Less referentially specific than guenon or meerkat alarms.",
+          "users": "All ages/sexes"
+        }
+      ],
+      "completeness_warning": "Chestnut-crowned babbler repertoires are relatively small; this entry reflects the best-documented call types relevant to studies of turn-taking, coordination, and cooperative breeding."
     },
     {
       "species_name": "European starling (Sturnus vulgaris)",
