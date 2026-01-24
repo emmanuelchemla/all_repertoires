@@ -1,0 +1,13 @@
+# Core analysis and plotting
+numpy
+matplotlib
+sentence-transformers
+umap-learn
+
+# Interactive visualizations
+plotly
+dash
+
+# LLM providers (used in main.py)
+openai
+google-generativeai
