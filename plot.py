@@ -115,6 +115,7 @@ def available_taxa(
 def build_taxonomy_sunburst(
     calls: List[Dict[str, object]],
     title: str = "Taxonomy overview",
+    species_color_map: Dict[str, str] | None = None,
 ):
     """Build a simple Plotly sunburst chart from the optional taxonomy fields.
 
@@ -137,6 +138,10 @@ def build_taxonomy_sunburst(
     labels: List[str] = []
     ids: List[str] = []
     parents: List[str] = []
+    colors: List[str] = []
+
+    # Light neutral for internal taxonomy nodes; species leaves get their species color.
+    internal_color = "#E6E6E6"
 
     # Build a simple tree using string IDs like "rank:value" to avoid collisions.
     def node_id(rank: str, value: str) -> str:
@@ -149,6 +154,7 @@ def build_taxonomy_sunburst(
     labels.append("Life")
     ids.append(root)
     parents.append("")
+    colors.append(internal_color)
     added.add(root)
 
     for sp, c in seen.items():
@@ -174,6 +180,12 @@ def build_taxonomy_sunburst(
                 labels.append(value)
                 ids.append(nid)
                 parents.append(parent)
+
+                if rank == "species" and species_color_map is not None:
+                    colors.append(species_color_map.get(value, internal_color))
+                else:
+                    colors.append(internal_color)
+
                 added.add(nid)
 
             parent = nid
@@ -185,6 +197,7 @@ def build_taxonomy_sunburst(
             parents=parents,
             branchvalues="total",
             maxdepth=4,
+            marker=dict(colors=colors),
         )
     )
     fig.update_layout(title=title, margin=dict(t=40, l=10, r=10, b=10))
@@ -1022,7 +1035,7 @@ def run_dash_app(
     fig_scatter = make_scatter(init_calls, clicked_idx=None)
     fig_tax = None
     try:
-        fig_tax = build_taxonomy_sunburst(calls_all)
+        fig_tax = build_taxonomy_sunburst(calls_all, species_color_map=color_map)
     except Exception:
         fig_tax = go.Figure()
 
@@ -1099,13 +1112,13 @@ def run_dash_app(
                         id="details",
                         children="Click a point in the UMAP to see details here.",
                         style={
-                            "whiteSpace": "pre-wrap",
-                            "fontFamily": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-                            "fontSize": "12px",
                             "border": "1px solid #ddd",
-                            "padding": "10px",
-                            "borderRadius": "6px",
+                            "padding": "12px",
+                            "borderRadius": "8px",
                             "minHeight": "420px",
+                            "background": "#fff",
+                            "fontSize": "13px",
+                            "lineHeight": "1.35",
                         },
                     ),
                 ],
@@ -1199,39 +1212,72 @@ def run_dash_app(
     )
     def _show_details(clickData):
         if not clickData or not clickData.get("points"):
-            return "Click a point in the UMAP to see details here."
+            return dcc.Markdown(
+                "Click a point in the UMAP to see details here.",
+                style={"opacity": 0.75},
+            )
+
         idx = clickData["points"][0].get("customdata")
         if idx is None:
-            return "Click a point in the UMAP to see details here."
+            return dcc.Markdown(
+                "Click a point in the UMAP to see details here.",
+                style={"opacity": 0.75},
+            )
 
         c = calls_all[int(idx)]
+
+        species = str(c.get("species", ""))
+        call_name = str(c.get("call_name", ""))
+        acoustic = str(c.get("acoustic_description", "") or "").strip()
+        semantic = str(c.get("semantic_description", "") or "").strip()
+
+        # Keywords
         kws = c.get("ontology_keywords", []) or []
         if isinstance(kws, list):
-            kws_str = ", ".join(map(str, kws))
+            kws_list = [str(x) for x in kws if str(x).strip()]
         else:
-            kws_str = str(kws)
+            kws_list = [str(kws).strip()] if str(kws).strip() else []
 
-        lines = [
-            f"Species: {c.get('species', '')}",
-            f"Call:    {c.get('call_name', '')}",
-            "",
-            f"Acoustic: {c.get('acoustic_description', '')}",
-            "",
-            f"Semantic: {c.get('semantic_description', '')}",
-            "",
-            f"Keywords: {kws_str}",
-        ]
+        if kws_list:
+            kw_md = ", ".join(kws_list)
+        else:
+            kw_md = "_None_"
 
-        # Optional taxonomy display
-        tax_bits = []
-        for r in ["kingdom", "phylum", "class", "order", "family", "genus"]:
-            v = str(c.get(r, "")).strip()
-            if v:
-                tax_bits.append(f"{r}={v}")
-        if tax_bits:
-            lines.extend(["", "Taxonomy: " + " / ".join(tax_bits)])
+        acoustic_block = acoustic if acoustic else "_None_"
+        semantic_block = semantic if semantic else "_None_"
 
-        return "\n".join(lines)
+        # Render a nicer layout using HTML so label/value alignment is consistent.
+        label_w = "78px"  # fixed label column width for alignment
+        header_style = {"fontSize": "18px", "lineHeight": "1.25", "marginBottom": "6px"}
+
+        def header_row(label: str, value: str):
+            return html.Div(
+                style={"display": "flex", "gap": "10px", **header_style},
+                children=[
+                    html.Div(
+                        html.Strong(label + ":"),
+                        style={"width": label_w, "flex": f"0 0 {label_w}"},
+                    ),
+                    html.Div(value, style={"flex": "1"}),
+                ],
+            )
+
+        section_title_style = {"marginTop": "14px", "marginBottom": "6px"}
+        body_style = {"whiteSpace": "pre-wrap"}
+
+        return html.Div(
+            children=[
+                header_row("Species", species),
+                header_row("Call", call_name),
+                html.Hr(style={"margin": "10px 0"}),
+                html.H4("Acoustic description", style=section_title_style),
+                html.Div(acoustic_block, style=body_style),
+                html.H4("Semantic description", style=section_title_style),
+                html.Div(semantic_block, style=body_style),
+                html.H4("Keywords", style=section_title_style),
+                html.Div(kw_md, style=body_style),
+            ]
+        )
 
     # Dash 2.14+ prefers app.run(); keep a fallback for older versions.
     try:
