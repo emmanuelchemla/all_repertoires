@@ -32,13 +32,26 @@ from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 
 
 def load_calls(json_path: Path) -> List[Dict[str, object]]:
-    """Flatten species -> calls into a list of call dicts."""
+    """Flatten species -> calls into a list of call dicts.
+
+    Also carries optional taxonomy fields if present in the JSON under each species entry.
+    Supported keys (all optional): taxonomy (dict) and the flattened keys genus/family/order/class/phylum/kingdom.
+    """
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     calls: List[Dict[str, object]] = []
     for species_entry in data.get("species", []):
         species_name = species_entry.get("species_name", "unknown")
+        # Optional taxonomy fields (keep everything optional / backward-compatible)
+        taxonomy = species_entry.get("taxonomy", {}) or {}
+        # allow either nested taxonomy dict or flattened keys
+        tax_kingdom = taxonomy.get("kingdom", species_entry.get("kingdom", ""))
+        tax_phylum = taxonomy.get("phylum", species_entry.get("phylum", ""))
+        tax_class = taxonomy.get("class", species_entry.get("class", ""))
+        tax_order = taxonomy.get("order", species_entry.get("order", ""))
+        tax_family = taxonomy.get("family", species_entry.get("family", ""))
+        tax_genus = taxonomy.get("genus", species_entry.get("genus", ""))
         for call in species_entry.get("calls", []):
             calls.append(
                 {
@@ -47,9 +60,135 @@ def load_calls(json_path: Path) -> List[Dict[str, object]]:
                     "acoustic_description": call.get("acoustic_description", ""),
                     "semantic_description": call.get("semantic_description", ""),
                     "ontology_keywords": call.get("ontology_keywords", []),
+                    "taxonomy": taxonomy,
+                    "kingdom": tax_kingdom,
+                    "phylum": tax_phylum,
+                    "class": tax_class,
+                    "order": tax_order,
+                    "family": tax_family,
+                    "genus": tax_genus,
                 }
             )
     return calls
+
+
+def filter_calls(
+    calls: List[Dict[str, object]],
+    species_allowlist: Sequence[str] | None = None,
+    taxon_rank: str | None = None,
+    taxon_values: Sequence[str] | None = None,
+) -> List[Dict[str, object]]:
+    """Filter calls by species and/or a taxonomy rank.
+
+    - species_allowlist: if provided, keep only these species.
+    - taxon_rank: one of kingdom/phylum/class/order/family/genus
+    - taxon_values: if provided with taxon_rank, keep only calls whose rank value is in taxon_values.
+    """
+    out: List[Dict[str, object]] = []
+    allow = set(species_allowlist) if species_allowlist else None
+    tax_vals = set(taxon_values) if taxon_values else None
+
+    for c in calls:
+        sp = str(c.get("species", ""))
+        if allow is not None and sp not in allow:
+            continue
+
+        if taxon_rank and tax_vals is not None:
+            v = str(c.get(taxon_rank, ""))
+            if v not in tax_vals:
+                continue
+
+        out.append(c)
+    return out
+
+
+def available_taxa(
+    calls: List[Dict[str, object]],
+    rank: str,
+) -> List[str]:
+    """Return sorted unique values for a given taxonomy rank."""
+    vals = {str(c.get(rank, "")).strip() for c in calls}
+    vals.discard("")
+    return sorted(vals)
+
+
+def build_taxonomy_sunburst(
+    calls: List[Dict[str, object]],
+    title: str = "Taxonomy overview",
+):
+    """Build a simple Plotly sunburst chart from the optional taxonomy fields.
+
+    This is a lightweight alternative to a full phylogenetic tree, but it helps users
+    filter/organize by taxa in a web UI.
+
+    Requires: plotly
+    """
+    import plotly.graph_objects as go
+
+    # Use unique species entries; pick the first call for each species.
+    seen = {}
+    for c in calls:
+        sp = str(c.get("species", "unknown"))
+        if sp not in seen:
+            seen[sp] = c
+
+    ranks = ["kingdom", "phylum", "class", "order", "family", "genus", "species"]
+
+    labels: List[str] = []
+    ids: List[str] = []
+    parents: List[str] = []
+
+    # Build a simple tree using string IDs like "rank:value" to avoid collisions.
+    def node_id(rank: str, value: str) -> str:
+        return f"{rank}:{value}" if rank != "species" else f"species:{value}"
+
+    added = set()
+
+    # Root node
+    root = "root:Life"
+    labels.append("Life")
+    ids.append(root)
+    parents.append("")
+    added.add(root)
+
+    for sp, c in seen.items():
+        path = {
+            "kingdom": str(c.get("kingdom", "")).strip(),
+            "phylum": str(c.get("phylum", "")).strip(),
+            "class": str(c.get("class", "")).strip(),
+            "order": str(c.get("order", "")).strip(),
+            "family": str(c.get("family", "")).strip(),
+            "genus": str(c.get("genus", "")).strip(),
+            "species": sp,
+        }
+
+        # Determine the first non-empty rank to attach to root
+        parent = root
+        for rank in ranks:
+            value = path.get(rank, "")
+            if rank != "species" and not value:
+                continue
+
+            nid = node_id(rank, value)
+            if nid not in added:
+                labels.append(value)
+                ids.append(nid)
+                parents.append(parent)
+                added.add(nid)
+
+            parent = nid
+
+    fig = go.Figure(
+        go.Sunburst(
+            labels=labels,
+            ids=ids,
+            parents=parents,
+            branchvalues="total",
+            maxdepth=4,
+        )
+    )
+    fig.update_layout(title=title, margin=dict(t=40, l=10, r=10, b=10))
+    return fig
 
 
 def load_cache(cache_path: Path, model: str) -> Dict[str, List[float]]:
@@ -729,5 +868,380 @@ def run_interactive(
     return fig
 
 
+def run_dash_app(
+    json_path: Path | str = "database.json",
+    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2",
+    cache: Path | str = ".embedding_cache.json",
+    host: str = "0.0.0.0",
+    port: int = 8050,
+    n_components: int = 2,
+):
+    """Run an internal Dash web app.
+
+    Features:
+    - Species selection (multi)
+    - Taxonomy filtering (if taxonomy fields exist in JSON)
+    - Click a point to show call details
+    - Optional taxonomy sunburst overview
+
+    Notes:
+    - Requires: dash, plotly
+    - Intended for internal use (e.g., Cloud Run/GCE) and access over Tailscale.
+    """
+    from pathlib import Path as _Path
+
+    import numpy as _np
+    import plotly.graph_objects as go
+
+    try:
+        from dash import Dash, dcc, html, Input, Output
+    except Exception as e:  # pragma: no cover
+        raise RuntimeError(
+            "Dash is required for run_dash_app(). Install with: pip install dash"
+        ) from e
+
+    json_path = _Path(json_path)
+    cache = _Path(cache)
+
+    calls_all = load_calls(json_path)
+    if not calls_all:
+        raise SystemExit("No calls found in the provided JSON.")
+
+    # Build embeddings once
+    acoustic_texts = [str(c.get("acoustic_description", "")) for c in calls_all]
+    semantic_texts = [str(c.get("semantic_description", "")) for c in calls_all]
+    species_all = [str(c.get("species", "unknown")) for c in calls_all]
+    call_names_all = [str(c.get("call_name", "unknown")) for c in calls_all]
+
+    encoder = SentenceTransformer(embedding_model)
+    acoustic_embeds, _ = embed_texts(acoustic_texts, embedding_model, cache, encoder)
+    semantic_embeds, _ = embed_texts(semantic_texts, embedding_model, cache, encoder)
+
+    coords = reduce_umap(acoustic_embeds, n_components=n_components)
+    coords = _np.asarray(coords)
+
+    # Stable integer index for each call
+    for i, c in enumerate(calls_all):
+        c["_idx"] = i
+
+    species_unique = sorted(set(species_all))
+
+    # --- Color map (species -> color) for consistent coloring across plots/lines ---
+    from plotly.colors import qualitative as _qual
+
+    color_map = {
+        sp: _qual.Plotly[i % len(_qual.Plotly)] for i, sp in enumerate(species_unique)
+    }
+
+    def make_scatter(
+        filtered_calls: List[Dict[str, object]],
+        clicked_idx: int | None = None,
+    ):
+        """Build scatter colored by species.
+
+        If clicked_idx is provided (stable global call index), draw one line per
+        other species to its nearest neighbor in *semantic* space.
+        """
+        idxs = [int(c["_idx"]) for c in filtered_calls]
+        if not idxs:
+            return go.Figure()
+
+        # Species present in the current filtered view
+        species_in_view = sorted({species_all[i] for i in idxs})
+
+        fig = go.Figure()
+
+        # Scatter: one trace per species, so each dot is colored by its species
+        for sp in species_in_view:
+            sp_idxs = [i for i in idxs if species_all[i] == sp]
+            if not sp_idxs:
+                continue
+            fig.add_trace(
+                go.Scatter(
+                    x=coords[sp_idxs, 0],
+                    y=coords[sp_idxs, 1],
+                    mode="markers",
+                    marker=dict(size=9, opacity=0.8, color=color_map.get(sp)),
+                    customdata=sp_idxs,
+                    text=[f"{call_names_all[i]} ({species_all[i]})" for i in sp_idxs],
+                    hoverinfo="text",
+                    name=sp,
+                    showlegend=True,
+                )
+            )
+
+        # Lines: when a point is clicked, connect to nearest semantic neighbor in each other species
+        if clicked_idx is not None:
+            try:
+                clicked_idx = int(clicked_idx)
+            except Exception:
+                clicked_idx = None
+
+        if clicked_idx is not None and clicked_idx in set(idxs):
+            base_species = species_all[clicked_idx]
+
+            # Precompute candidate lists per species within current view
+            sp_to_candidates: Dict[str, List[int]] = {}
+            for sp in species_in_view:
+                if sp == base_species:
+                    continue
+                sp_to_candidates[sp] = [i for i in idxs if species_all[i] == sp]
+
+            # Draw one line per other species (colored by the destination species)
+            base_vec = semantic_embeds[clicked_idx]
+            for sp, candidates in sp_to_candidates.items():
+                if not candidates:
+                    continue
+                cand_vecs = semantic_embeds[candidates]
+                dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
+                nn_idx = candidates[int(dists.argmin())]
+
+                fig.add_trace(
+                    go.Scatter(
+                        x=[coords[clicked_idx, 0], coords[nn_idx, 0]],
+                        y=[coords[clicked_idx, 1], coords[nn_idx, 1]],
+                        mode="lines",
+                        line=dict(color=color_map.get(sp), width=2),
+                        opacity=0.55,
+                        hoverinfo="skip",
+                        showlegend=False,
+                        name=f"{sp} connection",
+                    )
+                )
+
+        fig.update_layout(
+            title="UMAP of Acoustic Descriptions (interactive)",
+            xaxis_title="UMAP-1",
+            yaxis_title="UMAP-2",
+            margin=dict(t=45, l=10, r=10, b=10),
+        )
+        return fig
+
+    # Initial figures
+    init_calls = calls_all
+    fig_scatter = make_scatter(init_calls, clicked_idx=None)
+    fig_tax = None
+    try:
+        fig_tax = build_taxonomy_sunburst(calls_all)
+    except Exception:
+        fig_tax = go.Figure()
+
+    app = Dash(__name__)
+
+    # Store user selection (species allowlist). Empty means "all species".
+    # Taxonomy graph clicks will toggle species in/out of the selection.
+    from dash import State
+
+    # Map taxonomy node id (e.g., "family:Hominidae") -> set of species names.
+    tax_ranks = ["kingdom", "phylum", "class", "order", "family", "genus"]
+    tax_to_species: Dict[str, set[str]] = {}
+
+    # Use unique species entries (first call per species) to avoid duplicates.
+    first_by_species: Dict[str, Dict[str, object]] = {}
+    for c in calls_all:
+        sp = str(c.get("species", "unknown"))
+        if sp not in first_by_species:
+            first_by_species[sp] = c
+
+    for sp, c in first_by_species.items():
+        for r in tax_ranks:
+            v = str(c.get(r, "")).strip()
+            if not v:
+                continue
+            nid = f"{r}:{v}"
+            tax_to_species.setdefault(nid, set()).add(sp)
+
+    # A convenience node for "all species"
+    tax_to_species["root:Life"] = set(first_by_species.keys())
+
+    app.layout = html.Div(
+        style={"display": "flex", "gap": "16px", "alignItems": "flex-start"},
+        children=[
+            # Left: taxonomy tree (click to filter)
+            html.Div(
+                style={"width": "340px"},
+                children=[
+                    dcc.Store(id="species-store", data=[]),
+                    html.H3("Taxonomy"),
+                    html.Div(
+                        "Click taxonomy nodes to add/remove species. Click 'Life' to select all.",
+                        style={
+                            "fontSize": "12px",
+                            "opacity": 0.75,
+                            "marginBottom": "6px",
+                        },
+                    ),
+                    dcc.Graph(id="taxonomy", figure=fig_tax),
+                    html.Div(
+                        id="selected-species",
+                        style={
+                            "fontSize": "12px",
+                            "marginTop": "8px",
+                            "whiteSpace": "pre-wrap",
+                        },
+                    ),
+                ],
+            ),
+            # Middle: UMAP
+            html.Div(
+                style={"flex": "1", "minWidth": "520px"},
+                children=[
+                    html.H3("UMAP"),
+                    dcc.Graph(id="scatter", figure=fig_scatter, clear_on_unhover=True),
+                ],
+            ),
+            # Right: details
+            html.Div(
+                style={"width": "380px"},
+                children=[
+                    html.H3("Selected call"),
+                    html.Div(
+                        id="details",
+                        children="Click a point in the UMAP to see details here.",
+                        style={
+                            "whiteSpace": "pre-wrap",
+                            "fontFamily": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+                            "fontSize": "12px",
+                            "border": "1px solid #ddd",
+                            "padding": "10px",
+                            "borderRadius": "6px",
+                            "minHeight": "420px",
+                        },
+                    ),
+                ],
+            ),
+        ],
+    )
+
+    # --- New callbacks for species/taxonomy selection ---
+
+    @app.callback(
+        Output("species-store", "data"),
+        Input("taxonomy", "clickData"),
+        State("species-store", "data"),
+        prevent_initial_call=True,
+    )
+    def _toggle_species_from_taxonomy(clickData, current):
+        current_set = set(current or [])
+        if not clickData or not clickData.get("points"):
+            return sorted(current_set)
+
+        pt = clickData["points"][0]
+        node_id = pt.get("id") or pt.get("label")
+        if not node_id:
+            return sorted(current_set)
+
+        # Click root to reset to "all" (empty store)
+        if node_id == "root:Life" or node_id == "Life":
+            return []
+
+        node_id = str(node_id)
+        if ":" not in node_id:
+            return sorted(current_set)
+
+        rank, value = node_id.split(":", 1)
+
+        if rank == "species":
+            sp = value
+            if sp in current_set:
+                current_set.remove(sp)
+            else:
+                current_set.add(sp)
+            return sorted(current_set)
+
+        species_under = tax_to_species.get(node_id, set())
+        if not species_under:
+            return sorted(current_set)
+
+        if species_under.issubset(current_set):
+            current_set -= set(species_under)
+        else:
+            current_set |= set(species_under)
+
+        return sorted(current_set)
+
+    @app.callback(
+        Output("scatter", "figure"),
+        Input("species-store", "data"),
+        Input("scatter", "clickData"),
+    )
+    def _update_scatter_from_store(species_sel, clickData):
+        species_sel = species_sel or []
+        filtered = filter_calls(
+            calls_all,
+            species_allowlist=species_sel if species_sel else None,
+        )
+
+        clicked_idx = None
+        if clickData and clickData.get("points"):
+            clicked_idx = clickData["points"][0].get("customdata")
+
+        return make_scatter(filtered, clicked_idx=clicked_idx)
+
+    @app.callback(
+        Output("selected-species", "children"),
+        Input("species-store", "data"),
+    )
+    def _render_selected_species(species_sel):
+        species_sel = species_sel or []
+        if not species_sel:
+            return "Selected species: (all)"
+        if len(species_sel) <= 25:
+            return "Selected species:\n" + "\n".join(species_sel)
+        return "Selected species (first 25 of %d):\n%s" % (
+            len(species_sel),
+            "\n".join(species_sel[:25]),
+        )
+
+    @app.callback(
+        Output("details", "children"),
+        Input("scatter", "clickData"),
+    )
+    def _show_details(clickData):
+        if not clickData or not clickData.get("points"):
+            return "Click a point in the UMAP to see details here."
+        idx = clickData["points"][0].get("customdata")
+        if idx is None:
+            return "Click a point in the UMAP to see details here."
+
+        c = calls_all[int(idx)]
+        kws = c.get("ontology_keywords", []) or []
+        if isinstance(kws, list):
+            kws_str = ", ".join(map(str, kws))
+        else:
+            kws_str = str(kws)
+
+        lines = [
+            f"Species: {c.get('species', '')}",
+            f"Call:    {c.get('call_name', '')}",
+            "",
+            f"Acoustic: {c.get('acoustic_description', '')}",
+            "",
+            f"Semantic: {c.get('semantic_description', '')}",
+            "",
+            f"Keywords: {kws_str}",
+        ]
+
+        # Optional taxonomy display
+        tax_bits = []
+        for r in ["kingdom", "phylum", "class", "order", "family", "genus"]:
+            v = str(c.get(r, "")).strip()
+            if v:
+                tax_bits.append(f"{r}={v}")
+        if tax_bits:
+            lines.extend(["", "Taxonomy: " + " / ".join(tax_bits)])
+
+        return "\n".join(lines)
+
+    # Dash 2.14+ prefers app.run(); keep a fallback for older versions.
+    try:
+        app.run(host=host, port=port, debug=False)
+    except Exception:
+        app.run_server(host=host, port=port, debug=False)
+
+
 if __name__ == "__main__":
-    generate_all_plots()
+    # Default behavior: generate static plots.
+    # generate_all_plots()
+    # To run the internal web app instead, uncomment:
+    run_dash_app()
