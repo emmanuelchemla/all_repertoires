@@ -179,3 +179,423 @@
 .translation-card .call-card {
   margin-top: 0;
 }
+
+/* =========================
+   Base / page
+   ========================= */
+:root {
+  --bg: #fbfbfc;
+  --surface: #ffffff;
+  --surface-2: #f6f7f9;
+
+  --text: #111827;
+  --muted: #6b7280;
+
+  --border: rgba(17, 24, 39, 0.12);
+  --border-2: rgba(17, 24, 39, 0.08);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --radius: 14px;
+  --radius-sm: 10px;
+
+  --pad: 12px;
+  --pad-lg: 16px;
+
+  --accent: #2563eb;
+  --accent-2: #7c3aed;
+  --good: #16a34a;
+  --bad: #dc2626;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+.app-root {
+  padding: 14px 16px;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  margin: 0 0 10px 0;
+  letter-spacing: -0.015em;
+}
+h1 {
+  font-size: 26px;
+}
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 16px;
+  text-transform: none;
+}
+
+/* Small helper text */
+.subtle {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  margin: 6px 0 0 0;
+}
+
+/* =========================
+   Hero (top intro)
+   ========================= */
+.hero {
+  border: 1px solid var(--border-2);
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.06),
+    rgba(124, 58, 237, 0.05)
+  );
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 14px;
+}
+
+.hero__title {
+  display: inline-block;
+  margin: 0 0 8px 0;
+  font-weight: 800;
+}
+
+.hero__subtitle {
+  color: var(--muted);
+  max-width: 980px;
+  line-height: 1.45;
+}
+
+.hero__paragraph {
+  margin: 6px 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.hero__paragraph--lead {
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hero__list {
+  margin: 8px 0 0 18px;
+  padding: 0;
+  color: var(--muted);
+}
+.hero__list li {
+  margin: 6px 0;
+}
+
+/* =========================
+   Top row layout
+   ========================= */
+.app-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+/* Columns */
+.col--left {
+  width: 340px;
+}
+.col--middle {
+  flex: 1;
+  min-width: 520px;
+}
+.col--right {
+  width: 380px;
+}
+
+/* Give each column a subtle “section” feel */
+.col--left > h3,
+.col--middle > h3,
+.col--right > h3 {
+  padding: 0 2px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+/* =========================
+   Plot frames / panels
+   ========================= */
+.panel {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow-sm);
+  min-height: 220px;
+}
+
+.panel--hovered {
+}
+
+/* Plotly graphs: give them a nice frame without touching Plotly itself */
+.js-plotly-plot,
+.dash-graph {
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* =========================
+   Call cards
+   ========================= */
+.call-card {
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: var(--surface-2);
+}
+
+.call-card__title {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.call-card__title-strong {
+  font-weight: 800;
+}
+
+.call-card__hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid var(--border-2);
+}
+
+.call-card__row {
+  font-size: 12px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  white-space: pre-wrap;
+}
+
+.call-card__label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* =========================
+   Below row: Selected + Translations
+   ========================= */
+.below-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-top: 14px;
+}
+
+.below-row__selected {
+  width: 380px; /* matches right column width */
+}
+
+.below-row__translations {
+  flex: 1;
+  min-width: 0; /* IMPORTANT: allows the strip to actually scroll */
+}
+
+.selection-strip {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.selection-strip__inner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.selection-strip__inner .call-card {
+  min-width: 330px;
+  flex: 0 0 auto;
+}
+
+/* Translation metric lines */
+.translation-card {
+  flex: 0 0 auto;
+}
+.translation-metric {
+  margin: 0 0 6px 0;
+}
+
+/* Optional: make metric stand out slightly */
+.translation-card .translation-metric:first-child {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* =========================
+   Gallery (scroll + zoom)
+   ========================= */
+.static-gallery {
+  margin-top: 18px;
+}
+
+.section-title {
+  margin-top: 0;
+}
+
+.gallery-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px 2px 2px 2px;
+}
+
+.gallery-item {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 12px;
+  min-width: 320px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-item__title {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.gallery-item__img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-2);
+  cursor: zoom-in;
+}
+
+.gallery-item__caption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+/* =========================
+   Zoom modal
+   ========================= */
+.zoom-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+}
+
+.zoom-modal--hidden {
+  display: none;
+}
+
+.zoom-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.zoom-modal__content {
+  position: relative;
+  width: min(1200px, 92vw);
+  max-height: 90vh;
+  overflow: auto;
+  background: var(--surface);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 14px;
+  box-shadow: var(--shadow-md);
+}
+
+.zoom-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+.zoom-modal__close:hover {
+  border-color: var(--border);
+}
+
+.zoom-modal__title {
+  font-weight: 900;
+  margin: 6px 0 10px 0;
+}
+
+.zoom-modal__img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-2);
+}
+
+.zoom-modal__caption {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* =========================
+   Small quality-of-life
+   ========================= */
+
+/* nicer scrollbar (WebKit) */
+.gallery-strip::-webkit-scrollbar,
+.selection-strip::-webkit-scrollbar {
+  height: 10px;
+}
+.gallery-strip::-webkit-scrollbar-thumb,
+.selection-strip::-webkit-scrollbar-thumb {
+  background: rgba(17, 24, 39, 0.18);
+  border-radius: 999px;
+}
+.gallery-strip::-webkit-scrollbar-track,
+.selection-strip::-webkit-scrollbar-track {
+  background: rgba(17, 24, 39, 0.06);
+  border-radius: 999px;
+}
+
+/* reduce ugly focus outlines but keep accessibility */
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
