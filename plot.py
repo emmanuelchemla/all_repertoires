@@ -1227,11 +1227,11 @@ def run_dash_app(
             html.Div(
                 className="hero",
                 children=[
-                    html.H1("All repertoires", className="hero__title"),
+                    html.H1("Many species repertoires", className="hero__title"),
                     html.Div(
                         [
                             html.P(
-                                "This page is an interactive explorer of a cross-species database of animal vocal repertoires.",
+                                "This page offers an interactive explorer of a cross-species database of animal vocal repertoires.",
                                 className="hero__paragraph",
                             ),
                             html.P(
@@ -1246,19 +1246,30 @@ def run_dash_app(
                             html.Ul(
                                 [
                                     html.Li(
-                                        "Use the taxonomy panel on the left to filter species or higher taxonomic groups."
+                                        "Use the taxonomy panel on the left to filter species or higher taxonomic groups (play around with, it does not work perfectly)."
                                     ),
                                     html.Li(
                                         "Hover over points to inspect individual calls."
                                     ),
                                     html.Li(
-                                        "Click a point to select a call and view its nearest semantic translations in other species below."
+                                        "Click a point to select a call and view its nearest semantic equivalent in every other species:"
                                     ),
                                     html.Li(
-                                        "In the Translations panel, check whether translations map back to the original call (back-translation)."
+                                        "> The connections in the plot show these 'translations'."
+                                    ),
+                                    html.Li(
+                                        "> The Translations panel below provides all details, it also indicates whether these 'translations' map back to the original call (back-translation)."
                                     ),
                                 ],
                                 className="hero__list",
+                            ),
+                            html.P(
+                                "Static plots below",
+                                className="hero__paragraph hero__paragraph--lead",
+                            ),
+                            html.P(
+                                "At the bottom of the page, you will find some plots summarizing the whole data.",
+                                className="hero__paragraph",
                             ),
                         ],
                     ),
