@@ -1286,7 +1286,7 @@ def run_dash_app(
                             # --- BEGIN: Selection mode toggle ---
                             html.H3("Taxonomy"),
                             html.Div(
-                                "Click taxonomy nodes to filter species (add a group or focus on a group)
+                                "Click taxonomy nodes to filter species (add a group or focus on a group)",
                                 className="subtle",
                             ),
                             html.Div(
