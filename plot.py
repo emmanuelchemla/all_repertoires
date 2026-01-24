@@ -1283,11 +1283,32 @@ def run_dash_app(
                         className="col col--left",
                         children=[
                             dcc.Store(id="species-store", data=[]),
+                            # --- BEGIN: Selection mode toggle ---
                             html.H3("Taxonomy"),
                             html.Div(
-                                "Click taxonomy nodes to add/remove species. Click 'Life' to select all.",
+                                "Click taxonomy nodes to filter species (add a group or focus on a group)
                                 className="subtle",
                             ),
+                            html.Div(
+                                className="taxonomy-controls",
+                                children=[
+                                    html.Div(
+                                        "Selection mode",
+                                        className="taxonomy-controls__label",
+                                    ),
+                                    dcc.RadioItems(
+                                        id="selection-mode",
+                                        options=[
+                                            {"label": "Additive", "value": "add"},
+                                            {"label": "Replace", "value": "replace"},
+                                        ],
+                                        value="add",
+                                        inline=True,
+                                        className="taxonomy-controls__radio",
+                                    ),
+                                ],
+                            ),
+                            # --- END: Selection mode toggle ---
                             dcc.Graph(id="taxonomy", figure=fig_tax),
                         ],
                     ),
@@ -1401,13 +1422,17 @@ def run_dash_app(
     @app.callback(
         Output("species-store", "data"),
         Input("taxonomy", "clickData"),
+        Input("selection-mode", "value"),
         State("species-store", "data"),
         prevent_initial_call=True,
     )
-    def _toggle_species_from_taxonomy(clickData, current):
+    def _toggle_species_from_taxonomy(clickData, mode, current):
         current_set = set(current or [])
         if not clickData or not clickData.get("points"):
             return sorted(current_set)
+
+        mode = mode or "add"
+        is_replace = mode == "replace"
 
         pt = clickData["points"][0]
         node_id = pt.get("id") or pt.get("label")
@@ -1426,6 +1451,12 @@ def run_dash_app(
 
         if rank == "species":
             sp = value
+            if is_replace:
+                # Replace selection with this single species; clicking again clears
+                if current_set == {sp}:
+                    return []
+                return [sp]
+            # Additive: toggle
             if sp in current_set:
                 current_set.remove(sp)
             else:
@@ -1436,6 +1467,13 @@ def run_dash_app(
         if not species_under:
             return sorted(current_set)
 
+        if is_replace:
+            # Replace selection with the species under this node; clicking again clears
+            if current_set == set(species_under):
+                return []
+            return sorted(species_under)
+
+        # Additive (existing): toggle union/subtract
         if species_under.issubset(current_set):
             current_set -= set(species_under)
         else:
