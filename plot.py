@@ -28,7 +28,20 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from umap import UMAP
+
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+import re
+
+
+def species_common_name(name: str) -> str:
+    """Return display-friendly common name.
+
+    If the species string ends with a parenthetical (e.g. "Lion (Panthera leo)"),
+    strip the trailing parenthetical for display in legends/axes.
+    """
+    s = str(name)
+    return re.sub(r"\s*\([^)]*\)\s*$", "", s).strip()
 
 
 def load_calls(json_path: Path) -> List[Dict[str, object]]:
@@ -275,7 +288,7 @@ def plot_umap(embeddings: np.ndarray, species: List[str], out_path: Path) -> Non
             coords[mask, 0],
             coords[mask, 1],
             color=color_map[sp],
-            label=sp,
+            label=species_common_name(sp),
             s=30,
             alpha=0.8,
         )
@@ -304,7 +317,7 @@ def plot_umap_3d(embeddings: np.ndarray, species: List[str], out_path: Path) -> 
             coords[mask, 1],
             coords[mask, 2],
             color=color_map[sp],
-            label=sp,
+            label=species_common_name(sp),
             s=30,
             alpha=0.8,
         )
@@ -378,7 +391,7 @@ def plot_semantic_with_keywords(
             coords[mask, 0],
             coords[mask, 1],
             color=color_map[sp],
-            label=sp,
+            label=species_common_name(sp),
             s=30,
             alpha=0.8,
         )
@@ -432,7 +445,7 @@ def plot_semantic_with_keywords_3d(
             coords[mask, 1],
             coords[mask, 2],
             color=color_map[sp],
-            label=sp,
+            label=species_common_name(sp),
             s=30,
             alpha=0.8,
         )
@@ -470,9 +483,10 @@ def plot_calls_per_species(species: List[str], out_path: Path) -> None:
     counts = Counter(species)
     items = sorted(counts.items(), key=lambda x: x[1], reverse=True)
     labels, values = zip(*items)
+    labels_disp = [species_common_name(s) for s in labels]
     plt.figure(figsize=(10, 6))
     plt.bar(range(len(labels)), values, color="steelblue")
-    plt.xticks(range(len(labels)), labels, rotation=60, ha="right")
+    plt.xticks(range(len(labels)), labels_disp, rotation=60, ha="right")
     plt.ylabel("# calls")
     plt.title("Number of calls per species")
     plt.tight_layout()
@@ -481,20 +495,63 @@ def plot_calls_per_species(species: List[str], out_path: Path) -> None:
 
 
 def plot_keyword_frequency(
-    ontology_keywords: List[List[str]], out_path: Path, top_n: int = 20
+    ontology_keywords: List[List[str]],
+    orders: List[str],
+    out_path: Path,
+    top_n: int = 20,
 ) -> None:
-    counter: Counter[str] = Counter()
-    for kws in ontology_keywords:
-        counter.update(kws or [])
-    if not counter:
+    # Count keyword occurrences per taxonomic order
+    order_kw_counts: Dict[str, Counter] = defaultdict(Counter)
+    total_counter: Counter[str] = Counter()
+
+    for kws, order in zip(ontology_keywords, orders):
+        if not kws:
+            continue
+        for kw in kws:
+            order_kw_counts[order].update([kw])
+            total_counter.update([kw])
+
+    if not total_counter:
         return
-    most = counter.most_common(top_n)
-    labels, values = zip(*most)
+
+    # Select top-N keywords overall
+    top_keywords = [kw for kw, _ in total_counter.most_common(top_n)]
+
+    orders_unique = sorted(order_kw_counts.keys())
+
+    # Prepare stacked data
+    data = {
+        order: [order_kw_counts[order][kw] for kw in top_keywords]
+        for order in orders_unique
+    }
+
+    # Plot
     plt.figure(figsize=(10, 6))
-    plt.bar(range(len(labels)), values, color="darkgreen")
-    plt.xticks(range(len(labels)), labels, rotation=60, ha="right")
+    bottom = np.zeros(len(top_keywords))
+
+    palette = plt.cm.get_cmap("tab20", len(orders_unique))
+
+    for i, order in enumerate(orders_unique):
+        values = np.array(data[order])
+        plt.bar(
+            range(len(top_keywords)),
+            values,
+            bottom=bottom,
+            label=order,
+            color=palette(i),
+        )
+        bottom += values
+
+    plt.xticks(range(len(top_keywords)), top_keywords, rotation=60, ha="right")
     plt.ylabel("Frequency")
-    plt.title(f"Top {top_n} ontology keywords")
+    plt.title(f"Top {top_n} ontology keywords (stacked by taxonomic order)")
+    plt.legend(
+        title="Order",
+        fontsize="small",
+        title_fontsize="small",
+        bbox_to_anchor=(1.04, 1),
+        loc="upper left",
+    )
     plt.tight_layout()
     plt.savefig(out_path, dpi=300)
     plt.close()
@@ -529,7 +586,8 @@ def plot_keyword_heatmap(
     im = plt.imshow(mat, aspect="auto", cmap="viridis")
     plt.colorbar(im, label="Count")
     plt.xticks(range(len(keywords)), keywords, rotation=60, ha="right")
-    plt.yticks(range(len(species_set)), species_set)
+    species_disp = [species_common_name(s) for s in species_set]
+    plt.yticks(range(len(species_set)), species_disp)
     plt.title(f"Ontology keyword counts per species (top {top_n})")
     plt.tight_layout()
     plt.savefig(out_path, dpi=300)
@@ -577,7 +635,8 @@ def plot_keyword_heatmap_binned(
     cbar = plt.colorbar(im, ticks=[0, 1, 2, 3])
     cbar.ax.set_yticklabels(["0 calls", "1 call", "2–5 calls", ">5 calls"])
     plt.xticks(range(len(keywords)), keywords, rotation=60, ha="right")
-    plt.yticks(range(len(species_set)), species_set)
+    species_disp = [species_common_name(s) for s in species_set]
+    plt.yticks(range(len(species_set)), species_disp)
     plt.title(f"Binned keyword counts per species (top {top_n})")
     plt.tight_layout()
     plt.savefig(out_path, dpi=300)
@@ -647,7 +706,8 @@ def generate_all_plots(
     plot_calls_per_species(species, outputs["calls_per_species"])
 
     outputs["keyword_freq"] = out_dir / "keyword_freq.png"
-    plot_keyword_frequency(ontology_keywords, outputs["keyword_freq"])
+    orders = [c.get("order", "") for c in calls]
+    plot_keyword_frequency(ontology_keywords, orders, outputs["keyword_freq"])
 
     outputs["keyword_heatmap"] = out_dir / "keyword_heatmap.png"
     plot_keyword_heatmap(species, ontology_keywords, outputs["keyword_heatmap"])
@@ -766,7 +826,7 @@ def run_interactive(
             y=[None],
             mode="markers",
             marker=dict(color=color_map[sp], size=8),
-            name=sp,
+            name=species_common_name(sp),
             hoverinfo="skip",
             showlegend=True,
             uid=f"legend-{sp}",
@@ -903,8 +963,10 @@ def run_dash_app(
     """
     from pathlib import Path as _Path
 
+    import base64 as _base64
     import numpy as _np
     import plotly.graph_objects as go
+    import html as _html
 
     try:
         from dash import Dash, dcc, html, Input, Output
@@ -946,6 +1008,13 @@ def run_dash_app(
         sp: _qual.Plotly[i % len(_qual.Plotly)] for i, sp in enumerate(species_unique)
     }
 
+    def _fmt_hover(i: int) -> str:
+        """Minimal hover: species + call name."""
+        c = calls_all[i]
+        species = _html.escape(str(c.get("species", "")))
+        call_name = _html.escape(str(c.get("call_name", "")))
+        return f"{call_name} ({species})"
+
     def make_scatter(
         filtered_calls: List[Dict[str, object]],
         clicked_idx: int | None = None,
@@ -976,9 +1045,9 @@ def run_dash_app(
                     mode="markers",
                     marker=dict(size=9, opacity=0.8, color=color_map.get(sp)),
                     customdata=sp_idxs,
-                    text=[f"{call_names_all[i]} ({species_all[i]})" for i in sp_idxs],
-                    hoverinfo="text",
-                    name=sp,
+                    text=["" for _ in sp_idxs],
+                    hovertemplate="<extra></extra>",
+                    name=species_common_name(sp),
                     showlegend=True,
                 )
             )
@@ -1041,6 +1110,91 @@ def run_dash_app(
 
     app = Dash(__name__)
 
+    # Styling: CSS lives in ./assets/style.css (Dash auto-loads assets).
+    # Prefer className hooks over inline style dicts.
+
+    # --- Static plot gallery (images generated by generate_all_plots) ---
+    plots_dir = _Path("plots")
+
+    def _img_card(title: str, filename: str, caption: str):
+        p = plots_dir / filename
+        if not p.exists():
+            return html.Div(
+                className="img-card img-card--missing",
+                children=[
+                    html.H4(title, className="img-card__title"),
+                    html.Div(
+                        f"Missing: {p}",
+                        className="img-card__subtle",
+                    ),
+                ],
+            )
+
+        try:
+            b64 = _base64.b64encode(p.read_bytes()).decode("ascii")
+            src = f"data:image/png;base64,{b64}"
+        except Exception as e:
+            return html.Div(
+                className="img-card img-card--error",
+                children=[
+                    html.H4(title, className="img-card__title"),
+                    html.Div(
+                        f"Could not load {p}: {e}",
+                        className="img-card__subtle",
+                    ),
+                ],
+            )
+
+        return html.Div(
+            className="img-card",
+            children=[
+                html.H4(title, className="img-card__title"),
+                html.Div(caption, className="img-card__caption"),
+                html.Img(src=src, className="img-card__img"),
+            ],
+        )
+
+    static_gallery = html.Div(
+        className="static-gallery",
+        children=[
+            html.H3("Static plots"),
+            html.Div(
+                "A few summary plots (looked up in ./plots).",
+                className="subtle",
+            ),
+            html.Div(
+                className="static-gallery__grid",
+                children=[
+                    _img_card(
+                        "Acoustic UMAP",
+                        "acoustic_umap.png",
+                        "2D UMAP of acoustic descriptions colored by species.",
+                    ),
+                    _img_card(
+                        "Semantic UMAP",
+                        "semantic_umap.png",
+                        "Semantic description embedding with ontology keyword markers.",
+                    ),
+                    _img_card(
+                        "Calls per species",
+                        "calls_per_species.png",
+                        "How many call types are currently recorded per species.",
+                    ),
+                    _img_card(
+                        "Keyword frequency",
+                        "keyword_freq.png",
+                        "Most common ontology keywords across the dataset.",
+                    ),
+                    _img_card(
+                        "Keyword heatmap (binned)",
+                        "keyword_heatmap_bin.png",
+                        "Species × keyword presence, binned into frequency buckets.",
+                    ),
+                ],
+            ),
+        ],
+    )
+
     # Store user selection (species allowlist). Empty means "all species".
     # Taxonomy graph clicks will toggle species in/out of the selection.
     from dash import State
@@ -1068,65 +1222,130 @@ def run_dash_app(
     tax_to_species["root:Life"] = set(first_by_species.keys())
 
     app.layout = html.Div(
-        style={"display": "flex", "gap": "16px", "alignItems": "flex-start"},
+        className="app-root",
         children=[
-            # Left: taxonomy tree (click to filter)
             html.Div(
-                style={"width": "340px"},
+                className="app-row",
                 children=[
-                    dcc.Store(id="species-store", data=[]),
-                    html.H3("Taxonomy"),
+                    # Left: taxonomy tree (click to filter)
                     html.Div(
-                        "Click taxonomy nodes to add/remove species. Click 'Life' to select all.",
-                        style={
-                            "fontSize": "12px",
-                            "opacity": 0.75,
-                            "marginBottom": "6px",
-                        },
+                        className="col col--left",
+                        children=[
+                            dcc.Store(id="species-store", data=[]),
+                            html.H3("Taxonomy"),
+                            html.Div(
+                                "Click taxonomy nodes to add/remove species. Click 'Life' to select all.",
+                                className="subtle",
+                            ),
+                            dcc.Graph(id="taxonomy", figure=fig_tax),
+                        ],
                     ),
-                    dcc.Graph(id="taxonomy", figure=fig_tax),
+                    # Middle: UMAP
                     html.Div(
-                        id="selected-species",
-                        style={
-                            "fontSize": "12px",
-                            "marginTop": "8px",
-                            "whiteSpace": "pre-wrap",
-                        },
+                        className="col col--middle",
+                        children=[
+                            html.H3("UMAP"),
+                            dcc.Graph(
+                                id="scatter", figure=fig_scatter, clear_on_unhover=True
+                            ),
+                        ],
                     ),
-                ],
-            ),
-            # Middle: UMAP
-            html.Div(
-                style={"flex": "1", "minWidth": "520px"},
-                children=[
-                    html.H3("UMAP"),
-                    dcc.Graph(id="scatter", figure=fig_scatter, clear_on_unhover=True),
-                ],
-            ),
-            # Right: details
-            html.Div(
-                style={"width": "380px"},
-                children=[
-                    html.H3("Selected call"),
+                    # Right: hovered call only (selected call panel removed)
                     html.Div(
-                        id="details",
-                        children="Click a point in the UMAP to see details here.",
-                        style={
-                            "border": "1px solid #ddd",
-                            "padding": "12px",
-                            "borderRadius": "8px",
-                            "minHeight": "420px",
-                            "background": "#fff",
-                            "fontSize": "13px",
-                            "lineHeight": "1.35",
-                        },
+                        className="col col--right",
+                        children=[
+                            html.H3("Hovered call"),
+                            html.Div(
+                                id="overlayed",
+                                children="Hover a point to see its details here.",
+                                className="panel panel--hovered",
+                            ),
+                        ],
                     ),
                 ],
             ),
+            html.Div(
+                className="below-row",
+                children=[
+                    html.Div(
+                        className="below-row__selected",
+                        children=[
+                            html.H3("Selected call"),
+                            html.Div(
+                                id="selected-call",
+                                children="Click a point to select a call.",
+                                className="panel panel--selected",
+                            ),
+                        ],
+                    ),
+                    html.Div(
+                        className="below-row__translations",
+                        children=[
+                            html.H3("Translations"),
+                            html.Div(
+                                id="translations-strip",
+                                children="Click a point to see nearest semantic neighbors in other displayed species.",
+                                className="selection-strip",
+                            ),
+                        ],
+                    ),
+                ],
+            ),
+            static_gallery,
         ],
     )
 
     # --- New callbacks for species/taxonomy selection ---
+
+    # --- Reusable call-card renderer for selected/hovered call panels and translation strip ---
+    def _render_call_card(c: Dict[str, object]) -> html.Div:
+        species = str(c.get("species", ""))
+        call_name = str(c.get("call_name", ""))
+        acoustic = str(c.get("acoustic_description", "") or "").strip()
+        semantic = str(c.get("semantic_description", "") or "").strip()
+
+        kws = c.get("ontology_keywords", []) or []
+        if isinstance(kws, list):
+            kws_list = [str(x) for x in kws if str(x).strip()]
+        else:
+            kws_list = [str(kws).strip()] if str(kws).strip() else []
+        kw_text = ", ".join(kws_list) if kws_list else "None"
+
+        return html.Div(
+            className="call-card",
+            children=[
+                html.Div(
+                    [
+                        html.Strong(species, className="call-card__title-strong"),
+                        html.Span(" — "),
+                        html.Strong(call_name, className="call-card__title-strong"),
+                    ],
+                    className="call-card__title",
+                ),
+                html.Hr(className="call-card__hr"),
+                html.Div(
+                    [
+                        html.Span("Acoustic: ", className="call-card__label"),
+                        acoustic or "None",
+                    ],
+                    className="call-card__row",
+                ),
+                html.Div(
+                    [
+                        html.Span("Semantic: ", className="call-card__label"),
+                        semantic or "None",
+                    ],
+                    className="call-card__row",
+                ),
+                html.Div(
+                    [
+                        html.Span("Keywords: ", className="call-card__label"),
+                        kw_text,
+                    ],
+                    className="call-card__row",
+                ),
+            ],
+        )
 
     @app.callback(
         Output("species-store", "data"),
@@ -1192,92 +1411,122 @@ def run_dash_app(
         return make_scatter(filtered, clicked_idx=clicked_idx)
 
     @app.callback(
-        Output("selected-species", "children"),
+        Output("selected-call", "children"),
+        Output("translations-strip", "children"),
         Input("species-store", "data"),
-    )
-    def _render_selected_species(species_sel):
-        species_sel = species_sel or []
-        if not species_sel:
-            return "Selected species: (all)"
-        if len(species_sel) <= 25:
-            return "Selected species:\n" + "\n".join(species_sel)
-        return "Selected species (first 25 of %d):\n%s" % (
-            len(species_sel),
-            "\n".join(species_sel[:25]),
-        )
-
-    @app.callback(
-        Output("details", "children"),
         Input("scatter", "clickData"),
     )
-    def _show_details(clickData):
-        if not clickData or not clickData.get("points"):
-            return dcc.Markdown(
-                "Click a point in the UMAP to see details here.",
-                style={"opacity": 0.75},
+    def _show_selected_and_translations(species_sel, clickData):
+        # Build the currently displayed set (same as scatter filtering)
+        species_sel = species_sel or []
+        filtered = filter_calls(
+            calls_all,
+            species_allowlist=species_sel if species_sel else None,
+        )
+        idxs = [int(c["_idx"]) for c in filtered]
+
+        if not idxs:
+            return (
+                dcc.Markdown("No calls in the current view.", className="subtle"),
+                dcc.Markdown("No calls in the current view.", className="subtle"),
             )
 
-        idx = clickData["points"][0].get("customdata")
+        placeholder_selected = dcc.Markdown(
+            "Click a point to select a call.",
+            className="subtle",
+        )
+        placeholder_trans = dcc.Markdown(
+            "Click a point to see nearest semantic neighbors in other displayed species.",
+            className="subtle",
+        )
+
+        if not clickData or not clickData.get("points"):
+            return (placeholder_selected, placeholder_trans)
+
+        clicked_idx = clickData["points"][0].get("customdata")
+        if clicked_idx is None:
+            return (placeholder_selected, placeholder_trans)
+
+        try:
+            clicked_idx = int(clicked_idx)
+        except Exception:
+            return (placeholder_selected, placeholder_trans)
+
+        if clicked_idx not in set(idxs):
+            return (
+                dcc.Markdown(
+                    "The selected point is not in the current filtered view.",
+                    className="subtle",
+                ),
+                placeholder_trans,
+            )
+
+        base_species = species_all[clicked_idx]
+        base_vec = semantic_embeds[clicked_idx]
+
+        # Nearest semantic neighbor per other species within the CURRENT view
+        neighbors: List[Tuple[float, int]] = []
+        species_in_view = sorted({species_all[i] for i in idxs})
+        for sp in species_in_view:
+            if sp == base_species:
+                continue
+            candidates = [i for i in idxs if species_all[i] == sp]
+            if not candidates:
+                continue
+            cand_vecs = semantic_embeds[candidates]
+            dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
+            j = int(dists.argmin())
+            nn_idx = candidates[j]
+            neighbors.append((float(dists[j]), nn_idx))
+
+        neighbors.sort(key=lambda x: x[0])
+
+        selected_card = _render_call_card(calls_all[clicked_idx])
+
+        # Translation cards ordered by closeness, with similarity/distance labels
+        trans_cards = []
+        for dist, nn_idx in neighbors:
+            # semantic_embeds are normalized, so we can convert L2 distance to cosine similarity
+            # dist^2 = 2 - 2*cos => cos = 1 - dist^2/2
+            cos_sim = 1.0 - (dist * dist) / 2.0
+            metric = f"sim={cos_sim:.3f} (d={dist:.3f})"
+            trans_cards.append(
+                html.Div(
+                    className="translation-card",
+                    children=[
+                        html.Div(metric, className="subtle translation-metric"),
+                        _render_call_card(calls_all[nn_idx]),
+                    ],
+                )
+            )
+
+        translations_inner = html.Div(
+            className="selection-strip__inner",
+            children=trans_cards,
+        )
+
+        return (selected_card, translations_inner)
+
+    @app.callback(
+        Output("overlayed", "children"),
+        Input("scatter", "hoverData"),
+    )
+    def _show_hovered(hoverData):
+        if not hoverData or not hoverData.get("points"):
+            return dcc.Markdown(
+                "Hover a point in the UMAP to see its details here.",
+                className="subtle",
+            )
+
+        idx = hoverData["points"][0].get("customdata")
         if idx is None:
             return dcc.Markdown(
-                "Click a point in the UMAP to see details here.",
-                style={"opacity": 0.75},
+                "Hover a point in the UMAP to see its details here.",
+                className="subtle",
             )
 
         c = calls_all[int(idx)]
-
-        species = str(c.get("species", ""))
-        call_name = str(c.get("call_name", ""))
-        acoustic = str(c.get("acoustic_description", "") or "").strip()
-        semantic = str(c.get("semantic_description", "") or "").strip()
-
-        # Keywords
-        kws = c.get("ontology_keywords", []) or []
-        if isinstance(kws, list):
-            kws_list = [str(x) for x in kws if str(x).strip()]
-        else:
-            kws_list = [str(kws).strip()] if str(kws).strip() else []
-
-        if kws_list:
-            kw_md = ", ".join(kws_list)
-        else:
-            kw_md = "_None_"
-
-        acoustic_block = acoustic if acoustic else "_None_"
-        semantic_block = semantic if semantic else "_None_"
-
-        # Render a nicer layout using HTML so label/value alignment is consistent.
-        label_w = "78px"  # fixed label column width for alignment
-        header_style = {"fontSize": "18px", "lineHeight": "1.25", "marginBottom": "6px"}
-
-        def header_row(label: str, value: str):
-            return html.Div(
-                style={"display": "flex", "gap": "10px", **header_style},
-                children=[
-                    html.Div(
-                        html.Strong(label + ":"),
-                        style={"width": label_w, "flex": f"0 0 {label_w}"},
-                    ),
-                    html.Div(value, style={"flex": "1"}),
-                ],
-            )
-
-        section_title_style = {"marginTop": "14px", "marginBottom": "6px"}
-        body_style = {"whiteSpace": "pre-wrap"}
-
-        return html.Div(
-            children=[
-                header_row("Species", species),
-                header_row("Call", call_name),
-                html.Hr(style={"margin": "10px 0"}),
-                html.H4("Acoustic description", style=section_title_style),
-                html.Div(acoustic_block, style=body_style),
-                html.H4("Semantic description", style=section_title_style),
-                html.Div(semantic_block, style=body_style),
-                html.H4("Keywords", style=section_title_style),
-                html.Div(kw_md, style=body_style),
-            ]
-        )
+        return _render_call_card(c)
 
     # Dash 2.14+ prefers app.run(); keep a fallback for older versions.
     try:

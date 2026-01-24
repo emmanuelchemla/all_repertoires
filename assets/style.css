@@ -1,0 +1,181 @@
+/* --- Global layout --- */
+.app-root {
+  padding: 10px 12px;
+}
+
+.app-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.col--left {
+  width: 340px;
+}
+
+.col--middle {
+  flex: 1;
+  min-width: 520px;
+}
+
+.col--right {
+  width: 380px;
+}
+
+/* Small helper text */
+.subtle {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+/* Selected species list */
+.selected-species {
+  font-size: 12px;
+  margin-top: 8px;
+  white-space: pre-wrap;
+}
+
+/* Right-side panels */
+.panel {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  min-height: 260px;
+  margin-bottom: 12px;
+}
+
+.panel--hovered {
+  margin-bottom: 0;
+}
+
+/* --- Call cards (used in both panels) --- */
+.call-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fafafa;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.call-card__title {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.call-card__title-strong {
+  font-weight: 700;
+}
+
+.call-card__hr {
+  margin: 8px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.call-card__row {
+  margin-bottom: 6px;
+  white-space: pre-wrap;
+}
+
+.call-card__label {
+  font-weight: 700;
+}
+
+/* --- Static gallery --- */
+.static-gallery {
+  margin-top: 18px;
+}
+
+.static-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+/* --- Image cards --- */
+.img-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+}
+
+.img-card--missing,
+.img-card--error {
+  background: #fafafa;
+}
+
+.img-card__title {
+  margin: 0 0 6px 0;
+}
+
+.img-card__caption {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+.img-card__subtle {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.img-card__img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+.selection-strip {
+  overflow-x: auto;
+}
+.selection-strip__inner {
+  display: flex;
+  gap: 12px;
+}
+.selection-strip__inner .call-card {
+  min-width: 320px;
+  flex: 0 0 auto;
+}
+.below-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+
+/* Fixed left panel */
+.below-row__selected {
+  width: 380px; /* match right column or whatever you like */
+}
+
+/* Translations take the remaining width */
+.below-row__translations {
+  flex: 1;
+  min-width: 0; /* important so flex children can shrink and allow scrolling */
+}
+
+/* Scroll area */
+.selection-strip {
+  overflow-x: auto;
+}
+
+.selection-strip__inner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.selection-strip__inner .call-card {
+  min-width: 320px;
+  flex: 0 0 auto;
+}
+.translation-metric {
+  margin-bottom: 6px;
+}
+.translation-card .call-card {
+  margin-top: 0;
+}
