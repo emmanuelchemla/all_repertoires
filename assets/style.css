@@ -599,3 +599,13 @@ button:focus-visible,
   outline: 3px solid rgba(37, 99, 235, 0.35);
   outline-offset: 2px;
 }
+.taxonomy-controls {
+  margin: 8px 0 10px;
+}
+.taxonomy-controls__label {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.taxonomy-controls__radio label {
+  margin-right: 14px;
+}
