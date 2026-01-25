@@ -1009,6 +1009,36 @@ def run_dash_app(
         sp: _qual.Plotly[i % len(_qual.Plotly)] for i, sp in enumerate(species_unique)
     }
 
+    # --- Helper function: taxonomic icon ---
+    def _taxon_icon(c: Dict[str, object]) -> str:
+        """Return a small emoji icon based on broad taxonomy."""
+        cls = str(c.get("class", "")).lower()
+        order = str(c.get("order", "")).lower()
+
+        if "aves" in cls:
+            return "🐦"
+        if "amphibia" in cls:
+            return "🐸"
+        if "mammalia" in cls:
+            if "primates" in order:
+                family = str(c.get("family", "")).lower()
+                genus = str(c.get("genus", "")).lower()
+
+                # Great apes (Hominidae)
+                if "hominidae" in family or genus in ["pan", "gorilla", "pongo"]:
+                    return "🦧"
+
+                # Other primates
+                return "🐒"
+            if any(x in order for x in ["chiroptera"]):
+                return "🦇"
+            if any(x in order for x in ["proboscidea"]):
+                return "🐘"
+            if any(x in order for x in ["carnivora"]):
+                return "🐺"
+            return "🐾"
+        return ""
+
     def _fmt_hover(i: int) -> str:
         """Minimal hover: species + call name."""
         c = calls_all[i]
@@ -1048,7 +1078,7 @@ def run_dash_app(
                     customdata=sp_idxs,
                     text=["" for _ in sp_idxs],
                     hovertemplate="<extra></extra>",
-                    name=species_common_name(sp),
+                    name=f"{_taxon_icon(calls_all[sp_idxs[0]])} {species_common_name(sp)}",
                     showlegend=True,
                 )
             )
@@ -1421,28 +1451,6 @@ def run_dash_app(
     # --- New callbacks for species/taxonomy selection ---
 
     # --- New callbacks for species/taxonomy selection ---
-
-    # --- Helper function: taxonomic icon ---
-    def _taxon_icon(c: Dict[str, object]) -> str:
-        """Return a small emoji icon based on broad taxonomy."""
-        cls = str(c.get("class", "")).lower()
-        order = str(c.get("order", "")).lower()
-
-        if "aves" in cls:
-            return "🐦"
-        if "amphibia" in cls:
-            return "🐸"
-        if "mammalia" in cls:
-            if any(x in order for x in ["primates"]):
-                return "🐒"
-            if any(x in order for x in ["chiroptera"]):
-                return "🦇"
-            if any(x in order for x in ["proboscidea"]):
-                return "🐘"
-            if any(x in order for x in ["carnivora"]):
-                return "🐺"
-            return "🐾"
-        return ""
 
     # --- Reusable call-card renderer for selected/hovered call panels and translation strip ---
     def _render_call_card(c: Dict[str, object]) -> html.Div:
