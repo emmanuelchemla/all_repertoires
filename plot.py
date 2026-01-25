@@ -1359,22 +1359,22 @@ def run_dash_app(
                                                         "Selection mode",
                                                         className="taxonomy-controls__label",
                                                     ),
-                                                    dcc.RadioItems(
-                                                        id="static-selection-mode",
-                                                        options=[
-                                                            {
-                                                                "label": "Focus",
-                                                                "value": "replace",
-                                                            },
-                                                            {
-                                                                "label": "Add",
-                                                                "value": "add",
-                                                            },
-                                                        ],
-                                                        value="add",
-                                                        inline=True,
-                                                        className="taxonomy-controls__radio",
-                                                    ),
+                                    dcc.RadioItems(
+                                        id="static-selection-mode",
+                                        options=[
+                                            {
+                                                "label": "Focus",
+                                                "value": "replace",
+                                            },
+                                            {
+                                                "label": "Add",
+                                                "value": "add",
+                                            },
+                                        ],
+                                        value="replace",
+                                        inline=True,
+                                        className="taxonomy-controls__radio",
+                                    ),
                                                 ],
                                             ),
                                             dcc.Graph(
@@ -1488,7 +1488,7 @@ def run_dash_app(
                                                                 "value": "add",
                                                             },
                                                         ],
-                                                        value="add",
+                                                        value="replace",
                                                         inline=True,
                                                         className="taxonomy-controls__radio",
                                                     ),
