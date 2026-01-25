@@ -1276,12 +1276,39 @@ def run_dash_app(
     app.layout = html.Div(
         className="app-root",
         children=[
+            html.Nav(
+                className="topnav",
+                children=[
+                    html.Div("Repertoire Explorer", className="topnav__brand"),
+                    html.Div(
+                        className="topnav__links",
+                        children=[
+                            html.A("Homepage", href="#home", className="topnav__link"),
+                            html.A(
+                                "Explorer", href="#explorer", className="topnav__link"
+                            ),
+                            html.A(
+                                "Static plots",
+                                href="#static-plots",
+                                className="topnav__link",
+                            ),
+                        ],
+                    ),
+                ],
+            ),
             html.Div(
+                id="home",
                 className="hero",
                 children=[
-                    html.H1("Many species repertoires", className="hero__title"),
                     html.Div(
-                        [
+                        className="hero__header",
+                        children=html.H1(
+                            "Many species repertoires", className="hero__title"
+                        ),
+                    ),
+                    html.Div(
+                        className="hero__body",
+                        children=[
                             html.P(
                                 "This page offers an interactive explorer of a cross-species database of animal vocal repertoires.",
                                 className="hero__paragraph",
@@ -1300,9 +1327,7 @@ def run_dash_app(
                                     html.Li(
                                         "Use the taxonomy panel on the left to filter species or higher taxonomic groups (play around with, it does not work perfectly)."
                                     ),
-                                    html.Li(
-                                        "Hover over points to inspect individual calls."
-                                    ),
+                                    html.Li("Hover over points to inspect individual calls."),
                                     html.Li(
                                         "Click a point to select a call and view its nearest semantic equivalent in every other species:"
                                     ),
@@ -1328,123 +1353,170 @@ def run_dash_app(
                 ],
             ),
             html.Div(
-                className="app-row",
+                id="explorer",
+                className="section section--explorer",
                 children=[
-                    # Left: taxonomy tree (click to filter)
                     html.Div(
-                        className="col col--left",
+                        className="section__header",
                         children=[
-                            dcc.Store(id="species-store", data=[]),
-                            dcc.Store(id="selected-idx-store", data=None),
-                            html.H3("Taxonomy selection"),
                             html.Div(
-                                className="panel panel--taxonomy",
-                                children=[
-                                    html.Div(
-                                        "Click taxonomy nodes to filter species",
-                                        className="subtle subtle--tight",
+                                [
+                                    html.P(
+                                        "Interactive explorer",
+                                        className="section__kicker",
                                     ),
+                                    html.H2(
+                                        "Filter taxa, explore the UMAP, see translations",
+                                        className="section__title",
+                                    ),
+                                ]
+                            )
+                        ],
+                    ),
+                    html.Div(
+                        className="app-row",
+                        children=[
+                            # Left: taxonomy tree (click to filter)
+                            html.Div(
+                                className="col col--left",
+                                children=[
+                                    dcc.Store(id="species-store", data=[]),
+                                    dcc.Store(id="selected-idx-store", data=None),
+                                    html.H3("Taxonomy selection"),
                                     html.Div(
-                                        className="taxonomy-controls taxonomy-controls--compact taxonomy-controls--inline",
+                                        className="panel panel--taxonomy",
                                         children=[
-                                            html.Span(
-                                                "Selection mode",
-                                                className="taxonomy-controls__label",
+                                            html.Div(
+                                                "Click taxonomy nodes to filter species",
+                                                className="subtle subtle--tight",
                                             ),
-                                            dcc.RadioItems(
-                                                id="selection-mode",
-                                                options=[
-                                                    {
-                                                        "label": "Focus",
-                                                        "value": "replace",
-                                                    },
-                                                    {"label": "Add", "value": "add"},
+                                            html.Div(
+                                                className="taxonomy-controls taxonomy-controls--compact taxonomy-controls--inline",
+                                                children=[
+                                                    html.Span(
+                                                        "Selection mode",
+                                                        className="taxonomy-controls__label",
+                                                    ),
+                                                    dcc.RadioItems(
+                                                        id="selection-mode",
+                                                        options=[
+                                                            {
+                                                                "label": "Focus",
+                                                                "value": "replace",
+                                                            },
+                                                            {
+                                                                "label": "Add",
+                                                                "value": "add",
+                                                            },
+                                                        ],
+                                                        value="replace",
+                                                        inline=True,
+                                                        className="taxonomy-controls__radio",
+                                                    ),
                                                 ],
-                                                value="replace",
-                                                inline=True,
-                                                className="taxonomy-controls__radio",
+                                            ),
+                                            dcc.Graph(
+                                                id="taxonomy",
+                                                figure=fig_tax,
+                                                style={
+                                                    "height": "360px",
+                                                    "margin": "0",
+                                                },
                                             ),
                                         ],
                                     ),
+                                ],
+                            ),
+                            # Middle: UMAP
+                            html.Div(
+                                className="col col--middle",
+                                children=[
+                                    html.H3("UMAP"),
                                     dcc.Graph(
-                                        id="taxonomy",
-                                        figure=fig_tax,
-                                        style={
-                                            "height": "360px",
-                                            "margin": "0",
-                                        },
+                                        id="scatter",
+                                        figure=fig_scatter,
+                                        clear_on_unhover=True,
+                                    ),
+                                ],
+                            ),
+                            # Right: hovered call only (selected call panel removed)
+                            html.Div(
+                                className="col col--right",
+                                children=[
+                                    html.H3("Hovered call"),
+                                    html.Div(
+                                        id="overlayed",
+                                        children="Hover a point to see its details here.",
+                                        className="panel panel--hovered",
                                     ),
                                 ],
                             ),
                         ],
                     ),
-                    # Middle: UMAP
                     html.Div(
-                        className="col col--middle",
+                        className="below-row",
                         children=[
-                            html.H3("UMAP"),
-                            dcc.Graph(
-                                id="scatter",
-                                figure=fig_scatter,
-                                clear_on_unhover=True,
-                            ),
-                        ],
-                    ),
-                    # Right: hovered call only (selected call panel removed)
-                    html.Div(
-                        className="col col--right",
-                        children=[
-                            html.H3("Hovered call"),
                             html.Div(
-                                id="overlayed",
-                                children="Hover a point to see its details here.",
-                                className="panel panel--hovered",
+                                className="below-row__selected",
+                                children=[
+                                    html.Div(
+                                        className="panel-header",
+                                        children=[
+                                            html.H3(
+                                                "Selected call",
+                                                className="panel-header__title",
+                                            ),
+                                            html.Button(
+                                                "Clear selection",
+                                                id="clear-selection",
+                                                n_clicks=0,
+                                                className="btn btn--subtle",
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        id="selected-call",
+                                        children="Click a point to select a call.",
+                                        className="panel panel--selected",
+                                    ),
+                                ],
+                            ),
+                            html.Div(
+                                className="below-row__translations",
+                                children=[
+                                    html.H3("Translations"),
+                                    html.Div(
+                                        id="translations-strip",
+                                        children="Click a point to see nearest semantic neighbors in other displayed species.",
+                                        className="selection-strip",
+                                    ),
+                                ],
                             ),
                         ],
                     ),
                 ],
             ),
             html.Div(
-                className="below-row",
+                id="static-plots",
+                className="section section--static",
                 children=[
                     html.Div(
-                        className="below-row__selected",
+                        className="section__header",
                         children=[
                             html.Div(
-                                className="panel-header",
-                                children=[
-                                    html.H3(
-                                        "Selected call", className="panel-header__title"
+                                [
+                                    html.P("Static plots", className="section__kicker"),
+                                    html.H2(
+                                        "Quick summaries of the dataset",
+                                        className="section__title",
                                     ),
-                                    html.Button(
-                                        "Clear selection",
-                                        id="clear-selection",
-                                        n_clicks=0,
-                                        className="btn btn--subtle",
-                                    ),
-                                ],
-                            ),
-                            html.Div(
-                                id="selected-call",
-                                children="Click a point to select a call.",
-                                className="panel panel--selected",
-                            ),
+                                ]
+                            )
                         ],
                     ),
-                    html.Div(
-                        className="below-row__translations",
-                        children=[
-                            html.H3("Translations"),
-                            html.Div(
-                                id="translations-strip",
-                                children="Click a point to see nearest semantic neighbors in other displayed species.",
-                                className="selection-strip",
-                            ),
-                        ],
-                    ),
+                    static_gallery,
                 ],
             ),
-            static_gallery,
         ],
     )
 
