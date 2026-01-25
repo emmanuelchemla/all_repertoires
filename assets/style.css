@@ -743,6 +743,30 @@ h3 {
   flex: 0 0 auto;
 }
 
+.selection-strip--horizontal {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.selection-strip--horizontal .translation-card,
+.selection-strip--horizontal .call-card {
+  flex: 0 0 auto;
+}
+
+.translations-bottom {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: stretch;
+}
+
 /* Translation metric lines */
 .translation-card {
   flex: 0 0 auto;

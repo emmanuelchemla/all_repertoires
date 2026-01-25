@@ -1578,6 +1578,24 @@ def run_dash_app(
                 ],
             ),
             html.Div(
+                className="translations-bottom",
+                children=[
+                    dcc.Store(id="trans-selected-idx", data=None),
+                    html.Div(
+                        id="trans-selected-call",
+                        className="panel panel--tight",
+                        children="Click a point in any UMAP to select a call.",
+                        style={"flex": "0 0 32%"},
+                    ),
+                    html.Div(
+                        id="trans-translations-strip",
+                        className="panel panel--tight selection-strip selection-strip--horizontal",
+                        children="Translations will appear here.",
+                        style={"flex": "1 1 auto", "maxHeight": "320px"},
+                    ),
+                ],
+            ),
+            html.Div(
                 id="explorer",
                 className="section section--explorer",
                 children=[
@@ -2171,27 +2189,106 @@ def run_dash_app(
         Output("trans-umap2d-b", "figure"),
         Output("trans-umap3d-b", "figure"),
         Input("trans-species-store", "data"),
+        Input("trans-selected-idx", "data"),
     )
-    def _update_trans_figs(species_sel):
+    def _update_trans_figs(species_sel, selected_idx):
         fig_u2a = make_umap_fig(
             acoustic_umap2d_a,
             species_sel or [],
             "Acoustic UMAP",
             showlegend=False,
+            selected_idx=selected_idx,
         )
         fig_u3a = make_umap_fig(
-            acoustic_umap3d_a, species_sel or [], "Acoustic UMAP", showlegend=False
+            acoustic_umap3d_a,
+            species_sel or [],
+            "Acoustic UMAP",
+            showlegend=False,
+            selected_idx=selected_idx,
         )
         fig_u2b = make_umap_fig(
             semantic_umap2d,
             species_sel or [],
             "Semantic UMAP",
             showlegend=False,
+            selected_idx=selected_idx,
         )
         fig_u3b = make_umap_fig(
-            semantic_umap3d, species_sel or [], "Semantic UMAP", showlegend=False
+            semantic_umap3d,
+            species_sel or [],
+            "Semantic UMAP",
+            showlegend=False,
+            selected_idx=selected_idx,
         )
         return fig_u2a, fig_u3a, fig_u2b, fig_u3b
+
+    @app.callback(
+        Output("trans-selected-idx", "data"),
+        Input("trans-umap2d-a", "clickData"),
+        Input("trans-umap3d-a", "clickData"),
+        Input("trans-umap2d-b", "clickData"),
+        Input("trans-umap3d-b", "clickData"),
+        State("trans-selected-idx", "data"),
+        prevent_initial_call=True,
+    )
+    def _select_trans_idx(cd2a, cd3a, cd2b, cd3b, current):
+        from dash import ctx
+
+        trigger = ctx.triggered_id
+        clickData = {
+            "trans-umap2d-a": cd2a,
+            "trans-umap3d-a": cd3a,
+            "trans-umap2d-b": cd2b,
+            "trans-umap3d-b": cd3b,
+        }.get(trigger)
+        if clickData and clickData.get("points"):
+            idx = clickData["points"][0].get("customdata")
+            try:
+                return int(idx) if idx is not None else current
+            except Exception:
+                return current
+        return current
+
+    @app.callback(
+        Output("trans-selected-call", "children"),
+        Output("trans-translations-strip", "children"),
+        Input("trans-selected-idx", "data"),
+        Input("trans-species-store", "data"),
+    )
+    def _update_trans_selected(selected_idx, species_sel):
+        species_sel = species_sel or []
+        idxs = _idxs_for_species(species_sel)
+        if selected_idx is None or selected_idx not in idxs:
+            msg = "Click a point in the UMAPs to see details."
+            return msg, msg
+
+        # selected call card
+        selected_card = _render_call_card(calls_all[selected_idx])
+
+        # translations as nearest semantic neighbors per other displayed species
+        base_species = species_all[selected_idx]
+        base_vec = semantic_embeds[selected_idx]
+        neighbors = []
+        species_in_view = sorted({species_all[i] for i in idxs})
+        for sp in species_in_view:
+            if sp == base_species:
+                continue
+            candidates = [i for i in idxs if species_all[i] == sp]
+            if not candidates:
+                continue
+            cand_vecs = semantic_embeds[candidates]
+            dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
+            j = int(dists.argmin())
+            neighbors.append((dists[j], candidates[j]))
+
+        # order by semantic distance ascending
+        neighbors.sort(key=lambda x: x[0])
+
+        translations_strip = []
+        for dist, nn_idx in neighbors:
+            translations_strip.append(_render_call_card(calls_all[nn_idx]))
+
+        return selected_card, translations_strip
 
     @app.callback(
         Output("pair-graph", "figure"),
