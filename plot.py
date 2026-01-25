@@ -1359,22 +1359,22 @@ def run_dash_app(
                                                         "Selection mode",
                                                         className="taxonomy-controls__label",
                                                     ),
-                                    dcc.RadioItems(
-                                        id="static-selection-mode",
-                                        options=[
-                                            {
-                                                "label": "Focus",
-                                                "value": "replace",
-                                            },
-                                            {
-                                                "label": "Add",
-                                                "value": "add",
-                                            },
-                                        ],
-                                        value="replace",
-                                        inline=True,
-                                        className="taxonomy-controls__radio",
-                                    ),
+                                                    dcc.RadioItems(
+                                                        id="static-selection-mode",
+                                                        options=[
+                                                            {
+                                                                "label": "Focus",
+                                                                "value": "replace",
+                                                            },
+                                                            {
+                                                                "label": "Add",
+                                                                "value": "add",
+                                                            },
+                                                        ],
+                                                        value="replace",
+                                                        inline=True,
+                                                        className="taxonomy-controls__radio",
+                                                    ),
                                                 ],
                                             ),
                                             dcc.Graph(
@@ -1588,19 +1588,24 @@ def run_dash_app(
                         style={"flex": "0 0 32%"},
                     ),
                     html.Div(
-                        style={"flex": "1 1 auto", "display": "flex", "flexDirection": "column", "gap": "10px"},
+                        style={
+                            "flex": "1 1 auto",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "gap": "10px",
+                        },
                         children=[
                             html.Div(
                                 id="trans-translations-strip",
                                 className="panel panel--tight selection-strip selection-strip--horizontal",
                                 children="Semantic translations will appear here.",
-                                style={"maxHeight": "200px"},
+                                style={"maxHeight": "340px"},
                             ),
                             html.Div(
                                 id="trans-translations-acoustic",
                                 className="panel panel--tight selection-strip selection-strip--horizontal",
                                 children="Acoustic translations will appear here.",
-                                style={"maxHeight": "200px"},
+                                style={"maxHeight": "340px"},
                             ),
                         ],
                     ),
