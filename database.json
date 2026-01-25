@@ -370,8 +370,9 @@
       "order": "Anura",
       "family": "Leptodactylidae",
       "genus": "Engystomops",
+      "synonyms": ["Physalaemus pustulosus"],
       "taxonomy_basis": {
-        "summary": "Neotropical frog with a classic model system for sexual selection and signal evolution. Males produce complex multi-note 'whine–chuck' calls; call complexity and structure are subject to strong female choice and predation pressure. Aggressive and release calls are also described.",
+        "summary": "Neotropical frog with a classic model system for sexual selection and signal evolution. Males produce complex multi-note 'whine–chuck' calls; call complexity and structure are subject to strong female choice and predation pressure. Aggressive and release calls are also described. Formerly classified as Physalaemus pustulosus in older literature.",
         "scientific_references": [
           "https://doi.org/10.1016/S0003-3472(98)80018-1",
           "https://doi.org/10.1098/rstb.2013.0056"
@@ -5611,79 +5612,6 @@
       "genus": "Taeniopygia"
     },
     {
-      "species_name": "Túngara frog (Physalaemus pustulosus)",
-      "taxonomy_basis": {
-        "summary": "Neotropical leptodactylid frog and one of the most intensively studied models of acoustic communication and sexual selection. Male túngara frogs produce advertisement calls composed of a mandatory ‘whine’ and optional ‘chuck’ components. Call structure reflects a tradeoff between female mate choice and predation risk, making the species a canonical system for studying signal components, receiver bias, and signal evolution.",
-        "scientific_references": [
-          "https://doi.org/10.1126/science.210.4471.677",
-          "https://doi.org/10.1016/S0169-5347(99)01405-9",
-          "https://doi.org/10.1038/35039560"
-        ]
-      },
-      "calls": [
-        {
-          "call_name": "Advertisement call (whine)",
-          "acoustic_description": "Frequency-modulated downward sweep (‘whine’) produced by calling males; can occur alone or as the core of more complex calls.",
-          "semantic_description": "Species recognition and mate attraction; minimal signal required to elicit female phonotaxis.",
-          "ontology_keywords": ["sex", "sexual_selection", "species_identity"],
-          "scientific_references": [
-            "https://doi.org/10.1126/science.210.4471.677",
-            "https://doi.org/10.1016/S0169-5347(99)01405-9"
-          ],
-          "subjective_reliability": "high",
-          "comments": "The whine alone is sufficient for female attraction but less attractive than complex calls.",
-          "users": "Adult males"
-        },
-        {
-          "call_name": "Complex advertisement call (whine + chuck)",
-          "acoustic_description": "Advertisement call consisting of a whine followed by one or more short broadband ‘chuck’ components.",
-          "semantic_description": "Enhanced mate attraction through additive signal components; increases attractiveness at the cost of higher predation risk.",
-          "ontology_keywords": [
-            "sex",
-            "sexual_selection",
-            "signal_components",
-            "receiver_bias"
-          ],
-          "scientific_references": [
-            "https://doi.org/10.1126/science.210.4471.677",
-            "https://doi.org/10.1038/35039560"
-          ],
-          "subjective_reliability": "high",
-          "comments": "Classic example of component-based signaling and receiver bias in sexual selection.",
-          "users": "Adult males"
-        },
-        {
-          "call_name": "Aggressive call",
-          "acoustic_description": "Shorter, harsher call produced during male–male interactions.",
-          "semantic_description": "Territorial or competitive signaling toward rival males.",
-          "ontology_keywords": ["aggression", "territory"],
-          "scientific_references": [
-            "https://doi.org/10.1016/S0169-5347(99)01405-9"
-          ],
-          "subjective_reliability": "medium-high",
-          "comments": "Typically produced at close range during chorus interactions.",
-          "users": "Adult males"
-        },
-        {
-          "call_name": "Distress call",
-          "acoustic_description": "Loud, broadband scream emitted when seized by a predator.",
-          "semantic_description": "Extreme distress; startle or deterrence of predators.",
-          "ontology_keywords": ["affective", "distress", "predator"],
-          "scientific_references": [
-            "https://doi.org/10.1016/S0169-5347(99)01405-9"
-          ],
-          "subjective_reliability": "high",
-          "comments": "Innate defensive vocalization common across anurans.",
-          "users": "All ages/sexes"
-        }
-      ],
-      "completeness_warning": "The túngara frog repertoire is well characterized for mating and aggression contexts; rarer or developmental vocalizations are not exhaustively treated here.",
-      "class": "Amphibia",
-      "order": "Anura",
-      "family": "Leptodactylidae",
-      "genus": "Physalaemus"
-    },
-    {
       "species_name": "Green tree frog (Hyla cinerea)",
       "taxonomy_basis": {
         "summary": "North American hylid frog widely used as a baseline model for anuran acoustic communication. Male green tree frogs produce stereotyped advertisement calls for mate attraction, along with distinct aggressive, release, and distress calls. The repertoire is small, innate, and strongly context-bound, making this species a useful contrast to both vocal-learning birds and component-based frog systems such as the túngara frog.",
@@ -5755,89 +5683,6 @@
       "order": "Anura",
       "family": "Hylidae",
       "genus": "Hyla"
-    },
-    {
-      "species_name": "Poison dart frogs (Oophaga spp. / Dendrobates spp.)",
-      "taxonomy_basis": {
-        "summary": "Neotropical dendrobatid frogs known for conspicuous coloration and well-studied acoustic signaling associated with territorial defense, mate attraction, and parental care. Unlike many anurans, poison dart frogs often show individual recognition, graded territorial signaling, and sex-specific roles in calling. Their vocal systems are innate but exhibit fine-scale contextual modulation.",
-        "scientific_references": [
-          "https://doi.org/10.1016/S0003-3472(03)00054-8",
-          "https://doi.org/10.1007/s00265-006-0261-x",
-          "https://doi.org/10.1098/rspb.2012.2061"
-        ]
-      },
-      "calls": [
-        {
-          "call_name": "Advertisement call",
-          "acoustic_description": "Short, stereotyped tonal or pulsed call repeated at regular intervals by males.",
-          "semantic_description": "Mate attraction and species recognition; also advertises male presence to rivals.",
-          "ontology_keywords": ["sex", "sexual_selection", "species_identity"],
-          "scientific_references": [
-            "https://doi.org/10.1016/S0003-3472(03)00054-8"
-          ],
-          "subjective_reliability": "high",
-          "comments": "Primary call type used during breeding periods; structure varies across species.",
-          "users": "Adult males"
-        },
-        {
-          "call_name": "Territorial call",
-          "acoustic_description": "Modified advertisement call with changes in rate, duration, or amplitude, often produced during interactions with neighboring males.",
-          "semantic_description": "Territorial defense and spacing between rival males.",
-          "ontology_keywords": [
-            "territory",
-            "aggression",
-            "individual_identity"
-          ],
-          "scientific_references": [
-            "https://doi.org/10.1007/s00265-006-0261-x",
-            "https://doi.org/10.1098/rspb.2012.2061"
-          ],
-          "subjective_reliability": "high",
-          "comments": "Playback experiments show graded escalation and individual-specific responses.",
-          "users": "Adult males"
-        },
-        {
-          "call_name": "Courtship call",
-          "acoustic_description": "Softer, short-range call produced during close male–female interactions.",
-          "semantic_description": "Courtship coordination and pair formation.",
-          "ontology_keywords": ["sex", "coordination"],
-          "scientific_references": [
-            "https://doi.org/10.1016/S0003-3472(03)00054-8"
-          ],
-          "subjective_reliability": "medium-high",
-          "comments": "Low-amplitude and often omitted from coarse repertoire surveys.",
-          "users": "Adult males"
-        },
-        {
-          "call_name": "Aggressive encounter call",
-          "acoustic_description": "Harsh, rapid call produced during escalated male–male confrontations.",
-          "semantic_description": "High-intensity aggression and territorial escalation.",
-          "ontology_keywords": ["aggression", "threat"],
-          "scientific_references": [
-            "https://doi.org/10.1007/s00265-006-0261-x"
-          ],
-          "subjective_reliability": "medium",
-          "comments": "Typically occurs at very close range and may accompany physical displays.",
-          "users": "Adult males"
-        },
-        {
-          "call_name": "Distress call",
-          "acoustic_description": "Loud, broadband scream emitted when seized by a predator.",
-          "semantic_description": "Extreme distress; startle or deterrence of predators.",
-          "ontology_keywords": ["affective", "distress", "predator"],
-          "scientific_references": [
-            "https://doi.org/10.1016/S0003-3472(03)00054-8"
-          ],
-          "subjective_reliability": "high",
-          "comments": "Innate defensive vocalization shared with many anuran species.",
-          "users": "All ages/sexes"
-        }
-      ],
-      "completeness_warning": "Dendrobatid vocal repertoires vary across genera and species; this entry reflects a conservative synthesis of well-studied call categories rather than an exhaustive species-level inventory.",
-      "class": "Amphibia",
-      "order": "Anura",
-      "family": "Dendrobatidae",
-      "genus": null
     }
   ]
 }
