@@ -254,6 +254,9 @@ h3 {
   line-height: 1.35;
   margin: 6px 0 0 0;
 }
+.subtle--tight {
+  margin-top: 0;
+}
 
 /* =========================
    Hero (top intro)
@@ -310,7 +313,7 @@ h3 {
 .app-row {
   display: flex;
   gap: 14px;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 /* Columns */
@@ -322,7 +325,7 @@ h3 {
   min-width: 520px;
 }
 .col--right {
-  width: 380px;
+  width: 300px;
 }
 
 /* Give each column a subtle “section” feel */
@@ -344,9 +347,6 @@ h3 {
   padding: 12px;
   box-shadow: var(--shadow-sm);
   min-height: 220px;
-}
-
-.panel--hovered {
 }
 
 /* Plotly graphs: give them a nice frame without touching Plotly itself */
@@ -403,7 +403,7 @@ h3 {
 .below-row {
   display: flex;
   gap: 14px;
-  align-items: flex-start;
+  align-items: stretch;
   margin-top: 14px;
 }
 
@@ -414,6 +414,33 @@ h3 {
 .below-row__translations {
   flex: 1;
   min-width: 0; /* IMPORTANT: allows the strip to actually scroll */
+}
+
+/* =========================
+   Bottom row: equal-height Selected vs Translations
+   ========================= */
+
+.below-row__selected,
+.below-row__translations {
+  display: flex;
+  flex-direction: column;
+}
+
+.below-row__selected .panel,
+.below-row__translations .selection-strip {
+  flex: 1;
+  min-height: 320px;
+}
+
+.below-row__translations .selection-strip {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px; /* tighter scrollbar reserve */
+}
+
+.below-row__selected .panel {
+  overflow: hidden;
+  padding-bottom: 20px; /* slightly larger to visually match scrollbar */
 }
 
 .selection-strip {
@@ -608,4 +635,84 @@ button:focus-visible,
 }
 .taxonomy-controls__radio label {
   margin-right: 14px;
+}
+
+/* Taxonomy panel: compact selection controls */
+.taxonomy-controls--compact {
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.taxonomy-controls--compact .taxonomy-controls__label {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.taxonomy-controls--compact .taxonomy-controls__radio label {
+  font-size: 12px;
+}
+
+/* =========================
+   Call card header hierarchy
+   ========================= */
+
+.call-card__title {
+  font-size: 15px;
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+
+.call-card__title-strong {
+  font-weight: 800;
+}
+
+.call-card__subtitle {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.call-card__callname-wrapper {
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.call-card__callname {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* =========================
+   Consistent call card width (all contexts)
+   ========================= */
+
+.call-card {
+  max-width: 360px;
+}
+
+/* =========================
+   Translation meta header (fixed height)
+   ========================= */
+
+.translation-meta {
+  min-height: 44px; /* space for similarity + back-translation */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.translation-meta--placeholder {
+  visibility: hidden; /* keeps space, hides text */
+}
+
+.translation-meta .translation-metric {
+  margin: 0;
+}
+
+.taxonomy-controls--inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

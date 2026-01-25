@@ -213,7 +213,8 @@ def build_taxonomy_sunburst(
             marker=dict(colors=colors),
         )
     )
-    fig.update_layout(title=title, margin=dict(t=40, l=10, r=10, b=10))
+    # Keep margins tight so the wheel fills the available panel space
+    fig.update_layout(title=title, margin=dict(t=10, l=10, r=10, b=10))
     return fig
 
 
@@ -1093,10 +1094,10 @@ def run_dash_app(
 
         fig.update_layout(
             title="UMAP of Acoustic Descriptions (interactive)",
-            xaxis_title="UMAP-1",
-            yaxis_title="UMAP-2",
             margin=dict(t=45, l=10, r=10, b=10),
         )
+        fig.update_xaxes(title=None)
+        fig.update_yaxes(title=None)
         return fig
 
     # Initial figures
@@ -1104,7 +1105,11 @@ def run_dash_app(
     fig_scatter = make_scatter(init_calls, clicked_idx=None)
     fig_tax = None
     try:
-        fig_tax = build_taxonomy_sunburst(calls_all, species_color_map=color_map)
+        fig_tax = build_taxonomy_sunburst(
+            calls_all,
+            title="",
+            species_color_map=color_map,
+        )
     except Exception:
         fig_tax = go.Figure()
 
@@ -1283,33 +1288,46 @@ def run_dash_app(
                         className="col col--left",
                         children=[
                             dcc.Store(id="species-store", data=[]),
-                            # --- BEGIN: Selection mode toggle ---
-                            html.H3("Taxonomy"),
+                            html.H3("Taxonomy selection"),
                             html.Div(
-                                "Click taxonomy nodes to filter species (add a group or focus on a group)",
-                                className="subtle",
-                            ),
-                            html.Div(
-                                className="taxonomy-controls",
+                                className="panel panel--taxonomy",
                                 children=[
                                     html.Div(
-                                        "Selection mode",
-                                        className="taxonomy-controls__label",
+                                        "Click taxonomy nodes to filter species",
+                                        className="subtle subtle--tight",
                                     ),
-                                    dcc.RadioItems(
-                                        id="selection-mode",
-                                        options=[
-                                            {"label": "Additive", "value": "add"},
-                                            {"label": "Replace", "value": "replace"},
+                                    html.Div(
+                                        className="taxonomy-controls taxonomy-controls--compact taxonomy-controls--inline",
+                                        children=[
+                                            html.Span(
+                                                "Selection mode",
+                                                className="taxonomy-controls__label",
+                                            ),
+                                            dcc.RadioItems(
+                                                id="selection-mode",
+                                                options=[
+                                                    {
+                                                        "label": "Focus",
+                                                        "value": "replace",
+                                                    },
+                                                    {"label": "Add", "value": "add"},
+                                                ],
+                                                value="replace",
+                                                inline=True,
+                                                className="taxonomy-controls__radio",
+                                            ),
                                         ],
-                                        value="add",
-                                        inline=True,
-                                        className="taxonomy-controls__radio",
+                                    ),
+                                    dcc.Graph(
+                                        id="taxonomy",
+                                        figure=fig_tax,
+                                        style={
+                                            "height": "360px",
+                                            "margin": "0",
+                                        },
                                     ),
                                 ],
                             ),
-                            # --- END: Selection mode toggle ---
-                            dcc.Graph(id="taxonomy", figure=fig_tax),
                         ],
                     ),
                     # Middle: UMAP
@@ -1318,7 +1336,9 @@ def run_dash_app(
                         children=[
                             html.H3("UMAP"),
                             dcc.Graph(
-                                id="scatter", figure=fig_scatter, clear_on_unhover=True
+                                id="scatter",
+                                figure=fig_scatter,
+                                clear_on_unhover=True,
                             ),
                         ],
                     ),
@@ -1369,6 +1389,28 @@ def run_dash_app(
 
     # --- New callbacks for species/taxonomy selection ---
 
+    # --- Helper function: taxonomic icon ---
+    def _taxon_icon(c: Dict[str, object]) -> str:
+        """Return a small emoji icon based on broad taxonomy."""
+        cls = str(c.get("class", "")).lower()
+        order = str(c.get("order", "")).lower()
+
+        if "aves" in cls:
+            return "🐦"
+        if "amphibia" in cls:
+            return "🐸"
+        if "mammalia" in cls:
+            if any(x in order for x in ["primates"]):
+                return "🐒"
+            if any(x in order for x in ["chiroptera"]):
+                return "🦇"
+            if any(x in order for x in ["proboscidea"]):
+                return "🐘"
+            if any(x in order for x in ["carnivora"]):
+                return "🐺"
+            return "🐾"
+        return ""
+
     # --- Reusable call-card renderer for selected/hovered call panels and translation strip ---
     def _render_call_card(c: Dict[str, object]) -> html.Div:
         species = str(c.get("species", ""))
@@ -1383,16 +1425,35 @@ def run_dash_app(
             kws_list = [str(kws).strip()] if str(kws).strip() else []
         kw_text = ", ".join(kws_list) if kws_list else "None"
 
+        # Split species into common name and scientific name if present
+        sp = species
+        sci = ""
+        if "(" in species and species.endswith(")"):
+            sp = species[: species.rfind("(")].strip()
+            sci = species[species.rfind("(") + 1 : -1].strip()
+
         return html.Div(
             className="call-card",
             children=[
                 html.Div(
                     [
-                        html.Strong(species, className="call-card__title-strong"),
-                        html.Span(" — "),
-                        html.Strong(call_name, className="call-card__title-strong"),
+                        html.Span(_taxon_icon(c), className="call-card__icon"),
+                        html.Span(" "),
+                        html.Strong(sp, className="call-card__title-strong"),
                     ],
                     className="call-card__title",
+                ),
+                (
+                    html.Div(
+                        html.Em(sci),
+                        className="call-card__subtitle",
+                    )
+                    if sci
+                    else None
+                ),
+                html.Div(
+                    html.Strong(call_name, className="call-card__callname"),
+                    className="call-card__callname-wrapper",
                 ),
                 html.Hr(className="call-card__hr"),
                 html.Div(
@@ -1485,8 +1546,9 @@ def run_dash_app(
         Output("scatter", "figure"),
         Input("species-store", "data"),
         Input("scatter", "clickData"),
+        Input("scatter", "relayoutData"),
     )
-    def _update_scatter_from_store(species_sel, clickData):
+    def _update_scatter_from_store(species_sel, clickData, relayoutData):
         species_sel = species_sel or []
         filtered = filter_calls(
             calls_all,
@@ -1494,8 +1556,14 @@ def run_dash_app(
         )
 
         clicked_idx = None
+
+        # Click on a point
         if clickData and clickData.get("points"):
             clicked_idx = clickData["points"][0].get("customdata")
+
+        # Click on empty space: relayoutData fires without clickData
+        elif relayoutData:
+            clicked_idx = None
 
         return make_scatter(filtered, clicked_idx=clicked_idx)
 
@@ -1572,6 +1640,20 @@ def run_dash_app(
 
         selected_card = _render_call_card(calls_all[clicked_idx])
 
+        # Fixed-height meta block (placeholder for Selected call)
+        selected_meta = html.Div(
+            className="translation-meta translation-meta--placeholder",
+            children=[
+                html.Div("", className="subtle translation-metric"),
+                html.Div("", className="subtle translation-metric"),
+            ],
+        )
+
+        selected_with_meta = html.Div(
+            className="translation-card translation-card--selected",
+            children=[selected_meta, selected_card],
+        )
+
         # Translation cards ordered by closeness, with similarity + back-translation check
         trans_cards = []
 
@@ -1606,12 +1688,17 @@ def run_dash_app(
                     className="translation-card",
                     children=[
                         html.Div(
-                            f"Similarlity: {cos_sim:.3f}",
-                            className="subtle translation-metric",
-                        ),
-                        html.Div(
-                            back_line,
-                            className="subtle translation-metric",
+                            className="translation-meta",
+                            children=[
+                                html.Div(
+                                    f"Similarlity: {cos_sim:.3f}",
+                                    className="subtle translation-metric",
+                                ),
+                                html.Div(
+                                    back_line,
+                                    className="subtle translation-metric",
+                                ),
+                            ],
                         ),
                         _render_call_card(calls_all[nn_idx]),
                     ],
@@ -1623,7 +1710,7 @@ def run_dash_app(
             children=trans_cards,
         )
 
-        return (selected_card, translations_inner)
+        return (selected_with_meta, translations_inner)
 
     @app.callback(
         Output("overlayed", "children"),
