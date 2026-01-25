@@ -24,6 +24,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Dict, Iterable, List, Sequence, Tuple
 
+import warnings
+
 import matplotlib.pyplot as plt
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -32,6 +34,13 @@ from umap import UMAP
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 
 import re
+
+# Silence UMAP warning about n_jobs being forced to 1 when random_state is set.
+warnings.filterwarnings(
+    "ignore",
+    message=r"n_jobs value 1 overridden to 1 by setting random_state",
+    category=UserWarning,
+)
 
 
 def species_common_name(name: str) -> str:
