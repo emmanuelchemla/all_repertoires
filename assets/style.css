@@ -722,11 +722,18 @@ button:focus-visible,
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  height: 44px;
   margin-bottom: 10px;
 }
 
 .panel-header__title {
   margin: 0;
+}
+
+.below-row__translations > h3 {
+  height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .btn {
