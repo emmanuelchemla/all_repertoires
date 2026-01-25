@@ -2063,6 +2063,15 @@ def run_dash_app(
             _idxs_for_species(species_sel or []),
             cross_only=True,
         )
+        mantel_strong_all = _mantel_partial(
+            acoustic_embeds, semantic_embeds, _idxs_for_species(species_sel or [])
+        )
+        mantel_strong_cross = _mantel_partial(
+            acoustic_embeds,
+            semantic_embeds,
+            _idxs_for_species(species_sel or []),
+            cross_only=True,
+        )
 
         def _fmt(res, label):
             if res is None:
@@ -2085,6 +2094,7 @@ def run_dash_app(
                         [
                             html.Tr(
                                 [
+                                    html.Td(html.Strong("Mantel (weak)")),
                                     html.Td("All pairs of calls"),
                                     html.Td(
                                         html.I(f"r = {mantel_all[0]:.3f}")
@@ -2096,10 +2106,12 @@ def run_dash_app(
                                         if mantel_all
                                         else "n/a"
                                     ),
-                                ]
+                                ],
+                                style={"borderTop": "2px solid var(--border-strong)"},
                             ),
                             html.Tr(
                                 [
+                                    html.Td(""),
                                     html.Td("Cross-species only"),
                                     html.Td(
                                         html.I(f"r = {mantel_cross[0]:.3f}")
@@ -2112,6 +2124,44 @@ def run_dash_app(
                                         else "n/a"
                                     ),
                                 ]
+                            ),
+                            html.Tr(
+                                [],
+                                style={"borderTop": "1px solid var(--border-2)"},
+                            ),
+                            html.Tr(
+                                [
+                                    html.Td(html.Strong("Mantel (strong)")),
+                                    html.Td("All pairs of calls"),
+                                    html.Td(
+                                        html.I(f"r = {mantel_strong_all[0]:.3f}")
+                                        if mantel_strong_all
+                                        else "n/a"
+                                    ),
+                                    html.Td(
+                                        html.I(f"p = {mantel_strong_all[1]:.3f}")
+                                        if mantel_strong_all
+                                        else "n/a"
+                                    ),
+                                ],
+                                style={"borderTop": "2px solid var(--border-strong)"},
+                            ),
+                            html.Tr(
+                                [
+                                    html.Td(""),
+                                    html.Td("Cross-species only"),
+                                    html.Td(
+                                        html.I(f"r = {mantel_strong_cross[0]:.3f}")
+                                        if mantel_strong_cross
+                                        else "n/a"
+                                    ),
+                                    html.Td(
+                                        html.I(f"p = {mantel_strong_cross[1]:.3f}")
+                                        if mantel_strong_cross
+                                        else "n/a"
+                                    ),
+                                ],
+                                style={"borderBottom": "2px solid var(--border-strong)"},
                             ),
                         ],
                         style={
@@ -2836,6 +2886,16 @@ def run_dash_app(
         )
         return fig
 
+    def _safe_corr(x: np.ndarray, y: np.ndarray) -> float | None:
+        if x.size < 2 or y.size < 2:
+            return None
+        if np.std(x) < 1e-9 or np.std(y) < 1e-9:
+            return None
+        r = np.corrcoef(x, y)[0, 1]
+        if np.isnan(r):
+            return None
+        return float(r)
+
     def _mantel_stats(
         emb_a: np.ndarray,
         emb_s: np.ndarray,
@@ -2871,7 +2931,9 @@ def run_dash_app(
         if a_vec.size < 3:
             return None
 
-        r_obs = np.corrcoef(a_vec, s_vec)[0, 1]
+        r_obs = _safe_corr(a_vec, s_vec)
+        if r_obs is None:
+            return None
 
         # permutation test (shuffle semantic labels)
         rs = []
@@ -2879,10 +2941,74 @@ def run_dash_app(
             perm = np.random.permutation(len(idxs))
             Ss_perm = Ss[perm][:, perm]
             s_vec_perm = Ss_perm[tri][mask]
-            rs.append(np.corrcoef(a_vec, s_vec_perm)[0, 1])
+            r_p = _safe_corr(a_vec, s_vec_perm)
+            if r_p is not None:
+                rs.append(r_p)
+        if not rs:
+            return None
         rs = np.array(rs)
         p = (np.sum(np.abs(rs) >= abs(r_obs)) + 1) / (n_perm + 1)
         return float(r_obs), float(p)
+
+    def _mantel_partial(
+        emb_a: np.ndarray,
+        emb_s: np.ndarray,
+        idxs: List[int],
+        cross_only: bool = False,
+        n_perm: int = 999,
+    ):
+        """Partial Mantel controlling for species identity matrix C."""
+        if len(idxs) < 3:
+            return None
+
+        ea = emb_a[idxs]
+        es = emb_s[idxs]
+        ea = ea / (np.linalg.norm(ea, axis=1, keepdims=True) + 1e-9)
+        es = es / (np.linalg.norm(es, axis=1, keepdims=True) + 1e-9)
+        Sa = ea @ ea.T
+        Ss = es @ es.T
+
+        species_idxs = [species_all[i] for i in idxs]
+        C = np.equal.outer(species_idxs, species_idxs).astype(float)
+
+        tri = np.triu_indices(len(idxs), k=1)
+        mask = np.ones_like(tri[0], dtype=bool)
+        if cross_only:
+            mask = np.array(
+                [species_idxs[i] != species_idxs[j] for i, j in zip(tri[0], tri[1])]
+            )
+            if not mask.any():
+                return None
+
+        a_vec = Sa[tri][mask]
+        s_vec = Ss[tri][mask]
+        c_vec = C[tri][mask]
+        if a_vec.size < 3:
+            return None
+
+        r_ab = _safe_corr(a_vec, s_vec)
+        r_ac = _safe_corr(a_vec, c_vec)
+        r_bc = _safe_corr(s_vec, c_vec)
+        if r_ab is None or r_ac is None or r_bc is None:
+            return None
+        denom = np.sqrt((1 - r_ac**2) * (1 - r_bc**2)) + 1e-12
+        r_partial = (r_ab - r_ac * r_bc) / denom
+
+        rs = []
+        for _ in range(n_perm):
+            perm = np.random.permutation(len(s_vec))
+            s_perm = s_vec[perm]
+            r_ab_p = _safe_corr(a_vec, s_perm)
+            r_bc_p = _safe_corr(s_perm, c_vec)
+            if r_ab_p is None or r_bc_p is None:
+                continue
+            r_partial_p = (r_ab_p - r_ac * r_bc_p) / denom
+            rs.append(r_partial_p)
+        if not rs:
+            return None
+        rs = np.array(rs)
+        p = (np.sum(np.abs(rs) >= abs(r_partial)) + 1) / (n_perm + 1)
+        return float(r_partial), float(p)
 
     def make_similarity_heatmap(
         embeds: np.ndarray,
