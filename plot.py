@@ -2257,9 +2257,7 @@ def run_dash_app(
         for sp, _ in items:
             g = _group_label(first_by_species.get(sp, {}))
             colors.append(
-                group_colors.get(
-                    g, FALLBACK_COLORS[len(colors) % len(FALLBACK_COLORS)]
-                )
+                group_colors.get(g, FALLBACK_COLORS[len(colors) % len(FALLBACK_COLORS)])
             )
 
         fig = go.Figure(
@@ -2356,14 +2354,38 @@ def run_dash_app(
                 height=220,
             )
 
-        row_h = 1.6
+        row_h = 2.0
         shapes = []
         annotations = []
 
         left_center_x = 0
         right_center_x = 8
-        box_w = 1.6
-        box_h = 1.0
+        box_w = 1.8
+        box_h = 1.6
+
+        def _wrap_two_lines(text: str, width: int = 18) -> str:
+            """Wrap text to at most two lines using <br>, trimming if needed."""
+            words = str(text).split()
+            if not words:
+                return ""
+            lines = []
+            line = words[0]
+            for w in words[1:]:
+                if len(line) + 1 + len(w) <= width:
+                    line += " " + w
+                else:
+                    lines.append(line)
+                    line = w
+                    if len(lines) == 1:  # already have first line
+                        break
+            lines.append(line)
+            if len(lines) > 2:
+                lines = lines[:2]
+            # If there were leftover words after second line, add ellipsis
+            remaining = len(words) - len(" ".join(lines).split())
+            if remaining > 0:
+                lines[-1] = lines[-1] + "…"
+            return "<br>".join(lines)
 
         left_row_map: Dict[int, float] = {}
         right_row_map: Dict[int, float] = {}
@@ -2393,11 +2415,11 @@ def run_dash_app(
             if is_left:
                 left_row_map[idx_local] = cy
                 c = calls_all[idxs1[idx_local]]
-                txt = _strip_parenthetical(c.get("call_name", ""))
+                txt = _wrap_two_lines(_strip_parenthetical(c.get("call_name", "")))
             else:
                 right_row_map[idx_local] = cy
                 c = calls_all[idxs2[idx_local]]
-                txt = _strip_parenthetical(c.get("call_name", ""))
+                txt = _wrap_two_lines(_strip_parenthetical(c.get("call_name", "")))
             annotations.append(
                 dict(
                     x=cx,
@@ -2423,8 +2445,8 @@ def run_dash_app(
             y1 = right_row_map.get(j_local)
             if y0 is None or y1 is None:
                 continue
-            y0 += 0.12
-            y1 += 0.12
+            y0 += 0.35
+            y1 += 0.35
             tail_x = left_center_x + box_w / 2
             head_x = right_center_x - box_w / 2
             annotations.append(
@@ -2453,8 +2475,8 @@ def run_dash_app(
             sim = sims[i_local, j_local]
             if i_local not in left_row_map or j_local not in right_row_map:
                 continue
-            y0 = right_row_map[j_local] - 0.12
-            y1 = left_row_map[i_local] - 0.12
+            y0 = right_row_map[j_local] - 0.35
+            y1 = left_row_map[i_local] - 0.35
             tail_x = right_center_x - box_w / 2
             head_x = left_center_x + box_w / 2
             annotations.append(
