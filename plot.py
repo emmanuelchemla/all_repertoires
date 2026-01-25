@@ -1337,11 +1337,11 @@ def run_dash_app(
                             )
                         ],
                     ),
-            html.Div(
-                className="static-layout",
-                children=[
                     html.Div(
-                        className="static-left",
+                        className="static-layout",
+                        children=[
+                            html.Div(
+                                className="static-left",
                                 children=[
                                     dcc.Store(id="static-species-store", data=[]),
                                     html.H3("Taxonomy selection"),
@@ -1467,8 +1467,14 @@ def run_dash_app(
                                                     dcc.RadioItems(
                                                         id="trans-selection-mode",
                                                         options=[
-                                                            {"label": "Focus", "value": "replace"},
-                                                            {"label": "Add", "value": "add"},
+                                                            {
+                                                                "label": "Focus",
+                                                                "value": "replace",
+                                                            },
+                                                            {
+                                                                "label": "Add",
+                                                                "value": "add",
+                                                            },
                                                         ],
                                                         value="add",
                                                         inline=True,
@@ -1479,7 +1485,10 @@ def run_dash_app(
                                             dcc.Graph(
                                                 id="trans-taxonomy",
                                                 figure=fig_tax,
-                                                style={"height": "360px", "margin": "0"},
+                                                style={
+                                                    "height": "360px",
+                                                    "margin": "0",
+                                                },
                                             ),
                                         ],
                                     ),
@@ -1502,7 +1511,9 @@ def run_dash_app(
                                                     html.Span(
                                                         "●",
                                                         style={
-                                                            "color": color_map.get(sp, "#555"),
+                                                            "color": color_map.get(
+                                                                sp, "#555"
+                                                            ),
                                                             "fontSize": "12px",
                                                             "marginRight": "6px",
                                                         },
@@ -2756,7 +2767,10 @@ def run_dash_app(
 
         # Simple ordering: species name then call name
         def _key(idx):
-            return (species_common_name(species_all[idx]), calls_all[idx].get("call_name", ""))
+            return (
+                species_common_name(species_all[idx]),
+                calls_all[idx].get("call_name", ""),
+            )
 
         # group by species (already ordered by group then species)
         blocks: List[List[int]] = []
@@ -2788,9 +2802,10 @@ def run_dash_app(
                 x=labels,
                 y=labels,
                 colorscale=[
-                    [0.0, "#d6c800"],  # yellow for negative
-                    [0.5, "#ffffff"],  # white at zero
-                    [1.0, "#c81e1e"],  # red for positive
+                    [0.0, "#ffff00"],  # yellow at -1
+                    [0.25, "#ffffff"],  # white from -0.5 upward
+                    [0.75, "#ffffff"],  # white until +0.5
+                    [1.0, "#c81e1e"],  # red at +1
                 ],
                 zmin=-1,
                 zmax=1,
@@ -2833,7 +2848,11 @@ def run_dash_app(
                         marker=dict(
                             color=color_map.get(sp),
                             size=[
-                                8 if (selected_idx is not None and i == selected_idx) else 4
+                                (
+                                    8
+                                    if (selected_idx is not None and i == selected_idx)
+                                    else 4
+                                )
                                 for i in sp_idxs
                             ],
                             opacity=0.85,
@@ -2889,7 +2908,11 @@ def run_dash_app(
                     marker=dict(
                         color=color_map.get(sp),
                         size=[
-                            11 if (selected_idx is not None and i == selected_idx) else 7
+                            (
+                                11
+                                if (selected_idx is not None and i == selected_idx)
+                                else 7
+                            )
                             for i in sp_idxs
                         ],
                         opacity=0.85,
