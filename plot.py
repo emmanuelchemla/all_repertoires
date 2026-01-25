@@ -1018,6 +1018,42 @@ def run_dash_app(
         sp: _qual.Plotly[i % len(_qual.Plotly)] for i, sp in enumerate(species_unique)
     }
 
+    # --- Fixed group colors for consistency across plots ---
+    GROUP_COLOR_PRESET: Dict[str, str] = {
+        "Bats": "#6b7280",  # gray
+        "Amphibia": "#22c55e",  # green
+        "Primates": "#a855f7",  # purple
+        "Apes": "#7c3aed",  # deeper purple
+        "Birds": "#0ea5e9",  # sky blue
+        "Carnivores": "#f97316",  # orange
+        "Elephants": "#10b981",  # teal/green
+        "Ungulates": "#f59e0b",  # amber
+        "Other": "#94a3b8",  # slate
+    }
+    FALLBACK_COLORS = _qual.Plotly
+
+    def _group_label(c: Dict[str, object]) -> str:
+        cls = str(c.get("class", "")).lower()
+        order = str(c.get("order", "")).lower()
+        family = str(c.get("family", "")).lower()
+        if "hominidae" in family:
+            return "Apes"
+        if "primates" in order:
+            return "Primates"
+        if "aves" in cls:
+            return "Birds"
+        if "amphibia" in cls:
+            return "Amphibia"
+        if "chiroptera" in order:
+            return "Bats"
+        if "carnivora" in order:
+            return "Carnivores"
+        if "proboscidea" in order:
+            return "Elephants"
+        if order in {"cetartiodactyla", "artiodactyla", "perissodactyla"}:
+            return "Ungulates"
+        return cls.title() if cls else "Other"
+
     # --- Helper function: taxonomic icon ---
     def _taxon_icon(c: Dict[str, object]) -> str:
         """Return a small emoji icon based on broad taxonomy."""
@@ -2266,7 +2302,25 @@ def run_dash_app(
             for (sp, _), icon in zip(items, species_icons)
         ]
         values = [v for _, v in items]
-        colors = [color_map.get(sp, "#999") for sp, _ in items]
+        # assign fixed group colors with fallback
+        group_colors: Dict[str, str] = {}
+        fallback_idx = 0
+        for sp in species_unique:
+            g = _group_label(first_by_species.get(sp, {}))
+            if g not in group_colors:
+                group_colors[g] = GROUP_COLOR_PRESET.get(
+                    g, FALLBACK_COLORS[fallback_idx % len(FALLBACK_COLORS)]
+                )
+                fallback_idx += 1
+
+        colors = []
+        for sp, _ in items:
+            g = _group_label(first_by_species.get(sp, {}))
+            colors.append(
+                group_colors.get(
+                    g, FALLBACK_COLORS[len(colors) % len(FALLBACK_COLORS)]
+                )
+            )
 
         fig = go.Figure(
             go.Bar(
@@ -2580,38 +2634,94 @@ def run_dash_app(
 
     def make_keyword_bar(species_sel: List[str] | None, top_n: int = 20):
         idxs = _idxs_for_species(species_sel)
-        kws: Counter[str] = Counter()
+
+        # Collect keyword counts per group
+        kw_counts: Dict[str, Counter] = {}
         for i in idxs:
-            kws.update(calls_all[i].get("ontology_keywords") or [])
-        top = kws.most_common(top_n)
+            c = calls_all[i]
+            group = _group_label(c)
+            kw_counts.setdefault(group, Counter()).update(
+                c.get("ontology_keywords") or []
+            )
+
+        # Top keywords overall
+        total = Counter()
+        for c in kw_counts.values():
+            total.update(c)
+        top = total.most_common(top_n)
         if not top:
             return go.Figure().update_layout(
                 title="Keyword frequencies (none)",
                 template="plotly_white",
                 height=330,
             )
-        labels = [k for k, _ in top]
-        values = [v for _, v in top]
-        colors = [
-            color_map.get(species_unique[i % len(species_unique)], "#2563eb")
-            for i in range(len(labels))
-        ]
 
-        fig = go.Figure(
-            go.Bar(
-                x=values,
-                y=labels,
-                orientation="h",
-                marker=dict(color=colors),
-                text=[f"{v}" for v in values],
-                textposition="outside",
+        keywords = [k for k, _ in top]
+
+        fig = go.Figure()
+        groups = sorted(kw_counts.keys())
+        group_icons: Dict[str, str] = {}
+        # stable group -> color map using preset with fallback
+        group_colors: Dict[str, str] = {}
+        fallback_idx = 0
+        for sp in species_unique:
+            g = _group_label(first_by_species.get(sp, {}))
+            if g not in group_colors:
+                group_colors[g] = GROUP_COLOR_PRESET.get(
+                    g, FALLBACK_COLORS[fallback_idx % len(FALLBACK_COLORS)]
+                )
+                if g not in GROUP_COLOR_PRESET:
+                    fallback_idx += 1
+
+        for group in groups:
+            counts = [kw_counts.get(group, Counter()).get(k, 0) for k in keywords]
+            if all(v == 0 for v in counts):
+                continue
+            color = group_colors.get(group, FALLBACK_COLORS[0])
+            # pick an icon from any species in this group if available
+            icon = ""
+            for i in idxs:
+                if _group_label(calls_all[i]) == group:
+                    icon = species_icon_map.get(species_all[i], "")
+                    break
+            group_icons[group] = icon
+            fig.add_trace(
+                go.Bar(
+                    x=counts,
+                    y=keywords,
+                    orientation="h",
+                    name=f"{icon} {group}".strip(),
+                    marker=dict(color=color),
+                    customdata=[group] * len(counts),
+                )
             )
-        )
+
+        # add total labels aligned to the bar end (left edge of text at bar end)
+        totals_per_kw = [sum(kw_counts[g].get(k, 0) for g in groups) for k in keywords]
+        total_ann = []
+        for y, t in zip(keywords, totals_per_kw):
+            if t <= 0:
+                continue
+            total_ann.append(
+                dict(
+                    x=t,
+                    y=y,
+                    xanchor="left",
+                    yanchor="middle",
+                    text=str(t),
+                    showarrow=False,
+                    font=dict(color="black"),
+                )
+            )
+
         fig.update_layout(
-            title="Keyword frequencies (top 20)",
+            barmode="stack",
+            title="Keyword frequencies",
             height=360,
-            margin=dict(l=200, r=10, t=50, b=30),
+            margin=dict(l=220, r=10, t=50, b=30),
             template="plotly_white",
+            legend=dict(orientation="v", yanchor="top", y=1, xanchor="left", x=1.02),
+            annotations=total_ann,
         )
         return fig
 
