@@ -1405,6 +1405,19 @@ def run_dash_app(
                                             ),
                                         ],
                                     ),
+                                    html.Div(
+                                        className="static-row",
+                                        children=[
+                                            dcc.Graph(
+                                                id="static-heat-acoustic",
+                                                className="static-graph",
+                                            ),
+                                            dcc.Graph(
+                                                id="static-heat-semantic",
+                                                className="static-graph",
+                                            ),
+                                        ],
+                                    ),
                                 ],
                             ),
                         ],
@@ -2004,12 +2017,20 @@ def run_dash_app(
     @app.callback(
         Output("static-calls-bar", "figure"),
         Output("static-kw-bar", "figure"),
+        Output("static-heat-acoustic", "figure"),
+        Output("static-heat-semantic", "figure"),
         Input("static-species-store", "data"),
     )
     def _update_static_figs(species_sel):
         fig_calls = make_calls_bar(species_sel or [])
         fig_kw = make_keyword_bar(species_sel or [])
-        return fig_calls, fig_kw
+        fig_heat_a = make_similarity_heatmap(
+            acoustic_embeds, species_sel or [], "Pairwise acoustic similarities"
+        )
+        fig_heat_s = make_similarity_heatmap(
+            semantic_embeds, species_sel or [], "Pairwise semantic similarities"
+        )
+        return fig_calls, fig_kw, fig_heat_a, fig_heat_s
 
     @app.callback(
         Output("trans-species-store", "data"),
@@ -2719,6 +2740,71 @@ def run_dash_app(
             template="plotly_white",
             legend=dict(orientation="v", yanchor="top", y=1, xanchor="left", x=1.02),
             annotations=total_ann,
+        )
+        return fig
+
+    def make_similarity_heatmap(
+        embeds: np.ndarray,
+        species_sel: List[str] | None,
+        title: str,
+    ):
+        idxs = _idxs_for_species(species_sel)
+        if not idxs:
+            return go.Figure().update_layout(
+                title=f"{title} (none)", template="plotly_white", height=400
+            )
+
+        # Simple ordering: species name then call name
+        def _key(idx):
+            return (species_common_name(species_all[idx]), calls_all[idx].get("call_name", ""))
+
+        # group by species (already ordered by group then species)
+        blocks: List[List[int]] = []
+        for sp in sorted({species_all[i] for i in idxs}, key=species_common_name):
+            block = [i for i in sorted(idxs, key=_key) if species_all[i] == sp]
+            if block:
+                blocks.append(block)
+
+        ordered: List[int] = []
+        for b in blocks:
+            ordered.extend(b)
+
+        mat = embeds[ordered]
+        mat = mat / (np.linalg.norm(mat, axis=1, keepdims=True) + 1e-9)
+        sims = np.dot(mat, mat.T)
+
+        # build labels per call (before separators)
+        base_labels = [
+            f"{species_icon_map.get(species_all[i], '')} {species_common_name(species_all[i])}: {_strip_parenthetical(calls_all[i].get('call_name',''))}"
+            for i in ordered
+        ]
+
+        # no separators; use base labels and sims directly
+        labels = base_labels
+
+        fig = go.Figure(
+            data=go.Heatmap(
+                z=sims,
+                x=labels,
+                y=labels,
+                colorscale=[
+                    [0.0, "#d6c800"],  # yellow for negative
+                    [0.5, "#ffffff"],  # white at zero
+                    [1.0, "#c81e1e"],  # red for positive
+                ],
+                zmin=-1,
+                zmax=1,
+                colorbar=dict(title="sim"),
+                hovertemplate="<b>%{y}</b><br>%{x}<br>sim=%{z:.3f}<extra></extra>",
+            )
+        )
+        fig.update_layout(
+            title=title,
+            height=420,
+            margin=dict(l=80, r=20, t=40, b=120),
+            xaxis=dict(showticklabels=False),
+            yaxis=dict(showticklabels=False),
+            template="plotly_white",
         )
         return fig
 
