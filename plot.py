@@ -2068,13 +2068,19 @@ def run_dash_app(
     )
     def _update_trans_figs(species_sel):
         fig_u2a = make_umap_fig(
-            acoustic_umap2d_a, species_sel or [], "Acoustic UMAP", showlegend=False
+            acoustic_umap2d_a,
+            species_sel or [],
+            "Acoustic UMAP",
+            showlegend=False,
         )
         fig_u3a = make_umap_fig(
             acoustic_umap3d_a, species_sel or [], "Acoustic UMAP", showlegend=False
         )
         fig_u2b = make_umap_fig(
-            semantic_umap2d, species_sel or [], "Semantic UMAP", showlegend=False
+            semantic_umap2d,
+            species_sel or [],
+            "Semantic UMAP",
+            showlegend=False,
         )
         fig_u3b = make_umap_fig(
             semantic_umap3d, species_sel or [], "Semantic UMAP", showlegend=False
@@ -2759,6 +2765,7 @@ def run_dash_app(
         species_sel: List[str] | None,
         title: str,
         showlegend: bool = True,
+        selected_idx: int | None = None,
     ):
         idxs = _idxs_for_species(species_sel)
         if not idxs:
@@ -2775,10 +2782,18 @@ def run_dash_app(
                         y=coords[sp_idxs, 1],
                         z=coords[sp_idxs, 2],
                         mode="markers",
-                        marker=dict(color=color_map.get(sp), size=4, opacity=0.8),
+                        marker=dict(
+                            color=color_map.get(sp),
+                            size=[
+                                8 if (selected_idx is not None and i == selected_idx) else 4
+                                for i in sp_idxs
+                            ],
+                            opacity=0.85,
+                        ),
                         name=f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
                         hovertext=[call_names_all[i] for i in sp_idxs],
                         hoverinfo="text",
+                        customdata=sp_idxs,
                         showlegend=showlegend,
                     )
                 )
@@ -2793,19 +2808,19 @@ def run_dash_app(
                     xaxis=dict(
                         showticklabels=False,
                         showgrid=True,
-                        gridcolor="rgba(200,200,200,0.35)",
+                        gridcolor="rgba(255,255,255,0.55)",
                         zeroline=False,
                     ),
                     yaxis=dict(
                         showticklabels=False,
                         showgrid=True,
-                        gridcolor="rgba(200,200,200,0.35)",
+                        gridcolor="rgba(255,255,255,0.55)",
                         zeroline=False,
                     ),
                     zaxis=dict(
                         showticklabels=False,
                         showgrid=True,
-                        gridcolor="rgba(200,200,200,0.35)",
+                        gridcolor="rgba(255,255,255,0.55)",
                         zeroline=False,
                     ),
                 ),
@@ -2823,10 +2838,18 @@ def run_dash_app(
                     x=coords[sp_idxs, 0],
                     y=coords[sp_idxs, 1],
                     mode="markers",
-                    marker=dict(color=color_map.get(sp), size=7, opacity=0.8),
+                    marker=dict(
+                        color=color_map.get(sp),
+                        size=[
+                            11 if (selected_idx is not None and i == selected_idx) else 7
+                            for i in sp_idxs
+                        ],
+                        opacity=0.85,
+                    ),
                     name=f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
                     hovertext=[call_names_all[i] for i in sp_idxs],
                     hoverinfo="text",
+                    customdata=sp_idxs,
                     showlegend=True,
                 )
             )
@@ -2839,14 +2862,20 @@ def run_dash_app(
             xaxis=dict(
                 showticklabels=False,
                 showgrid=True,
-                gridcolor="rgba(200,200,200,0.35)",
+                gridcolor="rgba(255,255,255,0.55)",
                 zeroline=False,
+                scaleanchor="y",
+                scaleratio=1,
+                constrain="domain",
             ),
             yaxis=dict(
                 showticklabels=False,
                 showgrid=True,
-                gridcolor="rgba(200,200,200,0.35)",
+                gridcolor="rgba(255,255,255,0.55)",
                 zeroline=False,
+                scaleanchor="x",
+                scaleratio=1,
+                constrain="domain",
             ),
             showlegend=showlegend,
         )
