@@ -1680,7 +1680,6 @@ def run_dash_app(
                 id="pair-species",
                 className="section section--pair",
                 children=[
-                    dcc.Store(id="pair-selected", data=None),
                     html.Div(
                         className="section__header",
                         children=[
@@ -1962,72 +1961,13 @@ def run_dash_app(
 
     @app.callback(
         Output("pair-graph", "figure"),
-        Output("pair-selected", "data"),
-        Input("pair-graph", "clickData"),
-        Input("pair-space", "value"),
-        Input("pair-species-1", "value"),
-        Input("pair-species-2", "value"),
-        State("pair-selected", "data"),
-    )
-    def _update_pair_graph(clickData, space, sp1, sp2, selected):
-        new_selected = selected
-        if clickData and clickData.get("points"):
-            idx = clickData["points"][0].get("customdata")
-            if idx is not None:
-                new_selected = None if selected == idx else idx
-        fig = _make_pair_plot(space or "semantic", sp1, sp2, selected_idx=new_selected)
-        return fig, new_selected
-
-    @app.callback(
-        Output("pair-hover-left", "children"),
-        Output("pair-hover-right", "children"),
-        Input("pair-selected", "data"),
         Input("pair-space", "value"),
         Input("pair-species-1", "value"),
         Input("pair-species-2", "value"),
     )
-    def _update_pair_panels(selected, space, sp1, sp2):
-        if selected is None or not sp1 or not sp2 or sp1 == sp2:
-            placeholder = html.Div("Click a call to see details.", className="subtle")
-            return placeholder, placeholder
-
-        emb = (
-            acoustic_embeds if (space or "semantic") == "acoustic" else semantic_embeds
-        )
-        if selected in [i for i, s in enumerate(species_all) if s == sp1]:
-            base_idx = int(selected)
-            other_idxs = [i for i, s in enumerate(species_all) if s == sp2]
-            if not other_idxs:
-                return _render_call_card(calls_all[base_idx]), html.Div(
-                    "No calls in Species 2", className="subtle"
-                )
-            vec = emb[base_idx]
-            cand = emb[other_idxs]
-            dists = np.linalg.norm(cand - vec, axis=1)
-            j = int(dists.argmin())
-            nn_idx = other_idxs[j]
-            return _render_call_card(calls_all[base_idx]), _render_call_card(
-                calls_all[nn_idx]
-            )
-
-        if selected in [i for i, s in enumerate(species_all) if s == sp2]:
-            base_idx = int(selected)
-            other_idxs = [i for i, s in enumerate(species_all) if s == sp1]
-            if not other_idxs:
-                return html.Div(
-                    "No calls in Species 1", className="subtle"
-                ), _render_call_card(calls_all[base_idx])
-            vec = emb[base_idx]
-            cand = emb[other_idxs]
-            dists = np.linalg.norm(cand - vec, axis=1)
-            j = int(dists.argmin())
-            nn_idx = other_idxs[j]
-            return _render_call_card(calls_all[nn_idx]), _render_call_card(
-                calls_all[base_idx]
-            )
-
-        placeholder = html.Div("Click a call to see details.", className="subtle")
-        return placeholder, placeholder
+    def _update_pair_graph(space, sp1, sp2):
+        fig = _make_pair_plot(space or "semantic", sp1, sp2)
+        return fig
 
     @app.callback(
         Output("scatter", "figure"),
@@ -2407,9 +2347,7 @@ def run_dash_app(
         # to reduce crossings, keep current order
         return rows, idxs1, idxs2, sims
 
-    def _make_pair_plot(
-        space: str, sp1: str, sp2: str, selected_idx: int | None = None
-    ) -> go.Figure:
+    def _make_pair_plot(space: str, sp1: str, sp2: str) -> go.Figure:
         rows, idxs1, idxs2, sims = _pair_rows(space, sp1, sp2)
         if not rows:
             return go.Figure().update_layout(
@@ -2421,19 +2359,6 @@ def run_dash_app(
         row_h = 1.6
         shapes = []
         annotations = []
-
-        sel_side = None
-        sel_local = None
-        sel_translation_local = None
-        if selected_idx is not None:
-            if selected_idx in idxs1:
-                sel_side = "left"
-                sel_local = idxs1.index(selected_idx)
-                sel_translation_local = int(sims[sel_local].argmax())
-            elif selected_idx in idxs2:
-                sel_side = "right"
-                sel_local = idxs2.index(selected_idx)
-                sel_translation_local = int(sims[:, sel_local].argmax())
 
         left_center_x = 0
         right_center_x = 8
@@ -2454,28 +2379,6 @@ def run_dash_app(
             line_width = 1
             line_dash = "solid"
             line_color = "rgba(0,0,0,0.2)"
-
-            global_idx = idxs1[idx_local] if is_left else idxs2[idx_local]
-            if selected_idx is not None and global_idx == selected_idx:
-                line_width = 3
-                line_color = "rgba(37,99,235,0.9)"
-            elif sel_translation_local is not None:
-                if (
-                    sel_side == "left"
-                    and not is_left
-                    and idx_local == sel_translation_local
-                ):
-                    line_width = 2.5
-                    line_dash = "dash"
-                    line_color = "rgba(37,99,235,0.9)"
-                if (
-                    sel_side == "right"
-                    and is_left
-                    and idx_local == sel_translation_local
-                ):
-                    line_width = 2.5
-                    line_dash = "dash"
-                    line_color = "rgba(37,99,235,0.9)"
             shapes.append(
                 dict(
                     type="rect",
@@ -2524,14 +2427,6 @@ def run_dash_app(
             y1 += 0.12
             tail_x = left_center_x + box_w / 2
             head_x = right_center_x - box_w / 2
-            highlight = (
-                (sel_side == "left" and sel_local == i_local)
-                or (
-                    sel_side == "right" and j_local is not None and sel_local == j_local
-                )
-                or (sel_side == "left" and sel_translation_local == j_local)
-                or (sel_side == "right" and sel_translation_local == i_local)
-            )
             annotations.append(
                 dict(
                     x=head_x,
@@ -2544,11 +2439,9 @@ def run_dash_app(
                     ayref="y",
                     showarrow=True,
                     arrowhead=4,
-                    arrowsize=2.0 if highlight else 1.6,
-                    arrowwidth=2.2 if highlight else 1.4,
-                    arrowcolor=(
-                        "rgba(220,38,38,0.95)" if highlight else "rgba(220,38,38,0.7)"
-                    ),
+                    arrowsize=1.6,
+                    arrowwidth=1.4,
+                    arrowcolor="rgba(220,38,38,0.7)",
                     text=f"{sim_ij:.3f}",
                     font=dict(size=10, color="rgba(220,38,38,0.9)"),
                 )
@@ -2564,12 +2457,6 @@ def run_dash_app(
             y1 = left_row_map[i_local] - 0.12
             tail_x = right_center_x - box_w / 2
             head_x = left_center_x + box_w / 2
-            highlight = (
-                (sel_side == "right" and sel_local == j_local)
-                or (sel_side == "left" and sel_local == i_local)
-                or (sel_side == "right" and sel_translation_local == i_local)
-                or (sel_side == "left" and sel_translation_local == j_local)
-            )
             annotations.append(
                 dict(
                     x=head_x,
@@ -2582,11 +2469,9 @@ def run_dash_app(
                     ayref="y",
                     showarrow=True,
                     arrowhead=4,
-                    arrowsize=2.0 if highlight else 1.6,
-                    arrowwidth=2.2 if highlight else 1.4,
-                    arrowcolor=(
-                        "rgba(37,99,235,0.95)" if highlight else "rgba(37,99,235,0.7)"
-                    ),
+                    arrowsize=1.6,
+                    arrowwidth=1.4,
+                    arrowcolor="rgba(37,99,235,0.7)",
                     text=f"{sim:.3f}",
                     font=dict(size=10, color="rgba(37,99,235,0.9)"),
                 )
