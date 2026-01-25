@@ -716,3 +716,43 @@ button:focus-visible,
   align-items: center;
   gap: 10px;
 }
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.panel-header__title {
+  margin: 0;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background 120ms ease,
+    border-color 120ms ease,
+    transform 120ms ease;
+}
+
+.btn:hover {
+  border-color: var(--border);
+  background: rgba(17, 24, 39, 0.03);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--subtle {
+  color: var(--muted);
+}

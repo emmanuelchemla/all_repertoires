@@ -1288,6 +1288,7 @@ def run_dash_app(
                         className="col col--left",
                         children=[
                             dcc.Store(id="species-store", data=[]),
+                            dcc.Store(id="selected-idx-store", data=None),
                             html.H3("Taxonomy selection"),
                             html.Div(
                                 className="panel panel--taxonomy",
@@ -1362,7 +1363,20 @@ def run_dash_app(
                     html.Div(
                         className="below-row__selected",
                         children=[
-                            html.H3("Selected call"),
+                            html.Div(
+                                className="panel-header",
+                                children=[
+                                    html.H3(
+                                        "Selected call", className="panel-header__title"
+                                    ),
+                                    html.Button(
+                                        "Clear selection",
+                                        id="clear-selection",
+                                        n_clicks=0,
+                                        className="btn btn--subtle",
+                                    ),
+                                ],
+                            ),
                             html.Div(
                                 id="selected-call",
                                 children="Click a point to select a call.",
@@ -1386,6 +1400,8 @@ def run_dash_app(
             static_gallery,
         ],
     )
+
+    # --- New callbacks for species/taxonomy selection ---
 
     # --- New callbacks for species/taxonomy selection ---
 
@@ -1481,6 +1497,28 @@ def run_dash_app(
         )
 
     @app.callback(
+        Output("selected-idx-store", "data"),
+        Input("scatter", "clickData"),
+        Input("clear-selection", "n_clicks"),
+        State("selected-idx-store", "data"),
+        prevent_initial_call=True,
+    )
+    def _update_selected_idx(clickData, n_clear, current):
+        from dash import ctx
+
+        if ctx.triggered_id == "clear-selection":
+            return None
+
+        if clickData and clickData.get("points"):
+            idx = clickData["points"][0].get("customdata")
+            try:
+                return int(idx) if idx is not None else None
+            except Exception:
+                return None
+
+        return current
+
+    @app.callback(
         Output("species-store", "data"),
         Input("taxonomy", "clickData"),
         Input("selection-mode", "value"),
@@ -1545,10 +1583,9 @@ def run_dash_app(
     @app.callback(
         Output("scatter", "figure"),
         Input("species-store", "data"),
-        Input("scatter", "clickData"),
-        Input("scatter", "relayoutData"),
+        Input("selected-idx-store", "data"),
     )
-    def _update_scatter_from_store(species_sel, clickData, relayoutData):
+    def _update_scatter_from_store(species_sel, selected_idx):
         species_sel = species_sel or []
         filtered = filter_calls(
             calls_all,
@@ -1556,14 +1593,11 @@ def run_dash_app(
         )
 
         clicked_idx = None
-
-        # Click on a point
-        if clickData and clickData.get("points"):
-            clicked_idx = clickData["points"][0].get("customdata")
-
-        # Click on empty space: relayoutData fires without clickData
-        elif relayoutData:
-            clicked_idx = None
+        if selected_idx is not None:
+            try:
+                clicked_idx = int(selected_idx)
+            except Exception:
+                clicked_idx = None
 
         return make_scatter(filtered, clicked_idx=clicked_idx)
 
@@ -1571,9 +1605,9 @@ def run_dash_app(
         Output("selected-call", "children"),
         Output("translations-strip", "children"),
         Input("species-store", "data"),
-        Input("scatter", "clickData"),
+        Input("selected-idx-store", "data"),
     )
-    def _show_selected_and_translations(species_sel, clickData):
+    def _show_selected_and_translations(species_sel, selected_idx):
         # Build the currently displayed set (same as scatter filtering)
         species_sel = species_sel or []
         filtered = filter_calls(
@@ -1597,15 +1631,11 @@ def run_dash_app(
             className="subtle",
         )
 
-        if not clickData or not clickData.get("points"):
-            return (placeholder_selected, placeholder_trans)
-
-        clicked_idx = clickData["points"][0].get("customdata")
-        if clicked_idx is None:
+        if selected_idx is None:
             return (placeholder_selected, placeholder_trans)
 
         try:
-            clicked_idx = int(clicked_idx)
+            clicked_idx = int(selected_idx)
         except Exception:
             return (placeholder_selected, placeholder_trans)
 
