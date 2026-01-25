@@ -1418,6 +1418,19 @@ def run_dash_app(
                                             ),
                                         ],
                                     ),
+                                    html.Div(
+                                        className="static-row",
+                                        children=[
+                                            html.Div(
+                                                id="static-mantel",
+                                                className="panel",
+                                                style={
+                                                    "gridColumn": "span 2",
+                                                    "padding": "8px 12px",
+                                                },
+                                            ),
+                                        ],
+                                    ),
                                 ],
                             ),
                         ],
@@ -2030,6 +2043,7 @@ def run_dash_app(
         Output("static-kw-bar", "figure"),
         Output("static-heat-acoustic", "figure"),
         Output("static-heat-semantic", "figure"),
+        Output("static-mantel", "children"),
         Input("static-species-store", "data"),
     )
     def _update_static_figs(species_sel):
@@ -2041,7 +2055,75 @@ def run_dash_app(
         fig_heat_s = make_similarity_heatmap(
             semantic_embeds, species_sel or [], "Pairwise semantic similarities"
         )
-        return fig_calls, fig_kw, fig_heat_a, fig_heat_s
+        mantel_all = _mantel_stats(
+            acoustic_embeds, semantic_embeds, _idxs_for_species(species_sel or [])
+        )
+        mantel_cross = _mantel_stats(
+            acoustic_embeds,
+            semantic_embeds,
+            _idxs_for_species(species_sel or []),
+            cross_only=True,
+        )
+
+        def _fmt(res, label):
+            if res is None:
+                return f"{label}: n/a"
+            r, p = res
+            return f"{label}: r={r:.3f}, p={p:.3f}"
+
+        return (
+            fig_calls,
+            fig_kw,
+            fig_heat_a,
+            fig_heat_s,
+            html.Div(
+                [
+                    html.Div(
+                        "Correlations between acoustic and semantic (Mantel tests):",
+                        style={"marginBottom": "4px"},
+                    ),
+                    html.Table(
+                        [
+                            html.Tr(
+                                [
+                                    html.Td("All pairs of calls"),
+                                    html.Td(
+                                        html.I(f"r = {mantel_all[0]:.3f}")
+                                        if mantel_all
+                                        else "n/a"
+                                    ),
+                                    html.Td(
+                                        html.I(f"p = {mantel_all[1]:.3f}")
+                                        if mantel_all
+                                        else "n/a"
+                                    ),
+                                ]
+                            ),
+                            html.Tr(
+                                [
+                                    html.Td("Cross-species only"),
+                                    html.Td(
+                                        html.I(f"r = {mantel_cross[0]:.3f}")
+                                        if mantel_cross
+                                        else "n/a"
+                                    ),
+                                    html.Td(
+                                        html.I(f"p = {mantel_cross[1]:.3f}")
+                                        if mantel_cross
+                                        else "n/a"
+                                    ),
+                                ]
+                            ),
+                        ],
+                        style={
+                            "width": "100%",
+                            "borderCollapse": "collapse",
+                            "fontSize": "14px",
+                        },
+                    ),
+                ]
+            ),
+        )
 
     @app.callback(
         Output("trans-species-store", "data"),
@@ -2753,6 +2835,54 @@ def run_dash_app(
             annotations=total_ann,
         )
         return fig
+
+    def _mantel_stats(
+        emb_a: np.ndarray,
+        emb_s: np.ndarray,
+        idxs: List[int],
+        cross_only: bool = False,
+        n_perm: int = 199,
+    ):
+        """Compute Mantel-like Pearson r between acoustic and semantic similarity matrices.
+        If cross_only=True, ignore within-species pairs."""
+        if len(idxs) < 3:
+            return None
+        # normalize embeddings
+        ea = emb_a[idxs]
+        es = emb_s[idxs]
+        ea = ea / (np.linalg.norm(ea, axis=1, keepdims=True) + 1e-9)
+        es = es / (np.linalg.norm(es, axis=1, keepdims=True) + 1e-9)
+        Sa = ea @ ea.T
+        Ss = es @ es.T
+
+        # upper triangle indices
+        tri = np.triu_indices(len(idxs), k=1)
+        mask = np.ones_like(tri[0], dtype=bool)
+        if cross_only:
+            species_idxs = [species_all[i] for i in idxs]
+            mask = np.array(
+                [species_idxs[i] != species_idxs[j] for i, j in zip(tri[0], tri[1])]
+            )
+            if not mask.any():
+                return None
+
+        a_vec = Sa[tri][mask]
+        s_vec = Ss[tri][mask]
+        if a_vec.size < 3:
+            return None
+
+        r_obs = np.corrcoef(a_vec, s_vec)[0, 1]
+
+        # permutation test (shuffle semantic labels)
+        rs = []
+        for _ in range(n_perm):
+            perm = np.random.permutation(len(idxs))
+            Ss_perm = Ss[perm][:, perm]
+            s_vec_perm = Ss_perm[tri][mask]
+            rs.append(np.corrcoef(a_vec, s_vec_perm)[0, 1])
+        rs = np.array(rs)
+        p = (np.sum(np.abs(rs) >= abs(r_obs)) + 1) / (n_perm + 1)
+        return float(r_obs), float(p)
 
     def make_similarity_heatmap(
         embeds: np.ndarray,
