@@ -839,7 +839,7 @@ def run_interactive(
             legend_traces.append(go.Scatter(**leg_kwargs))
 
     layout = go.Layout(
-        title="UMAP of Acoustic Descriptions (interactive)",
+        title="UMAP of Acoustic Descriptions. Click on a dot (a call) to display semantic nearest neighbors, with details below.",
         xaxis_title="UMAP-1",
         yaxis_title="UMAP-2",
         showlegend=True,
@@ -1123,8 +1123,11 @@ def run_dash_app(
                 )
 
         fig.update_layout(
-            title="UMAP of Acoustic Descriptions (interactive)",
-            margin=dict(t=45, l=10, r=10, b=10),
+            title=dict(
+                text="UMAP of Acoustic Descriptions<br><span style='font-size:12px; color:#6b7280;'>Click a dot (call) to see semantic nearest neighbors; with full details displayed below</span>",
+                y=0.97,
+            ),
+            margin=dict(t=58, l=10, r=10, b=10),
         )
         fig.update_xaxes(
             title=None,
@@ -1283,13 +1286,18 @@ def run_dash_app(
                     html.Div(
                         className="topnav__links",
                         children=[
-                            html.A("Homepage", href="#home", className="topnav__link"),
+                            html.A("Home", href="#home", className="topnav__link"),
+                            html.A(
+                                "Summary plots",
+                                href="#static-plots",
+                                className="topnav__link",
+                            ),
                             html.A(
                                 "Explorer", href="#explorer", className="topnav__link"
                             ),
                             html.A(
-                                "Static plots",
-                                href="#static-plots",
+                                "One species",
+                                href="#one-species",
                                 className="topnav__link",
                             ),
                         ],
@@ -1302,9 +1310,7 @@ def run_dash_app(
                 children=[
                     html.Div(
                         className="hero__header",
-                        children=html.H1(
-                            "Many species repertoires", className="hero__title"
-                        ),
+                        children=html.H1("Home", className="hero__title"),
                     ),
                     html.Div(
                         className="hero__body",
@@ -1312,33 +1318,6 @@ def run_dash_app(
                             html.P(
                                 "This page offers an interactive explorer of a cross-species database of animal vocal repertoires.",
                                 className="hero__paragraph",
-                            ),
-                            html.P(
-                                "Each point in the UMAP corresponds to a specific call type, embedded based on its acoustic description. "
-                                "Colors indicate species.",
-                                className="hero__paragraph",
-                            ),
-                            html.P(
-                                "How to use the interface:",
-                                className="hero__paragraph hero__paragraph--lead",
-                            ),
-                            html.Ul(
-                                [
-                                    html.Li(
-                                        "Use the taxonomy panel on the left to filter species or higher taxonomic groups (play around with, it does not work perfectly)."
-                                    ),
-                                    html.Li("Hover over points to inspect individual calls."),
-                                    html.Li(
-                                        "Click a point to select a call and view its nearest semantic equivalent in every other species:"
-                                    ),
-                                    html.Li(
-                                        "> The connections in the plot show these 'translations'."
-                                    ),
-                                    html.Li(
-                                        "> The Translations panel below provides all details, it also indicates whether these 'translations' map back to the original call (back-translation)."
-                                    ),
-                                ],
-                                className="hero__list",
                             ),
                             html.P(
                                 "Static plots below",
@@ -1350,6 +1329,27 @@ def run_dash_app(
                             ),
                         ],
                     ),
+                ],
+            ),
+            html.Div(
+                id="static-plots",
+                className="section section--static",
+                children=[
+                    html.Div(
+                        className="section__header",
+                        children=[
+                            html.Div(
+                                [
+                                    html.P("Static plots", className="section__kicker"),
+                                    html.H2(
+                                        "Quick summaries of the dataset",
+                                        className="section__title",
+                                    ),
+                                ]
+                            )
+                        ],
+                    ),
+                    static_gallery,
                 ],
             ),
             html.Div(
@@ -1366,7 +1366,7 @@ def run_dash_app(
                                         className="section__kicker",
                                     ),
                                     html.H2(
-                                        "Filter taxa, explore the UMAP, see translations",
+                                        "Explore calls in acoustic space, find translations in semantic space.",
                                         className="section__title",
                                     ),
                                 ]
@@ -1497,24 +1497,43 @@ def run_dash_app(
                 ],
             ),
             html.Div(
-                id="static-plots",
-                className="section section--static",
+                id="one-species",
+                className="section section--onespecies",
                 children=[
                     html.Div(
                         className="section__header",
                         children=[
                             html.Div(
                                 [
-                                    html.P("Static plots", className="section__kicker"),
-                                    html.H2(
-                                        "Quick summaries of the dataset",
-                                        className="section__title",
-                                    ),
+                                    html.P("Single species view", className="section__kicker"),
+                                    html.H2("One species", className="section__title"),
                                 ]
                             )
                         ],
                     ),
-                    static_gallery,
+                    html.Div(
+                        className="one-species__controls",
+                        children=[
+                            html.Label("Choose a species", className="taxonomy-controls__label"),
+                            dcc.Dropdown(
+                                id="one-species-dropdown",
+                                options=[
+                                    {"label": species_common_name(sp), "value": sp}
+                                    for sp in species_unique
+                                ],
+                                placeholder="Select a species",
+                                clearable=True,
+                            ),
+                        ],
+                    ),
+                    html.Div(
+                        id="one-species-list",
+                        className="one-species__list",
+                        children=html.Div(
+                            "Pick a species to see its calls and translations.",
+                            className="subtle",
+                        ),
+                    ),
                 ],
             ),
         ],
@@ -1525,6 +1544,10 @@ def run_dash_app(
     # --- New callbacks for species/taxonomy selection ---
 
     # --- Reusable call-card renderer for selected/hovered call panels and translation strip ---
+    def _strip_parenthetical(text: str) -> str:
+        """Drop trailing parenthetical from a call name, if present."""
+        return re.sub(r"\s*\([^)]*\)\s*$", "", str(text)).strip()
+
     def _render_call_card(c: Dict[str, object]) -> html.Div:
         species = str(c.get("species", ""))
         call_name = str(c.get("call_name", ""))
@@ -1804,7 +1827,9 @@ def run_dash_app(
                 bt_sim = 1.0 - (bt_dist * bt_dist) / 2.0
 
             if bt_idx is not None:
-                bt_call_name = str(calls_all[bt_idx].get("call_name", ""))
+                bt_call_name = _strip_parenthetical(
+                    calls_all[bt_idx].get("call_name", "")
+                )
                 icon = "✅" if int(bt_idx) == int(clicked_idx) else "❌"
                 back_line = f"Back-translation: {icon} {bt_call_name} (similarity: {bt_sim:.3f})"
             else:
@@ -1838,6 +1863,132 @@ def run_dash_app(
         )
 
         return (selected_with_meta, translations_inner)
+
+    def _translations_for_idx(idx: int) -> Tuple[html.Div, html.Div]:
+        """Return (base_call_card_with_meta, translations_strip_inner) for a given call index."""
+        base_species = species_all[idx]
+        base_vec = semantic_embeds[idx]
+
+        # nearest neighbor per other species (global)
+        neighbors: List[Tuple[float, int]] = []
+        for sp in species_unique:
+            if sp == base_species:
+                continue
+            candidates = [i for i, s in enumerate(species_all) if s == sp]
+            if not candidates:
+                continue
+            cand_vecs = semantic_embeds[candidates]
+            dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
+            j = int(dists.argmin())
+            nn_idx = candidates[j]
+            neighbors.append((float(dists[j]), nn_idx))
+
+        neighbors.sort(key=lambda x: x[0])
+
+        selected_card = _render_call_card(calls_all[idx])
+        selected_meta = html.Div(
+            className="translation-meta translation-meta--placeholder",
+            children=[
+                html.Div("", className="subtle translation-metric"),
+                html.Div("", className="subtle translation-metric"),
+            ],
+        )
+        selected_with_meta = html.Div(
+            className="translation-card translation-card--selected",
+            children=[selected_meta, selected_card],
+        )
+
+        base_candidates = [i for i, s in enumerate(species_all) if s == base_species]
+        trans_cards = []
+        for dist, nn_idx in neighbors:
+            cos_sim = 1.0 - (dist * dist) / 2.0
+
+            bt_idx = None
+            bt_sim = None
+            if base_candidates:
+                bt_dists = _np.linalg.norm(
+                    semantic_embeds[base_candidates] - semantic_embeds[nn_idx], axis=1
+                )
+                j_bt = int(bt_dists.argmin())
+                bt_idx = base_candidates[j_bt]
+                bt_dist = float(bt_dists[j_bt])
+                bt_sim = 1.0 - (bt_dist * bt_dist) / 2.0
+
+            if bt_idx is not None:
+                bt_call_name = _strip_parenthetical(
+                    calls_all[bt_idx].get("call_name", "")
+                )
+                icon = "✅" if int(bt_idx) == int(idx) else "❌"
+                back_line = f"Back-translation: {icon} {bt_call_name} (similarity: {bt_sim:.3f})"
+            else:
+                back_line = "Back-translation: (none)"
+
+            trans_cards.append(
+                html.Div(
+                    className="translation-card",
+                    children=[
+                        html.Div(
+                            className="translation-meta",
+                            children=[
+                                html.Div(
+                                    f"Similarity: {cos_sim:.3f}",
+                                    className="subtle translation-metric",
+                                ),
+                                html.Div(back_line, className="subtle translation-metric"),
+                            ],
+                        ),
+                        _render_call_card(calls_all[nn_idx]),
+                    ],
+                )
+            )
+
+        translations_inner = html.Div(
+            className="selection-strip__inner",
+            children=trans_cards,
+        )
+        return selected_with_meta, translations_inner
+
+    @app.callback(
+        Output("one-species-list", "children"),
+        Input("one-species-dropdown", "value"),
+    )
+    def _render_one_species(selected_species):
+        if not selected_species:
+            return html.Div(
+                "Pick a species to see its calls and translations.",
+                className="subtle",
+            )
+
+        idxs = [i for i, sp in enumerate(species_all) if sp == selected_species]
+        if not idxs:
+            return html.Div("No calls for that species.", className="subtle")
+
+        cards = []
+        for idx in idxs:
+            base_card, translations_inner = _translations_for_idx(idx)
+            cards.append(
+                html.Div(
+                    className="onespecies-call",
+                    children=[
+                        html.Div(
+                            className="onespecies-call__base",
+                            children=html.Div(
+                                className="panel panel--selected",
+                                children=base_card,
+                            ),
+                        ),
+                        html.Div(
+                            className="onespecies-call__translations",
+                            children=html.Div(
+                                className="selection-strip selection-strip--stacked",
+                                children=translations_inner,
+                            ),
+                        ),
+                    ],
+                )
+            )
+
+        return cards
 
     @app.callback(
         Output("overlayed", "children"),

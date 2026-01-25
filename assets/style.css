@@ -319,6 +319,61 @@ body {
   font-size: 20px;
 }
 
+.section__intro {
+  margin-top: 6px;
+}
+
+.section__intro .hero__paragraph {
+  font-size: 12px;
+  line-height: 1.35;
+  margin: 2px 0 4px 0;
+}
+
+.section__intro .hero__list {
+  margin: 4px 0 0 16px;
+}
+
+.section__intro .hero__list li {
+  font-size: 12px;
+  line-height: 1.3;
+  margin: 2px 0;
+}
+
+/* =========================
+   One-species section
+   ========================= */
+.one-species__controls {
+  margin: 10px 0 12px;
+  max-width: 420px;
+}
+
+.one-species__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.onespecies-call {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.onespecies-call__base {
+  width: 360px;
+  flex: 0 0 auto;
+}
+
+.onespecies-call__translations {
+  flex: 1;
+  min-width: 0;
+}
+
+.selection-strip--stacked {
+  padding: 10px;
+  overflow-x: auto;
+}
+
 /* Headings */
 h1,
 h2,
