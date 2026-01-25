@@ -1419,23 +1419,39 @@ def run_dash_app(
                                 className="static-left",
                                 children=[
                                     dcc.Store(id="static-species-store", data=[]),
-                                    html.H4(
-                                        "Taxonomy wheel", className="static-left__title"
-                                    ),
-                                    dcc.RadioItems(
-                                        id="static-selection-mode",
-                                        options=[
-                                            {"label": "Add", "value": "add"},
-                                            {"label": "Focus", "value": "replace"},
+                                    html.H3("Taxonomy selection"),
+                                    html.Div(
+                                        className="panel panel--taxonomy",
+                                        children=[
+                                            html.Div(
+                                                "Click taxonomy nodes to filter species",
+                                                className="subtle subtle--tight",
+                                            ),
+                                            html.Div(
+                                                className="taxonomy-controls taxonomy-controls--compact taxonomy-controls--inline",
+                                                children=[
+                                                    html.Span(
+                                                        "Selection mode",
+                                                        className="taxonomy-controls__label",
+                                                    ),
+                                                    dcc.RadioItems(
+                                                        id="static-selection-mode",
+                                                        options=[
+                                                            {"label": "Focus", "value": "replace"},
+                                                            {"label": "Add", "value": "add"},
+                                                        ],
+                                                        value="add",
+                                                        inline=True,
+                                                        className="taxonomy-controls__radio",
+                                                    ),
+                                                ],
+                                            ),
+                                            dcc.Graph(
+                                                id="static-taxonomy",
+                                                figure=fig_tax,
+                                                style={"height": "360px", "margin": "0"},
+                                            ),
                                         ],
-                                        value="add",
-                                        inline=True,
-                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
-                                    ),
-                                    dcc.Graph(
-                                        id="static-taxonomy",
-                                        figure=fig_tax,
-                                        style={"height": "360px", "margin": "0"},
                                     ),
                                 ],
                             ),
