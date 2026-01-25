@@ -613,6 +613,22 @@ h3 {
   min-height: 220px;
 }
 
+.panel--tight {
+  min-height: auto;
+  padding: 8px 10px;
+  line-height: 1.25;
+}
+
+.mantel-table {
+  width: auto;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.mantel-table td {
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+
 /* Plotly graphs: give them a nice frame without touching Plotly itself */
 .js-plotly-plot,
 .dash-graph {

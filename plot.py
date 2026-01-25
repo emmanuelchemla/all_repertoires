@@ -1423,10 +1423,9 @@ def run_dash_app(
                                         children=[
                                             html.Div(
                                                 id="static-mantel",
-                                                className="panel",
+                                                className="panel panel--tight",
                                                 style={
                                                     "gridColumn": "span 2",
-                                                    "padding": "8px 12px",
                                                 },
                                             ),
                                         ],
@@ -2116,10 +2115,11 @@ def run_dash_app(
                             ),
                         ],
                         style={
-                            "width": "100%",
+                            "width": "auto",
                             "borderCollapse": "collapse",
-                            "fontSize": "14px",
+                            "fontSize": "13px",
                         },
+                        className="mantel-table",
                     ),
                 ]
             ),
