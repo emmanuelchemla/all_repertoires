@@ -1405,32 +1405,6 @@ def run_dash_app(
                                             ),
                                         ],
                                     ),
-                                    html.Div(
-                                        className="static-row",
-                                        children=[
-                                            dcc.Graph(
-                                                id="static-umap2d-a",
-                                                className="static-graph",
-                                            ),
-                                            dcc.Graph(
-                                                id="static-umap3d-a",
-                                                className="static-graph",
-                                            ),
-                                        ],
-                                    ),
-                                    html.Div(
-                                        className="static-row",
-                                        children=[
-                                            dcc.Graph(
-                                                id="static-umap2d-b",
-                                                className="static-graph",
-                                            ),
-                                            dcc.Graph(
-                                                id="static-umap3d-b",
-                                                className="static-graph",
-                                            ),
-                                        ],
-                                    ),
                                 ],
                             ),
                         ],
@@ -2030,24 +2004,12 @@ def run_dash_app(
     @app.callback(
         Output("static-calls-bar", "figure"),
         Output("static-kw-bar", "figure"),
-        Output("static-umap2d-a", "figure"),
-        Output("static-umap3d-a", "figure"),
-        Output("static-umap2d-b", "figure"),
-        Output("static-umap3d-b", "figure"),
         Input("static-species-store", "data"),
     )
     def _update_static_figs(species_sel):
         fig_calls = make_calls_bar(species_sel or [])
         fig_kw = make_keyword_bar(species_sel or [])
-        fig_u2a = make_umap_fig(
-            acoustic_umap2d_a, species_sel or [], "Acoustic UMAP", showlegend=False
-        )
-        fig_u3a = make_umap_fig(acoustic_umap3d_a, species_sel or [], "Acoustic UMAP")
-        fig_u2b = make_umap_fig(
-            semantic_umap2d, species_sel or [], "Semantic UMAP", showlegend=False
-        )
-        fig_u3b = make_umap_fig(semantic_umap3d, species_sel or [], "Semantic UMAP")
-        return fig_calls, fig_kw, fig_u2a, fig_u3a, fig_u2b, fig_u3b
+        return fig_calls, fig_kw
 
     @app.callback(
         Output("trans-species-store", "data"),
