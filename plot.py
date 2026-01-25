@@ -1096,8 +1096,25 @@ def run_dash_app(
             title="UMAP of Acoustic Descriptions (interactive)",
             margin=dict(t=45, l=10, r=10, b=10),
         )
-        fig.update_xaxes(title=None, showticklabels=False)
-        fig.update_yaxes(title=None, showticklabels=False)
+        fig.update_xaxes(
+            title=None,
+            showticklabels=False,
+            showgrid=True,
+            zeroline=False,
+            gridcolor="rgba(200,200,200,0.6)",
+            gridwidth=1,
+            dtick=3,
+        )
+        fig.update_yaxes(
+            title=None,
+            showticklabels=False,
+            showgrid=True,
+            zeroline=False,
+            gridcolor="rgba(200,200,200,0.6)",
+            gridwidth=1,
+            dtick=3,
+            scaleanchor="x",
+        )
         return fig
 
     # Initial figures
