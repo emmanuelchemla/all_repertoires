@@ -2066,12 +2066,6 @@ def run_dash_app(
         mantel_strong_all = _mantel_partial(
             acoustic_embeds, semantic_embeds, _idxs_for_species(species_sel or [])
         )
-        mantel_strong_cross = _mantel_partial(
-            acoustic_embeds,
-            semantic_embeds,
-            _idxs_for_species(species_sel or []),
-            cross_only=True,
-        )
 
         def _fmt(res, label):
             if res is None:
@@ -2144,24 +2138,10 @@ def run_dash_app(
                                         else "n/a"
                                     ),
                                 ],
-                                style={"borderTop": "2px solid var(--border-strong)"},
-                            ),
-                            html.Tr(
-                                [
-                                    html.Td(""),
-                                    html.Td("Cross-species only"),
-                                    html.Td(
-                                        html.I(f"r = {mantel_strong_cross[0]:.3f}")
-                                        if mantel_strong_cross
-                                        else "n/a"
-                                    ),
-                                    html.Td(
-                                        html.I(f"p = {mantel_strong_cross[1]:.3f}")
-                                        if mantel_strong_cross
-                                        else "n/a"
-                                    ),
-                                ],
-                                style={"borderBottom": "2px solid var(--border-strong)"},
+                                style={
+                                    "borderTop": "2px solid var(--border-strong)",
+                                    "borderBottom": "2px solid var(--border-strong)",
+                                },
                             ),
                         ],
                         style={
@@ -2886,16 +2866,6 @@ def run_dash_app(
         )
         return fig
 
-    def _safe_corr(x: np.ndarray, y: np.ndarray) -> float | None:
-        if x.size < 2 or y.size < 2:
-            return None
-        if np.std(x) < 1e-9 or np.std(y) < 1e-9:
-            return None
-        r = np.corrcoef(x, y)[0, 1]
-        if np.isnan(r):
-            return None
-        return float(r)
-
     def _mantel_stats(
         emb_a: np.ndarray,
         emb_s: np.ndarray,
@@ -2931,9 +2901,7 @@ def run_dash_app(
         if a_vec.size < 3:
             return None
 
-        r_obs = _safe_corr(a_vec, s_vec)
-        if r_obs is None:
-            return None
+        r_obs = float(np.corrcoef(a_vec, s_vec)[0, 1])
 
         # permutation test (shuffle semantic labels)
         rs = []
@@ -2941,11 +2909,7 @@ def run_dash_app(
             perm = np.random.permutation(len(idxs))
             Ss_perm = Ss[perm][:, perm]
             s_vec_perm = Ss_perm[tri][mask]
-            r_p = _safe_corr(a_vec, s_vec_perm)
-            if r_p is not None:
-                rs.append(r_p)
-        if not rs:
-            return None
+            rs.append(np.corrcoef(a_vec, s_vec_perm)[0, 1])
         rs = np.array(rs)
         p = (np.sum(np.abs(rs) >= abs(r_obs)) + 1) / (n_perm + 1)
         return float(r_obs), float(p)
@@ -2986,11 +2950,9 @@ def run_dash_app(
         if a_vec.size < 3:
             return None
 
-        r_ab = _safe_corr(a_vec, s_vec)
-        r_ac = _safe_corr(a_vec, c_vec)
-        r_bc = _safe_corr(s_vec, c_vec)
-        if r_ab is None or r_ac is None or r_bc is None:
-            return None
+        r_ab = np.corrcoef(a_vec, s_vec)[0, 1]
+        r_ac = np.corrcoef(a_vec, c_vec)[0, 1]
+        r_bc = np.corrcoef(s_vec, c_vec)[0, 1]
         denom = np.sqrt((1 - r_ac**2) * (1 - r_bc**2)) + 1e-12
         r_partial = (r_ab - r_ac * r_bc) / denom
 
@@ -2998,14 +2960,10 @@ def run_dash_app(
         for _ in range(n_perm):
             perm = np.random.permutation(len(s_vec))
             s_perm = s_vec[perm]
-            r_ab_p = _safe_corr(a_vec, s_perm)
-            r_bc_p = _safe_corr(s_perm, c_vec)
-            if r_ab_p is None or r_bc_p is None:
-                continue
+            r_ab_p = np.corrcoef(a_vec, s_perm)[0, 1]
+            r_bc_p = np.corrcoef(s_perm, c_vec)[0, 1]
             r_partial_p = (r_ab_p - r_ac * r_bc_p) / denom
             rs.append(r_partial_p)
-        if not rs:
-            return None
         rs = np.array(rs)
         p = (np.sum(np.abs(rs) >= abs(r_partial)) + 1) / (n_perm + 1)
         return float(r_partial), float(p)
