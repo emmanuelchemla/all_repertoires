@@ -374,6 +374,55 @@ body {
   overflow-x: auto;
 }
 
+/* =========================
+   Static plots panel
+   ========================= */
+.static-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 14px;
+}
+
+.static-left {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.static-left__title {
+  margin: 0 0 8px 2px;
+  font-size: 14px;
+}
+
+.taxonomy-controls__radio--compact {
+  margin: 4px 0 8px;
+}
+
+.static-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.static-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 12px;
+}
+
+.static-graph {
+  height: 350px !important;
+}
+
+.static-graph--tall {
+  height: 380px !important;
+}
+
 /* Headings */
 h1,
 h2,

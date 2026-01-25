@@ -1039,6 +1039,12 @@ def run_dash_app(
             return "🐾"
         return ""
 
+    # Species -> icon map (first occurrence per species)
+    species_icon_map: Dict[str, str] = {}
+    for sp, c in zip(species_all, calls_all):
+        if sp not in species_icon_map:
+            species_icon_map[sp] = _taxon_icon(c)
+
     def _fmt_hover(i: int) -> str:
         """Minimal hover: species + call name."""
         c = calls_all[i]
@@ -1162,6 +1168,16 @@ def run_dash_app(
         )
     except Exception:
         fig_tax = go.Figure()
+
+    # Precompute UMAPs for static plots (two random seeds for variety)
+    def _reduce_umap_static(embeds, n_components: int, seed: int = 42):
+        reducer = UMAP(random_state=seed, n_components=n_components)
+        return reducer.fit_transform(embeds)
+
+    acoustic_umap2d_a = _reduce_umap_static(acoustic_embeds, 2, seed=42)
+    acoustic_umap3d_a = _reduce_umap_static(acoustic_embeds, 3, seed=42)
+    acoustic_umap2d_b = _reduce_umap_static(acoustic_embeds, 2, seed=7)
+    acoustic_umap3d_b = _reduce_umap_static(acoustic_embeds, 3, seed=7)
 
     app = Dash(__name__)
 
@@ -1349,7 +1365,79 @@ def run_dash_app(
                             )
                         ],
                     ),
-                    static_gallery,
+                    html.Div(
+                        className="static-layout",
+                        children=[
+                            html.Div(
+                                className="static-left",
+                                children=[
+                                    dcc.Store(id="static-species-store", data=[]),
+                                    html.H4(
+                                        "Taxonomy wheel", className="static-left__title"
+                                    ),
+                                    dcc.RadioItems(
+                                        id="static-selection-mode",
+                                        options=[
+                                            {"label": "Add", "value": "add"},
+                                            {"label": "Focus", "value": "replace"},
+                                        ],
+                                        value="add",
+                                        inline=True,
+                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                    ),
+                                    dcc.Graph(
+                                        id="static-taxonomy",
+                                        figure=fig_tax,
+                                        style={"height": "360px", "margin": "0"},
+                                    ),
+                                ],
+                            ),
+                            html.Div(
+                                className="static-right",
+                                children=[
+                                    html.Div(
+                                        className="static-row",
+                                        children=[
+                                            dcc.Graph(
+                                                id="static-calls-bar",
+                                                className="static-graph static-graph--tall",
+                                            ),
+                                            dcc.Graph(
+                                                id="static-kw-bar",
+                                                className="static-graph static-graph--tall",
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        className="static-row",
+                                        children=[
+                                            dcc.Graph(
+                                                id="static-umap2d-a",
+                                                className="static-graph",
+                                            ),
+                                            dcc.Graph(
+                                                id="static-umap3d-a",
+                                                className="static-graph",
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        className="static-row",
+                                        children=[
+                                            dcc.Graph(
+                                                id="static-umap2d-b",
+                                                className="static-graph",
+                                            ),
+                                            dcc.Graph(
+                                                id="static-umap3d-b",
+                                                className="static-graph",
+                                            ),
+                                        ],
+                                    ),
+                                ],
+                            ),
+                        ],
+                    ),
                 ],
             ),
             html.Div(
@@ -1505,7 +1593,10 @@ def run_dash_app(
                         children=[
                             html.Div(
                                 [
-                                    html.P("Single species view", className="section__kicker"),
+                                    html.P(
+                                        "Single species view",
+                                        className="section__kicker",
+                                    ),
                                     html.H2("One species", className="section__title"),
                                 ]
                             )
@@ -1514,7 +1605,9 @@ def run_dash_app(
                     html.Div(
                         className="one-species__controls",
                         children=[
-                            html.Label("Choose a species", className="taxonomy-controls__label"),
+                            html.Label(
+                                "Choose a species", className="taxonomy-controls__label"
+                            ),
                             dcc.Dropdown(
                                 id="one-species-dropdown",
                                 options=[
@@ -1699,6 +1792,35 @@ def run_dash_app(
             current_set |= set(species_under)
 
         return sorted(current_set)
+
+    @app.callback(
+        Output("static-species-store", "data"),
+        Input("static-taxonomy", "clickData"),
+        Input("static-selection-mode", "value"),
+        State("static-species-store", "data"),
+        prevent_initial_call=True,
+    )
+    def _toggle_species_static(clickData, mode, current):
+        # same behavior as main taxonomy selector
+        return _toggle_species_from_taxonomy(clickData, mode, current)
+
+    @app.callback(
+        Output("static-calls-bar", "figure"),
+        Output("static-kw-bar", "figure"),
+        Output("static-umap2d-a", "figure"),
+        Output("static-umap3d-a", "figure"),
+        Output("static-umap2d-b", "figure"),
+        Output("static-umap3d-b", "figure"),
+        Input("static-species-store", "data"),
+    )
+    def _update_static_figs(species_sel):
+        fig_calls = make_calls_bar(species_sel or [])
+        fig_kw = make_keyword_bar(species_sel or [])
+        fig_u2a = make_umap_fig(acoustic_umap2d_a, species_sel or [], "Acoustic UMAP")
+        fig_u3a = make_umap_fig(acoustic_umap3d_a, species_sel or [], "Acoustic UMAP")
+        fig_u2b = make_umap_fig(acoustic_umap2d_b, species_sel or [], "Acoustic UMAP")
+        fig_u3b = make_umap_fig(acoustic_umap3d_b, species_sel or [], "Acoustic UMAP")
+        return fig_calls, fig_kw, fig_u2a, fig_u3a, fig_u2b, fig_u3b
 
     @app.callback(
         Output("scatter", "figure"),
@@ -1934,7 +2056,9 @@ def run_dash_app(
                                     f"Similarity: {cos_sim:.3f}",
                                     className="subtle translation-metric",
                                 ),
-                                html.Div(back_line, className="subtle translation-metric"),
+                                html.Div(
+                                    back_line, className="subtle translation-metric"
+                                ),
                             ],
                         ),
                         _render_call_card(calls_all[nn_idx]),
@@ -1947,6 +2071,178 @@ def run_dash_app(
             children=trans_cards,
         )
         return selected_with_meta, translations_inner
+
+    # --- Static plots helpers ---
+    def _idxs_for_species(species_sel: List[str] | None) -> List[int]:
+        if not species_sel:
+            return list(range(len(calls_all)))
+        allow = set(species_sel)
+        return [i for i, sp in enumerate(species_all) if sp in allow]
+
+    def make_calls_bar(species_sel: List[str] | None):
+        idxs = _idxs_for_species(species_sel)
+        if not idxs:
+            return go.Figure().update_layout(
+                title="Number of calls per species (none)",
+                template="plotly_white",
+                height=480,
+            )
+        counts = Counter(species_all[i] for i in idxs)
+        items = sorted(counts.items(), key=lambda x: x[1], reverse=True)
+        species_icons = [species_icon_map.get(sp, "") for sp, _ in items]
+        species_labels = [
+            f"{species_common_name(sp)} {icon}".strip()
+            for (sp, _), icon in zip(items, species_icons)
+        ]
+        values = [v for _, v in items]
+        colors = [color_map.get(sp, "#999") for sp, _ in items]
+
+        fig = go.Figure(
+            go.Bar(
+                x=values,
+                y=species_labels,
+                orientation="h",
+                marker=dict(color=colors),
+                text=[f"{v}" for v in values],
+                textposition="outside",
+                insidetextanchor="middle",
+            )
+        )
+        fig.update_layout(
+            title="Number of calls per species",
+            height=380,
+            margin=dict(l=170, r=10, t=50, b=30),
+            template="plotly_white",
+        )
+        return fig
+
+    def make_keyword_bar(species_sel: List[str] | None, top_n: int = 20):
+        idxs = _idxs_for_species(species_sel)
+        kws: Counter[str] = Counter()
+        for i in idxs:
+            kws.update(calls_all[i].get("ontology_keywords") or [])
+        top = kws.most_common(top_n)
+        if not top:
+            return go.Figure().update_layout(
+                title="Keyword frequencies (none)",
+                template="plotly_white",
+                height=330,
+            )
+        labels = [k for k, _ in top]
+        values = [v for _, v in top]
+        colors = [
+            color_map.get(species_unique[i % len(species_unique)], "#2563eb")
+            for i in range(len(labels))
+        ]
+
+        fig = go.Figure(
+            go.Bar(
+                x=values,
+                y=labels,
+                orientation="h",
+                marker=dict(color=colors),
+                text=[f"{v}" for v in values],
+                textposition="outside",
+            )
+        )
+        fig.update_layout(
+            title="Keyword frequencies (top 20)",
+            height=360,
+            margin=dict(l=200, r=10, t=50, b=30),
+            template="plotly_white",
+        )
+        return fig
+
+    def make_umap_fig(coords: np.ndarray, species_sel: List[str] | None, title: str):
+        idxs = _idxs_for_species(species_sel)
+        if not idxs:
+            return go.Figure().update_layout(title=f"{title} (none)")
+        if coords.shape[1] == 3:
+            fig = go.Figure()
+            for sp in species_unique:
+                sp_idxs = [i for i in idxs if species_all[i] == sp]
+                if not sp_idxs:
+                    continue
+            fig.add_trace(
+                go.Scatter3d(
+                    x=coords[sp_idxs, 0],
+                    y=coords[sp_idxs, 1],
+                    z=coords[sp_idxs, 2],
+                    mode="markers",
+                    marker=dict(color=color_map.get(sp), size=4, opacity=0.8),
+                    name=f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
+                    hovertext=[call_names_all[i] for i in sp_idxs],
+                    hoverinfo="text",
+                    showlegend=True,
+                )
+            )
+            fig.update_layout(
+                title=title,
+                height=340,
+                margin=dict(l=0, r=0, t=40, b=0),
+                scene=dict(
+                    xaxis_title="",
+                    yaxis_title="",
+                    zaxis_title="",
+                    xaxis=dict(
+                        showticklabels=False,
+                        showgrid=True,
+                        gridcolor="rgba(200,200,200,0.35)",
+                        zeroline=False,
+                    ),
+                    yaxis=dict(
+                        showticklabels=False,
+                        showgrid=True,
+                        gridcolor="rgba(200,200,200,0.35)",
+                        zeroline=False,
+                    ),
+                    zaxis=dict(
+                        showticklabels=False,
+                        showgrid=True,
+                        gridcolor="rgba(200,200,200,0.35)",
+                        zeroline=False,
+                    ),
+                ),
+            )
+            return fig
+
+        fig = go.Figure()
+        for sp in species_unique:
+            sp_idxs = [i for i in idxs if species_all[i] == sp]
+            if not sp_idxs:
+                continue
+            fig.add_trace(
+                go.Scatter(
+                    x=coords[sp_idxs, 0],
+                    y=coords[sp_idxs, 1],
+                    mode="markers",
+                    marker=dict(color=color_map.get(sp), size=7, opacity=0.8),
+                    name=f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
+                    hovertext=[call_names_all[i] for i in sp_idxs],
+                    hoverinfo="text",
+                    showlegend=True,
+                )
+            )
+        fig.update_layout(
+            title=title,
+            height=340,
+            margin=dict(l=10, r=10, t=40, b=30),
+            xaxis_title="",
+            yaxis_title="",
+            xaxis=dict(
+                showticklabels=False,
+                showgrid=True,
+                gridcolor="rgba(200,200,200,0.35)",
+                zeroline=False,
+            ),
+            yaxis=dict(
+                showticklabels=False,
+                showgrid=True,
+                gridcolor="rgba(200,200,200,0.35)",
+                zeroline=False,
+            ),
+        )
+        return fig
 
     @app.callback(
         Output("one-species-list", "children"),
