@@ -1585,7 +1585,11 @@ def run_dash_app(
                         id="trans-selected-call",
                         className="panel panel--tight",
                         children="Click a point in any UMAP to select a call.",
-                        style={"flex": "0 0 32%"},
+                        style={
+                            "flex": "0 0 28%",
+                            "maxWidth": "360px",
+                            "minWidth": "260px",
+                        },
                     ),
                     html.Div(
                         style={
