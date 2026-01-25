@@ -1638,6 +1638,7 @@ def run_dash_app(
                 id="pair-species",
                 className="section section--pair",
                 children=[
+                    dcc.Store(id="pair-selected", data=None),
                     html.Div(
                         className="section__header",
                         children=[
@@ -1687,10 +1688,31 @@ def run_dash_app(
                             ),
                         ],
                     ),
-                    dcc.Graph(
-                        id="pair-graph",
-                        className="pair-graph",
-                        figure=go.Figure(),
+                    html.Div(
+                        className="pair-layout",
+                        children=[
+                            html.Div(
+                                id="pair-hover-left",
+                                className="pair-hover__col pair-hover__col--left",
+                                children=html.Div(
+                                    "Click a call to see details.",
+                                    className="subtle",
+                                ),
+                            ),
+                            dcc.Graph(
+                                id="pair-graph",
+                                className="pair-graph",
+                                figure=go.Figure(),
+                            ),
+                            html.Div(
+                                id="pair-hover-right",
+                                className="pair-hover__col pair-hover__col--right",
+                                children=html.Div(
+                                    "Click a call to see details.",
+                                    className="subtle",
+                                ),
+                            ),
+                        ],
                     ),
                 ],
             ),

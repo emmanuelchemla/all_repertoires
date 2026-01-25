@@ -454,6 +454,33 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
+.pair-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 280px;
+  gap: 14px;
+  align-items: start;
+}
+
+.pair-hover__col {
+  position: sticky;
+  top: 90px;
+  min-height: 140px;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.pair-hover__col .call-card {
+  width: 100%;
+  margin: 0;
+}
+
+.pair-hover__col .subtle {
+  margin: 0;
+}
+
 /* Headings */
 h1,
 h2,
