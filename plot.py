@@ -2735,19 +2735,19 @@ def run_dash_app(
                 sp_idxs = [i for i in idxs if species_all[i] == sp]
                 if not sp_idxs:
                     continue
-            fig.add_trace(
-                go.Scatter3d(
-                    x=coords[sp_idxs, 0],
-                    y=coords[sp_idxs, 1],
-                    z=coords[sp_idxs, 2],
-                    mode="markers",
-                    marker=dict(color=color_map.get(sp), size=4, opacity=0.8),
-                    name=f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
-                    hovertext=[call_names_all[i] for i in sp_idxs],
-                    hoverinfo="text",
-                    showlegend=True,
+                fig.add_trace(
+                    go.Scatter3d(
+                        x=coords[sp_idxs, 0],
+                        y=coords[sp_idxs, 1],
+                        z=coords[sp_idxs, 2],
+                        mode="markers",
+                        marker=dict(color=color_map.get(sp), size=4, opacity=0.8),
+                        name=f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
+                        hovertext=[call_names_all[i] for i in sp_idxs],
+                        hoverinfo="text",
+                        showlegend=True,
+                    )
                 )
-            )
             fig.update_layout(
                 title=title,
                 height=340,
