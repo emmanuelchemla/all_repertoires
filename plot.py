@@ -1316,6 +1316,11 @@ def run_dash_app(
                                 href="#one-species",
                                 className="topnav__link",
                             ),
+                            html.A(
+                                "Pair of species",
+                                href="#pair-species",
+                                className="topnav__link",
+                            ),
                         ],
                     ),
                 ],
@@ -1629,6 +1634,66 @@ def run_dash_app(
                     ),
                 ],
             ),
+            html.Div(
+                id="pair-species",
+                className="section section--pair",
+                children=[
+                    html.Div(
+                        className="section__header",
+                        children=[
+                            html.Div(
+                                [
+                                    html.P("Cross-species pairs", className="section__kicker"),
+                                    html.H2("Pair of species", className="section__title"),
+                                ]
+                            )
+                        ],
+                    ),
+                    html.Div(
+                        className="pair-controls",
+                        children=[
+                            dcc.RadioItems(
+                                id="pair-space",
+                                options=[
+                                    {"label": "Semantic space", "value": "semantic"},
+                                    {"label": "Acoustic space", "value": "acoustic"},
+                                ],
+                                value="semantic",
+                                inline=True,
+                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                            ),
+                            dcc.Dropdown(
+                                id="pair-species-1",
+                                options=[
+                                    {"label": species_common_name(sp), "value": sp}
+                                    for sp in species_unique
+                                ],
+                                placeholder="Species 1",
+                                clearable=False,
+                                value=species_unique[0] if species_unique else None,
+                                className="pair-dropdown",
+                            ),
+                            html.Div("⇄", className="pair-arrow-placeholder"),
+                            dcc.Dropdown(
+                                id="pair-species-2",
+                                options=[
+                                    {"label": species_common_name(sp), "value": sp}
+                                    for sp in species_unique
+                                ],
+                                placeholder="Species 2",
+                                clearable=False,
+                                value=species_unique[1] if len(species_unique) > 1 else None,
+                                className="pair-dropdown",
+                            ),
+                        ],
+                    ),
+                    dcc.Graph(
+                        id="pair-graph",
+                        className="pair-graph",
+                        figure=go.Figure(),
+                    ),
+                ],
+            ),
         ],
     )
 
@@ -1821,6 +1886,15 @@ def run_dash_app(
         fig_u2b = make_umap_fig(acoustic_umap2d_b, species_sel or [], "Acoustic UMAP")
         fig_u3b = make_umap_fig(acoustic_umap3d_b, species_sel or [], "Acoustic UMAP")
         return fig_calls, fig_kw, fig_u2a, fig_u3a, fig_u2b, fig_u3b
+
+    @app.callback(
+        Output("pair-graph", "figure"),
+        Input("pair-space", "value"),
+        Input("pair-species-1", "value"),
+        Input("pair-species-2", "value"),
+    )
+    def _update_pair_graph(space, sp1, sp2):
+        return _make_pair_plot(space or "semantic", sp1, sp2)
 
     @app.callback(
         Output("scatter", "figure"),
@@ -2113,6 +2187,212 @@ def run_dash_app(
             height=380,
             margin=dict(l=170, r=10, t=50, b=30),
             template="plotly_white",
+        )
+        return fig
+
+    # --- Pair-of-species helper ---
+    def _pair_rows(space: str, sp1: str, sp2: str):
+        if not sp1 or not sp2 or sp1 == sp2:
+            return []
+
+        idxs1 = [i for i, sp in enumerate(species_all) if sp == sp1]
+        idxs2 = [i for i, sp in enumerate(species_all) if sp == sp2]
+        if not idxs1 or not idxs2:
+            return []
+
+        emb = acoustic_embeds if space == "acoustic" else semantic_embeds
+        v1 = emb[idxs1]
+        v2 = emb[idxs2]
+
+        # normalize to be safe
+        v1n = v1 / (np.linalg.norm(v1, axis=1, keepdims=True) + 1e-8)
+        v2n = v2 / (np.linalg.norm(v2, axis=1, keepdims=True) + 1e-8)
+        sims = np.dot(v1n, v2n.T)  # shape (m,n)
+
+        best12 = sims.argmax(axis=1)
+        best21 = sims.argmax(axis=0)
+
+        used1 = set()
+        used2 = set()
+        rows: List[Tuple[int | None, int | None, float, float, bool]] = []
+
+        # mutual best first
+        mutual = []
+        for i, j in enumerate(best12):
+            if best21[j] == i:
+                mutual.append((i, j, sims[i, j]))
+        mutual.sort(key=lambda x: x[2], reverse=True)
+        for i, j, sim in mutual:
+            used1.add(i)
+            used2.add(j)
+            rows.append((i, j, sim, sim, True))
+
+        # remaining: pair each unused i with its best j not yet used if possible
+        remaining = []
+        for i in range(len(idxs1)):
+            if i in used1:
+                continue
+            j = best12[i]
+            sim_ij = sims[i, j]
+            sim_ji = sims[best21[j], j] if best21[j] < len(idxs1) else 0.0
+            remaining.append((i, j, sim_ij, sim_ji))
+        remaining.sort(key=lambda x: x[2], reverse=True)
+
+        for i, j, sim_ij, sim_ji in remaining:
+            if j in used2:
+                rows.append((i, None, sim_ij, sim_ji, False))
+                used1.add(i)
+                continue
+            rows.append((i, j, sim_ij, sim_ji, False))
+            used1.add(i)
+            used2.add(j)
+
+        # leftover only-in-species2
+        for j in range(len(idxs2)):
+            if j in used2:
+                continue
+            rows.append((None, j, 0.0, 0.0, False))
+
+        # to reduce crossings, keep current order
+        return rows, idxs1, idxs2, sims
+
+    def _make_pair_plot(space: str, sp1: str, sp2: str) -> go.Figure:
+        rows, idxs1, idxs2, sims = _pair_rows(space, sp1, sp2)
+        if not rows:
+            return go.Figure().update_layout(
+                title="Select two different species",
+                margin=dict(l=20, r=20, t=40, b=20),
+                height=220,
+            )
+
+        row_h = 1.6
+        shapes = []
+        annotations = []
+
+        left_center_x = 0
+        right_center_x = 8
+        box_w = 1.6
+        box_h = 1.0
+
+        left_row_map: Dict[int, float] = {}
+        right_row_map: Dict[int, float] = {}
+
+        def add_box(is_left: bool, idx_local: int, row_idx: int):
+            cx = left_center_x if is_left else right_center_x
+            cy = -row_idx * row_h
+            x0 = cx - box_w / 2
+            x1 = cx + box_w / 2
+            y0 = cy - box_h / 2
+            y1 = cy + box_h / 2
+            shapes.append(
+                dict(
+                    type="rect",
+                    x0=x0,
+                    x1=x1,
+                    y0=y0,
+                    y1=y1,
+                    line=dict(color="rgba(0,0,0,0.2)", width=1),
+                    fillcolor="white",
+                )
+            )
+            if is_left:
+                left_row_map[idx_local] = cy
+                c = calls_all[idxs1[idx_local]]
+                txt = _strip_parenthetical(c.get("call_name", ""))
+            else:
+                right_row_map[idx_local] = cy
+                c = calls_all[idxs2[idx_local]]
+                txt = _strip_parenthetical(c.get("call_name", ""))
+            annotations.append(
+                dict(
+                    x=cx,
+                    y=cy,
+                    text=txt,
+                    showarrow=False,
+                    font=dict(size=12),
+                )
+            )
+
+        # assign rows
+        for r_idx, (i_local, j_local, _, _, _) in enumerate(rows):
+            if i_local is not None:
+                add_box(True, i_local, r_idx)
+            if j_local is not None:
+                add_box(False, j_local, r_idx)
+
+        # arrows left -> right (red) for every call in species 1
+        for i_local in range(len(idxs1)):
+            j_local = sims[i_local].argmax()
+            sim_ij = sims[i_local, j_local]
+            y0 = left_row_map.get(i_local)
+            y1 = right_row_map.get(j_local)
+            if y0 is None or y1 is None:
+                continue
+            y0 += 0.12
+            y1 += 0.12
+            tail_x = left_center_x + box_w / 2
+            head_x = right_center_x - box_w / 2
+            annotations.append(
+                dict(
+                    x=head_x,
+                    y=y1,
+                    ax=tail_x,
+                    ay=y0,
+                    xref="x",
+                    yref="y",
+                    axref="x",
+                    ayref="y",
+                    showarrow=True,
+                    arrowhead=4,
+                    arrowsize=1.6,
+                    arrowwidth=1.4,
+                    arrowcolor="rgba(220,38,38,0.7)",
+                    text=f"{sim_ij:.3f}",
+                    font=dict(size=10, color="rgba(220,38,38,0.9)"),
+                )
+            )
+
+        # arrows right -> left (blue)
+        for j_local in range(len(idxs2)):
+            i_local = sims[:, j_local].argmax()
+            sim = sims[i_local, j_local]
+            if i_local not in left_row_map or j_local not in right_row_map:
+                continue
+            y0 = right_row_map[j_local] - 0.12
+            y1 = left_row_map[i_local] - 0.12
+            tail_x = right_center_x - box_w / 2
+            head_x = left_center_x + box_w / 2
+            annotations.append(
+                dict(
+                    x=head_x,
+                    y=y1,
+                    ax=tail_x,
+                    ay=y0,
+                    xref="x",
+                    yref="y",
+                    axref="x",
+                    ayref="y",
+                    showarrow=True,
+                    arrowhead=4,
+                    arrowsize=1.6,
+                    arrowwidth=1.4,
+                    arrowcolor="rgba(37,99,235,0.7)",
+                    text=f"{sim:.3f}",
+                    font=dict(size=10, color="rgba(37,99,235,0.9)"),
+                )
+            )
+
+        max_rows = len(rows)
+        fig = go.Figure()
+        fig.update_layout(
+            title=f"{space.title()} nearest neighbors between {species_common_name(sp1)} and {species_common_name(sp2)}",
+            showlegend=False,
+            margin=dict(l=20, r=20, t=50, b=20),
+            xaxis=dict(visible=False, range=[-2.5, 10]),
+            yaxis=dict(visible=False, range=[-max_rows * row_h - 0.5, row_h]),
+            shapes=shapes,
+            annotations=annotations,
+            height=max(240, int(max_rows * 60 + 80)),
         )
         return fig
 

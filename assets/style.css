@@ -423,6 +423,37 @@ body {
   height: 380px !important;
 }
 
+/* =========================
+   Pair of species
+   ========================= */
+.section--pair {
+  margin-top: 16px;
+}
+
+.pair-controls {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 60px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 8px 0 12px;
+}
+
+.pair-dropdown {
+  width: 100%;
+}
+
+.pair-arrow-placeholder {
+  text-align: center;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.pair-graph .js-plotly-plot {
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
 /* Headings */
 h1,
 h2,
