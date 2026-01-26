@@ -2382,12 +2382,12 @@ def run_dash_app(
                                         [
                                             html.Span(
                                                 (
-                                                    "✔︎ "
+                                                    "✅ "
                                                     if nn_idx
                                                     == secondary_best_map.get(
                                                         species_all[nn_idx]
                                                     )
-                                                    else "✘ "
+                                                    else "❌ "
                                                 ),
                                                 style={
                                                     "color": (
@@ -2408,7 +2408,7 @@ def run_dash_app(
                                     html.Div(
                                         [
                                             html.Span(
-                                                "✔︎ " if "✅" in back_line else "✘ ",
+                                                "✅ " if "✅" in back_line else "❌ ",
                                                 style={
                                                     "color": (
                                                         "#10b981"
@@ -2620,8 +2620,9 @@ def run_dash_app(
         base_species = species_all[idx]
         base_vec = semantic_embeds[idx]
 
-        # nearest neighbor per other species (global)
+        # nearest SEMANTIC neighbor per other species (global)
         neighbors: List[Tuple[float, int]] = []
+        best_ac: Dict[str, int] = {}
         for sp in species_unique:
             if sp == base_species:
                 continue
@@ -2633,6 +2634,12 @@ def run_dash_app(
             j = int(dists.argmin())
             nn_idx = candidates[j]
             neighbors.append((float(dists[j]), nn_idx))
+
+            # store acoustic nearest for this species (for secondary line check)
+            d_ac = np.linalg.norm(
+                acoustic_embeds[candidates] - acoustic_embeds[idx], axis=1
+            )
+            best_ac[sp] = candidates[int(d_ac.argmin())]
 
         neighbors.sort(key=lambda x: x[0])
 
@@ -2652,10 +2659,20 @@ def run_dash_app(
         base_candidates = [i for i, s in enumerate(species_all) if s == base_species]
         trans_cards = []
         for dist, nn_idx in neighbors:
-            cos_sim = 1.0 - (dist * dist) / 2.0
+            sim_sem = 1.0 - (dist * dist) / 2.0
 
+            # Secondary (acoustic) similarity + check if also acoustic nearest for that species
+            other_dist = float(
+                np.linalg.norm(acoustic_embeds[nn_idx] - acoustic_embeds[idx])
+            )
+            other_sim = 1.0 - (other_dist * other_dist) / 2.0
+            sp = species_all[nn_idx]
+            is_acoustic_best = nn_idx == best_ac.get(sp)
+
+            # Back-translation in semantic space
             bt_idx = None
             bt_sim = None
+            bt_ok = False
             if base_candidates:
                 bt_dists = _np.linalg.norm(
                     semantic_embeds[base_candidates] - semantic_embeds[nn_idx], axis=1
@@ -2664,13 +2681,27 @@ def run_dash_app(
                 bt_idx = base_candidates[j_bt]
                 bt_dist = float(bt_dists[j_bt])
                 bt_sim = 1.0 - (bt_dist * bt_dist) / 2.0
+                if idx in base_candidates:
+                    sel_pos = base_candidates.index(idx)
+                    sel_dist = bt_dists[sel_pos]
+                    min_dist = bt_dists[j_bt]
+                    bt_ok = np.isclose(sel_dist, min_dist, atol=1e-6)
+                bt_ok = bt_ok or (bt_idx == idx)
+                if bt_idx is not None:
+                    sel_name = _strip_parenthetical(
+                        calls_all[idx].get("call_name", "")
+                    ).lower()
+                    bt_name = _strip_parenthetical(
+                        calls_all[bt_idx].get("call_name", "")
+                    ).lower()
+                    if sel_name and bt_name and sel_name == bt_name:
+                        bt_ok = True
 
             if bt_idx is not None:
                 bt_call_name = _strip_parenthetical(
                     calls_all[bt_idx].get("call_name", "")
                 )
-                icon = "✅" if int(bt_idx) == int(idx) else "❌"
-                back_line = f"Back-translation: {icon} {bt_call_name} (similarity: {bt_sim:.3f})"
+                back_line = f"Back-translation: {'✅' if bt_ok else '❌'} {bt_call_name} (similarity: {bt_sim:.3f})"
             else:
                 back_line = "Back-translation: (none)"
 
@@ -2682,11 +2713,56 @@ def run_dash_app(
                             className="translation-meta",
                             children=[
                                 html.Div(
-                                    f"Similarity: {cos_sim:.3f}",
+                                    f"Semantic similarity: {sim_sem:.3f}",
                                     className="subtle translation-metric",
                                 ),
                                 html.Div(
-                                    back_line, className="subtle translation-metric"
+                                    [
+                                        html.Span(
+                                            "✅ " if is_acoustic_best else "❌ ",
+                                            style={
+                                                "color": (
+                                                    "#10b981"
+                                                    if is_acoustic_best
+                                                    else "#ef4444"
+                                                ),
+                                                "fontWeight": "700",
+                                            },
+                                        ),
+                                        f"Acoustic similarity: {other_sim:.3f}",
+                                    ],
+                                    className="subtle translation-metric",
+                                ),
+                                html.Div(
+                                    [
+                                        html.Span(
+                                            (
+                                                "✅ "
+                                                if back_line.startswith(
+                                                    "Back-translation: ✅"
+                                                )
+                                                else "❌ "
+                                            ),
+                                            style={
+                                                "color": (
+                                                    "#10b981"
+                                                    if back_line.startswith(
+                                                        "Back-translation: ✅"
+                                                    )
+                                                    else "#ef4444"
+                                                ),
+                                                "fontWeight": "700",
+                                            },
+                                        ),
+                                        back_line.replace(
+                                            "Back-translation: ✅ ",
+                                            "Back-translation: ",
+                                        ).replace(
+                                            "Back-translation: ❌ ",
+                                            "Back-translation: ",
+                                        ),
+                                    ],
+                                    className="subtle translation-metric",
                                 ),
                             ],
                         ),
