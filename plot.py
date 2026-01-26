@@ -1699,6 +1699,17 @@ def run_dash_app(
                     html.Div(
                         className="pair-controls",
                         children=[
+                            dcc.Dropdown(
+                                id="pair-species-1",
+                                options=[
+                                    {"label": species_common_name(sp), "value": sp}
+                                    for sp in species_unique
+                                ],
+                                placeholder="Species 1",
+                                clearable=False,
+                                value=species_unique[0] if species_unique else None,
+                                className="pair-dropdown",
+                            ),
                             dcc.RadioItems(
                                 id="pair-space",
                                 options=[
@@ -1712,21 +1723,9 @@ def run_dash_app(
                                     },
                                 ],
                                 value="semantic",
-                                inline=True,
-                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                inline=False,
+                                className="taxonomy-controls__radio taxonomy-controls__radio--compact pair-space-toggle",
                             ),
-                            dcc.Dropdown(
-                                id="pair-species-1",
-                                options=[
-                                    {"label": species_common_name(sp), "value": sp}
-                                    for sp in species_unique
-                                ],
-                                placeholder="Species 1",
-                                clearable=False,
-                                value=species_unique[0] if species_unique else None,
-                                className="pair-dropdown",
-                            ),
-                            html.Div("⇄", className="pair-arrow-placeholder"),
                             dcc.Dropdown(
                                 id="pair-species-2",
                                 options=[
@@ -1740,7 +1739,7 @@ def run_dash_app(
                                     if len(species_unique) > 1
                                     else None
                                 ),
-                                className="pair-dropdown",
+                                className="pair-dropdown pair-dropdown--right",
                             ),
                         ],
                     ),
@@ -3090,7 +3089,8 @@ def run_dash_app(
                 )
             )
         fig.update_layout(
-            title=f"{space.title()} nearest neighbors between {species_common_name(sp1)} and {species_common_name(sp2)}",
+            title=f"{space.title()} nearest neighbors<br>{species_common_name(sp1)} vs {species_common_name(sp2)}",
+            title_x=0.5,
             showlegend=False,
             margin=dict(l=20, r=20, t=50, b=20),
             xaxis=dict(visible=False, range=[-2.5, 10]),
