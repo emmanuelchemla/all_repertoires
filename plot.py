@@ -1726,6 +1726,25 @@ def run_dash_app(
                                 placeholder="Select a species",
                                 clearable=True,
                             ),
+                            html.Div(
+                                [
+                                    html.Label(
+                                        "Show translations",
+                                        className="taxonomy-controls__label",
+                                        style={"marginTop": "8px"},
+                                    ),
+                                    dcc.Checklist(
+                                        id="one-species-mode",
+                                        options=[
+                                            {"label": "Semantic", "value": "semantic"},
+                                            {"label": "Acoustic", "value": "acoustic"},
+                                        ],
+                                        value=["semantic", "acoustic"],
+                                        inline=True,
+                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                    ),
+                                ]
+                            ),
                         ],
                     ),
                     html.Div(
@@ -2127,6 +2146,162 @@ def run_dash_app(
             ),
         )
 
+
+    def _translations_for_idx_and_species(
+        selected_idx: int, species_sel: list[str], focus_species: str | None = None
+    ):
+        """Return (selected_card, semantic_cards, acoustic_cards) for a call within a species subset."""
+        species_sel = species_sel or []
+        idxs = _idxs_for_species(species_sel)
+        if selected_idx is None or selected_idx not in idxs:
+            return None, None, None
+
+        selected_card = _render_call_card(calls_all[selected_idx])
+        base_species = species_all[selected_idx]
+        species_in_view = sorted({species_all[i] for i in idxs})
+
+        # precompute nearest semantic and acoustic per other species
+        best_sem = {}
+        best_ac = {}
+        for sp in species_in_view:
+            if sp == base_species:
+                continue
+            candidates = [i for i in idxs if species_all[i] == sp]
+            if not candidates:
+                continue
+            d_sem = np.linalg.norm(
+                semantic_embeds[candidates] - semantic_embeds[selected_idx], axis=1
+            )
+            best_sem[sp] = candidates[int(d_sem.argmin())]
+            d_ac = np.linalg.norm(
+                acoustic_embeds[candidates] - acoustic_embeds[selected_idx], axis=1
+            )
+            best_ac[sp] = candidates[int(d_ac.argmin())]
+
+        def nearest_panel(embeds_from, other_embeds, label_prefix, secondary_label, secondary_best_map):
+            base_vec = embeds_from[selected_idx]
+            neighbors = []
+            for sp in species_in_view:
+                if sp == base_species:
+                    continue
+                candidates = [i for i in idxs if species_all[i] == sp]
+                if not candidates:
+                    continue
+                cand_vecs = embeds_from[candidates]
+                dists = np.linalg.norm(cand_vecs - base_vec, axis=1)
+                j = int(dists.argmin())
+                neighbors.append((dists[j], candidates[j]))
+            neighbors.sort(key=lambda x: (sp != focus_species if focus_species else False, x[0]))
+
+            cards = []
+            for dist, nn_idx in neighbors:
+                sim = 1.0 - (dist * dist) / 2.0
+                other_dist = float(np.linalg.norm(other_embeds[nn_idx] - other_embeds[selected_idx]))
+                other_sim = 1.0 - (other_dist * other_dist) / 2.0
+
+                # back-translation in same space
+                candidates_back = [i for i in idxs if species_all[i] == base_species]
+                bt_idx = None
+                bt_sim = None
+                bt_ok = False
+                if candidates_back:
+                    bt_dists = np.linalg.norm(
+                        embeds_from[candidates_back] - embeds_from[nn_idx], axis=1
+                    )
+                    j_bt = int(bt_dists.argmin())
+                    bt_idx = candidates_back[j_bt]
+                    bt_sim = 1.0 - (float(bt_dists[j_bt]) ** 2) / 2.0
+                    if selected_idx in candidates_back:
+                        sel_pos = candidates_back.index(selected_idx)
+                        sel_dist = bt_dists[sel_pos]
+                        min_dist = bt_dists[j_bt]
+                        bt_ok = np.isclose(sel_dist, min_dist, atol=1e-6)
+                    bt_ok = bt_ok or (bt_idx == selected_idx)
+                    selected_call_name = _strip_parenthetical(
+                        calls_all[selected_idx].get("call_name", "")
+                    )
+                    bt_call_name_check = _strip_parenthetical(
+                        calls_all[bt_idx].get("call_name", "")
+                    )
+                    if selected_call_name and bt_call_name_check:
+                        bt_ok = bt_ok or (
+                            bt_call_name_check.lower() == selected_call_name.lower()
+                        )
+
+                if bt_idx is not None:
+                    bt_call_name = _strip_parenthetical(
+                        calls_all[bt_idx].get("call_name", "")
+                    )
+                    icon = "✅" if bt_ok else "❌"
+                    back_line = f"Back-translation: {icon} {bt_call_name} (similarity: {bt_sim:.3f})"
+                else:
+                    back_line = "Back-translation: (none)"
+
+                cards.append(
+                    html.Div(
+                        className="translation-card",
+                        id={
+                            "type": "trans-card",
+                            "space": label_prefix.lower(),
+                            "species": species_all[nn_idx],
+                            "idx": int(nn_idx),
+                        },
+                        n_clicks=0,
+                        **{"data-species": species_all[nn_idx]},
+                        children=[
+                            html.Div(
+                                className="translation-meta",
+                                children=[
+                                    html.Div(
+                                        f"{label_prefix} similarity: {sim:.3f}",
+                                        className="subtle translation-metric",
+                                    ),
+                                    html.Div(
+                                        [
+                                            html.Span(
+                                                "✅ "
+                                                if nn_idx == secondary_best_map.get(species_all[nn_idx])
+                                                else "❌ ",
+                                                style={
+                                                    "color": "#10b981"
+                                                    if nn_idx == secondary_best_map.get(species_all[nn_idx])
+                                                    else "#ef4444",
+                                                    "fontWeight": "700",
+                                                },
+                                            ),
+                                            f"{secondary_label} similarity: {other_sim:.3f}",
+                                        ],
+                                        className="subtle translation-metric",
+                                    ),
+                                    html.Div(
+                                        [
+                                            html.Span(
+                                                "✅ " if "✅" in back_line else "❌ ",
+                                                style={
+                                                    "color": "#10b981" if "✅" in back_line else "#ef4444",
+                                                    "fontWeight": "700",
+                                                },
+                                            ),
+                                            back_line.replace("✅ ", "").replace("❌ ", ""),
+                                        ],
+                                        className="subtle translation-metric",
+                                    ),
+                                ],
+                            ),
+                            _render_call_card(calls_all[nn_idx]),
+                        ],
+                    )
+                )
+            return cards
+
+        semantic_cards = nearest_panel(
+            semantic_embeds, acoustic_embeds, "Semantic", "Acoustic", best_ac
+        )
+        acoustic_cards = nearest_panel(
+            acoustic_embeds, semantic_embeds, "Acoustic", "Semantic", best_sem
+        )
+
+        return selected_card, semantic_cards, acoustic_cards
     @app.callback(
         Output("trans-species-store", "data"),
         Input("trans-taxonomy", "clickData"),
@@ -3305,6 +3480,7 @@ def run_dash_app(
         p = (np.sum(np.abs(rs) >= abs(r_obs)) + 1) / (n_perm + 1)
         return float(r_obs), float(p)
 
+
     def _mantel_partial(
         emb_a: np.ndarray,
         emb_s: np.ndarray,
@@ -3560,8 +3736,10 @@ def run_dash_app(
     @app.callback(
         Output("one-species-list", "children"),
         Input("one-species-dropdown", "value"),
+        Input("one-species-mode", "value"),
     )
-    def _render_one_species(selected_species):
+    def _render_one_species(selected_species, modes):
+        modes = modes or []
         if not selected_species:
             return html.Div(
                 "Pick a species to see its calls and translations.",
@@ -3574,6 +3752,26 @@ def run_dash_app(
 
         cards = []
         for idx in idxs:
+            # Use all species as reference set so translations are populated by default.
+            sel_card, sem_cards, ac_cards = _translations_for_idx_and_species(
+                idx, species_unique
+            )
+            strips = []
+            if "semantic" in modes and sem_cards is not None:
+                strips.append(
+                    html.Div(
+                        className="selection-strip selection-strip--horizontal",
+                        children=sem_cards,
+                    )
+                )
+            if "acoustic" in modes and ac_cards is not None:
+                strips.append(
+                    html.Div(
+                        className="selection-strip selection-strip--horizontal",
+                        children=ac_cards,
+                    )
+                )
+
             cards.append(
                 html.Div(
                     className="onespecies-call",
@@ -3582,21 +3780,18 @@ def run_dash_app(
                             className="onespecies-call__base",
                             children=html.Div(
                                 className="panel panel--selected",
-                                children=_render_call_card(calls_all[idx]),
+                                children=sel_card or _render_call_card(calls_all[idx]),
                             ),
                         ),
                         html.Div(
                             className="onespecies-call__translations",
-                            children=html.Div(
-                                className="selection-strip selection-strip--stacked",
-                                children=_translations_for_idx(idx)[1],
-                            ),
+                            children=strips,
                         ),
                     ],
                 )
             )
 
-        return html.Div(cards, className="one-species__list")
+        return cards
 
     @app.callback(
         Output("one-species-explore-list", "children"),
