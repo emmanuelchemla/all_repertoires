@@ -1273,17 +1273,17 @@ def run_dash_app(
                                 className="topnav__link",
                             ),
                             html.A(
-                                "Translations",
+                                "Single call translated to every other species",
                                 href="#translations",
                                 className="topnav__link",
                             ),
                             html.A(
-                                "One species",
+                                "Full species repertoire translated to all species",
                                 href="#one-species",
                                 className="topnav__link",
                             ),
                             html.A(
-                                "Pair of species",
+                                "Full repertoire bilingual mapping",
                                 href="#pair-species",
                                 className="topnav__link",
                             ),
@@ -1328,7 +1328,7 @@ def run_dash_app(
                                         "Descriptive plots", className="section__kicker"
                                     ),
                                     html.H2(
-                                        "Quick summaries of the dataset",
+                                        "Quick summaries for the whole dataset",
                                         className="section__title",
                                     ),
                                 ]
@@ -1447,11 +1447,11 @@ def run_dash_app(
                                     html.Div(
                                         [
                                             html.P(
-                                                "Translations",
+                                                "Single call translation",
                                                 className="section__kicker",
                                             ),
                                             html.H2(
-                                                "Cross-species translations overview",
+                                                "Single call translated to a call in every other species",
                                                 className="section__title",
                                             ),
                                         ]
@@ -1637,10 +1637,13 @@ def run_dash_app(
                             html.Div(
                                 [
                                     html.P(
-                                        "Single species view",
+                                        "Full species repertoire translated",
                                         className="section__kicker",
                                     ),
-                                    html.H2("One species", className="section__title"),
+                                    html.H2(
+                                        "Mapping every call of a species to a call in every other species",
+                                        className="section__title",
+                                    ),
                                 ]
                             )
                         ],
@@ -1682,11 +1685,12 @@ def run_dash_app(
                             html.Div(
                                 [
                                     html.P(
-                                        "Cross-species pairs",
+                                        "Full repertoire bilingual mapping",
                                         className="section__kicker",
                                     ),
                                     html.H2(
-                                        "Pair of species", className="section__title"
+                                        "FInd best repertoire alignment across two species",
+                                        className="section__title",
                                     ),
                                 ]
                             )
