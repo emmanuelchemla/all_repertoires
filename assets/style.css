@@ -586,6 +586,13 @@ h3 {
   margin-top: 2px;
 }
 
+.hero__todo {
+  font-size: 11px;
+  color: #dc2626;
+  line-height: 1.35;
+  margin-top: 6px;
+}
+
 .hero__paragraph--lead {
   margin-top: 10px;
   font-weight: 700;

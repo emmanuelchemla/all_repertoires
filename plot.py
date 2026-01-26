@@ -1325,6 +1325,37 @@ def run_dash_app(
                                 f"{len(species_unique)} species · {len(calls_all)} calls currently in the database",
                                 className="hero__paragraph hero__paragraph--meta",
                             ),
+                            html.Div(
+                                [
+                                    html.Div(
+                                        "TODO: assess quality of LLM generated database"
+                                    ),
+                                    html.Div("TODO: review database manually"),
+                                    html.Div(
+                                        "TODO: make descriptions homogeneous by asking a full rewrite (certainly if we import expert descriptions)"
+                                    ),
+                                    html.Div(
+                                        "TODO: expand database (more species, more calls)"
+                                    ),
+                                    html.Div(
+                                        "TODO: provide reviewing/editing tools to the database for external users?"
+                                    ),
+                                    html.Div(
+                                        "TODO: make the bilingual plot clickable (display the card of a call clicked on, and of its translation)"
+                                    ),
+                                    html.Div(
+                                        "TODO: fix the issue with automatic scrolling for alignment"
+                                    ),
+                                    html.Div("TODO: better visualization"),
+                                    html.Div(
+                                        "TODO: see if text embeddings are doing a good job"
+                                    ),
+                                    html.Div(
+                                        "TODO: explain 'translation' caveats. One of them: predator does not mean the same thing for all species (compare: president/king)"
+                                    ),
+                                ],
+                                className="hero__todo",
+                            ),
                         ],
                     ),
                 ],
@@ -2146,7 +2177,6 @@ def run_dash_app(
             ),
         )
 
-
     def _translations_for_idx_and_species(
         selected_idx: int, species_sel: list[str], focus_species: str | None = None
     ):
@@ -2178,7 +2208,9 @@ def run_dash_app(
             )
             best_ac[sp] = candidates[int(d_ac.argmin())]
 
-        def nearest_panel(embeds_from, other_embeds, label_prefix, secondary_label, secondary_best_map):
+        def nearest_panel(
+            embeds_from, other_embeds, label_prefix, secondary_label, secondary_best_map
+        ):
             base_vec = embeds_from[selected_idx]
             neighbors = []
             for sp in species_in_view:
@@ -2191,12 +2223,16 @@ def run_dash_app(
                 dists = np.linalg.norm(cand_vecs - base_vec, axis=1)
                 j = int(dists.argmin())
                 neighbors.append((dists[j], candidates[j]))
-            neighbors.sort(key=lambda x: (sp != focus_species if focus_species else False, x[0]))
+            neighbors.sort(
+                key=lambda x: (sp != focus_species if focus_species else False, x[0])
+            )
 
             cards = []
             for dist, nn_idx in neighbors:
                 sim = 1.0 - (dist * dist) / 2.0
-                other_dist = float(np.linalg.norm(other_embeds[nn_idx] - other_embeds[selected_idx]))
+                other_dist = float(
+                    np.linalg.norm(other_embeds[nn_idx] - other_embeds[selected_idx])
+                )
                 other_sim = 1.0 - (other_dist * other_dist) / 2.0
 
                 # back-translation in same space
@@ -2259,13 +2295,23 @@ def run_dash_app(
                                     html.Div(
                                         [
                                             html.Span(
-                                                "✅ "
-                                                if nn_idx == secondary_best_map.get(species_all[nn_idx])
-                                                else "❌ ",
+                                                (
+                                                    "✅ "
+                                                    if nn_idx
+                                                    == secondary_best_map.get(
+                                                        species_all[nn_idx]
+                                                    )
+                                                    else "❌ "
+                                                ),
                                                 style={
-                                                    "color": "#10b981"
-                                                    if nn_idx == secondary_best_map.get(species_all[nn_idx])
-                                                    else "#ef4444",
+                                                    "color": (
+                                                        "#10b981"
+                                                        if nn_idx
+                                                        == secondary_best_map.get(
+                                                            species_all[nn_idx]
+                                                        )
+                                                        else "#ef4444"
+                                                    ),
                                                     "fontWeight": "700",
                                                 },
                                             ),
@@ -2278,11 +2324,17 @@ def run_dash_app(
                                             html.Span(
                                                 "✅ " if "✅" in back_line else "❌ ",
                                                 style={
-                                                    "color": "#10b981" if "✅" in back_line else "#ef4444",
+                                                    "color": (
+                                                        "#10b981"
+                                                        if "✅" in back_line
+                                                        else "#ef4444"
+                                                    ),
                                                     "fontWeight": "700",
                                                 },
                                             ),
-                                            back_line.replace("✅ ", "").replace("❌ ", ""),
+                                            back_line.replace("✅ ", "").replace(
+                                                "❌ ", ""
+                                            ),
                                         ],
                                         className="subtle translation-metric",
                                     ),
@@ -2302,6 +2354,7 @@ def run_dash_app(
         )
 
         return selected_card, semantic_cards, acoustic_cards
+
     @app.callback(
         Output("trans-species-store", "data"),
         Input("trans-taxonomy", "clickData"),
@@ -3479,7 +3532,6 @@ def run_dash_app(
         rs = np.array(rs)
         p = (np.sum(np.abs(rs) >= abs(r_obs)) + 1) / (n_perm + 1)
         return float(r_obs), float(p)
-
 
     def _mantel_partial(
         emb_a: np.ndarray,
