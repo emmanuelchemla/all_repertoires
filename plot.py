@@ -1467,7 +1467,9 @@ def run_dash_app(
                                     html.Div(
                                         className="static-left",
                                         children=[
-                                            dcc.Store(id="trans-species-store", data=[]),
+                                            dcc.Store(
+                                                id="trans-species-store", data=[]
+                                            ),
                                             html.H3("Taxonomy selection"),
                                             html.Div(
                                                 className="panel panel--taxonomy",
@@ -2228,31 +2230,116 @@ def run_dash_app(
         fig_u2a = make_umap_fig(
             acoustic_umap2d_a,
             species_sel or [],
-            "Acoustic UMAP",
+            "UMAP of Acoustic Descriptions<br><span style='font-size:12px; color:#6b7280;'>Click on a dot (i.e. on a call) to reveal its semantic nearest neighbors</span>",
             showlegend=False,
             selected_idx=selected_idx,
         )
         fig_u3a = make_umap_fig(
             acoustic_umap3d_a,
             species_sel or [],
-            "Acoustic UMAP",
+            "UMAP of Acoustic Descriptions<br><span style='font-size:12px; color:#6b7280;'>Click on a dot (i.e. on a call) to reveal its semantic nearest neighbors</span>",
             showlegend=False,
             selected_idx=selected_idx,
         )
         fig_u2b = make_umap_fig(
             semantic_umap2d,
             species_sel or [],
-            "Semantic UMAP",
+            "UMAP of Semantic Descriptions<br><span style='font-size:12px; color:#6b7280;'>Click on a dot (i.e. on a call) to reveal its acoustic nearest neighbors</span>",
             showlegend=False,
             selected_idx=selected_idx,
         )
         fig_u3b = make_umap_fig(
             semantic_umap3d,
             species_sel or [],
-            "Semantic UMAP",
+            "UMAP of Semantic Descriptions<br><span style='font-size:12px; color:#6b7280;'>Click on a dot (i.e. on a call) to reveal its acoustic nearest neighbors</span>",
             showlegend=False,
             selected_idx=selected_idx,
         )
+
+        # In acoustic UMAPs, draw segments to the nearest *semantic* neighbor
+        # in each other species (same behavior as in the Explorer scatter).
+        if selected_idx is not None:
+            idxs = _idxs_for_species(species_sel or [])
+            if selected_idx in idxs:
+                base_species = species_all[selected_idx]
+                sel2d = acoustic_umap2d_a[selected_idx]
+                sel3d = acoustic_umap3d_a[selected_idx]
+                for sp in sorted({species_all[i] for i in idxs}):
+                    if sp == base_species:
+                        continue
+                    candidates = [i for i in idxs if species_all[i] == sp]
+                    if not candidates:
+                        continue
+                    # choose nearest in SEMANTIC space
+                    d_sem = np.linalg.norm(
+                        semantic_embeds[candidates] - semantic_embeds[selected_idx],
+                        axis=1,
+                    )
+                    nn_idx = candidates[int(d_sem.argmin())]
+                    nn2d = acoustic_umap2d_a[nn_idx]
+                    nn3d = acoustic_umap3d_a[nn_idx]
+                    color = color_map.get(sp, "#888")
+                    fig_u2a.add_trace(
+                        go.Scatter(
+                            x=[sel2d[0], nn2d[0]],
+                            y=[sel2d[1], nn2d[1]],
+                            mode="lines",
+                            line=dict(color=color, width=2),
+                            hoverinfo="skip",
+                            showlegend=False,
+                        )
+                    )
+                    fig_u3a.add_trace(
+                        go.Scatter3d(
+                            x=[sel3d[0], nn3d[0]],
+                            y=[sel3d[1], nn3d[1]],
+                            z=[sel3d[2], nn3d[2]],
+                            mode="lines",
+                            line=dict(color=color, width=3),
+                            hoverinfo="skip",
+                            showlegend=False,
+                        )
+                    )
+                # In semantic UMAPs, draw segments to the nearest *acoustic* neighbor
+                # in each other species.
+                sel2d_sem = semantic_umap2d[selected_idx]
+                sel3d_sem = semantic_umap3d[selected_idx]
+                for sp in sorted({species_all[i] for i in idxs}):
+                    if sp == base_species:
+                        continue
+                    candidates = [i for i in idxs if species_all[i] == sp]
+                    if not candidates:
+                        continue
+                    d_ac = np.linalg.norm(
+                        acoustic_embeds[candidates] - acoustic_embeds[selected_idx],
+                        axis=1,
+                    )
+                    nn_idx = candidates[int(d_ac.argmin())]
+                    nn2d_sem = semantic_umap2d[nn_idx]
+                    nn3d_sem = semantic_umap3d[nn_idx]
+                    color = color_map.get(sp, "#888")
+                    fig_u2b.add_trace(
+                        go.Scatter(
+                            x=[sel2d_sem[0], nn2d_sem[0]],
+                            y=[sel2d_sem[1], nn2d_sem[1]],
+                            mode="lines",
+                            line=dict(color=color, width=2),
+                            hoverinfo="skip",
+                            showlegend=False,
+                        )
+                    )
+                    fig_u3b.add_trace(
+                        go.Scatter3d(
+                            x=[sel3d_sem[0], nn3d_sem[0]],
+                            y=[sel3d_sem[1], nn3d_sem[1]],
+                            z=[sel3d_sem[2], nn3d_sem[2]],
+                            mode="lines",
+                            line=dict(color=color, width=3),
+                            hoverinfo="skip",
+                            showlegend=False,
+                        )
+                    )
+
         return fig_u2a, fig_u3a, fig_u2b, fig_u3b
 
     @app.callback(
@@ -2284,8 +2371,12 @@ def run_dash_app(
 
     @app.callback(
         Output("trans-focus-species", "data"),
-        Input({"type": "trans-card", "space": ALL, "idx": ALL, "species": ALL}, "n_clicks"),
-        State({"type": "trans-card", "space": ALL, "idx": ALL, "species": ALL}, "species"),
+        Input(
+            {"type": "trans-card", "space": ALL, "idx": ALL, "species": ALL}, "n_clicks"
+        ),
+        State(
+            {"type": "trans-card", "space": ALL, "idx": ALL, "species": ALL}, "species"
+        ),
         State("trans-focus-species", "data"),
         prevent_initial_call=True,
     )
@@ -2349,13 +2440,19 @@ def run_dash_app(
             if not candidates:
                 continue
             # semantic
-            d_sem = _np.linalg.norm(semantic_embeds[candidates] - semantic_embeds[selected_idx], axis=1)
+            d_sem = _np.linalg.norm(
+                semantic_embeds[candidates] - semantic_embeds[selected_idx], axis=1
+            )
             best_sem[sp] = candidates[int(d_sem.argmin())]
             # acoustic
-            d_ac = _np.linalg.norm(acoustic_embeds[candidates] - acoustic_embeds[selected_idx], axis=1)
+            d_ac = _np.linalg.norm(
+                acoustic_embeds[candidates] - acoustic_embeds[selected_idx], axis=1
+            )
             best_ac[sp] = candidates[int(d_ac.argmin())]
 
-        def nearest_panel(embeds_from, other_embeds, label_prefix, secondary_label, secondary_best_map):
+        def nearest_panel(
+            embeds_from, other_embeds, label_prefix, secondary_label, secondary_best_map
+        ):
             base_vec = embeds_from[selected_idx]
             neighbors = []
             for sp in species_in_view:
@@ -2368,7 +2465,9 @@ def run_dash_app(
                 dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
                 j = int(dists.argmin())
                 neighbors.append((dists[j], candidates[j]))
-            neighbors.sort(key=lambda x: (sp != focus_species if focus_species else False, x[0]))
+            neighbors.sort(
+                key=lambda x: (sp != focus_species if focus_species else False, x[0])
+            )
 
             cards = []
             for dist, nn_idx in neighbors:
@@ -2429,19 +2528,23 @@ def run_dash_app(
                                     html.Div(
                                         [
                                             html.Span(
-                                                "✔︎ "
-                                                if nn_idx
-                                                == secondary_best_map.get(
-                                                    species_all[nn_idx]
-                                                )
-                                                else "✘ ",
-                                                style={
-                                                    "color": "#10b981"
+                                                (
+                                                    "✔︎ "
                                                     if nn_idx
                                                     == secondary_best_map.get(
                                                         species_all[nn_idx]
                                                     )
-                                                    else "#ef4444",
+                                                    else "✘ "
+                                                ),
+                                                style={
+                                                    "color": (
+                                                        "#10b981"
+                                                        if nn_idx
+                                                        == secondary_best_map.get(
+                                                            species_all[nn_idx]
+                                                        )
+                                                        else "#ef4444"
+                                                    ),
                                                     "fontWeight": "700",
                                                 },
                                             ),
@@ -2454,13 +2557,17 @@ def run_dash_app(
                                             html.Span(
                                                 "✔︎ " if "✅" in back_line else "✘ ",
                                                 style={
-                                                    "color": "#10b981"
-                                                    if "✅" in back_line
-                                                    else "#ef4444",
+                                                    "color": (
+                                                        "#10b981"
+                                                        if "✅" in back_line
+                                                        else "#ef4444"
+                                                    ),
                                                     "fontWeight": "700",
                                                 },
                                             ),
-                                            back_line.replace("✅ ", "").replace("❌ ", ""),
+                                            back_line.replace("✅ ", "").replace(
+                                                "❌ ", ""
+                                            ),
                                         ],
                                         className="subtle translation-metric",
                                     ),
