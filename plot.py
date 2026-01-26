@@ -2382,6 +2382,7 @@ def run_dash_app(
                 candidates_back = [i for i in idxs if species_all[i] == base_species]
                 bt_idx = None
                 bt_sim = None
+                bt_ok = False
                 if candidates_back:
                     bt_dists = _np.linalg.norm(
                         embeds_from[candidates_back] - embeds_from[nn_idx], axis=1
@@ -2389,12 +2390,19 @@ def run_dash_app(
                     j_bt = int(bt_dists.argmin())
                     bt_idx = candidates_back[j_bt]
                     bt_sim = 1.0 - (float(bt_dists[j_bt]) ** 2) / 2.0
+                    if selected_idx in candidates_back:
+                        sel_pos = candidates_back.index(selected_idx)
+                        sel_dist = bt_dists[sel_pos]
+                        min_dist = bt_dists[j_bt]
+                        # treat selected call as successful back-translation if it's tied (within tol) for best distance
+                        bt_ok = abs(sel_dist - min_dist) < 1e-9
+                    bt_ok = bt_ok or (bt_idx == selected_idx)
 
                 if bt_idx is not None:
                     bt_call_name = _strip_parenthetical(
                         calls_all[bt_idx].get("call_name", "")
                     )
-                    icon = "✅" if int(bt_idx) == int(selected_idx) else "❌"
+                    icon = "✅" if bt_ok else "❌"
                     back_line = f"Back-translation: {icon} {bt_call_name} (similarity: {bt_sim:.3f})"
                 else:
                     back_line = "Back-translation: (none)"
