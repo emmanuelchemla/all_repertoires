@@ -1262,7 +1262,7 @@ def run_dash_app(
             html.Nav(
                 className="topnav",
                 children=[
-                    html.Div("Repertoire Explorer", className="topnav__brand"),
+                    html.Div("Cross-species Repertoire Explorer & Translator", className="topnav__brand"),
                     html.Div(
                         className="topnav__links",
                         children=[
@@ -1270,6 +1270,11 @@ def run_dash_app(
                             html.A(
                                 "Summary plots",
                                 href="#static-plots",
+                                className="topnav__link",
+                            ),
+                            html.A(
+                                "Single species repertoire exploration",
+                                href="#one-species-explore",
                                 className="topnav__link",
                             ),
                             html.A(
@@ -1431,6 +1436,55 @@ def run_dash_app(
                                 ],
                             ),
                         ],
+                    ),
+                ],
+            ),
+            html.Div(
+                id="one-species-explore",
+                className="section section--onespecies",
+                children=[
+                    html.Div(
+                        className="section__header",
+                        children=[
+                            html.Div(
+                                [
+                                    html.P(
+                                        "Single species repertoire exploration",
+                                        className="section__kicker",
+                                    ),
+                                    html.H2(
+                                        "Single species repertoire exploration",
+                                        className="section__title",
+                                    ),
+                                ]
+                            )
+                        ],
+                    ),
+                    html.Div(
+                        className="one-species__controls",
+                        children=[
+                            html.Label(
+                                "Choose a species",
+                                className="taxonomy-controls__label",
+                            ),
+                            dcc.Dropdown(
+                                id="one-species-explore-dropdown",
+                                options=[
+                                    {"label": species_common_name(sp), "value": sp}
+                                    for sp in species_unique
+                                ],
+                                placeholder="Select a species",
+                                clearable=True,
+                            ),
+                        ],
+                    ),
+                    html.Div(
+                        id="one-species-explore-list",
+                        className="one-species-explore__list",
+                        children=html.Div(
+                            "Pick a species to see its calls.",
+                            className="subtle",
+                        ),
                     ),
                 ],
             ),
@@ -1675,6 +1729,7 @@ def run_dash_app(
                     ),
                 ],
             ),
+
             html.Div(
                 id="pair-species",
                 className="section section--pair",
@@ -3511,7 +3566,6 @@ def run_dash_app(
 
         cards = []
         for idx in idxs:
-            base_card, translations_inner = _translations_for_idx(idx)
             cards.append(
                 html.Div(
                     className="onespecies-call",
@@ -3520,21 +3574,50 @@ def run_dash_app(
                             className="onespecies-call__base",
                             children=html.Div(
                                 className="panel panel--selected",
-                                children=base_card,
+                                children=_render_call_card(calls_all[idx]),
                             ),
                         ),
                         html.Div(
                             className="onespecies-call__translations",
                             children=html.Div(
                                 className="selection-strip selection-strip--stacked",
-                                children=translations_inner,
+                                children=_translations_for_idx(idx)[1],
                             ),
                         ),
                     ],
                 )
             )
 
-        return cards
+        return html.Div(cards, className="one-species__list")
+
+    @app.callback(
+        Output("one-species-explore-list", "children"),
+        Input("one-species-explore-dropdown", "value"),
+    )
+    def _render_one_species_explore(selected_species):
+        if not selected_species:
+            return html.Div(
+                "Pick a species to see its calls.",
+                className="subtle",
+            )
+
+        idxs = [i for i, sp in enumerate(species_all) if sp == selected_species]
+        if not idxs:
+            return html.Div("No calls for that species.", className="subtle")
+
+        cards = []
+        for idx in idxs:
+            cards.append(
+                html.Div(
+                    className="onespecies-call-card",
+                    children=html.Div(
+                        className="panel panel--selected",
+                        children=_render_call_card(calls_all[idx]),
+                    ),
+                )
+            )
+
+        return html.Div(cards, className="one-species-explore__grid")
 
     @app.callback(
         Output("overlayed", "children"),

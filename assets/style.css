@@ -1103,3 +1103,70 @@ button:focus-visible,
 .btn--subtle {
   color: var(--muted);
 }
+
+/* Single species repertoire exploration */
+.one-species-explore__list,
+.one-species-explore__grid,
+.onespecies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 20px;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
+.onespecies-call-card,
+.onespecies-explore-card {
+  flex: 1 1 300px;
+  max-width: 430px;
+}
+
+.onespecies-call-card .panel--selected,
+.onespecies-explore-card .panel--selected {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.one-species__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.onespecies-call {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+.onespecies-call__base {
+  width: 360px;
+  flex: 0 0 auto;
+}
+.onespecies-call__translations {
+  flex: 1;
+  min-width: 220px;
+}
+.selection-strip--stacked {
+  padding: 10px;
+  border: 1px solid var(--border-2);
+  overflow-x: auto;
+}
+.one-species-explore__list,
+.one-species-explore__grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 20px;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
+.onespecies-explore-card {
+  flex: 1 1 300px;
+  max-width: 430px;
+}
+
+.onespecies-explore-card .panel--selected {
+  width: 100%;
+  box-sizing: border-box;
+}
