@@ -753,6 +753,7 @@ h3 {
   gap: 10px;
   overflow-x: auto;
   overflow-y: hidden;
+  width: 100%;
 }
 
 .selection-strip--horizontal .translation-card,
@@ -765,6 +766,15 @@ h3 {
   gap: 12px;
   margin-top: 12px;
   align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.translations-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Translation metric lines */

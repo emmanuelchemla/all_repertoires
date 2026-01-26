@@ -980,6 +980,7 @@ def run_dash_app(
 
     try:
         from dash import Dash, dcc, html, Input, Output
+        from dash.dependencies import ALL
     except Exception as e:  # pragma: no cover
         raise RuntimeError(
             "Dash is required for run_dash_app(). Install with: pip install dash"
@@ -1441,175 +1442,187 @@ def run_dash_app(
                 className="section section--translations",
                 children=[
                     html.Div(
-                        className="section__header",
+                        className="translations-container",
                         children=[
                             html.Div(
-                                [
-                                    html.P("Translations", className="section__kicker"),
-                                    html.H2(
-                                        "Cross-species translations overview",
-                                        className="section__title",
-                                    ),
-                                ]
-                            )
-                        ],
-                    ),
-                    html.Div(
-                        className="static-layout",
-                        children=[
-                            html.Div(
-                                className="static-left",
+                                className="section__header",
                                 children=[
-                                    dcc.Store(id="trans-species-store", data=[]),
-                                    html.H3("Taxonomy selection"),
                                     html.Div(
-                                        className="panel panel--taxonomy",
-                                        children=[
-                                            html.Div(
-                                                "Click taxonomy nodes to filter species",
-                                                className="subtle subtle--tight",
+                                        [
+                                            html.P(
+                                                "Translations",
+                                                className="section__kicker",
                                             ),
+                                            html.H2(
+                                                "Cross-species translations overview",
+                                                className="section__title",
+                                            ),
+                                        ]
+                                    )
+                                ],
+                            ),
+                            html.Div(
+                                className="static-layout",
+                                children=[
+                                    html.Div(
+                                        className="static-left",
+                                        children=[
+                                            dcc.Store(id="trans-species-store", data=[]),
+                                            html.H3("Taxonomy selection"),
                                             html.Div(
-                                                className="taxonomy-controls taxonomy-controls--compact taxonomy-controls--inline",
+                                                className="panel panel--taxonomy",
                                                 children=[
-                                                    html.Span(
-                                                        "Selection mode",
-                                                        className="taxonomy-controls__label",
+                                                    html.Div(
+                                                        "Click taxonomy nodes to filter species",
+                                                        className="subtle subtle--tight",
                                                     ),
-                                                    dcc.RadioItems(
-                                                        id="trans-selection-mode",
-                                                        options=[
-                                                            {
-                                                                "label": "Focus",
-                                                                "value": "replace",
-                                                            },
-                                                            {
-                                                                "label": "Add",
-                                                                "value": "add",
-                                                            },
+                                                    html.Div(
+                                                        className="taxonomy-controls taxonomy-controls--compact taxonomy-controls--inline",
+                                                        children=[
+                                                            html.Span(
+                                                                "Selection mode",
+                                                                className="taxonomy-controls__label",
+                                                            ),
+                                                            dcc.RadioItems(
+                                                                id="trans-selection-mode",
+                                                                options=[
+                                                                    {
+                                                                        "label": "Focus",
+                                                                        "value": "replace",
+                                                                    },
+                                                                    {
+                                                                        "label": "Add",
+                                                                        "value": "add",
+                                                                    },
+                                                                ],
+                                                                value="replace",
+                                                                inline=True,
+                                                                className="taxonomy-controls__radio",
+                                                            ),
                                                         ],
-                                                        value="replace",
-                                                        inline=True,
-                                                        className="taxonomy-controls__radio",
+                                                    ),
+                                                    dcc.Graph(
+                                                        id="trans-taxonomy",
+                                                        figure=fig_tax,
+                                                        style={
+                                                            "height": "360px",
+                                                            "margin": "0",
+                                                        },
                                                     ),
                                                 ],
                                             ),
-                                            dcc.Graph(
-                                                id="trans-taxonomy",
-                                                figure=fig_tax,
+                                            html.Div(
+                                                id="trans-legend",
+                                                className="legend legend--stacked",
                                                 style={
-                                                    "height": "360px",
-                                                    "margin": "0",
+                                                    "maxHeight": "160px",
+                                                    "overflowY": "auto",
+                                                    "fontSize": "12px",
+                                                    "padding": "6px 8px",
+                                                    "border": "1px solid var(--border-2)",
+                                                    "borderRadius": "var(--radius)",
+                                                    "background": "var(--surface)",
+                                                    "marginTop": "8px",
                                                 },
+                                                children=[
+                                                    html.Div(
+                                                        [
+                                                            html.Span(
+                                                                "●",
+                                                                style={
+                                                                    "color": color_map.get(
+                                                                        sp, "#555"
+                                                                    ),
+                                                                    "fontSize": "12px",
+                                                                    "marginRight": "6px",
+                                                                },
+                                                            ),
+                                                            html.Span(
+                                                                f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
+                                                                className="legend__label",
+                                                            ),
+                                                        ],
+                                                        className="legend__item",
+                                                    )
+                                                    for sp in species_unique
+                                                ],
                                             ),
                                         ],
                                     ),
                                     html.Div(
-                                        id="trans-legend",
-                                        className="legend legend--stacked",
+                                        className="static-right",
+                                        children=[
+                                            html.Div(
+                                                className="static-row",
+                                                children=[
+                                                    dcc.Graph(
+                                                        id="trans-umap2d-a",
+                                                        className="static-graph",
+                                                    ),
+                                                    dcc.Graph(
+                                                        id="trans-umap3d-a",
+                                                        className="static-graph",
+                                                    ),
+                                                ],
+                                            ),
+                                            html.Div(
+                                                className="static-row",
+                                                children=[
+                                                    dcc.Graph(
+                                                        id="trans-umap2d-b",
+                                                        className="static-graph",
+                                                    ),
+                                                    dcc.Graph(
+                                                        id="trans-umap3d-b",
+                                                        className="static-graph",
+                                                    ),
+                                                ],
+                                            ),
+                                        ],
+                                    ),
+                                ],
+                            ),
+                            html.Div(
+                                className="translations-bottom",
+                                children=[
+                                    dcc.Store(id="trans-selected-idx", data=None),
+                                    dcc.Store(id="trans-scroll-trigger", data=None),
+                                    dcc.Store(id="trans-focus-species", data=None),
+                                    html.Div(
+                                        id="trans-selected-call",
+                                        className="panel panel--tight",
+                                        children="Click a point in any UMAP to select a call.",
                                         style={
-                                            "maxHeight": "160px",
-                                            "overflowY": "auto",
-                                            "fontSize": "12px",
-                                            "padding": "6px 8px",
-                                            "border": "1px solid var(--border-2)",
-                                            "borderRadius": "var(--radius)",
-                                            "background": "var(--surface)",
-                                            "marginTop": "8px",
+                                            "flex": "0 0 28%",
+                                            "maxWidth": "360px",
+                                            "minWidth": "260px",
+                                        },
+                                    ),
+                                    html.Div(
+                                        style={
+                                            "flex": "1 1 auto",
+                                            "display": "flex",
+                                            "flexDirection": "column",
+                                            "gap": "10px",
+                                            "minWidth": "0",
                                         },
                                         children=[
                                             html.Div(
-                                                [
-                                                    html.Span(
-                                                        "●",
-                                                        style={
-                                                            "color": color_map.get(
-                                                                sp, "#555"
-                                                            ),
-                                                            "fontSize": "12px",
-                                                            "marginRight": "6px",
-                                                        },
-                                                    ),
-                                                    html.Span(
-                                                        f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
-                                                        className="legend__label",
-                                                    ),
-                                                ],
-                                                className="legend__item",
-                                            )
-                                            for sp in species_unique
-                                        ],
-                                    ),
-                                ],
-                            ),
-                            html.Div(
-                                className="static-right",
-                                children=[
-                                    html.Div(
-                                        className="static-row",
-                                        children=[
-                                            dcc.Graph(
-                                                id="trans-umap2d-a",
-                                                className="static-graph",
+                                                id="trans-translations-strip",
+                                                className="panel panel--tight selection-strip selection-strip--horizontal",
+                                                children="Semantic translations will appear here.",
+                                                style={"maxHeight": "340px"},
                                             ),
-                                            dcc.Graph(
-                                                id="trans-umap3d-a",
-                                                className="static-graph",
-                                            ),
-                                        ],
-                                    ),
-                                    html.Div(
-                                        className="static-row",
-                                        children=[
-                                            dcc.Graph(
-                                                id="trans-umap2d-b",
-                                                className="static-graph",
-                                            ),
-                                            dcc.Graph(
-                                                id="trans-umap3d-b",
-                                                className="static-graph",
+                                            html.Div(
+                                                id="trans-translations-acoustic",
+                                                className="panel panel--tight selection-strip selection-strip--horizontal",
+                                                children="Acoustic translations will appear here.",
+                                                style={"maxHeight": "340px"},
                                             ),
                                         ],
                                     ),
                                 ],
-                            ),
-                        ],
-                    ),
-                ],
-            ),
-            html.Div(
-                className="translations-bottom",
-                children=[
-                    dcc.Store(id="trans-selected-idx", data=None),
-                    html.Div(
-                        id="trans-selected-call",
-                        className="panel panel--tight",
-                        children="Click a point in any UMAP to select a call.",
-                        style={
-                            "flex": "0 0 28%",
-                            "maxWidth": "360px",
-                            "minWidth": "260px",
-                        },
-                    ),
-                    html.Div(
-                        style={
-                            "flex": "1 1 auto",
-                            "display": "flex",
-                            "flexDirection": "column",
-                            "gap": "10px",
-                        },
-                        children=[
-                            html.Div(
-                                id="trans-translations-strip",
-                                className="panel panel--tight selection-strip selection-strip--horizontal",
-                                children="Semantic translations will appear here.",
-                                style={"maxHeight": "340px"},
-                            ),
-                            html.Div(
-                                id="trans-translations-acoustic",
-                                className="panel panel--tight selection-strip selection-strip--horizontal",
-                                children="Acoustic translations will appear here.",
-                                style={"maxHeight": "340px"},
+                                style={"maxWidth": "1200px", "margin": "0 auto"},
                             ),
                         ],
                     ),
@@ -2270,13 +2283,50 @@ def run_dash_app(
         return current
 
     @app.callback(
+        Output("trans-focus-species", "data"),
+        Input({"type": "trans-card", "space": ALL, "idx": ALL, "species": ALL}, "n_clicks"),
+        State({"type": "trans-card", "space": ALL, "idx": ALL, "species": ALL}, "species"),
+        State("trans-focus-species", "data"),
+        prevent_initial_call=True,
+    )
+    def _focus_species_from_card(n_clicks_list, species_list, current):
+        from dash import ctx
+
+        trig = ctx.triggered_id
+        if isinstance(trig, dict) and trig.get("species"):
+            return trig.get("species")
+        return current
+
+    # Client-side scroll alignment: when focus species changes, scroll matching cards into view
+    app.clientside_callback(
+        """
+        function(focus){
+            if(!focus){return null;}
+            const panels = ["trans-translations-strip", "trans-translations-acoustic"];
+            panels.forEach(id => {
+                const panel = document.getElementById(id);
+                if(!panel) return;
+                const card = panel.querySelector('[data-species=\"' + focus + '\"]');
+                if(card && card.scrollIntoView){
+                    card.scrollIntoView({behavior:"smooth", inline:"start", block:"nearest"});
+                }
+            });
+            return null;
+        }
+        """,
+        Output("trans-scroll-trigger", "data"),
+        Input("trans-focus-species", "data"),
+    )
+
+    @app.callback(
         Output("trans-selected-call", "children"),
         Output("trans-translations-strip", "children"),
         Output("trans-translations-acoustic", "children"),
         Input("trans-selected-idx", "data"),
         Input("trans-species-store", "data"),
+        Input("trans-focus-species", "data"),
     )
-    def _update_trans_selected(selected_idx, species_sel):
+    def _update_trans_selected(selected_idx, species_sel, focus_species):
         species_sel = species_sel or []
         idxs = _idxs_for_species(species_sel)
         if selected_idx is None or selected_idx not in idxs:
@@ -2302,7 +2352,7 @@ def run_dash_app(
                 dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
                 j = int(dists.argmin())
                 neighbors.append((dists[j], candidates[j]))
-            neighbors.sort(key=lambda x: x[0])
+            neighbors.sort(key=lambda x: (sp != focus_species if focus_species else False, x[0]))
 
             cards = []
             for dist, nn_idx in neighbors:
@@ -2331,6 +2381,14 @@ def run_dash_app(
                 cards.append(
                     html.Div(
                         className="translation-card",
+                        id={
+                            "type": "trans-card",
+                            "space": label_prefix.lower(),
+                            "species": species_all[nn_idx],
+                            "idx": int(nn_idx),
+                        },
+                        n_clicks=0,
+                        **{"data-species": species_all[nn_idx]},
                         children=[
                             html.Div(
                                 className="translation-meta",
