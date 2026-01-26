@@ -1118,8 +1118,8 @@ button:focus-visible,
 
 .onespecies-call-card,
 .onespecies-explore-card {
-  flex: 1 1 300px;
-  max-width: 430px;
+  flex: 0 0 320px;
+  max-width: 320px;
 }
 
 .onespecies-call-card .panel--selected,
