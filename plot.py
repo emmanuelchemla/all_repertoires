@@ -2339,7 +2339,23 @@ def run_dash_app(
         base_species = species_all[selected_idx]
         species_in_view = sorted({species_all[i] for i in idxs})
 
-        def nearest_panel(embeds_from, label_prefix):
+        # precompute nearest semantic and acoustic per other species
+        best_sem = {}
+        best_ac = {}
+        for sp in species_in_view:
+            if sp == base_species:
+                continue
+            candidates = [i for i in idxs if species_all[i] == sp]
+            if not candidates:
+                continue
+            # semantic
+            d_sem = _np.linalg.norm(semantic_embeds[candidates] - semantic_embeds[selected_idx], axis=1)
+            best_sem[sp] = candidates[int(d_sem.argmin())]
+            # acoustic
+            d_ac = _np.linalg.norm(acoustic_embeds[candidates] - acoustic_embeds[selected_idx], axis=1)
+            best_ac[sp] = candidates[int(d_ac.argmin())]
+
+        def nearest_panel(embeds_from, other_embeds, label_prefix, secondary_label, secondary_best_map):
             base_vec = embeds_from[selected_idx]
             neighbors = []
             for sp in species_in_view:
@@ -2357,6 +2373,11 @@ def run_dash_app(
             cards = []
             for dist, nn_idx in neighbors:
                 sim = 1.0 - (dist * dist) / 2.0
+                # secondary similarity (other space)
+                other_dist = float(
+                    np.linalg.norm(other_embeds[nn_idx] - other_embeds[selected_idx])
+                )
+                other_sim = 1.0 - (other_dist * other_dist) / 2.0
                 # back-translation in same space
                 candidates_back = [i for i in idxs if species_all[i] == base_species]
                 bt_idx = None
@@ -2398,7 +2419,41 @@ def run_dash_app(
                                         className="subtle translation-metric",
                                     ),
                                     html.Div(
-                                        back_line,
+                                        [
+                                            html.Span(
+                                                "✔︎ "
+                                                if nn_idx
+                                                == secondary_best_map.get(
+                                                    species_all[nn_idx]
+                                                )
+                                                else "✘ ",
+                                                style={
+                                                    "color": "#10b981"
+                                                    if nn_idx
+                                                    == secondary_best_map.get(
+                                                        species_all[nn_idx]
+                                                    )
+                                                    else "#ef4444",
+                                                    "fontWeight": "700",
+                                                },
+                                            ),
+                                            f"{secondary_label} similarity: {other_sim:.3f}",
+                                        ],
+                                        className="subtle translation-metric",
+                                    ),
+                                    html.Div(
+                                        [
+                                            html.Span(
+                                                "✔︎ " if "✅" in back_line else "✘ ",
+                                                style={
+                                                    "color": "#10b981"
+                                                    if "✅" in back_line
+                                                    else "#ef4444",
+                                                    "fontWeight": "700",
+                                                },
+                                            ),
+                                            back_line.replace("✅ ", "").replace("❌ ", ""),
+                                        ],
                                         className="subtle translation-metric",
                                     ),
                                 ],
@@ -2409,8 +2464,12 @@ def run_dash_app(
                 )
             return cards
 
-        semantic_cards = nearest_panel(semantic_embeds, "Semantic")
-        acoustic_cards = nearest_panel(acoustic_embeds, "Acoustic")
+        semantic_cards = nearest_panel(
+            semantic_embeds, acoustic_embeds, "Semantic", "Acoustic", best_ac
+        )
+        acoustic_cards = nearest_panel(
+            acoustic_embeds, semantic_embeds, "Acoustic", "Semantic", best_sem
+        )
 
         return selected_card, semantic_cards, acoustic_cards
 
