@@ -1262,7 +1262,10 @@ def run_dash_app(
             html.Nav(
                 className="topnav",
                 children=[
-                    html.Div("Cross-species Repertoire Explorer & Translator", className="topnav__brand"),
+                    html.Div(
+                        "Cross-species Repertoire Explorer & Translator",
+                        className="topnav__brand",
+                    ),
                     html.Div(
                         className="topnav__links",
                         children=[
@@ -1313,10 +1316,16 @@ def run_dash_app(
                     ),
                     html.Div(
                         className="hero__body",
-                        children=html.P(
-                            "Interactive explorer of a cross-species database of animal vocal repertoires.",
-                            className="hero__paragraph",
-                        ),
+                        children=[
+                            html.P(
+                                "Interactive explorer of a cross-species database of animal vocal repertoires.",
+                                className="hero__paragraph",
+                            ),
+                            html.P(
+                                f"{len(species_unique)} species · {len(calls_all)} calls currently in the database",
+                                className="hero__paragraph hero__paragraph--meta",
+                            ),
+                        ],
                     ),
                 ],
             ),
@@ -1729,7 +1738,6 @@ def run_dash_app(
                     ),
                 ],
             ),
-
             html.Div(
                 id="pair-species",
                 className="section section--pair",

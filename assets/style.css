@@ -581,6 +581,10 @@ h3 {
   color: var(--muted);
   line-height: 1.45;
 }
+.hero__paragraph--meta {
+  color: var(--muted);
+  margin-top: 2px;
+}
 
 .hero__paragraph--lead {
   margin-top: 10px;
