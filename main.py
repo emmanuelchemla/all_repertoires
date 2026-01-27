@@ -1,24 +1,13 @@
 from __future__ import annotations
+from collections import Counter
 import json
-from collections import Counter, defaultdict
-from pathlib import Path
-from typing import Dict, Iterable, List, Sequence, Tuple
-
-import warnings
-
 import matplotlib.pyplot as plt
 import numpy as np
-from sentence_transformers import SentenceTransformer
-from umap import UMAP
-
+from pathlib import Path
 import re
-
-# Silence UMAP warning about n_jobs being forced to 1 when random_state is set.
-warnings.filterwarnings(
-    "ignore",
-    message=r"n_jobs value 1 overridden to 1 by setting random_state",
-    category=UserWarning,
-)
+from sentence_transformers import SentenceTransformer
+from typing import Dict, Iterable, List, Sequence, Tuple
+from umap import UMAP
 
 
 def species_common_name(name: str) -> str:
