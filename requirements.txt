@@ -8,6 +8,3 @@ umap-learn
 plotly
 dash
 
-# LLM providers (used in main.py)
-openai
-google-generativeai

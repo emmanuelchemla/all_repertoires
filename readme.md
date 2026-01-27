@@ -2,21 +2,20 @@
 
 `database.json` contains an LLM generated list of species with their repertoires
 
-`plot.py` generates summary plots
+First prompt was:
 
-To generate "an interactive translation plot" eg in a notebook use:
+```text
+give me a json with all the calls of a species. The json should contain
+- species name
+- call name
+- acoustic description
+- semantic description (context of use)
+- scientific references (as many as possible, ideally urls)
+- subjective reliability
+- comments
+- users (only females, only young individuals, only some groups/populations, etc)
 
-```python
-from plot import run_interactive
-
-fig = run_interactive(
-    json_path="database.json",
-    embedding_model="sentence-transformers/all-MiniLM-L6-v2",
-    cache=".embedding_cache.json",
-    n_components=2,  # Use n_components=3 for a 3D plot
-    width=900,
-    height=700,
-)
-
-fig  # depending on your configuration, also try: fig.show() or run it twice
+Start with chimps
 ```
+
+`python main.py` generates a dashboard to explore the resulting database
