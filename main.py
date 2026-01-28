@@ -375,7 +375,9 @@ def run_dash_app(
                             ),
                             html.P(
                                 children=[
-                                    "We gathered acoustic and semantic descriptions for calls across many species. It looks like this: ",
+                                    "We gathered acoustic and semantic descriptions for calls across many species.",
+                                    f"{len(species_unique)} species · {len(calls_all)} calls currently in the database",
+                                    "It looks like this: ",
                                 ]
                             ),
                             html.Div(
@@ -547,7 +549,7 @@ def run_dash_app(
                                         "more similar sounding vocalizations have more similar meanings",
                                         className="hero__highlight",
                                     ),
-                                    ". This could be due to:",
+                                    ". This could be a sign of two fascinating possibilities:",
                                 ],
                             ),
                             html.Ul(
