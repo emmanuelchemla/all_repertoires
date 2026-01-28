@@ -329,7 +329,14 @@ def run_dash_app(
                 className="topnav",
                 children=[
                     html.Div(
-                        NAV_CONTENT["brand"],
+                        [
+                            html.Img(
+                                src="/assets/esp_logo.svg",
+                                className="topnav__logo",
+                                title="ESP",
+                            ),
+                            html.Span(NAV_CONTENT["brand"], className="topnav__brandtext"),
+                        ],
                         className="topnav__brand",
                     ),
                     html.Div(
