@@ -12,7 +12,7 @@ from umap import UMAP
 from dash import Dash, dcc, html, Input, Output, ALL, ctx
 from plotly.colors import qualitative as qualitative
 
-from app.content import NAV_LINKS, TODO_ITEMS
+from app.content import NAV_CONTENT, TODO_ITEMS
 from app.utils import (
     build_taxonomy_sunburst,
     embed_texts,
@@ -21,6 +21,10 @@ from app.utils import (
     reduce_umap,
     species_common_name,
 )
+
+
+def section_text(section_id: str, field: str) -> str:
+    return NAV_CONTENT["sections"][section_id][field]
 
 
 def run_dash_app(
@@ -318,19 +322,23 @@ def run_dash_app(
             html.Nav(
                 className="topnav",
                 children=[
-                    html.Div(
-                        "Cross-species Repertoire Explorer & Translator",
-                        className="topnav__brand",
-                    ),
-                    html.Div(
-                        className="topnav__links",
-                        children=[
-                            html.A(text, href=href, className="topnav__link")
-                            for text, href in NAV_LINKS
-                        ],
-                    ),
+            html.Div(
+                NAV_CONTENT["brand"],
+                className="topnav__brand",
+            ),
+            html.Div(
+                className="topnav__links",
+                children=[
+                    html.A(
+                        NAV_CONTENT["sections"][sid]["link_text"],
+                        href=NAV_CONTENT["sections"][sid]["link_href"],
+                        className="topnav__link",
+                    )
+                    for sid in NAV_CONTENT["nav_order"]
                 ],
             ),
+        ],
+    ),
             html.Div(
                 id="home",
                 className="section section--home",
@@ -340,8 +348,14 @@ def run_dash_app(
                         children=[
                             html.Div(
                                 [
-                                    html.P("Overview", className="section__kicker"),
-                                    html.H2("Home", className="section__title"),
+                                    html.P(
+                                        section_text("home", "kicker"),
+                                        className="section__kicker",
+                                    ),
+                                    html.H2(
+                                        section_text("home", "title"),
+                                        className="section__title",
+                                    ),
                                 ]
                             )
                         ],
@@ -375,10 +389,11 @@ def run_dash_app(
                             html.Div(
                                 [
                                     html.P(
-                                        "Descriptive plots", className="section__kicker"
+                                        section_text("static", "kicker"),
+                                        className="section__kicker",
                                     ),
                                     html.H2(
-                                        "Quick summaries for the whole dataset",
+                                        section_text("static", "title"),
                                         className="section__title",
                                     ),
                                 ]
@@ -494,11 +509,11 @@ def run_dash_app(
                             html.Div(
                                 [
                                     html.P(
-                                        "Single species repertoire exploration",
+                                        section_text("one-species-explore", "kicker"),
                                         className="section__kicker",
                                     ),
                                     html.H2(
-                                        "Single species repertoire exploration",
+                                        section_text("one-species-explore", "title"),
                                         className="section__title",
                                     ),
                                 ]
@@ -546,11 +561,11 @@ def run_dash_app(
                                     html.Div(
                                         [
                                             html.P(
-                                                "Single call translation",
+                                                section_text("translations", "kicker"),
                                                 className="section__kicker",
                                             ),
                                             html.H2(
-                                                "Single call translated to a call in every other species",
+                                                section_text("translations", "title"),
                                                 className="section__title",
                                             ),
                                         ]
@@ -736,11 +751,11 @@ def run_dash_app(
                             html.Div(
                                 [
                                     html.P(
-                                        "Full species repertoire translated",
+                                        section_text("one-species", "kicker"),
                                         className="section__kicker",
                                     ),
                                     html.H2(
-                                        "Mapping every call of a species to a call in every other species",
+                                        section_text("one-species", "title"),
                                         className="section__title",
                                     ),
                                 ]
@@ -803,11 +818,11 @@ def run_dash_app(
                             html.Div(
                                 [
                                     html.P(
-                                        "Full repertoire bilingual mapping",
+                                        section_text("pair-species", "kicker"),
                                         className="section__kicker",
                                     ),
                                     html.H2(
-                                        "FInd best repertoire alignment across two species",
+                                        section_text("pair-species", "title"),
                                         className="section__title",
                                     ),
                                 ]
