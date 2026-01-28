@@ -29,41 +29,6 @@ from app.utils import (
 )
 
 
-def run(
-    json_path: Path | str = "database.json",
-    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2",
-    cache: Path | str = ".embedding_cache.json",
-    out: Path | str = "umap_acoustic.png",
-) -> Path:
-    """Embed acoustic/semantic descriptions and save a UMAP plot.
-
-    Returns the output path for convenience in notebooks.
-    """
-    json_path = Path(json_path)
-    cache = Path(cache)
-    out = Path(out)
-
-    calls = load_calls(json_path)
-    if not calls:
-        raise SystemExit("No calls found in the provided JSON.")
-
-    acoustic_texts = [c["acoustic_description"] for c in calls]
-    semantic_texts = [c["semantic_description"] for c in calls]
-
-    encoder = SentenceTransformer(embedding_model)
-
-    acoustic_embeds, _ = embed_texts(acoustic_texts, embedding_model, cache, encoder)
-    semantic_embeds, _ = embed_texts(semantic_texts, embedding_model, cache, encoder)
-
-    # Simple check: print shapes for confirmation.
-    print(f"Acoustic embeddings: {acoustic_embeds.shape}")
-    print(f"Semantic embeddings: {semantic_embeds.shape}")
-
-    plot_umap(acoustic_embeds, [c["species"] for c in calls], out)
-    print(f"Saved UMAP plot to {out}")
-    return out
-
-
 def run_dash_app(
     json_path: Path | str = "database.json",
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2",
