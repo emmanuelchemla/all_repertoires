@@ -374,9 +374,10 @@ def run_dash_app(
                                 className="hero__paragraph",
                             ),
                             html.P(
-                                children=[
-                                    "We harvested acoustic and semantic descriptions for calls across many species.",
-                                ]
+                                "We harvested acoustic and semantic descriptions for calls across many species."
+                            ),
+                            html.P(
+                                "The spirit is to expose the whole of written scientific knowledge on the topic, as summarized by LLMs."
                             ),
                             html.Div(
                                 className="hero__stat hero__stat--inline",
@@ -475,58 +476,61 @@ def run_dash_app(
                                                 clearable=True,
                                                 style={"width": "320px"},
                                             ),
-                            dcc.RadioItems(
-                                id="home-pair-space",
-                                options=[
-                                    {
-                                        "label": "Semantic",
-                                        "value": "semantic",
-                                    },
-                                    {
-                                        "label": "Acoustic",
-                                        "value": "acoustic",
-                                    },
-                                ],
-                                value="semantic",
-                                inline=True,
-                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
-                            ),
-                            html.Div(
-                                className="hero__pair-threshold",
-                                style={
-                                    "display": "flex",
-                                    "alignItems": "flex-start",
-                                    "gap": "8px",
-                                    "marginTop": "6px",
-                                    "width": "340px",
-                                },
-                                children=[
-                                    html.Span(
-                                        "Thresholding",
-                                        className="taxonomy-controls__label",
+                                            dcc.RadioItems(
+                                                id="home-pair-space",
+                                                options=[
+                                                    {
+                                                        "label": "Semantic",
+                                                        "value": "semantic",
+                                                    },
+                                                    {
+                                                        "label": "Acoustic",
+                                                        "value": "acoustic",
+                                                    },
+                                                ],
+                                                value="semantic",
+                                                inline=True,
+                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                            ),
+                                            html.Div(
+                                                className="hero__pair-threshold",
+                                                style={
+                                                    "display": "flex",
+                                                    "alignItems": "flex-start",
+                                                    "gap": "8px",
+                                                    "marginTop": "6px",
+                                                    "width": "340px",
+                                                },
+                                                children=[
+                                                    html.Span(
+                                                        "Thresholding",
+                                                        className="taxonomy-controls__label",
+                                                        style={
+                                                            "fontSize": "13px",
+                                                            "opacity": 0.7,
+                                                            "margin": "0",
+                                                        },
+                                                    ),
+                                                    dcc.Slider(
+                                                        id="home-pair-threshold",
+                                                        min=0,
+                                                        max=1,
+                                                        step=0.01,
+                                                        value=0,
+                                                        marks={0: "0", 1: "1"},
+                                                        tooltip={
+                                                            "placement": "bottom",
+                                                            "always_visible": False,
+                                                        },
+                                                    ),
+                                                ],
+                                            ),
+                                        ],
                                         style={
-                                            "fontSize": "13px",
-                                            "opacity": 0.7,
-                                            "margin": "0",
+                                            "flexDirection": "column",
+                                            "alignItems": "flex-start",
                                         },
                                     ),
-                                    dcc.Slider(
-                                        id="home-pair-threshold",
-                                        min=0,
-                                        max=1,
-                                        step=0.01,
-                                        value=0,
-                                        marks={0: "0", 1: "1"},
-                                        tooltip={
-                                            "placement": "bottom",
-                                            "always_visible": False,
-                                        },
-                                    ),
-                                ],
-                            ),
-                        ],
-                        style={"flexDirection": "column", "alignItems": "flex-start"},
-                    ),
                                     dcc.Graph(
                                         id="home-pair-graph",
                                         className="pair-graph pair-graph--mini",
@@ -696,12 +700,18 @@ def run_dash_app(
                                 ],
                             ),
                             html.P(
-                                f"""A couple of caveats about 'translation'.
+                                f"""Notes about 'translation'.
                                 - Calls can be close in semantic space, or acoustic space, or both, and this means different things! Calls close in acoustic space may be coming from a common ancestor (or not). They may have (retained) the same meaning (or not).
                                 - While this is the best possible translation, there are systematic reasons why it may be off.
                                 -- A call in one species may not have an equivalent in another species, they simply don't talk about the same thing! In this case, there will still be a closest call, but it won't be very close.
                                 -- A call could be used to signal 'predators' in two species, but these predators may be different, a predator for one is not a predator for another. (The same true is human language, "president" may be 'translated' by "prime minister" in some cultures)
                                 -- The same is true acoustically: a high pitch vocalization is not the same thing for bats and for elephants. This relativity of the description is interesting though, there are reasons to believe that higher pitch means something, so you may use that differently based on your own vocal range.
+                                """,
+                                className="hero__paragraph hero__paragraph--meta",
+                            ),
+                            html.P(
+                                f"""Notes about 'calls' and 'repertoires'.
+                                Not everything can be summarized through the idea of a neatly clustered set of discrete call types. But some things can...
                                 """,
                                 className="hero__paragraph hero__paragraph--meta",
                             ),
@@ -2836,9 +2846,9 @@ def run_dash_app(
                 continue
             y0 -= 0.5  # lowered per request
             y1 -= 0.5
-            tail_x = left_edge               # start at left box edge
-            head_x = right_edge              # end at right box edge
-            label_x = right_edge + 0.05      # text just outside target box
+            tail_x = left_edge  # start at left box edge
+            head_x = right_edge  # end at right box edge
+            label_x = right_edge + 0.05  # text just outside target box
             ann_secondary.append(
                 dict(
                     x=label_x,
@@ -2869,9 +2879,9 @@ def run_dash_app(
                 continue
             y0 = right_row_map[j_local] - 0.7  # lowered further per request
             y1 = left_row_map[i_local] - 0.7
-            tail_x = right_edge             # source edge (right box)
-            head_x = left_edge              # target edge (left box)
-            label_x = left_edge - 0.05      # text outside target box
+            tail_x = right_edge  # source edge (right box)
+            head_x = left_edge  # target edge (left box)
+            label_x = left_edge - 0.05  # text outside target box
             ann_secondary.append(
                 dict(
                     x=label_x,
@@ -2904,9 +2914,9 @@ def run_dash_app(
                 continue
             y0 += 0.5
             y1 += 0.5
-            tail_x = left_edge              # start at left box edge
-            head_x = right_edge             # end at right box edge
-            label_x = right_edge + 0.05     # text just outside target box
+            tail_x = left_edge  # start at left box edge
+            head_x = right_edge  # end at right box edge
+            label_x = right_edge + 0.05  # text just outside target box
             if sim_ij < min_sim:
                 continue
             annotations.append(
@@ -2937,9 +2947,9 @@ def run_dash_app(
                 continue
             y0 = right_row_map[j_local] - 0.2
             y1 = left_row_map[i_local] - 0.2
-            tail_x = right_edge            # start at right box edge
-            head_x = left_edge             # end at left box edge
-            label_x = left_edge - 0.05     # text just outside target box
+            tail_x = right_edge  # start at right box edge
+            head_x = left_edge  # end at left box edge
+            label_x = left_edge - 0.05  # text just outside target box
             if sim < min_sim:
                 continue
             annotations.append(
