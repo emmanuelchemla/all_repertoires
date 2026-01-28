@@ -2837,7 +2837,7 @@ def run_dash_app(
             head_x = right_center_x - box_w / 2
             ann_secondary.append(
                 dict(
-                    x=head_x,
+                    x=head_x + 0.15,  # shift outward (right box)
                     y=y1,
                     ax=tail_x,
                     ay=y0,
@@ -2850,7 +2850,7 @@ def run_dash_app(
                     arrowsize=1.2,
                     arrowwidth=1.0,
                     arrowcolor=sec_color_lr,
-                    text=f"{sim_ij:.3f}",
+                    text=f"{sim_ij:.2g}",
                     font=dict(size=9, color="#666"),
                 )
             )
@@ -2869,7 +2869,7 @@ def run_dash_app(
             head_x = left_center_x + box_w / 2
             ann_secondary.append(
                 dict(
-                    x=head_x,
+                    x=head_x - 0.15,  # shift outward (left box)
                     y=y1,
                     ax=tail_x,
                     ay=y0,
@@ -2882,7 +2882,7 @@ def run_dash_app(
                     arrowsize=1.2,
                     arrowwidth=1.0,
                     arrowcolor=sec_color_rl,
-                    text=f"{sim:.3f}",
+                    text=f"{sim:.2g}",
                     font=dict(size=9, color="#666"),
                 )
             )
@@ -2905,7 +2905,7 @@ def run_dash_app(
                 continue
             annotations.append(
                 dict(
-                    x=head_x,
+                    x=head_x + 0.2,  # shift to outward edge of right box
                     y=y1,
                     ax=tail_x,
                     ay=y0,
@@ -2918,7 +2918,7 @@ def run_dash_app(
                     arrowsize=1.6,
                     arrowwidth=1.4,
                     arrowcolor="rgba(220,38,38,0.7)",
-                    text=f"{sim_ij:.3f}",
+                    text=f"{sim_ij:.2g}",
                     font=dict(size=10, color="rgba(220,38,38,0.9)"),
                 )
             )
@@ -2937,7 +2937,7 @@ def run_dash_app(
                 continue
             annotations.append(
                 dict(
-                    x=head_x,
+                    x=head_x - 0.2,  # shift to outward edge of left box
                     y=y1,
                     ax=tail_x,
                     ay=y0,
@@ -2950,7 +2950,7 @@ def run_dash_app(
                     arrowsize=1.6,
                     arrowwidth=1.4,
                     arrowcolor="rgba(37,99,235,0.7)",
-                    text=f"{sim:.3f}",
+                    text=f"{sim:.2g}",
                     font=dict(size=10, color="rgba(37,99,235,0.9)"),
                 )
             )
