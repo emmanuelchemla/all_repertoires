@@ -1,10 +1,6 @@
-# Core analysis and plotting
-numpy
+dash
 matplotlib
+numpy
+plotly
 sentence-transformers
 umap-learn
-
-# Interactive visualizations
-plotly
-dash
-
