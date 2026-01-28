@@ -524,34 +524,6 @@ def run_dash_app(
                                         ],
                                     ),
                                     html.Div(
-                                        className="hero__multi-controls",
-                                        style={"marginTop": "6px"},
-                                        children=[
-                                            dcc.Dropdown(
-                                                id="home-mantel-group",
-                                                options=[
-                                                    {
-                                                        "label": "All species",
-                                                        "value": "All",
-                                                    },
-                                                    *[
-                                                        {"label": g, "value": g}
-                                                        for g in sorted(
-                                                            {
-                                                                "Primates",
-                                                                "Primates (no Apes)",
-                                                                "Apes",
-                                                            }
-                                                            | group_values
-                                                        )
-                                                    ],
-                                                ],
-                                                value="All",
-                                                clearable=False,
-                                            ),
-                                        ],
-                                    ),
-                                    html.Div(
                                         className="hero__multi-layout",
                                         children=[
                                             dcc.Graph(
@@ -576,6 +548,34 @@ def run_dash_app(
                                         className="hero__highlight",
                                     ),
                                     ". This could be due to both common descent or the use of a general 'iconic' biological code, two fascinating options.",
+                                ],
+                            ),
+                            html.Div(
+                                className="hero__multi-controls",
+                                children=[
+                                    html.Label(
+                                        "Calls that sound the same are most likely to be semantically similar",
+                                        className="taxonomy-controls__label",
+                                    ),
+                                    dcc.Dropdown(
+                                        id="home-mantel-group",
+                                        options=[
+                                            {"label": "All species", "value": "All"},
+                                            *[
+                                                {"label": g, "value": g}
+                                                for g in sorted(
+                                                    {
+                                                        "Primates",
+                                                        "Primates (no Apes)",
+                                                        "Apes",
+                                                    }
+                                                    | group_values
+                                                )
+                                            ],
+                                        ],
+                                        value="All",
+                                        clearable=False,
+                                    ),
                                 ],
                             ),
                             html.Div(
