@@ -582,7 +582,7 @@ def run_dash_app(
                                 className="panel panel--tight",
                                 children=[
                                     html.Div(
-                                        "Mantel correlations between acoustic and semantic spaces (all species):",
+                                        "Mantel correlations between acoustic and semantic spaces:",
                                         className="subtle subtle--tight",
                                     ),
                                     html.Div(
@@ -597,7 +597,7 @@ def run_dash_app(
                                 - Calls can be close in semantic space, or acoustic space, or both, and this means different things! Calls close in acoustic space may be coming from a common ancestor (or not). They may have (retained) the same meaning (or not).
                                 - While this is the best possible translation, there are systematic reasons why it may be off.
                                 -- A call in one species may not have an equivalent in another species, they simply don't talk about the same thing! In this case, there will still be a closest call, but it won't be very close.
-                                -- A call could be used to signal 'predators' in two species, but these predators may be different, a predator for one is not a predator for another.
+                                -- A call could be used to signal 'predators' in two species, but these predators may be different, a predator for one is not a predator for another. (The same true is human language, "president" may be 'translated' by "prime minister" in some cultures)
                                 -- The same is true acoustically: a high pitch vocalization is not the same thing for bats and for elephants. This relativity of the description is interesting though, there are reasons to believe that higher pitch means something, so you may use that differently based on your own vocal range.
                                 """,
                                 className="hero__paragraph hero__paragraph--meta",
