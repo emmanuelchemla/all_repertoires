@@ -5,11 +5,9 @@ NAV_CONTENT = {
     "brand": "Cross-species Repertoire Explorer & Translator",
     "nav_order": [
         "home",
-        "one-species-explore",
-        "pair-species",
-        "translations",
-        # "one-species",
         "static",
+        "translations",
+        "one-species",
     ],
     "sections": {
         "home": {
@@ -24,12 +22,6 @@ NAV_CONTENT = {
             "kicker": "Descriptive plots",
             "title": "Stats for the whole dataset",
         },
-        "one-species-explore": {
-            "link_text": "Single species repertoire exploration",
-            "link_href": "#one-species-explore",
-            "kicker": "Single species repertoire exploration",
-            "title": "Single species repertoire exploration",
-        },
         "translations": {
             "link_text": "Single call translation",
             "link_href": "#translations",
@@ -41,12 +33,6 @@ NAV_CONTENT = {
             "link_href": "#one-species",
             "kicker": "Full species repertoire translated",
             "title": "Mapping every call of a species to a call in every other species",
-        },
-        "pair-species": {
-            "link_text": "Full repertoire bilingual mapping",
-            "link_href": "#pair-species",
-            "kicker": "Full repertoire bilingual mapping",
-            "title": "FInd best repertoire alignment across two species",
         },
     },
 }

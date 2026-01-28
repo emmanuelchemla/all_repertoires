@@ -403,20 +403,14 @@ def run_dash_app(
                             ),
                             html.P(
                                 children=[
-                                    "From there, we can measure acoustic or semantic distance between calls, that is, we can do 'translation'! The best possible translation of a call is the call that has the closest semantic description. The resulting 'bilingual dictionaries' can be built in automatically: ",
-                                    html.A(
-                                        "Pair of species",
-                                        href="#pair-species",
-                                        className="hero__link",
-                                    ),
-                                    ".",
+                                    "From there, we can measure acoustic or semantic distance between calls, that is, we can do 'translation'! The best possible translation of a call is the call that has the closest semantic description. The resulting 'bilingual dictionaries' can be built automatically below.",
                                 ]
                             ),
                             html.Div(
                                 className="hero__pair-mini",
                                 children=[
                                     html.Label(
-                                        "Bilingual translation preview",
+                                        "Automatically built bilingual translation",
                                         className="taxonomy-controls__label",
                                     ),
                                     html.Div(
@@ -628,55 +622,6 @@ def run_dash_app(
                                 ],
                             ),
                         ],
-                    ),
-                ],
-            ),
-            html.Div(
-                id="one-species-explore",
-                className="section section--onespecies",
-                children=[
-                    html.Div(
-                        className="section__header",
-                        children=[
-                            html.Div(
-                                [
-                                    html.P(
-                                        section_text("one-species-explore", "kicker"),
-                                        className="section__kicker",
-                                    ),
-                                    html.H2(
-                                        section_text("one-species-explore", "title"),
-                                        className="section__title",
-                                    ),
-                                ]
-                            )
-                        ],
-                    ),
-                    html.Div(
-                        className="one-species__controls",
-                        children=[
-                            html.Label(
-                                "Choose a species",
-                                className="taxonomy-controls__label",
-                            ),
-                            dcc.Dropdown(
-                                id="one-species-explore-dropdown",
-                                options=[
-                                    {"label": species_common_name(sp), "value": sp}
-                                    for sp in species_unique
-                                ],
-                                placeholder="Select a species",
-                                clearable=True,
-                            ),
-                        ],
-                    ),
-                    html.Div(
-                        id="one-species-explore-list",
-                        className="one-species-explore__list",
-                        children=html.Div(
-                            "Pick a species to see its calls.",
-                            className="subtle",
-                        ),
                     ),
                 ],
             ),
@@ -941,100 +886,7 @@ def run_dash_app(
                 ],
             ),
             html.Div(
-                id="pair-species",
-                className="section section--pair",
-                children=[
-                    html.Div(
-                        className="section__header",
-                        children=[
-                            html.Div(
-                                [
-                                    html.P(
-                                        section_text("pair-species", "kicker"),
-                                        className="section__kicker",
-                                    ),
-                                    html.H2(
-                                        section_text("pair-species", "title"),
-                                        className="section__title",
-                                    ),
-                                ]
-                            )
-                        ],
-                    ),
-                    html.Div(
-                        className="pair-controls",
-                        children=[
-                            dcc.Dropdown(
-                                id="pair-species-1",
-                                options=[
-                                    {"label": species_common_name(sp), "value": sp}
-                                    for sp in species_unique
-                                ],
-                                placeholder="Species 1",
-                                clearable=False,
-                                value=species_unique[0] if species_unique else None,
-                                className="pair-dropdown",
-                            ),
-                            dcc.RadioItems(
-                                id="pair-space",
-                                options=[
-                                    {
-                                        "label": "Semantic nearest neighbors",
-                                        "value": "semantic",
-                                    },
-                                    {
-                                        "label": "Acoustic nearest neighbors",
-                                        "value": "acoustic",
-                                    },
-                                ],
-                                value="semantic",
-                                inline=False,
-                                className="taxonomy-controls__radio taxonomy-controls__radio--compact pair-space-toggle",
-                            ),
-                            dcc.Dropdown(
-                                id="pair-species-2",
-                                options=[
-                                    {"label": species_common_name(sp), "value": sp}
-                                    for sp in species_unique
-                                ],
-                                placeholder="Species 2",
-                                clearable=False,
-                                value=(
-                                    species_unique[1]
-                                    if len(species_unique) > 1
-                                    else None
-                                ),
-                                className="pair-dropdown pair-dropdown--right",
-                            ),
-                        ],
-                    ),
-                    html.Div(
-                        className="pair-layout",
-                        children=[
-                            html.Div(
-                                id="pair-hover-left",
-                                className="pair-hover__col pair-hover__col--left",
-                                children=html.Div(
-                                    "Click a call to see details.",
-                                    className="subtle",
-                                ),
-                            ),
-                            dcc.Graph(
-                                id="pair-graph",
-                                className="pair-graph",
-                                figure=go.Figure(),
-                            ),
-                            html.Div(
-                                id="pair-hover-right",
-                                className="pair-hover__col pair-hover__col--right",
-                                children=html.Div(
-                                    "Click a call to see details.",
-                                    className="subtle",
-                                ),
-                            ),
-                        ],
-                    ),
-                ],
+                # end sections
             ),
         ],
     )
@@ -1952,16 +1804,6 @@ def run_dash_app(
         )
 
         return selected_card, semantic_cards, acoustic_cards
-
-    @app.callback(
-        Output("pair-graph", "figure"),
-        Input("pair-space", "value"),
-        Input("pair-species-1", "value"),
-        Input("pair-species-2", "value"),
-    )
-    def _update_pair_graph(space, sp1, sp2):
-        fig = _make_pair_plot(space or "semantic", sp1, sp2)
-        return fig
 
     @app.callback(
         Output("scatter", "figure"),
@@ -3062,35 +2904,6 @@ def run_dash_app(
             )
 
         return cards
-
-    @app.callback(
-        Output("one-species-explore-list", "children"),
-        Input("one-species-explore-dropdown", "value"),
-    )
-    def _render_one_species_explore(selected_species):
-        if not selected_species:
-            return html.Div(
-                "Pick a species to see its calls.",
-                className="subtle",
-            )
-
-        idxs = [i for i, sp in enumerate(species_all) if sp == selected_species]
-        if not idxs:
-            return html.Div("No calls for that species.", className="subtle")
-
-        cards = []
-        for idx in idxs:
-            cards.append(
-                html.Div(
-                    className="onespecies-call-card",
-                    children=html.Div(
-                        className="panel panel--selected",
-                        children=_render_call_card(calls_all[idx]),
-                    ),
-                )
-            )
-
-        return html.Div(cards, className="one-species-explore__grid")
 
     @app.callback(
         Output("overlayed", "children"),
