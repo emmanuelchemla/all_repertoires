@@ -516,6 +516,33 @@ body {
   margin: 0;
 }
 
+/* Home multi-species UMAP */
+.hero__multispecies {
+  margin-top: 14px;
+}
+.hero__multi-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 6px 0 10px 0;
+}
+.hero__multi-controls .Select,
+.hero__multi-controls .Select-control,
+.hero__multi-controls .dash-dropdown,
+.hero__multi-controls .Select-menu-outer {
+  min-width: 320px;
+}
+.hero__multi-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+.hero__multi-layout .static-graph {
+  height: 320px;
+}
+
 /* Headings */
 h1,
 h2,
@@ -592,6 +619,13 @@ h3 {
 .hero__paragraph--meta {
   color: var(--muted);
   margin-top: 2px;
+}
+.hero__highlight {
+  font-weight: 700;
+  color: var(--text);
+  background: #fef3c7;
+  padding: 0 4px;
+  border-radius: 4px;
 }
 
 .hero__todo {

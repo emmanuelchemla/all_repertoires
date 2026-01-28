@@ -115,6 +115,12 @@ def run_dash_app(
             return "Ungulates"
         return cls.title() if cls else "Other"
 
+    group_to_species: Dict[str, set[str]] = {}
+    for i in range(len(calls_all)):
+        g = _group_label(calls_all[i])
+        group_to_species.setdefault(g, set()).add(species_all[i])
+    group_values = {g for g, sset in group_to_species.items() if len(sset) >= 2}
+
     # --- Helper function: taxonomic icon ---
     def _taxon_icon(c: Dict[str, object]) -> str:
         """Return a small emoji icon based on broad taxonomy."""
@@ -470,18 +476,99 @@ def run_dash_app(
                                 ],
                             ),
                             html.P(
+                                "Here is a multi-species visualization of this same idea. Below, the calls are plotted in acoustic space (closest calls sound more similar). When clicking on a call, you see the calls of the other species that are most similar semantically.",
+                            ),
+                            dcc.Store(id="home-umap-selected", data=None),
+                            html.Div(
+                                className="hero__multispecies",
                                 children=[
-                                    "There is also a visual version of this, one that covers all-species at once, in: ",
-                                    html.A(
-                                        "Translations",
-                                        href="#translations",
-                                        className="hero__link",
+                                    html.Label(
+                                        "Multi-species translation in space",
+                                        className="taxonomy-controls__label",
                                     ),
-                                    ".",
+                                    html.Div(
+                                        className="hero__multi-controls",
+                                        children=[
+                                            dcc.Dropdown(
+                                                id="home-group-select",
+                                                options=[
+                                                    {
+                                                        "label": "All groups",
+                                                        "value": "All",
+                                                    },
+                                                    {
+                                                        "label": "Primates",
+                                                        "value": "Primates_all",
+                                                    },
+                                                    {
+                                                        "label": "Primates (no Apes)",
+                                                        "value": "Primates_no_apes",
+                                                    },
+                                                    {
+                                                        "label": "Apes",
+                                                        "value": "Apes",
+                                                    },
+                                                    *[
+                                                        {"label": g, "value": g}
+                                                        for g in sorted(group_values)
+                                                        if g not in {"Primates", "Apes"}
+                                                    ],
+                                                ],
+                                                value="All",
+                                                clearable=False,
+                                            ),
+                                            dcc.RadioItems(
+                                                id="home-dim-select",
+                                                options=[
+                                                    {"label": "2D space", "value": 2},
+                                                    {"label": "3D space", "value": 3},
+                                                ],
+                                                value=2,
+                                                inline=True,
+                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        className="hero__multi-layout",
+                                        children=[
+                                            dcc.Graph(
+                                                id="home-umap-graph",
+                                                className="static-graph",
+                                                figure=go.Figure(),
+                                            ),
+                                            html.Div(
+                                                id="home-umap-hover",
+                                                className="panel panel--tight",
+                                                children="Hover a point to see its details.",
+                                            ),
+                                        ],
+                                    ),
                                 ],
                             ),
                             html.P(
-                                f"One important result at this stage is that <b>more similar sounding vocalizations have more similar meanings</b>. This could be due to both common descent or the use of a general 'iconic' biological code, two fascinating options.",
+                                children=[
+                                    "One important result at this stage is that ",
+                                    html.Span(
+                                        "more similar sounding vocalizations have more similar meanings",
+                                        className="hero__highlight",
+                                    ),
+                                    ". This could be due to both common descent or the use of a general 'iconic' biological code, two fascinating options.",
+                                ],
+                            ),
+                            html.Div(
+                                className="panel panel--tight",
+                                children=[
+                                    html.Div(
+                                        "Mantel correlations between acoustic and semantic spaces (all species):",
+                                        className="subtle subtle--tight",
+                                    ),
+                                    html.Div(
+                                        id="home-mantel",
+                                        className="mantel-inline",
+                                        children="Computing…",
+                                    ),
+                                ],
                             ),
                             html.P(
                                 f"""A couple of caveats about 'translation'.
@@ -529,16 +616,39 @@ def run_dash_app(
                     html.Div(
                         className="static-layout",
                         children=[
-                            html.Div(
-                                className="static-left",
-                                children=[
-                                    dcc.Store(id="static-species-store", data=[]),
-                                    html.H3("Taxonomy selection"),
                                     html.Div(
-                                        className="panel panel--taxonomy",
+                                        className="static-left",
                                         children=[
+                                            dcc.Store(id="static-species-store", data=[]),
+                                            html.H3("Taxonomy selection"),
+                                            dcc.Dropdown(
+                                                id="static-group-select",
+                                                options=[
+                                                    {"label": "All groups", "value": "All"},
+                                                    {"label": "Primates", "value": "Primates_all"},
+                                                    {
+                                                        "label": "Primates (no Apes)",
+                                                        "value": "Primates_no_apes",
+                                                    },
+                                                    {
+                                                        "label": "Apes only",
+                                                        "value": "Apes",
+                                                    },
+                                                    *[
+                                                        {"label": g, "value": g}
+                                                        for g in sorted(group_values)
+                                                        if g not in {"Primates", "Apes"}
+                                                    ],
+                                                ],
+                                                value="All",
+                                                clearable=False,
+                                                style={"marginBottom": "8px"},
+                                            ),
                                             html.Div(
-                                                "Click taxonomy nodes to filter species",
+                                                className="panel panel--taxonomy",
+                                                children=[
+                                                    html.Div(
+                                                        "Click taxonomy nodes to filter species",
                                                 className="subtle subtle--tight",
                                             ),
                                             html.Div(
@@ -1109,6 +1219,166 @@ def run_dash_app(
             return fig
         return _make_pair_plot(space or "semantic", sp1, sp2)
 
+    def _idxs_for_group(group_val):
+        if not group_val or group_val == "All":
+            return list(range(len(calls_all)))
+        if group_val == "Primates_all":
+            return [
+                i
+                for i in range(len(calls_all))
+                if _group_label(calls_all[i]) in {"Primates", "Apes"}
+            ]
+        if group_val == "Primates_no_apes":
+            return [
+                i
+                for i in range(len(calls_all))
+                if _group_label(calls_all[i]) == "Primates"
+            ]
+        return [
+            i for i in range(len(calls_all)) if _group_label(calls_all[i]) == group_val
+        ]
+
+    @app.callback(
+        Output("home-umap-selected", "data"),
+        Input("home-umap-graph", "clickData"),
+        prevent_initial_call=True,
+    )
+    def _home_umap_select(clickData):
+        if clickData and clickData.get("points"):
+            idx = clickData["points"][0].get("customdata")
+            try:
+                return int(idx)
+            except Exception:
+                return None
+        return None
+
+    @app.callback(
+        Output("home-umap-graph", "figure"),
+        Output("home-umap-hover", "children"),
+        Input("home-group-select", "value"),
+        Input("home-dim-select", "value"),
+        Input("home-umap-selected", "data"),
+        Input("home-umap-graph", "hoverData"),
+    )
+    def _update_home_umap(group_val, dim, selected_idx, hoverData):
+        dim = 3 if dim == 3 else 2
+        idxs = _idxs_for_group(group_val)
+        if not idxs:
+            return (
+                go.Figure().update_layout(title="No calls for this group"),
+                "No calls in this group.",
+            )
+
+        coords = acoustic_umap3d_a if dim == 3 else acoustic_umap2d_a
+        ScatterCls = go.Scatter3d if dim == 3 else go.Scatter
+
+        fig = go.Figure()
+        # one trace per species present in view
+        species_in_view = sorted({species_all[i] for i in idxs})
+        for sp in species_in_view:
+            sp_idxs = [i for i in idxs if species_all[i] == sp]
+            if not sp_idxs:
+                continue
+            scatter_kwargs = dict(
+                x=[coords[i, 0] for i in sp_idxs],
+                y=[coords[i, 1] for i in sp_idxs],
+                mode="markers",
+                marker=dict(
+                    size=8 if dim == 2 else 5,
+                    opacity=0.8,
+                    color=color_map.get(sp, "#888"),
+                ),
+                text=[species_common_name(sp)] * len(sp_idxs),
+                hoverinfo="text",
+                customdata=sp_idxs,
+                name=f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
+                showlegend=True,
+            )
+            if dim == 3:
+                scatter_kwargs["z"] = [coords[i, 2] for i in sp_idxs]
+            fig.add_trace(ScatterCls(**scatter_kwargs))
+
+        # Draw semantic-neighbor lines from selected point
+        if selected_idx is not None and selected_idx in idxs:
+            base_species = species_all[selected_idx]
+            sel_coord = coords[selected_idx]
+            for sp in species_in_view:
+                if sp == base_species:
+                    continue
+                candidates = [i for i in idxs if species_all[i] == sp]
+                if not candidates:
+                    continue
+                d_sem = np.linalg.norm(
+                    semantic_embeds[candidates] - semantic_embeds[selected_idx], axis=1
+                )
+                nn_idx = candidates[int(d_sem.argmin())]
+                nn_coord = coords[nn_idx]
+                line_kwargs = dict(
+                    x=[sel_coord[0], nn_coord[0]],
+                    y=[sel_coord[1], nn_coord[1]],
+                    mode="lines",
+                    line=dict(color=color_map.get(sp, "#888"), width=2),
+                    hoverinfo="skip",
+                    showlegend=False,
+                )
+                if dim == 3:
+                    line_kwargs["z"] = [sel_coord[2], nn_coord[2]]
+                    fig.add_trace(go.Scatter3d(**line_kwargs))
+                else:
+                    fig.add_trace(go.Scatter(**line_kwargs))
+
+        fig.update_layout(
+            margin=dict(l=10, r=10, t=30, b=10),
+            height=360 if dim == 2 else 420,
+            template="plotly_white",
+            showlegend=True,
+            title=None,
+            xaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=None),
+            yaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=None),
+        )
+        if dim == 3:
+            fig.update_scenes(
+                xaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=None),
+                yaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=None),
+                zaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=None),
+            )
+        hover_card = "Hover a point to see its details."
+        if hoverData and hoverData.get("points"):
+            idx = hoverData["points"][0].get("customdata")
+            try:
+                idx = int(idx)
+                hover_card = _render_call_card(calls_all[idx])
+            except Exception:
+                hover_card = "Hover a point to see its details."
+        return fig, hover_card
+
+    @app.callback(
+        Output("home-mantel", "children"),
+        Input("home-group-select", "value"),
+    )
+    def _update_home_mantel(group_val):
+        idxs = _idxs_for_group(group_val)
+        mantel_all = _mantel_stats(acoustic_embeds, semantic_embeds, idxs)
+        mantel_cross = _mantel_stats(
+            acoustic_embeds, semantic_embeds, idxs, cross_only=True
+        )
+        mantel_partial = _mantel_partial(acoustic_embeds, semantic_embeds, idxs)
+
+        def fmt(res, label):
+            if res is None:
+                return f"{label}: n/a"
+            r, p = res
+            return f"{label}: r={r:.3f}, p={p:.3f}"
+
+        return html.Div(
+            [
+                html.Div(fmt(mantel_all, "Mantel (all pairs)")),
+                html.Div(fmt(mantel_cross, "Mantel (cross-species only)")),
+                html.Div(fmt(mantel_partial, "Partial Mantel (controls for species)")),
+            ],
+            className="mantel-inline__rows",
+        )
+
     @app.callback(
         Output("home-species-strip", "children"),
         Input("home-species-dropdown", "value"),
@@ -1140,8 +1410,24 @@ def run_dash_app(
         Output("static-heat-semantic", "figure"),
         Output("static-mantel", "children"),
         Input("static-species-store", "data"),
+        Input("static-group-select", "value"),
     )
-    def _update_static_figs(species_sel):
+    def _update_static_figs(species_sel, group_filter):
+        # apply group filter first (overrides/adds to species_sel)
+        if group_filter and group_filter != "All":
+            species_sel = [
+                sp
+                for sp in set(species_all)
+                if (
+                    (_group_label(first_by_species.get(sp, {})) in {"Primates", "Apes"})
+                    if group_filter == "Primates_all"
+                    else (
+                        _group_label(first_by_species.get(sp, {})) == "Primates"
+                        if group_filter == "Primates_no_apes"
+                        else _group_label(first_by_species.get(sp, {})) == group_filter
+                    )
+                )
+            ]
         fig_calls = make_calls_bar(species_sel or [])
         fig_kw = make_keyword_bar(species_sel or [])
         fig_heat_a = make_similarity_heatmap(
@@ -1176,6 +1462,8 @@ def run_dash_app(
             fig_heat_s,
             html.Div(
                 [
+                    html.Strong("Correlations between acoustic and semantic (Mantel tests):"),
+                    html.Br(),
                     html.Div(
                         "Correlations between acoustic and semantic (Mantel tests):",
                         style={"marginBottom": "4px"},
