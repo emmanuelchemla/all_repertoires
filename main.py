@@ -1426,6 +1426,10 @@ def run_dash_app(
             sp_idxs = [i for i in idxs if species_all[i] == sp]
             if not sp_idxs:
                 continue
+            hover_text = [
+                f"{species_common_name(species_all[i]).replace('(', '').replace(')', '')}<br>{str(calls_all[i].get('call_name','')).replace('(', '').replace(')', '')}"
+                for i in sp_idxs
+            ]
             scatter_kwargs = dict(
                 x=[coords[i, 0] for i in sp_idxs],
                 y=[coords[i, 1] for i in sp_idxs],
@@ -1435,7 +1439,7 @@ def run_dash_app(
                     opacity=0.8,
                     color=color_map.get(sp, "#888"),
                 ),
-                text=[species_common_name(sp)] * len(sp_idxs),
+                text=hover_text,
                 hoverinfo="text",
                 customdata=sp_idxs,
                 name=f"{species_icon_map.get(sp, '')} {species_common_name(sp)}",
