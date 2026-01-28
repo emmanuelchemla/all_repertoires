@@ -626,6 +626,25 @@ h3 {
   color: var(--muted);
   margin-top: 2px;
 }
+.hero__stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+  color: var(--text);
+  margin: 6px 0 10px 0;
+}
+.hero__stat-icon {
+  font-size: 18px;
+}
+.hero__stat-text {
+  font-size: 14px;
+}
 .hero__highlight {
   font-weight: 700;
   color: var(--text);

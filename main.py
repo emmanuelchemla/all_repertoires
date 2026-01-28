@@ -375,10 +375,18 @@ def run_dash_app(
                             ),
                             html.P(
                                 children=[
-                                    "We gathered acoustic and semantic descriptions for calls across many species.",
-                                    f"{len(species_unique)} species · {len(calls_all)} calls currently in the database",
-                                    "It looks like this: ",
+                                    "We harvested acoustic and semantic descriptions for calls across many species.",
                                 ]
+                            ),
+                            html.Div(
+                                className="hero__stat hero__stat--inline",
+                                children=[
+                                    html.Span("📈", className="hero__stat-icon"),
+                                    html.Span(
+                                        f"{len(species_unique)} species · {len(calls_all)} calls currently in the database",
+                                        className="hero__stat-text",
+                                    ),
+                                ],
                             ),
                             html.Div(
                                 className="hero__species-picker",
