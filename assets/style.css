@@ -581,6 +581,14 @@ h3 {
   color: var(--muted);
   line-height: 1.45;
 }
+.hero__link {
+  color: #0ea5e9;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(14, 165, 233, 0.5);
+}
+.hero__link:hover {
+  text-decoration: underline;
+}
 .hero__paragraph--meta {
   color: var(--muted);
   margin-top: 2px;

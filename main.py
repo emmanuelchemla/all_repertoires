@@ -322,23 +322,23 @@ def run_dash_app(
             html.Nav(
                 className="topnav",
                 children=[
-            html.Div(
-                NAV_CONTENT["brand"],
-                className="topnav__brand",
-            ),
-            html.Div(
-                className="topnav__links",
-                children=[
-                    html.A(
-                        NAV_CONTENT["sections"][sid]["link_text"],
-                        href=NAV_CONTENT["sections"][sid]["link_href"],
-                        className="topnav__link",
-                    )
-                    for sid in NAV_CONTENT["nav_order"]
+                    html.Div(
+                        NAV_CONTENT["brand"],
+                        className="topnav__brand",
+                    ),
+                    html.Div(
+                        className="topnav__links",
+                        children=[
+                            html.A(
+                                NAV_CONTENT["sections"][sid]["link_text"],
+                                href=NAV_CONTENT["sections"][sid]["link_href"],
+                                className="topnav__link",
+                            )
+                            for sid in NAV_CONTENT["nav_order"]
+                        ],
+                    ),
                 ],
             ),
-        ],
-    ),
             html.Div(
                 id="home",
                 className="section section--home",
@@ -366,6 +366,52 @@ def run_dash_app(
                             html.P(
                                 "Interactive explorer of a cross-species database of animal vocal repertoires.",
                                 className="hero__paragraph",
+                            ),
+                            html.P(
+                                children=[
+                                    "We gathered acoustic and semantic descriptions for calls across many species. You can see the format of the database in ",
+                                    html.A(
+                                        "the single-species section",
+                                        href="#one-species",
+                                        className="hero__link",
+                                    ),
+                                    ".",
+                                ]
+                            ),
+                            html.P(
+                                children=[
+                                    "From there, we can measure acoustic or semantic distance between calls, that is, we can do 'translation'! The best possible translation of a call is the call that has the closest semantic description. The resulting 'bilingual dictionaries' are automatically built in: ",
+                                    html.A(
+                                        "Pair of species",
+                                        href="#pair-species",
+                                        className="hero__link",
+                                    ),
+                                    ".",
+                                ]
+                            ),
+                            html.P(
+                                children=[
+                                    "There is also a visual version of this, one that covers all-species at once, in: ",
+                                    html.A(
+                                        "Translations",
+                                        href="#translations",
+                                        className="hero__link",
+                                    ),
+                                    ".",
+                                ],
+                            ),
+                            html.P(
+                                f"One important result at this stage is that <b>more similar sounding vocalizations have more similar meanings</b>. This could be due to both common descent or the use of a general 'iconic' biological code, two fascinating options.",
+                            ),
+                            html.P(
+                                f"""A couple of caveats about 'translation'.
+                                - Calls can be close in semantic space, or acoustic space, or both, and this means different things! Calls close in acoustic space may be coming from a common ancestor (or not). They may have (retained) the same meaning (or not).
+                                - While this is the best possible translation, there are systematic reasons why it may be off.
+                                -- A call in one species may not have an equivalent in another species, they simply don't talk about the same thing! In this case, there will still be a closest call, but it won't be very close.
+                                -- A call could be used to signal 'predators' in two species, but these predators may be different, a predator for one is not a predator for another.
+                                -- The same is true acoustically: a high pitch vocalization is not the same thing for bats and for elephants. This relativity of the description is interesting though, there are reasons to believe that higher pitch means something, so you may use that differently based on your own vocal range.
+                                """,
+                                className="hero__paragraph hero__paragraph--meta",
                             ),
                             html.P(
                                 f"{len(species_unique)} species · {len(calls_all)} calls currently in the database",
@@ -906,6 +952,23 @@ def run_dash_app(
             ),
         ],
     )
+
+    # Reorder page sections to follow NAV_CONTENT["nav_order"]
+    children = list(app.layout.children)
+    if children:
+        nav = children[0]
+        sections_by_id = {
+            getattr(child, "id", None): child for child in children[1:] if getattr(child, "id", None)
+        }
+        ordered_sections = []
+        for sid in NAV_CONTENT["nav_order"]:
+            href = NAV_CONTENT["sections"][sid]["link_href"]
+            target_id = href.lstrip("#")
+            # prefer exact id match on target_id, else fallback to section key
+            child = sections_by_id.get(target_id) or sections_by_id.get(sid)
+            if child:
+                ordered_sections.append(child)
+        app.layout.children = [nav, *ordered_sections]
 
     # --- New callbacks for species/taxonomy selection ---
 
