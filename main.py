@@ -1401,19 +1401,19 @@ def run_dash_app(
                     showgrid=True,
                     zeroline=False,
                     showticklabels=False,
-                    title=dict(text="", font=dict(size=1)),
+                    title="",
                 ),
                 yaxis=dict(
                     showgrid=True,
                     zeroline=False,
                     showticklabels=False,
-                    title=dict(text="", font=dict(size=1)),
+                    title="",
                 ),
                 zaxis=dict(
                     showgrid=True,
                     zeroline=False,
                     showticklabels=False,
-                    title=dict(text="", font=dict(size=1)),
+                    title="",
                 ),
             )
         hover_card = "Hover a point to see its details."
