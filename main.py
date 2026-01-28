@@ -580,6 +580,39 @@ def run_dash_app(
                                                 inline=True,
                                                 className="taxonomy-controls__radio taxonomy-controls__radio--compact",
                                             ),
+                                            html.Div(
+                                                className="hero__pair-threshold",
+                                                style={
+                                                    "display": "flex",
+                                                    "alignItems": "center",
+                                                    "gap": "8px",
+                                                    "marginTop": "6px",
+                                                    "width": "340px",
+                                                },
+                                                children=[
+                                                    html.Span(
+                                                        "Thresholding",
+                                                        className="taxonomy-controls__label",
+                                                        style={
+                                                            "fontSize": "13px",
+                                                            "opacity": 0.7,
+                                                            "margin": "0",
+                                                        },
+                                                    ),
+                                                    dcc.Slider(
+                                                        id="home-umap-threshold",
+                                                        min=0,
+                                                        max=1,
+                                                        step=0.01,
+                                                        value=0,
+                                                        marks={0: "0", 1: "1"},
+                                                        tooltip={
+                                                            "placement": "bottom",
+                                                            "always_visible": False,
+                                                        },
+                                                    ),
+                                                ],
+                                            ),
                                         ],
                                     ),
                                     html.Div(
@@ -1372,8 +1405,9 @@ def run_dash_app(
         Input("home-dim-select", "value"),
         Input("home-umap-selected", "data"),
         Input("home-umap-graph", "hoverData"),
+        Input("home-umap-threshold", "value"),
     )
-    def _update_home_umap(group_val, dim, selected_idx, hoverData):
+    def _update_home_umap(group_val, dim, selected_idx, hoverData, threshold):
         dim = 3 if dim == 3 else 2
         idxs = _idxs_for_group(group_val)
         if not idxs:
@@ -1425,6 +1459,9 @@ def run_dash_app(
                     semantic_embeds[candidates] - semantic_embeds[selected_idx], axis=1
                 )
                 nn_idx = candidates[int(d_sem.argmin())]
+                sim = 1.0 - float(d_sem.min() ** 2) / 2.0
+                if threshold is not None and sim < float(threshold):
+                    continue
                 nn_coord = coords[nn_idx]
                 line_kwargs = dict(
                     x=[sel_coord[0], nn_coord[0]],
