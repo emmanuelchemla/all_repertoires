@@ -2735,6 +2735,9 @@ def run_dash_app(
         right_center_x = 8
         box_w = 1.8
         box_h = 1.6
+        # Adjust arrow endpoints to land just outside box edges
+        left_edge = left_center_x + box_w / 2
+        right_edge = right_center_x - box_w / 2
 
         def _wrap_two_lines(text: str, width: int = 18) -> str:
             """Wrap text to at most two lines using <br>, trimming if needed."""
@@ -2833,11 +2836,12 @@ def run_dash_app(
                 continue
             y0 -= 0.5  # lowered per request
             y1 -= 0.5
-            tail_x = left_center_x + box_w / 2
-            head_x = right_center_x - box_w / 2
+            tail_x = left_edge               # start at left box edge
+            head_x = right_edge              # end at right box edge
+            label_x = right_edge + 0.05      # text just outside target box
             ann_secondary.append(
                 dict(
-                    x=head_x + 0.15,  # shift outward (right box)
+                    x=label_x,
                     y=y1,
                     ax=tail_x,
                     ay=y0,
@@ -2865,11 +2869,12 @@ def run_dash_app(
                 continue
             y0 = right_row_map[j_local] - 0.7  # lowered further per request
             y1 = left_row_map[i_local] - 0.7
-            tail_x = right_center_x - box_w / 2
-            head_x = left_center_x + box_w / 2
+            tail_x = right_edge             # source edge (right box)
+            head_x = left_edge              # target edge (left box)
+            label_x = left_edge - 0.05      # text outside target box
             ann_secondary.append(
                 dict(
-                    x=head_x - 0.15,  # shift outward (left box)
+                    x=label_x,
                     y=y1,
                     ax=tail_x,
                     ay=y0,
@@ -2899,13 +2904,14 @@ def run_dash_app(
                 continue
             y0 += 0.5
             y1 += 0.5
-            tail_x = left_center_x + box_w / 2
-            head_x = right_center_x - box_w / 2
+            tail_x = left_edge              # start at left box edge
+            head_x = right_edge             # end at right box edge
+            label_x = right_edge + 0.05     # text just outside target box
             if sim_ij < min_sim:
                 continue
             annotations.append(
                 dict(
-                    x=head_x + 0.2,  # shift to outward edge of right box
+                    x=label_x,
                     y=y1,
                     ax=tail_x,
                     ay=y0,
@@ -2931,13 +2937,14 @@ def run_dash_app(
                 continue
             y0 = right_row_map[j_local] - 0.2
             y1 = left_row_map[i_local] - 0.2
-            tail_x = right_center_x - box_w / 2
-            head_x = left_center_x + box_w / 2
+            tail_x = right_edge            # start at right box edge
+            head_x = left_edge             # end at left box edge
+            label_x = left_edge - 0.05     # text just outside target box
             if sim < min_sim:
                 continue
             annotations.append(
                 dict(
-                    x=head_x - 0.2,  # shift to outward edge of left box
+                    x=label_x,
                     y=y1,
                     ax=tail_x,
                     ay=y0,
