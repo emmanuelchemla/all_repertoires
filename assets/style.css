@@ -533,6 +533,26 @@ body {
 .hero__multi-controls .Select-menu-outer {
   min-width: 320px;
 }
+.hero__pair-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.hero__pair-controls .Select-control,
+.hero__pair-controls .Select,
+.hero__pair-controls .Select-menu-outer,
+.hero__pair-controls .dash-dropdown {
+  min-width: 320px;
+  max-width: 320px;
+  width: 320px;
+}
+.hero__pair-threshold {
+  width: 340px;
+}
+.hero__pair-threshold .rc-slider {
+  width: 240px;
+}
 .hero__multi-controls .Select,
 .hero__multi-controls .Select-control,
 .hero__multi-controls .dash-dropdown,

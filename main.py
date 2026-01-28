@@ -417,6 +417,7 @@ def run_dash_app(
                                         ],
                                         placeholder="Select a species",
                                         clearable=True,
+                                        style={"width": "320px"},
                                     ),
                                     html.Div(
                                         id="home-species-strip",
@@ -439,6 +440,7 @@ def run_dash_app(
                                     html.Label(
                                         "Automatically built bilingual translation",
                                         className="taxonomy-controls__label",
+                                        style={"fontSize": "15px", "fontWeight": "600"},
                                     ),
                                     html.Div(
                                         className="hero__pair-controls",
@@ -456,6 +458,7 @@ def run_dash_app(
                                                 ],
                                                 placeholder="Species 1",
                                                 clearable=True,
+                                                style={"width": "320px"},
                                             ),
                                             dcc.Dropdown(
                                                 id="home-pair-species-2",
@@ -470,25 +473,60 @@ def run_dash_app(
                                                 ],
                                                 placeholder="Species 2",
                                                 clearable=True,
+                                                style={"width": "320px"},
                                             ),
-                                            dcc.RadioItems(
-                                                id="home-pair-space",
-                                                options=[
-                                                    {
-                                                        "label": "Semantic",
-                                                        "value": "semantic",
-                                                    },
-                                                    {
-                                                        "label": "Acoustic",
-                                                        "value": "acoustic",
-                                                    },
-                                                ],
-                                                value="semantic",
-                                                inline=True,
-                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
-                                            ),
-                                        ],
+                            dcc.RadioItems(
+                                id="home-pair-space",
+                                options=[
+                                    {
+                                        "label": "Semantic",
+                                        "value": "semantic",
+                                    },
+                                    {
+                                        "label": "Acoustic",
+                                        "value": "acoustic",
+                                    },
+                                ],
+                                value="semantic",
+                                inline=True,
+                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                            ),
+                            html.Div(
+                                className="hero__pair-threshold",
+                                style={
+                                    "display": "flex",
+                                    "alignItems": "flex-start",
+                                    "gap": "8px",
+                                    "marginTop": "6px",
+                                    "width": "340px",
+                                },
+                                children=[
+                                    html.Span(
+                                        "Thresholding",
+                                        className="taxonomy-controls__label",
+                                        style={
+                                            "fontSize": "13px",
+                                            "opacity": 0.7,
+                                            "margin": "0",
+                                        },
                                     ),
+                                    dcc.Slider(
+                                        id="home-pair-threshold",
+                                        min=0,
+                                        max=1,
+                                        step=0.01,
+                                        value=0,
+                                        marks={0: "0", 1: "1"},
+                                        tooltip={
+                                            "placement": "bottom",
+                                            "always_visible": False,
+                                        },
+                                    ),
+                                ],
+                            ),
+                        ],
+                        style={"flexDirection": "column", "alignItems": "flex-start"},
+                    ),
                                     dcc.Graph(
                                         id="home-pair-graph",
                                         className="pair-graph pair-graph--mini",
@@ -1248,8 +1286,9 @@ def run_dash_app(
         Input("home-pair-space", "value"),
         Input("home-pair-species-1", "value"),
         Input("home-pair-species-2", "value"),
+        Input("home-pair-threshold", "value"),
     )
-    def _update_home_pair_graph(space, sp1, sp2):
+    def _update_home_pair_graph(space, sp1, sp2, threshold):
         if not sp1 or not sp2 or sp1 == sp2:
             fig = go.Figure()
             fig.update_layout(
@@ -1270,7 +1309,22 @@ def run_dash_app(
                 yaxis=dict(visible=False),
             )
             return fig
-        return _make_pair_plot(space or "semantic", sp1, sp2)
+        return _make_pair_plot(space or "semantic", sp1, sp2, min_sim=threshold or 0)
+
+    @app.callback(
+        Output("home-pair-hover", "children"),
+        Input("home-pair-graph", "hoverData"),
+        Input("home-pair-graph", "clickData"),
+    )
+    def _update_home_pair_hover(hoverData, clickData):
+        data = clickData or hoverData
+        if data and data.get("points"):
+            idx = data["points"][0].get("customdata")
+            try:
+                return _render_call_card(calls_all[int(idx)])
+            except Exception:
+                return "Hover or click a point to see details."
+        return "Hover or click a point to see details."
 
     def _idxs_for_group(group_val):
         if not group_val or group_val == "All":
@@ -2621,7 +2675,9 @@ def run_dash_app(
         # to reduce crossings, keep current order
         return rows, idxs1, idxs2, sims
 
-    def _make_pair_plot(space: str, sp1: str, sp2: str) -> go.Figure:
+    def _make_pair_plot(
+        space: str, sp1: str, sp2: str, min_sim: float = 0.0
+    ) -> go.Figure:
         rows, idxs1, idxs2, sims = _pair_rows(space, sp1, sp2)
         if not rows:
             return go.Figure().update_layout(
@@ -2725,6 +2781,8 @@ def run_dash_app(
             y1 += 0.35
             tail_x = left_center_x + box_w / 2
             head_x = right_center_x - box_w / 2
+            if sim_ij < min_sim:
+                continue
             annotations.append(
                 dict(
                     x=head_x,
@@ -2755,6 +2813,8 @@ def run_dash_app(
             y1 = left_row_map[i_local] - 0.35
             tail_x = right_center_x - box_w / 2
             head_x = left_center_x + box_w / 2
+            if sim < min_sim:
+                continue
             annotations.append(
                 dict(
                     x=head_x,
