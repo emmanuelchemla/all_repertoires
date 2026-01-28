@@ -2810,6 +2810,85 @@ def run_dash_app(
             if j_local is not None:
                 add_box(False, j_local, r_idx)
 
+        # Secondary overlay: nearest neighbors in the *other* space (faint, behind)
+        ann_secondary = []
+        emb_sec = acoustic_embeds if space == "semantic" else semantic_embeds
+        v1_sec = emb_sec[idxs1]
+        v2_sec = emb_sec[idxs2]
+        v1n_sec = v1_sec / (np.linalg.norm(v1_sec, axis=1, keepdims=True) + 1e-8)
+        v2n_sec = v2_sec / (np.linalg.norm(v2_sec, axis=1, keepdims=True) + 1e-8)
+        sims_sec = np.dot(v1n_sec, v2n_sec.T)
+        sec_color_lr = "rgba(160,160,160,0.35)"
+        sec_color_rl = "rgba(120,120,120,0.35)"
+
+        # left -> right (secondary space)
+        for i_local in range(len(idxs1)):
+            j_local = sims_sec[i_local].argmax()
+            sim_ij = sims_sec[i_local, j_local]
+            if sim_ij < min_sim:
+                continue
+            y0 = left_row_map.get(i_local)
+            y1 = right_row_map.get(j_local)
+            if y0 is None or y1 is None:
+                continue
+            y0 -= 0.5  # lowered per request
+            y1 -= 0.5
+            tail_x = left_center_x + box_w / 2
+            head_x = right_center_x - box_w / 2
+            ann_secondary.append(
+                dict(
+                    x=head_x,
+                    y=y1,
+                    ax=tail_x,
+                    ay=y0,
+                    xref="x",
+                    yref="y",
+                    axref="x",
+                    ayref="y",
+                    showarrow=True,
+                    arrowhead=2,
+                    arrowsize=1.2,
+                    arrowwidth=1.0,
+                    arrowcolor=sec_color_lr,
+                    text=f"{sim_ij:.3f}",
+                    font=dict(size=9, color="#666"),
+                )
+            )
+
+        # right -> left (secondary space)
+        for j_local in range(len(idxs2)):
+            i_local = sims_sec[:, j_local].argmax()
+            sim = sims_sec[i_local, j_local]
+            if sim < min_sim:
+                continue
+            if i_local not in left_row_map or j_local not in right_row_map:
+                continue
+            y0 = right_row_map[j_local] - 0.7  # lowered further per request
+            y1 = left_row_map[i_local] - 0.7
+            tail_x = right_center_x - box_w / 2
+            head_x = left_center_x + box_w / 2
+            ann_secondary.append(
+                dict(
+                    x=head_x,
+                    y=y1,
+                    ax=tail_x,
+                    ay=y0,
+                    xref="x",
+                    yref="y",
+                    axref="x",
+                    ayref="y",
+                    showarrow=True,
+                    arrowhead=2,
+                    arrowsize=1.2,
+                    arrowwidth=1.0,
+                    arrowcolor=sec_color_rl,
+                    text=f"{sim:.3f}",
+                    font=dict(size=9, color="#666"),
+                )
+            )
+
+        annotations.extend(ann_secondary)
+
         # arrows left -> right (red) for every call in species 1
         for i_local in range(len(idxs1)):
             j_local = sims[i_local].argmax()
@@ -2818,8 +2897,8 @@ def run_dash_app(
             y1 = right_row_map.get(j_local)
             if y0 is None or y1 is None:
                 continue
-            y0 += 0.35
-            y1 += 0.35
+            y0 += 0.5
+            y1 += 0.5
             tail_x = left_center_x + box_w / 2
             head_x = right_center_x - box_w / 2
             if sim_ij < min_sim:
@@ -2850,8 +2929,8 @@ def run_dash_app(
             sim = sims[i_local, j_local]
             if i_local not in left_row_map or j_local not in right_row_map:
                 continue
-            y0 = right_row_map[j_local] - 0.35
-            y1 = left_row_map[i_local] - 0.35
+            y0 = right_row_map[j_local] - 0.2
+            y1 = left_row_map[i_local] - 0.2
             tail_x = right_center_x - box_w / 2
             head_x = left_center_x + box_w / 2
             if sim < min_sim:
