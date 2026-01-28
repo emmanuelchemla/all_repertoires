@@ -369,18 +369,41 @@ def run_dash_app(
                             ),
                             html.P(
                                 children=[
-                                    "We gathered acoustic and semantic descriptions for calls across many species. You can see the format of the database in ",
-                                    html.A(
-                                        "the single-species section",
-                                        href="#one-species",
-                                        className="hero__link",
-                                    ),
-                                    ".",
+                                    "We gathered acoustic and semantic descriptions for calls across many species. It looks like this: ",
                                 ]
+                            ),
+                            html.Div(
+                                className="hero__species-picker",
+                                children=[
+                                    html.Label(
+                                        "Quick look at one species",
+                                        className="taxonomy-controls__label",
+                                    ),
+                                    dcc.Dropdown(
+                                        id="home-species-dropdown",
+                                        options=[
+                                            {
+                                                "label": species_common_name(sp),
+                                                "value": sp,
+                                            }
+                                            for sp in species_unique
+                                        ],
+                                        placeholder="Select a species",
+                                        clearable=True,
+                                    ),
+                                    html.Div(
+                                        id="home-species-strip",
+                                        className="panel panel--tight selection-strip selection-strip--horizontal",
+                                        children=html.Div(
+                                            "Choose a species to preview its calls.",
+                                            className="subtle",
+                                        ),
+                                    ),
+                                ],
                             ),
                             html.P(
                                 children=[
-                                    "From there, we can measure acoustic or semantic distance between calls, that is, we can do 'translation'! The best possible translation of a call is the call that has the closest semantic description. The resulting 'bilingual dictionaries' are automatically built in: ",
+                                    "From there, we can measure acoustic or semantic distance between calls, that is, we can do 'translation'! The best possible translation of a call is the call that has the closest semantic description. The resulting 'bilingual dictionaries' can be built in automatically: ",
                                     html.A(
                                         "Pair of species",
                                         href="#pair-species",
@@ -388,6 +411,69 @@ def run_dash_app(
                                     ),
                                     ".",
                                 ]
+                            ),
+                            html.Div(
+                                className="hero__pair-mini",
+                                children=[
+                                    html.Label(
+                                        "Bilingual translation preview",
+                                        className="taxonomy-controls__label",
+                                    ),
+                                    html.Div(
+                                        className="hero__pair-controls",
+                                        children=[
+                                            dcc.Dropdown(
+                                                id="home-pair-species-1",
+                                                options=[
+                                                    {
+                                                        "label": species_common_name(
+                                                            sp
+                                                        ),
+                                                        "value": sp,
+                                                    }
+                                                    for sp in species_unique
+                                                ],
+                                                placeholder="Species 1",
+                                                clearable=True,
+                                            ),
+                                            dcc.Dropdown(
+                                                id="home-pair-species-2",
+                                                options=[
+                                                    {
+                                                        "label": species_common_name(
+                                                            sp
+                                                        ),
+                                                        "value": sp,
+                                                    }
+                                                    for sp in species_unique
+                                                ],
+                                                placeholder="Species 2",
+                                                clearable=True,
+                                            ),
+                                            dcc.RadioItems(
+                                                id="home-pair-space",
+                                                options=[
+                                                    {
+                                                        "label": "Semantic",
+                                                        "value": "semantic",
+                                                    },
+                                                    {
+                                                        "label": "Acoustic",
+                                                        "value": "acoustic",
+                                                    },
+                                                ],
+                                                value="semantic",
+                                                inline=True,
+                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                            ),
+                                        ],
+                                    ),
+                                    dcc.Graph(
+                                        id="home-pair-graph",
+                                        className="pair-graph pair-graph--mini",
+                                        figure=go.Figure(),
+                                    ),
+                                ],
                             ),
                             html.P(
                                 children=[
@@ -958,7 +1044,9 @@ def run_dash_app(
     if children:
         nav = children[0]
         sections_by_id = {
-            getattr(child, "id", None): child for child in children[1:] if getattr(child, "id", None)
+            getattr(child, "id", None): child
+            for child in children[1:]
+            if getattr(child, "id", None)
         }
         ordered_sections = []
         for sid in NAV_CONTENT["nav_order"]:
@@ -1139,6 +1227,59 @@ def run_dash_app(
     def _toggle_species_static(clickData, mode, current):
         # same behavior as main taxonomy selector
         return _toggle_species_from_taxonomy(clickData, mode, current)
+
+    @app.callback(
+        Output("home-pair-graph", "figure"),
+        Input("home-pair-space", "value"),
+        Input("home-pair-species-1", "value"),
+        Input("home-pair-species-2", "value"),
+    )
+    def _update_home_pair_graph(space, sp1, sp2):
+        if not sp1 or not sp2 or sp1 == sp2:
+            fig = go.Figure()
+            fig.update_layout(
+                margin=dict(l=20, r=20, t=20, b=10),
+                height=140,
+                annotations=[
+                    dict(
+                        text="Pick species 1 and 2 to see the alignment of their repertoires.",
+                        showarrow=False,
+                        x=0.5,
+                        y=0.5,
+                        xref="paper",
+                        yref="paper",
+                        font=dict(color="#6b7280"),
+                    )
+                ],
+                xaxis=dict(visible=False),
+                yaxis=dict(visible=False),
+            )
+            return fig
+        return _make_pair_plot(space or "semantic", sp1, sp2)
+
+    @app.callback(
+        Output("home-species-strip", "children"),
+        Input("home-species-dropdown", "value"),
+    )
+    def _home_species_preview(species_value):
+        if not species_value:
+            return html.Div(
+                "Choose a species to preview its calls.",
+                className="subtle",
+            )
+
+        idxs = [i for i, sp in enumerate(species_all) if sp == species_value]
+        if not idxs:
+            return html.Div("No calls for that species.", className="subtle")
+
+        cards = [
+            html.Div(
+                _render_call_card(calls_all[idx]),
+                className="call-card",
+            )
+            for idx in idxs
+        ]
+        return html.Div(cards, className="selection-strip__inner")
 
     @app.callback(
         Output("static-calls-bar", "figure"),

@@ -5,11 +5,11 @@ NAV_CONTENT = {
     "brand": "Cross-species Repertoire Explorer & Translator",
     "nav_order": [
         "home",
-        "static",
         "one-species-explore",
-        "translations",
-        "one-species",
         "pair-species",
+        "translations",
+        # "one-species",
+        "static",
     ],
     "sections": {
         "home": {
