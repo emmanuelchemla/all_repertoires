@@ -388,7 +388,6 @@ def run_dash_app(
                                             ),
                                             f"{len(species_unique)} species",
                                         ],
-                                        className="hero__stat-text",
                                     ),
                                     html.P(
                                         children=[
@@ -397,11 +396,6 @@ def run_dash_app(
                                             ),
                                             f"{len(calls_all)} calls",
                                         ],
-                                        className="hero__stat-text",
-                                    ),
-                                    html.P(
-                                        "currently in the database",
-                                        className="hero__stat-text",
                                     ),
                                 ],
                             ),
@@ -1404,13 +1398,22 @@ def run_dash_app(
         if dim == 3:
             fig.update_scenes(
                 xaxis=dict(
-                    showgrid=True, zeroline=False, showticklabels=False, title=None
+                    showgrid=True,
+                    zeroline=False,
+                    showticklabels=False,
+                    title=dict(text="", font=dict(size=1), standoff=0),
                 ),
                 yaxis=dict(
-                    showgrid=True, zeroline=False, showticklabels=False, title=None
+                    showgrid=True,
+                    zeroline=False,
+                    showticklabels=False,
+                    title=dict(text="", font=dict(size=1), standoff=0),
                 ),
                 zaxis=dict(
-                    showgrid=True, zeroline=False, showticklabels=False, title=None
+                    showgrid=True,
+                    zeroline=False,
+                    showticklabels=False,
+                    title=dict(text="", font=dict(size=1), standoff=0),
                 ),
             )
         hover_card = "Hover a point to see its details."
