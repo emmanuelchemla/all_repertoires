@@ -381,9 +381,26 @@ def run_dash_app(
                             html.Div(
                                 className="hero__stat hero__stat--inline",
                                 children=[
-                                    html.Span("📈", className="hero__stat-icon"),
-                                    html.Span(
-                                        f"{len(species_unique)} species · {len(calls_all)} calls currently in the database",
+                                    html.P(
+                                        children=[
+                                            html.Span(
+                                                "📈", className="hero__stat-icon"
+                                            ),
+                                            f"{len(species_unique)} species",
+                                        ],
+                                        className="hero__stat-text",
+                                    ),
+                                    html.P(
+                                        children=[
+                                            html.Span(
+                                                "🔊", className="hero__stat-icon"
+                                            ),
+                                            f"{len(calls_all)} calls",
+                                        ],
+                                        className="hero__stat-text",
+                                    ),
+                                    html.P(
+                                        "currently in the database",
                                         className="hero__stat-text",
                                     ),
                                 ],
@@ -621,10 +638,6 @@ def run_dash_app(
                                 -- A call could be used to signal 'predators' in two species, but these predators may be different, a predator for one is not a predator for another. (The same true is human language, "president" may be 'translated' by "prime minister" in some cultures)
                                 -- The same is true acoustically: a high pitch vocalization is not the same thing for bats and for elephants. This relativity of the description is interesting though, there are reasons to believe that higher pitch means something, so you may use that differently based on your own vocal range.
                                 """,
-                                className="hero__paragraph hero__paragraph--meta",
-                            ),
-                            html.P(
-                                f"{len(species_unique)} species · {len(calls_all)} calls currently in the database",
                                 className="hero__paragraph hero__paragraph--meta",
                             ),
                             html.Div(
