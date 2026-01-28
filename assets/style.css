@@ -527,6 +527,12 @@ body {
   align-items: flex-start;
   margin: 6px 0 10px 0;
 }
+.hero__multi-controls .dash-dropdown,
+.hero__multi-controls .Select,
+.hero__multi-controls .Select-control,
+.hero__multi-controls .Select-menu-outer {
+  min-width: 320px;
+}
 .hero__multi-controls .Select,
 .hero__multi-controls .Select-control,
 .hero__multi-controls .dash-dropdown,

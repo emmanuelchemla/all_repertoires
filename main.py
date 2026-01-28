@@ -409,7 +409,7 @@ def run_dash_app(
                             ),
                             html.P(
                                 children=[
-                                    "From there, we can measure acoustic or semantic distance between calls, that is, we can do 'translation'! The best possible translation of a call is the call that has the closest semantic description. The resulting 'bilingual dictionaries' can be built automatically below.",
+                                    "We can now measure acoustic and semantic distance between calls, that is, we can do 'translation'! The best possible translation of a call is the call that has the closest semantic description. The resulting 'bilingual dictionaries' can be built automatically below.",
                                 ]
                             ),
                             html.Div(
@@ -493,25 +493,19 @@ def run_dash_app(
                                                 id="home-group-select",
                                                 options=[
                                                     {
-                                                        "label": "All groups",
+                                                        "label": "All species",
                                                         "value": "All",
-                                                    },
-                                                    {
-                                                        "label": "Primates",
-                                                        "value": "Primates_all",
-                                                    },
-                                                    {
-                                                        "label": "Primates (no Apes)",
-                                                        "value": "Primates_no_apes",
-                                                    },
-                                                    {
-                                                        "label": "Apes",
-                                                        "value": "Apes",
                                                     },
                                                     *[
                                                         {"label": g, "value": g}
-                                                        for g in sorted(group_values)
-                                                        if g not in {"Primates", "Apes"}
+                                                        for g in sorted(
+                                                            {
+                                                                "Primates",
+                                                                "Primates (no Apes)",
+                                                                "Apes",
+                                                            }
+                                                            | group_values
+                                                        )
                                                     ],
                                                 ],
                                                 value="All",
@@ -526,6 +520,34 @@ def run_dash_app(
                                                 value=2,
                                                 inline=True,
                                                 className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        className="hero__multi-controls",
+                                        style={"marginTop": "6px"},
+                                        children=[
+                                            dcc.Dropdown(
+                                                id="home-mantel-group",
+                                                options=[
+                                                    {
+                                                        "label": "All species",
+                                                        "value": "All",
+                                                    },
+                                                    *[
+                                                        {"label": g, "value": g}
+                                                        for g in sorted(
+                                                            {
+                                                                "Primates",
+                                                                "Primates (no Apes)",
+                                                                "Apes",
+                                                            }
+                                                            | group_values
+                                                        )
+                                                    ],
+                                                ],
+                                                value="All",
+                                                clearable=False,
                                             ),
                                         ],
                                     ),
@@ -616,39 +638,42 @@ def run_dash_app(
                     html.Div(
                         className="static-layout",
                         children=[
+                            html.Div(
+                                className="static-left",
+                                children=[
+                                    dcc.Store(id="static-species-store", data=[]),
+                                    html.H3("Taxonomy selection"),
+                                    dcc.Dropdown(
+                                        id="static-group-select",
+                                        options=[
+                                            {"label": "All groups", "value": "All"},
+                                            {
+                                                "label": "Primates",
+                                                "value": "Primates_all",
+                                            },
+                                            {
+                                                "label": "Primates (no Apes)",
+                                                "value": "Primates_no_apes",
+                                            },
+                                            {
+                                                "label": "Apes only",
+                                                "value": "Apes",
+                                            },
+                                            *[
+                                                {"label": g, "value": g}
+                                                for g in sorted(group_values)
+                                                if g not in {"Primates", "Apes"}
+                                            ],
+                                        ],
+                                        value="All",
+                                        clearable=False,
+                                        style={"marginBottom": "8px"},
+                                    ),
                                     html.Div(
-                                        className="static-left",
+                                        className="panel panel--taxonomy",
                                         children=[
-                                            dcc.Store(id="static-species-store", data=[]),
-                                            html.H3("Taxonomy selection"),
-                                            dcc.Dropdown(
-                                                id="static-group-select",
-                                                options=[
-                                                    {"label": "All groups", "value": "All"},
-                                                    {"label": "Primates", "value": "Primates_all"},
-                                                    {
-                                                        "label": "Primates (no Apes)",
-                                                        "value": "Primates_no_apes",
-                                                    },
-                                                    {
-                                                        "label": "Apes only",
-                                                        "value": "Apes",
-                                                    },
-                                                    *[
-                                                        {"label": g, "value": g}
-                                                        for g in sorted(group_values)
-                                                        if g not in {"Primates", "Apes"}
-                                                    ],
-                                                ],
-                                                value="All",
-                                                clearable=False,
-                                                style={"marginBottom": "8px"},
-                                            ),
                                             html.Div(
-                                                className="panel panel--taxonomy",
-                                                children=[
-                                                    html.Div(
-                                                        "Click taxonomy nodes to filter species",
+                                                "Click taxonomy nodes to filter species",
                                                 className="subtle subtle--tight",
                                             ),
                                             html.Div(
@@ -1234,6 +1259,12 @@ def run_dash_app(
                 for i in range(len(calls_all))
                 if _group_label(calls_all[i]) == "Primates"
             ]
+        if group_val == "Primates_all":
+            return [
+                i
+                for i in range(len(calls_all))
+                if _group_label(calls_all[i]) in {"Primates", "Apes"}
+            ]
         return [
             i for i in range(len(calls_all)) if _group_label(calls_all[i]) == group_val
         ]
@@ -1338,9 +1369,15 @@ def run_dash_app(
         )
         if dim == 3:
             fig.update_scenes(
-                xaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=None),
-                yaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=None),
-                zaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=None),
+                xaxis=dict(
+                    showgrid=True, zeroline=False, showticklabels=False, title=None
+                ),
+                yaxis=dict(
+                    showgrid=True, zeroline=False, showticklabels=False, title=None
+                ),
+                zaxis=dict(
+                    showgrid=True, zeroline=False, showticklabels=False, title=None
+                ),
             )
         hover_card = "Hover a point to see its details."
         if hoverData and hoverData.get("points"):
@@ -1354,7 +1391,7 @@ def run_dash_app(
 
     @app.callback(
         Output("home-mantel", "children"),
-        Input("home-group-select", "value"),
+        Input("home-mantel-group", "value"),
     )
     def _update_home_mantel(group_val):
         idxs = _idxs_for_group(group_val)
@@ -1462,7 +1499,9 @@ def run_dash_app(
             fig_heat_s,
             html.Div(
                 [
-                    html.Strong("Correlations between acoustic and semantic (Mantel tests):"),
+                    html.Strong(
+                        "Correlations between acoustic and semantic (Mantel tests):"
+                    ),
                     html.Br(),
                     html.Div(
                         "Correlations between acoustic and semantic (Mantel tests):",
