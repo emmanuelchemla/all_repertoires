@@ -7,24 +7,18 @@ from pathlib import Path
 import re
 import plotly.graph_objects as go
 from sentence_transformers import SentenceTransformer
-from typing import Dict, List, Sequence, Tuple
+from typing import Dict, List, Tuple
 from umap import UMAP
-from dash import Dash, dcc, html, Input, Output, State, ALL, ctx
+from dash import Dash, dcc, html, Input, Output, ALL, ctx
 from plotly.colors import qualitative as qualitative
 
 from app.content import NAV_LINKS, TODO_ITEMS
 from app.utils import (
-    available_taxa,
-    batch_iter,
     build_taxonomy_sunburst,
     embed_texts,
     filter_calls,
-    load_cache,
     load_calls,
-    plot_umap,
-    plot_umap_3d,
     reduce_umap,
-    save_cache,
     species_common_name,
 )
 
