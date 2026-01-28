@@ -547,7 +547,18 @@ def run_dash_app(
                                         "more similar sounding vocalizations have more similar meanings",
                                         className="hero__highlight",
                                     ),
-                                    ". This could be due to both common descent or the use of a general 'iconic' biological code, two fascinating options.",
+                                    ". This could be due to:",
+                                ],
+                            ),
+                            html.Ul(
+                                className="hero__list",
+                                children=[
+                                    html.Li(
+                                        "common descent (some calls existed a long time ago and were preserved across multiple species)",
+                                    ),
+                                    html.Li(
+                                        "a biological code (calls mean what they mean for a reason; e.g., high energy relates to some meanings)",
+                                    ),
                                 ],
                             ),
                             html.Div(
