@@ -1,12 +1,16 @@
 from __future__ import annotations
 
 from collections import Counter
+import html as pyhtml
 import numpy as np
 from pathlib import Path
 import re
+import plotly.graph_objects as go
 from sentence_transformers import SentenceTransformer
 from typing import Dict, List, Sequence, Tuple
 from umap import UMAP
+from dash import Dash, dcc, html, Input, Output, State, ALL, ctx
+from plotly.colors import qualitative as qualitative
 
 from app.content import NAV_LINKS, TODO_ITEMS
 from app.utils import (
@@ -80,23 +84,8 @@ def run_dash_app(
     - Requires: dash, plotly
     - Intended for internal use (e.g., Cloud Run/GCE) and access over Tailscale.
     """
-    from pathlib import Path as _Path
-
-    import base64 as _base64
-    import numpy as _np
-    import plotly.graph_objects as go
-    import html as _html
-
-    try:
-        from dash import Dash, dcc, html, Input, Output
-        from dash.dependencies import ALL
-    except Exception as e:  # pragma: no cover
-        raise RuntimeError(
-            "Dash is required for run_dash_app(). Install with: pip install dash"
-        ) from e
-
-    json_path = _Path(json_path)
-    cache = _Path(cache)
+    json_path = Path(json_path)
+    cache = Path(cache)
 
     calls_all = load_calls(json_path)
     if not calls_all:
@@ -113,7 +102,7 @@ def run_dash_app(
     semantic_embeds, _ = embed_texts(semantic_texts, embedding_model, cache, encoder)
 
     coords = reduce_umap(acoustic_embeds, n_components=n_components)
-    coords = _np.asarray(coords)
+    coords = np.asarray(coords)
 
     # Stable integer index for each call
     for i, c in enumerate(calls_all):
@@ -122,10 +111,9 @@ def run_dash_app(
     species_unique = sorted(set(species_all))
 
     # --- Color map (species -> color) for consistent coloring across plots/lines ---
-    from plotly.colors import qualitative as _qual
-
     color_map = {
-        sp: _qual.Plotly[i % len(_qual.Plotly)] for i, sp in enumerate(species_unique)
+        sp: qualitative.Plotly[i % len(qualitative.Plotly)]
+        for i, sp in enumerate(species_unique)
     }
 
     # --- Fixed group colors for consistency across plots ---
@@ -140,7 +128,7 @@ def run_dash_app(
         "Ungulates": "#f59e0b",  # amber
         "Other": "#94a3b8",  # slate
     }
-    FALLBACK_COLORS = _qual.Plotly
+    FALLBACK_COLORS = qualitative.Plotly
 
     def _group_label(c: Dict[str, object]) -> str:
         cls = str(c.get("class", "")).lower()
@@ -203,8 +191,8 @@ def run_dash_app(
     def _fmt_hover(i: int) -> str:
         """Minimal hover: species + call name."""
         c = calls_all[i]
-        species = _html.escape(str(c.get("species", "")))
-        call_name = _html.escape(str(c.get("call_name", "")))
+        species = pyhtml.escape(str(c.get("species", "")))
+        call_name = pyhtml.escape(str(c.get("call_name", "")))
         return f"{call_name} ({species})"
 
     def make_scatter(
@@ -267,7 +255,7 @@ def run_dash_app(
                 if not candidates:
                     continue
                 cand_vecs = semantic_embeds[candidates]
-                dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
+                dists = np.linalg.norm(cand_vecs - base_vec, axis=1)
                 nn_idx = candidates[int(dists.argmin())]
 
                 fig.add_trace(
@@ -1030,8 +1018,6 @@ def run_dash_app(
         prevent_initial_call=True,
     )
     def _update_selected_idx(clickData, n_clear, current):
-        from dash import ctx
-
         if ctx.triggered_id == "clear-selection":
             return None
 
@@ -1557,8 +1543,6 @@ def run_dash_app(
         prevent_initial_call=True,
     )
     def _select_trans_idx(cd2a, cd3a, cd2b, cd3b, current):
-        from dash import ctx
-
         trigger = ctx.triggered_id
         clickData = {
             "trans-umap2d-a": cd2a,
@@ -1586,8 +1570,6 @@ def run_dash_app(
         prevent_initial_call=True,
     )
     def _focus_species_from_card(n_clicks_list, species_list, current):
-        from dash import ctx
-
         trig = ctx.triggered_id
         if isinstance(trig, dict) and trig.get("species"):
             return trig.get("species")
@@ -1645,12 +1627,12 @@ def run_dash_app(
             if not candidates:
                 continue
             # semantic
-            d_sem = _np.linalg.norm(
+            d_sem = np.linalg.norm(
                 semantic_embeds[candidates] - semantic_embeds[selected_idx], axis=1
             )
             best_sem[sp] = candidates[int(d_sem.argmin())]
             # acoustic
-            d_ac = _np.linalg.norm(
+            d_ac = np.linalg.norm(
                 acoustic_embeds[candidates] - acoustic_embeds[selected_idx], axis=1
             )
             best_ac[sp] = candidates[int(d_ac.argmin())]
@@ -1667,7 +1649,7 @@ def run_dash_app(
                 if not candidates:
                     continue
                 cand_vecs = embeds_from[candidates]
-                dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
+                dists = np.linalg.norm(cand_vecs - base_vec, axis=1)
                 j = int(dists.argmin())
                 neighbors.append((dists[j], candidates[j]))
             neighbors.sort(
@@ -1688,7 +1670,7 @@ def run_dash_app(
                 bt_sim = None
                 bt_ok = False
                 if candidates_back:
-                    bt_dists = _np.linalg.norm(
+                    bt_dists = np.linalg.norm(
                         embeds_from[candidates_back] - embeds_from[nn_idx], axis=1
                     )
                     j_bt = int(bt_dists.argmin())
@@ -1884,7 +1866,7 @@ def run_dash_app(
             if not candidates:
                 continue
             cand_vecs = semantic_embeds[candidates]
-            dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
+            dists = np.linalg.norm(cand_vecs - base_vec, axis=1)
             j = int(dists.argmin())
             nn_idx = candidates[j]
             neighbors.append((float(dists[j]), nn_idx))
@@ -1921,7 +1903,7 @@ def run_dash_app(
             bt_idx = None
             bt_sim = None
             if base_candidates:
-                bt_dists = _np.linalg.norm(
+                bt_dists = np.linalg.norm(
                     semantic_embeds[base_candidates] - semantic_embeds[nn_idx], axis=1
                 )
                 j_bt = int(bt_dists.argmin())
@@ -1982,7 +1964,7 @@ def run_dash_app(
             if not candidates:
                 continue
             cand_vecs = semantic_embeds[candidates]
-            dists = _np.linalg.norm(cand_vecs - base_vec, axis=1)
+            dists = np.linalg.norm(cand_vecs - base_vec, axis=1)
             j = int(dists.argmin())
             nn_idx = candidates[j]
             neighbors.append((float(dists[j]), nn_idx))
@@ -2026,7 +2008,7 @@ def run_dash_app(
             bt_sim = None
             bt_ok = False
             if base_candidates:
-                bt_dists = _np.linalg.norm(
+                bt_dists = np.linalg.norm(
                     semantic_embeds[base_candidates] - semantic_embeds[nn_idx], axis=1
                 )
                 j_bt = int(bt_dists.argmin())

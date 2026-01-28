@@ -10,6 +10,7 @@ from typing import Dict, Iterable, List, Sequence, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
+import plotly.graph_objects as go
 from sentence_transformers import SentenceTransformer
 from umap import UMAP
 
@@ -93,7 +94,6 @@ def build_taxonomy_sunburst(
     species_color_map: Dict[str, str] | None = None,
 ):
     """Build a simple Plotly sunburst chart from the optional taxonomy fields."""
-    import plotly.graph_objects as go
 
     seen = {}
     for c in calls:
