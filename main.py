@@ -569,7 +569,7 @@ def run_dash_app(
                                                     "display": "flex",
                                                     "alignItems": "center",
                                                     "gap": "12px",
-                                                    "width": "460px",
+                                                    "width": "680px",
                                                 },
                                                 children=[
                                                     html.Span(
@@ -587,8 +587,10 @@ def run_dash_app(
                                                         id="home-pair-repr",
                                                         options=[
                                                             {"label": "Boxes", "value": "boxes"},
-                                                            {"label": "Acoustic space", "value": "acoustic"},
-                                                            {"label": "Semantic space", "value": "semantic"},
+                                                            {"label": "2D acoustic space", "value": "acoustic2d"},
+                                                            {"label": "2D semantic space", "value": "semantic2d"},
+                                                            {"label": "3D acoustic space", "value": "acoustic3d"},
+                                                            {"label": "3D semantic space", "value": "semantic3d"},
                                                         ],
                                                         value="boxes",
                                                         inline=True,
@@ -3127,15 +3129,15 @@ def run_dash_app(
         )
         return fig
 
-    def _pair_coords_2d(rep: str) -> np.ndarray:
-        base = coords if rep == "acoustic" else semantic_coords
-        base = np.asarray(base)
-        if base.shape[1] >= 2:
-            return base[:, :2]
-        # pad if someone asks for 1D reduction
-        zeros = np.zeros((base.shape[0], 2))
-        zeros[:, : base.shape[1]] = base
-        return zeros
+    def _pair_coords(rep: str) -> tuple[np.ndarray, int]:
+        if rep in {"acoustic3d"}:
+            return acoustic_umap3d_a, 3
+        if rep in {"semantic3d"}:
+            return semantic_umap3d, 3
+        if rep in {"semantic2d", "semantic"}:
+            return semantic_umap2d, 2
+        # default acoustic 2D
+        return acoustic_umap2d_a, 2
 
     def _make_pair_scatter(
         space: str, rep: str, sp1: str, sp2: str, min_sim: float = 0.0
@@ -3148,100 +3150,231 @@ def run_dash_app(
                 height=220,
             )
 
-        xy = _pair_coords_2d(rep)
+        coords_rep, dim = _pair_coords(rep)
+        ScatterCls = go.Scatter3d if dim == 3 else go.Scatter
         fig = go.Figure()
 
-        fig.add_trace(
-            go.Scatter(
-                x=xy[idxs1, 0],
-                y=xy[idxs1, 1],
-                mode="markers",
-                marker=dict(
-                    size=10,
-                    color=color_map.get(sp1, "#ef4444"),
-                    line=dict(width=1, color="rgba(0,0,0,0.2)"),
-                ),
-                name=species_common_name(sp1),
-                customdata=idxs1,
-                hovertemplate="<extra></extra>",
-            )
+        trace1 = ScatterCls(
+            x=[coords_rep[i, 0] for i in idxs1],
+            y=[coords_rep[i, 1] for i in idxs1],
+            mode="markers",
+            marker=dict(
+                size=10,
+                color=color_map.get(sp1, "#ef4444"),
+                line=dict(width=1, color="rgba(0,0,0,0.2)"),
+            ),
+            name=species_common_name(sp1),
+            customdata=idxs1,
+            hovertemplate="<extra></extra>",
+            showlegend=True,
         )
-        fig.add_trace(
-            go.Scatter(
-                x=xy[idxs2, 0],
-                y=xy[idxs2, 1],
-                mode="markers",
-                marker=dict(
-                    size=10,
-                    color=color_map.get(sp2, "#3b82f6"),
-                    line=dict(width=1, color="rgba(0,0,0,0.2)"),
-                ),
-                name=species_common_name(sp2),
-                customdata=idxs2,
-                hovertemplate="<extra></extra>",
-            )
-        )
+        if dim == 3:
+            trace1.z = [coords_rep[i, 2] for i in idxs1]
+        fig.add_trace(trace1)
 
-        # primary arrows
+        trace2 = ScatterCls(
+            x=[coords_rep[i, 0] for i in idxs2],
+            y=[coords_rep[i, 1] for i in idxs2],
+            mode="markers",
+            marker=dict(
+                size=10,
+                color=color_map.get(sp2, "#3b82f6"),
+                line=dict(width=1, color="rgba(0,0,0,0.2)"),
+            ),
+            name=species_common_name(sp2),
+            customdata=idxs2,
+            hovertemplate="<extra></extra>",
+            showlegend=True,
+        )
+        if dim == 3:
+            trace2.z = [coords_rep[i, 2] for i in idxs2]
+        fig.add_trace(trace2)
+
+        text_traces = []
+        arrow_color = "rgba(120,120,120,0.65)"
+        arrow_tip_border = "rgba(80,80,80,0.9)"
+        text_color = "rgba(75,85,99,0.95)"
+
+        def _midpoint(p0, p1):
+            z0 = p0[2] if len(p0) > 2 else 0.0
+            z1 = p1[2] if len(p1) > 2 else 0.0
+            return (
+                0.65 * p1[0] + 0.35 * p0[0],
+                0.65 * p1[1] + 0.35 * p0[1],
+                0.65 * z1 + 0.35 * z0,
+            )
+
+        # primary arrows (as lines) sp1 -> sp2
         for i_local in range(len(idxs1)):
             j_local = sims[i_local].argmax()
             sim_ij = sims[i_local, j_local]
             if sim_ij < min_sim:
                 continue
-            x0, y0 = xy[idxs1[i_local], 0], xy[idxs1[i_local], 1]
-            x1, y1 = xy[idxs2[j_local], 0], xy[idxs2[j_local], 1]
-            fig.add_annotation(
-                x=x1,
-                y=y1,
-                ax=x0,
-                ay=y0,
-                xref="x",
-                yref="y",
-                axref="x",
-                ayref="y",
-                showarrow=True,
-                arrowhead=4,
-                arrowsize=1.5,
-                arrowwidth=1.4,
-                arrowcolor="rgba(220,38,38,0.7)",
-                text=f"{sim_ij:.2g}",
-                font=dict(size=10, color="rgba(220,38,38,0.9)"),
-            )
+            p0 = coords_rep[idxs1[i_local]]
+            p1 = coords_rep[idxs2[j_local]]
+            if dim == 2:
+                fig.add_annotation(
+                    x=p1[0],
+                    y=p1[1],
+                    ax=p0[0],
+                    ay=p0[1],
+                    xref="x",
+                    yref="y",
+                    axref="x",
+                    ayref="y",
+                    showarrow=True,
+                    arrowhead=3,
+                    arrowsize=1.2,
+                    arrowwidth=1.6,
+                    arrowcolor=arrow_color,
+                    standoff=2,
+                )
+            else:
+                line_kwargs = dict(
+                    x=[p0[0], p1[0]],
+                    y=[p0[1], p1[1]],
+                    z=[p0[2], p1[2]],
+                    mode="lines",
+                    line=dict(color=arrow_color, width=3),
+                    hoverinfo="skip",
+                    showlegend=False,
+                )
+                fig.add_trace(go.Scatter3d(**line_kwargs))
+                fig.add_trace(
+                    go.Scatter3d(
+                        x=[p1[0]],
+                        y=[p1[1]],
+                        z=[p1[2]],
+                        mode="markers",
+                        marker=dict(
+                            size=4.5,
+                            color=arrow_color,
+                            line=dict(color=arrow_tip_border, width=1),
+                        ),
+                        hoverinfo="skip",
+                        showlegend=False,
+                    )
+                )
 
+            mid = _midpoint(p0, p1)
+            text_kwargs = dict(
+                x=[mid[0]],
+                y=[mid[1]],
+                mode="text",
+                text=[f"{sim_ij:.2g}"],
+                textfont=dict(color=text_color, size=10),
+                showlegend=False,
+                hoverinfo="skip",
+            )
+            if dim == 3:
+                text_kwargs["z"] = [mid[2]]
+                text_traces.append(go.Scatter3d(**text_kwargs))
+            else:
+                text_traces.append(go.Scatter(**text_kwargs))
+
+        # primary arrows sp2 -> sp1
         for j_local in range(len(idxs2)):
             i_local = sims[:, j_local].argmax()
             sim = sims[i_local, j_local]
             if sim < min_sim:
                 continue
-            x0, y0 = xy[idxs2[j_local], 0], xy[idxs2[j_local], 1]
-            x1, y1 = xy[idxs1[i_local], 0], xy[idxs1[i_local], 1]
-            fig.add_annotation(
-                x=x1,
-                y=y1,
-                ax=x0,
-                ay=y0,
-                xref="x",
-                yref="y",
-                axref="x",
-                ayref="y",
-                showarrow=True,
-                arrowhead=4,
-                arrowsize=1.5,
-                arrowwidth=1.4,
-                arrowcolor="rgba(37,99,235,0.7)",
-                text=f"{sim:.2g}",
-                font=dict(size=10, color="rgba(37,99,235,0.9)"),
+            p0 = coords_rep[idxs2[j_local]]
+            p1 = coords_rep[idxs1[i_local]]
+            if dim == 2:
+                fig.add_annotation(
+                    x=p1[0],
+                    y=p1[1],
+                    ax=p0[0],
+                    ay=p0[1],
+                    xref="x",
+                    yref="y",
+                    axref="x",
+                    ayref="y",
+                    showarrow=True,
+                    arrowhead=3,
+                    arrowsize=1.2,
+                    arrowwidth=1.6,
+                    arrowcolor=arrow_color,
+                    standoff=2,
+                )
+            else:
+                line_kwargs = dict(
+                    x=[p0[0], p1[0]],
+                    y=[p0[1], p1[1]],
+                    z=[p0[2], p1[2]],
+                    mode="lines",
+                    line=dict(color=arrow_color, width=3),
+                    hoverinfo="skip",
+                    showlegend=False,
+                )
+                fig.add_trace(go.Scatter3d(**line_kwargs))
+                fig.add_trace(
+                    go.Scatter3d(
+                        x=[p1[0]],
+                        y=[p1[1]],
+                        z=[p1[2]],
+                        mode="markers",
+                        marker=dict(
+                            size=4.5,
+                            color=arrow_color,
+                            line=dict(color=arrow_tip_border, width=1),
+                        ),
+                        hoverinfo="skip",
+                        showlegend=False,
+                    )
+                )
+
+            mid = _midpoint(p0, p1)
+            text_kwargs = dict(
+                x=[mid[0]],
+                y=[mid[1]],
+                mode="text",
+                text=[f"{sim:.2g}"],
+                textfont=dict(color=text_color, size=10),
+                showlegend=False,
+                hoverinfo="skip",
             )
+            if dim == 3:
+                text_kwargs["z"] = [mid[2]]
+                text_traces.append(go.Scatter3d(**text_kwargs))
+            else:
+                text_traces.append(go.Scatter(**text_kwargs))
+
+        for t in text_traces:
+            fig.add_trace(t)
 
         fig.update_layout(
-            title=f"{rep.title()} view • {space.title()} nearest neighbors<br>{species_common_name(sp1)} vs {species_common_name(sp2)}",
+            title=f"{rep.replace('2d','2D').replace('3d','3D').replace('_',' ')} • {space.title()} nearest neighbors<br>{species_common_name(sp1)} vs {species_common_name(sp2)}",
             title_x=0.5,
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
-            margin=dict(l=30, r=20, t=70, b=40),
-            xaxis=dict(visible=False),
-            yaxis=dict(visible=False),
-            height=360,
+            margin=dict(l=10, r=10, t=70, b=30),
+            template="plotly_white",
+            showlegend=True,
+            height=360 if dim == 2 else 420,
         )
+
+        if dim == 2:
+            fig.update_xaxes(
+                showgrid=True,
+                zeroline=False,
+                showticklabels=False,
+                title=None,
+            )
+            fig.update_yaxes(
+                showgrid=True,
+                zeroline=False,
+                showticklabels=False,
+                title=None,
+            )
+        else:
+            fig.update_scenes(
+                xaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=""),
+                yaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=""),
+                zaxis=dict(showgrid=True, zeroline=False, showticklabels=False, title=""),
+            )
+
+        # Keep markers above lines/text for readability
+        fig.data = tuple(fig.data[2:]) + (fig.data[0], fig.data[1])
         return fig
 
     def make_keyword_bar(species_sel: List[str] | None, top_n: int = 20):
