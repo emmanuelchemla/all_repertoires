@@ -673,10 +673,32 @@ def run_dash_app(
                                             "alignItems": "flex-start",
                                         },
                                     ),
-                                    dcc.Graph(
-                                        id="home-pair-graph",
-                                        className="pair-graph pair-graph--mini",
-                                        figure=go.Figure(),
+                                    html.Div(
+                                        style={
+                                            "display": "flex",
+                                            "gap": "16px",
+                                            "alignItems": "flex-start",
+                                            "flexWrap": "wrap",
+                                        },
+                                        children=[
+                                            dcc.Graph(
+                                                id="home-pair-graph",
+                                                className="pair-graph pair-graph--mini",
+                                                figure=go.Figure(),
+                                                style={"flex": "1 1 520px"},
+                                            ),
+                                            html.Div(
+                                                id="home-pair-hover",
+                                                className="panel panel--tight",
+                                                style={
+                                                    "flex": "0 0 320px",
+                                                    "minWidth": "280px",
+                                                    "maxHeight": "420px",
+                                                    "overflowY": "auto",
+                                                },
+                                                children="Hover a call to see details.",
+                                            ),
+                                        ],
                                     ),
                                 ],
                             ),
@@ -1509,16 +1531,75 @@ def run_dash_app(
         Output("home-pair-hover", "children"),
         Input("home-pair-graph", "hoverData"),
         Input("home-pair-graph", "clickData"),
+        State("home-pair-space", "value"),
+        State("home-pair-species-1", "value"),
+        State("home-pair-species-2", "value"),
     )
-    def _update_home_pair_hover(hoverData, clickData):
+    def _update_home_pair_hover(hoverData, clickData, nn_space, sp1, sp2):
         data = clickData or hoverData
-        if data and data.get("points"):
-            idx = data["points"][0].get("customdata")
-            try:
-                return _render_call_card(calls_all[int(idx)])
-            except Exception:
-                return "Hover or click a point to see details."
-        return "Hover or click a point to see details."
+        if not data or not data.get("points"):
+            return "Hover or click a point to see details."
+        try:
+            idx = int(data["points"][0].get("customdata"))
+        except Exception:
+            return "Hover or click a point to see details."
+
+        base_call = calls_all[idx]
+        base_sp = species_all[idx]
+
+        # pick the opposite species (only the two selected)
+        other_sp = None
+        if base_sp == sp1:
+            other_sp = sp2
+        elif base_sp == sp2:
+            other_sp = sp1
+
+        # If opposite species is missing, just show the base card
+        if not other_sp:
+            return _render_call_card(base_call)
+
+        # choose similarity space
+        nn_space = nn_space or "semantic"
+        embeds = semantic_embeds if nn_space == "semantic" else acoustic_embeds
+
+        # candidates from other species
+        cand_idxs = [i for i, sp in enumerate(species_all) if sp == other_sp]
+        if not cand_idxs:
+            return _render_call_card(base_call)
+
+        # find nearest neighbor by cosine similarity (embeds already normalized)
+        sims = np.dot(embeds[idx], embeds[cand_idxs].T)
+        nn_idx = cand_idxs[int(np.argmax(sims))]
+
+        # Order cards consistent with species 1 then species 2, using plot legend colors
+        first_card, second_card = base_call, calls_all[nn_idx]
+        first_color = color_map.get(sp1, "#2563eb")
+        second_color = color_map.get(sp2, "#10b981")
+        if base_sp == sp2:
+            first_card, second_card = calls_all[nn_idx], base_call
+
+        def _card_div(card, color):
+            return html.Div(
+                _render_call_card(card),
+                className="call-card",
+                style={
+                    "border": f"2px solid {color}",
+                    "borderRadius": "8px",
+                    "boxShadow": f"0 0 0 1px {color}",
+                },
+            )
+
+        return html.Div(
+            style={
+                "display": "grid",
+                "gridTemplateColumns": "1fr 1fr",
+                "gap": "12px",
+            },
+            children=[
+                _card_div(first_card, first_color),
+                _card_div(second_card, second_color),
+            ],
+        )
 
     def _idxs_for_group(group_val):
         if not group_val or group_val == "All":
