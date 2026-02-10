@@ -532,6 +532,71 @@ def run_dash_app(
                                                     "display": "flex",
                                                     "alignItems": "center",
                                                     "gap": "12px",
+                                                    "width": "720px",
+                                                },
+                                                children=[
+                                                    html.Span(
+                                                        "Representation space",
+                                                        className="taxonomy-controls__label",
+                                                        style={
+                                                            "fontSize": "13px",
+                                                            "opacity": 0.7,
+                                                            "margin": "0",
+                                                            "minWidth": "130px",
+                                                            "textAlign": "right",
+                                                        },
+                                                    ),
+                                                    dcc.RadioItems(
+                                                        id="home-pair-repr-space",
+                                                        options=[
+                                                            {"label": "Boxes", "value": "boxes"},
+                                                            {"label": "Semantic", "value": "semantic"},
+                                                            {"label": "Acoustic", "value": "acoustic"},
+                                                        ],
+                                                        value="boxes",
+                                                        inline=True,
+                                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                                    ),
+                                                ],
+                                            ),
+                                            html.Div(
+                                                style={
+                                                    "display": "flex",
+                                                    "alignItems": "center",
+                                                    "gap": "12px",
+                                                    "width": "720px",
+                                                },
+                                                id="home-pair-dim-wrapper",
+                                                children=[
+                                                    html.Span(
+                                                        "Dimension",
+                                                        className="taxonomy-controls__label",
+                                                        style={
+                                                            "fontSize": "13px",
+                                                            "opacity": 0.7,
+                                                            "margin": "0",
+                                                            "paddingLeft": "142px",
+                                                            "minWidth": 0,
+                                                            "textAlign": "left",
+                                                        },
+                                                    ),
+                                                    dcc.RadioItems(
+                                                        id="home-pair-dim",
+                                                        options=[
+                                                            {"label": "2D", "value": 2},
+                                                            {"label": "3D", "value": 3},
+                                                        ],
+                                                        value=2,
+                                                        inline=True,
+                                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                                    ),
+                                                ],
+                                            ),
+                                            html.Div(
+                                                style={
+                                                    "display": "flex",
+                                                    "alignItems": "center",
+                                                    "gap": "12px",
                                                     "width": "460px",
                                                 },
                                                 children=[
@@ -559,40 +624,6 @@ def run_dash_app(
                                                             },
                                                         ],
                                                         value="semantic",
-                                                        inline=True,
-                                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
-                                                    ),
-                                                ],
-                                            ),
-                                            html.Div(
-                                                style={
-                                                    "display": "flex",
-                                                    "alignItems": "center",
-                                                    "gap": "12px",
-                                                    "width": "680px",
-                                                },
-                                                children=[
-                                                    html.Span(
-                                                        "Representation",
-                                                        className="taxonomy-controls__label",
-                                                        style={
-                                                            "fontSize": "13px",
-                                                            "opacity": 0.7,
-                                                            "margin": "0",
-                                                            "minWidth": "130px",
-                                                            "textAlign": "right",
-                                                        },
-                                                    ),
-                                                    dcc.RadioItems(
-                                                        id="home-pair-repr",
-                                                        options=[
-                                                            {"label": "Boxes", "value": "boxes"},
-                                                            {"label": "2D acoustic space", "value": "acoustic2d"},
-                                                            {"label": "2D semantic space", "value": "semantic2d"},
-                                                            {"label": "3D acoustic space", "value": "acoustic3d"},
-                                                            {"label": "3D semantic space", "value": "semantic3d"},
-                                                        ],
-                                                        value="boxes",
                                                         inline=True,
                                                         className="taxonomy-controls__radio taxonomy-controls__radio--compact",
                                                     ),
@@ -1437,13 +1468,14 @@ def run_dash_app(
 
     @app.callback(
         Output("home-pair-graph", "figure"),
-        Input("home-pair-repr", "value"),
+        Input("home-pair-repr-space", "value"),
+        Input("home-pair-dim", "value"),
         Input("home-pair-space", "value"),
         Input("home-pair-species-1", "value"),
         Input("home-pair-species-2", "value"),
         Input("home-pair-threshold", "value"),
     )
-    def _update_home_pair_graph(rep, space, sp1, sp2, threshold):
+    def _update_home_pair_graph(rep_space, dim_val, space, sp1, sp2, threshold):
         if not sp1 or not sp2 or sp1 == sp2:
             fig = go.Figure()
             fig.update_layout(
@@ -1465,10 +1497,13 @@ def run_dash_app(
             )
             return fig
         space = space or "semantic"
-        rep = rep or "boxes"
-        if rep == "boxes":
+        rep_space = rep_space or "boxes"
+        dim_val = 3 if dim_val == 3 else 2
+        if rep_space == "boxes":
             return _make_pair_plot(space, sp1, sp2, min_sim=threshold or 0)
-        return _make_pair_scatter(space, rep, sp1, sp2, min_sim=threshold or 0)
+        return _make_pair_scatter(
+            space, rep_space, dim_val, sp1, sp2, min_sim=threshold or 0
+        )
 
     @app.callback(
         Output("home-pair-hover", "children"),
@@ -3129,18 +3164,22 @@ def run_dash_app(
         )
         return fig
 
-    def _pair_coords(rep: str) -> tuple[np.ndarray, int]:
-        if rep in {"acoustic3d"}:
-            return acoustic_umap3d_a, 3
-        if rep in {"semantic3d"}:
-            return semantic_umap3d, 3
-        if rep in {"semantic2d", "semantic"}:
-            return semantic_umap2d, 2
-        # default acoustic 2D
-        return acoustic_umap2d_a, 2
+    def _pair_coords(rep_space: str, dim: int) -> tuple[np.ndarray, int]:
+        dim = 3 if dim == 3 else 2
+        if rep_space == "semantic":
+            return (semantic_umap3d if dim == 3 else semantic_umap2d), dim
+        if rep_space == "acoustic":
+            return (acoustic_umap3d_a if dim == 3 else acoustic_umap2d_a), dim
+        # boxes fallback (should not reach here for coordinates)
+        return (acoustic_umap2d_a if dim == 2 else acoustic_umap3d_a), dim
 
     def _make_pair_scatter(
-        space: str, rep: str, sp1: str, sp2: str, min_sim: float = 0.0
+        space: str,
+        rep_space: str,
+        dim_choice: int,
+        sp1: str,
+        sp2: str,
+        min_sim: float = 0.0,
     ) -> go.Figure:
         rows, idxs1, idxs2, sims = _pair_rows(space, sp1, sp2)
         if not rows:
@@ -3150,7 +3189,7 @@ def run_dash_app(
                 height=220,
             )
 
-        coords_rep, dim = _pair_coords(rep)
+        coords_rep, dim = _pair_coords(rep_space, dim_choice)
         ScatterCls = go.Scatter3d if dim == 3 else go.Scatter
         fig = go.Figure()
 
@@ -3344,7 +3383,7 @@ def run_dash_app(
             fig.add_trace(t)
 
         fig.update_layout(
-            title=f"{rep.replace('2d','2D').replace('3d','3D').replace('_',' ')} • {space.title()} nearest neighbors<br>{species_common_name(sp1)} vs {species_common_name(sp2)}",
+            title=f"{rep_space.title()} {dim}D • {space.title()} nearest neighbors<br>{species_common_name(sp1)} vs {species_common_name(sp2)}",
             title_x=0.5,
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
             margin=dict(l=10, r=10, t=70, b=30),
@@ -3376,6 +3415,23 @@ def run_dash_app(
         # Keep markers above lines/text for readability
         fig.data = tuple(fig.data[2:]) + (fig.data[0], fig.data[1])
         return fig
+
+    @app.callback(
+        Output("home-pair-dim", "disabled"),
+        Output("home-pair-dim-wrapper", "style"),
+        Input("home-pair-repr-space", "value"),
+    )
+    def _disable_dim_when_boxes(rep_space):
+        is_boxes = (rep_space or "boxes") == "boxes"
+        style = {
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "12px",
+            "width": "720px",
+            "opacity": 0.45 if is_boxes else 1.0,
+            "pointerEvents": "none" if is_boxes else "auto",
+        }
+        return is_boxes, style
 
     def make_keyword_bar(species_sel: List[str] | None, top_n: int = 20):
         idxs = _idxs_for_species(species_sel)
