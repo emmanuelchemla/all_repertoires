@@ -66,6 +66,8 @@ def run_dash_app(
 
     coords = reduce_umap(acoustic_embeds, n_components=n_components)
     coords = np.asarray(coords)
+    semantic_coords = reduce_umap(semantic_embeds, n_components=n_components)
+    semantic_coords = np.asarray(semantic_coords)
 
     # Stable integer index for each call
     for i, c in enumerate(calls_all):
@@ -557,6 +559,38 @@ def run_dash_app(
                                                             },
                                                         ],
                                                         value="semantic",
+                                                        inline=True,
+                                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                                    ),
+                                                ],
+                                            ),
+                                            html.Div(
+                                                style={
+                                                    "display": "flex",
+                                                    "alignItems": "center",
+                                                    "gap": "12px",
+                                                    "width": "460px",
+                                                },
+                                                children=[
+                                                    html.Span(
+                                                        "Representation",
+                                                        className="taxonomy-controls__label",
+                                                        style={
+                                                            "fontSize": "13px",
+                                                            "opacity": 0.7,
+                                                            "margin": "0",
+                                                            "minWidth": "130px",
+                                                            "textAlign": "right",
+                                                        },
+                                                    ),
+                                                    dcc.RadioItems(
+                                                        id="home-pair-repr",
+                                                        options=[
+                                                            {"label": "Boxes", "value": "boxes"},
+                                                            {"label": "Acoustic space", "value": "acoustic"},
+                                                            {"label": "Semantic space", "value": "semantic"},
+                                                        ],
+                                                        value="boxes",
                                                         inline=True,
                                                         className="taxonomy-controls__radio taxonomy-controls__radio--compact",
                                                     ),
@@ -1401,12 +1435,13 @@ def run_dash_app(
 
     @app.callback(
         Output("home-pair-graph", "figure"),
+        Input("home-pair-repr", "value"),
         Input("home-pair-space", "value"),
         Input("home-pair-species-1", "value"),
         Input("home-pair-species-2", "value"),
         Input("home-pair-threshold", "value"),
     )
-    def _update_home_pair_graph(space, sp1, sp2, threshold):
+    def _update_home_pair_graph(rep, space, sp1, sp2, threshold):
         if not sp1 or not sp2 or sp1 == sp2:
             fig = go.Figure()
             fig.update_layout(
@@ -1427,7 +1462,11 @@ def run_dash_app(
                 yaxis=dict(visible=False),
             )
             return fig
-        return _make_pair_plot(space or "semantic", sp1, sp2, min_sim=threshold or 0)
+        space = space or "semantic"
+        rep = rep or "boxes"
+        if rep == "boxes":
+            return _make_pair_plot(space, sp1, sp2, min_sim=threshold or 0)
+        return _make_pair_scatter(space, rep, sp1, sp2, min_sim=threshold or 0)
 
     @app.callback(
         Output("home-pair-hover", "children"),
@@ -3085,6 +3124,123 @@ def run_dash_app(
             shapes=shapes,
             annotations=annotations,
             height=max(240, int(max_rows * 60 + 80)),
+        )
+        return fig
+
+    def _pair_coords_2d(rep: str) -> np.ndarray:
+        base = coords if rep == "acoustic" else semantic_coords
+        base = np.asarray(base)
+        if base.shape[1] >= 2:
+            return base[:, :2]
+        # pad if someone asks for 1D reduction
+        zeros = np.zeros((base.shape[0], 2))
+        zeros[:, : base.shape[1]] = base
+        return zeros
+
+    def _make_pair_scatter(
+        space: str, rep: str, sp1: str, sp2: str, min_sim: float = 0.0
+    ) -> go.Figure:
+        rows, idxs1, idxs2, sims = _pair_rows(space, sp1, sp2)
+        if not rows:
+            return go.Figure().update_layout(
+                title="Select two different species",
+                margin=dict(l=20, r=20, t=40, b=20),
+                height=220,
+            )
+
+        xy = _pair_coords_2d(rep)
+        fig = go.Figure()
+
+        fig.add_trace(
+            go.Scatter(
+                x=xy[idxs1, 0],
+                y=xy[idxs1, 1],
+                mode="markers",
+                marker=dict(
+                    size=10,
+                    color=color_map.get(sp1, "#ef4444"),
+                    line=dict(width=1, color="rgba(0,0,0,0.2)"),
+                ),
+                name=species_common_name(sp1),
+                customdata=idxs1,
+                hovertemplate="<extra></extra>",
+            )
+        )
+        fig.add_trace(
+            go.Scatter(
+                x=xy[idxs2, 0],
+                y=xy[idxs2, 1],
+                mode="markers",
+                marker=dict(
+                    size=10,
+                    color=color_map.get(sp2, "#3b82f6"),
+                    line=dict(width=1, color="rgba(0,0,0,0.2)"),
+                ),
+                name=species_common_name(sp2),
+                customdata=idxs2,
+                hovertemplate="<extra></extra>",
+            )
+        )
+
+        # primary arrows
+        for i_local in range(len(idxs1)):
+            j_local = sims[i_local].argmax()
+            sim_ij = sims[i_local, j_local]
+            if sim_ij < min_sim:
+                continue
+            x0, y0 = xy[idxs1[i_local], 0], xy[idxs1[i_local], 1]
+            x1, y1 = xy[idxs2[j_local], 0], xy[idxs2[j_local], 1]
+            fig.add_annotation(
+                x=x1,
+                y=y1,
+                ax=x0,
+                ay=y0,
+                xref="x",
+                yref="y",
+                axref="x",
+                ayref="y",
+                showarrow=True,
+                arrowhead=4,
+                arrowsize=1.5,
+                arrowwidth=1.4,
+                arrowcolor="rgba(220,38,38,0.7)",
+                text=f"{sim_ij:.2g}",
+                font=dict(size=10, color="rgba(220,38,38,0.9)"),
+            )
+
+        for j_local in range(len(idxs2)):
+            i_local = sims[:, j_local].argmax()
+            sim = sims[i_local, j_local]
+            if sim < min_sim:
+                continue
+            x0, y0 = xy[idxs2[j_local], 0], xy[idxs2[j_local], 1]
+            x1, y1 = xy[idxs1[i_local], 0], xy[idxs1[i_local], 1]
+            fig.add_annotation(
+                x=x1,
+                y=y1,
+                ax=x0,
+                ay=y0,
+                xref="x",
+                yref="y",
+                axref="x",
+                ayref="y",
+                showarrow=True,
+                arrowhead=4,
+                arrowsize=1.5,
+                arrowwidth=1.4,
+                arrowcolor="rgba(37,99,235,0.7)",
+                text=f"{sim:.2g}",
+                font=dict(size=10, color="rgba(37,99,235,0.9)"),
+            )
+
+        fig.update_layout(
+            title=f"{rep.title()} view • {space.title()} nearest neighbors<br>{species_common_name(sp1)} vs {species_common_name(sp2)}",
+            title_x=0.5,
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
+            margin=dict(l=30, r=20, t=70, b=40),
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False),
+            height=360,
         )
         return fig
 
