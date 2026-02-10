@@ -453,60 +453,123 @@ def run_dash_app(
                                     html.Div(
                                         className="hero__pair-controls",
                                         children=[
-                                            dcc.Dropdown(
-                                                id="home-pair-species-1",
-                                                options=[
-                                                    {
-                                                        "label": species_common_name(
-                                                            sp
-                                                        ),
-                                                        "value": sp,
-                                                    }
-                                                    for sp in species_unique
+                                            html.Div(
+                                                style={
+                                                    "display": "flex",
+                                                    "alignItems": "center",
+                                                    "gap": "12px",
+                                                    "width": "460px",
+                                                },
+                                                children=[
+                                                    html.Span(
+                                                        "Species 1",
+                                                        className="taxonomy-controls__label",
+                                                        style={
+                                                            "fontSize": "13px",
+                                                            "opacity": 0.7,
+                                                            "margin": "0",
+                                                            "minWidth": "130px",
+                                                            "textAlign": "right",
+                                                        },
+                                                    ),
+                                                    dcc.Dropdown(
+                                                        id="home-pair-species-1",
+                                                        options=[
+                                                            {
+                                                                "label": species_common_name(
+                                                                    sp
+                                                                ),
+                                                                "value": sp,
+                                                            }
+                                                            for sp in species_unique
+                                                        ],
+                                                        placeholder="Species 1",
+                                                        clearable=True,
+                                                        style={"width": "320px"},
+                                                    ),
                                                 ],
-                                                placeholder="Species 1",
-                                                clearable=True,
-                                                style={"width": "320px"},
                                             ),
-                                            dcc.Dropdown(
-                                                id="home-pair-species-2",
-                                                options=[
-                                                    {
-                                                        "label": species_common_name(
-                                                            sp
-                                                        ),
-                                                        "value": sp,
-                                                    }
-                                                    for sp in species_unique
+                                            html.Div(
+                                                style={
+                                                    "display": "flex",
+                                                    "alignItems": "center",
+                                                    "gap": "12px",
+                                                    "width": "460px",
+                                                },
+                                                children=[
+                                                    html.Span(
+                                                        "Species 2",
+                                                        className="taxonomy-controls__label",
+                                                        style={
+                                                            "fontSize": "13px",
+                                                            "opacity": 0.7,
+                                                            "margin": "0",
+                                                            "minWidth": "130px",
+                                                            "textAlign": "right",
+                                                        },
+                                                    ),
+                                                    dcc.Dropdown(
+                                                        id="home-pair-species-2",
+                                                        options=[
+                                                            {
+                                                                "label": species_common_name(
+                                                                    sp
+                                                                ),
+                                                                "value": sp,
+                                                            }
+                                                            for sp in species_unique
+                                                        ],
+                                                        placeholder="Species 2",
+                                                        clearable=True,
+                                                        style={"width": "320px"},
+                                                    ),
                                                 ],
-                                                placeholder="Species 2",
-                                                clearable=True,
-                                                style={"width": "320px"},
                                             ),
-                                            dcc.RadioItems(
-                                                id="home-pair-space",
-                                                options=[
-                                                    {
-                                                        "label": "Semantic",
-                                                        "value": "semantic",
-                                                    },
-                                                    {
-                                                        "label": "Acoustic",
-                                                        "value": "acoustic",
-                                                    },
+                                            html.Div(
+                                                style={
+                                                    "display": "flex",
+                                                    "alignItems": "center",
+                                                    "gap": "12px",
+                                                    "width": "460px",
+                                                },
+                                                children=[
+                                                    html.Span(
+                                                        "Nearest neighbors",
+                                                        className="taxonomy-controls__label",
+                                                        style={
+                                                            "fontSize": "13px",
+                                                            "opacity": 0.7,
+                                                            "margin": "0",
+                                                            "minWidth": "130px",
+                                                            "textAlign": "right",
+                                                        },
+                                                    ),
+                                                    dcc.RadioItems(
+                                                        id="home-pair-space",
+                                                        options=[
+                                                            {
+                                                                "label": "Semantic",
+                                                                "value": "semantic",
+                                                            },
+                                                            {
+                                                                "label": "Acoustic",
+                                                                "value": "acoustic",
+                                                            },
+                                                        ],
+                                                        value="semantic",
+                                                        inline=True,
+                                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                                    ),
                                                 ],
-                                                value="semantic",
-                                                inline=True,
-                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
                                             ),
                                             html.Div(
                                                 className="hero__pair-threshold",
                                                 style={
                                                     "display": "flex",
-                                                    "alignItems": "flex-start",
-                                                    "gap": "8px",
+                                                    "alignItems": "center",
+                                                    "gap": "12px",
                                                     "marginTop": "6px",
-                                                    "width": "340px",
+                                                    "width": "460px",
                                                 },
                                                 children=[
                                                     html.Span(
@@ -516,19 +579,24 @@ def run_dash_app(
                                                             "fontSize": "13px",
                                                             "opacity": 0.7,
                                                             "margin": "0",
+                                                            "minWidth": "130px",
+                                                            "textAlign": "right",
                                                         },
                                                     ),
-                                                    dcc.Slider(
-                                                        id="home-pair-threshold",
-                                                        min=0,
-                                                        max=1,
-                                                        step=0.01,
-                                                        value=0,
-                                                        marks={0: "0", 1: "1"},
-                                                        tooltip={
-                                                            "placement": "bottom",
-                                                            "always_visible": False,
-                                                        },
+                                                    html.Div(
+                                                        dcc.Slider(
+                                                            id="home-pair-threshold",
+                                                            min=0,
+                                                            max=1,
+                                                            step=0.01,
+                                                            value=0,
+                                                            marks={0: "0", 1: "1"},
+                                                            tooltip={
+                                                                "placement": "bottom",
+                                                                "always_visible": False,
+                                                            },
+                                                        ),
+                                                        style={"flex": 1},
                                                     ),
                                                 ],
                                             ),
