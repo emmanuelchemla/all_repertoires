@@ -418,6 +418,10 @@ def run_dash_app(
                                 ],
                             ),
                             html.Div(
+                                [html.Div(item) for item in TODO_ITEMS],
+                                className="hero__todo",
+                            ),
+                            html.Div(
                                 id="quick-look",
                                 className="section section--sub",
                                 children=[
@@ -535,10 +539,22 @@ def run_dash_app(
                                             html.Ul(
                                                 children=[
                                                     html.Li(
-                                                        "Look for nearest neighbors in semantic space for 'translations'."
+                                                        children=[
+                                                            "Look for nearest ",
+                                                            html.Span(
+                                                                "semantic",
+                                                                style={
+                                                                    "fontStyle": "italic"
+                                                                },
+                                                            ),
+                                                            "neighbors for 'translations'.",
+                                                        ]
                                                     ),
                                                     html.Li(
-                                                        "Use the Acoustic representation space to get a sense of acoustic similarities between calls, or use the Boxes representation for a flatter mapping between calls."
+                                                        "Use the Acoustic representation space to get a sense of acoustic similarities between calls."
+                                                    ),
+                                                    html.Li(
+                                                        "Use the Boxes representation for a mapping between calls, bilingual dictionary like."
                                                     ),
                                                 ]
                                             ),
@@ -649,10 +665,6 @@ def run_dash_app(
                                                                 id="home-pair-repr-space",
                                                                 options=[
                                                                     {
-                                                                        "label": "Boxes",
-                                                                        "value": "boxes",
-                                                                    },
-                                                                    {
                                                                         "label": "Semantic",
                                                                         "value": "semantic",
                                                                     },
@@ -660,8 +672,12 @@ def run_dash_app(
                                                                         "label": "Acoustic",
                                                                         "value": "acoustic",
                                                                     },
+                                                                    {
+                                                                        "label": "Boxes",
+                                                                        "value": "boxes",
+                                                                    },
                                                                 ],
-                                                                value="boxes",
+                                                                value="acoustic",
                                                                 inline=True,
                                                                 className="taxonomy-controls__radio taxonomy-controls__radio--compact",
                                                             ),
@@ -700,7 +716,7 @@ def run_dash_app(
                                                                         "value": 3,
                                                                     },
                                                                 ],
-                                                                value=2,
+                                                                value=3,
                                                                 inline=True,
                                                                 className="taxonomy-controls__radio taxonomy-controls__radio--compact",
                                                             ),
@@ -1036,6 +1052,7 @@ def run_dash_app(
                                                 children=[
                                                     html.Div(
                                                         "Mantel correlations between acoustic and semantic spaces",
+                                                        style={"fontWeight": "bold"},
                                                     ),
                                                     html.Div(
                                                         id="home-mantel",
@@ -1045,10 +1062,6 @@ def run_dash_app(
                                                 ],
                                             ),
                                         ],
-                                    ),
-                                    html.Div(
-                                        [html.Div(item) for item in TODO_ITEMS],
-                                        className="hero__todo",
                                     ),
                                 ],
                             ),
