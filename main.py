@@ -391,10 +391,10 @@ def run_dash_app(
                                 "The spirit is to expose the whole of written scientific knowledge on the topic, as summarized by LLMs."
                             ),
                             html.P(
-                                children=[
-                                    "Caveat: imperfect database (can be curated, crowdsourced, collection method may be improved)",
-                                    "Caveat: Not all communication can be summarized through neatly clustered, discrete call types. But some things can.",
-                                ],
+                                "Caveat: imperfect database (can be curated, crowdsourced, collection method may be improved)"
+                            ),
+                            html.P(
+                                "Caveat: Not all communication can be summarized through neatly clustered, discrete call types. But some things can."
                             ),
                             html.Div(
                                 className="hero__stat hero__stat--inline",
@@ -1177,6 +1177,46 @@ def run_dash_app(
                                         ],
                                     ),
                                 ],
+                            ),
+                        ],
+                    ),
+                    html.Div(
+                        id="conclusion",
+                        className="section section--sub",
+                        children=[
+                            html.Div(
+                                className="section__header",
+                                children=[
+                                    html.Div(
+                                        [
+                                            html.P(
+                                                section_text("conclusion", "kicker"),
+                                                className="section__kicker",
+                                            ),
+                                            html.H2(
+                                                section_text("conclusion", "title"),
+                                                className="section__title",
+                                            ),
+                                        ]
+                                    )
+                                ],
+                            ),
+                            html.P(
+                                "Insight: distance in acoustic space and semantic space can be calculated from text. Pros/Cons."
+                            ),
+                            html.P(
+                                "Knowledge is compressed, must be curated, can be exposed and exploited."
+                            ),
+                            html.P("Warning: quality of current results"),
+                            html.P(
+                                "One result: sounds and meanings follow each other. Across families? Across habitats? Relative to species vocal range?"
+                            ),
+                            html.P("Next step: gather sounds."),
+                            html.P(
+                                "Open questions: reconstruct ancient sounds, reconstruct ancient meanings, and their history through evolution pressures."
+                            ),
+                            html.P(
+                                "Open questions: combination of sounds, feature interpretations.",
                             ),
                         ],
                     ),
