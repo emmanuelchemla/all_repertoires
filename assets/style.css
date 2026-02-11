@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
 /* --- Global layout --- */
 .app-root {
   padding: 10px 12px;
@@ -184,18 +186,18 @@
    Base / page
    ========================= */
 :root {
-  --bg: #fbfbfc;
+  --bg: #f2f3f5;
   --surface: #ffffff;
-  --surface-2: #f6f7f9;
+  --surface-2: #f7f8fa;
 
-  --text: #111827;
+  --text: #0f172a;
   --muted: #6b7280;
 
-  --border: rgba(17, 24, 39, 0.12);
-  --border-2: rgba(17, 24, 39, 0.08);
+  --border: rgba(15, 23, 42, 0.14);
+  --border-2: rgba(15, 23, 42, 0.08);
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 6px 12px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 18px 40px rgba(15, 23, 42, 0.12);
 
   --radius: 14px;
   --radius-sm: 10px;
@@ -203,9 +205,9 @@
   --pad: 12px;
   --pad-lg: 16px;
 
-  --accent: #2563eb;
-  --accent-2: #7c3aed;
-  --good: #16a34a;
+  --accent: #2f7c6f;
+  --accent-2: #4ca987;
+  --good: #169f5b;
   --bad: #dc2626;
 }
 
@@ -214,6 +216,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family:
+    "Manrope",
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -245,8 +248,8 @@ body {
   border-radius: 16px;
   background: linear-gradient(
     120deg,
-    rgba(37, 99, 235, 0.1),
-    rgba(124, 58, 237, 0.08)
+    rgba(47, 124, 111, 0.16),
+    rgba(76, 169, 135, 0.12)
   );
   border: 1px solid var(--border-2);
   box-shadow: var(--shadow-sm);
@@ -304,33 +307,45 @@ body {
 }
 
 .section {
-  margin-top: 64px;
+  margin-top: 38px;
+  padding: 20px 20px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.section--sub {
+  margin-top: 26px;
+  background: var(--surface-2);
+  box-shadow: var(--shadow-sm);
 }
 
 .section__header {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 10px;
-  padding: 16px 18px;
-  background: #0b1220;
-  color: #f8fafc;
-  border: 1px solid rgba(15, 23, 42, 0.55);
-  border-radius: var(--radius);
-  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.22);
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 0 0 8px 0;
+  background: transparent;
+  color: var(--text);
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid var(--border-2);
 }
 
 .section__header h1,
 .section__header h2,
 .section__header h3,
 .section__header p {
-  color: #f8fafc;
+  color: var(--text);
 }
 
 .section__kicker {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(248, 250, 252, 0.7);
+  color: rgba(15, 23, 42, 0.55);
   font-size: 11px;
   margin: 0 0 2px 0;
 }
@@ -338,7 +353,7 @@ body {
 .section__title {
   margin: 0;
   font-size: 20px;
-  color: #f8fafc;
+  color: var(--text);
 }
 
 .section__intro {

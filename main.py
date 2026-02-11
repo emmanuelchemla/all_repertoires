@@ -421,656 +421,592 @@ def run_dash_app(
                                 [html.Div(item) for item in TODO_ITEMS],
                                 className="hero__todo",
                             ),
+                        ],
+                    ),
+                ],
+            ),
+            html.Div(
+                id="quick-look",
+                className="section section--sub",
+                children=[
+                    html.Div(
+                        className="section__header",
+                        children=[
                             html.Div(
-                                id="quick-look",
-                                className="section section--sub",
+                                [
+                                    html.P(
+                                        section_text("quick-look", "kicker"),
+                                        className="section__kicker",
+                                    ),
+                                    html.H2(
+                                        section_text("quick-look", "title"),
+                                        className="section__title",
+                                    ),
+                                ]
+                            )
+                        ],
+                    ),
+                    html.P(
+                        children=[
+                            "To get a sense of what the database contains, you may look at the list of calls obtained for some species.",
+                        ],
+                    ),
+                    html.Div(
+                        className="hero__species-picker",
+                        children=[
+                            dcc.Dropdown(
+                                id="home-species-dropdown",
+                                options=[
+                                    {
+                                        "label": species_common_name(sp),
+                                        "value": sp,
+                                    }
+                                    for sp in species_unique
+                                ],
+                                placeholder="Select a species",
+                                clearable=True,
+                                style={"width": "320px"},
+                            ),
+                            html.Div(
+                                id="home-species-strip",
+                                className="panel panel--tight selection-strip selection-strip--horizontal",
+                                children=html.Div(
+                                    "Choose a species to preview its calls.",
+                                    className="subtle",
+                                ),
+                            ),
+                        ],
+                    ),
+                ],
+            ),
+            html.Div(
+                id="auto-translation",
+                className="section section--sub",
+                children=[
+                    html.Div(
+                        className="section__header",
+                        children=[
+                            html.Div(
+                                [
+                                    html.P(
+                                        section_text("auto-translation", "kicker"),
+                                        className="section__kicker",
+                                    ),
+                                    html.H2(
+                                        section_text("auto-translation", "title"),
+                                        className="section__title",
+                                    ),
+                                ]
+                            )
+                        ],
+                    ),
+                    html.Div(
+                        children=[
+                            html.P(
+                                "We can now measure distances between calls: the descriptions of the calls may be more or less similar."
+                            ),
+                            html.P(
+                                "Calls can thus be found to be close in semantic space, or in acoustic space, or in both. This may be symptoms of different evolutionary stories! Calls close in acoustic space may be coming from a way to produce a sound that a common ancestor invented (or that was invented several times). These sounds may have been created for the same function, or they may have retained their original function from the ancestor, or they function may have shifted with time and generations..."
+                            ),
+                            html.P(
+                                "In practice, consider the call in one species. Its closest call (in semantic space) in another species is the best guess of a... 'translation'! While this is the best guess of a translation, there are systematic reasons why it may be off, including:"
+                            ),
+                            html.Ul(
+                                children=[
+                                    html.Li(
+                                        "While there are now many tools to do this, we can never perfectly measure the 'distance' between two descriptions."
+                                    ),
+                                    html.Li(
+                                        "A call in one species may not have an equivalent in another species. There will still be a closest call, but it might not be very close."
+                                    ),
+                                    html.Li(
+                                        "A call could be used to signal 'predators' in two species, but these predators may differ (similar to how 'president' might map to 'prime minister' across cultures)."
+                                    ),
+                                    html.Li(
+                                        "On the acoustic side of things, there is an interesting equivalent to the issue above. A vocalization described as 'high-pitch' may correspond to very different sounds when concerning, say, bats and elephants. That is, the description are relative to the species. This is both a weakness and a strength, maybe in some cases say the highest pitched sounds, or the longest sounds, or the most energetic sounds in the range of a given species are used to carry similar meanings across species."
+                                    ),
+                                ]
+                            ),
+                            html.P(
+                                "With all of these issues in mind, we can now construct the best possible translation of calls across species, as if we could have bilingual dictionaries!"
+                            ),
+                            html.Ul(
+                                children=[
+                                    html.Li(
+                                        children=[
+                                            "To get 'translations', look for ",
+                                            html.Span(
+                                                "semantic",
+                                                style={"fontStyle": "italic"},
+                                            ),
+                                            " nearest neighbors.",
+                                        ]
+                                    ),
+                                    html.Li(
+                                        "Use the Acoustic representation space to get a sense of acoustic similarities between calls."
+                                    ),
+                                    html.Li(
+                                        "Use the Boxes representation for a mapping between calls, bilingual dictionary like."
+                                    ),
+                                ]
+                            ),
+                        ]
+                    ),
+                    html.Div(
+                        className="hero__pair-mini",
+                        children=[
+                            html.Div(
+                                className="hero__pair-controls",
                                 children=[
                                     html.Div(
-                                        className="section__header",
+                                        style={
+                                            "display": "flex",
+                                            "alignItems": "center",
+                                            "gap": "12px",
+                                            "width": "460px",
+                                        },
                                         children=[
-                                            html.Div(
-                                                [
-                                                    html.P(
-                                                        section_text(
-                                                            "quick-look", "kicker"
-                                                        ),
-                                                        className="section__kicker",
-                                                    ),
-                                                    html.H2(
-                                                        section_text(
-                                                            "quick-look", "title"
-                                                        ),
-                                                        className="section__title",
-                                                    ),
-                                                ]
-                                            )
-                                        ],
-                                    ),
-                                    html.P(
-                                        children=[
-                                            "To get a sense of what the database contains, you may look at the list of calls obtained for some species.",
-                                        ],
-                                    ),
-                                    html.Div(
-                                        className="hero__species-picker",
-                                        children=[
+                                            html.Span(
+                                                "Species 1",
+                                                className="taxonomy-controls__label",
+                                                style={
+                                                    "fontSize": "13px",
+                                                    "opacity": 0.7,
+                                                    "margin": "0",
+                                                    "minWidth": "130px",
+                                                    "textAlign": "right",
+                                                },
+                                            ),
                                             dcc.Dropdown(
-                                                id="home-species-dropdown",
+                                                id="home-pair-species-1",
                                                 options=[
                                                     {
-                                                        "label": species_common_name(
-                                                            sp
-                                                        ),
+                                                        "label": species_common_name(sp),
                                                         "value": sp,
                                                     }
                                                     for sp in species_unique
                                                 ],
-                                                placeholder="Select a species",
+                                                placeholder="Species 1",
                                                 clearable=True,
                                                 style={"width": "320px"},
                                             ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        style={
+                                            "display": "flex",
+                                            "alignItems": "center",
+                                            "gap": "12px",
+                                            "width": "460px",
+                                        },
+                                        children=[
+                                            html.Span(
+                                                "Species 2",
+                                                className="taxonomy-controls__label",
+                                                style={
+                                                    "fontSize": "13px",
+                                                    "opacity": 0.7,
+                                                    "margin": "0",
+                                                    "minWidth": "130px",
+                                                    "textAlign": "right",
+                                                },
+                                            ),
+                                            dcc.Dropdown(
+                                                id="home-pair-species-2",
+                                                options=[
+                                                    {
+                                                        "label": species_common_name(sp),
+                                                        "value": sp,
+                                                    }
+                                                    for sp in species_unique
+                                                ],
+                                                placeholder="Species 2",
+                                                clearable=True,
+                                                style={"width": "320px"},
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        style={
+                                            "display": "flex",
+                                            "alignItems": "center",
+                                            "gap": "12px",
+                                            "width": "720px",
+                                        },
+                                        children=[
+                                            html.Span(
+                                                "Representation space",
+                                                className="taxonomy-controls__label",
+                                                style={
+                                                    "fontSize": "13px",
+                                                    "opacity": 0.7,
+                                                    "margin": "0",
+                                                    "minWidth": "130px",
+                                                    "textAlign": "right",
+                                                },
+                                            ),
+                                            dcc.RadioItems(
+                                                id="home-pair-repr-space",
+                                                options=[
+                                                    {
+                                                        "label": "Semantic",
+                                                        "value": "semantic",
+                                                    },
+                                                    {
+                                                        "label": "Acoustic",
+                                                        "value": "acoustic",
+                                                    },
+                                                    {
+                                                        "label": "Boxes",
+                                                        "value": "boxes",
+                                                    },
+                                                ],
+                                                value="acoustic",
+                                                inline=True,
+                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        style={
+                                            "display": "flex",
+                                            "alignItems": "center",
+                                            "gap": "12px",
+                                            "width": "720px",
+                                        },
+                                        id="home-pair-dim-wrapper",
+                                        children=[
+                                            html.Span(
+                                                "Dimension",
+                                                className="taxonomy-controls__label",
+                                                style={
+                                                    "fontSize": "13px",
+                                                    "opacity": 0.7,
+                                                    "margin": "0",
+                                                    "paddingLeft": "142px",
+                                                    "minWidth": 0,
+                                                    "textAlign": "left",
+                                                },
+                                            ),
+                                            dcc.RadioItems(
+                                                id="home-pair-dim",
+                                                options=[
+                                                    {"label": "2D", "value": 2},
+                                                    {"label": "3D", "value": 3},
+                                                ],
+                                                value=3,
+                                                inline=True,
+                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        style={
+                                            "display": "flex",
+                                            "alignItems": "center",
+                                            "gap": "12px",
+                                            "width": "460px",
+                                        },
+                                        children=[
+                                            html.Span(
+                                                "Nearest neighbors",
+                                                className="taxonomy-controls__label",
+                                                style={
+                                                    "fontSize": "13px",
+                                                    "opacity": 0.7,
+                                                    "margin": "0",
+                                                    "minWidth": "130px",
+                                                    "textAlign": "right",
+                                                },
+                                            ),
+                                            dcc.RadioItems(
+                                                id="home-pair-space",
+                                                options=[
+                                                    {"label": "Semantic", "value": "semantic"},
+                                                    {"label": "Acoustic", "value": "acoustic"},
+                                                ],
+                                                value="semantic",
+                                                inline=True,
+                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                            ),
+                                        ],
+                                    ),
+                                    html.Div(
+                                        className="hero__pair-threshold",
+                                        style={
+                                            "display": "flex",
+                                            "alignItems": "center",
+                                            "gap": "12px",
+                                            "marginTop": "6px",
+                                            "width": "460px",
+                                        },
+                                        children=[
+                                            html.Span(
+                                                "Thresholding",
+                                                className="taxonomy-controls__label",
+                                                style={
+                                                    "fontSize": "13px",
+                                                    "opacity": 0.7,
+                                                    "margin": "0",
+                                                    "minWidth": "130px",
+                                                    "textAlign": "right",
+                                                },
+                                            ),
                                             html.Div(
-                                                id="home-species-strip",
-                                                className="panel panel--tight selection-strip selection-strip--horizontal",
-                                                children=html.Div(
-                                                    "Choose a species to preview its calls.",
-                                                    className="subtle",
+                                                dcc.Slider(
+                                                    id="home-pair-threshold",
+                                                    min=0,
+                                                    max=1,
+                                                    step=0.01,
+                                                    value=0,
+                                                    marks={0: "0", 1: "1"},
+                                                    tooltip={
+                                                        "placement": "bottom",
+                                                        "always_visible": False,
+                                                    },
                                                 ),
+                                                style={"flex": 1},
                                             ),
                                         ],
                                     ),
                                 ],
+                                style={"flexDirection": "column", "alignItems": "flex-start"},
                             ),
                             html.Div(
-                                id="auto-translation",
-                                className="section section--sub",
+                                style={
+                                    "display": "flex",
+                                    "gap": "16px",
+                                    "alignItems": "flex-start",
+                                    "flexWrap": "wrap",
+                                },
                                 children=[
-                                    html.Div(
-                                        className="section__header",
-                                        children=[
-                                            html.Div(
-                                                [
-                                                    html.P(
-                                                        section_text(
-                                                            "auto-translation", "kicker"
-                                                        ),
-                                                        className="section__kicker",
-                                                    ),
-                                                    html.H2(
-                                                        section_text(
-                                                            "auto-translation", "title"
-                                                        ),
-                                                        className="section__title",
-                                                    ),
-                                                ]
-                                            )
-                                        ],
+                                    dcc.Graph(
+                                        id="home-pair-graph",
+                                        className="pair-graph pair-graph--mini",
+                                        figure=go.Figure(),
+                                        style={"flex": "1 1 520px"},
                                     ),
                                     html.Div(
-                                        children=[
-                                            html.P(
-                                                "We can now measure distances between calls: the descriptions of the calls may be more or less similar."
-                                            ),
-                                            html.P(
-                                                "Calls can thus be found to be close in semantic space, or in acoustic space, or in both. This may be symptoms of different evolutionary stories! Calls close in acoustic space may be coming from a way to produce a sound that a common ancestor invented (or that was invented several times). These sounds may have been created for the same function, or they may have retained their original function from the ancestor, or they function may have shifted with time and generations..."
-                                            ),
-                                            html.P(
-                                                "In practice, consider the call in one species. Its closest call (in semantic space) in another species is the best guess of a... 'translation'! While this is the best guess of a translation, there are systematic reasons why it may be off, including:"
-                                            ),
-                                            html.Ul(
-                                                children=[
-                                                    html.Li(
-                                                        "While there are now many tools to do this, we can never perfectly measure the 'distance' between two descriptions."
-                                                    ),
-                                                    html.Li(
-                                                        "A call in one species may not have an equivalent in another species. There will still be a closest call, but it might not be very close."
-                                                    ),
-                                                    html.Li(
-                                                        "A call could be used to signal 'predators' in two species, but these predators may differ (similar to how 'president' might map to 'prime minister' across cultures)."
-                                                    ),
-                                                    html.Li(
-                                                        "On the acoustic side of things, there is an interesting equivalent to the issue above. A vocalization described as 'high-pitch' may correspond to very different sounds when concerning, say, bats and elephants. That is, the description are relative to the species. This is both a weakness and a strength, maybe in some cases say the highest pitched sounds, or the longest sounds, or the most energetic sounds in the range of a given species are used to carry similar meanings across species."
-                                                    ),
-                                                ]
-                                            ),
-                                            html.P(
-                                                "With all of these issues in mind, we can now construct the best possible translation of calls across species, as if we could have bilingual dictionaries!"
-                                            ),
-                                            html.Ul(
-                                                children=[
-                                                    html.Li(
-                                                        children=[
-                                                            "To get 'translations', look for ",
-                                                            html.Span(
-                                                                "semantic",
-                                                                style={
-                                                                    "fontStyle": "italic"
-                                                                },
-                                                            ),
-                                                            " nearest neighbors.",
-                                                        ]
-                                                    ),
-                                                    html.Li(
-                                                        "Use the Acoustic representation space to get a sense of acoustic similarities between calls."
-                                                    ),
-                                                    html.Li(
-                                                        "Use the Boxes representation for a mapping between calls, bilingual dictionary like."
-                                                    ),
-                                                ]
-                                            ),
-                                        ]
-                                    ),
-                                    html.Div(
-                                        className="hero__pair-mini",
-                                        children=[
-                                            html.Div(
-                                                className="hero__pair-controls",
-                                                children=[
-                                                    html.Div(
-                                                        style={
-                                                            "display": "flex",
-                                                            "alignItems": "center",
-                                                            "gap": "12px",
-                                                            "width": "460px",
-                                                        },
-                                                        children=[
-                                                            html.Span(
-                                                                "Species 1",
-                                                                className="taxonomy-controls__label",
-                                                                style={
-                                                                    "fontSize": "13px",
-                                                                    "opacity": 0.7,
-                                                                    "margin": "0",
-                                                                    "minWidth": "130px",
-                                                                    "textAlign": "right",
-                                                                },
-                                                            ),
-                                                            dcc.Dropdown(
-                                                                id="home-pair-species-1",
-                                                                options=[
-                                                                    {
-                                                                        "label": species_common_name(
-                                                                            sp
-                                                                        ),
-                                                                        "value": sp,
-                                                                    }
-                                                                    for sp in species_unique
-                                                                ],
-                                                                placeholder="Species 1",
-                                                                clearable=True,
-                                                                style={
-                                                                    "width": "320px"
-                                                                },
-                                                            ),
-                                                        ],
-                                                    ),
-                                                    html.Div(
-                                                        style={
-                                                            "display": "flex",
-                                                            "alignItems": "center",
-                                                            "gap": "12px",
-                                                            "width": "460px",
-                                                        },
-                                                        children=[
-                                                            html.Span(
-                                                                "Species 2",
-                                                                className="taxonomy-controls__label",
-                                                                style={
-                                                                    "fontSize": "13px",
-                                                                    "opacity": 0.7,
-                                                                    "margin": "0",
-                                                                    "minWidth": "130px",
-                                                                    "textAlign": "right",
-                                                                },
-                                                            ),
-                                                            dcc.Dropdown(
-                                                                id="home-pair-species-2",
-                                                                options=[
-                                                                    {
-                                                                        "label": species_common_name(
-                                                                            sp
-                                                                        ),
-                                                                        "value": sp,
-                                                                    }
-                                                                    for sp in species_unique
-                                                                ],
-                                                                placeholder="Species 2",
-                                                                clearable=True,
-                                                                style={
-                                                                    "width": "320px"
-                                                                },
-                                                            ),
-                                                        ],
-                                                    ),
-                                                    html.Div(
-                                                        style={
-                                                            "display": "flex",
-                                                            "alignItems": "center",
-                                                            "gap": "12px",
-                                                            "width": "720px",
-                                                        },
-                                                        children=[
-                                                            html.Span(
-                                                                "Representation space",
-                                                                className="taxonomy-controls__label",
-                                                                style={
-                                                                    "fontSize": "13px",
-                                                                    "opacity": 0.7,
-                                                                    "margin": "0",
-                                                                    "minWidth": "130px",
-                                                                    "textAlign": "right",
-                                                                },
-                                                            ),
-                                                            dcc.RadioItems(
-                                                                id="home-pair-repr-space",
-                                                                options=[
-                                                                    {
-                                                                        "label": "Semantic",
-                                                                        "value": "semantic",
-                                                                    },
-                                                                    {
-                                                                        "label": "Acoustic",
-                                                                        "value": "acoustic",
-                                                                    },
-                                                                    {
-                                                                        "label": "Boxes",
-                                                                        "value": "boxes",
-                                                                    },
-                                                                ],
-                                                                value="acoustic",
-                                                                inline=True,
-                                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
-                                                            ),
-                                                        ],
-                                                    ),
-                                                    html.Div(
-                                                        style={
-                                                            "display": "flex",
-                                                            "alignItems": "center",
-                                                            "gap": "12px",
-                                                            "width": "720px",
-                                                        },
-                                                        id="home-pair-dim-wrapper",
-                                                        children=[
-                                                            html.Span(
-                                                                "Dimension",
-                                                                className="taxonomy-controls__label",
-                                                                style={
-                                                                    "fontSize": "13px",
-                                                                    "opacity": 0.7,
-                                                                    "margin": "0",
-                                                                    "paddingLeft": "142px",
-                                                                    "minWidth": 0,
-                                                                    "textAlign": "left",
-                                                                },
-                                                            ),
-                                                            dcc.RadioItems(
-                                                                id="home-pair-dim",
-                                                                options=[
-                                                                    {
-                                                                        "label": "2D",
-                                                                        "value": 2,
-                                                                    },
-                                                                    {
-                                                                        "label": "3D",
-                                                                        "value": 3,
-                                                                    },
-                                                                ],
-                                                                value=3,
-                                                                inline=True,
-                                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
-                                                            ),
-                                                        ],
-                                                    ),
-                                                    html.Div(
-                                                        style={
-                                                            "display": "flex",
-                                                            "alignItems": "center",
-                                                            "gap": "12px",
-                                                            "width": "460px",
-                                                        },
-                                                        children=[
-                                                            html.Span(
-                                                                "Nearest neighbors",
-                                                                className="taxonomy-controls__label",
-                                                                style={
-                                                                    "fontSize": "13px",
-                                                                    "opacity": 0.7,
-                                                                    "margin": "0",
-                                                                    "minWidth": "130px",
-                                                                    "textAlign": "right",
-                                                                },
-                                                            ),
-                                                            dcc.RadioItems(
-                                                                id="home-pair-space",
-                                                                options=[
-                                                                    {
-                                                                        "label": "Semantic",
-                                                                        "value": "semantic",
-                                                                    },
-                                                                    {
-                                                                        "label": "Acoustic",
-                                                                        "value": "acoustic",
-                                                                    },
-                                                                ],
-                                                                value="semantic",
-                                                                inline=True,
-                                                                className="taxonomy-controls__radio taxonomy-controls__radio--compact",
-                                                            ),
-                                                        ],
-                                                    ),
-                                                    html.Div(
-                                                        className="hero__pair-threshold",
-                                                        style={
-                                                            "display": "flex",
-                                                            "alignItems": "center",
-                                                            "gap": "12px",
-                                                            "marginTop": "6px",
-                                                            "width": "460px",
-                                                        },
-                                                        children=[
-                                                            html.Span(
-                                                                "Thresholding",
-                                                                className="taxonomy-controls__label",
-                                                                style={
-                                                                    "fontSize": "13px",
-                                                                    "opacity": 0.7,
-                                                                    "margin": "0",
-                                                                    "minWidth": "130px",
-                                                                    "textAlign": "right",
-                                                                },
-                                                            ),
-                                                            html.Div(
-                                                                dcc.Slider(
-                                                                    id="home-pair-threshold",
-                                                                    min=0,
-                                                                    max=1,
-                                                                    step=0.01,
-                                                                    value=0,
-                                                                    marks={
-                                                                        0: "0",
-                                                                        1: "1",
-                                                                    },
-                                                                    tooltip={
-                                                                        "placement": "bottom",
-                                                                        "always_visible": False,
-                                                                    },
-                                                                ),
-                                                                style={"flex": 1},
-                                                            ),
-                                                        ],
-                                                    ),
-                                                ],
-                                                style={
-                                                    "flexDirection": "column",
-                                                    "alignItems": "flex-start",
-                                                },
-                                            ),
-                                            html.Div(
-                                                style={
-                                                    "display": "flex",
-                                                    "gap": "16px",
-                                                    "alignItems": "flex-start",
-                                                    "flexWrap": "wrap",
-                                                },
-                                                children=[
-                                                    dcc.Graph(
-                                                        id="home-pair-graph",
-                                                        className="pair-graph pair-graph--mini",
-                                                        figure=go.Figure(),
-                                                        style={"flex": "1 1 520px"},
-                                                    ),
-                                                    html.Div(
-                                                        id="home-pair-hover",
-                                                        className="panel panel--tight",
-                                                        style={
-                                                            "flex": "0 0 320px",
-                                                            "minWidth": "280px",
-                                                            "maxHeight": "420px",
-                                                            "overflowY": "auto",
-                                                        },
-                                                        children="Hover a call to see details.",
-                                                    ),
-                                                ],
-                                            ),
-                                        ],
+                                        id="home-pair-hover",
+                                        className="panel panel--tight",
+                                        style={
+                                            "flex": "0 0 320px",
+                                            "minWidth": "280px",
+                                            "maxHeight": "420px",
+                                            "overflowY": "auto",
+                                        },
+                                        children="Hover a call to see details.",
                                     ),
                                 ],
                             ),
+                        ],
+                    ),
+                ],
+            ),
+            html.Div(
+                id="multispecies",
+                className="section section--sub",
+                children=[
+                    html.Div(
+                        className="section__header",
+                        children=[
                             html.Div(
-                                id="multispecies",
-                                className="section section--sub",
-                                children=[
-                                    html.Div(
-                                        className="section__header",
-                                        children=[
-                                            html.Div(
-                                                [
-                                                    html.P(
-                                                        section_text(
-                                                            "multispecies", "kicker"
-                                                        ),
-                                                        className="section__kicker",
-                                                    ),
-                                                    html.H2(
-                                                        section_text(
-                                                            "multispecies", "title"
-                                                        ),
-                                                        className="section__title",
-                                                    ),
-                                                ]
-                                            )
-                                        ],
-                                    ),
+                                [
                                     html.P(
-                                        "The same 'translation' attempt can be pursued across many species at once. Below, the calls are plotted in acoustic space (closest calls sound more similar). Clicking on a call displays the most semantically similar call of each of the other species.",
+                                        section_text("multispecies", "kicker"),
+                                        className="section__kicker",
                                     ),
-                                    dcc.Store(id="home-umap-selected", data=None),
+                                    html.H2(
+                                        section_text("multispecies", "title"),
+                                        className="section__title",
+                                    ),
+                                ]
+                            )
+                        ],
+                    ),
+                    html.P(
+                        "The same 'translation' attempt can be pursued across many species at once. Below, the calls are plotted in acoustic space (closest calls sound more similar). Clicking on a call displays the most semantically similar call of each of the other species.",
+                    ),
+                    dcc.Store(id="home-umap-selected", data=None),
+                    html.Div(
+                        className="hero__multispecies",
+                        children=[
+                            html.Div(
+                                className="hero__multi-controls",
+                                children=[
+                                    dcc.Dropdown(
+                                        id="home-group-select",
+                                        options=[
+                                            {"label": "All species", "value": "All"},
+                                            *[
+                                                {"label": g, "value": g}
+                                                for g in sorted(
+                                                    {"Primates", "Primates (no Apes)", "Apes"}
+                                                    | group_values
+                                                )
+                                            ],
+                                        ],
+                                        value="All",
+                                        clearable=False,
+                                    ),
+                                    dcc.RadioItems(
+                                        id="home-dim-select",
+                                        options=[
+                                            {"label": "2D space", "value": 2},
+                                            {"label": "3D space", "value": 3},
+                                        ],
+                                        value=3,
+                                        inline=True,
+                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
+                                    ),
                                     html.Div(
-                                        className="hero__multispecies",
+                                        className="hero__pair-threshold",
+                                        style={
+                                            "display": "flex",
+                                            "alignItems": "center",
+                                            "gap": "8px",
+                                            "marginTop": "6px",
+                                            "width": "340px",
+                                        },
                                         children=[
-                                            html.Div(
-                                                className="hero__multi-controls",
-                                                children=[
-                                                    dcc.Dropdown(
-                                                        id="home-group-select",
-                                                        options=[
-                                                            {
-                                                                "label": "All species",
-                                                                "value": "All",
-                                                            },
-                                                            *[
-                                                                {"label": g, "value": g}
-                                                                for g in sorted(
-                                                                    {
-                                                                        "Primates",
-                                                                        "Primates (no Apes)",
-                                                                        "Apes",
-                                                                    }
-                                                                    | group_values
-                                                                )
-                                                            ],
-                                                        ],
-                                                        value="All",
-                                                        clearable=False,
-                                                    ),
-                                                    dcc.RadioItems(
-                                                        id="home-dim-select",
-                                                        options=[
-                                                            {
-                                                                "label": "2D space",
-                                                                "value": 2,
-                                                            },
-                                                            {
-                                                                "label": "3D space",
-                                                                "value": 3,
-                                                            },
-                                                        ],
-                                                        value=3,
-                                                        inline=True,
-                                                        className="taxonomy-controls__radio taxonomy-controls__radio--compact",
-                                                    ),
-                                                    html.Div(
-                                                        className="hero__pair-threshold",
-                                                        style={
-                                                            "display": "flex",
-                                                            "alignItems": "center",
-                                                            "gap": "8px",
-                                                            "marginTop": "6px",
-                                                            "width": "340px",
-                                                        },
-                                                        children=[
-                                                            html.Span(
-                                                                "Thresholding",
-                                                                className="taxonomy-controls__label",
-                                                                style={
-                                                                    "fontSize": "13px",
-                                                                    "opacity": 0.7,
-                                                                    "margin": "0",
-                                                                },
-                                                            ),
-                                                            dcc.Slider(
-                                                                id="home-umap-threshold",
-                                                                min=0,
-                                                                max=1,
-                                                                step=0.01,
-                                                                value=0,
-                                                                marks={0: "0", 1: "1"},
-                                                                tooltip={
-                                                                    "placement": "bottom",
-                                                                    "always_visible": False,
-                                                                },
-                                                            ),
-                                                        ],
-                                                    ),
-                                                ],
+                                            html.Span(
+                                                "Thresholding",
+                                                className="taxonomy-controls__label",
+                                                style={
+                                                    "fontSize": "13px",
+                                                    "opacity": 0.7,
+                                                    "margin": "0",
+                                                },
                                             ),
-                                            html.Div(
-                                                className="hero__multi-layout",
-                                                children=[
-                                                    dcc.Graph(
-                                                        id="home-umap-graph",
-                                                        className="static-graph",
-                                                        figure=go.Figure(),
-                                                    ),
-                                                    html.Div(
-                                                        id="home-umap-hover",
-                                                        className="panel panel--tight",
-                                                        children="Hover a point to see its details.",
-                                                    ),
-                                                ],
+                                            dcc.Slider(
+                                                id="home-umap-threshold",
+                                                min=0,
+                                                max=1,
+                                                step=0.01,
+                                                value=0,
+                                                marks={0: "0", 1: "1"},
+                                                tooltip={
+                                                    "placement": "bottom",
+                                                    "always_visible": False,
+                                                },
                                             ),
                                         ],
                                     ),
+                                ],
+                            ),
+                            html.Div(
+                                className="hero__multi-layout",
+                                children=[
+                                    dcc.Graph(
+                                        id="home-umap-graph",
+                                        className="static-graph",
+                                        figure=go.Figure(),
+                                    ),
                                     html.Div(
-                                        id="mantel",
-                                        className="section section--sub",
-                                        children=[
-                                            html.Div(
-                                                className="section__header",
-                                                children=[
-                                                    html.Div(
-                                                        [
-                                                            html.P(
-                                                                section_text(
-                                                                    "mantel", "kicker"
-                                                                ),
-                                                                className="section__kicker",
-                                                            ),
-                                                            html.H2(
-                                                                section_text(
-                                                                    "mantel", "title"
-                                                                ),
-                                                                className="section__title",
-                                                            ),
-                                                        ]
-                                                    )
-                                                ],
-                                            ),
-                                            html.P(
-                                                children=[
-                                                    "One important result at this stage is that more similar sounding vocalizations have more similar meanings. This could be a sign of two fascinating possibilities:",
-                                                ],
-                                            ),
-                                            html.Ul(
-                                                children=[
-                                                    html.Li(
-                                                        "common descent (some calls existed a long time ago and were preserved across multiple species)",
-                                                    ),
-                                                    html.Li(
-                                                        "a biological code (calls mean what they mean for a reason; e.g., high energy relates to some meanings)",
-                                                    ),
-                                                ],
-                                            ),
-                                            html.P(
-                                                children=[
-                                                    "To assess this, we can calculate all the distances between any pair of calls in acoustic space, and all the distances between any pair of calls in semantic space. Tests consistently show that the two distances covary, i.e. when two calls are close acoustically, they are close semantically.",
-                                                ]
-                                            ),
-                                            html.Div(
-                                                className="hero__multi-controls",
-                                                children=[
-                                                    dcc.Dropdown(
-                                                        id="home-mantel-group",
-                                                        options=[
-                                                            {
-                                                                "label": "All species",
-                                                                "value": "All",
-                                                            },
-                                                            *[
-                                                                {"label": g, "value": g}
-                                                                for g in sorted(
-                                                                    {
-                                                                        "Primates",
-                                                                        "Primates (no Apes)",
-                                                                        "Apes",
-                                                                    }
-                                                                    | group_values
-                                                                )
-                                                            ],
-                                                        ],
-                                                        value="All",
-                                                        clearable=False,
-                                                    ),
-                                                ],
-                                            ),
-                                            html.Div(
-                                                className="static-row",
-                                                children=[
-                                                    dcc.Graph(
-                                                        id="home-heat-acoustic",
-                                                        className="static-graph",
-                                                    ),
-                                                    dcc.Graph(
-                                                        id="home-heat-semantic",
-                                                        className="static-graph",
-                                                    ),
-                                                ],
-                                            ),
-                                            html.Div(
-                                                className="panel panel--tight",
-                                                children=[
-                                                    html.Div(
-                                                        "Mantel correlations between acoustic and semantic spaces",
-                                                        style={"fontWeight": "bold"},
-                                                    ),
-                                                    html.Div(
-                                                        id="home-mantel",
-                                                        className="mantel-inline",
-                                                        children="Computing…",
-                                                    ),
-                                                ],
-                                            ),
-                                        ],
+                                        id="home-umap-hover",
+                                        className="panel panel--tight",
+                                        children="Hover a point to see its details.",
                                     ),
                                 ],
                             ),
                         ],
                     ),
                     html.Div(
-                        id="static-plots",
-                        className="section section--static",
+                        id="mantel",
+                        className="section section--sub",
                         children=[
+                            html.Div(
+                                className="section__header",
+                                children=[
+                                    html.Div(
+                                        [
+                                            html.P(
+                                                section_text("mantel", "kicker"),
+                                                className="section__kicker",
+                                            ),
+                                            html.H2(
+                                                section_text("mantel", "title"),
+                                                className="section__title",
+                                            ),
+                                        ]
+                                    )
+                                ],
+                            ),
+                            html.P(
+                                children=[
+                                    "One important result at this stage is that more similar sounding vocalizations have more similar meanings. This could be a sign of two fascinating possibilities:",
+                                ],
+                            ),
+                            html.Ul(
+                                children=[
+                                    html.Li(
+                                        "common descent (some calls existed a long time ago and were preserved across multiple species)",
+                                    ),
+                                    html.Li(
+                                        "a biological code (calls mean what they mean for a reason; e.g., high energy relates to some meanings)",
+                                    ),
+                                ],
+                            ),
+                            html.P(
+                                children=[
+                                    "To assess this, we can calculate all the distances between any pair of calls in acoustic space, and all the distances between any pair of calls in semantic space. Tests consistently show that the two distances covary, i.e. when two calls are close acoustically, they are close semantically.",
+                                ]
+                            ),
+                            html.Div(
+                                className="hero__multi-controls",
+                                children=[
+                                    dcc.Dropdown(
+                                        id="home-mantel-group",
+                                        options=[
+                                            {"label": "All species", "value": "All"},
+                                            *[
+                                                {"label": g, "value": g}
+                                                for g in sorted(
+                                                    {"Primates", "Primates (no Apes)", "Apes"}
+                                                    | group_values
+                                                )
+                                            ],
+                                        ],
+                                        value="All",
+                                        clearable=False,
+                                    ),
+                                ],
+                            ),
+                            html.Div(
+                                className="static-row",
+                                children=[
+                                    dcc.Graph(
+                                        id="home-heat-acoustic",
+                                        className="static-graph",
+                                    ),
+                                    dcc.Graph(
+                                        id="home-heat-semantic",
+                                        className="static-graph",
+                                    ),
+                                ],
+                            ),
+                            html.Div(
+                                className="panel panel--tight",
+                                children=[
+                                    html.Div(
+                                        "Mantel correlations between acoustic and semantic spaces",
+                                        style={"fontWeight": "bold"},
+                                    ),
+                                    html.Div(
+                                        id="home-mantel",
+                                        className="mantel-inline",
+                                        children="Computing…",
+                                    ),
+                                ],
+                            ),
+                        ],
+                    ),
+                ],
+            ),
+            html.Div(
+                id="static-plots",
+                className="section section--static",
+                children=[
                             html.Div(
                                 className="section__header",
                                 children=[
@@ -1518,8 +1454,6 @@ def run_dash_app(
                             ),
                         ],
                     ),
-                ],
-            ),
         ],
     )
 
