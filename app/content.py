@@ -24,14 +24,14 @@ NAV_CONTENT = {
         "quick-look": {
             "link_text": "One Species",
             "link_href": "#quick-look",
-            "kicker": "Single species peek",
-            "title": "Quick look at one species",
+            "kicker": "What the database looks like",
+            "title": "One Species",
         },
         "auto-translation": {
             "link_text": "Two Species",
             "link_href": "#auto-translation",
-            "kicker": "Call-to-call mapping",
-            "title": "Automatically built 'bilingual translation'",
+            "kicker": "Building a 'bilingual translation'",
+            "title": "Two Species'",
         },
         "mantel": {
             "link_text": "Sounds and Meanings",
@@ -40,10 +40,10 @@ NAV_CONTENT = {
             "title": "Calls that sound the same are most likely to be semantically similar",
         },
         "multispecies": {
-            "link_text": "More Species",
+            "link_text": "Many Species",
             "link_href": "#multispecies",
-            "kicker": "Across species",
-            "title": "Multi-species translation in space",
+            "kicker": "Building a 'multi-lingual translation'",
+            "title": "Many Species",
         },
         "static": {
             "link_text": "Database counts",
