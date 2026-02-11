@@ -5,6 +5,10 @@ NAV_CONTENT = {
     "brand": "Cross-species Repertoire Explorer & Translator",
     "nav_order": [
         "home",
+        "quick-look",
+        "auto-translation",
+        "multispecies",
+        "mantel",
         "static",
         "translations",
         "one-species",
@@ -15,6 +19,30 @@ NAV_CONTENT = {
             "link_href": "#home",
             "kicker": "Overview",
             "title": "Home",
+        },
+        "quick-look": {
+            "link_text": "One Species",
+            "link_href": "#quick-look",
+            "kicker": "Single species peek",
+            "title": "Quick look at one species",
+        },
+        "auto-translation": {
+            "link_text": "Two Species",
+            "link_href": "#auto-translation",
+            "kicker": "Call-to-call mapping",
+            "title": "Automatically built bilingual translation",
+        },
+        "mantel": {
+            "link_text": "Sounds and Meanings",
+            "link_href": "#mantel",
+            "kicker": "Do sound-alikes mean the same?",
+            "title": "Calls that sound the same are most likely to be semantically similar",
+        },
+        "multispecies": {
+            "link_text": "More Species",
+            "link_href": "#multispecies",
+            "kicker": "Across species",
+            "title": "Multi-species translation in space",
         },
         "static": {
             "link_text": "Summary plots",
