@@ -30,7 +30,7 @@ NAV_CONTENT = {
             "link_text": "Two Species",
             "link_href": "#auto-translation",
             "kicker": "Call-to-call mapping",
-            "title": "Automatically built bilingual translation",
+            "title": "Automatically built 'bilingual translation'",
         },
         "mantel": {
             "link_text": "Sounds and Meanings",

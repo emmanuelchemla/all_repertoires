@@ -392,8 +392,8 @@ def run_dash_app(
                             ),
                             html.P(
                                 children=[
-                                    "Add caveat: imperfect database (can be curated)",
-                                    "Add caveat: And not all communication can be summarized through the idea of a neatly clustered set of discrete call types. But some things can.",
+                                    "Caveat: imperfect database (can be curated)",
+                                    "Caveat: And not all communication can be summarized through the idea of a neatly clustered set of discrete call types. But some things can.",
                                 ],
                             ),
                             html.Div(
@@ -444,7 +444,7 @@ def run_dash_app(
                                     ),
                                     html.P(
                                         children=[
-                                            "An easy way to get a sense of what the database contains is to look at the list of calls obtained for some species.",
+                                            "To get a sense of what the database contains, you may look at the list of calls obtained for some species.",
                                         ],
                                     ),
                                     html.Div(
@@ -847,7 +847,7 @@ def run_dash_app(
                                         ],
                                     ),
                                     html.P(
-                                        "Here is a multi-species visualization of this same idea. Below, the calls are plotted in acoustic space (closest calls sound more similar). When clicking on a call, you see the calls of the other species that are most similar semantically.",
+                                        "The same 'translation' attempt can be pursued across many species at once. Below, the calls are plotted in acoustic space (closest calls sound more similar). Clicking on a call displays the most semantically similar call of each of the other species.",
                                     ),
                                     dcc.Store(id="home-umap-selected", data=None),
                                     html.Div(
@@ -890,7 +890,7 @@ def run_dash_app(
                                                                 "value": 3,
                                                             },
                                                         ],
-                                                        value=2,
+                                                        value=3,
                                                         inline=True,
                                                         className="taxonomy-controls__radio taxonomy-controls__radio--compact",
                                                     ),
@@ -973,12 +973,7 @@ def run_dash_app(
                                             ),
                                             html.P(
                                                 children=[
-                                                    "One important result at this stage is that ",
-                                                    html.Span(
-                                                        "more similar sounding vocalizations have more similar meanings",
-                                                        className="hero__highlight",
-                                                    ),
-                                                    ". This could be a sign of two fascinating possibilities:",
+                                                    "One important result at this stage is that more similar sounding vocalizations have more similar meanings. This could be a sign of two fascinating possibilities:",
                                                 ],
                                             ),
                                             html.Ul(
@@ -993,7 +988,7 @@ def run_dash_app(
                                             ),
                                             html.P(
                                                 children=[
-                                                    "Below we can see all the pairwise distances between calls in acoustic space, and all the pairwise distance in semantic space. The tests consistently reveal that the two distances have much in common (relatively high value for r, relatively low value for p)",
+                                                    "To assess this, we can calculate all the distances between any pair of calls in acoustic space, and all the distances between any pair of calls in semantic space. Tests consistently show that the two distances covary, i.e. when two calls are close acoustically, they are close semantically.",
                                                 ]
                                             ),
                                             html.Div(
@@ -1024,11 +1019,23 @@ def run_dash_app(
                                                 ],
                                             ),
                                             html.Div(
+                                                className="static-row",
+                                                children=[
+                                                    dcc.Graph(
+                                                        id="home-heat-acoustic",
+                                                        className="static-graph",
+                                                    ),
+                                                    dcc.Graph(
+                                                        id="home-heat-semantic",
+                                                        className="static-graph",
+                                                    ),
+                                                ],
+                                            ),
+                                            html.Div(
                                                 className="panel panel--tight",
                                                 children=[
                                                     html.Div(
-                                                        "Mantel correlations between acoustic and semantic spaces:",
-                                                        className="subtle subtle--tight",
+                                                        "Mantel correlations between acoustic and semantic spaces",
                                                     ),
                                                     html.Div(
                                                         id="home-mantel",
@@ -1164,31 +1171,6 @@ def run_dash_app(
                                                     dcc.Graph(
                                                         id="static-kw-bar",
                                                         className="static-graph static-graph--tall",
-                                                    ),
-                                                ],
-                                            ),
-                                            html.Div(
-                                                className="static-row",
-                                                children=[
-                                                    dcc.Graph(
-                                                        id="static-heat-acoustic",
-                                                        className="static-graph",
-                                                    ),
-                                                    dcc.Graph(
-                                                        id="static-heat-semantic",
-                                                        className="static-graph",
-                                                    ),
-                                                ],
-                                            ),
-                                            html.Div(
-                                                className="static-row",
-                                                children=[
-                                                    html.Div(
-                                                        id="static-mantel",
-                                                        className="panel panel--tight",
-                                                        style={
-                                                            "gridColumn": "span 2",
-                                                        },
                                                     ),
                                                 ],
                                             ),
@@ -1935,30 +1917,83 @@ def run_dash_app(
 
     @app.callback(
         Output("home-mantel", "children"),
+        Output("home-heat-acoustic", "figure"),
+        Output("home-heat-semantic", "figure"),
         Input("home-mantel-group", "value"),
     )
     def _update_home_mantel(group_val):
         idxs = _idxs_for_group(group_val)
+
+        def _heat_subset(embeds, title):
+            if not idxs:
+                return go.Figure().update_layout(
+                    title=f"{title} (none)", template="plotly_white"
+                )
+            ordered = idxs
+            mat = embeds[ordered]
+            mat = mat / (np.linalg.norm(mat, axis=1, keepdims=True) + 1e-9)
+            sims = np.dot(mat, mat.T)
+            labels = [
+                f"{species_icon_map.get(species_all[i], '')} {species_common_name(species_all[i])}: {_strip_parenthetical(calls_all[i].get('call_name',''))}"
+                for i in ordered
+            ]
+            fig = go.Figure(
+                data=go.Heatmap(
+                    z=sims,
+                    x=labels,
+                    y=labels,
+                    colorscale="Blues",
+                    zmin=0,
+                    zmax=1,
+                    hovertemplate="<b>%{y}</b><br>%{x}<br>sim=%{z:.3f}<extra></extra>",
+                )
+            )
+            fig.update_layout(
+                title=title,
+                height=420,
+                margin=dict(l=80, r=20, t=40, b=120),
+                xaxis=dict(showticklabels=False),
+                yaxis=dict(showticklabels=False),
+                template="plotly_white",
+            )
+            return fig
+
         mantel_all = _mantel_stats(acoustic_embeds, semantic_embeds, idxs)
         mantel_cross = _mantel_stats(
             acoustic_embeds, semantic_embeds, idxs, cross_only=True
         )
         mantel_partial = _mantel_partial(acoustic_embeds, semantic_embeds, idxs)
 
-        def fmt(res, label):
-            if res is None:
-                return f"{label}: n/a"
-            r, p = res
-            return f"{label}: r={r:.3f}, p={p:.3f}"
+        def _table_row(label_left, label_mid, res):
+            r_val = f"{res[0]:.3f}" if res else "n/a"
+            p_val = f"{res[1]:.3f}" if res else "n/a"
+            return html.Tr(
+                [
+                    html.Td(html.Strong(label_left)),
+                    html.Td(label_mid),
+                    html.Td(html.I(f"r = {r_val}")),
+                    html.Td(html.I(f"p = {p_val}")),
+                ],
+            )
 
-        return html.Div(
+        mantel_block = html.Table(
             [
-                html.Div(fmt(mantel_all, "Mantel (all pairs)")),
-                html.Div(fmt(mantel_cross, "Mantel (cross-species only)")),
-                html.Div(fmt(mantel_partial, "Partial Mantel (controls for species)")),
+                _table_row("Mantel (weak)", "All pairs of calls", mantel_all),
+                _table_row("", "Cross-species only", mantel_cross),
+                _table_row("Mantel (strong)", "All pairs of calls", mantel_partial),
             ],
-            className="mantel-inline__rows",
+            style={
+                "width": "auto",
+                "borderCollapse": "collapse",
+                "fontSize": "13px",
+            },
+            className="mantel-table",
         )
+
+        fig_heat_a = _heat_subset(acoustic_embeds, "Pairwise acoustic similarities")
+        fig_heat_s = _heat_subset(semantic_embeds, "Pairwise semantic similarities")
+
+        return mantel_block, fig_heat_a, fig_heat_s
 
     @app.callback(
         Output("home-species-strip", "children"),
@@ -1987,14 +2022,10 @@ def run_dash_app(
     @app.callback(
         Output("static-calls-bar", "figure"),
         Output("static-kw-bar", "figure"),
-        Output("static-heat-acoustic", "figure"),
-        Output("static-heat-semantic", "figure"),
-        Output("static-mantel", "children"),
         Input("static-species-store", "data"),
         Input("static-group-select", "value"),
     )
     def _update_static_figs(species_sel, group_filter):
-        # apply group filter first (overrides/adds to species_sel)
         if group_filter and group_filter != "All":
             species_sel = [
                 sp
@@ -2011,116 +2042,7 @@ def run_dash_app(
             ]
         fig_calls = make_calls_bar(species_sel or [])
         fig_kw = make_keyword_bar(species_sel or [])
-        fig_heat_a = make_similarity_heatmap(
-            acoustic_embeds, species_sel or [], "Pairwise acoustic similarities"
-        )
-        fig_heat_s = make_similarity_heatmap(
-            semantic_embeds, species_sel or [], "Pairwise semantic similarities"
-        )
-        mantel_all = _mantel_stats(
-            acoustic_embeds, semantic_embeds, _idxs_for_species(species_sel or [])
-        )
-        mantel_cross = _mantel_stats(
-            acoustic_embeds,
-            semantic_embeds,
-            _idxs_for_species(species_sel or []),
-            cross_only=True,
-        )
-        mantel_strong_all = _mantel_partial(
-            acoustic_embeds, semantic_embeds, _idxs_for_species(species_sel or [])
-        )
-
-        def _fmt(res, label):
-            if res is None:
-                return f"{label}: n/a"
-            r, p = res
-            return f"{label}: r={r:.3f}, p={p:.3f}"
-
-        return (
-            fig_calls,
-            fig_kw,
-            fig_heat_a,
-            fig_heat_s,
-            html.Div(
-                [
-                    html.Strong(
-                        "Correlations between acoustic and semantic (Mantel tests):"
-                    ),
-                    html.Br(),
-                    html.Div(
-                        "Correlations between acoustic and semantic (Mantel tests):",
-                        style={"marginBottom": "4px"},
-                    ),
-                    html.Table(
-                        [
-                            html.Tr(
-                                [
-                                    html.Td(html.Strong("Mantel (weak)")),
-                                    html.Td("All pairs of calls"),
-                                    html.Td(
-                                        html.I(f"r = {mantel_all[0]:.3f}")
-                                        if mantel_all
-                                        else "n/a"
-                                    ),
-                                    html.Td(
-                                        html.I(f"p = {mantel_all[1]:.3f}")
-                                        if mantel_all
-                                        else "n/a"
-                                    ),
-                                ],
-                                style={"borderTop": "2px solid var(--border-strong)"},
-                            ),
-                            html.Tr(
-                                [
-                                    html.Td(""),
-                                    html.Td("Cross-species only"),
-                                    html.Td(
-                                        html.I(f"r = {mantel_cross[0]:.3f}")
-                                        if mantel_cross
-                                        else "n/a"
-                                    ),
-                                    html.Td(
-                                        html.I(f"p = {mantel_cross[1]:.3f}")
-                                        if mantel_cross
-                                        else "n/a"
-                                    ),
-                                ]
-                            ),
-                            html.Tr(
-                                [],
-                                style={"borderTop": "1px solid var(--border-2)"},
-                            ),
-                            html.Tr(
-                                [
-                                    html.Td(html.Strong("Mantel (strong)")),
-                                    html.Td("All pairs of calls"),
-                                    html.Td(
-                                        html.I(f"r = {mantel_strong_all[0]:.3f}")
-                                        if mantel_strong_all
-                                        else "n/a"
-                                    ),
-                                    html.Td(
-                                        html.I(f"p = {mantel_strong_all[1]:.3f}")
-                                        if mantel_strong_all
-                                        else "n/a"
-                                    ),
-                                ],
-                                style={
-                                    "borderTop": "2px solid var(--border-strong)",
-                                    "borderBottom": "2px solid var(--border-strong)",
-                                },
-                            ),
-                        ],
-                        style={
-                            "width": "auto",
-                            "borderCollapse": "collapse",
-                            "fontSize": "13px",
-                        },
-                        className="mantel-table",
-                    ),
-                ]
-            ),
-        )
+        return fig_calls, fig_kw
 
     def _translations_for_idx_and_species(
         selected_idx: int, species_sel: list[str], focus_species: str | None = None
