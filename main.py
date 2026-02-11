@@ -540,14 +540,14 @@ def run_dash_app(
                                                 children=[
                                                     html.Li(
                                                         children=[
-                                                            "Look for nearest ",
+                                                            "To get 'translations', look for ",
                                                             html.Span(
                                                                 "semantic",
                                                                 style={
                                                                     "fontStyle": "italic"
                                                                 },
                                                             ),
-                                                            "neighbors for 'translations'.",
+                                                            " nearest neighbors.",
                                                         ]
                                                     ),
                                                     html.Li(
