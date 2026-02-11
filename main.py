@@ -392,8 +392,8 @@ def run_dash_app(
                             ),
                             html.P(
                                 children=[
-                                    "Caveat: imperfect database (can be curated)",
-                                    "Caveat: And not all communication can be summarized through the idea of a neatly clustered set of discrete call types. But some things can.",
+                                    "Caveat: imperfect database (can be curated, crowdsourced, collection method may be improved)",
+                                    "Caveat: Not all communication can be summarized through neatly clustered, discrete call types. But some things can.",
                                 ],
                             ),
                             html.Div(
@@ -508,10 +508,10 @@ def run_dash_app(
                                                 "We can now measure distances between calls: the descriptions of the calls may be more or less similar."
                                             ),
                                             html.P(
-                                                "Calls can be close in semantic space, or acoustic space, or both, and this means different things! Calls close in acoustic space may be coming from a way to produce a sound that a common ancestor invented (or that was invented several times). They may have (retained) the same meaning (or not)."
+                                                "Calls can thus be found to be close in semantic space, or in acoustic space, or in both. This may be symptoms of different evolutionary stories! Calls close in acoustic space may be coming from a way to produce a sound that a common ancestor invented (or that was invented several times). These sounds may have been created for the same function, or they may have retained their original function from the ancestor, or they function may have shifted with time and generations..."
                                             ),
                                             html.P(
-                                                "For any call, its closest call in semantic space is the best guess of a... 'translation'! While this is the best guess of a translation, there are systematic reasons why it may be off, including:"
+                                                "In practice, consider the call in one species. Its closest call (in semantic space) in another species is the best guess of a... 'translation'! While this is the best guess of a translation, there are systematic reasons why it may be off, including:"
                                             ),
                                             html.Ul(
                                                 children=[
