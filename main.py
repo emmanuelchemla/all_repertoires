@@ -378,15 +378,26 @@ def run_dash_app(
                         className="hero__body",
                         children=[
                             html.P(
+                                "In this prototype, we ask how to collect and expose the whole of written scientific knowledge on non-human animal communication repertoires. ",
+                            ),
+                            html.P(
                                 children=[
-                                    "Through agents and LLMs, we harvested acoustic and semantic descriptions for calls across many species. ",
-                                    "The goal is to collect and expose the whole of written scientific knowledge on non-human animal repertoires. ",
-                                    "Unsurprisingly, this results in an imperfect database, probably with halucinations. ",
-                                    "Also, some may worry that the problem could be ill-posed: Not all communication can be summarized through neatly clustered, discrete call types.",
+                                    "Researchers have recognized that some animals, sometimes, communicate using 'call types': classes of sounds used in the same conditions, "
+                                    "think about 'words', which always sound a bit differently, and have roughly the same usage, or meaning. ",
+                                    "These call types form the 'repertoire' of a species, think about a 'dictionary'. ",
+                                    "Through agents and LLMs, we harvested information about the call types that have been studied. ",
+                                    "We collected acoustic descriptions (how they sound), and semantic descriptions (when they are used, or for what). ",
+                                    "Being machine generated, the result is a large but imperfect database, probably with halucinations. ",
+                                    "Also, some may worry that summarizing communication into neatly clustered, discrete call types is an oversimplification. ",
                                     "While these caveats are real, they have solutions. ",
-                                    "Databases can be curated, and the collection method may be improved. ",
-                                    "Some communication systems are based on call types, and the emerging results seem to confirm the validity of this first-order approach.",
+                                    "Databases can be curated, and the collection method can be improved, in fact, it is likely that it will provide better results as technology progresses. ",
+                                    "Some communication systems are based on call types.",
                                 ]
+                            ),
+                            html.P(
+                                "Overall, the emerging results seem to confirm a posteriori at least the partial validity of this first-order approach. ",
+                                "One result that seems to emerge is that, across species, calls that sound the same, serve similar functions. ",
+                                "We discuss the interpretation of this below, but let us first dive into exploring the raw repertoires!",
                             ),
                             html.Div(
                                 className="hero__stat hero__stat--inline",
