@@ -494,27 +494,34 @@ def run_dash_app(
                     html.Div(
                         children=[
                             html.P(
-                                "We can now measure distances between calls: the descriptions of the calls may be more or less similar."
+                                "By comparing their descriptions, we can measure distances between calls: the descriptions of two calls may be more or less similar."
                             ),
                             html.P(
-                                "Calls can thus be found to be close in semantic space, or in acoustic space, or in both. This may be symptoms of different evolutionary stories! Calls close in acoustic space may be coming from a way to produce a sound that a common ancestor invented (or that was invented several times). These sounds may have been created for the same function, or they may have retained their original function from the ancestor, or they function may have shifted with time and generations..."
+                                children=[
+                                    "Two calls can then be found to be close in semantic space, or in acoustic space, or in both. This may be symptoms of different evolutionary stories! ",
+                                    "Calls close in acoustic space may be coming from a way to produce a sound that a common ancestor invented, or that was invented several times because it was such an obvious idea. ",
+                                    "On the semantic side, these sounds may have been created for the same function because it is such an important domain to communicate about. ",
+                                    "And the acoustic and semantic similarities may converge: calls invented long ago may have retained their original form and function. ",
+                                    "If not, we may be able to evaluate how meanings have shifted with time and generations...",
+                                    "The set of possibilities is large, and studying how the similarities and dissimilarities are distributed in the phylogenetic tree can inform us about the evolutionary pressures on communication. ",
+                                ]
                             ),
                             html.P(
-                                "In practice, consider the call in one species. Its closest call (in semantic space) in another species is the best guess of a... 'translation'! While this is the best guess of a translation, there are systematic reasons why it may be off, including:"
+                                "In practice, consider the call in one species. Its closest call (in semantic space) in another species is the best guess of... a 'translation'! While this is the best guess of a translation, there are systematic reasons why it may be off, including:"
                             ),
                             html.Ul(
                                 children=[
                                     html.Li(
-                                        "While there are now many tools to do this, we can never perfectly measure the 'distance' between two descriptions."
+                                        "While there are now many tools to do this, we can never perfectly measure the 'distance' between two textual descriptions."
                                     ),
                                     html.Li(
                                         "A call in one species may not have an equivalent in another species. There will still be a closest call, but it might not be very close."
                                     ),
                                     html.Li(
-                                        "A call could be used to signal 'predators' in two species, but these predators may differ (similar to how 'president' might map to 'prime minister' across cultures)."
+                                        "A call could be used to signal 'predators' in two species, but these predators may differ (similar to how 'president' might map to 'prime minister' or 'monarch' or 'leader' in different cultures)."
                                     ),
                                     html.Li(
-                                        "On the acoustic side of things, there is an interesting equivalent to the issue above. A vocalization described as 'high-pitch' may correspond to very different sounds when concerning, say, bats and elephants. That is, the description are relative to the species. This is both a weakness and a strength, maybe in some cases say the highest pitched sounds, or the longest sounds, or the most energetic sounds in the range of a given species are used to carry similar meanings across species."
+                                        "On the acoustic side of things, there is an interesting equivalent to the issue above. A vocalization described as 'high-pitch' may correspond to very different sounds when concerning, say, bats and elephants. That is, the descriptions are relative to the species. This is both a weakness and a strength, maybe in some cases say the highest pitched sounds, or the longest sounds, or the most energetic sounds in the range of a given species are used to carry similar meanings across species."
                                     ),
                                 ]
                             ),
