@@ -148,57 +148,31 @@ To decompose the signal into interpretable units, we computed the pointwise mutu
 
 The previous section demonstrates that there is stability in the form-to-meaning mapping. We trained models to exploit this regularity: predicting semantic embeddings from acoustic embeddings under three hold-out conditions of increasing ambition (Table~\ref{tab:prediction}). Within-repertoire, ridge regression achieves a mean cosine similarity of 0.74 and MRR of 0.46---substantially above the random baseline (cos.\ 0.36, MRR 0.11). Generalization to held-out species is equally strong (cos.\ 0.74, MRR 0.80), and remains well above chance even when entire families are held out (cos.\ 0.68, MRR 0.70). The retrieval baseline approaches ridge regression in MRR for held-out conditions, indicating that the acoustic-to-semantic mapping is largely a global alignment of the two spaces rather than a complex nonlinear transformation. The MLP offers no consistent advantage over ridge regression, consistent with this interpretation. Together these results show that the biological code identified by the Mantel analysis is not an artefact of within-species structure: it generalises to species and entire families unseen at training time. In other words, our existing knowledge of species transfers to new species.
 
-\section{Lexical translation across species and into human language}
+\section{Lexical translation across species}
 
 \begin{figure}[t]
 	\centering
-	% placeholder: visual translation figure -- e.g., a chord diagram or force-directed graph
-	% connecting human concepts (left) to animal calls (right), with acoustic spectrograms or
-	% waveform icons and semantic similarity scores
 	\includegraphics[width=\textwidth]{../plots/semantic_umap3d.png}
 	\caption{%
 		\textbf{Cross-species lexical translation.}
-		[Placeholder: For each of ten human concepts (left column), the best-matching animal call in \dbname is identified by semantic embedding proximity. Lines connect each concept to its translation; line thickness encodes cosine similarity. Inset spectrograms (or schematic waveform icons) illustrate the acoustic character of each best-matching call. Color encodes taxonomic class of the matched species. The diversity of matched species and the intuitiveness of many translations---``danger'' $\to$ meerkat alarm call; ``come here'' $\to$ elephant contact rumble---illustrate the reach and coherence of the form-to-meaning code.]
+		[Placeholder: a force-directed graph in which nodes are calls from several species, edges connect nearest semantic neighbours across species, and node color encodes species. Calls from different species that are semantically equivalent cluster together regardless of their acoustic surface form. Insets show example translated pairs---e.g., meerkat alarm call $\leftrightarrow$ vervet alarm call $\leftrightarrow$ chickadee \textit{seet} call---with a condensed semantic gloss. Edge thickness encodes cosine similarity of the matched semantic embeddings.]
 	}
 	\label{fig:translation}
 \end{figure}
 
-\begin{table}[t]
-	\centering
-	\caption{%
-	\textbf{Lexical translation: selected examples.}
-	For each human concept (left), the best-matching call in \dbname by semantic embedding similarity is listed with its cosine similarity score, species, and a condensed acoustic description. [Placeholder: to be filled once translation pipeline is run.]
-	}
-	\label{tab:translation}
-	\begin{tabular}{p{2.8cm}rp{4cm}p{5cm}}
-		\toprule
-		\textbf{Human concept} & \textbf{Sim.} & \textbf{Best-match call} & \textbf{Acoustic description (condensed)} \\
-		\midrule
-		danger                 & ---           & [species] / [call]       & [acoustic]                                \\
-		I am hungry            & ---           & [species] / [call]       & [acoustic]                                \\
-		come here              & ---           & [species] / [call]       & [acoustic]                                \\
-		I am here              & ---           & [species] / [call]       & [acoustic]                                \\
-		stay away              & ---           & [species] / [call]       & [acoustic]                                \\
-		greeting               & ---           & [species] / [call]       & [acoustic]                                \\
-		let's move together    & ---           & [species] / [call]       & [acoustic]                                \\
-		I am afraid            & ---           & [species] / [call]       & [acoustic]                                \\
-		this is mine           & ---           & [species] / [call]       & [acoustic]                                \\
-		help me                & ---           & [species] / [call]       & [acoustic]                                \\
-		\bottomrule
-	\end{tabular}
-\end{table}
+The form-to-meaning structure identified above enables a direct translational application that operates entirely within the animal kingdom. Given a call from species~A, we retrieve the call in species~B whose semantic embedding is nearest---a lexical translation from one repertoire to another. When both species are represented in \dbname with full semantic annotations, the mapping is performed in semantic space by retrieval. When semantic annotations are absent for one or both species---as will routinely be the case for poorly studied taxa---the acoustic-to-semantic predictor from the previous section supplies a best-guess semantic embedding from acoustic features alone, enabling translation even across the boundary of documented knowledge.
 
-The alignment between acoustic and semantic spaces supports a direct translational application. Given any human concept, we embed it in the same semantic space and retrieve the call in \dbname with the nearest semantic embedding. Conversely, given any documented call, we retrieve the closest human concept. Table~\ref{tab:translation} and Fig.~\ref{fig:translation} show ten examples: the translations are intuitive---``danger'' maps to anti-predator alarm calls; ``come here'' maps to contact recruitment calls; ``I am hungry'' maps to begging vocalizations---and are grounded in the entire corpus of documented animal vocalizations as synthesized by \dbname.
+This two-mode pipeline (retrieval for annotated calls; prediction for unannotated ones) makes \dbname a living resource: every new species added expands the reach of translation, and the predictor provides a scaffold for annotating the next. We release an interactive web application (\url{[placeholder URL]}) in which users can select any call and browse its nearest semantic neighbours across all species in \dbname, with the option to include predicted-semantics calls from unannotated recordings (see Appendix~\ref{sec:supp_webapp}).
 
-This retrieval pipeline is necessarily limited to calls that have been documented and annotated. We extend it using the acoustic-to-semantic predictor from the previous section: for any acoustic recording from any species---including taxa not represented in \dbname---the model provides a best-guess semantic embedding from acoustic features alone, enabling translation beyond the boundaries of existing knowledge. We provide an interactive web application (see Supplementary) through which both modes of translation can be explored at scale.
+A natural extension is to learn the translation \emph{directly in acoustic space}, bypassing the semantic intermediate. Two species that are phylogenetically close should have nearly aligned acoustic spaces---similar vocal anatomies, shared evolutionary pressures, conserved call repertoires---and their repertoires should be mappable by a small rotation. Phylogenetically distant species may require a larger transformation. This suggests learning a family of species-pair rotations $R_{AB}$ (Procrustes-style, constrained to be orthogonal) regularised by phylogenetic distance: $\|R_{AB} - \mathbf{I}\|_F \leq \lambda \cdot d_{\mathrm{phylo}}(A,B)$, where $d_{\mathrm{phylo}}$ is branch length in a dated phylogeny and $\lambda$ controls how much divergence is allowed per unit evolutionary distance. Such a model would be fully audio-grounded, require no semantic labels, and could scale to the thousands of species for which recordings but no annotations exist. We leave this to future work, but note that the form-to-meaning results above provide the theoretical justification: because acoustic and semantic spaces are aligned, a rotation in acoustic space is also, approximately, a rotation in semantic space.
 
 \section{Discussion}
 
-Our results establish three things. First, animal vocalizations carry systematic form-to-meaning relationships that are detectable across the tree of life---not just within well-studied model systems. Second, these relationships are learnable and generalizable: a model trained on some species predicts meaning from acoustics for held-out species and families. Third, this learnability supports practical translation between acoustic and semantic spaces, including across the human-animal boundary.
+Our results establish three things. First, animal vocalizations carry systematic form-to-meaning relationships detectable across the tree of life---not just within well-studied model systems. Second, these relationships are learnable and generalizable: a model trained on some species predicts communicative meaning from acoustics for entirely held-out species and families. Third, this learnability enables practical cross-species lexical translation---finding, for any call, its closest semantic analogue in any other repertoire---including for species whose calls have never been semantically annotated.
 
 Two non-exclusive mechanisms can explain the cross-taxon alignment. Convergent functional pressures may independently channel evolution toward similar acoustic solutions for similar communicative problems: the physics of sound localization favors broadband calls for alarm regardless of ancestry \cite{marler1955characteristics}; the acoustics of long-range propagation favor tonality for cohesion calls \cite{morton1977on}. Phylogenetic inertia may additionally preserve ancestral form-to-meaning associations within lineages, explaining why correlations are strongest within species and weaken---without vanishing---across families. These mechanisms predict different patterns in phylogenetically controlled analyses, which future work with broader taxonomic sampling can test.
 
-Several caveats apply. \dbname represents the current state of published knowledge, which skews toward well-studied mammals; birds and amphibians---acoustically diverse and experimentally tractable---are underrepresented. Our acoustic embeddings are derived from textual descriptions, not from audio directly; future work integrating audio representations \cite{hagiwara2022avesanimalvocalizationencoder,robinson2025naturelmaudio} will test whether the form-to-meaning alignment is even stronger in the raw signal domain. Finally, lexical translation should be understood as semantic proximity, not cognitive equivalence: when we say that ``danger'' maps to an alarm call, we make no claim about the mental states of the signaling animal.
+Several caveats apply. \dbname represents the current state of published knowledge, which skews toward well-studied mammals; birds and amphibians---acoustically diverse and experimentally tractable---are underrepresented. Our acoustic embeddings are derived from textual descriptions, not from audio directly; future work integrating audio representations \cite{hagiwara2022avesanimalvocalizationencoder,robinson2025naturelmaudio} will test whether the form-to-meaning alignment is stronger in the raw signal domain. Lexical translation should be understood as semantic proximity within the space of documented ethological descriptions---not as a claim about subjective experience, cognitive content, or the \textit{Umwelt} of the signaling animal. Any mapping through human language (see Appendix~\ref{sec:supp_human_translation}) inherits an additional anthropomorphic bias and should be treated as a heuristic rather than a literal gloss.
 
 Despite these limitations, the demonstration that form-to-meaning structure is learnable and cross-taxon generalizable opens a practical path forward: with each new species added to \dbname, the translation model improves, and with each improvement the model can bootstrap annotation of the next species. This virtuous cycle---human knowledge, compressed by language models, refined by acoustic-semantic prediction, extended to undocumented taxa---is the long-term promise of the approach introduced here.
 
@@ -263,7 +237,37 @@ We thank the researchers whose detailed ethological and bioacoustic studies form
 \section{Web application}
 \label{sec:supp_webapp}
 
-We release an interactive web application at \url{[placeholder URL]} that allows users to: (i) browse \dbname filtered by species, taxon, semantic category, or acoustic keyword; (ii) perform lexical translation---enter any text and retrieve the closest animal calls by semantic similarity; (iii) perform reverse translation---select any call and retrieve the closest human-language descriptions; and (iv) explore semantic and acoustic embedding spaces as interactive 3-D UMAP projections. The application is built on [placeholder: framework] and is freely accessible without registration.
+We release an interactive web application at \url{[placeholder URL]} that allows users to: (i) browse \dbname filtered by species, taxon, semantic category, or acoustic keyword; (ii) translate any call to its nearest semantic neighbour in any other species; (iii) explore semantic and acoustic embedding spaces as interactive 3-D UMAP projections; and (iv) optionally include predicted-semantics calls from unannotated recordings. The application is built on [placeholder: framework] and is freely accessible without registration.
+
+\section{Human-language translation (anthropomorphic, use with caution)}
+\label{sec:supp_human_translation}
+
+The translation framework can be applied with human language as one of the two ``species'': given a word or phrase, embed it in the shared semantic space and retrieve the animal call with the nearest embedding; conversely, given any call, retrieve the closest human-language gloss. This mapping is \emph{not} a claim that animals share human concepts---it reflects only that the ethological descriptions in \dbname, written by human researchers, overlap in embedding space with human vocabulary. Every translation step through human language imposes an anthropomorphic frame and risks projecting a human \textit{Umwelt} onto species whose perceptual and cognitive worlds may be radically different. We include it here as an exploratory tool for human audiences, not as a scientific claim.
+
+\begin{table}[h]
+	\centering
+	\caption{%
+	\textbf{Human-language translation: selected examples (see caveats above).}
+	For each human phrase, the best-matching call in \dbname by semantic embedding similarity. [Placeholder: to be filled once translation pipeline is run.]
+	}
+	\label{tab:human_translation}
+	\begin{tabular}{p{3cm}rp{4cm}p{4.5cm}}
+		\toprule
+		\textbf{Human phrase} & \textbf{Sim.} & \textbf{Best-match call} & \textbf{Acoustic description} \\
+		\midrule
+		danger                & ---           & [species] / [call]       & [acoustic]                    \\
+		I am hungry           & ---           & [species] / [call]       & [acoustic]                    \\
+		come here             & ---           & [species] / [call]       & [acoustic]                    \\
+		I am here             & ---           & [species] / [call]       & [acoustic]                    \\
+		stay away             & ---           & [species] / [call]       & [acoustic]                    \\
+		greeting              & ---           & [species] / [call]       & [acoustic]                    \\
+		let's move together   & ---           & [species] / [call]       & [acoustic]                    \\
+		I am afraid           & ---           & [species] / [call]       & [acoustic]                    \\
+		this is mine          & ---           & [species] / [call]       & [acoustic]                    \\
+		help me               & ---           & [species] / [call]       & [acoustic]                    \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \section{Validation against audio representations}
 \label{sec:supp_audio}
