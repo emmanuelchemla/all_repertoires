@@ -41,7 +41,7 @@
 \RequirePackage{amsmath,amssymb}
 \RequirePackage{xspace}
 \RequirePackage[font=small,labelsep=period]{caption}
-\RequirePackage[final,tracking=true]{microtype}
+\RequirePackage[final,verbose=silent]{microtype}
 
 % ------------------------------------------------------------------ %
 %  TABLES

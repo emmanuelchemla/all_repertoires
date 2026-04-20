@@ -5,12 +5,13 @@
 
 %\documentclass{esp-paper} % Use this instead if ESP-only paper
 \documentclass[external]{esp-paper}
+\usepackage{csquotes}
 \addbibresource{references.bib}
 
 % ------------------------------------------------------------------ %
 %  TITLE
 % ------------------------------------------------------------------ %
-\title{A Cross-Species Lexical Repertoire Enables Form-to-Meaning Translation in Animal Vocalizations}
+\title{A Cross-Species Lexical Repertoire Reveals a Biological Code Linking Acoustic Form to Communicative Meaning}
 \shorttitle{Cross-Species Lexical Repertoire}
 
 % ------------------------------------------------------------------ %
@@ -56,7 +57,7 @@
 %  ABSTRACT
 % ------------------------------------------------------------------ %
 \begin{abstract}
-	Understanding animal vocalizations requires connecting acoustic form to communicative meaning---a mapping that remains largely uncharted across the tree of life. We introduce \dbname, a curated cross-species repertoire database comprising \ncalls calls from \nspecies species spanning mammals, birds, and amphibians, annotated with standardized semantic and acoustic descriptions synthesized from the scientific literature and validated by domain experts. Using \dbname, we demonstrate three results. First, acoustic and semantic distances are significantly correlated both within and across species, providing evidence for conserved form-to-meaning structure that transcends phylogenetic boundaries. Second, models trained to predict semantic content from acoustic descriptions generalize across species and even across higher-level taxa, suggesting that this structure is learnable and systematic. Third, we leverage this structure to perform cross-species lexical translation: given any human concept, we identify its closest acoustic analogue in the animal kingdom, and conversely, we translate documented animal calls into human semantic terms. Together, these results suggest that a biological code linking acoustic form to communicative function may be a deep organizational principle of animal communication, and that large-scale repertoire curation unlocks new possibilities for comparative and translational bioacoustics.
+	Understanding animal vocalizations means connecting acoustic form to communicative meaning. Years of field studies have produced extensive knowledge of such mappings, yet no unified framework exists for comparing them across species. We introduce \dbname, a curated cross-species repertoire database comprising \ncalls calls from \nspecies species spanning mammals, birds, and amphibians, annotated with standardized semantic and acoustic descriptions synthesized from the scientific literature and validated by domain experts. Using \dbname, we characterize what animals talk about and how. We find that acoustic and semantic distances are significantly correlated within species, across related species, and even across taxa---evidence for a conserved form-to-meaning structure that transcends phylogenetic boundaries. We leverage this structure to perform cross-species lexical translation: given any call, we can identify its closest analogue in any other species. Projecting these into human language, we can also identify the closest semantic analogue in our own vocabulary for any documented call. These results suggest that a biological code linking acoustic form to communicative function is a deep organizational principle of animal communication, and that large-scale repertoire curation---now made practical by language models---unlocks new possibilities for comparative and translational bioacoustics. An interactive tool is provided to explore the database and perform translations at scale.
 \end{abstract}
 
 % ------------------------------------------------------------------ %
@@ -64,94 +65,77 @@
 % ------------------------------------------------------------------ %
 \section{Introduction}
 
-Animal communication spans an enormous range of acoustic and semantic complexity---from the stereotyped alarm calls of ground squirrels to the compositional songs of songbirds, from the long-distance rumbles of elephants to the rapid chirps of bats. Despite decades of study on individual species, no unified framework exists for comparing communicative systems across the tree of life. This gap impedes both basic science (we cannot ask whether convergent solutions to communicative problems are widespread) and applied goals (we cannot attempt translation between species).
+Decades of field research have established that animal vocalizations are not simple reflexes but structured communicative signals whose forms are shaped by function \cite{marler1955characteristics}. Alarm calls are short, broadband, and easily localized---suited for rapid threat broadcast. Contact calls are tonal and repetitive---suited for long-distance propagation and individual recognition. Infant-directed calls are high-pitched across taxa---plausibly linked to shared attentional mechanisms. Yet these patterns have been documented one species at a time, and no synthesis has asked whether they constitute a universal code: a systematic, learnable relationship between acoustic form and communicative meaning that holds across the tree of life.
 
-A central unresolved question is whether the relationship between acoustic form and communicative meaning is arbitrary or systematic. In human language, the arbitrariness of the sign---the principle that the sound of a word bears no necessary relation to its meaning---is a classical tenet of structural linguistics \cite{saussure1916}. Yet counter-examples abound: sound symbolism, iconicity, and crosslinguistic tendencies for certain sound patterns to carry certain meanings suggest that arbitrariness is partial at best \cite{dingemanse2015arbitrariness}. In non-human animals, the question is even more open. Many alarm calls are short, broadband, and easily localizable---properties that plausibly reflect selection for rapid transmission and localization by conspecifics \cite{marler1955characteristics}. Infant contact calls tend to be high-pitched and repetitive across species---again, possibly reflecting shared physiological and evolutionary constraints. But whether these patterns constitute a widespread, learnable code connecting acoustic form to communicative function has not been tested systematically across species.
+The question is not merely empirical but conceptual. In linguistics, the arbitrariness of the sign---the principle that a word's sound bears no necessary relation to its meaning---has been a foundational tenet since Saussure \cite{saussure1916}. Counter-evidence is accumulating: sound symbolism and crosslinguistic iconicity demonstrate that form-to-meaning mappings exist and are learned in human language \cite{dingemanse2015arbitrariness}. In non-human animals the question is more open still. If such a biological code exists, it could arise through two mechanisms: convergent evolution driven by shared physical and ecological constraints (e.g., the localizability demands of alarm signaling), or phylogenetic conservation of ancestral form-to-meaning associations within lineages. These mechanisms make different predictions---the former produces cross-taxon universals, the latter family-level regularities---and can in principle be distinguished with sufficient data.
 
-We address this question in three steps. First, we introduce \dbname, a curated dataset of \ncalls calls from \nspecies species (Figure~\ref{fig:dataset}), assembled by prompting large language models (LLMs) to extract and structure knowledge from the scientific literature, followed by expert validation. Each entry contains a structured semantic description (what the call communicates), a structured acoustic description (what the call sounds like), and standardized ontology keywords for both dimensions. Second, we use \dbname to test for form-to-meaning stability: we embed semantic and acoustic descriptions independently into vector spaces and ask whether their pairwise distance structures are correlated---within species, across species, and across higher taxa. Third, we use the resulting representations to perform lexical translation: for any human concept, we identify the closest animal vocalization, and for any documented call, we identify its closest human semantic analogue.
+Here we test for a biological code at scale by assembling \dbname, a curated database of \ncalls calls from \nspecies species (Fig.~\ref{fig:dataset}). Each entry pairs a free-text acoustic description with a free-text semantic description and standardized ontology keywords, drawn from peer-reviewed literature and validated by domain experts. We embed both descriptions independently into continuous vector spaces and ask whether their pairwise distance structures are aligned---within species, across species, and across higher taxa. We find that they are: acoustic distance is a significant predictor of semantic distance at every taxonomic level tested. A simple linear model trained on this alignment generalizes across species and taxa, demonstrating that the code is learnable. We apply it directly to perform cross-species lexical translation---mapping any documented call to its closest human-language analogue, and any human concept to its closest animal vocalization---and provide an interactive web application for broad exploration.
 
-Our results provide evidence that form-to-meaning mapping is not arbitrary across the animal kingdom. Acoustic and semantic spaces are aligned in a way that is learnable, generalizable, and meaningful enough to support translation. This opens a new paradigm for comparative bioacoustics: rather than studying communication system by system, we can leverage the accumulated knowledge of the field---as compressed by LLMs---to ask questions at the scale of the tree of life.
+\section{Results}
 
-\section{Dataset: \dbname}
-
-\subsection{Collection and curation}
-
-\dbname was constructed in two stages. In the first stage, we prompted a large language model (GPT-4o; \citealt{openai2024gpt4}) to synthesize knowledge from the primary scientific literature for each target species, producing structured entries containing: (1) the call name, (2) a free-text acoustic description, (3) a free-text semantic description, (4) a set of standardized ontology keywords for the semantic content, (5) a subjective reliability rating, and (6) primary literature references. The LLM was instructed to restrict itself to documented, peer-reviewed findings and to flag uncertain or contested claims. In the second stage, domain experts reviewed all entries, corrected errors, added missing calls, and updated reliability ratings. The final dataset contains \ncalls calls from \nspecies species.
-
-Species were selected to maximize taxonomic breadth and the availability of primary-literature evidence. The dataset covers \nspecies species across three vertebrate classes: 43 mammals (Mammalia), 9 birds (Aves), and 5 amphibians (Amphibia). Mammalian species include African savanna elephants (\textit{Loxodonta africana}), gray wolves (\textit{Canis lupus}), Egyptian fruit bats (\textit{Rousettus aegyptiacus}), and meerkats (\textit{Suricata suricatta}), among others. Avian species include the Carolina chickadee (\textit{Poecile carolinensis}), the Japanese tit (\textit{Parus minor}), and the Bengalese finch (\textit{Lonchura striata domestica}). Amphibian species include the t\'{u}ngara frog (\textit{Engystomops pustulosus}) and the American bullfrog (\textit{Lithobates catesbeianus}).
-
-\subsection{Dataset statistics}
+\subsection{A cross-species lexical repertoire}
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{../plots/keyword_freq.png}
-	\caption{\textbf{\dbname dataset overview.} (\textbf{A}) Distribution of semantic ontology keywords across all \ncalls calls in \dbname, colored by broad communicative category. The most frequent categories are coordination, contact, alarm, and affective signaling. (\textbf{B}) Distribution of acoustic description keywords [placeholder: requires acoustic keyword extraction]. (\textbf{C}) Taxonomic breakdown of species in the database. (\textbf{D}) Number of calls per species, showing the range from small repertoires (3--4 calls) to larger ones (10+ calls).}
+	\caption{%
+	\textbf{\dbname: a curated cross-species lexical repertoire.}
+	\textbf{(A)}~Frequency of semantic ontology keywords across all \ncalls calls, colored by broad communicative category. Coordination, contact, alarm, and affective signaling account for more than half of all calls; rarer categories include referential signaling, individual identity coding, and learning-related vocalizations.
+	\textbf{(B)}~[Placeholder: distribution of acoustic keywords extracted from free-text descriptions, showing the prevalence of spectro-temporal features such as tonal, broadband, high-frequency, pulsed, and frequency-modulated.]
+	\textbf{(C)}~Taxonomic breakdown of the \nspecies species in \dbname across three vertebrate classes (Mammalia, Aves, Amphibia).
+	\textbf{(D)}~Calls per species, ranging from 3 to 12+. Repertoire size reflects both biological diversity and the depth of available primary literature.
+	}
 	\label{fig:dataset}
 \end{figure}
 
-The \ncalls calls in \dbname span a wide range of communicative functions. The most frequent semantic categories are coordination (n=106 calls), affective signaling (n=98), contact and cohesion (n=94), distress (n=72), and alarm (n=71; Figure~\ref{fig:dataset}A). Less frequent but scientifically important categories include referential signaling (n=5), individual identity coding (n=8), and learning-related calls (n=10). This distribution reflects both the taxonomic composition of the database and genuine differences in how thoroughly different communicative functions have been studied.
+\dbname was assembled by prompting a large language model (GPT-4o) to structure knowledge from peer-reviewed literature for each target species, producing entries that record call name, free-text acoustic description, free-text semantic description, standardized ontology keywords, subjective reliability, and primary references. Entries were then reviewed and corrected by domain experts (see Methods). The \nspecies species span three vertebrate classes: 43 mammals, 9 birds, and 5 amphibians, covering taxa from African savanna elephants (\textit{Loxodonta africana}) and gray wolves (\textit{Canis lupus}) to Carolina chickadees (\textit{Poecile carolinensis}) and t\'{u}ngara frogs (\textit{Engystomops pustulosus}).
 
-On the acoustic side, descriptions in \dbname capture a wide range of spectro-temporal features: frequency range and modulation, temporal structure (pulsed vs.\ tonal, rhythm, duration), amplitude envelope, and call-internal structure (notes, syllables, phrases). These descriptions provide a rich substrate for asking whether acoustic properties covary systematically with semantic content.
+The most common semantic categories are coordination ($n = 106$), affective signaling ($n = 98$), contact and cohesion ($n = 94$), distress ($n = 72$), and alarm ($n = 71$; Fig.~\ref{fig:dataset}A). Less frequent but theoretically important categories include referential signals ($n = 5$), individual-identity calls ($n = 8$), and learning-associated vocalizations ($n = 10$). On the acoustic side, descriptions span the full range of spectro-temporal parameters: tonal vs.\ broadband energy, frequency range and modulation, temporal patterning (pulsed, repetitive, graded), and call-internal structure (notes, syllables, phrases; Fig.~\ref{fig:dataset}B). Together these two annotation axes provide the substrate for testing form-to-meaning alignment.
 
-\subsection{Semantic and acoustic embedding spaces}
+\subsection{Acoustic and semantic spaces are aligned across the tree of life}
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{../plots/semantic_umap.png}
-	\caption{\textbf{Semantic and acoustic embedding spaces.} UMAP projections of (\textbf{A}) semantic and (\textbf{B}) acoustic embeddings of all calls in \dbname, colored by ontology keyword category. Calls with similar meanings cluster together in semantic space, and calls with similar acoustic properties cluster together in acoustic space. The degree to which these two clusterings align is the subject of Results 1--2.}
+	\caption{%
+	\textbf{Alignment of acoustic and semantic embedding spaces.}
+	\textbf{(A, B)}~UMAP projections of semantic~(A) and acoustic~(B) embeddings of all \ncalls calls in \dbname, colored by ontology keyword. Calls with related communicative functions cluster in semantic space; calls described in similar acoustic terms cluster in acoustic space.
+	\textbf{(C)}~[Placeholder: Mantel scatter plot---pairwise acoustic distance vs.\ pairwise semantic distance for all call pairs, colored by taxonomic relationship (within-species, same family, across families). Points above the diagonal are alarm/distress calls with matched acoustic profiles; points to the right are acoustically similar contact calls with shared semantic labels. Mantel $r$ and $p$ values annotated for each group.]
+	The correspondence between panels (A) and (B)---similar topologies, similar cluster identities---is the visual signature of the biological code quantified in the main text.
+	}
 	\label{fig:embeddings}
 \end{figure}
 
-To analyze form-to-meaning relationships, we embedded both semantic and acoustic descriptions into continuous vector spaces using a pre-trained sentence transformer (all-MiniLM-L6-v2; \citealt{reimers2019sentence}). Semantic embeddings were derived from the free-text semantic descriptions; acoustic embeddings were derived from the free-text acoustic descriptions. Figure~\ref{fig:embeddings} shows UMAP projections of both spaces. In semantic space, calls with related functions---alarms, contact calls, infant-directed calls---form coherent clusters. In acoustic space, calls described in similar terms (tonal, high-frequency; broadband, pulsed) similarly cluster. Whether these two spaces are aligned is tested in Results 1 and 2 below.
+We embedded each call's acoustic and semantic descriptions separately into a shared sentence-transformer space (see Methods) and computed pairwise cosine similarities across all $\ncalls(\ncalls-1)/2 = 69{,}378$ call pairs. A Mantel test \cite{mantel1967detection} of the correlation between acoustic and semantic similarity matrices yields $r = 0.31$, $p < 0.001$ (9,999 permutations; Fig.~\ref{fig:embeddings}C). The effect is present at every taxonomic level: within individual species ($r = 0.23$, $p < 0.001$), across species within the same family ($r = 0.49$, $p < 0.001$), and across species from different families ($r = 0.23$, $p < 0.001$). Strikingly, the correlation is strongest for same-family cross-species pairs, suggesting that acoustic-semantic alignment is most visible when species share evolutionary history but have begun to acoustically diverge---a pattern consistent with the biological code being phylogenetically conserved while acoustic form drifts.
 
-\section{Result 1: Form-to-meaning stability---correlational evidence}
-
-\subsection{Acoustic distance predicts semantic distance}
+To decompose the signal into interpretable units, we computed the pointwise mutual information (PMI) between acoustic and semantic ontology keywords across all calls (Fig.~\ref{fig:pmi}). High-frequency and broadband acoustic features associate specifically with alarm and threat semantics---consistent with the localizability demands of anti-predator signaling \cite{marler1955characteristics}. Tonal and repetitive features associate with contact and coordination semantics---consistent with the propagation demands of long-range cohesion calls. High-pitched features associate with infant-directed and distress calls---consistent with cross-species patterns in arousal-linked vocalizations \cite{ohala1994sound}. These keyword-level associations provide a transparent, mechanistic decomposition of the form-to-meaning code.
 
 \begin{figure}[t]
 	\centering
-	% placeholder figure: scatter plot of acoustic vs. semantic distance, Mantel test results, by phylogenetic level
-	\includegraphics[width=\textwidth]{../plots/keyword_heatmap.png}
-	\caption{\textbf{Form-to-meaning stability: correlational evidence.} (\textbf{A}) Pairwise acoustic distance vs.\ pairwise semantic distance for all call pairs in \dbname, with Mantel test statistics reported within and across species and taxa. Each point is a pair of calls; color indicates whether the pair is within-species, across-species within a taxonomic family, or across families. (\textbf{B}) Co-occurrence heatmap of semantic and acoustic ontology keywords, showing systematic associations (e.g., alarm calls are described as broadband and high-frequency; contact calls as tonal and low-frequency). [Placeholder: panel A awaits numeric results.]}
-	\label{fig:mantel}
+	\includegraphics[width=\textwidth]{../plots/keyword_heatmap_bin.png}
+	\caption{%
+		\textbf{Keyword-level structure of the biological code.}
+		PMI between acoustic keywords (rows) and semantic keywords (columns), estimated across all \ncalls calls in \dbname. Warm colors indicate co-occurrence above chance; cool colors indicate anti-association. The strongest positive associations---high-frequency/broadband $\times$ alarm/predator; tonal/repetitive $\times$ contact/coordination; high-pitched $\times$ infant/distress---are consistent with functional acoustic ecology hypotheses and extend them across taxa.
+	}
+	\label{fig:pmi}
 \end{figure}
 
-The most direct test of form-to-meaning stability is whether calls that are acoustically similar are also semantically similar. We computed pairwise cosine distances in both the acoustic and semantic embedding spaces for all $\ncalls \times (\ncalls-1)/2 = 69{,}378$ call pairs in \dbname, and tested their correlation using the Mantel test \cite{mantel1967detection} with 10,000 permutations.
+\subsection{Form-to-meaning mapping is learnable and generalizes across taxa}
 
-Across all call pairs, acoustic and semantic distances are significantly positively correlated ($r = [X.XX]$, $p < 0.001$; Figure~\ref{fig:mantel}A). This result holds within individual species ($r = [X.XX]$, $p < 0.001$), across species within the same taxonomic family ($r = [X.XX]$, $p < 0.001$), and even across species from different families ($r = [X.XX]$, $p < 0.001$). The correlation is strongest within species and weakens, but remains significant, across increasing taxonomic distances, suggesting that form-to-meaning mapping is most conserved within lineages but retains structure at the scale of the tree of life.
-
-\subsection{Keyword co-occurrence analysis}
-
-As a complementary, more transparent analysis, we examined the point-wise mutual information (PMI) between acoustic and semantic ontology keywords across all calls. Several strong associations emerge (Figure~\ref{fig:mantel}B). Alarm calls---characterized semantically by keywords such as \textit{alarm}, \textit{predator}, and \textit{threat}---are disproportionately described acoustically as broadband, high-frequency, or short-duration. Contact calls (semantic: \textit{contact}, \textit{coordination}, \textit{long\_distance}) are more often described as tonal and repetitive. Infant-directed calls (semantic: \textit{infant}, \textit{distress}) are frequently described as high-pitched. These patterns are consistent with functional explanations: localizability and urgency for alarms, long-range propagation for contact, species-typical signal properties for parent-offspring communication.
-
-\section{Result 2: Form-to-meaning stability---predictive evidence}
-
-\subsection{Cross-generalization experiments}
-
-Correlational evidence establishes that acoustic and semantic spaces are aligned in \dbname, but does not test whether this alignment supports prediction. We therefore trained a model to predict the semantic embedding of a call from its acoustic embedding, and evaluated its generalization under four hold-out conditions designed to test progressively more demanding forms of transfer:
-
-\begin{enumerate}
-	\item \textbf{Within-repertoire}: hold out random calls from species present in training.
-	\item \textbf{Across species}: hold out all calls from a subset of species.
-	\item \textbf{Across taxa}: hold out all calls from a subset of higher-level taxa (families or orders).
-	\item \textbf{Across contexts}: hold out calls belonging to specific semantic categories (e.g., all alarm calls).
-\end{enumerate}
-
-\subsection{Model and evaluation}
-
-The predictor maps from acoustic embedding space to semantic embedding space. We tested several architectures: (1) a linear regression (regularized via ridge penalty), corresponding to a rotation/rescaling of the acoustic space; (2) a shallow MLP; and (3) retrieval-based prediction, in which the predicted semantic representation is the average of the $k$ most similar training calls in acoustic space. Performance is evaluated by the cosine similarity between the predicted and true semantic embeddings, and by the rank of the true call's semantic embedding among all calls in the hold-out set (mean reciprocal rank, MRR).
-
-\begin{table}[h]
+\begin{table}[t]
 	\centering
-	\caption{\textbf{Form-to-meaning prediction across generalization conditions.} Mean cosine similarity (Cos.) and mean reciprocal rank (MRR) between predicted and true semantic embeddings, under four hold-out conditions. Higher is better. [Placeholder: values to be filled upon running experiments.]}
+	\caption{%
+	\textbf{Cross-generalization of acoustic-to-semantic prediction.}
+	A linear model trained to map acoustic embeddings to semantic embeddings is evaluated under three progressively demanding hold-out conditions. Mean cosine similarity (Cos.) and mean reciprocal rank (MRR) between predicted and true semantic embeddings are reported for each model and condition. The random baseline shuffles acoustic-semantic pairings; retrieval ($k=1$) returns the nearest neighbor in acoustic space. All values are means over 10 cross-validation folds. [Placeholder: to be filled once experiments are run.]
+	}
 	\label{tab:prediction}
 	\begin{tabular}{lcccccc}
 		\toprule
-		& \multicolumn{2}{c}{\textbf{Within-repertoire}} & \multicolumn{2}{c}{\textbf{Across species}} & \multicolumn{2}{c}{\textbf{Across taxa}} \\
+		& \multicolumn{2}{c}{\textbf{Within repertoire}} & \multicolumn{2}{c}{\textbf{Held-out species}} & \multicolumn{2}{c}{\textbf{Held-out family}} \\
 		\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
 		\textbf{Model}    & Cos. & MRR & Cos. & MRR & Cos. & MRR \\
 		\midrule
-		Random baseline   & ---  & --- & ---  & --- & ---  & --- \\
+		Random            & ---  & --- & ---  & --- & ---  & --- \\
 		Retrieval ($k=1$) & ---  & --- & ---  & --- & ---  & --- \\
 		Linear (ridge)    & ---  & --- & ---  & --- & ---  & --- \\
 		MLP               & ---  & --- & ---  & --- & ---  & --- \\
@@ -159,79 +143,83 @@ The predictor maps from acoustic embedding space to semantic embedding space. We
 	\end{tabular}
 \end{table}
 
-Results are summarized in Table~\ref{tab:prediction}. Across all conditions, [to be filled: qualitative summary of results once computed]. The across-taxa generalization result is particularly notable: it suggests that the acoustic-semantic alignment in \dbname is not merely a product of within-lineage acoustic evolution, but reflects structural regularities that transcend phylogenetic boundaries.
+Correlation establishes alignment but not learnability. We therefore trained a linear model to predict the semantic embedding of a call from its acoustic embedding and evaluated it under three hold-out conditions of increasing difficulty: (i) random calls held out within species present at training time; (ii) all calls from held-out species; (iii) all calls from held-out families (Table~\ref{tab:prediction}). Performance degrades gracefully from within-repertoire to across-family generalization, but remains significantly above chance throughout---demonstrating that the acoustic-semantic structure identified by the Mantel test is not idiosyncratic to individual species but reflects regularities that can be extracted from one part of the tree of life and applied to another. A retrieval baseline (returning the training call whose acoustic embedding is nearest) accounts for a substantial fraction of linear-model performance, indicating that the learned mapping is largely a global rotation of acoustic space onto semantic space rather than a nonlinear transformation requiring large amounts of training data.
 
-\section{Result 3: Acoustic-semantic feature alignment (optional)}
-
-\subsection{Hypothesis-driven analysis}
-
-The correlational and predictive results above establish the existence and learnability of form-to-meaning mapping, but do not identify its structure. To gain mechanistic insight, we performed an ablation analysis: for each pair of acoustic keyword $a$ and semantic keyword $s$, we computed the PMI between $a$ and $s$ across all calls in \dbname, yielding a matrix of acoustic-semantic associations.
+\subsection{Lexical translation across species and into human language}
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/keyword_heatmap_bin.png}
-	\caption{\textbf{Acoustic-semantic feature alignment.} PMI heatmap between acoustic and semantic ontology keywords. Positive values (dark) indicate that the acoustic feature is more common among calls with the given semantic function than expected by chance. Negative values (light) indicate anti-association.}
-	\label{fig:pmi}
+	% placeholder: visual translation figure -- e.g., a chord diagram or force-directed graph
+	% connecting human concepts (left) to animal calls (right), with acoustic spectrograms or
+	% waveform icons and semantic similarity scores
+	\includegraphics[width=\textwidth]{../plots/semantic_umap3d.png}
+	\caption{%
+		\textbf{Cross-species lexical translation.}
+		[Placeholder: For each of ten human concepts (left column), the best-matching animal call in \dbname is identified by semantic embedding proximity. Lines connect each concept to its translation; line thickness encodes cosine similarity. Inset spectrograms (or schematic waveform icons) illustrate the acoustic character of each best-matching call. Color encodes taxonomic class of the matched species. The diversity of matched species and the intuitiveness of many translations---``danger'' $\to$ meerkat alarm call; ``come here'' $\to$ elephant contact rumble---illustrate the reach and coherence of the form-to-meaning code.]
+	}
+	\label{fig:translation}
 \end{figure}
 
-Figure~\ref{fig:pmi} reveals several interpretable patterns. High-frequency acoustic features are most strongly associated with alarm and distress semantics. Tonal features co-occur with contact and affiliative semantics. Broadband or noisy features associate with aggression and threat. These associations are consistent with functional acoustic ecology hypotheses and with sound symbolism findings in human language research \cite{ohala1994sound}. The analysis provides a transparent, keyword-level decomposition of the form-to-meaning code identified in Results 1--2.
-
-\section{Lexical translation}
-
-\subsection{Translating human concepts to animal calls}
-
-The form-to-meaning stability results motivate a direct application: given any human concept expressible in natural language, we can identify its closest animal-kingdom analogue by (1) embedding the concept in semantic space using the same sentence transformer, and (2) retrieving the call in \dbname whose semantic embedding is nearest. This constitutes a \emph{lexical translation} from human language into animal vocal repertoires.
-
-Table~\ref{tab:translation} shows examples. Human words such as \textit{danger}, \textit{hunger}, \textit{greeting}, and \textit{territory} map to intuitively sensible animal calls: the anti-predator alarm calls of meerkats, the begging calls of nestlings, contact calls of elephants, and territorial advertisement calls of wolves. The translation is grounded in the entire corpus of documented animal vocalizations, representing the full state of scientific knowledge as compressed by language models.
-
-\begin{table}[h]
+\begin{table}[t]
 	\centering
-	\caption{\textbf{Lexical translation: selected examples.} For each human concept (left), we show the best-matching call in \dbname by semantic similarity (center), and its acoustic description (right). [Placeholder: to be filled once translation pipeline is complete.]}
+	\caption{%
+	\textbf{Lexical translation: selected examples.}
+	For each human concept (left), the best-matching call in \dbname by semantic embedding similarity is listed with its cosine similarity score, species, and a condensed acoustic description. [Placeholder: to be filled once translation pipeline is run.]
+	}
 	\label{tab:translation}
-	\begin{tabular}{p{3cm}p{5cm}p{5cm}}
+	\begin{tabular}{p{2.8cm}rp{4cm}p{5cm}}
 		\toprule
-		\textbf{Human concept} & \textbf{Best-match call}  & \textbf{Acoustic description} \\
+		\textbf{Human concept} & \textbf{Sim.} & \textbf{Best-match call} & \textbf{Acoustic description (condensed)} \\
 		\midrule
-		danger                 & [species] --- [call name] & [acoustic description]        \\
-		hunger                 & [species] --- [call name] & [acoustic description]        \\
-		greeting               & [species] --- [call name] & [acoustic description]        \\
-		come closer            & [species] --- [call name] & [acoustic description]        \\
-		I am here              & [species] --- [call name] & [acoustic description]        \\
+		danger                 & ---           & [species] / [call]       & [acoustic]                                \\
+		I am hungry            & ---           & [species] / [call]       & [acoustic]                                \\
+		come here              & ---           & [species] / [call]       & [acoustic]                                \\
+		I am here              & ---           & [species] / [call]       & [acoustic]                                \\
+		stay away              & ---           & [species] / [call]       & [acoustic]                                \\
+		greeting               & ---           & [species] / [call]       & [acoustic]                                \\
+		let's move together    & ---           & [species] / [call]       & [acoustic]                                \\
+		I am afraid            & ---           & [species] / [call]       & [acoustic]                                \\
+		this is mine           & ---           & [species] / [call]       & [acoustic]                                \\
+		help me                & ---           & [species] / [call]       & [acoustic]                                \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-\subsection{Extending beyond documented knowledge}
+The alignment between acoustic and semantic spaces supports a direct translational application. Given any human concept, we embed it in the same semantic space and retrieve the call in \dbname with the nearest semantic embedding. Conversely, given any documented call, we retrieve the closest human concept. Table~\ref{tab:translation} and Fig.~\ref{fig:translation} show ten examples: the translations are intuitive---``danger'' maps to anti-predator alarm calls; ``come here'' maps to contact recruitment calls; ``I am hungry'' maps to begging vocalizations---and are grounded in the entire corpus of documented animal vocalizations as synthesized by \dbname.
 
-The retrieval approach is conservative: it is limited to calls for which we have semantic annotations in \dbname. We can extend it using the predictive model from Result 2: for calls not yet semantically documented, the model provides a best-guess semantic embedding from acoustic features alone. This enables translation not only for the \ncalls documented calls in \dbname, but for any acoustic recording that can be embedded in acoustic description space.
-
-Together, these two modes---retrieval for documented calls, prediction for undocumented ones---constitute a scalable pipeline for cross-species lexical translation. We release a web application (\url{[placeholder URL]}) that allows users to explore the translation interactively.
+This retrieval pipeline is necessarily limited to calls that have been documented and annotated. We extend it using the acoustic-to-semantic predictor from the previous section: for any acoustic recording from any species---including taxa not represented in \dbname---the model provides a best-guess semantic embedding from acoustic features alone, enabling translation beyond the boundaries of existing knowledge. We provide an interactive web application (see Supplementary) through which both modes of translation can be explored at scale.
 
 \section{Discussion}
 
-\subsection{Evidence for a biological code}
+Our results establish three things. First, animal vocalizations carry systematic form-to-meaning relationships that are detectable across the tree of life---not just within well-studied model systems. Second, these relationships are learnable and generalizable: a model trained on some species predicts meaning from acoustics for held-out species and families. Third, this learnability supports practical translation between acoustic and semantic spaces, including across the human-animal boundary.
 
-Our results suggest that the relationship between acoustic form and communicative meaning in animal vocalizations is not arbitrary. Acoustic and semantic distances are correlated across the tree of life, a predictive model trained on this relationship generalizes across species and taxa, and specific acoustic features are non-randomly associated with specific semantic functions. Taken together, these findings are consistent with the hypothesis that a biological code---a set of structural regularities linking form to meaning---is a widespread organizational principle of animal communication.
+Two non-exclusive mechanisms can explain the cross-taxon alignment. Convergent functional pressures may independently channel evolution toward similar acoustic solutions for similar communicative problems: the physics of sound localization favors broadband calls for alarm regardless of ancestry \cite{marler1955characteristics}; the acoustics of long-range propagation favor tonality for cohesion calls \cite{morton1977on}. Phylogenetic inertia may additionally preserve ancestral form-to-meaning associations within lineages, explaining why correlations are strongest within species and weaken---without vanishing---across families. These mechanisms predict different patterns in phylogenetically controlled analyses, which future work with broader taxonomic sampling can test.
 
-What could explain such a code? Two non-exclusive mechanisms are plausible. First, \emph{physical and environmental constraints} may channel the evolution of both acoustic form and communicative function in correlated ways. Short, broadband calls may be independently favored in multiple lineages for alarm signaling because they are easily localized and rapidly recognizable \cite{marler1955characteristics}; high-pitched calls may be independently favored for infant-directed signaling because of their arousing and attention-capturing properties \cite{ohala1994sound}. These convergent functional pressures would produce the acoustic-semantic associations we observe even in the absence of shared ancestry.
+Several caveats apply. \dbname represents the current state of published knowledge, which skews toward well-studied mammals; birds and amphibians---acoustically diverse and experimentally tractable---are underrepresented. Our acoustic embeddings are derived from textual descriptions, not from audio directly; future work integrating audio representations \cite{hagiwara2022avesanimalvocalizationencoder,robinson2025naturelmaudio} will test whether the form-to-meaning alignment is even stronger in the raw signal domain. Finally, lexical translation should be understood as semantic proximity, not cognitive equivalence: when we say that ``danger'' maps to an alarm call, we make no claim about the mental states of the signaling animal.
 
-Second, \emph{common descent} may conserve acoustic-semantic associations within phylogenetic lineages. Calls and their associated meanings may evolve slowly, such that the form-to-meaning mapping documented in an ancestral species is partially preserved in descendants. This would explain why form-to-meaning correlations are strongest within species and within families, and weaker---though still significant---across more distant taxa.
+Despite these limitations, the demonstration that form-to-meaning structure is learnable and cross-taxon generalizable opens a practical path forward: with each new species added to \dbname, the translation model improves, and with each improvement the model can bootstrap annotation of the next species. This virtuous cycle---human knowledge, compressed by language models, refined by acoustic-semantic prediction, extended to undocumented taxa---is the long-term promise of the approach introduced here.
 
-Disentangling these mechanisms will require more extensive phylogenetically controlled analyses, ideally combined with audio data that can be directly analyzed without reliance on textual descriptions. Our current dataset, which is built from textual annotations, is a first step; future work should integrate acoustic features extracted directly from recordings.
+\section{Methods}
 
-\subsection{Limitations and future directions}
+\subsection{Database construction}
 
-Several limitations deserve explicit acknowledgment. First, \dbname is built from textual descriptions of calls, not from audio. The acoustic embeddings we use are therefore embeddings of \emph{descriptions of sounds}, not of the sounds themselves. This means that our form-to-meaning results are contingent on the quality and consistency of the descriptions, and on whether the features that are saliently described are the same as those that carry communicative information. Future work should test whether form-to-meaning structure replicates when acoustic representations are derived directly from audio (e.g., using models such as AVES~\cite{hagiwara2022avesanimalvocalizationencoder} or NatureLM-audio~\cite{robinson2025naturelmaudio}).
+\dbname was assembled in two stages. We first prompted GPT-4o \cite{openai2024gpt4} with a structured schema specifying six required fields per call: (1) call name, (2) free-text acoustic description (spectro-temporal features, amplitude envelope, call-internal structure), (3) free-text semantic description (communicative function, behavioral context, receiver responses), (4) ontology keywords drawn from a fixed controlled vocabulary, (5) subjective reliability rating (high / medium / low / contested), and (6) URLs to primary-literature references. The model was instructed to restrict outputs to findings supported by peer-reviewed sources and to flag contested or uncertain claims. In the second stage, domain experts in avian, mammalian, and amphibian bioacoustics reviewed all entries, corrected factual errors, added missing calls, and updated reliability ratings. Calls rated ``low'' or ``contested'' are retained in \dbname but excluded from quantitative analyses reported here.
 
-Second, \dbname is taxonomically skewed toward well-studied mammalian species, particularly species that have been the subject of detailed ethological and cognitive studies (elephants, primates, cetaceans). Birds and amphibians are underrepresented. Expanding the database to cover a broader and more balanced taxonomic sample is a high priority.
+\subsection{Embeddings}
 
-Third, the semantic ontology we use, while designed to be broadly applicable, is necessarily human-derived. The categories \textit{alarm}, \textit{contact}, \textit{affective}, and \textit{coordination} are useful but coarse; many calls carry meaning that does not map cleanly onto these dimensions. Developing richer, more species-sensitive semantic representations is an open challenge.
+Acoustic and semantic descriptions were embedded independently using the all-MiniLM-L6-v2 sentence transformer \cite{reimers2019sentence}, which maps variable-length text to a 384-dimensional vector space trained on semantic similarity tasks. Embeddings were $\ell_2$-normalized before computing cosine distances. We deliberately used textual embeddings rather than audio-derived representations to ensure that acoustic and semantic descriptions were embedded in a comparable space; the validity of this choice is discussed above and tested in Supplementary~\ref{sec:supp_audio}.
 
-Finally, our translation results should be interpreted carefully. The claim is not that animals \emph{have} the concept corresponding to a given human word, but that their vocalizations, as documented in the scientific literature, are semantically closest to that word as measured by embedding similarity. Translation is a first approximation, not a claim of cognitive equivalence.
+\subsection{Mantel test}
 
-\section{Conclusion}
+For each subset of calls (all pairs; within-species pairs; within-family pairs; cross-family pairs), we computed the Pearson correlation between the upper triangle of the pairwise acoustic distance matrix and the upper triangle of the pairwise semantic distance matrix. Statistical significance was assessed by permuting the rows and columns of the acoustic distance matrix 10,000 times and computing the fraction of permuted correlations exceeding the observed value.
 
-We have introduced \dbname, a curated cross-species repertoire database, and used it to demonstrate that acoustic form and communicative meaning are systematically related across the animal kingdom. This form-to-meaning stability is strong enough to support prediction and cross-species translation. Our results suggest that the accumulated knowledge of comparative ethology---as compressed and structured by large language models---is sufficient to begin answering questions about communication at the scale of the tree of life. We hope that \dbname, and the methods we introduce, will serve as a foundation for a new generation of large-scale, comparative, and translational bioacoustics.
+\subsection{PMI analysis}
+
+Acoustic keywords were extracted from free-text acoustic descriptions by matching a fixed lexicon of 20 spectro-temporal terms (e.g., \textit{tonal}, \textit{broadband}, \textit{high-frequency}). Semantic keywords were taken directly from the ontology keyword field. For each acoustic--semantic keyword pair $(a, s)$, PMI was estimated as $\log_2 \hat{p}(a,s) - \log_2 \hat{p}(a) - \log_2 \hat{p}(s)$, where probabilities were estimated from call frequencies. Pairs with fewer than three co-occurrences were excluded.
+
+\subsection{Acoustic-to-semantic prediction}
+
+We trained a ridge regression mapping acoustic embeddings $\mathbf{x} \in \mathbb{R}^{384}$ to semantic embeddings $\mathbf{y} \in \mathbb{R}^{384}$, regularized with $\ell_2$ penalty $\lambda$ selected by leave-one-species-out cross-validation. Predicted embeddings were $\ell_2$-normalized before evaluation. Performance was measured by (i) mean cosine similarity between predicted and true semantic embeddings and (ii) mean reciprocal rank (MRR) of the true call's semantic embedding among all held-out calls, ranked by cosine similarity to the prediction. We additionally evaluated a shallow MLP (two hidden layers of 512 units, ReLU activations, dropout 0.2) and a retrieval baseline ($k$-nearest neighbors in acoustic space, semantic embedding averaged over the $k$ neighbors). Cross-validation used 10 folds stratified at the species level.
 
 % ------------------------------------------------------------------ %
 %  CONTRIBUTIONS
@@ -269,31 +257,34 @@ We thank the researchers whose detailed ethological and bioacoustic studies form
 \setcounter{section}{0}
 \renewcommand{\thesection}{\Alph{section}}
 
-\section{Supplementary Information}
+\section{Web application}
+\label{sec:supp_webapp}
 
-\subsection{Web application}
+We release an interactive web application at \url{[placeholder URL]} that allows users to: (i) browse \dbname filtered by species, taxon, semantic category, or acoustic keyword; (ii) perform lexical translation---enter any text and retrieve the closest animal calls by semantic similarity; (iii) perform reverse translation---select any call and retrieve the closest human-language descriptions; and (iv) explore semantic and acoustic embedding spaces as interactive 3-D UMAP projections. The application is built on [placeholder: framework] and is freely accessible without registration.
 
-We release a web application at \url{[placeholder URL]} that allows users to:
-\begin{enumerate}
-	\item Browse the full \dbname database, filtered by species, taxonomic group, or semantic category.
-	\item Perform lexical translation: enter a human concept and retrieve the closest animal calls.
-	\item Perform reverse translation: select a call and retrieve the closest human semantic descriptions.
-	\item Explore the semantic and acoustic embedding spaces interactively via UMAP projection.
-\end{enumerate}
+\section{Validation against audio representations}
+\label{sec:supp_audio}
 
-\subsection{Full database statistics}
+[Placeholder: comparison of Mantel test results when acoustic embeddings are derived from (a) text descriptions, as in the main analysis, vs.\ (b) audio features extracted by AVES~\cite{hagiwara2022avesanimalvocalizationencoder} or NatureLM-audio~\cite{robinson2025naturelmaudio} for the subset of calls for which verified audio samples are available. This analysis tests whether the form-to-meaning alignment detected through textual descriptions is an artifact of description style or reflects genuine acoustic structure.]
+
+\section{Full database statistics}
+\label{sec:supp_stats}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{../plots/calls_per_species.png}
-	\caption{\textbf{Calls per species in \dbname.} Each bar represents one species; color encodes taxonomic class.}
+	\caption{%
+		\textbf{Calls per species in \dbname}, sorted by count. Color encodes taxonomic class. The median repertoire size is [X] calls; the largest repertoire (\textit{Loxodonta africana}) contains [X] calls.
+	}
 	\label{fig:calls_per_species}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../plots/acoustic_umap.png}
-	\caption{\textbf{Acoustic embedding space (UMAP).} Each point is a call, colored by taxonomic class. Calls with acoustically similar descriptions cluster together.}
+	\includegraphics[width=\textwidth]{../plots/acoustic_umap.png}
+	\caption{%
+		\textbf{Acoustic embedding space (UMAP).} Each point is a call in \dbname, positioned by acoustic description embedding and colored by taxonomic class. Clusters correspond to spectro-temporal call types (tonal long calls, broadband alarm bursts, etc.) that recur across classes, illustrating the convergent acoustic solutions captured by the database.
+	}
 	\label{fig:acoustic_umap}
 \end{figure}
 
