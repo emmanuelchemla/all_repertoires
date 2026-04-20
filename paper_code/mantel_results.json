@@ -4,7 +4,7 @@
     "p": 0.0001,
     "n_pairs": 69378
   },
-  "within_species": {
+  "within_species (pooled)": {
     "r": 0.23294924452811433,
     "p": 0.0001,
     "n_pairs": 1551
@@ -18,5 +18,15 @@
     "r": 0.23334440289838493,
     "p": 0.0001,
     "n_pairs": 54806
+  },
+  "partial | species identity": {
+    "r": 0.30936451616684224,
+    "p": 0.0001,
+    "n_pairs": 69378
+  },
+  "partial | family identity": {
+    "r": 0.29624653224731384,
+    "p": 0.0001,
+    "n_pairs": 69378
   }
 }

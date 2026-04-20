@@ -55,6 +55,39 @@ def run_mantel_subset(Sa, Ss, mask_2d):
     return r, p, len(a_vec)
 
 
+def partial_mantel(Sa, Ss, C, n_perm=N_PERM, seed=42):
+    """Partial Mantel: correlation between Sa and Ss controlling for C.
+
+    Computes the partial correlation r(Sa, Ss | C) and tests it by
+    permuting the Ss vector (equivalent to permuting Ss rows/cols).
+    """
+    rng = np.random.default_rng(seed)
+    n = Sa.shape[0]
+    tri_i, tri_j = np.triu_indices(n, k=1)
+    a_vec = Sa[tri_i, tri_j]
+    s_vec = Ss[tri_i, tri_j]
+    c_vec = C[tri_i, tri_j]
+
+    r_ab = float(np.corrcoef(a_vec, s_vec)[0, 1])
+    r_ac = float(np.corrcoef(a_vec, c_vec)[0, 1])
+    r_bc = float(np.corrcoef(s_vec, c_vec)[0, 1])
+    denom = np.sqrt((1 - r_ac**2) * (1 - r_bc**2)) + 1e-12
+    r_partial = (r_ab - r_ac * r_bc) / denom
+
+    count = 0
+    for _ in range(n_perm):
+        perm = rng.permutation(n)
+        Ss_p = Ss[np.ix_(perm, perm)]
+        s_p  = Ss_p[tri_i, tri_j]
+        r_ab_p = float(np.corrcoef(a_vec, s_p)[0, 1])
+        r_bc_p = float(np.corrcoef(s_p, c_vec)[0, 1])
+        r_p = (r_ab_p - r_ac * r_bc_p) / denom
+        if r_p >= r_partial:
+            count += 1
+    p = (count + 1) / (n_perm + 1)
+    return float(r_partial), p
+
+
 def main():
     calls = load_calls(DB_PATH)
     print(f"Loaded {len(calls)} calls from {len({c['species'] for c in calls})} species")
@@ -91,11 +124,23 @@ def main():
     mask_cross_fam = fa_arr[:, None] != fa_arr[None, :]
     r_cross, p_cross, k_cross = run_mantel_subset(Sa, Ss, mask_cross_fam)
 
+    # ---- Partial Mantel controlling for species identity ----
+    C_species = (sp_arr[:, None] == sp_arr[None, :]).astype(float)
+    print("Running partial Mantel (controlling for species identity) …")
+    r_partial, p_partial = partial_mantel(Sa, Ss, C_species)
+
+    # ---- Partial Mantel controlling for family identity ----
+    C_family = (fa_arr[:, None] == fa_arr[None, :]).astype(float)
+    print("Running partial Mantel (controlling for family identity) …")
+    r_partial_fam, p_partial_fam = partial_mantel(Sa, Ss, C_family)
+
     results = {
-        "all_pairs":           {"r": r_all,    "p": p_all,    "n_pairs": k_all},
-        "within_species":      {"r": r_within, "p": p_within, "n_pairs": k_within},
-        "same_family_cross_species": {"r": r_fam,   "p": p_fam,   "n_pairs": k_fam},
-        "cross_family":        {"r": r_cross,  "p": p_cross,  "n_pairs": k_cross},
+        "all_pairs":                     {"r": r_all,         "p": p_all,         "n_pairs": k_all},
+        "within_species (pooled)":       {"r": r_within,      "p": p_within,      "n_pairs": k_within},
+        "same_family_cross_species":     {"r": r_fam,         "p": p_fam,         "n_pairs": k_fam},
+        "cross_family":                  {"r": r_cross,       "p": p_cross,       "n_pairs": k_cross},
+        "partial | species identity":    {"r": r_partial,     "p": p_partial,     "n_pairs": k_all},
+        "partial | family identity":     {"r": r_partial_fam, "p": p_partial_fam, "n_pairs": k_all},
     }
 
     print(f"\nMantel test results (n_perm={N_PERM})\n{'='*55}")
