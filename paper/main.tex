@@ -71,9 +71,7 @@ The question is not merely empirical but conceptual. In linguistics, the arbitra
 
 Here we test for a biological code at scale by assembling \dbname, a curated database of \ncalls calls from \nspecies species (Fig.~\ref{fig:dataset}). Each entry pairs a free-text acoustic description with a free-text semantic description and standardized ontology keywords, drawn from peer-reviewed literature and validated by domain experts. We embed both descriptions independently into continuous vector spaces and ask whether their pairwise distance structures are aligned---within species, across species, and across higher taxa. We find that they are: acoustic distance is a significant predictor of semantic distance at every taxonomic level tested. A simple linear model trained on this alignment generalizes across species and taxa, demonstrating that the code is learnable. We apply it directly to perform cross-species lexical translation---mapping any documented call to its closest human-language analogue, and any human concept to its closest animal vocalization---and provide an interactive web application for broad exploration.
 
-\section{Results}
-
-\subsection{A cross-species lexical repertoire}
+\section{A cross-species lexical repertoire}
 
 \begin{figure}[t]
 	\centering
@@ -92,7 +90,7 @@ Here we test for a biological code at scale by assembling \dbname, a curated dat
 
 The most common semantic categories are coordination ($n = 106$), affective signaling ($n = 98$), contact and cohesion ($n = 94$), distress ($n = 72$), and alarm ($n = 71$; Fig.~\ref{fig:dataset}A). Less frequent but theoretically important categories include referential signals ($n = 5$), individual-identity calls ($n = 8$), and learning-associated vocalizations ($n = 10$). On the acoustic side, descriptions span the full range of spectro-temporal parameters: tonal vs.\ broadband energy, frequency range and modulation, temporal patterning (pulsed, repetitive, graded), and call-internal structure (notes, syllables, phrases; Fig.~\ref{fig:dataset}B). Together these two annotation axes provide the substrate for testing form-to-meaning alignment.
 
-\subsection{Acoustic and semantic spaces are aligned across the tree of life}
+\section{Acoustic and semantic spaces are aligned across the tree of life}
 
 \begin{figure}[t]
 	\centering
@@ -120,32 +118,37 @@ To decompose the signal into interpretable units, we computed the pointwise mutu
 	\label{fig:pmi}
 \end{figure}
 
-\subsection{Form-to-meaning mapping is learnable and generalizes across taxa}
+\section{Form-to-meaning mapping is learnable and generalizes across taxa}
 
 \begin{table}[t]
 	\centering
 	\caption{%
-	\textbf{Cross-generalization of acoustic-to-semantic prediction.}
-	A linear model trained to map acoustic embeddings to semantic embeddings is evaluated under three progressively demanding hold-out conditions. Mean cosine similarity (Cos.) and mean reciprocal rank (MRR) between predicted and true semantic embeddings are reported for each model and condition. The random baseline shuffles acoustic-semantic pairings; retrieval ($k=1$) returns the nearest neighbor in acoustic space. All values are means over 10 cross-validation folds. [Placeholder: to be filled once experiments are run.]
+		\textbf{Cross-generalization of acoustic-to-semantic prediction.}
+		Four models are evaluated under three hold-out conditions of increasing difficulty.
+		\emph{Cos.}~=~mean cosine similarity between predicted and true semantic embedding (higher is better, max 1).
+		\emph{MRR}~=~mean reciprocal rank of the true call among all test-set calls ranked by similarity to the prediction (higher is better, max 1).
+		The random baseline shuffles acoustic--semantic pairings within each test set.
+		Retrieval ($k=1$) returns the nearest neighbour in acoustic space among training calls.
+		Within-repertoire values are means over 10 random folds; held-out species and family values are means over leave-one-out folds (55 and 26 folds respectively).
 	}
 	\label{tab:prediction}
 	\begin{tabular}{lcccccc}
 		\toprule
 		& \multicolumn{2}{c}{\textbf{Within repertoire}} & \multicolumn{2}{c}{\textbf{Held-out species}} & \multicolumn{2}{c}{\textbf{Held-out family}} \\
 		\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
-		\textbf{Model}    & Cos. & MRR & Cos. & MRR & Cos. & MRR \\
+		\textbf{Model}    & Cos.          & MRR  & Cos.          & MRR           & Cos.          & MRR           \\
 		\midrule
-		Random            & ---  & --- & ---  & --- & ---  & --- \\
-		Retrieval ($k=1$) & ---  & --- & ---  & --- & ---  & --- \\
-		Linear (ridge)    & ---  & --- & ---  & --- & ---  & --- \\
-		MLP               & ---  & --- & ---  & --- & ---  & --- \\
+		Random            & 0.36          & 0.11 & 0.46          & 0.41          & 0.47          & 0.42          \\
+		Retrieval ($k=1$) & 0.67          & 0.51 & 0.68          & 0.78          & 0.60          & 0.67          \\
+		Linear (ridge)    & \textbf{0.74} & 0.46 & \textbf{0.74} & \textbf{0.80} & \textbf{0.68} & \textbf{0.70} \\
+		MLP               & 0.71          & 0.45 & 0.73          & 0.80          & 0.66          & 0.68          \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-Correlation establishes alignment but not learnability. We therefore trained a linear model to predict the semantic embedding of a call from its acoustic embedding and evaluated it under three hold-out conditions of increasing difficulty: (i) random calls held out within species present at training time; (ii) all calls from held-out species; (iii) all calls from held-out families (Table~\ref{tab:prediction}). Performance degrades gracefully from within-repertoire to across-family generalization, but remains significantly above chance throughout---demonstrating that the acoustic-semantic structure identified by the Mantel test is not idiosyncratic to individual species but reflects regularities that can be extracted from one part of the tree of life and applied to another. A retrieval baseline (returning the training call whose acoustic embedding is nearest) accounts for a substantial fraction of linear-model performance, indicating that the learned mapping is largely a global rotation of acoustic space onto semantic space rather than a nonlinear transformation requiring large amounts of training data.
+The previous section demonstrates that there is stability in the form-to-meaning mapping. We trained models to exploit this regularity: predicting semantic embeddings from acoustic embeddings under three hold-out conditions of increasing ambition (Table~\ref{tab:prediction}). Within-repertoire, ridge regression achieves a mean cosine similarity of 0.74 and MRR of 0.46---substantially above the random baseline (cos.\ 0.36, MRR 0.11). Generalization to held-out species is equally strong (cos.\ 0.74, MRR 0.80), and remains well above chance even when entire families are held out (cos.\ 0.68, MRR 0.70). The retrieval baseline approaches ridge regression in MRR for held-out conditions, indicating that the acoustic-to-semantic mapping is largely a global alignment of the two spaces rather than a complex nonlinear transformation. The MLP offers no consistent advantage over ridge regression, consistent with this interpretation. Together these results show that the biological code identified by the Mantel analysis is not an artefact of within-species structure: it generalises to species and entire families unseen at training time. In other words, our existing knowledge of species transfers to new species.
 
-\subsection{Lexical translation across species and into human language}
+\section{Lexical translation across species and into human language}
 
 \begin{figure}[t]
 	\centering
