@@ -1,0 +1,53 @@
+% ESP Paper Template README
+% ============================
+
+% SETUP CHECKLIST  
+% ------------------
+% 0. Make a copy of this template File > Make a copy 
+% 1. Import: 
+%     - Bibliography (either upload your own, or replace the content in references.bib) 
+%     - Figures 
+%     - Logos of external collaborators (if applicable) 
+% 2. Fill in your title, authors, and affiliations at the top of main.tex
+% 3. Replace placeholder sections with your content
+% 4. Compile!
+
+% In case you have compiling errors, double-check that you are compiling using XeLaTeX. Check under File > Settings > Compiler > XeLaTeX
+
+ 
+% ESP-ONLY VS. EXTERNAL COLLABORATIONS
+% -------------------------------------- 
+
+%   ESP-only:  
+%     - Use \documentclass{esp-paper} at the top of main.tex 
+%     - Single \affil{Earth Species Project} for all authors
+%     - Shows only the ESP logo on Page 1 and subsequent headers
+      
+%   External:  
+%     - Use \documentclass[external]{esp-paper} at the top of main.tex 
+%     - Numbered superscripts ($^1$, $^2$) per author and affiliation
+%     - Including collaborator's logos (as it makes sense, use your best judgment if there is a very long list of external affiliations) 
+ 
+% CITATIONS
+% -------------------------------------- 
+%   - Use \citep{key} for parenthetical citations: (Smith, 2023)
+%   - Use \citet{key} for inline citations: Smith (2023)
+%   - When copying over from another .tex file that used \cite{}, the parenthetical formatting may not transfer over. Do a Find + Replace to ensure you are using \citep{}.  
+
+
+% OPTIONAL FEATURES
+% -----------------
+%   Short title:  
+%     - Shown in the running header from page 2 onward
+%     - If your main title is short enough, you could reuse it here
+%     - You may omit if the main title is too long, and does not have a convenient shorter title  
+  
+%   Two-column layout:
+%     - If you need 2 columns, uncomment out the lines 103 and 185
+%     - \begin{multicols}{2} ... \end{multicols} 
+  
+%   Collaborator logos: 
+%     - Add images to logos/ and uncomment the \extralogos{} block
+    
+%   Custom commands:    
+%     - Add shorthands in the CUSTOM COMMANDS section of main.tex 
