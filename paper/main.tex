@@ -108,14 +108,19 @@ We embedded each call's acoustic and semantic descriptions separately into a sha
 
 Examining subsets of pairs by taxonomic relationship reveals additional structure. Pairs from the same family but different species show the strongest correlation ($r = 0.49$, $p < 0.001$, $n = 13{,}021$ pairs), while within-species pairs (pooled across all species; $r = 0.23$, $p < 0.001$, $n = 1{,}551$) and cross-family pairs ($r = 0.23$, $p < 0.001$, $n = 54{,}806$) are weaker and similar to each other. The same-family peak suggests that acoustic-semantic alignment is most visible when species share evolutionary history but have begun to acoustically diverge---consistent with a code that is phylogenetically conserved while acoustic surface form drifts.
 
-To decompose the signal into interpretable units, we computed the pointwise mutual information (PMI) between acoustic and semantic ontology keywords across all calls (Fig.~\ref{fig:pmi}). High-frequency and broadband acoustic features associate specifically with alarm and threat semantics---consistent with the localizability demands of anti-predator signaling \cite{marler1955characteristics}. Tonal and repetitive features associate with contact and coordination semantics---consistent with the propagation demands of long-range cohesion calls. High-pitched features associate with infant-directed and distress calls---consistent with cross-species patterns in arousal-linked vocalizations \cite{ohala1994sound}. These keyword-level associations provide a transparent, mechanistic decomposition of the form-to-meaning code.
+To decompose the signal into interpretable units, we computed the pointwise mutual information (PMI) between acoustic features and semantic keywords across all calls (Fig.~\ref{fig:pmi}). Several strong, interpretable associations emerge. High-frequency calls are over-represented in infant-directed and food contexts (PMI~$\approx$~2.1--2.3) and sharply under-represented in display and aggression contexts (PMI~$\approx$~$-3.3$ to~$-3.4$). Broadband and noisy calls are enriched for aggression and threat semantics (PMI~$\approx$~1.7), consistent with the ``harsh = aggressive'' frequency code \cite{morton1977on}. Long/sustained and loud features co-occur with long-distance cohesion calls (PMI~$\approx$~1.8--2.0), consistent with propagation demands. These keyword-level associations provide a transparent, mechanistic decomposition of the biological code and replicate functional acoustic ecology predictions across \nspecies species simultaneously.
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/keyword_heatmap_bin.png}
+	\includegraphics[width=\textwidth]{../plots/pmi_heatmap_paper.png}
 	\caption{%
 		\textbf{Keyword-level structure of the biological code.}
-		PMI between acoustic keywords (rows) and semantic keywords (columns), estimated across all \ncalls calls in \dbname. Warm colors indicate co-occurrence above chance; cool colors indicate anti-association. The strongest positive associations---high-frequency/broadband $\times$ alarm/predator; tonal/repetitive $\times$ contact/coordination; high-pitched $\times$ infant/distress---are consistent with functional acoustic ecology hypotheses and extend them across taxa.
+		Pointwise mutual information (PMI, bits) between acoustic features (rows) and semantic functions (columns), estimated across all \ncalls calls in \dbname.
+		Rows and columns are ordered by hierarchical clustering; numbers annotate the six strongest and three weakest cells.
+		Warm colors~= acoustic feature over-represented in calls with that semantic function; cool colors~= under-represented.
+		Three groupings are bracketed on the $x$-axis.
+		Key associations: high-frequency calls are enriched for infant/food contexts (PMI~$>$~2) and depleted for aggression and display (PMI~$<-3$); broadband/noisy calls are enriched for aggression and threat; long/sustained and loud features co-occur with long-distance cohesion calls.
+		These patterns are consistent with functional acoustic ecology predictions and extend them across \nspecies species.
 	}
 	\label{fig:pmi}
 \end{figure}
