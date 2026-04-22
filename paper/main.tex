@@ -159,34 +159,25 @@ The previous section demonstrates that there is stability in the form-to-meaning
 
 \section{Lexical translation across species}
 
-% \begin{figure}[t]
-% 	\centering
-% 	\includegraphics[width=\textwidth]{../plots/semantic_umap3d.png}
-% 	\caption{%
-% 		\textbf{Cross-species lexical translation.}
-% 		[Placeholder: a force-directed graph in which nodes are calls from several species, edges connect nearest semantic neighbours across species, and node color encodes species. Calls from different species that are semantically equivalent cluster together regardless of their acoustic surface form. Insets show example translated pairs---e.g., meerkat alarm call $\leftrightarrow$ vervet alarm call $\leftrightarrow$ chickadee \textit{seet} call---with a condensed semantic gloss. Edge thickness encodes cosine similarity of the matched semantic embeddings.]
-% 	}
-% 	\label{fig:translation}
-% \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/fig5_landmark_calls.pdf}
+	\includegraphics[width=\textwidth]{../plots/fig4_landmark_v2.pdf}
 	\caption{%
-		\textbf{Cross-species lexical translation. Calls with consistent cross-species neighbors in both acoustic and semantic space.}
-		%[\textit{Alternative to Fig.~\ref{fig:translation}.}]
-		Each rosette shows one landmark call ($\bigstar$, labeled with its call name at center) connected to up to eight calls from other species whose acoustic \emph{and} semantic embeddings both rank among its top-20 nearest neighbors.
-		%Call names are shown on each node; species are abbreviated (\textit{Genus~species} $\to$ \textit{G.~species}).
-		Node color encodes semantic category (same scheme as Fig.~\ref{fig:embeddings}); spoke width is proportional to mean acoustic–semantic similarity.
-		Parenthetical counts give the number of distinct species with at least one consistent neighbor (range: 10–16).
-		These landmark calls represent acoustic-semantic motifs independently co-opted across the tree of life—the concrete instances of the biological code quantified by the Mantel test (Fig.~\ref{fig:embeddings}C).
+		\textbf{Cross-species call groups sharing acoustic and semantic form.}
+		Each panel shows one group of calls---one per species---belonging to a single semantic category (header).
+		A pair of calls qualifies iff each is simultaneously the top-1 acoustic \emph{and} top-1 semantic nearest neighbour of the other within its counterpart species; groups are cliques in this species-pairwise mutual-consistency graph, chosen to maximise taxonomic diversity.
+		Each row lists species and call name (bold), ontology labels (\textit{Sem:}), and a brief acoustic description (\textit{Acc:}).
+		The coloured dot encodes taxonomic class (see legend, left).
+		The icon in the dark header circle identifies the semantic category (legend, right):
+		$\bigtriangleup$~danger, $\leftrightarrow$~cohesion, $\oplus$~social, $\bigstar$~foraging.
 	}
-	\label{fig:landmarks}
+	\label{fig:landmarks_v2}
 \end{figure}
 
-The form-to-meaning structure identified above enables a direct translational application that operates entirely within the animal kingdom. Given a call from species~A, we retrieve the call in species~B whose semantic embedding is nearest---a lexical translation from one repertoire to another. When both species are represented in \dbname with full semantic annotations, the mapping is performed in semantic space by retrieval. When semantic annotations are absent for one or both species---as will routinely be the case for poorly studied taxa---the acoustic-to-semantic predictor from the previous section supplies a best-guess semantic embedding from acoustic features alone, enabling translation even across the boundary of documented knowledge.
+AnimalLex allows best guess translations across the animal kingdom. Given a call from species~A, we retrieve the call in species~B whose semantic embedding is nearest---a lexical translation from one repertoire to another. When both species are represented in \dbname with full semantic annotations, the mapping is performed in semantic space by retrieval. Given the form-to-meaning structure identified above, translational attempts are also possible on the basis of acoustic annotations only---as will routinely be the case for poorly studied taxa---the acoustic-to-semantic predictor from the previous section supplies a best-guess semantic embedding from acoustic features alone, enabling translation even across the boundary of documented knowledge.
 
-This two-mode pipeline (retrieval for annotated calls; prediction for unannotated ones) makes \dbname a living resource: every new species added expands the reach of translation, and the predictor provides a scaffold for annotating the next. We release an interactive web application (\url{[placeholder URL]}) in which users can select any call and browse its nearest semantic neighbours across all species in \dbname, with the option to include predicted-semantics calls from unannotated recordings (see Appendix~\ref{sec:supp_webapp}).
+This two-mode pipeline (retrieval for annotated calls; prediction for unannotated ones) makes \dbname a living resource: every new species added expands the reach of translation, and the predictor provides a scaffold for annotating the next. We release an interactive web application (\url{[placeholder URL]}) in which users can select any call and browse its nearest semantic neighbours across all species in \dbname, with the option to include predicted-semantics calls from unannotated recordings (see Appendix~\ref{sec:supp_webapp}). Strikingly, Fig.~\ref{fig:landmarks_v2} shows examples where several calls can be closest in semantic space from each other as well as closest in acoustic space across broad families of species; this confirms the form-to-meaning stability.
 
 A natural extension is to learn the translation \emph{directly in acoustic space}, bypassing the semantic intermediate. Two species that are phylogenetically close should have nearly aligned acoustic spaces---similar vocal anatomies, shared evolutionary pressures, conserved call repertoires---and their repertoires should be mappable by a small rotation. Phylogenetically distant species may require a larger transformation. This suggests learning a family of species-pair rotations $R_{AB}$ (Procrustes-style, constrained to be orthogonal) regularised by phylogenetic distance: $\|R_{AB} - \mathbf{I}\|_F \leq \lambda \cdot d_{\mathrm{phylo}}(A,B)$, where $d_{\mathrm{phylo}}$ is branch length in a dated phylogeny and $\lambda$ controls how much divergence is allowed per unit evolutionary distance. Such a model would be fully audio-grounded, require no semantic labels, and could scale to the thousands of species for which recordings but no annotations exist. We leave this to future work, but note that the form-to-meaning results above provide the theoretical justification: because acoustic and semantic spaces are aligned, a rotation in acoustic space is also, approximately, a rotation in semantic space.
 
@@ -202,23 +193,22 @@ Despite these limitations, the demonstration that form-to-meaning structure is l
 
 \section{Methods}
 
-\subsection{Database construction}
-
+\paragraph{Database construction}
 \dbname was assembled in two stages. We first prompted GPT-4o \cite{openai2024gpt4} with a structured schema specifying six required fields per call: (1) call name, (2) free-text acoustic description (spectro-temporal features, amplitude envelope, call-internal structure), (3) free-text semantic description (communicative function, behavioral context, receiver responses), (4) ontology keywords drawn from a fixed controlled vocabulary, (5) subjective reliability rating (high / medium / low / contested), and (6) URLs to primary-literature references. The model was instructed to restrict outputs to findings supported by peer-reviewed sources and to flag contested or uncertain claims. In the second stage, domain experts in avian, mammalian, and amphibian bioacoustics reviewed all entries, corrected factual errors, added missing calls, and updated reliability ratings. Calls rated ``low'' or ``contested'' are retained in \dbname but excluded from quantitative analyses reported here.
 
-\subsection{Embeddings}
+\paragraph{Embeddings}
 
 Acoustic and semantic descriptions were embedded independently using the all-MiniLM-L6-v2 sentence transformer \cite{reimers2019sentence}, which maps variable-length text to a 384-dimensional vector space trained on semantic similarity tasks. Embeddings were $\ell_2$-normalized before computing cosine distances. We deliberately used textual embeddings rather than audio-derived representations to ensure that acoustic and semantic descriptions were embedded in a comparable space; the validity of this choice is discussed above and tested in Supplementary~\ref{sec:supp_audio}.
 
-\subsection{Mantel test}
+\paragraph{Mantel test}
 
 For each subset of calls (all pairs; within-species pairs; within-family pairs; cross-family pairs), we computed the Pearson correlation between the upper triangle of the pairwise acoustic distance matrix and the upper triangle of the pairwise semantic distance matrix. Statistical significance was assessed by permuting the rows and columns of the acoustic distance matrix 10,000 times and computing the fraction of permuted correlations exceeding the observed value.
 
-\subsection{PMI analysis}
+\paragraph{PMI analysis}
 
 Acoustic keywords were extracted from free-text acoustic descriptions by matching a fixed lexicon of 20 spectro-temporal terms (e.g., \textit{tonal}, \textit{broadband}, \textit{high-frequency}). Semantic keywords were taken directly from the ontology keyword field. For each acoustic--semantic keyword pair $(a, s)$, PMI was estimated as $\log_2 \hat{p}(a,s) - \log_2 \hat{p}(a) - \log_2 \hat{p}(s)$, where probabilities were estimated from call frequencies. Pairs with fewer than three co-occurrences were excluded.
 
-\subsection{Acoustic-to-semantic prediction}
+\paragraph{Acoustic-to-semantic prediction}
 
 We trained a ridge regression mapping acoustic embeddings $\mathbf{x} \in \mathbb{R}^{384}$ to semantic embeddings $\mathbf{y} \in \mathbb{R}^{384}$, regularized with $\ell_2$ penalty $\lambda$ selected by leave-one-species-out cross-validation. Predicted embeddings were $\ell_2$-normalized before evaluation. Performance was measured by (i) mean cosine similarity between predicted and true semantic embeddings and (ii) mean reciprocal rank (MRR) of the true call's semantic embedding among all held-out calls, ranked by cosine similarity to the prediction. We additionally evaluated a shallow MLP (two hidden layers of 512 units, ReLU activations, dropout 0.2) and a retrieval baseline ($k$-nearest neighbors in acoustic space, semantic embedding averaged over the $k$ neighbors). Cross-validation used 10 folds stratified at the species level.
 
@@ -248,15 +238,12 @@ We thank the researchers whose detailed ethological and bioacoustic studies form
 % ------------------------------------------------------------------ %
 %  REFERENCES
 % ------------------------------------------------------------------ %
-\clearpage
 \printbibliography
-\clearpage
 
 % ------------------------------------------------------------------ %
 %  SUPPLEMENTARY INFORMATION
 % ------------------------------------------------------------------ %
-\setcounter{section}{0}
-\renewcommand{\thesection}{\Alph{section}}
+\appendix
 
 \section{Web application}
 \label{sec:supp_webapp}
@@ -266,7 +253,7 @@ We release an interactive web application at \url{[placeholder URL]} that allows
 \section{Human-language translation (anthropomorphic, use with caution)}
 \label{sec:supp_human_translation}
 
-The translation framework can be applied with human language as one of the two ``species'': given a word or phrase, embed it in the shared semantic space and retrieve the animal call with the nearest embedding; conversely, given any call, retrieve the closest human-language gloss. This mapping is \emph{not} a claim that animals share human concepts---it reflects only that the ethological descriptions in \dbname, written by human researchers, overlap in embedding space with human vocabulary. Every translation step through human language imposes an anthropomorphic frame and risks projecting a human \textit{Umwelt} onto species whose perceptual and cognitive worlds may be radically different. We include it here as an exploratory tool for human audiences, not as a scientific claim.
+The translation framework can be applied with human language as one of the two ``species'': given a word or phrase, embed it in the shared semantic space and retrieve the animal call with the nearest embedding; conversely, given any call, retrieve the closest human-language gloss. This mapping is \emph{not} a claim that animals share human concepts---it reflects only that the ethological descriptions in \dbname, written by human researchers, overlap in embedding space with human vocabulary. Every translation step through human language imposes an anthropomorphic frame and risks projecting a human \textit{Umwelt} onto species whose perceptual and cognitive worlds may be radically different. We include Table~\ref{tab:human_translation} here as an exploratory tool for human audiences, not as a scientific claim.
 
 \begin{table}[h]
 	\centering
@@ -298,8 +285,10 @@ The translation framework can be applied with human language as one of the two `
 
 [Placeholder: comparison of Mantel test results when acoustic embeddings are derived from (a) text descriptions, as in the main analysis, vs.\ (b) audio features extracted by AVES~\cite{hagiwara2022avesanimalvocalizationencoder} or NatureLM-audio~\cite{robinson2025naturelmaudio} for the subset of calls for which verified audio samples are available. This analysis tests whether the form-to-meaning alignment detected through textual descriptions is an artifact of description style or reflects genuine acoustic structure.]
 
-\section{Full database statistics}
+\section{More database statistics}
 \label{sec:supp_stats}
+
+See Figure~\ref{fig:calls_per_species}
 
 \begin{figure}[h]
 	\centering
@@ -309,6 +298,10 @@ The translation framework can be applied with human language as one of the two `
 	}
 	\label{fig:calls_per_species}
 \end{figure}
+
+\section{Reserve material}
+
+Figure~\ref{fig:acoustic_umap}, Figure~\ref{fig:merged}, Figure~\ref{fig:landmarks}.
 
 \begin{figure}[h]
 	\centering
@@ -336,6 +329,31 @@ The translation framework can be applied with human language as one of the two `
 		Right column: \textbf{(D)}~PMI heatmap with semantic functions as rows and acoustic features as columns (square cells); rows and columns ordered by hierarchical clustering (same data as Fig.~\ref{fig:pmi}).
 	}
 	\label{fig:merged}
+\end{figure}
+
+% \begin{figure}[t]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{../plots/semantic_umap3d.png}
+% 	\caption{%
+% 		\textbf{Cross-species lexical translation.}
+% 		[Placeholder: a force-directed graph in which nodes are calls from several species, edges connect nearest semantic neighbours across species, and node color encodes species. Calls from different species that are semantically equivalent cluster together regardless of their acoustic surface form. Insets show example translated pairs---e.g., meerkat alarm call $\leftrightarrow$ vervet alarm call $\leftrightarrow$ chickadee \textit{seet} call---with a condensed semantic gloss. Edge thickness encodes cosine similarity of the matched semantic embeddings.]
+% 	}
+% 	\label{fig:translation}
+% \end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{../plots/fig5_landmark_calls.pdf}
+	\caption{%
+		\textbf{[Alternative to Fig.~\ref{fig:landmarks_v2}] Cross-species lexical translation. Calls with consistent cross-species neighbors in both acoustic and semantic space.}
+		%[\textit{Alternative to Fig.~\ref{fig:translation}.}]
+		Each rosette shows one landmark call ($\bigstar$, labeled with its call name at center) connected to up to eight calls from other species whose acoustic \emph{and} semantic embeddings both rank among its top-20 nearest neighbors.
+		%Call names are shown on each node; species are abbreviated (\textit{Genus~species} $\to$ \textit{G.~species}).
+		Node color encodes semantic category (same scheme as Fig.~\ref{fig:embeddings}); spoke width is proportional to mean acoustic–semantic similarity.
+		Parenthetical counts give the number of distinct species with at least one consistent neighbor (range: 10–16).
+		These landmark calls represent acoustic-semantic motifs independently co-opted across the tree of life—the concrete instances of the biological code quantified by the Mantel test (Fig.~\ref{fig:embeddings}C).
+	}
+	\label{fig:landmarks}
 \end{figure}
 
 \end{document}

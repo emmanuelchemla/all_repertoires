@@ -127,22 +127,23 @@ def cluster_order(mat):
 # ------------------------------------------------------------------ #
 
 def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
-    # Transpose so semantic keywords are rows, acoustic features are columns
-    pmi_T = pmi.T   # (n_sem, n_ac)
-    row_order = cluster_order(pmi_T)       # cluster semantic rows
-    col_order = cluster_order(pmi_T.T)     # cluster acoustic columns
+    # Acoustic features as rows (fewer = 12), semantic functions as columns (more = ~18).
+    # Both axes ordered by hierarchical clustering so structure emerges bottom-up;
+    # semantic category brackets overlay the data-driven column order.
+    row_order = cluster_order(pmi)      # cluster acoustic rows
+    col_order = cluster_order(pmi.T)    # cluster semantic columns
 
-    pmi_c = pmi_T[np.ix_(row_order, col_order)]
-    sem_c = [sem_labels[i] for i in row_order]
-    ac_c  = [ac_labels[j]  for j in col_order]
+    pmi_c = pmi[np.ix_(row_order, col_order)]
+    ac_c  = [ac_labels[i]  for i in row_order]
+    sem_c = [sem_labels[j] for j in col_order]
     sem_c_display = [SEMANTIC_LABELS.get(s, s) for s in sem_c]
 
-    n_rows, n_cols = pmi_c.shape
-    cell = 0.52           # inches per cell (square cells)
-    margin_left = 1.8     # room for row labels
-    margin_right = 1.0    # room for colorbar
-    margin_top = 0.5
-    margin_bottom = 1.6   # room for column labels + brackets
+    n_rows, n_cols = pmi_c.shape        # n_rows ≤ 12, n_cols ≤ 18
+    cell = 0.52                         # inches per cell — square cells
+    margin_left   = 1.9                 # acoustic feature row labels
+    margin_right  = 1.0                 # colorbar
+    margin_top    = 0.5
+    margin_bottom = 1.8                 # rotated semantic column labels + brackets
     fig_w = n_cols * cell + margin_left + margin_right
     fig_h = n_rows * cell + margin_top  + margin_bottom
 
@@ -152,13 +153,13 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
     im = ax.imshow(pmi_c, aspect=1, cmap="RdBu_r",
                    vmin=-vmax, vmax=vmax, interpolation="nearest")
 
-    # axis ticks: acoustic on x, semantic on y
+    # ticks: semantic on x (columns), acoustic on y (rows)
     ax.set_xticks(range(n_cols))
-    ax.set_xticklabels(ac_c, rotation=45, ha="right", fontsize=10)
+    ax.set_xticklabels(sem_c_display, rotation=45, ha="right", fontsize=10)
     ax.set_yticks(range(n_rows))
-    ax.set_yticklabels(sem_c_display, fontsize=10)
+    ax.set_yticklabels(ac_c, fontsize=10)
 
-    # thin grid lines between cells
+    # thin white grid lines between cells
     ax.set_xticks(np.arange(-0.5, n_cols), minor=True)
     ax.set_yticks(np.arange(-0.5, n_rows), minor=True)
     ax.grid(which="minor", color="white", linewidth=0.5)
@@ -169,24 +170,27 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
     for idx in list(np.argsort(flat)[::-1][:6]) + list(np.argsort(flat)[:3]):
         r, c = divmod(idx, n_cols)
         v = pmi_c[r, c]
-        color = "white" if abs(v) > vmax * 0.55 else "black"
+        col = "white" if abs(v) > vmax * 0.55 else "black"
         ax.text(c, r, f"{v:.1f}", ha="center", va="center",
-                fontsize=8.5, fontweight="bold", color=color)
+                fontsize=8.5, fontweight="bold", color=col)
 
     # colorbar
     cbar = fig.colorbar(im, ax=ax, shrink=0.55, pad=0.02)
     cbar.set_label("PMI (bits)", fontsize=10)
     cbar.ax.tick_params(labelsize=8)
 
-    ax.set_xlabel("Acoustic feature", fontsize=11, labelpad=8)
-    ax.set_ylabel("Semantic function", fontsize=11, labelpad=8)
+    ax.set_xlabel("Semantic function", fontsize=11, labelpad=8)
+    ax.set_ylabel("Acoustic feature",  fontsize=11, labelpad=8)
 
-    # group brackets on x-axis for acoustic features
-    freq_cols    = [i for i, a in enumerate(ac_c) if a in {"high-frequency","low-frequency"}]
-    spectral_cols = [i for i, a in enumerate(ac_c)
-                     if a in {"tonal","broadband / noisy","frequency-modulated","harmonic"}]
-    temporal_cols = [i for i, a in enumerate(ac_c)
-                     if a in {"pulsed","repetitive","short","long / sustained"}]
+    # semantic category brackets on x-axis — overlaid on the clustering order
+    alarm_cols   = [i for i, s in enumerate(sem_c)
+                    if s in {"alarm","predator","threat","aggression"}]
+    infant_cols  = [i for i, s in enumerate(sem_c)
+                    if s in {"distress","infant"}]
+    contact_cols = [i for i, s in enumerate(sem_c)
+                    if s in {"contact","coordination","long_distance","affiliative"}]
+    social_cols  = [i for i, s in enumerate(sem_c)
+                    if s in {"display","sex","dominance","submission","territory"}]
 
     def bracket(cols, label, color="#444"):
         if not cols:
@@ -196,12 +200,13 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
                     xycoords=("data", "axes fraction"),
                     textcoords=("data", "axes fraction"),
                     arrowprops=dict(arrowstyle="-", color=color, lw=1.5))
-        ax.text((x0+x1)/2, -0.11, label, ha="center", va="top",
+        ax.text((x0+x1)/2, -0.12, label, ha="center", va="top",
                 fontsize=8.5, color=color, transform=ax.get_xaxis_transform())
 
-    bracket(freq_cols,     "frequency")
-    bracket(spectral_cols, "spectral")
-    bracket(temporal_cols, "temporal")
+    bracket(alarm_cols,   "danger / threat")
+    bracket(infant_cols,  "distress")
+    bracket(contact_cols, "cohesion")
+    bracket(social_cols,  "social")
 
     fig.tight_layout()
     # save as both PNG and PDF
