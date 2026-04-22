@@ -48,13 +48,14 @@ SEMANTIC = [
     "alarm", "predator", "threat", "aggression",
     "distress", "infant",
     "contact", "coordination", "long_distance", "affiliative",
-    "display", "sex", "territory",
-    "food",
+    "display", "sex", "dominance", "submission", "territory",
+    "food", "recruitment",
+    "individual_identity", "learning", "referential",
 ]
 
 SEMANTIC_LABELS = {
-    "long_distance": "long-distance",
-    "affiliative": "affiliative",
+    "long_distance":      "long-distance",
+    "individual_identity": "indiv. identity",
 }
 
 # ------------------------------------------------------------------ #
@@ -72,12 +73,10 @@ def extract_acoustic_flags(desc: str, patterns: list[str]) -> bool:
     return any(p in desc for p in patterns)
 
 
-def compute_pmi(calls):
+def compute_pmi(calls, min_calls=4):
     n = len(calls)
     ac_labels  = [label for label, _ in ACOUSTIC]
-    sem_labels = SEMANTIC
 
-    # binary presence vectors
     ac_mat  = np.zeros((n, len(ACOUSTIC)),  dtype=float)
     sem_mat = np.zeros((n, len(SEMANTIC)), dtype=float)
 
@@ -89,14 +88,17 @@ def compute_pmi(calls):
         for j, sk in enumerate(SEMANTIC):
             sem_mat[i, j] = float(sk in kws)
 
-    # marginal probabilities
-    p_ac  = ac_mat.mean(axis=0)   # (n_ac,)
-    p_sem = sem_mat.mean(axis=0)  # (n_sem,)
+    # filter semantic keywords with too few calls
+    sem_counts = sem_mat.sum(axis=0)
+    keep = sem_counts >= min_calls
+    sem_mat = sem_mat[:, keep]
+    sem_labels = [s for s, k in zip(SEMANTIC, keep) if k]
+    print(f"  Semantic keywords kept (≥{min_calls} calls): {sem_labels}")
 
-    # joint probabilities
-    p_joint = (ac_mat[:, :, None] * sem_mat[:, None, :]).mean(axis=0)  # (n_ac, n_sem)
+    p_ac    = ac_mat.mean(axis=0)
+    p_sem   = sem_mat.mean(axis=0)
+    p_joint = (ac_mat[:, :, None] * sem_mat[:, None, :]).mean(axis=0)
 
-    # PMI
     with np.errstate(divide="ignore", invalid="ignore"):
         pmi = np.where(
             (p_joint > 0) & (p_ac[:, None] > 0) & (p_sem[None, :] > 0),
@@ -125,31 +127,36 @@ def cluster_order(mat):
 # ------------------------------------------------------------------ #
 
 def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
-    # cluster both axes
-    row_order = cluster_order(pmi)
-    col_order  = cluster_order(pmi.T)
+    # Transpose so semantic keywords are rows, acoustic features are columns
+    pmi_T = pmi.T   # (n_sem, n_ac)
+    row_order = cluster_order(pmi_T)       # cluster semantic rows
+    col_order = cluster_order(pmi_T.T)     # cluster acoustic columns
 
-    pmi_c = pmi[np.ix_(row_order, col_order)]
-    ac_c  = [ac_labels[i]  for i in row_order]
-    sem_c = [sem_labels[j] for j in col_order]
+    pmi_c = pmi_T[np.ix_(row_order, col_order)]
+    sem_c = [sem_labels[i] for i in row_order]
+    ac_c  = [ac_labels[j]  for j in col_order]
     sem_c_display = [SEMANTIC_LABELS.get(s, s) for s in sem_c]
 
     n_rows, n_cols = pmi_c.shape
-    cell = 0.55           # inches per cell
-    fig_w = max(7, n_cols * cell + 2.5)
-    fig_h = max(4, n_rows * cell + 1.8)
+    cell = 0.52           # inches per cell (square cells)
+    margin_left = 1.8     # room for row labels
+    margin_right = 1.0    # room for colorbar
+    margin_top = 0.5
+    margin_bottom = 1.6   # room for column labels + brackets
+    fig_w = n_cols * cell + margin_left + margin_right
+    fig_h = n_rows * cell + margin_top  + margin_bottom
 
     fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 
     vmax = max(abs(pmi_c.max()), abs(pmi_c.min()), 1.0)
-    im = ax.imshow(pmi_c, aspect="auto", cmap="RdBu_r",
+    im = ax.imshow(pmi_c, aspect=1, cmap="RdBu_r",
                    vmin=-vmax, vmax=vmax, interpolation="nearest")
 
-    # axis ticks
+    # axis ticks: acoustic on x, semantic on y
     ax.set_xticks(range(n_cols))
-    ax.set_xticklabels(sem_c_display, rotation=45, ha="right", fontsize=10)
+    ax.set_xticklabels(ac_c, rotation=45, ha="right", fontsize=10)
     ax.set_yticks(range(n_rows))
-    ax.set_yticklabels(ac_c, fontsize=10)
+    ax.set_yticklabels(sem_c_display, fontsize=10)
 
     # thin grid lines between cells
     ax.set_xticks(np.arange(-0.5, n_cols), minor=True)
@@ -157,11 +164,9 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
     ax.grid(which="minor", color="white", linewidth=0.5)
     ax.tick_params(which="minor", length=0)
 
-    # annotate top-5 positive and top-3 negative cells
+    # annotate top-6 positive and top-3 negative cells
     flat = pmi_c.flatten()
-    top_pos = np.argsort(flat)[::-1][:6]
-    top_neg = np.argsort(flat)[:3]
-    for idx in list(top_pos) + list(top_neg):
+    for idx in list(np.argsort(flat)[::-1][:6]) + list(np.argsort(flat)[:3]):
         r, c = divmod(idx, n_cols)
         v = pmi_c[r, c]
         color = "white" if abs(v) > vmax * 0.55 else "black"
@@ -169,39 +174,43 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
                 fontsize=8.5, fontweight="bold", color=color)
 
     # colorbar
-    cbar = fig.colorbar(im, ax=ax, shrink=0.6, pad=0.02)
+    cbar = fig.colorbar(im, ax=ax, shrink=0.55, pad=0.02)
     cbar.set_label("PMI (bits)", fontsize=10)
     cbar.ax.tick_params(labelsize=8)
 
-    # axis labels
-    ax.set_xlabel("Semantic function", fontsize=11, labelpad=8)
-    ax.set_ylabel("Acoustic feature", fontsize=11, labelpad=8)
+    ax.set_xlabel("Acoustic feature", fontsize=11, labelpad=8)
+    ax.set_ylabel("Semantic function", fontsize=11, labelpad=8)
 
-    # group brackets on x-axis (optional visual grouping)
-    # alarm/threat cluster
-    alarm_cols = [i for i, s in enumerate(sem_c) if s in {"alarm","predator","threat","aggression"}]
-    infant_cols = [i for i, s in enumerate(sem_c) if s in {"distress","infant"}]
-    contact_cols = [i for i, s in enumerate(sem_c) if s in {"contact","coordination","long_distance","affiliative"}]
+    # group brackets on x-axis for acoustic features
+    freq_cols    = [i for i, a in enumerate(ac_c) if a in {"high-frequency","low-frequency"}]
+    spectral_cols = [i for i, a in enumerate(ac_c)
+                     if a in {"tonal","broadband / noisy","frequency-modulated","harmonic"}]
+    temporal_cols = [i for i, a in enumerate(ac_c)
+                     if a in {"pulsed","repetitive","short","long / sustained"}]
 
-    def bracket(ax, cols, label, y_offset=-0.08, color="#444"):
+    def bracket(cols, label, color="#444"):
         if not cols:
             return
         x0, x1 = min(cols) - 0.45, max(cols) + 0.45
-        ax.annotate("", xy=(x1, y_offset), xytext=(x0, y_offset),
+        ax.annotate("", xy=(x1, -0.07), xytext=(x0, -0.07),
                     xycoords=("data", "axes fraction"),
                     textcoords=("data", "axes fraction"),
                     arrowprops=dict(arrowstyle="-", color=color, lw=1.5))
-        ax.text((x0+x1)/2, y_offset - 0.04, label, ha="center", va="top",
+        ax.text((x0+x1)/2, -0.11, label, ha="center", va="top",
                 fontsize=8.5, color=color, transform=ax.get_xaxis_transform())
 
-    bracket(ax, alarm_cols,   "danger / threat")
-    bracket(ax, infant_cols,  "infant / distress")
-    bracket(ax, contact_cols, "contact / cohesion")
+    bracket(freq_cols,     "frequency")
+    bracket(spectral_cols, "spectral")
+    bracket(temporal_cols, "temporal")
 
     fig.tight_layout()
-    fig.savefig(out_path, dpi=200, bbox_inches="tight")
+    # save as both PNG and PDF
+    png_path = Path(str(out_path).replace(".pdf", ".png")) if str(out_path).endswith(".pdf") else out_path
+    pdf_path = Path(str(out_path).replace(".png", ".pdf")) if str(out_path).endswith(".png") else out_path
+    fig.savefig(png_path, dpi=200, bbox_inches="tight")
+    fig.savefig(pdf_path, bbox_inches="tight")
     plt.close(fig)
-    print(f"Saved {out_path}")
+    print(f"Saved {pdf_path}")
 
 
 # ------------------------------------------------------------------ #

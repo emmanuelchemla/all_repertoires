@@ -75,13 +75,12 @@ Here we test for a biological code at scale by assembling \dbname, a curated dat
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/keyword_freq.png}
+	\includegraphics[width=\textwidth]{../plots/fig1_dataset_overview.png}
 	\caption{%
-	\textbf{\dbname: a curated cross-species lexical repertoire.}
-	\textbf{(A)}~Frequency of semantic ontology keywords across all \ncalls calls, colored by broad communicative category. Coordination, contact, alarm, and affective signaling account for more than half of all calls; rarer categories include referential signaling, individual identity coding, and learning-related vocalizations.
-	\textbf{(B)}~[Placeholder: distribution of acoustic keywords extracted from free-text descriptions, showing the prevalence of spectro-temporal features such as tonal, broadband, high-frequency, pulsed, and frequency-modulated.]
-	\textbf{(C)}~Taxonomic breakdown of the \nspecies species in \dbname across three vertebrate classes (Mammalia, Aves, Amphibia).
-	\textbf{(D)}~Calls per species, ranging from 3 to 12+. Repertoire size reflects both biological diversity and the depth of available primary literature.
+		\textbf{\dbname: a curated cross-species lexical repertoire.}
+		\textbf{(A)}~Frequency of semantic ontology keywords across all \ncalls calls, colored by communicative category. Coordination, contact, alarm, and affective signaling dominate; rarer categories include referential signaling, individual identity, and learning-related calls.
+		\textbf{(B)}~Frequency of acoustic features extracted by term-matching from free-text descriptions. Tonal, high-frequency, and repetitive features are most common; soft/quiet and harmonic features are rarer.
+		\textbf{(C)}~Calls per species, grouped by taxonomic group (Apes, Old World monkeys, other primates, Carnivora, other mammals, Passeriformes, Psittaciformes, Amphibia) and colored by family. Within each group, species are sorted by repertoire size. Repertoire sizes range from 2 to 32; the largest is the Bornean orangutan (32 calls), reflecting the depth of primary literature on great apes.
 	}
 	\label{fig:dataset}
 \end{figure}
@@ -94,14 +93,31 @@ The most common semantic categories are coordination ($n = 106$), affective sign
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/semantic_umap.png}
+	\begin{tabular}{ccc}
+		\includegraphics[width=0.32\textwidth]{../plots/fig2A_semantic_umap.pdf} &
+		\includegraphics[width=0.32\textwidth]{../plots/fig2B_acoustic_umap.pdf} &
+		\includegraphics[width=0.32\textwidth]{../plots/fig2C_mantel.pdf}
+	\end{tabular}
 	\caption{%
-	\textbf{Alignment of acoustic and semantic embedding spaces.}
-	\textbf{(A, B)}~UMAP projections of semantic~(A) and acoustic~(B) embeddings of all \ncalls calls in \dbname, colored by ontology keyword. Calls with related communicative functions cluster in semantic space; calls described in similar acoustic terms cluster in acoustic space.
-	\textbf{(C)}~[Placeholder: Mantel scatter plot---pairwise acoustic distance vs.\ pairwise semantic distance for all call pairs, colored by taxonomic relationship (within-species, same family, across families). Points above the diagonal are alarm/distress calls with matched acoustic profiles; points to the right are acoustically similar contact calls with shared semantic labels. Mantel $r$ and $p$ values annotated for each group.]
-	The correspondence between panels (A) and (B)---similar topologies, similar cluster identities---is the visual signature of the biological code quantified in the main text.
+		\textbf{Alignment of acoustic and semantic embedding spaces.}
+		\textbf{(A)}~Semantic UMAP: each point is a call, colored by communicative category (legend inside panel). Alarm/threat calls (red) cluster together; contact/cohesion calls (blue) form a separate region.
+		\textbf{(B)}~Acoustic UMAP: the same calls positioned by their acoustic description embedding. The topological similarity to~(A)---shared cluster identities despite independent embeddings---is the visual signature of the biological code.
+		\textbf{(C)}~Mantel scatter: 1,000 randomly sampled pairs per group, pairwise acoustic distance vs.\ semantic distance, colored by taxonomic relationship. $r$ values from permutation Mantel tests on all pairs; same-family cross-species pairs ($r=0.49$) show the strongest alignment.
 	}
 	\label{fig:embeddings}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.62\textwidth]{../plots/pmi_heatmap_paper.png}
+	\caption{%
+		\textbf{Keyword-level structure of the biological code.}
+		Pointwise mutual information (PMI, bits) between semantic functions (rows) and acoustic features (columns), estimated across all \ncalls calls in \dbname.
+		Rows and columns are ordered by hierarchical clustering; numbers annotate the six strongest and three weakest cells.
+		Warm colors~= acoustic feature over-represented in calls with that semantic function; cool colors~= under-represented.
+		Three acoustic feature groups are bracketed on the $x$-axis.
+	}
+	\label{fig:pmi}
 \end{figure}
 
 We embedded each call's acoustic and semantic descriptions separately into a shared sentence-transformer space (see Methods) and computed pairwise cosine similarities across all $\ncalls(\ncalls-1)/2 = 69{,}378$ call pairs. A Mantel test \cite{mantel1967detection} of the correlation between acoustic and semantic similarity matrices yields $r = 0.31$, $p < 0.001$ (9,999 permutations; Fig.~\ref{fig:embeddings}C). A partial Mantel test controlling for species identity yields an identical coefficient ($r = 0.31$, $p < 0.001$), confirming that the correlation is not driven by the trivial within-species similarity structure: calls from the same species are not the reason acoustic and semantic spaces are aligned.
@@ -110,20 +126,6 @@ Examining subsets of pairs by taxonomic relationship reveals additional structur
 
 To decompose the signal into interpretable units, we computed the pointwise mutual information (PMI) between acoustic features and semantic keywords across all calls (Fig.~\ref{fig:pmi}). Several strong, interpretable associations emerge. High-frequency calls are over-represented in infant-directed and food contexts (PMI~$\approx$~2.1--2.3) and sharply under-represented in display and aggression contexts (PMI~$\approx$~$-3.3$ to~$-3.4$). Broadband and noisy calls are enriched for aggression and threat semantics (PMI~$\approx$~1.7), consistent with the ``harsh = aggressive'' frequency code \cite{morton1977on}. Long/sustained and loud features co-occur with long-distance cohesion calls (PMI~$\approx$~1.8--2.0), consistent with propagation demands. These keyword-level associations provide a transparent, mechanistic decomposition of the biological code and replicate functional acoustic ecology predictions across \nspecies species simultaneously.
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=\textwidth]{../plots/pmi_heatmap_paper.png}
-	\caption{%
-		\textbf{Keyword-level structure of the biological code.}
-		Pointwise mutual information (PMI, bits) between acoustic features (rows) and semantic functions (columns), estimated across all \ncalls calls in \dbname.
-		Rows and columns are ordered by hierarchical clustering; numbers annotate the six strongest and three weakest cells.
-		Warm colors~= acoustic feature over-represented in calls with that semantic function; cool colors~= under-represented.
-		Three groupings are bracketed on the $x$-axis.
-		Key associations: high-frequency calls are enriched for infant/food contexts (PMI~$>$~2) and depleted for aggression and display (PMI~$<-3$); broadband/noisy calls are enriched for aggression and threat; long/sustained and loud features co-occur with long-distance cohesion calls.
-		These patterns are consistent with functional acoustic ecology predictions and extend them across \nspecies species.
-	}
-	\label{fig:pmi}
-\end{figure}
 
 \section{Form-to-meaning mapping is learnable and generalizes across taxa}
 
@@ -143,12 +145,12 @@ To decompose the signal into interpretable units, we computed the pointwise mutu
 		\toprule
 		& \multicolumn{2}{c}{\textbf{Within repertoire}} & \multicolumn{2}{c}{\textbf{Held-out species}} & \multicolumn{2}{c}{\textbf{Held-out family}} \\
 		\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
-		\textbf{Model}    & Cos.          & MRR  & Cos.          & MRR           & Cos.          & MRR           \\
+		\textbf{Model}    & Cos.          & MRR           & Cos.          & MRR           & Cos.          & MRR           \\
 		\midrule
-		Random            & 0.36          & 0.11 & 0.46          & 0.41          & 0.47          & 0.42          \\
-		Retrieval ($k=1$) & 0.67          & 0.51 & 0.68          & 0.78          & 0.60          & 0.67          \\
-		Linear (ridge)    & \textbf{0.74} & 0.46 & \textbf{0.74} & \textbf{0.80} & \textbf{0.68} & \textbf{0.70} \\
-		MLP               & 0.71          & 0.45 & 0.73          & 0.80          & 0.66          & 0.68          \\
+		Random            & 0.36          & 0.11          & 0.46          & 0.41          & 0.47          & 0.42          \\
+		Retrieval ($k=1$) & 0.67          & \textbf{0.51} & 0.68          & 0.78          & 0.60          & 0.67          \\
+		Linear (ridge)    & \textbf{0.74} & 0.46          & \textbf{0.74} & \textbf{0.80} & \textbf{0.68} & \textbf{0.70} \\
+		MLP               & 0.71          & 0.45          & 0.73          & \textbf{0.80} & 0.66          & 0.68          \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -157,14 +159,29 @@ The previous section demonstrates that there is stability in the form-to-meaning
 
 \section{Lexical translation across species}
 
-\begin{figure}[t]
+% \begin{figure}[t]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{../plots/semantic_umap3d.png}
+% 	\caption{%
+% 		\textbf{Cross-species lexical translation.}
+% 		[Placeholder: a force-directed graph in which nodes are calls from several species, edges connect nearest semantic neighbours across species, and node color encodes species. Calls from different species that are semantically equivalent cluster together regardless of their acoustic surface form. Insets show example translated pairs---e.g., meerkat alarm call $\leftrightarrow$ vervet alarm call $\leftrightarrow$ chickadee \textit{seet} call---with a condensed semantic gloss. Edge thickness encodes cosine similarity of the matched semantic embeddings.]
+% 	}
+% 	\label{fig:translation}
+% \end{figure}
+
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/semantic_umap3d.png}
+	\includegraphics[width=\textwidth]{../plots/fig5_landmark_calls.pdf}
 	\caption{%
-		\textbf{Cross-species lexical translation.}
-		[Placeholder: a force-directed graph in which nodes are calls from several species, edges connect nearest semantic neighbours across species, and node color encodes species. Calls from different species that are semantically equivalent cluster together regardless of their acoustic surface form. Insets show example translated pairs---e.g., meerkat alarm call $\leftrightarrow$ vervet alarm call $\leftrightarrow$ chickadee \textit{seet} call---with a condensed semantic gloss. Edge thickness encodes cosine similarity of the matched semantic embeddings.]
+		\textbf{Cross-species lexical translation. Calls with consistent cross-species neighbors in both acoustic and semantic space.}
+		%[\textit{Alternative to Fig.~\ref{fig:translation}.}]
+		Each rosette shows one landmark call ($\bigstar$, labeled with its call name at center) connected to up to eight calls from other species whose acoustic \emph{and} semantic embeddings both rank among its top-20 nearest neighbors.
+		%Call names are shown on each node; species are abbreviated (\textit{Genus~species} $\to$ \textit{G.~species}).
+		Node color encodes semantic category (same scheme as Fig.~\ref{fig:embeddings}); spoke width is proportional to mean acoustic–semantic similarity.
+		Parenthetical counts give the number of distinct species with at least one consistent neighbor (range: 10–16).
+		These landmark calls represent acoustic-semantic motifs independently co-opted across the tree of life—the concrete instances of the biological code quantified by the Mantel test (Fig.~\ref{fig:embeddings}C).
 	}
-	\label{fig:translation}
+	\label{fig:landmarks}
 \end{figure}
 
 The form-to-meaning structure identified above enables a direct translational application that operates entirely within the animal kingdom. Given a call from species~A, we retrieve the call in species~B whose semantic embedding is nearest---a lexical translation from one repertoire to another. When both species are represented in \dbname with full semantic annotations, the mapping is performed in semantic space by retrieval. When semantic annotations are absent for one or both species---as will routinely be the case for poorly studied taxa---the acoustic-to-semantic predictor from the previous section supplies a best-guess semantic embedding from acoustic features alone, enabling translation even across the boundary of documented knowledge.
@@ -300,6 +317,25 @@ The translation framework can be applied with human language as one of the two `
 		\textbf{Acoustic embedding space (UMAP).} Each point is a call in \dbname, positioned by acoustic description embedding and colored by taxonomic class. Clusters correspond to spectro-temporal call types (tonal long calls, broadband alarm bursts, etc.) that recur across classes, illustrating the convergent acoustic solutions captured by the database.
 	}
 	\label{fig:acoustic_umap}
+\end{figure}
+
+\begin{figure}[p]
+	\centering
+	\begin{minipage}[c]{0.30\textwidth}
+		\includegraphics[width=\linewidth]{../plots/fig2A_semantic_umap.pdf}\\[2pt]
+		\includegraphics[width=\linewidth]{../plots/fig2B_acoustic_umap.pdf}\\[2pt]
+		\includegraphics[width=\linewidth]{../plots/fig2C_mantel.pdf}
+	\end{minipage}%
+	\hfill
+	\begin{minipage}[c]{0.68\textwidth}
+		\includegraphics[width=\linewidth]{../plots/pmi_heatmap_paper.pdf}
+	\end{minipage}
+	\caption{%
+		\textbf{[Draft] Merged Figs.~2+3 candidate.}
+		Left column: \textbf{(A)}~semantic UMAP, \textbf{(B)}~acoustic UMAP, \textbf{(C)}~Mantel scatter (same as Fig.~\ref{fig:embeddings}).
+		Right column: \textbf{(D)}~PMI heatmap with semantic functions as rows and acoustic features as columns (square cells); rows and columns ordered by hierarchical clustering (same data as Fig.~\ref{fig:pmi}).
+	}
+	\label{fig:merged}
 \end{figure}
 
 \end{document}
