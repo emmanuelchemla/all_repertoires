@@ -39,6 +39,8 @@
 % ------------------------------------------------------------------ %
 \usepackage{xspace}
 \usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[section]{placeins}
 
 \begin{document}
 \thispagestyle{firstpage}
@@ -73,7 +75,7 @@ Here we test for a biological code at scale by assembling \dbname, a curated dat
 
 \section{A cross-species lexical repertoire}
 
-\begin{figure}[t]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=\textwidth]{../plots/fig1_dataset_overview.png}
 	\caption{%
@@ -91,7 +93,7 @@ The most common semantic categories are coordination ($n = 106$), affective sign
 
 \section{Acoustic and semantic spaces are aligned across the tree of life}
 
-\begin{figure}[t]
+\begin{figure}[!h]
 	\centering
 	\begin{tabular}{ccc}
 		\includegraphics[width=0.32\textwidth]{../plots/fig2A_semantic_umap.pdf} &
@@ -107,7 +109,7 @@ The most common semantic categories are coordination ($n = 106$), affective sign
 	\label{fig:embeddings}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.62\textwidth]{../plots/pmi_heatmap_paper.png}
 	\caption{%
@@ -120,7 +122,7 @@ The most common semantic categories are coordination ($n = 106$), affective sign
 	\label{fig:pmi}
 \end{figure}
 
-We embedded each call's acoustic and semantic descriptions separately into a shared sentence-transformer space (see Methods) and computed pairwise cosine similarities across all $\ncalls(\ncalls-1)/2 = 69{,}378$ call pairs. A Mantel test \cite{mantel1967detection} of the correlation between acoustic and semantic similarity matrices yields $r = 0.31$, $p < 0.001$ (9,999 permutations; Fig.~\ref{fig:embeddings}C). A partial Mantel test controlling for species identity yields an identical coefficient ($r = 0.31$, $p < 0.001$), confirming that the correlation is not driven by the trivial within-species similarity structure: calls from the same species are not the reason acoustic and semantic spaces are aligned.
+We embedded each call's acoustic and semantic descriptions separately into a shared sentence-transformer space (see Methods) and computed pairwise cosine similarities across all $\ncalls(\ncalls-1)/2 = 69{,}378$ call pairs. A Mantel test \cite{mantel1967detection} of the correlation between acoustic and semantic similarity matrices yields $r = 0.31$, $p < 0.001$ (9,999 permutations; Fig.~\ref{fig:embeddings}C; Supplementary~Sections~\ref{sec:supp_mantel_matrix} and~\ref{sec:supp_bootstrap}). A partial Mantel test controlling for species identity yields an identical coefficient ($r = 0.31$, $p < 0.001$), confirming that the correlation is not driven by the trivial within-species similarity structure: calls from the same species are not the reason acoustic and semantic spaces are aligned (Supplementary~Section~\ref{sec:supp_sensitivity}).
 
 Examining subsets of pairs by taxonomic relationship reveals additional structure. Pairs from the same family but different species show the strongest correlation ($r = 0.49$, $p < 0.001$, $n = 13{,}021$ pairs), while within-species pairs (pooled across all species; $r = 0.23$, $p < 0.001$, $n = 1{,}551$) and cross-family pairs ($r = 0.23$, $p < 0.001$, $n = 54{,}806$) are weaker and similar to each other. The same-family peak suggests that acoustic-semantic alignment is most visible when species share evolutionary history but have begun to acoustically diverge---consistent with a code that is phylogenetically conserved while acoustic surface form drifts.
 
@@ -160,13 +162,13 @@ The previous section demonstrates that there is stability in the form-to-meaning
 \section{Lexical translation across species}
 
 
-\begin{figure}[h]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=\textwidth]{../plots/fig4_landmark_h.pdf}
 	\caption{%
 		\textbf{Cross-species call groups sharing acoustic and semantic form.}
 		Each panel shows one group of calls---one per species---belonging to a single semantic category (dark header).
-		A pair of calls qualifies iff each is simultaneously the top-1 acoustic \emph{and} top-1 semantic nearest neighbour of the other within its counterpart species; groups are cliques in this species-pairwise mutual-consistency graph, selected to maximise taxonomic diversity (class and family spread).
+		A pair of calls qualifies iff each is simultaneously the top-1 acoustic \emph{and} top-1 semantic nearest neighbour of the other within its counterpart species; groups are cliques in this species-pairwise mutual-consistency graph, selected to maximise taxonomic diversity (class and family spread; see Supplementary~Sections~\ref{sec:supp_sensitivity} and~\ref{sec:supp_cliques}).
 		The coloured dot encodes taxonomic class (legend).
 		\textit{Top:} 2$\times$2 layout; each row shows species and call name, followed by semantic (\textit{Sem:}) and acoustic (\textit{Acc:}) descriptions.
 		\textit{Bottom:} same four groups arranged horizontally; each row shows common name (line~1), call name (line~2), semantic keywords (line~3), and acoustic description in italics (line~4).
@@ -242,6 +244,7 @@ We thank the researchers whose detailed ethological and bioacoustic studies form
 % ------------------------------------------------------------------ %
 %  SUPPLEMENTARY INFORMATION
 % ------------------------------------------------------------------ %
+\clearpage
 \appendix
 
 \section{Web application}
@@ -279,7 +282,72 @@ The translation framework can be applied with human language as one of the two `
 	\end{tabular}
 \end{table}
 
-\section{Validation against audio representations}
+\section{Full pairwise acoustic--semantic correlations}
+\label{sec:supp_mantel_matrix}
+
+Figure~\ref{fig:supp_mantel_matrix} shows the Pearson~$r$ between acoustic similarity and semantic similarity for every pair of species in \dbname.
+Each cell $(A, B)$ is the correlation computed across all $n_A \times n_B$ cross-species call pairs.
+The overall mean is $r = 0.228 \pm 0.275$ (SD across 1{,}485 species pairs).
+Positive correlations dominate within each taxonomic class and persist broadly across classes, confirming that the form-to-meaning alignment reported in the main text is not an artefact of pooling.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\textwidth]{../plots/fig_supp_mantel_matrix.pdf}
+	\caption{%
+		\textbf{Species-pairwise acoustic--semantic correlation.}
+		Each cell shows the Pearson~$r$ between the vector of all acoustic-similarity values and the vector of all semantic-similarity values for a given species pair.
+		Species are sorted by taxonomic class (coloured bars: Amphibia, Aves, Mammalia), with hierarchical clustering within each class to reveal similarity structure.
+		Colour scale: $-0.3$ (red) to $+0.3$ (blue).
+	}
+	\label{fig:supp_mantel_matrix}
+\end{figure}
+
+\section{Sensitivity analysis}
+\label{sec:supp_sensitivity}
+
+Figure~\ref{fig:supp_sensitivity} presents two sensitivity analyses.
+Panel~A shows Mantel~$r$ (with 95\% bootstrap confidence intervals, $n_\text{boot}=500$) computed separately for within-class and cross-class species pairs.
+The form-to-meaning alignment is positive and significant within Mammalia ($r = 0.364$), Aves ($r = 0.377$), and Amphibia ($r = 0.694$), and holds for most cross-class comparisons; the negative value for Aves~$\times$~Amphibia reflects the small sample ($n = 731$ pairs).
+
+Panel~B quantifies how the mutual nearest-neighbour graph changes when the strictness of the cross-modal agreement criterion is relaxed from top-1 to top-$k$ ($k \in \{1,2,3\}$).
+At $k=1$ (the main analysis), 4 cliques span all three classes; relaxing to $k=2$ yields 235 such cliques, and $k=3$ yields 10{,}690.
+The main-text result is therefore conservative: the qualitative finding strengthens as the criterion is relaxed.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\textwidth]{../plots/fig_supp_sensitivity.pdf}
+	\caption{%
+		\textbf{Sensitivity analysis.}
+		\textit{Left}: Mantel~$r$ by taxonomic class pair. Bars show Pearson~$r$; error bars are 95\% bootstrap CIs.
+		\textit{Right}: Number of graph edges, cliques with $\geq 3$ species, and three-class cliques as the mutual-NN threshold varies from top-1 (strict) to top-3 (relaxed).
+	}
+	\label{fig:supp_sensitivity}
+\end{figure}
+
+\section{Bootstrap confidence intervals for Mantel statistics}
+\label{sec:supp_bootstrap}
+
+Table~\ref{tab:supp_mantel_ci} reproduces the Mantel test results from the main text, augmented with 95\% bootstrap confidence intervals ($n_\text{boot}=1{,}000$ for plain Mantel tests, $n_\text{boot}=500$ for partial Mantel).
+
+\begin{table}[h]
+	\centering
+	\caption{Mantel test results with 95\% bootstrap confidence intervals.}
+	\label{tab:supp_mantel_ci}
+	\begin{tabular}{lrrl}
+		\toprule
+		\textbf{Test}                   & $r$      & \textbf{95\% CI}    & $p$      \\
+		\midrule
+		All pairs                       & $+0.309$ & $[+0.300,\;+0.319]$ & $<0.001$ \\
+		Within species (pooled)         & $+0.233$ & ---                 & $<0.001$ \\
+		Same family, cross-species      & $+0.488$ & ---                 & $<0.001$ \\
+		Cross-family                    & $+0.233$ & ---                 & $<0.001$ \\
+		Partial $\mid$ species identity & $+0.309$ & $[+0.273,\;+0.388]$ & $<0.001$ \\
+		Partial $\mid$ family identity  & $+0.296$ & $[+0.261,\;+0.374]$ & $<0.001$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{Validation against audio representations - IF WE CAN GET A SUBSET}
 \label{sec:supp_audio}
 
 [Placeholder: comparison of Mantel test results when acoustic embeddings are derived from (a) text descriptions, as in the main analysis, vs.\ (b) audio features extracted by AVES~\cite{hagiwara2022avesanimalvocalizationencoder} or NatureLM-audio~\cite{robinson2025naturelmaudio} for the subset of calls for which verified audio samples are available. This analysis tests whether the form-to-meaning alignment detected through textual descriptions is an artifact of description style or reflects genuine acoustic structure.]
@@ -291,12 +359,40 @@ See Figure~\ref{fig:calls_per_species}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/calls_per_species.png}
+	\includegraphics[width=.9\textwidth]{../plots/calls_per_species.png}
 	\caption{%
 		\textbf{Calls per species in \dbname}, sorted by count. Color encodes taxonomic class. The median repertoire size is [X] calls; the largest repertoire (\textit{Loxodonta africana}) contains [X] calls.
 	}
 	\label{fig:calls_per_species}
 \end{figure}
+
+
+\section{Complete cross-species call groups}
+\label{sec:supp_cliques}
+
+Figure~\ref{fig:supp_cliques} summarises all 297 cross-species call groups (maximal cliques in the mutual-NN graph with $\geq 2$ distinct species) identified in \dbname.
+Groups range in size from 2 to 26 calls, and span all five semantic categories.
+Cohesion groups are the most frequent (134), followed by social (60), danger (49), and distress (44).
+
+Table~\ref{tab:supp_cliques} lists all groups sorted by taxonomic diversity (number of classes, then number of species).
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{../plots/fig_supp_cliques.pdf}
+	\caption{%
+		\textbf{Distribution of cross-species call groups.}
+		\textit{Left}: number of groups by size, coloured by dominant semantic category.
+		\textit{Centre}: number of groups with 1, 2, or 3 taxonomic classes, grouped by category.
+		\textit{Right}: top-15 groups by taxonomic diversity.
+	}
+	\label{fig:supp_cliques}
+\end{figure}
+
+\begin{small}
+	\input{../paper_code/supp_cliques_table.tex}
+\end{small}
+
+\clearpage
 
 \section{Reserve material}
 
@@ -362,13 +458,12 @@ Figure~\ref{fig:acoustic_umap}, Figure~\ref{fig:merged}, Figure~\ref{fig:landmar
 	\caption{%
 		\textbf{Cross-species call groups sharing acoustic and semantic form.}
 		Each panel shows one group of calls---one per species---belonging to a single semantic category (dark header).
-		A pair of calls qualifies iff each is simultaneously the top-1 acoustic \emph{and} top-1 semantic nearest neighbour of the other within its counterpart species; groups are cliques in this species-pairwise mutual-consistency graph, selected to maximise taxonomic diversity (class and family spread).
+		A pair of calls qualifies iff each is simultaneously the top-1 acoustic \emph{and} top-1 semantic nearest neighbour of the other within its counterpart species; groups are cliques in this species-pairwise mutual-consistency graph, selected to maximise taxonomic diversity (class and family spread; see Supplementary~Sections~\ref{sec:supp_sensitivity} and~\ref{sec:supp_cliques}).
 		The coloured dot encodes taxonomic class (legend).
 		\textit{Top:} 2$\times$2 layout; each row shows species and call name, followed by semantic (\textit{Sem:}) and acoustic (\textit{Acc:}) descriptions.
 		\textit{Bottom:} same four groups arranged horizontally; each row shows common name (line~1), call name (line~2), semantic keywords (line~3), and acoustic description in italics (line~4).
 	}
 	\label{fig:landmarks_v2}
 \end{figure}
-
 
 \end{document}
