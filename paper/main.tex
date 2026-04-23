@@ -213,6 +213,11 @@ Acoustic keywords were extracted from free-text acoustic descriptions by matchin
 
 We trained a ridge regression mapping acoustic embeddings $\mathbf{x} \in \mathbb{R}^{384}$ to semantic embeddings $\mathbf{y} \in \mathbb{R}^{384}$, regularized with $\ell_2$ penalty $\lambda$ selected by leave-one-species-out cross-validation. Predicted embeddings were $\ell_2$-normalized before evaluation. Performance was measured by (i) mean cosine similarity between predicted and true semantic embeddings and (ii) mean reciprocal rank (MRR) of the true call's semantic embedding among all held-out calls, ranked by cosine similarity to the prediction. We additionally evaluated a shallow MLP (two hidden layers of 512 units, ReLU activations, dropout 0.2) and a retrieval baseline ($k$-nearest neighbors in acoustic space, semantic embedding averaged over the $k$ neighbors). Cross-validation used 10 folds stratified at the species level.
 
+\paragraph{Heavy AI methods}
+
+This work made maximally heavy use of AI technology including database collection, curation and organization, discussion, design and implementation of analyses, literature search, writing and reviewing.
+
+
 % ------------------------------------------------------------------ %
 %  CONTRIBUTIONS
 % ------------------------------------------------------------------ %
