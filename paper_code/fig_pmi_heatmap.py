@@ -139,11 +139,11 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
     sem_c_display = [SEMANTIC_LABELS.get(s, s) for s in sem_c]
 
     n_rows, n_cols = pmi_c.shape        # n_rows ≤ 12, n_cols ≤ 18
-    cell = 0.52                         # inches per cell — square cells
-    margin_left   = 1.9                 # acoustic feature row labels
-    margin_right  = 1.0                 # colorbar
+    cell = 0.62                         # inches per cell — square cells
+    margin_left   = 2.2                 # acoustic feature row labels
+    margin_right  = 1.1                 # colorbar
     margin_top    = 0.5
-    margin_bottom = 1.8                 # rotated semantic column labels + brackets
+    margin_bottom = 2.1                 # rotated semantic column labels + brackets
     fig_w = n_cols * cell + margin_left + margin_right
     fig_h = n_rows * cell + margin_top  + margin_bottom
 
@@ -155,9 +155,9 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
 
     # ticks: semantic on x (columns), acoustic on y (rows)
     ax.set_xticks(range(n_cols))
-    ax.set_xticklabels(sem_c_display, rotation=45, ha="right", fontsize=10)
+    ax.set_xticklabels(sem_c_display, rotation=45, ha="right", fontsize=12)
     ax.set_yticks(range(n_rows))
-    ax.set_yticklabels(ac_c, fontsize=10)
+    ax.set_yticklabels(ac_c, fontsize=12)
 
     # thin white grid lines between cells
     ax.set_xticks(np.arange(-0.5, n_cols), minor=True)
@@ -172,15 +172,15 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
         v = pmi_c[r, c]
         col = "white" if abs(v) > vmax * 0.55 else "black"
         ax.text(c, r, f"{v:.1f}", ha="center", va="center",
-                fontsize=8.5, fontweight="bold", color=col)
+                fontsize=10, fontweight="bold", color=col)
 
     # colorbar
     cbar = fig.colorbar(im, ax=ax, shrink=0.55, pad=0.02)
-    cbar.set_label("PMI (bits)", fontsize=10)
-    cbar.ax.tick_params(labelsize=8)
+    cbar.set_label("PMI (bits)", fontsize=12)
+    cbar.ax.tick_params(labelsize=10)
 
-    ax.set_xlabel("Semantic function", fontsize=11, labelpad=8)
-    ax.set_ylabel("Acoustic feature",  fontsize=11, labelpad=8)
+    ax.set_xlabel("Semantic function", fontsize=13, labelpad=8)
+    ax.set_ylabel("Acoustic feature",  fontsize=13, labelpad=8)
 
     # semantic category brackets on x-axis — overlaid on the clustering order
     alarm_cols   = [i for i, s in enumerate(sem_c)
@@ -201,7 +201,7 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
                     textcoords=("data", "axes fraction"),
                     arrowprops=dict(arrowstyle="-", color=color, lw=1.5))
         ax.text((x0+x1)/2, -0.12, label, ha="center", va="top",
-                fontsize=8.5, color=color, transform=ax.get_xaxis_transform())
+                fontsize=10.5, color=color, transform=ax.get_xaxis_transform())
 
     bracket(alarm_cols,   "danger / threat")
     bracket(infant_cols,  "distress")
