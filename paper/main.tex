@@ -160,24 +160,23 @@ The previous section demonstrates that there is stability in the form-to-meaning
 \section{Lexical translation across species}
 
 
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/fig4_landmark_v2.pdf}
+	\includegraphics[width=\textwidth]{../plots/fig4_landmark_h.pdf}
 	\caption{%
 		\textbf{Cross-species call groups sharing acoustic and semantic form.}
-		Each panel shows one group of calls---one per species---belonging to a single semantic category (header).
-		A pair of calls qualifies iff each is simultaneously the top-1 acoustic \emph{and} top-1 semantic nearest neighbour of the other within its counterpart species; groups are cliques in this species-pairwise mutual-consistency graph, chosen to maximise taxonomic diversity.
-		Each row lists species and call name (bold), ontology labels (\textit{Sem:}), and a brief acoustic description (\textit{Acc:}).
-		The coloured dot encodes taxonomic class (see legend, left).
-		The icon in the dark header circle identifies the semantic category (legend, right):
-		$\bigtriangleup$~danger, $\leftrightarrow$~cohesion, $\oplus$~social, $\bigstar$~foraging.
+		Each panel shows one group of calls---one per species---belonging to a single semantic category (dark header).
+		A pair of calls qualifies iff each is simultaneously the top-1 acoustic \emph{and} top-1 semantic nearest neighbour of the other within its counterpart species; groups are cliques in this species-pairwise mutual-consistency graph, selected to maximise taxonomic diversity (class and family spread).
+		The coloured dot encodes taxonomic class (legend).
+		\textit{Top:} 2$\times$2 layout; each row shows species and call name, followed by semantic (\textit{Sem:}) and acoustic (\textit{Acc:}) descriptions.
+		\textit{Bottom:} same four groups arranged horizontally; each row shows common name (line~1), call name (line~2), semantic keywords (line~3), and acoustic description in italics (line~4).
 	}
-	\label{fig:landmarks_v2}
+	\label{fig:landmarks}
 \end{figure}
 
 AnimalLex allows best guess translations across the animal kingdom. Given a call from species~A, we retrieve the call in species~B whose semantic embedding is nearest---a lexical translation from one repertoire to another. When both species are represented in \dbname with full semantic annotations, the mapping is performed in semantic space by retrieval. Given the form-to-meaning structure identified above, translational attempts are also possible on the basis of acoustic annotations only---as will routinely be the case for poorly studied taxa---the acoustic-to-semantic predictor from the previous section supplies a best-guess semantic embedding from acoustic features alone, enabling translation even across the boundary of documented knowledge.
 
-This two-mode pipeline (retrieval for annotated calls; prediction for unannotated ones) makes \dbname a living resource: every new species added expands the reach of translation, and the predictor provides a scaffold for annotating the next. We release an interactive web application (\url{[placeholder URL]}) in which users can select any call and browse its nearest semantic neighbours across all species in \dbname, with the option to include predicted-semantics calls from unannotated recordings (see Appendix~\ref{sec:supp_webapp}). Strikingly, Fig.~\ref{fig:landmarks_v2} shows examples where several calls can be closest in semantic space from each other as well as closest in acoustic space across broad families of species; this confirms the form-to-meaning stability.
+This two-mode pipeline (retrieval for annotated calls; prediction for unannotated ones) makes \dbname a living resource: every new species added expands the reach of translation, and the predictor provides a scaffold for annotating the next. We release an interactive web application (\url{[placeholder URL]}) in which users can select any call and browse its nearest semantic neighbours across all species in \dbname, with the option to include predicted-semantics calls from unannotated recordings (see Appendix~\ref{sec:supp_webapp}). Strikingly, Fig.~\ref{fig:landmarks} shows examples where several calls can be closest in semantic space from each other as well as closest in acoustic space across broad families of species; this confirms the form-to-meaning stability.
 
 A natural extension is to learn the translation \emph{directly in acoustic space}, bypassing the semantic intermediate. Two species that are phylogenetically close should have nearly aligned acoustic spaces---similar vocal anatomies, shared evolutionary pressures, conserved call repertoires---and their repertoires should be mappable by a small rotation. Phylogenetically distant species may require a larger transformation. This suggests learning a family of species-pair rotations $R_{AB}$ (Procrustes-style, constrained to be orthogonal) regularised by phylogenetic distance: $\|R_{AB} - \mathbf{I}\|_F \leq \lambda \cdot d_{\mathrm{phylo}}(A,B)$, where $d_{\mathrm{phylo}}$ is branch length in a dated phylogeny and $\lambda$ controls how much divergence is allowed per unit evolutionary distance. Such a model would be fully audio-grounded, require no semantic labels, and could scale to the thousands of species for which recordings but no annotations exist. We leave this to future work, but note that the form-to-meaning results above provide the theoretical justification: because acoustic and semantic spaces are aligned, a rotation in acoustic space is also, approximately, a rotation in semantic space.
 
@@ -301,7 +300,7 @@ See Figure~\ref{fig:calls_per_species}
 
 \section{Reserve material}
 
-Figure~\ref{fig:acoustic_umap}, Figure~\ref{fig:merged}, Figure~\ref{fig:landmarks}.
+Figure~\ref{fig:acoustic_umap}, Figure~\ref{fig:merged}, Figure~\ref{fig:landmarks_v1}, Figure~\ref{fig:landmarks_v2}.
 
 \begin{figure}[h]
 	\centering
@@ -353,7 +352,23 @@ Figure~\ref{fig:acoustic_umap}, Figure~\ref{fig:merged}, Figure~\ref{fig:landmar
 		Parenthetical counts give the number of distinct species with at least one consistent neighbor (range: 10–16).
 		These landmark calls represent acoustic-semantic motifs independently co-opted across the tree of life—the concrete instances of the biological code quantified by the Mantel test (Fig.~\ref{fig:embeddings}C).
 	}
-	\label{fig:landmarks}
+	\label{fig:landmarks_v1}
 \end{figure}
+
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=\textwidth]{../plots/fig4_landmark_v2.pdf}
+
+	\caption{%
+		\textbf{Cross-species call groups sharing acoustic and semantic form.}
+		Each panel shows one group of calls---one per species---belonging to a single semantic category (dark header).
+		A pair of calls qualifies iff each is simultaneously the top-1 acoustic \emph{and} top-1 semantic nearest neighbour of the other within its counterpart species; groups are cliques in this species-pairwise mutual-consistency graph, selected to maximise taxonomic diversity (class and family spread).
+		The coloured dot encodes taxonomic class (legend).
+		\textit{Top:} 2$\times$2 layout; each row shows species and call name, followed by semantic (\textit{Sem:}) and acoustic (\textit{Acc:}) descriptions.
+		\textit{Bottom:} same four groups arranged horizontally; each row shows common name (line~1), call name (line~2), semantic keywords (line~3), and acoustic description in italics (line~4).
+	}
+	\label{fig:landmarks_v2}
+\end{figure}
+
 
 \end{document}
