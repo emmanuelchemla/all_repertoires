@@ -138,6 +138,44 @@ def reorder_within_classes(species, R, classes):
     return new_order
 
 
+def orient_class_blocks(R, classes, n_boundary=3):
+    """For each class block, choose keep-or-flip to maximise mean r at class boundaries.
+
+    After hierarchical clustering any subtree can be reflected without breaking the
+    topology, so we try both orientations and keep whichever puts more similar species
+    at each inter-class boundary.  Returns a permutation of range(len(classes)).
+    """
+    spans = class_spans(classes)
+    perm = list(range(len(classes)))
+
+    def _boundary_mean(left_indices, right_indices):
+        vals = [R[i, j] for i in left_indices for j in right_indices
+                if not np.isnan(R[i, j])]
+        return float(np.mean(vals)) if vals else 0.0
+
+    for k, (start, end, _cls) in enumerate(spans):
+        if end - start <= 1:
+            continue
+        nb = min(n_boundary, end - start)
+
+        # Indices of the neighbour bands (already in current perm order)
+        left_band  = list(range(max(0, spans[k-1][1] - nb), spans[k-1][1])) if k > 0 else []
+        right_band = list(range(spans[k+1][0], min(len(classes), spans[k+1][0] + nb))) if k < len(spans) - 1 else []
+
+        # Forward: first nb of this block face left_band; last nb face right_band
+        fwd_first = list(range(start, start + nb))
+        fwd_last  = list(range(end - nb, end))
+        score_fwd  = _boundary_mean(left_band, fwd_first) + _boundary_mean(fwd_last, right_band)
+
+        # Reversed: last nb face left_band; first nb face right_band
+        score_rev  = _boundary_mean(left_band, fwd_last) + _boundary_mean(fwd_first, right_band)
+
+        if score_rev > score_fwd:
+            perm[start:end] = list(range(end - 1, start - 1, -1))
+
+    return perm
+
+
 def class_spans(classes):
     """
     Return list of (start_idx, end_idx_exclusive, class_name) for each
@@ -185,6 +223,12 @@ def main():
     species = [species[i] for i in order]
     R = R[np.ix_(order, order)]
     classes = [classes[i] for i in order]
+
+    # Orient each class block (keep or flip) to maximise cross-class boundary similarity
+    flip = orient_class_blocks(R, classes)
+    species = [species[i] for i in flip]
+    R = R[np.ix_(flip, flip)]
+    classes = [classes[i] for i in flip]
 
     # Summary statistics (off-diagonal non-NaN cells)
     off_diag = R[~np.eye(n_sp, dtype=bool)]
