@@ -139,10 +139,10 @@ To decompose the signal into interpretable units, we computed the pointwise mutu
 	\includegraphics[width=\textwidth]{../plots/pmi_heatmap_paper.png}
 	\caption{%
 		\textbf{Keyword-level structure of the biological code.}
-		Pointwise mutual information (PMI, bits) between semantic functions (rows) and acoustic features (columns), estimated across all \ncalls calls in \dbname.
-		Rows and columns are ordered by hierarchical clustering; numbers annotate the six strongest and three weakest cells.
+		Pointwise mutual information (PMI, bits) between semantic functions (columns, grouped into panels by category) and acoustic features (rows, grouped by type), estimated across all \ncalls calls in \dbname.
+		Acoustic features are ordered by group: frequency (high, low, FM), duration (short, long), amplitude (loud, soft), and texture/pattern.
+		Numbers annotate the two strongest and one weakest association per panel.
 		Warm colors~= acoustic feature over-represented in calls with that semantic function; cool colors~= under-represented.
-		Three acoustic feature groups are bracketed on the $x$-axis.
 	}
 	\label{fig:pmi}
 \end{figure}
