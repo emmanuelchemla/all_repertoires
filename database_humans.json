@@ -1,0 +1,525 @@
+{
+  "scope_notes": {
+    "exhaustive_definition": "This entry covers the repertoire of non-speech human vocal bursts — short, non-lexical affective vocalizations produced without words (e.g., 'ha', 'aww', 'ugh'). The taxonomy follows the 30 discrete emotion categories established by Cowen et al. via large-scale behavioral ratings of 2,032 stimuli. Coverage is exhaustive with respect to that taxonomy; rarer or highly culture-specific burst types may not be represented. Bursts produced only by infants or only in pathological contexts are excluded.",
+    "last_updated_utc_date": "2026-04-30",
+    "citation_policy": "Primary reference is the Cowen et al. vocal-burst dataset and associated papers. Acoustic descriptions are based on phonetic literature on affective non-speech vocalizations."
+  },
+  "species": [
+    {
+      "species_name": "Human (Homo sapiens)",
+      "class": "Mammalia",
+      "order": "Primates",
+      "family": "Hominidae",
+      "genus": "Homo",
+      "taxonomy_basis": {
+        "summary": "Humans produce a rich repertoire of short, non-lexical vocal bursts that convey affective and social information independently of language. These vocalizations — laughter, cries, gasps, sighs, exclamations — are rapidly and reliably recognised across cultures and appear to be continuous with homologous affective calls in other primates. Cowen et al. (2019) systematically mapped this repertoire using 2,032 stimuli rated by thousands of participants, identifying 30 discrete emotion categories connected by continuous gradients. The acoustic forms described here (phonetic rendering, pitch contour, voice quality, duration) are drawn from that corpus and from phonetic analyses of affective non-speech vocalizations.",
+        "scientific_references": [
+          "https://doi.org/10.1037/amp0000399",
+          "https://doi.org/10.1073/pnas.1702247114",
+          "https://doi.org/10.1037/a0015821",
+          "https://doi.org/10.1016/j.cognition.2010.01.002"
+        ]
+      },
+      "calls": [
+        {
+          "call_name": "Amusement burst (laughter)",
+          "acoustic_description": "Rhythmic pulsed bursts of voiced sound, typically 'ha-ha-ha' or 'hee-hee-hee'; each pulse lasts ~80–200 ms separated by ~50–120 ms gaps. Fundamental frequency is high (200–450 Hz in females, 120–280 Hz in males) and often rises across the sequence. Voice quality is relatively breathy or falsetto in high-intensity laughter; more modal in mild chuckling. Amplitude is moderate to high. Variants include snorting (nasal turbulence) and silent laughter (purely whispered pulses).",
+          "semantic_description": "Signals positive affect, playful engagement, and social bonding; functions as an invitation to shared mirth and reinforces group cohesion. Contagious: heard laughter reliably elicits laughter in listeners.",
+          "ontology_keywords": [
+            "affiliative",
+            "display",
+            "contact",
+            "positive_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1016/j.cognition.2010.01.002"
+          ],
+          "subjective_reliability": "high",
+          "comments": "Most frequent and best-studied human non-speech vocalization. 213 stimuli in Cowen corpus dominated by this category.",
+          "users": "Both sexes, all ages"
+        },
+        {
+          "call_name": "Adoration burst",
+          "acoustic_description": "Soft, nasal, rising-then-falling vowel sound, typically 'awww' or 'ohhh'; duration 300–800 ms. Fundamental frequency is mid-to-high (often 200–350 Hz), with a gentle rising onset followed by a slow fall. Voice quality is warm and modal, sometimes slightly breathy. Amplitude is moderate and controlled. Often produced with mouth slightly rounded.",
+          "semantic_description": "Elicited by perceived cuteness, vulnerability, or tenderness in others (infants, animals, endearing objects). Signals warmth, nurturing motivation, and approach disposition.",
+          "ontology_keywords": [
+            "affiliative",
+            "positive_affect",
+            "contact"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "118 dominant stimuli in Cowen corpus. Often confusable with sympathy and contentment bursts.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Anger burst",
+          "acoustic_description": "Harsh, loud, short exclamation: 'UGH!', 'ARGH!', 'GRR', or a staccato 'HA!' (scornful). Fundamental frequency is relatively low (100–180 Hz) but variable, with abrupt onset and often a falling contour. Voice quality is pressed or creaky; high subglottal pressure produces harsh, tense voicing. Duration 200–600 ms. May include ingressive components (sharp inhalation before the burst).",
+          "semantic_description": "Signals frustration, blocked goals, or perceived injustice. Functions as a warning to others and an expression of dominance threat.",
+          "ontology_keywords": [
+            "aggression",
+            "threat",
+            "display",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1073/pnas.1702247114"
+          ],
+          "subjective_reliability": "high",
+          "comments": "97 dominant stimuli. Acoustic profile overlaps with contempt but anger bursts tend to be louder and less controlled.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Awe burst",
+          "acoustic_description": "Slow, wide-pitch-range vowel exclamation: 'ohhhh', 'wooow', or a drawn-out 'aaah'. Duration 400 ms–1.5 s. Fundamental frequency often starts mid-range, rises dramatically, then falls. Voice quality is breathy or aspirated, reflecting a partial open-glottis state. Amplitude is moderate, sometimes building. May be preceded by a brief inhalatory gasp.",
+          "semantic_description": "Elicited by perceived vastness, beauty, or transcendence. Signals openness, absorption, and reduced self-focus; may facilitate social transmission of wonder.",
+          "ontology_keywords": [
+            "positive_affect",
+            "referential",
+            "display"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "101 dominant stimuli. Confusable with surprise (positive) but typically longer, more sustained, and with more breathy voice quality.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Confusion burst",
+          "acoustic_description": "Short, mid-pitched nasal or quasi-nasal sound: 'huh?', 'hmm?', or 'uhh?'; duration 150–400 ms. Fundamental frequency rises sharply at the end (interrogative contour), suggesting uncertainty. Voice quality is modal. Amplitude is low to moderate. May include a brief labial or dental articulation before the voiced portion ('wh-' or 'eh').",
+          "semantic_description": "Signals failure to understand or interpret an event or utterance. Functions as a social signal requesting clarification.",
+          "ontology_keywords": [
+            "referential",
+            "contact",
+            "coordination"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "60 dominant stimuli. Often produced with furrowed brows and head tilt. Acoustic form is highly cross-linguistically similar (Dingemanse et al. 2015).",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Contempt burst",
+          "acoustic_description": "Brief, lightly voiced or unvoiced fricative or click: 'pfff', 'tch', 'heh' (short, flat). Duration 100–300 ms. Fundamental frequency, if present, is low and monotone. Voice quality is pressed or whispered. Often unilateral (one side of mouth). May include a lateral click or bilabial trill ('brr'). Amplitude is deliberately low, signalling controlled disdain.",
+          "semantic_description": "Signals moral superiority or disdain toward a target. Functions as a social dominance signal that derogates without overt aggression.",
+          "ontology_keywords": [
+            "aggression",
+            "display",
+            "dominance",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1073/pnas.1702247114"
+          ],
+          "subjective_reliability": "high",
+          "comments": "104 dominant stimuli. Acoustic subtlety is intentional: contempt is performed, not reactive.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Contentment burst",
+          "acoustic_description": "Smooth, sustained, low-to-mid-pitched hum or sigh: 'mmmm', 'ahhhh', or a long nasal murmur. Duration 400 ms–1.5 s. Fundamental frequency is stable, often slightly falling (declarative contour). Voice quality is modal and relaxed, with low subglottal pressure. Amplitude is low. May be nearly whispered or entirely nasal.",
+          "semantic_description": "Signals satiation, comfort, or peaceful well-being. Not a social demand — rather a passive expression of positive state that may invite proximity.",
+          "ontology_keywords": [
+            "affiliative",
+            "positive_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "93 dominant stimuli. Often confused with serenity and relief bursts; distinguished by context.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Desire burst",
+          "acoustic_description": "Breathy, sustained vowel: 'ooh', 'mmm', or 'ahh', with a slightly rising-then-stable pitch contour. Duration 300–800 ms. Fundamental frequency is mid-range (150–280 Hz), often with subtle vibrato. Voice quality is notably breathy, reflecting partial glottal abduction. Amplitude is low to moderate, suggesting intimacy or restraint.",
+          "semantic_description": "Signals attraction, craving, or appetitive motivation — toward food, people, or objects. Functions as an approach signal and may invite reciprocation.",
+          "ontology_keywords": [
+            "affiliative",
+            "sex",
+            "positive_affect",
+            "display"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "125 dominant stimuli. Highly confusable with adoration and contentment; desire bursts tend to be breathier and have a more forward-placed resonance.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Disappointment burst",
+          "acoustic_description": "Falling, often extended vowel: 'ohh', 'aww' (descending), or a soft 'nooo'. Duration 300–700 ms. Fundamental frequency starts mid-range and falls monotonically, sometimes ending in vocal fry. Voice quality is modal or slightly creaky. Amplitude is low. May include an exhalatory component (audible breath before or after the voiced portion).",
+          "semantic_description": "Signals unmet expectations or lost opportunity. May function to elicit sympathy or mark a goal-failure for self and others.",
+          "ontology_keywords": [
+            "distress",
+            "negative_affect",
+            "contact"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "127 dominant stimuli. Resembles sadness but shorter and less intense; often context-dependent.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Disgust burst",
+          "acoustic_description": "Guttural or pharyngeal voiced sound: 'ewww', 'ugh', 'blech', or 'yuck'; duration 150–500 ms. Fundamental frequency is low and variable, often with abrupt onset. Voice quality is pressed, rough, or creaky, reflecting high laryngeal tension. Amplitude is moderate to high. Often accompanied by a retracted tongue or lowered jaw, producing a dark resonance.",
+          "semantic_description": "Signals repulsion in response to a contaminating stimulus (rotten food, foul odour, moral violation). Functions to alert others to an aversive stimulus and motivate avoidance.",
+          "ontology_keywords": [
+            "alarm",
+            "negative_affect",
+            "threat"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1073/pnas.1702247114"
+          ],
+          "subjective_reliability": "high",
+          "comments": "150 dominant stimuli — one of the most reliably recognised categories. Convergent evidence across cultures.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Distress burst",
+          "acoustic_description": "High-pitched, sustained or tremulous cry: 'nooo', 'ahhh' (strained), or a wavering wail. Duration 300 ms–2 s. Fundamental frequency is high (250–500 Hz) and may oscillate (cry-break pattern). Voice quality is tense and often includes phonation breaks or rough registers from laryngeal instability. Amplitude is high. May include inhalatory sobs.",
+          "semantic_description": "Signals extreme negative affect or urgent need for help. Functions as a distress signal that reliably elicits attention and helping behaviour in listeners.",
+          "ontology_keywords": [
+            "distress",
+            "alarm",
+            "contact",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1016/j.cognition.2010.01.002"
+          ],
+          "subjective_reliability": "high",
+          "comments": "23 dominant stimuli (rare as a dominant category; overlaps with fear and sadness). Acoustically similar to pain but contextually distinguished.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Ecstasy burst",
+          "acoustic_description": "Very high-pitched, loud, explosive exclamation: 'YAAA!', 'OHHHH!' (peak intensity), or a shrieking laugh. Duration 200–600 ms. Fundamental frequency is very high (often >400 Hz in females, >250 Hz in males), may crack or shift register. Voice quality is breathy or tense at peak. Amplitude is very high. May include rapid pitch glide upward.",
+          "semantic_description": "Signals extreme positive affect at peak intensity, typically in response to unexpected very positive outcomes (e.g., winning, orgasm, profound beauty).",
+          "ontology_keywords": [
+            "display",
+            "positive_affect",
+            "affiliative"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "36 dominant stimuli. Difficult to distinguish from elation without context; ecstasy bursts tend to be louder and at higher pitch extremes.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Elation burst",
+          "acoustic_description": "Bright, energetic exclamation: 'woohoo!', 'yesss!', or rapid high-pitched laughter bursts. Duration 200–500 ms. Fundamental frequency is high and often rising. Voice quality is modal but energetic, with high subglottal pressure producing a clear, projecting tone. Amplitude is high. Often includes a rapid upward pitch glide.",
+          "semantic_description": "Signals intense happiness or euphoria at a positive outcome. Functions as a social signal of success and positive emotion that invites shared celebration.",
+          "ontology_keywords": [
+            "display",
+            "positive_affect",
+            "affiliative"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "46 dominant stimuli. Confusable with triumph; elation is more surprise-infused, triumph is more controlled and directed.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Embarrassment burst",
+          "acoustic_description": "Brief, high-pitched, broken laughter: 'heh-heh' or 'haa' with phonation breaks; duration 150–400 ms per pulse, often with a falling terminal contour. Fundamental frequency is high and unstable. Voice quality is often mixed modal/falsetto with abrupt transitions. Amplitude is low to moderate — typically quieter than genuine amusement laughter. May include a terminal falling 'oh'.",
+          "semantic_description": "Signals awareness of social transgression or unwanted exposure. Functions to appease potential critics and signal submission, reducing the likelihood of negative social consequences.",
+          "ontology_keywords": [
+            "display",
+            "affiliative",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1073/pnas.1702247114"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "20 dominant stimuli (relatively rare). Distinct from shame in being more social/performative and less internalised.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Fear burst",
+          "acoustic_description": "Short, high-pitched, sharp exclamation or gasp: 'ahhh!', a brief shriek, or an audible inhalatory gasp. Duration 100–400 ms. Fundamental frequency rises sharply at onset, often reaching very high values (>350 Hz). Voice quality is breathy (gasp) or tense (scream onset). Amplitude is high but brief. The inhalatory gasp form is distinctive: turbulent airflow through a partly open larynx.",
+          "semantic_description": "Signals detection of imminent threat. Functions as an alarm call that prepares the vocaliser for flight/fight and warns nearby conspecifics.",
+          "ontology_keywords": [
+            "alarm",
+            "predator",
+            "distress",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1016/j.cognition.2010.01.002"
+          ],
+          "subjective_reliability": "high",
+          "comments": "84 dominant stimuli. The inhalatory gasp is cross-culturally recognised. Scream-type fear bursts overlap acoustically with pain.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Guilt burst",
+          "acoustic_description": "Soft, falling, low-pitched exhalation or murmur: 'ohh' (quiet), 'mmm' (low), or a barely voiced sigh. Duration 300–600 ms. Fundamental frequency is low and gently falling. Voice quality is soft and modal, sometimes whispery. Amplitude is low — guilt bursts are restrained and inward-directed.",
+          "semantic_description": "Signals moral self-condemnation following perceived transgression. May function to pre-empt or attenuate social punishment by signalling remorse.",
+          "ontology_keywords": [
+            "distress",
+            "display",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "low",
+          "comments": "Only 2 dominant stimuli in Cowen corpus — acoustically very close to disappointment and shame. High ambiguity; context-dependent.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Interest burst",
+          "acoustic_description": "Short, mid-pitched nasal or voiced sound: 'ooh?', 'hmm', or 'oh' (level or slightly rising). Duration 150–350 ms. Fundamental frequency is mid-range with a slight rising or level contour. Voice quality is modal. Amplitude is moderate. Often produced with lips slightly parted and brows raised.",
+          "semantic_description": "Signals directed attention and curiosity toward a novel or salient stimulus. Functions to orient self and others toward something worth exploring.",
+          "ontology_keywords": [
+            "referential",
+            "positive_affect",
+            "contact"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "98 dominant stimuli. Acoustically similar to confusion but with a more neutral-to-positive valence inflection.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Neutral burst",
+          "acoustic_description": "Flat, monotone acknowledgement sound: 'mhm', 'uh-huh', or 'mm' with no marked pitch contour. Duration 150–400 ms. Fundamental frequency is mid-range and steady. Voice quality is modal with no particular energy or affect. Amplitude is low to moderate.",
+          "semantic_description": "Signals attentive listening or neutral acknowledgement with no strong affective content. Functions as a backchannel in social interaction.",
+          "ontology_keywords": [
+            "contact",
+            "coordination"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "26 dominant stimuli. Difficult to elicit in isolation; in the Cowen corpus these are the residual category.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Pain burst",
+          "acoustic_description": "Sharp, high-pitched exclamation: 'ow!', 'ahhh!' (strained), or 'eee!'. Duration 100–500 ms, often with a short sharp onset and a decaying tail. Fundamental frequency is high and abrupt at onset (300–500 Hz), then falls. Voice quality is tense, often pressed or harsh. Amplitude is high. The sudden onset reflects the startle component.",
+          "semantic_description": "Signals acute physical pain. Functions as an alarm to conspecifics and may elicit sympathetic approach.",
+          "ontology_keywords": [
+            "distress",
+            "alarm",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1016/j.cognition.2010.01.002"
+          ],
+          "subjective_reliability": "high",
+          "comments": "62 dominant stimuli. Cross-culturally recognised. Acoustically distinct from fear by sharper temporal onset and often higher peak frequency.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Pride burst",
+          "acoustic_description": "Controlled, mid-to-low-pitched, slightly sustained sound: 'ahh' (satisfied), 'mmm' (deep and resonant), or a short 'hmph' with a rising then stable contour. Duration 200–500 ms. Voice quality is full modal, resonant, with no breathiness. Amplitude is moderate. The overall impression is composed and restrained.",
+          "semantic_description": "Signals self-assessed success or achievement. Functions as a dominance display that communicates high status and capability to observers.",
+          "ontology_keywords": [
+            "display",
+            "dominance",
+            "positive_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1073/pnas.1702247114"
+          ],
+          "subjective_reliability": "low",
+          "comments": "Only 2 dominant stimuli in Cowen corpus — pride bursts are easily confused with contentment and triumph. Often conveyed through posture rather than vocalisation.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Realization burst",
+          "acoustic_description": "Short, mid-pitched exclamation with a rapid rising onset: 'oh!', 'aha!', or 'ohhh' (dawning). Duration 150–400 ms. Fundamental frequency starts low and rises sharply in the first 50–100 ms, then may level off or fall. Voice quality is modal. Amplitude is moderate, with a clear attack. The acoustic onset is the most salient feature.",
+          "semantic_description": "Signals sudden understanding or recognition (the 'aha' moment). Functions to announce a shift in knowledge state and invite shared awareness.",
+          "ontology_keywords": [
+            "referential",
+            "positive_affect",
+            "contact"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "65 dominant stimuli. Confusable with surprise (positive); realization bursts tend to have a slower, more deliberate rising contour.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Relief burst",
+          "acoustic_description": "Long, sustained exhalatory sigh: 'phew', 'ahhhh' (releasing), or a voiced exhalation 'haaaa' (slow decay). Duration 500 ms–2 s. Fundamental frequency is mid-range and falls across the vocalization, often ending in vocal fry or whisper. Voice quality transitions from modal to breathy or whispery, reflecting decreasing laryngeal tension. Amplitude decays smoothly.",
+          "semantic_description": "Signals cessation of threat or restoration of safety after a period of tension or fear. Functions to signal de-escalation to self and conspecifics.",
+          "ontology_keywords": [
+            "positive_affect",
+            "affiliative",
+            "alarm"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1016/j.cognition.2010.01.002"
+          ],
+          "subjective_reliability": "high",
+          "comments": "154 dominant stimuli — one of the most frequent categories. The falling-into-whisper contour is highly distinctive.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Romantic love burst",
+          "acoustic_description": "Very soft, sustained, warm vowel: 'mmmm', 'ohhhh' (tender), or a gentle cooing 'ooh'. Duration 400 ms–1 s. Fundamental frequency is mid-range, stable or gently undulating. Voice quality is notably breathy and soft, with low subglottal pressure and partial glottal abduction. Amplitude is very low — intimacy-marking quietness. Produced close-range.",
+          "semantic_description": "Signals pair-bond affection and romantic attachment. Functions to maintain and reinforce pair bonds and signal exclusive positive regard.",
+          "ontology_keywords": [
+            "affiliative",
+            "sex",
+            "contact",
+            "positive_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "low",
+          "comments": "0 dominant stimuli in Cowen corpus — acoustically very close to adoration, desire, and contentment. Context-dependent disambiguation.",
+          "users": "Both sexes, adults"
+        },
+        {
+          "call_name": "Sadness burst",
+          "acoustic_description": "Low-pitched, falling, often tremulous sound: 'ohh' (slow), 'mmm' (mournful), or a soft cry-like 'uhhh'. Duration 400 ms–1.5 s. Fundamental frequency is low (below modal speaking pitch) and falls steadily, often with pitch instability (cry breaks). Voice quality is lax or slightly breathy, reflecting reduced laryngeal effort. Amplitude is low.",
+          "semantic_description": "Signals grief, loss, or low mood. Functions to elicit comfort and social support from conspecifics.",
+          "ontology_keywords": [
+            "distress",
+            "contact",
+            "negative_affect",
+            "affiliative"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1016/j.cognition.2010.01.002"
+          ],
+          "subjective_reliability": "high",
+          "comments": "79 dominant stimuli. Cross-culturally recognised. Distinguished from distress by lower intensity and more sustained duration.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Serenity burst",
+          "acoustic_description": "Very soft, sustained nasal hum or whispered sigh: 'mmm' (barely audible), 'ahhh' (whispered), or near-silent exhalation. Duration 500 ms–2 s. Fundamental frequency is low to mid, extremely stable. Voice quality is modal-to-whispery with minimal laryngeal effort. Amplitude is very low. Often transitional — at the boundary between vocalisation and silence.",
+          "semantic_description": "Signals deep calm and peaceful contentment. Rarely communicative in an active sense — more of a self-directed vocalisation of reduced arousal.",
+          "ontology_keywords": [
+            "positive_affect",
+            "affiliative"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "low",
+          "comments": "0 dominant stimuli in Cowen corpus — acoustically indistinguishable from contentment and relief at low arousal.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Shame burst",
+          "acoustic_description": "Very soft, low, often uninflected murmur or whispered 'ohh', 'mmm' (defeated), or almost silent exhale. Duration 200–500 ms. Fundamental frequency is low and flat or barely falling. Voice quality is whispery or nearly aphonic, reflecting desire to minimise acoustic presence. Amplitude is minimal.",
+          "semantic_description": "Signals internalised self-condemnation from perceived global self-failure. Functions to reduce social conspicuousness and signal submission.",
+          "ontology_keywords": [
+            "distress",
+            "display",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "low",
+          "comments": "0 dominant stimuli in Cowen corpus. Distinguished from guilt by its more internalised quality and greater reduction in amplitude/pitch.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Surprise burst (negative)",
+          "acoustic_description": "Sharp, abrupt, high-pitched exclamation with sudden onset: 'oh!', 'ahh!' (startled), or an inhalatory gasp. Duration 100–300 ms. Fundamental frequency rises sharply at onset. Voice quality may be breathy (gasp) or modal with high laryngeal tension. Amplitude is moderate-to-high with abrupt attack. The short duration and abrupt onset are distinctive.",
+          "semantic_description": "Signals sudden unexpected negative event. Reflexive; orients self and alerts nearby conspecifics to a potential threat.",
+          "ontology_keywords": [
+            "alarm",
+            "referential",
+            "negative_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "80 dominant stimuli. The gasp form is a reliable cross-cultural universal (Dingemanse et al. 2015).",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Surprise burst (positive)",
+          "acoustic_description": "Bright, rising exclamation: 'ooh!', 'wow!', or 'oh!' (delighted). Duration 150–400 ms. Fundamental frequency starts mid-range and rises, often more gradually than negative surprise. Voice quality is modal and energetic. Amplitude is moderate to high. Lips often round on the vowel. Distinguished from negative surprise by a slower onset and less abrupt attack.",
+          "semantic_description": "Signals pleasant unexpected event. Functions to share the emotional impact of a positive surprise and invite shared attention.",
+          "ontology_keywords": [
+            "referential",
+            "positive_affect",
+            "contact"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "high",
+          "comments": "48 dominant stimuli. Acoustic profile midway between awe and negative surprise.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Sympathy burst",
+          "acoustic_description": "Soft, warm, slightly falling sound: 'awww', 'ohh' (tender), or 'mmm' (caring). Duration 300–700 ms. Fundamental frequency is mid-range with a gentle fall. Voice quality is modal and warm, similar to adoration but with a slightly more falling, resigned contour. Amplitude is low to moderate.",
+          "semantic_description": "Signals empathic concern for another's distress. Functions to comfort the recipient and signal willingness to provide support.",
+          "ontology_keywords": [
+            "affiliative",
+            "contact",
+            "positive_affect"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399"
+          ],
+          "subjective_reliability": "low",
+          "comments": "3 dominant stimuli — acoustically overlaps heavily with adoration and contentment. Context-dependence is high.",
+          "users": "Both sexes"
+        },
+        {
+          "call_name": "Triumph burst",
+          "acoustic_description": "Controlled, projected exclamation: 'YES!' (punched), 'HA!' (victorious), or 'AH!' (declarative). Duration 200–500 ms. Fundamental frequency is mid-to-high, often with an abrupt rise and a stable or slightly falling plateau. Voice quality is full modal with high effort but less frantic than ecstasy. Amplitude is high. Often produced with a downward arm gesture.",
+          "semantic_description": "Signals victory or decisive success over an adversary or challenge. Functions as a dominance display and social announcement of competitive success.",
+          "ontology_keywords": [
+            "display",
+            "dominance",
+            "positive_affect",
+            "territory"
+          ],
+          "scientific_references": [
+            "https://doi.org/10.1037/amp0000399",
+            "https://doi.org/10.1073/pnas.1702247114"
+          ],
+          "subjective_reliability": "medium",
+          "comments": "16 dominant stimuli. Cross-culturally distinct from amusement and elation; triumph bursts are more controlled, competitive, and directed.",
+          "users": "Both sexes"
+        }
+      ]
+    }
+  ]
+}
