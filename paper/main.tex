@@ -42,7 +42,7 @@
 \usepackage{longtable}
 \usepackage[section]{placeins}
 \usepackage{draftwatermark}
-\SetWatermarkText{\shortstack{Secret \\ do not distribute}}
+\SetWatermarkText{\shortstack{Do not distribute}}
 \SetWatermarkScale{0.5}
 \SetWatermarkColor[rgb]{0.85, 0.1, 0.1}
 
@@ -276,10 +276,13 @@ We thank the researchers whose detailed ethological and bioacoustic studies form
 
 We release an interactive web application at \url{https://emmanuel-dev.tail3ea00b.ts.net/} that allows users to: (i) browse \dbname filtered by species, taxon, semantic category, or acoustic keyword; (ii) translate any call to its nearest semantic neighbour in any other species; (iii) explore semantic and acoustic embedding spaces as interactive 3-D UMAP projections; and (iv) optionally include predicted-semantics calls from unannotated recordings. The application is built on [placeholder: framework] and is freely accessible without registration.
 
-\section{Human-language translation (anthropomorphic, use with caution)}
+\section{Humans and the biological code}
 \label{sec:supp_human_translation}
 
-\section*{TODO: integrate the ``human vocalization burst'' database (produce acoustic+semantic descriptions and see if there is a form-to-meaning mapping there)}
+This appendix section applies \dbname's analytical framework to the human side of the animal kingdom in two complementary ways: first via abstract human-language glosses (anthropomorphic, exploratory), and second via a curated database of non-linguistic human vocal bursts that can be directly compared to animal calls on equal terms.
+
+\subsection{Human-language glosses (anthropomorphic, use with caution)}
+\label{sec:supp_human_gloss}
 
 The translation framework can be applied with human language as one of the two ``species'': given a word or phrase, embed it in the shared semantic space and retrieve the animal call with the nearest embedding; conversely, given any call, retrieve the closest human-language gloss. This mapping is \emph{not} a claim that animals share human concepts---it reflects only that the ethological descriptions in \dbname, written by human researchers, overlap in embedding space with human vocabulary. Every translation step through human language imposes an anthropomorphic frame and risks projecting a human \textit{Umwelt} onto species whose perceptual and cognitive worlds may be radically different. We include Table~\ref{tab:human_translation} here as an exploratory tool for human audiences, not as a scientific claim.
 
@@ -307,6 +310,86 @@ The translation framework can be applied with human language as one of the two `
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+\subsection{Human non-linguistic vocal bursts}
+\label{sec:supp_human_bursts}
+
+A stronger test of the biological code's universality is to include \emph{human} non-linguistic vocalizations --- short affective bursts such as laughter, gasps, sighs, growls, and cries --- in the same framework as animal calls.
+Unlike language-mediated glosses, these vocalizations are pre-lexical, cross-culturally produced and recognized \cite{sauter2010crosscultural}, and share evolutionary continuity with homologous calls in other primates.
+We curated a database of 30 human vocal burst types following the 30-category taxonomy of \citet{cowen2019mapping}, who collected and rated 2{,}032 non-speech human vocal burst stimuli.
+Each burst type received the same annotation schema as animal calls in \dbname: an acoustic description (phonetic form, pitch contour, voice quality, duration) and a semantic description (affective context and social function), with ontology keywords drawn from the shared \dbname vocabulary (\emph{alarm}, \emph{affiliative}, \emph{display}, \emph{distress}, etc.) augmented by two new valence keywords (\emph{positive\_affect}, \emph{negative\_affect}).
+
+\paragraph{Semantic correspondents.}
+Figure~\ref{fig:human_correspondents} shows the maximum semantic cosine similarity between each of the 30 human burst types and each animal species in \dbname.
+Several interpretable patterns emerge.
+Fear and pain bursts --- high-pitched, sudden, broadband exclamations --- consistently map to alarm and anti-predator calls across all three vertebrate classes, with particularly high similarity to bat echolocation-adjacent distress calls and primate alarm barks.
+Contentment, serenity, and adoration bursts map most strongly to affiliative calls in social primates and songbirds, consistent with the predicted association between soft, low-frequency vocalizations and affiliation.
+The ``Guilt'' row, acoustically similar to a soft descending murmur, is weakest across the board, reflecting the absence of a clear non-human functional analogue.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{../plots/fig_human_correspondents.pdf}
+	\caption{%
+		\textbf{Semantic correspondents between human vocal bursts and animal species.}
+		Each cell shows the maximum semantic cosine similarity (L2-normalised sentence embeddings) between a human burst type (row) and any call of an animal species (column).
+		Species are sorted by taxonomic class (Amphibia | Aves | Mammalia, colored bars on top) and alphabetically within class.
+		Annotated cells ($\geq 0.75$) show the best-matching call name.
+		Warm colors indicate close semantic correspondence.
+	}
+	\label{fig:human_correspondents}
+\end{figure}
+
+\paragraph{Keyword-level form-to-meaning structure.}
+Figure~\ref{fig:human_pmi} applies the same PMI analysis as Fig.~\ref{fig:pmi} to the human burst database.
+The acoustic rows are identical; the semantic columns reflect the human keyword vocabulary.
+Several patterns echo the biological code identified in non-human animals:
+\emph{high-frequency} calls are strongly associated with \emph{alarm} and \emph{referential} functions (fear gasp, surprise burst, pain exclamation; PMI~$\approx$~2.3), paralleling the high-frequency $\times$ alarm enrichment across taxa.
+\emph{Broadband/noisy} calls are enriched for \emph{negative affect} (anger, disgust; PMI~$\approx$~1.3), consistent with Morton's frequency code \cite{morton1977on}.
+\emph{Repetitive} and \emph{pulsed} bursts are enriched for \emph{display} and \emph{contact} functions (laughter; PMI~$\approx$~1.3), and \emph{long/sustained} calls are depleted for \emph{display} (soft sighs and murmurs are not attention-grabbing; PMI~$\approx -1.7$).
+
+To quantify how much the overall pattern overlaps with the non-human animal PMI (Fig.~\ref{fig:pmi}), we computed the Pearson correlation between the two matrices restricted to their shared keywords (alarm, affiliative, display, contact, distress, referential): $\rho_\mathrm{PMI} = -0.03$.
+This \emph{PMI pattern similarity} is a completely different quantity from the call-pair Mantel $r$ reported elsewhere: it asks ``do the same acoustic features get associated with the same semantic categories in both humans and animals?'', not ``does acoustic proximity predict semantic proximity across individual calls?''
+A near-zero $\rho_\mathrm{PMI}$ means that the \emph{global rank-ordering} of acoustic--semantic weights differs: individual strong associations are preserved (high-frequency $\to$ alarm, broadband $\to$ negative affect), but their relative magnitudes and the allocation across categories diverge.
+The species-level analysis below reveals why: the code runs in opposite directions for mammals and birds, and their contributions cancel in the aggregate.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth]{../plots/fig_human_pmi.pdf}
+	\caption{%
+		\textbf{Keyword-level structure of the biological code in human vocal bursts.}
+		Same format as Fig.~\ref{fig:pmi}.
+		Rows: 12 acoustic features grouped by type (colored strips).
+		Columns: 8 semantic keywords surviving a minimum-count threshold ($\geq 3$ calls), grouped into four panels.
+		Numbers annotate the two strongest and one weakest association per panel.
+	}
+	\label{fig:human_pmi}
+\end{figure}
+
+\paragraph{Human vocalizations in the cross-species Mantel matrix.}
+Figure~\ref{fig:human_mantel_row} adds a ``human row'' to the species-pairwise Mantel matrix (Fig.~\ref{fig:mantel_matrix}): for each animal species, the Pearson $r$ between acoustic and semantic cosine similarities across all $30 \times n_s$ human--animal call pairs.
+Within each class, species are sorted by their $r$ value (highest first), revealing the graded structure of human-animal correspondence.
+
+The two findings above are now reconcilable.
+\emph{Mammals} show a consistently positive mean correlation ($\bar{r} = 0.082$), with the strongest alignment in a bat (Egyptian fruit bat, $r = 0.65$), a prosimian (Indri, $r = 0.53$), and several Old World monkeys and apes (Crowned guenon, Chacma baboon, Mandrill; $r \approx 0.38$--$0.41$).
+\emph{Amphibians} are weakly positive ($\bar{r} = 0.039$).
+\emph{Birds}, strikingly, are on average \emph{negative} ($\bar{r} = -0.126$): for most avian species, the calls that sound most like human bursts tend to carry \emph{opposite} semantic functions.
+This inversion --- where the acoustic-semantic code runs in an opposing direction between birds and humans --- is the main driver of the near-zero aggregate PMI correlation.
+Averaged across all three classes, their contributions partially cancel, bringing the keyword-level correlation to $r \approx 0$.
+
+The picture that emerges is therefore: at the keyword level, the code appears globally flat because mammalian and avian influences offset each other; breaking by species exposes the underlying structure --- genuine acoustic--semantic sharing with mammals (amplified by evolutionary and ecological proximity), and a largely inverted mapping with birds, whose vocal priorities (territory, mate attraction, species recognition via song) differ fundamentally from human affective burst functions.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.72\textwidth]{../plots/fig_human_mantel_row.pdf}
+	\caption{%
+		\textbf{Human vocal bursts in the cross-species Mantel matrix.}
+		Each bar shows the Pearson $r$ between acoustic and semantic cosine similarities for all human--animal call pairs involving that species ($30 \times n_s$ pairs; species with fewer than 6 pairs excluded).
+		Within each taxonomic class, species are sorted by $r$ value (highest first); class colors match Fig.~\ref{fig:mantel_matrix}.
+		The red vertical line marks the non-human overall Mantel $r = 0.215$.
+		Mammals are predominantly positive, amphibians weakly positive, and birds predominantly negative --- their class-level averages partially cancel in aggregate keyword comparisons.
+	}
+	\label{fig:human_mantel_row}
+\end{figure}
 
 
 
