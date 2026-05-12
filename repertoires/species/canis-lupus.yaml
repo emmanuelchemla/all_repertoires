@@ -1,0 +1,232 @@
+scientific_name: Canis lupus
+common_name: Gray wolf
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Canidae
+  genus: Canis
+  species: lupus
+calls:
+  - name: howl
+    alternative_names:
+      - chorus howl
+      - flat howl
+      - breaking howl
+      - aggressive howl
+      - bark-howl
+    scope: &adult_juvenile_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - long
+      - loud
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A long, loud tonal vocalization with a low to mid fundamental frequency and slow frequency modulation. Single howls may be relatively flat or breaking, while chorus howls are multi-individual sequences with overlapping howls and sometimes mixed bark-howls or other brief elements.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - territorial
+      - spacing
+      - identity
+    semantic_description: Used for long-distance contact, reassembly, and pack spacing. Field studies show that packs answer simulated or recorded howls most strongly in contexts involving pups, kills, breeding animals, or territory use, and pack howls can carry group-specific identity information.
+    acoustic_references:
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: zaccaroni_etal_2012
+        url: https://doi.org/10.1080/03949370.2012.664569
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+    semantic_references:
+      - id: harrington_mech_1979
+        url: https://doi.org/10.1163/156853979X00322
+      - id: harrington_mech_1982
+        url: https://doi.org/10.2307/3808560
+      - id: harrington_mech_1983
+        url: https://doi.org/10.1007/BF00343208
+      - id: ausband_etal_2020
+        url: https://doi.org/10.1111/eth.13041
+      - id: zaccaroni_etal_2012
+        url: https://doi.org/10.1080/03949370.2012.664569
+    playback_references:
+      - id: harrington_mech_1979
+        url: https://doi.org/10.1163/156853979X00322
+      - id: harrington_mech_1982
+        url: https://doi.org/10.2307/3808560
+      - id: harrington_mech_1983
+        url: https://doi.org/10.1007/BF00343208
+      - id: ausband_etal_2020
+        url: https://doi.org/10.1111/eth.13041
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Harrington and Mech 1978 treat howls as a primary wolf vocalization, and later field studies by Harrington and Mech 1979, Harrington and Mech 1982, Zaccaroni et al. 2012, and Sadhukhan et al. 2019 all analyze howling directly. Terminology varies for flat, breaking, aggressive, bark-howl, and chorus forms, but the base call type is not disputed.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Harrington and Mech 1978 describe the prolonged tonal form, Zaccaroni et al. 2012 quantify wild pack howls, and Sadhukhan et al. 2019 classify harmonic howl variants. These sources agree on the long tonal structure while allowing graded and mixed variants.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Harrington and Mech 1979 and 1983 show roles in territorial spacing and resource defense, Harrington and Mech 1982 and Ausband et al. 2020 demonstrate reliable responses to simulated howling, and Zaccaroni et al. 2012 supports group-level identity in wild pack howls.
+
+  - name: bark
+    alternative_names:
+      - woof
+      - bark-growl
+      - growl-bark
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+      - frequency_modulated
+    acoustic_description: A short, explosive, low-pitched noisy sound, often with rapid frequency modulation and little sustained tonal structure. It grades into woofs, growl-barks, and bark-howls when combined with other call forms.
+    semantic_keywords:
+      - alarm
+      - threat
+      - aggression
+      - attention
+    semantic_description: Produced in immediate defensive or alarm contexts, such as when wolves face a nearby threat, defend pups, or defend a food resource. It appears to draw attention to the caller or threat and can blend with other agonistic signals.
+    acoustic_references:
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+    semantic_references:
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Bark is one of the reduced primary wolf vocalization classes summarized by Harrington and Mech 1978 and retained in Harrington and Asa 2003. Sadhukhan et al. 2019 also describes bark-related defensive use and bark-howl combinations in Indian wolves.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 agree that barks are short, explosive, and low/noisy, but there are fewer quantitative acoustic studies of standalone wild wolf barks than of howls. Sadhukhan et al. 2019 adds support mainly for bark-howl combinations and field context.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Harrington and Mech 1978, Harrington and Asa 2003, and Sadhukhan et al. 2019 consistently associate barking with immediate defensive or aggressive contexts. Agreement is medium because much of the context evidence is descriptive and bark, woof, and bark-growl boundaries are graded.
+
+  - name: growl
+    alternative_names:
+      - snarl
+      - growl-bark
+      - bark-growl
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - long
+      - graded
+    acoustic_description: A deep, coarse, mostly non-harmonic close-range sound with energy spread across a broad low-frequency band. Growls vary in duration and roughness and may be combined with snarls or barks in more intense displays.
+    semantic_keywords:
+      - threat
+      - aggression
+      - submission
+    semantic_description: Used in close-range agonistic interactions, including dominance displays, warnings, food defense, and maternal control of pups. It typically communicates an aggressive or defensive motivation that can increase social distance.
+    acoustic_references:
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+    semantic_references:
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Growl is one of the four broad wolf vocalization classes recognized in Harrington and Mech 1978 and is retained in Harrington and Asa 2003. Sadhukhan et al. 2019 summarizes growls as part of the noisy aggressive call set, although their quantitative analysis focused on harmonic calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 agree on a low, coarse, noisy structure, but growls have less modern quantitative wild acoustic treatment than howls. The label is medium because growls grade into snarls and bark-growl combinations.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 agree that growls are close-range agonistic calls, and Sadhukhan et al. 2019 repeats the dominance and aggression interpretation from the wolf literature. Evidence is consistent but mostly descriptive.
+
+  - name: whimper
+    alternative_names:
+      - whine
+      - squeak
+      - yelp
+      - social squeak
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - quiet
+      - graded
+    acoustic_description: A soft, high-pitched, relatively pure-toned harmonic close-range call class. Shorter whimpers, longer whines, squeaks, and yelps form a graded family that differs mainly in duration, contour, and abruptness.
+    semantic_keywords:
+      - affiliation
+      - submission
+      - contact
+      - begging
+    semantic_description: Used at close range in greeting, affiliation, appeasement, pup-adult interactions, and courtship-related or submissive contexts. The broad whimper class generally accompanies decreased social distance or non-aggressive motivation.
+    acoustic_references:
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+    semantic_references:
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Harrington and Mech 1978 explicitly group whines, whimpers, and squeaks under a broad whimper class, while Sadhukhan et al. 2019 separates whimper, social squeak, and whine in an Indian wolf harmonic repertoire. The broad existence is well supported, but boundaries among subtypes differ.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 agree on high-pitched, relatively pure-toned calls, and Sadhukhan et al. 2019 provides modern acoustic classification for several harmonic variants. Agreement is medium because sources merge and split the whimper/whine/squeak/yelp complex differently.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 associate this call family with affiliation, greeting, submission, and decreasing social distance, while Sadhukhan et al. 2019 distinguishes friendly and submissive roles among variants. The general non-aggressive interpretation is consistent, but subtype-specific meanings remain graded.
+
+references:
+  harrington_mech_1978:
+    citation: "Harrington FH, Mech LD. 1978. Wolf vocalization. In: Hall RL, Sharp HS, editors. Wolf and Man: Evolution in Parallel. New York: Academic Press. p. 109-132."
+    url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+    doi: 10.1016/B978-0-12-319250-9.50014-1
+  harrington_mech_1979:
+    citation: "Harrington FH, Mech LD. 1979. Wolf howling and its role in territory maintenance. Behaviour 68(3-4): 207-249."
+    url: https://doi.org/10.1163/156853979X00322
+    doi: 10.1163/156853979X00322
+  harrington_mech_1982:
+    citation: "Harrington FH, Mech LD. 1982. An analysis of howling response parameters useful for wolf pack censusing. Journal of Wildlife Management 46(3): 686-693."
+    url: https://doi.org/10.2307/3808560
+    doi: 10.2307/3808560
+  harrington_mech_1983:
+    citation: "Harrington FH, Mech LD. 1983. Wolf pack spacing: howling as a territory-independent spacing mechanism in a territorial population. Behavioral Ecology and Sociobiology 12(2): 161-168."
+    url: https://doi.org/10.1007/BF00343208
+    doi: 10.1007/BF00343208
+  harrington_asa_2003:
+    citation: "Harrington FH, Asa CS. 2003. Wolf communication. In: Mech LD, Boitani L, editors. Wolves: Behavior, Ecology, and Conservation. Chicago: University of Chicago Press. p. 66-103."
+    url: https://doi.org/10.7208/9780226516981-007
+    doi: 10.7208/9780226516981-007
+  zaccaroni_etal_2012:
+    citation: "Zaccaroni M, Passilongo D, Buccianti A, Dessi-Fulgheri F, Facchini C, Gazzola A, Maggini I, Apollonio M. 2012. Group specific vocal signature in free-ranging wolf packs. Ethology Ecology & Evolution 24(4): 322-331."
+    url: https://doi.org/10.1080/03949370.2012.664569
+    doi: 10.1080/03949370.2012.664569
+  sadhukhan_etal_2019:
+    citation: "Sadhukhan S, Hennelly L, Habib B. 2019. Characterising the harmonic vocal repertoire of the Indian wolf (Canis lupus pallipes). PLoS One 14(10): e0216186."
+    url: https://doi.org/10.1371/journal.pone.0216186
+    doi: 10.1371/journal.pone.0216186
+  ausband_etal_2020:
+    citation: "Ausband DE, Bassing SB, Mitchell MS. 2020. Environmental and social factors influencing wolf (Canis lupus) howling behavior. Ethology 126(9): 890-899."
+    url: https://doi.org/10.1111/eth.13041
+    doi: 10.1111/eth.13041
