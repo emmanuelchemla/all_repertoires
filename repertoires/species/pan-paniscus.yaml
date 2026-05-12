@@ -23,10 +23,7 @@ calls:
         - female
         - male
       population_specific: false
-      note: Adult wild call type from the updated LuiKotale repertoire; no population-specific absence is noted in the cited scope source.
-      scope_references:
-        - id: wegdell_etal_2025
-          url: https://doi.org/10.1371/journal.pone.0330250
+      note: ""
     acoustic_description: A short, high-frequency tonal call, often with an inverted-U contour and sometimes with a short noisy onset. In the updated adult repertoire it also absorbs several bark-like variants that overlap acoustically with high hoots.
     semantic_description: Used as a conspicuous contact or attention-getting call, especially over distance, helping advertise the caller's presence or location and support cohesion between parties. Bark-like variants can also occur in food and arousal contexts, so function is broader than simple distance contact.
     acoustic_references:
@@ -239,12 +236,7 @@ calls:
         - female
         - male
       population_specific: true
-      note: Adult wild call type with population-variable production; regular production is reported at LuiKotale, while absence is reported for adult bonobos at Kokolopori.
-      scope_references:
-        - id: wegdell_etal_2025
-          url: https://doi.org/10.1371/journal.pone.0330250
-        - id: schamberg_etal_2023
-          url: https://doi.org/10.1007/s00265-022-03285-4
+      note: Regular production is reported at LuiKotale (wegdell_etal_2025), while absence is reported for adult bonobos at Kokolopori (schamberg_etal_2023).
     acoustic_description: A very short, tonal call with an upward slope, medium noise, and relatively high frequency range compared with other low, short calls.
     semantic_description: A subordination or greeting-related signal in some bonobo populations, especially from lower-ranking individuals toward higher-ranking recipients. Its use varies sharply by population and social system.
     acoustic_references:

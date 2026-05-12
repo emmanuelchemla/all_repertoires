@@ -34,9 +34,13 @@ def check(path: Path) -> list[str]:
             )
 
     for i, call in enumerate(data.get("calls") or []):
-        for c in (call.get("scope") or {}).get("scope_references") or []:
-            if c["id"] not in ref_ids:
-                errors.append(f"calls[{i}].scope.scope_references: unknown reference id '{c['id']}'")
+        scope = call.get("scope") or {}
+        note = (scope.get("note") or "").strip()
+        if scope.get("population_specific"):
+            if not note:
+                errors.append(f"calls[{i}].scope.note: required when population_specific is true")
+        elif note:
+            errors.append(f"calls[{i}].scope.note: must be empty when population_specific is false")
 
         for field in ("acoustic_references", "semantic_references", "playback_references"):
             for c in call.get(field) or []:

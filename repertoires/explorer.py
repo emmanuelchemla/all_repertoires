@@ -6,6 +6,7 @@ Run:
 """
 from __future__ import annotations
 
+from html import escape
 from pathlib import Path
 
 import streamlit as st
@@ -34,6 +35,32 @@ AGREEMENT_COLORS = {
     "weak": "#b00020",
     "medium": "#a16207",
     "strong": "#166534",
+}
+
+LIFE_STAGE_LABELS = {
+    "infant": "infant",
+    "juvenile": "juvenile",
+    "adult": "adult",
+    "unknown": "?",
+}
+
+LIFE_STAGE_COLORS = {
+    "infant": "#7c3aed",
+    "juvenile": "#2563eb",
+    "adult": "#166534",
+    "unknown": "#555",
+}
+
+SEX_LABELS = {
+    "female": "♀",
+    "male": "♂",
+    "unknown": "?",
+}
+
+SEX_COLORS = {
+    "female": "#be185d",
+    "male": "#1d4ed8",
+    "unknown": "#555",
 }
 
 
@@ -90,27 +117,45 @@ def taxonomy_line(data: dict) -> str:
     return " > ".join(taxonomy[rank] for rank in ranks if taxonomy.get(rank))
 
 
-def render_scope(data: dict, refs: dict) -> None:
+def chip(label: str, color: str, title: str) -> str:
+    return (
+        f"<span title='{escape(title)}' style='display:inline-block;"
+        f"background:{color};color:white;padding:2px 8px;margin:0 4px 4px 0;"
+        f"border-radius:999px;font-weight:700;font-size:0.8em'>{escape(label)}</span>"
+    )
+
+
+def render_scope(data: dict) -> None:
     scope = data.get("scope") or {}
-    life_stages = ", ".join(scope.get("life_stages") or [])
-    sexes = ", ".join(scope.get("sexes") or [])
-    population = "population-specific" if scope.get("population_specific") else "not population-specific"
-    bits = [b for b in (life_stages, sexes, population) if b]
-    if bits:
-        st.caption("Scope: " + " | ".join(bits))
-    if scope.get("note"):
-        citations = ", ".join(
-            render_citation(c, refs) for c in scope.get("scope_references") or []
+    bits = []
+    for stage in scope.get("life_stages") or []:
+        bits.append(
+            chip(
+                LIFE_STAGE_LABELS.get(stage, stage),
+                LIFE_STAGE_COLORS.get(stage, "#555"),
+                f"Life stage: {stage}",
+            )
         )
-        suffix = f" Sources: {citations}" if citations else ""
-        st.caption(scope["note"] + suffix)
+    for sex in scope.get("sexes") or []:
+        bits.append(
+            chip(
+                SEX_LABELS.get(sex, sex),
+                SEX_COLORS.get(sex, "#555"),
+                f"Sex: {sex}",
+            )
+        )
+    if bits:
+        st.markdown("".join(bits), unsafe_allow_html=True)
+    if scope.get("population_specific"):
+        with st.expander("Population specific"):
+            st.write(f"Population specific: {scope.get('note', '')}")
 
 
 def render_call(call: dict, refs: dict) -> None:
     st.markdown(f"### {call['name']}")
     if call.get("alternative_names"):
         st.caption("Also known as: " + ", ".join(call["alternative_names"]))
-    render_scope(call, refs)
+    render_scope(call)
 
     cols = st.columns(3)
     triples = [

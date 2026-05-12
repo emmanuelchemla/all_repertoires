@@ -38,7 +38,7 @@
     },
     "scope": {
       "type": "object",
-      "required": ["life_stages", "sexes", "population_specific", "note", "scope_references"],
+      "required": ["life_stages", "sexes", "population_specific", "note"],
       "additionalProperties": false,
       "properties": {
         "life_stages": {
@@ -60,12 +60,7 @@
           }
         },
         "population_specific": { "type": "boolean" },
-        "note": { "type": "string", "minLength": 1 },
-        "scope_references": {
-          "type": "array",
-          "minItems": 1,
-          "items": { "$ref": "#/$defs/citation" }
-        }
+        "note": { "type": "string" }
       }
     },
     "call": {

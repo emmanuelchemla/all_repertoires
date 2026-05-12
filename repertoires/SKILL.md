@@ -31,7 +31,7 @@ Do not include calls known only from captivity when there is no wild evidence fo
   - `life_stages`: list using only `infant`, `juvenile`, `adult`, or `unknown`.
   - `sexes`: list using only `female`, `male`, or `unknown`.
   - `population_specific`: `true` when the call is known to be population-specific or absent from some studied populations; otherwise `false`.
-  - `note`: short prose explaining age/sex coverage, population limits, and important exclusions. Make sure to cite relevant sources.
+  - `note`: if `population_specific` is `true`, short note explaining why and citing references. Otherwise, leave it empty.
 - `acoustic_description`: prose. What the call sounds like / its spectro-temporal structure. Avoid functional terms here.
 - `semantic_description`: prose. Context of use, i.e. when it is made. Avoid acoustic terms here.
 - `acoustic_references` / `semantic_references`: lists of `{id, url}` objects. **At least one of each is required** — they provide the basis for validating the corresponding description. `id` must exist in top-level `references`.
