@@ -24,7 +24,19 @@ calls:
         - male
       population_specific: false
       note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - noisy
+      - short
+      - graded
     acoustic_description: A short, high-frequency tonal call, often with an inverted-U contour and sometimes with a short noisy onset. In the updated adult repertoire it also absorbs several bark-like variants that overlap acoustically with high hoots.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+      - food
     semantic_description: Used as a conspicuous contact or attention-getting call, especially over distance, helping advertise the caller's presence or location and support cohesion between parties. Bark-like variants can also occur in food and arousal contexts, so function is broader than simple distance contact.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -50,7 +62,17 @@ calls:
   - name: scream
     alternative_names: []
     scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - long
+      - graded
     acoustic_description: A relatively long, high-frequency broadband call with variable noise and a flatter contour than high hoots, lacking a clear inverted-U shape at the beginning or end.
+    semantic_keywords:
+      - distress
+      - aggression
+      - alarm
     semantic_description: Produced in high-arousal negative social situations, especially aggression, conflict, distress, or alarm-like episodes. It is best treated as an affectively intense call rather than a context-specific referential signal.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -75,7 +97,18 @@ calls:
     alternative_names:
       - food grunt
     scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - quiet
+      - graded
     acoustic_description: A very short, low-frequency, noisy call with an unshaped or weakly structured contour. It may be tonal or atonal and can sound breathy.
+    semantic_keywords:
+      - group_coordination
+      - attention
+      - food
+      - affiliation
     semantic_description: Given during varied close-range activities such as grooming, resting, moving, and feeding. Recent semantic analysis suggests it can draw attention to the caller's ongoing activity, and food studies show that grunts can participate in food-associated sequences.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -101,7 +134,18 @@ calls:
       - food peep
       - alarm peep
     scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - short
     acoustic_description: A short, tonal, medium- to high-frequency call with a mostly flat contour, few harmonics, and low noise. It may include a small frequency squiggle or slight upward slope.
+    semantic_keywords:
+      - group_coordination
+      - attention
+      - food
+      - alarm
+      - affiliation
     semantic_description: A highly flexible call used across feeding, travel, rest, aggression, alarm, nesting, grooming, and other daily contexts. Depending on context it can work as a mild coordination proposal or attention signal, with pragmatic context contributing strongly to interpretation.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -133,7 +177,14 @@ calls:
     alternative_names:
       - laugh
     scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
     acoustic_description: A short, medium-frequency, noisy and atonal call with an unshaped spectrographic structure and high noise.
+    semantic_keywords:
+      - play
+      - affiliation
     semantic_description: Associated primarily with play or positive social arousal, especially in close-range affiliative interactions. Published evidence is thinner than for peeps or contest hoots, so the semantic description should be treated as provisional.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -157,7 +208,15 @@ calls:
   - name: low hoot
     alternative_names: []
     scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - graded
     acoustic_description: A short, low-frequency call with an unshaped contour, variable tonality, and relatively high noise.
+    semantic_keywords:
+      - group_coordination
+      - attention
     semantic_description: Associated with high-arousal situations and social coordination, including night-nest construction in recent semantic analysis. Its exact function remains broad and context-dependent.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -181,7 +240,15 @@ calls:
   - name: whistle
     alternative_names: []
     scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - long
     acoustic_description: A relatively long, tonal call with a low but high-pitched frequency range, usually flat or containing small frequency squiggles, and little noise.
+    semantic_keywords:
+      - contact
+      - group_coordination
     semantic_description: Used in spatial coordination and cohesion, especially to keep group members together. It can combine with peeps in socially sensitive contexts, where interpretation depends on the surrounding interaction.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -205,7 +272,18 @@ calls:
   - name: contest hoot
     alternative_names: []
     scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - multi_component
     acoustic_description: A short, low-frequency tonal hoot with an inverted-U contour and low noise. In extended bouts it can be part of a multi-phase sequence with introductory, escalation, and let-down phases.
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+      - play
     semantic_description: Produced especially by adult and subadult males as a socially directed challenge that can provoke a reaction such as chase, and can also occur in friendly play. It appears to assert social status or signal an intention to interact with socially important partners.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -237,7 +315,16 @@ calls:
         - male
       population_specific: true
       note: Regular production is reported at LuiKotale (wegdell_etal_2025), while absence is reported for adult bonobos at Kokolopori (schamberg_etal_2023).
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - noisy
+      - short
     acoustic_description: A very short, tonal call with an upward slope, medium noise, and relatively high frequency range compared with other low, short calls.
+    semantic_keywords:
+      - submission
+      - affiliation
     semantic_description: A subordination or greeting-related signal in some bonobo populations, especially from lower-ranking individuals toward higher-ranking recipients. Its use varies sharply by population and social system.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -261,7 +348,16 @@ calls:
   - name: yelp
     alternative_names: []
     scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - short
     acoustic_description: A short, low-frequency tonal call with a downward-pointing slope and low noise.
+    semantic_keywords:
+      - group_coordination
+      - food
+      - recruitment
     semantic_description: Used in social coordination and food-associated calling. Recent semantic analysis interprets yelps as stronger imperatives associated with changes in audience behavior, while food studies show yelps more often in sequences linked to less-preferred foods.
     acoustic_references:
       - id: wegdell_etal_2025
@@ -291,7 +387,17 @@ calls:
     alternative_names:
       - peep-yelp
     scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - graded
     acoustic_description: A short, low-frequency tonal call with a variable contour, often an inverted-U or upward-pointing shape, and low noise.
+    semantic_keywords:
+      - group_coordination
+      - food
+      - combinatorial
     semantic_description: Used in coordination contexts including group encounters, night-nest building, and travel between parties. In food contexts it appears in graded sequences, often with intermediate or broader food associations than pure peeps or yelps.
     acoustic_references:
       - id: wegdell_etal_2025

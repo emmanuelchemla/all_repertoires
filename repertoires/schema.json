@@ -68,7 +68,9 @@
       "required": [
         "name",
         "scope",
+        "acoustic_keywords",
         "acoustic_description",
+        "semantic_keywords",
         "semantic_description",
         "acoustic_references",
         "semantic_references",
@@ -84,7 +86,21 @@
         "name": { "type": "string" },
         "alternative_names": { "type": "array", "items": { "type": "string" } },
         "scope": { "$ref": "#/$defs/scope" },
+        "acoustic_keywords": {
+          "type": "array",
+          "description": "Controlled acoustic feature tags. Use only spectro-temporal/acoustic properties, not function or context.",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/acoustic_keyword" }
+        },
         "acoustic_description": { "type": "string" },
+        "semantic_keywords": {
+          "type": "array",
+          "description": "Controlled communicative function/context tags. Do not use caller class, transmission range, or evidence type.",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/semantic_keyword" }
+        },
         "semantic_description": { "type": "string" },
         "acoustic_references": {
           "type": "array",
@@ -112,6 +128,54 @@
     "agreement": {
       "type": "string",
       "enum": ["weak", "medium", "strong"]
+    },
+    "acoustic_keyword": {
+      "type": "string",
+      "enum": [
+        "high_frequency",
+        "low_frequency",
+        "frequency_modulated",
+        "tonal",
+        "broadband",
+        "noisy",
+        "harmonic",
+        "short",
+        "long",
+        "abrupt",
+        "repetitive",
+        "pulsed",
+        "multi_component",
+        "loud",
+        "quiet",
+        "graded"
+      ]
+    },
+    "semantic_keyword": {
+      "type": "string",
+      "enum": [
+        "contact",
+        "group_coordination",
+        "affiliation",
+        "threat",
+        "aggression",
+        "submission",
+        "alarm",
+        "predator",
+        "distress",
+        "begging",
+        "caregiving",
+        "courtship",
+        "mating",
+        "food",
+        "recruitment",
+        "territorial",
+        "spacing",
+        "identity",
+        "attention",
+        "play",
+        "display",
+        "combinatorial"
+      ]
     },
     "citation": {
       "type": "object",

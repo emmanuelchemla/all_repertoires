@@ -32,7 +32,25 @@ Do not include calls known only from captivity when there is no wild evidence fo
   - `sexes`: list using only `female`, `male`, or `unknown`.
   - `population_specific`: `true` when the call is known to be population-specific or absent from some studied populations; otherwise `false`.
   - `note`: if `population_specific` is `true`, short note explaining why and citing references. Otherwise, leave it empty.
+- `acoustic_keywords`: concise controlled tags for spectro-temporal form. Use only:
+  - frequency: `high_frequency`, `low_frequency`, `frequency_modulated`
+  - spectral quality: `tonal`, `broadband`, `noisy`, `harmonic`
+  - temporal structure: `short`, `long`, `abrupt`, `repetitive`, `pulsed`, `multi_component`
+  - amplitude: `loud`, `quiet`
+  - variation: `graded`
 - `acoustic_description`: prose. What the call sounds like / its spectro-temporal structure. Avoid functional terms here.
+- `semantic_keywords`: concise controlled tags for communicative function/context. Use only:
+  - social cohesion: `contact`, `group_coordination`, `affiliation`
+  - agonistic: `threat`, `aggression`, `submission`
+  - danger: `alarm`, `predator`
+  - distress and care: `distress`, `begging`, `caregiving`
+  - reproduction: `courtship`, `mating`
+  - resources: `food`, `recruitment`
+  - territorial spacing: `territorial`, `spacing`
+  - identity and attention: `identity`, `attention`
+  - metacommunicative: `play`, `display`
+  - combinatorial: `combinatorial`
+  Do not use semantic keywords for caller class (`infant` belongs in `scope.life_stages`), transmission range, or evidence type.
 - `semantic_description`: prose. Context of use, i.e. when it is made. Avoid acoustic terms here.
 - `acoustic_references` / `semantic_references`: lists of `{id, url}` objects. **At least one of each is required** — they provide the basis for validating the corresponding description. `id` must exist in top-level `references`.
 - `audio_samples`: optional list of URLs (Macaulay Library, xeno-canto, etc.).

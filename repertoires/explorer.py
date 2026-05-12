@@ -63,6 +63,84 @@ SEX_COLORS = {
     "unknown": "#555",
 }
 
+ACOUSTIC_KEYWORD_GROUPS = {
+    "frequency": {
+        "color": "#d96bc2",
+        "keywords": ("high_frequency", "low_frequency", "frequency_modulated"),
+    },
+    "spectral": {
+        "color": "#b8bf18",
+        "keywords": ("tonal", "broadband", "noisy", "harmonic"),
+    },
+    "temporal": {
+        "color": "#22b8c7",
+        "keywords": ("short", "long", "abrupt", "repetitive", "pulsed", "multi_component"),
+    },
+    "amplitude": {
+        "color": "#96594e",
+        "keywords": ("loud", "quiet"),
+    },
+    "variation": {
+        "color": "#64748b",
+        "keywords": ("graded",),
+    },
+}
+
+ACOUSTIC_KEYWORD_TO_GROUP = {
+    keyword: group
+    for group, spec in ACOUSTIC_KEYWORD_GROUPS.items()
+    for keyword in spec["keywords"]
+}
+
+SEMANTIC_KEYWORD_GROUPS = {
+    "social cohesion": {
+        "color": "#1f77b4",
+        "keywords": ("contact", "group_coordination", "affiliation"),
+    },
+    "agonistic": {
+        "color": "#9467bd",
+        "keywords": ("threat", "aggression", "submission"),
+    },
+    "danger": {
+        "color": "#d62728",
+        "keywords": ("alarm", "predator"),
+    },
+    "distress and care": {
+        "color": "#ff7f0e",
+        "keywords": ("distress", "begging", "caregiving"),
+    },
+    "reproduction": {
+        "color": "#c026d3",
+        "keywords": ("courtship", "mating"),
+    },
+    "resources": {
+        "color": "#2ca02c",
+        "keywords": ("food", "recruitment"),
+    },
+    "territorial spacing": {
+        "color": "#8c564b",
+        "keywords": ("territorial", "spacing"),
+    },
+    "identity and attention": {
+        "color": "#7f7f7f",
+        "keywords": ("identity", "attention"),
+    },
+    "metacommunicative": {
+        "color": "#17becf",
+        "keywords": ("play", "display"),
+    },
+    "combinatorial": {
+        "color": "#bcbd22",
+        "keywords": ("combinatorial",),
+    },
+}
+
+SEMANTIC_KEYWORD_TO_GROUP = {
+    keyword: group
+    for group, spec in SEMANTIC_KEYWORD_GROUPS.items()
+    for keyword in spec["keywords"]
+}
+
 
 def normalize_agreement(value: object) -> str:
     if not isinstance(value, str):
@@ -151,11 +229,68 @@ def render_scope(data: dict) -> None:
         st.markdown("".join(bits), unsafe_allow_html=True)
 
 
+def render_keyword_groups(
+    keywords: list[str],
+    groups: dict[str, dict],
+    keyword_to_group: dict[str, str],
+) -> None:
+    if not keywords:
+        return
+
+    rendered_groups = [
+        "<div style='display:flex;flex-wrap:wrap;gap:4px 12px;"
+        "align-items:center;margin:2px 0 8px 0'>"
+    ]
+    for group, spec in groups.items():
+        group_keywords = [kw for kw in spec["keywords"] if kw in keywords]
+        if not group_keywords:
+            continue
+        chips = "".join(
+            chip(kw.replace("_", " "), spec["color"], f"{group}: {kw}")
+            for kw in group_keywords
+        )
+        rendered_groups.append(
+            f"<span style='display:inline-flex;align-items:baseline;"
+            f"white-space:nowrap'>{chips}</span>"
+        )
+
+    unknown_keywords = [
+        kw for kw in keywords if kw not in keyword_to_group
+    ]
+    if unknown_keywords:
+        chips = "".join(chip(kw.replace("_", " "), "#555", f"unknown group: {kw}") for kw in unknown_keywords)
+        rendered_groups.append(
+            f"<span style='display:inline-flex;align-items:baseline;"
+            f"white-space:nowrap'>{chips}</span>"
+        )
+
+    rendered_groups.append("</div>")
+    st.markdown("".join(rendered_groups), unsafe_allow_html=True)
+
+
+def render_acoustic_keywords(call: dict) -> None:
+    render_keyword_groups(
+        call.get("acoustic_keywords") or [],
+        ACOUSTIC_KEYWORD_GROUPS,
+        ACOUSTIC_KEYWORD_TO_GROUP,
+    )
+
+
+def render_semantic_keywords(call: dict) -> None:
+    render_keyword_groups(
+        call.get("semantic_keywords") or [],
+        SEMANTIC_KEYWORD_GROUPS,
+        SEMANTIC_KEYWORD_TO_GROUP,
+    )
+
+
 def render_call(call: dict, refs: dict) -> None:
     st.markdown(f"### {call['name']}")
     if call.get("alternative_names"):
         st.caption("Also known as: " + ", ".join(call["alternative_names"]))
     render_scope(call)
+    render_acoustic_keywords(call)
+    render_semantic_keywords(call)
 
     cols = st.columns(3)
     triples = [
