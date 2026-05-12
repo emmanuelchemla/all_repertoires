@@ -25,7 +25,19 @@ def check(path: Path) -> list[str]:
         errors.append(f"{loc}: {err.message}")
 
     ref_ids = set((data.get("references") or {}).keys())
+    taxonomy = data.get("taxonomy") or {}
+    if taxonomy.get("genus") and taxonomy.get("species") and data.get("scientific_name"):
+        expected = f"{taxonomy['genus']} {taxonomy['species']}"
+        if expected != data["scientific_name"]:
+            errors.append(
+                f"taxonomy: genus + species is '{expected}', expected scientific_name '{data['scientific_name']}'"
+            )
+
     for i, call in enumerate(data.get("calls") or []):
+        for c in (call.get("scope") or {}).get("scope_references") or []:
+            if c["id"] not in ref_ids:
+                errors.append(f"calls[{i}].scope.scope_references: unknown reference id '{c['id']}'")
+
         for field in ("acoustic_references", "semantic_references", "playback_references"):
             for c in call.get(field) or []:
                 if c["id"] not in ref_ids:

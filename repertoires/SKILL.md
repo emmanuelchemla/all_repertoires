@@ -21,12 +21,19 @@ description: Use this skill whenever creating, editing, or reviewing a species r
 - `calls`: list of call-type objects (see below).
 - `references`: bibliography for the whole file. Cite with **stable string IDs** in `lastname_year` form (`smith_2019`, `marler_etal_1967`).
 
+Do not include calls known only from captivity when there is no wild evidence for that call type.
+
 ### Per call type
 
 - `name`: canonical name used in the literature. Prefer the most common term.
 - `alternative_names`: list of synonyms encountered in other papers.
+- `scope`: object describing which animals and populations the call type is supported for:
+  - `life_stages`: list using only `infant`, `juvenile`, `adult`, or `unknown`.
+  - `sexes`: list using only `female`, `male`, or `unknown`.
+  - `population_specific`: `true` when the call is known to be population-specific or absent from some studied populations; otherwise `false`.
+  - `note`: short prose explaining age/sex coverage, population limits, and important exclusions. Make sure to cite relevant sources.
 - `acoustic_description`: prose. What the call sounds like / its spectro-temporal structure. Avoid functional terms here.
-- `semantic_description`: prose. Context of use, what it means / when it is produced. Avoid acoustic terms here.
+- `semantic_description`: prose. Context of use, i.e. when it is made. Avoid acoustic terms here.
 - `acoustic_references` / `semantic_references`: lists of `{id, url}` objects. **At least one of each is required** — they provide the basis for validating the corresponding description. `id` must exist in top-level `references`.
 - `audio_samples`: optional list of URLs (Macaulay Library, xeno-canto, etc.).
 - `playback_references`: list of `{id, url}` citations to playback studies on this call. Empty or omitted = no playback experiments. Non-empty = yes, with these citations.

@@ -90,10 +90,27 @@ def taxonomy_line(data: dict) -> str:
     return " > ".join(taxonomy[rank] for rank in ranks if taxonomy.get(rank))
 
 
+def render_scope(data: dict, refs: dict) -> None:
+    scope = data.get("scope") or {}
+    life_stages = ", ".join(scope.get("life_stages") or [])
+    sexes = ", ".join(scope.get("sexes") or [])
+    population = "population-specific" if scope.get("population_specific") else "not population-specific"
+    bits = [b for b in (life_stages, sexes, population) if b]
+    if bits:
+        st.caption("Scope: " + " | ".join(bits))
+    if scope.get("note"):
+        citations = ", ".join(
+            render_citation(c, refs) for c in scope.get("scope_references") or []
+        )
+        suffix = f" Sources: {citations}" if citations else ""
+        st.caption(scope["note"] + suffix)
+
+
 def render_call(call: dict, refs: dict) -> None:
     st.markdown(f"### {call['name']}")
     if call.get("alternative_names"):
         st.caption("Also known as: " + ", ".join(call["alternative_names"]))
+    render_scope(call, refs)
 
     cols = st.columns(3)
     triples = [
@@ -161,6 +178,7 @@ def main() -> None:
         st.caption(f"{len(species)} species, {sum(len(v.get('calls', [])) for v in species.values())} calls total")
 
     data = species[choice]
+    refs = data.get("references", {}) or {}
     st.header(f"{data['common_name']}")
     st.markdown(f"*{data['scientific_name']}*")
     if line := taxonomy_line(data):
@@ -183,7 +201,6 @@ def main() -> None:
             st.markdown(agreement_summary_badges(calls, key), unsafe_allow_html=True)
     st.divider()
 
-    refs = data.get("references", {}) or {}
     for call in calls:
         render_call(call, refs)
 

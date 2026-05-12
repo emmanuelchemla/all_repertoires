@@ -36,10 +36,43 @@
         "species": { "type": "string", "description": "Species epithet only, e.g. paniscus in Pan paniscus.", "minLength": 1 }
       }
     },
+    "scope": {
+      "type": "object",
+      "required": ["life_stages", "sexes", "population_specific", "note", "scope_references"],
+      "additionalProperties": false,
+      "properties": {
+        "life_stages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["infant", "juvenile", "adult", "unknown"]
+          }
+        },
+        "sexes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["female", "male", "unknown"]
+          }
+        },
+        "population_specific": { "type": "boolean" },
+        "note": { "type": "string", "minLength": 1 },
+        "scope_references": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/citation" }
+        }
+      }
+    },
     "call": {
       "type": "object",
       "required": [
         "name",
+        "scope",
         "acoustic_description",
         "semantic_description",
         "acoustic_references",
@@ -55,6 +88,7 @@
       "properties": {
         "name": { "type": "string" },
         "alternative_names": { "type": "array", "items": { "type": "string" } },
+        "scope": { "$ref": "#/$defs/scope" },
         "acoustic_description": { "type": "string" },
         "semantic_description": { "type": "string" },
         "acoustic_references": {
