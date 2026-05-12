@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SpeciesRepertoire",
+  "type": "object",
+  "required": ["scientific_name", "common_name", "taxonomy", "calls", "references"],
+  "additionalProperties": false,
+  "properties": {
+    "scientific_name": { "type": "string", "minLength": 3 },
+    "common_name": { "type": "string", "minLength": 1 },
+    "taxonomy": { "$ref": "#/$defs/taxonomy" },
+    "calls": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/call" }
+    },
+    "references": {
+      "type": "object",
+      "description": "Map of stable reference IDs to bibliographic entries. ID form: lastname_year or lastname_etal_year.",
+      "patternProperties": {
+        "^[a-z][a-z0-9_]*$": { "$ref": "#/$defs/reference" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "taxonomy": {
+      "type": "object",
+      "required": ["kingdom", "phylum", "class", "order", "family", "genus", "species"],
+      "additionalProperties": false,
+      "properties": {
+        "kingdom": { "type": "string", "minLength": 1 },
+        "phylum": { "type": "string", "minLength": 1 },
+        "class": { "type": "string", "minLength": 1 },
+        "order": { "type": "string", "minLength": 1 },
+        "family": { "type": "string", "minLength": 1 },
+        "genus": { "type": "string", "minLength": 1 },
+        "species": { "type": "string", "description": "Species epithet only, e.g. paniscus in Pan paniscus.", "minLength": 1 }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["life_stages", "sexes", "population_specific", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "life_stages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["infant", "juvenile", "adult", "unknown"]
+          }
+        },
+        "sexes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["female", "male", "unknown"]
+          }
+        },
+        "population_specific": { "type": "boolean" },
+        "note": { "type": "string" }
+      }
+    },
+    "call": {
+      "type": "object",
+      "required": [
+        "name",
+        "scope",
+        "acoustic_keywords",
+        "acoustic_description",
+        "semantic_keywords",
+        "semantic_description",
+        "acoustic_references",
+        "semantic_references",
+        "call_type_existence_agreement",
+        "call_type_existence_explanation",
+        "acoustic_description_agreement",
+        "acoustic_description_explanation",
+        "semantic_description_agreement",
+        "semantic_description_explanation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "alternative_names": { "type": "array", "items": { "type": "string" } },
+        "scope": { "$ref": "#/$defs/scope" },
+        "acoustic_keywords": {
+          "type": "array",
+          "description": "Controlled acoustic feature tags. Use only spectro-temporal/acoustic properties, not function or context.",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/acoustic_keyword" }
+        },
+        "acoustic_description": { "type": "string" },
+        "semantic_keywords": {
+          "type": "array",
+          "description": "Controlled communicative function/context tags. Do not use caller class, transmission range, or evidence type.",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/semantic_keyword" }
+        },
+        "semantic_description": { "type": "string" },
+        "acoustic_references": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/citation" }
+        },
+        "semantic_references": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/citation" }
+        },
+        "audio_samples": { "type": "array", "items": { "type": "string", "format": "uri" } },
+        "playback_references": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/citation" }
+        },
+        "call_type_existence_agreement": { "$ref": "#/$defs/agreement" },
+        "call_type_existence_explanation": { "type": "string", "minLength": 1 },
+        "acoustic_description_agreement": { "$ref": "#/$defs/agreement" },
+        "acoustic_description_explanation": { "type": "string", "minLength": 1 },
+        "semantic_description_agreement": { "$ref": "#/$defs/agreement" },
+        "semantic_description_explanation": { "type": "string", "minLength": 1 }
+      }
+    },
+    "agreement": {
+      "type": "string",
+      "enum": ["weak", "medium", "strong"]
+    },
+    "acoustic_keyword": {
+      "type": "string",
+      "enum": [
+        "high_frequency",
+        "low_frequency",
+        "frequency_modulated",
+        "tonal",
+        "broadband",
+        "noisy",
+        "harmonic",
+        "short",
+        "long",
+        "abrupt",
+        "repetitive",
+        "pulsed",
+        "multi_component",
+        "loud",
+        "quiet",
+        "graded"
+      ]
+    },
+    "semantic_keyword": {
+      "type": "string",
+      "enum": [
+        "contact",
+        "group_coordination",
+        "affiliation",
+        "threat",
+        "aggression",
+        "submission",
+        "alarm",
+        "predator",
+        "distress",
+        "begging",
+        "caregiving",
+        "courtship",
+        "mating",
+        "food",
+        "recruitment",
+        "territorial",
+        "spacing",
+        "identity",
+        "attention",
+        "play",
+        "display",
+        "combinatorial"
+      ]
+    },
+    "citation": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "required": ["citation"],
+      "additionalProperties": false,
+      "properties": {
+        "citation": { "type": "string", "description": "Full bibliographic citation as plain text." },
+        "url": { "type": "string", "format": "uri" },
+        "doi": { "type": "string" }
+      }
+    }
+  }
+}
