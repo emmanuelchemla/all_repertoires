@@ -164,7 +164,7 @@ def main() -> None:
     st.header(f"{data['common_name']}")
     st.markdown(f"*{data['scientific_name']}*")
     if line := taxonomy_line(data):
-        st.markdown(f"**Taxonomy:** {line}")
+        st.caption(line)
 
     calls = data.get("calls", [])
     if not calls:
