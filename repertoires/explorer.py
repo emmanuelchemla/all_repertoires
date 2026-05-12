@@ -85,7 +85,7 @@ def taxonomy_line(data: dict) -> str:
         "order",
         "family",
         "genus",
-        "specific_epithet",
+        "species",
     )
     return " > ".join(taxonomy[rank] for rank in ranks if taxonomy.get(rank))
 
@@ -164,7 +164,7 @@ def main() -> None:
     st.header(f"{data['common_name']}")
     st.markdown(f"*{data['scientific_name']}*")
     if line := taxonomy_line(data):
-        st.caption(line)
+        st.markdown(f"**Taxonomy:** {line}")
 
     calls = data.get("calls", [])
     if not calls:

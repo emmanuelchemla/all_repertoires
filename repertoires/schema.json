@@ -24,7 +24,7 @@
   "$defs": {
     "taxonomy": {
       "type": "object",
-      "required": ["kingdom", "phylum", "class", "order", "family", "genus", "specific_epithet"],
+      "required": ["kingdom", "phylum", "class", "order", "family", "genus", "species"],
       "additionalProperties": false,
       "properties": {
         "kingdom": { "type": "string", "minLength": 1 },
@@ -33,7 +33,7 @@
         "order": { "type": "string", "minLength": 1 },
         "family": { "type": "string", "minLength": 1 },
         "genus": { "type": "string", "minLength": 1 },
-        "specific_epithet": { "type": "string", "minLength": 1 }
+        "species": { "type": "string", "description": "Species epithet only, e.g. paniscus in Pan paniscus.", "minLength": 1 }
       }
     },
     "call": {
