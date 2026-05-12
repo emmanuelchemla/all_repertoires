@@ -1,0 +1,371 @@
+scientific_name: Suricata suricatta
+common_name: Meerkat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Herpestidae
+  genus: Suricata
+  species: suricatta
+calls:
+  - name: close call
+    alternative_names:
+      - contact call
+      - close calls
+    scope: &adult_juvenile_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - quiet
+      - repetitive
+      - graded
+    acoustic_description: A quiet, short-range call produced repeatedly during foraging. Close calls are individually variable and their rate and structure vary with caller traits, spacing to neighbors, behavioral context, season, and wind, while remaining much softer and shorter than alarm or recruitment calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Used during foraging and group movement to maintain cohesion and advertise local presence. Playback and field observations show that close calls can attract group members, elicit call feedback, and support spatial coordination rather than immediate predator response.
+    acoustic_references:
+      - id: mausbach_etal_2017
+        url: https://doi.org/10.1371/journal.pone.0175371
+      - id: engesser_manser_2022
+        url: https://doi.org/10.1016/j.anbehav.2021.12.014
+    semantic_references:
+      - id: engesser_manser_2022
+        url: https://doi.org/10.1016/j.anbehav.2021.12.014
+      - id: townsend_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.04.010
+    playback_references:
+      - id: engesser_manser_2022
+        url: https://doi.org/10.1016/j.anbehav.2021.12.014
+      - id: townsend_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.04.010
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Close calls are treated as a core meerkat contact-call type by Mausbach et al. 2017, Townsend et al. 2010, and Engesser and Manser 2022. These independent wild studies agree on the call type while focusing on different aspects of acoustic variation and social use.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Mausbach et al. 2017 and Engesser and Manser 2022 both analyze wild close-call acoustics and calling rates. Agreement is strong for their short, quiet, repeatedly produced structure, though fine acoustic parameters vary with context and environment.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Engesser and Manser 2022 experimentally support a cohesion function, and Townsend et al. 2010 show that close calls carry group-specific signatures even if receivers did not use them in that playback design. The studies agree that close calls are social-contact signals, not alarm calls.
+
+  - name: aerial alarm call
+    alternative_names:
+      - aerial predator alarm
+      - aerial alarm
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - short
+      - loud
+      - graded
+    acoustic_description: A short, loud alarm call whose acoustic structure varies with predator class and urgency. High-urgency versions contain stronger noisy or nonlinear components and more abrupt temporal structure than low-urgency versions.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: Produced when an aerial predator or flying predator-like threat is detected. Receivers use the call to select an escape response appropriate to an aerial danger, with urgency level modulating the intensity of response.
+    acoustic_references:
+      - id: manser_2001
+        url: https://doi.org/10.1098/rspb.2001.1773
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    semantic_references:
+      - id: manser_etal_2001
+        url: https://doi.org/10.1098/rspb.2001.1772
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    playback_references:
+      - id: manser_etal_2001
+        url: https://doi.org/10.1098/rspb.2001.1772
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Manser 2001 separates aerial alarm calls acoustically from other alarm categories, and Manser et al. 2001 tests receiver responses to these predator-class calls. Rauber et al. 2020 also treats alarm calls as distinct from sentinel calls in wild sequences.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Manser 2001 provides the primary acoustic analysis of predator type and urgency, while Rauber et al. 2020 includes alarm calls in the sentinel-call gradation. Agreement is strong for an acoustically distinct alarm category, with urgency creating graded variants.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Manser et al. 2001 playback experiments show that receivers extract predator-class and urgency information, and Rauber et al. 2020 places alarm calls at the high-risk end of sentinel sequences. These sources agree that the call signals immediate aerial danger.
+
+  - name: terrestrial alarm call
+    alternative_names:
+      - terrestrial predator alarm
+      - ground predator alarm
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - loud
+      - graded
+    acoustic_description: A loud, short alarm call with urgency-dependent changes in noise, duration, and temporal patterning. The terrestrial category is acoustically separable from aerial and recruitment alarms, but within-category structure changes with the required response intensity.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: Produced to terrestrial predators or ground-level threats. Receivers respond with ground-predator-appropriate vigilance or refuge behavior, and the urgency encoded in the call alters the speed and intensity of response.
+    acoustic_references:
+      - id: manser_2001
+        url: https://doi.org/10.1098/rspb.2001.1773
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    semantic_references:
+      - id: manser_etal_2001
+        url: https://doi.org/10.1098/rspb.2001.1772
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    playback_references:
+      - id: manser_etal_2001
+        url: https://doi.org/10.1098/rspb.2001.1772
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Manser 2001 identifies terrestrial alarms as one of the principal alarm categories, and Manser et al. 2001 confirms that receivers treat predator classes differently. Rauber et al. 2020 retains terrestrial alarms as distinct high-risk calls in sentinel sequences.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The acoustic account is based mainly on Manser 2001 and is supported by later sequence work in Rauber et al. 2020. Agreement is strong for the category, though urgency produces graded acoustic variation within it.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Manser et al. 2001 playback work provides strong evidence that receivers extract terrestrial-predator information, and Rauber et al. 2020 treats these alarms as the endpoint of increasing perceived risk.
+
+  - name: recruitment call
+    alternative_names:
+      - recruitment alarm
+      - mobbing call
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - repetitive
+      - graded
+    acoustic_description: A loud alarm-related call category with repeated, noisy elements and urgency-dependent structural variation. It is acoustically separable from aerial and terrestrial alarm calls in Manser's predator-type analysis.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - group_coordination
+    semantic_description: Used when the caller recruits group members toward a localized threat or object of interest, such as a snake, predator trace, or rival-associated danger, rather than simply triggering immediate flight. Receivers approach or coordinate around the source of risk.
+    acoustic_references:
+      - id: manser_2001
+        url: https://doi.org/10.1098/rspb.2001.1773
+    semantic_references:
+      - id: manser_etal_2001
+        url: https://doi.org/10.1098/rspb.2001.1772
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    playback_references:
+      - id: manser_etal_2001
+        url: https://doi.org/10.1098/rspb.2001.1772
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Manser 2001 includes recruitment calls as a distinct alarm-call category, and Manser et al. 2001 tests the information receivers extract from these categories. The category is well established in the meerkat alarm literature.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Manser 2001 gives direct acoustic support, but fewer later studies focus on recruitment-call acoustics than on aerial, terrestrial, or sentinel calls. The category is clear, while detailed acoustic boundaries deserve a medium label.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Manser et al. 2001 provides playback evidence that receivers use recruitment-call information, and later sentinel-sequence work distinguishes alarms from lower-risk sentinel calls. The recruitment context is therefore strongly supported.
+
+  - name: sentinel short-note call
+    alternative_names:
+      - single-note call
+      - double-note call
+      - sentinel calming call
+      - Watchman's song
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - tonal
+      - short
+      - quiet
+      - repetitive
+      - graded
+    acoustic_description: A soft sentinel call composed of one or two short tonal note units, repeated during guarding bouts. In longer sequences these short-note calls form the low-risk end of a graded series that can progress through triple-note and multiple-note calls.
+    semantic_keywords:
+      - group_coordination
+      - attention
+    semantic_description: Given by sentinels during low perceived predation risk and used by foragers as social information that a guard is present. Playbacks increase foraging or reduce vigilance compared with warning-call playbacks, so the call functions as a calming or all-clear signal rather than an immediate alarm.
+    acoustic_references:
+      - id: rauber_manser_2017
+        url: https://doi.org/10.1038/srep44436
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    semantic_references:
+      - id: rauber_manser_2017
+        url: https://doi.org/10.1038/srep44436
+      - id: rauber_manser_2018
+        url: https://doi.org/10.1038/s41598-018-29678-y
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    playback_references:
+      - id: rauber_manser_2017
+        url: https://doi.org/10.1038/srep44436
+      - id: rauber_manser_2018
+        url: https://doi.org/10.1038/s41598-018-29678-y
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Rauber and Manser 2017 identify single- and double-note sentinel calls as common short-note calls, and Rauber et al. 2020 confirms them as discrete units in sentinel sequences. The existence of the category is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Rauber and Manser 2017 provide spectrogram-based classification, and Rauber et al. 2020 analyzes the same call units in sequence data. The acoustic account is strong, though single- and double-note calls are grouped here because their tested function is shared.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Rauber and Manser 2017 show experimentally that these calls increase foraging and decrease vigilance relative to warning calls, and Rauber and Manser 2018 shows receivers adjust vigilance by caller identity and experience. The all-clear interpretation is well supported.
+
+  - name: sentinel long call
+    alternative_names:
+      - di-drrr call
+      - wheek call
+      - sentinel warning call
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - long
+      - repetitive
+      - graded
+    acoustic_description: A longer, more modulated sentinel-call category that includes di-drrr and wheek calls. These calls occupy the higher-risk end of sentinel sequences before full alarm calls and are less commonly produced than short-note calming calls.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - group_coordination
+    semantic_description: Produced when perceived predation risk is elevated but before an immediate flight alarm is required. Playbacks of long calls increase vigilance and reduce foraging relative to short-note or close-call controls.
+    acoustic_references:
+      - id: rauber_manser_2017
+        url: https://doi.org/10.1038/srep44436
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    semantic_references:
+      - id: rauber_manser_2017
+        url: https://doi.org/10.1038/srep44436
+      - id: rauber_etal_2020
+        url: https://doi.org/10.1186/s12915-020-00847-8
+    playback_references:
+      - id: rauber_manser_2017
+        url: https://doi.org/10.1038/srep44436
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Rauber and Manser 2017 and Rauber et al. 2020 both identify di-drrr and wheek calls as distinct sentinel-call units. The grouped long-call category follows the tested warning-call grouping in Rauber and Manser 2017.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The spectrogram classes and the sequence analysis agree that di-drrr and wheek calls are longer warning-side units in the sentinel gradation. Grouping them broadens the acoustic description but does not conflict with the sources.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Rauber and Manser 2017 experimentally shows that these calls increase vigilance, and Rauber et al. 2020 places them just below alarm calls in a graded risk sequence. Their warning function is strongly supported.
+
+  - name: repeat begging call
+    alternative_names:
+      - repeat call
+      - repetitive begging call
+    scope: &pup_both_scope
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - repetitive
+      - graded
+    acoustic_description: A repeated pup begging call produced in long bouts while dependent young accompany foraging adults. The call is repetitive and acoustically distinct from the louder high-pitched begging calls produced during feeding events.
+    semantic_keywords:
+      - begging
+      - food
+      - caregiving
+    semantic_description: Used by mobile dependent pups while following foraging adults. Playbacks increase provisioning by adults, and call structure changes with age in ways that reduce adult provisioning responses as young become independent.
+    acoustic_references:
+      - id: kunc_etal_2007
+        url: https://doi.org/10.1086/521233
+      - id: madden_etal_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.03.011
+    semantic_references:
+      - id: kunc_etal_2007
+        url: https://doi.org/10.1086/521233
+      - id: madden_etal_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.03.011
+    playback_references:
+      - id: kunc_etal_2007
+        url: https://doi.org/10.1086/521233
+      - id: madden_etal_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.03.011
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Kunc et al. 2007 explicitly distinguishes repeat calls from high-pitched begging calls, and Madden et al. 2009 uses age-specific begging-call playbacks. The repeat call is a well supported pup call type.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Kunc et al. 2007 differentiates repeat calls acoustically from other begging calls, and Madden et al. 2009 shows age-related acoustic changes in begging calls. Agreement is strong for repetitive pup begging structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Kunc et al. 2007 and Madden et al. 2009 both use playback evidence showing adult provisioning responses to pup begging calls. The begging/provisioning context is strongly supported.
+
+  - name: high-pitched begging call
+    alternative_names:
+      - high-pitched call
+      - feeding-event begging call
+    scope: *pup_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - short
+      - repetitive
+    acoustic_description: A high-frequency, more intense begging call that dependent young switch to when adults have food. It is acoustically distinct from repeat calls and is produced in vigorous bouts during feeding opportunities.
+    semantic_keywords:
+      - begging
+      - food
+      - caregiving
+    semantic_description: Used by pups during direct feeding opportunities, especially when an adult has food available. Adults preferentially respond to high-pitched begging calls over repeat calls in feeding-choice experiments.
+    acoustic_references:
+      - id: kunc_etal_2007
+        url: https://doi.org/10.1086/521233
+    semantic_references:
+      - id: kunc_etal_2007
+        url: https://doi.org/10.1086/521233
+      - id: madden_etal_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.03.011
+    playback_references:
+      - id: kunc_etal_2007
+        url: https://doi.org/10.1086/521233
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Kunc et al. 2007 identifies high-pitched calls as a distinct begging call type used in a different social context from repeat calls. Later work on begging-call age effects is compatible with this call-type split.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Kunc et al. 2007 provides the main direct acoustic comparison between high-pitched and repeat calls. The label is medium because fewer independent acoustic studies focus specifically on this call type.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Kunc et al. 2007 experimentally shows that adults prefer high-pitched call playbacks during feeding contexts. The semantic description is therefore strongly supported despite a narrower literature base.
+
+references:
+  manser_2001:
+    citation: "Manser MB. 2001. The acoustic structure of suricates' alarm calls varies with predator type and the level of response urgency. Proceedings of the Royal Society B 268(1483): 2315-2324."
+    url: https://doi.org/10.1098/rspb.2001.1773
+    doi: 10.1098/rspb.2001.1773
+  manser_etal_2001:
+    citation: "Manser MB, Bell MB, Fletcher LB. 2001. The information that receivers extract from alarm calls in suricates. Proceedings of the Royal Society B 268(1484): 2485-2491."
+    url: https://doi.org/10.1098/rspb.2001.1772
+    doi: 10.1098/rspb.2001.1772
+  rauber_manser_2017:
+    citation: "Rauber R, Manser MB. 2017. Discrete call types referring to predation risk enhance the efficiency of the meerkat sentinel system. Scientific Reports 7: 44436."
+    url: https://doi.org/10.1038/srep44436
+    doi: 10.1038/srep44436
+  rauber_manser_2018:
+    citation: "Rauber R, Manser MB. 2018. Experience of the signaller explains the use of social versus personal information in the context of sentinel behaviour in meerkats. Scientific Reports 8: 11506."
+    url: https://doi.org/10.1038/s41598-018-29678-y
+    doi: 10.1038/s41598-018-29678-y
+  rauber_etal_2020:
+    citation: "Rauber R, Kranstauber B, Manser MB. 2020. Call order within vocal sequences of meerkats contains temporary contextual and individual information. BMC Biology 18: 119."
+    url: https://doi.org/10.1186/s12915-020-00847-8
+    doi: 10.1186/s12915-020-00847-8
+  engesser_manser_2022:
+    citation: "Engesser S, Manser MB. 2022. Collective close calling mediates group cohesion in foraging meerkats via spatially determined differences in call rates. Animal Behaviour 185: 73-82."
+    url: https://doi.org/10.1016/j.anbehav.2021.12.014
+    doi: 10.1016/j.anbehav.2021.12.014
+  mausbach_etal_2017:
+    citation: "Mausbach J, Braga Goncalves I, Heistermann M, Ganswindt A, Manser MB. 2017. Meerkat close calling patterns are linked to sex, social category, season and wind, but not fecal glucocorticoid metabolite concentrations. PLoS One 12(5): e0175371."
+    url: https://doi.org/10.1371/journal.pone.0175371
+    doi: 10.1371/journal.pone.0175371
+  townsend_etal_2010:
+    citation: "Townsend SW, Hollen LI, Manser MB. 2010. Meerkat close calls encode group-specific signatures, but receivers fail to discriminate. Animal Behaviour 80(1): 133-138."
+    url: https://doi.org/10.1016/j.anbehav.2010.04.010
+    doi: 10.1016/j.anbehav.2010.04.010
+  kunc_etal_2007:
+    citation: "Kunc HP, Madden JR, Manser MB. 2007. Begging signals in a mobile feeding system: the evolution of different call types. The American Naturalist 170(4): 617-624."
+    url: https://doi.org/10.1086/521233
+    doi: 10.1086/521233
+  madden_etal_2009:
+    citation: "Madden JR, Kunc HP, English S, Clutton-Brock TH. 2009. Why do meerkat pups stop begging? Animal Behaviour 78(1): 85-89."
+    url: https://doi.org/10.1016/j.anbehav.2009.03.011
+    doi: 10.1016/j.anbehav.2009.03.011
