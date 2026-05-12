@@ -1,0 +1,335 @@
+scientific_name: Pan paniscus
+common_name: Bonobo
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hominidae
+  genus: Pan
+  species: Pan paniscus
+calls:
+  - name: high hoot
+    alternative_names:
+      - bark
+      - soft bark
+      - scream bark
+      - wieew bark
+      - food bark
+    acoustic_description: A short, high-frequency tonal call, often with an inverted-U contour and sometimes with a short noisy onset. In the updated adult repertoire it also absorbs several bark-like variants that overlap acoustically with high hoots.
+    semantic_description: Used as a conspicuous contact or attention-getting call, especially over distance, helping advertise the caller's presence or location and support cohesion between parties. Bark-like variants can also occur in food and arousal contexts, so function is broader than simple distance contact.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: hohmann_fruth_1994
+        url: https://doi.org/10.1007/BF02737430
+    semantic_references:
+      - id: hohmann_fruth_1994
+        url: https://doi.org/10.1007/BF02737430
+      - id: berthet_etal_2025
+        url: https://doi.org/10.1126/science.adv1170
+      - id: clay_zuberbuhler_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.02.016
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s002
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Wegdell et al. 2025 quantitatively validate high hoots, and Hohmann and Fruth 1994 describe high hoots as bonobo distance calls. The label is strong, though Wegdell et al. merge several previously named bark categories into high hoots while earlier studies split or named these calls differently.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 and Hohmann and Fruth 1994 agree that the call is high-pitched and structurally variable, with the 2025 random-forest analysis giving the strongest acoustic validation. The label remains strong despite the broad acoustic boundary created by merged bark variants.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Hohmann and Fruth 1994 support a distance-contact/cohesion function, Berthet et al. 2025 interpret high hoots as advertising caller presence or location, and Clay and Zuberbuhler 2009 show bark-like calls in food contexts. These sources agree on attention/contact value but differ in contextual scope.
+
+  - name: scream
+    alternative_names: []
+    acoustic_description: A relatively long, high-frequency broadband call with variable noise and a flatter contour than high hoots, lacking a clear inverted-U shape at the beginning or end.
+    semantic_description: Produced in high-arousal negative social situations, especially aggression, conflict, distress, or alarm-like episodes. It is best treated as an affectively intense call rather than a context-specific referential signal.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: bermejo_omedes_1999
+        url: https://doi.org/10.1159/000021717
+    semantic_references:
+      - id: dewaal_1988
+        url: https://doi.org/10.1163/156853988X00269
+      - id: bermejo_omedes_1999
+        url: https://doi.org/10.1159/000021717
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s003
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Screams are recognized in the older qualitative repertoires of de Waal 1988 and Bermejo and Omedes 1999 and are quantitatively retained by Wegdell et al. 2025. The label is strong, though detailed boundaries between screams and scream-like bark variants remain partly graded.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 provide quantitative acoustic support for screams as a discriminable adult call type, and Bermejo and Omedes 1999 include comparable wild repertoire descriptions. The broad noisy structure makes the description reliable but less tightly bounded than more tonal calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: De Waal 1988 and Bermejo and Omedes 1999 associate screams with agonistic or distress contexts, but the later quantitative repertoire does not test function. Agreement is moderate because the semantic evidence is mainly qualitative.
+
+  - name: grunt
+    alternative_names:
+      - food grunt
+    acoustic_description: A very short, low-frequency, noisy call with an unshaped or weakly structured contour. It may be tonal or atonal and can sound breathy.
+    semantic_description: Given during varied close-range activities such as grooming, resting, moving, and feeding. Recent semantic analysis suggests it can draw attention to the caller's ongoing activity, and food studies show that grunts can participate in food-associated sequences.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: clay_zuberbuhler_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.02.016
+    semantic_references:
+      - id: berthet_etal_2025
+        url: https://doi.org/10.1126/science.adv1170
+      - id: clay_zuberbuhler_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.02.016
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s004
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Grunts are retained as an acoustically discriminable adult call type by Wegdell et al. 2025 and are included among food-associated calls by Clay and Zuberbuhler 2009. The label is strong, though very soft, short-range calls are hard to sample in wild forest conditions.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 characterize grunts as short, low, and noisy; Clay and Zuberbuhler 2009 also separate grunts from tonal food calls. Agreement is good, with some uncertainty from recording quality and the graded nature of the repertoire.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Berthet et al. 2025 link grunts to the caller's ongoing activity across several contexts, while Clay and Zuberbuhler 2009 document food-associated use. These are compatible close-range coordination interpretations, though not all contexts have playback tests.
+
+  - name: peep
+    alternative_names:
+      - food peep
+      - alarm peep
+    acoustic_description: A short, tonal, medium- to high-frequency call with a mostly flat contour, few harmonics, and low noise. It may include a small frequency squiggle or slight upward slope.
+    semantic_description: A highly flexible call used across feeding, travel, rest, aggression, alarm, nesting, grooming, and other daily contexts. Depending on context it can work as a mild coordination proposal or attention signal, with pragmatic context contributing strongly to interpretation.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: clay_zuberbuhler_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.02.016
+      - id: clay_etal_2015
+        url: https://doi.org/10.7717/peerj.1124
+    semantic_references:
+      - id: clay_etal_2015
+        url: https://doi.org/10.7717/peerj.1124
+      - id: berthet_etal_2025
+        url: https://doi.org/10.1126/science.adv1170
+      - id: clay_zuberbuhler_2011
+        url: https://doi.org/10.1371/journal.pone.0018786
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s005
+    playback_references:
+      - id: clay_zuberbuhler_2011
+        url: https://doi.org/10.1371/journal.pone.0018786
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Peeps are recognized across Bermejo and Omedes 1999, Clay and Zuberbuhler 2009, Clay et al. 2015, Berthet et al. 2025, and Wegdell et al. 2025. Multiple independent studies agree that peeps are a central bonobo call type.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025, Clay and Zuberbuhler 2009, and Clay et al. 2015 all describe peeps as short, tonal calls with relatively simple contours. The acoustic category is consistently recognized despite context-dependent variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Clay et al. 2015 demonstrate functional flexibility across positive, neutral, and negative contexts; Berthet et al. 2025 derive a tentative coordination meaning; and Clay and Zuberbuhler 2011 show receivers use food-call sequences containing peeps. These studies strongly agree that peep meaning is context-sensitive and flexible.
+
+  - name: laughter
+    alternative_names:
+      - laugh
+    acoustic_description: A short, medium-frequency, noisy and atonal call with an unshaped spectrographic structure and high noise.
+    semantic_description: Associated primarily with play or positive social arousal, especially in close-range affiliative interactions. Published evidence is thinner than for peeps or contest hoots, so the semantic description should be treated as provisional.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: dewaal_1988
+        url: https://doi.org/10.1163/156853988X00269
+    semantic_references:
+      - id: dewaal_1988
+        url: https://doi.org/10.1163/156853988X00269
+      - id: bermejo_omedes_1999
+        url: https://doi.org/10.1159/000021717
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s006
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Laughter appears in older qualitative repertoire work and is retained as an acoustically discriminable call type in Wegdell et al. 2025. The label is strong for call-type existence, though fewer studies focus specifically on laughter than on peeps, high hoots, or contest hoots.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 provides quantitative acoustic support for laughter as a distinct noisy call. Older repertoire descriptions are compatible but less quantitative.
+    semantic_description_agreement: weak
+    semantic_description_explanation: De Waal 1988 and Bermejo and Omedes 1999 support a play or positive-social association, but there are few dedicated bonobo laughter studies in the cited set. The function is plausible but less independently validated.
+
+  - name: low hoot
+    alternative_names: []
+    acoustic_description: A short, low-frequency call with an unshaped contour, variable tonality, and relatively high noise.
+    semantic_description: Associated with high-arousal situations and social coordination, including night-nest construction in recent semantic analysis. Its exact function remains broad and context-dependent.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: dewaal_1988
+        url: https://doi.org/10.1163/156853988X00269
+    semantic_references:
+      - id: berthet_etal_2025
+        url: https://doi.org/10.1126/science.adv1170
+      - id: dewaal_1988
+        url: https://doi.org/10.1163/156853988X00269
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s007
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Low hoots are retained by Wegdell et al. 2025 and appear in earlier repertoire descriptions. The label is strong, though hoot terminology has been split differently across studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 gives quantitative support for a low, short call type, and earlier qualitative work recognizes low hoot-like calls. The boundary with other low short calls is still somewhat graded.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Berthet et al. 2025 links low hoots to high-arousal contexts such as night-nest building, while de Waal 1988 supplies broader repertoire context. Dedicated functional work remains limited.
+
+  - name: whistle
+    alternative_names: []
+    acoustic_description: A relatively long, tonal call with a low but high-pitched frequency range, usually flat or containing small frequency squiggles, and little noise.
+    semantic_description: Used in spatial coordination and cohesion, especially to keep group members together. It can combine with peeps in socially sensitive contexts, where interpretation depends on the surrounding interaction.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: bermejo_omedes_1999
+        url: https://doi.org/10.1159/000021717
+    semantic_references:
+      - id: berthet_etal_2025
+        url: https://doi.org/10.1126/science.adv1170
+      - id: bermejo_omedes_1999
+        url: https://doi.org/10.1159/000021717
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s008
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Whistles are recognized in qualitative repertoire work and retained by Wegdell et al. 2025 as an acoustically discriminable adult call type. The label is strong, though functional treatment is less extensive than for peeps.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 provides a clear acoustic profile for whistles, and Bermejo and Omedes 1999 include whistles in the wild repertoire. Agreement is good for the tonal, elongated structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Berthet et al. 2025 interprets whistles as supporting spatial cohesion, and Bermejo and Omedes 1999 report contextual use in wild bonobos. The meaning is reasonably consistent, though fewer studies test whistles directly.
+
+  - name: contest hoot
+    alternative_names: []
+    acoustic_description: A short, low-frequency tonal hoot with an inverted-U contour and low noise. In extended bouts it can be part of a multi-phase sequence with introductory, escalation, and let-down phases.
+    semantic_description: Produced especially by adult and subadult males as a socially directed challenge that can provoke a reaction such as chase, and can also occur in friendly play. It appears to assert social status or signal an intention to interact with socially important partners.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: genty_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0084738
+    semantic_references:
+      - id: genty_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0084738
+      - id: berthet_etal_2025
+        url: https://doi.org/10.1126/science.adv1170
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s009
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Contest hoots are described in de Waal 1988 and studied directly by Genty et al. 2014, and Wegdell et al. 2025 validates them acoustically in wild adult calls. The label is strong, though Bermejo and Omedes 1999 did not separate contest hoots from other hoots.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 and Genty et al. 2014 both describe a hoot with structured frequency modulation, though Genty et al. analyze longer social sequences while Wegdell et al. classify individual calls. Agreement is strong but not perfectly one-to-one in unit definition.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Genty et al. 2014 provides focused evidence that contest hoots are socially directed challenges used in agonistic and play contexts, and Berthet et al. 2025 supports high-hoot/low-hoot combinations in socially charged contexts. This is one of the best-supported call functions in bonobos.
+
+  - name: pant grunt
+    alternative_names:
+      - greeting grunt
+    acoustic_description: A very short, tonal call with an upward slope, medium noise, and relatively high frequency range compared with other low, short calls.
+    semantic_description: A subordination or greeting-related signal in some bonobo populations, especially from lower-ranking individuals toward higher-ranking recipients. Its use varies sharply by population and social system.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: schamberg_etal_2023
+        url: https://doi.org/10.1007/s00265-022-03285-4
+    semantic_references:
+      - id: schamberg_etal_2023
+        url: https://doi.org/10.1007/s00265-022-03285-4
+      - id: dewaal_1988
+        url: https://doi.org/10.1163/156853988X00269
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s010
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Wegdell et al. 2025 validates pant grunts acoustically, and Schamberg et al. 2023 confirms regular production at LuiKotale. The label is medium because Schamberg et al. also report absence in adult bonobos at Kokolopori and summarize contradictory reports across populations.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 provides an acoustic profile for pant grunts, and Schamberg et al. 2023 focuses on the same call type in wild populations. Acoustic existence is clearer than population-level presence.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Schamberg et al. 2023 treats pant grunts as subordination signals where present, while de Waal 1988 described greeting grunts in captive bonobos in dominance-relevant contexts. The function is coherent but population-specific.
+
+  - name: yelp
+    alternative_names: []
+    acoustic_description: A short, low-frequency tonal call with a downward-pointing slope and low noise.
+    semantic_description: Used in social coordination and food-associated calling. Recent semantic analysis interprets yelps as stronger imperatives associated with changes in audience behavior, while food studies show yelps more often in sequences linked to less-preferred foods.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: clay_zuberbuhler_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.02.016
+    semantic_references:
+      - id: berthet_etal_2025
+        url: https://doi.org/10.1126/science.adv1170
+      - id: clay_zuberbuhler_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.02.016
+      - id: clay_zuberbuhler_2011
+        url: https://doi.org/10.1371/journal.pone.0018786
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s011
+    playback_references:
+      - id: clay_zuberbuhler_2011
+        url: https://doi.org/10.1371/journal.pone.0018786
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Yelps are recognized by Clay and Zuberbuhler 2009 and retained by Wegdell et al. 2025, and Berthet et al. 2025 includes yelps in the semantic/compositional analysis. The label is strong, though yelps and peep-yelps have partly overlapping meanings and acoustic space.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 describes yelps as short descending tonal calls, and Clay and Zuberbuhler 2009 distinguish yelps from peeps and peep-yelps in food-associated calling. Agreement is good despite graded overlap.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Berthet et al. 2025 interprets yelps as social imperatives, while Clay and Zuberbuhler 2009 and 2011 show their role in food-call sequences. The function is consistently coordinative, though the context differs between studies.
+
+  - name: peep yelp
+    alternative_names:
+      - peep-yelp
+    acoustic_description: A short, low-frequency tonal call with a variable contour, often an inverted-U or upward-pointing shape, and low noise.
+    semantic_description: Used in coordination contexts including group encounters, night-nest building, and travel between parties. In food contexts it appears in graded sequences, often with intermediate or broader food associations than pure peeps or yelps.
+    acoustic_references:
+      - id: wegdell_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0330250
+      - id: clay_zuberbuhler_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.02.016
+    semantic_references:
+      - id: berthet_etal_2025
+        url: https://doi.org/10.1126/science.adv1170
+      - id: clay_zuberbuhler_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.02.016
+      - id: clay_zuberbuhler_2011
+        url: https://doi.org/10.1371/journal.pone.0018786
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0330250.s012
+    playback_references:
+      - id: clay_zuberbuhler_2011
+        url: https://doi.org/10.1371/journal.pone.0018786
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Peep yelps are recognized in food-call work, semantic/compositional work, and the 2025 quantitative repertoire. The label is strong, though peep yelps are acoustically and semantically close to both peeps and yelps in several analyses.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Wegdell et al. 2025 gives a quantitative profile for peep yelps, and Clay and Zuberbuhler 2009 distinguish them from peeps and yelps. Agreement is good, with expected uncertainty from the graded repertoire.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Berthet et al. 2025 links peep yelps to joining and coordination in group encounters, night nesting, and travel-related combinations, while Clay and Zuberbuhler 2009 and 2011 document their role in food-associated sequences. The broad coordinative reading is well supported but context-sensitive.
+
+references:
+  wegdell_etal_2025:
+    citation: "Wegdell F, Schamberg I, Berthet M, Rothacher Y, Dellwo V, Surbeck M, Townsend SW. 2025. An updated vocal repertoire of wild adult bonobos (Pan paniscus). PLoS One 20(9): e0330250."
+    url: https://doi.org/10.1371/journal.pone.0330250
+    doi: 10.1371/journal.pone.0330250
+  bermejo_omedes_1999:
+    citation: "Bermejo M, Omedes A. 1999. Preliminary vocal repertoire and vocal communication of wild bonobos (Pan paniscus) at Lilungu (Democratic Republic of Congo). Folia Primatologica 70(6): 328-357."
+    url: https://doi.org/10.1159/000021717
+    doi: 10.1159/000021717
+  dewaal_1988:
+    citation: "de Waal FBM. 1988. The communicative repertoire of captive bonobos (Pan paniscus), compared to that of chimpanzees. Behaviour 106(3-4): 183-251."
+    url: https://doi.org/10.1163/156853988X00269
+    doi: 10.1163/156853988X00269
+  hohmann_fruth_1994:
+    citation: "Hohmann G, Fruth B. 1994. Structure and use of distance calls in wild bonobos (Pan paniscus). International Journal of Primatology 15(5): 767-782."
+    url: https://doi.org/10.1007/BF02737430
+    doi: 10.1007/BF02737430
+  genty_etal_2014:
+    citation: "Genty E, Clay Z, Hobaiter C, Zuberbuhler K. 2014. Multi-modal use of a socially directed call in bonobos. PLoS One 9(1): e84738."
+    url: https://doi.org/10.1371/journal.pone.0084738
+    doi: 10.1371/journal.pone.0084738
+  clay_zuberbuhler_2009:
+    citation: "Clay Z, Zuberbuhler K. 2009. Food-associated calling sequences in bonobos. Animal Behaviour 77(6): 1387-1396."
+    url: https://doi.org/10.1016/j.anbehav.2009.02.016
+    doi: 10.1016/j.anbehav.2009.02.016
+  clay_zuberbuhler_2011:
+    citation: "Clay Z, Zuberbuhler K. 2011. Bonobos extract meaning from call sequences. PLoS One 6(4): e18786."
+    url: https://doi.org/10.1371/journal.pone.0018786
+    doi: 10.1371/journal.pone.0018786
+  clay_etal_2015:
+    citation: "Clay Z, Archbold J, Zuberbuhler K. 2015. Functional flexibility in wild bonobo vocal behaviour. PeerJ 3: e1124."
+    url: https://doi.org/10.7717/peerj.1124
+    doi: 10.7717/peerj.1124
+  schamberg_etal_2023:
+    citation: "Schamberg I, Clay Z, Townsend SW, Surbeck M. 2023. Between-group variation in production of pant-grunt vocalizations by wild bonobos (Pan paniscus). Behavioral Ecology and Sociobiology 77: 14."
+    url: https://doi.org/10.1007/s00265-022-03285-4
+    doi: 10.1007/s00265-022-03285-4
+  berthet_etal_2025:
+    citation: "Berthet M, Surbeck M, Townsend SW. 2025. Extensive compositionality in the vocal system of bonobos. Science 388(6742): 104-108."
+    url: https://doi.org/10.1126/science.adv1170
+    doi: 10.1126/science.adv1170
