@@ -8,12 +8,14 @@ from __future__ import annotations
 
 from html import escape
 from pathlib import Path
+from urllib.parse import urlparse
 
 import streamlit as st
 import yaml
 
 ROOT = Path(__file__).parent
 SPECIES_DIR = ROOT / "species"
+AUDIO_EXTENSIONS = {".aac", ".aiff", ".flac", ".m4a", ".mp3", ".oga", ".ogg", ".opus", ".wav", ".webm"}
 
 
 def species_cache_key() -> tuple[tuple[str, int], ...]:
@@ -181,6 +183,11 @@ def render_citation(c: dict, refs: dict) -> str:
     return f"[{label}]({url})" if url else label
 
 
+def is_direct_audio_url(url: str) -> bool:
+    path = urlparse(url).path.lower()
+    return any(path.endswith(ext) for ext in AUDIO_EXTENSIONS)
+
+
 def taxonomy_line(data: dict) -> str:
     taxonomy = data.get("taxonomy") or {}
     ranks = (
@@ -330,7 +337,16 @@ def render_call(call: dict, refs: dict) -> None:
     else:
         bits.append("🔁 No playback experiments on record")
     if audio:
-        bits.append("🔊 Audio: " + " · ".join(f"[sample {i + 1}]({u})" for i, u in enumerate(audio)))
+        direct_audio = [(i, u) for i, u in enumerate(audio) if is_direct_audio_url(u)]
+        linked_audio = [(i, u) for i, u in enumerate(audio) if not is_direct_audio_url(u)]
+        for i, url in direct_audio:
+            st.caption(f"Audio sample {i + 1}")
+            st.audio(url)
+        if linked_audio:
+            bits.append(
+                "🔊 Audio: "
+                + " · ".join(f"[sample {i + 1}]({u})" for i, u in linked_audio)
+            )
     st.markdown("  \n".join(bits))
 
     st.divider()
