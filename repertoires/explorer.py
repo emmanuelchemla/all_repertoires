@@ -144,11 +144,11 @@ def render_scope(data: dict) -> None:
                 f"Sex: {sex}",
             )
         )
+    if scope.get("population_specific"):
+        note = scope.get("note") or "Population-specific call"
+        bits.append(chip("!", "#b45309", f"Population specific: {note}"))
     if bits:
         st.markdown("".join(bits), unsafe_allow_html=True)
-    if scope.get("population_specific"):
-        with st.expander("Population specific"):
-            st.write(f"Population specific: {scope.get('note', '')}")
 
 
 def render_call(call: dict, refs: dict) -> None:
