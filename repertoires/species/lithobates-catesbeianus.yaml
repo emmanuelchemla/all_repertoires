@@ -1,0 +1,136 @@
+scientific_name: Lithobates catesbeianus
+common_name: American bullfrog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Ranidae
+  genus: Lithobates
+  species: catesbeianus
+calls:
+  - name: advertisement call
+    alternative_names:
+      - mating call
+      - breeding call
+      - multicroak call
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - harmonic
+      - loud
+      - long
+      - repetitive
+      - multi_component
+    acoustic_description: A loud, low-frequency, quasiharmonic call composed of one to many repeated croaks. Field recordings describe long advertisement calls, with individual advertisement notes commonly around 0.3-0.6 s and broad spectral energy spanning low kilohertz frequencies.
+    semantic_keywords:
+      - courtship
+      - mating
+      - territorial
+      - spacing
+      - identity
+    semantic_description: Produced by adult males in breeding choruses. It functions in mate attraction and in communication among neighboring males, and playback of mating calls can provoke territorial approach or attack by resident males.
+    acoustic_references:
+      - id: simmons_2004
+        url: https://doi.org/10.1121/1.1643366
+      - id: herrick_etal_2018
+        url: https://doi.org/10.1670/17-049
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+    semantic_references:
+      - id: wiewandt_1969
+        url: https://doi.org/10.2307/1442074
+      - id: ryan_1980
+        url: https://doi.org/10.2307/1444139
+      - id: bee_2002
+        url: https://doi.org/10.1093/beheco/13.1.109
+      - id: simmons_2004
+        url: https://doi.org/10.1121/1.1643366
+    playback_references:
+      - id: wiewandt_1969
+        url: https://doi.org/10.2307/1442074
+      - id: bee_2002
+        url: https://doi.org/10.1093/beheco/13.1.109
+      - id: simmons_2004
+        url: https://doi.org/10.1121/1.1643366
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Capranica 1968 identifies the male mating call in a repertoire study, Wiewandt 1969 documents mating-call playbacks and territorial responses under field conditions, and Simmons 2004 analyzes spontaneous and playback advertisement calls at natural ponds. The call type is consistently recognized despite the older Rana nomenclature.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Simmons 2004 describes the advertisement call as multicroak and quasiharmonic, Herrick et al. 2018 report field measurements of bullfrog advertisement-note duration and frequency range, and Capranica 1968 treats it as a stereotyped repertoire item. Agreement is strong for the long, repeated, low-frequency structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Wiewandt 1969, Ryan 1980, Bee 2002, and Simmons 2004 all support breeding-chorus use by territorial adult males, with functions in mate attraction, neighbor recognition, and territorial response. These functions are compatible rather than conflicting.
+
+  - name: encounter call
+    alternative_names:
+      - bonk
+      - aggressive call
+      - territorial call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - harmonic
+      - short
+      - abrupt
+      - loud
+    acoustic_description: A curt, abrupt, low-frequency note with spectral composition similar to the advertisement call but much shorter in duration. Wiewandt called this vocalization a bonk, and later work contrasts it with the longer multicroak advertisement call.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+      - spacing
+    semantic_description: Emitted by territorial adult males during close-range male-male competition and defense of calling or shoreline territories. Field playback and model presentations show that males give this call when approaching or attacking apparent intruders.
+    acoustic_references:
+      - id: wiewandt_1969
+        url: https://doi.org/10.2307/1442074
+      - id: simmons_2004
+        url: https://doi.org/10.1121/1.1643366
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+    semantic_references:
+      - id: wiewandt_1969
+        url: https://doi.org/10.2307/1442074
+      - id: bee_2002
+        url: https://doi.org/10.1093/beheco/13.1.109
+      - id: ryan_1980
+        url: https://doi.org/10.2307/1444139
+    playback_references:
+      - id: wiewandt_1969
+        url: https://doi.org/10.2307/1442074
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Wiewandt 1969 documented the bonk in field territorial interactions and playback tests, Capranica 1968 recognized territorial calls in the bullfrog repertoire, and Simmons 2004 treats the encounter call as a conspecific vocalization distinct from advertisement calls. The call is therefore well supported even though terminology varies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Wiewandt 1969 and Simmons 2004 agree that the encounter call is a short aggressive vocalization, with Simmons 2004 noting that it is much shorter than advertisement calls while spectrally similar. The label is medium because fewer sources provide detailed quantitative acoustic measurements for the bonk than for the advertisement call.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Wiewandt 1969 directly links the bonk to territorial defense and attacks on an apparent intruder, Bee 2002 confirms that adult male bullfrogs respond aggressively to acoustic intrusions in the field, and Ryan 1980 describes male territory defense in the breeding system. Agreement on the aggressive territorial context is strong.
+
+references:
+  capranica_1968:
+    citation: "Capranica RR. 1968. The vocal repertoire of the bullfrog (Rana catesbeiana). Behaviour 31(3-4): 302-324."
+    url: https://doi.org/10.1163/156853968X00306
+    doi: 10.1163/156853968X00306
+  wiewandt_1969:
+    citation: "Wiewandt TA. 1969. Vocalization, aggressive behavior, and territoriality in the bullfrog, Rana catesbeiana. Copeia 1969(2): 276-285."
+    url: https://doi.org/10.2307/1442074
+    doi: 10.2307/1442074
+  ryan_1980:
+    citation: "Ryan MJ. 1980. The reproductive behavior of the bullfrog (Rana catesbeiana). Copeia 1980(1): 108-114."
+    url: https://doi.org/10.2307/1444139
+    doi: 10.2307/1444139
+  bee_2002:
+    citation: "Bee MA. 2002. Territorial male bullfrogs (Rana catesbeiana) do not assess fighting ability based on size-related variation in acoustic signals. Behavioral Ecology 13(1): 109-124."
+    url: https://doi.org/10.1093/beheco/13.1.109
+    doi: 10.1093/beheco/13.1.109
+  simmons_2004:
+    citation: "Simmons AM. 2004. Call recognition in the bullfrog, Rana catesbeiana: Generalization along the duration continuum. Journal of the Acoustical Society of America 115(3): 1345-1355."
+    url: https://doi.org/10.1121/1.1643366
+    doi: 10.1121/1.1643366
+  herrick_etal_2018:
+    citation: "Herrick SZ, Wells KD, Farkas TE, Schultz ET. 2018. Noisy neighbors: acoustic interference and vocal interactions between two syntopic species of ranid frogs, Rana clamitans and Rana catesbeiana. Journal of Herpetology 52(2): 176-184."
+    url: https://doi.org/10.1670/17-049
+    doi: 10.1670/17-049
