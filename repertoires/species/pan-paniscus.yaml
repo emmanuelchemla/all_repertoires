@@ -7,7 +7,7 @@ taxonomy:
   order: Primates
   family: Hominidae
   genus: Pan
-  species: Pan paniscus
+  specific_epithet: paniscus
 calls:
   - name: high hoot
     alternative_names:

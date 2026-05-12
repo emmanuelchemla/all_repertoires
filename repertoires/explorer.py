@@ -78,7 +78,15 @@ def render_citation(c: dict, refs: dict) -> str:
 
 def taxonomy_line(data: dict) -> str:
     taxonomy = data.get("taxonomy") or {}
-    ranks = ("kingdom", "phylum", "class", "order", "family", "genus", "species")
+    ranks = (
+        "kingdom",
+        "phylum",
+        "class",
+        "order",
+        "family",
+        "genus",
+        "specific_epithet",
+    )
     return " > ".join(taxonomy[rank] for rank in ranks if taxonomy.get(rank))
 
 

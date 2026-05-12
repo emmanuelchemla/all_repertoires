@@ -17,7 +17,7 @@ description: Use this skill whenever creating, editing, or reviewing a species r
 
 - `scientific_name`: binomial, italicized intent only (plain text in YAML).
 - `common_name`: most widely used English common name.
-- `taxonomy`: required object with `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, and `species`. Use canonical Latin taxon names; `species` should match `scientific_name`.
+- `taxonomy`: required object with `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, and `specific_epithet`. Use canonical Latin taxon names; `genus` + `specific_epithet` should match `scientific_name`.
 - `calls`: list of call-type objects (see below).
 - `references`: bibliography for the whole file. Cite with **stable string IDs** in `lastname_year` form (`smith_2019`, `marler_etal_1967`).
 
