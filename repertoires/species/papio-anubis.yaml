@@ -1,0 +1,575 @@
+scientific_name: Papio anubis
+common_name: Olive baboon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Papio
+  species: anubis
+primary_inventory:
+  id: ransom_1981
+  rationale: "Ransom 1981 is used as the primary_inventory spine because it is a primary field monograph on free-ranging olive baboons at Gombe and enumerates the named vocal classes most often repeated for this species: basic grunts, broken grunting, pant-grunts, roargrunts, cough-barks, cough-gecks, wa-hoos, shrill barks, screams, moans, basic gecks, and juvenile panting. Later wild olive baboon studies by Ey and Fischer 2011, Ey et al. 2009, Silk et al. 2018, and Bouquet et al. 2018 provide focused support for contact grunts, clear/contact and loud calls, and copulation calls."
+calls:
+  - name: basic grunt
+    in_primary_inventory: true
+    alternative_names:
+      - grunt
+      - low-amplitude grunt
+      - contact grunt
+    scope: &all_age_both_scope
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - harmonic
+      - short
+      - quiet
+      - repetitive
+      - graded
+    acoustic_description: "A low-amplitude, low-frequency, harmonically structured grunt, usually produced as short elements singly or in bouts. Wild olive baboon studies show that grunt duration can lengthen in denser habitat, while the general grunt form remains conserved."
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - caregiving
+    semantic_description: "Produced during routine feeding, travel, settling, close approaches, and affiliative social interactions. Female approach grunts in wild olive baboons predict less aggression and more affiliative interaction, including infant handling."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: ey_etal_2009
+        url: https://doi.org/10.1111/j.1439-0310.2009.01638.x
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: silk_etal_2018
+        url: https://doi.org/10.1371/journal.pone.0204601
+      - id: ey_fischer_2011
+        url: https://doi.org/10.1007/978-1-4419-7403-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Ransom 1981 lists basic grunts in the olive baboon repertoire, Ey et al. 2009 and Ey and Fischer 2011 analyze wild olive baboon grunts, Silk et al. 2018 studies their social use, and Hammerschmidt and Fischer 2019 treats grunts as a conserved Papio call type. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Ransom 1981, Ey et al. 2009, and Hammerschmidt and Fischer 2019 converge on grunts as short, low, quiet contact calls, with Ey et al. 2009 adding quantitative habitat-linked duration data. Agreement is strong for the broad structure."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Ransom 1981, Ey and Fischer 2011, and Silk et al. 2018 independently support routine contact, movement, and affiliative approach contexts. Silk et al. 2018 gives direct wild olive baboon evidence for benign-intent use."
+
+  - name: broken grunting
+    in_primary_inventory: true
+    alternative_names:
+      - broken grunt
+      - rapid broken grunt
+    scope: *all_age_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - quiet
+      - repetitive
+      - pulsed
+      - graded
+    acoustic_description: "A low-volume, rapid series of short grunt elements. It is described as a broken, temporally segmented version of grunting rather than a single sustained call."
+    semantic_keywords:
+      - aggression
+      - threat
+      - submission
+    semantic_description: "Given during relatively low-intensity aggressive encounters, before or during interactions that may escalate. It is associated with tense social encounters rather than routine affiliation."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Ransom 1981 names broken grunting for wild olive baboons, and the broader Papio literature recognizes rapid or graded grunt variants. Fewer olive-specific quantitative studies isolate it from other grunts, so existence agreement is medium."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The rapid, quiet, repeated form is clear in Ransom 1981 and consistent with conserved Papio grunting, but detailed olive baboon acoustic measurements for this subtype are sparse."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 links broken grunting to low-intensity aggression. The context is clear in the primary inventory, but independent wild olive baboon tests of this subtype are limited."
+
+  - name: pant-grunt
+    in_primary_inventory: true
+    alternative_names:
+      - pant grunt
+      - two-phase grunt
+    scope: *all_age_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - repetitive
+      - pulsed
+      - multi_component
+      - loud
+      - graded
+    acoustic_description: "A louder, repeated two-phase grunt with inhaled and exhaled components. The elements are short and pulsed, forming a faster and higher-amplitude bout than broken grunting."
+    semantic_keywords:
+      - aggression
+      - threat
+      - submission
+    semantic_description: "Produced when aggressive encounters intensify. It occurs in escalated social conflict and is treated as a higher-arousal continuation of lower-intensity grunting."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Pant-grunts are named in Ransom 1981 for wild olive baboons and correspond to widely recognized two-phase grunt variants in Papio, but they are not a main target of newer olive baboon acoustic work. Agreement is medium."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Ransom 1981 provides the clearest olive baboon description of the two-phase structure. Later comparative work supports conserved Papio grunt/loud-call organization but does not provide a detailed olive pant-grunt treatment."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 consistently places pant-grunts in escalated aggression, but there is little call-specific playback or experimental evidence for olive baboons."
+
+  - name: roargrunt
+    in_primary_inventory: true
+    alternative_names:
+      - roar-grunt
+      - grating roar
+      - humming roargrunt
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - long
+      - loud
+      - repetitive
+      - pulsed
+      - graded
+    acoustic_description: "A deep, resonant male call built from low-pitched grunt-like or humming elements, often in a bout. The signal is lower and more sustained than ordinary grunts and can grade toward roar-like sound."
+    semantic_keywords:
+      - display
+      - threat
+      - aggression
+      - identity
+    semantic_description: "Given by adult males during displays, after fights, or during disturbances. It is associated with male arousal, threat, and social display contexts."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Ransom 1981 lists roargrunts in wild olive baboons and comparative Papio work recognizes male loud-call and roargrunt classes. Olive-specific modern quantification is thinner than for ordinary grunts and loud calls."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The low, resonant, pulsed structure is consistently described, but most quantitative comparative work pools broad male loud-call classes rather than measuring olive roargrunts alone."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 and comparative Papio accounts agree on adult male display and agonistic contexts, with limited olive-specific experimental testing."
+
+  - name: cough-bark
+    in_primary_inventory: true
+    alternative_names:
+      - cough bark
+      - alarm cough-bark
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+      - graded
+    acoustic_description: "A short, abrupt, cough-like bark with broadband noise. It is harsher than clear contact barks and lacks the extended two-syllable form of wa-hoos."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - threat
+    semantic_description: "Produced in low-anxiety alarm or disturbance contexts, including responses to unfamiliar humans or low-flying birds. It alerts nearby group members to a possible threat."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Ransom 1981 names cough-barks for wild olive baboons. Later Papio work supports bark and loud-call classes broadly, but the cough-bark subtype is less often isolated in modern olive baboon studies."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The cough-like broadband bark form is available from inventory descriptions, but detailed olive baboon acoustic measurements of cough-barks are sparse."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 gives clear disturbance and low-intensity alarm contexts. The evidence is primary and wild, but not independently tested by playback for this subtype."
+
+  - name: cough-geck
+    in_primary_inventory: true
+    alternative_names:
+      - cough geck
+      - alarm geck
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - repetitive
+      - graded
+    acoustic_description: "A short, abrupt, cough-like geck, often described as a sharper and less bark-like noisy element than cough-barks. It can be given singly or in brief series."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - threat
+    semantic_description: "Produced in low-level alarm, anxiety, or discomfort contexts, including unfamiliar humans and low-flying birds. It is associated with orientation to possible external disturbance."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Ransom 1981 lists cough-gecks in the wild olive baboon repertoire. The named type is clear in that inventory but less represented in later acoustic analyses."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The published support is mainly qualitative and inventory-level, with little modern quantitative acoustic treatment of cough-gecks in olive baboons."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 consistently links cough-gecks to low-level alarm and disturbance contexts, but independent functional tests are lacking."
+
+  - name: wa-hoo
+    in_primary_inventory: true
+    alternative_names:
+      - wahoo
+      - two-phase bark
+      - loud call
+    scope: &adult_juvenile_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - long
+      - loud
+      - multi_component
+      - repetitive
+      - graded
+    acoustic_description: "A loud two-syllable call with an initial wa-like component followed by a lower hoo-like component. Bouts can contain repeated calls over extended periods and grade with other loud-call variants."
+    semantic_keywords:
+      - contact
+      - spacing
+      - alarm
+      - predator
+      - display
+      - group_coordination
+    semantic_description: "Produced during predator or disturbance contexts, separation or attempts to regain group contact, night-time exchanges near sleeping sites, and male display or intergroup contexts."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: ey_2008
+        url: https://doi.org/10.53846/goediss-3630
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: ey_fischer_2011
+        url: https://doi.org/10.1007/978-1-4419-7403-7
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Ransom 1981 names wa-hoos for wild olive baboons, Ey 2008 and Ey and Fischer 2011 treat loud calls in wild Nigerian olive baboons, and Hammerschmidt and Fischer 2019 includes olive baboon loud calls in comparative Papio analyses. Existence is strongly supported."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Ransom 1981, Ey 2008, and Hammerschmidt and Fischer 2019 agree on loud, multi-component bark/loud-call structure, with Ey 2008 providing olive baboon acoustic values for clear barks and loud calls."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Sources agree that wa-hoos and loud calls occur in contact, separation, predator, night disturbance, and display contexts, but the call class is broad and context variants may grade into one another."
+
+  - name: shrill bark
+    in_primary_inventory: true
+    alternative_names:
+      - alarm bark
+      - sharp bark
+      - clear bark
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+      - graded
+    acoustic_description: "A loud, explosive bark with a sharp onset and relatively high-frequency noisy energy. Inventory and comparative accounts distinguish it from quieter grunts and from longer two-syllable wa-hoos."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - threat
+    semantic_description: "Given when a potential threat appears suddenly, including humans or predators. It can startle or orient other group members toward immediate danger."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: ey_2008
+        url: https://doi.org/10.53846/goediss-3630
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: ey_fischer_2011
+        url: https://doi.org/10.1007/978-1-4419-7403-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Ransom 1981 describes shrill barks in wild olive baboons, while Ey 2008 and Ey and Fischer 2011 document clear/contact bark and loud-call variants in wild olive baboons. Comparative Papio work also recognizes bark/loud-call classes."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Ransom 1981 and Ey 2008 support loud bark structure, but clear/contact barks and alarm barks can grade acoustically, so the exact subtype boundary is moderate rather than strong."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 supports sudden-threat alarm contexts, while Ey and Fischer 2011 emphasizes contact and habitat-linked use of clear barks. Semantic agreement is medium because bark labels span alarm and contact contexts."
+
+  - name: scream
+    in_primary_inventory: true
+    alternative_names:
+      - screech
+      - screaming
+    scope: *all_age_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - long
+      - loud
+      - graded
+    acoustic_description: "A loud, high-pitched, sustained or continuous call, often harsh or noisy. Scream bouts can vary in duration and intensity with arousal."
+    semantic_keywords:
+      - distress
+      - submission
+      - aggression
+      - threat
+    semantic_description: "Produced in highly stressful contexts, including pain, fear, aggression, and retreat during aggressive encounters. It is common across age and sex classes during intense social disturbance."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Ransom 1981 names screams for wild olive baboons, and Hammerschmidt and Fischer 2019 treats screams as a major Papio call class separated from grunts and loud calls. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Sources agree on loud, high-pitched, harsh scream structure, but detailed olive-specific acoustic values are less extensive than for grunts and loud calls."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Ransom 1981 and comparative Papio accounts consistently associate screams with distress, fear, submission, and aggressive encounters."
+
+  - name: moan
+    in_primary_inventory: true
+    alternative_names:
+      - infant moan
+      - juvenile moan
+    scope: &immature_both_scope
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - long
+      - frequency_modulated
+      - quiet
+      - graded
+    acoustic_description: "A comparatively soft, tonal immature call that is longer than a geck and can show gradual frequency modulation. It is described as a moaning call rather than a bark or grunt."
+    semantic_keywords:
+      - distress
+      - begging
+      - caregiving
+      - contact
+    semantic_description: "Produced by infants and juveniles during discomfort, fear, separation from the mother, weaning, or tantrum-like episodes. It is associated with immature distress and caregiving contexts."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Moans are listed by Ransom 1981 as wild immature olive baboon calls. The inventory support is clear, but later olive baboon acoustic studies have focused mainly on adults and contact calls."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The acoustic account is mostly qualitative and inventory-level; detailed spectrographic measurements for olive baboon moans are sparse."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 provides a clear immature distress and separation context, but independent wild tests of moan function are limited."
+
+  - name: basic geck
+    in_primary_inventory: true
+    alternative_names:
+      - geck
+      - infant geck
+    scope: *immature_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - repetitive
+      - graded
+    acoustic_description: "A brief, sharp, geck-like call with abrupt onset and noisy broadband structure. It can be produced singly or in short repetitions."
+    semantic_keywords:
+      - distress
+      - begging
+      - caregiving
+      - contact
+    semantic_description: "Produced by infants and juveniles in discomfort, fear, frustration, separation from the mother, or weaning contexts. It is an immature distress and contact-maintenance call."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Basic gecks are named in Ransom 1981 for wild immature olive baboons. The call type is well supported by the primary inventory but has little later olive-specific acoustic analysis."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The abrupt geck-like structure is described qualitatively in the primary inventory; quantitative acoustic agreement is limited."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 links basic gecks to immature distress and separation contexts. The context is clear, though not experimentally tested."
+
+  - name: panting
+    in_primary_inventory: true
+    alternative_names:
+      - play panting
+      - laugh-like panting
+    scope: *immature_both_scope
+    acoustic_keywords:
+      - noisy
+      - short
+      - repetitive
+      - pulsed
+      - quiet
+      - graded
+    acoustic_description: "A breathy, repeated, pulsed call with short pant-like elements. It is less tonal and less bark-like than contact or alarm calls."
+    semantic_keywords:
+      - play
+      - affiliation
+    semantic_description: "Produced by young olive baboons during rough-and-tumble play. It is associated with nonaggressive immature social play."
+    acoustic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    semantic_references:
+      - id: ransom_1981
+        url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Ransom 1981 lists juvenile panting as a wild olive baboon call. Later olive baboon studies rarely focus on this immature play call, so agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The breathy repeated pant structure is qualitatively supported by the primary inventory, with little quantitative acoustic work."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Ransom 1981 clearly associates panting with rough-and-tumble play, but there are few independent wild functional studies."
+
+  - name: copulation call
+    in_primary_inventory: false
+    alternative_names:
+      - female copulation call
+      - mating call
+    scope: &adult_female_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - multi_component
+      - graded
+      - noisy
+    acoustic_description: "A conspicuous female mating-associated call, typically described as a distinct call sequence rather than a single quiet grunt. Olive-specific publications emphasize occurrence and function more than fine acoustic structure."
+    semantic_keywords:
+      - mating
+      - courtship
+      - display
+      - attention
+    semantic_description: "Produced by sexually receptive females during or shortly after copulation. In wild olive baboons, calling probability after mounts has been modeled against hypotheses involving sperm competition, male competition, and female choice."
+    acoustic_references:
+      - id: bouquet_etal_2018
+        url: https://doi.org/10.1016/j.anbehav.2017.11.019
+      - id: hammerschmidt_fischer_2019
+        url: https://doi.org/10.1016/j.jhevol.2018.10.010
+    semantic_references:
+      - id: bouquet_etal_2018
+        url: https://doi.org/10.1016/j.anbehav.2017.11.019
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Bouquet et al. 2018 provides direct wild olive baboon evidence for female copulation calls, and Hammerschmidt and Fischer 2019 recognizes copulation calls as a Papio call type. The call is not marked as in_primary_inventory because the Ransom 1981 spine sources consulted for this file did not clearly enumerate it."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Wild olive baboon evidence strongly supports the call's occurrence, but Bouquet et al. 2018 focuses on function and call probability rather than detailed acoustic measurements. Acoustic agreement is therefore weak."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Bouquet et al. 2018 directly analyzes copulation events in wild olive baboons and compares functional hypotheses for calling after mounts. The mating context is strongly supported."
+references:
+  bouquet_etal_2018:
+    citation: "Bouquet, Y., Stephan, C., Johnson, C. A., Rothman, J. M., Neumann, C., & Zuberbuhler, K. (2018). Comparing functions of copulation calls in wild olive baboons, Papio anubis, using multimodel inference. Animal Behaviour, 135, 187-197."
+    doi: 10.1016/j.anbehav.2017.11.019
+    url: https://doi.org/10.1016/j.anbehav.2017.11.019
+  ey_2008:
+    citation: "Ey, E. (2008). Influences of ecological factors on vocal communication in olive baboons (Papio hamadryas anubis). Doctoral dissertation, University of Goettingen."
+    doi: 10.53846/goediss-3630
+    url: https://doi.org/10.53846/goediss-3630
+  ey_etal_2009:
+    citation: "Ey, E., Rahn, C., Hammerschmidt, K., & Fischer, J. (2009). Wild female olive baboons adapt their grunt vocalizations to environmental conditions. Ethology, 115(5), 493-503."
+    doi: 10.1111/j.1439-0310.2009.01638.x
+    url: https://doi.org/10.1111/j.1439-0310.2009.01638.x
+  ey_fischer_2011:
+    citation: "Ey, E., & Fischer, J. (2011). Keeping in contact: Flexibility in calls of olive baboons. In V. Sommer & C. Ross (Eds.), Primates of Gashaka: Socioecology and conservation in Nigeria's biodiversity hotspot (pp. 413-436). Springer."
+    doi: 10.1007/978-1-4419-7403-7
+    url: https://doi.org/10.1007/978-1-4419-7403-7
+  fischer_zinner_2011:
+    citation: "Fischer, J., & Zinner, D. (2011). Communication and cognition in primate group movement. International Journal of Primatology, 32, 1279-1295."
+    doi: 10.1007/s10764-011-9542-7
+    url: https://doi.org/10.1007/s10764-011-9542-7
+  hammerschmidt_fischer_2019:
+    citation: "Hammerschmidt, K., & Fischer, J. (2019). Baboon vocal repertoires and the evolution of primate vocal diversity. Journal of Human Evolution, 126, 1-13."
+    doi: 10.1016/j.jhevol.2018.10.010
+    url: https://doi.org/10.1016/j.jhevol.2018.10.010
+  ransom_1981:
+    citation: "Ransom, T. W. (1981). Beach troop of the Gombe. Lewisburg, PA: Bucknell University Press."
+    url: https://www1.bucknell.edu/script/upress/book.asp?id=2078
+  silk_etal_2018:
+    citation: "Silk, J. B., Roberts, E. R., Stadele, V., & Strum, S. C. (2018). To grunt or not to grunt: Factors governing call production in female olive baboons, Papio anubis. PLoS ONE, 13(11), e0204601."
+    doi: 10.1371/journal.pone.0204601
+    url: https://doi.org/10.1371/journal.pone.0204601
