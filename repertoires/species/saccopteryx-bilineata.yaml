@@ -8,8 +8,12 @@ taxonomy:
   family: Emballonuridae
   genus: Saccopteryx
   species: bilineata
+primary_inventory:
+  id: behr_helversen_2004
+  rationale: Behr and von Helversen 2004 is used as the primary_inventory spine because it is the peer-reviewed inventory that classified daytime vocalizations of 16 wild male S. bilineata from Costa Rica by acoustic properties and social context, explicitly listing seven vocalization types--echolocation pulses, barks, chatter, whistles, screeches, territorial songs, and courtship songs. Because this spine is adult-male and day-roost focused, later peer-reviewed pup, female, and distress-call studies are retained as outside-inventory calls when they provide separate acoustic and behavioral evidence.
 calls:
   - name: territorial song
+    in_primary_inventory: true
     alternative_names:
       - male territorial song
       - countersong
@@ -67,6 +71,7 @@ calls:
     semantic_description_explanation: Behr and von Helversen 2004 and Behr et al. 2006 support a territorial-quality display function, Behr et al. 2009 provides playback evidence for male responses to territorial-song frequency, and Knornschild et al. 2017 supports attraction of dispersing females by male songs.
 
   - name: courtship song
+    in_primary_inventory: true
     alternative_names:
       - serenade
       - male courtship song
@@ -99,6 +104,7 @@ calls:
         url: https://doi.org/10.1644/08-MAMM-S-060.1
       - id: davidson_wilkinson_2004
         url: https://doi.org/10.1016/j.anbehav.2003.06.016
+    playback_references: []
     call_type_existence_agreement: strong
     call_type_existence_explanation: Behr and von Helversen 2004 explicitly distinguishes courtship songs from territorial songs in wild male Saccopteryx bilineata, while Davidson and Wilkinson 2004 and Voigt et al. 2008 support the broader role of male acoustic display in this mating system.
     acoustic_description_agreement: strong
@@ -106,7 +112,158 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Behr and von Helversen 2004 reports courtship songs exclusively during male displays toward females, Davidson and Wilkinson 2004 links male song features to females in territories, and Voigt et al. 2008 places acoustic song within the multimodal sexual display system.
 
+  - name: bark
+    in_primary_inventory: true
+    alternative_names:
+      - bark call
+      - male bark
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - abrupt
+    acoustic_description: A short male call resembling an echolocation pulse in frequency range and modulation, but typically longer and with the spectral maximum emphasized in the fundamental frequency. The inventory reports barks around 10 ms in duration, longer than the shorter echolocation pulses recorded in the same roost context.
+    semantic_keywords:
+      - attention
+      - threat
+      - aggression
+    semantic_description: Produced mainly by adult males at day roosts when no obvious interaction was underway, and sometimes during agonistic conflicts. The context suggests a low-intensity alert or mildly aggressive social signal rather than a song display.
+    acoustic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+    semantic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Behr and von Helversen 2004 explicitly lists barks as one of seven daytime male vocalization types and separates them from echolocation pulses by duration and spectral emphasis. The label is medium because later work rarely treats bark as a focal call type.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Behr and von Helversen 2004 provides direct spectrographic criteria for bark structure, but independent acoustic replication is sparse. Agreement is medium because the primary inventory is detailed but mostly stands alone.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Behr and von Helversen 2004 gives the observed noninteractive and agonistic contexts for barks. The label is medium because receiver effects and finer motivational distinctions have not been tested with playback.
+
+  - name: chatter
+    in_primary_inventory: true
+    alternative_names:
+      - chatter sequence
+      - chatter train
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - repetitive
+      - multi_component
+    acoustic_description: A train of many brief calls, with sequences reaching up to several seconds and individual elements lasting only a few milliseconds. Single chatter elements resemble echolocation pulses but are usually more strongly modulated, and pauses within a train are regular enough to form a rhythmic sequence.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - display
+    semantic_description: Frequently emitted by roosting adult males throughout the day without an obvious immediate interaction. Chatter can also be embedded with other vocalization types and can transition into trill-like sequences within courtship songs, linking it to low-arousal roost communication and male display structure.
+    acoustic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+    semantic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Behr and von Helversen 2004 includes chatter in the seven-type primary inventory and describes it as a sequence distinct from isolated barks, echolocation pulses, and songs. Agreement is medium because subsequent studies mention it mainly as part of the broader repertoire rather than analyzing it independently.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The primary inventory gives clear acoustic criteria for chatter trains, including short repeated elements and regular pauses. The label is medium because detailed acoustic evidence is concentrated in that source.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Behr and von Helversen 2004 reports frequent day-roost production without obvious dyadic interaction and notes transitions into courtship-song trills. The context is clear enough for medium support, but semantic interpretation remains partly inferential.
+
+  - name: whistle
+    in_primary_inventory: true
+    alternative_names:
+      - hover-flight whistle
+      - inverted-V call
+      - screech-inverted-V call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - long
+      - loud
+    acoustic_description: A loud, stereotyped tonal male call with an upward frequency-modulated stroke that often ends in a downward modulation. The first harmonic is typically the loudest, placing the main energy near the ultrasonic range characteristic of echolocation pulses, while part of the call remains audible to humans.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+      - attention
+    semantic_description: Produced by adult males during hover displays in front of females, synchronized with specialized wing strokes and scent-fanning behavior. Females often answer the hover display with screeches, and related Trinidad work links comparable screech-inverted-V male calls to female numbers in male territories.
+    acoustic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+      - id: davidson_wilkinson_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.06.016
+    semantic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+      - id: davidson_wilkinson_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.06.016
+      - id: voigt_etal_2008
+        url: https://doi.org/10.1644/08-MAMM-S-060.1
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Behr and von Helversen 2004 lists whistles as a distinct inventory type, and Davidson and Wilkinson 2004 analyzes comparable male screech-inverted-V vocalizations in the same mating system. Agreement is medium because terminology and syllable grouping differ between studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Behr and von Helversen 2004 provides the clearest whistle description, while Davidson and Wilkinson 2004 supports the existence of comparable tonal inverted-V components in male display calls. The label is medium because the exact mapping between terminology is not perfect.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Behr and von Helversen 2004 ties whistles directly to male hover displays toward females, Davidson and Wilkinson 2004 links comparable display-call features to female territory membership, and Voigt et al. 2008 places these acoustic displays in the multimodal sexual signaling system.
+
+  - name: screech
+    in_primary_inventory: true
+    alternative_names:
+      - screech call
+      - noisy screech
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - harmonic
+      - short
+      - loud
+      - graded
+    acoustic_description: A broad-spectrum, noisy adult call with variable noisiness and sometimes discernible multiharmonic components. Screeches are typically longer than barks and echolocation pulses, and individual calls can include both noisy and multiharmonic sections.
+    semantic_keywords:
+      - aggression
+      - threat
+      - territorial
+      - courtship
+    semantic_description: Produced by both sexes during agonistic encounters, especially territorial conflicts. Female screeches are also common responses to male hover displays and often occur immediately before or alongside male whistles.
+    acoustic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+      - id: davidson_wilkinson_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.06.016
+    semantic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+      - id: davidson_wilkinson_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.06.016
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Behr and von Helversen 2004 identifies screeches as one of the seven inventory types and notes production by both sexes, while Davidson and Wilkinson 2004 reports screech-related responses in male call interactions. The label is medium because later studies use partly different composite-call terminology.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Behr and von Helversen 2004 provides direct broad-band and noisy acoustic descriptions, with Davidson and Wilkinson 2004 supporting comparable screech components in Trinidad male vocalizations. Agreement is medium because detailed measurements are limited and screeches can grade in noisiness.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Behr and von Helversen 2004 reports screeches in agonistic and female response-to-hover contexts, and Davidson and Wilkinson 2004 independently associates screech calls with responses to other bats' calls and nearby social interactions. The social context is consistent across sources.
+
   - name: isolation call
+    in_primary_inventory: false
     alternative_names:
       - pup isolation call
       - IC
@@ -166,6 +323,7 @@ calls:
     semantic_description_explanation: Knornschild and von Helversen 2008 provides playback evidence that mothers discriminate own-pup isolation calls, Knornschild et al. 2012 links calls to group cohesion and social modification, and Fernandez and Knornschild 2020 documents adult male isolation-call production during pup-directed interactions.
 
   - name: maternal directive call
+    in_primary_inventory: false
     alternative_names:
       - directive call
       - MD call
@@ -200,14 +358,16 @@ calls:
         url: https://doi.org/10.3389/fevo.2020.00265
       - id: knornschild_helversen_2008
         url: https://doi.org/10.1016/j.anbehav.2008.05.018
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Fernandez and Knornschild 2020 directly analyzes maternal directive calls from wild colonies, and Knornschild and von Helversen 2008 provides the earlier mother-pup recognition framework. The label is strong for pup-directed female call existence.
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Fernandez and Knornschild 2020 directly analyzes maternal directive calls from wild colonies, and Knornschild and von Helversen 2008 provides the earlier mother-pup recognition framework. The label is medium because the named call type is well supported but detailed treatment is concentrated in one focused study.
     acoustic_description_agreement: medium
     acoustic_description_explanation: Fernandez and Knornschild 2020 gives acoustic comparisons between pup-directed and adult-directed female vocalizations, including timbre and peak-frequency differences. Agreement is medium because fewer independent studies focus on the detailed acoustic form of maternal directive calls.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Fernandez and Knornschild 2020 identifies maternal directive calls as female pup-directed vocalizations, and Knornschild and von Helversen 2008 supports the broader mother-pup communication context. The caregiving interpretation is direct and consistent.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Fernandez and Knornschild 2020 identifies maternal directive calls as female pup-directed vocalizations, and Knornschild and von Helversen 2008 supports the broader mother-pup communication context. The label is medium because the caregiving interpretation is direct but has not been tested independently with call-specific playback.
 
   - name: distress call
+    in_primary_inventory: false
     alternative_names:
       - conspecific distress call
       - buzz syllable distress call
@@ -243,14 +403,15 @@ calls:
     playback_references:
       - id: eckenweber_knornschild_2016
         url: https://doi.org/10.1098/rsos.160151
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Eckenweber and Knornschild 2016 analyzes distress calls, separates distress-call categories, and uses them in conspecific playback experiments with wild Saccopteryx bilineata. The call type is directly supported by focused primary evidence.
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Eckenweber and Knornschild 2016 analyzes distress calls, separates distress-call categories, and uses them in conspecific playback experiments with wild Saccopteryx bilineata. The call type is directly supported, but the label is medium because detailed S. bilineata evidence is concentrated in one focused primary study.
     acoustic_description_agreement: medium
     acoustic_description_explanation: Eckenweber and Knornschild 2016 provides the focused acoustic evidence and spectrographic categories, but the description is mostly from one study. Agreement is medium because independent acoustic replication is limited.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Eckenweber and Knornschild 2016 explicitly frames these calls as signals of extreme physical distress and demonstrates location-dependent conspecific responses in playback experiments. The distress/alarm context is strongly supported.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Eckenweber and Knornschild 2016 explicitly frames these calls as signals of extreme physical distress and demonstrates location-dependent conspecific responses in playback experiments. The label is medium because the behavioral evidence is experimental but comes from one focal study.
 
   - name: echolocation call
+    in_primary_inventory: true
     alternative_names:
       - echolocation pulse
       - search call
@@ -290,6 +451,7 @@ calls:
         url: https://doi.org/10.1098/rsos.181076
       - id: knornschild_helversen_2008
         url: https://doi.org/10.1016/j.anbehav.2008.05.018
+    playback_references: []
     call_type_existence_agreement: strong
     call_type_existence_explanation: Ratcliffe et al. 2011 directly records echolocation calls in Panama, Burchardt et al. 2019 analyzes echolocation call sequences from wild Costa Rican bats, and Behr and von Helversen 2004 includes echolocation pulses in the broader repertoire. The call type is uncontroversial.
     acoustic_description_agreement: strong

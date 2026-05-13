@@ -2,12 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "SpeciesRepertoire",
   "type": "object",
-  "required": ["scientific_name", "common_name", "taxonomy", "calls", "references"],
+  "required": ["scientific_name", "common_name", "taxonomy", "primary_inventory", "calls", "references"],
   "additionalProperties": false,
   "properties": {
     "scientific_name": { "type": "string", "minLength": 3 },
     "common_name": { "type": "string", "minLength": 1 },
     "taxonomy": { "$ref": "#/$defs/taxonomy" },
+    "primary_inventory": { "$ref": "#/$defs/primary_inventory" },
     "calls": {
       "type": "array",
       "items": { "$ref": "#/$defs/call" }
@@ -34,6 +35,16 @@
         "family": { "type": "string", "minLength": 1 },
         "genus": { "type": "string", "minLength": 1 },
         "species": { "type": "string", "description": "Species epithet only, e.g. paniscus in Pan paniscus.", "minLength": 1 }
+      }
+    },
+    "primary_inventory": {
+      "type": "object",
+      "description": "Spine paper enumerating the species' repertoire. Omit 'id' when no inventory paper exists; rationale must then explain the absence.",
+      "required": ["rationale"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "rationale": { "type": "string", "minLength": 1 }
       }
     },
     "scope": {
@@ -67,6 +78,7 @@
       "type": "object",
       "required": [
         "name",
+        "in_primary_inventory",
         "scope",
         "acoustic_keywords",
         "acoustic_description",
@@ -85,6 +97,7 @@
       "properties": {
         "name": { "type": "string" },
         "alternative_names": { "type": "array", "items": { "type": "string" } },
+        "in_primary_inventory": { "type": "boolean" },
         "scope": { "$ref": "#/$defs/scope" },
         "acoustic_keywords": {
           "type": "array",

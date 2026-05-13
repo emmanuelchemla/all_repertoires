@@ -18,15 +18,26 @@ description: Use this skill whenever creating, editing, or reviewing a species r
 - `scientific_name`: binomial, italicized intent only (plain text in YAML).
 - `common_name`: most widely used English common name.
 - `taxonomy`: required object with `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, and `species`. Use canonical Latin taxon names; `species` is the species epithet only, so `genus` + `species` should match `scientific_name`.
-- `calls`: list of call-type objects (see below).
+- `primary_inventory`: the single paper used as the spine for the call list.
+  - Pick the most comprehensive paper that explicitly enumerates the species' vocal repertoire and is widely cited as such. Set `id` to its reference ID; explain the pick in `rationale`.
+  - If no such paper exists, omit `id` and use `rationale` to explain why. Every call must then be marked `in_primary_inventory: false`.
+- `calls`: list of call-type objects (see below). See inclusion rules below.
 - `references`: bibliography for the whole file. Cite with **stable string IDs** in `lastname_year` form (`smith_2019`, `marler_etal_1967`).
 
-Do not include calls known only from captivity when there is no wild evidence for that call type.
+### Inclusion rules
+
+- **From the primary inventory**: include every call the inventory paper lists.
+- **Outside the inventory**: include a call if ≥1 peer-reviewed source describes it as a *distinct* call type in this species, with enough detail to fill both descriptions and cite ≥1 acoustic + ≥1 semantic reference. Err on the side of inclusion: a `weak` call with an honest explanation is more useful than silent omission.
+- **Renamings** of an inventory call go into `alternative_names` on the existing entry, not as a new call.
+- **Subtypes/variants** of an existing call belong in that call's agreement explanations, not as new entries.
+- **Splits** (one inventory call separated into two by a credible source) are added as new calls; explain the split in agreement explanations of both.
+- Do not include calls known only from captivity when there is no wild evidence.
 
 ### Per call type
 
 - `name`: canonical name used in the literature. Prefer the most common term.
 - `alternative_names`: list of synonyms encountered in other papers.
+- `in_primary_inventory`: `true` if the call appears in the species' primary inventory paper; `false` for additions sourced from other literature (or for every call when no inventory exists).
 - `scope`: object describing which animals and populations the call type is supported for:
   - `life_stages`: list using only `infant`, `juvenile`, `adult`, or `unknown`.
   - `sexes`: list using only `female`, `male`, or `unknown`.
@@ -86,6 +97,7 @@ A common drift is to let function leak into acoustic descriptions (e.g. "alarm-l
 
 ## Multi-agent etiquette
 
+- Before generating a species file, pick a species from `species_index.yaml` that does not yet have a file at `species/<kebab-name>.yaml`.
 - One agent per species file per session. The git layer is your conflict detector.
 - Do not edit `schema.json` or this skill as a side-effect of species work. Propose schema changes separately.
 - After any edit: run `validate.py`. If it fails, fix before reporting done.

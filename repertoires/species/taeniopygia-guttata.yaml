@@ -8,10 +8,15 @@ taxonomy:
   family: Estrildidae
   genus: Taeniopygia
   species: guttata
+primary_inventory:
+  id: zann_1996
+  rationale: "Zann 1996 is used as the primary_inventory spine because it is the field-grounded synthesis of the wild zebra finch repertoire and is explicitly used as the nomenclatural baseline by later peer-reviewed repertoire studies. This file marks Zann's song, adult distance, tet, stack, ark, kackle, whine, wsst, distress, thuk, copulation-whine, juvenile begging, and juvenile long-tonal categories as in_primary_inventory. Elie and Theunissen 2016 is treated as a major secondary acoustic inventory, not the spine, because it studied domesticated birds, grouped Zann's ark and kackle calls into Nest calls, did not quantify Zann's wild take-off Stack call, and added the Tuck alarm category without clear wild evidence. The heat/incubation/v-call is retained as an outside-inventory vocalization because wild and later biophysical work support a distinct heat-associated sound, but its communicative status is weak and contested."
 calls:
   - name: song
+    in_primary_inventory: true
     alternative_names:
       - male song
+      - directed song
       - undirected song
     scope:
       life_stages:
@@ -27,37 +32,44 @@ calls:
       - repetitive
       - multi_component
       - long
-    acoustic_description: A learned male vocal display built from repeated motifs containing multiple song elements. Wild Australian songs are structured phrases assembled from element sequences, and calibrated field recordings show that the signal is relatively low-amplitude and short-range compared with many territorial songbirds.
+      - quiet
+    acoustic_description: A learned male vocal display built from repeated motifs containing multiple song syllables. Wild Australian songs are structured as individual phrase sequences, while domesticated repertoire work shows that song syllables overlap acoustically with some calls but remain complex, multi-element, and more temporally patterned than single calls. Calibrated wild recordings show song is relatively low-amplitude and short-range.
     semantic_keywords:
       - courtship
+      - mating
       - affiliation
       - display
-    semantic_description: Produced by males in close social contexts, including pair and flock contexts, rather than as a long-range territorial advertisement. In wild birds, song is common after pair formation and can occur as undirected song in feeding flocks.
+    semantic_description: Produced by adult males in courtship, pair bonding, and mating contexts, and also as undirected song in social flocks. In wild birds it functions mainly in close social contexts rather than as a far-carrying territorial advertisement.
     acoustic_references:
       - id: zann_1993
         url: https://doi.org/10.2307/4088626
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
       - id: loning_etal_2022
         url: https://doi.org/10.1093/beheco/arab107
+    semantic_references:
       - id: zann_1996
         url: https://doi.org/10.1093/oso/9780198540793.001.0001
-    semantic_references:
       - id: dunn_zann_1996
         url: https://doi.org/10.1111/j.1439-0310.1996.tb01145.x
       - id: loning_etal_2022
         url: https://doi.org/10.1093/beheco/arab107
-      - id: zann_1996
-        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+    playback_references:
+      - id: damelio_etal_2017
+        url: https://doi.org/10.1038/s41598-017-05982-x
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Zann 1993 analyzes song structure in hundreds of wild Australian zebra finches, Dunn and Zann 1996 studies undirected song in wild flocks, and Loning et al. 2022 provides calibrated wild recordings. Song is an undisputed repertoire component.
+    call_type_existence_explanation: Zann 1993, Zann 1996, Dunn and Zann 1996, Elie and Theunissen 2016, and Loning et al. 2022 all treat male song as a core zebra finch vocal type. There is no substantive disagreement about the existence of this category.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Zann 1993 gives detailed wild song-element structure, Zann 1996 synthesizes field and laboratory vocalization accounts, and Loning et al. 2022 confirms the short-range amplitude profile in the wild. Agreement is strong despite individual song variation.
+    acoustic_description_explanation: Zann 1993 gives detailed wild song-element structure, Elie and Theunissen 2016 places song in a broad repertoire acoustic analysis, and Loning et al. 2022 confirms the short-range amplitude profile in the wild. Agreement is strong despite individual song variation.
     semantic_description_agreement: strong
-    semantic_description_explanation: Dunn and Zann 1996 and Loning et al. 2022 agree that wild zebra finch song is not mainly a far-carrying territorial signal and is strongly tied to close social contexts. Zann 1996 provides the broader natural-history context.
+    semantic_description_explanation: Zann 1996, Dunn and Zann 1996, Elie and Theunissen 2016, and Loning et al. 2022 agree that song is a male display tied to courtship, mating, pair contexts, and close-range social use rather than ordinary contact calling.
 
   - name: distance call
+    in_primary_inventory: true
     alternative_names:
       - long-distance contact call
-      - long tonal call
+      - long call
+      - long tonal adult call
     scope: &adult_both_scope
       life_stages:
         - adult
@@ -72,114 +84,416 @@ calls:
       - tonal
       - frequency_modulated
       - long
-    acoustic_description: A relatively loud, long contact call with a harmonic structure. The call is sexually dimorphic, with female calls typically more stable and plateau-like, while male calls often include a higher-pitched tonal portion and a frequency-modulated downsweep.
+    acoustic_description: A relatively loud, long, harmonic contact call. Females typically produce a steadier, lower-pitched harmonic stack, whereas males often produce a shorter, higher-pitched call with a tonal portion followed by a frequency-modulated noisy downsweep.
     semantic_keywords:
       - contact
       - identity
       - group_coordination
-    semantic_description: Used when birds are visually separated or need to re-establish acoustic contact, including take-off, greeting, and between-song contexts. Wild work shows that even this louder call is still a short- to medium-range signal in natural habitat.
+    semantic_description: Used when birds are out of immediate visual contact with the colony, mate, parents, or fledglings. Playback and recognition studies show that distance calls can support sex, individual, mate, parent, and kin recognition and can promote orientation, callbacks, and reunions.
     acoustic_references:
       - id: zann_1990
         url: https://doi.org/10.1016/S0003-3472(05)80982-0
-      - id: zann_1996
-        url: https://doi.org/10.1093/oso/9780198540793.001.0001
-      - id: loning_etal_2022
-        url: https://doi.org/10.1093/beheco/arab107
+      - id: mouterde_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0102842
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
     semantic_references:
-      - id: zann_1990
-        url: https://doi.org/10.1016/S0003-3472(05)80982-0
       - id: zann_1996
         url: https://doi.org/10.1093/oso/9780198540793.001.0001
-      - id: loning_etal_2022
-        url: https://doi.org/10.1093/beheco/arab107
+      - id: vignal_etal_2008
+        url: https://doi.org/10.1016/j.beproc.2007.09.003
+      - id: mouterde_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0102842
+    playback_references:
+      - id: vignal_etal_2004
+        url: https://doi.org/10.1038/nature02645
+      - id: vignal_etal_2008
+        url: https://doi.org/10.1016/j.beproc.2007.09.003
+      - id: damelio_etal_2017
+        url: https://doi.org/10.1038/s41598-017-05982-x
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Zann 1990 recorded distance calls from wild sons and fathers, Zann 1996 treats the distance call as a standard repertoire category, and Loning et al. 2022 measured wild distance-call amplitude. Existence is strongly supported in wild birds.
+    call_type_existence_explanation: Zann 1990 recorded distance-call learning in wild birds, Zann 1996 treats distance calls as a standard repertoire class, and Elie and Theunissen 2016 and Mouterde et al. 2014 provide detailed acoustic analyses. The type is uncontroversial.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Zann 1990, Zann 1996, and Loning et al. 2022 agree that distance calls are distinct, relatively loud contact signals. The sex-specific acoustic differences are well established, although individual signatures add variation within the type.
+    acoustic_description_explanation: Zann 1990, Mouterde et al. 2014, and Elie and Theunissen 2016 agree on a loud, harmonic, sexually dimorphic contact call, with consistent male-female differences in pitch stability and modulation.
     semantic_description_agreement: strong
-    semantic_description_explanation: Zann 1996 and Loning et al. 2022 both identify distance calls as contact signals used across separation and coordination contexts, and Zann 1990 supports their natural production and learning in wild birds.
+    semantic_description_explanation: Zann 1996, Vignal et al. 2004, Vignal et al. 2008, Mouterde et al. 2014, and D'Amelio et al. 2017 all support a contact and recognition function for distance calls, with playback evidence for mate or individual recognition.
 
   - name: tet call
+    in_primary_inventory: true
     alternative_names:
       - short contact call
-      - stack call
-    scope: *adult_both_scope
+      - soft contact call
+      - tet
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
     acoustic_keywords:
       - short
       - quiet
       - tonal
+      - harmonic
+      - frequency_modulated
       - repetitive
-    acoustic_description: A short, soft contact call that can be repeated in loose series. It is much less conspicuous than the distance call and is treated in modern repertoire classifications as a short contact-category vocalization.
+    acoustic_description: A very short, soft, harmonic contact call with stronger frequency modulation than stack-like calls. It is lower in spectral mean and much shorter and softer than the distance call, and can be produced in dense series during routine movement.
     semantic_keywords:
       - contact
       - affiliation
       - group_coordination
-    semantic_description: Used in close-range social contact and day-to-day coordination among nearby birds. Field and repertoire accounts associate this call class with maintaining local contact rather than advertising over distance.
+    semantic_description: Used for close-range contact among nearby birds, often during hopping, moving on perches or the ground, and nest-associated interactions. It can form part of quiet mate exchanges at the nest but is also a frequent background contact call in groups.
     acoustic_references:
       - id: zann_1996
         url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: ter_maat_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0109334
       - id: elie_theunissen_2016
         url: https://doi.org/10.1007/s10071-015-0933-6
     semantic_references:
       - id: zann_1996
         url: https://doi.org/10.1093/oso/9780198540793.001.0001
-      - id: elie_theunissen_2016
-        url: https://doi.org/10.1007/s10071-015-0933-6
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Zann 1996 describes the wild vocal repertoire and Elie and Theunissen 2016 classifies tet calls in a large repertoire dataset that follows Zann's field nomenclature. The label is medium because tet and stack terminology can overlap in later captive classifications.
+      - id: elie_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.003
+      - id: gill_etal_2015
+        url: https://doi.org/10.7554/eLife.07770
+    playback_references:
+      - id: elie_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.003
+      - id: damelio_etal_2017
+        url: https://doi.org/10.1038/s41598-017-05982-x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Zann 1996, Ter Maat et al. 2014, Gill et al. 2015, and Elie and Theunissen 2016 all recognize tet or tet-like soft contact calls. Some authors split stack-like variants from tets, but the tet category itself is stable.
     acoustic_description_agreement: medium
-    acoustic_description_explanation: Zann 1996 and Elie and Theunissen 2016 support a short contact-call category, but the exact boundary between tet and stack-like calls varies among authors. Agreement is adequate but less clean than for song or distance calls.
+    acoustic_description_explanation: Ter Maat et al. 2014 and Elie and Theunissen 2016 agree that tets are short, soft, harmonic calls, but they differ on how much to split constant-stack variants from frequency-modulated tets. Agreement is therefore medium rather than strong.
     semantic_description_agreement: medium
-    semantic_description_explanation: Both Zann 1996 and Elie and Theunissen 2016 treat tet-class calls as contact/coordination signals, but direct wild playback tests for this exact category are limited. The function is well motivated but not experimentally strong.
+    semantic_description_explanation: Zann 1996, Elie et al. 2010, Gill et al. 2015, and Elie and Theunissen 2016 all place tet calls in close contact and nest exchange contexts, but direct wild playback tests for the tet category alone remain limited.
 
-  - name: nest call
+  - name: stack call
+    in_primary_inventory: true
     alternative_names:
-      - soft nest call
-      - private duet call
+      - stacks
+      - take-off stack
+      - stack-like soft contact call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - short
+      - quiet
+      - tonal
+      - harmonic
+      - repetitive
+    acoustic_description: A soft harmonic call intermediate between the tet and the distance call in the Zann field account, louder, longer, and higher pitched than tets but softer, shorter, and lower pitched than distance calls. Captive telemetry studies use stack for flatter, less frequency-modulated soft calls that are longer than tets.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+      - identity
+    semantic_description: In the field inventory, stacks are associated with the moment of take-off and likely help coordinate local movement. In captive pair and group studies, stack calls are exchanged antiphonally, especially within bonded pairs, and can define pair-specific calling relationships.
+    acoustic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: ter_maat_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0109334
+      - id: gill_etal_2015
+        url: https://doi.org/10.7554/eLife.07770
+    semantic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: ter_maat_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0109334
+      - id: gill_etal_2015
+        url: https://doi.org/10.7554/eLife.07770
+    playback_references:
+      - id: damelio_etal_2017
+        url: https://doi.org/10.1038/s41598-017-05982-x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Zann 1996 describes a wild take-off stack, while Ter Maat et al. 2014 and Gill et al. 2015 study stack-like soft calls in captive groups. Elie and Theunissen 2016 did not recover Zann's take-off stack as a separate category and instead grouped many stack-like calls with tets, so existence as a clean discrete type is medium.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree that stack calls are soft harmonic calls near the tet/distance acoustic space, but Zann's wild take-off stack and the captive constant-stack contact calls are not necessarily identical. Acoustic boundaries with tet calls are therefore only moderately agreed.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Zann 1996 links stacks to take-off, whereas Ter Maat et al. 2014 and Gill et al. 2015 emphasize pair contact and breeding-cycle communication. These uses are compatible as close-range coordination but not identical.
+
+  - name: ark call
+    in_primary_inventory: true
+    alternative_names:
+      - ark
+      - ark-ark call
+      - nest call
     scope: *adult_both_scope
     acoustic_keywords:
       - quiet
-      - short
-      - tonal
+      - long
+      - noisy
       - repetitive
-      - multi_component
-    acoustic_description: A soft close-range vocalization produced in interactive sequences at the nest. Calls are low-amplitude and can be temporally coordinated between pair members as part of short mutual sequences.
+    acoustic_description: A soft, relatively long, harsh nest-associated sound, often produced as paired ark-ark units. Later acoustic classifications place ark-like sounds within a broader nest-call continuum rather than separating them cleanly from kackles.
     semantic_keywords:
       - affiliation
       - caregiving
       - group_coordination
-    semantic_description: Used between mates at the nest, especially during meeting and sentinel-like sequences after separation or during nest attendance. Wild nestbox recordings and playback evidence suggest a role in pair-bond maintenance and mate recognition.
+    semantic_description: Produced around potential nest sites and active nests during nest searching, nest building, and mate relief at the nest. It can occur in quiet sequences by one partner or as part of coordinated nest duets between mates.
     acoustic_references:
-      - id: elie_etal_2010
-        url: https://doi.org/10.1016/j.anbehav.2010.06.003
       - id: zann_1996
         url: https://doi.org/10.1093/oso/9780198540793.001.0001
       - id: elie_theunissen_2016
         url: https://doi.org/10.1007/s10071-015-0933-6
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
     semantic_references:
-      - id: elie_etal_2010
-        url: https://doi.org/10.1016/j.anbehav.2010.06.003
       - id: zann_1996
         url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.003
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
     playback_references:
       - id: elie_etal_2010
         url: https://doi.org/10.1016/j.anbehav.2010.06.003
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Elie et al. 2010 recorded nest vocal exchanges in wild zebra finches, and Zann 1996 includes nest-associated vocalizations in the species' repertoire. Elie and Theunissen 2016 retains nest calls as a repertoire category.
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Zann 1996 distinguishes ark calls in the wild repertoire, but Elie and Theunissen 2015 and 2016 group Ark and Kackle into a single nest-call continuum because their captive recordings were hard to separate. The primary category is retained, with medium agreement.
     acoustic_description_agreement: medium
-    acoustic_description_explanation: Elie et al. 2010 provides direct wild recordings of soft nest vocalizations, while Elie and Theunissen 2016 provides a larger acoustic classification in domesticated birds based on the same field-grounded categories. Agreement is medium because the most detailed acoustics are partly laboratory-derived.
+    acoustic_description_explanation: Zann 1996 provides the ark-specific acoustic description, while Elie and Theunissen 2015 and 2016 support a nest-call acoustic space but not a clean Ark/Kackle split. Agreement is moderate because the split is partly graded.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Zann 1996, Elie et al. 2010, and Elie and Theunissen 2016 agree that ark-like nest calls occur during nest and mate interactions, but later studies often merge them with kackles for semantic analysis.
+
+  - name: kackle call
+    in_primary_inventory: true
+    alternative_names:
+      - kackle
+      - cackle
+      - cackle call
+      - nest call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - short
+      - loud
+      - noisy
+      - broadband
+      - repetitive
+    acoustic_description: A relatively short, raspy, loud nest-associated call. In Zann's terminology it is separated from softer ark calls, while later work often treats kackle/cackle-like sounds as the noisier end of a broader nest-call continuum.
+    semantic_keywords:
+      - affiliation
+      - caregiving
+      - group_coordination
+    semantic_description: Produced around potential nest sites and during reproductive activity. Captive breeding-cycle telemetry found cackles among the frequent, distinct call types and showed that cackle production increased around early nesting.
+    acoustic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: gill_etal_2015
+        url: https://doi.org/10.7554/eLife.07770
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    semantic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: gill_etal_2015
+        url: https://doi.org/10.7554/eLife.07770
+      - id: elie_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.003
+    playback_references:
+      - id: elie_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.003
+      - id: damelio_etal_2017
+        url: https://doi.org/10.1038/s41598-017-05982-x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Zann 1996 distinguishes kackle calls, and Gill et al. 2015 treats cackles as one of five frequent distinct call types. Elie and Theunissen 2016 groups kackles with arks as Nest calls, so the existence of a kackle-like nest call is strong but the discrete split is medium.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Zann 1996 and Gill et al. 2015 support a raspy cackle/kackle category, while Elie and Theunissen 2016 finds a continuum from tonal ark-like to noisier kackle-like nest calls. The acoustic description is field-grounded but boundaries are graded.
     semantic_description_agreement: strong
-    semantic_description_explanation: Elie et al. 2010 directly links nest calls to coordinated mate exchanges in wild birds and reports playback evidence consistent with mate recognition. Zann 1996 supplies the broader reproductive context, supporting a pair/nest coordination function.
+    semantic_description_explanation: Zann 1996, Elie et al. 2010, Gill et al. 2015, and Elie and Theunissen 2016 agree that kackle/cackle-like calls are tied to nesting, pair communication, and reproductive-state changes.
+
+  - name: whine call
+    in_primary_inventory: true
+    alternative_names:
+      - whine
+      - nesting whine
+      - copulation whine
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - quiet
+      - harmonic
+      - tonal
+      - frequency_modulated
+      - long
+    acoustic_description: A soft, relatively long, harmonic call with slowly modulated pitch, low spectral mean, low formants, and frequent double-voice structure. It is among the softest adult calls and has a distinctive whining quality.
+    semantic_keywords:
+      - affiliation
+      - caregiving
+      - mating
+    semantic_description: Produced by paired birds around nest searching, nest building, nest relief, and sometimes copulation. It is commonly part of quiet pair communication at the nest and increases around reproductive activity.
+    acoustic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+      - id: gill_etal_2015
+        url: https://doi.org/10.7554/eLife.07770
+    semantic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.003
+      - id: gill_etal_2015
+        url: https://doi.org/10.7554/eLife.07770
+    playback_references:
+      - id: elie_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.003
+      - id: damelio_etal_2017
+        url: https://doi.org/10.1038/s41598-017-05982-x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Zann 1996, Elie et al. 2010, Gill et al. 2015, and Elie and Theunissen 2016 all recognize whine calls or whine-like nest vocalizations, and Gill et al. 2015 analyzes whines as one of the frequent call types.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Elie and Theunissen 2016 gives detailed acoustic measures for whines, Gill et al. 2015 provides spectrographic examples, and Zann 1996 supplies the field nomenclature. These sources agree on a soft, long, modulated call.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Zann 1996, Elie et al. 2010, Gill et al. 2015, and Elie and Theunissen 2016 consistently tie whines to nest, pair-bond, and reproductive contexts.
+
+  - name: wsst call
+    in_primary_inventory: true
+    alternative_names:
+      - aggressive call
+      - hiss call
+      - wsst
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - long
+      - multi_component
+    acoustic_description: A noisy broadband aggressive call that may be mono- or polysyllabic. It has very low pitch saliency, broad bandwidth, low first and second formants, and a long high-frequency power tail, giving it a short hiss-like quality.
+    semantic_keywords:
+      - aggression
+      - threat
+    semantic_description: Produced by an aggressor shortly before or during attacks or supplanting, especially near nests during building or brooding. It advertises aggressive intent in close-range conflicts with conspecifics.
+    acoustic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    semantic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Zann 1996 lists Wsst as an aggressive repertoire call, and Elie and Theunissen 2015 and 2016 classify and quantify Wsst calls in extensive repertoire datasets.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Elie and Theunissen 2015 and 2016 agree on a noisy, broadband, low-saliency acoustic form, consistent with Zann's field description of a hiss-like aggressive call.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Zann 1996, Elie and Theunissen 2015, and Elie and Theunissen 2016 agree that Wsst calls are produced by the aggressive bird in conspecific conflict contexts.
+
+  - name: distress call
+    in_primary_inventory: true
+    alternative_names:
+      - distress
+      - victim call
+      - escape call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - noisy
+      - broadband
+      - loud
+      - long
+      - multi_component
+    acoustic_description: A noisy, often loud, mono- or polysyllabic call with broad bandwidth and low formants, acoustically similar to Wsst calls but somewhat more tonal and with a more peaked temporal envelope. It may include a third formant resembling the structure seen in chick begging calls.
+    semantic_keywords:
+      - distress
+      - submission
+      - aggression
+    semantic_description: Produced by the victim during or immediately after an attack, while escaping or being physically dominated by a conspecific. Juvenile examples have also been reported, but most quantified descriptions are adult conflict calls.
+    acoustic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    semantic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Zann 1996 and Elie and Theunissen 2015 and 2016 recognize distress calls, but Elie and Theunissen 2016 reports substantial acoustic overlap and classifier confusion with Wsst calls. The call is retained, but the boundary is graded.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on a noisy conflict call, but Elie and Theunissen 2016 shows Distress and Wsst calls overlap heavily in acoustic space and may partly reflect role or intensity within aggressive interactions.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Zann 1996, Elie and Theunissen 2015, and Elie and Theunissen 2016 consistently distinguish the distress context as the attacked or escaping bird, even though the acoustic boundary with Wsst is imperfect.
+
+  - name: thuk call
+    in_primary_inventory: true
+    alternative_names:
+      - thuck call
+      - thuk alarm call
+      - parental alarm call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - short
+      - abrupt
+      - quiet
+      - noisy
+      - repetitive
+    acoustic_description: A very short, soft, abrupt alarm-related call. In later acoustic analyses it is one of the shortest zebra finch vocalizations and is partly separable from the captive Tuck alarm category.
+    semantic_keywords:
+      - alarm
+      - predator
+      - caregiving
+      - attention
+    semantic_description: Produced by adults, especially parenting birds, when danger or disturbance is detected but birds are reluctant to flee. Captive observations report production toward chicks and mates, with chicks stopping begging in response.
+    acoustic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    semantic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Zann 1996 lists Thuk as an alarm call and Elie and Theunissen 2015 and 2016 retain it, but some later work did not record thucks and Elie and Theunissen's additional Tuck category is captivity-based. Agreement is medium for the exact alarm-call taxonomy.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Zann 1996 and Elie and Theunissen 2016 support a short alarm call, but the Thuk/Tuck split is not field-established and acoustic overlap remains. The Thuk description is adequate but not as robust as distance calls or song.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Zann 1996 and Elie and Theunissen 2016 agree on alarm and parental-warning contexts, but direct wild playback or predator-response evidence for Thuk alone is limited.
 
   - name: begging call
+    in_primary_inventory: true
     alternative_names:
       - nestling begging call
       - food begging call
+      - begging call bout
     scope:
       life_stages:
         - infant
+        - juvenile
       sexes:
-        - unknown
+        - female
+        - male
       population_specific: false
       note: ""
     acoustic_keywords:
@@ -189,54 +503,104 @@ calls:
       - repetitive
       - loud
       - graded
-    acoustic_description: A repeated, high-pitched nestling call with noisy broadband energy and graded variation in spectral structure. Calls can vary with physiological state and brood context.
+    acoustic_description: A repeated, high-pitched begging vocalization that begins as soft cheeping in very young chicks and develops into loud, noisy broadband bouts in older nestlings and fledglings. Acoustic structure varies with development, physiological state, and brood context.
     semantic_keywords:
       - begging
       - caregiving
       - food
       - attention
-    semantic_description: Produced by dependent young to solicit parental care. In wild birds, begging-call playback can attract prospecting conspecifics to nest sites, and experimental elevation of nestling corticosterone shifts call spectra and affects parental behaviour.
+    semantic_description: Produced by dependent young while gaping and soliciting food from parents. In wild birds, begging calls also provide social information to prospecting conspecifics at nest sites, and experimental corticosterone elevation shifts call spectra and affects parental behavior.
     acoustic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
       - id: perez_etal_2016
         url: https://doi.org/10.1093/beheco/arw069
-      - id: brandl_etal_2019
-        url: https://doi.org/10.1093/auk/ukz007
       - id: elie_theunissen_2016
         url: https://doi.org/10.1007/s10071-015-0933-6
     semantic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
       - id: perez_etal_2016
         url: https://doi.org/10.1093/beheco/arw069
       - id: brandl_etal_2019
         url: https://doi.org/10.1093/auk/ukz007
-      - id: zann_1996
-        url: https://doi.org/10.1093/oso/9780198540793.001.0001
     playback_references:
       - id: brandl_etal_2019
         url: https://doi.org/10.1093/auk/ukz007
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Zann 1996 includes begging in the zebra finch repertoire, Perez et al. 2016 records and manipulates begging-call structure in wild nestlings, and Brandl et al. 2019 uses wild begging-call playback. Existence is strongly supported.
+    call_type_existence_explanation: Zann 1996 includes begging in the zebra finch repertoire, Elie and Theunissen 2016 quantifies begging calls, Perez et al. 2016 records and manipulates wild begging structure, and Brandl et al. 2019 uses wild begging-call playback.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Perez et al. 2016, Brandl et al. 2019, and Elie and Theunissen 2016 all support a noisy, repetitive begging-call category with measurable spectral variation. Agreement is strong across wild and laboratory-aligned sources.
+    acoustic_description_explanation: Zann 1996, Perez et al. 2016, Brandl et al. 2019, and Elie and Theunissen 2016 all support a noisy, repetitive, high-frequency begging-call category with measurable developmental and physiological variation.
     semantic_description_agreement: strong
-    semantic_description_explanation: Perez et al. 2016 links begging calls to parental behaviour in the wild, Brandl et al. 2019 shows that begging calls also provide social information to prospectors, and Zann 1996 provides natural-history support. The caregiving/food solicitation function is well established.
+    semantic_description_explanation: Zann 1996, Perez et al. 2016, and Brandl et al. 2019 agree that begging calls solicit parental care and food; Brandl et al. 2019 further shows social-information effects for prospecting conspecifics in the wild.
 
-  - name: thuk call
+  - name: long tonal call
+    in_primary_inventory: true
     alternative_names:
-      - alarm call
-      - thuk alarm call
+      - juvenile long tonal call
+      - fledgling long tonal call
+      - precursor distance call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - harmonic
+      - tonal
+      - long
+    acoustic_description: A loud, long, highly harmonic juvenile contact call produced around fledging. It resembles the adult distance call in fundamental-frequency range, formant structure, and duration, but is slightly shifted toward higher frequencies and is softer than adult distance calls.
+    semantic_keywords:
+      - contact
+      - caregiving
+      - group_coordination
+    semantic_description: Produced by chicks from about the late nestling or fledging period when visually separated from siblings or parents, and in response to parental distance calls or sibling long-tonal calls. It is the developmental precursor of the adult distance call.
+    acoustic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    semantic_references:
+      - id: zann_1996
+        url: https://doi.org/10.1093/oso/9780198540793.001.0001
+      - id: elie_theunissen_2015
+        url: https://doi.org/10.1111/ejn.12812
+      - id: elie_theunissen_2016
+        url: https://doi.org/10.1007/s10071-015-0933-6
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Zann 1996 describes Long Tonal calls as juvenile contact calls, and Elie and Theunissen 2015 and 2016 include them as one of the juvenile semantic/acoustic categories.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Zann 1996 and Elie and Theunissen 2016 agree that Long Tonal calls are harmonic and distance-call-like, with detailed quantified support from the latter.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Zann 1996, Elie and Theunissen 2015, and Elie and Theunissen 2016 all describe Long Tonal calls as juvenile separation/contact calls and as precursors of adult distance calls.
+
+  - name: copulation whine
+    in_primary_inventory: true
+    alternative_names:
+      - copulation call
+      - copulation whine call
+      - mating whine
     scope: *adult_both_scope
     acoustic_keywords:
-      - short
-      - abrupt
-      - noisy
-      - broadband
-      - repetitive
-    acoustic_description: A short abrupt call with noisy broadband structure, often produced in repeated bouts. It is one of the alarm-related categories retained in repertoire classifications derived from Zann's field descriptions.
+      - quiet
+      - harmonic
+      - tonal
+      - frequency_modulated
+      - long
+    acoustic_description: A whine-like, soft, harmonic call associated with copulation. Published acoustic treatment is sparse; later repertoire work recorded too few copulation examples for quantitative analysis and treated the available example as a copulation whine.
     semantic_keywords:
-      - alarm
-      - predator
-      - attention
-    semantic_description: Associated with alarm or defensive contexts, warning nearby conspecifics of disturbance or danger. The category is supported as a natural repertoire component, but direct wild playback tests are sparse.
+      - mating
+      - courtship
+      - affiliation
+    semantic_description: Produced in the immediate copulation context. It appears to be related to the broader whine class used by paired birds in reproductive contexts, but the distinctiveness of copulation whines as a separate call type remains poorly tested.
     acoustic_references:
       - id: zann_1996
         url: https://doi.org/10.1093/oso/9780198540793.001.0001
@@ -247,12 +611,58 @@ calls:
         url: https://doi.org/10.1093/oso/9780198540793.001.0001
       - id: elie_theunissen_2016
         url: https://doi.org/10.1007/s10071-015-0933-6
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Zann 1996 describes copulation calls, and Elie and Theunissen 2016 recorded examples but could not include them in analysis because quality and quantity were insufficient. The category is retained to honor the primary inventory, but evidence for a discrete type is weak.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The available acoustic basis is mainly Zann 1996 plus Elie and Theunissen's note of a copulation whine example. No robust quantitative description separates this call from ordinary whines.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Zann 1996 and Elie and Theunissen 2016 agree on copulation as the context, but whether this is a separate call type or a whine used during copulation is unresolved.
+
+  - name: incubation call
+    in_primary_inventory: false
+    alternative_names:
+      - heat call
+      - v-call
+      - heat-associated vocalization
+      - heat whistle
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - quiet
+      - frequency_modulated
+      - tonal
+      - short
+      - repetitive
+    acoustic_description: An extremely soft, high-frequency, frequency-modulated heat-associated sound. Earlier incubation-call work described 6-10 kHz, highly rhythmic calls produced in fast regular series, while later biophysical work measured chevron-shaped dominant frequencies near 6.8 kHz and very low source levels around 14 dB SPL at 1 m.
+    semantic_keywords:
+      - caregiving
+    semantic_description: Originally interpreted as a parental acoustic cue produced during hot late-incubation conditions and capable, in experimental playback, of altering offspring development. Later wild nest-box, captive heat-exposure, and biophysical studies show that the sound depends strongly on heat and panting, can be produced outside reproduction, and may be too soft to function as an adaptive acoustic signal or cue.
+    acoustic_references:
+      - id: mariette_buchanan_2016
+        url: https://doi.org/10.1126/science.aaf7049
+      - id: mcdiarmid_etal_2018
+        url: https://doi.org/10.1093/beheco/ary123
+      - id: anttonen_etal_2025
+        url: https://doi.org/10.1016/j.cub.2025.08.054
+    semantic_references:
+      - id: mariette_buchanan_2016
+        url: https://doi.org/10.1126/science.aaf7049
+      - id: mcdiarmid_etal_2018
+        url: https://doi.org/10.1093/beheco/ary123
+      - id: anttonen_etal_2025
+        url: https://doi.org/10.1016/j.cub.2025.08.054
+    playback_references:
+      - id: mariette_buchanan_2016
+        url: https://doi.org/10.1126/science.aaf7049
+      - id: katsis_etal_2018
+        url: https://doi.org/10.1038/s41598-018-33301-5
     call_type_existence_agreement: medium
-    call_type_existence_explanation: Zann 1996 supports alarm-related call categories in the wild repertoire, and Elie and Theunissen 2016 retains thuk as a distinct vocalization type in an extensive repertoire classification. The label is medium because this call has less wild-focused study than song, distance, nest, or begging calls.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Zann 1996 and Elie and Theunissen 2016 agree on thuk as a distinct call category, but detailed acoustic measurements are mainly from domesticated birds. The acoustic description is therefore moderate-confidence and field-anchored by Zann's synthesis.
+    call_type_existence_explanation: Mariette and Buchanan 2016, McDiarmid et al. 2018, and Anttonen et al. 2025 all support a distinct heat-associated sound, but they disagree strongly on whether it should be understood as a communicative call. It is outside the Zann inventory.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Mariette and Buchanan 2016, McDiarmid et al. 2018, and Anttonen et al. 2025 agree that the sound is high-frequency, heat-associated, and rhythmically produced; Anttonen et al. 2025 adds calibrated source-level and production-mechanism evidence.
     semantic_description_agreement: weak
-    semantic_description_explanation: Zann 1996 and Elie and Theunissen 2016 support an alarm/disturbance context, but this category lacks the direct wild playback or experimental evidence available for begging, nest, or distance calls. Semantic agreement is therefore weak.
+    semantic_description_explanation: Mariette and Buchanan 2016 and Katsis et al. 2018 use incubation-call playbacks as developmental acoustic treatments, but McDiarmid et al. 2018 shows production depends on heat rather than reproductive stage, and Anttonen et al. 2025 argues heat whistles are inaudible nonadaptive by-products of panting. Semantic agreement is therefore weak.
 
 references:
   zann_1990:
@@ -271,18 +681,58 @@ references:
     citation: "Dunn AM, Zann RA. 1996. Undirected song in wild zebra finch flocks: contexts and effects of mate removal. Ethology 102(4): 529-539."
     url: https://doi.org/10.1111/j.1439-0310.1996.tb01145.x
     doi: 10.1111/j.1439-0310.1996.tb01145.x
+  vignal_etal_2004:
+    citation: "Vignal C, Mathevon N, Mottin S. 2004. Audience drives male songbird response to partner's voice. Nature 430: 448-451."
+    url: https://doi.org/10.1038/nature02645
+    doi: 10.1038/nature02645
+  vignal_etal_2008:
+    citation: "Vignal C, Mathevon N, Mottin S. 2008. Mate recognition by female zebra finch: analysis of individuality in male call and first investigations on female decoding process. Behavioural Processes 77(2): 191-198."
+    url: https://doi.org/10.1016/j.beproc.2007.09.003
+    doi: 10.1016/j.beproc.2007.09.003
   elie_etal_2010:
     citation: "Elie JE, Mariette MM, Soula HA, Griffith SC, Mathevon N, Vignal C. 2010. Vocal communication at the nest between mates in wild zebra finches: a private vocal duet? Animal Behaviour 80(4): 597-605."
     url: https://doi.org/10.1016/j.anbehav.2010.06.003
     doi: 10.1016/j.anbehav.2010.06.003
+  mouterde_etal_2014:
+    citation: "Mouterde SC, Theunissen FE, Elie JE, Vignal C, Mathevon N. 2014. Acoustic communication and sound degradation: how do the individual signatures of male and female zebra finch calls transmit over distance? PLoS ONE 9(7): e102842."
+    url: https://doi.org/10.1371/journal.pone.0102842
+    doi: 10.1371/journal.pone.0102842
+  ter_maat_etal_2014:
+    citation: "Ter Maat A, Trost L, Sagunsky H, Seltmann S, Gahr M. 2014. Zebra finch mates use their forebrain song system in unlearned call communication. PLoS ONE 9(10): e109334."
+    url: https://doi.org/10.1371/journal.pone.0109334
+    doi: 10.1371/journal.pone.0109334
+  elie_theunissen_2015:
+    citation: "Elie JE, Theunissen FE. 2015. Meaning in the avian auditory cortex: neural representation of communication calls. European Journal of Neuroscience 41(5): 546-567."
+    url: https://doi.org/10.1111/ejn.12812
+    doi: 10.1111/ejn.12812
+  gill_etal_2015:
+    citation: "Gill LF, Goymann W, Ter Maat A, Gahr M. 2015. Patterns of call communication between group-housed zebra finches change during the breeding cycle. eLife 4: e07770."
+    url: https://doi.org/10.7554/eLife.07770
+    doi: 10.7554/eLife.07770
   perez_etal_2016:
     citation: "Perez EC, Elie JE, Boucaud ICA, Crouchet T, Soulage CO, Griffith SC, Vignal C. 2016. Corticosterone triggers high-pitched nestlings' begging calls and affects parental behavior in the wild zebra finch. Behavioral Ecology 27(6): 1665-1675."
     url: https://doi.org/10.1093/beheco/arw069
     doi: 10.1093/beheco/arw069
+  mariette_buchanan_2016:
+    citation: "Mariette MM, Buchanan KL. 2016. Prenatal acoustic communication programs offspring for high posthatching temperatures in a songbird. Science 353(6301): 812-814."
+    url: https://doi.org/10.1126/science.aaf7049
+    doi: 10.1126/science.aaf7049
   elie_theunissen_2016:
     citation: "Elie JE, Theunissen FE. 2016. The vocal repertoire of the domesticated zebra finch: a data-driven approach to decipher the information-bearing acoustic features of communication signals. Animal Cognition 19(2): 285-315."
     url: https://doi.org/10.1007/s10071-015-0933-6
     doi: 10.1007/s10071-015-0933-6
+  damelio_etal_2017:
+    citation: "D'Amelio PB, Klumb M, Adreani MN, Gahr ML, Ter Maat A. 2017. Individual recognition of opposite sex vocalizations in the zebra finch. Scientific Reports 7: 5579."
+    url: https://doi.org/10.1038/s41598-017-05982-x
+    doi: 10.1038/s41598-017-05982-x
+  mcdiarmid_etal_2018:
+    citation: "McDiarmid CS, Naguib M, Griffith SC. 2018. Calling in the heat: the zebra finch incubation call depends on heat but not reproductive stage. Behavioral Ecology 29(6): 1245-1254."
+    url: https://doi.org/10.1093/beheco/ary123
+    doi: 10.1093/beheco/ary123
+  katsis_etal_2018:
+    citation: "Katsis AC, Davies MH, Buchanan KL, Kleindorfer S, Hauber ME, Mariette MM. 2018. Prenatal exposure to incubation calls affects song learning in the zebra finch. Scientific Reports 8: 15232."
+    url: https://doi.org/10.1038/s41598-018-33301-5
+    doi: 10.1038/s41598-018-33301-5
   brandl_etal_2019:
     citation: "Brandl HB, Griffith SC, Laaksonen T, Schuett W. 2019. Begging calls provide social cues for prospecting conspecifics in the wild Zebra Finch (Taeniopygia guttata). The Auk 136(2): ukz007."
     url: https://doi.org/10.1093/auk/ukz007
@@ -291,3 +741,7 @@ references:
     citation: "Loning H, Griffith SC, Naguib M. 2022. Zebra finch song is a very short-range signal in the wild: evidence from an integrated approach. Behavioral Ecology 33(1): 37-46."
     url: https://doi.org/10.1093/beheco/arab107
     doi: 10.1093/beheco/arab107
+  anttonen_etal_2025:
+    citation: "Anttonen T, Loning H, Felbo FM, Christensen-Dalsgaard J, Griffith SC, Naguib M, Elemans CPH. 2025. Zebra finches produce soft laryngeal whistles during thermal panting that are not adaptive vocal signals. Current Biology 35(20): 5090-5096."
+    url: https://doi.org/10.1016/j.cub.2025.08.054
+    doi: 10.1016/j.cub.2025.08.054

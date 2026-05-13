@@ -8,11 +8,16 @@ taxonomy:
   family: Hyaenidae
   genus: Crocuta
   species: crocuta
+primary_inventory:
+  id: kruuk_1972
+  rationale: No dedicated peer-reviewed paper was found that supersedes the classic repertoire catalog. Kruuk 1972 is used as the spine because it is the original detailed inventory of named spotted hyena calls with acoustic notes, postures, and contexts; Hayssen and Noonan 2021 cite the Kruuk appendix and Mills 1990 table as the extensive catalog for the species. All named Kruuk inventory entries are included here, and no outside-inventory calls are added where later sources give only broad labels without call-level acoustic and semantic detail.
 calls:
   - name: whoop
+    in_primary_inventory: true
     alternative_names:
       - slow whoop
       - long-distance whoop
+      - loud call
     scope: &all_life_both_scope
       life_stages:
         - infant
@@ -32,7 +37,7 @@ calls:
       - loud
       - repetitive
       - multi_component
-    acoustic_description: A loud, tonal, frequency-modulated call produced in bouts of repeated whoops separated by pauses. Individual whoops are long enough to carry over kilometers, and bouts can combine structurally distinct whoop types with stable individual acoustic signatures.
+    acoustic_description: A loud tonal call given in bouts of repeated, discrete whoop units separated by pauses. Units typically begin low and sweep upward, and bouts can contain structurally distinct whoop types with stable individual acoustic signatures that carry over long distances.
     semantic_keywords:
       - contact
       - group_coordination
@@ -40,8 +45,10 @@ calls:
       - recruitment
       - territorial
       - display
-    semantic_description: Used for medium- and long-distance communication to advertise the caller's identity and location, request or rally support, coordinate dispersed clan members, and mediate territorial or social display. Cubs use whoops especially for location and support, while adults use them prominently for identity display and coordination.
+    semantic_description: Used for medium- and long-distance communication when clan members are separated or need to coordinate. It advertises caller identity and location, requests or rallies support, and is used in contexts such as locating offspring, agonistic encounters, resource defense, and interclan interactions.
     acoustic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
       - id: east_hofer_1991a
         url: https://doi.org/10.1016/S0003-3472(05)80246-5
       - id: theis_etal_2007
@@ -49,6 +56,8 @@ calls:
       - id: lehmann_etal_2022
         url: https://doi.org/10.1098/rspb.2022.0548
     semantic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
       - id: east_hofer_1991b
         url: https://doi.org/10.1016/S0003-3472(05)80247-7
       - id: holekamp_etal_1999
@@ -63,17 +72,26 @@ calls:
       - id: benson_amram_etal_2011
         url: https://doi.org/10.1016/j.anbehav.2011.07.004
     call_type_existence_agreement: strong
-    call_type_existence_explanation: East and Hofer 1991a,b give the classic structural and functional accounts of whoops, and Theis et al. 2007 and Lehmann et al. 2022 analyze the same long-distance vocalization in wild hyenas. Multiple independent studies agree that the whoop is a central discrete call type.
+    call_type_existence_explanation: Kruuk 1972 lists whoops in the primary inventory, East and Hofer 1991a,b provide the classic structural and functional studies, and Theis et al. 2007 and Lehmann et al. 2022 analyze the same long-distance call in wild hyenas. Multiple independent studies agree that the whoop is a central discrete call type.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: East and Hofer 1991a describe whoop-bout structure and types, Theis et al. 2007 analyzes acoustic variation, and Lehmann et al. 2022 confirms individual acoustic signatures. Agreement is strong despite variation among whoop subtypes.
+    acoustic_description_explanation: East and Hofer 1991a describe whoop-bout structure, Theis et al. 2007 analyzes acoustic variation including slow and fast whooping, and Lehmann et al. 2022 confirms individual signatures in whoop bouts. Agreement is strong despite subtype and arousal-related variation.
     semantic_description_agreement: strong
-    semantic_description_explanation: East and Hofer 1991b describe identity display, support requests, and location functions; Holekamp et al. 1999 and Benson-Amram et al. 2011 provide playback evidence for vocal recognition and individual discrimination. The semantic account is strongly supported.
+    semantic_description_explanation: East and Hofer 1991b identifies identity display, support requests, and location functions, while Holekamp et al. 1999 and Benson-Amram et al. 2011 provide playback evidence that wild hyenas discriminate whoops. The semantic interpretation is strongly supported.
 
   - name: fast whoop
+    in_primary_inventory: true
     alternative_names:
       - excited whoop
       - rapid whoop
-    scope: *all_life_both_scope
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
     acoustic_keywords:
       - high_frequency
       - frequency_modulated
@@ -82,35 +100,184 @@ calls:
       - repetitive
       - multi_component
       - graded
-    acoustic_description: A whoop-like bout with shorter intervals and generally higher-pitched, more excited calls than ordinary whooping. It grades acoustically toward the ordinary whoop but differs in rate and arousal-related structure.
+    acoustic_description: A whoop-like bout with shorter intervals and generally higher-pitched, more rapidly delivered elements than ordinary slow whooping. It grades toward the ordinary whoop but differs in rate, pitch, and arousal-related structure.
     semantic_keywords:
       - threat
       - aggression
       - recruitment
       - group_coordination
-    semantic_description: Given in excited social situations, especially before attacks or during disputes around kills with lions, rival hyenas, or other competitors. It appears to recruit or coordinate others in high-arousal conflict rather than serve as a relaxed contact call.
+      - predator
+      - food
+    semantic_description: Produced in excited conflict contexts, especially with other hyenas present before attacks or during disputes over kills with lions, rival hyenas, or other competitors. It appears to recruit or coordinate nearby animals in high-arousal agonistic situations.
     acoustic_references:
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
       - id: theis_etal_2007
         url: https://doi.org/10.1163/156853907780713046
     semantic_references:
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: theis_etal_2007
+        url: https://doi.org/10.1163/156853907780713046
+    playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_explanation: Kruuk 1972 recognizes fast whoop as a named call, but later acoustic work often treats whoop types and arousal variation within broader whooping rather than as a separate primary repertoire unit. The category is useful but partly graded.
+    call_type_existence_explanation: Kruuk 1972 lists fast whoop as a primary-inventory entry and Mills 1990 retains the inventory tradition, but Theis et al. 2007 discusses fast whoops as an arousal-related category within broader whooping. The call type is recognized, while its boundary from slow whoop is graded.
     acoustic_description_agreement: medium
-    acoustic_description_explanation: Kruuk 1972 describes the high-rate, high-pitched distinction, and Theis et al. 2007 discusses arousal-related variation in long-distance vocalizations. Agreement is medium because the boundary with ordinary whoops is not always treated as discrete.
+    acoustic_description_explanation: Kruuk 1972 and Mills 1990 support the high-rate, higher-pitched inventory distinction, and Theis et al. 2007 discusses the acoustic contrast with slow whoops. Agreement is medium because later work often treats the distinction as part of whoop variation.
     semantic_description_agreement: medium
-    semantic_description_explanation: Kruuk 1972 and Animal Diversity Web agree on an excited conflict context, but there are fewer playback or dedicated functional studies for fast whoops than for ordinary whoops. The semantic label is therefore medium.
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 place fast whoops in attack and kill-dispute contexts, and Theis et al. 2007 links the category to heightened arousal. Dedicated playback tests of fast whoops are lacking, so semantic agreement is medium.
+
+  - name: grunt
+    in_primary_inventory: true
+    alternative_names:
+      - soft growl
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - long
+      - quiet
+    acoustic_description: A soft, low-pitched growling sound lasting several seconds and audible only at close range. It is quieter and less far carrying than whoops or giggles and has a rougher, less tonal quality than groans.
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+    semantic_description: Given at close range during the approach of an unwelcome hyena or in tense social encounters, often before chasing or escalation. It functions as a low-level agonistic or spacing signal.
+    acoustic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: mathevon_etal_2010
+        url: https://doi.org/10.1186/1472-6785-10-9
+    semantic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: mathevon_etal_2010
+        url: https://doi.org/10.1186/1472-6785-10-9
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Kruuk 1972 lists grunt as a primary-inventory call, Mills 1990 uses the related soft-growl terminology, and Mathevon et al. 2010 cites the grunt or soft growl as a close-range call. Agreement is medium because labels vary and the category is close to groans and growls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Kruuk 1972 and Mills 1990 provide mainly qualitative acoustic descriptions, while Mathevon et al. 2010 mentions the call for contrast rather than analyzing it. The broad low quiet structure is consistent, but fine acoustic agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 agree on close-range tense social contexts, and Mathevon et al. 2010 supports its close-meeting use. Experimental receiver evidence is lacking, so the semantic label is medium.
+
+  - name: groan
+    in_primary_inventory: true
+    alternative_names:
+      - greeting groan
+      - soft groan
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - harmonic
+      - long
+      - quiet
+      - graded
+    acoustic_description: A low, sustained ooo-like close-range call, generally more tonal and rounded than the grunt. Experimental work shows groans can vary from growl-like to more prolonged tonal forms with higher fundamental frequency in some eliciting conditions.
+    semantic_keywords:
+      - affiliation
+      - caregiving
+      - submission
+      - contact
+    semantic_description: Produced before and during meeting or greeting ceremonies and also in adult-cub den interactions. It is associated with close social approach, greeting, and affiliative or caregiving contact rather than long-distance recruitment.
+    acoustic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: theunissen_etal_2008
+        url: https://doi.org/10.1121/1.2934834
+    semantic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: east_etal_1993
+        url: https://doi.org/10.1007/BF00170251
+      - id: theunissen_etal_2008
+        url: https://doi.org/10.1121/1.2934834
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Kruuk 1972 lists groan as a primary-inventory call, Mills 1990 preserves the catalog, and Theunissen et al. 2008 experimentally elicited and analyzed groans. Agreement is medium because groans form a broad category that grades toward growls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Kruuk 1972 and Mills 1990 describe the ooo-like inventory call, and Theunissen et al. 2008 provides acoustic evidence that groans vary by eliciting condition. Agreement is medium because the category is acoustically heterogeneous.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 connect groans with greetings, East et al. 1993 supports the broader greeting-ceremony context, and Theunissen et al. 2008 shows context-linked groan variation. Playback evidence is not available, so the label remains medium.
+
+  - name: low
+    in_primary_inventory: true
+    alternative_names:
+      - lowing call
+      - ooo call
+      - lowing
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - long
+      - graded
+    acoustic_description: A usually low-pitched ooo-like call lasting several seconds. It is less bout-structured than whooping and is treated as a graded arousal call rather than a sharply bounded tonal display.
+    semantic_keywords:
+      - threat
+      - aggression
+      - food
+      - group_coordination
+      - recruitment
+    semantic_description: Produced by aroused hyenas in situations resembling fast-whoop contexts but with less immediate attack tendency, including tense feeding or social conflicts. It appears to bring nearby group members into a shared state of arousal or readiness.
+    acoustic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: hayssen_noonan_2021
+        url: https://doi.org/10.1093/mspecies/seab002
+    semantic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: hayssen_noonan_2021
+        url: https://doi.org/10.1093/mspecies/seab002
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Kruuk 1972 lists low as a primary-inventory call, Mills 1990 retains the catalog, and Hayssen and Noonan 2021 includes lows in the species' vocal repertoire. Agreement is medium because later quantitative work has not focused on lows as a separate acoustic class.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic account rests mainly on qualitative inventory descriptions in Kruuk 1972 and Mills 1990, with Hayssen and Noonan 2021 confirming the repertoire label. Dedicated spectrographic evidence is sparse, so acoustic agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 place lows in aroused conflict contexts similar to fast whoops but less attack-oriented, and Hayssen and Noonan 2021 retains lows as a repertoire category. The interpretation is coherent but observational.
 
   - name: giggle
+    in_primary_inventory: true
     alternative_names:
       - laugh
       - laughing call
       - hoot-laugh
+      - chuckle
     scope:
       life_stages:
         - juvenile
@@ -128,37 +295,45 @@ calls:
       - repetitive
       - pulsed
       - graded
-    acoustic_description: A high-pitched, staccato series of short notes, often produced in brief bouts with strong frequency and temporal variation. Acoustic parameters encode age, dominance-related status, and individual cues.
+    acoustic_description: A high-pitched staccato series of short notes, often produced in brief bouts with strong frequency and temporal variation. Acoustic parameters encode age, dominance-related status, and individual cues.
     semantic_keywords:
       - submission
       - distress
       - aggression
       - identity
-    semantic_description: Produced in close-range, high-arousal social situations such as feeding competition, being chased, threatened, or attacked. It is associated with distress or submission rather than amusement, and may provide receivers with information about the caller's social position.
+      - food
+    semantic_description: Produced in close-range, high-arousal social situations, especially feeding competition, being chased, threatened, or attacked. It is associated with distress, frustration, or submission rather than amusement and may provide receivers with information about the caller's social position.
     acoustic_references:
-      - id: mathevon_etal_2010
-        url: https://doi.org/10.1186/1472-6785-10-9
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: mathevon_etal_2010
+        url: https://doi.org/10.1186/1472-6785-10-9
     semantic_references:
-      - id: mathevon_etal_2010
-        url: https://doi.org/10.1186/1472-6785-10-9
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: mathevon_etal_2010
+        url: https://doi.org/10.1186/1472-6785-10-9
+      - id: hayssen_noonan_2021
+        url: https://doi.org/10.1093/mspecies/seab002
     audio_samples:
       - https://commons.wikimedia.org/wiki/File:Giggling_call_of_a_spotted_hyena_(Crocuta_crocuta)_-_1472-6785-10-9-S1.oga
+    playback_references: []
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Giggles are described in Kruuk 1972 and are the focus of Mathevon et al. 2010. The call is widely recognized as one of the characteristic spotted hyena vocalizations.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Mathevon et al. 2010 gives strong acoustic detail, but much of that fine-grained analysis used a managed colony even though the call is known in wild contexts. Agreement on broad structure is strong, while wild acoustic generalization is medium.
+    call_type_existence_explanation: Giggles are listed in Kruuk 1972 and Mills 1990, included by Hayssen and Noonan 2021, and are the focus of Mathevon et al. 2010. The call is widely recognized as one of the characteristic spotted hyena vocalizations.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Kruuk 1972 and Mills 1990 give the inventory-level description, and Mathevon et al. 2010 provides detailed temporal and frequency-domain analyses of giggle notes and bouts. The broad high-pitched staccato structure is strongly supported.
     semantic_description_agreement: medium
-    semantic_description_explanation: Kruuk 1972 and Animal Diversity Web associate giggles with being chased, attacked, or frustrated at kills, and Mathevon et al. 2010 links acoustic variation to social status. The function is coherent but less playback-tested than whoops.
+    semantic_description_explanation: Kruuk 1972, Mills 1990, and Mathevon et al. 2010 agree that giggles occur in distressed or submissive high-arousal contexts such as feeding competition and attack. The function is coherent, but direct playback tests are still lacking.
 
-  - name: grunt
+  - name: yell
+    in_primary_inventory: true
     alternative_names:
-      - soft growl
+      - scream
+      - distress yell
     scope:
       life_stages:
         - juvenile
@@ -169,110 +344,44 @@ calls:
       population_specific: false
       note: ""
     acoustic_keywords:
-      - low_frequency
-      - noisy
-      - long
-      - quiet
-    acoustic_description: A soft, low-pitched growling sound lasting several seconds and audible only at close range. It is quieter and less far carrying than whoops or giggles.
-    semantic_keywords:
-      - threat
-      - aggression
-    semantic_description: Given at close range during the approach of an unwelcome hyena or in tense social encounters, often before chasing or escalation. It functions as a low-level agonistic signal.
-    acoustic_references:
-      - id: kruuk_1972
-        url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
-    semantic_references:
-      - id: kruuk_1972
-        url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Kruuk 1972 lists grunts as a repertoire element, and Animal Diversity Web summarizes grunts among aggressive calls. The label is medium because short-range calls are less quantified and sometimes named as soft growls.
-    acoustic_description_agreement: weak
-    acoustic_description_explanation: The acoustic description rests mainly on qualitative repertoire accounts in Kruuk 1972 and secondary summary in Animal Diversity Web. Dedicated spectrographic work is sparse, so the acoustic agreement is weak.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Kruuk 1972 and Animal Diversity Web agree on close-range agonistic use, but experimental receiver evidence is lacking. The semantic category is therefore medium.
-
-  - name: groan
-    alternative_names:
-      - greeting groan
-    scope: *all_life_both_scope
-    acoustic_keywords:
-      - low_frequency
-      - tonal
-      - long
-      - quiet
-    acoustic_description: A low, sustained ooo-like call, higher and more rounded in quality than the grunt. It is a close-range sound rather than a long-distance call.
-    semantic_keywords:
-      - affiliation
-      - submission
-      - caregiving
-    semantic_description: Produced before and during meeting or greeting ceremonies, and also reported in adult-cub den interactions. It is associated with close social approach rather than aggression at a distance.
-    acoustic_references:
-      - id: kruuk_1972
-        url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
-    semantic_references:
-      - id: kruuk_1972
-        url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Groans appear as a named call in Kruuk 1972 and are retained in authoritative species summaries. The label is medium because later quantitative vocal studies have focused more on whoops and giggles.
-    acoustic_description_agreement: weak
-    acoustic_description_explanation: Published acoustic detail for groans is limited and mostly qualitative. The description follows Kruuk 1972 and Animal Diversity Web, so agreement is weak.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Kruuk 1972 and Animal Diversity Web agree that groans occur in greeting or close social contact. The interpretation is consistent but lacks playback tests.
-
-  - name: low
-    alternative_names:
-      - lowing call
-      - ooo call
-    scope:
-      life_stages:
-        - juvenile
-        - adult
-      sexes:
-        - female
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - low_frequency
-      - tonal
-      - long
+      - high_frequency
       - loud
+      - long
+      - abrupt
       - graded
-    acoustic_description: A usually low-pitched ooo-like call lasting several seconds. It resembles the fast whoop in affective setting but is less attack-oriented and less bout-structured.
+    acoustic_description: A loud, high-pitched call lasting several seconds. It is more sustained and intense than individual giggle notes and lacks the repeated staccato bout structure of giggling.
     semantic_keywords:
-      - threat
+      - distress
+      - submission
       - aggression
-      - food
-      - group_coordination
-    semantic_description: Produced by excited or impatient hyenas, especially around contested food, and in contexts similar to fast whooping but with less immediate attack tendency. It signals arousal around social or feeding conflict.
+    semantic_description: Produced in the same broad fleeing or attack context as giggles, but especially when the caller is actually being bitten. It functions as an acute distress signal during close-range aggression.
     acoustic_references:
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: hayssen_noonan_2021
+        url: https://doi.org/10.1093/mspecies/seab002
     semantic_references:
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: hayssen_noonan_2021
+        url: https://doi.org/10.1093/mspecies/seab002
+    playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_explanation: Kruuk 1972 identifies lows as a call type, and Animal Diversity Web reports lowing calls in impatient hyenas. The label is medium because some later summaries fold such calls into broader excited or agonistic categories.
+    call_type_existence_explanation: Kruuk 1972 lists yell as a primary-inventory call, Mills 1990 retains the catalog, and Hayssen and Noonan 2021 includes yells and related high-intensity calls in the repertoire. Agreement is medium because later work provides little call-specific quantification and broad accounts sometimes use scream-like labels.
     acoustic_description_agreement: weak
-    acoustic_description_explanation: The acoustic account is qualitative and rests mainly on older repertoire description. It is reliable enough to include but not strongly quantified.
+    acoustic_description_explanation: The acoustic description comes mainly from qualitative inventory accounts in Kruuk 1972 and Mills 1990, with Hayssen and Noonan 2021 confirming repertoire inclusion. Dedicated acoustic measurements of yells are sparse.
     semantic_description_agreement: medium
-    semantic_description_explanation: Kruuk 1972 and Animal Diversity Web agree on aroused feeding or conflict contexts. Agreement is medium because the behavioral category overlaps with fast whooping and other agonistic calls.
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 consistently place yells in direct attack or biting contexts, and Hayssen and Noonan 2021 supports the broader repertoire category. Evidence is observational rather than experimental, so agreement is medium.
 
   - name: growl
+    in_primary_inventory: true
     alternative_names:
       - rattling growl
+      - snarl
     scope:
       life_stages:
         - juvenile
@@ -289,7 +398,7 @@ calls:
       - loud
       - long
       - abrupt
-    acoustic_description: A loud, low, rattling broadband call lasting several seconds, with harsh noisy energy rather than the tonal structure of whoops. It is one of the more forceful short-range aggressive sounds.
+    acoustic_description: A loud, low, rattling broadband call lasting several seconds, with harsh noisy energy rather than the tonal structure of whoops or groans. It is one of the more forceful short-range aggressive sounds.
     semantic_keywords:
       - threat
       - aggression
@@ -297,88 +406,249 @@ calls:
     acoustic_references:
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: theunissen_etal_2008
+        url: https://doi.org/10.1121/1.2934834
     semantic_references:
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: hayssen_noonan_2021
+        url: https://doi.org/10.1093/mspecies/seab002
+    playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_explanation: Growls are described as a distinct aggressive call in Kruuk 1972 and summarized by Animal Diversity Web. The label is medium because growls, grunts, and grunt-laughs may grade into each other in natural conflicts.
-    acoustic_description_agreement: weak
-    acoustic_description_explanation: Kruuk 1972 provides a qualitative acoustic description, but modern quantitative acoustic treatment of growls is limited. Agreement is weak for detailed structure even though the broad harsh low call is clear.
+    call_type_existence_explanation: Kruuk 1972 lists growl as a primary-inventory call, Mills 1990 retains the aggressive-call catalog, and Hayssen and Noonan 2021 includes growls in the species repertoire. The label is medium because growls, grunts, and groans can grade into each other.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Kruuk 1972 and Mills 1990 provide the qualitative rattling low-call description, and Theunissen et al. 2008 treats growl-like sounds in the groan/growl acoustic continuum. Agreement is medium rather than strong because the boundary is graded.
     semantic_description_agreement: medium
-    semantic_description_explanation: Kruuk 1972 and Animal Diversity Web agree that growls occur during defensive or aggressive encounters. The absence of playback studies keeps the semantic label at medium.
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 agree on defensive or aggressive contexts, and Hayssen and Noonan 2021 keeps growls in the vocal repertoire. The absence of playback studies keeps the semantic label at medium.
+
+  - name: soft grunt-laugh
+    in_primary_inventory: true
+    alternative_names:
+      - soft grunt laugh
+      - quiet grunt-laugh
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - quiet
+      - repetitive
+      - pulsed
+    acoustic_description: A rapid succession of low-pitched, soft, staccato grunt elements lasting several seconds. It has a pulsed repetitive structure but is quieter and lower than the giggle.
+    semantic_keywords:
+      - alarm
+      - predator
+      - distress
+      - aggression
+    semantic_description: Produced when fleeing in surprise from lions or humans and also when attacking large prey. It is associated with sudden danger, conflict, or high-arousal predatory encounters at close range.
+    acoustic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+    semantic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Kruuk 1972 lists soft grunt-laugh as a primary-inventory call and Mills 1990 retains the catalog. Agreement is medium because later peer-reviewed accounts rarely analyze this call separately from other short-range high-arousal calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description is based on qualitative inventory accounts in Kruuk 1972 and Mills 1990. No dedicated quantitative study was found, so acoustic agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 give matching contexts involving surprise flight and attacks on large prey. Evidence is consistent but observational and not playback-tested.
+
+  - name: loud grunt-laugh
+    in_primary_inventory: true
+    alternative_names:
+      - loud grunt laugh
+      - long grunt-laugh
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - long
+      - repetitive
+      - pulsed
+      - graded
+    acoustic_description: A louder and often much longer version of the grunt-laugh, built from repeated low-pitched grunt-like elements. It is still not as far carrying as whoops and may continue in extended bouts.
+    semantic_keywords:
+      - threat
+      - aggression
+      - predator
+      - territorial
+      - group_coordination
+    semantic_description: Produced in intense encounters with lions or other hyena clans. It is associated with group-level conflict, threat, and coordinated arousal during interspecific or interclan confrontation.
+    acoustic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+    semantic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Kruuk 1972 lists loud grunt-laugh as a primary-inventory call and Mills 1990 retains the catalog. Agreement is medium because the category is probably graded with soft grunt-laughs and other agonistic calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Published acoustic detail is limited to qualitative catalog descriptions in Kruuk 1972 and Mills 1990. The repeated low grunt-laugh structure is described, but quantitative agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 agree on lion and interclan encounter contexts. The context is clear observationally, but receiver-response experiments are lacking.
 
   - name: whine
+    in_primary_inventory: true
     alternative_names:
-      - soft squeal
-      - squeal
+      - begging whine
+      - drawn-out squeal
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - repetitive
+      - graded
+    acoustic_description: A loud, high-pitched, rapid, drawn-out squealing whine, often repeated. It has a longer, more continuous quality than the staccato giggle and is harsher or more insistent than the soft squeal.
+    semantic_keywords:
+      - begging
+      - distress
+      - caregiving
+      - food
+    semantic_description: Used mainly by cubs when following a female before suckling or when prevented from obtaining food. It signals need, frustration, or distress in dependent young.
+    acoustic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: hayssen_noonan_2021
+        url: https://doi.org/10.1093/mspecies/seab002
+    semantic_references:
+      - id: kruuk_1972
+        url: https://portals.iucn.org/library/node/18008
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+      - id: hayssen_noonan_2021
+        url: https://doi.org/10.1093/mspecies/seab002
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Kruuk 1972 lists whine as a primary-inventory call, Mills 1990 retains the catalog, and Hayssen and Noonan 2021 discusses juvenile vocalizations and the broader vocal repertoire. The label is medium because later quantitative work rarely isolates whines.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Kruuk 1972 and Mills 1990 provide the main acoustic description, and Hayssen and Noonan 2021 supports the broader developmental context. Dedicated acoustic measurements are sparse, so agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 agree that whines are mainly cub calls in suckling or food-frustration contexts, and Hayssen and Noonan 2021 supports early-life vocal communication. Evidence is observational but consistent.
+
+  - name: soft squeal
+    in_primary_inventory: true
+    alternative_names:
+      - reunion squeal
+      - soft whine
     scope: *all_life_both_scope
     acoustic_keywords:
       - high_frequency
       - tonal
       - long
-      - repetitive
+      - quiet
       - graded
-    acoustic_description: A drawn-out, high-pitched squeal or whine, often repeated rapidly. Softer versions lack the same staccato quality but share the high, squealing structure.
+    acoustic_description: A softer high-pitched squeal related to the whine but without the same rapid staccato or insistent quality. It is a close-range call with a smoother, quieter delivery than the whine.
     semantic_keywords:
-      - begging
-      - distress
-      - submission
-      - caregiving
       - affiliation
-    semantic_description: Used most prominently by cubs when following females before suckling or when frustrated around food, and softer versions can occur during reunion or contact with clan mates. The call family signals need, distress, or appeasing social contact.
+      - contact
+      - submission
+      - distress
+    semantic_description: Used by both cubs and adults when encountering a clan mate after a long separation. It signals close-range reunion or appeasing social contact rather than immediate attack or long-distance recruitment.
     acoustic_references:
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
     semantic_references:
       - id: kruuk_1972
         url: https://portals.iucn.org/library/node/18008
-      - id: animal_diversity_web
-        url: https://animaldiversity.org/accounts/Crocuta_crocuta/
+      - id: mills_1990
+        url: https://www.si.edu/object/siris_sil_397843
+    playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_explanation: Kruuk 1972 distinguishes whines and soft squeals, and Animal Diversity Web reports them in cub and reunion contexts. This file groups them because published quantitative boundaries are thin and the calls appear related.
+    call_type_existence_explanation: Kruuk 1972 lists soft squeal as a primary-inventory call and Mills 1990 retains the catalog. Agreement is medium because later work often discusses high-pitched cub or reunion calls without separating this call quantitatively from whines.
     acoustic_description_agreement: weak
-    acoustic_description_explanation: Acoustic detail comes mainly from qualitative repertoire descriptions, with little dedicated spectrographic work. The high, drawn-out structure is reliable, but fine boundaries are weakly supported.
+    acoustic_description_explanation: Acoustic support is mainly qualitative in Kruuk 1972 and Mills 1990. The distinction from whine is described, but there is little quantitative acoustic work.
     semantic_description_agreement: medium
-    semantic_description_explanation: Kruuk 1972 and Animal Diversity Web agree on suckling, frustration, and reunion contexts. Evidence is observational rather than experimental, so the label is medium.
+    semantic_description_explanation: Kruuk 1972 and Mills 1990 agree that soft squeals occur during reunion with a clan mate after separation. The context is consistent but based on observation rather than playback.
 
 references:
   kruuk_1972:
     citation: "Kruuk H. 1972. The Spotted Hyena: A Study of Predation and Social Behavior. Chicago: University of Chicago Press."
     url: https://portals.iucn.org/library/node/18008
+  mills_1990:
+    citation: "Mills MGL. 1990. Kalahari Hyaenas: Comparative Behavioural Ecology of Two Species. London: Unwin Hyman."
+    url: https://www.si.edu/object/siris_sil_397843
+  hayssen_noonan_2021:
+    citation: "Hayssen V, Noonan P. 2021. Crocuta crocuta (Carnivora: Hyaenidae). Mammalian Species 53(1000):1-22."
+    url: https://doi.org/10.1093/mspecies/seab002
+    doi: 10.1093/mspecies/seab002
   east_hofer_1991a:
-    citation: "East ML, Hofer H. 1991. Loud calling in a female-dominated mammalian society: I. Structure and composition of whooping bouts of spotted hyaenas, Crocuta crocuta. Animal Behaviour 42(4): 637-649."
+    citation: "East ML, Hofer H. 1991. Loud calling in a female-dominated mammalian society: I. Structure and composition of whooping bouts of spotted hyaenas, Crocuta crocuta. Animal Behaviour 42(4):637-649."
     url: https://doi.org/10.1016/S0003-3472(05)80246-5
     doi: 10.1016/S0003-3472(05)80246-5
   east_hofer_1991b:
-    citation: "East ML, Hofer H. 1991. Loud calling in a female-dominated mammalian society: II. Behavioural contexts and functions of whooping of spotted hyaenas, Crocuta crocuta. Animal Behaviour 42(4): 651-669."
+    citation: "East ML, Hofer H. 1991. Loud calling in a female-dominated mammalian society: II. Behavioural contexts and functions of whooping of spotted hyaenas, Crocuta crocuta. Animal Behaviour 42(4):651-669."
     url: https://doi.org/10.1016/S0003-3472(05)80247-7
     doi: 10.1016/S0003-3472(05)80247-7
+  east_etal_1993:
+    citation: "East ML, Hofer H, Wickler W. 1993. The erect 'penis' is a flag of submission in a female-dominated society: greetings in Serengeti spotted hyenas. Behavioral Ecology and Sociobiology 33:355-370."
+    url: https://doi.org/10.1007/BF00170251
+    doi: 10.1007/BF00170251
   theis_etal_2007:
-    citation: "Theis KR, Greene KM, Benson-Amram SR, Holekamp KE. 2007. Sources of variation in the long-distance vocalizations of spotted hyenas. Behaviour 144(5): 557-584."
+    citation: "Theis KR, Greene KM, Benson-Amram SR, Holekamp KE. 2007. Sources of variation in the long-distance vocalizations of spotted hyenas. Behaviour 144(5):557-584."
     url: https://doi.org/10.1163/156853907780713046
     doi: 10.1163/156853907780713046
   holekamp_etal_1999:
-    citation: "Holekamp KE, Boydston EE, Szykman M, Graham I, Nutt KJ, Birch S, Piskiel A, Singh M. 1999. Vocal recognition in the spotted hyaena and its possible implications regarding the evolution of intelligence. Animal Behaviour 58(2): 383-395."
+    citation: "Holekamp KE, Boydston EE, Szykman M, Graham I, Nutt KJ, Birch S, Piskiel A, Singh M. 1999. Vocal recognition in the spotted hyaena and its possible implications regarding the evolution of intelligence. Animal Behaviour 58(2):383-395."
     url: https://doi.org/10.1006/anbe.1999.1157
     doi: 10.1006/anbe.1999.1157
   benson_amram_etal_2011:
-    citation: "Benson-Amram S, Heinen VK, Dryer SL, Holekamp KE. 2011. Numerical assessment and individual call discrimination by wild spotted hyaenas, Crocuta crocuta. Animal Behaviour 82(4): 743-752."
+    citation: "Benson-Amram S, Heinen VK, Dryer SL, Holekamp KE. 2011. Numerical assessment and individual call discrimination by wild spotted hyaenas, Crocuta crocuta. Animal Behaviour 82(4):743-752."
     url: https://doi.org/10.1016/j.anbehav.2011.07.004
     doi: 10.1016/j.anbehav.2011.07.004
   mathevon_etal_2010:
-    citation: "Mathevon N, Koralek A, Weldele M, Glickman SE, Theunissen FE. 2010. What the hyena's laugh tells: sex, age, dominance and individual signature in the giggling call of Crocuta crocuta. BMC Ecology 10: 9."
+    citation: "Mathevon N, Koralek A, Weldele M, Glickman SE, Theunissen FE. 2010. What the hyena's laugh tells: sex, age, dominance and individual signature in the giggling call of Crocuta crocuta. BMC Ecology 10:9."
     url: https://doi.org/10.1186/1472-6785-10-9
     doi: 10.1186/1472-6785-10-9
+  theunissen_etal_2008:
+    citation: "Theunissen FE, Glickman SE, Page S. 2008. Vocalizations of the Spotted Hyena (Crocuta crocuta): Eliciting Acoustic Variation in Groans. Journal of the Acoustical Society of America 123(5_Supplement):3620."
+    url: https://doi.org/10.1121/1.2934834
+    doi: 10.1121/1.2934834
   lehmann_etal_2022:
-    citation: "Lehmann KDS, Jensen FH, Gersick AS, Strandburg-Peshkin A, Holekamp KE. 2022. Long-distance vocalizations of spotted hyenas contain individual, but not group, signatures. Proceedings of the Royal Society B 289: 20220548."
+    citation: "Lehmann KDS, Jensen FH, Gersick AS, Strandburg-Peshkin A, Holekamp KE. 2022. Long-distance vocalizations of spotted hyenas contain individual, but not group, signatures. Proceedings of the Royal Society B 289:20220548."
     url: https://doi.org/10.1098/rspb.2022.0548
     doi: 10.1098/rspb.2022.0548
-  animal_diversity_web:
-    citation: "Animal Diversity Web. Crocuta crocuta (spotted hyena): communication and perception account."
-    url: https://animaldiversity.org/accounts/Crocuta_crocuta/
