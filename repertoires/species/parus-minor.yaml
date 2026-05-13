@@ -8,8 +8,11 @@ taxonomy:
   family: Paridae
   genus: Parus
   species: minor
+primary_inventory:
+  rationale: No single published paper enumerates the Parus minor vocal repertoire as a whole. The literature on this species is dominated by Suzuki and colleagues' work on the alarm-call subsystem (jar calls, ABC notes, D notes, and ABC-D compositional sequences); reviews note that Japanese tits have "over 10 different notes" but no comprehensive inventory has been published. Broader repertoire knowledge is mostly extrapolated from the closely related great tit (Parus major), whose 40-note song-and-call system is documented separately. Every call in this file is therefore a literature-grounded addition rather than an inventory entry.
 calls:
   - name: jar call
+    in_primary_inventory: false
     alternative_names:
       - snake alarm call
       - jar alarm call
@@ -58,6 +61,7 @@ calls:
     semantic_description_explanation: Suzuki 2012 shows that jar-call playback elicits ground-directed predator searching, Suzuki 2014 links jar production to snake presentations, and Suzuki 2015 shows risk assessment from alarm calls by incubating females. These studies agree on a snake/predator-alert function.
 
   - name: ABC call
+    in_primary_inventory: false
     alternative_names:
       - chicka call
       - chicka alarm call
@@ -101,6 +105,7 @@ calls:
     semantic_description_explanation: Suzuki 2012 supports predator-search responses to chicka calls, Suzuki 2014 links chicka production to crow and marten presentations, and Suzuki, Wheatcroft, and Griesser 2016 shows that ABC notes elicit scanning for danger. Agreement is strong for a danger-scanning function.
 
   - name: D call
+    in_primary_inventory: false
     alternative_names:
       - D-note call
       - recruitment call
@@ -136,6 +141,7 @@ calls:
     semantic_description_explanation: Suzuki, Wheatcroft, and Griesser 2016 directly tests D-call playback and finds approach responses. The semantic evidence for recruitment/approach is experimentally strong, even if the call-type boundary is narrower than jar or chicka calls.
 
   - name: ABC-D sequence
+    in_primary_inventory: false
     alternative_names:
       - ABC-D call
       - compositional call sequence
