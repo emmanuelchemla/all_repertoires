@@ -1,0 +1,148 @@
+scientific_name: Papio ursinus
+common_name: Chacma Baboon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Papio
+  species: ursinus
+primary_inventory:
+  id: fischer_etal_2001
+  rationale: No single recent paper enumerates every chacma baboon call type as a full repertoire inventory. Fischer et al. 2001 is used as a spine for a central graded call class because it links acoustic structure and receiver responses in wild Papio cynocephalus ursinus, supplemented by studies of grunts and loud calls.
+calls:
+  - name: contact bark
+    alternative_names:
+      - clear bark
+    in_primary_inventory: true
+    scope: &adult_both
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, tonal, short, graded]
+    acoustic_description: Clear bark with more tonal harmonic structure than harsher alarm barks, grading through intermediate variants.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Produced when callers risk losing contact with the group or when mother and infant are separated.
+    acoustic_references:
+      - id: fischer_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1687
+    semantic_references:
+      - id: fischer_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1687
+    playback_references:
+      - id: fischer_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1687
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Fischer et al. 2001 distinguishes contact barks from alarm barks and tests receiver discrimination.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Acoustic grading from clear to harsh bark variants is the core topic of Fischer et al. 2001.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact and separation contexts are explicitly tied to clear barks and supported by playback discrimination.
+
+  - name: alarm bark
+    alternative_names:
+      - harsh bark
+    in_primary_inventory: true
+    scope: *adult_both
+    acoustic_keywords: [loud, noisy, broadband, short, graded]
+    acoustic_description: Harsher bark variant with noisier broadband structure than contact barks and intermediate forms between categories.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced in response to predators or other urgent threats and discriminated by receivers from contact barks.
+    acoustic_references:
+      - id: fischer_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1687
+    semantic_references:
+      - id: fischer_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1687
+    playback_references:
+      - id: fischer_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1687
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Alarm barks are a central category in Fischer et al. 2001 and are contrasted experimentally with contact barks.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The harsh noisy acoustic structure is explicitly described, though graded intermediates occur.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Predator and alarm contexts are supported by production context and playback responses.
+
+  - name: grunt
+    alternative_names:
+      - move grunt
+      - infant grunt
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, harmonic, short, graded]
+    acoustic_description: Tonal, harmonically rich low-frequency vocalization with variants that differ by context, sex, and caller state.
+    semantic_keywords: [affiliation, contact, group_coordination, caregiving]
+    semantic_description: Used in benign social approaches, infant-handling contexts, and group movement coordination; variants can predict caller behavior.
+    acoustic_references:
+      - id: rendall_etal_1999
+        url: https://doi.org/10.1006/anbe.1998.1031
+      - id: meise_etal_2011
+        url: https://doi.org/10.1121/1.3531944
+    semantic_references:
+      - id: rendall_etal_1999
+        url: https://doi.org/10.1006/anbe.1998.1031
+      - id: cheney_etal_2016
+        url: https://doi.org/10.1371/journal.pone.0163978
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Grunts are repeatedly studied in wild chacma baboons by Rendall et al. 1999, Meise et al. 2011, and Cheney et al. 2016.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Independent acoustic studies agree that grunts are harmonically rich low-frequency calls with contextual and sex-linked variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Movement, infant, and affiliative approach contexts are consistently documented across sources.
+
+  - name: wahoo
+    alternative_names:
+      - loud call
+      - male loud call
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, multi_component, low_frequency, frequency_modulated]
+    acoustic_description: Loud two-part call with a wa phase followed by a hoo phase, carrying over long distances and showing caller-related acoustic variation.
+    semantic_keywords: [display, spacing, threat, identity]
+    semantic_description: Produced by adult males in display, spacing, and competitive contexts where long-distance assessment is relevant.
+    acoustic_references:
+      - id: fischer_etal_2002
+        url: https://doi.org/10.1016/S0003-3472(02)00037-3
+    semantic_references:
+      - id: fischer_etal_2002
+        url: https://doi.org/10.1016/S0003-3472(02)00037-3
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Male baboon loud calls are a well-established call class and Fischer et al. 2002 analyzes their acoustic features in chacma baboons.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The two-part loud-call structure is consistently described in baboon literature.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Display and assessment roles are supported, but specific contexts vary with age, status, and social setting.
+references:
+  fischer_etal_2001:
+    citation: "Fischer, J., Hammerschmidt, K., Cheney, D. L., & Seyfarth, R. M. (2001). Baboon responses to graded bark variants. Animal Behaviour, 61, 925-931."
+    url: https://doi.org/10.1006/anbe.2000.1687
+    doi: 10.1006/anbe.2000.1687
+  rendall_etal_1999:
+    citation: "Rendall, D., Seyfarth, R. M., Cheney, D. L., & Owren, M. J. (1999). The meaning and function of grunt variants in baboons. Animal Behaviour, 57, 583-592."
+    url: https://doi.org/10.1006/anbe.1998.1031
+    doi: 10.1006/anbe.1998.1031
+  meise_etal_2011:
+    citation: "Meise, K., Keller, C., Cowlishaw, G., & Fischer, J. (2011). Sources of acoustic variation: implications for production specificity and call categorization in chacma baboon grunts. Journal of the Acoustical Society of America, 129, 1631-1641."
+    url: https://doi.org/10.1121/1.3531944
+    doi: 10.1121/1.3531944
+  cheney_etal_2016:
+    citation: "Cheney, D. L., Moscovice, L. R., Heesen, M., Mundry, R., & Seyfarth, R. M. (2016). Strategic use of affiliative vocalizations by wild female baboons. PLOS ONE, 11, e0163978."
+    url: https://doi.org/10.1371/journal.pone.0163978
+    doi: 10.1371/journal.pone.0163978
+  fischer_etal_2002:
+    citation: "Fischer, J., Hammerschmidt, K., Cheney, D. L., & Seyfarth, R. M. (2002). Acoustic features of male baboon loud calls: influences of context, age, and individuality. Journal of the Acoustical Society of America, 111, 1465-1474."
+    url: https://doi.org/10.1121/1.1433807
+    doi: 10.1121/1.1433807

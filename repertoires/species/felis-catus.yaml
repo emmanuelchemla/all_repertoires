@@ -1,0 +1,191 @@
+scientific_name: Felis catus
+common_name: Domestic Cat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Felidae
+  genus: Felis
+  species: catus
+primary_inventory:
+  id: moelk_1944
+  rationale: Moelk 1944 is used as the primary inventory because it is the classic systematic description of domestic cat vocal sounds and remains the basis for many later reviews and acoustic studies. Later work on meows, purrs, and human-directed communication is used for context and acoustic refinement.
+calls:
+  - name: meow
+    alternative_names:
+      - miaow
+      - mew
+    in_primary_inventory: true
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, short, graded]
+    acoustic_description: Tonal or mixed-voice call with variable pitch contour and duration, grading across mew, meow, and related vowel-like forms.
+    semantic_keywords: [attention, contact, caregiving, food]
+    semantic_description: Common in cat-human and mother-young interactions, often used to solicit attention, food, or care.
+    acoustic_references:
+      - id: moelk_1944
+        url: https://doi.org/10.2307/1416947
+      - id: nicastro_owren_2003
+        url: https://doi.org/10.1016/S0003-3472(03)00111-1
+    semantic_references:
+      - id: nicastro_owren_2003
+        url: https://doi.org/10.1016/S0003-3472(03)00111-1
+      - id: schotz_etal_2016
+        url: https://doi.org/10.21437/SpeechProsody.2016-37
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Meows are a core Moelk 1944 call type and receive focused acoustic and perception analysis in later studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on a variable tonal, contour-rich call, although subtypes grade continuously.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Human-directed attention and solicitation functions are consistently reported.
+
+  - name: purr
+    alternative_names:
+      - purring
+    in_primary_inventory: true
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, repetitive, pulsed, long, quiet]
+    acoustic_description: Low-frequency continuous pulsed vocalization with alternating egressive and ingressive phases.
+    semantic_keywords: [affiliation, caregiving, begging, contact]
+    semantic_description: Produced in affiliative contexts such as nursing, resting, and human interaction, and in solicitation contexts when food or attention is sought.
+    acoustic_references:
+      - id: moelk_1944
+        url: https://doi.org/10.2307/1416947
+      - id: mccomb_etal_2009
+        url: https://doi.org/10.1016/j.cub.2009.05.033
+    semantic_references:
+      - id: mccomb_etal_2009
+        url: https://doi.org/10.1016/j.cub.2009.05.033
+      - id: schotz_etal_2016
+        url: https://doi.org/10.21437/SpeechProsody.2016-37
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Purring is a classic Moelk 1944 category and has modern acoustic work on solicitation purrs.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Low-frequency pulsed structure is consistent across sources.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Affiliation and solicitation contexts are strongly supported, especially by McComb et al. 2009.
+
+  - name: growl
+    alternative_names:
+      - snarl
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, long, broadband, graded]
+    acoustic_description: Low harsh sustained vocalization with broadband noise and variable amplitude.
+    semantic_keywords: [threat, aggression]
+    semantic_description: Produced in agonistic contexts to warn or threaten conspecifics, humans, or other animals.
+    acoustic_references:
+      - id: moelk_1944
+        url: https://doi.org/10.2307/1416947
+      - id: schotz_etal_2016
+        url: https://doi.org/10.21437/SpeechProsody.2016-37
+    semantic_references:
+      - id: moelk_1944
+        url: https://doi.org/10.2307/1416947
+      - id: bradshaw_cameronbeaumont_2000
+        url: https://doi.org/10.1017/CBO9780511628856.005
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Growls are a standard domestic cat call type in Moelk 1944 and later cat communication reviews.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The harsh low-frequency structure is stable, but detailed acoustic measurement is less extensive than for meows and purrs.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Threat and aggression contexts are consistent across sources.
+
+  - name: hiss
+    alternative_names:
+      - spit
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, noisy, long, loud]
+    acoustic_description: Sustained broadband aperiodic noise generated by forced airflow, sometimes accompanied by a short explosive spit.
+    semantic_keywords: [threat, aggression, alarm]
+    semantic_description: Produced during defensive threat displays when a cat is frightened, cornered, or repelling approach.
+    acoustic_references:
+      - id: moelk_1944
+        url: https://doi.org/10.2307/1416947
+      - id: schotz_etal_2016
+        url: https://doi.org/10.21437/SpeechProsody.2016-37
+    semantic_references:
+      - id: moelk_1944
+        url: https://doi.org/10.2307/1416947
+      - id: bradshaw_cameronbeaumont_2000
+        url: https://doi.org/10.1017/CBO9780511628856.005
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Hisses and spits are classic defensive sounds in Moelk 1944 and later cat communication reviews.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Broadband noisy airflow structure is unambiguous and consistently described.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Defensive threat contexts are consistent across sources.
+
+  - name: trill
+    alternative_names:
+      - chirrup
+      - chirr
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, short, frequency_modulated, repetitive]
+    acoustic_description: Short voiced rolling or chirruping call with rapid modulation and tonal structure.
+    semantic_keywords: [affiliation, contact, attention]
+    semantic_description: Used during friendly approach, greeting, and attention-getting interactions with familiar humans or cats.
+    acoustic_references:
+      - id: moelk_1944
+        url: https://doi.org/10.2307/1416947
+      - id: schotz_etal_2016
+        url: https://doi.org/10.21437/SpeechProsody.2016-37
+    semantic_references:
+      - id: schotz_etal_2016
+        url: https://doi.org/10.21437/SpeechProsody.2016-37
+      - id: bradshaw_cameronbeaumont_2000
+        url: https://doi.org/10.1017/CBO9780511628856.005
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Trills and chirrups are included in Moelk 1944 and modern descriptions of domestic cat vocalization.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Tonal rolling structure is consistent, though detailed measurement is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Greeting and affiliation contexts are supported, but formal experimental evidence is limited.
+references:
+  moelk_1944:
+    citation: "Moelk, M. (1944). Vocalizing in the house-cat; a phonetic and functional study. The American Journal of Psychology, 57, 184-205."
+    url: https://doi.org/10.2307/1416947
+    doi: 10.2307/1416947
+  nicastro_owren_2003:
+    citation: "Nicastro, N., & Owren, M. J. (2003). Classification of domestic cat (Felis catus) vocalizations by naive and experienced human listeners. Journal of Comparative Psychology, 117, 44-52."
+    url: https://doi.org/10.1037/0735-7036.117.1.44
+    doi: 10.1037/0735-7036.117.1.44
+  schotz_etal_2016:
+    citation: "Schotz, S., van de Weijer, J., & Eklund, R. (2016). Phonetic characteristics of domestic cat vocalisations. Proceedings of Speech Prosody 2016, 387-391."
+    url: https://doi.org/10.21437/SpeechProsody.2016-37
+    doi: 10.21437/SpeechProsody.2016-37
+  mccomb_etal_2009:
+    citation: "McComb, K., Taylor, A. M., Wilson, C., & Charlton, B. D. (2009). The cry embedded within the purr. Current Biology, 19, R507-R508."
+    url: https://doi.org/10.1016/j.cub.2009.05.033
+    doi: 10.1016/j.cub.2009.05.033
+  bradshaw_cameronbeaumont_2000:
+    citation: "Bradshaw, J. W. S., & Cameron-Beaumont, C. (2000). The signalling repertoire of the domestic cat and its undomesticated relatives. In D. C. Turner & P. Bateson (Eds.), The Domestic Cat: The Biology of its Behaviour."
+    url: https://doi.org/10.1017/CBO9780511628856.005
+    doi: 10.1017/CBO9780511628856.005
