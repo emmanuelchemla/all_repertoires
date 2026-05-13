@@ -1,0 +1,137 @@
+scientific_name: Pongo pygmaeus
+common_name: Bornean Orangutan
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hominidae
+  genus: Pongo
+  species: pygmaeus
+primary_inventory:
+  id: hardus_etal_2009
+  rationale: Hardus et al. 2009 is used as the primary inventory because it reviews the orangutan vocal and sound repertoire across Bornean and Sumatran populations and explicitly discusses geographic variation. This file includes well-supported Bornean orangutan calls with broad evidence from that repertoire and focused acoustic or contextual studies.
+calls:
+  - name: long call
+    alternative_names:
+      - male long call
+      - long-distance call
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, multi_component, frequency_modulated]
+    acoustic_description: Long, loud, multi-component call series with low-frequency roaring or bubbling elements and variable frequency modulation.
+    semantic_keywords: [spacing, territorial, display, identity, mating]
+    semantic_description: Produced mainly by flanged adult males as a long-distance signal advertising identity, status, and location to females and rival males.
+    acoustic_references:
+      - id: hardus_etal_2009
+        url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+      - id: delgado_2006
+        url: https://doi.org/10.1002/ajp.20250
+    semantic_references:
+      - id: hardus_etal_2009
+        url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+      - id: delgado_2006
+        url: https://doi.org/10.1002/ajp.20250
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Long calls are a central orangutan call in Hardus et al. 2009 and are independently analyzed in population and ranging studies such as Delgado 2006.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources consistently describe long calls as loud multi-component low-frequency male calls, although fine structure varies among individuals and populations.
+    semantic_description_agreement: strong
+    semantic_description_explanation: The spacing, identity, and reproductive advertisement functions are consistently supported in the orangutan literature.
+
+  - name: kiss squeak
+    alternative_names:
+      - kiss-squeak
+      - kiss squeak with leaves
+    in_primary_inventory: true
+    scope: &all_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, noisy, high_frequency, loud]
+    acoustic_description: Short sharp noisy squeak or smack-like sound, sometimes modified by holding leaves or a hand near the mouth.
+    semantic_keywords: [alarm, threat, predator, display]
+    semantic_description: Produced in disturbance or alarm contexts, including encounters with predators, humans, or other threats; tool-assisted variants can exaggerate the signal.
+    acoustic_references:
+      - id: hardus_etal_2009
+        url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+      - id: hardus_etal_2009_tool
+        url: https://doi.org/10.1098/rspb.2009.1027
+    semantic_references:
+      - id: hardus_etal_2009
+        url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+      - id: hardus_etal_2009_tool
+        url: https://doi.org/10.1098/rspb.2009.1027
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Kiss squeaks are included in the repertoire review and receive focused treatment in studies of tool-assisted signal modification.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Both sources agree on a short sharp noisy structure, with leaf or hand use modifying amplitude and spectral output.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Alarm and disturbance contexts are consistently described, especially for predator or human-directed kiss squeaks.
+
+  - name: grumph
+    alternative_names:
+      - grumph call
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [low_frequency, noisy, short, quiet, graded]
+    acoustic_description: Low, rough, grunt-like call with short duration and variable amplitude, grading into other low-frequency close calls.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used as a close-range contact or movement-associated call in ordinary social and travel contexts.
+    acoustic_references:
+      - id: hardus_etal_2009
+        url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+    semantic_references:
+      - id: hardus_etal_2009
+        url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Hardus et al. 2009 lists grumphs as part of the orangutan repertoire, but the category has less focused acoustic literature than long calls or kiss squeaks.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description relies mainly on the repertoire account, so fine acoustic agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and coordination contexts are described in the inventory, but the category is broad and under-tested experimentally.
+
+  - name: raspberry
+    alternative_names:
+      - splutter
+      - splutter call
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [noisy, short, repetitive, pulsed, broadband]
+    acoustic_description: Short noisy labial or oral splutter made of rapid pulses, often with broadband energy and irregular temporal structure.
+    semantic_keywords: [food, affiliation, contact]
+    semantic_description: Commonly associated with feeding or relaxed close-range contexts and may accompany foraging activity.
+    acoustic_references:
+      - id: hardus_etal_2009
+        url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+    semantic_references:
+      - id: hardus_etal_2009
+        url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: The repertoire review recognizes raspberry-like sounds, but naming and subdivision differ across orangutan field sites.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Published acoustic quantification is sparse compared with long calls, so agreement is weak beyond the broad noisy pulsed form.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Feeding and relaxed close-range use is supported by the inventory, but functions are not as experimentally resolved as alarm kiss squeaks.
+references:
+  hardus_etal_2009:
+    citation: "Hardus, M. E., Lameira, A. R. E., Singleton, I., Morrogh-Bernard, H. C., Knott, C. D., Ancrenaz, M., Utami Atmoko, S. S., & Wich, S. A. (2009). A description of the orangutan's vocal and sound repertoire, with a focus on geographic variation. In Orangutans: Geographic Variation in Behavioral Ecology and Conservation. Oxford University Press."
+    url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+    doi: 10.1093/acprof:oso/9780199213276.003.0004
+  delgado_2006:
+    citation: "Delgado, R. A. (2006). Sexual selection in the loud calls of male primates: signal content and function. International Journal of Primatology, 27, 5-25."
+    url: https://doi.org/10.1007/s10764-005-9001-y
+    doi: 10.1007/s10764-005-9001-y
+  hardus_etal_2009_tool:
+    citation: "Hardus, M. E., Lameira, A. R. E., van Schaik, C. P., & Wich, S. A. (2009). Tool use in wild orang-utans modifies sound production: a functionally deceptive innovation? Proceedings of the Royal Society B, 276, 3689-3694."
+    url: https://doi.org/10.1098/rspb.2009.1027
+    doi: 10.1098/rspb.2009.1027
