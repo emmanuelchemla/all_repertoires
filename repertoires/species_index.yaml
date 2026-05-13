@@ -1,5 +1,7 @@
-# Species candidates for the repertoire database.
+# Core species candidates for the repertoire database.
 # Grouped by family. A species is "done" iff species/<kebab-name>.yaml exists.
+
+# Species were selected to prioritize taxa for which vocal repertoires are likely to support comparative analysis of call-type structure. We favored species with discrete, named, and literature-supported vocal or acoustic signal classes, especially where both acoustic form and behavioral context have been described from wild populations. To reduce redundancy, closely related species with similar expected repertoires were pruned unless they added clear comparative value, while taxa with strongly graded, weakly contextualized, or primarily individual-level acoustic variation were retained only when they represented especially important systems such as cetacean vocal culture. The resulting core set comprised 100 species across 47 families, including 28 primates, 28 birds, 12 rodents and bats, 10 terrestrial carnivores, 9 marine mammals, 9 frogs, and 4 elephants or ungulates.
 
 families:
 
@@ -9,9 +11,7 @@ families:
     - { scientific_name: Pan troglodytes, common_name: Chimpanzee }
     - { scientific_name: Pan paniscus, common_name: Bonobo }
     - { scientific_name: Gorilla gorilla, common_name: Western Gorilla }
-    - { scientific_name: Gorilla beringei, common_name: Eastern Gorilla }
     - { scientific_name: Pongo pygmaeus, common_name: Bornean Orangutan }
-    - { scientific_name: Pongo abelii, common_name: Sumatran Orangutan }
 
   Hylobatidae:
     - { scientific_name: Hylobates lar, common_name: White-handed Gibbon }
@@ -23,17 +23,11 @@ families:
     - { scientific_name: Cercopithecus diana, common_name: Diana Monkey }
     - { scientific_name: Cercopithecus campbelli, common_name: Campbell's Monkey }
     - { scientific_name: Cercopithecus nictitans, common_name: Putty-nosed Monkey }
-    - { scientific_name: Cercopithecus mitis, common_name: Blue Monkey }
     - { scientific_name: Macaca mulatta, common_name: Rhesus Macaque }
     - { scientific_name: Macaca fuscata, common_name: Japanese Macaque }
-    - { scientific_name: Macaca fascicularis, common_name: Long-tailed Macaque }
-    - { scientific_name: Macaca sylvanus, common_name: Barbary Macaque }
     - { scientific_name: Papio anubis, common_name: Olive Baboon }
-    - { scientific_name: Papio cynocephalus, common_name: Yellow Baboon }
-    - { scientific_name: Papio ursinus, common_name: Chacma Baboon }
-    - { scientific_name: Papio hamadryas, common_name: Hamadryas Baboon }
     - { scientific_name: Theropithecus gelada, common_name: Gelada }
-    - { scientific_name: Semnopithecus entellus, common_name: Gray Langur }
+    - { scientific_name: Colobus guereza, common_name: Mantled Guereza }
 
   Atelidae:
     - { scientific_name: Alouatta palliata, common_name: Mantled Howler Monkey }
@@ -48,25 +42,21 @@ families:
   Callitrichidae:
     - { scientific_name: Callithrix jacchus, common_name: Common Marmoset }
     - { scientific_name: Saguinus oedipus, common_name: Cotton-top Tamarin }
-    - { scientific_name: Cebuella pygmaea, common_name: Pygmy Marmoset }
+    - { scientific_name: Saguinus fuscicollis, common_name: Saddle-back Tamarin }
 
   Lemuridae:
     - { scientific_name: Lemur catta, common_name: Ring-tailed Lemur }
+    - { scientific_name: Varecia variegata, common_name: Black-and-white Ruffed Lemur }
 
   Indriidae:
     - { scientific_name: Indri indri, common_name: Indri }
-
-  Tarsiidae:
-    - { scientific_name: Tarsius tarsier, common_name: Spectral Tarsier }
 
   # ---- Cetaceans ----
 
   Delphinidae:
     - { scientific_name: Tursiops truncatus, common_name: Common Bottlenose Dolphin }
     - { scientific_name: Orcinus orca, common_name: Killer Whale }
-    - { scientific_name: Globicephala macrorhynchus, common_name: Short-finned Pilot Whale }
     - { scientific_name: Globicephala melas, common_name: Long-finned Pilot Whale }
-    - { scientific_name: Stenella longirostris, common_name: Spinner Dolphin }
 
   Monodontidae:
     - { scientific_name: Delphinapterus leucas, common_name: Beluga }
@@ -76,18 +66,15 @@ families:
 
   Balaenopteridae:
     - { scientific_name: Megaptera novaeangliae, common_name: Humpback Whale }
-    - { scientific_name: Balaenoptera musculus, common_name: Blue Whale }
 
   # ---- Pinnipeds ----
 
   Phocidae:
     - { scientific_name: Leptonychotes weddellii, common_name: Weddell Seal }
-    - { scientific_name: Erignathus barbatus, common_name: Bearded Seal }
     - { scientific_name: Mirounga angustirostris, common_name: Northern Elephant Seal }
-    - { scientific_name: Halichoerus grypus, common_name: Grey Seal }
 
   Otariidae:
-    - { scientific_name: Arctocephalus pusillus, common_name: Cape Fur Seal }
+    - { scientific_name: Zalophus californianus, common_name: California Sea Lion }
 
   # ---- Carnivores ----
 
@@ -95,10 +82,10 @@ families:
     - { scientific_name: Canis lupus, common_name: Gray Wolf }
     - { scientific_name: Canis familiaris, common_name: Domestic Dog }
     - { scientific_name: Lycaon pictus, common_name: African Wild Dog }
+    - { scientific_name: Canis latrans, common_name: Coyote }
 
   Felidae:
     - { scientific_name: Panthera leo, common_name: Lion }
-    - { scientific_name: Felis catus, common_name: Domestic Cat }
 
   Hyaenidae:
     - { scientific_name: Crocuta crocuta, common_name: Spotted Hyena }
@@ -107,6 +94,12 @@ families:
     - { scientific_name: Suricata suricatta, common_name: Meerkat }
     - { scientific_name: Mungos mungo, common_name: Banded Mongoose }
 
+  Mustelidae:
+    - { scientific_name: Aonyx cinereus, common_name: Asian Small-clawed Otter }
+
+  Ursidae:
+    - { scientific_name: Ailuropoda melanoleuca, common_name: Giant Panda }
+
   # ---- Rodents ----
 
   Sciuridae:
@@ -114,7 +107,6 @@ families:
     - { scientific_name: Urocitellus beldingi, common_name: Belding's Ground Squirrel }
     - { scientific_name: Otospermophilus beecheyi, common_name: California Ground Squirrel }
     - { scientific_name: Cynomys ludovicianus, common_name: Black-tailed Prairie Dog }
-    - { scientific_name: Cynomys gunnisoni, common_name: Gunnison's Prairie Dog }
 
   Muridae:
     - { scientific_name: Rattus norvegicus, common_name: Brown Rat }
@@ -128,6 +120,7 @@ families:
   Phyllostomidae:
     - { scientific_name: Phyllostomus hastatus, common_name: Greater Spear-nosed Bat }
     - { scientific_name: Phyllostomus discolor, common_name: Pale Spear-nosed Bat }
+    - { scientific_name: Desmodus rotundus, common_name: Common Vampire Bat }
 
   Emballonuridae:
     - { scientific_name: Saccopteryx bilineata, common_name: Greater Sac-winged Bat }
@@ -139,7 +132,6 @@ families:
 
   Elephantidae:
     - { scientific_name: Loxodonta africana, common_name: African Savanna Elephant }
-    - { scientific_name: Loxodonta cyclotis, common_name: African Forest Elephant }
     - { scientific_name: Elephas maximus, common_name: Asian Elephant }
 
   # ---- Ungulates ----
@@ -147,31 +139,29 @@ families:
   Equidae:
     - { scientific_name: Equus caballus, common_name: Domestic Horse }
 
+  Cervidae:
+    - { scientific_name: Cervus elaphus, common_name: Red Deer }
+
   # ---- Corvids ----
 
   Corvidae:
     - { scientific_name: Corvus corax, common_name: Common Raven }
     - { scientific_name: Corvus brachyrhynchos, common_name: American Crow }
-    - { scientific_name: Corvus corone, common_name: Carrion Crow }
-    - { scientific_name: Corvus moneduloides, common_name: New Caledonian Crow }
     - { scientific_name: Corvus monedula, common_name: Western Jackdaw }
     - { scientific_name: Pica pica, common_name: Eurasian Magpie }
-    - { scientific_name: Garrulus glandarius, common_name: Eurasian Jay }
     - { scientific_name: Aphelocoma coerulescens, common_name: Florida Scrub-Jay }
-    - { scientific_name: Aphelocoma wollweberi, common_name: Mexican Jay }
+    - { scientific_name: Cyanocitta cristata, common_name: Blue Jay }
 
   # ---- Songbirds ----
 
   Paridae:
     - { scientific_name: Poecile atricapillus, common_name: Black-capped Chickadee }
     - { scientific_name: Poecile carolinensis, common_name: Carolina Chickadee }
-    - { scientific_name: Baeolophus bicolor, common_name: Tufted Titmouse }
     - { scientific_name: Parus major, common_name: Great Tit }
     - { scientific_name: Parus minor, common_name: Japanese Tit }
 
   Estrildidae:
     - { scientific_name: Taeniopygia guttata, common_name: Zebra Finch }
-    - { scientific_name: Lonchura striata, common_name: Bengalese Finch }
 
   Fringillidae:
     - { scientific_name: Serinus canaria, common_name: Canary }
@@ -179,20 +169,20 @@ families:
   Passerellidae:
     - { scientific_name: Zonotrichia leucophrys, common_name: White-crowned Sparrow }
     - { scientific_name: Melospiza melodia, common_name: Song Sparrow }
-    - { scientific_name: Melospiza georgiana, common_name: Swamp Sparrow }
     - { scientific_name: Junco hyemalis, common_name: Dark-eyed Junco }
 
   Sturnidae:
     - { scientific_name: Sturnus vulgaris, common_name: European Starling }
 
-  Muscicapidae:
-    - { scientific_name: Luscinia megarhynchos, common_name: Common Nightingale }
-
-  Turdidae:
-    - { scientific_name: Turdus merula, common_name: Common Blackbird }
-
   Icteridae:
     - { scientific_name: Molothrus ater, common_name: Brown-headed Cowbird }
+    - { scientific_name: Agelaius phoeniceus, common_name: Red-winged Blackbird }
+
+  Mimidae:
+    - { scientific_name: Mimus polyglottos, common_name: Northern Mockingbird }
+
+  Maluridae:
+    - { scientific_name: Malurus cyaneus, common_name: Superb Fairywren }
 
   # ---- Parrots ----
 
@@ -200,16 +190,16 @@ families:
     - { scientific_name: Psittacus erithacus, common_name: Grey Parrot }
     - { scientific_name: Amazona auropalliata, common_name: Yellow-naped Amazon }
     - { scientific_name: Eupsittula canicularis, common_name: Orange-fronted Parakeet }
-    - { scientific_name: Myiopsitta monachus, common_name: Monk Parakeet }
+    - { scientific_name: Forpus passerinus, common_name: Green-rumped Parrotlet }
 
   Psittaculidae:
     - { scientific_name: Melopsittacus undulatus, common_name: Budgerigar }
+    - { scientific_name: Nymphicus hollandicus, common_name: Cockatiel }
 
   # ---- Fowl ----
 
   Phasianidae:
     - { scientific_name: Gallus gallus, common_name: Red Junglefowl }
-    - { scientific_name: Coturnix japonica, common_name: Japanese Quail }
 
   Anatidae:
     - { scientific_name: Anser anser, common_name: Greylag Goose }
@@ -219,5 +209,18 @@ families:
   Eleutherodactylidae:
     - { scientific_name: Eleutherodactylus coqui, common_name: Common Coqui }
 
+  Dendrobatidae:
+    - { scientific_name: Allobates femoralis, common_name: Brilliant-thighed Poison Frog }
+
   Hylidae:
     - { scientific_name: Hyla arborea, common_name: European Tree Frog }
+    - { scientific_name: Hyla cinerea, common_name: Green Treefrog }
+    - { scientific_name: Agalychnis spurrelli, common_name: Gliding Treefrog }
+    - { scientific_name: Boana ericae, common_name: Erica's Treefrog }
+
+  Ranidae:
+    - { scientific_name: Lithobates catesbeianus, common_name: American Bullfrog }
+    - { scientific_name: Pelophylax ridibundus, common_name: Marsh Frog }
+
+  Leptodactylidae:
+    - { scientific_name: Engystomops pustulosus, common_name: Tungara Frog }
