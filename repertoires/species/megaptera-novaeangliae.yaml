@@ -1,0 +1,139 @@
+scientific_name: Megaptera novaeangliae
+common_name: Humpback Whale
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Cetacea
+  family: Balaenopteridae
+  genus: Megaptera
+  species: novaeangliae
+primary_inventory:
+  id: dunlop_etal_2007
+  rationale: Dunlop et al. 2007 is used as the primary inventory because it classifies the social vocal repertoire of migrating humpback whales into named sound types and functional contexts. Song studies are added for the male song system, which is a major repertoire component but not reducible to one social-call class.
+calls:
+  - name: song unit
+    alternative_names:
+      - song phrase
+      - song theme
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: true
+      note: Song content changes over time and spreads culturally within and among populations, as described by Payne and McVay 1971 and Noad et al. 2000.
+    acoustic_keywords: [long, repetitive, multi_component, frequency_modulated, tonal]
+    acoustic_description: Hierarchically organized sequences of units, phrases, and themes, with tonal and frequency-modulated components repeated over long bouts.
+    semantic_keywords: [mating, courtship, display, identity]
+    semantic_description: Produced mainly by males on breeding grounds and migration routes as reproductive signaling whose structure changes culturally over time.
+    acoustic_references:
+      - id: payne_mcvay_1971
+        url: https://doi.org/10.1126/science.173.3997.585
+      - id: noad_etal_2000
+        url: https://doi.org/10.1038/35046199
+    semantic_references:
+      - id: herman_2017
+        url: https://doi.org/10.1111/brv.12309
+      - id: noad_etal_2000
+        url: https://doi.org/10.1038/35046199
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Humpback song is one of the best-established cetacean vocal systems, with classic hierarchical descriptions and cultural transmission evidence.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multiple sources agree on repeated hierarchical units and themes, although actual unit forms change through time.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Male reproductive signaling is supported by Herman 2017, and cultural song change is supported by Noad et al. 2000, but the exact receiver function of song remains debated.
+
+  - name: wop
+    alternative_names:
+      - whop
+    in_primary_inventory: true
+    scope: &all_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, tonal, repetitive]
+    acoustic_description: Short low-frequency tonal sound, often repeated in bouts and distinct from long song phrases.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Produced in social contexts during migration or group interactions and may help maintain contact among nearby whales.
+    acoustic_references:
+      - id: dunlop_etal_2007
+        url: https://doi.org/10.1121/1.2783115
+    semantic_references:
+      - id: dunlop_etal_2007
+        url: https://doi.org/10.1121/1.2783115
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Wops are a named sound type in the Dunlop et al. 2007 social repertoire.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Dunlop et al. 2007 gives acoustic classification, but independent detailed descriptions are limited compared with song.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social contact use is supported by production context, but specific receiver effects are less tested.
+
+  - name: grunt
+    alternative_names:
+      - groan
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [low_frequency, noisy, short, graded]
+    acoustic_description: Low-frequency rough sound with variable duration and spectral structure, often shorter than song phrases.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used during social interactions and group movement, with broad low-arousal contact functions.
+    acoustic_references:
+      - id: dunlop_etal_2007
+        url: https://doi.org/10.1121/1.2783115
+    semantic_references:
+      - id: dunlop_etal_2007
+        url: https://doi.org/10.1121/1.2783115
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Grunt-like sounds are included in the social repertoire, but low-frequency categories can be broad and graded.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The primary inventory supports the broad form; fine subdivision differs among studies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social context is supported, but specific function is broad.
+
+  - name: feeding call
+    alternative_names:
+      - feeding vocalization
+    in_primary_inventory: false
+    scope: *all_scope
+    acoustic_keywords: [long, low_frequency, frequency_modulated, loud]
+    acoustic_description: Long low-frequency call with repeated or modulated components used during coordinated feeding in some populations.
+    semantic_keywords: [food, recruitment, group_coordination]
+    semantic_description: Associated with cooperative feeding, especially in populations where calls are used to coordinate or initiate prey-herding behavior.
+    acoustic_references:
+      - id: cerchio_dahlheim_2001
+        url: https://doi.org/10.1080/09524622.2001.9753468
+    semantic_references:
+      - id: cerchio_dahlheim_2001
+        url: https://doi.org/10.1080/09524622.2001.9753468
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Feeding calls are well described in some humpback populations, but they are not universal across all populations.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The long low-frequency form is supported by focused feeding-call work, with population differences likely.
+    semantic_description_agreement: strong
+    semantic_description_explanation: The association with cooperative feeding is strong in Cerchio and Dahlheim 2001.
+references:
+  dunlop_etal_2007:
+    citation: "Dunlop, R. A., Cato, D. H., & Noad, M. J. (2007). The social vocalization repertoire of east Australian migrating humpback whales (Megaptera novaeangliae). Journal of the Acoustical Society of America, 122, 2893-2905."
+    url: https://doi.org/10.1121/1.2783115
+    doi: 10.1121/1.2783115
+  payne_mcvay_1971:
+    citation: "Payne, R. S., & McVay, S. (1971). Songs of humpback whales. Science, 173, 585-597."
+    url: https://doi.org/10.1126/science.173.3997.585
+    doi: 10.1126/science.173.3997.585
+  noad_etal_2000:
+    citation: "Noad, M. J., Cato, D. H., Bryden, M. M., Jenner, M. N., & Jenner, K. C. S. (2000). Cultural revolution in whale songs. Nature, 408, 537."
+    url: https://doi.org/10.1038/35046199
+    doi: 10.1038/35046199
+  herman_2017:
+    citation: "Herman, L. M. (2017). The multiple functions of male song within the humpback whale (Megaptera novaeangliae) mating system: review, evaluation, and synthesis. Biological Reviews, 92, 1795-1818."
+    url: https://doi.org/10.1111/brv.12309
+    doi: 10.1111/brv.12309
+  cerchio_dahlheim_2001:
+    citation: "Cerchio, S., & Dahlheim, M. (2001). Variation in feeding vocalizations of humpback whales Megaptera novaeangliae from southeast Alaska. Bioacoustics, 11, 277-295."
+    url: https://doi.org/10.1080/09524622.2001.9753468
+    doi: 10.1080/09524622.2001.9753468
