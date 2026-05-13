@@ -8,6 +8,6 @@ The repertoire database is organized as follows:
 - To add new species, prompt with something like:
 
 ```
-Invoke the species-repertoire skill to add 10 new species, using one subagent per species so they run in parallel.
+Invoke the species-repertoire skill to add 10 new species, one subagent per species, on a new branch with one commit per species and a single PR.
 ```
 

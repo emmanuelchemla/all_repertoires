@@ -1,11 +1,13 @@
 scientific_name: Poecile carolinensis
 common_name: Carolina chickadee
 taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
   class: Aves
   order: Passeriformes
   family: Paridae
   genus: Poecile
-  species: Poecile carolinensis
+  species: carolinensis
 primary_inventory:
   id: smith_1972
   rationale: Smith 1972 is the primary inventory spine because it is a species-specific field-and-sonagram monograph whose vocal-display chapter explicitly recognizes 20 Carolina chickadee vocal displays. This repertoire includes those 20 displays as in-primary-inventory calls. Later peer-reviewed papers are used to update acoustic and semantic evidence for the chick-a-dee complex, song, tseet, and gargle-aligned calls, but no outside-inventory calls are added.
@@ -22,11 +24,8 @@ calls:
       sexes:
         - female
         - male
-      geographic_scope: Species-wide, with detailed observations from Pennsylvania and the northeastern United States.
-      captive_wild: wild
-      seasonal_context: Year-round; especially conspicuous during territorial patrolling, disputes, breeding interactions, and mobbing contexts.
       population_specific: false
-      note:
+      note: ""
     acoustic_keywords:
       - multi_component
       - tonal
@@ -44,18 +43,18 @@ calls:
       - alarm
     semantic_description: Used in mild threat, patrolling, territorial disputes, close pair or flock encounters, predator-directed mobbing, precopulatory approaches, and adult responses to persistent fledgling begging. Smith interpreted the display as attack readiness inhibited by competing tendencies, often functioning as alerting or mild threat.
     acoustic_references:
-      - smith_1972
-      - hailman_1989
+      - id: smith_1972
+      - id: hailman_1989
     semantic_references:
-      - smith_1972
-      - hailman_1989
+      - id: smith_1972
+      - id: hailman_1989
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Smith treats T-slink as one of the 20 primary vocal displays, and Hailman later recognized Smith's T-slink/gargle-aligned material in the parid comparative framework. The label is not widely retained in recent experimental work, so agreement is medium rather than strong.
-    acoustic_form_agreement: medium
-    acoustic_form_agreement_explanation: The acoustic form is documented with Smith's sonagrams and linked by Hailman to the broader parid gargle complex, but most detail comes from the primary inventory.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: Contextual associations are rich in Smith's field observations, but the inferred motivational message has little independent experimental confirmation.
+    call_type_existence_explanation: Smith treats T-slink as one of the 20 primary vocal displays, and Hailman later recognized Smith's T-slink/gargle-aligned material in the parid comparative framework. The label is not widely retained in recent experimental work, so agreement is medium rather than strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The acoustic form is documented with Smith's sonagrams and linked by Hailman to the broader parid gargle complex, but most detail comes from the primary inventory.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Contextual associations are rich in Smith's field observations, but the inferred motivational message has little independent experimental confirmation.
 
   - name: Click-rasp
     alternative_names:
@@ -82,20 +81,20 @@ calls:
       - display
     semantic_description: Given mainly in patrol, disputes, and close confrontations with other chickadees. Smith interpreted it as more strongly attack-biased than T-slink, while Hailman's comparative treatment places it with agonistic parid gargle displays.
     acoustic_references:
-      - smith_1972
-      - hailman_1989
-      - henry_lucas_2010
+      - id: smith_1972
+      - id: hailman_1989
+      - id: henry_lucas_2010
     semantic_references:
-      - smith_1972
-      - hailman_1989
-      - henry_lucas_2010
+      - id: smith_1972
+      - id: hailman_1989
+      - id: henry_lucas_2010
     playback_references: []
     call_type_existence_agreement: strong
-    call_type_existence_agreement_explanation: Smith listed Click-rasp as a primary display, Hailman independently aligned the same Smith material with the parid gargle complex, and later Carolina chickadee summaries retain gargle as a major call category.
-    acoustic_form_agreement: medium
-    acoustic_form_agreement_explanation: The rasp-bearing form is consistently distinguished from tonal calls, but detailed Carolina-specific structure is still anchored mainly in Smith's sonagrams.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: Multiple sources agree on an agonistic role for gargle-like calls, though fine-grained motivational interpretations remain based mostly on Smith's observational analysis.
+    call_type_existence_explanation: Smith listed Click-rasp as a primary display, Hailman independently aligned the same Smith material with the parid gargle complex, and later Carolina chickadee summaries retain gargle as a major call category.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The rasp-bearing form is consistently distinguished from tonal calls, but detailed Carolina-specific structure is still anchored mainly in Smith's sonagrams.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Multiple sources agree on an agonistic role for gargle-like calls, though fine-grained motivational interpretations remain based mostly on Smith's observational analysis.
 
   - name: Chip
     alternative_names:
@@ -118,16 +117,16 @@ calls:
       - predator
     semantic_description: Heard in interflock disputes, patrolling toward dispute sites, dominant male patrols, male or pair disputes, and predator mobbing. Smith interpreted Chip as a strong threat signal reflecting conflict between attack and escape tendencies.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Smith clearly lists and illustrates Chip as a primary display, but later Carolina chickadee papers usually subsume related material into broader chick-a-dee or alarm categories.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: The call is described in detail by Smith, yet independent acoustic treatments using the same Chip label are sparse.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: Threat and mobbing contexts are consistent within Smith's observations, but there is little direct playback or independent semantic testing of this call as a separate type.
+    call_type_existence_explanation: Smith clearly lists and illustrates Chip as a primary display, but later Carolina chickadee papers usually subsume related material into broader chick-a-dee or alarm categories.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The call is described in detail by Smith, yet independent acoustic treatments using the same Chip label are sparse.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Threat and mobbing contexts are consistent within Smith's observations, but there is little direct playback or independent semantic testing of this call as a separate type.
 
   - name: Song
     alternative_names:
@@ -140,11 +139,8 @@ calls:
         - adult
       sexes:
         - male
-      geographic_scope: Species-wide, with detailed observations from Pennsylvania and the northeastern United States.
-      captive_wild: wild
-      seasonal_context: Mainly breeding season, dawn song, territorial patrol, and countersinging.
       population_specific: false
-      note:
+      note: ""
     acoustic_keywords:
       - tonal
       - high_frequency
@@ -158,22 +154,22 @@ calls:
       - courtship
       - display
       - identity
-    semantic_description: Produced chiefly by males during spring patrolling, dawn singing, and countersinging, and near nesting contexts. Smith interpreted song as readiness for agonistic and pair-bond-limited behavior, and later sources emphasize its territorial and breeding-season display role.
+    semantic_description: Produced chiefly by males during spring patrolling, dawn singing, countersinging, and nesting contexts. Smith interpreted song as readiness for agonistic and pair-bond-limited behavior, and later sources emphasize its territorial and breeding-season display role.
     acoustic_references:
-      - smith_1972
-      - lucas_etal_1999
-      - henry_lucas_2010
+      - id: smith_1972
+      - id: lucas_etal_1999
+      - id: henry_lucas_2010
     semantic_references:
-      - smith_1972
-      - lucas_etal_1999
-      - henry_lucas_2010
+      - id: smith_1972
+      - id: lucas_etal_1999
+      - id: henry_lucas_2010
     playback_references: []
     call_type_existence_agreement: strong
-    call_type_existence_agreement_explanation: Song is a primary Smith display and is repeatedly retained as a major Carolina chickadee vocal category in later acoustic and behavioral papers.
-    acoustic_form_agreement: strong
-    acoustic_form_agreement_explanation: Sources agree that the song is a clear, tonal, alternating high-low whistle, despite natural variation in note number and phrase pattern.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: Territorial and breeding associations are well supported, while Smith's finer motivational interpretation is less directly tested.
+    call_type_existence_explanation: Song is a primary Smith display and is repeatedly retained as a major Carolina chickadee vocal category in later acoustic and behavioral papers.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree that the song is a clear, tonal, alternating high-low whistle, despite natural variation in note number and phrase pattern.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Territorial and breeding associations are well supported, while Smith's finer motivational interpretation is less directly tested.
 
   - name: Song Variant
     alternative_names:
@@ -195,33 +191,30 @@ calls:
       - display
     semantic_description: Used in the same broad patrolling and countersinging settings as Song, but Smith interpreted Song Variant as song motivation partly thwarted by lack of normal opportunity or social conditions.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Song Variant is explicitly one of Smith's 20 displays, but later sources generally discuss song variation without preserving this separate inventory category.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: The form is described by Smith, but independent acoustic studies do not consistently separate these variants as a distinct call type.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: The semantic interpretation depends almost entirely on Smith's contextual and motivational analysis.
+    call_type_existence_explanation: Song Variant is explicitly one of Smith's 20 displays, but later sources generally discuss song variation without preserving this separate inventory category.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The form is described by Smith, but independent acoustic studies do not consistently separate these variants as a distinct call type.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The semantic interpretation depends almost entirely on Smith's contextual and motivational analysis.
 
   - name: Faint Song
     alternative_names:
       - Quiet song
       - Faint fee-bee song
     in_primary_inventory: true
-    scope:
+    scope: &adult_all_scope
       life_stages:
         - adult
       sexes:
         - female
         - male
-      geographic_scope: Species-wide, with detailed observations from Pennsylvania and the northeastern United States.
-      captive_wild: wild
-      seasonal_context: Breeding and family contexts, especially around mates, nests, and young.
       population_specific: false
-      note:
+      note: ""
     acoustic_keywords:
       - quiet
       - tonal
@@ -236,33 +229,23 @@ calls:
       - courtship
     semantic_description: Given mainly by birds moving near mates, nests, or young, including male approaches to females and family-group situations. Smith interpreted it as readiness for association and other pair-bond-limited behavior.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Faint Song is a primary Smith display, but later work usually groups quiet song-like sounds with song variation rather than maintaining this label.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: Smith supplies the diagnostic amplitude and structure distinctions, with little independent treatment of this display as a separate acoustic type.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: The association and pair-bond interpretation is plausible from Smith's contexts but not independently tested.
+    call_type_existence_explanation: Faint Song is a primary Smith display, but later work usually groups quiet song-like sounds with song variation rather than maintaining this label.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Smith supplies the diagnostic amplitude and structure distinctions, with little independent treatment of this display as a separate acoustic type.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The association and pair-bond interpretation is plausible from Smith's contexts but not independently tested.
 
   - name: Faint Song Variant
     alternative_names:
       - Quiet variant song
       - Faint variant song
     in_primary_inventory: true
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - female
-        - male
-      geographic_scope: Species-wide, with detailed observations from Pennsylvania and the northeastern United States.
-      captive_wild: wild
-      seasonal_context: Breeding and family contexts, especially around mates, nests, and young.
-      population_specific: false
-      note:
+    scope: *adult_all_scope
     acoustic_keywords:
       - quiet
       - tonal
@@ -277,16 +260,16 @@ calls:
       - courtship
     semantic_description: Occurs in association-oriented breeding and family situations. Smith interpreted it as Faint Song motivation modified or thwarted by immediate social conditions.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: It is included in Smith's primary inventory, but there is little independent literature retaining Faint Song Variant as a named category.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: Acoustic separation from Faint Song rests on Smith's descriptions of irregular phrase organization.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: The proposed function is inferred from Smith's limited contextual observations and has not been experimentally tested.
+    call_type_existence_explanation: It is included in Smith's primary inventory, but there is little independent literature retaining Faint Song Variant as a named category.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic separation from Faint Song rests on Smith's descriptions of irregular phrase organization.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The proposed function is inferred from Smith's limited contextual observations and has not been experimentally tested.
 
   - name: Variable See
     alternative_names:
@@ -309,16 +292,16 @@ calls:
       - caregiving
     semantic_description: Occurs in breeding-related interactions, including males near nesting females, dawn calling, copulation approaches, aggressive encounters, and patrol. Smith interpreted it as conflict among agonistic, escape, and pair-bond-limited tendencies.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Variable See is a Smith primary display, but later work rarely preserves it as a separate named call rather than discussing high see-like notes more broadly.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: Smith gives detailed sonagraphic description, but independent acoustic confirmation of this exact category is limited.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: The semantic account depends on Smith's contextual interpretation, without playback tests of Variable See as a distinct signal.
+    call_type_existence_explanation: Variable See is a Smith primary display, but later work rarely preserves it as a separate named call rather than discussing high see-like notes more broadly.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Smith gives detailed sonagraphic description, but independent acoustic confirmation of this exact category is limited.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The semantic account depends on Smith's contextual interpretation, without playback tests of Variable See as a distinct signal.
 
   - name: Broken Dee
     alternative_names:
@@ -332,11 +315,8 @@ calls:
       sexes:
         - female
         - unknown
-      geographic_scope: Species-wide, with detailed observations from Pennsylvania and the northeastern United States.
-      captive_wild: wild
-      seasonal_context: Breeding season, nestling, fledgling, female begging, and family-care contexts.
       population_specific: false
-      note:
+      note: ""
     acoustic_keywords:
       - tonal
       - harmonic
@@ -353,16 +333,16 @@ calls:
       - mating
     semantic_description: Produced by nestlings, fledglings, and adult females begging from mates; also heard during adult feeding approaches to young. Smith interpreted it as readiness for bond-limited behavior, especially feeding, guarding, or copulation-related interactions.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Broken Dee is one of Smith's primary displays, and begging/dee-like calls are behaviorally plausible in parids, but later Carolina chickadee work rarely treats this exact label independently.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: Acoustic differentiation from Dee is well described by Smith but not independently quantified in the later note-type literature.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: Begging and provisioning contexts are direct and repeated in Smith's observations, though no playback tests establish receiver interpretation.
+    call_type_existence_explanation: Broken Dee is one of Smith's primary displays, and begging/dee-like calls are behaviorally plausible in parids, but later Carolina chickadee work rarely treats this exact label independently.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic differentiation from Dee is well described by Smith but not independently quantified in the later note-type literature.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Begging and provisioning contexts are direct and repeated in Smith's observations, though no playback tests establish receiver interpretation.
 
   - name: Lisping Tee
     alternative_names:
@@ -384,16 +364,16 @@ calls:
       - caregiving
     semantic_description: Used when birds associate closely, fly between mates or flock members, approach nests, and coordinate family movements. Smith interpreted it as balancing association with locomotory activity.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Lisping Tee is clearly included in Smith's primary inventory, but later literature does not commonly use the same named category.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: Acoustic detail comes almost entirely from Smith's sonagrams and field descriptions.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: Association and movement-coordination functions are inferred from Smith's contexts and lack independent experimental tests.
+    call_type_existence_explanation: Lisping Tee is clearly included in Smith's primary inventory, but later literature does not commonly use the same named category.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail comes almost entirely from Smith's sonagrams and field descriptions.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Association and movement-coordination functions are inferred from Smith's contexts and lack independent experimental tests.
 
   - name: Soft Dee
     alternative_names:
@@ -414,16 +394,16 @@ calls:
       - group_coordination
     semantic_description: Heard infrequently during close association, feeding-station encounters, and spring interactions near nests or females. Smith suggested an association-oriented function but treated the interpretation as tentative.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Soft Dee is a primary Smith display, but sparse later use of the label limits independent support.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: The quiet dee-like form is described in Smith, with no later Carolina chickadee quantification as a distinct note class.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: Smith explicitly treated the function as tentative, and subsequent experimental evidence is lacking.
+    call_type_existence_explanation: Soft Dee is a primary Smith display, but sparse later use of the label limits independent support.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The quiet dee-like form is described in Smith, with no later Carolina chickadee quantification as a distinct note class.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Smith explicitly treated the function as tentative, and subsequent experimental evidence is lacking.
 
   - name: High See
     alternative_names:
@@ -447,21 +427,21 @@ calls:
       - threat
     semantic_description: Associated with perched vigilance, observer or predator presence, hawks overhead, mobbing, feeding-station alertness, and disputes. Smith interpreted High See as an escape-biased alarm or attention signal, while later predator-context studies show high-frequency introductory note changes in chick-a-dee calls.
     acoustic_references:
-      - smith_1972
-      - bloomfield_etal_2005
-      - freeberg_2008
-      - soard_ritchison_2009
+      - id: smith_1972
+      - id: bloomfield_etal_2005
+      - id: freeberg_2008
+      - id: soard_ritchison_2009
     semantic_references:
-      - smith_1972
-      - freeberg_2008
-      - soard_ritchison_2009
+      - id: smith_1972
+      - id: freeberg_2008
+      - id: soard_ritchison_2009
     playback_references: []
     call_type_existence_agreement: strong
-    call_type_existence_agreement_explanation: Smith lists High See as a primary display, and later chick-a-dee note-type studies independently support a high-frequency introductory note category with predator-related variation.
-    acoustic_form_agreement: medium
-    acoustic_form_agreement_explanation: Sources agree on a high-frequency tonal introductory form, though the exact boundary between Smith's High See and modern A-note classes is not perfectly one-to-one.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: Alarm and predator associations recur across observational and experimental-context studies, but receiver tests usually address whole chick-a-dee calls rather than isolated High See notes.
+    call_type_existence_explanation: Smith lists High See as a primary display, and later chick-a-dee note-type studies independently support a high-frequency introductory note category with predator-related variation.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on a high-frequency tonal introductory form, though the exact boundary between Smith's High See and modern A-note classes is not perfectly one-to-one.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and predator associations recur across observational and experimental-context studies, but receiver tests usually address whole chick-a-dee calls rather than isolated High See notes.
 
   - name: High Tee
     alternative_names:
@@ -476,7 +456,6 @@ calls:
       - frequency_modulated
       - short
       - repetitive
-      - combinatorial
     acoustic_description: A short, clear high chevron note that can occur alone or as an introductory element in chick-a-dee sequences. Smith described intergradation with High See and Loud Tee; later note-type studies place comparable introductory notes in the combinatorial A/B/C/D chick-a-dee system.
     semantic_keywords:
       - alarm
@@ -486,23 +465,23 @@ calls:
       - combinatorial
     semantic_description: Given during flight, alighting, perch changes, feeding-station activity, and tense social or predator-related situations. In modern chick-a-dee research, introductory high notes help modulate call meaning in predator and social contexts.
     acoustic_references:
-      - smith_1972
-      - bloomfield_etal_2005
-      - freeberg_2008
-      - soard_ritchison_2009
+      - id: smith_1972
+      - id: bloomfield_etal_2005
+      - id: freeberg_2008
+      - id: soard_ritchison_2009
     semantic_references:
-      - smith_1972
-      - freeberg_2008
-      - soard_ritchison_2009
+      - id: smith_1972
+      - id: freeberg_2008
+      - id: soard_ritchison_2009
     playback_references:
-      - freeberg_lucas_2002
-      - soard_ritchison_2009
+      - id: freeberg_lucas_2002
+      - id: soard_ritchison_2009
     call_type_existence_agreement: strong
-    call_type_existence_agreement_explanation: Smith includes High Tee in the primary inventory, and later studies independently identify high introductory note types within Carolina chickadee chick-a-dee calls.
-    acoustic_form_agreement: medium
-    acoustic_form_agreement_explanation: The high, short, introductory form is consistent, but mapping Smith's High Tee to modern note labels is approximate because later studies classify note positions rather than Smith display names.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: Alarm and attention roles are supported by context and playback studies of whole chick-a-dee calls, while isolated High Tee meaning remains less directly tested.
+    call_type_existence_explanation: Smith includes High Tee in the primary inventory, and later studies independently identify high introductory note types within Carolina chickadee chick-a-dee calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The high, short, introductory form is consistent, but mapping Smith's High Tee to modern note labels is approximate because later studies classify note positions rather than Smith display names.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and attention roles are supported by context and playback studies of whole chick-a-dee calls, while isolated High Tee meaning remains less directly tested.
 
   - name: Chick
     alternative_names:
@@ -516,7 +495,7 @@ calls:
       - harmonic
       - frequency_modulated
       - short
-      - combinatorial
+      - multi_component
       - graded
     acoustic_description: A narrow chevron-shaped note with a pointed peak and multiple resonance harmonics, commonly occurring after High Tee-like notes and before Dee notes in chick-a-dee sequences. Smith described a mushy quality and intergradation with neighboring chick-a-dee elements.
     semantic_keywords:
@@ -527,23 +506,23 @@ calls:
       - combinatorial
     semantic_description: Used in chick-a-dee combinations during movement, feeding, disputes, and tense or retreating situations. Smith interpreted it as intermediate between High Tee and Dee; later work shows that chick-a-dee note composition carries information about social and predator contexts.
     acoustic_references:
-      - smith_1972
-      - bloomfield_etal_2005
-      - freeberg_2008
-      - soard_ritchison_2009
+      - id: smith_1972
+      - id: bloomfield_etal_2005
+      - id: freeberg_2008
+      - id: soard_ritchison_2009
     semantic_references:
-      - smith_1972
-      - freeberg_2008
-      - soard_ritchison_2009
+      - id: smith_1972
+      - id: freeberg_2008
+      - id: soard_ritchison_2009
     playback_references:
-      - freeberg_lucas_2002
-      - soard_ritchison_2009
+      - id: freeberg_lucas_2002
+      - id: soard_ritchison_2009
     call_type_existence_agreement: strong
-    call_type_existence_agreement_explanation: Smith includes Chick as a primary display, and later work independently confirms chick-like note classes in the Carolina chickadee chick-a-dee call.
-    acoustic_form_agreement: strong
-    acoustic_form_agreement_explanation: Smith's chick element and later A/B/C/D note classifications consistently identify a distinct middle element in chick-a-dee sequences, even though exact label boundaries differ.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: Semantic evidence is strong for chick-a-dee sequences as a whole, but weaker for the isolated Chick element by itself.
+    call_type_existence_explanation: Smith includes Chick as a primary display, and later work independently confirms chick-like note classes in the Carolina chickadee chick-a-dee call.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Smith's chick element and later A/B/C/D note classifications consistently identify a distinct middle element in chick-a-dee sequences, even though exact label boundaries differ.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Semantic evidence is strong for chick-a-dee sequences as a whole, but weaker for the isolated Chick element by itself.
 
   - name: Dee
     alternative_names:
@@ -558,7 +537,6 @@ calls:
       - tonal
       - repetitive
       - multi_component
-      - combinatorial
       - graded
     acoustic_description: A series of broad, relatively flat chevron notes with stacked harmonics, commonly forming the terminal dee portion of chick-a-dee calls. Smith described series of several Dee notes and many prefixes by High See, High Tee, Chick, or combinations; later studies quantify the A/B/C/D syntax of these calls.
     semantic_keywords:
@@ -571,27 +549,27 @@ calls:
       - combinatorial
     semantic_description: Used in feeding, flock coordination, disputes, predator contexts, and other tense associations. Playback and context studies show that chick-a-dee note composition affects receiver behavior, predator-threat coding, and food recruitment, making the Dee-bearing call complex a major combinatorial signal.
     acoustic_references:
-      - smith_1972
-      - bloomfield_etal_2005
-      - freeberg_2008
-      - lucas_etal_1999
-      - henry_lucas_2010
+      - id: smith_1972
+      - id: bloomfield_etal_2005
+      - id: freeberg_2008
+      - id: lucas_etal_1999
+      - id: henry_lucas_2010
     semantic_references:
-      - smith_1972
-      - freeberg_lucas_2002
-      - freeberg_2008
-      - mahurin_freeberg_2009
-      - soard_ritchison_2009
+      - id: smith_1972
+      - id: freeberg_lucas_2002
+      - id: freeberg_2008
+      - id: mahurin_freeberg_2009
+      - id: soard_ritchison_2009
     playback_references:
-      - freeberg_lucas_2002
-      - mahurin_freeberg_2009
-      - soard_ritchison_2009
+      - id: freeberg_lucas_2002
+      - id: mahurin_freeberg_2009
+      - id: soard_ritchison_2009
     call_type_existence_agreement: strong
-    call_type_existence_agreement_explanation: Smith lists Dee as a primary display, and later Carolina chickadee research repeatedly treats the chick-a-dee call and its D-note/dee component as a central, experimentally supported call complex.
-    acoustic_form_agreement: strong
-    acoustic_form_agreement_explanation: Multiple acoustic studies agree that chick-a-dee calls contain ordered note types with a repeated dee/D-note terminal component, despite graded variation.
-    semantic_function_agreement: strong
-    semantic_function_agreement_explanation: Receiver playback, predator-context, food-recruitment, and observational studies all support contact, recruitment, and alarm-related functions for Dee-bearing chick-a-dee calls.
+    call_type_existence_explanation: Smith lists Dee as a primary display, and later Carolina chickadee research repeatedly treats the chick-a-dee call and its D-note/dee component as a central, experimentally supported call complex.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multiple acoustic studies agree that chick-a-dee calls contain ordered note types with a repeated dee/D-note terminal component, despite graded variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Receiver playback, predator-context, food-recruitment, and observational studies all support contact, recruitment, and alarm-related functions for Dee-bearing chick-a-dee calls.
 
   - name: Loud Tee
     alternative_names:
@@ -614,16 +592,16 @@ calls:
       - threat
     semantic_description: Used across foraging, feeder visits, patrolling, nest guarding, hawk encounters, and disputes, but less often in direct face-to-face standoffs. Smith interpreted it as a sudden or high-level escape-biased warning signal.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Loud Tee is included in Smith's primary inventory, but later Carolina chickadee papers do not commonly retain this exact display label.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: Smith provides the main acoustic evidence; later work on high introductory notes does not clearly isolate Loud Tee.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: Warning and alarm functions are inferred from Smith's contexts and lack direct playback tests for this isolated call.
+    call_type_existence_explanation: Loud Tee is included in Smith's primary inventory, but later Carolina chickadee papers do not commonly retain this exact display label.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Smith provides the main acoustic evidence; later work on high introductory notes does not clearly isolate Loud Tee.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Warning and alarm functions are inferred from Smith's contexts and lack direct playback tests for this isolated call.
 
   - name: Tseet
     alternative_names:
@@ -646,18 +624,18 @@ calls:
       - alarm
     semantic_description: Common in feeding, foraging, patrolling interruptions, nest trips, close approaches, and novel or mildly disturbing situations. Smith interpreted it as a weak escape-biased signal, while later summaries treat it as a common contact or coordination call.
     acoustic_references:
-      - smith_1972
-      - lucas_etal_1999
+      - id: smith_1972
+      - id: lucas_etal_1999
     semantic_references:
-      - smith_1972
-      - lucas_etal_1999
+      - id: smith_1972
+      - id: lucas_etal_1999
     playback_references: []
     call_type_existence_agreement: strong
-    call_type_existence_agreement_explanation: Tseet is a Smith primary display and later Carolina chickadee work independently treats tseet as a common vocalization.
-    acoustic_form_agreement: medium
-    acoustic_form_agreement_explanation: Sources agree on a brief high-frequency tonal call, but later publications provide less detailed structural treatment than Smith.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: Contact and mild-alert contexts are consistent across sources, though receiver meaning has not been tested as extensively as chick-a-dee calls.
+    call_type_existence_explanation: Tseet is a Smith primary display and later Carolina chickadee work independently treats tseet as a common vocalization.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on a brief high-frequency tonal call, but later publications provide less detailed structural treatment than Smith.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and mild-alert contexts are consistent across sources, though receiver meaning has not been tested as extensively as chick-a-dee calls.
 
   - name: Squeal
     alternative_names:
@@ -672,11 +650,8 @@ calls:
         - female
         - male
         - unknown
-      geographic_scope: Species-wide, with detailed observations from Pennsylvania and the northeastern United States.
-      captive_wild: both
-      seasonal_context: Handling, trapping, and other acute restraint or distress contexts.
       population_specific: false
-      note:
+      note: ""
     acoustic_keywords:
       - loud
       - high_frequency
@@ -691,16 +666,16 @@ calls:
       - attention
     semantic_description: Heard from birds restrained in mist nets, traps, or the hand. Smith interpreted Squeal as thwarted escape and noted that it can attract attention from nearby chickadees and other species.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Squeal is a primary Smith display and fits widespread avian distress-call contexts, but later Carolina chickadee papers rarely treat it as a separate experimental category.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: Acoustic detail is mainly Smith's, and the call grades into Scream.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: The handling and restraint context strongly supports distress or thwarted escape, though receiver response has not been tested with playback.
+    call_type_existence_explanation: Squeal is a primary Smith display and fits widespread avian distress-call contexts, but later Carolina chickadee papers rarely treat it as a separate experimental category.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is mainly Smith's, and the call grades into Scream.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The handling and restraint context strongly supports distress or thwarted escape, though receiver response has not been tested with playback.
 
   - name: Scream
     alternative_names:
@@ -712,7 +687,6 @@ calls:
       - loud
       - noisy
       - broadband
-      - harsh
       - long
       - graded
     acoustic_description: A harsh, loud distress call that grades from elongated Squeals into noisier broadband forms and intergrades completely with Hiss. Smith emphasized its rougher structure compared with Squeal.
@@ -723,16 +697,16 @@ calls:
       - aggression
     semantic_description: Produced by restrained birds in nets, traps, or the hand. Smith interpreted Scream as reflecting both thwarted escape and attack, and noted that it may draw mobbing or investigative responses from nearby birds.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Scream is listed in Smith's inventory, but its boundary with Squeal and Hiss is graded and later Carolina chickadee work rarely separates it.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: Smith documents the harsh graded form, but independent acoustic quantification is lacking.
-    semantic_function_agreement: medium
-    semantic_function_agreement_explanation: The restraint context and attraction of other birds support distress and defensive threat, but the specific motivational interpretation is based on Smith.
+    call_type_existence_explanation: Scream is listed in Smith's inventory, but its boundary with Squeal and Hiss is graded and later Carolina chickadee work rarely separates it.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Smith documents the harsh graded form, but independent acoustic quantification is lacking.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The restraint context and attraction of other birds support distress and defensive threat, but the specific motivational interpretation is based on Smith.
 
   - name: Hiss
     alternative_names:
@@ -743,7 +717,6 @@ calls:
     acoustic_keywords:
       - noisy
       - broadband
-      - harsh
       - long
       - graded
     acoustic_description: A nearly formless, broadband, white-noise-like hiss that intergrades with harsh Screams. Smith treated Hiss as the noisiest end of the restraint-related distress series.
@@ -754,59 +727,48 @@ calls:
       - alarm
     semantic_description: Given by restrained birds and interpreted by Smith as a display of thwarted escape combined with attack tendency. Its context suggests acute distress and defensive threat.
     acoustic_references:
-      - smith_1972
+      - id: smith_1972
     semantic_references:
-      - smith_1972
+      - id: smith_1972
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_agreement_explanation: Hiss is a Smith primary display, but the category is closely graded with Scream and is not commonly isolated in later studies.
-    acoustic_form_agreement: weak
-    acoustic_form_agreement_explanation: The broadband acoustic characterization comes primarily from Smith.
-    semantic_function_agreement: weak
-    semantic_function_agreement_explanation: Distress and defensive threat are plausible from handling contexts, but there is no independent receiver or playback evidence for Hiss as a distinct signal.
+    call_type_existence_explanation: Hiss is a Smith primary display, but the category is closely graded with Scream and is not commonly isolated in later studies.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The broadband acoustic characterization comes primarily from Smith.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Distress and defensive threat are plausible from handling contexts, but there is no independent receiver or playback evidence for Hiss as a distinct signal.
 references:
   smith_1972:
     citation: "Smith, S. T. (1972). Communication and other social behavior in Parus carolinensis. Publications of the Nuttall Ornithological Club, 11, 1-125."
-    doi:
     url: https://archive.org/details/communicationoth00smit
-    notes: Primary inventory spine; species-specific monograph recognizing 20 vocal displays and describing their acoustic forms and contexts.
   lucas_etal_1999:
     citation: "Lucas, J. R., Freeberg, T. M., Egbert, J., & Schwabl, H. (1999). Carolina chickadee (Aves, Paridae, Poecile carolinensis) vocalization rates: effects of body mass and food availability under aviary conditions. Ethology, 105(6), 503-520."
     doi: 10.1046/j.1439-0310.1999.00445.x
     url: https://doi.org/10.1046/j.1439-0310.1999.00445.x
-    notes: Documents common captive vocalizations and usage rates for chick-a-dee, tseet, and song categories.
   freeberg_lucas_2002:
     citation: "Freeberg, T. M., & Lucas, J. R. (2002). Receivers respond differently to chick-a-dee calls varying in note composition in Carolina chickadees, Poecile carolinensis. Animal Behaviour, 63(5), 837-845."
     doi: 10.1006/anbe.2001.1981
     url: https://doi.org/10.1006/anbe.2001.1981
-    notes: Playback evidence that note composition in chick-a-dee calls affects receiver behavior.
   bloomfield_etal_2005:
     citation: "Bloomfield, L. L., Charrier, I., & Sturdy, C. B. (2005). Note types and coding in parid vocalizations. III: The chick-a-dee call of the Carolina chickadee (Poecile carolinensis). Canadian Journal of Zoology, 83(6), 820-833."
     doi: 10.1139/z05-067
     url: https://doi.org/10.1139/z05-067
-    notes: Acoustic analysis of note types and combinatorial coding in Carolina chickadee chick-a-dee calls.
   freeberg_2008:
     citation: "Freeberg, T. M. (2008). Complexity in the chick-a-dee call of Carolina chickadees (Poecile carolinensis): associations of context and signaler behavior to call structure. The Auk, 125(4), 896-907."
     doi: 10.1525/auk.2008.07025
     url: https://doi.org/10.1525/auk.2008.07025
-    notes: Shows call-structure variation with context and signaler behavior in Carolina chickadee chick-a-dee calls.
   mahurin_freeberg_2009:
     citation: "Mahurin, E. J., & Freeberg, T. M. (2009). Chick-a-dee call variation in Carolina chickadees and recruiting flockmates to food. Behavioral Ecology, 20(1), 111-116."
     doi: 10.1093/beheco/arn121
     url: https://doi.org/10.1093/beheco/arn121
-    notes: Food-recruitment context and playback-related evidence for chick-a-dee call variation.
   soard_ritchison_2009:
     citation: "Soard, C. M., & Ritchison, G. (2009). 'Chick-a-dee' calls of Carolina chickadees convey information about degree of threat posed by avian predators. Animal Behaviour, 78(6), 1447-1453."
     doi: 10.1016/j.anbehav.2009.09.026
     url: https://doi.org/10.1016/j.anbehav.2009.09.026
-    notes: Predator-threat context and playback evidence for chick-a-dee call variation.
   henry_lucas_2010:
     citation: "Henry, K. S., & Lucas, J. R. (2010). Auditory sensitivity and the frequency selectivity of auditory filters in the Carolina chickadee, Poecile carolinensis. Animal Behaviour, 80(3), 497-507."
     doi: 10.1016/j.anbehav.2010.06.012
     url: https://doi.org/10.1016/j.anbehav.2010.06.012
-    notes: Places common Carolina chickadee vocalizations in broad song, chick-a-dee, and gargle categories relative to hearing sensitivity.
   hailman_1989:
     citation: "Hailman, J. P. (1989). The organization of major vocalizations in the Paridae. Wilson Bulletin, 101(2), 305-343."
-    doi:
     url: https://sora.unm.edu/sites/default/files/journals/wilson/v101n02/p0305-p0343.pdf
-    notes: Comparative parid review that relates Smith's Carolina chickadee call labels, including T-slink and Click-rasp variants, to broader parid vocal categories.
