@@ -1,0 +1,145 @@
+scientific_name: Hylobates lar
+common_name: White-handed Gibbon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hylobatidae
+  genus: Hylobates
+  species: lar
+primary_inventory:
+  id: clarke_etal_2015
+  rationale: No single recent paper enumerates the complete lar gibbon repertoire as an inventory in the same way as some primate repertoire papers. Clarke et al. 2015 is used as the spine because it analyzes the most common close-range call, the hoo, across natural contexts, while classic and recent song studies cover the conspicuous duet and great-call components.
+calls:
+  - name: hoo
+    alternative_names:
+      - close-range hoo
+    in_primary_inventory: true
+    scope: &adult_both
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, quiet, short, frequency_modulated]
+    acoustic_description: Quiet low-amplitude tonal call with context-linked spectral variation and relatively short duration.
+    semantic_keywords: [contact, food, alarm, predator, territorial]
+    semantic_description: Produced in multiple close-range contexts including feeding, separation, predator encounters, neighbor interactions, and duet songs.
+    acoustic_references:
+      - id: clarke_etal_2015
+        url: https://doi.org/10.1186/s12862-015-0332-2
+    semantic_references:
+      - id: clarke_etal_2015
+        url: https://doi.org/10.1186/s12862-015-0332-2
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Clarke et al. 2015 specifically identifies hoo calls as common close-range vocalizations in wild lar gibbons.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The same study provides acoustic measurements across contexts, giving strong support for the broad form.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Context-specific production is well supported, but the call is broad and used in several contexts rather than one fixed function.
+
+  - name: great call
+    alternative_names:
+      - female great call
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, long, frequency_modulated, multi_component]
+    acoustic_description: Long, loud, stereotyped female song phrase with multiple notes and a climactic frequency-modulated portion.
+    semantic_keywords: [territorial, spacing, identity, display]
+    semantic_description: Produced as the most conspicuous female phrase in duet songs and used in territorial and long-distance identity contexts.
+    acoustic_references:
+      - id: terleph_etal_2015
+        url: https://doi.org/10.1002/ajp.22406
+      - id: terleph_etal_2016
+        url: https://doi.org/10.1186/s12862-015-0578-8
+    semantic_references:
+      - id: terleph_etal_2015
+        url: https://doi.org/10.1002/ajp.22406
+      - id: geissmann_2002
+        url: https://doi.org/10.1007/978-1-4615-1079-6_6
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The great call is repeatedly described in gibbon song literature and directly quantified for lar gibbons by Terleph et al. 2015 and 2016.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multiple studies agree that the female great call is a loud, multi-note, stereotyped phrase with individual acoustic structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial, spacing, and identity roles are consistent across lar-specific and comparative gibbon song studies.
+
+  - name: duet song
+    alternative_names:
+      - pair duet
+      - mated pair duet
+    in_primary_inventory: false
+    scope: *adult_both
+    acoustic_keywords: [loud, long, repetitive, multi_component, frequency_modulated]
+    acoustic_description: Coordinated long song sequence in which male phrases and female great calls alternate or overlap in a stereotyped pattern.
+    semantic_keywords: [territorial, spacing, group_coordination, display]
+    semantic_description: Produced by pair members for territory advertisement, spacing with neighbors, and pair-level coordination.
+    acoustic_references:
+      - id: geissmann_2002
+        url: https://doi.org/10.1007/978-1-4615-1079-6_6
+      - id: clarke_etal_2015
+        url: https://doi.org/10.1186/s12862-015-0332-2
+    semantic_references:
+      - id: geissmann_2002
+        url: https://doi.org/10.1007/978-1-4615-1079-6_6
+      - id: terleph_etal_2015
+        url: https://doi.org/10.1002/ajp.22406
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Coordinated duets are a defining feature of lar gibbon vocal behavior and are covered by both comparative and lar-specific studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The broad duet structure is stable, but phrase-level subdivision varies among studies and individuals.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and spacing functions are consistently reported for gibbon duet songs.
+
+  - name: male song phrase
+    alternative_names:
+      - male phrase
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, repetitive, tonal, frequency_modulated]
+    acoustic_description: Repeated male tonal song phrases that form part of solo or duet song sequences and are less climactic than the female great call.
+    semantic_keywords: [territorial, spacing, display, identity]
+    semantic_description: Used in long-distance song displays during territorial advertisement and pair or neighbor interactions.
+    acoustic_references:
+      - id: geissmann_2002
+        url: https://doi.org/10.1007/978-1-4615-1079-6_6
+      - id: clarke_etal_2015
+        url: https://doi.org/10.1186/s12862-015-0332-2
+    semantic_references:
+      - id: geissmann_2002
+        url: https://doi.org/10.1007/978-1-4615-1079-6_6
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Male song phrases are well recognized, but phrase labels are less standardized in this schema than the female great call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Comparative song literature supports the repeated tonal phrase form, but lar-specific quantitative descriptions focus more heavily on hoos and female great calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Territorial display is well supported for songs as a whole, but isolated male-phrase function is less directly tested.
+references:
+  clarke_etal_2015:
+    citation: "Clarke, E., Reichard, U. H., & Zuberbuhler, K. (2015). Context-specific close-range 'hoo' calls in wild gibbons (Hylobates lar). BMC Evolutionary Biology, 15, 56."
+    url: https://doi.org/10.1186/s12862-015-0332-2
+    doi: 10.1186/s12862-015-0332-2
+  terleph_etal_2015:
+    citation: "Terleph, T. A., Malaivijitnond, S., & Reichard, U. H. (2015). Lar gibbon (Hylobates lar) great call reveals individual caller identity. American Journal of Primatology, 77(7), 811-821."
+    url: https://doi.org/10.1002/ajp.22406
+    doi: 10.1002/ajp.22406
+  terleph_etal_2016:
+    citation: "Terleph, T. A., Malaivijitnond, S., & Reichard, U. H. (2016). Age related decline in female lar gibbon great call performance suggests that call features correlate with physical condition. BMC Evolutionary Biology, 16, 4."
+    url: https://doi.org/10.1186/s12862-015-0578-8
+    doi: 10.1186/s12862-015-0578-8
+  geissmann_2002:
+    citation: "Geissmann, T. (2002). Duet-splitting and the evolution of gibbon songs. Biological Reviews, 77, 57-76."
+    url: https://doi.org/10.1017/S1464793101005826
+    doi: 10.1017/S1464793101005826
