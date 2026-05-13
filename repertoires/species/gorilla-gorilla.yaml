@@ -1,0 +1,154 @@
+scientific_name: Gorilla gorilla
+common_name: Western Gorilla
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hominidae
+  genus: Gorilla
+  species: gorilla
+primary_inventory:
+  id: salmi_etal_2013
+  rationale: Salmi et al. 2013 is used as the primary inventory because it provides a quantitative repertoire and contextual analysis for wild western gorillas, distinguishing 17 vocal call types and testing acoustic classification for 14 of them. This compact file includes well-supported core call types from that inventory rather than all rare or marginal classes.
+calls:
+  - name: single grunt
+    alternative_names:
+      - grunt
+    in_primary_inventory: true
+    scope: &all_ages_both
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, noisy, graded]
+    acoustic_description: Short low-frequency grunt element, usually produced singly and grading acoustically into other grunt-like calls.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close-range within-group contexts, especially routine social contact and low-arousal coordination among group members.
+    acoustic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+      - id: harcourt_etal_1993
+        url: https://doi.org/10.1007/BF02381188
+    semantic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+      - id: harcourt_etal_1993
+        url: https://doi.org/10.1007/BF02381188
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Salmi et al. 2013 treats single grunts as a primary western gorilla call type, and earlier mountain gorilla work by Harcourt et al. 1993 supports grunts as a central gorilla close call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Salmi et al. 2013 provides the clearest quantitative acoustic basis, while Harcourt et al. 1993 supports the broad grunt category. Agreement is medium because grunt-like classes grade into one another.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Both sources place grunts in ordinary close-range group contexts, but the category is broad and not tied to one narrow function.
+
+  - name: double grunt
+    alternative_names:
+      - grumble
+    in_primary_inventory: true
+    scope: *all_ages_both
+    acoustic_keywords: [low_frequency, short, repetitive, noisy, graded]
+    acoustic_description: Paired or repeated low-frequency grunt elements, often rough or grumbling, with variable duration and amplitude.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Produced during within-group movements and interactions, especially by adult males in the western gorilla inventory, where it appears to help maintain spacing and cohesion.
+    acoustic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+      - id: harcourt_etal_1993
+        url: https://doi.org/10.1007/BF02381188
+    semantic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Double grunts are explicitly enumerated and acoustically classified by Salmi et al. 2013, with comparable grunt forms described in previous gorilla vocal studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The repeated low grunt structure is stable in Salmi et al. 2013, but boundaries with single grunts and grumbles are graded.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The within-group coordination interpretation follows Salmi et al. 2013, but context specificity is moderate rather than exclusive.
+
+  - name: hum
+    alternative_names:
+      - humming
+    in_primary_inventory: true
+    scope: *all_ages_both
+    acoustic_keywords: [low_frequency, tonal, long, quiet]
+    acoustic_description: Quiet tonal voiced call with relatively low frequency and extended duration compared with short grunts.
+    semantic_keywords: [food, affiliation]
+    semantic_description: Given mainly during foraging and feeding, particularly in relaxed within-group contexts.
+    acoustic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+    semantic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Salmi et al. 2013 lists hums as a context-specific western gorilla call and includes them in the acoustic repertoire analysis.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The call is well described in the primary inventory, but independent acoustic treatments for western gorilla hums are limited.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Salmi et al. 2013 reports hums as strongly associated with foraging, making the broad feeding context well supported within the inventory.
+
+  - name: hoot series
+    alternative_names:
+      - hoot
+      - long call
+    in_primary_inventory: true
+    scope: *all_ages_both
+    acoustic_keywords: [low_frequency, tonal, long, repetitive, loud, multi_component]
+    acoustic_description: Repeated hoot elements forming a longer series, often lower frequency and more carrying than close grunts.
+    semantic_keywords: [contact, spacing, group_coordination]
+    semantic_description: Used in within-group and longer-range coordination contexts, including situations where group members are separated or spacing must be maintained.
+    acoustic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+      - id: harcourt_etal_1993
+        url: https://doi.org/10.1007/BF02381188
+    semantic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+      - id: harcourt_etal_1993
+        url: https://doi.org/10.1007/BF02381188
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Hoot series are listed by Salmi et al. 2013 and are comparable to long-call classes discussed in earlier gorilla vocal behavior literature.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on a repeated hoot structure, but published detail varies between western and mountain gorilla studies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The long-range contact and spacing interpretation is consistent across sources, though Salmi et al. 2013 notes broader context use in western gorillas.
+
+  - name: scream
+    alternative_names:
+      - cry-scream
+    in_primary_inventory: true
+    scope: *all_ages_both
+    acoustic_keywords: [high_frequency, loud, noisy, long, frequency_modulated]
+    acoustic_description: Loud high-frequency harsh call, often extended and strongly modulated, acoustically distinct from low grunt and hoot classes.
+    semantic_keywords: [aggression, alarm, distress]
+    semantic_description: Produced in escalated aggression or alarm-like contexts, especially by females and immatures in the western gorilla sample.
+    acoustic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+      - id: harcourt_etal_1993
+        url: https://doi.org/10.1007/BF02381188
+    semantic_references:
+      - id: salmi_etal_2013
+        url: https://doi.org/10.1111/eth.12122
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Screams are explicitly included in the western gorilla inventory and are also recognized in broader gorilla vocal literature.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Salmi et al. 2013 distinguishes screams acoustically, but detailed independent western gorilla measurements are limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Aggression and alarm contexts are supported by Salmi et al. 2013, with some age-sex specificity and limited playback evidence.
+references:
+  salmi_etal_2013:
+    citation: "Salmi, R., Hammerschmidt, K., & Doran-Sheehy, D. M. (2013). Western gorilla vocal repertoire and contextual use of vocalizations. Ethology, 119(10), 831-847."
+    url: https://doi.org/10.1111/eth.12122
+    doi: 10.1111/eth.12122
+  harcourt_etal_1993:
+    citation: "Harcourt, A. H., Stewart, K. J., & Hauser, M. D. (1993). Functions of wild gorilla close calls. I. Repertoire, context, and interspecific comparison. Behaviour, 124, 89-122."
+    url: https://doi.org/10.1007/BF02381188
+    doi: 10.1007/BF02381188
