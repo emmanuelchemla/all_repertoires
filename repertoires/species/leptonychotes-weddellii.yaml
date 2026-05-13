@@ -1,0 +1,513 @@
+scientific_name: Leptonychotes weddellii
+common_name: Weddell seal
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Phocidae
+  genus: Leptonychotes
+  species: weddellii
+primary_inventory:
+  id: thomas_kuechle_1982
+  rationale: "Thomas and Kuechle 1982 is used as the primary_inventory spine because it is the dedicated quantitative field inventory of underwater Weddell seal sounds at McMurdo Sound and it established the widely reused 34-call classification based on frequency range, duration, repetition, auxiliary sounds, harmonics, and contour. This file follows later wild studies in consolidating closely related subtypes into broad named categories such as trill, chirp, growl, mew, knock, cricket call, whistle, and jaw clap, and adds two airborne mother-pup call types that are well supported outside the underwater inventory. Ultrasonic chirps, whistles, and trills from Cziko et al. 2020 are cited acoustically where relevant but are not separated here because their behavioral context remains unresolved."
+calls:
+  - name: trill
+    in_primary_inventory: true
+    alternative_names:
+      - descending trill
+      - frequency-modulated trill
+      - underwater trill
+      - male trill
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - long
+      - repetitive
+      - multi_component
+      - loud
+      - graded
+    acoustic_description: A long frequency-modulated underwater call, typically a repeated or continuous tonal contour that begins at relatively high frequency and sweeps downward across a broad band. Trills can include auxiliary elements before or after the main sweep, and duration and contour vary among subtypes.
+    semantic_keywords:
+      - territorial
+      - display
+      - courtship
+      - spacing
+    semantic_description: Produced by adult males during the breeding season in underwater territorial and courtship contexts, including approaches to or departures from breathing holes and interactions involving other males or females.
+    acoustic_references:
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: terhune_dellapa_2006
+        url: https://doi.org/10.1578/AM.32.2.2006.175
+      - id: cziko_etal_2020
+        url: https://doi.org/10.1121/10.0002867
+    semantic_references:
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: terhune_dellapa_2006
+        url: https://doi.org/10.1578/AM.32.2.2006.175
+      - id: watkins_schevill_1968
+        url: https://doi.org/10.2307/1377986
+    playback_references:
+      - id: watkins_schevill_1968
+        url: https://doi.org/10.2307/1377986
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Thomas and Kuechle 1982 split multiple trill subtypes, Russell et al. 2016 retained trill as a core category in wild courtship observations, and Terhune and Dell'Apa 2006 documented stereotyped male sequences containing trills. The broad trill call type is strongly supported even though subtype boundaries vary.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Thomas and Kuechle 1982, Russell et al. 2016, Terhune and Dell'Apa 2006, and Cziko et al. 2020 agree that Weddell seal trills are frequency-modulated repeated tonal calls, including high-frequency and ultrasonic variants. Agreement is strong for the broad acoustic form.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Russell et al. 2016 and Terhune and Dell'Apa 2006 tie trills to male breeding-season display and territory use, and Watkins and Schevill 1968 showed seals respond vocally to underwater playback. Agreement is medium because receiver effects and female responses are not resolved for individual trill subtypes.
+
+  - name: chirp
+    in_primary_inventory: true
+    alternative_names:
+      - underwater chirp
+      - broadband chirp
+      - ultrasonic chirp
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - frequency_modulated
+      - short
+      - abrupt
+      - loud
+      - graded
+    acoustic_description: A short underwater call with broadband or steeply frequency-modulated energy, usually less than one second in duration. Adult male and female examples can differ in frequency extent, and later broadband recordings show ultrasonic chirp elements above 20 kHz.
+    semantic_keywords:
+      - contact
+      - attention
+      - spacing
+    semantic_description: Produced by both sexes near underwater breathing-hole activity and social encounters. Courtship observations interpret chirps as contact or location cues during close-range underwater interactions.
+    acoustic_references:
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: cziko_etal_2020
+        url: https://doi.org/10.1121/10.0002867
+    semantic_references:
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: watkins_schevill_1968
+        url: https://doi.org/10.2307/1377986
+    playback_references:
+      - id: watkins_schevill_1968
+        url: https://doi.org/10.2307/1377986
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Chirps are part of the Thomas and Kuechle 1982 inventory, are the most frequent category in Russell et al. 2016's wild case study, and have newly described ultrasonic variants in Cziko et al. 2020. The named type is robust across studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Thomas and Kuechle 1982, Russell et al. 2016, and Cziko et al. 2020 agree that chirps are short high-frequency calls, but broadband and ultrasonic equipment differences affect the measured upper frequency range. Agreement is medium rather than strong for the detailed spectral limits.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Russell et al. 2016 proposes a contact or location role from paired in situ observations, and Watkins and Schevill 1968 supports general social salience of underwater sounds through playback. Agreement is medium because chirp-specific playback evidence is lacking.
+
+  - name: mew
+    in_primary_inventory: true
+    alternative_names:
+      - underwater mew
+      - male mew
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - quiet
+      - tonal
+      - graded
+    acoustic_description: A short low-frequency underwater call with comparatively low amplitude and most energy concentrated below about 1 kHz in the Russell et al. 2016 recordings. It is simpler and shorter than long male growls or trills.
+    semantic_keywords:
+      - courtship
+      - display
+      - affiliation
+      - spacing
+    semantic_description: Recorded from an adult male during breeding-season underwater interactions and directed especially during encounters involving females, while also occurring in male social contexts.
+    acoustic_references:
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+    semantic_references:
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Mew appears in the Thomas and Kuechle 1982 classification and in Russell et al. 2016's wild courtship observations, but it has less independent treatment than trills or chirps. Agreement is medium for retaining it as a named category.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Thomas and Kuechle 1982 and Russell et al. 2016 support a short low-frequency category, but few studies quantify mews separately from neighboring low-frequency male sounds. Agreement is medium.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Russell et al. 2016 is the main source linking mews to breeding-season social context and possible female-directed use. Semantic agreement is weak because the context has not been replicated across many focal animals.
+
+  - name: growl
+    in_primary_inventory: true
+    alternative_names:
+      - underwater growl
+      - low-frequency growl
+      - male growl
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - long
+      - loud
+      - graded
+    acoustic_description: A long low-frequency broadband underwater call with high amplitude and energy concentrated in the lower kilohertz range. It is longer and more intense than a mew, and may occur alone or in combination with other male call elements.
+    semantic_keywords:
+      - display
+      - territorial
+      - threat
+      - courtship
+    semantic_description: Produced by adult males in underwater breeding-season encounters and interpreted as an advertising or assessment signal during interactions with females and rival males.
+    acoustic_references:
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+    semantic_references:
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Growl is represented in the Thomas and Kuechle 1982 inventory and was recorded repeatedly from the focal wild male in Russell et al. 2016. The type is supported, but fewer independent studies focus on growls as a separate class.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Thomas and Kuechle 1982 and Russell et al. 2016 converge on a long low-frequency broadband form. Agreement remains medium because detailed quantitative replication is limited.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Russell et al. 2016 provides the strongest call-specific behavioral context, while Thomas and Kuechle 1982 gives broader social-repertoire support. The proposed display and territory context is plausible but not strongly replicated.
+
+  - name: knock
+    in_primary_inventory: true
+    alternative_names:
+      - underwater knock
+      - male knock
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - broadband
+      - short
+      - abrupt
+      - loud
+      - pulsed
+    acoustic_description: A short, abrupt, high-amplitude underwater sound with broadband energy over the lower kilohertz range. It may occur singly, in series, or appended to longer calls.
+    semantic_keywords:
+      - territorial
+      - threat
+      - display
+      - attention
+    semantic_description: Recorded from adult males during breeding-season underwater interactions, including contexts in which a territory holder interacted with other seals near a breathing hole.
+    acoustic_references:
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: terhune_dellapa_2006
+        url: https://doi.org/10.1578/AM.32.2.2006.175
+    semantic_references:
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: terhune_dellapa_2006
+        url: https://doi.org/10.1578/AM.32.2.2006.175
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Knock is included in the Thomas and Kuechle 1982 inventory, retained by Russell et al. 2016, and appears in male stereotyped sequences discussed by Terhune and Dell'Apa 2006. Agreement is medium because knocks also function as elements in compound displays.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Thomas and Kuechle 1982, Russell et al. 2016, and Terhune and Dell'Apa 2006 support a short abrupt broadband description, but element placement in sequences varies. Agreement is medium.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Russell et al. 2016 and Terhune and Dell'Apa 2006 place knocks in male breeding displays, but call-specific receiver responses have not been isolated. Semantic agreement is weak.
+
+  - name: cricket call
+    in_primary_inventory: true
+    alternative_names:
+      - cricket
+      - narrow-band cricket call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - long
+      - repetitive
+      - quiet
+    acoustic_description: A moderately long underwater call with repeated, relatively narrow-band elements concentrated in the mid-kilohertz range. It is less broadband than growls or knocks and has a regular repeated texture.
+    semantic_keywords:
+      - display
+      - courtship
+      - spacing
+    semantic_description: Recorded from an adult male in breeding-season underwater contexts near a defended breathing-hole setting, but its contextual specificity was weaker than for several other male categories.
+    acoustic_references:
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+    semantic_references:
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Cricket call maps to Thomas and Kuechle 1982 nomenclature and is retained as a male category in Russell et al. 2016. Agreement is medium because fewer later studies emphasize this category independently.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Thomas and Kuechle 1982 and Russell et al. 2016 support a repeated mid-frequency structure, but detailed measurements are sparse outside the case-study table. Agreement is medium.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Russell et al. 2016 reported cricket calls in the focal male's breeding-season repertoire but found weaker context dependence than for most other categories. Semantic agreement is weak.
+
+  - name: whistle
+    in_primary_inventory: true
+    alternative_names:
+      - underwater whistle
+      - ascending whistle
+      - ultrasonic whistle
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - harmonic
+      - long
+      - graded
+    acoustic_description: A narrow-band tonal underwater call with a frequency-modulated contour. Documented forms include ascending and descending contours, and broadband monitoring has shown ultrasonic whistle elements with fundamentals above 20 kHz.
+    semantic_keywords:
+      - display
+      - courtship
+      - contact
+    semantic_description: Used in underwater social contexts during the breeding season, including adult display sequences and sex-linked surface or underwater calling contexts in field studies.
+    acoustic_references:
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+      - id: oetelaar_etal_2003
+        url: https://doi.org/10.1578/016754203101024194
+      - id: terhune_dellapa_2006
+        url: https://doi.org/10.1578/AM.32.2.2006.175
+      - id: cziko_etal_2020
+        url: https://doi.org/10.1121/10.0002867
+    semantic_references:
+      - id: oetelaar_etal_2003
+        url: https://doi.org/10.1578/016754203101024194
+      - id: terhune_dellapa_2006
+        url: https://doi.org/10.1578/AM.32.2.2006.175
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Thomas and Kuechle 1982 includes whistle-like underwater calls, Oetelaar et al. 2003 discusses sex-linked whistle forms, Terhune and Dell'Apa 2006 reports whistles in stereotyped male sequences, and Cziko et al. 2020 adds ultrasonic whistle elements. Agreement is medium because studies split whistle variants differently.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The cited sources agree on tonal frequency-modulated whistle structure, but whistle direction, frequency range, and sex association differ among studies and recording systems. Agreement is medium.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Oetelaar et al. 2003 and Terhune and Dell'Apa 2006 place whistles in breeding-season social and display contexts, but whistle-specific function is not isolated. Semantic agreement is weak.
+
+  - name: jaw clap
+    in_primary_inventory: true
+    alternative_names:
+      - jaw snap
+      - jaw clap sound
+      - underwater jaw clap
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - short
+      - abrupt
+      - loud
+      - pulsed
+    acoustic_description: A very short broadband mechanical sound produced by rapid jaw closure, with an abrupt onset and energy extending over several kilohertz. It is not a laryngeal vocalization but is treated as an acoustic display category in Weddell seal call classifications.
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+      - attention
+    semantic_description: Occurs during close-range underwater social encounters around breeding-season breathing-hole use, including interactions involving a territory holder and another seal.
+    acoustic_references:
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+    semantic_references:
+      - id: russell_etal_2016
+        url: https://doi.org/10.12966/abc.04.05.2016
+      - id: thomas_kuechle_1982
+        url: https://doi.org/10.1121/1.388667
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Thomas and Kuechle 1982 classified jaw claps with the acoustic repertoire and Russell et al. 2016 followed that convention for wild observations. Agreement is medium because the sound is mechanical rather than vocal.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Thomas and Kuechle 1982 and Russell et al. 2016 agree that jaw claps are short abrupt broadband sounds produced by jaw closure. The acoustic mechanism is clear.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Russell et al. 2016 provides the main contextual evidence for jaw claps in underwater social encounters. The specific communicative role is weakly resolved.
+
+  - name: pup contact call
+    in_primary_inventory: false
+    alternative_names:
+      - female pup contact call
+      - maternal contact call
+      - in-air pup contact call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - harmonic
+      - short
+      - frequency_modulated
+      - graded
+    acoustic_description: An airborne female call with measurable temporal, fundamental-frequency, and spectral features that vary among individuals. Reported in-air Weddell seal mother-pup calls occupy low to mid audio frequencies and last from fractions of a second to several seconds.
+    semantic_keywords:
+      - contact
+      - caregiving
+      - identity
+      - affiliation
+    semantic_description: Used by mothers during natural mother-pup reunions and other lactation-period interactions, supporting contact maintenance and individual recognition between female and pup.
+    acoustic_references:
+      - id: collins_etal_2005
+        url: https://doi.org/10.1163/1568539053627668
+      - id: collins_etal_2011
+        url: https://doi.org/10.1016/j.beproc.2011.06.005
+    semantic_references:
+      - id: collins_etal_2005
+        url: https://doi.org/10.1163/1568539053627668
+      - id: collins_etal_2011
+        url: https://doi.org/10.1016/j.beproc.2011.06.005
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collins et al. 2005 and Collins et al. 2011 independently analyze wild airborne mother-pup contact calling in Weddell seals, with individual and contextual measures. The type is outside the underwater primary inventory but strongly supported.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collins et al. 2005 and Collins et al. 2011 agree that female pup-contact calls have measurable temporal, fundamental-frequency, and spectral structure, but the available open summaries emphasize statistical features more than a simple categorical spectrogram shape. Agreement is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Collins et al. 2005 shows use during natural pair reunions and individual distinctiveness, while Collins et al. 2011 shows context-dependent call rates in reunion and activity contexts. The caregiving and contact context is strongly supported.
+
+  - name: pup primary call
+    in_primary_inventory: false
+    alternative_names:
+      - primary call
+      - in-air pup primary call
+      - pup call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - short
+      - graded
+    acoustic_description: An airborne pup call with individually variable temporal, fundamental-frequency, and spectral features. Calls from older pups show greater stereotypy, and heightened-arousal contexts are associated with longer duration, higher fundamental frequency, and stronger upper harmonics.
+    semantic_keywords:
+      - contact
+      - begging
+      - caregiving
+      - identity
+      - distress
+    semantic_description: Produced by dependent pups during the lactation period, especially when alone, active, reuniting, or soliciting maternal attention, and may aid maternal recognition after pups are about two weeks old.
+    acoustic_references:
+      - id: collins_etal_2006
+        url: https://doi.org/10.1111/j.1748-7692.2006.00074.x
+      - id: collins_etal_2011
+        url: https://doi.org/10.1016/j.beproc.2011.06.005
+    semantic_references:
+      - id: collins_etal_2006
+        url: https://doi.org/10.1111/j.1748-7692.2006.00074.x
+      - id: collins_etal_2011
+        url: https://doi.org/10.1016/j.beproc.2011.06.005
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collins et al. 2006 directly names and quantifies pup primary calls in wild Weddell seals, and Collins et al. 2011 analyzes pup calls across behavioral contexts. The type is strongly supported outside the underwater inventory.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collins et al. 2006 and Collins et al. 2011 both analyze temporal, fundamental-frequency, and spectral features of pup calls, but categorical acoustic labels are broad. Agreement is medium for the summary description.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Collins et al. 2006 supports an identity and maternal-recognition role, and Collins et al. 2011 shows elevated calling and arousal-linked acoustic shifts during reunion and lone-pup contexts. The caregiving and contact context is strongly supported.
+references:
+  abgrall_etal_2003:
+    citation: Abgrall, P., Terhune, J. M., and Burton, H. R. 2003. Variation of Weddell seal (Leptonychotes weddellii) underwater vocalizations over mesogeographic ranges. Aquatic Mammals 29(2):268-277.
+    doi: 10.1578/016754203101024202
+    url: https://doi.org/10.1578/016754203101024202
+  collins_etal_2005:
+    citation: Collins, K. T., Rogers, T. L., Terhune, J. M., McGreevy, P. D., Wheatley, K. E., and Harcourt, R. G. 2005. Individual variation of in-air female pup contact calls in Weddell seals, Leptonychotes weddellii. Behaviour 142(2):167-189.
+    doi: 10.1163/1568539053627668
+    url: https://doi.org/10.1163/1568539053627668
+  collins_etal_2006:
+    citation: Collins, K. T., Terhune, J. M., Rogers, T. L., Wheatley, K. E., and Harcourt, R. G. 2006. Vocal individuality of in-air Weddell seal (Leptonychotes weddellii) pup primary calls. Marine Mammal Science 22(4):933-951.
+    doi: 10.1111/j.1748-7692.2006.00074.x
+    url: https://doi.org/10.1111/j.1748-7692.2006.00074.x
+  collins_etal_2011:
+    citation: Collins, K. T., McGreevy, P. D., Wheatley, K. E., and Harcourt, R. G. 2011. The influence of behavioural context on Weddell seal (Leptonychotes weddellii) airborne mother-pup vocalisation. Behavioural Processes 87(3):286-290.
+    doi: 10.1016/j.beproc.2011.06.005
+    url: https://doi.org/10.1016/j.beproc.2011.06.005
+  cziko_etal_2020:
+    citation: Cziko, P. A., Munger, L. M., Santos, N. R., and Terhune, J. M. 2020. Weddell seals produce ultrasonic vocalizations. Journal of the Acoustical Society of America 148(6):3784-3796.
+    doi: 10.1121/10.0002867
+    url: https://doi.org/10.1121/10.0002867
+  moors_terhune_2004:
+    citation: Moors, H. B., and Terhune, J. M. 2004. Repetition patterns in Weddell seal (Leptonychotes weddellii) underwater multiple element calls. Journal of the Acoustical Society of America 116(2):1261-1270.
+    doi: 10.1121/1.1763956
+    url: https://doi.org/10.1121/1.1763956
+  oetelaar_etal_2003:
+    citation: Oetelaar, M. L., Terhune, J. M., and Burton, H. R. 2003. Can the sex of a Weddell seal (Leptonychotes weddellii) be identified by its surface call? Aquatic Mammals 29(2):261-267.
+    doi: 10.1578/016754203101024194
+    url: https://doi.org/10.1578/016754203101024194
+  pahl_etal_1996:
+    citation: Pahl, B. C., Terhune, J. M., and Burton, H. R. 1996. Proportional weekly use of underwater call types by Weddell seals, Leptonychotes weddellii, during the breeding season at the Vestfold Hills. Australian Journal of Zoology 44(1):75-79.
+    doi: 10.1071/ZO9960075
+    url: https://doi.org/10.1071/ZO9960075
+  pahl_etal_1997:
+    citation: Pahl, B. C., Terhune, J. M., and Burton, H. R. 1997. Repertoire and geographic variation in underwater vocalisations of Weddell seals, Leptonychotes weddellii, at the Vestfold Hills, Antarctica. Australian Journal of Zoology 45(2):171-187.
+    doi: 10.1071/ZO95044
+    url: https://doi.org/10.1071/ZO95044
+  russell_etal_2016:
+    citation: "Russell, L., Purdy, J., and Davis, R. 2016. Social context predicts vocalization use in the courtship behaviors of Weddell seals (Leptonychotes weddellii): A case study. Animal Behavior and Cognition 3(2):95-119."
+    doi: 10.12966/abc.04.05.2016
+    url: https://doi.org/10.12966/abc.04.05.2016
+  terhune_dellapa_2006:
+    citation: Terhune, J. M., and Dell'Apa, A. 2006. Stereotyped calling patterns of a male Weddell seal (Leptonychotes weddellii). Aquatic Mammals 32(2):175-181.
+    doi: 10.1578/AM.32.2.2006.175
+    url: https://doi.org/10.1578/AM.32.2.2006.175
+  thomas_kuechle_1982:
+    citation: Thomas, J. A., and Kuechle, V. B. 1982. Quantitative analysis of Weddell seal (Leptonychotes weddellii) underwater vocalizations at McMurdo Sound, Antarctica. Journal of the Acoustical Society of America 72(6):1730-1738.
+    doi: 10.1121/1.388667
+    url: https://doi.org/10.1121/1.388667
+  thomas_stirling_1983:
+    citation: Thomas, J. A., and Stirling, I. 1983. Geographic variation in the underwater vocalizations of Weddell seals (Leptonychotes weddellii) from Palmer Peninsula and McMurdo Sound, Antarctica. Canadian Journal of Zoology 61(10):2203-2212.
+    doi: 10.1139/z83-291
+    url: https://doi.org/10.1139/z83-291
+  watkins_schevill_1968:
+    citation: Watkins, W. A., and Schevill, W. E. 1968. Underwater playback of their own sounds to Leptonychotes, Weddell seals. Journal of Mammalogy 49(2):287-296.
+    doi: 10.2307/1377986
+    url: https://doi.org/10.2307/1377986
