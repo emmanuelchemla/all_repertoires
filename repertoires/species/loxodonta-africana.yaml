@@ -1,0 +1,362 @@
+scientific_name: Loxodonta africana
+common_name: African savanna elephant
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Proboscidea
+  family: Elephantidae
+  genus: Loxodonta
+  species: africana
+calls:
+  - name: contact rumble
+    alternative_names:
+      - contact call
+      - contact-rumble
+      - female contact call
+    scope: &adult_female_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - long
+      - loud
+    acoustic_description: A long, powerful, low-frequency rumble, often 4-6.5 seconds in ElephantVoices descriptions, with a throaty tonal quality and strong frequency modulation. Infrasonic fundamentals and higher frequency components both contribute to transmission and caller identity.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+      - affiliation
+    semantic_description: Used by adult females to maintain or re-establish contact with family and bond-group members over long distances. Receivers can recognize familiar callers and respond by listening, calling, approaching, or bunching depending on social relationship.
+    acoustic_references:
+      - id: poole_etal_1988
+        url: https://doi.org/10.1007/BF00294975
+      - id: mccomb_etal_2003
+        url: https://doi.org/10.1006/anbe.2003.2047
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=48
+    semantic_references:
+      - id: mccomb_etal_2000
+        url: https://doi.org/10.1006/anbe.2000.1406
+      - id: mccomb_etal_2003
+        url: https://doi.org/10.1006/anbe.2003.2047
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=48
+    audio_samples:
+      - https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=48
+    playback_references:
+      - id: mccomb_etal_2000
+        url: https://doi.org/10.1006/anbe.2000.1406
+      - id: mccomb_etal_2003
+        url: https://doi.org/10.1006/anbe.2003.2047
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Poole et al. 1988, McComb et al. 2000, McComb et al. 2003, and the ElephantVoices ethogram all treat contact rumbles as a major African elephant call type. The call is among the best supported elephant vocalizations.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Poole et al. 1988 describes very low-frequency calls in wild African elephants, McComb et al. 2003 analyzes acoustic cues to identity and propagation, and ElephantVoices provides call-specific acoustic descriptions. Agreement is strong.
+    semantic_description_agreement: strong
+    semantic_description_explanation: McComb et al. 2000 and 2003 use playbacks to show vocal recognition of contact calls, and ElephantVoices describes contact-call sequences in natural behavior. The contact and identity functions are strongly supported.
+
+  - name: musth rumble
+    alternative_names:
+      - musth-rumble
+      - male social rumble
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - harmonic
+      - pulsed
+      - long
+      - loud
+    acoustic_description: A low-frequency male rumble, often deep and pulsating, with strong harmonic structure and modulation. Male social rumbles encode caller-related information in spectral and temporal features.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+      - threat
+    semantic_description: Produced by adult males in musth and used in reproductive advertisement, assessment, and male-male or male-female interactions. Playback experiments show that musth status alters how males and females respond to these calls.
+    acoustic_references:
+      - id: stoeger_baotic_2016
+        url: https://doi.org/10.1038/srep27585
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+      - id: elephantvoices_acoustic
+        url: https://www.elephantvoices.org/elephant-communication/acoustic-communication.html
+    semantic_references:
+      - id: poole_1999
+        url: https://doi.org/10.1006/anbe.1999.1117
+      - id: stoeger_baotic_2016
+        url: https://doi.org/10.1038/srep27585
+      - id: elephantvoices_acoustic
+        url: https://www.elephantvoices.org/elephant-communication/acoustic-communication.html
+    playback_references:
+      - id: poole_1999
+        url: https://doi.org/10.1006/anbe.1999.1117
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Poole 1999 uses musth rumbles in playback experiments, Soltis 2010 reviews musth rumbles within the African elephant vocal system, and Stoeger and Baotic 2016 analyzes male social rumbles. The call type is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Stoeger and Baotic 2016 provides detailed acoustic analysis of male rumbles, while Soltis 2010 and ElephantVoices agree on low-frequency rumble structure. Agreement is strong for the broad acoustic profile.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Poole 1999 experimentally shows assessment responses to musth rumbles, and Stoeger and Baotic 2016 supports information content in male rumbles. These sources strongly support reproductive and assessment functions.
+
+  - name: estrous rumble
+    alternative_names:
+      - estrous call
+      - estrous-rumble
+      - estrous song
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - harmonic
+      - long
+      - loud
+      - repetitive
+    acoustic_description: A long, powerful, highly modulated rumble repeated in series. ElephantVoices describes estrous rumbles as starting low, rising sharply, and descending more slowly, often repeated for extended periods after mating or during peak estrus.
+    semantic_keywords:
+      - courtship
+      - mating
+      - recruitment
+    semantic_description: Produced by adult females in estrus or immediately after mating and functions to attract distant males or advertise reproductive state. Playback experiments show that males, especially musth males, approach estrous calls.
+    acoustic_references:
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=349
+    semantic_references:
+      - id: poole_1999
+        url: https://doi.org/10.1006/anbe.1999.1117
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=349
+    audio_samples:
+      - https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=349
+    playback_references:
+      - id: poole_1999
+        url: https://doi.org/10.1006/anbe.1999.1117
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Poole 1999 treats the estrous call as an experimentally testable signal, Soltis 2010 includes reproductive rumbles in the reviewed repertoire, and ElephantVoices documents estrous rumbles with behavior examples. Agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: ElephantVoices gives a call-specific acoustic description and Soltis 2010 reviews rumble structure, but fewer independent quantitative papers focus narrowly on estrous rumble acoustics. The label is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Poole 1999 playback experiments show male attraction to estrous calls, and ElephantVoices describes estrous-rumble production around mating. The reproductive function is strongly supported.
+
+  - name: roar
+    alternative_names:
+      - bellow
+      - scream
+      - squeal
+      - roar-rumble
+    scope: &all_life_both_scope
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - broadband
+      - noisy
+      - tonal
+      - short
+      - loud
+      - graded
+    acoustic_description: A loud, highly variable call that can be noisy, tonal, or mixed, often around 1-2 seconds in ElephantVoices descriptions. Younger elephants produce higher-pitched screaming or squealing variants, while adults produce deeper bellowing or roaring sounds.
+    semantic_keywords:
+      - distress
+      - aggression
+      - alarm
+      - caregiving
+      - display
+    semantic_description: Produced in high-arousal contexts including distress, calf care, social excitement, aggressive interactions, mating pandemonium, and predator confrontation. It is often combined with rumbles in roar-rumble sequences.
+    acoustic_references:
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=205
+    semantic_references:
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=205
+    audio_samples:
+      - https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=205
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Soltis 2010 reviews roars as one of the acoustically distinct African elephant call types, and ElephantVoices provides a detailed ethogram entry and audio/video examples. The call type is well established.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Soltis 2010 and ElephantVoices agree that roars are loud and variable, but the call spans noisy, tonal, mixed, age-dependent, and combination forms. Agreement is medium because the category is broad and graded.
+    semantic_description_agreement: medium
+    semantic_description_explanation: ElephantVoices documents multiple roar contexts and Soltis 2010 reviews broad vocal behavior. The semantic range is consistent but broad, so a medium label is more appropriate than strong.
+
+  - name: trumpet
+    alternative_names:
+      - trumpet-blast
+      - alarmed trumpet
+      - social trumpet
+      - play trumpet
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - broadband
+      - noisy
+      - short
+      - loud
+      - abrupt
+      - graded
+    acoustic_description: A loud trunk call with broadband, high-frequency, noisy energy and strong modulation. Trumpet-blasts are relatively sustained but brief, often around 1-1.5 seconds, while social and play trumpets vary in intensity.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - aggression
+      - display
+      - play
+    semantic_description: Produced during threat displays, predator confrontation, charging, social excitement, and play. In serious confrontation it can intimidate a threat, while in social play it accompanies mock charges and high arousal.
+    acoustic_references:
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=271
+    semantic_references:
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=271
+    audio_samples:
+      - https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=271
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Soltis 2010 includes trumpets among the African elephant vocal repertoire, and ElephantVoices distinguishes multiple trumpet subtypes with natural audio/video examples. The broad trumpet call type is strongly supported.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on trunk-produced, loud, broadband trumpeting, but subtypes such as trumpet-blast, play trumpet, and social trumpet differ in intensity and context. The acoustic agreement is medium for this grouped category.
+    semantic_description_agreement: medium
+    semantic_description_explanation: ElephantVoices and Soltis 2010 agree that trumpets occur in threat, social excitement, and play contexts. The broad contextual range and lack of a single playback test for all variants keep the label medium.
+
+  - name: snort
+    alternative_names:
+      - trunk snort
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - loud
+      - abrupt
+    acoustic_description: A short, sharp, noisy broadband sound produced by forcefully blowing air through the trunk. It is more purposeful and abrupt than non-signal blows or sneezes.
+    semantic_keywords:
+      - alarm
+      - attention
+      - threat
+    semantic_description: Produced when an elephant is surprised, annoyed, socially excited, or alerting others to a new situation. It can accompany vigilance and low-level threat assessment without necessarily escalating to a trumpet or charge.
+    acoustic_references:
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=245
+    semantic_references:
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+      - id: elephantvoices_ethogram
+        url: https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=245
+    audio_samples:
+      - https://www.elephantvoices.org/elephant-ethogram/search-portal/behavior?id=245
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Soltis 2010 includes snorts in the repertoire and ElephantVoices gives a dedicated snort entry. The call type is strongly recognized.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: ElephantVoices provides a clear acoustic distinction from blows and sneezes, and Soltis 2010 reviews trunk calls generally. Dedicated quantitative acoustic work is more limited, so agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: ElephantVoices and Soltis 2010 support alert, annoyance, and excitement contexts, but the call has not been tested as extensively as contact or reproductive rumbles. The semantic label is medium.
+
+  - name: bee alarm call
+    alternative_names:
+      - bee alarm rumble
+      - bee rumble
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - long
+      - loud
+      - graded
+    acoustic_description: A rumble-like alarm call with a distinctive acoustic structure elicited by bee threat in wild African elephant families. It is low-frequency and call-specific enough to be separated from general rumbles in acoustic analyses.
+    semantic_keywords:
+      - alarm
+      - attention
+      - group_coordination
+    semantic_description: Produced during bee-threat contexts and associated with group defensive or avoidance responses to African honeybees. The call alerts family members to a specific small but dangerous threat.
+    acoustic_references:
+      - id: king_etal_2010
+        url: https://doi.org/10.1371/journal.pone.0010346
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+    semantic_references:
+      - id: king_etal_2010
+        url: https://doi.org/10.1371/journal.pone.0010346
+      - id: soltis_2010
+        url: https://doi.org/10.1002/zoo.20251
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: King et al. 2010 identifies a bee-threat alarm call in wild African elephants, and Soltis 2010 places such work within the broader vocal repertoire. The label is medium because it is a context-specific call with a smaller literature than contact or reproductive rumbles.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: King et al. 2010 provides the focused acoustic evidence for this call, with Soltis 2010 supplying broader repertoire context. Agreement is medium due to the limited number of independent acoustic studies.
+    semantic_description_agreement: strong
+    semantic_description_explanation: King et al. 2010 directly links the call to bee threat, a well-defined ecological context. The semantic label is strong for that context even though the call type has fewer independent studies than contact rumbles.
+
+references:
+  poole_etal_1988:
+    citation: "Poole JH, Payne K, Langbauer WR Jr, Moss CJ. 1988. The social contexts of some very low frequency calls of African elephants. Behavioral Ecology and Sociobiology 22(6): 385-392."
+    url: https://doi.org/10.1007/BF00294975
+    doi: 10.1007/BF00294975
+  mccomb_etal_2000:
+    citation: "McComb K, Moss C, Sayialel S, Baker L. 2000. Unusually extensive networks of vocal recognition in African elephants. Animal Behaviour 59(6): 1103-1109."
+    url: https://doi.org/10.1006/anbe.2000.1406
+    doi: 10.1006/anbe.2000.1406
+  mccomb_etal_2003:
+    citation: "McComb K, Reby D, Baker L, Moss C, Sayialel S. 2003. Long-distance communication of acoustic cues to social identity in African elephants. Animal Behaviour 65(2): 317-329."
+    url: https://doi.org/10.1006/anbe.2003.2047
+    doi: 10.1006/anbe.2003.2047
+  poole_1999:
+    citation: "Poole JH. 1999. Signals and assessment in African elephants: evidence from playback experiments. Animal Behaviour 58(1): 185-193."
+    url: https://doi.org/10.1006/anbe.1999.1117
+    doi: 10.1006/anbe.1999.1117
+  soltis_2010:
+    citation: "Soltis J. 2010. Vocal communication in African elephants (Loxodonta africana). Zoo Biology 29(2): 192-209."
+    url: https://doi.org/10.1002/zoo.20251
+    doi: 10.1002/zoo.20251
+  stoeger_baotic_2016:
+    citation: "Stoeger AS, Baotic A. 2016. Information content and acoustic structure of male African elephant social rumbles. Scientific Reports 6: 27585."
+    url: https://doi.org/10.1038/srep27585
+    doi: 10.1038/srep27585
+  king_etal_2010:
+    citation: "King LE, Soltis J, Douglas-Hamilton I, Savage A, Vollrath F. 2010. Bee threat elicits alarm call in African elephants. PLoS One 5(4): e10346."
+    url: https://doi.org/10.1371/journal.pone.0010346
+    doi: 10.1371/journal.pone.0010346
+  elephantvoices_acoustic:
+    citation: "ElephantVoices. Acoustic communication in elephants."
+    url: https://www.elephantvoices.org/elephant-communication/acoustic-communication.html
+  elephantvoices_ethogram:
+    citation: "Poole JH, Granli P. The Elephant Ethogram: A library of African elephant behavior. ElephantVoices."
+    url: https://www.elephantvoices.org/elephant-ethogram/search-portal.html

@@ -1,0 +1,129 @@
+scientific_name: Engystomops pustulosus
+common_name: Tungara frog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Leptodactylidae
+  genus: Engystomops
+  species: pustulosus
+calls:
+  - name: whine-only advertisement call
+    alternative_names:
+      - simple call
+      - simple advertisement call
+      - whine
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - long
+    acoustic_description: A single extended tonal whine with a descending frequency-modulated contour and no terminal chuck components. It is the less complex end of the species' advertisement-call series.
+    semantic_keywords:
+      - courtship
+      - mating
+    semantic_description: Produced by adult males in breeding choruses to attract females. Isolated males commonly give whine-only calls, and females can use the whine as a conspecific mate-attraction signal even though they often prefer calls with added chucks.
+    acoustic_references:
+      - id: rand_ryan_1981
+        url: https://doi.org/10.1111/j.1439-0310.1981.tb01923.x
+      - id: ryan_1983
+        url: https://doi.org/10.1111/j.1558-5646.1983.tb05536.x
+    semantic_references:
+      - id: rand_ryan_1981
+        url: https://doi.org/10.1111/j.1439-0310.1981.tb01923.x
+      - id: ryan_1980
+        url: https://doi.org/10.1126/science.209.4455.523
+      - id: ryan_1983
+        url: https://doi.org/10.1111/j.1558-5646.1983.tb05536.x
+    playback_references:
+      - id: ryan_1980
+        url: https://doi.org/10.1126/science.209.4455.523
+      - id: ryan_rand_1990
+        url: https://doi.org/10.1111/j.1558-5646.1990.tb05200.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Rand and Ryan 1981 describe the advertisement call as a whine with 0-6 chucks, explicitly including the whine-only form, and Ryan 1983 treats the whine as a core component of sexual communication in this species. Multiple primary studies therefore agree that whine-only calls occur as a recognizable signal form.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Rand and Ryan 1981 and Ryan 1983 agree that the simple call is the extended whine without chucks. Later playback work by Ryan and Rand 1990 also uses whine-only stimuli as the baseline for comparing complex calls, so the acoustic boundary is well supported.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Ryan 1980, Rand and Ryan 1981, and Ryan 1983 all treat the whine as a male mate-attraction signal used in breeding choruses. The main nuance is relative attractiveness because females often prefer complex calls, but whine-only calls still function in courtship and species recognition.
+
+  - name: whine-chuck advertisement call
+    alternative_names:
+      - complex call
+      - complex advertisement call
+      - whine plus chucks
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - long
+      - multi_component
+      - repetitive
+    acoustic_description: A multi-component advertisement call consisting of the descending whine followed by one or more short low-frequency chuck components; published descriptions report a graded series with up to several chucks appended to the whine.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+    semantic_description: Produced by adult males in breeding choruses, especially when other males are calling nearby. Females preferentially approach complex calls in phonotaxis tests, while males appear to balance the increased attractiveness of chucks against ecological costs such as eavesdropping predators.
+    acoustic_references:
+      - id: rand_ryan_1981
+        url: https://doi.org/10.1111/j.1439-0310.1981.tb01923.x
+      - id: ryan_rand_1990
+        url: https://doi.org/10.1111/j.1558-5646.1990.tb05200.x
+      - id: ryan_etal_1990
+        url: https://doi.org/10.1038/343066a0
+    semantic_references:
+      - id: rand_ryan_1981
+        url: https://doi.org/10.1111/j.1439-0310.1981.tb01923.x
+      - id: ryan_1980
+        url: https://doi.org/10.1126/science.209.4455.523
+      - id: ryan_rand_1990
+        url: https://doi.org/10.1111/j.1558-5646.1990.tb05200.x
+      - id: ryan_etal_1990
+        url: https://doi.org/10.1038/343066a0
+    playback_references:
+      - id: rand_ryan_1981
+        url: https://doi.org/10.1111/j.1439-0310.1981.tb01923.x
+      - id: ryan_1980
+        url: https://doi.org/10.1126/science.209.4455.523
+      - id: ryan_rand_1990
+        url: https://doi.org/10.1111/j.1558-5646.1990.tb05200.x
+      - id: ryan_etal_1990
+        url: https://doi.org/10.1038/343066a0
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The whine-chuck call is the classic complex call in Rand and Ryan 1981, Ryan 1980, Ryan 1983, Ryan and Rand 1990, and Ryan et al. 1990. These independent studies consistently identify the chuck-bearing form as a discrete complex variant of the advertisement call.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Rand and Ryan 1981 describe the whine plus 0-6 chucks series, Ryan and Rand 1990 describe the added chuck as increasing duration, energy, and frequency range, and Ryan et al. 1990 focus on the chuck's low-frequency spectral properties. Agreement is strong even though the number of chucks is graded.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Rand and Ryan 1981 and Ryan and Rand 1990 show female preference for chuck-bearing calls, Ryan 1980 establishes female mate choice on male calls, and Ryan et al. 1990 links chuck properties to female auditory bias. These sources agree that complex calls function in sexual advertisement, with male-male chorus context modulating chuck production.
+
+references:
+  ryan_1980:
+    citation: "Ryan MJ. 1980. Female mate choice in a Neotropical frog. Science 209(4455): 523-525."
+    url: https://doi.org/10.1126/science.209.4455.523
+    doi: 10.1126/science.209.4455.523
+  rand_ryan_1981:
+    citation: "Rand AS, Ryan MJ. 1981. The adaptive significance of a complex vocal repertoire in a Neotropical frog. Zeitschrift fuer Tierpsychologie 57(3-4): 209-214."
+    url: https://doi.org/10.1111/j.1439-0310.1981.tb01923.x
+    doi: 10.1111/j.1439-0310.1981.tb01923.x
+  ryan_1983:
+    citation: "Ryan MJ. 1983. Sexual selection and communication in a Neotropical frog, Physalaemus pustulosus. Evolution 37(2): 261-272."
+    url: https://doi.org/10.1111/j.1558-5646.1983.tb05536.x
+    doi: 10.1111/j.1558-5646.1983.tb05536.x
+  ryan_rand_1990:
+    citation: "Ryan MJ, Rand AS. 1990. The sensory basis of sexual selection for complex calls in the tungara frog, Physalaemus pustulosus. Evolution 44(2): 305-314."
+    url: https://doi.org/10.1111/j.1558-5646.1990.tb05200.x
+    doi: 10.1111/j.1558-5646.1990.tb05200.x
+  ryan_etal_1990:
+    citation: "Ryan MJ, Fox JH, Wilczynski W, Rand AS. 1990. Sexual selection for sensory exploitation in the frog Physalaemus pustulosus. Nature 343: 66-67."
+    url: https://doi.org/10.1038/343066a0
+    doi: 10.1038/343066a0

@@ -1,0 +1,216 @@
+scientific_name: Poecile carolinensis
+common_name: Carolina chickadee
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Paridae
+  genus: Poecile
+  species: carolinensis
+calls:
+  - name: chick-a-dee call
+    alternative_names:
+      - chick-a-dee
+      - chickadee call
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A variable multi-note call built from ordered A, B, C, and D note classes. Introductory chick-like notes and terminal dee-like D notes can be repeated or omitted, producing many combinations while preserving the broad ordering constraints of the parid chick-a-dee system.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - alarm
+      - predator
+      - food
+      - recruitment
+      - combinatorial
+    semantic_description: Used in flock cohesion and social organization, including movement, recruitment to food, and mobbing of perched avian predators. Note composition varies with context; C-note-rich calls can recruit flockmates to food, while predator-elicited calls vary with threat level and affect receiver mobbing responses.
+    acoustic_references:
+      - id: bloomfield_etal_2005
+        url: https://doi.org/10.1139/z05-067
+      - id: freeberg_2008
+        url: https://doi.org/10.1525/auk.2008.07025
+      - id: soard_ritchison_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.09.026
+    semantic_references:
+      - id: freeberg_lucas_2002
+        url: https://doi.org/10.1006/anbe.2001.1981
+      - id: mahurin_freeberg_2009
+        url: https://doi.org/10.1093/beheco/arn121
+      - id: soard_ritchison_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.09.026
+    playback_references:
+      - id: freeberg_lucas_2002
+        url: https://doi.org/10.1006/anbe.2001.1981
+      - id: soard_ritchison_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.09.026
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Smith 1972, Bloomfield et al. 2005, Freeberg 2008, Mahurin and Freeberg 2009, and Soard and Ritchison 2009 all treat chick-a-dee calls as a central Carolina chickadee vocal type. The label is strong, though note-level variants are numerous and graded.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Bloomfield et al. 2005 gives detailed note-type coding, Freeberg 2008 analyzes field-recorded note composition, and Soard and Ritchison 2009 applies the same note framework in predator experiments. These independent sources agree on a combinatorial, ordered, multi-note acoustic structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Freeberg and Lucas 2002 and Mahurin and Freeberg 2009 support receiver responses and food recruitment, while Soard and Ritchison 2009 supports predator-threat signalling and playback effects. Agreement is strong that the call is context-sensitive and socially coordinative.
+
+  - name: fee-bee-fee-bay song
+    alternative_names:
+      - fee-bee song
+      - song
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - long
+      - repetitive
+    acoustic_description: A simple whistled song, usually four slowly delivered tonal notes in the Carolina form. Notes have little frequency modulation and occupy the chickadee's main long-range communication frequency band.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - courtship
+    semantic_description: Produced primarily by adult males, especially in spring and territorial contexts. It is used away from close flock contact and is associated with territory advertisement and mate-related spacing rather than close-range flock coordination.
+    acoustic_references:
+      - id: smith_1972
+        url: https://nuttallclub.org/publications/
+      - id: henry_lucas_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.012
+      - id: lucas_etal_1999
+        url: https://doi.org/10.1046/j.1439-0310.1999.00445.x
+    semantic_references:
+      - id: smith_1972
+        url: https://nuttallclub.org/publications/
+      - id: lucas_etal_1999
+        url: https://doi.org/10.1046/j.1439-0310.1999.00445.x
+      - id: henry_lucas_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.012
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Smith 1972 describes the Carolina chickadee song, Lucas et al. 1999 measured fee-bee-fee-bay production, and Henry and Lucas 2010 use it as one of the common Carolina chickadee vocalizations. The existence of this song type is not disputed.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Henry and Lucas 2010 and Lucas et al. 1999 both describe a simple tonal fee-bee-fee-bay signal, consistent with Smith 1972. The fine details of local song variants are broader than this entry, but the basic acoustic form is stable.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Smith 1972 and Lucas et al. 1999 associate the song mainly with isolated or patrolling males and territorial advertisement. Agreement is medium because the cited evidence is less experimentally developed than the chick-a-dee call literature.
+
+  - name: tseet call
+    alternative_names:
+      - seet call
+      - contact call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - quiet
+    acoustic_description: A short, simple, high-pitched contact note with relatively little internal structure compared with chick-a-dee and gargle calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+    semantic_description: Used as a close- to medium-range contact signal, especially to maintain auditory contact with flockmates when individuals are not continuously visible to one another.
+    acoustic_references:
+      - id: smith_1972
+        url: https://nuttallclub.org/publications/
+      - id: lucas_etal_1999
+        url: https://doi.org/10.1046/j.1439-0310.1999.00445.x
+    semantic_references:
+      - id: smith_1972
+        url: https://nuttallclub.org/publications/
+      - id: lucas_etal_1999
+        url: https://doi.org/10.1046/j.1439-0310.1999.00445.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Smith 1972 and Lucas et al. 1999 both recognize tseet as a Carolina chickadee vocalization, but it has far fewer dedicated acoustic or playback studies than chick-a-dee calls. The call type is accepted but not as intensively validated.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Smith 1972 provides the repertoire basis and Lucas et al. 1999 scored tseet vocalizations, but recent quantitative acoustic work focuses more on chick-a-dee, song, and broader auditory processing. Agreement is adequate but based on limited sources.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Smith 1972 interprets tseet as a flock contact call and Lucas et al. 1999 treats it as a nonsong social vocalization. The contact interpretation is consistent, but direct field playback evidence for this specific call is limited.
+
+  - name: gargle call
+    alternative_names:
+      - t-slink
+      - click-rasp
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - noisy
+      - short
+      - repetitive
+      - multi_component
+    acoustic_description: A short, complex call made from rapidly delivered elements, including tonal sweeps, clicks, rasps, or trill-like components. It is more acoustically elaborate than the tseet call and less syntactically regular than chick-a-dee calls.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+    semantic_description: Associated with close-range agonistic or spacing interactions, including situations in which birds threaten, supplant, or maintain distance from conspecifics.
+    acoustic_references:
+      - id: smith_1972
+        url: https://nuttallclub.org/publications/
+      - id: henry_lucas_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.012
+      - id: hailman_1989
+        url: https://sora.unm.edu/sites/default/files/journals/wilson/v101n02/p0305-p0343.pdf
+    semantic_references:
+      - id: smith_1972
+        url: https://nuttallclub.org/publications/
+      - id: hailman_1989
+        url: https://sora.unm.edu/sites/default/files/journals/wilson/v101n02/p0305-p0343.pdf
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Smith 1972 depicts several Carolina chickadee calls that later comparative parid work treats as gargle-like, and Henry and Lucas 2010 includes gargle among common Carolina chickadee vocalizations. The label is medium because nomenclature differs across older Carolina-specific descriptions and broader parid terminology.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Henry and Lucas 2010 and Hailman 1989 agree that gargle-class signals are complex, multi-element parid calls, while Smith 1972 supplies the Carolina chickadee sonographic basis under older names. Agreement is moderate because Carolina gargles have not been analyzed as deeply as black-capped chickadee gargles.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Smith 1972 and comparative parid reviews associate gargle-like calls with agonistic close-range interactions, but Carolina-specific experimental evidence is sparse. The function is plausible and literature-supported, yet weaker than for chick-a-dee calls.
+
+references:
+  smith_1972:
+    citation: "Smith ST. 1972. Communication and other social behavior in Parus carolinensis. Publications of the Nuttall Ornithological Club 11: 1-125."
+    url: https://nuttallclub.org/publications/
+  lucas_etal_1999:
+    citation: "Lucas JR, Schraeder A, Jackson C. 1999. Carolina Chickadee (Aves, Paridae, Poecile carolinensis) vocalization rates: effects of body mass and food availability under aviary conditions. Ethology 105(6): 503-520."
+    url: https://doi.org/10.1046/j.1439-0310.1999.00445.x
+    doi: 10.1046/j.1439-0310.1999.00445.x
+  freeberg_lucas_2002:
+    citation: "Freeberg TM, Lucas JR. 2002. Receivers respond differently to chick-a-dee calls varying in note composition in Carolina chickadees, Poecile carolinensis. Animal Behaviour 63(5): 837-845."
+    url: https://doi.org/10.1006/anbe.2001.1981
+    doi: 10.1006/anbe.2001.1981
+  bloomfield_etal_2005:
+    citation: "Bloomfield LL, Phillmore LS, Weisman RG, Sturdy CB. 2005. Note types and coding in parid vocalizations. III: The chick-a-dee call of the Carolina chickadee (Poecile carolinensis). Canadian Journal of Zoology 83(6): 820-833."
+    url: https://doi.org/10.1139/z05-067
+    doi: 10.1139/z05-067
+  freeberg_2008:
+    citation: "Freeberg TM. 2008. Complexity in the chick-a-dee call of Carolina Chickadees (Poecile carolinensis): associations of context and signaler behavior to call structure. The Auk 125(4): 896-907."
+    url: https://doi.org/10.1525/auk.2008.07025
+    doi: 10.1525/auk.2008.07025
+  mahurin_freeberg_2009:
+    citation: "Mahurin EJ, Freeberg TM. 2009. Chick-a-dee call variation in Carolina chickadees and recruiting flockmates to food. Behavioral Ecology 20(1): 111-116."
+    url: https://doi.org/10.1093/beheco/arn121
+    doi: 10.1093/beheco/arn121
+  soard_ritchison_2009:
+    citation: "Soard CM, Ritchison G. 2009. Chick-a-dee calls of Carolina chickadees convey information about degree of threat posed by avian predators. Animal Behaviour 78(6): 1447-1453."
+    url: https://doi.org/10.1016/j.anbehav.2009.09.026
+    doi: 10.1016/j.anbehav.2009.09.026
+  henry_lucas_2010:
+    citation: "Henry KS, Lucas JR. 2010. Auditory sensitivity and the frequency selectivity of auditory filters in the Carolina chickadee, Poecile carolinensis. Animal Behaviour 80(3): 497-507."
+    url: https://doi.org/10.1016/j.anbehav.2010.06.012
+    doi: 10.1016/j.anbehav.2010.06.012
+  hailman_1989:
+    citation: "Hailman JP. 1989. The organization of major vocalizations in the Paridae. Wilson Bulletin 101(2): 305-343."
+    url: https://sora.unm.edu/sites/default/files/journals/wilson/v101n02/p0305-p0343.pdf

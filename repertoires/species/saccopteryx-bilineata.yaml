@@ -1,0 +1,352 @@
+scientific_name: Saccopteryx bilineata
+common_name: Greater sac-winged bat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Chiroptera
+  family: Emballonuridae
+  genus: Saccopteryx
+  species: bilineata
+calls:
+  - name: territorial song
+    alternative_names:
+      - male territorial song
+      - countersong
+      - song
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - noisy
+      - harmonic
+      - repetitive
+      - multi_component
+      - loud
+    acoustic_description: A short, stereotyped, multi-element male song composed of repeated syllable types such as short tonal elements, buzzes, trills, noise bursts, and echolocation-like calls. Long buzz syllables are harsh, loud, and low in fundamental frequency, and song elements can be rhythmically organized.
+    semantic_keywords:
+      - territorial
+      - threat
+      - display
+      - courtship
+      - mating
+    semantic_description: Produced mainly by territorial males at day roosts, especially around reoccupation and departure periods, to repel rivals, advertise territory-holder quality, and attract females. Playback work shows territorial males respond more strongly to lower-frequency songs, and field experiments show male song can attract dispersing females.
+    acoustic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+      - id: behr_etal_2006
+        url: https://doi.org/10.1093/beheco/arl013
+      - id: burchardt_etal_2019
+        url: https://doi.org/10.1098/rsos.181076
+    semantic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+      - id: behr_etal_2006
+        url: https://doi.org/10.1093/beheco/arl013
+      - id: behr_etal_2009
+        url: https://doi.org/10.1007/s00265-008-0677-2
+      - id: knornschild_etal_2017
+        url: https://doi.org/10.1038/s41598-017-14434-5
+    playback_references:
+      - id: behr_etal_2009
+        url: https://doi.org/10.1007/s00265-008-0677-2
+      - id: knornschild_etal_2017
+        url: https://doi.org/10.1038/s41598-017-14434-5
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Behr and von Helversen 2004 separate territorial song from courtship song in wild Costa Rican males, Behr et al. 2006 analyzes territorial-song syllables and male quality, and Burchardt et al. 2019 uses territorial songs as one of three focal vocalization types. The call type is strongly established.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Behr and von Helversen 2004, Behr et al. 2006, and Burchardt et al. 2019 all describe territorial songs as multi-element male songs with tonal, buzz, trill, noisy, and echolocation-like components. Agreement is strong despite variation in element nomenclature across studies.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Behr and von Helversen 2004 and Behr et al. 2006 support a territorial-quality display function, Behr et al. 2009 provides playback evidence for male responses to territorial-song frequency, and Knornschild et al. 2017 supports attraction of dispersing females by male songs.
+
+  - name: courtship song
+    alternative_names:
+      - serenade
+      - male courtship song
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - noisy
+      - harmonic
+      - long
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A long, complex male song produced in display bouts and built from variable elements, especially trills, noise bursts, short tonal calls, and quasi-constant-frequency calls. Trill parameters differ among males and can contribute to individual repertoires.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+      - identity
+    semantic_description: Produced by adult males when displaying toward females, often as part of multimodal courtship that also includes wing-sac scent displays and hovering. It is associated with mate attraction, individual male display, and potential female choice.
+    acoustic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+      - id: davidson_wilkinson_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.06.016
+    semantic_references:
+      - id: behr_helversen_2004
+        url: https://doi.org/10.1007/s00265-004-0768-7
+      - id: voigt_etal_2008
+        url: https://doi.org/10.1644/08-MAMM-S-060.1
+      - id: davidson_wilkinson_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.06.016
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Behr and von Helversen 2004 explicitly distinguishes courtship songs from territorial songs in wild male Saccopteryx bilineata, while Davidson and Wilkinson 2004 and Voigt et al. 2008 support the broader role of male acoustic display in this mating system.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Behr and von Helversen 2004 provides the clearest element-level description of trills, noise bursts, short tonal calls, and quasi-constant-frequency calls, and Davidson and Wilkinson 2004 independently reports tonal and noisy male call components in a wild Trinidad population.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Behr and von Helversen 2004 reports courtship songs exclusively during male displays toward females, Davidson and Wilkinson 2004 links male song features to females in territories, and Voigt et al. 2008 places acoustic song within the multimodal sexual display system.
+
+  - name: isolation call
+    alternative_names:
+      - pup isolation call
+      - IC
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - noisy
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A complex multisyllabic call containing introductory or simple variable elements followed by composite and stereotyped elements. Pup calls commonly contain several element types in a repeated sequence and encode individual, group, and age-related information in different syllable portions.
+    semantic_keywords:
+      - contact
+      - caregiving
+      - begging
+      - identity
+      - submission
+      - affiliation
+    semantic_description: Produced by pups to elicit maternal care and support mother-pup reunions. Related isolation-call forms also occur later in life, including use by young or subordinate males in affiliative or appeasement contexts, so the adult semantic scope is broader than pup care alone.
+    acoustic_references:
+      - id: knornschild_helversen_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.05.018
+      - id: knornschild_etal_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.06.029
+      - id: fernandez_knornschild_2017
+        url: https://doi.org/10.12966/abc.04.05.2017
+      - id: burchardt_etal_2019
+        url: https://doi.org/10.1098/rsos.181076
+    semantic_references:
+      - id: knornschild_helversen_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.05.018
+      - id: knornschild_etal_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.06.029
+      - id: fernandez_knornschild_2017
+        url: https://doi.org/10.12966/abc.04.05.2017
+      - id: fernandez_knornschild_2020
+        url: https://doi.org/10.3389/fevo.2020.00265
+    playback_references:
+      - id: knornschild_helversen_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.05.018
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Isolation calls are central in Knornschild and von Helversen 2008, Knornschild et al. 2012, Fernandez and Knornschild 2017, and Burchardt et al. 2019. These independent analyses of recognition, group signatures, ontogeny, and rhythm strongly agree that this is a discrete call type.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Knornschild and von Helversen 2008 describes complex multisyllabic pup calls, Knornschild et al. 2012 and Fernandez and Knornschild 2017 identify individual, group, and age signatures in syllable components, and Burchardt et al. 2019 quantifies element sequences and rhythm.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Knornschild and von Helversen 2008 provides playback evidence that mothers discriminate own-pup isolation calls, Knornschild et al. 2012 links calls to group cohesion and social modification, and Fernandez and Knornschild 2020 documents adult male isolation-call production during pup-directed interactions.
+
+  - name: maternal directive call
+    alternative_names:
+      - directive call
+      - MD call
+      - pup-directed female call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - short
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A pup-directed female call produced as a monosyllabic series, usually several short syllables in succession. Compared with adult-directed female calls, maternal directive calls differ in timbre and have lower peak frequency.
+    semantic_keywords:
+      - caregiving
+      - contact
+      - attention
+    semantic_description: Produced by mothers toward their own pups, especially in mother-pup communication during the pup's ontogeny and early flight or care-related interactions. It is a female pup-directed vocal feedback signal.
+    acoustic_references:
+      - id: fernandez_knornschild_2020
+        url: https://doi.org/10.3389/fevo.2020.00265
+      - id: knornschild_helversen_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.05.018
+    semantic_references:
+      - id: fernandez_knornschild_2020
+        url: https://doi.org/10.3389/fevo.2020.00265
+      - id: knornschild_helversen_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.05.018
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Fernandez and Knornschild 2020 directly analyzes maternal directive calls from wild colonies, and Knornschild and von Helversen 2008 provides the earlier mother-pup recognition framework. The label is strong for pup-directed female call existence.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Fernandez and Knornschild 2020 gives acoustic comparisons between pup-directed and adult-directed female vocalizations, including timbre and peak-frequency differences. Agreement is medium because fewer independent studies focus on the detailed acoustic form of maternal directive calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Fernandez and Knornschild 2020 identifies maternal directive calls as female pup-directed vocalizations, and Knornschild and von Helversen 2008 supports the broader mother-pup communication context. The caregiving interpretation is direct and consistent.
+
+  - name: distress call
+    alternative_names:
+      - conspecific distress call
+      - buzz syllable distress call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - pulsed
+      - repetitive
+      - multi_component
+      - loud
+      - graded
+    acoustic_description: A loud, noisy, multi-syllable distress vocalization with several described categories; the most common playback stimulus category consists of buzz syllables with a tonal part. Spectrograms show broad-band energy and pulsed buzz structure.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced under extreme physical distress, such as capture-like predator contexts. Playback experiments show that conspecifics are attracted to distress calls within or near day roosts, consistent with threat assessment or mobbing.
+    acoustic_references:
+      - id: eckenweber_knornschild_2016
+        url: https://doi.org/10.1098/rsos.160151
+    semantic_references:
+      - id: eckenweber_knornschild_2016
+        url: https://doi.org/10.1098/rsos.160151
+    playback_references:
+      - id: eckenweber_knornschild_2016
+        url: https://doi.org/10.1098/rsos.160151
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Eckenweber and Knornschild 2016 analyzes distress calls, separates distress-call categories, and uses them in conspecific playback experiments with wild Saccopteryx bilineata. The call type is directly supported by focused primary evidence.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Eckenweber and Knornschild 2016 provides the focused acoustic evidence and spectrographic categories, but the description is mostly from one study. Agreement is medium because independent acoustic replication is limited.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Eckenweber and Knornschild 2016 explicitly frames these calls as signals of extreme physical distress and demonstrates location-dependent conspecific responses in playback experiments. The distress/alarm context is strongly supported.
+
+  - name: echolocation call
+    alternative_names:
+      - echolocation pulse
+      - search call
+      - frequency-alternating call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - repetitive
+      - multi_component
+    acoustic_description: A high-frequency ultrasonic pulse emitted in sequences. Search sequences can be monotonous around a stable frequency or frequency-alternating with low-note and high-note calls, and release recordings show rhythmic trains of many short elements.
+    semantic_keywords:
+      - food
+      - group_coordination
+      - identity
+      - spacing
+    semantic_description: Used for orientation, navigation, and insect prey capture during flight, with frequency-alternating sequences associated with active foraging. Echolocation sequences can also contain sex-specific or individual information, so they may contribute to social communication beyond sonar.
+    acoustic_references:
+      - id: ratcliffe_etal_2011
+        url: https://doi.org/10.1007/s00359-011-0630-0
+      - id: burchardt_etal_2019
+        url: https://doi.org/10.1098/rsos.181076
+    semantic_references:
+      - id: ratcliffe_etal_2011
+        url: https://doi.org/10.1007/s00359-011-0630-0
+      - id: burchardt_etal_2019
+        url: https://doi.org/10.1098/rsos.181076
+      - id: knornschild_helversen_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.05.018
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Ratcliffe et al. 2011 directly records echolocation calls in Panama, Burchardt et al. 2019 analyzes echolocation call sequences from wild Costa Rican bats, and Behr and von Helversen 2004 includes echolocation pulses in the broader repertoire. The call type is uncontroversial.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Ratcliffe et al. 2011 describes monotonous and frequency-alternating sequences with low-note and high-note calls, while Burchardt et al. 2019 quantifies rhythmic echolocation call trains. These studies agree on repeated high-frequency pulse sequences.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Ratcliffe et al. 2011 supports a foraging/orientation role, Burchardt et al. 2019 treats echolocation sequences alongside social vocalizations, and Knornschild and von Helversen 2008 finds mother echolocation pulse trains carry weaker individual distinctiveness. Agreement is medium because sonar and social-information roles are partly separate.
+
+references:
+  behr_helversen_2004:
+    citation: "Behr O, von Helversen O. 2004. Bat serenades - complex courtship songs of the sac-winged bat (Saccopteryx bilineata). Behavioral Ecology and Sociobiology 56(2): 106-115."
+    url: https://doi.org/10.1007/s00265-004-0768-7
+    doi: 10.1007/s00265-004-0768-7
+  davidson_wilkinson_2004:
+    citation: "Davidson SM, Wilkinson GS. 2004. Function of male song in the greater white-lined bat, Saccopteryx bilineata. Animal Behaviour 67(5): 883-891."
+    url: https://doi.org/10.1016/j.anbehav.2003.06.016
+    doi: 10.1016/j.anbehav.2003.06.016
+  behr_etal_2006:
+    citation: "Behr O, von Helversen O, Heckel G, Nagy M, Voigt CC, Mayer F. 2006. Territorial songs indicate male quality in the sac-winged bat Saccopteryx bilineata (Chiroptera, Emballonuridae). Behavioral Ecology 17(5): 810-817."
+    url: https://doi.org/10.1093/beheco/arl013
+    doi: 10.1093/beheco/arl013
+  voigt_etal_2008:
+    citation: "Voigt CC, Behr O, Caspers B, von Helversen O, Knornschild M, Mayer F, Nagy M. 2008. Songs, scents, and senses: sexual selection in the greater sac-winged bat, Saccopteryx bilineata. Journal of Mammalogy 89(6): 1401-1410."
+    url: https://doi.org/10.1644/08-MAMM-S-060.1
+    doi: 10.1644/08-MAMM-S-060.1
+  behr_etal_2009:
+    citation: "Behr O, Knornschild M, von Helversen O. 2009. Territorial counter-singing in male sac-winged bats (Saccopteryx bilineata): low-frequency songs trigger a stronger response. Behavioral Ecology and Sociobiology 63(3): 433-442."
+    url: https://doi.org/10.1007/s00265-008-0677-2
+    doi: 10.1007/s00265-008-0677-2
+  knornschild_helversen_2008:
+    citation: "Knornschild M, von Helversen O. 2008. Nonmutual vocal mother-pup recognition in the greater sac-winged bat. Animal Behaviour 76(3): 1001-1009."
+    url: https://doi.org/10.1016/j.anbehav.2008.05.018
+    doi: 10.1016/j.anbehav.2008.05.018
+  knornschild_etal_2012:
+    citation: "Knornschild M, Nagy M, Metz M, Mayer F, von Helversen O. 2012. Learned vocal group signatures in the polygynous bat Saccopteryx bilineata. Animal Behaviour 84(4): 761-769."
+    url: https://doi.org/10.1016/j.anbehav.2012.06.029
+    doi: 10.1016/j.anbehav.2012.06.029
+  fernandez_knornschild_2017:
+    citation: "Fernandez AA, Knornschild M. 2017. Isolation calls of the bat Saccopteryx bilineata encode multiple messages. Animal Behavior and Cognition 4(2): 169-186."
+    url: https://doi.org/10.12966/abc.04.05.2017
+    doi: 10.12966/abc.04.05.2017
+  knornschild_etal_2017:
+    citation: "Knornschild M, Bluml S, Steidl P, Eckenweber M, Nagy M. 2017. Bat songs as acoustic beacons - male territorial songs attract dispersing females. Scientific Reports 7: 13918."
+    url: https://doi.org/10.1038/s41598-017-14434-5
+    doi: 10.1038/s41598-017-14434-5
+  fernandez_knornschild_2020:
+    citation: "Fernandez AA, Knornschild M. 2020. Pup directed vocalizations of adult females and males in a vocal learning bat. Frontiers in Ecology and Evolution 8: 265."
+    url: https://doi.org/10.3389/fevo.2020.00265
+    doi: 10.3389/fevo.2020.00265
+  eckenweber_knornschild_2016:
+    citation: "Eckenweber M, Knornschild M. 2016. Responsiveness to conspecific distress calls is influenced by day-roost proximity in bats (Saccopteryx bilineata). Royal Society Open Science 3(5): 160151."
+    url: https://doi.org/10.1098/rsos.160151
+    doi: 10.1098/rsos.160151
+  ratcliffe_etal_2011:
+    citation: "Ratcliffe JM, Jakobsen L, Kalko EKV, Surlykke A. 2011. Frequency alternation and an offbeat rhythm indicate foraging behavior in the echolocating bat, Saccopteryx bilineata. Journal of Comparative Physiology A 197(5): 413-423."
+    url: https://doi.org/10.1007/s00359-011-0630-0
+    doi: 10.1007/s00359-011-0630-0
+  burchardt_etal_2019:
+    citation: "Burchardt LS, Norton P, Behr O, Scharff C, Knornschild M. 2019. General isochronous rhythm in echolocation calls and social vocalizations of the bat Saccopteryx bilineata. Royal Society Open Science 6(1): 181076."
+    url: https://doi.org/10.1098/rsos.181076
+    doi: 10.1098/rsos.181076

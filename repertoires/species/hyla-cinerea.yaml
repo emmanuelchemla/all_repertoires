@@ -1,0 +1,136 @@
+scientific_name: Hyla cinerea
+common_name: Green tree frog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Hylidae
+  genus: Hyla
+  species: cinerea
+calls:
+  - name: advertisement call
+    alternative_names:
+      - mating call
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - high_frequency
+      - harmonic
+      - pulsed
+      - short
+      - repetitive
+      - loud
+    acoustic_description: A repeated, short, pulsed mating call with a bimodal spectrum. Playback studies identify an effective low-frequency band near 0.9-1.1 kHz, a higher band near 2.7-3.3 kHz, and fine-temporal periodicity near 300 per second as salient features of typical calls.
+    semantic_keywords:
+      - courtship
+      - mating
+      - attention
+    semantic_description: Produced by adult males in nighttime breeding choruses to attract females. Female phonotaxis experiments show selective approach to calls with species-typical spectral and temporal structure, and field studies show that calling attendance is central to male mating opportunities.
+    acoustic_references:
+      - id: gerhardt_1974
+        url: https://doi.org/10.1242/jeb.61.1.229
+      - id: gerhardt_1978
+        url: https://doi.org/10.1242/jeb.74.1.59
+      - id: gerhardt_1987
+        url: https://doi.org/10.1016/S0003-3472(87)80020-9
+    semantic_references:
+      - id: gerhardt_1974
+        url: https://doi.org/10.1242/jeb.61.1.229
+      - id: gerhardt_1987
+        url: https://doi.org/10.1016/S0003-3472(87)80020-9
+      - id: gerhardt_etal_1987
+        url: https://doi.org/10.1016/S0003-3472(87)80021-0
+      - id: perrill_etal_1982
+        url: https://doi.org/10.1016/S0003-3472(82)80235-2
+    playback_references:
+      - id: gerhardt_1974
+        url: https://doi.org/10.1242/jeb.61.1.229
+      - id: gerhardt_1978
+        url: https://doi.org/10.1242/jeb.74.1.59
+      - id: gerhardt_1987
+        url: https://doi.org/10.1016/S0003-3472(87)80020-9
+      - id: perrill_etal_1982
+        url: https://doi.org/10.1016/S0003-3472(82)80235-2
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Gerhardt 1974, Gerhardt 1978, Gerhardt 1987, Gerhardt et al. 1987, and Perrill et al. 1982 all treat the male mating or advertisement call as the principal breeding signal of Hyla cinerea. The call type is stable across playback and field-behavior studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Gerhardt 1974 identifies the spectral bands important for mating-call recognition, Gerhardt 1978 identifies typical fine-temporal periodicity, and Gerhardt 1987 extends the female playback work to call duration, repetition rate, and level. These studies strongly agree on the bimodal, pulsed acoustic structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Gerhardt 1974 and 1987 show female phonotaxis toward species-typical mating-call structure, Gerhardt et al. 1987 link calling attendance with mating opportunity in a wild breeding aggregation, and Perrill et al. 1982 show that male advertisement calls also attract satellite males. The mating/attention function is strongly supported.
+
+  - name: encounter call
+    alternative_names:
+      - aggressive call
+      - pulsed call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - pulsed
+      - short
+      - repetitive
+      - loud
+      - graded
+    acoustic_description: A strongly pulsed call used as a distinct signal from the mating call. Published playback and recognition work distinguishes these pulsed encounter calls from advertisement calls, with pulsing continuing through the signal rather than being limited to the beginning of the call.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+      - spacing
+    semantic_description: Produced by adult males during close-range interactions in breeding aggregations, especially when males are near one another. Playback experiments using synthetic encounter calls show that males respond differently to encounter calls than to mating calls, consistent with a role in male-male spacing and aggression.
+    acoustic_references:
+      - id: gerhardt_1978
+        url: https://doi.org/10.1242/jeb.74.1.59
+      - id: perrill_etal_1982
+        url: https://doi.org/10.1016/S0003-3472(82)80235-2
+      - id: fellers_1979
+        url: https://doi.org/10.1016/0003-3472(79)90131-3
+    semantic_references:
+      - id: gerhardt_1978
+        url: https://doi.org/10.1242/jeb.74.1.59
+      - id: perrill_etal_1982
+        url: https://doi.org/10.1016/S0003-3472(82)80235-2
+      - id: fellers_1979
+        url: https://doi.org/10.1016/0003-3472(79)90131-3
+    playback_references:
+      - id: gerhardt_1978
+        url: https://doi.org/10.1242/jeb.74.1.59
+      - id: perrill_etal_1982
+        url: https://doi.org/10.1016/S0003-3472(82)80235-2
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Perrill et al. 1982 explicitly use synthetic encounter calls in field experiments on Hyla cinerea, and Gerhardt 1978 discusses pulsed calls as distinct from mating calls in the green tree frog repertoire. The label is medium rather than strong because fewer studies focus on this call type than on the advertisement call, and Fellers 1979 is partly comparative across North American tree frogs.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Gerhardt 1978 distinguishes pulsed calls from mating calls using playback and recognition criteria, and Perrill et al. 1982 confirms the use of synthetic encounter-call stimuli in field experiments. Acoustic agreement is medium because detailed published measurements for Hyla cinerea encounter calls are less abundant than for the advertisement call.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Perrill et al. 1982 shows that males respond differently to synthetic encounter calls and mating calls in the field, Gerhardt 1978 links pulsed calls with close male proximity and aggressive behavior, and Fellers 1979 places encounter calls in a broader treefrog pattern of territorial and aggressive interactions. The male-male spacing context is well supported.
+
+references:
+  gerhardt_1974:
+    citation: "Gerhardt HC. 1974. The significance of some spectral features in mating call recognition in the green treefrog (Hyla cinerea). Journal of Experimental Biology 61(1): 229-241."
+    url: https://doi.org/10.1242/jeb.61.1.229
+    doi: 10.1242/jeb.61.1.229
+  gerhardt_1978:
+    citation: "Gerhardt HC. 1978. Mating call recognition in the green treefrog (Hyla cinerea): the significance of some fine-temporal properties. Journal of Experimental Biology 74(1): 59-73."
+    url: https://doi.org/10.1242/jeb.74.1.59
+    doi: 10.1242/jeb.74.1.59
+  fellers_1979:
+    citation: "Fellers GM. 1979. Aggression, territoriality, and mating behaviour in North American treefrogs. Animal Behaviour 27(1): 107-119."
+    url: https://doi.org/10.1016/0003-3472(79)90131-3
+    doi: 10.1016/0003-3472(79)90131-3
+  perrill_etal_1982:
+    citation: "Perrill SA, Gerhardt HC, Daniel RE. 1982. Mating strategy shifts in male green treefrogs (Hyla cinerea): an experimental study. Animal Behaviour 30(1): 43-48."
+    url: https://doi.org/10.1016/S0003-3472(82)80235-2
+    doi: 10.1016/S0003-3472(82)80235-2
+  gerhardt_1987:
+    citation: "Gerhardt HC. 1987. Evolutionary and neurobiological implications of selective phonotaxis in the green treefrog, Hyla cinerea. Animal Behaviour 35(5): 1479-1489."
+    url: https://doi.org/10.1016/S0003-3472(87)80020-9
+    doi: 10.1016/S0003-3472(87)80020-9
+  gerhardt_etal_1987:
+    citation: "Gerhardt HC, Daniel RE, Perrill SA, Schramm S. 1987. Mating behaviour and male mating success in the green treefrog. Animal Behaviour 35(5): 1490-1503."
+    url: https://doi.org/10.1016/S0003-3472(87)80021-0
+    doi: 10.1016/S0003-3472(87)80021-0

@@ -1,0 +1,288 @@
+scientific_name: Callithrix jacchus
+common_name: Common marmoset
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Callithrix
+  species: jacchus
+calls:
+  - name: phee
+    alternative_names:
+      - phee call
+      - isolation call
+      - long-distance contact call
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - repetitive
+      - frequency_modulated
+    acoustic_description: A long, narrowband tonal call, usually composed of one or more sustained pulses with gradual frequency modulation. Phee strings can repeat several phee units with short silent intervals between them.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - spacing
+      - identity
+      - territorial
+    semantic_description: Used as a long-distance contact call, especially when individuals are separated or visually occluded, and in antiphonal exchanges. The call carries information about caller identity and social group and can also participate in territorial spacing.
+    acoustic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+      - id: miller_etal_2010
+        url: https://doi.org/10.1002/ajp.20854
+    semantic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: miller_etal_2010
+        url: https://doi.org/10.1002/ajp.20854
+      - id: miller_thomas_2012
+        url: https://doi.org/10.1007/s00359-012-0712-7
+    playback_references:
+      - id: miller_etal_2009
+        url: https://doi.org/10.1007/s00359-009-0456-1
+      - id: miller_thomas_2012
+        url: https://doi.org/10.1007/s00359-012-0712-7
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Phees are described in the wild repertoire by Bezerra and Souto 2008, are one of the four major quantitative call classes in Agamaite et al. 2015, and are the focus of antiphonal calling studies by Miller et al. 2010 and Miller and Thomas 2012. Agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Bezerra and Souto 2008 and Agamaite et al. 2015 agree on phee calls as long, narrowband tonal calls, while Miller et al. 2010 quantifies pulse structure and identity cues. The acoustic description is strongly supported.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Bezerra and Souto 2008 supports wild long-distance use, Miller et al. 2010 shows identity and social-group information during antiphonal calling, and Miller and Thomas 2012 shows individual recognition in playback exchanges. The contact/identity function is strong.
+
+  - name: trill
+    alternative_names:
+      - trill call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - long
+    acoustic_description: A narrowband tonal call distinguished by a sinusoidal frequency-modulated contour, usually shorter-range and less sustained than phees. The fundamental frequency commonly lies in the upper kilohertz range and can vary with age.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Used mostly at short range during social contact or vocal exchanges between nearby individuals. Wild work also shows age-related differences in trill pitch, indicating developmental variation in this common call.
+    acoustic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+      - id: bezerra_etal_2009
+        url: https://doi.org/10.1007/s10329-009-0132-7
+    semantic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+      - id: bezerra_etal_2009
+        url: https://doi.org/10.1007/s10329-009-0132-7
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Trills are recognized in the wild repertoire of Bezerra and Souto 2008, analyzed quantitatively by Agamaite et al. 2015, and examined in wild ontogenetic work by Bezerra et al. 2009. The call type is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Agamaite et al. 2015 gives detailed acoustic measures of the sinusoidal frequency modulation that distinguishes trills from phees, and Bezerra et al. 2009 shows pitch differences across ages in wild animals. The acoustic account is strong.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Bezerra and Souto 2008 and Agamaite et al. 2015 associate trills with close-range social exchange, but fewer dedicated functional tests exist than for phees. The semantic label is therefore medium.
+
+  - name: twitter
+    alternative_names:
+      - twitter call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - frequency_modulated
+      - repetitive
+      - multi_component
+      - long
+    acoustic_description: A phrased, wideband call made from a sequence of regularly spaced upward frequency-modulated sweeps. Phrase number, inter-phrase interval, and sweep structure vary between callers and populations.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Produced in social vocal exchanges among nearby individuals and often answered by another twitter or a different contact call. Its exact functional range is less well resolved than phee calls, but it is a common social-coordination vocalization.
+    acoustic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+    semantic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Twitter calls are included in Bezerra and Souto 2008 and form one of the major call classes in the quantitative acoustic analysis by Agamaite et al. 2015. Agreement is strong for existence.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Agamaite et al. 2015 describes twitters as wideband, phrased calls with repeated upward frequency sweeps, consistent with the repertoire-level description in Bezerra and Souto 2008. The acoustic structure is strongly supported.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Bezerra and Souto 2008 and Agamaite et al. 2015 associate twitters with social exchanges, but the sources note that the detailed function of twitters is less established than for phees. The semantic label is medium.
+
+  - name: tsik
+    alternative_names:
+      - mobbing call
+      - alarm tsik
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - frequency_modulated
+      - short
+      - abrupt
+      - loud
+      - repetitive
+    acoustic_description: An extremely short, high-intensity broadband call with a rapid frequency sweep, often produced in repeated strings. It is among the broadest-band simple calls in quantitative analyses.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - distress
+      - group_coordination
+    semantic_description: Produced during mobbing or alarm responses to threatening stimuli, including predator models, and can be repeated rapidly in high-arousal situations. Experimental studies also link tsik calling with coping or stress modulation during threats.
+    acoustic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+      - id: clara_etal_2008
+        url: https://doi.org/10.1007/s10071-007-0125-0
+    semantic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: cross_rogers_2006
+        url: https://doi.org/10.1016/j.yhbeh.2005.07.007
+      - id: clara_etal_2008
+        url: https://doi.org/10.1007/s10071-007-0125-0
+    playback_references:
+      - id: cross_rogers_2006
+        url: https://doi.org/10.1016/j.yhbeh.2005.07.007
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Tsik calls are described in wild common marmosets by Bezerra and Souto 2008 and treated as a simple call type by Agamaite et al. 2015. Clara et al. 2008 and Cross and Rogers 2006 further support the mobbing-call category experimentally.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Agamaite et al. 2015 provides detailed support for tsiks as very short, broadband, high-intensity calls, and the experimental mobbing studies use the same call label. The acoustic description is strong.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Bezerra and Souto 2008 supports wild use in the repertoire, while Clara et al. 2008 and Cross and Rogers 2006 link tsiks to model-snake mobbing and physiological responses. The alarm/mobbing interpretation is strongly supported.
+
+  - name: egg
+    alternative_names:
+      - ek
+      - egg call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - graded
+    acoustic_description: A short, harsh broadband call that often appears near tsiks or as a component of mobbing-related compound calls. It is less acoustically elaborated than phees, trills, or twitters.
+    semantic_keywords:
+      - alarm
+      - threat
+      - distress
+      - aggression
+    semantic_description: Associated with alarm, mild anxiety, mobbing, or threat contexts, often in combination with tsiks and related short calls. Its independent function is less clearly tested than that of the phee or tsik.
+    acoustic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+    semantic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Egg calls are included in the wild repertoire by Bezerra and Souto 2008 and identified as a simple call type by Agamaite et al. 2015. Existence is strong even though the functional literature is thinner.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Agamaite et al. 2015 distinguishes egg calls from tsiks and ocks, but fewer detailed descriptions are available than for the major phee, trill, and twitter classes. Acoustic agreement is medium.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Bezerra and Souto 2008 and Agamaite et al. 2015 place eggs near alarm or mobbing-related short-call contexts, but independent playback or production-specific tests are limited. The semantic description is weak.
+
+  - name: tsik-egg
+    alternative_names:
+      - tsik egg
+      - tsik-egg compound
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - repetitive
+      - multi_component
+      - loud
+    acoustic_description: A compound call beginning with a tsik-like element followed by one or more egg-like elements with very short silent intervals. It can occur within longer variable strings of tsik, egg, and related short calls.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - group_coordination
+      - combinatorial
+    semantic_description: Produced in mobbing or predator-related contexts as part of the short-call alarm system. It appears to package tsik and egg elements into a recurring compound form, but its meaning relative to single tsiks remains incompletely tested.
+    acoustic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+    semantic_references:
+      - id: bezerra_souto_2008
+        url: https://doi.org/10.1007/s10764-008-9250-0
+      - id: agamaite_etal_2015
+        url: https://doi.org/10.1121/1.4934268
+      - id: clara_etal_2008
+        url: https://doi.org/10.1007/s10071-007-0125-0
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Agamaite et al. 2015 treats tsik-egg as a recurring compound call type, and Bezerra and Souto 2008 supports the wild short-call repertoire from which it is built. The label is medium because compound-call boundaries are less settled than simple calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Agamaite et al. 2015 gives a clear structural description of tsik-eggs, but the category depends on sequencing rules among short elements and has fewer wild quantitative analyses. Acoustic agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Agamaite et al. 2015 and Clara et al. 2008 support mobbing use for tsik/egg strings, while Bezerra and Souto 2008 supports wild occurrence of the component calls. The alarm semantics are supported, but the compound-specific meaning is not well tested.
+
+references:
+  bezerra_souto_2008:
+    citation: "Bezerra BM, Souto A. 2008. Structure and usage of the vocal repertoire of Callithrix jacchus. International Journal of Primatology 29(3): 671-701."
+    url: https://doi.org/10.1007/s10764-008-9250-0
+    doi: 10.1007/s10764-008-9250-0
+  agamaite_etal_2015:
+    citation: "Agamaite JA, Chang CJ, Osmanski MS, Wang X. 2015. A quantitative acoustic analysis of the vocal repertoire of the common marmoset (Callithrix jacchus). Journal of the Acoustical Society of America 138(5): 2906-2928."
+    url: https://doi.org/10.1121/1.4934268
+    doi: 10.1121/1.4934268
+  miller_etal_2010:
+    citation: "Miller CT, Mandel K, Wang X. 2010. The communicative content of the common marmoset phee call during antiphonal calling. American Journal of Primatology 72(11): 974-980."
+    url: https://doi.org/10.1002/ajp.20854
+    doi: 10.1002/ajp.20854
+  miller_etal_2009:
+    citation: "Miller CT, Beck K, Meade B, Wang X. 2009. Antiphonal call timing in marmosets is behaviorally significant: interactive playback experiments. Journal of Comparative Physiology A 195(8): 783-789."
+    url: https://doi.org/10.1007/s00359-009-0456-1
+    doi: 10.1007/s00359-009-0456-1
+  miller_thomas_2012:
+    citation: "Miller CT, Thomas AW. 2012. Individual recognition during bouts of antiphonal calling in common marmosets. Journal of Comparative Physiology A 198(5): 337-346."
+    url: https://doi.org/10.1007/s00359-012-0712-7
+    doi: 10.1007/s00359-012-0712-7
+  bezerra_etal_2009:
+    citation: "Bezerra BM, Souto A, Oliveira MAB, Halsey LG. 2009. Vocalisations of wild common marmosets are influenced by diurnal and ontogenetic factors. Primates 50(3): 231-237."
+    url: https://doi.org/10.1007/s10329-009-0132-7
+    doi: 10.1007/s10329-009-0132-7
+  cross_rogers_2006:
+    citation: "Cross N, Rogers LJ. 2006. Mobbing vocalizations as a coping response in the common marmoset. Hormones and Behavior 49(2): 237-245."
+    url: https://doi.org/10.1016/j.yhbeh.2005.07.007
+    doi: 10.1016/j.yhbeh.2005.07.007
+  clara_etal_2008:
+    citation: "Clara E, Tommasi L, Rogers LJ. 2008. Social mobbing calls in common marmosets (Callithrix jacchus): effects of experience and associated cortisol levels. Animal Cognition 11(2): 349-358."
+    url: https://doi.org/10.1007/s10071-007-0125-0
+    doi: 10.1007/s10071-007-0125-0

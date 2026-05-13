@@ -1,0 +1,193 @@
+scientific_name: Parus minor
+common_name: Japanese tit
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Paridae
+  genus: Parus
+  species: minor
+calls:
+  - name: jar call
+    alternative_names:
+      - snake alarm call
+      - jar alarm call
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - repetitive
+      - abrupt
+    acoustic_description: A repeated harsh call made of short noisy elements that are acoustically discrete from chicka calls. It is typically produced as a bout of jar-like notes rather than as an ordered A-B-C-D sequence.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced by adults in nest-defence contexts especially when confronted with Japanese rat snakes. Playback of jar calls causes adult receivers to direct search toward the ground, and incubating females use conspecific alarm-call information to assess predation risk.
+    acoustic_references:
+      - id: suzuki_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.03.030
+      - id: suzuki_2014
+        url: https://doi.org/10.1016/j.anbehav.2013.10.009
+    semantic_references:
+      - id: suzuki_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.03.030
+      - id: suzuki_2014
+        url: https://doi.org/10.1016/j.anbehav.2013.10.009
+      - id: suzuki_2015
+        url: https://doi.org/10.1038/srep10239
+    playback_references:
+      - id: suzuki_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.03.030
+      - id: suzuki_2015
+        url: https://doi.org/10.1038/srep10239
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Suzuki 2012 and Suzuki 2014 both treat jar calls as a discrete Japanese tit mobbing-call type, distinct from chicka calls. The call is also used in later predation-risk playback work by Suzuki 2015.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Suzuki 2012 and Suzuki 2014 independently contrast the acoustic form of jar calls with chicka calls in the same wild population. Agreement is strong for a harsh repeated call class, even though the precise acoustic measurements are concentrated in Suzuki's work.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Suzuki 2012 shows that jar-call playback elicits ground-directed predator searching, Suzuki 2014 links jar production to snake presentations, and Suzuki 2015 shows risk assessment from alarm calls by incubating females. These studies agree on a snake/predator-alert function.
+
+  - name: ABC call
+    alternative_names:
+      - chicka call
+      - chicka alarm call
+      - mobbing call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A multi-note parid alarm call assembled from A, B, and C note units, often within the broader chicka-call system. Notes are short and ordered, and the number and arrangement of notes can vary across predator contexts.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used in mobbing and danger contexts, especially around aerial or climbing nest predators such as crows and martens. Playback of ABC units causes receivers to scan the surroundings, particularly the horizontal field where such predators are expected.
+    acoustic_references:
+      - id: suzuki_2014
+        url: https://doi.org/10.1016/j.anbehav.2013.10.009
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+    semantic_references:
+      - id: suzuki_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.03.030
+      - id: suzuki_2014
+        url: https://doi.org/10.1016/j.anbehav.2013.10.009
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+    playback_references:
+      - id: suzuki_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.03.030
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Suzuki 2014 documents chicka calls in predator-presentation trials, and Suzuki, Wheatcroft, and Griesser 2016 experimentally separates the ABC unit from D notes. The label is strong, though ABC is a functional unit within a broader variable chicka-call family.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Suzuki 2014 and Suzuki, Wheatcroft, and Griesser 2016 agree that the call is composed of ordered note units that can enter larger combinations. The exact note repertoire is complex, but the ABC unit is consistently identified.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Suzuki 2012 supports predator-search responses to chicka calls, Suzuki 2014 links chicka production to crow and marten presentations, and Suzuki, Wheatcroft, and Griesser 2016 shows that ABC notes elicit scanning for danger. Agreement is strong for a danger-scanning function.
+
+  - name: D call
+    alternative_names:
+      - D-note call
+      - recruitment call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - short
+      - repetitive
+    acoustic_description: A string of repeated short D notes, usually delivered as a dee-like series. In experimental stimuli, D notes occur as multiple repeated elements rather than a single isolated note.
+    semantic_keywords:
+      - recruitment
+      - contact
+      - group_coordination
+    semantic_description: Functions as an approach or recruitment signal. In playback experiments, receivers approach the caller or loudspeaker in response to D-note strings, and D notes add recruitment value when combined after ABC calls.
+    acoustic_references:
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+      - id: suzuki_2014
+        url: https://doi.org/10.1016/j.anbehav.2013.10.009
+    semantic_references:
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+    playback_references:
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Suzuki, Wheatcroft, and Griesser 2016 identifies D-note strings as a meaningful call unit and Suzuki 2014 documents D notes within natural chicka-call combinations. The label is medium because D is often discussed as a note unit or subcall rather than a fully independent repertoire category.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The repeated-note form is clear in Suzuki, Wheatcroft, and Griesser 2016 and compatible with Suzuki 2014, but detailed independent acoustic descriptions of D calls alone are limited. Agreement is therefore moderate.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Suzuki, Wheatcroft, and Griesser 2016 directly tests D-call playback and finds approach responses. The semantic evidence for recruitment/approach is experimentally strong, even if the call-type boundary is narrower than jar or chicka calls.
+
+  - name: ABC-D sequence
+    alternative_names:
+      - ABC-D call
+      - compositional call sequence
+      - chicka-D sequence
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - repetitive
+      - multi_component
+      - long
+    acoustic_description: An ordered compound call in which A, B, and C note units precede a repeated string of D notes. Natural intervals between note units are short, and reversing the order to D-ABC disrupts receiver interpretation.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - group_coordination
+      - combinatorial
+    semantic_description: Combines the danger-scanning response associated with ABC notes and the approach response associated with D notes. Receivers treat the natural ABC-D order as a compound signal that recruits them while they scan for danger.
+    acoustic_references:
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+      - id: suzuki_2014
+        url: https://doi.org/10.1016/j.anbehav.2013.10.009
+    semantic_references:
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+    playback_references:
+      - id: suzuki_wheatcroft_griesser_2016
+        url: https://doi.org/10.1038/ncomms10986
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Suzuki, Wheatcroft, and Griesser 2016 records natural ABC-D sequences and tests them experimentally, while Suzuki 2014 shows that Japanese tits use many structured chicka-note combinations in predator contexts. The natural ordered sequence is well supported.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Suzuki, Wheatcroft, and Griesser 2016 provides the clearest acoustic unit definition, including natural and reversed sequence construction, and Suzuki 2014 supports broader combinatorial variation. Agreement is medium because one paper supplies most of the sequence-specific detail.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Suzuki, Wheatcroft, and Griesser 2016 experimentally shows that receivers combine the scanning response to ABC with the approach response to D only when the order is natural. This is strong playback evidence for compositional interpretation.
+
+references:
+  suzuki_2012:
+    citation: "Suzuki TN. 2012. Referential mobbing calls elicit different predator-searching behaviours in Japanese great tits. Animal Behaviour 84(1): 53-57."
+    url: https://doi.org/10.1016/j.anbehav.2012.03.030
+    doi: 10.1016/j.anbehav.2012.03.030
+  suzuki_2014:
+    citation: "Suzuki TN. 2014. Communication about predator type by a bird using discrete, graded and combinatorial variation in alarm calls. Animal Behaviour 87: 59-65."
+    url: https://doi.org/10.1016/j.anbehav.2013.10.009
+    doi: 10.1016/j.anbehav.2013.10.009
+  suzuki_2015:
+    citation: "Suzuki TN. 2015. Assessment of predation risk through referential communication in incubating birds. Scientific Reports 5: 10239."
+    url: https://doi.org/10.1038/srep10239
+    doi: 10.1038/srep10239
+  suzuki_wheatcroft_griesser_2016:
+    citation: "Suzuki TN, Wheatcroft D, Griesser M. 2016. Experimental evidence for compositional syntax in bird calls. Nature Communications 7: 10986."
+    url: https://doi.org/10.1038/ncomms10986
+    doi: 10.1038/ncomms10986

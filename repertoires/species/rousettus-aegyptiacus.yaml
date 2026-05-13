@@ -1,0 +1,232 @@
+scientific_name: Rousettus aegyptiacus
+common_name: Egyptian fruit bat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Chiroptera
+  family: Pteropodidae
+  genus: Rousettus
+  species: aegyptiacus
+calls:
+  - name: aggression call
+    alternative_names:
+      - aggressive call
+      - squabble call
+      - social call
+    scope: &adult_unknown_scope
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - harmonic
+      - noisy
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A variable sequence of broad-band, multi-harmonic syllables, commonly arranged in short bouts of one to about twenty syllables. The spectral detail carries information useful for classifying caller, addressee, and interaction context.
+    semantic_keywords:
+      - aggression
+      - threat
+      - food
+      - mating
+      - spacing
+      - identity
+    semantic_description: Produced during everyday pairwise squabbles, especially conflicts over feeding, mating, perching, and sleeping space. Calls are directed to particular addressees and can predict the behavioral response of the interaction partner.
+    acoustic_references:
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+      - id: prat_etal_2017
+        url: https://doi.org/10.1038/sdata.2017.143
+    semantic_references:
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+      - id: prat_etal_2017
+        url: https://doi.org/10.1038/sdata.2017.143
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Prat et al. 2016 treat aggression calls as the most common Egyptian fruit bat social call type and Prat et al. 2017 archives a large annotated vocal dataset from the same research program. The label is medium because the category is well supported within one experimental-colony tradition but has less independent wild validation.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Prat et al. 2016 and Prat et al. 2017 agree on broad-band multi-harmonic syllable sequences and provide extensive annotated recordings. Agreement is medium because detailed acoustic boundaries among aggression subcontexts are statistical rather than a simple hand-classified call catalogue.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Prat et al. 2016 distinguishes feeding, mating, perch, and sleep aggression contexts and shows that calls contain addressee and context information, with Prat et al. 2017 providing the supporting dataset. Agreement is medium because the evidence is rich but comes mainly from captive groups of wild-caught bats.
+
+  - name: mating call
+    alternative_names: []
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - harmonic
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A context-specific social vocalization produced in bouts during mating, with broad spectral energy and multi-harmonic syllable structure comparable to other Egyptian fruit bat social calls.
+    semantic_keywords:
+      - mating
+      - courtship
+      - attention
+    semantic_description: Produced by adult males during mating interactions. In the annotated repertoire it is separated from aggression calls and pup or distress calls by the caller class and mating context.
+    acoustic_references:
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+      - id: prat_etal_2017
+        url: https://doi.org/10.1038/sdata.2017.143
+    semantic_references:
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+      - id: prat_etal_2017
+        url: https://doi.org/10.1038/sdata.2017.143
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Prat et al. 2016 explicitly identifies male mating calls and Prat et al. 2017 includes vocalizations across reproductive and social contexts. The label is medium because the call is clear in the annotated colony work but less independently described in wild field studies.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description relies mainly on the Prat et al. 2016 figure and dataset-level information rather than a focused acoustic analysis of mating calls. Prat et al. 2017 supports the presence of the recordings, but independent acoustic descriptions are limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Prat et al. 2016 labels the call as male-produced during mating, and the Scientific Data descriptor documents the broader annotated dataset. Agreement is medium because the context label is explicit but the function beyond mating-context production is not experimentally tested.
+
+  - name: isolation call
+    alternative_names:
+      - pup isolation call
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - harmonic
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A repeated juvenile call sequence with harmonic and frequency-modulated syllables. Across ontogeny, pup calls develop toward the adult social repertoire and are represented in long-term recordings from birth to adulthood.
+    semantic_keywords:
+      - distress
+      - begging
+      - caregiving
+      - contact
+    semantic_description: Produced by pups when left alone in the roost or detached from their mothers. It functions as a separation-related care-soliciting contact call in the colony recordings.
+    acoustic_references:
+      - id: prat_etal_2015
+        url: https://doi.org/10.1126/sciadv.1500019
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+      - id: prat_etal_2017
+        url: https://doi.org/10.1038/sdata.2017.143
+    semantic_references:
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+      - id: prat_etal_2017
+        url: https://doi.org/10.1038/sdata.2017.143
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Prat et al. 2016 names pup isolation calls, Prat et al. 2017 documents the complete vocal ontogeny of pups in the dataset, and Prat et al. 2015 analyzes developmental acquisition of the adult repertoire. The label is medium because the evidence is extensive but mostly from controlled housing.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Prat et al. 2015, 2016, and 2017 all support repeated developmental vocalizations by pups, but the cited work emphasizes ontogeny and information content more than a narrow acoustic definition of the isolation-call syllable inventory.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Prat et al. 2016 explicitly defines isolation calls as produced by pups when alone or detached from mothers, and Prat et al. 2017 provides a large ontogenetic dataset. The care-soliciting interpretation is reasonable but not supported here by a dedicated playback test.
+
+  - name: seclusion distress call
+    alternative_names:
+      - distress call
+      - seclusion call
+    scope: *adult_unknown_scope
+    acoustic_keywords:
+      - broadband
+      - harmonic
+      - noisy
+      - repetitive
+      - multi_component
+      - loud
+    acoustic_description: A social vocalization emitted in repeated syllable sequences under separation or distress. It shares the broad-band, multi-harmonic structure of many Egyptian fruit bat social calls but is categorized by the adult separation context.
+    semantic_keywords:
+      - distress
+      - contact
+      - attention
+    semantic_description: Emitted mostly by distressed adults separated from others. The call is associated with social seclusion rather than aggression over a specific resource or mating interaction.
+    acoustic_references:
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+      - id: prat_etal_2017
+        url: https://doi.org/10.1038/sdata.2017.143
+    semantic_references:
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+      - id: prat_etal_2017
+        url: https://doi.org/10.1038/sdata.2017.143
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Prat et al. 2016 lists seclusion/distress calls as a repertoire class and Prat et al. 2017 provides the associated annotated vocalization database. The label is medium because the call is clear in that dataset but not strongly cross-validated by independent wild studies.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The broad acoustic profile follows Prat et al. 2016 and the Prat et al. 2017 dataset, but there is little call-specific acoustic quantification separate from other broad-band social vocalizations. The label is weak for fine acoustic boundaries.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Prat et al. 2016 explicitly associates this call with distressed adults separated from others, and Prat et al. 2017 supports the annotation framework. Agreement is medium because the social context is direct but functional receiver responses are not experimentally tested.
+
+  - name: echolocation click
+    alternative_names:
+      - lingual click
+      - click
+      - echolocation call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - short
+      - abrupt
+      - quiet
+      - repetitive
+    acoustic_description: A very brief, click-like impulse signal produced in repeated trains. Measurements show low-energy, short-duration, broad-band clicks whose structure is matched to the species' hearing sensitivity despite being much lower in energy than many microbat echolocation calls.
+    semantic_keywords:
+      - spacing
+      - food
+    semantic_description: Used for non-social acoustic orientation and obstacle avoidance during flight, including movement through dark or cluttered spaces and foraging routes. It is included here as a vocal repertoire element even though its primary role is sonar rather than social signaling.
+    acoustic_references:
+      - id: holland_etal_2004
+        url: https://doi.org/10.1242/jeb.01288
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+    semantic_references:
+      - id: holland_etal_2004
+        url: https://doi.org/10.1242/jeb.01288
+      - id: prat_etal_2016
+        url: https://doi.org/10.1038/srep39419
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Holland et al. 2004 directly measures echolocation clicks in Rousettus aegyptiacus, and Prat et al. 2016 includes echolocation clicks as one of the repertoire categories. The existence of lingual echolocation in this genus is well established.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Holland et al. 2004 provides focused measurements of duration, energy, amplitude, and peak frequency, while Prat et al. 2016 independently identifies click-based sonar calls in the vocal dataset. Agreement is strong for the brief click-like structure.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Holland et al. 2004 supports an obstacle-avoidance sonar role, and Prat et al. 2016 treats echolocation clicks separately from social calls. The label is medium because this is a non-social orientation function and not a semantic signal in the same sense as the social calls.
+
+references:
+  prat_etal_2015:
+    citation: "Prat Y, Taub M, Yovel Y. 2015. Vocal learning in a social mammal: demonstrated by isolation and playback experiments in bats. Science Advances 1(2): e1500019."
+    url: https://doi.org/10.1126/sciadv.1500019
+    doi: 10.1126/sciadv.1500019
+  prat_etal_2016:
+    citation: "Prat Y, Taub M, Yovel Y. 2016. Everyday bat vocalizations contain information about emitter, addressee, context, and behavior. Scientific Reports 6: 39419."
+    url: https://doi.org/10.1038/srep39419
+    doi: 10.1038/srep39419
+  prat_etal_2017:
+    citation: "Prat Y, Taub M, Pratt E, Yovel Y. 2017. An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny. Scientific Data 4: 170143."
+    url: https://doi.org/10.1038/sdata.2017.143
+    doi: 10.1038/sdata.2017.143
+  holland_etal_2004:
+    citation: "Holland RA, Waters DA, Rayner JMV. 2004. Echolocation signal structure in the Megachiropteran bat Rousettus aegyptiacus Geoffroy 1810. Journal of Experimental Biology 207(25): 4361-4369."
+    url: https://doi.org/10.1242/jeb.01288
+    doi: 10.1242/jeb.01288
