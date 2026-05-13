@@ -1,0 +1,170 @@
+scientific_name: Orcinus orca
+common_name: Killer Whale
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Cetacea
+  family: Delphinidae
+  genus: Orcinus
+  species: orca
+primary_inventory:
+  id: ford_1987
+  rationale: Ford 1987 is used as the primary inventory because it catalogued underwater calls of resident killer whales in British Columbia and provided the foundation for later work on discrete calls, repertoires, and vocal traditions. This compact file represents the major sound classes rather than each pod-specific call type.
+calls:
+  - name: discrete pulsed call
+    alternative_names:
+      - stereotyped call
+      - discrete call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: true
+      note: Matrilines and pods have distinctive repertoires and dialects in resident killer whales, as described by Ford 1987 and Ford 1991.
+    acoustic_keywords: [pulsed, repetitive, multi_component, loud, graded]
+    acoustic_description: Stereotyped pulsed call type composed of rapid broadband pulses with recurring contour and temporal pattern, often stable within matrilines.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Used for social contact and coordination, with call repertoires carrying group identity and dialect information.
+    acoustic_references:
+      - id: ford_1987
+        url: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf
+      - id: deecke_etal_2010
+        url: https://doi.org/10.1121/1.3467777
+    semantic_references:
+      - id: ford_1991
+        url: https://doi.org/10.1139/z91-301
+      - id: deecke_etal_2000
+        url: https://doi.org/10.1006/anbe.2000.1507
+    playback_references:
+      - id: deecke_etal_2000
+        url: https://doi.org/10.1006/anbe.2000.1507
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Discrete pulsed calls are the core units of Ford 1987 and are central to later dialect and playback studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Ford 1987 and Deecke et al. 2010 agree on stereotyped pulsed structure and stable group-specific patterns.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Ford 1991 and Deecke et al. 2000 support social identity and recognition functions for discrete calls.
+
+  - name: variable pulsed call
+    alternative_names:
+      - aberrant call
+      - variable call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [pulsed, noisy, broadband, graded]
+    acoustic_description: Pulsed call lacking the stable stereotyped contour of discrete calls, with variable pulse structure and timing.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Produced during social activity and movement, but carries less stable dialect information than discrete calls.
+    acoustic_references:
+      - id: ford_1987
+        url: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf
+      - id: riesch_etal_2006
+        url: https://doi.org/10.1111/j.1439-0310.2006.01234.x
+    semantic_references:
+      - id: ford_1987
+        url: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf
+      - id: riesch_etal_2006
+        url: https://doi.org/10.1111/j.1439-0310.2006.01234.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Variable calls are recognized in Ford 1987 and later acoustic classifications, but they are less discrete than stereotyped calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree that the class is pulsed and variable, but category boundaries are broad by definition.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Social use is supported, but specific meanings are less resolved than for discrete dialect calls.
+
+  - name: whistle
+    alternative_names:
+      - tonal whistle
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, high_frequency, frequency_modulated, long]
+    acoustic_description: Narrow-band tonal signal with frequency modulation, acoustically distinct from pulsed calls and clicks.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in social and close-range interactions, often in association with affiliative or coordinated group activity.
+    acoustic_references:
+      - id: ford_1987
+        url: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf
+      - id: thomsen_etal_2001
+        url: https://doi.org/10.1121/1.1349530
+    semantic_references:
+      - id: thomsen_etal_2001
+        url: https://doi.org/10.1121/1.1349530
+      - id: ford_1987
+        url: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Whistles are recognized in the primary catalogue and treated as a distinct sound class by Thomsen et al. 2001.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Tonal frequency-modulated structure is consistent across sources.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social use is supported, but whistles have less well-resolved referential or identity content than discrete pulsed calls.
+
+  - name: echolocation click train
+    alternative_names:
+      - click train
+      - sonar click
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, pulsed, short, repetitive, high_frequency]
+    acoustic_description: Series of short broadband clicks, often highly directional and repeated at variable inter-click intervals.
+    semantic_keywords: [attention, food, group_coordination]
+    semantic_description: Used primarily for orientation and prey detection, with click production shaped by foraging and travel contexts rather than social identity alone.
+    acoustic_references:
+      - id: ford_1987
+        url: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf
+      - id: au_etal_2004
+        url: https://doi.org/10.1121/1.1642628
+    semantic_references:
+      - id: au_etal_2004
+        url: https://doi.org/10.1121/1.1642628
+      - id: ford_1987
+        url: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Click trains are a standard killer whale sound class in Ford 1987 and bioacoustic studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Broadband repeated click structure is well established in acoustic measurements.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Foraging and orientation roles are clear, but this schema treats clicks as communicative attention/context signals only cautiously.
+references:
+  ford_1987:
+    citation: "Ford, J. K. B. (1987). A catalogue of underwater calls produced by killer whales (Orcinus orca) in British Columbia. Canadian Data Report of Fisheries and Aquatic Sciences 633."
+    url: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf
+  ford_1991:
+    citation: "Ford, J. K. B. (1991). Vocal traditions among resident killer whales (Orcinus orca) in coastal waters of British Columbia. Canadian Journal of Zoology, 69, 1454-1483."
+    url: https://doi.org/10.1139/z91-301
+    doi: 10.1139/z91-301
+  deecke_etal_2000:
+    citation: "Deecke, V. B., Ford, J. K. B., & Spong, P. (2000). Dialect change in resident killer whales: implications for vocal learning and cultural transmission. Animal Behaviour, 60, 629-638."
+    url: https://doi.org/10.1006/anbe.2000.1507
+    doi: 10.1006/anbe.2000.1507
+  deecke_etal_2010:
+    citation: "Deecke, V. B., Barrett-Lennard, L. G., Spong, P., & Ford, J. K. B. (2010). The structure of stereotyped calls reflects kinship and social affiliation in resident killer whales. Journal of the Acoustical Society of America, 128, EL215-EL221."
+    url: https://doi.org/10.1121/1.3467777
+    doi: 10.1121/1.3467777
+  riesch_etal_2006:
+    citation: "Riesch, R., Ford, J. K. B., & Thomsen, F. (2006). Stability and group specificity of stereotyped whistles in resident killer whales. Ethology, 112, 1210-1220."
+    url: https://doi.org/10.1111/j.1439-0310.2006.01234.x
+    doi: 10.1111/j.1439-0310.2006.01234.x
+  thomsen_etal_2001:
+    citation: "Thomsen, F., Franck, D., & Ford, J. K. B. (2001). Characteristics of whistles from the acoustic repertoire of resident killer whales. Journal of the Acoustical Society of America, 109, 1240-1246."
+    url: https://doi.org/10.1121/1.1349530
+    doi: 10.1121/1.1349530
+  au_etal_2004:
+    citation: "Au, W. W. L., Ford, J. K. B., Horne, J. K., & Newman Allman, K. A. (2004). Echolocation signals of free-ranging killer whales and modeling of foraging for Chinook salmon. Journal of the Acoustical Society of America, 115, 901-909."
+    url: https://doi.org/10.1121/1.1642628
+    doi: 10.1121/1.1642628
