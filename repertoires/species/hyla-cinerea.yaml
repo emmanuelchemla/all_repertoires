@@ -1,5 +1,5 @@
 scientific_name: Hyla cinerea
-common_name: Green tree frog
+common_name: Green treefrog
 taxonomy:
   kingdom: Animalia
   phylum: Chordata
@@ -8,10 +8,24 @@ taxonomy:
   family: Hylidae
   genus: Hyla
   species: cinerea
+primary_inventory:
+  id: reichert_hobel_2018
+  rationale: >-
+    Reichert and Hobel 2018 is used as the primary_inventory spine because it
+    explicitly records and analyzes the two primary vocalization types in male
+    Hyla cinerea, advertisement calls and aggressive calls. This is not a
+    formal whole-life-stage repertoire monograph, but I found no stronger
+    species-specific peer-reviewed inventory. General accounts mention release,
+    warning, alarm, or rain calls, but I did not find peer-reviewed
+    species-specific acoustic and semantic descriptions detailed enough to add
+    them under the current inclusion rules.
 calls:
   - name: advertisement call
+    in_primary_inventory: true
     alternative_names:
       - mating call
+      - mate-attraction call
+      - breeding call
     scope: &adult_male_scope
       life_stages:
         - adult
@@ -22,25 +36,43 @@ calls:
     acoustic_keywords:
       - low_frequency
       - high_frequency
+      - tonal
       - harmonic
       - pulsed
       - short
       - repetitive
       - loud
-    acoustic_description: A repeated, short, pulsed mating call with a bimodal spectrum. Playback studies identify an effective low-frequency band near 0.9-1.1 kHz, a higher band near 2.7-3.3 kHz, and fine-temporal periodicity near 300 per second as salient features of typical calls.
+    acoustic_description: >-
+      A loud, short, repeated, single-note harmonic call. Natural and
+      synthetic-call studies describe a call about 120-160 ms long, repeated
+      roughly once or twice per second in choruses, with a bimodal spectrum: a
+      low-frequency peak near 0.9-1.1 kHz and higher energy near about 2.7-3.3
+      kHz. The call is not a pulse train, but its waveform has fine-temporal
+      periodicity near 300 per second and a brief pulsatile onset.
     semantic_keywords:
       - courtship
       - mating
+      - identity
       - attention
-    semantic_description: Produced by adult males in nighttime breeding choruses to attract females. Female phonotaxis experiments show selective approach to calls with species-typical spectral and temporal structure, and field studies show that calling attendance is central to male mating opportunities.
+    semantic_description: Produced by adult males in breeding choruses at wetlands, ponds, and other calling sites. Female phonotaxis and mate-choice experiments show that females selectively approach species-typical advertisement calls, while field studies show that calling attendance is central to male mating opportunities and that the calls also attract eavesdropping satellite males.
     acoustic_references:
+      - id: oldham_gerhardt_1975
+        url: https://doi.org/10.2307/1442880
       - id: gerhardt_1974
         url: https://doi.org/10.1242/jeb.61.1.229
+      - id: gerhardt_1976
+        url: https://doi.org/10.1038/261692a0
       - id: gerhardt_1978
         url: https://doi.org/10.1242/jeb.74.1.59
       - id: gerhardt_1987
         url: https://doi.org/10.1016/S0003-3472(87)80020-9
+      - id: velez_etal_2012
+        url: https://doi.org/10.1007/s00359-012-0760-z
+      - id: reichert_hobel_2018
+        url: https://doi.org/10.1002/ece3.3927
     semantic_references:
+      - id: oldham_gerhardt_1975
+        url: https://doi.org/10.2307/1442880
       - id: gerhardt_1974
         url: https://doi.org/10.1242/jeb.61.1.229
       - id: gerhardt_1987
@@ -49,6 +81,8 @@ calls:
         url: https://doi.org/10.1016/S0003-3472(87)80021-0
       - id: perrill_etal_1982
         url: https://doi.org/10.1016/S0003-3472(82)80235-2
+      - id: velez_etal_2012
+        url: https://doi.org/10.1007/s00359-012-0760-z
     playback_references:
       - id: gerhardt_1974
         url: https://doi.org/10.1242/jeb.61.1.229
@@ -58,68 +92,113 @@ calls:
         url: https://doi.org/10.1016/S0003-3472(87)80020-9
       - id: perrill_etal_1982
         url: https://doi.org/10.1016/S0003-3472(82)80235-2
+      - id: velez_etal_2012
+        url: https://doi.org/10.1007/s00359-012-0760-z
+      - id: hobel_rodriguez_2022
+        url: https://doi.org/10.1098/rspb.2021.1822
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Gerhardt 1974, Gerhardt 1978, Gerhardt 1987, Gerhardt et al. 1987, and Perrill et al. 1982 all treat the male mating or advertisement call as the principal breeding signal of Hyla cinerea. The call type is stable across playback and field-behavior studies.
+    call_type_existence_explanation: Reichert and Hobel 2018 list advertisement calls as one of the two primary Hyla cinerea vocalization types, and Oldham and Gerhardt 1975, Gerhardt 1974, Gerhardt 1978, Gerhardt 1987, Gerhardt et al. 1987, Perrill et al. 1982, and Velez et al. 2012 all treat this male call as the core breeding signal. Terminology varies between advertisement, mating, and mate-attraction call, but the call type is stable.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Gerhardt 1974 identifies the spectral bands important for mating-call recognition, Gerhardt 1978 identifies typical fine-temporal periodicity, and Gerhardt 1987 extends the female playback work to call duration, repetition rate, and level. These studies strongly agree on the bimodal, pulsed acoustic structure.
+    acoustic_description_explanation: Oldham and Gerhardt 1975, Gerhardt 1974, Gerhardt 1976, Gerhardt 1978, Gerhardt 1987, Velez et al. 2012, and Reichert and Hobel 2018 agree that the call is short, repeated, harmonic, and centered on low and high spectral regions near 1 and 3 kHz. Differences among studies mainly reflect which receiver-relevant feature was manipulated, not disagreement about call structure.
     semantic_description_agreement: strong
-    semantic_description_explanation: Gerhardt 1974 and 1987 show female phonotaxis toward species-typical mating-call structure, Gerhardt et al. 1987 link calling attendance with mating opportunity in a wild breeding aggregation, and Perrill et al. 1982 show that male advertisement calls also attract satellite males. The mating/attention function is strongly supported.
+    semantic_description_explanation: Gerhardt 1974 and 1987 show female phonotaxis to species-typical advertisement-call structure, Gerhardt et al. 1987 links calling attendance with mating opportunity in a wild breeding aggregation, Perrill et al. 1982 shows mating calls attract satellite males, and Velez et al. 2012 tests female recognition of advertisement calls in chorus noise. The mating and species-recognition context is strongly supported.
 
-  - name: encounter call
+  - name: aggressive call
+    in_primary_inventory: true
     alternative_names:
-      - aggressive call
+      - encounter call
+      - aggressive encounter call
       - pulsed call
     scope: *adult_male_scope
     acoustic_keywords:
+      - low_frequency
+      - high_frequency
+      - tonal
+      - harmonic
       - pulsed
       - short
       - repetitive
       - loud
-      - graded
-    acoustic_description: A strongly pulsed call used as a distinct signal from the mating call. Published playback and recognition work distinguishes these pulsed encounter calls from advertisement calls, with pulsing continuing through the signal rather than being limited to the beginning of the call.
+      - multi_component
+    acoustic_description: >-
+      A short, strongly amplitude-modulated call that is pulsed throughout
+      rather than mainly at the onset. Recent playback stimuli based on
+      population means model the Hyla cinerea aggressive call as about 125 ms
+      long with five pulses and spectral components near 900 and 2700 Hz;
+      comparative repertoire work measures it separately from the advertisement
+      call using modulation depth, relative amplitude, duty cycle, pulse rate,
+      and related timing traits.
     semantic_keywords:
       - threat
       - aggression
       - territorial
       - spacing
-    semantic_description: Produced by adult males during close-range interactions in breeding aggregations, especially when males are near one another. Playback experiments using synthetic encounter calls show that males respond differently to encounter calls than to mating calls, consistent with a role in male-male spacing and aggression.
+    semantic_description: Produced by adult males during close-range male-male interactions in breeding aggregations and calling spaces. Field and playback studies distinguish responses to synthetic encounter/aggressive calls from responses to mating calls, consistent with a role in repelling or spacing rival males rather than attracting mates.
     acoustic_references:
+      - id: oldham_gerhardt_1975
+        url: https://doi.org/10.2307/1442880
       - id: gerhardt_1978
         url: https://doi.org/10.1242/jeb.74.1.59
+      - id: gerhardt_1978b
+        url: https://doi.org/10.1126/science.628833
       - id: perrill_etal_1982
         url: https://doi.org/10.1016/S0003-3472(82)80235-2
-      - id: fellers_1979
-        url: https://doi.org/10.1016/0003-3472(79)90131-3
+      - id: reichert_hobel_2018
+        url: https://doi.org/10.1002/ece3.3927
+      - id: hobel_rodriguez_2022
+        url: https://doi.org/10.1098/rspb.2021.1822
     semantic_references:
+      - id: oldham_gerhardt_1975
+        url: https://doi.org/10.2307/1442880
       - id: gerhardt_1978
         url: https://doi.org/10.1242/jeb.74.1.59
-      - id: perrill_etal_1982
-        url: https://doi.org/10.1016/S0003-3472(82)80235-2
+      - id: gerhardt_1978b
+        url: https://doi.org/10.1126/science.628833
       - id: fellers_1979
         url: https://doi.org/10.1016/0003-3472(79)90131-3
-    playback_references:
-      - id: gerhardt_1978
-        url: https://doi.org/10.1242/jeb.74.1.59
       - id: perrill_etal_1982
         url: https://doi.org/10.1016/S0003-3472(82)80235-2
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Perrill et al. 1982 explicitly use synthetic encounter calls in field experiments on Hyla cinerea, and Gerhardt 1978 discusses pulsed calls as distinct from mating calls in the green tree frog repertoire. The label is medium rather than strong because fewer studies focus on this call type than on the advertisement call, and Fellers 1979 is partly comparative across North American tree frogs.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Gerhardt 1978 distinguishes pulsed calls from mating calls using playback and recognition criteria, and Perrill et al. 1982 confirms the use of synthetic encounter-call stimuli in field experiments. Acoustic agreement is medium because detailed published measurements for Hyla cinerea encounter calls are less abundant than for the advertisement call.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Perrill et al. 1982 shows that males respond differently to synthetic encounter calls and mating calls in the field, Gerhardt 1978 links pulsed calls with close male proximity and aggressive behavior, and Fellers 1979 places encounter calls in a broader treefrog pattern of territorial and aggressive interactions. The male-male spacing context is well supported.
+      - id: reichert_hobel_2018
+        url: https://doi.org/10.1002/ece3.3927
+      - id: hobel_rodriguez_2022
+        url: https://doi.org/10.1098/rspb.2021.1822
+    playback_references:
+      - id: gerhardt_1978b
+        url: https://doi.org/10.1126/science.628833
+      - id: perrill_etal_1982
+        url: https://doi.org/10.1016/S0003-3472(82)80235-2
+      - id: hobel_rodriguez_2022
+        url: https://doi.org/10.1098/rspb.2021.1822
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Reichert and Hobel 2018 list aggressive calls as the second primary Hyla cinerea vocalization type, Gerhardt 1978b reports that males produce two distinctive calls with rare acoustic intermediates, Perrill et al. 1982 uses synthetic encounter calls in field experiments, and Hobel and Rodriguez 2022 uses aggressive-call stimuli derived from population means. The encounter/aggressive naming differs, but the discrete call type is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Gerhardt 1978 and Gerhardt 1978b distinguish the pulsed aggressive/encounter signal from the advertisement call, Reichert and Hobel 2018 measure aggressive-call traits separately from advertisement-call traits, and Hobel and Rodriguez 2022 gives explicit stimulus parameters for Hyla cinerea aggressive calls. These sources agree that the signal is short and strongly amplitude-modulated/pulsed.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Oldham and Gerhardt 1975, Fellers 1979, Perrill et al. 1982, Reichert and Hobel 2018, and Hobel and Rodriguez 2022 consistently place aggressive or encounter calls outside the female-attraction role of advertisement calls and in male-male or aversive contexts. The label is medium rather than strong because direct Hyla cinerea field studies of naturally produced aggressive calls are fewer than for advertisement calls, and some evidence comes from synthetic playback or comparative treefrog framing.
 
 references:
+  oldham_gerhardt_1975:
+    citation: "Oldham RS, Gerhardt HC. 1975. Behavioral isolating mechanisms of the treefrogs Hyla cinerea and Hyla gratiosa. Copeia 1975(2): 223-231."
+    url: https://doi.org/10.2307/1442880
+    doi: 10.2307/1442880
   gerhardt_1974:
     citation: "Gerhardt HC. 1974. The significance of some spectral features in mating call recognition in the green treefrog (Hyla cinerea). Journal of Experimental Biology 61(1): 229-241."
     url: https://doi.org/10.1242/jeb.61.1.229
     doi: 10.1242/jeb.61.1.229
+  gerhardt_1976:
+    citation: "Gerhardt HC. 1976. Significance of two frequency bands in long distance vocal communication in the green treefrog. Nature 261: 692-694."
+    url: https://doi.org/10.1038/261692a0
+    doi: 10.1038/261692a0
   gerhardt_1978:
     citation: "Gerhardt HC. 1978. Mating call recognition in the green treefrog (Hyla cinerea): the significance of some fine-temporal properties. Journal of Experimental Biology 74(1): 59-73."
     url: https://doi.org/10.1242/jeb.74.1.59
     doi: 10.1242/jeb.74.1.59
+  gerhardt_1978b:
+    citation: "Gerhardt HC. 1978. Discrimination of intermediate sounds in a synthetic call continuum by female green tree frogs. Science 199(4333): 1089-1091."
+    url: https://doi.org/10.1126/science.628833
+    doi: 10.1126/science.628833
   fellers_1979:
-    citation: "Fellers GM. 1979. Aggression, territoriality, and mating behaviour in North American treefrogs. Animal Behaviour 27(1): 107-119."
+    citation: "Fellers GM. 1979. Aggression, territoriality, and mating behavior in North American treefrogs. Animal Behaviour 27(1): 107-119."
     url: https://doi.org/10.1016/0003-3472(79)90131-3
     doi: 10.1016/0003-3472(79)90131-3
   perrill_etal_1982:
@@ -134,3 +213,15 @@ references:
     citation: "Gerhardt HC, Daniel RE, Perrill SA, Schramm S. 1987. Mating behaviour and male mating success in the green treefrog. Animal Behaviour 35(5): 1490-1503."
     url: https://doi.org/10.1016/S0003-3472(87)80021-0
     doi: 10.1016/S0003-3472(87)80021-0
+  velez_etal_2012:
+    citation: "Velez A, Hobel G, Gordon NM, Bee MA. 2012. Dip listening or modulation masking? Call recognition by green treefrogs (Hyla cinerea) in temporally fluctuating noise. Journal of Comparative Physiology A 198(12): 891-904."
+    url: https://doi.org/10.1007/s00359-012-0760-z
+    doi: 10.1007/s00359-012-0760-z
+  reichert_hobel_2018:
+    citation: "Reichert MS, Hobel G. 2018. Phenotypic integration and the evolution of signal repertoires: a case study of treefrog acoustic communication. Ecology and Evolution 8(6): 3410-3429."
+    url: https://doi.org/10.1002/ece3.3927
+    doi: 10.1002/ece3.3927
+  hobel_rodriguez_2022:
+    citation: "Hobel G, Rodriguez RL. 2022. Positive-to-negative behavioural responses suggest hedonic evaluation in treefrog mate choice. Proceedings of the Royal Society B 289(1967): 20211822."
+    url: https://doi.org/10.1098/rspb.2021.1822
+    doi: 10.1098/rspb.2021.1822

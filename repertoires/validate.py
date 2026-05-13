@@ -33,7 +33,17 @@ def check(path: Path) -> list[str]:
                 f"taxonomy: genus + species is '{expected}', expected scientific_name '{data['scientific_name']}'"
             )
 
+    inventory = data.get("primary_inventory") or {}
+    inventory_id = inventory.get("id")
+    if inventory_id and inventory_id not in ref_ids:
+        errors.append(f"primary_inventory.id: unknown reference id '{inventory_id}'")
+
     for i, call in enumerate(data.get("calls") or []):
+        if not inventory_id and call.get("in_primary_inventory"):
+            errors.append(
+                f"calls[{i}].in_primary_inventory: must be false when primary_inventory.id is absent"
+            )
+
         scope = call.get("scope") or {}
         note = (scope.get("note") or "").strip()
         if scope.get("population_specific"):

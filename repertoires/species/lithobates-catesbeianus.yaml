@@ -8,12 +8,17 @@ taxonomy:
   family: Ranidae
   genus: Lithobates
   species: catesbeianus
+primary_inventory:
+  id: capranica_1968
+  rationale: Capranica 1968 is the species-specific repertoire spine because it explicitly enumerates the bullfrog vocal repertoire as mating call, three territorial-call subtypes, release call, warning call, and distress call. Later field, playback, endocrine, auditory, and defensive-vocalization studies refine acoustic and semantic detail while retaining every call type listed in this inventory.
 calls:
   - name: advertisement call
     alternative_names:
       - mating call
+      - mate call
       - breeding call
       - multicroak call
+    in_primary_inventory: true
     scope: &adult_male_scope
       life_stages:
         - adult
@@ -23,54 +28,68 @@ calls:
       note: ""
     acoustic_keywords:
       - low_frequency
+      - tonal
       - harmonic
       - loud
       - long
       - repetitive
       - multi_component
-    acoustic_description: A loud, low-frequency, quasiharmonic call composed of one to many repeated croaks. Field recordings describe long advertisement calls, with individual advertisement notes commonly around 0.3-0.6 s and broad spectral energy spanning low kilohertz frequencies.
+    acoustic_description: A loud, low-frequency, quasiharmonic call composed of one to many repeated croaks. Published descriptions identify the adult male advertisement call as a multicroak signal, commonly 1-12 croaks per call, with fine-temporal periodicity near 100 Hz, strong low-frequency energy around a few hundred hertz, and an additional higher spectral band in the low kilohertz range.
     semantic_keywords:
       - courtship
       - mating
       - territorial
       - spacing
       - identity
-    semantic_description: Produced by adult males in breeding choruses. It functions in mate attraction and in communication among neighboring males, and playback of mating calls can provoke territorial approach or attack by resident males.
+    semantic_description: Produced by adult males in breeding choruses. It attracts females, elicits vocal responses from other males, and mediates territorial neighbor-stranger recognition and spacing among resident males at calling sites.
     acoustic_references:
-      - id: simmons_2004
-        url: https://doi.org/10.1121/1.1643366
-      - id: herrick_etal_2018
-        url: https://doi.org/10.1670/17-049
       - id: capranica_1968
         url: https://doi.org/10.1163/156853968X00306
+      - id: simmons_2004
+        url: https://doi.org/10.1121/1.1643366
+      - id: schwartz_simmons_1990
+        url: https://doi.org/10.1007/BF00192019
+      - id: bee_gerhardt_2001a
+        url: https://doi.org/10.1006/anbe.2001.1851
     semantic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
       - id: wiewandt_1969
         url: https://doi.org/10.2307/1442074
       - id: ryan_1980
         url: https://doi.org/10.2307/1444139
-      - id: bee_2002
-        url: https://doi.org/10.1093/beheco/13.1.109
-      - id: simmons_2004
-        url: https://doi.org/10.1121/1.1643366
+      - id: bee_gerhardt_2002
+        url: https://doi.org/10.1098/rspb.2002.2041
+      - id: boyd_1994
+        url: https://doi.org/10.1006/hbeh.1994.1020
     playback_references:
       - id: wiewandt_1969
         url: https://doi.org/10.2307/1442074
+      - id: bee_gerhardt_2001b
+        url: https://doi.org/10.1006/anbe.2001.1852
       - id: bee_2002
         url: https://doi.org/10.1093/beheco/13.1.109
+      - id: bee_gerhardt_2002
+        url: https://doi.org/10.1098/rspb.2002.2041
       - id: simmons_2004
         url: https://doi.org/10.1121/1.1643366
+      - id: boyd_1994
+        url: https://doi.org/10.1006/hbeh.1994.1020
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Capranica 1968 identifies the male mating call in a repertoire study, Wiewandt 1969 documents mating-call playbacks and territorial responses under field conditions, and Simmons 2004 analyzes spontaneous and playback advertisement calls at natural ponds. The call type is consistently recognized despite the older Rana nomenclature.
+    call_type_existence_explanation: Capranica 1968 lists the mating call as a repertoire item, Wiewandt 1969 and Ryan 1980 document the call in field territorial and reproductive behavior, and Simmons 2004 plus Bee and Gerhardt 2001a/2002 analyze it in playback and recognition work. Terminology shifts between mating, advertisement, and mate call, but the call type itself is stable.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Simmons 2004 describes the advertisement call as multicroak and quasiharmonic, Herrick et al. 2018 report field measurements of bullfrog advertisement-note duration and frequency range, and Capranica 1968 treats it as a stereotyped repertoire item. Agreement is strong for the long, repeated, low-frequency structure.
+    acoustic_description_explanation: Capranica 1968, Schwartz and Simmons 1990, Simmons 2004, and Bee and Gerhardt 2001a agree that this is a low-frequency, harmonically structured, repeated male signal with measurable individual variation in spectral and temporal features. Agreement is strong even though studies emphasize different receiver-relevant parameters.
     semantic_description_agreement: strong
-    semantic_description_explanation: Wiewandt 1969, Ryan 1980, Bee 2002, and Simmons 2004 all support breeding-chorus use by territorial adult males, with functions in mate attraction, neighbor recognition, and territorial response. These functions are compatible rather than conflicting.
+    semantic_description_explanation: Capranica 1968, Wiewandt 1969, Ryan 1980, Boyd 1994, and Bee and Gerhardt 2002 all support breeding-chorus use by adult males for mate attraction and male-male territorial communication. The mate-attraction, spacing, and identity roles are complementary rather than conflicting.
 
-  - name: encounter call
+  - name: male territorial call
     alternative_names:
+      - encounter call
       - bonk
       - aggressive call
       - territorial call
+      - male-specific territorial call
+    in_primary_inventory: true
     scope: *adult_male_scope
     acoustic_keywords:
       - low_frequency
@@ -78,7 +97,7 @@ calls:
       - short
       - abrupt
       - loud
-    acoustic_description: A curt, abrupt, low-frequency note with spectral composition similar to the advertisement call but much shorter in duration. Wiewandt called this vocalization a bonk, and later work contrasts it with the longer multicroak advertisement call.
+    acoustic_description: A curt, abrupt, low-frequency aggressive note. Later work equates the male encounter call with Wiewandt's bonk, describes it as spectrally similar to the advertisement call but much shorter, and places territorial-call energy in lower and middle frequency bands.
     semantic_keywords:
       - threat
       - aggression
@@ -86,13 +105,17 @@ calls:
       - spacing
     semantic_description: Emitted by territorial adult males during close-range male-male competition and defense of calling or shoreline territories. Field playback and model presentations show that males give this call when approaching or attacking apparent intruders.
     acoustic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
       - id: wiewandt_1969
         url: https://doi.org/10.2307/1442074
       - id: simmons_2004
         url: https://doi.org/10.1121/1.1643366
+      - id: schwartz_simmons_1990
+        url: https://doi.org/10.1007/BF00192019
+    semantic_references:
       - id: capranica_1968
         url: https://doi.org/10.1163/156853968X00306
-    semantic_references:
       - id: wiewandt_1969
         url: https://doi.org/10.2307/1442074
       - id: bee_2002
@@ -102,12 +125,205 @@ calls:
     playback_references:
       - id: wiewandt_1969
         url: https://doi.org/10.2307/1442074
+      - id: bee_2002
+        url: https://doi.org/10.1093/beheco/13.1.109
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Wiewandt 1969 documented the bonk in field territorial interactions and playback tests, Capranica 1968 recognized territorial calls in the bullfrog repertoire, and Simmons 2004 treats the encounter call as a conspecific vocalization distinct from advertisement calls. The call is therefore well supported even though terminology varies.
+    call_type_existence_explanation: Capranica 1968 lists a male-only territorial call, Wiewandt 1969 describes the bonk during territorial playback and model experiments, and Simmons 2004 explicitly identifies the male encounter call as the bonk of Wiewandt. Terminology varies, but the male aggressive territorial call is independently supported.
     acoustic_description_agreement: medium
-    acoustic_description_explanation: Wiewandt 1969 and Simmons 2004 agree that the encounter call is a short aggressive vocalization, with Simmons 2004 noting that it is much shorter than advertisement calls while spectrally similar. The label is medium because fewer sources provide detailed quantitative acoustic measurements for the bonk than for the advertisement call.
+    acoustic_description_explanation: Wiewandt 1969 and Simmons 2004 agree that the call is a short aggressive vocalization, and Simmons 2004 adds that it is shorter than advertisement calls while spectrally similar. The label is medium because fewer sources quantify this call than the advertisement call, and Capranica's territorial subtypes are not always separated in later acoustic papers.
     semantic_description_agreement: strong
-    semantic_description_explanation: Wiewandt 1969 directly links the bonk to territorial defense and attacks on an apparent intruder, Bee 2002 confirms that adult male bullfrogs respond aggressively to acoustic intrusions in the field, and Ryan 1980 describes male territory defense in the breeding system. Agreement on the aggressive territorial context is strong.
+    semantic_description_explanation: Capranica 1968 links male territorial calls to territory occupancy and trespass, Wiewandt 1969 directly observes bonks during attacks on an apparent intruder, Ryan 1980 describes males alternating mating and territorial calls during territory establishment, and Bee 2002 shows territorial males give encounter calls during aggressive playback responses.
+
+  - name: female territorial call
+    alternative_names:
+      - female-specific territorial call
+    in_primary_inventory: true
+    scope: &adult_female_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - frequency_modulated
+      - graded
+    acoustic_description: A female-only territorial signal in Capranica's inventory. Later auditory work cites the female bullfrog territorial call as a broad-spectrum signal with low-frequency modulation, including steady modulation near 30 Hz followed by an abrupt upward glissando to about 90 Hz.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - threat
+    semantic_description: Produced by adult females in territorial occupancy or trespass contexts. Capranica interpreted this female-specific type as alerting conspecifics that a defended area was occupied and being trespassed.
+    acoustic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+      - id: fisher_etal_2011
+        url: https://doi.org/10.1073/pnas.1017467108
+    semantic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Capranica 1968 explicitly lists a female-only territorial call and Fisher et al. 2011 independently refers to the female bullfrog territorial call when discussing behaviorally relevant acoustic modulation. The label is medium because there are fewer field-behavior studies of this female-specific subtype than of male territorial calling.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Capranica 1968 provides the inventory basis and Fisher et al. 2011 gives a concrete modulation pattern for the female territorial call. Agreement is medium because the detailed quantitative acoustic description rests mainly on one later source plus the original inventory.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Capranica 1968 supplies the primary behavioral interpretation for female territorial calls, but later sources mainly mention acoustic relevance rather than observing female territorial interactions. The occupancy/trespass context is therefore plausible but sparsely replicated.
+
+  - name: shared territorial call
+    alternative_names:
+      - bisexual territorial call
+      - male-female territorial call
+    in_primary_inventory: true
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - harmonic
+      - frequency_modulated
+      - graded
+    acoustic_description: A territorial-call subtype made by both sexes in Capranica's inventory. It belongs to the bullfrog set of broad-spectrum, harmonically structured communication sounds with low-frequency temporal modulation, but later studies rarely isolate this shared subtype from male and female territorial calls.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - threat
+    semantic_description: Produced by both adult males and adult females in occupancy or trespass contexts. Capranica interpreted the territorial-call set as signals that a territory was occupied and that another frog was trespassing.
+    acoustic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+      - id: schwartz_simmons_1990
+        url: https://doi.org/10.1007/BF00192019
+    semantic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Capranica 1968 explicitly lists a territorial subtype made by both sexes, so it is retained from the primary inventory. The label is weak because later field and playback literature usually collapses territorial signals into male encounter calls or advertisement-call aggression and does not independently resolve this shared subtype.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Capranica 1968 is the only source found that separates this shared territorial subtype, while Schwartz and Simmons 1990 describe territorial calls more generally as harmonically related, low-frequency communication sounds. The exact acoustic boundary from the male-only and female-only territorial calls remains weakly documented.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Capranica 1968 gives the occupancy/trespass context for the territorial-call set, but later studies do not provide independent behavioral detail for the shared male-female subtype. The semantic label is therefore weak and inventory-dependent.
+
+  - name: release call
+    alternative_names:
+      - amplexus release call
+      - rejection call
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - harmonic
+      - pulsed
+      - short
+      - repetitive
+      - multi_component
+    acoustic_description: A repeated clasping-release vocalization with harmonic structure. Sonogram analysis found male and female release calls similar in duration, dominant-frequency characteristics, and secondary or tertiary harmonic display, although intercall intervals and call rates differ between the sexes; spectral-envelope work also shows strong peaks in the release-call spectrum.
+    semantic_keywords:
+      - mating
+      - submission
+      - distress
+    semantic_description: Produced when an unreceptive female or a male is clasped by another male. The clasped animal struggles and emits the call, after which the amplexing frog releases it.
+    acoustic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+      - id: boyd_1992
+        url: https://doi.org/10.1016/0018-506X(92)90019-R
+      - id: purgue_1997
+        url: https://doi.org/10.1007/s003590050127
+    semantic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+      - id: boyd_1992
+        url: https://doi.org/10.1016/0018-506X(92)90019-R
+      - id: boyd_1997
+        url: https://doi.org/10.1016/S0361-9230(97)00213-X
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Capranica 1968 lists release calls for both sexes, Boyd 1992 analyzes release calls and their hormonal control, Boyd 1997 summarizes release calling as a bullfrog sexual behavior, and Purgue 1997 records male release calls in sound-radiation experiments. These sources agree that the release call is a discrete call type.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Capranica 1968 provides the repertoire basis, Boyd 1992 compares release-call sonograms between males and females, and Purgue 1997 analyzes the release-call spectral envelope and radiation. Agreement is strong for a harmonically structured repeated call, with sex differences mainly in rate rather than spectral form.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Capranica 1968 and Boyd 1992 agree that release calls occur during inappropriate clasping, and Boyd 1997 treats release calling as one of the bullfrog sexual behaviors modulated by vasotocin. The clasp-release function is consistent across sources.
+
+  - name: warning call
+    alternative_names:
+      - alarm call
+      - warning cry
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - harmonic
+      - short
+      - abrupt
+      - frequency_modulated
+    acoustic_description: A distinct natural call in the bullfrog repertoire with complex spectral and temporal structure. Capranica separated it from mating, territorial, release, and distress calls, and auditory-thalamus experiments found the warning call among the natural repertoire sounds that strongly stimulated both bullfrog auditory organs.
+    semantic_keywords:
+      - alarm
+      - attention
+    semantic_description: Produced by both sexes shortly before a leap into or out of water and sometimes after another call type. The context is startle or escape-related alerting rather than mating, territorial defense, or amplexus release.
+    acoustic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+      - id: mudry_capranica_1987
+        url: https://doi.org/10.1007/BF00615081
+      - id: schwartz_simmons_1990
+        url: https://doi.org/10.1007/BF00192019
+    semantic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Capranica 1968 lists warning calls as a discrete call type, and Mudry and Capranica 1987 tested warning calls as one of the natural bullfrog repertoire sounds. The label is medium because later behavioral field studies rarely focus on this call type.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Capranica 1968 distinguishes the warning call acoustically in the repertoire, Mudry and Capranica 1987 show that the warning call has auditory-relevant structure that stimulates both auditory organs, and Schwartz and Simmons 1990 describe bullfrog repertoire calls generally as harmonically related, low-modulation communication sounds. Agreement is medium because detailed warning-call measurements are sparse.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Capranica 1968 is the primary source for the pre-leap and post-call contexts. Later sources support the call's acoustic distinctiveness but do not add much independent behavioral evidence, so the semantic assignment is weak.
+
+  - name: distress call
+    alternative_names:
+      - distress scream
+      - defensive call
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - harmonic
+      - loud
+      - long
+      - multi_component
+      - frequency_modulated
+    acoustic_description: A loud, high-pitched defensive call produced with the mouth open. Independent defensive-vocalization recordings describe long calls with many harmonic bands, dominant energy in the kilohertz range, and type-specific frequency contours that can include rises, falls, and nearly constant frequency portions.
+    semantic_keywords:
+      - distress
+      - predator
+      - alarm
+    semantic_description: Produced by both sexes after repeated noxious stimulation, capture, or handling, especially in predator-like defensive contexts. The call is associated with open-mouth defensive display rather than breeding, territory defense, or amplexus release.
+    acoustic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+      - id: toledo_haddad_2009
+        url: https://doi.org/10.2994/057.004.0104
+    semantic_references:
+      - id: capranica_1968
+        url: https://doi.org/10.1163/156853968X00306
+      - id: toledo_haddad_2009
+        url: https://doi.org/10.2994/057.004.0104
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Capranica 1968 lists distress calls as part of the bullfrog repertoire, and Toledo and Haddad 2009 independently recorded and analyzed Lithobates catesbeianus distress calls among defensive vocalizations of anurans. This gives independent support beyond the primary inventory.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Capranica 1968 describes the distress call as high-pitched and open-mouth, while Toledo and Haddad 2009 provide quantitative harmonic and frequency-contour detail for L. catesbeianus distress calls. The two sources agree on a loud, high-frequency defensive vocalization.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Capranica 1968 links distress calling to repeated noxious stimulation, and Toledo and Haddad 2009 record distress calls in defensive handling contexts. Agreement is strong for a predator-like distress or defensive function.
 
 references:
   capranica_1968:
@@ -130,7 +346,47 @@ references:
     citation: "Simmons AM. 2004. Call recognition in the bullfrog, Rana catesbeiana: Generalization along the duration continuum. Journal of the Acoustical Society of America 115(3): 1345-1355."
     url: https://doi.org/10.1121/1.1643366
     doi: 10.1121/1.1643366
-  herrick_etal_2018:
-    citation: "Herrick SZ, Wells KD, Farkas TE, Schultz ET. 2018. Noisy neighbors: acoustic interference and vocal interactions between two syntopic species of ranid frogs, Rana clamitans and Rana catesbeiana. Journal of Herpetology 52(2): 176-184."
-    url: https://doi.org/10.1670/17-049
-    doi: 10.1670/17-049
+  schwartz_simmons_1990:
+    citation: "Schwartz JJ, Simmons AM. 1990. Encoding of a spectrally-complex communication sound in the bullfrog's auditory nerve. Journal of Comparative Physiology A 166: 489-500."
+    url: https://doi.org/10.1007/BF00192019
+    doi: 10.1007/BF00192019
+  bee_gerhardt_2001b:
+    citation: "Bee MA, Gerhardt HC. 2001. Neighbor-stranger discrimination by territorial male bullfrogs, part 2: perceptual basis. Animal Behaviour 62: 1141-1150."
+    url: https://doi.org/10.1006/anbe.2001.1852
+    doi: 10.1006/anbe.2001.1852
+  bee_gerhardt_2002:
+    citation: "Bee MA, Gerhardt HC. 2002. Individual voice recognition in a territorial frog (Rana catesbeiana). Proceedings of the Royal Society B 269: 1443-1448."
+    url: https://doi.org/10.1098/rspb.2002.2041
+    doi: 10.1098/rspb.2002.2041
+  boyd_1994:
+    citation: "Boyd SK. 1994. Arginine vasotocin facilitation of advertisement calling and call phonotaxis in bullfrogs. Hormones and Behavior 28(3): 232-240."
+    url: https://doi.org/10.1006/hbeh.1994.1020
+    doi: 10.1006/hbeh.1994.1020
+  fisher_etal_2011:
+    citation: "Fisher JA, Kowalik L, Hudspeth AJ. 2011. Imaging electrical resonance in hair cells. Proceedings of the National Academy of Sciences 108(4): 1651-1656."
+    url: https://doi.org/10.1073/pnas.1017467108
+    doi: 10.1073/pnas.1017467108
+  boyd_1992:
+    citation: "Boyd SK. 1992. Sexual differences in hormonal control of release calling in bullfrogs. Hormones and Behavior 26(4): 522-535."
+    url: https://doi.org/10.1016/0018-506X(92)90019-R
+    doi: 10.1016/0018-506X(92)90019-R
+  boyd_1997:
+    citation: "Boyd SK. 1997. Brain vasotocin pathways and the control of sexual behaviors in the bullfrog. Brain Research Bulletin 44(4): 345-350."
+    url: https://doi.org/10.1016/S0361-9230(97)00213-X
+    doi: 10.1016/S0361-9230(97)00213-X
+  purgue_1997:
+    citation: "Purgue AP. 1997. Tympanic sound radiation in the bullfrog Rana catesbeiana. Journal of Comparative Physiology A 181: 438-445."
+    url: https://doi.org/10.1007/s003590050127
+    doi: 10.1007/s003590050127
+  mudry_capranica_1987:
+    citation: "Mudry KM, Capranica RR. 1987. Correlation between auditory evoked responses in the thalamus and species-specific call characteristics. I. Rana catesbeiana. Journal of Comparative Physiology A 160(4): 477-489."
+    url: https://doi.org/10.1007/BF00615081
+    doi: 10.1007/BF00615081
+  toledo_haddad_2009:
+    citation: "Toledo LGM, Haddad CFB. 2009. Defensive vocalizations of Neotropical anurans. South American Journal of Herpetology 4(1): 25-42."
+    url: https://doi.org/10.2994/057.004.0104
+    doi: 10.2994/057.004.0104
+  bee_gerhardt_2001a:
+    citation: "Bee MA, Gerhardt HC. 2001. Neighbour-stranger discrimination by territorial male bullfrogs (Rana catesbeiana): I. Acoustic basis. Animal Behaviour 62(6): 1129-1140."
+    url: https://doi.org/10.1006/anbe.2001.1851
+    doi: 10.1006/anbe.2001.1851

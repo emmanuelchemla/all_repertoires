@@ -8,12 +8,17 @@ taxonomy:
   family: Hominidae
   genus: Pan
   species: troglodytes
+primary_inventory:
+  id: girardbuttoz_etal_2022
+  rationale: Girard-Buttoz et al. 2022 is used as the spine because it explicitly enumerates the wild mature chimpanzee repertoire into 12 single units in Table 2 and analyzes how those units combine across the Tai repertoire. The full pant-hoot is treated here as a multi-unit sequence rather than a separate primary-inventory unit.
 calls:
-  - name: pant-hoot
+  - name: grunt
+    in_primary_inventory: true
     alternative_names:
-      - panted hoot
-      - long-distance pant hoot
-    scope: &adult_both_scope
+      - rough grunt
+      - food grunt
+      - food-associated grunt
+    scope: &mature_both_scope
       life_stages:
         - adult
       sexes:
@@ -23,48 +28,43 @@ calls:
       note: ""
     acoustic_keywords:
       - low_frequency
-      - high_frequency
-      - broadband
       - noisy
-      - long
-      - repetitive
-      - multi_component
-      - loud
+      - short
+      - quiet
       - graded
-    acoustic_description: A long, multi-phase call sequence that commonly begins with softer low-frequency hoos or pants, accelerates through a build-up, reaches a loud broadband high-frequency climax, and may end in a let-down phase. Phase presence and detailed timing vary between individuals and populations.
+    acoustic_description: A short, low-frequency noisy call with variable fundamental-frequency shape. It is usually produced singly or in short close-range bouts and grades toward bark-like calls in some recordings.
     semantic_keywords:
-      - contact
-      - group_coordination
-      - spacing
-      - display
       - food
-    semantic_description: Used over distance to advertise caller presence, coordinate parties, and support inter-party contact. It can occur during travel, displays, feeding arrivals, and chorusing, so its function is broad rather than tied to a single context.
+      - group_coordination
+      - recruitment
+      - affiliation
+    semantic_description: Produced in close-range social and feeding contexts, including arrival at food and interactions where callers may retain, recruit, or coordinate with nearby partners. Food-associated rough grunts are best treated as an important contextual variant of the broader grunt unit.
     acoustic_references:
       - id: girardbuttoz_etal_2022
         url: https://doi.org/10.1038/s42003-022-03350-8
-      - id: fedurek_etal_2017
-        url: https://doi.org/10.1186/s12983-017-0235-8
-      - id: clark_wrangham_1993
-        url: https://doi.org/10.1002/ajp.1350310203
+      - id: fedurek_slocombe_2013
+        url: https://doi.org/10.1002/ajp.22122
     semantic_references:
-      - id: mitani_nishida_1993
-        url: https://hdl.handle.net/2027.42/30892
-      - id: clark_wrangham_1993
-        url: https://doi.org/10.1002/ajp.1350310203
+      - id: fedurek_slocombe_2013
+        url: https://doi.org/10.1002/ajp.22122
       - id: bouchard_zuberbuhler_2022
         url: https://doi.org/10.1016/j.anbehav.2022.01.009
+      - id: girardbuttoz_etal_2025
+        url: https://doi.org/10.1126/sciadv.adq2879
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Pant-hoots are central in classic field studies by Mitani and Nishida 1993 and Clark and Wrangham 1993, and are retained as a major call unit in the quantitative Taï repertoire analysis of Girard-Buttoz et al. 2022. The label is strong despite population and individual variation in phase structure.
-    acoustic_description_agreement: strong
-    acoustic_description_explanation: Girard-Buttoz et al. 2022, Fedurek et al. 2017, and Clark and Wrangham 1993 all describe a long multi-component call with a build-up and loud climax, while also documenting variation in phase use and timing. The broad acoustic outline is robust.
+    call_type_existence_explanation: Girard-Buttoz et al. 2022 lists grunts as one of the 12 primary single units, and Fedurek and Slocombe 2013 plus Bouchard and Zuberbuhler 2022 independently study food-associated grunt use in wild chimpanzees. The label is strong, while rough/food grunts are treated as contextual variants rather than a separate inventory call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 gives the clearest repertoire-level acoustic description, and Fedurek and Slocombe 2013 supports the rough-grunt variant, but the grunt category is graded and close to other low noisy calls. Agreement is therefore moderate rather than sharply categorical.
     semantic_description_agreement: strong
-    semantic_description_explanation: Mitani and Nishida 1993 support a spacing/contact role, Clark and Wrangham 1993 show food-arrival pant-hoots are not uniquely acoustically distinct, and Bouchard and Zuberbuhler 2022 show pant-hoots can mediate feeding competition and cooperation. These sources agree on broad long-range coordination rather than a narrow referential meaning.
+    semantic_description_explanation: Fedurek and Slocombe 2013 and Bouchard and Zuberbuhler 2022 independently support food and social-coordination functions, and Girard-Buttoz et al. 2025 places grunts in the broader event structure of chimpanzee call combinations. The broad feeding/coordination interpretation is strong.
 
-  - name: pant-grunt
+  - name: panted grunt
+    in_primary_inventory: true
     alternative_names:
-      - panted grunt
+      - pant-grunt
+      - panted-grunt
       - greeting grunt
-    scope: *adult_both_scope
+    scope: *mature_both_scope
     acoustic_keywords:
       - low_frequency
       - noisy
@@ -72,7 +72,7 @@ calls:
       - repetitive
       - pulsed
       - graded
-    acoustic_description: A repeated series of low-frequency grunt elements interspersed with audible inhalations or panting. Elements are short and can vary in amplitude and noisiness across bouts.
+    acoustic_description: A panted series of low-frequency noisy grunt elements, with voiced inhalations or panting inserted between short grunt pulses. Bouts are repetitive and can vary in amplitude and noisiness.
     semantic_keywords:
       - submission
       - affiliation
@@ -92,58 +92,23 @@ calls:
       - id: desai_etal_2022
         url: https://doi.org/10.1016/j.isci.2022.104851
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Pant-grunts are treated as a distinct greeting call by Laporte and Zuberbuhler 2010, Fedurek et al. 2021, and Desai et al. 2022, and they are retained as a single unit in Girard-Buttoz et al. 2022. Agreement is strong even though greeting sequences can include pant-hoots.
+    call_type_existence_explanation: Panted grunts are a primary inventory unit in Girard-Buttoz et al. 2022 and are treated as a distinct greeting call by Laporte and Zuberbuhler 2010, Fedurek et al. 2021, and Desai et al. 2022. Agreement is strong despite variation in greeting sequence order.
     acoustic_description_agreement: medium
-    acoustic_description_explanation: Girard-Buttoz et al. 2022 and Desai et al. 2022 support the panted low-grunt structure, but most cited greeting studies emphasize social context more than fine acoustic measurements. The acoustic label is stable but less quantitatively detailed than pant-hoots or hoos.
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 and Desai et al. 2022 support the panted low-grunt structure, but most greeting studies emphasize social context more than detailed acoustic measurement. The acoustic label is stable but not as finely quantified as pant-hoots or hoos.
     semantic_description_agreement: strong
-    semantic_description_explanation: Laporte and Zuberbuhler 2010, Fedurek et al. 2021, and Desai et al. 2022 all link pant-grunts with greeting, approach, dominance, and aggression-risk contexts. The submissive greeting interpretation is strongly supported across independent wild studies.
-
-  - name: rough grunt
-    alternative_names:
-      - food grunt
-      - food-associated grunt
-    scope: *adult_both_scope
-    acoustic_keywords:
-      - low_frequency
-      - noisy
-      - short
-      - quiet
-      - graded
-    acoustic_description: A short, low-frequency, harsh or noisy grunt, usually produced at close range and often in bouts. It is lower and less tonal than hoo calls and lacks the multi-phase structure of pant-hoots.
-    semantic_keywords:
-      - food
-      - group_coordination
-      - recruitment
-      - affiliation
-    semantic_description: Produced when feeding or arriving at food, especially in contexts where callers may coordinate with nearby social partners or mediate competition. Evidence from wild males suggests the calls can help retain or recruit others and regulate feeding interactions.
-    acoustic_references:
-      - id: girardbuttoz_etal_2022
-        url: https://doi.org/10.1038/s42003-022-03350-8
-      - id: fedurek_slocombe_2013
-        url: https://doi.org/10.1002/ajp.22122
-      - id: bouchard_zuberbuhler_2022
-        url: https://doi.org/10.1016/j.anbehav.2022.01.009
-    semantic_references:
-      - id: fedurek_slocombe_2013
-        url: https://doi.org/10.1002/ajp.22122
-      - id: bouchard_zuberbuhler_2022
-        url: https://doi.org/10.1016/j.anbehav.2022.01.009
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Food-associated rough grunts are repeatedly recognized in wild chimpanzee feeding studies, including Fedurek and Slocombe 2013 and Bouchard and Zuberbuhler 2022, and grunts are a core call unit in Girard-Buttoz et al. 2022.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: The sources agree that rough grunts are short low noisy calls, but the strongest wild papers focus on production context and social function rather than full acoustic separation from other grunt-like variants. Agreement is moderate because the repertoire is graded.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Fedurek and Slocombe 2013 and Bouchard and Zuberbuhler 2022 independently show food-associated use in wild males and interpret the calls as mediating social coordination around feeding. The broad food/coordination semantics are strong.
+    semantic_description_explanation: Laporte and Zuberbuhler 2010, Fedurek et al. 2021, and Desai et al. 2022 all link panted grunts with greeting, approach, dominance, and aggression-risk contexts. The submissive greeting interpretation is strongly supported across independent wild studies.
 
   - name: hoo
+    in_primary_inventory: true
     alternative_names:
       - soft hoo
       - quiet hoo
       - alert hoo
+      - alarm hoo
       - alarm huu
       - travel hoo
       - rest hoo
-    scope: *adult_both_scope
+    scope: *mature_both_scope
     acoustic_keywords:
       - low_frequency
       - frequency_modulated
@@ -151,7 +116,7 @@ calls:
       - short
       - quiet
       - graded
-    acoustic_description: A short, tonal, low-frequency call, often quiet and low-amplitude in soft variants. Alarm-related variants can be longer, louder, and more frequency-modulated, but remain more tonal than waa barks.
+    acoustic_description: A short, low-frequency, highly tonal call with a mostly flat contour. Quiet variants are low-amplitude, while alarm-related variants can be longer, louder, and more frequency-modulated.
     semantic_keywords:
       - contact
       - group_coordination
@@ -160,12 +125,12 @@ calls:
       - attention
     semantic_description: Used across quiet coordination contexts such as resting and travel, and in alert or alarm contexts when callers encounter ambiguous or ambush-like threats. Receivers can use context and call variant to guide cautious approach, avoidance, or group coordination.
     acoustic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
       - id: crockford_etal_2018
         url: https://doi.org/10.1098/rsos.172066
       - id: schel_etal_2013
         url: https://doi.org/10.1371/journal.pone.0076674
-      - id: girardbuttoz_etal_2022
-        url: https://doi.org/10.1038/s42003-022-03350-8
     semantic_references:
       - id: crockford_etal_2018
         url: https://doi.org/10.1098/rsos.172066
@@ -180,77 +145,91 @@ calls:
       - id: girardbuttoz_etal_2023
         url: https://doi.org/10.1038/s41467-023-37816-y
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Hoos are retained as a broad call unit by Girard-Buttoz et al. 2022, while Crockford et al. 2018 and Schel et al. 2013 validate context-linked quiet and alarm variants. The broad hoo category is stable even though variants are split differently across studies.
+    call_type_existence_explanation: Hoos are retained as a primary inventory unit by Girard-Buttoz et al. 2022, while Crockford et al. 2018 and Schel et al. 2013 validate context-linked quiet and alarm variants. The broad hoo category is stable even though variants are split differently across studies.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Crockford et al. 2018 and Schel et al. 2013 provide acoustic descriptions of quiet and alarm-related hoos, and Girard-Buttoz et al. 2022 treats hoos as a discriminable unit in the repertoire. Agreement is strong for a short tonal low-frequency call with graded variants.
+    acoustic_description_explanation: Girard-Buttoz et al. 2022, Crockford et al. 2018, and Schel et al. 2013 provide compatible acoustic descriptions of short tonal low-frequency hoos. Agreement is strong for the broad form, with graded variation among variants.
     semantic_description_agreement: medium
     semantic_description_explanation: Crockford et al. 2018 supports rest/travel/alert functions, while Crockford et al. 2012 and Schel et al. 2013 support alarm use in snake or ambush-threat contexts. Agreement is moderate because the same broad call type covers several context-specific variants.
 
-  - name: scream
+  - name: panted hoo
+    in_primary_inventory: true
     alternative_names:
-      - victim scream
-      - recruitment scream
-    scope: *adult_both_scope
+      - pant-hoot build-up
+      - pant hoot
+      - panted hoot
+    scope: *mature_both_scope
     acoustic_keywords:
-      - high_frequency
-      - broadband
-      - noisy
+      - low_frequency
+      - tonal
       - long
-      - loud
+      - repetitive
+      - pulsed
+      - multi_component
       - graded
-    acoustic_description: A loud, high-frequency, noisy and broadband call that can occur in repeated bouts. Acoustic structure varies with caller role and the severity of the social interaction.
+    acoustic_description: A repetitive panted series of tonal hoo elements, with short pant intervals between units. It often follows single hoos and precedes climax elements such as panted barks or panted screams in pant-hoot sequences.
     semantic_keywords:
-      - distress
-      - aggression
-      - recruitment
-      - submission
-    semantic_description: Produced during agonistic interactions, especially by victims of aggression. The calls can recruit or influence bystanders and convey information about the severity of aggression and the caller's social situation.
+      - contact
+      - group_coordination
+      - spacing
+      - display
+      - identity
+    semantic_description: Used as a central build-up component in long-distance pant-hoot sequences, which advertise caller presence, coordinate parties, and support spacing or inter-party contact. It can also occur in broader call combinations rather than only in canonical pant-hoots.
     acoustic_references:
-      - id: slocombe_zuberbuhler_2007
-        url: https://doi.org/10.1073/pnas.0706741104
       - id: girardbuttoz_etal_2022
         url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: fedurek_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0235-8
+      - id: clark_wrangham_1993
+        url: https://doi.org/10.1002/ajp.1350310203
     semantic_references:
-      - id: slocombe_zuberbuhler_2007
-        url: https://doi.org/10.1073/pnas.0706741104
-      - id: fedurek_etal_2015
-        url: https://doi.org/10.1016/j.anbehav.2015.09.010
+      - id: mitani_nishida_1993
+        url: https://doi.org/10.1006/anbe.1993.1088
+      - id: fedurek_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0235-8
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Screams are recognized as a core wild chimpanzee call in Slocombe and Zuberbuhler 2007, Fedurek et al. 2015, and Girard-Buttoz et al. 2022. The label is strong even though subtypes vary with caller role and event severity.
+    call_type_existence_explanation: Panted hoo is listed as a primary unit in Girard-Buttoz et al. 2022 and corresponds to the build-up phase described in pant-hoot studies such as Fedurek et al. 2017 and Clark and Wrangham 1993. The full pant-hoot sequence is not duplicated as a separate inventory unit.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Slocombe and Zuberbuhler 2007 quantify acoustic variation in victim screams, and Girard-Buttoz et al. 2022 treats screams as a repertoire unit. Agreement is strong for a loud noisy broadband call with graded social variation.
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 and Fedurek et al. 2017 agree on repeated panted hoo elements as a core phase of pant-hoot-like sequences, while Clark and Wrangham 1993 gives compatible pant-hoot acoustic structure. Agreement is strong despite phase-level variation.
     semantic_description_agreement: strong
-    semantic_description_explanation: Slocombe and Zuberbuhler 2007 show screams vary with aggression severity and audience composition, and Fedurek et al. 2015 distinguishes scream function from waa bark function in aggressive events. The distress/recruitment interpretation is strongly supported.
+    semantic_description_explanation: Mitani and Nishida 1993 support a long-distance spacing/contact role for pant-hoots, Fedurek et al. 2017 treats panted hoos as part of the structured pant-hoot sequence, and Girard-Buttoz et al. 2022 shows panted hoos combine widely across the repertoire. The long-range coordination interpretation is strong.
 
-  - name: waa bark
+  - name: bark
+    in_primary_inventory: true
     alternative_names:
+      - waa bark
       - waa-bark
       - alarm bark
-      - bark
-    scope: *adult_both_scope
+      - hunting bark
+      - rough bark
+    scope: *mature_both_scope
     acoustic_keywords:
+      - high_frequency
       - broadband
       - noisy
       - short
       - abrupt
       - loud
       - graded
-    acoustic_description: A loud, abrupt, noisy bark-like call, typically with a low-frequency onset followed by a broader higher-frequency element. It is shorter and more explosive than screams and less tonal than alarm hoos.
+    acoustic_description: A short, abrupt, noisy bark-like call with a relatively high fundamental frequency and dome-shaped contour when visible. It can grade acoustically toward grunts or screams, and context-specific bark variants differ in fine structure.
     semantic_keywords:
       - alarm
       - predator
       - aggression
       - recruitment
       - combinatorial
-    semantic_description: Produced in high-arousal alarm or agonistic contexts, including encounters with snakes, hunting, and aggressive interactions. It can recruit others or signal readiness to retaliate, and in snake contexts it can combine with alarm huus to produce a stronger recruitment effect.
+    semantic_description: Produced in high-arousal alarm or agonistic contexts, including encounters with snakes, hunting, and aggressive interactions. It can recruit others or signal readiness to retaliate, and in snake contexts it can combine with alarm hoos to produce a stronger recruitment effect.
     acoustic_references:
-      - id: schel_etal_2013
-        url: https://doi.org/10.1371/journal.pone.0076674
-      - id: fedurek_etal_2015
-        url: https://doi.org/10.1016/j.anbehav.2015.09.010
       - id: girardbuttoz_etal_2022
         url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: crockford_boesch_2003
+        url: https://doi.org/10.1006/anbe.2003.2166
+      - id: schel_etal_2013
+        url: https://doi.org/10.1371/journal.pone.0076674
     semantic_references:
+      - id: crockford_boesch_2003
+        url: https://doi.org/10.1006/anbe.2003.2166
       - id: schel_etal_2013
         url: https://doi.org/10.1371/journal.pone.0076674
       - id: fedurek_etal_2015
@@ -263,17 +242,285 @@ calls:
       - id: girardbuttoz_etal_2023
         url: https://doi.org/10.1038/s41467-023-37816-y
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Waa barks are explicitly described and acoustically illustrated by Schel et al. 2013, separated from screams in Fedurek et al. 2015, and included within the broader bark units of Girard-Buttoz et al. 2022. The label is strong, though some studies use broader bark terminology.
+    call_type_existence_explanation: Bark is a primary inventory unit in Girard-Buttoz et al. 2022, and Crockford and Boesch 2003, Schel et al. 2013, and Fedurek et al. 2015 all describe bark or waa-bark variants in wild chimpanzees. The label is strong, though some studies split context-specific barks.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Schel et al. 2013 provides spectrographic and audio examples, Fedurek et al. 2015 treats waa barks as distinct from screams, and Girard-Buttoz et al. 2022 includes bark-like units in the repertoire. The abrupt noisy bark structure is well supported.
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 gives the inventory-level acoustic profile, Crockford and Boesch 2003 analyzes context-specific barks, and Schel et al. 2013 provides spectrographic and audio examples. The abrupt noisy bark structure is well supported.
     semantic_description_agreement: strong
-    semantic_description_explanation: Schel et al. 2013 supports alarm use, Fedurek et al. 2015 supports agonistic functions distinct from screams, and Girard-Buttoz et al. 2023 shows alarm-huu plus waa-bark combinations recruit conspecifics in snake contexts. The broad alarm/aggression/recruitment function is strong.
+    semantic_description_explanation: Crockford and Boesch 2003 supports context-specific bark use, Schel et al. 2013 supports alarm use, Fedurek et al. 2015 supports agonistic functions distinct from screams, and Girard-Buttoz et al. 2023 shows alarm-hoo plus bark combinations recruit conspecifics. The broad alarm/aggression/recruitment function is strong.
+
+  - name: panted bark
+    in_primary_inventory: true
+    alternative_names:
+      - panted-bark
+      - pant bark
+      - pant-hoot climax bark
+    scope: *mature_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - noisy
+      - long
+      - repetitive
+      - pulsed
+      - multi_component
+      - loud
+      - graded
+    acoustic_description: A panted series of bark elements, each separated by short pant intervals. It shares the noisy dome-shaped bark structure but occurs as a repeated panted unit, often in climax positions of pant-hoot-like sequences.
+    semantic_keywords:
+      - display
+      - group_coordination
+      - aggression
+      - combinatorial
+    semantic_description: Used as a high-arousal panted unit in pant-hoot and other call combinations, often after hoos or panted hoos. Its meaning is best interpreted through sequence context, where it contributes to display, arousal, and social coordination.
+    acoustic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: fedurek_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0235-8
+    semantic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: crockford_boesch_2005
+        url: https://doi.org/10.1163/1568539054012047
+      - id: leroux_etal_2021
+        url: https://doi.org/10.1016/j.anbehav.2021.06.026
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Panted bark is listed as a primary inventory unit by Girard-Buttoz et al. 2022 and corresponds to one climax option in pant-hoot sequence descriptions such as Fedurek et al. 2017. Agreement is strong for the unit's existence.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 provides the clearest unit-level acoustic profile and Fedurek et al. 2017 places panted barks in pant-hoot phase structure. Agreement is moderate because much of the evidence treats panted bark as a sequence component rather than measuring it independently.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Girard-Buttoz et al. 2022, Crockford and Boesch 2005, and Leroux et al. 2021 all show panted barks in multi-unit sequences, but the unit's standalone function is less well resolved than that of hoos, grunts, or screams. The semantic label is therefore medium.
+
+  - name: pant
+    in_primary_inventory: true
+    alternative_names:
+      - pants
+      - panting
+      - pant-hoot let-down pant
+    scope: *mature_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - repetitive
+      - pulsed
+    acoustic_description: A noisy panted unit with low fundamental frequency when visible and a flat contour when measurable. It consists of short breathy pant elements and can appear alone or as the let-down part of longer sequences.
+    semantic_keywords:
+      - affiliation
+      - play
+      - group_coordination
+      - display
+    semantic_description: Occurs as an independent panted unit and as a let-down component in pant-hoot-like sequences. Recent event-based work links pants especially with approach, affiliative, and play-related events, while pant-hoot literature treats them as part of long-distance display sequences.
+    acoustic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: fedurek_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0235-8
+    semantic_references:
+      - id: girardbuttoz_etal_2025
+        url: https://doi.org/10.1126/sciadv.adq2879
+      - id: fedurek_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0235-8
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Pant is one of the 12 primary units in Girard-Buttoz et al. 2022 and is also recognized as a let-down element in pant-hoot sequence descriptions such as Fedurek et al. 2017. The label is strong for inventory inclusion.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 describes pants acoustically, but measurable frequency structure is sometimes absent or weak because the unit is noisy and breathy. Agreement is moderate because the acoustic profile is less information-rich than tonal units.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Girard-Buttoz et al. 2025 links pants to approach, affiliation, and play-related event structure, while Fedurek et al. 2017 places pants in pant-hoot let-down phases. These functions are compatible but broad, so agreement is medium.
+
+  - name: scream
+    in_primary_inventory: true
+    alternative_names:
+      - victim scream
+      - recruitment scream
+    scope: *mature_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - long
+      - loud
+      - graded
+    acoustic_description: A loud, high-frequency, noisy and broadband call with a relatively flat midsection. Screams can occur singly or in repeated bouts, and acoustic structure varies with caller role and interaction severity.
+    semantic_keywords:
+      - distress
+      - aggression
+      - recruitment
+      - submission
+    semantic_description: Produced during agonistic interactions, especially by victims of aggression. The calls can recruit or influence bystanders and convey information about the severity of aggression and the caller's social situation.
+    acoustic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: slocombe_zuberbuhler_2007
+        url: https://doi.org/10.1073/pnas.0706741104
+    semantic_references:
+      - id: slocombe_zuberbuhler_2007
+        url: https://doi.org/10.1073/pnas.0706741104
+      - id: fedurek_etal_2015
+        url: https://doi.org/10.1016/j.anbehav.2015.09.010
+      - id: girardbuttoz_etal_2025
+        url: https://doi.org/10.1126/sciadv.adq2879
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Scream is a primary unit in Girard-Buttoz et al. 2022 and is recognized as a core wild chimpanzee call in Slocombe and Zuberbuhler 2007 and Fedurek et al. 2015. The label is strong even though subtypes vary with caller role and event severity.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 gives the inventory acoustic profile, and Slocombe and Zuberbuhler 2007 quantify acoustic variation in victim screams. Agreement is strong for a loud noisy broadband call with graded social variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Slocombe and Zuberbuhler 2007 show screams vary with aggression severity and audience composition, Fedurek et al. 2015 distinguishes scream function from bark function in aggressive events, and Girard-Buttoz et al. 2025 places screams in the event structure of call combinations. The distress/recruitment interpretation is strongly supported.
+
+  - name: panted scream
+    in_primary_inventory: true
+    alternative_names:
+      - panted-scream
+      - pant scream
+      - pant-hoot climax scream
+    scope: *mature_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - long
+      - repetitive
+      - pulsed
+      - loud
+      - graded
+    acoustic_description: A repeated panted series of high-frequency noisy scream elements separated by short pant intervals. It shares the broadband scream profile but occurs as a panted multi-element unit, often in climax positions of pant-hoot-like sequences.
+    semantic_keywords:
+      - display
+      - group_coordination
+      - distress
+      - aggression
+      - combinatorial
+    semantic_description: Used as a high-arousal panted unit in long-distance or socially intense sequences, including pant-hoot climaxes and other call combinations. It likely contributes arousal, display, or recruitment value depending on the surrounding unit sequence.
+    acoustic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: fedurek_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0235-8
+    semantic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: crockford_boesch_2005
+        url: https://doi.org/10.1163/1568539054012047
+      - id: leroux_etal_2021
+        url: https://doi.org/10.1016/j.anbehav.2021.06.026
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Panted scream is a primary inventory unit in Girard-Buttoz et al. 2022 and is one of the recognized pant-hoot climax options in Fedurek et al. 2017. The label is strong for existence, although panted and non-panted scream semantics are often discussed together.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 defines the panted scream unit acoustically, and Fedurek et al. 2017 supports its placement in pant-hoot phase structure. Agreement is medium because detailed independent acoustic work on panted screams is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Girard-Buttoz et al. 2022, Crockford and Boesch 2005, and Leroux et al. 2021 show panted screams in structured call combinations, but their standalone meaning is less clearly resolved than non-panted screams. The semantic label is medium.
+
+  - name: non-vocal sound
+    in_primary_inventory: true
+    alternative_names:
+      - non-vocal sounds
+      - lip smack
+      - raspberry
+    scope: *mature_both_scope
+    acoustic_keywords:
+      - noisy
+      - short
+      - repetitive
+      - quiet
+    acoustic_description: A short noisy mechanically produced sound unit, including lip smacks and raspberries, without measurable fundamental frequency or tonal contour in the primary inventory.
+    semantic_keywords:
+      - affiliation
+      - attention
+      - group_coordination
+    semantic_description: Included in the inventory as a single unit that can occur alone or in combinations. Recent event-based analysis links non-vocal sounds especially with close-range affiliative events such as grooming, rather than long-distance contact.
+    acoustic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+    semantic_references:
+      - id: girardbuttoz_etal_2025
+        url: https://doi.org/10.1126/sciadv.adq2879
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Girard-Buttoz et al. 2022 includes non-vocal sounds as one of the 12 units in the primary inventory, but this category is mechanically produced rather than strictly vocal and is less often treated as a classic chimpanzee call type. The inventory rule supports inclusion, while the label remains medium.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description relies mainly on Girard-Buttoz et al. 2022, which defines the unit as noisy and lacking measurable fundamental-frequency or contour values. Independent acoustic treatment of lip smacks and raspberries in this repertoire context is sparse, so agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Girard-Buttoz et al. 2025 provides event-based support for close-range affiliative use, and Girard-Buttoz et al. 2022 shows the unit participates in combinations. The label is medium because semantic evidence is recent and less replicated than for alarm, greeting, or food calls.
+
+  - name: whimper
+    in_primary_inventory: true
+    alternative_names: []
+    scope: *mature_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - quiet
+    acoustic_description: A short, highly tonal call with a mostly flat contour and a fundamental frequency around the mid-to-high range of the chimpanzee repertoire.
+    semantic_keywords:
+      - distress
+      - submission
+      - attention
+      - affiliation
+    semantic_description: A relatively rare call in the adult wild repertoire. It is treated in recent whole-repertoire work as a single unit in combinations, with context suggesting close-range social or low-intensity distress and attention-related use rather than loud long-distance signaling.
+    acoustic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+    semantic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: girardbuttoz_etal_2025
+        url: https://doi.org/10.1126/sciadv.adq2879
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Whimper is listed as a primary inventory unit by Girard-Buttoz et al. 2022, with 78 occurrences, but it has much less independent call-specific literature than grunts, hoos, barks, or screams. The existence label is medium.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 provides the main acoustic basis for the adult wild whimper unit. Because independent acoustic studies focused on wild chimpanzee whimpers are limited, agreement is weak.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Girard-Buttoz et al. 2025 gives recent event-level support, but the semantic interpretation remains much less developed than for food grunts, panted grunts, hoos, barks, or screams. The label is weak.
+
+  - name: panted roar
+    in_primary_inventory: true
+    alternative_names:
+      - panted-roar
+      - pant roar
+      - pant-hoot let-down roar
+    scope: *mature_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - long
+      - repetitive
+      - pulsed
+      - graded
+    acoustic_description: A rare noisy panted roar unit with low-frequency energy and spectral bands below the visible fundamental frequency. It occurs as a panted form, especially as a possible let-down component in pant-hoot-like sequences.
+    semantic_keywords:
+      - display
+      - contact
+      - group_coordination
+    semantic_description: Best supported as a rare let-down or terminal component of long-distance display and contact sequences. Its specific standalone function remains uncertain because the primary inventory recorded it only rarely.
+    acoustic_references:
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+      - id: fedurek_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0235-8
+    semantic_references:
+      - id: fedurek_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0235-8
+      - id: girardbuttoz_etal_2022
+        url: https://doi.org/10.1038/s42003-022-03350-8
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Panted roar is included in the primary inventory of Girard-Buttoz et al. 2022, but it occurred only once there and is mainly known as a pant-hoot let-down option in sequence descriptions. The label is weak because the inventory support is sparse.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Girard-Buttoz et al. 2022 gives the only clear unit-level acoustic description in the cited set, and the sample is extremely small. Fedurek et al. 2017 supports a let-down roar component but not a broad acoustic sample.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Fedurek et al. 2017 and Girard-Buttoz et al. 2022 support a pant-hoot let-down/display interpretation, but the unit is too rare in the primary inventory for strong standalone semantic claims.
 
 references:
   girardbuttoz_etal_2022:
     citation: "Girard-Buttoz C, Zaccarella E, Bortolato T, Friederici AD, Wittig RM, Crockford C. 2022. Chimpanzees produce diverse vocal sequences with ordered and recombinatorial properties. Communications Biology 5: 410."
     url: https://doi.org/10.1038/s42003-022-03350-8
     doi: 10.1038/s42003-022-03350-8
+  girardbuttoz_etal_2025:
+    citation: "Girard-Buttoz C, Neumann C, Bortolato T, Zaccarella E, Friederici AD, Wittig RM, Crockford C. 2025. Versatile use of chimpanzee call combinations promotes meaning expansion. Science Advances 11(19): eadq2879."
+    url: https://doi.org/10.1126/sciadv.adq2879
+    doi: 10.1126/sciadv.adq2879
   fedurek_etal_2017:
     citation: "Fedurek P, Zuberbuhler K, Semple S. 2017. Trade-offs in the production of animal vocal sequences: insights from the structure of wild chimpanzee pant hoots. Frontiers in Zoology 14: 50."
     url: https://doi.org/10.1186/s12983-017-0235-8
@@ -284,7 +531,8 @@ references:
     doi: 10.1002/ajp.1350310203
   mitani_nishida_1993:
     citation: "Mitani JC, Nishida T. 1993. Contexts and social correlates of long-distance calling by male chimpanzees. Animal Behaviour 45(4): 735-746."
-    url: https://hdl.handle.net/2027.42/30892
+    url: https://doi.org/10.1006/anbe.1993.1088
+    doi: 10.1006/anbe.1993.1088
   bouchard_zuberbuhler_2022:
     citation: "Bouchard A, Zuberbuhler K. 2022. Male chimpanzees communicate to mediate competition and cooperation during feeding. Animal Behaviour 186: 41-55."
     url: https://doi.org/10.1016/j.anbehav.2022.01.009
@@ -305,6 +553,14 @@ references:
     citation: "Fedurek P, Slocombe KE. 2013. The social function of food-associated calls in male chimpanzees. American Journal of Primatology 75(7): 726-739."
     url: https://doi.org/10.1002/ajp.22122
     doi: 10.1002/ajp.22122
+  crockford_boesch_2003:
+    citation: "Crockford C, Boesch C. 2003. Context-specific calls in wild chimpanzees, Pan troglodytes verus: analysis of barks. Animal Behaviour 66(1): 115-125."
+    url: https://doi.org/10.1006/anbe.2003.2166
+    doi: 10.1006/anbe.2003.2166
+  crockford_boesch_2005:
+    citation: "Crockford C, Boesch C. 2005. Call combinations in wild chimpanzees. Behaviour 142(4): 397-421."
+    url: https://doi.org/10.1163/1568539054012047
+    doi: 10.1163/1568539054012047
   crockford_etal_2018:
     citation: "Crockford C, Gruber T, Zuberbuhler K. 2018. Chimpanzee quiet hoo variants differ according to context. Royal Society Open Science 5(5): 172066."
     url: https://doi.org/10.1098/rsos.172066
@@ -329,3 +585,7 @@ references:
     citation: "Girard-Buttoz C, Zaccarella E, Bortolato T, Zuberbuhler K, Wittig RM, Crockford C. 2023. Call combinations and compositional processing in wild chimpanzees. Nature Communications 14: 2225."
     url: https://doi.org/10.1038/s41467-023-37816-y
     doi: 10.1038/s41467-023-37816-y
+  leroux_etal_2021:
+    citation: "Leroux M, Schel AM, Wilke C, Chandia B, Zuberbuhler K, Slocombe KE, Townsend SW. 2021. Chimpanzees combine pant hoots with food calls into larger structures. Animal Behaviour 179: 41-50."
+    url: https://doi.org/10.1016/j.anbehav.2021.06.026
+    doi: 10.1016/j.anbehav.2021.06.026

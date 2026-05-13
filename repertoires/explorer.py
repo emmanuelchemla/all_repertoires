@@ -285,7 +285,14 @@ def render_semantic_keywords(call: dict) -> None:
 
 
 def render_call(call: dict, refs: dict) -> None:
-    st.markdown(f"### {call['name']}")
+    addition = call.get("in_primary_inventory") is False
+    badge = (
+        " &nbsp; <span style='background:#b45309;color:white;padding:2px 8px;"
+        "border-radius:999px;font-weight:600;font-size:0.7em;vertical-align:middle'>addition</span>"
+        if addition
+        else ""
+    )
+    st.markdown(f"### {escape(call['name'])}{badge}", unsafe_allow_html=True)
     if call.get("alternative_names"):
         st.caption("Also known as: " + ", ".join(call["alternative_names"]))
     render_scope(call)
@@ -355,6 +362,18 @@ def main() -> None:
             "Select species", list(species.keys()), format_func=lambda k: labels[k]
         )
         st.divider()
+        st.header("Filters")
+        existence_filter = st.multiselect(
+            "Call type existence",
+            ["strong", "medium", "weak"],
+            default=["strong", "medium", "weak"],
+        )
+        inventory_filter = st.radio(
+            "Primary inventory",
+            ["all", "only inventory", "only additions"],
+            index=0,
+        )
+        st.divider()
         st.caption(f"{len(species)} species, {sum(len(v.get('calls', [])) for v in species.values())} calls total")
 
     data = species[choice]
@@ -364,13 +383,48 @@ def main() -> None:
     if line := taxonomy_line(data):
         st.caption(line)
 
-    calls = data.get("calls", [])
-    if not calls:
+    inventory = data.get("primary_inventory") or {}
+    inv_id = inventory.get("id")
+    rationale = inventory.get("rationale", "")
+    if inv_id:
+        citation = render_citation({"id": inv_id}, refs)
+        st.markdown(f"📖 **Primary inventory:** {citation}")
+    else:
+        st.markdown("📖 **Primary inventory:** *none — every call is an addition*")
+    if rationale:
+        with st.expander("inventory rationale"):
+            st.write(rationale)
+
+    all_calls = data.get("calls", [])
+    if not all_calls:
         st.warning("No calls described yet.")
         return
 
+    def keep(call: dict) -> bool:
+        if normalize_agreement(call.get("call_type_existence_agreement")) not in existence_filter:
+            return False
+        if inventory_filter == "only inventory" and not call.get("in_primary_inventory"):
+            return False
+        if inventory_filter == "only additions" and call.get("in_primary_inventory"):
+            return False
+        return True
+
+    calls = [c for c in all_calls if keep(c)]
+    if not calls:
+        st.info(f"No calls match the current filters (hiding {len(all_calls)}).")
+        return
+
+    n_from_inv = sum(1 for c in calls if c.get("in_primary_inventory"))
+    filtered = len(calls) != len(all_calls)
     m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Calls described", len(calls))
+    with m1:
+        st.metric("Calls shown", len(calls))
+        if filtered:
+            st.caption(f"filtered from {len(all_calls)}")
+        elif inv_id:
+            st.caption(f"{n_from_inv} from inventory · {len(calls) - n_from_inv} additions")
+        else:
+            st.caption(f"{len(calls)} additions")
     for metric, label, key in (
         (m2, "Existence", "call_type_existence_agreement"),
         (m3, "Acoustic", "acoustic_description_agreement"),

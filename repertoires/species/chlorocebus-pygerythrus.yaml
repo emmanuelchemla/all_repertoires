@@ -8,13 +8,59 @@ taxonomy:
   family: Cercopithecidae
   genus: Chlorocebus
   species: pygerythrus
+primary_inventory:
+  id: struhsaker_1967
+  rationale: "Struhsaker 1967 is used as the primary_inventory spine because it is the classic observational and spectrographic inventory of free-ranging Amboseli vervet auditory communication. It enumerates the predator alarms and the major intragroup, intergroup, submissive, affiliative, play, and infant vocal or audible signal classes later summarized by Isbell and Enstam-Jaffe 2013 and Radick 2006. This file includes those named communicative call/sound classes, while excluding noncommunicative physiological noises such as coughs, sneezes, and vomiting."
 calls:
-  - name: terrestrial predator alarm
+  - name: uh
+    in_primary_inventory: true
     alternative_names:
-      - leopard alarm
-      - chirp
-      - bark
-      - threat-alarm bark
+      - uh alarm
+      - low-intensity minor-predator alarm
+    scope: &adult_juvenile_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - abrupt
+      - quiet
+      - graded
+    acoustic_description: "A short, low-intensity alarm vocalization, named onomatopoetically by Struhsaker. Detailed spectrographic measurements are sparse, but inventory accounts distinguish it from louder, repeated, high-intensity alarm calls such as rraups, chirps, and threat-alarm barks."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: "Produced to nearby minor terrestrial threats, including small mammalian predators or other low-intensity disturbances. It appears to alert group members to inspect the source of danger rather than to trigger the more urgent escape responses associated with major predators."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: radick_2006
+        url: https://doi.org/10.1016/j.shpsc.2006.03.009
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Struhsaker 1967 lists uh among the alarm-call repertoire and Radick 2006 discusses it as part of Struhsaker's broader predator-call table, but later experimental work focuses mostly on leopard, eagle, and snake alarm classes. The existence label is therefore medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Struhsaker 1967 and Isbell and Enstam-Jaffe 2013 support uh as a low-intensity alarm call, but published acoustic measurements are limited compared with the quantified chutter, rraup, chirp, and bark literature. Agreement is weak for fine structure."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Struhsaker 1967 and Radick 2006 agree that uh is tied to minor mammalian or human-like threats, but no dedicated playback or quantitative production study tests this call alone. Semantic agreement is moderate but not strong."
+
+  - name: nyow
+    in_primary_inventory: true
+    alternative_names:
+      - nyow alarm
+      - moderate-intensity minor-predator alarm
     scope: &adult_both_scope
       life_stages:
         - adult
@@ -24,83 +70,42 @@ calls:
       population_specific: false
       note: ""
     acoustic_keywords:
-      - broadband
-      - noisy
       - short
-      - repetitive
-      - multi_component
       - loud
-      - graded
-    acoustic_description: "A loud alarm-call class with sex-linked variants: female terrestrial-predator calls are often chirp-like calls with fewer, longer elements and medium frequency values, while male calls include bark-like calls with relatively high-frequency long elements. Bark variants can grade toward calls in aggressive contexts."
-    semantic_keywords:
-      - alarm
-      - predator
-      - attention
-    semantic_description: Produced to terrestrial predators, especially leopards and leopard models, and historically also described for other dangerous terrestrial carnivores. Playbacks of these calls lead listeners to choose terrestrial-predator avoidance responses, especially moving into trees.
-    acoustic_references:
-      - id: price_etal_2015
-        url: https://doi.org/10.1038/srep13220
-      - id: seyfarth_etal_1980_anbehav
-        url: https://doi.org/10.1016/S0003-3472(80)80097-2
-    semantic_references:
-      - id: seyfarth_etal_1980_anbehav
-        url: https://doi.org/10.1016/S0003-3472(80)80097-2
-      - id: price_etal_2015
-        url: https://doi.org/10.1038/srep13220
-    playback_references:
-      - id: seyfarth_etal_1980_anbehav
-        url: https://doi.org/10.1016/S0003-3472(80)80097-2
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Terrestrial predator alarms are central to Seyfarth et al. 1980 and are quantitatively reanalyzed by Price et al. 2015. Agreement is strong, though Price et al. show that male bark-like calls can overlap with aggressive contexts and that female and male variants differ acoustically.
-    acoustic_description_agreement: strong
-    acoustic_description_explanation: Price et al. 2015 provides the strongest acoustic basis, distinguishing terrestrial-predator calls from snake and eagle calls with high classification accuracy, while also documenting sex-specific call structure. The category is acoustically strong but internally heterogeneous.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Seyfarth et al. 1980 playback experiments show listeners respond adaptively to terrestrial-predator alarms, and Price et al. 2015 confirms context specificity for these calls while adding nuance about aggression overlap in male barks. The predator-warning meaning is strongly supported.
-
-  - name: rraup
-    alternative_names:
-      - eagle alarm
-      - aerial predator alarm
-    scope: *adult_both_scope
-    acoustic_keywords:
-      - low_frequency
-      - broadband
+      - abrupt
       - noisy
-      - short
-      - repetitive
-      - multi_component
       - graded
-    acoustic_description: A relatively low-frequency alarm call made of repeated noisy elements. In quantitative analyses, eagle-related clusters contain lower-frequency calls than chutters and are partly graded with calls produced in aggressive contexts.
+    acoustic_description: "A moderate-intensity, abrupt alarm call represented by the onomatopoetic label nyow. It is described as distinct from both the quieter uh and the higher-intensity rraup, chirp, and bark calls, but it has not received the same quantitative acoustic treatment as the classic three predator alarms."
     semantic_keywords:
       - alarm
       - predator
       - attention
-    semantic_description: Produced mainly in response to aerial predators such as martial eagles. Playback experiments show that listeners respond by looking upward or selecting aerial-predator avoidance behavior, although similar calls can also occur in escalated aggression.
+    semantic_description: "Given to sudden movements or appearances of minor predators such as baboons or small cats. It functions as an alerting call associated with moderate threat, often prompting orientation and sometimes flight."
     acoustic_references:
-      - id: price_etal_2015
-        url: https://doi.org/10.1038/srep13220
-      - id: seyfarth_etal_1980_anbehav
-        url: https://doi.org/10.1016/S0003-3472(80)80097-2
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
     semantic_references:
-      - id: seyfarth_etal_1980_anbehav
-        url: https://doi.org/10.1016/S0003-3472(80)80097-2
-      - id: price_etal_2015
-        url: https://doi.org/10.1038/srep13220
-    playback_references:
-      - id: seyfarth_etal_1980_anbehav
-        url: https://doi.org/10.1016/S0003-3472(80)80097-2
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Rraup or eagle alarms appear in the classic playback study of Seyfarth et al. 1980 and in the quantitative cluster analysis of Price et al. 2015. The call type is well recognized, though Price et al. documents graded overlap with aggression calls.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Price et al. 2015 supports a lower-frequency repeated alarm cluster, but also reports intergradation between rraup-like calls and aggression-related calls. Agreement is therefore moderate rather than cleanly categorical.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Seyfarth et al. 1980 playback experiments show appropriate aerial-predator responses, and Price et al. 2015 confirms that rraups are mainly associated with raptors. The semantic label is strong despite contextual overlap in production.
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: radick_2006
+        url: https://doi.org/10.1016/j.shpsc.2006.03.009
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Nyow is part of the Struhsaker 1967 alarm inventory and is repeated in later repertoire summaries, but it is not a central unit in the later playback and quantitative alarm-call literature. Existence agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The available sources distinguish nyow qualitatively by intensity and context, but provide little modern spectrographic measurement. Acoustic agreement is therefore weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Struhsaker 1967 and Radick 2006 consistently place nyow in moderate minor-predator contexts. The lack of nyow-specific playback evidence keeps semantic agreement at medium."
 
   - name: chutter
+    in_primary_inventory: true
     alternative_names:
       - snake alarm
       - snake chutter
-    scope: *adult_both_scope
+      - aggressive chutter
+    scope: *adult_juvenile_both_scope
     acoustic_keywords:
       - high_frequency
       - broadband
@@ -109,81 +114,286 @@ calls:
       - repetitive
       - multi_component
       - graded
-    acoustic_description: A broadband call made of multiple short elements, generally higher in frequency than rraups. Chutters can vary continuously toward rraup-like calls and are not always confined to predator contexts.
+    acoustic_description: "A staccato, multi-element broadband call. Quantitative analyses identify high-frequency clusters of short elements, but also show graded continuity from typical chutters toward rraup-like calls when aggressive contexts are included."
     semantic_keywords:
       - alarm
       - predator
       - aggression
       - threat
       - attention
-    semantic_description: Commonly produced toward snakes, especially pythons, and can prompt ground-directed scanning by listeners. Similar chutter calls also occur during between-group aggression, so context helps interpret the signal.
+    semantic_description: "Produced to snakes, especially pythons, and to some human or intergroup threats. Playback studies show snake-alarm responses such as looking down or inspecting the ground, while later analyses show that chutter-like calls also occur during between-group aggression."
     acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: owren_bernacki_1988
+        url: https://doi.org/10.1121/1.396477
       - id: price_etal_2015
         url: https://doi.org/10.1038/srep13220
-      - id: seyfarth_etal_1980_anbehav
-        url: https://doi.org/10.1016/S0003-3472(80)80097-2
     semantic_references:
       - id: seyfarth_etal_1980_anbehav
         url: https://doi.org/10.1016/S0003-3472(80)80097-2
+      - id: seyfarth_etal_1980_science
+        url: https://doi.org/10.1126/science.7433999
       - id: price_etal_2015
         url: https://doi.org/10.1038/srep13220
     playback_references:
       - id: seyfarth_etal_1980_anbehav
         url: https://doi.org/10.1016/S0003-3472(80)80097-2
+      - id: seyfarth_etal_1980_science
+        url: https://doi.org/10.1126/science.7433999
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Chutters are part of the classic vervet alarm-call repertoire in Seyfarth et al. 1980 and form a high-frequency multi-element cluster in Price et al. 2015. The label is strong, but the category is graded and not purely snake-specific.
+    call_type_existence_explanation: "Chutters are listed in Struhsaker 1967, experimentally tested as snake alarms by Seyfarth et al. 1980, acoustically analyzed by Owren and Bernacki 1988, and reanalyzed quantitatively by Price et al. 2015. Existence agreement is strong."
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Price et al. 2015 gives quantitative support for chutters as broadband, multi-element calls with high frequency values relative to rraups, and Seyfarth et al. 1980 supplies the playback-linked call category. Agreement is strong for the acoustic form.
+    acoustic_description_explanation: "Owren and Bernacki 1988 and Price et al. 2015 independently support a short, repeated, broadband structure, while Price et al. also documents graded overlap with rraup-like aggressive calls. Agreement is strong for the broad acoustic form."
     semantic_description_agreement: medium
-    semantic_description_explanation: "Seyfarth et al. 1980 supports snake-specific listener responses, but Price et al. 2015 shows chutters are also produced in between-group aggression. The semantic label is therefore medium: snake alarm is strongly supported, but not exclusive."
+    semantic_description_explanation: "Seyfarth et al. 1980 provides strong playback evidence for snake-alarm responses, but Price et al. 2015 shows that chutters are also produced in between-group aggression. Semantic agreement is therefore medium rather than narrowly snake-specific."
 
-  - name: grunt
+  - name: rraup
+    in_primary_inventory: true
     alternative_names:
-      - social grunt
-      - contact grunt
+      - eagle alarm
+      - aerial predator alarm
+      - cough
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - short
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: "A rough, low-frequency alarm call, often produced as short noisy elements. Price et al. 2015 places rraups in lower-frequency clusters than typical chutters, while noting continuous intermediates between rraup-like and chutter-like calls in aggressive contexts."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: "Produced mainly to aerial predators such as martial eagles. Playbacks elicit aerial-predator responses, including looking upward or moving toward cover, although rraup-like calls can also occur during escalated aggression."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: price_etal_2015
+        url: https://doi.org/10.1038/srep13220
+      - id: owren_bernacki_1988
+        url: https://doi.org/10.1121/1.396477
+    semantic_references:
+      - id: seyfarth_etal_1980_anbehav
+        url: https://doi.org/10.1016/S0003-3472(80)80097-2
+      - id: seyfarth_etal_1980_science
+        url: https://doi.org/10.1126/science.7433999
+      - id: price_etal_2015
+        url: https://doi.org/10.1038/srep13220
+    playback_references:
+      - id: seyfarth_etal_1980_anbehav
+        url: https://doi.org/10.1016/S0003-3472(80)80097-2
+      - id: seyfarth_etal_1980_science
+        url: https://doi.org/10.1126/science.7433999
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Rraup is a named alarm in Struhsaker 1967, a central eagle-alarm class in Seyfarth et al. 1980, and a low-frequency cluster in Price et al. 2015. The call type is strongly recognized."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Price et al. 2015 and Owren and Bernacki 1988 support low-frequency raptor-alarm structure, but Price et al. also shows graded overlap with chutter-like aggressive calls. Acoustic agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Seyfarth et al. 1980 playback experiments support aerial-predator responses, and Price et al. 2015 confirms that rraups are mainly associated with raptor contexts while adding nuance about aggressive overlap. Semantic agreement is strong."
+
+  - name: chirp
+    in_primary_inventory: true
+    alternative_names:
+      - leopard alarm
+      - terrestrial predator alarm
+      - female terrestrial-predator alarm
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - loud
+      - abrupt
+      - graded
+    acoustic_description: "A short, sharp, loud alarm call, historically described as low in frequency and long-carrying. Quantitative work finds that female leopard-context chirps have fewer, longer elements and medium frequency values, and are more acoustically distinct from other alarm and aggressive calls than chutter/rraup variants."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: "Given to major terrestrial predators such as leopards, lions, cheetahs, and servals. Playbacks of leopard alarms lead receivers to climb or move into trees, consistent with terrestrial ambush-predator avoidance."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: price_etal_2015
+        url: https://doi.org/10.1038/srep13220
+    semantic_references:
+      - id: seyfarth_etal_1980_anbehav
+        url: https://doi.org/10.1016/S0003-3472(80)80097-2
+      - id: seyfarth_etal_1980_science
+        url: https://doi.org/10.1126/science.7433999
+      - id: radick_2006
+        url: https://doi.org/10.1016/j.shpsc.2006.03.009
+    playback_references:
+      - id: seyfarth_etal_1980_anbehav
+        url: https://doi.org/10.1016/S0003-3472(80)80097-2
+      - id: seyfarth_etal_1980_science
+        url: https://doi.org/10.1126/science.7433999
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Chirp is listed by Struhsaker 1967, discussed as one of the historically central predator calls by Radick 2006, and emerges as a distinct female terrestrial-predator cluster in Price et al. 2015. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Struhsaker 1967 provides the qualitative inventory description and Price et al. 2015 gives quantitative evidence that chirps are acoustically distinct from chutters, rraups, and aggressive calls. Acoustic agreement is strong."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Seyfarth et al. 1980 playback experiments show terrestrial-predator avoidance responses to leopard alarms, and Struhsaker 1967 plus Radick 2006 link chirps to major mammalian predators. Semantic agreement is strong."
+
+  - name: bark
+    in_primary_inventory: true
+    alternative_names:
+      - threat-alarm bark
+      - leopard alarm bark
+      - male alarm bark
+      - aggressive bark
+    scope: &adult_juvenile_male_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - long
+      - loud
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: "A loud, gruff, bark-like call usually produced in repeated bouts by subadult or adult males. Price et al. 2015 finds bark-like calls with relatively high-frequency long elements and partial overlap between leopard and aggressive contexts, while Schad et al. 2025 treats barks as long-distance loud calls."
+    semantic_keywords:
+      - alarm
+      - predator
+      - aggression
+      - threat
+      - display
+      - territorial
+    semantic_description: "Produced by males to large terrestrial predators and also during within- and between-group aggressive interactions. Playback work shows that receivers use contextual information when interpreting male alarm barks, and recent field work links barking rates with male rank and season."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: price_etal_2015
+        url: https://doi.org/10.1038/srep13220
+      - id: schad_etal_2025
+        url: https://doi.org/10.1007/s10764-024-00475-x
+    semantic_references:
+      - id: price_etal_2015
+        url: https://doi.org/10.1038/srep13220
+      - id: deshpande_etal_2023
+        url: https://doi.org/10.1007/s10071-023-01767-0
+      - id: schad_etal_2025
+        url: https://doi.org/10.1007/s10764-024-00475-x
+    playback_references:
+      - id: deshpande_etal_2023
+        url: https://doi.org/10.1007/s10071-023-01767-0
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Barks or threat-alarm barks are listed in Struhsaker 1967, quantitatively analyzed by Price et al. 2015, tested in playback by Deshpande et al. 2023, and studied as male loud calls by Schad et al. 2025. Agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Price et al. 2015 provides quantitative bark structure and context overlap, while Schad et al. 2025 independently treats male barks as long-distance high-amplitude calls. Acoustic agreement is strong, with graded contextual variants."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Price et al. 2015, Deshpande et al. 2023, and Schad et al. 2025 agree that barks occur in predator and aggression contexts. The exact inferred meaning is context-dependent, but the dual alarm/aggression use is strongly supported."
+
+  - name: wrr
+    in_primary_inventory: true
+    alternative_names:
+      - wrrr
+      - threat grunt
+      - aggressive grunt
     scope: *adult_both_scope
     acoustic_keywords:
       - low_frequency
       - noisy
       - short
-      - abrupt
+      - repetitive
       - graded
-    acoustic_description: A very short harsh call, about 125 ms in classic measurements, with an aperiodic low fundamental near 240 Hz and one or two spectral peaks. Subtypes differ in spectral peak placement and contour rather than sounding categorically different to human listeners.
+    acoustic_description: "A harsh, low-frequency threat-grunt-like call. The published quantitative detail is limited, but Price et al. 2015 includes wrrs as threat grunts occurring in aggressive contexts alongside chutter- and rraup-like calls."
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+    semantic_description: "Used in within- and between-group aggression, where it appears to signal threat or agonistic arousal rather than predator-specific danger. Its boundaries with other aggressive grunt-like calls are less firmly resolved."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: price_etal_2015
+        url: https://doi.org/10.1038/srep13220
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: price_etal_2015
+        url: https://doi.org/10.1038/srep13220
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Wrrs are in the Struhsaker 1967 inventory and are named as threat grunts in Price et al. 2015, but they are not deeply analyzed as a standalone call type. Agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Sources agree that wrrs are threat-grunt-like, but detailed acoustic measurements remain sparse. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Struhsaker 1967, Isbell and Enstam-Jaffe 2013, and Price et al. 2015 place wrrs in aggressive contexts. The threat interpretation is supported, but not playback-tested, so agreement is medium."
+
+  - name: grunt
+    in_primary_inventory: true
+    alternative_names:
+      - social grunt
+      - contact grunt
+      - progression grunt
+      - intergroup grunt
+      - greeting grunt
+      - approach grunt
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - abrupt
+      - quiet
+      - graded
+    acoustic_description: "A short, harsh, usually close-range call. Classic acoustic measurements describe grunts as about 125 ms long, with an aperiodic low fundamental near 240 Hz and one or two spectral peaks whose placement and contour distinguish context-specific variants."
     semantic_keywords:
       - contact
       - group_coordination
       - affiliation
       - spacing
+      - identity
       - attention
-    semantic_description: Used in several social and ranging situations, including approaching dominant or subordinate group members, moving into a new area of the home range, and observing another group. Playback work shows receivers distinguish at least four grunt types and treat them as carrying situation-specific information.
+    semantic_description: "Used across social approach, movement, and intergroup contexts. Playback experiments show that vervets distinguish at least four grunt variants, including calls associated with approaching dominant or subordinate individuals, moving into a new area, and seeing another group; later work also links greeting grunts with benign intent and recruitment in risky situations."
     acoustic_references:
-      - id: seyfarth_cheney_1984
-        url: https://doi.org/10.1121/1.390872
       - id: cheney_seyfarth_1982
         url: https://doi.org/10.1016/S0003-3472(82)80146-2
+      - id: seyfarth_cheney_1984
+        url: https://doi.org/10.1121/1.390872
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
     semantic_references:
       - id: cheney_seyfarth_1982
         url: https://doi.org/10.1016/S0003-3472(82)80146-2
-      - id: seyfarth_cheney_1984
-        url: https://doi.org/10.1121/1.390872
-      - id: debortoli_etal_2017
+      - id: mercier_etal_2017
         url: https://doi.org/10.1016/j.anbehav.2017.07.021
+      - id: seyfarth_cheney_1986
+        url: https://doi.org/10.1016/S0003-3472(86)80252-4
     playback_references:
       - id: cheney_seyfarth_1982
         url: https://doi.org/10.1016/S0003-3472(82)80146-2
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Cheney and Seyfarth 1982 and Seyfarth and Cheney 1984 treat grunts as a major social-call class with multiple receiver-discriminated subtypes, and De Bortoli Vizioli et al. 2017 confirms wild greeting-grunt use. Agreement is strong for grunts as a call class.
+    call_type_existence_explanation: "Grunts are part of Struhsaker 1967's repertoire and are central to Cheney and Seyfarth 1982, Seyfarth and Cheney 1984, and Mercier et al. 2017. Agreement is strong for grunts as a major call class, although studies split context-specific variants differently."
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Seyfarth and Cheney 1984 provides detailed acoustic measurements of grunt duration, aperiodic low fundamental structure, and spectral peaks, while Cheney and Seyfarth 1982 demonstrates that small acoustic differences are meaningful to receivers. The acoustic account is strong.
+    acoustic_description_explanation: "Seyfarth and Cheney 1984 gives detailed acoustic measurements, while Cheney and Seyfarth 1982 shows receivers treat small acoustic differences as meaningful. Acoustic agreement is strong."
     semantic_description_agreement: strong
-    semantic_description_explanation: Cheney and Seyfarth 1982 uses field playbacks to show receivers distinguish approach, ranging, and intergroup grunts, while De Bortoli Vizioli et al. 2017 adds a modern wild analysis of greeting-grunt use. Agreement is strong for situation-specific social coordination.
+    semantic_description_explanation: "Cheney and Seyfarth 1982 playback experiments and Mercier et al. 2017 field analyses independently support situation-specific social and greeting functions. Semantic agreement is strong for the broad grunt class."
 
   - name: scream
+    in_primary_inventory: true
     alternative_names:
       - agonistic scream
       - victim scream
       - aggressor scream
-    scope: *adult_both_scope
+      - juvenile scream
+    scope: *adult_juvenile_both_scope
     acoustic_keywords:
       - high_frequency
       - broadband
@@ -191,68 +401,499 @@ calls:
       - long
       - loud
       - graded
-    acoustic_description: A high-pitched, high-amplitude, noisy call produced singly or in bouts during conflict. Victim screams tend to be longer and higher-pitched than aggressor screams, and severe conflicts produce calls with higher entropy.
+    acoustic_description: "A high-pitched, high-amplitude noisy call produced singly or in bouts. In wild agonistic screams, victim screams tend to be longer and higher-pitched than aggressor screams, and severe conflicts produce screams with higher entropy."
     semantic_keywords:
       - distress
       - aggression
       - submission
       - recruitment
-    semantic_description: Produced during agonistic encounters by both aggressors and victims. Acoustic variation is associated with caller role and conflict severity and may reduce opponent aggression or attract potential helpers.
+      - identity
+    semantic_description: "Produced during agonistic encounters and distress situations by victims and aggressors, including juveniles. Acoustic variation is associated with caller role, identity, and conflict severity, and may reduce opponent aggression or attract helpers; juvenile scream playbacks also support individual recognition by mothers."
     acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
       - id: mercier_etal_2019
         url: https://doi.org/10.1371/journal.pone.0214640
     semantic_references:
+      - id: cheney_seyfarth_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80044-3
       - id: mercier_etal_2019
         url: https://doi.org/10.1371/journal.pone.0214640
+    playback_references:
+      - id: cheney_seyfarth_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80044-3
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Mercier et al. 2019 directly analyzes wild vervet agonistic screams and separates victim and aggressor variants. The call type is strongly supported, even though detailed evidence is more recent and narrower than the alarm-call literature.
+    call_type_existence_explanation: "Screams are in the Struhsaker 1967 inventory, juvenile screams were used in Cheney and Seyfarth 1980 playback work, and adult agonistic screams were quantified by Mercier et al. 2019. Agreement is strong."
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Mercier et al. 2019 quantifies acoustic differences in screams by caller role and conflict severity, giving strong support for a loud high-pitched noisy agonistic call class.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Mercier et al. 2019 supports agonistic, distress, and helper-attraction interpretations, but the function is inferred from correlational wild observations rather than playback tests. The semantic agreement is medium.
+    acoustic_description_explanation: "Mercier et al. 2019 provides detailed acoustic evidence for high-pitched, high-amplitude agonistic screams and their variation with conflict role and severity. Acoustic agreement is strong."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Cheney and Seyfarth 1980 shows individual recognition of juvenile screams, and Mercier et al. 2019 links scream structure to role and conflict severity. Semantic agreement is strong for distress/agonistic recruitment functions."
 
-  - name: wrr
+  - name: squeal
+    in_primary_inventory: true
     alternative_names:
-      - threat grunt
-      - wrrr
-    scope: *adult_both_scope
+      - agonistic squeal
+      - defensive squeal
+    scope: &adult_juvenile_female_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - graded
+    acoustic_description: "A shrill, high-pitched call described with screams as a more continuous or graded defensive vocalization. Published acoustic measurements specific to squeals are limited, so the description relies mainly on the primary inventory and later repertoire summaries."
+    semantic_keywords:
+      - distress
+      - aggression
+      - submission
+      - recruitment
+    semantic_description: "Given by females and juveniles in defensive or subordinate agonistic situations, apparently to inhibit attack or solicit aid from other group members. It is less experimentally resolved than screams."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Squeals are included in Struhsaker 1967 and summarized by Isbell and Enstam-Jaffe 2013, but later acoustic and playback work usually focuses on screams rather than squeals. Existence agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The sources agree on a shrill, high-pitched form, but there are few squeal-specific measurements. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Struhsaker 1967 and Isbell and Enstam-Jaffe 2013 associate squeals with defensive agonistic contexts and solicitation of aid. The semantic account is plausible and repeated, but not experimentally isolated, so agreement is medium."
+
+  - name: woof-woof
+    in_primary_inventory: true
+    alternative_names:
+      - woof
+      - submissive woof
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
     acoustic_keywords:
       - low_frequency
       - noisy
       - short
       - repetitive
-      - graded
-    acoustic_description: A harsh, low-frequency threat-grunt-like call that can occur in aggressive contexts. Published quantitative detail is limited compared with grunts and the three classic alarm-call categories.
+      - multi_component
+    acoustic_description: "A deep, non-tonal, guttural call produced as repeated woof-like elements, usually with the mouth closed or slightly opened. Detailed modern acoustic analyses are not available."
     semantic_keywords:
+      - submission
       - threat
-      - aggression
-    semantic_description: Reported in within- and between-group aggressive contexts, where it appears to mark threat or agonistic arousal rather than predator-specific danger. Its boundaries with other aggressive grunts are less firmly resolved.
+      - display
+    semantic_description: "Produced by subordinate males in submissive or defensive display contexts, especially around dominance interactions. It may accompany visual displays and help signal de-escalation or submission."
     acoustic_references:
-      - id: price_etal_2015
-        url: https://doi.org/10.1038/srep13220
-      - id: ielc_vervet_fact_sheet
-        url: https://ielc.libguides.com/sdzg/factsheets/vervet/behavior
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
     semantic_references:
-      - id: price_etal_2015
-        url: https://doi.org/10.1038/srep13220
-      - id: ielc_vervet_fact_sheet
-        url: https://ielc.libguides.com/sdzg/factsheets/vervet/behavior
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_explanation: Price et al. 2015 mentions wrrs or threat grunts in aggressive contexts, and the San Diego Zoo Wildlife Alliance fact sheet summarizes wrrs among the recognized calls from Struhsaker and later authoritative accounts. The label is medium because modern acoustic analyses focus on other call types.
+    call_type_existence_explanation: "Woof-woof is in the Struhsaker 1967 inventory and later summaries, but has little dedicated follow-up work. Existence agreement is medium."
     acoustic_description_agreement: weak
-    acoustic_description_explanation: Available sources support wrrs as harsh threat-grunt-like calls, but detailed acoustic measurements are sparse in the cited literature. The acoustic label is weak compared with grunts, chutters, rraups, or screams.
+    acoustic_description_explanation: "The deep guttural description is consistent across inventory summaries, but lacks quantitative measurement. Acoustic agreement is weak."
     semantic_description_agreement: medium
-    semantic_description_explanation: Price et al. 2015 and the fact sheet agree that wrrs occur in aggressive contexts, but they provide limited call-specific functional tests. The threat/aggression interpretation is plausible and supported, but not deeply tested.
+    semantic_description_explanation: "Struhsaker 1967 and Isbell and Enstam-Jaffe 2013 associate woof-woof with subordinate male submission. The semantic description is repeated but not playback-tested, so agreement is medium."
+
+  - name: wa
+    in_primary_inventory: true
+    alternative_names:
+      - waa
+      - submissive wa
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - tonal
+      - long
+      - low_frequency
+      - graded
+    acoustic_description: "A continuous tonal exhalation often associated with a grimace. It is acoustically simpler and more sustained than the repeated woof-woof, but published measurements are sparse."
+    semantic_keywords:
+      - submission
+      - display
+      - threat
+    semantic_description: "Produced by subordinate males during submissive displays. It is often treated with woof-woof and woof-wa as part of a graded submissive display vocal complex."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Wa is included in Struhsaker 1967 and later repertoire summaries, but it has little standalone follow-up. Existence agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The continuous tonal exhalation description is qualitative and not well quantified in later sources. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "The primary inventory and review accounts agree on a subordinate male display context, but there are no call-specific playback tests. Semantic agreement is medium."
+
+  - name: woof-wa
+    in_primary_inventory: true
+    alternative_names:
+      - woof wa
+      - combined submissive call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - tonal
+      - multi_component
+      - long
+      - graded
+    acoustic_description: "A composite call combining woof-like guttural elements with the more tonal wa exhalation. It appears to be part of a graded submissive display complex rather than a sharply isolated acoustic category."
+    semantic_keywords:
+      - submission
+      - display
+      - threat
+    semantic_description: "Produced by subordinate males in submissive display contexts, apparently combining the communicative effects of woof-woof and wa during dominance-related encounters."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Woof-wa is named in the Struhsaker 1967 inventory and later summaries, though modern work does not treat it as a separate focal call. Agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The composite acoustic description is based on qualitative inventory evidence, with no detailed measurements. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Sources consistently place woof-wa in subordinate male display contexts, but functional testing is lacking. Semantic agreement is medium."
+
+  - name: aarr
+    in_primary_inventory: true
+    alternative_names:
+      - long aar
+      - aar
+      - adult intergroup call
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - long
+      - noisy
+      - graded
+    acoustic_description: "A long, aar-like vocalization produced with the mouth slightly open or puckered and the teeth covered. It is described as one of the more graded, continuous intergroup calls."
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - recruitment
+      - spacing
+      - threat
+    semantic_description: "Produced during encounters with trespassing or neighboring group members, especially by females and juveniles in Struhsaker's account and by adults in later summaries. It can recruit group members toward the contested area."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Aarr or long aar is included by Struhsaker 1967 and later summaries as an intergroup call, but it has limited modern acoustic or playback work. Existence agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The source descriptions agree on a long aar-like sound, but there are no detailed published measurements. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "The intergroup/territorial use is consistent in Struhsaker 1967 and Isbell and Enstam-Jaffe 2013, but call-specific experiments are absent. Semantic agreement is medium."
+
+  - name: wawoo
+    in_primary_inventory: true
+    alternative_names:
+      - infant intergroup call
+      - wawoo call
+    scope: &infant_both_scope
+      life_stages:
+        - infant
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - multi_component
+      - long
+      - tonal
+      - graded
+    acoustic_description: "An infant-only, multi-syllable wawoo-like call described in repertoire summaries of Struhsaker's intergroup-call inventory. Acoustic detail beyond the onomatopoetic label is sparse."
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - attention
+    semantic_description: "Produced by infants during encounters with foreign groups or nonmembers, apparently paralleling adult intergroup calls but within the infant repertoire."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: "Wawoo is recoverable from Struhsaker 1967 summaries as an infant intergroup call, but it has little independent follow-up. Existence agreement is weak."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Only a broad onomatopoetic and age-class description is available in the accessible literature. Acoustic agreement is weak."
+    semantic_description_agreement: weak
+    semantic_description_explanation: "The intergroup context is reported in inventory summaries, but the function and receiver responses are not independently tested. Semantic agreement is weak."
+
+  - name: rraugh
+    in_primary_inventory: true
+    alternative_names:
+      - yearling rraugh
+      - nonaggressive approach call
+    scope: &juvenile_both_scope
+      life_stages:
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - graded
+    acoustic_description: "A rraugh-like call produced with the mouth closed or partly open and the teeth covered. Published descriptions are qualitative and distinguish it mainly by age class and approach context."
+    semantic_keywords:
+      - affiliation
+      - submission
+      - contact
+      - attention
+    semantic_description: "Produced by yearlings when approaching older group members, apparently signalling nonaggression or appeasement during close social approaches."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Rraugh is included in the Struhsaker 1967 inventory and later summaries, but modern work does not focus on it. Existence agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The acoustic account is qualitative, with little measurement beyond mouth posture and broad sound quality. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "The yearling approach/nonaggression context is consistently reported, but it lacks playback testing. Semantic agreement is medium."
+
+  - name: lip smack and teeth chatter
+    in_primary_inventory: true
+    alternative_names:
+      - lip smack
+      - teeth chatter
+      - lipsmacking
+      - teeth-chattering
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - short
+      - repetitive
+      - pulsed
+      - quiet
+    acoustic_description: "A nonphonated audible signal produced by rapid repetitive opening/closing of the lips or slapping/chattering of the teeth. Struhsaker's account reports that it is audible only at close range."
+    semantic_keywords:
+      - affiliation
+      - submission
+      - display
+      - contact
+    semantic_description: "Used in close social contexts such as grooming and sometimes in response to male visual displays, probably signalling nonaggression or appeasement rather than predator danger."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Struhsaker 1967 includes lip smacks and teeth chatters among audible intragroup signals, and Isbell and Enstam-Jaffe 2013 summarize their close-range use. Existence agreement is medium because the signal is nonvocal and not usually analyzed with vocal calls."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The repeated close-range mechanical sound is consistently described, but there is no vervet-specific quantitative kinematic or acoustic analysis. Acoustic agreement is medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Inventory and review sources associate this signal with grooming, displays, and nonaggression. The context is consistent but not experimentally tested, so agreement is medium."
+
+  - name: purr
+    in_primary_inventory: true
+    alternative_names:
+      - purring
+      - play purr
+    scope: *juvenile_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - quiet
+      - long
+      - tonal
+      - graded
+    acoustic_description: "A very quiet, low-frequency purring sound produced at close range. It is rarely heard and has limited published measurement in vervets."
+    semantic_keywords:
+      - play
+      - affiliation
+      - contact
+    semantic_description: "Produced by juveniles during play-wrestling or grappling. It appears to be an affiliative play-context signal rather than an alarm or threat."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Purring is included in Struhsaker 1967 and later summaries, but it is rare and not a focus of later vervet vocal studies. Existence agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The quiet low-frequency description is repeated, but quantitative acoustic evidence is sparse. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Struhsaker 1967 and Isbell and Enstam-Jaffe 2013 place purrs in juvenile play. The context is consistent, but not tested experimentally, so semantic agreement is medium."
+
+  - name: infant distress call
+    in_primary_inventory: true
+    alternative_names:
+      - rrr
+      - infant rrr
+      - distress call
+      - infant scream
+    scope: &infant_juvenile_both_scope
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - noisy
+      - loud
+      - repetitive
+      - graded
+    acoustic_description: "An infant and juvenile distress vocalization, including rrr-like calls and scream-like variants. The broader distress-call class is loud and attention-getting, with individual differences sufficient for maternal recognition in juvenile scream playbacks."
+    semantic_keywords:
+      - distress
+      - caregiving
+      - recruitment
+      - identity
+    semantic_description: "Produced when infants or juveniles are separated from, threatened, or seeking their mothers and other potential helpers. Mothers and other group members can respond selectively, and male responsiveness has also been reported."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: cheney_seyfarth_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80044-3
+    semantic_references:
+      - id: cheney_seyfarth_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80044-3
+      - id: hauser_1986
+        url: https://www.jstor.org/stable/4599927
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+    playback_references:
+      - id: cheney_seyfarth_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80044-3
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Infant and juvenile distress calls are included by Struhsaker 1967, used in Cheney and Seyfarth 1980 playback work, and discussed by Hauser 1986. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The inventory and playback literature support individually distinctive distress screams/calls, but detailed acoustic measurements specific to rrr are limited. Acoustic agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Cheney and Seyfarth 1980 shows maternal recognition of juvenile screams, and Hauser 1986 supports social responsiveness to infant distress calls. Semantic agreement is strong for distress, caregiving, and identity."
+
+  - name: infant reunion call
+    in_primary_inventory: true
+    alternative_names:
+      - eh eh
+      - eh-eh
+      - reunion call
+    scope: *infant_juvenile_both_scope
+    acoustic_keywords:
+      - quiet
+      - short
+      - repetitive
+      - noisy
+    acoustic_description: "A quiet, short, non-tonal repeated eh-eh call. Published description is mainly qualitative and tied to mother-offspring reunion contexts."
+    semantic_keywords:
+      - affiliation
+      - caregiving
+      - contact
+    semantic_description: "Produced by infants or juveniles during reunion with their mothers, apparently supporting close-range contact and affiliative mother-offspring interaction."
+    acoustic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    semantic_references:
+      - id: struhsaker_1967
+        url: https://scholars.duke.edu/publication/1562008
+      - id: isbell_enstamjaffe_2013
+        url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Eh-eh reunion calls are listed in Struhsaker 1967 and later summaries, but have little standalone follow-up. Existence agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The quiet, short, non-tonal description is qualitative and not quantitatively tested. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "The mother-offspring reunion context is consistent in inventory sources, but lacks dedicated playback or production analysis. Semantic agreement is medium."
 
 references:
+  struhsaker_1967:
+    citation: "Struhsaker TT. 1967. Auditory communication among vervet monkeys (Cercopithecus aethiops). In: Altmann SA, editor. Social Communication among Primates. Chicago: University of Chicago Press. p. 281-324."
+    url: https://scholars.duke.edu/publication/1562008
+  radick_2006:
+    citation: "Radick G. 2006. What's in a name? The vervet predator calls and the limits of the Washburnian synthesis. Studies in History and Philosophy of Biological and Biomedical Sciences 37(2): 334-362."
+    url: https://doi.org/10.1016/j.shpsc.2006.03.009
+    doi: 10.1016/j.shpsc.2006.03.009
+  isbell_enstamjaffe_2013:
+    citation: "Isbell LA, Enstam Jaffe KL. 2013. Chlorocebus pygerythrus Vervet monkey. In: Butynski TM, Kingdon J, Kalina J, editors. The Mammals of Africa. Volume II: Primates. London: Bloomsbury. p. 277-283."
+    url: https://www.researchgate.net/publication/248706941_Chlorocebus_pygerythrus_Vervet_monkey
+  seyfarth_etal_1980_science:
+    citation: "Seyfarth RM, Cheney DL, Marler P. 1980. Monkey responses to three different alarm calls: evidence of predator classification and semantic communication. Science 210(4471): 801-803."
+    url: https://doi.org/10.1126/science.7433999
+    doi: 10.1126/science.7433999
   seyfarth_etal_1980_anbehav:
     citation: "Seyfarth RM, Cheney DL, Marler P. 1980. Vervet monkey alarm calls: semantic communication in a free-ranging primate. Animal Behaviour 28(4): 1070-1094."
     url: https://doi.org/10.1016/S0003-3472(80)80097-2
     doi: 10.1016/S0003-3472(80)80097-2
-  price_etal_2015:
-    citation: "Price T, Wadewitz P, Cheney D, Seyfarth R, Hammerschmidt K, Fischer J. 2015. Vervets revisited: a quantitative analysis of alarm call structure and context specificity. Scientific Reports 5: 13220."
-    url: https://doi.org/10.1038/srep13220
-    doi: 10.1038/srep13220
+  cheney_seyfarth_1980:
+    citation: "Cheney DL, Seyfarth RM. 1980. Vocal recognition in free-ranging vervet monkeys. Animal Behaviour 28(2): 362-367."
+    url: https://doi.org/10.1016/S0003-3472(80)80044-3
+    doi: 10.1016/S0003-3472(80)80044-3
   cheney_seyfarth_1982:
     citation: "Cheney DL, Seyfarth RM. 1982. How vervet monkeys perceive their grunts: field playback experiments. Animal Behaviour 30(3): 739-751."
     url: https://doi.org/10.1016/S0003-3472(82)80146-2
@@ -261,14 +902,34 @@ references:
     citation: "Seyfarth RM, Cheney DL. 1984. The acoustic features of vervet monkey grunts. Journal of the Acoustical Society of America 75(5): 1623-1628."
     url: https://doi.org/10.1121/1.390872
     doi: 10.1121/1.390872
-  debortoli_etal_2017:
-    citation: "De Bortoli Vizioli A, Koyama NF, Hardie SM, Schino G. 2017. Vervet monkeys greet adult males during high-risk situations. Animal Behaviour 132: 229-245."
+  seyfarth_cheney_1986:
+    citation: "Seyfarth RM, Cheney DL. 1986. Vocal development in vervet monkeys. Animal Behaviour 34(6): 1640-1658."
+    url: https://doi.org/10.1016/S0003-3472(86)80252-4
+    doi: 10.1016/S0003-3472(86)80252-4
+  owren_bernacki_1988:
+    citation: "Owren MJ, Bernacki RH. 1988. The acoustic features of vervet monkey alarm calls. Journal of the Acoustical Society of America 83(5): 1927-1935."
+    url: https://doi.org/10.1121/1.396477
+    doi: 10.1121/1.396477
+  hauser_1986:
+    citation: "Hauser MD. 1986. Male responsiveness to infant distress calls in free-ranging vervet monkeys. Behavioral Ecology and Sociobiology 19(1): 65-71."
+    url: https://www.jstor.org/stable/4599927
+  price_etal_2015:
+    citation: "Price T, Wadewitz P, Cheney D, Seyfarth R, Hammerschmidt K, Fischer J. 2015. Vervets revisited: a quantitative analysis of alarm call structure and context specificity. Scientific Reports 5: 13220."
+    url: https://doi.org/10.1038/srep13220
+    doi: 10.1038/srep13220
+  mercier_etal_2017:
+    citation: "Mercier S, Neumann C, van de Waal E, Chollet E, de Bellefon JM, Zuberbuhler K. 2017. Vervet monkeys greet adult males during high-risk situations. Animal Behaviour 132: 229-245."
     url: https://doi.org/10.1016/j.anbehav.2017.07.021
     doi: 10.1016/j.anbehav.2017.07.021
   mercier_etal_2019:
     citation: "Mercier S, Deaux EC, van de Waal E, Bono AEJ, Zuberbuhler K. 2019. Correlates of social role and conflict severity in wild vervet monkey agonistic screams. PLoS One 14(5): e0214640."
     url: https://doi.org/10.1371/journal.pone.0214640
     doi: 10.1371/journal.pone.0214640
-  ielc_vervet_fact_sheet:
-    citation: "San Diego Zoo Wildlife Alliance. 2024. Vervet Monkey (Chlorocebus pygerythrus) Fact Sheet: Behavior and Ecology. International Environment Library Consortium LibGuides."
-    url: https://ielc.libguides.com/sdzg/factsheets/vervet/behavior
+  deshpande_etal_2023:
+    citation: "Deshpande A, van de Waal E, Zuberbuhler K. 2023. Context-dependent alarm responses in wild vervet monkeys. Animal Cognition 26: 1199-1208."
+    url: https://doi.org/10.1007/s10071-023-01767-0
+    doi: 10.1007/s10071-023-01767-0
+  schad_etal_2025:
+    citation: "Schad L, Dongre P, van de Waal E, Fischer J. 2025. Loud Call Production in Male Vervet Monkeys (Chlorocebus pygerythrus) Varies with Season and Signaller Rank. International Journal of Primatology 46: 538-555."
+    url: https://doi.org/10.1007/s10764-024-00475-x
+    doi: 10.1007/s10764-024-00475-x

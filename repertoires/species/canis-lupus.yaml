@@ -8,16 +8,22 @@ taxonomy:
   family: Canidae
   genus: Canis
   species: lupus
+primary_inventory:
+  id: schassburger_1993
+  rationale: "Schassburger 1993 is used as the primary_inventory spine because it is the dedicated monograph on timber-wolf vocal communication and enumerates 11 major call classes: howl, whine, whimper, yelp, growl, snarl, woof, bark, moan, whine-moan, and growl-moan. Harrington and Asa 2003 review those classes as a graded repertoire with some weakly replicated boundaries, so every Schassburger major class is included here and the moan complex is marked with weak agreement where appropriate. Squeak is added as an outside-inventory call because later peer-reviewed work treats it as acoustically and contextually distinct rather than only a whistle-whimper variant."
 calls:
   - name: howl
+    in_primary_inventory: true
     alternative_names:
       - chorus howl
+      - solo howl
       - flat howl
       - breaking howl
-      - aggressive howl
       - bark-howl
-    scope: &adult_juvenile_both_scope
+      - howl-bark
+    scope: &all_life_both_scope
       life_stages:
+        - infant
         - juvenile
         - adult
       sexes:
@@ -29,22 +35,30 @@ calls:
       - low_frequency
       - frequency_modulated
       - tonal
+      - harmonic
       - long
       - loud
       - repetitive
       - multi_component
       - graded
-    acoustic_description: A long, loud tonal vocalization with a low to mid fundamental frequency and slow frequency modulation. Single howls may be relatively flat or breaking, while chorus howls are multi-individual sequences with overlapping howls and sometimes mixed bark-howls or other brief elements.
+    acoustic_description: "A long, loud, mostly tonal harmonic vocalization with a low to mid fundamental frequency and slow frequency modulation. Solo howls range from flat to breaking contours, while chorus howls contain overlapping individual howls and may incorporate short bark-howl or howl-bark components."
     semantic_keywords:
       - contact
       - group_coordination
       - territorial
       - spacing
       - identity
-    semantic_description: Used for long-distance contact, reassembly, and pack spacing. Field studies show that packs answer simulated or recorded howls most strongly in contexts involving pups, kills, breeding animals, or territory use, and pack howls can carry group-specific identity information.
+      - affiliation
+    semantic_description: "Used for long-distance contact, pack assembly, spacing among packs, territorial advertisement, and social bonding. Field playback and elicitation studies show that response probability varies with pack location, pups, food resources, relationship quality, and other social or ecological factors, and acoustic analyses support individual and pack identity cues."
     acoustic_references:
-      - id: harrington_mech_1978
-        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: theberge_falls_1967
+        url: https://doi.org/10.1093/icb/7.2.331
+      - id: harrington_1989
+        url: https://doi.org/10.1080/09524622.1989.9753122
       - id: zaccaroni_etal_2012
         url: https://doi.org/10.1080/03949370.2012.664569
       - id: sadhukhan_etal_2019
@@ -56,6 +70,8 @@ calls:
         url: https://doi.org/10.2307/3808560
       - id: harrington_mech_1983
         url: https://doi.org/10.1007/BF00343208
+      - id: mazzini_etal_2013
+        url: https://doi.org/10.1016/j.cub.2013.06.066
       - id: ausband_etal_2020
         url: https://doi.org/10.1111/eth.13041
       - id: zaccaroni_etal_2012
@@ -70,18 +86,323 @@ calls:
       - id: ausband_etal_2020
         url: https://doi.org/10.1111/eth.13041
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Harrington and Mech 1978 treat howls as a primary wolf vocalization, and later field studies by Harrington and Mech 1979, Harrington and Mech 1982, Zaccaroni et al. 2012, and Sadhukhan et al. 2019 all analyze howling directly. Terminology varies for flat, breaking, aggressive, bark-howl, and chorus forms, but the base call type is not disputed.
+    call_type_existence_explanation: "Howl is a major Schassburger 1993 class and is independently treated as a core wolf call by Harrington and Asa 2003, Theberge and Falls 1967, Harrington and Mech 1979, Zaccaroni et al. 2012, and Sadhukhan et al. 2019. Authors split or name howl variants differently, but the call type itself is uncontested."
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Harrington and Mech 1978 describe the prolonged tonal form, Zaccaroni et al. 2012 quantify wild pack howls, and Sadhukhan et al. 2019 classify harmonic howl variants. These sources agree on the long tonal structure while allowing graded and mixed variants.
+    acoustic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, Theberge and Falls 1967, Zaccaroni et al. 2012, and Sadhukhan et al. 2019 agree on a prolonged tonal harmonic structure with frequency modulation and graded variants. Chorus work adds complexity but does not contradict the basic acoustic description."
     semantic_description_agreement: strong
-    semantic_description_explanation: Harrington and Mech 1979 and 1983 show roles in territorial spacing and resource defense, Harrington and Mech 1982 and Ausband et al. 2020 demonstrate reliable responses to simulated howling, and Zaccaroni et al. 2012 supports group-level identity in wild pack howls.
+    semantic_description_explanation: "Harrington and Mech 1979, 1982, and 1983 show spacing and territorial roles through playback or simulated howling; Mazzini et al. 2013 and Ausband et al. 2020 add social and ecological predictors; Zaccaroni et al. 2012 supports pack identity. The major contexts are therefore strongly supported."
 
-  - name: bark
+  - name: whine
+    in_primary_inventory: true
     alternative_names:
-      - woof
+      - long whine
+      - social whine
+      - submissive whine
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - short
+      - quiet
+      - graded
+    acoustic_description: "A high-pitched harmonic call with a relatively pure tonal structure, usually soft and frequency modulated. It is longer and less abrupt than a yelp or squeak, but it grades into whimper and moan-like variants in some descriptions."
+    semantic_keywords:
+      - submission
+      - affiliation
+      - contact
+      - begging
+      - distress
+    semantic_description: "Given at close range during appeasement, greeting, care solicitation, social contact, and frustrated or distressed motivation. Pup and adult accounts associate whines with social dependence or reduced aggression rather than threat displays."
+    acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+    semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Whine is a Schassburger 1993 major class and is retained by Harrington and Asa 2003, Coscia et al. 1991, Passilongo et al. 2017, and Sadhukhan et al. 2019. Agreement is medium because whines, whimpers, squeaks, and whine-moans form a graded high-frequency family that some studies merge and others split."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, Coscia et al. 1991, Passilongo et al. 2017, and Sadhukhan et al. 2019 agree that whines are high-frequency harmonic close-range sounds, but the exact duration and boundary with whimpers and squeaks differs among inventories."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, and Coscia et al. 1991 tie whines to submissive, affiliative, and care-soliciting situations, while Sadhukhan et al. 2019 treats Indian-wolf whines as part of a friendly/submissive harmonic set. The broad context is consistent, but subtype meanings are not sharply resolved."
+
+  - name: whimper
+    in_primary_inventory: true
+    alternative_names:
+      - short whine
+      - whistle whimper
+      - friendly whimper
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - short
+      - quiet
+      - graded
+    acoustic_description: "A short, soft, high-pitched harmonic call with a clear tonal trace and frequency modulation. It is typically shorter than a whine and less abrupt than a yelp, and Schassburger's whistle-whimper subtype overlaps with later squeak terminology."
+    semantic_keywords:
+      - affiliation
+      - submission
+      - contact
+      - begging
+      - caregiving
+    semantic_description: "Used at close range in friendly greeting, appeasement, contact with familiar pack members, and pup-adult interactions. It generally accompanies social approach or nonaggressive motivation."
+    acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+      - id: weir_etal_2022
+        url: https://doi.org/10.1163/1568539X-bja10140
+    semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+      - id: weir_etal_2022
+        url: https://doi.org/10.1163/1568539X-bja10140
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Whimper is a Schassburger 1993 major class and appears in Harrington and Asa 2003, Passilongo et al. 2017, Sadhukhan et al. 2019, and Weir et al. 2022. Agreement is medium because later authors sometimes reserve whimper for one subtype and sometimes use squeak or social squeak for neighboring acoustic forms."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The cited sources agree on a short high-frequency harmonic structure, but Passilongo et al. 2017 and Sadhukhan et al. 2019 separate whimpers from squeaks while Schassburger 1993 included whistle-whimper variants. This supports the description but keeps the boundary agreement medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, Passilongo et al. 2017, Sadhukhan et al. 2019, and Weir et al. 2022 all place whimper-like calls in affiliative, submissive, or contact contexts. Agreement is medium because the precise division of friendly whimper versus squeak contexts varies."
+
+  - name: yelp
+    in_primary_inventory: true
+    alternative_names:
+      - sharp yelp
+      - infant yelp
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - short
+      - abrupt
+      - loud
+      - graded
+    acoustic_description: "A short, abrupt, high-pitched harmonic call, often more intense and steeper in contour than a whimper or whine. It may occur singly or in short series and grades toward squeak-like calls at lower intensity."
+    semantic_keywords:
+      - distress
+      - submission
+      - attention
+      - play
+      - caregiving
+    semantic_description: "Produced during sudden close-range distress, pain, fear, rough contact, or intense social interaction. In pups it can solicit adult attention, while adult accounts associate it with submissive or conflict-related situations."
+    acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+    semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Yelp is a Schassburger 1993 major class and is also listed by Harrington and Asa 2003, Coscia et al. 1991, and Passilongo et al. 2017. Agreement is medium because yelps sit near whimpers and squeaks in the high-frequency graded continuum and are less often analyzed quantitatively than howls, barks, or growls."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, Coscia et al. 1991, and Passilongo et al. 2017 support the short high-frequency abrupt structure. Fine acoustic boundaries are only moderately supported because sample sizes and subtype definitions vary."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Schassburger 1993 and Harrington and Asa 2003 associate yelps with intense close-range distress or submission, while Coscia et al. 1991 and Passilongo et al. 2017 add pup and chorus-context examples. Context agreement is moderate but not experimentally tested."
+
+  - name: growl
+    in_primary_inventory: true
+    alternative_names:
+      - low growl
       - bark-growl
       - growl-bark
-    scope: *adult_juvenile_both_scope
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - long
+      - loud
+      - graded
+    acoustic_description: "A low, rough, broadband vocalization with noisy energy and variable duration. It can be sustained or pulsed, and it grades into bark-growl, growl-bark, snarl, and growl-moan forms as intensity and mouth posture change."
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+      - territorial
+      - submission
+    semantic_description: "Used in close-range agonistic encounters, dominance displays, food defense, warnings, and tense interactions with pack members or outsiders. It signals aggressive or defensive motivation and often increases social distance."
+    acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+    semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: harrington_mech_1978
+        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: sadhukhan_etal_2019
+        url: https://doi.org/10.1371/journal.pone.0216186
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Growl is a Schassburger 1993 major class and one of the broad classes retained by Harrington and Mech 1978 and Harrington and Asa 2003. Coscia et al. 1991, Passilongo et al. 2017, and Sadhukhan et al. 2019 also treat growls or growl-like calls as part of the wolf repertoire."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Schassburger 1993, Harrington and Mech 1978, Harrington and Asa 2003, Coscia et al. 1991, and Passilongo et al. 2017 agree that growls are low, rough, and noisy, but growls grade into snarls and bark-growl combinations and have less modern quantitative treatment than howls."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Schassburger 1993, Harrington and Mech 1978, Harrington and Asa 2003, Passilongo et al. 2017, and Sadhukhan et al. 2019 consistently associate growls with aggressive, dominance, or defensive contexts. This is one of the most stable short-range semantic assignments."
+
+  - name: snarl
+    in_primary_inventory: true
+    alternative_names:
+      - snarling growl
+      - growl-snarl
+    scope: &juvenile_adult_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - long
+      - loud
+      - graded
+    acoustic_description: "A rough, low-frequency, broadband aggressive sound closely allied to growling, typically more intense and often associated with exposed teeth or open-mouth threat displays. Acoustic boundaries with growl are graded rather than sharply discrete."
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+      - submission
+    semantic_description: "Used in close-range threats, dominance contests, food defense, and escalated social conflict. It functions as a high-intensity warning or aggressive display and may precede attack or withdrawal."
+    acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+    semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Snarl is a Schassburger 1993 major class and is reviewed by Harrington and Asa 2003; Passilongo et al. 2017 also lists snarls among aggressive wolf vocalizations. Agreement is medium because many accounts treat snarling as a growl-associated display rather than a fully independent acoustic class."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The sources agree that snarls are rough, low, and growl-like, but there are few quantitative acoustic measurements of snarls separate from growls. The weak label reflects limited acoustic replication and a strongly graded boundary."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, and Passilongo et al. 2017 consistently place snarls in aggressive or threat contexts. The semantic label is medium because the context is stable, but the call is often conflated with growl display complexes."
+
+  - name: woof
+    in_primary_inventory: true
+    alternative_names:
+      - wuff
+      - low bark
+      - warning woof
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - quiet
+      - graded
+    acoustic_description: "A short, low, abrupt broadband sound that is softer and less explosive than a full bark. It has little sustained tonal structure and grades toward bark as amplitude and intensity increase."
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+      - caregiving
+    semantic_description: "Produced as a short-range warning or alert call, especially when an adult detects disturbance near pups or a den, and in other close-range defensive contexts. It can draw the attention of nearby pack members without the intensity of full barking."
+    acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+    semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Woof is a Schassburger 1993 major class and is retained by Harrington and Asa 2003, Coscia et al. 1991, and Passilongo et al. 2017. Agreement is medium because woofs are frequently described as low-intensity barks and the boundary between woof and bark is graded."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, Coscia et al. 1991, and Passilongo et al. 2017 agree on a short low noisy form, but quantitative separation from bark is limited. The acoustic label is therefore medium rather than strong."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, and Coscia et al. 1991 associate woofs with alerting, disturbance, or care-related contexts near pups; Passilongo et al. 2017 places woof among aggressive vocalizations. The warning role is consistent, but context evidence is mostly descriptive."
+
+  - name: bark
+    in_primary_inventory: true
+    alternative_names:
+      - warning bark
+      - alarm bark
+      - bark-growl
+      - growl-bark
+    scope: *all_life_both_scope
     acoustic_keywords:
       - low_frequency
       - broadband
@@ -89,144 +410,285 @@ calls:
       - short
       - abrupt
       - loud
-      - frequency_modulated
-    acoustic_description: A short, explosive, low-pitched noisy sound, often with rapid frequency modulation and little sustained tonal structure. It grades into woofs, growl-barks, and bark-howls when combined with other call forms.
+      - repetitive
+      - graded
+    acoustic_description: "A short, explosive, low-pitched broadband call with abrupt onset and relatively high amplitude. Barks may occur singly or in repeated bouts and grade into woofs, bark-growls, and bark-howls when combined with neighboring call forms."
     semantic_keywords:
       - alarm
       - threat
       - aggression
       - attention
-    semantic_description: Produced in immediate defensive or alarm contexts, such as when wolves face a nearby threat, defend pups, or defend a food resource. It appears to draw attention to the caller or threat and can blend with other agonistic signals.
+      - caregiving
+    semantic_description: "Used in immediate defensive or alarm situations, including disturbance at den or rendezvous sites, pup defense, food defense, and close-range confrontation with humans, other wolves, or other threats. It can recruit attention and warn nearby pack members."
     acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
       - id: harrington_mech_1978
         url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
       - id: harrington_asa_2003
         url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
       - id: sadhukhan_etal_2019
         url: https://doi.org/10.1371/journal.pone.0216186
     semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
       - id: harrington_mech_1978
         url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
       - id: harrington_asa_2003
         url: https://doi.org/10.7208/9780226516981-007
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
       - id: sadhukhan_etal_2019
         url: https://doi.org/10.1371/journal.pone.0216186
+    playback_references: []
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Bark is one of the reduced primary wolf vocalization classes summarized by Harrington and Mech 1978 and retained in Harrington and Asa 2003. Sadhukhan et al. 2019 also describes bark-related defensive use and bark-howl combinations in Indian wolves.
+    call_type_existence_explanation: "Bark is a Schassburger 1993 major class and one of the broad wolf vocalization classes summarized by Harrington and Mech 1978 and Harrington and Asa 2003. Coscia et al. 1991, Passilongo et al. 2017, and Sadhukhan et al. 2019 add independent support for bark or bark-combination forms."
     acoustic_description_agreement: medium
-    acoustic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 agree that barks are short, explosive, and low/noisy, but there are fewer quantitative acoustic studies of standalone wild wolf barks than of howls. Sadhukhan et al. 2019 adds support mainly for bark-howl combinations and field context.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Harrington and Mech 1978, Harrington and Asa 2003, and Sadhukhan et al. 2019 consistently associate barking with immediate defensive or aggressive contexts. Agreement is medium because much of the context evidence is descriptive and bark, woof, and bark-growl boundaries are graded.
+    acoustic_description_explanation: "The cited sources agree on a short abrupt low broadband form, but bark grades into woof, bark-growl, and bark-howl combinations. Agreement is medium because quantitative work on standalone wild barks is less extensive than for howls."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Schassburger 1993, Harrington and Mech 1978, Harrington and Asa 2003, Passilongo et al. 2017, and Sadhukhan et al. 2019 consistently connect barks with alarm, defense, or aggressive motivation. The broad semantic interpretation is strongly supported despite graded acoustic boundaries."
 
-  - name: growl
+  - name: moan
+    in_primary_inventory: true
     alternative_names:
-      - snarl
-      - growl-bark
-      - bark-growl
-    scope: *adult_juvenile_both_scope
+      - low moan
+      - pup moan
+      - social moan
+    scope: *all_life_both_scope
     acoustic_keywords:
       - low_frequency
-      - broadband
-      - noisy
+      - frequency_modulated
+      - tonal
+      - harmonic
       - long
+      - quiet
       - graded
-    acoustic_description: A deep, coarse, mostly non-harmonic close-range sound with energy spread across a broad low-frequency band. Growls vary in duration and roughness and may be combined with snarls or barks in more intense displays.
+    acoustic_description: "A relatively low, soft, sustained vocalization with more tonal structure than a growl and a lower frequency range than most whines. In Schassburger's scheme it is a central member of the moan complex and grades toward whine-moan and growl-moan forms."
+    semantic_keywords:
+      - submission
+      - affiliation
+      - distress
+      - caregiving
+    semantic_description: "Described mainly in close-range social situations with mixed appeasement, discomfort, or care-related motivation. Infant accounts report moan-like sounds in early development, while adult accounts treat moans as low-intensity social signals rather than long-distance calls."
+    acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+    semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+      - id: coscia_etal_1991
+        url: https://doi.org/10.1080/09524622.1991.9753190
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: "Moan is included because it is one of Schassburger's 1993 primary-inventory classes and is reviewed by Harrington and Asa 2003, with infant support from Coscia et al. 1991. Agreement is weak because later reviews note sparse wild evidence and little independent quantitative replication of adult moan categories."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Schassburger 1993 and Harrington and Asa 2003 describe moans as low, soft, and graded, and Coscia et al. 1991 supports moan-like infant calls. Acoustic agreement remains weak because the adult category is poorly sampled and hard to separate from whine-moan and growl-moan."
+    semantic_description_agreement: weak
+    semantic_description_explanation: "Schassburger 1993, Harrington and Asa 2003, and Coscia et al. 1991 provide close-range social or developmental contexts, but these are mostly descriptive and not supported by playback or broad wild replication. The semantic assignment is therefore weak."
+
+  - name: whine-moan
+    in_primary_inventory: true
+    alternative_names:
+      - whining moan
+      - whine moan
+      - moan-whine
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - long
+      - quiet
+      - multi_component
+      - graded
+    acoustic_description: "A graded intermediate call between whine and moan, with soft tonal or harmonic structure and a longer, lower contour than typical whimpers or squeaks. It may sound like a whine that falls into a lower moan-like component."
+    semantic_keywords:
+      - submission
+      - affiliation
+      - distress
+      - contact
+    semantic_description: "Associated with close-range social approach, appeasement, or ambivalent motivation in Schassburger's adult repertoire. It is best treated as a hypothesized intermediate social call rather than a strongly established standalone signal."
+    acoustic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+    semantic_references:
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: "Whine-moan is retained because Schassburger 1993 lists it as a major class and Harrington and Asa 2003 reviews it, but independent peer-reviewed work rarely uses it as a discrete category. Agreement is weak because it is an intermediate point on a graded whine-to-moan continuum."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Schassburger 1993 and Harrington and Asa 2003 support a soft tonal intermediate form, but there is little quantitative replication and no clear statistical boundary from whine or moan. The acoustic description is therefore weakly agreed."
+    semantic_description_agreement: weak
+    semantic_description_explanation: "Schassburger 1993 and Harrington and Asa 2003 provide close-range social contexts, but the call has not received independent playback or broad field-context confirmation. Semantic agreement is weak."
+
+  - name: growl-moan
+    in_primary_inventory: true
+    alternative_names:
+      - growling moan
+      - growl moan
+      - moan-growl
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - harmonic
+      - long
+      - quiet
+      - multi_component
+      - graded
+    acoustic_description: "A low, graded intermediate between growl and moan, with some rough or noisy energy but a softer and more moan-like contour than a typical growl. It belongs to the low-frequency moan complex rather than to long-distance vocalizations."
     semantic_keywords:
       - threat
       - aggression
       - submission
-    semantic_description: Used in close-range agonistic interactions, including dominance displays, warnings, food defense, and maternal control of pups. It typically communicates an aggressive or defensive motivation that can increase social distance.
+      - display
+    semantic_description: "Described in close-range ambivalent or low-intensity agonistic social situations, where aggressive and appeasing motivations appear mixed. It is best interpreted as a weakly established graded variant of the growl-moan continuum."
     acoustic_references:
-      - id: harrington_mech_1978
-        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
       - id: harrington_asa_2003
         url: https://doi.org/10.7208/9780226516981-007
     semantic_references:
-      - id: harrington_mech_1978
-        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
+      - id: schassburger_1993
+        url: https://library.wur.nl/WebQuery/titel/578119
       - id: harrington_asa_2003
         url: https://doi.org/10.7208/9780226516981-007
-      - id: sadhukhan_etal_2019
-        url: https://doi.org/10.1371/journal.pone.0216186
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Growl is one of the four broad wolf vocalization classes recognized in Harrington and Mech 1978 and is retained in Harrington and Asa 2003. Sadhukhan et al. 2019 summarizes growls as part of the noisy aggressive call set, although their quantitative analysis focused on harmonic calls.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 agree on a low, coarse, noisy structure, but growls have less modern quantitative wild acoustic treatment than howls. The label is medium because growls grade into snarls and bark-growl combinations.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 agree that growls are close-range agonistic calls, and Sadhukhan et al. 2019 repeats the dominance and aggression interpretation from the wolf literature. Evidence is consistent but mostly descriptive.
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: "Growl-moan is retained because it is a Schassburger 1993 primary-inventory class and appears in Harrington and Asa 2003, but independent studies generally discuss growls or moans rather than this mixed label. Existence agreement is weak because the category is graded and sparsely replicated."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Schassburger 1993 and Harrington and Asa 2003 support the low, rough, moan-like description, but quantitative acoustic separation from growl and moan is limited. Agreement is weak."
+    semantic_description_agreement: weak
+    semantic_description_explanation: "The available context evidence comes mainly from Schassburger 1993 and the Harrington and Asa 2003 review, without call-specific playback or broad field replication. Semantic agreement is weak."
 
-  - name: whimper
+  - name: squeak
+    in_primary_inventory: false
     alternative_names:
-      - whine
-      - squeak
-      - yelp
       - social squeak
-    scope: *adult_juvenile_both_scope
+      - whistle whimper
+      - squeaking vocalization
+    scope: *all_life_both_scope
     acoustic_keywords:
       - high_frequency
       - frequency_modulated
       - tonal
+      - harmonic
       - short
       - quiet
-      - graded
-    acoustic_description: A soft, high-pitched, relatively pure-toned harmonic close-range call class. Shorter whimpers, longer whines, squeaks, and yelps form a graded family that differs mainly in duration, contour, and abruptness.
+      - repetitive
+    acoustic_description: "A brief, high-frequency, tonal harmonic call with frequency modulation, often produced in short close-range bouts. It overlaps historically with Schassburger's whistle-whimper subtype, but recent studies separate squeaks or social squeaks from whines and whimpers."
     semantic_keywords:
       - affiliation
-      - submission
       - contact
-      - begging
-    semantic_description: Used at close range in greeting, affiliation, appeasement, pup-adult interactions, and courtship-related or submissive contexts. The broad whimper class generally accompanies decreased social distance or non-aggressive motivation.
+      - submission
+      - attention
+      - identity
+    semantic_description: "Produced in close-range affiliative social interactions, especially greeting and friendly contact among familiar animals. Individual acoustic differences reported for squeaks suggest that they can also carry caller identity information."
     acoustic_references:
-      - id: harrington_mech_1978
-        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
-      - id: harrington_asa_2003
-        url: https://doi.org/10.7208/9780226516981-007
+      - id: weir_etal_2022
+        url: https://doi.org/10.1163/1568539X-bja10140
       - id: sadhukhan_etal_2019
         url: https://doi.org/10.1371/journal.pone.0216186
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
     semantic_references:
-      - id: harrington_mech_1978
-        url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
-      - id: harrington_asa_2003
-        url: https://doi.org/10.7208/9780226516981-007
+      - id: weir_etal_2022
+        url: https://doi.org/10.1163/1568539X-bja10140
       - id: sadhukhan_etal_2019
         url: https://doi.org/10.1371/journal.pone.0216186
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Harrington and Mech 1978 explicitly group whines, whimpers, and squeaks under a broad whimper class, while Sadhukhan et al. 2019 separates whimper, social squeak, and whine in an Indian wolf harmonic repertoire. The broad existence is well supported, but boundaries among subtypes differ.
+      - id: passilongo_etal_2017
+        url: https://doi.org/10.4404/hystrix-28.2-12019
+      - id: harrington_asa_2003
+        url: https://doi.org/10.7208/9780226516981-007
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Squeak is outside the Schassburger 1993 major-class list, but Weir et al. 2022 treats squeaking as a distinct close-range affiliative vocalization, Sadhukhan et al. 2019 separates social squeak in Indian wolves, and Passilongo et al. 2017 identifies squeaks in wild chorus recordings. This is enough peer-reviewed support for inclusion."
     acoustic_description_agreement: medium
-    acoustic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 agree on high-pitched, relatively pure-toned calls, and Sadhukhan et al. 2019 provides modern acoustic classification for several harmonic variants. Agreement is medium because sources merge and split the whimper/whine/squeak/yelp complex differently.
+    acoustic_description_explanation: "Weir et al. 2022, Sadhukhan et al. 2019, and Passilongo et al. 2017 agree on a short high-frequency harmonic call, while Harrington and Asa 2003 links similar sounds to whistle-whimper terminology. Agreement is medium because terminology and boundaries with whimper remain variable."
     semantic_description_agreement: medium
-    semantic_description_explanation: Harrington and Mech 1978 and Harrington and Asa 2003 associate this call family with affiliation, greeting, submission, and decreasing social distance, while Sadhukhan et al. 2019 distinguishes friendly and submissive roles among variants. The general non-aggressive interpretation is consistent, but subtype-specific meanings remain graded.
+    semantic_description_explanation: "Weir et al. 2022 and Sadhukhan et al. 2019 place squeaks in close-range affiliative or friendly contexts, and Weir et al. 2022 reports individual acoustic identity. Agreement is medium because playback tests are lacking and some older sources folded the call into whimper."
 
 references:
+  schassburger_1993:
+    citation: "Schassburger RM. 1993. Vocal communication in the timber wolf, Canis lupus, Linnaeus: structure, motivation, and ontogeny. Advances in Ethology 30. Berlin: Paul Parey Scientific Publishers."
+    url: https://library.wur.nl/WebQuery/titel/578119
   harrington_mech_1978:
     citation: "Harrington FH, Mech LD. 1978. Wolf vocalization. In: Hall RL, Sharp HS, editors. Wolf and Man: Evolution in Parallel. New York: Academic Press. p. 109-132."
     url: https://doi.org/10.1016/B978-0-12-319250-9.50014-1
     doi: 10.1016/B978-0-12-319250-9.50014-1
   harrington_mech_1979:
-    citation: "Harrington FH, Mech LD. 1979. Wolf howling and its role in territory maintenance. Behaviour 68(3-4): 207-249."
+    citation: "Harrington FH, Mech LD. 1979. Wolf howling and its role in territory maintenance. Behaviour 68(3-4):207-249."
     url: https://doi.org/10.1163/156853979X00322
     doi: 10.1163/156853979X00322
   harrington_mech_1982:
-    citation: "Harrington FH, Mech LD. 1982. An analysis of howling response parameters useful for wolf pack censusing. Journal of Wildlife Management 46(3): 686-693."
+    citation: "Harrington FH, Mech LD. 1982. An analysis of howling response parameters useful for wolf pack censusing. Journal of Wildlife Management 46(3):686-693."
     url: https://doi.org/10.2307/3808560
     doi: 10.2307/3808560
   harrington_mech_1983:
-    citation: "Harrington FH, Mech LD. 1983. Wolf pack spacing: howling as a territory-independent spacing mechanism in a territorial population. Behavioral Ecology and Sociobiology 12(2): 161-168."
+    citation: "Harrington FH, Mech LD. 1983. Wolf pack spacing: howling as a territory-independent spacing mechanism in a territorial population. Behavioral Ecology and Sociobiology 12(2):161-168."
     url: https://doi.org/10.1007/BF00343208
     doi: 10.1007/BF00343208
+  theberge_falls_1967:
+    citation: "Theberge JB, Falls JB. 1967. Howling as a means of communication in timber wolves. American Zoologist 7(2):331-338."
+    url: https://doi.org/10.1093/icb/7.2.331
+    doi: 10.1093/icb/7.2.331
   harrington_asa_2003:
     citation: "Harrington FH, Asa CS. 2003. Wolf communication. In: Mech LD, Boitani L, editors. Wolves: Behavior, Ecology, and Conservation. Chicago: University of Chicago Press. p. 66-103."
     url: https://doi.org/10.7208/9780226516981-007
     doi: 10.7208/9780226516981-007
+  coscia_etal_1991:
+    citation: "Coscia EM, Phillips DP, Fentress JC. 1991. Spectral analysis of neonatal wolf Canis lupus vocalizations. Bioacoustics 3(4):275-293."
+    url: https://doi.org/10.1080/09524622.1991.9753190
+    doi: 10.1080/09524622.1991.9753190
+  harrington_1989:
+    citation: "Harrington FH. 1989. Chorus howling by wolves: acoustic structure, pack size and the Beau Geste effect. Bioacoustics 2(2):117-136."
+    url: https://doi.org/10.1080/09524622.1989.9753122
+    doi: 10.1080/09524622.1989.9753122
   zaccaroni_etal_2012:
-    citation: "Zaccaroni M, Passilongo D, Buccianti A, Dessi-Fulgheri F, Facchini C, Gazzola A, Maggini I, Apollonio M. 2012. Group specific vocal signature in free-ranging wolf packs. Ethology Ecology & Evolution 24(4): 322-331."
+    citation: "Zaccaroni M, Passilongo D, Buccianti A, Dessi-Fulgheri F, Facchini C, Gazzola A, Maggini I, Apollonio M. 2012. Group specific vocal signature in free-ranging wolf packs. Ethology Ecology & Evolution 24(4):322-331."
     url: https://doi.org/10.1080/03949370.2012.664569
     doi: 10.1080/03949370.2012.664569
+  passilongo_etal_2017:
+    citation: "Passilongo D, Marchetto M, Apollonio M. 2017. Singing in a wolf chorus: structure and complexity of a multicomponent acoustic behaviour. Hystrix 28(2):180-185."
+    url: https://doi.org/10.4404/hystrix-28.2-12019
+    doi: 10.4404/hystrix-28.2-12019
+  mazzini_etal_2013:
+    citation: "Mazzini F, Townsend SW, Viranyi Z, Range F. 2013. Wolf howling is mediated by relationship quality rather than underlying emotional stress. Current Biology 23(17):1677-1680."
+    url: https://doi.org/10.1016/j.cub.2013.06.066
+    doi: 10.1016/j.cub.2013.06.066
   sadhukhan_etal_2019:
-    citation: "Sadhukhan S, Hennelly L, Habib B. 2019. Characterising the harmonic vocal repertoire of the Indian wolf (Canis lupus pallipes). PLoS One 14(10): e0216186."
+    citation: "Sadhukhan S, Hennelly L, Habib B. 2019. Characterising the harmonic vocal repertoire of the Indian wolf (Canis lupus pallipes). PLoS One 14(10):e0216186."
     url: https://doi.org/10.1371/journal.pone.0216186
     doi: 10.1371/journal.pone.0216186
   ausband_etal_2020:
-    citation: "Ausband DE, Bassing SB, Mitchell MS. 2020. Environmental and social factors influencing wolf (Canis lupus) howling behavior. Ethology 126(9): 890-899."
+    citation: "Ausband DE, Bassing SB, Mitchell MS. 2020. Environmental and social factors influencing wolf (Canis lupus) howling behavior. Ethology 126(9):890-899."
     url: https://doi.org/10.1111/eth.13041
     doi: 10.1111/eth.13041
+  weir_etal_2022:
+    citation: "Weir JN, Schneider JN, Anderson RE. 2022. The squeaking vocalization of grey wolves (Canis lupus): individuality in a close-range affiliative mammalian vocalisation. Behaviour 159(6):501-535."
+    url: https://doi.org/10.1163/1568539X-bja10140
+    doi: 10.1163/1568539X-bja10140
