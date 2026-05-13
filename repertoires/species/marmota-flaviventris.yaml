@@ -1,0 +1,273 @@
+scientific_name: Marmota flaviventris
+common_name: Yellow-bellied marmot
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Sciuridae
+  genus: Marmota
+  species: flaviventris
+primary_inventory:
+  id: waring_1966
+  rationale: "Waring 1966 is used as the primary_inventory spine because it is the dedicated field and spectrographic study of yellow-bellied marmot auditory communication, based on field observations, tape recordings, playback, and sound-spectrograph analysis. This file includes the named wild-supported vocal or audible call types that are retained or clarified by later work: the whistle, chuck, and trill alarm calls emphasized by Blumstein and Armitage 1997 and Blumstein and Chi 2012; the pup scream quantified by Blumstein et al. 2008; and tooth chatter, which Waring 1966 and Frase and Hoffmann 1980 treat as a threat sound. Waring's unnamed six whistle variants are not split here because later wild studies collapse the best-supported alarm labels into whistle, chuck, and trill."
+calls:
+  - name: whistle
+    in_primary_inventory: true
+    alternative_names:
+      - primary whistle motif
+      - alarm whistle
+      - chirp
+    scope: &all_life_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - short
+      - repetitive
+      - graded
+    acoustic_description: "A brief, usually single-note tonal alarm call near the several-kilohertz range that may be produced singly or in repeated bouts. Whistle structure varies among calls and individuals; bouts can contain one to many notes, with rate and some frequency features varying more with risk than with predator class."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - caregiving
+    semantic_description: "Produced when marmots detect natural or simulated threats including terrestrial predators, aerial predators, humans, dogs, predator models, and other sudden disturbances. Receivers orient, increase vigilance, or retreat, and calling rate is especially associated with the degree of immediate risk; adult females with emerged pups call at higher rates, supporting a parental-care context."
+    acoustic_references:
+      - id: waring_1966
+        url: https://doi.org/10.1016/S0003-3472(66)80028-3
+      - id: blumstein_armitage_1997
+        url: https://doi.org/10.1006/anbe.1996.0285
+      - id: blumstein_chi_2012
+        url: https://doi.org/10.1098/rsbl.2011.0832
+    semantic_references:
+      - id: blumstein_armitage_1997
+        url: https://doi.org/10.1006/anbe.1996.0285
+      - id: blumstein_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0286
+      - id: shriner_1998
+        url: https://doi.org/10.1006/anbe.1997.0623
+    playback_references:
+      - id: waring_1966
+        url: https://doi.org/10.1016/S0003-3472(66)80028-3
+      - id: blumstein_armitage_1997
+        url: https://doi.org/10.1006/anbe.1996.0285
+      - id: shriner_1998
+        url: https://doi.org/10.1006/anbe.1997.0623
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Waring 1966 identifies whistles as a main yellow-bellied marmot sound, Blumstein and Armitage 1997 treats whistles as the commonest wild alarm vocalization, and Blumstein and Chi 2012 analyzes adult alarm whistles. The whistle label is therefore strongly supported."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Waring 1966 gives the inventory and spectrographic basis, Blumstein and Armitage 1997 quantifies whistle repetition and variation in wild alarm contexts, and Blumstein and Chi 2012 analyzes harmonic/noise structure in adult alarm whistles. Agreement is strong for the brief repeated tonal form, while fine parameters are graded."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Blumstein and Armitage 1997 combines natural observations, elicitation experiments, and playback to show that whistles communicate risk rather than predator class; Blumstein et al. 1997 supports a parental-care component; and Shriner 1998 shows receivers treat marmot alarms as antipredator information."
+
+  - name: chuck
+    in_primary_inventory: true
+    alternative_names:
+      - quiet whistle
+      - chucking sound
+      - alarm chuck
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - noisy
+      - short
+      - quiet
+      - abrupt
+      - graded
+    acoustic_description: "A short, quiet, lower-frequency call with descending frequency structure relative to whistles. Field recordings were rare and lower fidelity than whistles, but later summaries describe chucks as extremely noisy and acoustically distinct from whistles and trills."
+    semantic_keywords:
+      - alarm
+      - attention
+      - threat
+    semantic_description: "Given rarely in the field, usually after whistle bouts or in mildly disturbed social or human-associated situations. Playback work indicates that natural-volume chucks evoke weaker antipredator responses than whistles, while louder chucks can increase receiver responsiveness."
+    acoustic_references:
+      - id: blumstein_armitage_1997
+        url: https://doi.org/10.1006/anbe.1996.0285
+      - id: blumstein_chi_2012
+        url: https://doi.org/10.1098/rsbl.2011.0832
+    semantic_references:
+      - id: blumstein_armitage_1997
+        url: https://doi.org/10.1006/anbe.1996.0285
+      - id: waring_1966
+        url: https://doi.org/10.1016/S0003-3472(66)80028-3
+    playback_references:
+      - id: blumstein_armitage_1997
+        url: https://doi.org/10.1006/anbe.1996.0285
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Blumstein and Armitage 1997 observed wild chucks at all study areas but only in about 1% of alarm bouts, and treated them as possibly corresponding to Waring's quiet whistles. Blumstein and Chi 2012 retains chuck as one of the adult call labels, so existence is supported but less frequently sampled than whistles."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Blumstein and Armitage 1997 distinguishes chucks spectrographically from whistles and notes their lower descending frequencies, while Blumstein and Chi 2012 characterizes chucks as noisy. The small field sample keeps acoustic agreement at medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Blumstein and Armitage 1997 gives the main wild and playback evidence, placing chucks after alarm bouts and in minimally alarmed contexts. Waring 1966 supports quiet whistle-like sounds in the broader repertoire, but chuck-specific contexts are less replicated than whistle contexts."
+
+  - name: trill
+    in_primary_inventory: true
+    alternative_names:
+      - accelerando whistle
+      - accelerando whistles
+      - alarm trill
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - repetitive
+      - multi_component
+      - long
+      - graded
+    acoustic_description: "A multi-note alarm vocalization formed from rapidly repeated whistles. The sequence begins with whistle-like notes, accelerates, and then shows wavering or modulated fundamental frequency."
+    semantic_keywords:
+      - alarm
+      - predator
+      - distress
+      - aggression
+    semantic_description: "Produced in high-risk moments such as fleeing to burrows from dogs, badgers, sudden human approach, or predator models, and occasionally during aggressive social interactions when a marmot is fleeing. Later discussion treats trills as a high-risk form within the alarm system."
+    acoustic_references:
+      - id: waring_1966
+        url: https://doi.org/10.1016/S0003-3472(66)80028-3
+      - id: blumstein_armitage_1997
+        url: https://doi.org/10.1006/anbe.1996.0285
+      - id: blumstein_chi_2012
+        url: https://doi.org/10.1098/rsbl.2011.0832
+    semantic_references:
+      - id: blumstein_armitage_1997
+        url: https://doi.org/10.1006/anbe.1996.0285
+      - id: blumstein_chi_2012
+        url: https://doi.org/10.1098/rsbl.2011.0832
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Waring 1966 describes accelerando whistles, Blumstein and Armitage 1997 documents trills in wild alarm bouts at all study areas, and Blumstein and Chi 2012 retains trill as one of the adult call labels."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Waring 1966 and Blumstein and Armitage 1997 agree that trills are accelerando whistle sequences, and Blumstein and Chi 2012 summarizes trills as linked whistles. The acoustic form is well aligned across sources."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Blumstein and Armitage 1997 links trills to close or high-risk threats and some fleeing social conflicts, but trills were rare and not separately tested in playback. The context is clear enough for medium agreement rather than strong."
+
+  - name: pup scream
+    in_primary_inventory: true
+    alternative_names:
+      - scream
+      - fear scream
+      - elongated scream
+      - undulating scream
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - noisy
+      - long
+      - loud
+      - multi_component
+      - graded
+    acoustic_description: "An elongated juvenile vocalization that is much longer than pup alarm calls and often contains nonlinear acoustic phenomena such as noise and other irregular structure. Waring described marmot screams as undulating; later work quantified pup screams as acoustically distinct from pup alarm calls."
+    semantic_keywords:
+      - distress
+      - attention
+      - caregiving
+      - alarm
+    semantic_description: "Produced by recently emerged pups in intense disturbance or handling contexts when young are highly vulnerable. Playback experiments show that screams elicit elevated responses, consistent with a juvenile distress or assistance-soliciting context."
+    acoustic_references:
+      - id: waring_1966
+        url: https://doi.org/10.1016/S0003-3472(66)80028-3
+      - id: blumstein_etal_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.06.002
+      - id: blumstein_chi_2012
+        url: https://doi.org/10.1098/rsbl.2011.0832
+    semantic_references:
+      - id: waring_1966
+        url: https://doi.org/10.1016/S0003-3472(66)80028-3
+      - id: blumstein_etal_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.06.002
+      - id: blumstein_chi_2012
+        url: https://doi.org/10.1098/rsbl.2011.0832
+    playback_references:
+      - id: blumstein_etal_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.06.002
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Waring 1966 lists screams as one of the main marmot sound types, Blumstein et al. 2008 specifically defines and quantifies pup screams from free-living yellow-bellied marmots, and Blumstein and Chi 2012 repeats the juvenile scream/adult alarm-call distinction."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Blumstein et al. 2008 provides the main quantitative acoustic evidence for long nonlinear pup screams, Waring 1966 gives the inventory-level undulating-scream label, and Blumstein and Chi 2012 summarizes screams as nonlinear juvenile vocalizations."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Waring 1966 associates screams with fear or excitement, and Blumstein et al. 2008 experimentally shows receiver responsiveness to pup screams. Blumstein and Chi 2012 reinforces the interpretation that juvenile screams occur under high arousal."
+
+  - name: tooth chatter
+    in_primary_inventory: true
+    alternative_names:
+      - teeth chatter
+      - tooth chattering
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - quiet
+      - pulsed
+      - repetitive
+      - short
+      - noisy
+    acoustic_description: "A quiet, rapidly repeated tooth-produced chattering sound rather than a voiced whistle-like call. Published acoustic measurements are sparse, but inventory accounts consistently separate it from whistles and screams."
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+    semantic_description: "Reported in agonistic or threatening situations. It is treated as a close-range threat sound rather than an alarm call to predators."
+    acoustic_references:
+      - id: waring_1966
+        url: https://doi.org/10.1016/S0003-3472(66)80028-3
+      - id: frase_hoffmann_1980
+        url: https://www.mammalsociety.org/uploads/Marmota%20flaviventris.pdf
+    semantic_references:
+      - id: waring_1966
+        url: https://doi.org/10.1016/S0003-3472(66)80028-3
+      - id: frase_hoffmann_1980
+        url: https://www.mammalsociety.org/uploads/Marmota%20flaviventris.pdf
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Waring 1966 lists tooth chatter as one of the three main sound types and Frase and Hoffmann 1980 repeats it in the species account. It is retained here, but agreement is medium because later alarm-call studies focus on voiced whistle, chuck, trill, and pup scream categories."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The acoustic description rests mainly on Waring 1966 and Frase and Hoffmann 1980's qualitative account of a quiet tooth chatter; later work does not provide a dedicated spectrographic analysis. Acoustic agreement is therefore weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Waring 1966 and Frase and Hoffmann 1980 agree that tooth chatter is used in threat contexts, but there is little later experimental work on this sound. Semantic agreement is medium."
+references:
+  waring_1966:
+    citation: "Waring, G. H. 1966. Sounds and communications of the yellow-bellied marmot (Marmota flaviventris). Animal Behaviour 14(1):177-183."
+    url: https://doi.org/10.1016/S0003-3472(66)80028-3
+    doi: 10.1016/S0003-3472(66)80028-3
+  blumstein_armitage_1997:
+    citation: "Blumstein, D. T., and Armitage, K. B. 1997. Alarm calling in yellow-bellied marmots: I. The meaning of situationally variable alarm calls. Animal Behaviour 53(1):143-171."
+    url: https://doi.org/10.1006/anbe.1996.0285
+    doi: 10.1006/anbe.1996.0285
+  blumstein_etal_1997:
+    citation: "Blumstein, D. T., Steinmetz, J., Armitage, K. B., and Daniel, J. C. 1997. Alarm calling in yellow-bellied marmots: II. The importance of direct fitness. Animal Behaviour 53(1):173-184."
+    url: https://doi.org/10.1006/anbe.1996.0286
+    doi: 10.1006/anbe.1996.0286
+  shriner_1998:
+    citation: "Shriner, W. M. 1998. Yellow-bellied marmot and golden-mantled ground squirrel responses to heterospecific alarm calls. Animal Behaviour 55(3):529-536."
+    url: https://doi.org/10.1006/anbe.1997.0623
+    doi: 10.1006/anbe.1997.0623
+  blumstein_etal_2008:
+    citation: "Blumstein, D. T., Richardson, D. T., Cooley, L., Winternitz, J., and Daniel, J. C. 2008. The structure, meaning and function of yellow-bellied marmot pup screams. Animal Behaviour 76(3):1055-1064."
+    url: https://doi.org/10.1016/j.anbehav.2008.06.002
+    doi: 10.1016/j.anbehav.2008.06.002
+  blumstein_chi_2012:
+    citation: "Blumstein, D. T., and Chi, Y. Y. 2012. Scared and less noisy: glucocorticoids are associated with alarm call entropy. Biology Letters 8(2):189-192."
+    url: https://doi.org/10.1098/rsbl.2011.0832
+    doi: 10.1098/rsbl.2011.0832
+  frase_hoffmann_1980:
+    citation: "Frase, B. A., and Hoffmann, R. S. 1980. Marmota flaviventris. Mammalian Species 135:1-8."
+    url: https://www.mammalsociety.org/uploads/Marmota%20flaviventris.pdf
