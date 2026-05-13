@@ -1,0 +1,178 @@
+scientific_name: Macaca mulatta
+common_name: Rhesus Macaque
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Macaca
+  species: mulatta
+primary_inventory:
+  id: rowell_hinde_1962
+  rationale: Rowell and Hinde 1962 is used as the primary inventory because it is a classic systematic description of rhesus macaque vocal communication. Later acoustic, developmental, and playback studies refine major call classes such as coos, screams, grunts, barks, and girneys.
+calls:
+  - name: coo
+    alternative_names:
+      - contact coo
+      - isolation coo
+    in_primary_inventory: true
+    scope: &all_scope
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, long, loud]
+    acoustic_description: Tonal, frequency-modulated call with a smooth contour, often medium to long in duration and individually variable.
+    semantic_keywords: [contact, group_coordination, identity, distress]
+    semantic_description: Used for contact and separation contexts, including infant isolation and adult group coordination.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+      - id: hauser_1991
+        url: https://doi.org/10.1016/S0003-3472(05)80229-8
+    semantic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+      - id: hauser_1991
+        url: https://doi.org/10.1016/S0003-3472(05)80229-8
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Coos are a standard rhesus macaque call type in Rowell and Hinde 1962 and subsequent acoustic work by Hauser 1991.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources consistently describe coos as tonal calls with measurable contour variation.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and separation contexts are well supported, but coos cover several social situations and age classes.
+
+  - name: scream
+    alternative_names:
+      - agonistic scream
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [high_frequency, loud, noisy, long, frequency_modulated]
+    acoustic_description: Loud high-frequency call with noisy and tonal components, often extended and strongly modulated.
+    semantic_keywords: [aggression, distress, submission, threat]
+    semantic_description: Given during agonistic encounters, especially by victims or lower-ranking animals during attacks or threats.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1007/BF02382156
+    semantic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1007/BF02382156
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Screams are included in the classic repertoire and are extensively studied in rhesus agonistic communication.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The broad scream form is stable, but rhesus screams include graded variants related to social relationship and attack type.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Agonistic and distress contexts are consistent across Rowell and Hinde 1962 and Gouzoules et al. 1984.
+
+  - name: grunt
+    alternative_names:
+      - affiliative grunt
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [low_frequency, short, noisy, quiet, graded]
+    acoustic_description: Short low-frequency rough call, often given in series and grading into other close-range calls.
+    semantic_keywords: [affiliation, contact, submission]
+    semantic_description: Used during close social interactions, approaches, and low-arousal affiliative or appeasing contexts.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+      - id: partan_2002
+        url: https://doi.org/10.1016/S0003-3472(02)00028-2
+    semantic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+      - id: partan_2002
+        url: https://doi.org/10.1016/S0003-3472(02)00028-2
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Grunts are part of the classic rhesus inventory and are used in later multimodal communication studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Low rough structure is consistent, but grunts are graded and often combined with facial or body signals.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Affiliation and appeasement contexts are supported, though specific interpretation depends strongly on accompanying behavior.
+
+  - name: girney
+    alternative_names:
+      - gruff contact call
+    in_primary_inventory: true
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, repetitive, quiet, graded]
+    acoustic_description: Soft tonal or harsh-voiced call often produced in repeated sequences with variable pitch and amplitude.
+    semantic_keywords: [affiliation, caregiving, contact]
+    semantic_description: Common in affiliative interactions, including mother-infant and grooming-related contexts.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+      - id: hauser_1991
+        url: https://doi.org/10.1016/S0003-3472(05)80229-8
+    semantic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Girneys are classically described, but they are less central in later quantitative work than coos and screams.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description rests mainly on classic repertoire descriptions and limited later treatment.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Affiliation and caregiving contexts are consistently described, though not as heavily tested as alarm or agonistic calls.
+
+  - name: bark
+    alternative_names:
+      - alarm bark
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [loud, short, abrupt, noisy, broadband]
+    acoustic_description: Short abrupt broadband call with a harsh bark-like quality.
+    semantic_keywords: [alarm, predator, attention, threat]
+    semantic_description: Produced in alarm or disturbance contexts and can orient receivers toward potential danger.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+      - id: hauser_1998
+        url: https://doi.org/10.1098/rspb.1998.0304
+    semantic_references:
+      - id: hauser_1998
+        url: https://doi.org/10.1098/rspb.1998.0304
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+    playback_references:
+      - id: hauser_1998
+        url: https://doi.org/10.1098/rspb.1998.0304
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Barks appear in the classic inventory and in later studies of rhesus alarm communication.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The abrupt broadband form is stable, but the category may include context-linked variants.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm use is supported, but predator-specific meanings are less elaborated than in vervets.
+references:
+  rowell_hinde_1962:
+    citation: "Rowell, T. E., & Hinde, R. A. (1962). Vocal communication by the rhesus monkey (Macaca mulatta). Proceedings of the Zoological Society of London, 138, 279-294."
+    url: https://doi.org/10.1111/j.1469-7998.1962.tb05697.x
+    doi: 10.1111/j.1469-7998.1962.tb05697.x
+  hauser_1991:
+    citation: "Hauser, M. D. (1991). Sources of acoustic variation in rhesus macaque vocalizations. Ethology, 89, 29-46."
+    url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+    doi: 10.1111/j.1439-0310.1991.tb00291.x
+  gouzoules_etal_1984:
+    citation: "Gouzoules, S., Gouzoules, H., & Marler, P. (1984). Rhesus monkey screams: representational signalling in the recruitment of agonistic aid. Animal Behaviour, 32, 182-193."
+    url: https://doi.org/10.1016/S0003-3472(84)80336-X
+    doi: 10.1016/S0003-3472(84)80336-X
+  partan_2002:
+    citation: "Partan, S. R. (2002). Single and multichannel signal composition: facial expressions and vocalizations of rhesus macaques. Behaviour, 139, 993-1027."
+    url: https://doi.org/10.1163/15685390260337964
+    doi: 10.1163/15685390260337964
+  hauser_1998:
+    citation: "Hauser, M. D. (1998). Functional referents and acoustic similarity: field playback experiments with rhesus monkeys. Animal Behaviour, 55, 1647-1658."
+    url: https://doi.org/10.1006/anbe.1997.0715
+    doi: 10.1006/anbe.1997.0715
