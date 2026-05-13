@@ -1,0 +1,196 @@
+scientific_name: Phyllostomus hastatus
+common_name: Greater spear-nosed bat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Chiroptera
+  family: Phyllostomidae
+  genus: Phyllostomus
+  species: hastatus
+primary_inventory:
+  id: bohn_etal_2004
+  rationale: Bohn et al. 2004 is used as the primary_inventory spine because it explicitly summarizes the vocal repertoire of P. hastatus as three commonly emitted vocalization types--group-specific foraging calls, low-amplitude echolocation calls, and infant isolation calls--and gives frequency ranges for each. It is not a standalone wild repertoire monograph, so the call entries are cross-supported by call-specific wild and field-playback studies for screech calls, by infant-call acoustic and discrimination studies for isolation calls, and by echolocation/foraging studies for sonar calls. No additional captivity-only call types are included.
+calls:
+  - name: screech call
+    in_primary_inventory: true
+    alternative_names:
+      - group-specific foraging call
+      - group-distinctive call
+      - social call
+      - foraging call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: true
+      note: Screech-call spectra differ among female social groups and cave colonies in Trinidad, and later work in Panama reports different female foraging coordination patterns, so acoustic signatures and the strongest recruitment evidence are population- or colony-context dependent.
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - loud
+      - graded
+    acoustic_description: A loud, audible-frequency broadband call concentrated in the low-frequency range for this species, reported around 4-18 kHz in the group-distinctive analysis and summarized as about 6-11 kHz in the repertoire/hearing study. Calls have distinctive amplitude-frequency spectra and measurable spectral variables that separate social groups and cave colonies more clearly than individuals.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - recruitment
+      - identity
+      - food
+    semantic_description: Produced by adult females when leaving day roosts, during travel, and at feeding sites. Field observations and playback experiments in Trinidad support use in attracting social group mates, coordinating departures and foraging movements, and identifying group membership during access to patchy food resources.
+    acoustic_references:
+      - id: boughman_1997
+        url: https://doi.org/10.1007/s002650050316
+      - id: bohn_etal_2004
+        url: https://doi.org/10.1007/s00359-003-0485-0
+      - id: boughman_wilkinson_1998
+        url: https://doi.org/10.1006/anbe.1997.0721
+    semantic_references:
+      - id: wilkinson_boughman_1998
+        url: https://doi.org/10.1006/anbe.1997.0557
+      - id: boughman_wilkinson_1998
+        url: https://doi.org/10.1006/anbe.1997.0721
+      - id: boughman_1998
+        url: https://doi.org/10.1098/rspb.1998.0286
+      - id: calderon_capote_etal_2025
+        url: https://doi.org/10.1371/journal.pone.0313782
+    playback_references:
+      - id: wilkinson_boughman_1998
+        url: https://doi.org/10.1006/anbe.1997.0557
+      - id: boughman_wilkinson_1998
+        url: https://doi.org/10.1006/anbe.1997.0721
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Boughman 1997, Wilkinson and Boughman 1998, Boughman and Wilkinson 1998, Boughman 1998, and Bohn et al. 2004 all use the screech or group-specific foraging call as a named P. hastatus call type. The call type is strongly established even though the social-foraging context varies among populations.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Boughman 1997 gives the main wild acoustic analysis of loud broadband 4-18 kHz calls and group-level spectral differences, Boughman and Wilkinson 1998 analyzes the same acoustic variables in discrimination tests, and Bohn et al. 2004 independently summarizes the frequency range as 6-11 kHz. Agreement is strong for the broad acoustic profile.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Wilkinson and Boughman 1998 and Boughman and Wilkinson 1998 provide field observations and playback evidence for contact, recruitment, and group recognition in Trinidad, and Boughman 1998 links the call to learned group membership. The label is medium because Calderon-Capote et al. 2025 reports that Panama females did not show the same coordinated commuting and group-foraging pattern.
+
+  - name: infant isolation call
+    in_primary_inventory: true
+    alternative_names:
+      - isolation call
+      - pup isolation call
+      - neonatal vocalization
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - short
+      - multi_component
+      - graded
+    acoustic_description: A high-frequency, frequency-modulated pup call with harmonic energy, summarized for P. hastatus as spanning roughly 15-100 kHz. Detailed recordings show a typical double-note form with two short frequency-modulated notes separated by a brief interval; spectral shape is relatively stable during early development while duration decreases and peak frequency can increase with age.
+    semantic_keywords:
+      - distress
+      - caregiving
+      - contact
+      - identity
+    semantic_description: Produced by nonvolant pups when separated from or needing to be located by mothers in the roost. Females use these calls for offspring recognition, and discrimination experiments show that adult females can distinguish pup calls in a task relevant to maternal identification.
+    acoustic_references:
+      - id: bohn_etal_2004
+        url: https://doi.org/10.1007/s00359-003-0485-0
+      - id: bohn_etal_2007
+        url: https://doi.org/10.1016/j.anbehav.2006.09.003
+    semantic_references:
+      - id: bohn_etal_2004
+        url: https://doi.org/10.1007/s00359-003-0485-0
+      - id: bohn_etal_2007
+        url: https://doi.org/10.1016/j.anbehav.2006.09.003
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Bohn et al. 2004 lists infant isolation calls as one of the three common P. hastatus vocalization types, and Bohn et al. 2007 provides a dedicated acoustic and behavioral-discrimination study of those pup calls. The named call type is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Bohn et al. 2004 gives the broad 15-100 kHz range and links these calls to the species' hearing profile, while Bohn et al. 2007 measures note duration, inter-note interval, spectral contours, and frequency features of recorded infant calls. Agreement is strong for the high-frequency, frequency-modulated, often double-note structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Bohn et al. 2004 and Bohn et al. 2007 agree that infant isolation calls function in parent-offspring communication. Bohn et al. 2007 specifically tests adult female discrimination of pup calls and concludes that females should be able to identify their young using these calls.
+
+  - name: echolocation call
+    in_primary_inventory: true
+    alternative_names:
+      - sonar vocalization
+      - sonar cry
+      - echolocation pulse
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - broadband
+      - short
+      - quiet
+    acoustic_description: A low-amplitude ultrasonic sonar pulse composed of short broadband frequency-modulated sweeps. Bohn et al. 2004 summarizes the species' echolocation calls as about 1-3 ms pulses sweeping from roughly 80 to 40 kHz, and hearing studies treat these signals as distinct from the lower-frequency screech calls and higher-peak-energy infant isolation calls.
+    semantic_keywords:
+      - spacing
+      - food
+    semantic_description: Produced during orientation and foraging. Field and experimental work supports use in locating fruit displayed away from foliage, and the calls are part of the species' normal sonar system for navigating and detecting targets in cluttered habitats.
+    acoustic_references:
+      - id: bohn_etal_2004
+        url: https://doi.org/10.1007/s00359-003-0485-0
+      - id: koay_etal_2002
+        url: https://doi.org/10.1016/S0378-5955(02)00458-6
+    semantic_references:
+      - id: bohn_etal_2004
+        url: https://doi.org/10.1007/s00359-003-0485-0
+      - id: kalko_condon_1998
+        url: https://doi.org/10.2307/2390337
+      - id: koay_etal_2002
+        url: https://doi.org/10.1016/S0378-5955(02)00458-6
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Echolocation calls are listed as one of the three common P. hastatus vocalization types by Bohn et al. 2004, discussed in Koay et al. 2002 as part of the species' auditory ecology, and behaviorally linked to fruit detection by Kalko and Condon 1998. The type is strongly established.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Bohn et al. 2004 provides a clear frequency and duration summary for short low-amplitude 80-40 kHz sweeps, and Koay et al. 2002 independently discusses low-intensity brief sonar pulses. The label is medium because this file does not rely on a modern call-parameter inventory dedicated solely to P. hastatus echolocation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Bohn et al. 2004, Koay et al. 2002, and Kalko and Condon 1998 all place echolocation calls in orientation and foraging contexts, with Kalko and Condon 1998 providing direct evidence that P. hastatus uses echolocation to find displayed fruit. Agreement is strong for the navigation and food-detection context.
+references:
+  bohn_etal_2004:
+    citation: "Bohn, K. M., Boughman, J. W., Wilkinson, G. S., and Moss, C. F. 2004. Auditory sensitivity and frequency selectivity in greater spear-nosed bats suggest specializations for acoustic communication. Journal of Comparative Physiology A 190:185-192."
+    url: https://doi.org/10.1007/s00359-003-0485-0
+    doi: 10.1007/s00359-003-0485-0
+  boughman_1997:
+    citation: "Boughman, J. W. 1997. Greater spear-nosed bats give group-distinctive calls. Behavioral Ecology and Sociobiology 40:61-70."
+    url: https://doi.org/10.1007/s002650050316
+    doi: 10.1007/s002650050316
+  wilkinson_boughman_1998:
+    citation: "Wilkinson, G. S., and Boughman, J. W. 1998. Social calls coordinate foraging in greater spear-nosed bats. Animal Behaviour 55:337-350."
+    url: https://doi.org/10.1006/anbe.1997.0557
+    doi: 10.1006/anbe.1997.0557
+  boughman_wilkinson_1998:
+    citation: "Boughman, J. W., and Wilkinson, G. S. 1998. Greater spear-nosed bats discriminate group mates by vocalizations. Animal Behaviour 55:1717-1732."
+    url: https://doi.org/10.1006/anbe.1997.0721
+    doi: 10.1006/anbe.1997.0721
+  boughman_1998:
+    citation: "Boughman, J. W. 1998. Vocal learning by greater spear-nosed bats. Proceedings of the Royal Society B: Biological Sciences 265:227-233."
+    url: https://doi.org/10.1098/rspb.1998.0286
+    doi: 10.1098/rspb.1998.0286
+  bohn_etal_2007:
+    citation: "Bohn, K. M., Wilkinson, G. S., and Moss, C. F. 2007. Discrimination of infant isolation calls by female greater spear-nosed bats, Phyllostomus hastatus. Animal Behaviour 73:423-432."
+    url: https://doi.org/10.1016/j.anbehav.2006.09.003
+    doi: 10.1016/j.anbehav.2006.09.003
+  koay_etal_2002:
+    citation: "Koay, G., Bitter, K. S., Heffner, H. E., and Heffner, R. S. 2002. Hearing in American leaf-nosed bats. I. Phyllostomus hastatus. Hearing Research 171:96-102."
+    url: https://doi.org/10.1016/S0378-5955(02)00458-6
+    doi: 10.1016/S0378-5955(02)00458-6
+  kalko_condon_1998:
+    citation: "Kalko, E. K. V., and Condon, M. A. 1998. Echolocation, olfaction and fruit display: how bats find fruit of flagellichorous cucurbits. Functional Ecology 12:364-372."
+    url: https://doi.org/10.2307/2390337
+    doi: 10.2307/2390337
+  calderon_capote_etal_2025:
+    citation: "Calderon-Capote, M. C., O'Mara, M. T., Crofoot, M. C., and Dechmann, D. K. N. 2025. Intraspecific variability of social structure and linked foraging behavior in females of a widespread bat species (Phyllostomus hastatus). PLOS ONE 20:e0313782."
+    url: https://doi.org/10.1371/journal.pone.0313782
+    doi: 10.1371/journal.pone.0313782

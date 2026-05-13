@@ -1,0 +1,453 @@
+scientific_name: Cercopithecus campbelli
+common_name: Campbell's monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Cercopithecus
+  species: campbelli
+primary_inventory:
+  id: ouattara_etal_2009_plos
+  rationale: Ouattara et al. 2009 in PLoS One is used as the primary_inventory spine because it explicitly enumerates the six loud call types consistently produced by free-ranging adult male Campbell's monkeys in Tai National Park and provides spectrographic illustrations, acoustic measures, field contexts, and predator-simulation evidence for those calls. This file keeps those six male loud calls as the primary inventory and adds only separately named wild female alarm/contact call types from Ouattara et al. 2009 and Coye et al. 2018, while excluding captivity-only female alarm variants.
+calls:
+  - name: boom
+    in_primary_inventory: true
+    alternative_names:
+      - boom call
+      - boom-boom
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - long
+      - repetitive
+      - tonal
+    acoustic_description: A low-pitched loud call produced with the vocal sac, with little or no frequency modulation. Booms are acoustically inflexible, typically given as pairs, and often precede strings of other loud calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - spacing
+      - territorial
+      - combinatorial
+    semantic_description: Used in nonpredatory contexts, including cohesion or travel, falling trees or branches, disputes with neighboring groups, and unusual vocal excitement within the group. When placed before alarm-call sequences, booms reduce the predator specificity of the following calls in receiver responses.
+    acoustic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: ouattara_etal_2009_pnas
+        url: https://doi.org/10.1073/pnas.0908118106
+    semantic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: ouattara_etal_2009_pnas
+        url: https://doi.org/10.1073/pnas.0908118106
+      - id: zuberbuhler_2002
+        url: https://doi.org/10.1006/anbe.2001.1914
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0007808.s006
+    playback_references:
+      - id: zuberbuhler_2002
+        url: https://doi.org/10.1006/anbe.2001.1914
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Ouattara et al. 2009 PLoS One lists boom as one of six adult male loud calls, Ouattara et al. 2009 PNAS incorporates booms into context-specific male sequences, and Zuberbuhler 2002 experimentally tests boom-introduced sequences. Existence agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Ouattara et al. 2009 PLoS One and Ouattara et al. 2009 PNAS agree that booms are low-pitched, relatively inflexible, and usually paired before other calls. The acoustic description is strongly supported.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Ouattara et al. 2009 PLoS One and PNAS agree on nonpredatory, travel, and disturbance contexts, and Zuberbuhler 2002 provides playback evidence that booms alter the interpretation of subsequent alarm calls. Semantic agreement is strong.
+
+  - name: krak
+    in_primary_inventory: true
+    alternative_names:
+      - K
+      - leopard alarm
+      - unsuffixed krak
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - tonal
+      - short
+      - frequency_modulated
+      - abrupt
+      - graded
+    acoustic_description: A single loud tonal utterance with a short duration and a descending main frequency band, starting around the low kilohertz range. Quantitative analyses support a recognizable krak stem, while also showing graded variation within male predator-alarm calls.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced after detecting leopards and other major terrestrial-predator evidence. Playback work shows receivers treat unsuffixed krak calls as more specific and urgent than krak-oo calls.
+    acoustic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: keenan_etal_2013
+        url: https://doi.org/10.1016/j.anbehav.2012.10.014
+    semantic_references:
+      - id: zuberbuhler_2001
+        url: https://doi.org/10.1007/s002650100383
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: coye_etal_2015
+        url: https://doi.org/10.1098/rspb.2015.0265
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0007808.s003
+    playback_references:
+      - id: zuberbuhler_2001
+        url: https://doi.org/10.1007/s002650100383
+      - id: coye_etal_2015
+        url: https://doi.org/10.1098/rspb.2015.0265
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Krak is a primary adult male loud call in Ouattara et al. 2009 PLoS One, a sequence unit in Ouattara et al. 2009 PNAS, a tested leopard-alarm class in Zuberbuhler 2001, and part of the larger quantitative alarm-call analysis by Keenan et al. 2013. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Ouattara et al. 2009 PLoS One describes the descending tonal krak stem, while Keenan et al. 2013 shows that male alarm calls include both discrete and graded structure. Agreement is medium because the broad stem is stable but subtype boundaries are partly graded.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Zuberbuhler 2001, Ouattara et al. 2009 PLoS One, and Coye et al. 2015 all support a leopard or terrestrial-predator meaning for unsuffixed krak calls, including playback evidence. Semantic agreement is strong.
+
+  - name: krak-oo
+    in_primary_inventory: true
+    alternative_names:
+      - K+
+      - krak plus oo
+      - suffixed krak
+      - general alert call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - tonal
+      - short
+      - frequency_modulated
+      - multi_component
+      - graded
+    acoustic_description: A krak-like descending tonal stem followed rapidly by an acoustically stable oo suffix. The suffix creates a multi-component call, and later quantitative work treats suffixed forms as modifications of core male alarm stems with graded internal variation.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+      - combinatorial
+    semantic_description: Used as a general alert call to a wide range of disturbances rather than only leopard encounters. Receiver experiments show that the suffix reduces the specific leopard-alarm interpretation of the krak stem.
+    acoustic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: keenan_etal_2013
+        url: https://doi.org/10.1016/j.anbehav.2012.10.014
+    semantic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: ouattara_etal_2009_pnas
+        url: https://doi.org/10.1073/pnas.0908118106
+      - id: coye_etal_2015
+        url: https://doi.org/10.1098/rspb.2015.0265
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0007808.s004
+    playback_references:
+      - id: coye_etal_2015
+        url: https://doi.org/10.1098/rspb.2015.0265
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Krak-oo is one of the six primary adult male loud calls in Ouattara et al. 2009 PLoS One, appears as a sequence unit in Ouattara et al. 2009 PNAS, and is central to the suffixation playback study by Coye et al. 2015. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Ouattara et al. 2009 PLoS One supports the krak stem plus oo suffix structure, while Keenan et al. 2013 shows gradedness among suffixed alarm calls. The suffix itself is stable, but call-type boundaries are not perfectly discrete.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Ouattara et al. 2009 PLoS One and PNAS both treat krak-oo as broader than krak, and Coye et al. 2015 experimentally shows receivers respond differently to suffixed and unsuffixed krak calls. Semantic agreement is strong.
+
+  - name: hok
+    in_primary_inventory: true
+    alternative_names:
+      - H
+      - eagle alarm
+      - unsuffixed hok
+      - hoks
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - tonal
+      - short
+      - abrupt
+      - graded
+    acoustic_description: In adult males, a short single tonal utterance with little frequency modulation and a main band around the low kilohertz range. Female alarm work also recognizes hoks as a basic wild alarm-call type, although fewer female hok recordings are available than female RRA calls.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: In adult males, given mainly to crowned eagles and eagle-related evidence. In adult females, hoks are one of three basic alarm calls produced in response to disturbing or potentially dangerous events, but they were recorded much less often than RRA calls.
+    acoustic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: ouattara_etal_2009_female
+        url: https://doi.org/10.1016/j.anbehav.2009.03.014
+      - id: keenan_etal_2013
+        url: https://doi.org/10.1016/j.anbehav.2012.10.014
+    semantic_references:
+      - id: zuberbuhler_2001
+        url: https://doi.org/10.1007/s002650100383
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: ouattara_etal_2009_female
+        url: https://doi.org/10.1016/j.anbehav.2009.03.014
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0007808.s001
+    playback_references:
+      - id: zuberbuhler_2001
+        url: https://doi.org/10.1007/s002650100383
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Hok is a primary adult male loud call in Ouattara et al. 2009 PLoS One, a predator-alarm class in Zuberbuhler 2001, and one of the three basic female alarm calls in Ouattara et al. 2009. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Ouattara et al. 2009 PLoS One gives the clearest male acoustic description, Ouattara et al. 2009 confirms female hoks in the wild, and Keenan et al. 2013 indicates graded male alarm-call structure. Agreement is medium because female acoustic support is sparser and male boundaries are partly graded.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Zuberbuhler 2001 and Ouattara et al. 2009 PLoS One support eagle-associated male hoks, while Ouattara et al. 2009 confirms female hoks as wild alarm calls. Semantic agreement is strong for alarm use, with sex-specific breadth in context.
+
+  - name: hok-oo
+    in_primary_inventory: true
+    alternative_names:
+      - H+
+      - hok plus oo
+      - suffixed hok
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - tonal
+      - short
+      - multi_component
+      - graded
+    acoustic_description: A hok-like, flat tonal stem followed by the acoustically stable oo suffix. The call is multi-component and belongs to the suffixed male loud-call set, with quantitative work indicating graded overlap among suffixed alarm-call forms.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - aggression
+      - combinatorial
+    semantic_description: Produced to general canopy disturbances, including perched eagles, neighboring groups, conspecific opponents, and other arboreal events. It is often associated with threat posture or aggressive motivation rather than only predator detection.
+    acoustic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: keenan_etal_2013
+        url: https://doi.org/10.1016/j.anbehav.2012.10.014
+    semantic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: ouattara_etal_2009_pnas
+        url: https://doi.org/10.1073/pnas.0908118106
+      - id: zuberbuhler_2002
+        url: https://doi.org/10.1006/anbe.2001.1914
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0007808.s002
+    playback_references:
+      - id: zuberbuhler_2002
+        url: https://doi.org/10.1006/anbe.2001.1914
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Hok-oo is one of the six primary adult male loud calls in Ouattara et al. 2009 PLoS One and appears in the context-specific sequence analysis of Ouattara et al. 2009 PNAS. Zuberbuhler 2002 additionally supports boom-alarm sequence use involving Campbell's male alarm calls. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Ouattara et al. 2009 PLoS One describes the flat hok stem plus oo suffix, but Keenan et al. 2013 shows that hok-oo and related suffixed calls can be graded and difficult to split acoustically. Agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Ouattara et al. 2009 PLoS One and PNAS consistently link hok-oo with canopy disturbance and aggression-related events, but receiver-playback support is less direct than for krak versus krak-oo. Semantic agreement is medium.
+
+  - name: wak-oo
+    in_primary_inventory: true
+    alternative_names:
+      - W+
+      - wak plus oo
+      - wak-oos
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - graded
+    acoustic_description: A suffixed loud tonal call with a wak stem whose main frequency band rises through the low kilohertz range, followed by an obligatory oo suffix. In females, wak-oos are also recognized as a basic alarm-call type, but wild female recordings are rare relative to RRA calls.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - attention
+      - combinatorial
+    semantic_description: In adult males, associated with canopy disturbances such as eagles, other flying animals, and Diana monkey eagle alarms, but not reported for neighboring male contexts. In adult females, wak-oos are one of the basic alarm calls to potentially dangerous events.
+    acoustic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: ouattara_etal_2009_female
+        url: https://doi.org/10.1016/j.anbehav.2009.03.014
+      - id: keenan_etal_2013
+        url: https://doi.org/10.1016/j.anbehav.2012.10.014
+    semantic_references:
+      - id: ouattara_etal_2009_plos
+        url: https://doi.org/10.1371/journal.pone.0007808
+      - id: ouattara_etal_2009_pnas
+        url: https://doi.org/10.1073/pnas.0908118106
+      - id: ouattara_etal_2009_female
+        url: https://doi.org/10.1016/j.anbehav.2009.03.014
+    audio_samples:
+      - https://doi.org/10.1371/journal.pone.0007808.s005
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Wak-oo is part of the six-call adult male primary inventory in Ouattara et al. 2009 PLoS One, appears in Ouattara et al. 2009 PNAS sequences, and is independently listed among the three basic female alarm calls by Ouattara et al. 2009. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Ouattara et al. 2009 PLoS One supports the rising stem plus oo structure, while Ouattara et al. 2009 confirms female wak-oos and Keenan et al. 2013 notes gradedness among male alarm-call variants. Agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Ouattara et al. 2009 PLoS One and PNAS agree on male canopy-disturbance and eagle-related contexts, and Ouattara et al. 2009 supports female alarm use. The limited number of female wak-oo recordings and lack of call-specific conspecific playback keep semantic agreement at medium.
+
+  - name: RRA trill
+    in_primary_inventory: false
+    alternative_names:
+      - trill
+      - RRA
+      - rapidly ascending pulse call
+      - repeated and rapidly ascending trill
+    scope: &adult_female_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - repetitive
+      - pulsed
+      - graded
+      - long
+    acoustic_description: A variable trill-like alarm call made from repeated and rapidly ascending pulses. Wild recordings separate several RRA variants that differ systematically in temporal and frequency-domain features.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - attention
+    semantic_description: Produced by females during predatory and nonpredatory disturbances. Variant structure is context-linked, and one captive human-response variant reported elsewhere was absent from the wild population and is not included here as a repertoire call.
+    acoustic_references:
+      - id: ouattara_etal_2009_female
+        url: https://doi.org/10.1016/j.anbehav.2009.03.014
+      - id: coye_etal_2018
+        url: https://doi.org/10.1016/j.anbehav.2018.05.014
+    semantic_references:
+      - id: ouattara_etal_2009_female
+        url: https://doi.org/10.1016/j.anbehav.2009.03.014
+      - id: coye_etal_2018
+        url: https://doi.org/10.1016/j.anbehav.2018.05.014
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Ouattara et al. 2009 identifies RRA trill calls as the dominant female alarm-call type in wild Campbell's monkeys, and Coye et al. 2018 includes RRA alarm calls among the common female calls analyzed in free-ranging groups. Existence agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Ouattara et al. 2009 gives the detailed acoustic account of repeated, rapidly ascending pulses and variant structure, and Coye et al. 2018 uses the same RRA category in wild female call analyses. Acoustic agreement is strong.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Ouattara et al. 2009 links RRA variants to disturbing events with observational and experimental support, while Coye et al. 2018 treats RRA as the female alarm-call comparison class in natural contexts. Semantic agreement is strong.
+
+  - name: simple harmonic contact call
+    in_primary_inventory: false
+    alternative_names:
+      - SH
+      - low-pitched contact call
+      - simple call
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - harmonic
+      - short
+      - quiet
+    acoustic_description: A low-pitched harmonic contact call produced as a single simple unit, without the added high-pitched arched component found in combined harmonic contact calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - spacing
+      - identity
+    semantic_description: Used by adult females as a contact call. In wild groups, simple calls were used mainly when predation risk was high, consistent with maintaining contact while limiting conspicuous identity-rich signalling.
+    acoustic_references:
+      - id: coye_etal_2018
+        url: https://doi.org/10.1016/j.anbehav.2018.05.014
+    semantic_references:
+      - id: coye_etal_2018
+        url: https://doi.org/10.1016/j.anbehav.2018.05.014
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Coye et al. 2018 analyzes SH calls in wild adult females and contrasts them with combined harmonic calls, but the female social-call repertoire is less comprehensively inventoried than the male loud-call system. Existence agreement is medium.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Coye et al. 2018 supports SH as the simple low-pitched harmonic contact unit, but this file relies on one main wild contact-call source for the category. Acoustic agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Coye et al. 2018 provides wild contextual evidence that simple contact calls vary with risk and contact needs, but fewer independent studies test this call type than the alarm calls. Semantic agreement is medium.
+
+  - name: combined harmonic contact call
+    in_primary_inventory: false
+    alternative_names:
+      - CH
+      - CHf
+      - CHb
+      - combined call
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - low_frequency
+      - high_frequency
+      - tonal
+      - harmonic
+      - multi_component
+      - frequency_modulated
+    acoustic_description: A combined contact call in which the low-pitched harmonic contact unit is merged with a high-pitched arched unit. Front and back combined forms are reported, depending on the relative position of the added arched unit.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - spacing
+      - identity
+      - combinatorial
+    semantic_description: Used by adult females when identity information is especially relevant, including mixed-species associations and socially important vocal exchanges. Combined calls are more identity-rich and easier to detect than simple calls, with a trade-off against eavesdropping risk.
+    acoustic_references:
+      - id: coye_etal_2018
+        url: https://doi.org/10.1016/j.anbehav.2018.05.014
+    semantic_references:
+      - id: coye_etal_2018
+        url: https://doi.org/10.1016/j.anbehav.2018.05.014
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Coye et al. 2018 analyzes CHf and CHb calls from wild adult females and treats them as common combined contact forms, but the evidence base is concentrated in one main study. Existence agreement is medium.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Coye et al. 2018 supports the low-pitched unit merged with a high-pitched arched unit and distinguishes front/back combined forms, but independent acoustic inventories are limited. Acoustic agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Coye et al. 2018 links combined calls with identity-rich contact contexts in wild groups, but direct playback evidence for these female contact combinations is limited. Semantic agreement is medium.
+references:
+  zuberbuhler_2001:
+    citation: "Zuberbuhler, K. (2001). Predator-specific alarm calls in Campbell's monkeys, Cercopithecus campbelli. Behavioral Ecology and Sociobiology, 50(5), 414-422."
+    doi: 10.1007/s002650100383
+    url: https://doi.org/10.1007/s002650100383
+  zuberbuhler_2002:
+    citation: "Zuberbuhler, K. (2002). A syntactic rule in forest monkey communication. Animal Behaviour, 63(2), 293-299."
+    doi: 10.1006/anbe.2001.1914
+    url: https://doi.org/10.1006/anbe.2001.1914
+  ouattara_etal_2009_plos:
+    citation: "Ouattara, K., Lemasson, A., & Zuberbuhler, K. (2009). Campbell's monkeys use affixation to alter call meaning. PLoS ONE, 4(11), e7808."
+    doi: 10.1371/journal.pone.0007808
+    url: https://doi.org/10.1371/journal.pone.0007808
+  ouattara_etal_2009_pnas:
+    citation: "Ouattara, K., Lemasson, A., & Zuberbuhler, K. (2009). Campbell's monkeys concatenate vocalizations into context-specific call sequences. Proceedings of the National Academy of Sciences of the United States of America, 106(51), 22026-22031."
+    doi: 10.1073/pnas.0908118106
+    url: https://doi.org/10.1073/pnas.0908118106
+  ouattara_etal_2009_female:
+    citation: "Ouattara, K., Zuberbuhler, K., N'goran, E. K., Gombert, J.-E., & Lemasson, A. (2009). The alarm call system of female Campbell's monkeys. Animal Behaviour, 78(1), 35-44."
+    doi: 10.1016/j.anbehav.2009.03.014
+    url: https://doi.org/10.1016/j.anbehav.2009.03.014
+  keenan_etal_2013:
+    citation: "Keenan, S., Lemasson, A., & Zuberbuhler, K. (2013). Graded or discrete? A quantitative analysis of Campbell's monkey alarm calls. Animal Behaviour, 85(1), 109-118."
+    doi: 10.1016/j.anbehav.2012.10.014
+    url: https://doi.org/10.1016/j.anbehav.2012.10.014
+  coye_etal_2015:
+    citation: "Coye, C., Ouattara, K., Zuberbuhler, K., & Lemasson, A. (2015). Suffixation influences receivers' behaviour in non-human primates. Proceedings of the Royal Society B: Biological Sciences, 282(1807), 20150265."
+    doi: 10.1098/rspb.2015.0265
+    url: https://doi.org/10.1098/rspb.2015.0265
+  coye_etal_2018:
+    citation: "Coye, C., Ouattara, K., Arlet, M. E., Lemasson, A., & Zuberbuhler, K. (2018). Flexible use of simple and combined calls in female Campbell's monkeys. Animal Behaviour, 141, 171-181."
+    doi: 10.1016/j.anbehav.2018.05.014
+    url: https://doi.org/10.1016/j.anbehav.2018.05.014

@@ -1,0 +1,544 @@
+scientific_name: Corvus corax
+common_name: Common raven
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Corvus
+  species: corax
+primary_inventory:
+  id: conner_1985
+  rationale: Conner 1985 is used as the primary_inventory spine because it is a peer-reviewed field study of free-ranging Common Ravens that identified 18 call types from 1,210 tape-recorded vocalizations and linked many of them to behavior at roosts, nest sites, mountain ridges, and a landfill. This file includes the Conner call types with clear wild contextual support and omits rare or mainly unknown-context types. The well-studied food-associated haa, who, and chii calls are added outside the primary inventory because later wild field and playback studies treat them as named, context-specific call types.
+calls:
+  - name: Caw
+    alternative_names:
+      - cuw
+      - kaww
+      - croak
+    in_primary_inventory: true
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - harmonic
+      - loud
+      - frequency_modulated
+      - graded
+      - short
+    acoustic_description: A low-pitched, loud, harmonic call with variable pitch and duration; Conner measured many calls with fundamentals in the low hundreds of hertz and noted that some tokens ascended while others descended. The form grades broadly and includes individually and situationally variable versions.
+    semantic_keywords:
+      - contact
+      - alarm
+      - aggression
+      - threat
+      - play
+      - attention
+    semantic_description: Given by single birds and small groups while soaring, arriving near roosts, assessing feeding sites, responding to nest disturbance, watching disputes nearby, and during object play by likely immature birds.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: brown_1974
+        url: https://scholarworks.alaska.edu/uaf_grad_bio_sciences/520
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: brown_1974
+        url: https://scholarworks.alaska.edu/uaf_grad_bio_sciences/520
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 identified Caw as the most frequent Virginia call type, and Brown 1974 reported very common Kaww-like calls in free-ranging Alaskan ravens. Agreement is medium because transliterations and boundaries vary across inventories.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Conner 1985 provides measurements and sonagrams, and Brown 1974 independently supports a comparable common caw/kaw family, but broad grading keeps the exact acoustic boundary only moderately agreed.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Conner 1985 links Caw to several repeated wild contexts, including nest defense, alerting, conflict, and play. The category is broad, so fine semantic specificity is only medium.
+
+  - name: Growl-like
+    alternative_names:
+      - growl-like sound
+      - growl
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - pulsed
+      - loud
+      - short
+    acoustic_description: A loud, harsh, low-frequency sound with a pulsing growl-like quality. Conner illustrated several variants and treated them as a distinct harsh call type.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+    semantic_description: Heard during close conflicts over roost position, especially when two birds were trying to occupy the same position in roost trees.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: gwinner_1964
+        url: https://doi.org/10.1111/j.1439-0310.1964.tb01212.x
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 recorded and illustrated the wild Virginia call and noted that growl-like calls were among the types shared with Gwinner's raven work. Agreement is medium because the independent support includes captive comparison, while the wild contextual basis is from Conner.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Conner 1985 and Gwinner 1964 both support a growl-like acoustic form, but detailed wild measurements are concentrated in Conner.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The aggressive roost context is clear in Conner 1985, but independent wild semantic tests for this named type are sparse.
+
+  - name: Whine
+    alternative_names:
+      - whines
+      - defensive whine
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - harmonic
+      - tonal
+      - quiet
+      - frequency_modulated
+      - graded
+      - short
+    acoustic_description: A soft harmonic call, sometimes monotonal and sometimes multiharmonic, with a whine-like spectral trace. Conner's examples show several variants within the same soft call family.
+    semantic_keywords:
+      - submission
+      - distress
+      - aggression
+      - spacing
+    semantic_description: Given at roosts during apparent agonistic confrontations over position, especially by individuals retreating from a dominant bird.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: gwinner_1964
+        url: https://doi.org/10.1111/j.1439-0310.1964.tb01212.x
+      - id: szipl_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0244-7
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: szipl_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0244-7
+    playback_references:
+      - id: szipl_etal_2017
+        url: https://doi.org/10.1186/s12983-017-0244-7
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 identified Whine as a named wild call and compared whines with Gwinner's repertoire; Szipl et al. 2017 independently analysed defensive calls in wild ravens, but did not map them one-to-one onto Conner's Whine label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Conner 1985 gives the named whine description and measurements, while Szipl et al. 2017 supports the broader defensive-call acoustic pattern. Terminology differs, keeping agreement medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Conner 1985 and Szipl et al. 2017 agree that soft defensive calls occur during retreat, submission, or attack contexts, although the named Whine category is not isolated experimentally in the later work.
+
+  - name: Rattle
+    alternative_names:
+      - rattle call
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - pulsed
+      - repetitive
+      - broadband
+      - noisy
+      - loud
+      - long
+    acoustic_description: A loud, rapidly repeated, drum-like rattle. Conner compared its temporal texture to woodpecker drumming and illustrated it as a repeated broadband series.
+    semantic_keywords:
+      - courtship
+      - display
+      - affiliation
+      - mating
+    semantic_description: Given by paired birds during courtship at roosts, nest sites, and feeding areas, often with conspicuous body postures and most often during the breeding season.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: gwinner_1964
+        url: https://doi.org/10.1111/j.1439-0310.1964.tb01212.x
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 recorded Rattle as a named wild call type and noted rattle among call types shared with Gwinner's study. Agreement is medium because the clearest wild contextual support is from one detailed field inventory.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Conner 1985 provides sonagrams and description, with broader support from Gwinner 1964, but there are few later acoustic analyses retaining the exact Rattle label.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Conner 1985 repeatedly observed Rattle in courtship and pair contexts. Independent wild semantic confirmation under the same name is limited.
+
+  - name: Staccato caw
+    alternative_names:
+      - staccato caws
+      - short caw
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - abrupt
+      - short
+      - repetitive
+      - harmonic
+      - loud
+      - multi_component
+    acoustic_description: A shortened caw-like element, often followed by longer caws; Conner described it as about half the duration of ordinary caws and illustrated a sharp initial element with variable following notes.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - threat
+    semantic_description: Given when birds were disturbed at nests, flushed from roosts, or reacting to predators or human, dog, vehicle, and raptor disturbances near roosts and feeding sites.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 clearly separated Staccato caw from Caw in wild recordings, but later raven studies usually discuss alert or defensive calls more broadly.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic basis is well illustrated in Conner 1985, but independent analyses using the same label are sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Conner 1985 observed the call across multiple disturbance settings, making the alert context fairly consistent despite limited independent testing.
+
+  - name: Cluck
+    alternative_names:
+      - clucks
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - abrupt
+      - pulsed
+      - repetitive
+      - broadband
+      - short
+      - noisy
+    acoustic_description: A sputter-like call usually given as rapid staccato couplets, with some series containing four to nine clucks in quick succession.
+    semantic_keywords:
+      - distress
+      - submission
+      - attention
+      - caregiving
+    semantic_description: Heard when nesting pairs were disturbed, during visits near young, and when birds were displaced from preferred roost positions.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 identified and illustrated Cluck as a wild call type with repeated observations. The label is not widely retained in later raven playback work.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Conner 1985 gives the detailed acoustic description, but independent acoustic replication of this named type is limited.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Conner 1985 links Cluck to disturbance and displacement, but the caregiving or distress interpretation remains observational and untested.
+
+  - name: Kow
+    alternative_names:
+      - kow call
+      - attack call
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - harmonic
+      - loud
+      - abrupt
+      - short
+    acoustic_description: A very loud, high-pitched honking call with many harmonics reaching high frequencies; Conner recorded it rarely but described it as the loudest call he heard.
+    semantic_keywords:
+      - aggression
+      - threat
+      - territorial
+      - spacing
+    semantic_description: Given during attacks on intruding ravens near nest cliffs, during chases at roosts, and during an agonistic encounter between paired birds at a feeding site.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: gwinner_1964
+        url: https://doi.org/10.1111/j.1439-0310.1964.tb01212.x
+      - id: brown_1974
+        url: https://scholarworks.alaska.edu/uaf_grad_bio_sciences/520
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: brown_1974
+        url: https://scholarworks.alaska.edu/uaf_grad_bio_sciences/520
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 identified Kow in wild Virginia ravens, Brown 1974 reported common Koww-like Alaskan calls, and Conner noted comparison with Gwinner's material. Agreement is medium because spellings and exact boundaries vary.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Conner 1985 provides a sonagram and high-harmonic description, while Brown 1974 supports a related Koww category without identical nomenclature.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Conner 1985 repeatedly links Kow to direct aggression and chases. Broader inventory evidence supports the call family, but detailed contexts are mainly from Conner.
+
+  - name: Bell-like
+    alternative_names:
+      - bell-like sound
+      - bell call
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - loud
+      - quiet
+      - long
+      - frequency_modulated
+    acoustic_description: A resonant tonal sound like a muted bell or xylophone note, sometimes given loudly over distance and sometimes softly with a hoot-like quality. Conner illustrated multiple variants.
+    semantic_keywords:
+      - courtship
+      - display
+      - affiliation
+      - mating
+      - aggression
+    semantic_description: Given during aerial and ground courtship by paired birds, often with display postures, and also heard during a close male-male interaction.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: gwinner_1964
+        url: https://doi.org/10.1111/j.1439-0310.1964.tb01212.x
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 recorded Bell-like sounds in wild ravens and noted that bell-like calls were among those shared with Gwinner's ravens. The wild semantic base is still mostly one field study.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Conner 1985 and Gwinner 1964 support a bell-like acoustic form, but detailed wild acoustic treatment is concentrated in Conner.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Conner 1985 reports repeated courtship and pair-associated use, with one agonistic observation; the main display context is consistent but not experimentally tested.
+
+  - name: Ku-uk-kuk
+    alternative_names:
+      - kukuk
+      - kuk-kuk
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - abrupt
+      - repetitive
+      - noisy
+      - multi_component
+      - short
+    acoustic_description: A harsh staccato couplet or triplet with repeated elements. Conner illustrated the call as a compact multi-element sequence.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+    semantic_description: Given while one raven chased another, especially in aggressive interactions around roosting or nesting areas.
+    acoustic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+      - id: brown_1974
+        url: https://scholarworks.alaska.edu/uaf_grad_bio_sciences/520
+    semantic_references:
+      - id: conner_1985
+        url: https://doi.org/10.2307/1367219
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Conner 1985 lists Ku-uk-kuk as a wild Virginia call, and Brown 1974 reports stereotyped multisyllabic Kukuk-like calls in Alaskan ravens. Naming varies, so agreement is medium.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The compact repeated structure is supported by Conner 1985 and by Brown's report of stereotyped multisyllabic Kukuk-like calls, but exact matching is uncertain.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Conner 1985 links Ku-uk-kuk to chasing, but there is little independent semantic analysis of this exact named type.
+
+  - name: Haa call
+    alternative_names:
+      - haa
+      - yell
+      - long yell
+      - food-associated call
+      - food call
+    in_primary_inventory: false
+    scope: &all_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - long
+      - harmonic
+      - frequency_modulated
+      - repetitive
+      - graded
+    acoustic_description: A far-reaching long yell transcribed as haa. Analyses of marked wild birds show individually distinctive variation in fundamental-frequency and intensity-related parameters, with a highly harmonic structure and measurable variation in duration, harmonicity, jitter, amplitude modulation, and frequency contour.
+    semantic_keywords:
+      - food
+      - recruitment
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Produced when ravens encounter rich food that is defended, monopolized, difficult to access, or otherwise risky; receivers are attracted to the caller or speaker, and playback studies show that responses depend on caller identity, familiarity, sex, and rank.
+    acoustic_references:
+      - id: bugnyar_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1668
+      - id: boeckle_etal_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.08.011
+      - id: boeckle_etal_2018
+        url: https://doi.org/10.1186/s12983-018-0255-z
+    semantic_references:
+      - id: heinrich_marzluff_1991
+        url: https://doi.org/10.1007/BF00172134
+      - id: bugnyar_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1668
+      - id: szipl_etal_2015
+        url: https://doi.org/10.1016/j.anbehav.2014.10.015
+    playback_references:
+      - id: heinrich_marzluff_1991
+        url: https://doi.org/10.1007/BF00172134
+      - id: boeckle_etal_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.08.011
+      - id: szipl_etal_2015
+        url: https://doi.org/10.1016/j.anbehav.2014.10.015
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Heinrich and Marzluff 1991, Bugnyar et al. 2001, Boeckle et al. 2012, Szipl et al. 2015, and Boeckle et al. 2018 all treat haa/yell as a named raven food-associated call. It is outside Conner's primary inventory but strongly supported in later wild and playback work.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Bugnyar et al. 2001 describes the long haa form, while Boeckle et al. 2012 and 2018 quantify individual, age, and sex variation in the same call type. These sources agree on a long, loud, harmonic, variable yell.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Heinrich and Marzluff 1991, Bugnyar et al. 2001, and Szipl et al. 2015 converge on food recruitment and receiver attraction, with playback support for biologically meaningful responses.
+
+  - name: Who call
+    alternative_names:
+      - who
+      - short yell
+      - short food-associated call
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - loud
+      - harmonic
+      - abrupt
+    acoustic_description: A short yell transcribed as who and distinguished from the longer haa and juvenile chii calls in studies of raven food-associated calls.
+    semantic_keywords:
+      - food
+      - attention
+      - aggression
+      - spacing
+    semantic_description: Given by dominant ravens when landing at feeding sites or during the feeding situation; unlike haa calling, its occurrence is tied to the caller's behavior near food rather than to prior visual access to inaccessible food.
+    acoustic_references:
+      - id: bugnyar_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1668
+      - id: szipl_etal_2015
+        url: https://doi.org/10.1016/j.anbehav.2014.10.015
+    semantic_references:
+      - id: bugnyar_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1668
+      - id: szipl_etal_2015
+        url: https://doi.org/10.1016/j.anbehav.2014.10.015
+      - id: boeckle_etal_2018
+        url: https://doi.org/10.1186/s12983-018-0255-z
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Bugnyar et al. 2001 and Szipl et al. 2015 identify who as one of the raven food-associated calls, with Boeckle et al. 2018 noting it as a dominant-male-associated food call. It has less direct acoustic analysis than haa.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Sources agree that who is the short form, but detailed spectrographic description and measurement are limited compared with haa.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Bugnyar et al. 2001 and Szipl et al. 2015 agree that who occurs at feeding sites and differs functionally from haa, but fewer studies isolate it experimentally.
+
+  - name: Chii call
+    alternative_names:
+      - chii
+      - juvenile long yell
+      - juvenile food-associated call
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - long
+      - loud
+      - harmonic
+      - frequency_modulated
+      - graded
+    acoustic_description: A long juvenile yell transcribed as chii and treated as the juvenile form of the food-associated call complex, with developmental links to juvenile begging-like vocal behavior.
+    semantic_keywords:
+      - food
+      - begging
+      - recruitment
+      - caregiving
+      - attention
+    semantic_description: Produced by juvenile ravens in food contexts; its use changes as young birds become independent, and later studies interpret it as linked to hunger, age class, and juvenile status near feeding sites.
+    acoustic_references:
+      - id: bugnyar_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1668
+      - id: boeckle_etal_2018
+        url: https://doi.org/10.1186/s12983-018-0255-z
+    semantic_references:
+      - id: bugnyar_etal_2001
+        url: https://doi.org/10.1006/anbe.2000.1668
+      - id: szipl_etal_2015
+        url: https://doi.org/10.1016/j.anbehav.2014.10.015
+      - id: boeckle_etal_2018
+        url: https://doi.org/10.1186/s12983-018-0255-z
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Bugnyar et al. 2001 and Szipl et al. 2015 identify chii as the juvenile long yell, and Boeckle et al. 2018 discusses juvenile food-associated calls as age-linked. Support is good but narrower than for haa.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The sources distinguish chii as a long juvenile yell, but detailed measurements are mostly framed around the broader haa/food-call complex rather than chii alone.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Multiple food-call studies agree that chii is juvenile-linked and food-contextual, but its exact transition from begging to recruitment remains less directly tested than adult haa calling.
+references:
+  brown_1974:
+    citation: Brown, R. N. 1974. Aspects of vocal behavior of the raven (Corvus corax) in interior Alaska. M.S. thesis, University of Alaska, Fairbanks.
+    url: https://scholarworks.alaska.edu/uaf_grad_bio_sciences/520
+  conner_1985:
+    citation: Conner, R. N. 1985. Vocalizations of Common Ravens in Virginia. The Condor 87:379-388.
+    url: https://digitalcommons.usf.edu/condor/vol87/iss3/11
+    doi: 10.2307/1367219
+  gwinner_1964:
+    citation: Gwinner, E. 1964. Untersuchungen uber das Ausdrucks- und Sozialverhalten des Kolkraben (Corvus corax corax L.). Zeitschrift fur Tierpsychologie 21:657-748.
+    url: https://hdl.handle.net/11858/00-001M-0000-0028-442C-E
+    doi: 10.1111/j.1439-0310.1964.tb01212.x
+  heinrich_marzluff_1991:
+    citation: Heinrich, B., and J. M. Marzluff. 1991. Do common ravens yell because they want to attract others? Behavioral Ecology and Sociobiology 28:13-21.
+    url: https://doi.org/10.1007/BF00172134
+    doi: 10.1007/BF00172134
+  bugnyar_etal_2001:
+    citation: Bugnyar, T., M. Kijne, and K. Kotrschal. 2001. Food calling in ravens, Corvus corax, are yells referential signals? Animal Behaviour 61:949-958.
+    url: https://doi.org/10.1006/anbe.2000.1668
+    doi: 10.1006/anbe.2000.1668
+  enggist_dueblin_pfister_2002:
+    citation: Enggist-Dueblin, P., and U. Pfister. 2002. Cultural transmission of vocalizations in ravens, Corvus corax. Animal Behaviour 64:831-841.
+    url: https://doi.org/10.1006/anbe.2002.2016
+    doi: 10.1006/anbe.2002.2016
+  boeckle_etal_2012:
+    citation: Boeckle, M., G. Szipl, and T. Bugnyar. 2012. Who wants food? Individual characteristics in raven yells. Animal Behaviour 84:1123-1130.
+    url: https://doi.org/10.1016/j.anbehav.2012.08.011
+    doi: 10.1016/j.anbehav.2012.08.011
+  szipl_etal_2015:
+    citation: Szipl, G., M. Boeckle, C. A. F. Wascher, M. Spreafico, and T. Bugnyar. 2015. With whom to dine? Ravens' responses to food-associated calls depend on individual characteristics of the caller. Animal Behaviour 99:33-42.
+    url: https://doi.org/10.1016/j.anbehav.2014.10.015
+    doi: 10.1016/j.anbehav.2014.10.015
+  szipl_etal_2017:
+    citation: Szipl, G., E. Ringler, M. Spreafico, and T. Bugnyar. 2017. Calls during agonistic interactions vary with arousal and raise audience attention in ravens. Frontiers in Zoology 14:57.
+    url: https://doi.org/10.1186/s12983-017-0244-7
+    doi: 10.1186/s12983-017-0244-7
+  boeckle_etal_2018:
+    citation: Boeckle, M., G. Szipl, and T. Bugnyar. 2018. Raven food calls indicate sender's age and sex. Frontiers in Zoology 15:5.
+    url: https://doi.org/10.1186/s12983-018-0255-z
+    doi: 10.1186/s12983-018-0255-z
