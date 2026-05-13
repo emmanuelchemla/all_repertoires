@@ -448,7 +448,9 @@ See Figure~\ref{fig:calls_per_species}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.9\textwidth]{../plots/calls_per_species.png}
+	\IfFileExists{../plots/calls_per_species.png}{%
+		\includegraphics[width=.9\textwidth]{../plots/calls_per_species.png}%
+	}{\fbox{\parbox{.9\textwidth}{\centering\vspace{2em}[figure file \texttt{calls\_per\_species.png} missing]\vspace{2em}}}}
 	\caption{%
 		\textbf{Calls per species in \dbname}, sorted by count. Color encodes taxonomic class. The median repertoire size is [X] calls; the largest repertoire (\textit{Loxodonta africana}) contains [X] calls.
 	}
@@ -488,7 +490,9 @@ Figure~\ref{fig:acoustic_umap}, Figure~\ref{fig:merged}, Figure~\ref{fig:landmar
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/acoustic_umap.png}
+	\IfFileExists{../plots/acoustic_umap.png}{%
+		\includegraphics[width=\textwidth]{../plots/acoustic_umap.png}%
+	}{\fbox{\parbox{\textwidth}{\centering\vspace{2em}[figure file \texttt{acoustic\_umap.png} missing]\vspace{2em}}}}
 	\caption{%
 		\textbf{Acoustic embedding space (UMAP).} Each point is a call in \dbname, positioned by acoustic description embedding and colored by taxonomic class. Clusters correspond to spectro-temporal call types (tonal long calls, broadband alarm bursts, etc.) that recur across classes, illustrating the convergent acoustic solutions captured by the database.
 	}
