@@ -1,0 +1,156 @@
+scientific_name: Corvus corax
+common_name: Common Raven
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Corvus
+  species: corax
+primary_inventory:
+  id: gwin_1959
+  rationale: Gwin 1959 is used as the primary inventory because it is a classic descriptive account of raven vocal behavior and call categories. Later studies provide stronger support for food-associated yells, individually distinctive calls, and social-context vocal behavior.
+calls:
+  - name: yell
+    alternative_names:
+      - food-associated yell
+      - recruitment yell
+    in_primary_inventory: true
+    scope: &all_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, noisy, broadband, long]
+    acoustic_description: Loud harsh call with broadband energy and variable duration, typically carrying over long distances.
+    semantic_keywords: [food, recruitment, group_coordination, attention]
+    semantic_description: Produced around food discoveries and can attract other ravens, especially when recruitment helps overcome access problems.
+    acoustic_references:
+      - id: gwin_1959
+        url: https://sora.unm.edu/sites/default/files/journals/condor/v061n06/p0413-p0426.pdf
+      - id: heinrich_marzluff_1991
+        url: https://doi.org/10.1007/BF00171558
+    semantic_references:
+      - id: heinrich_marzluff_1991
+        url: https://doi.org/10.1007/BF00171558
+      - id: marzluff_etal_1996
+        url: https://doi.org/10.1007/BF00174050
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Gwin 1959 includes yells in the descriptive repertoire, and Heinrich and Marzluff 1991 plus Marzluff et al. 1996 treat food-associated yells as a distinct recruitment and attraction signal.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Gwin 1959 and Heinrich and Marzluff 1991 support the loud harsh form, but the older descriptive treatment is less quantitative than modern acoustic studies.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Food recruitment and attraction functions are supported by Heinrich and Marzluff 1991 and Marzluff et al. 1996.
+
+  - name: knock
+    alternative_names:
+      - knocking call
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, pulsed, repetitive]
+    acoustic_description: Low, hollow, percussive-sounding call often produced as repeated knocking notes.
+    semantic_keywords: [territorial, courtship, affiliation, display]
+    semantic_description: Used in pair, nesting, or territorial contexts, often associated with close-range social display.
+    acoustic_references:
+      - id: gwin_1959
+        url: https://sora.unm.edu/sites/default/files/journals/condor/v061n06/p0413-p0426.pdf
+      - id: boeckle_bugnyar_2012
+        url: https://doi.org/10.1093/beheco/arr155
+    semantic_references:
+      - id: gwin_1959
+        url: https://sora.unm.edu/sites/default/files/journals/condor/v061n06/p0413-p0426.pdf
+      - id: boeckle_bugnyar_2012
+        url: https://doi.org/10.1093/beheco/arr155
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Gwin 1959 recognizes knocking calls in the raven repertoire, with narrower contextual support from Boeckle and Bugnyar 2012 than is available for yells.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Gwin 1959 describes the broad percussive form, but quantitative acoustic agreement is limited and Boeckle and Bugnyar 2012 is not a dedicated acoustic taxonomy.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Gwin 1959 describes pair and territorial contexts, while Boeckle and Bugnyar 2012 supports social-context relevance; the evidence remains mostly observational for this named call.
+
+  - name: croak
+    alternative_names:
+      - kraa
+      - territorial call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, noisy, long, graded]
+    acoustic_description: Deep rough low-frequency call, often long and carrying, with graded variation in harshness and duration.
+    semantic_keywords: [territorial, spacing, contact, identity]
+    semantic_description: Used in territorial spacing, long-distance contact, and general social advertisement.
+    acoustic_references:
+      - id: gwin_1959
+        url: https://sora.unm.edu/sites/default/files/journals/condor/v061n06/p0413-p0426.pdf
+      - id: boeckle_bugnyar_2012
+        url: https://doi.org/10.1093/beheco/arr155
+    semantic_references:
+      - id: gwin_1959
+        url: https://sora.unm.edu/sites/default/files/journals/condor/v061n06/p0413-p0426.pdf
+      - id: boeckle_bugnyar_2012
+        url: https://doi.org/10.1093/beheco/arr155
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Gwin 1959 treats deep croak-like calls as a standard raven category, with Boeckle and Bugnyar 2012 providing additional social-call context rather than a full repertoire split.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Gwin 1959 and Boeckle and Bugnyar 2012 support low rough raven calls, but the class is broad and graded.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Gwin 1959 supports territorial and contact contexts, and Boeckle and Bugnyar 2012 supports identity-related social-call use, with less experimental resolution than food yells.
+
+  - name: scream
+    alternative_names:
+      - begging scream
+      - harsh scream
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, long]
+    acoustic_description: Loud high-frequency harsh call, often extended and variable in intensity.
+    semantic_keywords: [begging, aggression, distress, attention]
+    semantic_description: Produced in high-arousal contexts including food competition, begging, and aggressive interactions.
+    acoustic_references:
+      - id: gwin_1959
+        url: https://sora.unm.edu/sites/default/files/journals/condor/v061n06/p0413-p0426.pdf
+      - id: heinrich_marzluff_1991
+        url: https://doi.org/10.1007/BF00171558
+    semantic_references:
+      - id: gwin_1959
+        url: https://sora.unm.edu/sites/default/files/journals/condor/v061n06/p0413-p0426.pdf
+      - id: heinrich_marzluff_1991
+        url: https://doi.org/10.1007/BF00171558
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Gwin 1959 includes screams in the descriptive repertoire, and Heinrich and Marzluff 1991 supports their overlap with harsh feeding-context calls, but labels can blur with yells and begging calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Gwin 1959 and Heinrich and Marzluff 1991 support the high loud harsh form, though subdivision from yells and begging calls is not always consistent.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Gwin 1959 and Heinrich and Marzluff 1991 support high-arousal feeding, begging, and aggressive contexts, but the function is broad and context dependent.
+references:
+  gwin_1959:
+    citation: "Gwin, J. A. (1959). The vocalizations of the raven. The Condor, 61, 413-426."
+    url: https://sora.unm.edu/sites/default/files/journals/condor/v061n06/p0413-p0426.pdf
+  heinrich_marzluff_1991:
+    citation: "Heinrich, B., & Marzluff, J. M. (1991). Do common ravens yell because they want to attract others? Behavioral Ecology and Sociobiology, 28, 13-21."
+    url: https://doi.org/10.1007/BF00171558
+    doi: 10.1007/BF00171558
+  marzluff_etal_1996:
+    citation: "Marzluff, J. M., Heinrich, B., & Marzluff, C. S. (1996). Raven roosts are mobile information centres. Animal Behaviour, 51, 89-103."
+    url: https://doi.org/10.1006/anbe.1996.0008
+    doi: 10.1006/anbe.1996.0008
+  boeckle_bugnyar_2012:
+    citation: "Boeckle, M., & Bugnyar, T. (2012). Long-term memory for affiliates in ravens. Current Biology, 22, 801-806."
+    url: https://doi.org/10.1016/j.cub.2012.03.023
+    doi: 10.1016/j.cub.2012.03.023
