@@ -8,8 +8,12 @@ taxonomy:
   family: Hominidae
   genus: Pan
   species: paniscus
+primary_inventory:
+  id: wegdell_etal_2025
+  rationale: Wegdell et al. 2025 provide the most comprehensive recent inventory of the wild adult bonobo repertoire, quantitatively validating 11 acoustically distinguishable call types via random-forest analysis of >1500 calls from 53 individuals. It is explicitly framed as an updated repertoire and supersedes earlier qualitative descriptions (Bermejo & Omedes 1999; de Waal 1988), which used partially incompatible call categories. The 11 calls described here correspond one-to-one with the 11 call types in Wegdell et al. 2025.
 calls:
   - name: high hoot
+    in_primary_inventory: true
     alternative_names:
       - bark
       - soft bark
@@ -60,6 +64,7 @@ calls:
     semantic_description_explanation: Hohmann and Fruth 1994 support a distance-contact/cohesion function, Berthet et al. 2025 interpret high hoots as advertising caller presence or location, and Clay and Zuberbuhler 2009 show bark-like calls in food contexts. These sources agree on attention/contact value but differ in contextual scope.
 
   - name: scream
+    in_primary_inventory: true
     alternative_names: []
     scope: *adult_both_scope
     acoustic_keywords:
@@ -94,6 +99,7 @@ calls:
     semantic_description_explanation: De Waal 1988 and Bermejo and Omedes 1999 associate screams with agonistic or distress contexts, but the later quantitative repertoire does not test function. Agreement is moderate because the semantic evidence is mainly qualitative.
 
   - name: grunt
+    in_primary_inventory: true
     alternative_names:
       - food grunt
     scope: *adult_both_scope
@@ -130,6 +136,7 @@ calls:
     semantic_description_explanation: Berthet et al. 2025 link grunts to the caller's ongoing activity across several contexts, while Clay and Zuberbuhler 2009 document food-associated use. These are compatible close-range coordination interpretations, though not all contexts have playback tests.
 
   - name: peep
+    in_primary_inventory: true
     alternative_names:
       - food peep
       - alarm peep
@@ -174,6 +181,7 @@ calls:
     semantic_description_explanation: Clay et al. 2015 demonstrate functional flexibility across positive, neutral, and negative contexts; Berthet et al. 2025 derive a tentative coordination meaning; and Clay and Zuberbuhler 2011 show receivers use food-call sequences containing peeps. These studies strongly agree that peep meaning is context-sensitive and flexible.
 
   - name: laughter
+    in_primary_inventory: true
     alternative_names:
       - laugh
     scope: *adult_both_scope
@@ -206,6 +214,7 @@ calls:
     semantic_description_explanation: De Waal 1988 and Bermejo and Omedes 1999 support a play or positive-social association, but there are few dedicated bonobo laughter studies in the cited set. The function is plausible but less independently validated.
 
   - name: low hoot
+    in_primary_inventory: true
     alternative_names: []
     scope: *adult_both_scope
     acoustic_keywords:
@@ -238,6 +247,7 @@ calls:
     semantic_description_explanation: Berthet et al. 2025 links low hoots to high-arousal contexts such as night-nest building, while de Waal 1988 supplies broader repertoire context. Dedicated functional work remains limited.
 
   - name: whistle
+    in_primary_inventory: true
     alternative_names: []
     scope: *adult_both_scope
     acoustic_keywords:
@@ -270,6 +280,7 @@ calls:
     semantic_description_explanation: Berthet et al. 2025 interprets whistles as supporting spatial cohesion, and Bermejo and Omedes 1999 report contextual use in wild bonobos. The meaning is reasonably consistent, though fewer studies test whistles directly.
 
   - name: contest hoot
+    in_primary_inventory: true
     alternative_names: []
     scope: *adult_both_scope
     acoustic_keywords:
@@ -305,6 +316,7 @@ calls:
     semantic_description_explanation: Genty et al. 2014 provides focused evidence that contest hoots are socially directed challenges used in agonistic and play contexts, and Berthet et al. 2025 supports high-hoot/low-hoot combinations in socially charged contexts. This is one of the best-supported call functions in bonobos.
 
   - name: pant grunt
+    in_primary_inventory: true
     alternative_names:
       - greeting grunt
     scope:
@@ -346,6 +358,7 @@ calls:
     semantic_description_explanation: Schamberg et al. 2023 treats pant grunts as subordination signals where present, while de Waal 1988 described greeting grunts in captive bonobos in dominance-relevant contexts. The function is coherent but population-specific.
 
   - name: yelp
+    in_primary_inventory: true
     alternative_names: []
     scope: *adult_both_scope
     acoustic_keywords:
@@ -384,6 +397,7 @@ calls:
     semantic_description_explanation: Berthet et al. 2025 interprets yelps as social imperatives, while Clay and Zuberbuhler 2009 and 2011 show their role in food-call sequences. The function is consistently coordinative, though the context differs between studies.
 
   - name: peep yelp
+    in_primary_inventory: true
     alternative_names:
       - peep-yelp
     scope: *adult_both_scope
