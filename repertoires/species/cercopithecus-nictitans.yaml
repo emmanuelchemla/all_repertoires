@@ -1,0 +1,306 @@
+scientific_name: Cercopithecus nictitans
+common_name: Putty-nosed monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Cercopithecus
+  species: nictitans
+primary_inventory:
+  id: arnold_zuberbuhler_2006
+  rationale: "Arnold and Zuberbuhler 2006 is used as the primary_inventory spine because it is the central wild study of adult male putty-nosed monkey alarm calling at Gashaka Gumti National Park, identifying pyows, hacks, and structured call series in response to predator stimuli. It is not a complete all-age/sex repertoire inventory, so this file supplements it with later wild studies for female chirps, male keks/short pyows, caller identity, and cross-population call ordering. Broad secondary-only or captivity-only call labels are excluded."
+calls:
+  - name: pyow
+    in_primary_inventory: true
+    alternative_names:
+      - pyow call
+      - long pyow
+      - male alarm call
+      - male loud call
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - loud
+      - long
+      - graded
+    acoustic_description: "A loud adult-male call that is more acoustically variable than hacks, with tonal structure and descending frequency modulation reported from about 2.5 kHz toward lower frequencies. Pyows are commonly produced in repeated series and contain individually distinctive acoustic cues."
+    semantic_keywords:
+      - alarm
+      - predator
+      - spacing
+      - territorial
+      - identity
+      - display
+    semantic_description: "Produced by adult males across a broad range of disturbance contexts, including terrestrial threats such as leopards, calls from other males, intergroup situations, and situations in which the cause is not obvious to listeners. Females can use pyow-associated cues to recognize male identity during antipredator contexts."
+    acoustic_references:
+      - id: arnold_zuberbuhler_2006
+        url: https://doi.org/10.1016/j.anbehav.2005.11.017
+      - id: price_etal_2009
+        url: https://doi.org/10.1163/156853908X396610
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    semantic_references:
+      - id: arnold_zuberbuhler_2006
+        url: https://doi.org/10.1016/j.anbehav.2005.11.017
+      - id: arnold_pohlner_zuberbuhler_2008
+        url: https://doi.org/10.1007/s00265-007-0479-y
+      - id: arnold_zuberbuhler_2013
+        url: https://doi.org/10.1371/journal.pone.0065660
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    playback_references:
+      - id: arnold_zuberbuhler_2006
+        url: https://doi.org/10.1016/j.anbehav.2005.11.017
+      - id: arnold_pohlner_zuberbuhler_2008
+        url: https://doi.org/10.1007/s00265-007-0479-y
+      - id: arnold_zuberbuhler_2013
+        url: https://doi.org/10.1371/journal.pone.0065660
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Pyows are one of the two central male call types in Arnold and Zuberbuhler 2006, recur in predator-model and playback work by Arnold et al. 2008 and Arnold and Zuberbuhler 2013, and are analyzed for identity cues by Price et al. 2009 and Kiminou et al. 2022. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Arnold and Zuberbuhler 2006 distinguish pyows acoustically from hacks, Price et al. 2009 quantifies individual variation in pyows, and Kiminou et al. 2022 uses pyows as a distinct playback class. The broad acoustic description is strongly supported."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Multiple studies agree that pyows occur in alarm and disturbance contexts, but Arnold et al. 2008 and Arnold and Zuberbuhler 2013 show that pyow series occur in a wider range of contexts than a simple leopard-specific label would imply. Semantic agreement is therefore medium."
+
+  - name: hack
+    in_primary_inventory: true
+    alternative_names:
+      - hack call
+      - male alarm call
+      - male loud call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - short
+      - abrupt
+      - loud
+      - repetitive
+    acoustic_description: "A loud, short, low-frequency adult-male call with abrupt onset, often repeated in series. Published descriptions place the major band of acoustic energy around 0.6-1.1 kHz and distinguish hacks from the longer, more variable descending pyows."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: "Produced especially in response to crowned eagle-related stimuli and other disturbances. Receivers treat hack series without additional contextual cues as evidence for aerial danger, but natural production also includes non-eagle contexts, so the call is not narrowly predator-specific."
+    acoustic_references:
+      - id: arnold_zuberbuhler_2006
+        url: https://doi.org/10.1016/j.anbehav.2005.11.017
+      - id: price_etal_2009
+        url: https://doi.org/10.1163/156853908X396610
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    semantic_references:
+      - id: arnold_zuberbuhler_2006
+        url: https://doi.org/10.1016/j.anbehav.2005.11.017
+      - id: arnold_pohlner_zuberbuhler_2008
+        url: https://doi.org/10.1007/s00265-007-0479-y
+      - id: arnold_zuberbuhler_2013
+        url: https://doi.org/10.1371/journal.pone.0065660
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    playback_references:
+      - id: arnold_zuberbuhler_2006
+        url: https://doi.org/10.1016/j.anbehav.2005.11.017
+      - id: arnold_pohlner_zuberbuhler_2008
+        url: https://doi.org/10.1007/s00265-007-0479-y
+      - id: arnold_zuberbuhler_2013
+        url: https://doi.org/10.1371/journal.pone.0065660
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Hacks are the second central male call type in Arnold and Zuberbuhler 2006 and are retained as a distinct alarm playback class in Arnold et al. 2008, Arnold and Zuberbuhler 2013, Kiminou et al. 2022, and Mehon et al. 2024. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Arnold and Zuberbuhler 2006 provide the core low-frequency, short-call contrast with pyows, Price et al. 2009 analyzes hacks separately from pyows, and Kiminou et al. 2022 continues to treat hacks as a distinct playback type. Acoustic agreement is strong."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Hacks are repeatedly associated with crowned eagle contexts, but Arnold et al. 2008 and Arnold and Zuberbuhler 2013 show that hack or transitional series also occur with other disturbances and that listeners use contextual information. The semantic label is medium rather than narrowly referential."
+
+  - name: kek
+    in_primary_inventory: false
+    alternative_names:
+      - short pyow
+      - close-range alarm
+      - leopard-associated alarm
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - short
+      - abrupt
+      - broadband
+      - loud
+    acoustic_description: "A very short adult-male alarm call, reported with durations around 0.04-0.06 s and major acoustic energy spread from roughly 0.5 to 3 kHz. Keks lack the descending frequency transition typical of long pyows and resemble the short-pyow category described in other populations."
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - aggression
+    semantic_description: "Produced by males during close-range terrestrial threat encounters, especially when a leopard model has been visually detected and the male engages in predator defence or mobbing. Later cross-population work treats keks or short pyows as one of the basic male call types used in leopard contexts."
+    acoustic_references:
+      - id: mehon_stephan_2021
+        url: https://doi.org/10.1098/rsos.202135
+      - id: mehon_etal_2024
+        url: https://doi.org/10.1007/s10329-024-01155-3
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    semantic_references:
+      - id: mehon_stephan_2021
+        url: https://doi.org/10.1098/rsos.202135
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+      - id: mehon_etal_2024
+        url: https://doi.org/10.1007/s10329-024-01155-3
+    playback_references:
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Mehon and Stephan 2021 report keks as a newly documented male alarm, Kiminou et al. 2022 uses keks in wild playback tests, and Mehon et al. 2024 links keks with the short-pyow category across populations. Agreement is medium because the label is newer and partly reconciles population terminology."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Mehon and Stephan 2021 gives quantitative duration and frequency-band information, and Kiminou et al. 2022 treats keks as acoustically separable in playback stimuli. Agreement is medium because fewer studies quantify keks than pyows and hacks."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Mehon and Stephan 2021 and Mehon et al. 2024 link keks or short pyows to visually detected terrestrial threats and leopard contexts, while Kiminou et al. 2022 supports receiver sensitivity to this call type. The context is well supported but recent, so semantic agreement is medium."
+
+  - name: chirp
+    in_primary_inventory: false
+    alternative_names:
+      - female chirp
+      - female alarm
+      - general female alarm
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - abrupt
+      - repetitive
+    acoustic_description: "A short female alarm call identified in wild studies as a single chirp-type call. Published work provides less quantitative acoustic detail than for male pyows, hacks, and keks, but spectrographic illustrations and playback/production studies treat it as a distinct female alarm class."
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - group_coordination
+    semantic_description: "Produced by females as a general alarm to threatening events. During predator-defence experiments, female chirps recruit the group male, after which females may reduce their own alarm calling when male calls associated with direct defence are produced."
+    acoustic_references:
+      - id: mehon_stephan_2021
+        url: https://doi.org/10.1098/rsos.202135
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    semantic_references:
+      - id: mehon_stephan_2021
+        url: https://doi.org/10.1098/rsos.202135
+      - id: kiminou_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Mehon and Stephan 2021 identify a single female chirp alarm in wild putty-nosed monkeys, and Kiminou et al. 2022 summarizes females as possessing one general chirp alarm. Existence agreement is medium because the detailed literature is recent and narrower than for male calls."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The female chirp is spectrographically identified by Mehon and Stephan 2021 and used as a recognized class in later work, but published quantitative measurements are limited compared with pyows, hacks, and keks. Acoustic agreement is weak for fine structure."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Mehon and Stephan 2021 experimentally shows female alarms recruiting males for predator defence, and Kiminou et al. 2022 confirms the general female alarm role in wild social antipredator contexts. Semantic agreement is strong."
+
+  - name: pyow-hack sequence
+    in_primary_inventory: true
+    alternative_names:
+      - P-H sequence
+      - pyow-hack
+      - pyow-hack call sequence
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: true
+      note: "The group-movement function is best documented in the Gashaka population by Arnold and Zuberbuhler 2006 and 2008, while Mehon et al. 2024 shows population differences in male call ordering across additional populations."
+    acoustic_keywords:
+      - multi_component
+      - repetitive
+      - tonal
+      - frequency_modulated
+      - loud
+    acoustic_description: "An ordered multi-call sequence in which a small number of pyows precedes a small number of hacks, commonly described as 1-4 pyows followed by 1-4 hacks. The sequence combines the acoustic units of pyows and hacks into a stereotyped order rather than forming a new single-note call."
+    semantic_keywords:
+      - group_coordination
+      - spacing
+      - alarm
+      - predator
+      - combinatorial
+    semantic_description: "Produced in predatory and non-predatory contexts and reliably associated with forthcoming group progression in the best-studied population. Playback experiments show that receivers move after hearing pyow-hack sequences, especially when produced by their own group male."
+    acoustic_references:
+      - id: arnold_zuberbuhler_2006_nature
+        url: https://doi.org/10.1038/441303a
+      - id: arnold_zuberbuhler_2008
+        url: https://doi.org/10.1016/j.cub.2008.01.040
+      - id: schlenker_etal_2016
+        url: https://doi.org/10.1016/j.lingua.2015.10.002
+    semantic_references:
+      - id: arnold_zuberbuhler_2006_nature
+        url: https://doi.org/10.1038/441303a
+      - id: arnold_zuberbuhler_2008
+        url: https://doi.org/10.1016/j.cub.2008.01.040
+      - id: arnold_zuberbuhler_2013
+        url: https://doi.org/10.1371/journal.pone.0065660
+      - id: mehon_etal_2024
+        url: https://doi.org/10.1007/s10329-024-01155-3
+    playback_references:
+      - id: arnold_zuberbuhler_2008
+        url: https://doi.org/10.1016/j.cub.2008.01.040
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "The pyow-hack sequence is described by Arnold and Zuberbuhler 2006, experimentally tested by Arnold and Zuberbuhler 2008, discussed in Arnold and Zuberbuhler 2013, and revisited by Schlenker et al. 2016. Existence agreement is strong for the Gashaka system."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Arnold and Zuberbuhler 2006 and 2008 agree on the ordered pyow-then-hack structure, and Schlenker et al. 2016 explicitly models the sequence as a small number of pyows followed by hacks. Acoustic agreement is strong for sequence form."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Arnold and Zuberbuhler 2008 provides playback evidence for group progression, but Schlenker et al. 2016 debates the compositional interpretation and Mehon et al. 2024 shows population differences in call ordering. The group-movement association is strong locally but medium across the species."
+references:
+  arnold_zuberbuhler_2006:
+    citation: "Arnold, K., & Zuberbuhler, K. (2006). The alarm-calling system of adult male putty-nosed monkeys, Cercopithecus nictitans martini. Animal Behaviour, 72(3), 643-653."
+    url: https://doi.org/10.1016/j.anbehav.2005.11.017
+    doi: 10.1016/j.anbehav.2005.11.017
+  arnold_zuberbuhler_2006_nature:
+    citation: "Arnold, K., & Zuberbuhler, K. (2006). Language evolution: Semantic combinations in primate calls. Nature, 441(7091), 303."
+    url: https://doi.org/10.1038/441303a
+    doi: 10.1038/441303a
+  arnold_pohlner_zuberbuhler_2008:
+    citation: "Arnold, K., Pohlner, Y., & Zuberbuhler, K. (2008). A forest monkey's alarm call series to predator models. Behavioral Ecology and Sociobiology, 62(4), 549-559."
+    url: https://doi.org/10.1007/s00265-007-0479-y
+    doi: 10.1007/s00265-007-0479-y
+  arnold_zuberbuhler_2008:
+    citation: "Arnold, K., & Zuberbuhler, K. (2008). Meaningful call combinations in a non-human primate. Current Biology, 18(5), R202-R203."
+    url: https://doi.org/10.1016/j.cub.2008.01.040
+    doi: 10.1016/j.cub.2008.01.040
+  price_etal_2009:
+    citation: "Price, T., Arnold, K., Zuberbuhler, K., & Semple, S. (2009). Pyow but not hack calls of the male putty-nosed monkey (Cercopithecus nictitans) convey information about caller identity. Behaviour, 146(7), 871-888."
+    url: https://doi.org/10.1163/156853908X396610
+    doi: 10.1163/156853908X396610
+  arnold_zuberbuhler_2013:
+    citation: "Arnold, K., & Zuberbuhler, K. (2013). Female putty-nosed monkeys use experimentally altered contextual information to disambiguate the cause of male alarm calls. PLOS ONE, 8(6), e65660."
+    url: https://doi.org/10.1371/journal.pone.0065660
+    doi: 10.1371/journal.pone.0065660
+  schlenker_etal_2016:
+    citation: "Schlenker, P., Chemla, E., Arnold, K., & Zuberbuhler, K. (2016). Pyow-hack revisited: Two analyses of Putty-nosed monkey alarm calls. Lingua, 171, 1-23."
+    url: https://doi.org/10.1016/j.lingua.2015.10.002
+    doi: 10.1016/j.lingua.2015.10.002
+  mehon_stephan_2021:
+    citation: "Mehon, F. G., & Stephan, C. (2021). Female putty-nosed monkeys (Cercopithecus nictitans) vocally recruit males for predator defence. Royal Society Open Science, 8(3), 202135."
+    url: https://doi.org/10.1098/rsos.202135
+    doi: 10.1098/rsos.202135
+  kiminou_etal_2022:
+    citation: "Kiminou, D. N., Mehon, F. G., & Stephan, C. (2022). Vocal recognition of alarm calls in wild putty-nosed monkeys, Cercopithecus nictitans. Animal Behaviour, 190, 199-208."
+    url: https://doi.org/10.1016/j.anbehav.2022.06.016
+    doi: 10.1016/j.anbehav.2022.06.016
+  mehon_etal_2024:
+    citation: "Mehon, F. G., Zuberbuhler, K., & Stephan, C. (2024). Population differences in putty-nosed monkey (Cercopithecus nictitans) call order. Primates, 65(6), 515-524."
+    url: https://doi.org/10.1007/s10329-024-01155-3
+    doi: 10.1007/s10329-024-01155-3
