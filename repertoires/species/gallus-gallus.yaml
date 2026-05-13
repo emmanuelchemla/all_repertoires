@@ -1,0 +1,494 @@
+scientific_name: Gallus gallus
+common_name: Red junglefowl
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Galliformes
+  family: Phasianidae
+  genus: Gallus
+  species: gallus
+primary_inventory:
+  id: collias_1987
+  rationale: "Collias 1987 is used as the primary_inventory spine because it is the only species-level spectrographic inventory for red junglefowl, describing 24 vocal signals from an unconfined color-banded flock and comparing them with wild and domestic Gallus evidence. This file retains the named call types that are supported by Collias 1987 and by native-field or red-junglefowl-focused studies, especially Collias and Collias 1967 for crowing, courtship/food calling, clucking, alarm calls, and chick calls. It does not enumerate Collias's comfort, pain, mild-disturbance, and closely graded captivity-associated categories when wild contextual evidence is sparse."
+calls:
+  - name: crowing
+    in_primary_inventory: true
+    alternative_names:
+      - cock crow
+      - dawn crowing
+      - display call
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - harmonic
+      - multi_component
+      - long
+      - repetitive
+      - graded
+    acoustic_description: A loud stereotyped male call with three or four note-like energy peaks, clear harmonic structure, and some harsh energy. Red junglefowl crows are shorter and less drawn out than many domestic-fowl crows, with the strongest energy commonly concentrated near the third note.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - display
+      - identity
+      - mating
+    semantic_description: Produced mainly by adult males around roosts at dawn, with a smaller evening peak, and also during territorial and dominance interactions. Field observations treat it as a spacing, territorial, dominance, and mate-attraction signal.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+      - id: hao_etal_2022
+        url: https://doi.org/10.1093/cz/zoac053
+    semantic_references:
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: hao_etal_2025
+        url: https://doi.org/10.1186/s12862-025-02391-x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collias 1987 treats crowing as the species- and sex-specific adult male call, Collias and Collias 1967 document it extensively in native Indian field observations, and Hao et al. 2022 and Hao et al. 2025 provide modern red-junglefowl acoustic and activity data for male vocalization.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Collias 1987 and Collias and Collias 1967 agree on a loud multi-note harmonic crow with species-specific timing and structure, while Hao et al. 2022 provides modern spectrographic measurements of male red-junglefowl display calls. Agreement is strong despite individual and subspecies variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Collias and Collias 1967 directly link wild crowing to dawn roost activity, spacing, dominance, territorial rights, and mate attraction; Collias 1987 gives the same general interpretation, and Hao et al. 2025 confirms strong diel and seasonal structure in wild calling activity.
+
+  - name: courtship food call
+    in_primary_inventory: true
+    alternative_names:
+      - male food call
+      - tidbitting call
+      - courtship feeding call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - short
+      - repetitive
+      - low_frequency
+      - pulsed
+      - quiet
+    acoustic_description: A low-amplitude series of brief, rapidly repeated notes or pulses, often rendered as kuk- or tik-like elements. In the inventory it can deepen and accelerate during close female-directed display and may grade toward the nest-site attraction call.
+    semantic_keywords:
+      - food
+      - courtship
+      - recruitment
+      - attention
+      - mating
+    semantic_description: Produced by males around food items, food-like objects, or potential courtship opportunities in the presence of females. Females may approach the male, and the display can precede feeding by the female or mating.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+    semantic_references:
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+      - id: stokes_1971
+        url: https://doi.org/10.2307/4083958
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collias 1987 lists the food call and courtship call by males, Collias and Collias 1967 describe the same wild male attraction call in field observations, and Stokes 1971 treats parental and courtship feeding in red junglefowl as a focal behavior.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collias 1987 gives the spectrographic basis and Collias and Collias 1967 gives field verbal descriptions, but detailed independent acoustic measurement of the wild male food call is limited. The broad acoustic form is therefore moderately agreed.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Collias and Collias 1967, Stokes 1971, and Collias 1987 agree that male food/courtship calling attracts females in food-related or courtship contexts, with the field study documenting female approach to calling males.
+
+  - name: nest-site attraction call
+    in_primary_inventory: true
+    alternative_names:
+      - nest-site call
+      - male nest call
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - short
+      - repetitive
+      - low_frequency
+      - quiet
+      - pulsed
+    acoustic_description: A rapid train of brief low-pitched notes, structurally close to the male food call but associated in the inventory with nest-site display. The notes are short, low, and repeated in a dense sequence.
+    semantic_keywords:
+      - courtship
+      - recruitment
+      - mating
+      - attention
+    semantic_description: Given by adult males to attract hens to a potential nest site during courtship and pair interactions. It is treated as part of the male attraction-call set rather than as a general contact call.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    semantic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: stokes_1971
+        url: https://doi.org/10.2307/4083958
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Collias 1987 explicitly names a nest-site attraction call, and Stokes 1971 supports the broader red-junglefowl courtship-feeding system. Agreement is medium because the category is close to the male food/courtship call and is not separately emphasized in the native field study.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description rests mainly on Collias 1987; other red-junglefowl sources support related courtship behavior but do not provide independent nest-site-call measurements. The evidence is sparse outside the inventory.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Collias 1987 identifies the nest-site context, and Stokes 1971 supports male courtship attraction around food-related displays. The semantic category is plausible but partly graded with other male attraction calls.
+
+  - name: maternal food call
+    in_primary_inventory: true
+    alternative_names:
+      - hen food call
+      - food call to chicks
+      - feeding call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - repetitive
+      - low_frequency
+      - pulsed
+      - quiet
+    acoustic_description: A series of soft brief notes, usually single rather than paired, repeated at a relatively rapid and irregular rate. The notes emphasize lower frequencies and are less drawn out than clucking or purring.
+    semantic_keywords:
+      - food
+      - caregiving
+      - recruitment
+      - attention
+    semantic_description: Produced by broody females when directing chicks to food, often with food handling or pecking movements. Chicks respond by approaching, reducing ongoing calling, or changing movement and feeding behavior.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    semantic_references:
+      - id: sherry_1977
+        url: https://doi.org/10.1016/0003-3472(77)90109-9
+      - id: snapp_1969
+        url: https://doi.org/10.1016/0003-3472(69)90144-4
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    playback_references:
+      - id: snapp_1969
+        url: https://doi.org/10.1016/0003-3472(69)90144-4
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collias 1987 includes the hen food call, Sherry 1977 experimentally studies parental food calling in Burmese red junglefowl, and Snapp 1969 shows red-junglefowl chicks discriminate maternal feeding calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collias 1987 provides the main spectrographic description; Sherry 1977 and Snapp 1969 independently support the call type but focus more on behavior and response than detailed acoustic measurement. Agreement is moderate.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Sherry 1977, Snapp 1969, and Collias 1987 all support a maternal feeding and chick-recruitment context. The playback evidence in Snapp 1969 strengthens the semantic interpretation.
+
+  - name: clucking
+    in_primary_inventory: true
+    alternative_names:
+      - broody hen clucks
+      - maternal clucking
+      - brood contact call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - repetitive
+      - low_frequency
+      - quiet
+      - multi_component
+    acoustic_description: A soft repeated series of brief low-frequency notes, often paired as cluck units. The paired-note structure distinguishes it from the more rapid single-note maternal food call.
+    semantic_keywords:
+      - caregiving
+      - contact
+      - group_coordination
+      - recruitment
+    semantic_description: Used by broody females while moving with chicks and maintaining brood cohesion. Field observations describe hens leading chicks with clucking sounds.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    semantic_references:
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collias 1987 lists clucking by broody hens, and Collias and Collias 1967 report clucking in wild hen-chick movements. The call is a standard maternal red-junglefowl category.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collias 1987 gives the detailed acoustic contrast with food calls; Collias and Collias 1967 supports the call in native-field context but not with independent spectrograms. Agreement is moderate.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Collias and Collias 1967 and Collias 1987 agree that clucking is used by broody hens to lead and coordinate chicks, giving strong contextual support.
+
+  - name: ground-predator cackling alarm
+    in_primary_inventory: true
+    alternative_names:
+      - cackling alarm
+      - ground predator alarm
+      - scolding alarm
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - broadband
+      - noisy
+      - abrupt
+      - repetitive
+      - multi_component
+    acoustic_description: A harsh cackling series with short abrupt notes spread over a wide frequency range, often including rhythmically repeated cut-like notes and louder harsh terminal elements. It has broader and higher-frequency energy than low threat calls.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - group_coordination
+    semantic_description: Produced when a predator or disturbing animal is on the ground or perched nearby and immediate escape is not the only response. Field observations describe it as alerting and scolding around discovered predators.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    semantic_references:
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collias 1987 names warning calls to ground or perched predators, and Collias and Collias 1967 report cackling alarm cries in wild red junglefowl, including around a perched serpent eagle and around human disturbance.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The broadband cackling structure is well described in Collias 1987, while native-field support in Collias and Collias 1967 is contextual rather than spectrographic. Acoustic agreement is moderate because independent measurements are limited.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Collias and Collias 1967 distinguish this scolding/alerting context from instant-action hawk screams, and Collias 1987 makes the same ground-or-perched predator distinction. The semantic context is strongly supported.
+
+  - name: aerial-predator alarm scream
+    in_primary_inventory: true
+    alternative_names:
+      - hawk call
+      - flying-predator alarm
+      - high-intensity alarm cry
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - broadband
+      - noisy
+      - long
+      - abrupt
+    acoustic_description: A very loud harsh scream with strong high-frequency energy and a more gradual onset than the explosive ground-predator notes. Some calls include both high-frequency alarm energy and lower-frequency components.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - group_coordination
+    semantic_description: Given during sudden high-risk predator events, especially aerial attacks or similar emergencies. Field observations describe it as a high-intensity call that can silence other vocalizing and calls for immediate action.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    semantic_references:
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collias 1987 describes the warning scream to flying predators, and Collias and Collias 1967 identify the wild high-intensity hawk-call category. The aerial/emergency alarm is a stable named call type.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collias 1987 gives the detailed sonographic form, while Collias and Collias 1967 supports the same call in native-field context but without parallel acoustic measures. Agreement is moderate.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Collias and Collias 1967 and Collias 1987 agree that this call is tied to urgent predator danger and differs contextually from cackling alarm around already discovered or less immediate threats.
+
+  - name: distress squawk
+    in_primary_inventory: true
+    alternative_names:
+      - capture distress cry
+      - fear squawk
+      - distress cry
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - loud
+      - broadband
+      - noisy
+      - abrupt
+      - long
+      - repetitive
+    acoustic_description: Very loud harsh squawks with broad frequency spread, abrupt onset, long notes, and broken or wavering harmonic streaks. The notes are louder and longer than ordinary pain or startle cries and can be repeated.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced by adults during capture or intense restraint. It is associated with immediate distress and can serve as alarm information to nearby conspecifics.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    semantic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: snapp_1969
+        url: https://doi.org/10.1016/0003-3472(69)90144-4
+    playback_references:
+      - id: snapp_1969
+        url: https://doi.org/10.1016/0003-3472(69)90144-4
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Collias 1987 names adult distress squawks from captured birds, and Snapp 1969 supports red-junglefowl chick discrimination of adult distress calls. The call is well recognized, but much of the detailed adult evidence is from handling contexts.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collias 1987 provides the main acoustic description. Snapp 1969 confirms the use of distress-call stimuli but does not independently quantify the adult acoustic structure, so agreement is moderate.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Collias 1987 ties the call to capture, and Snapp 1969 shows that red-junglefowl chicks respond differently to adult distress calls than to feeding calls. The semantic evidence is meaningful but not as broad as for food calls or predator alarms.
+
+  - name: threat call
+    in_primary_inventory: true
+    alternative_names:
+      - low-intensity threat call
+      - defensive threat
+      - aggressive call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - long
+      - graded
+    acoustic_description: A harsh low-frequency call with broad frequency energy but emphasis below the high-frequency alarm band. It can be lower in intensity than predator alarm calls and may grade into louder roar-like threat sounds.
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+      - display
+    semantic_description: Produced during close aggressive or defensive interactions, including contests, dominance encounters, and defensive postures. It can accompany physical orientation toward an opponent and may precede pecking or withdrawal.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+    semantic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Collias 1987 names threat calls by both sexes and relates them to low-frequency harsh structure; Collias and Collias 1967 document natural dominance and territorial interactions where such aggressive signaling occurs. Agreement is medium because threat calls are graded and partly overlap with roar-like defensive calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collias 1987 gives the primary acoustic description and explicitly notes grading among threat forms. Other wild evidence is contextual rather than spectrographic, so acoustic agreement is moderate.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Collias 1987 supports aggressive and defensive contexts, and Collias and Collias 1967 supports the broader field context of male dominance and territorial encounters. The semantic range is plausible but graded.
+
+  - name: chick distress call
+    in_primary_inventory: true
+    alternative_names:
+      - chick distress cry
+      - chick fear trill
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - repetitive
+      - loud
+      - graded
+    acoustic_description: A high-pitched juvenile call made from repeated descending frequency cycles or trilled elements. Fear trills include irregular and very high-frequency components, while separation distress cries are loud and strident.
+    semantic_keywords:
+      - distress
+      - contact
+      - attention
+      - caregiving
+    semantic_description: Produced by chicks during separation, capture, threat, or insecurity. Field observations report similar loud chick distress cries in wild red junglefowl, especially when chicks are separated from the parent.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+    semantic_references:
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: snapp_1969
+        url: https://doi.org/10.1016/0003-3472(69)90144-4
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Collias 1987 describes chick distress cries and fear trills, Collias and Collias 1967 report chick distress cries in wild red junglefowl, and Snapp 1969 studies red-junglefowl chick responses to adult call categories. The juvenile distress category is well supported.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collias 1987 gives the detailed sonographic description and Collias and Collias 1967 supports similarity in wild chicks, but independent quantitative acoustic work on wild chick distress calls is limited. Agreement is moderate.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Collias and Collias 1967 and Collias 1987 agree on separation, capture, and insecurity contexts for chick distress calling. The category is behaviorally clear in both inventory and field accounts.
+
+  - name: chick pleasure call
+    in_primary_inventory: true
+    alternative_names:
+      - chick pleasure trill
+      - brood contact notes
+      - chick contact notes
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - repetitive
+      - quiet
+      - short
+    acoustic_description: A softer juvenile call with repeated notes or cycles that tend to rise in average frequency, including chevron-like brood-contact notes with both rising and falling components. It is lower in intensity and more regular than chick fear trills.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - caregiving
+    semantic_description: Produced by chicks during feeding, brooding, or secure brood contact. It is associated with close interaction with the mother rather than separation or threat.
+    acoustic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+    semantic_references:
+      - id: collias_1987
+        url: https://doi.org/10.2307/1368641
+      - id: collias_collias_1967
+        url: https://doi.org/10.2307/1366199
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Collias 1987 separates chick pleasure trills and brood-contact notes in the inventory, while Collias and Collias 1967 supports similar soft chick calls in wild red junglefowl. The combined call entry is medium because the inventory distinguishes several juvenile secure-contact variants.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Collias 1987 provides the spectrographic basis for rising-cycle pleasure trills and chevron brood-contact notes, and Collias and Collias 1967 supports similar wild chick calls. Independent acoustic detail remains limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Collias 1987 ties these calls to feeding, brooding, and secure contact, while Collias and Collias 1967 supports the broader field context of hen-chick association. Agreement is moderate because the entry groups closely related juvenile contact variants.
+
+references:
+  collias_1987:
+    citation: "Collias NE. 1987. The vocal repertoire of the red junglefowl: a spectrographic classification and the code of communication. The Condor 89(3): 510-524."
+    url: https://doi.org/10.2307/1368641
+    doi: 10.2307/1368641
+  collias_collias_1967:
+    citation: "Collias NE, Collias EC. 1967. A field study of the red jungle fowl in north-central India. The Condor 69(4): 360-386."
+    url: https://doi.org/10.2307/1366199
+    doi: 10.2307/1366199
+  hao_etal_2022:
+    citation: "Hao P, Zhao K, Huang X, Rao X, Liang W, Zhang Y. 2022. The vocalization of the red junglefowl is a signal of body size and individual health. Current Zoology 69(4): 393-400."
+    url: https://doi.org/10.1093/cz/zoac053
+    doi: 10.1093/cz/zoac053
+  hao_etal_2025:
+    citation: "Hao P, Rao X, Liang W, Zhang Y. 2025. Temporal patterns and environmental drivers of the red junglefowl vocalization. BMC Ecology and Evolution 25: 54."
+    url: https://doi.org/10.1186/s12862-025-02391-x
+    doi: 10.1186/s12862-025-02391-x
+  sherry_1977:
+    citation: "Sherry DF. 1977. Parental food-calling and the role of the young in the Burmese red junglefowl (Gallus gallus spadiceus). Animal Behaviour 25(3): 594-601."
+    url: https://doi.org/10.1016/0003-3472(77)90109-9
+    doi: 10.1016/0003-3472(77)90109-9
+  snapp_1969:
+    citation: "Snapp BD. 1969. Recognition of maternal calls by parentally naive Gallus gallus chicks. Animal Behaviour 17(3): 440-445."
+    url: https://doi.org/10.1016/0003-3472(69)90144-4
+    doi: 10.1016/0003-3472(69)90144-4
+  stokes_1971:
+    citation: "Stokes AW. 1971. Parental and courtship feeding in red jungle fowl. The Auk 88(1): 21-29."
+    url: https://doi.org/10.2307/4083958
+    doi: 10.2307/4083958

@@ -1,0 +1,554 @@
+scientific_name: Panthera leo
+common_name: Lion
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Felidae
+  genus: Panthera
+  species: leo
+primary_inventory:
+  id: rudnai_1973
+  rationale: Rudnai 1973 is used as the primary_inventory spine because it is a wild field monograph on Nairobi National Park lions and includes a dedicated communication section covering vocalization and marking. Schaller 1972 provides a second classic wild field account from the Serengeti, and later peer-reviewed studies add quantitative and playback evidence mainly for roaring. This file includes wild-supported named call types from the classic field inventories where acoustic and contextual descriptions can be supported; cough is treated as a growl-like variant, and purr-like or captivity-only labels are not included without clear wild evidence. The recently named intermediate roar is included as an outside-inventory call because Growcott et al. 2025 provides direct wild acoustic evidence for it.
+calls:
+  - name: roar
+    in_primary_inventory: true
+    alternative_names:
+      - full-throated roar
+      - main call
+      - roaring bout
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - loud
+      - long
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A loud low-frequency call produced in bouts. A typical bout contains introductory moans, several full-throated roar elements, and terminal grunts, with roar elements showing broad frequency contours and individually distinctive temporal structure.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - contact
+      - group_coordination
+      - identity
+      - mating
+      - threat
+    semantic_description: Used over long distances for territorial advertisement, spacing between groups, locating or recruiting companions, and mate-related signalling. Playback studies show that listeners use roars to assess caller identity, group size, sex or status, and the risk posed by unfamiliar intruders.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+      - id: stander_stander_1988
+        url: https://the-eis.com/elibrary/search/13405
+      - id: pfefferle_etal_2007
+        url: https://doi.org/10.1121/1.2722507
+      - id: wijers_etal_2021a
+        url: https://doi.org/10.1080/09524622.2020.1829050
+      - id: growcott_etal_2025
+        url: https://doi.org/10.1002/ece3.72474
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+      - id: mccomb_etal_1993
+        url: https://doi.org/10.1098/rspb.1993.0046
+      - id: mccomb_etal_1994
+        url: https://doi.org/10.1006/anbe.1994.1052
+      - id: grinnell_etal_1995
+        url: https://doi.org/10.1016/0003-3472(95)80157-X
+      - id: grinnell_mccomb_2001
+        url: https://doi.org/10.1006/anbe.2001.1735
+      - id: wijers_etal_2021b
+        url: https://doi.org/10.1016/j.anbehav.2021.01.027
+    playback_references:
+      - id: mccomb_etal_1993
+        url: https://doi.org/10.1098/rspb.1993.0046
+      - id: mccomb_etal_1994
+        url: https://doi.org/10.1006/anbe.1994.1052
+      - id: grinnell_etal_1995
+        url: https://doi.org/10.1016/0003-3472(95)80157-X
+      - id: grinnell_mccomb_2001
+        url: https://doi.org/10.1006/anbe.2001.1735
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 treat roaring as a core wild lion call, and Stander and Stander 1988, Pfefferle et al. 2007, Wijers et al. 2021a, and Growcott et al. 2025 analyze the same call class. Authors differ in how they split bout components, but the roar itself is uncontested.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Schaller 1972, Stander and Stander 1988, Pfefferle et al. 2007, Wijers et al. 2021a, and Growcott et al. 2025 agree that roaring is a loud, low-frequency, bout-structured call with measurable spectral and temporal features. Agreement is strong despite variation among callers and bout positions.
+    semantic_description_agreement: strong
+    semantic_description_explanation: McComb et al. 1993, McComb et al. 1994, Grinnell et al. 1995, Grinnell and McComb 2001, and Wijers et al. 2021b provide observational or playback evidence for territorial, spacing, identity, and coordination roles. These uses are also consistent with Rudnai 1973 and Schaller 1972.
+
+  - name: intermediate roar
+    in_primary_inventory: false
+    alternative_names:
+      - intermediary roar
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - loud
+      - short
+      - repetitive
+      - multi_component
+    acoustic_description: A roar-bout element that is shorter and flatter in pitch contour than the full-throated roar. It follows full-throated roar elements within the bout and can be separated from them using simple duration and frequency measures.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Occurs as part of the long-distance roaring bout used for territorial advertisement and intra-pride communication. Its independent contextual meaning has not yet been separated from the broader roaring-bout context.
+    acoustic_references:
+      - id: growcott_etal_2025
+        url: https://doi.org/10.1002/ece3.72474
+    semantic_references:
+      - id: growcott_etal_2025
+        url: https://doi.org/10.1002/ece3.72474
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Growcott et al. 2025 provides direct wild quantitative evidence and names the intermediate roar, but the category is new and has not yet been independently replicated in other lion populations or playback studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Growcott et al. 2025 gives a data-driven acoustic separation from full-throated roars, including duration and frequency criteria. Agreement is medium rather than strong because support currently comes from one study.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Growcott et al. 2025 places intermediate roars inside the roaring bout, but no study has isolated receiver responses or production contexts specific to this element. The semantic interpretation is therefore inherited from the bout context and remains weak.
+
+  - name: moan
+    in_primary_inventory: true
+    alternative_names:
+      - introductory moan
+      - soft moan
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - frequency_modulated
+      - long
+      - quiet
+      - graded
+    acoustic_description: A comparatively soft, low-pitched, drawn-out call that can begin a roaring bout. It is less intense than the full-throated roar and grades into the louder bout elements.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - territorial
+      - spacing
+      - display
+    semantic_description: Produced in the opening phase of long-distance roaring bouts and in close social situations described in classic field accounts. In bout use, it contributes to the same territorial, spacing, and contact context as roaring.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+      - id: grinnell_mccomb_2001
+        url: https://doi.org/10.1006/anbe.2001.1735
+      - id: growcott_etal_2025
+        url: https://doi.org/10.1002/ece3.72474
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+      - id: grinnell_mccomb_2001
+        url: https://doi.org/10.1006/anbe.2001.1735
+      - id: growcott_etal_2025
+        url: https://doi.org/10.1002/ece3.72474
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 name moans, and Grinnell and McComb 2001 and Growcott et al. 2025 describe moans as bout components. Agreement is medium because moans are often treated as part of a roaring sequence rather than as a separately tested call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Classic field descriptions and later roar-bout work agree on a soft, low introductory element. The acoustic boundary from roar and intermediate roar is only moderately resolved.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rudnai 1973, Schaller 1972, Grinnell and McComb 2001, and Growcott et al. 2025 agree that moans occur in roaring bouts or close social settings. Dedicated playback evidence for moans alone is lacking, so semantic agreement is medium.
+
+  - name: grunt
+    in_primary_inventory: true
+    alternative_names:
+      - terminal grunt
+      - close-range grunt
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - pulsed
+      - short
+      - abrupt
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A short, low, pulse-like call that may occur singly, in series, or as the terminal portion of a roaring bout. It is briefer and less resonant than the full-throated roar.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - territorial
+    semantic_description: Used in close-range social contact and as the ending phase of roaring bouts. In bout sequences it participates in long-distance territorial and contact signalling; in close range it accompanies social approach or group movement.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+      - id: grinnell_mccomb_2001
+        url: https://doi.org/10.1006/anbe.2001.1735
+      - id: growcott_etal_2025
+        url: https://doi.org/10.1002/ece3.72474
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+      - id: grinnell_mccomb_2001
+        url: https://doi.org/10.1006/anbe.2001.1735
+      - id: growcott_etal_2025
+        url: https://doi.org/10.1002/ece3.72474
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 list grunts, and Grinnell and McComb 2001 and Growcott et al. 2025 recognize terminal grunts in roaring bouts. Agreement is medium because close-range grunts and terminal bout grunts may not be identical subtypes.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on short low grunting elements, especially at the end of roar bouts. Quantitative treatment is limited outside modern bout classification, so acoustic agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rudnai 1973 and Schaller 1972 support close social uses, while Grinnell and McComb 2001 and Growcott et al. 2025 support bout use. No playback work isolates grunts, so the contextual interpretation is moderately supported.
+
+  - name: growl
+    in_primary_inventory: true
+    alternative_names:
+      - cough
+      - growl-cough
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - long
+      - loud
+      - graded
+    acoustic_description: A low, rough, noisy call that may be sustained or broken into shorter growl-cough variants. It has a harsher broadband quality than moans or mews and can vary in intensity.
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+      - food
+    semantic_description: Produced during close-range agonistic encounters, feeding disputes, defensive approach, and situations where another animal is being warned away. It functions as a threat or spacing signal.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 both include growl-like calls in wild lions, but later targeted acoustic work has focused on roaring rather than growls. The call type is accepted in classic inventories, with limited modern replication.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The broad low noisy structure is consistent in the two wild field inventories, but quantitative acoustic measurements for wild lion growls are sparse. Agreement is weak for fine structure.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rudnai 1973 and Schaller 1972 consistently place growls in threat, feeding, and close conflict contexts. Playback evidence is absent, keeping semantic agreement at medium.
+
+  - name: snarl
+    in_primary_inventory: true
+    alternative_names:
+      - snarling
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+      - graded
+    acoustic_description: A harsh broadband call with abrupt noisy energy, often shorter and sharper than a sustained growl. It may grade acoustically with growls during intense close-range interactions.
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+    semantic_description: Given in close-range threat, defensive, or aggressive contexts, including responses to unfamiliar or threatening conspecifics. It accompanies escalation or attempted spacing of another animal.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+      - id: mccomb_etal_1993
+        url: https://doi.org/10.1098/rspb.1993.0046
+    playback_references:
+      - id: mccomb_etal_1993
+        url: https://doi.org/10.1098/rspb.1993.0046
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 list snarling in wild lions, and McComb et al. 1993 records snarling as a response during roar playback experiments. Agreement is medium because snarl boundaries from growls are graded.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The harsh broadband character is supported qualitatively by classic field inventories, but no dedicated wild acoustic analysis of snarls was found. Fine acoustic agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rudnai 1973, Schaller 1972, and McComb et al. 1993 agree on threat or defensive contexts. The presence of playback-elicited snarling supports the context, though the call itself was not the playback stimulus.
+
+  - name: hiss-spit
+    in_primary_inventory: true
+    alternative_names:
+      - hiss
+      - spit
+      - hissing
+      - spitting
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - graded
+    acoustic_description: A noisy broadband close-range call complex. Hisses are more sustained and aperiodic, while spits are shorter and more explosive; both lack the low resonant structure of growls and roars.
+    semantic_keywords:
+      - threat
+      - aggression
+      - distress
+      - attention
+    semantic_description: Produced in defensive or high-arousal close-range contexts, including by young animals and adults when threatened, cornered, or trying to deter approach. It draws attention to an immediate close-range conflict or disturbance.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 both include hiss or spit terms for wild lions. They are combined here because field descriptions treat them as closely related defensive noisy calls, and later lion-specific acoustic work has not separated them.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The noisy broadband distinction is consistent with classic inventories, but acoustic measurements are lacking and hiss and spit may deserve separation with better data. Agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rudnai 1973 and Schaller 1972 place hiss-spit sounds in defensive close-range contexts, including young animals. Semantic agreement is medium because the context is consistent but not experimentally tested.
+
+  - name: mew
+    in_primary_inventory: true
+    alternative_names:
+      - meow
+      - miaow
+      - loud mew
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - short
+      - quiet
+      - graded
+    acoustic_description: A relatively high-pitched tonal call with a clear harmonic trace and frequency modulation. It is shorter and quieter than roaring and less noisy than growls, hisses, or spits.
+    semantic_keywords:
+      - contact
+      - distress
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Used in close-range contact and care contexts, especially between cubs and mothers, and during attention-seeking or separated-animal situations. Adults may also use mew-like calls during close social contact.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 describe mew-like calls in wild lions, especially in mother-cub communication. Later lion-specific acoustic studies largely ignore this close-range call type, so agreement is medium.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Classic sources support a high tonal mew, but there is little quantitative wild lion work on mew acoustics. The description is therefore weakly supported at fine scale.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rudnai 1973 and Schaller 1972 agree on close contact, care, and young-animal contexts. Playback evidence is lacking, so semantic agreement is medium.
+
+  - name: puff
+    in_primary_inventory: true
+    alternative_names:
+      - puffing
+      - prusten-like puff
+      - friendly puff
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - quiet
+      - pulsed
+      - repetitive
+    acoustic_description: A soft, short, noisy exhaled sound, often given in repeated puffs. It is less resonant than grunts and lacks the harsh intensity of growls or snarls.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - caregiving
+      - attention
+    semantic_description: Used in close-range affiliative or care-related interactions, including greetings or peaceful contact. It signals low-intensity social engagement rather than long-distance advertisement.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 support puffing as a wild close-range call. Agreement is medium because later lion-focused research has not examined puffing in detail and related felid literature sometimes uses different terms.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The soft noisy exhaled structure is supported qualitatively by classic field inventories, but quantitative acoustic descriptions for wild lions are missing. Acoustic agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rudnai 1973 and Schaller 1972 consistently associate puffing with close affiliative contact. No playback or receiver-response study isolates puffing, so semantic agreement is medium.
+
+  - name: woof
+    in_primary_inventory: true
+    alternative_names:
+      - woofing
+      - bark-like woof
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+    acoustic_description: A short abrupt bark-like call with broadband energy and a low, forceful onset. It is briefer than a growl and not organized into the repeated low-frequency arc of a roaring bout.
+    semantic_keywords:
+      - alarm
+      - attention
+      - threat
+      - spacing
+    semantic_description: Given in alert or disturbed contexts when a lion reacts to a nearby threat or unexpected stimulus. It can function as a short-range warning or attention signal.
+    acoustic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    semantic_references:
+      - id: rudnai_1973
+        url: https://doi.org/10.1007/978-94-011-7140-3
+      - id: schaller_1972
+        url: https://portals.iucn.org/library/node/16178
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rudnai 1973 and Schaller 1972 both support woof-like alarm calls in wild lions. Agreement is medium because later acoustic studies do not target woofs and the label overlaps with bark-like descriptions.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The short abrupt broadband form is supported by classic field accounts, but quantitative acoustic data are lacking. Fine acoustic agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rudnai 1973 and Schaller 1972 agree on alarm or disturbance contexts. Experimental evidence is absent, so semantic agreement is medium.
+references:
+  rudnai_1973:
+    citation: "Rudnai, J. A. (1973). The Social Life of the Lion: A Study of the Behaviour of Wild Lions (Panthera leo massaica [Newmann]) in the Nairobi National Park, Kenya. Medical and Technical Publishing."
+    url: https://link.springer.com/book/10.1007/978-94-011-7140-3
+    doi: 10.1007/978-94-011-7140-3
+  schaller_1972:
+    citation: "Schaller, G. B. (1972). The Serengeti Lion: A Study of Predator-Prey Relations. University of Chicago Press."
+    url: https://portals.iucn.org/library/node/16178
+  stander_stander_1988:
+    citation: Stander, P. E., and Stander, J. (1988). Characteristics of lion roars in Etosha National Park. Madoqua, 15(4), 315-318.
+    url: https://the-eis.com/elibrary/search/13405
+  mccomb_etal_1993:
+    citation: "McComb, K., Pusey, A., Packer, C., and Grinnell, J. (1993). Female lions can identify potentially infanticidal males from their roars. Proceedings of the Royal Society B: Biological Sciences, 252(1333), 59-64."
+    url: https://doi.org/10.1098/rspb.1993.0046
+    doi: 10.1098/rspb.1993.0046
+  mccomb_etal_1994:
+    citation: McComb, K., Packer, C., and Pusey, A. (1994). Roaring and numerical assessment in contests between groups of female lions, Panthera leo. Animal Behaviour, 47(2), 379-387.
+    url: https://doi.org/10.1006/anbe.1994.1052
+    doi: 10.1006/anbe.1994.1052
+  grinnell_etal_1995:
+    citation: Grinnell, J., Packer, C., and Pusey, A. E. (1995). Cooperation in male lions; kinship, reciprocity or mutualism? Animal Behaviour, 49(1), 95-105.
+    url: https://doi.org/10.1016/0003-3472(95)80157-X
+    doi: 10.1016/0003-3472(95)80157-X
+  grinnell_mccomb_2001:
+    citation: Grinnell, J., and McComb, K. (2001). Roaring and social communication in African lions; the limitations imposed by listeners. Animal Behaviour, 62(1), 93-98.
+    url: https://doi.org/10.1006/anbe.2001.1735
+    doi: 10.1006/anbe.2001.1735
+  pfefferle_etal_2007:
+    citation: Pfefferle, D., West, P. M., Grinnell, J., Packer, C., and Fischer, J. (2007). Do acoustic features of lion, Panthera leo, roars reflect sex and male condition? Journal of the Acoustical Society of America, 121(6), 3947-3953.
+    url: https://doi.org/10.1121/1.2722507
+    doi: 10.1121/1.2722507
+  wijers_etal_2021a:
+    citation: Wijers, M., Trethowan, P., du Preez, B., Chamaille-Jammes, S., Loveridge, A. J., Macdonald, D. W., and Markham, A. (2021). Vocal discrimination of African lions and its potential for collar-free tracking. Bioacoustics, 30(5), 575-593.
+    url: https://doi.org/10.1080/09524622.2020.1829050
+    doi: 10.1080/09524622.2020.1829050
+  wijers_etal_2021b:
+    citation: Wijers, M., Loveridge, A. J., Macdonald, D. W., Trethowan, P., du Preez, B., Chamaille-Jammes, S., and Markham, A. (2021). The influence of spatial features and atmospheric conditions on African lion vocal behaviour. Animal Behaviour, 174, 63-76.
+    url: https://doi.org/10.1016/j.anbehav.2021.01.027
+    doi: 10.1016/j.anbehav.2021.01.027
+  growcott_etal_2025:
+    citation: Growcott, J., Lobora, A., Markham, A., Searle, C. E., Wahlstrom, J., Wijers, M., and Simmons, B. I. (2025). Roar Data; Redefining a Lion's Roar Using Machine Learning. Ecology and Evolution, 15(11), e72474.
+    url: https://doi.org/10.1002/ece3.72474
+    doi: 10.1002/ece3.72474

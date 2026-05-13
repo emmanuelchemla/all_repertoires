@@ -1,0 +1,414 @@
+scientific_name: Theropithecus gelada
+common_name: Gelada
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Theropithecus
+  species: gelada
+primary_inventory:
+  id: gustison_etal_2012
+  rationale: "Gustison et al. 2012 is used as the primary_inventory spine because it is the main wild comparative inventory that identifies gelada homologous and derived call types and ties the derived calls to field-observed social contexts. The file emphasizes call types with independent wild support in later acoustic, playback, sequence, contact-call, and mating studies, and does not import the older zoo-only adult repertoire as standalone entries when wild evidence is lacking."
+calls:
+  - name: exhaled grunt
+    in_primary_inventory: true
+    alternative_names:
+      - exhale grunt
+      - contact grunt
+      - affiliative grunt
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - frequency_modulated
+      - graded
+    acoustic_description: "A short exhaled call with measurable fundamental-frequency and formant structure. In male affiliative sequences it averaged about 0.3 s and formed the short-duration end of the graded grunt-to-moan continuum; female contact grunts also vary acoustically by individual and behavioral state."
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+      - spacing
+    semantic_description: "Produced in close-range affiliative, foraging, travelling, and socializing contexts. Female contact-grunt similarity is structured at the band level, consistent with a role in maintaining cohesion in the multilevel society, while males also use grunts in affiliative sequences directed to females."
+    acoustic_references:
+      - id: gustison_etal_2016
+        url: https://doi.org/10.1073/pnas.1522072113
+      - id: gustison_bergman_2017
+        url: https://doi.org/10.1093/jole/lzx015
+      - id: painter_etal_2024
+        url: https://doi.org/10.1016/j.anbehav.2023.10.002
+    semantic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: gustison_etal_2019
+        url: https://doi.org/10.1007/s00265-018-2612-5
+      - id: painter_etal_2024
+        url: https://doi.org/10.1016/j.anbehav.2023.10.002
+    playback_references:
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Exhaled grunts are part of the Gustison et al. 2012 wild inventory, are one of the six units in the Gustison et al. 2016 sequence analysis, are measured spectro-temporally by Gustison and Bergman 2017, and are the focus of Painter et al. 2024 female contact-call analyses."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Gustison et al. 2016, Gustison and Bergman 2017, and Painter et al. 2024 all quantify short grunt structure and variation, with agreement that grunts are short contact calls that vary within the broader graded repertoire."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Gustison et al. 2012 and 2019 link grunts and grunt-containing sequences to affiliative social interactions, and Painter et al. 2024 independently supports contact-grunt use across foraging, travelling, and socializing states."
+
+  - name: inhaled grunt
+    in_primary_inventory: true
+    alternative_names:
+      - inhale grunt
+      - ingressive grunt
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - frequency_modulated
+      - graded
+    acoustic_description: "A short ingressive grunt. In wild male sequences it is typically slightly shorter than the exhaled grunt, and it has mean fundamental and formant values similar to exhaled grunts while differing in production direction."
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: "Produced by both males and females in close-range affiliative sequences. In males it is commonly combined with exhaled grunts and more elaborate derived calls during approaches, grooming-related interactions, and post-conflict affiliative exchanges with females."
+    acoustic_references:
+      - id: gustison_etal_2016
+        url: https://doi.org/10.1073/pnas.1522072113
+      - id: gustison_bergman_2017
+        url: https://doi.org/10.1093/jole/lzx015
+    semantic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+      - id: zanoli_etal_2022
+        url: https://doi.org/10.1093/cz/zoab093
+    playback_references:
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Inhaled grunts are identified in Gustison et al. 2012, appear as a discrete unit in the 4,747-call Gustison et al. 2016 sequence data, and are spectro-temporally measured by Gustison and Bergman 2017."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Gustison et al. 2016 and Gustison and Bergman 2017 agree that inhaled grunts are short, low-frequency, grunt-like units and provide compatible duration and spectral measurements."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Gustison et al. 2012 and Gustison and Bergman 2016 place inhaled grunts in affiliative sequences, and Zanoli et al. 2022 documents their use around post-copulatory close-call sequences. The broad affiliative/contact context is stable, but the standalone function of the unit is less isolated experimentally."
+
+  - name: exhaled moan
+    in_primary_inventory: true
+    alternative_names:
+      - exhale moan
+      - moan
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - long
+      - frequency_modulated
+      - tonal
+      - graded
+    acoustic_description: "An elongated exhaled grunt-like call on the long-duration side of the grunt-to-moan continuum. In male sequence analyses, exhaled moans are substantially longer than exhaled grunts and can last several seconds."
+    semantic_keywords:
+      - affiliation
+      - courtship
+      - attention
+    semantic_description: "Produced mainly by adult males in close-range affiliative sequences directed toward females, including approaches, grooming-related interactions, and periods after female-female conflicts. Playback work shows that female receivers attend more to male sequences containing derived calls than to grunt-only sequences."
+    acoustic_references:
+      - id: gustison_etal_2016
+        url: https://doi.org/10.1073/pnas.1522072113
+      - id: gustison_bergman_2017
+        url: https://doi.org/10.1093/jole/lzx015
+    semantic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+      - id: gustison_etal_2019
+        url: https://doi.org/10.1007/s00265-018-2612-5
+    playback_references:
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Exhaled moans are a derived gelada call in Gustison et al. 2012, are one of the six labeled sequence units in Gustison et al. 2016, and are used in the derived-call playback design of Gustison and Bergman 2016."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Gustison et al. 2016 gives duration thresholds and distributions, and Gustison and Bergman 2017 measures spectral properties, but grunts and moans are explicitly graded rather than perfectly discrete."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Gustison et al. 2012, Gustison and Bergman 2016, and Gustison et al. 2019 consistently associate male derived calls, including moans, with affiliative male-female interactions and female receiver attention."
+
+  - name: inhaled moan
+    in_primary_inventory: true
+    alternative_names:
+      - inhale moan
+      - ingressive moan
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - long
+      - frequency_modulated
+      - tonal
+      - graded
+    acoustic_description: "A long ingressive moan that forms the extended-duration counterpart to the inhaled grunt. Sequence analyses distinguish it from inhaled grunts by duration, and acoustic comparisons show a relatively low mean fundamental frequency and first formant."
+    semantic_keywords:
+      - affiliation
+      - courtship
+      - attention
+    semantic_description: "Produced mainly by adult males as part of close-range affiliative vocal sequences with females. It contributes to the complexity of male sequences used during approaches, grooming-related interactions, and other bonding contexts."
+    acoustic_references:
+      - id: gustison_etal_2016
+        url: https://doi.org/10.1073/pnas.1522072113
+      - id: gustison_bergman_2017
+        url: https://doi.org/10.1093/jole/lzx015
+    semantic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+      - id: gustison_etal_2019
+        url: https://doi.org/10.1007/s00265-018-2612-5
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Inhaled moans are identified in Gustison et al. 2012 and then treated as a separate labeled unit in the Gustison et al. 2016 wild sequence corpus and the Gustison and Bergman 2017 acoustic comparison."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Gustison et al. 2016 and Gustison and Bergman 2017 agree on its long ingressive structure, but the grunt/moan boundary is duration-based and graded, keeping fine categorical agreement at medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "The wider male affiliative-sequence context is well supported by Gustison et al. 2012, Gustison and Bergman 2016, and Gustison et al. 2019, but inhaled moans have not been tested independently from other sequence elements."
+
+  - name: wobble
+    in_primary_inventory: true
+    alternative_names:
+      - vocalized lip-smack
+      - vocalized lip-smacking
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - frequency_modulated
+      - repetitive
+      - pulsed
+      - multi_component
+      - graded
+      - long
+    acoustic_description: "A cyclic, strongly modulated call produced with rhythmic oral movements. It contains repeated amplitude and spectral pulses, often around speech-like rates, and shows larger formant bandwidths than exhaled grunts."
+    semantic_keywords:
+      - affiliation
+      - courtship
+      - attention
+    semantic_description: "Produced mainly by adult males in close-range affiliative vocal sequences directed toward females. Playback studies using sequences with wobbles show that females orient to and remain near derived-call sequences more than grunt-only sequences."
+    acoustic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: bergman_2013
+        url: https://doi.org/10.1016/j.cub.2013.02.038
+      - id: gustison_bergman_2017
+        url: https://doi.org/10.1093/jole/lzx015
+    semantic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+      - id: gustison_etal_2019
+        url: https://doi.org/10.1007/s00265-018-2612-5
+    playback_references:
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Wobbles are derived gelada calls in Gustison et al. 2012, were analyzed as speech-like vocalized lip-smacking by Bergman 2013, and are included in Gustison et al. 2016 and Gustison and Bergman 2017 acoustic datasets."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Bergman 2013 and Gustison and Bergman 2017 independently emphasize rhythmic modulation, while Gustison et al. 2016 provides duration data for wobbles inside wild male sequences."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Gustison et al. 2012 and 2019 link wobbles to male-female affiliative bonding, and Gustison and Bergman 2016 provides playback evidence that sequences containing derived calls, including wobbles, are salient to females."
+
+  - name: vocalized yawn
+    in_primary_inventory: true
+    alternative_names:
+      - yawn
+      - yawn vocalisation
+      - yawn vocalization
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - long
+      - broadband
+      - frequency_modulated
+      - graded
+    acoustic_description: "A conspicuous vocalized yawn with relatively high fundamental and first-formant frequencies and broad modulation across formants. It is longer than grunts and has one of the widest spectral profiles among the measured male derived calls."
+    semantic_keywords:
+      - affiliation
+      - courtship
+      - group_coordination
+      - attention
+    semantic_description: "Produced mainly by adult males in affiliative vocal sequences with females, where it contributes to sequence elaboration. Later playback work in a zoo colony also supports the acoustic salience of yawn sounds, but the wild production context comes from the field sequence and derived-call studies."
+    acoustic_references:
+      - id: gustison_etal_2016
+        url: https://doi.org/10.1073/pnas.1522072113
+      - id: gustison_bergman_2017
+        url: https://doi.org/10.1093/jole/lzx015
+      - id: pedruzzi_etal_2024
+        url: https://doi.org/10.1038/s41598-023-49797-5
+    semantic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+      - id: gustison_etal_2019
+        url: https://doi.org/10.1007/s00265-018-2612-5
+    playback_references:
+      - id: gustison_bergman_2016
+        url: https://doi.org/10.1038/srep19680
+      - id: pedruzzi_etal_2024
+        url: https://doi.org/10.1038/s41598-023-49797-5
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Vocalized yawns are a derived gelada call in Gustison et al. 2012, one of the six wild male sequence units in Gustison et al. 2016, and a measured call type in Gustison and Bergman 2017. Pedruzzi et al. 2024 further validates audible yawn vocalizations experimentally in a zoo colony."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Gustison et al. 2016 and Gustison and Bergman 2017 agree that yawns are long and spectrally broad relative to grunts, and Pedruzzi et al. 2024 provides additional spectrographic and playback support for yawn sounds."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Wild studies consistently place vocalized yawns within male affiliative sequence production, and Gustison and Bergman 2016 shows female attention to derived-call sequences. The possible wider group-coordination role is suggested by later yawn-sound work but is less fully resolved in wild production data."
+
+  - name: pre-copulation call
+    in_primary_inventory: true
+    alternative_names:
+      - precopulation call
+      - pre-copulatory call
+    scope: &adult_female_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - tonal
+      - frequency_modulated
+      - graded
+    acoustic_description: "A female call produced in sequences before genital contact. Wild copulation recordings classify it from spectrograms and fundamental-frequency contours, with sequence length varying across mating events."
+    semantic_keywords:
+      - courtship
+      - mating
+      - attention
+    semantic_description: "Produced by females while approaching a leader male before copulation. Longer sequences are associated with longer copulations and a higher likelihood of the end-copulation call, consistent with soliciting and sustaining successful mating."
+    acoustic_references:
+      - id: zanoli_etal_2022
+        url: https://doi.org/10.1093/cz/zoab093
+    semantic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: zanoli_etal_2022
+        url: https://doi.org/10.1093/cz/zoab093
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Gustison et al. 2012 reports the pre-copulation call, and Zanoli et al. 2022 analyzes it in 187 wild copulations. It is well supported contextually, though less independently studied than the core affiliative sequence units."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Zanoli et al. 2022 provides spectrographic classification and f0-based measurements, but detailed published acoustic descriptions are limited and classification overlap with other female vocal types remains nontrivial."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Gustison et al. 2012 and Zanoli et al. 2022 agree that the call occurs before mating, and Zanoli et al. 2022 quantitatively links pre-copulation call sequence length with mating-event outcomes."
+
+  - name: copulation call
+    in_primary_inventory: true
+    alternative_names:
+      - copulatory call
+      - mating call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - repetitive
+      - frequency_modulated
+      - tonal
+      - graded
+    acoustic_description: "A call type produced in sequences during copulation and classified from spectrograms and fundamental-frequency contours. Male and female call sequences can overlap during the copulatory event."
+    semantic_keywords:
+      - mating
+      - courtship
+      - attention
+    semantic_description: "Produced during copulation, with males typically calling from the beginning to the end and females sometimes calling concurrently. The calls participate in multimodal sexual communication with gaze and other mating signals."
+    acoustic_references:
+      - id: zanoli_etal_2022
+        url: https://doi.org/10.1093/cz/zoab093
+    semantic_references:
+      - id: gustison_etal_2012
+        url: https://doi.org/10.1098/rstb.2011.0218
+      - id: zanoli_etal_2022
+        url: https://doi.org/10.1093/cz/zoab093
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Gustison et al. 2012 reports male gelada copulation calls in the wild repertoire, and Zanoli et al. 2022 quantifies male and female copulation-call production during wild mating events."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Zanoli et al. 2022 validates the class from spectrograms and f0-derived parameters, but copulation calls have higher classification overlap than end-copulation calls and lack the detailed acoustic treatment given to grunts, moans, wobbles, and yawns."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Gustison et al. 2012 and Zanoli et al. 2022 consistently place copulation calls during mating, and Zanoli et al. 2022 links them to coordinated inter-sexual signaling during copulatory events."
+
+  - name: end-copulation call
+    in_primary_inventory: false
+    alternative_names:
+      - end copulation call
+      - female end-copulation call
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - short
+    acoustic_description: "A single female call type identified at the final stage of copulation. In wild recordings it was acoustically distinct from other female mating vocalizations in f0-based random-forest classification and was cross-checked against video-visible mouth opening."
+    semantic_keywords:
+      - mating
+      - attention
+    semantic_description: "Produced by females at the end of copulation and not recorded outside copulatory contexts in the field sample. It is interpreted as a marker of copulation completion and is associated with the outcome of the mating sequence."
+    acoustic_references:
+      - id: zanoli_etal_2022
+        url: https://doi.org/10.1093/cz/zoab093
+    semantic_references:
+      - id: zanoli_etal_2022
+        url: https://doi.org/10.1093/cz/zoab093
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Zanoli et al. 2022 identifies this as a new female vocal type from wild copulation recordings and reports strong classification performance for the class, but it currently rests mainly on one dedicated study."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Zanoli et al. 2022 provides f0-based acoustic validation and low classification error for end-copulation calls, though independent acoustic replications are not yet available."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Zanoli et al. 2022 found the call only at the final stage of copulation and linked it to mating completion, but the interpretation would be stronger with additional populations or playback/receiver-response studies."
+references:
+  gustison_etal_2012:
+    citation: "Gustison, M. L., le Roux, A., & Bergman, T. J. (2012). Derived vocalizations of geladas (Theropithecus gelada) and the evolution of vocal complexity in primates. Philosophical Transactions of the Royal Society B: Biological Sciences, 367(1597), 1847-1859."
+    url: https://doi.org/10.1098/rstb.2011.0218
+    doi: 10.1098/rstb.2011.0218
+  bergman_2013:
+    citation: "Bergman, T. J. (2013). Speech-like vocalized lip-smacking in geladas. Current Biology, 23(7), R268-R269."
+    url: https://doi.org/10.1016/j.cub.2013.02.038
+    doi: 10.1016/j.cub.2013.02.038
+  gustison_bergman_2016:
+    citation: "Gustison, M. L., & Bergman, T. J. (2016). Vocal complexity influences female responses to gelada male calls. Scientific Reports, 6, 19680."
+    url: https://doi.org/10.1038/srep19680
+    doi: 10.1038/srep19680
+  gustison_etal_2016:
+    citation: "Gustison, M. L., Semple, S., Ferrer-i-Cancho, R., & Bergman, T. J. (2016). Gelada vocal sequences follow Menzerath's linguistic law. Proceedings of the National Academy of Sciences of the United States of America, 113(19), E2750-E2758."
+    url: https://doi.org/10.1073/pnas.1522072113
+    doi: 10.1073/pnas.1522072113
+  gustison_bergman_2017:
+    citation: "Gustison, M. L., & Bergman, T. J. (2017). Divergent acoustic properties of gelada and baboon vocalizations and their implications for the evolution of human speech. Journal of Language Evolution, 2(1), 20-36."
+    url: https://doi.org/10.1093/jole/lzx015
+    doi: 10.1093/jole/lzx015
+  gustison_etal_2019:
+    citation: "Gustison, M. L., Tinsley Johnson, E., Beehner, J. C., & Bergman, T. J. (2019). The social functions of complex vocal sequences in wild geladas. Behavioral Ecology and Sociobiology, 73, 14."
+    url: https://doi.org/10.1007/s00265-018-2612-5
+    doi: 10.1007/s00265-018-2612-5
+  zanoli_etal_2022:
+    citation: "Zanoli, A., Gamba, M., Lemasson, A., Norscia, I., & Palagi, E. (2022). Inter-sexual multimodal communication during mating in wild geladas: the leading role of females. Current Zoology, 68(5), 570-580."
+    url: https://doi.org/10.1093/cz/zoab093
+    doi: 10.1093/cz/zoab093
+  painter_etal_2024:
+    citation: "Painter, M. C., Gustison, M. L., Snyder-Mackler, N., Tinsley Johnson, E., le Roux, A., & Bergman, T. J. (2024). Acoustic variation and group level convergence of gelada, Theropithecus gelada, contact calls. Animal Behaviour, 207, 235-246."
+    url: https://doi.org/10.1016/j.anbehav.2023.10.002
+    doi: 10.1016/j.anbehav.2023.10.002
+  pedruzzi_etal_2024:
+    citation: "Pedruzzi, L., Francesconi, M., Palagi, E., & Lemasson, A. (2024). The sound of yawns makes geladas yawn. Scientific Reports, 14, 361."
+    url: https://doi.org/10.1038/s41598-023-49797-5
+    doi: 10.1038/s41598-023-49797-5

@@ -1,0 +1,591 @@
+scientific_name: Elephas maximus
+common_name: Asian elephant
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Proboscidea
+  family: Elephantidae
+  genus: Elephas
+  species: maximus
+primary_inventory:
+  id: desilva_2010
+  rationale: de Silva 2010 is used as the spine because it provides a quantitative wild inventory for Sri Lankan Asian elephants, classifying 3921 recorded vocalizations into eight single-call types, five combination-call types, and one rare musth-associated male call. Earlier wild observations by McKay 1973 and the independent southern India acoustic study by Nair et al. 2009 are used to strengthen broad categories such as rumble, roar, trumpet, and squeak/chirp, while de Silva-only splits are retained with cautious agreement labels. The non-vocal trunk-bounce signal described by de Silva is not included as a call entry.
+calls:
+  - name: growl
+    in_primary_inventory: true
+    alternative_names:
+      - low-frequency growl
+      - soft growl
+    scope: &juvenile_adult_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - harmonic
+      - long
+      - quiet
+      - repetitive
+    acoustic_description: A long, low-frequency harmonic vocalization with little energy above 500 Hz, lower fundamental frequency than rumbles, and relatively level frequency contours. It is usually soft to human listeners, often delivered in bouts or choruses, and may be barely audible beyond close range.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - spacing
+      - attention
+      - identity
+    semantic_description: Produced across many social situations, especially while individuals are oriented toward an object or companion, moving, grazing alone, or interacting at close range. It can accompany following, approach, local coordination, and spacing among social groups.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: de Silva 2010 separates growls from rumbles acoustically in a wild Sri Lankan inventory, and McKay 1973 used growl terminology in an earlier Sri Lankan account. Agreement is medium because Nair et al. 2009 grouped comparable low-frequency calls under rumbles rather than recognizing growl as a separate four-category class.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: de Silva 2010 provides quantitative frequency and duration features and shows growls are lower than rumbles, while McKay 1973 provides qualitative support. Independent quantitative confirmation outside the Sri Lankan inventory is limited, so acoustic agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: de Silva 2010 associates growls with social orientation, movement, close exchanges, and spacing, while McKay 1973 proposed related low-frequency calls for contact over short distances. The contextual pattern is consistent but not experimentally tested.
+
+  - name: rumble
+    in_primary_inventory: true
+    alternative_names:
+      - low-frequency call
+      - infrasonic rumble
+      - contact rumble
+      - let us go rumble
+      - motorcycle
+    scope: *juvenile_adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - long
+      - loud
+      - graded
+    acoustic_description: A low-frequency harmonic call with fundamental frequencies in the infrasonic or near-infrasonic range, longer duration than high-frequency calls, and variable frequency modulation. Compared with growls in the Sri Lankan inventory, rumbles have higher low-frequency fundamentals, more upper harmonic energy, stronger modulation, and greater carrying distance.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - spacing
+      - attention
+      - alarm
+    semantic_description: Used for contact within and among herds, assembly before movement, close social interactions, group coordination in disorder or disturbance, between-herd encounters, and responses to other species or vehicles. Receivers may approach, gather, touch, orient, or coordinate movement after rumbles.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: nair_etal_2009
+        url: https://doi.org/10.1121/1.3224717
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+      - id: payne_etal_1986
+        url: https://doi.org/10.1007/BF00300007
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: nair_etal_2009
+        url: https://doi.org/10.1121/1.3224717
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Rumble is recognized in the de Silva 2010 wild Sri Lankan inventory and in Nair et al. 2009 as one of four wild southern India call classes, with McKay 1973 describing related low-frequency sounds and Payne et al. 1986 documenting infrasonic calls in Asian elephants. The broad call type is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: de Silva 2010 and Nair et al. 2009 independently quantify low-frequency, harmonic, modulated rumbles in wild Asian elephants, and Payne et al. 1986 supports the infrasonic frequency range. Agreement is strong for the broad acoustic form.
+    semantic_description_agreement: strong
+    semantic_description_explanation: de Silva 2010 and Nair et al. 2009 both link rumbles to contact, assembly, social interaction, disturbance, and between-group contexts. McKay 1973 proposed similar long-distance contact roles, so agreement is strong for the main contextual range even without playback tests.
+
+  - name: squeak
+    in_primary_inventory: true
+    alternative_names:
+      - chirp
+      - multiple short squeaks
+    scope: &all_life_both_scope
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - repetitive
+      - frequency_modulated
+    acoustic_description: A brief high-frequency tonal call, commonly occurring in rapid bouts of three or more elements separated by less than a second. Typical elements have strongly modulated contours and correspond to the chirp category in other Asian elephant studies.
+    semantic_keywords:
+      - alarm
+      - distress
+      - attention
+      - group_coordination
+      - threat
+    semantic_description: Produced mainly during disturbance, confusion, fear, or excitement, including encounters with humans, vehicles, other species, or a musth male. It can accompany bunching, confused running, orientation toward a possible source of threat, and separation from companions.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: nair_etal_2009
+        url: https://doi.org/10.1121/1.3224717
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: nair_etal_2009
+        url: https://doi.org/10.1121/1.3224717
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: de Silva 2010 names this call squeak and explicitly equates it with the chirp terminology of McKay 1973 and Nair et al. 2009. Nair et al. 2009 independently classifies chirps as one of four wild southern India call categories, so the broad call type is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: de Silva 2010 quantifies short high-frequency squeaks with typical modulated contours, and Nair et al. 2009 separates chirps from roars and trumpets by spectral and temporal features. Agreement is strong, allowing for terminology differences.
+    semantic_description_agreement: medium
+    semantic_description_explanation: de Silva 2010 and Nair et al. 2009 agree that squeaks or chirps occur in disturbance, confusion, alarm, and separation-like contexts. Agreement is medium because no call-specific playback experiment establishes receiver meaning.
+
+  - name: trumpet
+    in_primary_inventory: true
+    alternative_names:
+      - trumpet call
+      - high-amplitude squeak
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - loud
+      - abrupt
+      - frequency_modulated
+      - graded
+    acoustic_description: A loud high-frequency trunk call with harmonic structure, variable modulation, and occasional double-voicing. It is usually a short, conspicuous call and is acoustically distinct from squeaks and roars despite overlapping high-frequency energy.
+    semantic_keywords:
+      - alarm
+      - threat
+      - aggression
+      - display
+      - play
+      - distress
+    semantic_description: Produced during disturbance, threat display, charging, object throwing, defensive agitation, play, and encounters with humans, vehicles, or other species. It can occur alone or with squeaks during high-arousal episodes.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: nair_etal_2009
+        url: https://doi.org/10.1121/1.3224717
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: nair_etal_2009
+        url: https://doi.org/10.1121/1.3224717
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Trumpet is included in de Silva 2010, Nair et al. 2009, and McKay 1973, making it one of the best-supported wild Asian elephant call categories.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: de Silva 2010 and Nair et al. 2009 both distinguish trumpets from other high-frequency calls using acoustic structure, while McKay 1973 provides earlier descriptive support. Agreement is strong for a loud high-frequency trunk call.
+    semantic_description_agreement: strong
+    semantic_description_explanation: de Silva 2010 reports trumpets in disturbance and threat contexts, and Nair et al. 2009 links trumpets to play, disturbance, and aggression. These independent wild studies strongly agree on high-arousal use.
+
+  - name: roar
+    in_primary_inventory: true
+    alternative_names:
+      - short roar
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - loud
+      - abrupt
+      - graded
+    acoustic_description: A loud, noisy, aperiodic or weakly harmonic call that overlaps high-frequency ranges with trumpets and squeaks but lacks their regular temporal and spectral patterning. In de Silva 2010 it is shorter than longroar and can occur singly or in bouts.
+    semantic_keywords:
+      - distress
+      - alarm
+      - aggression
+      - play
+      - group_coordination
+      - threat
+    semantic_description: Produced during movement, disturbance, distress, play, arrival at places such as waterholes, arrival of other groups, and aggressive interactions. It is associated with high-arousal social or environmental events rather than a single narrow context.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: nair_etal_2009
+        url: https://doi.org/10.1121/1.3224717
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: nair_etal_2009
+        url: https://doi.org/10.1121/1.3224717
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Roar is recognized by de Silva 2010, Nair et al. 2009, and McKay 1973, though de Silva further splits longroars by duration. Agreement is strong for the broad roar category.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: de Silva 2010 and Nair et al. 2009 independently identify roars as noisy high-frequency calls distinct from squeaks/chirps and trumpets. Agreement is strong for the broad structure.
+    semantic_description_agreement: medium
+    semantic_description_explanation: de Silva 2010 and Nair et al. 2009 agree on high-arousal uses such as movement, disturbance, play, and aggression, but the context range is broad and not playback-tested, so agreement is medium.
+
+  - name: longroar
+    in_primary_inventory: true
+    alternative_names:
+      - long roar
+      - extended roar
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - long
+      - loud
+      - repetitive
+      - graded
+    acoustic_description: A longer noisy roar-like vocalization with aperiodic structure, resonant regions, and occasional partial harmonics. It can occur in long bouts by one caller or in choruses, and is acoustically separated from shorter roars mainly by duration.
+    semantic_keywords:
+      - contact
+      - distress
+      - group_coordination
+      - attention
+      - alarm
+    semantic_description: Produced mainly during separation, searching, movement, and distress, including cases in which a caller persists until joined by another individual. It can carry over long distances and may help re-establish contact or coordinate across obscured space.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: de Silva 2010 separates longroars as a duration-based wild call type, while McKay 1973 recognized roars more broadly. Nair et al. 2009 uses a broader roar category, so the longroar split has medium agreement.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: de Silva 2010 provides quantitative support for longer aperiodic roar-like calls, but independent studies usually merge them into roar. Acoustic agreement is medium because the boundary is duration-based and graded.
+    semantic_description_agreement: medium
+    semantic_description_explanation: de Silva 2010 consistently links longroars to separation, movement, searching, and distress, with McKay 1973 supporting similar contact-distance ideas for loud calls. Agreement is medium because the split from roar is not independently tested.
+
+  - name: bark
+    in_primary_inventory: true
+    alternative_names:
+      - short bark
+      - snort
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+    acoustic_description: A short, non-repeated aperiodic call, shorter than roars and longroars. It is a brief broadband vocalization rather than a long tonal or modulated low-frequency call.
+    semantic_keywords:
+      - aggression
+      - threat
+      - group_coordination
+      - play
+      - attention
+    semantic_description: Given during group movement or in aggressive episodes with lunging, pushing, or biting, usually directed at other elephants and especially calves. Calves may also direct similar calls at other animals during play.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Bark is a named de Silva 2010 wild category, and de Silva notes possible correspondence with McKay 1973's ambiguous snort terminology. Nair et al. 2009 did not keep bark as a separate class, so agreement is medium rather than strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: de Silva 2010 defines barks by short aperiodic structure and duration, while earlier support is qualitative and terminologically ambiguous. The broad acoustic form is plausible but not widely quantified.
+    semantic_description_agreement: medium
+    semantic_description_explanation: de Silva 2010 provides consistent movement and aggression contexts, with some support from McKay 1973's broader inventory. The lack of independent call-specific tests keeps agreement at medium.
+
+  - name: squeal
+    in_primary_inventory: true
+    alternative_names:
+      - long squeak
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - long
+      - frequency_modulated
+      - graded
+    acoustic_description: A high-frequency harmonic call longer than the typical squeak, with stronger frequency modulation and tonal structure. It is acoustically closer to squeak than to roar but differs in duration and contour.
+    semantic_keywords:
+      - alarm
+      - distress
+      - threat
+      - attention
+    semantic_description: Recorded during rare high-arousal disturbance events, often in the same broad situations as squeaks. Available wild observations associate it with fear, excitement, or disturbance rather than routine contact.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: de Silva 2010 lists squeals as a wild call type but also states they had not previously been described. The category is therefore weakly supported outside the primary inventory.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: de Silva 2010 provides the available quantitative description, but no independent wild source confirms the fine acoustic boundary from squeaks or trumpets. Acoustic agreement is weak.
+    semantic_description_agreement: weak
+    semantic_description_explanation: de Silva 2010 links squeals to rare disturbance-related events, but contextual samples are limited and independent semantic evidence is lacking.
+
+  - name: bark-rumble
+    in_primary_inventory: true
+    alternative_names:
+      - bark rumble
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - multi_component
+      - broadband
+      - noisy
+      - low_frequency
+      - harmonic
+      - graded
+    acoustic_description: A two-part combination call with a short aperiodic bark-like leading segment followed by a lower-frequency rumble-like segment. The leading segment resembles single barks in duration, while the second segment overlaps more with rumbles than with growls.
+    semantic_keywords:
+      - group_coordination
+      - contact
+      - attention
+      - distress
+      - caregiving
+    semantic_description: Produced mainly during movement and searching, with occasional use by calves wanting to nurse. It appears to occur in high-attention coordination contexts where a short onset is joined to a low-frequency follow-on segment.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Bark-rumble is a named wild combination call in de Silva 2010, but de Silva notes that combination calls had not previously been recognized as such. Independent confirmation is lacking, so existence agreement is weak.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: de Silva 2010 directly compares component durations and frequency contours, supporting a bark-like first segment and rumble-like second segment. Agreement is medium within that study but limited across sources.
+    semantic_description_agreement: weak
+    semantic_description_explanation: de Silva 2010 associates bark-rumbles mainly with movement and searching and rarely with nursing, but there are no independent semantic analyses or playback tests.
+
+  - name: roar-rumble
+    in_primary_inventory: true
+    alternative_names:
+      - roar rumble
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - multi_component
+      - broadband
+      - noisy
+      - low_frequency
+      - harmonic
+      - graded
+    acoustic_description: A combination call with a noisy roar-like leading segment followed by a lower-frequency rumble-like segment. The first segment is not significantly different in duration from single roars, and the second segment is acoustically closer to rumbles than to growls.
+    semantic_keywords:
+      - group_coordination
+      - contact
+      - attention
+      - distress
+      - caregiving
+    semantic_description: Produced primarily during movement and searching, with occasional calf nursing-related use. It appears in contexts requiring coordination, contact, or renewed attention rather than in a single narrow behavioral setting.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Roar-rumble is part of the de Silva 2010 wild combination-call inventory, but the combination category lacks independent confirmation and may be functionally graded with related calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: de Silva 2010 gives component-level acoustic comparisons showing a roar-like leading element and a rumble-like second element. Cross-source agreement is limited, so the label is medium rather than strong.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The semantic account rests mainly on de Silva 2010 observations of movement, searching, and occasional nursing-related contexts. No playback or independent production study tests roar-rumble specifically.
+
+  - name: longroar-rumble
+    in_primary_inventory: true
+    alternative_names:
+      - longroar rumble
+      - long roar-rumble
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - multi_component
+      - broadband
+      - noisy
+      - low_frequency
+      - harmonic
+      - long
+      - graded
+    acoustic_description: A two-part call with a long noisy roar-like leading segment followed by a lower-frequency rumble-like segment. The first component is long but shorter than stand-alone longroars, likely because it is joined to the second segment, and the second segment has a falling low-frequency contour.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - distress
+      - attention
+      - spacing
+    semantic_description: Produced mainly during separation, movement, searching, and distress. It may serve long-distance contact or coordination when the caller is separated, moving, or attempting to locate companions.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+      - id: mckay_1973
+        url: https://doi.org/10.5479/si.00810282.125
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Longroar-rumble is a frequent named combination type in de Silva 2010, but combination-call splitting has not been independently replicated. Agreement is medium because its components map onto better-known roar and rumble categories.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: de Silva 2010 provides quantitative component comparisons and principal-component support for the rumble-like second segment. The acoustic category is well supported within the inventory but not across independent studies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: de Silva 2010 consistently links the call to separation, movement, searching, and distress, and McKay 1973 proposed long-distance contact roles for loud and low-frequency sounds. Agreement is medium because this exact compound has not been independently tested.
+
+  - name: croak-rumble
+    in_primary_inventory: true
+    alternative_names:
+      - croak rumble
+    scope: *juvenile_adult_both_scope
+    acoustic_keywords:
+      - multi_component
+      - tonal
+      - short
+      - low_frequency
+      - harmonic
+      - repetitive
+    acoustic_description: A combination call with a brief croak-like leading segment under one second followed by a rumble- or growl-like low-frequency segment. It occurs in bouts where rumbles are also present and multiple individuals may call rapidly.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - attention
+    semantic_description: Recorded in chorused social bouts with rumbles, usually when two or more individuals called in rapid succession. Its documented use is in group-level social coordination rather than aggression or alarm alone.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Croak-rumble is listed by de Silva 2010 but was rare and not recognized by earlier wild studies as a separate call. Agreement is weak outside the primary inventory.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: de Silva 2010 identifies the brief leading element and low-frequency follow-on segment, but sample sizes are small and there is no independent acoustic confirmation.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The contextual description relies on a small number of de Silva 2010 observations in rumble-rich choruses, with no playback or independent semantic replication.
+
+  - name: chirp-rumble
+    in_primary_inventory: true
+    alternative_names:
+      - chirp rumble
+      - squeak-rumble
+    scope: *juvenile_adult_both_scope
+    acoustic_keywords:
+      - multi_component
+      - high_frequency
+      - tonal
+      - short
+      - low_frequency
+      - harmonic
+    acoustic_description: A rare combination call with a brief chirp-like leading segment followed by a lower-frequency rumble-like segment. The leading segment is short and tonal, and the second segment is lower in frequency and longer.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - caregiving
+      - attention
+    semantic_description: Observed in bouts by adult females among companions, with young animals approaching the caller on two documented occasions. The available context suggests close social contact or attention involving companions and calves.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Chirp-rumble was observed only rarely in de Silva 2010 and is not independently recognized as a separate wild call type by McKay 1973 or Nair et al. 2009. Agreement is weak.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: de Silva 2010 provides the only acoustic basis, and the category has very small sample size. The component description is plausible but weakly replicated.
+    semantic_description_agreement: weak
+    semantic_description_explanation: de Silva 2010 gives only a few contextual observations involving adult females and approaching young. The semantic interpretation is therefore weak.
+
+  - name: musth chirp-rumble
+    in_primary_inventory: true
+    alternative_names:
+      - musth chirp rumble
+      - musth male call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - multi_component
+      - low_frequency
+      - tonal
+      - short
+      - repetitive
+      - graded
+    acoustic_description: A rare male call with a brief softly audible first component around the low hundreds of hertz followed by a lower-frequency segment near the infrasonic range. Calls occur in long bouts separated by intervals of several seconds to tens of seconds, and the second segment may sometimes be absent.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+      - aggression
+    semantic_description: Produced by adult males in musth during prolonged contests with other musth males and during courtship or guarding of an estrous female. It is associated with male reproductive competition rather than ordinary group contact.
+    acoustic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    semantic_references:
+      - id: desilva_2010
+        url: https://doi.org/10.1163/000579510X495762
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: de Silva 2010 documents this rare call from three wild musth males and treats it as possibly unique, but it had not previously been documented in wild or captive Elephas. Agreement is weak because evidence comes from one study and few events.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The component structure and approximate frequencies are described by de Silva 2010, but sample size is very small and production details remain uncertain. Acoustic agreement is weak.
+    semantic_description_agreement: weak
+    semantic_description_explanation: de Silva 2010 observed the call in musth male contests and courtship/guarding, but no independent production or playback study confirms the contextual range.
+references:
+  desilva_2010:
+    citation: "de Silva, S. 2010. Acoustic communication in the Asian elephant, Elephas maximus maximus. Behaviour 147:825-852."
+    url: https://doi.org/10.1163/000579510X495762
+    doi: 10.1163/000579510X495762
+  nair_etal_2009:
+    citation: "Nair, S., Balakrishnan, R., Seelamantula, C. S., and Sukumar, R. 2009. Vocalizations of wild Asian elephants (Elephas maximus): structural classification and social context. The Journal of the Acoustical Society of America 126:2768-2778."
+    url: https://doi.org/10.1121/1.3224717
+    doi: 10.1121/1.3224717
+  mckay_1973:
+    citation: "McKay, G. M. 1973. Behavior and ecology of the Asiatic elephant in southeastern Ceylon. Smithsonian Contributions to Zoology 125:1-113."
+    url: https://doi.org/10.5479/si.00810282.125
+    doi: 10.5479/si.00810282.125
+  payne_etal_1986:
+    citation: "Payne, K. B., Langbauer, W. R. Jr., and Thomas, E. M. 1986. Infrasonic calls of the Asian elephant (Elephas maximus). Behavioral Ecology and Sociobiology 18:297-301."
+    url: https://doi.org/10.1007/BF00300007
+    doi: 10.1007/BF00300007

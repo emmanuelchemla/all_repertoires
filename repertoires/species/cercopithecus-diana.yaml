@@ -1,0 +1,831 @@
+scientific_name: Cercopithecus diana
+common_name: Diana monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Cercopithecus
+  species: diana
+primary_inventory:
+  id: coye_etal_2022
+  rationale: "Coye et al. 2022 is used as the primary_inventory spine because it explicitly compiles long-term published wild data on Diana monkey vocal units, call combinations, contextual use, and call rates, and summarizes the adult female repertoire as eight non-combined calls and eight combined calls. This file includes those 16 female call types and supplements them with the three well-supported adult male long-distance call variants separated by Zuberbuhler et al. 1997. Captivity-only calls are not included."
+calls:
+  - name: male general long-distance call
+    in_primary_inventory: false
+    alternative_names:
+      - long-distance call
+      - non-predation long-distance call
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - long
+      - repetitive
+      - multi_component
+      - low_frequency
+    acoustic_description: "A loud, multi-syllable long-distance call made as a sequence of discrete syllables. In the 1997 analysis, non-predation long-distance calls had a median of about seven syllables and were acoustically distinguishable from the shorter leopard-alarm variant."
+    semantic_keywords:
+      - territorial
+      - spacing
+      - display
+      - contact
+    semantic_description: "Produced by resident adult males in non-predation contexts such as spontaneous calling, neighboring male calls, and loud environmental disturbances. It is treated as a long-range signal involved in intergroup spacing and male advertisement."
+    acoustic_references:
+      - id: zuberbuhler_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0334
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: zuberbuhler_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0334
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Zuberbuhler et al. 1997 separates non-predation long-distance calls from leopard and eagle variants, and Coye et al. 2022 treats male Diana monkey calls as a distinct sex-specific repertoire component. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Zuberbuhler et al. 1997 provides the main quantitative distinction for syllable number and structure, while later papers focus more on predator-specific male alarms. Acoustic support is solid but source-limited, so agreement is medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Zuberbuhler et al. 1997 interprets general long-distance calls in intergroup or resource-defense terms, but the paper's experimental focus is predation. Semantic agreement is therefore medium."
+
+  - name: male leopard alarm call
+    in_primary_inventory: false
+    alternative_names:
+      - leopard alarm long-distance call
+      - male leopard alarm
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - loud
+      - long
+      - repetitive
+      - multi_component
+      - low_frequency
+    acoustic_description: "A loud long-distance alarm variant composed of discrete syllables, typically with fewer syllables than eagle-alarm sequences. Zuberbuhler et al. 1997 reports a median of about three syllables per call in leopard contexts, with acoustic parameters separating it from the eagle variant."
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - display
+    semantic_description: "Produced by adult males in response to leopards or leopard vocalizations. Calling is often paired with predator approach and functions in warning conspecifics and advertising detection to ambush predators."
+    acoustic_references:
+      - id: zuberbuhler_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0334
+      - id: stephan_zuberbuhler_2008
+        url: https://doi.org/10.1098/rsbl.2008.0488
+      - id: stephan_zuberbuhler_2016_social
+        url: https://doi.org/10.1098/rsos.150639
+    semantic_references:
+      - id: zuberbuhler_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0334
+      - id: zuberbuhler_2000
+        url: https://doi.org/10.1006/anbe.1999.1317
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    playback_references:
+      - id: zuberbuhler_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0334
+      - id: zuberbuhler_2000
+        url: https://doi.org/10.1006/anbe.1999.1317
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "The male leopard alarm is identified by Zuberbuhler et al. 1997, reanalyzed across populations by Stephan and Zuberbuhler 2008 and 2016, and used in later coordination playbacks by Stephan and Zuberbuhler 2016. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Zuberbuhler et al. 1997 gives acoustic separation from eagle alarms, while Stephan and Zuberbuhler 2008 and 2016 confirm male leopard-induced alarm sequences across populations. Acoustic agreement is strong for the broad call type."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Zuberbuhler et al. 1997 and Zuberbuhler 2000 show leopard-context production and receiver responses, while Stephan and Zuberbuhler 2016 shows male-female coordination around predator-specific alarms. Semantic agreement is strong."
+
+  - name: male eagle alarm call
+    in_primary_inventory: false
+    alternative_names:
+      - eagle alarm long-distance call
+      - male eagle alarm
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - loud
+      - long
+      - repetitive
+      - multi_component
+      - high_frequency
+    acoustic_description: "A loud long-distance alarm variant made from repeated syllables. In Zuberbuhler et al. 1997, eagle-context calls contained more syllables than leopard-context calls, with a median of about eight syllables, and differed from leopard calls across several measured acoustic parameters."
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - display
+    semantic_description: "Produced by adult males in response to crowned eagle calls or eagle encounters. Receivers respond as if an aerial predator is present, and males may approach the source during anti-predator signaling."
+    acoustic_references:
+      - id: zuberbuhler_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0334
+      - id: stephan_zuberbuhler_2008
+        url: https://doi.org/10.1098/rsbl.2008.0488
+      - id: stephan_zuberbuhler_2016_social
+        url: https://doi.org/10.1098/rsos.150639
+    semantic_references:
+      - id: zuberbuhler_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0334
+      - id: stephan_zuberbuhler_2008
+        url: https://doi.org/10.1098/rsbl.2008.0488
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    playback_references:
+      - id: zuberbuhler_etal_1997
+        url: https://doi.org/10.1006/anbe.1996.0334
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "The male eagle alarm is a central call type in Zuberbuhler et al. 1997, Stephan and Zuberbuhler 2008, Stephan and Zuberbuhler 2016, and Stephan and Zuberbuhler 2016 Current Biology. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Zuberbuhler et al. 1997 quantifies the higher syllable count and acoustic separation from leopard calls, and later male alarm studies retain the eagle-alarm category. Acoustic agreement is strong."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Zuberbuhler et al. 1997 gives production and playback evidence for aerial-predator meaning, and Stephan and Zuberbuhler 2016 confirms predator-specific coordination involving male eagle alarms. Semantic agreement is strong."
+
+  - name: Brrr
+    in_primary_inventory: true
+    alternative_names:
+      - threat call
+      - repetitive threat call
+    scope: &adult_female_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - pulsed
+      - noisy
+      - broadband
+      - short
+    acoustic_description: "A short, repetitive vocal unit described in the comparative repertoire as the Diana monkey counterpart of short repetitive threat structures in Campbell's monkeys. The label reflects a pulsed, rough-sounding sequence rather than an arched tonal contour."
+    semantic_keywords:
+      - threat
+      - aggression
+      - alarm
+    semantic_description: "Produced by adult females during threatening or socially negative events. It is treated as a threat-related unit rather than a contact or relaxed-social call."
+    acoustic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Coye et al. 2022 lists Brrr as one of eight adult female Diana monkey non-combined calls, but there are fewer dedicated studies of Brrr than of arched contact calls and predator alarms. Existence agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The available support comes mainly from the comparative repertoire summary in Coye et al. 2022. Fine acoustic measurements for Brrr are limited in the sources used here, so acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Coye et al. 2022 places Brrr in threat contexts and contrasts it with mild alert and relaxed social units. Because independent Brrr-specific functional tests are sparse, semantic agreement is medium."
+
+  - name: R
+    in_primary_inventory: true
+    alternative_names:
+      - R call
+      - mild alert call
+      - negative-context unit
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - repetitive
+      - short
+      - abrupt
+      - noisy
+    acoustic_description: "A short repetitive unit, distinct from the arched A-family calls and from the trill-based H and L units. It can occur alone or as the first unit in combinations with arched calls."
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: "Associated with socially negative or potentially dangerous events. In combinations, it contributes event information that listeners distinguish from the L unit."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+    playback_references:
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "R is listed by Candiotti et al. 2012, experimentally manipulated by Coye et al. 2016, and included in the Coye et al. 2022 repertoire synthesis. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The sources agree that R is a non-arched introductory or standalone unit, but the detailed acoustic description is less developed than for Af contact calls. Acoustic agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Candiotti et al. 2012 links R to negative or potentially dangerous contexts, and Coye et al. 2016 shows receivers discriminate R-based combinations from L-based combinations. Semantic agreement is strong."
+
+  - name: L
+    in_primary_inventory: true
+    alternative_names:
+      - L call
+      - low-pitched trill
+      - neutral-context unit
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+    acoustic_description: "A low-pitched, trill-based unit. It can occur alone or precede a full or broken arched A unit in two-unit combinations."
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: "Associated with neutral social or external contexts and often used as the first unit in contact combinations that help maintain group cohesion and convey caller-related information."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references:
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "L is one of the named vocal structures in Candiotti et al. 2012, one of the experimentally manipulated event units in Coye et al. 2016, and one of the eight non-combined calls in Coye et al. 2022. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Coye et al. 2022 characterizes L as a trill-based low-pitched unit, and Coye et al. 2016 distinguishes it from R and A units. Detailed parameter agreement is moderate rather than extensive."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Candiotti et al. 2012 and Coye et al. 2016 agree that L contributes neutral event information, and Coye et al. 2022 places it in the contact-call system. Semantic agreement is strong."
+
+  - name: H
+    in_primary_inventory: true
+    alternative_names:
+      - H call
+      - high-pitched trill
+      - positive-context unit
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+    acoustic_description: "A high-pitched, trill-based unit. It is acoustically separated from the lower-pitched L unit and from the arched A-family calls, and can occur alone or before Af or Ab."
+    semantic_keywords:
+      - affiliation
+      - contact
+      - group_coordination
+    semantic_description: "Associated with socially positive or relaxed contexts. In combinations, it contributes positive or relaxed contextual information before the identity-bearing arched unit."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "H is one of the four female vocal structures reported by Candiotti et al. 2012 and one of the eight non-combined calls in Coye et al. 2022. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Candiotti et al. 2012 and Coye et al. 2022 agree on H as a high-pitched trill-based structure, but fewer dedicated acoustic analyses exist than for Af. Acoustic agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Candiotti et al. 2012 links H to socially positive or relaxed situations, and Coye et al. 2022 retains H in the relaxed social part of the repertoire. Semantic agreement is strong."
+
+  - name: Af
+    in_primary_inventory: true
+    alternative_names:
+      - A full arch
+      - full-arched contact call
+      - contact call
+      - clear call
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - long
+      - high_frequency
+    acoustic_description: "A full arched tonal contour with a rising and falling frequency pattern. It is the full-arch member of the A-family contact calls and carries individual acoustic variation in its frequency contour."
+    semantic_keywords:
+      - contact
+      - identity
+      - group_coordination
+      - spacing
+    semantic_description: "Used by adult females to maintain spatial and social cohesion, especially when caller identity is important. It can occur alone or after H, L, or R."
+    acoustic_references:
+      - id: candiotti_etal_2012_convergence
+        url: https://doi.org/10.1098/rsbl.2011.1182
+      - id: uster_zuberbuhler_2001
+        url: https://doi.org/10.1163/156853901752233389
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_convergence
+        url: https://doi.org/10.1098/rsbl.2011.1182
+      - id: uster_zuberbuhler_2001
+        url: https://doi.org/10.1163/156853901752233389
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references:
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Af is the common contact or clear call analyzed by Uster and Zuberbuhler 2001 and Candiotti et al. 2012 Biology Letters, used in the Candiotti et al. 2012 combination study, experimentally manipulated by Coye et al. 2016, and listed by Coye et al. 2022. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Candiotti et al. 2012 documents individual variation in Af frequency contours, while Coye et al. 2022 identifies Af as a full-arched structure. Acoustic agreement is strong."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Uster and Zuberbuhler 2001 supports coordinated vigilance use of clear calls, Candiotti et al. 2012 and Coye et al. 2016 support Af as an identity-bearing contact unit, and Coye et al. 2022 reports high identity classification for LAf contact calls. Semantic agreement is strong."
+
+  - name: Ab
+    in_primary_inventory: true
+    alternative_names:
+      - A broken arch
+      - broken-arched contact call
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - long
+      - graded
+    acoustic_description: "A broken-arch member of the A-family, lacking the complete full-arch contour of Af. It can occur alone or as the arched unit in H-Ab, L-Ab, and R-Ab combinations."
+    semantic_keywords:
+      - contact
+      - identity
+      - group_coordination
+      - spacing
+    semantic_description: "Used in the contact-call system of adult females, with the arched unit contributing caller-related information during group coordination and social spacing."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Ab is included in Candiotti et al. 2012 and listed by Coye et al. 2022 as one of the eight non-combined female calls and as a component in several combinations. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Coye et al. 2022 distinguishes broken and full arched calls, but most detailed identity analyses emphasize Af or LAf. Acoustic agreement is medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Candiotti et al. 2012 and Coye et al. 2022 place Ab in the contact/identity-bearing arched-call system, but Ab-specific playback evidence is limited. Semantic agreement is medium."
+
+  - name: Alk
+    in_primary_inventory: true
+    alternative_names:
+      - truncated arch alarm
+      - Alk call
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - abrupt
+      - long
+    acoustic_description: "An arched call variant with lower frequencies truncated and a sharper upper contour than Af. It can occur as a single call or after R in R-Alk combinations."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: "Used by adult females in alarm contexts, particularly as one of the Diana-specific arched alarm units described for the female repertoire."
+    acoustic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+      - id: stephan_zuberbuhler_2014
+        url: https://doi.org/10.1007/s00265-013-1647-x
+    semantic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+      - id: stephan_zuberbuhler_2014
+        url: https://doi.org/10.1007/s00265-013-1647-x
+    playback_references:
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Alk is identified by Coye et al. 2022 as one of the Diana-specific female units, and Stephan and Zuberbuhler 2014 supports female predator-specific alarm-call production. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Coye et al. 2022 describes Alk's truncated arched morphology, while Stephan and Zuberbuhler 2014 supports the broader female alarm-call class. Acoustic agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Coye et al. 2022 places Alk among Diana-specific alarm units, and Stephan and Zuberbuhler 2014 shows female predator-specific alarm use in wild populations. Semantic agreement is strong."
+
+  - name: W
+    in_primary_inventory: true
+    alternative_names:
+      - W call
+      - double-arched alarm
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - short
+      - multi_component
+    acoustic_description: "A multi-component arched unit consisting of a short high-pitched arched note followed by an Alk-like truncated arch. It can occur alone or after R in R-W combinations."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: "Used by adult females in alarm contexts as one of the Diana-specific arched alarm units."
+    acoustic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+      - id: stephan_zuberbuhler_2014
+        url: https://doi.org/10.1007/s00265-013-1647-x
+    semantic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+      - id: stephan_zuberbuhler_2014
+        url: https://doi.org/10.1007/s00265-013-1647-x
+    playback_references:
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "W is listed by Coye et al. 2022 as one of two Diana-specific arched alarm units, and Stephan and Zuberbuhler 2014 supports female predator-specific alarm categories. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Coye et al. 2022 gives the clearest structural account of W as a high-pitched arched note followed by an Alk-like arch. Additional alarm papers support the call class more than W-specific morphology, so agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Coye et al. 2022 places W in the alarm portion of the female repertoire, and Stephan and Zuberbuhler 2014 documents female predator-specific alarm use. Semantic agreement is strong."
+
+  - name: L-Af
+    in_primary_inventory: true
+    alternative_names:
+      - LAf
+      - L plus full arch
+      - neutral contact combination
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - long
+    acoustic_description: "A two-unit combination beginning with the low-pitched L trill and ending with the full arched Af unit. The final arched contour is the main frequency-modulated element."
+    semantic_keywords:
+      - contact
+      - identity
+      - group_coordination
+      - spacing
+    semantic_description: "Used as a contact combination in neutral contexts, with the first unit contributing contextual information and the full arch contributing caller identity."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references:
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "L-Af is listed in Candiotti et al. 2012 and Coye et al. 2022, and L/A combinations were experimentally tested by Coye et al. 2016. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "The sources agree that L-Af combines a low-pitched L unit with a full arched A unit. Acoustic agreement is strong at the unit-combination level."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Candiotti et al. 2012 and Coye et al. 2016 support the event-plus-identity interpretation, and Coye et al. 2022 reports LAf as a major contact call. Semantic agreement is strong."
+
+  - name: L-Ab
+    in_primary_inventory: true
+    alternative_names:
+      - LAb
+      - L plus broken arch
+      - neutral broken-arch contact combination
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - long
+    acoustic_description: "A two-unit combination beginning with L and ending with the broken arched Ab unit. It shares the low-pitched introductory component with L-Af but has an incomplete arched ending."
+    semantic_keywords:
+      - contact
+      - identity
+      - group_coordination
+      - spacing
+    semantic_description: "Used in neutral contact contexts as part of the adult female combination system, with an introductory contextual unit followed by an identity-bearing arched unit."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "L-Ab is included in the Candiotti et al. 2012 combination set and in the Coye et al. 2022 repertoire synthesis. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The unit composition is clear in Candiotti et al. 2012 and Coye et al. 2022, but most later experimental work focuses on full-arch A combinations. Acoustic agreement is medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Candiotti et al. 2012 and Coye et al. 2022 support neutral/contact use, but L-Ab-specific playback evidence is sparse. Semantic agreement is medium."
+
+  - name: H-Af
+    in_primary_inventory: true
+    alternative_names:
+      - HAf
+      - H plus full arch
+      - positive full-arch combination
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - long
+    acoustic_description: "A two-unit combination beginning with the high-pitched H trill and ending with the full arched Af unit."
+    semantic_keywords:
+      - affiliation
+      - contact
+      - identity
+      - group_coordination
+    semantic_description: "Produced in socially positive or relaxed contexts, combining contextual information from H with caller-related information from Af."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "H-Af is reported by Candiotti et al. 2012 and included among the eight Diana monkey combined calls in Coye et al. 2022. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The H plus Af composition is agreed in Candiotti et al. 2012 and Coye et al. 2022, but H-Af has less detailed acoustic analysis than L-Af. Acoustic agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Candiotti et al. 2012 links H combinations to positive or relaxed contexts, and Coye et al. 2022 retains H-Af in the female combination repertoire. Semantic agreement is strong."
+
+  - name: H-Ab
+    in_primary_inventory: true
+    alternative_names:
+      - HAb
+      - H plus broken arch
+      - positive broken-arch combination
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - long
+    acoustic_description: "A two-unit combination beginning with H and ending with the broken arched Ab unit."
+    semantic_keywords:
+      - affiliation
+      - contact
+      - identity
+      - group_coordination
+    semantic_description: "Produced in socially positive or relaxed contexts as part of the adult female combination system."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "H-Ab is included in both Candiotti et al. 2012 and the Coye et al. 2022 synthesis of female Diana monkey combinations. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The combination structure is clear in the repertoire sources, but H-Ab-specific acoustic measurements are limited. Acoustic agreement is medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Candiotti et al. 2012 supports positive or relaxed contextual use for H combinations, while Coye et al. 2022 confirms the combination's place in the repertoire. Lack of direct playback keeps agreement at medium."
+
+  - name: R-Af
+    in_primary_inventory: true
+    alternative_names:
+      - RAf
+      - R plus full arch
+      - negative full-arch combination
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - repetitive
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - long
+    acoustic_description: "A two-unit combination beginning with the short R unit and ending with the full arched Af unit."
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+      - identity
+    semantic_description: "Used in socially negative or potentially dangerous contexts, while also conveying caller-related information through the Af unit. Playback tests show receivers attend to both the event unit and the arched unit."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references:
+      - id: coye_etal_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.010
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "R-Af is reported by Candiotti et al. 2012, used in Coye et al. 2016 playback work, and included by Coye et al. 2022. Existence agreement is strong."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "The composition of R followed by Af is consistent across the observational, playback, and synthesis sources. Acoustic agreement is strong at the call-combination level."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Candiotti et al. 2012 links R-A combinations to negative or dangerous contexts, and Coye et al. 2016 shows receivers distinguish R-Af from L-Af-type stimuli. Semantic agreement is strong."
+
+  - name: R-Ab
+    in_primary_inventory: true
+    alternative_names:
+      - RAb
+      - R plus broken arch
+      - negative broken-arch combination
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - repetitive
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - long
+    acoustic_description: "A two-unit combination beginning with R and ending with the broken arched Ab unit."
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+      - identity
+    semantic_description: "Used in socially negative or potentially dangerous contexts as part of the adult female combination system."
+    acoustic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    semantic_references:
+      - id: candiotti_etal_2012_context
+        url: https://doi.org/10.1007/s10071-011-0456-8
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "R-Ab appears in Candiotti et al. 2012 and in the Coye et al. 2022 list of Diana monkey female combinations. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "The unit structure is supported by Candiotti et al. 2012 and Coye et al. 2022, but R-Ab-specific parameterization is limited. Acoustic agreement is medium."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Candiotti et al. 2012 supports the negative or potentially dangerous context of R combinations, while Coye et al. 2022 confirms the repertoire entry. Direct R-Ab playback evidence is limited, so agreement is medium."
+
+  - name: R-Alk
+    in_primary_inventory: true
+    alternative_names:
+      - RAlk
+      - R plus truncated arch alarm
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - repetitive
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - multi_component
+    acoustic_description: "A two-unit alarm combination beginning with the short R unit and ending with the truncated arched Alk unit."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - identity
+    semantic_description: "Used in alarm contexts by adult females. Coye et al. 2022 treats R-Alk as a Diana monkey alarm combination generated by combining R with an arched alarm unit."
+    acoustic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+      - id: stephan_zuberbuhler_2014
+        url: https://doi.org/10.1007/s00265-013-1647-x
+    semantic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+      - id: stephan_zuberbuhler_2014
+        url: https://doi.org/10.1007/s00265-013-1647-x
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    playback_references:
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "R-Alk is included in the Coye et al. 2022 female combination inventory, and Stephan and Zuberbuhler 2014 and 2016 support the broader female predator-specific alarm system. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Coye et al. 2022 describes R-Alk as an R plus Alk combination, with alarm papers supporting the call category. Detailed acoustic measurements for this exact combination are limited, so agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Coye et al. 2022 places R-Alk in the alarm system, Stephan and Zuberbuhler 2014 documents female predator-specific alarm usage, and Stephan and Zuberbuhler 2016 tests coordinated predator-specific alarm calling. Semantic agreement is strong."
+
+  - name: R-W
+    in_primary_inventory: true
+    alternative_names:
+      - RW
+      - R plus W alarm
+    scope: *adult_female_scope
+    acoustic_keywords:
+      - repetitive
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - multi_component
+    acoustic_description: "A two-unit alarm combination beginning with R and ending with the multi-component W arched unit."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - identity
+    semantic_description: "Used in alarm contexts by adult females as one of the Diana monkey combinations that pairs R with a species-specific arched alarm unit."
+    acoustic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+      - id: stephan_zuberbuhler_2014
+        url: https://doi.org/10.1007/s00265-013-1647-x
+    semantic_references:
+      - id: coye_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00294-y
+      - id: stephan_zuberbuhler_2014
+        url: https://doi.org/10.1007/s00265-013-1647-x
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    playback_references:
+      - id: stephan_zuberbuhler_2016_coordination
+        url: https://doi.org/10.1016/j.cub.2016.08.033
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "R-W is listed in Coye et al. 2022 as one of the eight female Diana monkey combined calls, and later alarm studies support female predator-specific alarm production. Existence agreement is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Coye et al. 2022 gives the component structure of R-W, but W-combination-specific measurements are not as extensively reported as the arched contact calls. Acoustic agreement is medium."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Coye et al. 2022 identifies R-W as an alarm combination, and Stephan and Zuberbuhler 2014 and 2016 support female predator-specific alarm use and coordination. Semantic agreement is strong."
+references:
+  coye_etal_2022:
+    citation: "Coye, C., Zuberbuhler, K., and Lemasson, A. 2022. The evolution of vocal communication: inertia and divergence in two closely related primates. International Journal of Primatology 43:712-732."
+    url: https://doi.org/10.1007/s10764-022-00294-y
+    doi: 10.1007/s10764-022-00294-y
+  zuberbuhler_etal_1997:
+    citation: "Zuberbuhler, K., Noe, R., and Seyfarth, R. M. 1997. Diana monkey long-distance calls: messages for conspecifics and predators. Animal Behaviour 53:589-604."
+    url: https://doi.org/10.1006/anbe.1996.0334
+    doi: 10.1006/anbe.1996.0334
+  zuberbuhler_2000:
+    citation: "Zuberbuhler, K. 2000. Referential labelling in Diana monkeys. Animal Behaviour 59:917-927."
+    url: https://doi.org/10.1006/anbe.1999.1317
+    doi: 10.1006/anbe.1999.1317
+  uster_zuberbuhler_2001:
+    citation: "Uster, D., and Zuberbuhler, K. 2001. The functional significance of Diana monkey clear calls. Behaviour 138:741-756."
+    url: https://doi.org/10.1163/156853901752233389
+    doi: 10.1163/156853901752233389
+  stephan_zuberbuhler_2008:
+    citation: "Stephan, C., and Zuberbuhler, K. 2008. Predation increases acoustic complexity in primate alarm calls. Biology Letters 4:641-644."
+    url: https://doi.org/10.1098/rsbl.2008.0488
+    doi: 10.1098/rsbl.2008.0488
+  stephan_zuberbuhler_2014:
+    citation: "Stephan, C., and Zuberbuhler, K. 2014. Predation affects alarm call usage in female Diana monkeys (Cercopithecus diana diana). Behavioral Ecology and Sociobiology 68:321-331."
+    url: https://doi.org/10.1007/s00265-013-1647-x
+    doi: 10.1007/s00265-013-1647-x
+  stephan_zuberbuhler_2016_social:
+    citation: "Stephan, C., and Zuberbuhler, K. 2016. Social familiarity affects Diana monkey (Cercopithecus diana diana) alarm call responses in habitat-specific ways. Royal Society Open Science 3:150639."
+    url: https://doi.org/10.1098/rsos.150639
+    doi: 10.1098/rsos.150639
+  stephan_zuberbuhler_2016_coordination:
+    citation: "Stephan, C., and Zuberbuhler, K. 2016. Persistent females and compliant males coordinate alarm calling in Diana monkeys. Current Biology 26:2907-2912."
+    url: https://doi.org/10.1016/j.cub.2016.08.033
+    doi: 10.1016/j.cub.2016.08.033
+  candiotti_etal_2012_context:
+    citation: "Candiotti, A., Zuberbuhler, K., and Lemasson, A. 2012. Context-related call combinations in female Diana monkeys. Animal Cognition 15:327-339."
+    url: https://doi.org/10.1007/s10071-011-0456-8
+    doi: 10.1007/s10071-011-0456-8
+  candiotti_etal_2012_convergence:
+    citation: "Candiotti, A., Zuberbuhler, K., and Lemasson, A. 2012. Convergence and divergence in Diana monkey vocalizations. Biology Letters 8:382-385."
+    url: https://doi.org/10.1098/rsbl.2011.1182
+    doi: 10.1098/rsbl.2011.1182
+  coye_etal_2016:
+    citation: "Coye, C., Zuberbuhler, K., and Lemasson, A. 2016. Morphologically structured vocalizations in female Diana monkeys. Animal Behaviour 115:97-105."
+    url: https://doi.org/10.1016/j.anbehav.2016.03.010
+    doi: 10.1016/j.anbehav.2016.03.010

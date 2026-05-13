@@ -1,0 +1,246 @@
+scientific_name: Allobates femoralis
+common_name: Brilliant-thighed poison frog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Aromobatidae
+  genus: Allobates
+  species: femoralis
+primary_inventory:
+  id: stueckler_etal_2019
+  rationale: >-
+    Stueckler et al. 2019 is used as the primary_inventory spine because it is
+    a peer-reviewed, species-specific wild study of the prolonged courtship that
+    distinguishes advertisement calls from courtship calls and illustrates the
+    courtship call. I found no formal whole-repertoire monograph for all life
+    stages. Territorial and agonistic studies repeatedly use the male
+    advertisement call as the acoustic signal that attracts females and repels
+    rivals, so I treat "territorial call" as an alternate name for the
+    advertisement call rather than as a separate call type.
+calls:
+  - name: advertisement call
+    in_primary_inventory: true
+    alternative_names:
+      - territorial call
+      - male advertisement call
+      - standard call
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: true
+      note: >-
+        The advertisement call is widespread, but note number and timing vary
+        geographically across the Allobates femoralis complex; most French
+        Guiana and experimental accounts describe a four-note call, whereas the
+        Altamira phenotype has six notes arranged in couplets.
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - repetitive
+      - multi_component
+      - loud
+      - graded
+    acoustic_description: >-
+      A short, repeated bout call made of discrete tonal notes with upward
+      frequency sweeps. Many French Guiana studies use a four-note call with
+      note energy roughly in the 2.9-3.9 kHz range and calls repeated in bouts;
+      playback stimuli based on natural recordings specify four notes of about
+      32-66 ms each, separated by tens of milliseconds, while geographic surveys
+      report population differences including one-, three-, four-, and six-note
+      arrangements.
+    semantic_keywords:
+      - courtship
+      - mating
+      - territorial
+      - spacing
+      - aggression
+      - identity
+      - attention
+    semantic_description: >-
+      Produced by adult males from elevated structures on the forest floor
+      during the breeding season. The call advertises territory occupancy,
+      attracts female mating partners, elicits male phonotaxis and antiphonal
+      calling in playback experiments, and contributes to territorial defense
+      when combined with appropriate visual cues from an intruding male.
+    acoustic_references:
+      - id: narins_etal_2003
+        url: https://doi.org/10.1073/pnas.0237165100
+      - id: hodl_etal_2004
+        url: https://doi.org/10.1007/s00359-004-0536-1
+      - id: amezquita_etal_2009
+        url: https://doi.org/10.1111/j.1095-8312.2009.01324.x
+      - id: ringler_etal_2017
+        url: https://doi.org/10.1007/s00265-017-2340-2
+      - id: rodriguez_etal_2020
+        url: https://doi.org/10.1007/s00265-020-02857-6
+      - id: peignier_etal_2022
+        url: https://doi.org/10.1111/eth.13331
+    semantic_references:
+      - id: roithmair_1992
+        url: https://doi.org/10.1111/j.1439-0310.1992.tb00970.x
+      - id: narins_etal_2003
+        url: https://doi.org/10.1073/pnas.0237165100
+      - id: narins_etal_2005
+        url: https://doi.org/10.1073/pnas.0406407102
+      - id: hodl_etal_2004
+        url: https://doi.org/10.1007/s00359-004-0536-1
+      - id: ringler_etal_2017
+        url: https://doi.org/10.1007/s00265-017-2340-2
+      - id: rodriguez_etal_2020
+        url: https://doi.org/10.1007/s00265-020-02857-6
+      - id: peignier_etal_2022
+        url: https://doi.org/10.1111/eth.13331
+    playback_references:
+      - id: narins_etal_2003
+        url: https://doi.org/10.1073/pnas.0237165100
+      - id: narins_etal_2005
+        url: https://doi.org/10.1073/pnas.0406407102
+      - id: hodl_etal_2004
+        url: https://doi.org/10.1007/s00359-004-0536-1
+      - id: ringler_etal_2017
+        url: https://doi.org/10.1007/s00265-017-2340-2
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: >-
+      Stueckler et al. 2019, Narins et al. 2003 and 2005, Hoedl et al. 2004,
+      Ringler et al. 2017, Rodriguez et al. 2020, and Peignier et al. 2022 all
+      treat the male advertisement call as the prominent long-distance vocal
+      signal of Allobates femoralis. Some papers call the same signal a
+      territorial call in male-male contexts, but the call type itself is stable.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: >-
+      Narins et al. 2003, Hoedl et al. 2004, Ringler et al. 2017, Rodriguez et
+      al. 2020, and Peignier et al. 2022 agree that the common advertisement
+      call is a repeated, high-frequency, frequency-swept note group. Amezquita
+      et al. 2009 and later taxonomic comparisons document geographic variation
+      in note number, so the species-level acoustic description is strong but
+      explicitly population-aware.
+    semantic_description_agreement: strong
+    semantic_description_explanation: >-
+      Roithmair 1992, Narins et al. 2003 and 2005, Hoedl et al. 2004, Ringler
+      et al. 2017, Rodriguez et al. 2020, and Peignier et al. 2022 consistently
+      place advertisement calling in male territory advertisement, male-male
+      spacing, and female attraction. Agreement is strong, with the nuance that
+      physical attack in experiments requires dynamic visual information in
+      addition to the acoustic call.
+
+  - name: courtship call
+    in_primary_inventory: true
+    alternative_names:
+      - buzzing courtship call
+      - courtship vocalization
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - pulsed
+      - long
+      - repetitive
+      - quiet
+    acoustic_description: >-
+      A lower-frequency, close-range buzzing call distinct from the
+      advertisement call. Published descriptions characterize it as a broadband
+      burst of pulses lasting about 0.5-1 s with dominant energy around
+      2.5-2.7 kHz; spectrograms show dense amplitude modulation across the call.
+    semantic_keywords:
+      - courtship
+      - mating
+      - contact
+      - attention
+      - display
+    semantic_description: >-
+      Produced by adult males after a female is nearby or in sight during the
+      courtship sequence. Calling accompanies the courtship march in which the
+      male leads the female through his territory toward oviposition sites; when
+      the female stops following, the male returns and resumes courtship calling
+      until she follows again.
+    acoustic_references:
+      - id: montanarin_etal_2011
+        url: https://doi.org/10.1080/03949370.2011.554884
+      - id: stueckler_etal_2019
+        url: https://doi.org/10.1655/Herpetologica-D-19-00010.1
+      - id: peignier_etal_2022
+        url: https://doi.org/10.1111/eth.13331
+    semantic_references:
+      - id: montanarin_etal_2011
+        url: https://doi.org/10.1080/03949370.2011.554884
+      - id: stueckler_etal_2019
+        url: https://doi.org/10.1655/Herpetologica-D-19-00010.1
+      - id: fischer_etal_2020
+        url: https://doi.org/10.7717/peerj.8920
+      - id: peignier_etal_2022
+        url: https://doi.org/10.1111/eth.13331
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: >-
+      Montanarin et al. 2011 and Stueckler et al. 2019 independently describe
+      courtship calls in wild Allobates femoralis courtships, and Peignier et
+      al. 2022 summarizes the same two-call distinction while measuring
+      advertisement and courtship calls. The call type is therefore well
+      supported despite fewer acoustic studies than the advertisement call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: >-
+      Stueckler et al. 2019 provides the primary wild spectrographic basis for
+      the courtship call, Montanarin et al. 2011 distinguishes it from the
+      advertisement call in Central Amazonian courtship, and Peignier et al. 2022
+      gives concise duration and frequency values. The label is medium because
+      detailed quantitative descriptions are concentrated in a small number of
+      studies.
+    semantic_description_agreement: strong
+    semantic_description_explanation: >-
+      Montanarin et al. 2011, Stueckler et al. 2019, Fischer et al. 2020, and
+      Peignier et al. 2022 agree that males switch to courtship calls during
+      close-range male-female courtship and that the call accompanies female
+      following during the courtship march toward oviposition.
+
+references:
+  roithmair_1992:
+    citation: "Roithmair ME. 1992. Territoriality and male mating success in the dart-poison frog, Epipedobates femoralis (Dendrobatidae, Anura). Ethology 92(4): 331-343."
+    url: https://doi.org/10.1111/j.1439-0310.1992.tb00970.x
+    doi: 10.1111/j.1439-0310.1992.tb00970.x
+  narins_etal_2003:
+    citation: "Narins PM, Hoedl W, Grabul DS. 2003. Bimodal signal requisite for agonistic behavior in a dart-poison frog, Epipedobates femoralis. Proceedings of the National Academy of Sciences of the United States of America 100(2): 577-580."
+    url: https://doi.org/10.1073/pnas.0237165100
+    doi: 10.1073/pnas.0237165100
+  narins_etal_2005:
+    citation: "Narins PM, Grabul DS, Soma KK, Gaucher P, Hoedl W. 2005. Cross-modal integration in a dart-poison frog. Proceedings of the National Academy of Sciences of the United States of America 102(7): 2425-2429."
+    url: https://doi.org/10.1073/pnas.0406407102
+    doi: 10.1073/pnas.0406407102
+  hodl_etal_2004:
+    citation: "Hoedl W, Amezquita A, Narins PM. 2004. The role of call frequency and the auditory papillae in phonotactic behavior in male dart-poison frogs Epipedobates femoralis (Dendrobatidae). Journal of Comparative Physiology A 190(10): 823-829."
+    url: https://doi.org/10.1007/s00359-004-0536-1
+    doi: 10.1007/s00359-004-0536-1
+  amezquita_etal_2009:
+    citation: "Amezquita A, Lima AP, Jehle R, Castellanos L, Ramos O, Crawford AJ, Gasser H, Hoedl W. 2009. Calls, colours, shape, and genes: a multi-trait approach to the study of geographic variation in the Amazonian frog Allobates femoralis. Biological Journal of the Linnean Society 98(4): 826-838."
+    url: https://doi.org/10.1111/j.1095-8312.2009.01324.x
+    doi: 10.1111/j.1095-8312.2009.01324.x
+  montanarin_etal_2011:
+    citation: "Montanarin A, Kaefer IL, Lima AP. 2011. Courtship and mating behaviour of the brilliant-thighed frog Allobates femoralis from Central Amazonia: implications for the study of a species complex. Ethology Ecology and Evolution 23(2): 141-150."
+    url: https://doi.org/10.1080/03949370.2011.554884
+    doi: 10.1080/03949370.2011.554884
+  ringler_etal_2017:
+    citation: "Ringler M, Szipl G, Hoedl W, Khil L, Kofler B, Lonauer M, Provin C, Ringler E. 2017. Acoustic ranging in poison frogs-it is not about signal amplitude alone. Behavioral Ecology and Sociobiology 71: 114."
+    url: https://doi.org/10.1007/s00265-017-2340-2
+    doi: 10.1007/s00265-017-2340-2
+  stueckler_etal_2019:
+    citation: "Stueckler S, Ringler M, Pasukonis A, Weinlein S, Hoedl W, Ringler E. 2019. Spatio-temporal characteristics of the prolonged courtship in brilliant-thighed poison frogs, Allobates femoralis. Herpetologica 75(4): 268-279."
+    url: https://doi.org/10.1655/Herpetologica-D-19-00010.1
+    doi: 10.1655/Herpetologica-D-19-00010.1
+  fischer_etal_2020:
+    citation: "Fischer MT, Ringler M, Ringler E, Pasukonis A. 2020. Reproductive behavior drives female space use in a sedentary Neotropical frog. PeerJ 8: e8920."
+    url: https://doi.org/10.7717/peerj.8920
+    doi: 10.7717/peerj.8920
+  rodriguez_etal_2020:
+    citation: "Rodriguez C, Amezquita A, Ringler M, Pasukonis A, Hoedl W. 2020. Calling amplitude flexibility and acoustic spacing in the territorial frog Allobates femoralis. Behavioral Ecology and Sociobiology 74: 76."
+    url: https://doi.org/10.1007/s00265-020-02857-6
+    doi: 10.1007/s00265-020-02857-6
+  peignier_etal_2022:
+    citation: "Peignier M, Begue L, Gieseke A, Petri D, Ringler M, Ringler E. 2022. Mate choice in a promiscuous poison frog. Ethology 128(10-11): 693-703."
+    url: https://doi.org/10.1111/eth.13331
+    doi: 10.1111/eth.13331

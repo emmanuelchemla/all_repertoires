@@ -1,5 +1,5 @@
 scientific_name: Macaca mulatta
-common_name: Rhesus Macaque
+common_name: Rhesus macaque
 taxonomy:
   kingdom: Animalia
   phylum: Chordata
@@ -10,169 +10,577 @@ taxonomy:
   species: mulatta
 primary_inventory:
   id: rowell_hinde_1962
-  rationale: Rowell and Hinde 1962 is used as the primary inventory because it is a classic systematic description of rhesus macaque vocal communication. Later acoustic, developmental, and playback studies refine major call classes such as coos, screams, grunts, barks, and girneys.
+  rationale: Rowell and Hinde 1962 is used as the primary_inventory spine because it is the classic spectrographic repertoire treatment of rhesus macaque vocal communication, separating clear calls from harsh calls and naming the main social call classes. Later free-ranging Cayo Santiago work by Hauser and Marler, Gouzoules and colleagues, and Partan is used to refine food-call, scream-subtype, and multimodal social contexts. This file includes named call types with wild or free-ranging support and excludes call labels whose detailed evidence is primarily captive-only.
 calls:
   - name: coo
+    in_primary_inventory: true
     alternative_names:
       - contact coo
-      - isolation coo
-    in_primary_inventory: true
-    scope: &all_scope
-      life_stages: [infant, juvenile, adult]
-      sexes: [female, male]
+      - food coo
+      - contact call
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
       population_specific: false
       note: ""
-    acoustic_keywords: [tonal, frequency_modulated, long, loud]
-    acoustic_description: Tonal, frequency-modulated call with a smooth contour, often medium to long in duration and individually variable.
-    semantic_keywords: [contact, group_coordination, identity, distress]
-    semantic_description: Used for contact and separation contexts, including infant isolation and adult group coordination.
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - long
+      - quiet
+    acoustic_description: A clear, narrowband tonal call with visible harmonic structure and most energy concentrated in the low harmonics. The frequency contour varies among callers and contexts, but food-associated and nonfood coos are reported to be acoustically very similar.
+    semantic_keywords:
+      - contact
+      - food
+      - group_coordination
+      - identity
+      - caregiving
+    semantic_description: Produced in contact contexts, including group progression, mother-infant separation, and some food discoveries. Playback studies show that adult females can recognize individual and kinship information in contact calls, and food-call studies show coos can accompany lower-quality food discoveries.
     acoustic_references:
       - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+        url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
       - id: hauser_1991
-        url: https://doi.org/10.1016/S0003-3472(05)80229-8
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
     semantic_references:
-      - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
-      - id: hauser_1991
-        url: https://doi.org/10.1016/S0003-3472(05)80229-8
-    playback_references: []
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: rendall_etal_1996
+        url: https://doi.org/10.1006/anbe.1996.0103
+    playback_references:
+      - id: rendall_etal_1996
+        url: https://doi.org/10.1006/anbe.1996.0103
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Coos are a standard rhesus macaque call type in Rowell and Hinde 1962 and subsequent acoustic work by Hauser 1991.
+    call_type_existence_explanation: Rowell and Hinde 1962 list coos in the clear-call repertoire, Hauser and Marler 1993a treats coos as one of five food-associated calls in free-living rhesus macaques, and Rendall et al. 1996 uses contact calls in free-ranging playback experiments. Existence agreement is strong.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Sources consistently describe coos as tonal calls with measurable contour variation.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Contact and separation contexts are well supported, but coos cover several social situations and age classes.
-
-  - name: scream
-    alternative_names:
-      - agonistic scream
-    in_primary_inventory: true
-    scope: *all_scope
-    acoustic_keywords: [high_frequency, loud, noisy, long, frequency_modulated]
-    acoustic_description: Loud high-frequency call with noisy and tonal components, often extended and strongly modulated.
-    semantic_keywords: [aggression, distress, submission, threat]
-    semantic_description: Given during agonistic encounters, especially by victims or lower-ranking animals during attacks or threats.
-    acoustic_references:
-      - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
-      - id: gouzoules_etal_1984
-        url: https://doi.org/10.1007/BF02382156
-    semantic_references:
-      - id: gouzoules_etal_1984
-        url: https://doi.org/10.1007/BF02382156
-      - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
-    playback_references: []
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Screams are included in the classic repertoire and are extensively studied in rhesus agonistic communication.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: The broad scream form is stable, but rhesus screams include graded variants related to social relationship and attack type.
+    acoustic_description_explanation: Rowell and Hinde 1962 and Hauser 1991 support the clear tonal harmonic structure, while Hauser and Marler 1993a reports that food and nonfood coos are not statistically distinguishable. Agreement is strong for the broad acoustic form.
     semantic_description_agreement: strong
-    semantic_description_explanation: Agonistic and distress contexts are consistent across Rowell and Hinde 1962 and Gouzoules et al. 1984.
+    semantic_description_explanation: Hauser and Marler 1993a support food and nonfood contexts, and Rendall et al. 1996 demonstrates recognition of individual and kin information in free-ranging contact-call playbacks. Semantic agreement is strong for contact/identity use with food as an additional context.
 
   - name: grunt
-    alternative_names:
-      - affiliative grunt
     in_primary_inventory: true
-    scope: *all_scope
-    acoustic_keywords: [low_frequency, short, noisy, quiet, graded]
-    acoustic_description: Short low-frequency rough call, often given in series and grading into other close-range calls.
-    semantic_keywords: [affiliation, contact, submission]
-    semantic_description: Used during close social interactions, approaches, and low-arousal affiliative or appeasing contexts.
+    alternative_names:
+      - food grunt
+      - social grunt
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - pulsed
+      - short
+      - quiet
+    acoustic_description: A low, atonal or weakly voiced call with pulsed structure, unstable fundamental frequency, and strong low-frequency energy bands. Food grunts and nonfood grunts are similar to the ear but differ measurably in several acoustic parameters.
+    semantic_keywords:
+      - food
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Produced when individuals encounter lower-quality or common foods, especially provisioned chow, and also in nonfood social contexts such as grooming or close-range interactions. Food-call playbacks can attract other group members toward the caller.
     acoustic_references:
       - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
-      - id: partan_2002
-        url: https://doi.org/10.1016/S0003-3472(02)00028-2
+        url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
     semantic_references:
-      - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
-      - id: partan_2002
-        url: https://doi.org/10.1016/S0003-3472(02)00028-2
-    playback_references: []
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Grunts are part of the classic rhesus inventory and are used in later multimodal communication studies.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Low rough structure is consistent, but grunts are graded and often combined with facial or body signals.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Affiliation and appeasement contexts are supported, though specific interpretation depends strongly on accompanying behavior.
-
-  - name: girney
-    alternative_names:
-      - gruff contact call
-    in_primary_inventory: true
-    scope:
-      life_stages: [infant, juvenile, adult]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [tonal, frequency_modulated, repetitive, quiet, graded]
-    acoustic_description: Soft tonal or harsh-voiced call often produced in repeated sequences with variable pitch and amplitude.
-    semantic_keywords: [affiliation, caregiving, contact]
-    semantic_description: Common in affiliative interactions, including mother-infant and grooming-related contexts.
-    acoustic_references:
-      - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
-      - id: hauser_1991
-        url: https://doi.org/10.1016/S0003-3472(05)80229-8
-    semantic_references:
-      - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
-    playback_references: []
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Girneys are classically described, but they are less central in later quantitative work than coos and screams.
-    acoustic_description_agreement: weak
-    acoustic_description_explanation: The acoustic description rests mainly on classic repertoire descriptions and limited later treatment.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Affiliation and caregiving contexts are consistently described, though not as heavily tested as alarm or agonistic calls.
-
-  - name: bark
-    alternative_names:
-      - alarm bark
-    in_primary_inventory: true
-    scope: *all_scope
-    acoustic_keywords: [loud, short, abrupt, noisy, broadband]
-    acoustic_description: Short abrupt broadband call with a harsh bark-like quality.
-    semantic_keywords: [alarm, predator, attention, threat]
-    semantic_description: Produced in alarm or disturbance contexts and can orient receivers toward potential danger.
-    acoustic_references:
-      - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: hauser_marler_1993b
+        url: https://doi.org/10.1093/beheco/4.3.206
       - id: hauser_1998
-        url: https://doi.org/10.1098/rspb.1998.0304
-    semantic_references:
-      - id: hauser_1998
-        url: https://doi.org/10.1098/rspb.1998.0304
-      - id: rowell_hinde_1962
-        url: https://doi.org/10.1016/S0003-3472(62)80138-3
+        url: https://doi.org/10.1006/anbe.1997.0712
     playback_references:
       - id: hauser_1998
-        url: https://doi.org/10.1098/rspb.1998.0304
+        url: https://doi.org/10.1006/anbe.1997.0712
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Barks appear in the classic inventory and in later studies of rhesus alarm communication.
+    call_type_existence_explanation: Grunts are part of the older repertoire tradition summarized by Rowell and Hinde 1962 and are a central food-call class in Hauser and Marler 1993a and Hauser 1998. Existence agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Hauser and Marler 1993a gives a quantitative account of grunts as pulsed low-frequency atonal calls, compatible with the harsh-call framing in Rowell and Hinde 1962. Agreement is strong for the broad acoustic structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Hauser and Marler 1993a, Hauser and Marler 1993b, and Hauser 1998 consistently associate grunts with low-quality food and some nonfood social contexts, with field playback evidence for receiver classification. Semantic agreement is strong.
+
+  - name: warble
+    in_primary_inventory: true
+    alternative_names:
+      - food warble
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - long
+      - graded
+    acoustic_description: A clear tonal food call with harmonic structure and a modulated frequency contour. It is acoustically distinct from harmonic arches and grunts, although receivers can perceptually group warbles with harmonic arches in food-call playback experiments.
+    semantic_keywords:
+      - food
+      - recruitment
+      - group_coordination
+    semantic_description: Produced by free-living rhesus macaques on discovering rare, high-quality foods such as coconut. Receivers hearing food-call playbacks typically approach, and habituation experiments indicate that warbles are classified with other high-quality-food calls.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: hauser_1998
+        url: https://doi.org/10.1006/anbe.1997.0712
+    semantic_references:
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: hauser_marler_1993b
+        url: https://doi.org/10.1093/beheco/4.3.206
+      - id: hauser_1998
+        url: https://doi.org/10.1006/anbe.1997.0712
+    playback_references:
+      - id: hauser_1998
+        url: https://doi.org/10.1006/anbe.1997.0712
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Warbles are included in the Rowell and Hinde 1962 repertoire and are repeatedly analyzed as one of the five free-ranging food-call classes by Hauser and Marler 1993a and Hauser 1998. Existence agreement is strong.
     acoustic_description_agreement: medium
-    acoustic_description_explanation: The abrupt broadband form is stable, but the category may include context-linked variants.
+    acoustic_description_explanation: The sources agree that warbles are clear, tonal, and acoustically distinct from grunts and harmonic arches, but the open summaries provide less detailed structure than for coos, grunts, or screams. Acoustic agreement is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Hauser and Marler 1993a, Hauser and Marler 1993b, and Hauser 1998 all place warbles in rare high-quality food contexts and show receiver approach or classification effects. Semantic agreement is strong.
+
+  - name: harmonic arch
+    in_primary_inventory: false
+    alternative_names:
+      - harmonic arches
+      - food harmonic arch
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - long
+    acoustic_description: A clear tonal food call with harmonic structure and an arch-shaped frequency contour in which frequency rises and falls over the call. It is acoustically distinct from warbles and chirps but is perceptually grouped with warbles by receivers in field playback experiments.
+    semantic_keywords:
+      - food
+      - recruitment
+      - group_coordination
+    semantic_description: Produced on discovery of rare, highly preferred foods. Playback and habituation experiments show that listeners treat harmonic arches as members of the high-quality-food call set and often respond by approaching the caller.
+    acoustic_references:
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: hauser_1998
+        url: https://doi.org/10.1006/anbe.1997.0712
+    semantic_references:
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: hauser_1998
+        url: https://doi.org/10.1006/anbe.1997.0712
+    playback_references:
+      - id: hauser_1998
+        url: https://doi.org/10.1006/anbe.1997.0712
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Harmonic arches are one of the five food-call classes in Hauser and Marler 1993a and are central to Hauser 1998 field playback tests. They are marked outside the primary inventory because the label is a later food-call refinement rather than the Rowell and Hinde 1962 spine label.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Hauser and Marler 1993a and Hauser 1998 agree that harmonic arches are acoustically distinct from warbles, chirps, coos, and grunts, with an arched tonal structure. Agreement is strong.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Both Hauser and Marler 1993a and Hauser 1998 tie harmonic arches to high-quality food and show receiver classification or approach responses. Semantic agreement is strong.
+
+  - name: chirp
+    in_primary_inventory: true
+    alternative_names:
+      - food chirp
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - abrupt
+      - frequency_modulated
+    acoustic_description: A short clear food call, acoustically distinct from coos, grunts, warbles, and harmonic arches. The call is brief and tonal compared with the noisier harsh calls in the repertoire.
+    semantic_keywords:
+      - food
+      - recruitment
+      - group_coordination
+    semantic_description: Produced when free-living rhesus macaques discover rare, high-quality foods. It belongs to the food-call set that can bring listeners toward a food finder.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+    semantic_references:
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: hauser_marler_1993b
+        url: https://doi.org/10.1093/beheco/4.3.206
+      - id: hauser_1998
+        url: https://doi.org/10.1006/anbe.1997.0712
+    playback_references:
+      - id: hauser_1998
+        url: https://doi.org/10.1006/anbe.1997.0712
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Chirps are named in Rowell and Hinde 1962 and are one of the five free-ranging food-call classes in Hauser and Marler 1993a and Hauser 1998. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Rowell and Hinde 1962 and Hauser and Marler 1993a support chirps as a discrete clear call, but less detailed acoustic description is available in the main field summaries than for coos, grunts, and screams. Acoustic agreement is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Hauser and Marler 1993a, Hauser and Marler 1993b, and Hauser 1998 consistently associate chirps with high-quality food discoveries. Semantic agreement is strong.
+
+  - name: bark
+    in_primary_inventory: true
+    alternative_names:
+      - aggressive bark
+      - threat bark
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+    acoustic_description: A harsh, abrupt broadband vocalization with noisy energy spread across frequencies. In free-ranging multimodal observations, barks were associated with a stereotyped facial and head posture rather than the mouth shapes used for clear calls.
+    semantic_keywords:
+      - threat
+      - aggression
+      - attention
+    semantic_description: Produced in threatening or aggressive social encounters. Free-ranging observations link barks with visual displays such as retracted ears and lowered head, supporting its use in close-range agonistic signalling.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
+      - id: partan_2002
+        url: https://doi.org/10.1163/15685390260337877
+    semantic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
+      - id: partan_2002
+        url: https://doi.org/10.1163/15685390260337877
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Bark is named in the Rowell and Hinde 1962 repertoire and appears in Partan 2002 free-ranging multimodal analyses. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Rowell and Hinde 1962 supports bark as a harsh call and Partan 2002 confirms it as a distinct vocal component in free-ranging behaviour, but detailed modern acoustic measurements are limited. Acoustic agreement is medium.
     semantic_description_agreement: medium
-    semantic_description_explanation: Alarm use is supported, but predator-specific meanings are less elaborated than in vervets.
+    semantic_description_explanation: Rowell and Hinde 1962 and Partan 2002 both place bark in agonistic signalling, but the semantic evidence is mostly observational rather than playback-based. Agreement is medium.
+
+  - name: pant-threat
+    in_primary_inventory: false
+    alternative_names:
+      - pant threat
+      - aggressive call
+      - threat grunt
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - repetitive
+      - pulsed
+      - long
+      - graded
+    acoustic_description: A repeated, breathy, weakly voiced harsh call that is longer and less voiced than a grunt. It is formed from pant-like pulses and can grade toward other low noisy aggressive calls.
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+    semantic_description: Produced by dominant animals toward subordinates in aggressive situations. Free-ranging multimodal work associates pant-threats with forward ears and raised head during agonistic displays.
+    acoustic_references:
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: partan_2002
+        url: https://doi.org/10.1163/15685390260337877
+    semantic_references:
+      - id: hauser_marler_1993a
+        url: https://doi.org/10.1093/beheco/4.3.194
+      - id: partan_2002
+        url: https://doi.org/10.1163/15685390260337877
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Hauser and Marler 1993a distinguishes pant-threats acoustically from grunts, and Partan 2002 identifies pant-threats as a free-ranging vocal component tied to a specific visual display pattern. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The two sources agree that pant-threats are breathier, longer, and less voiced than grunts, but the acoustic literature is thinner than for food calls and screams. Acoustic agreement is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Hauser and Marler 1993a and Partan 2002 independently place pant-threats in dominant-to-subordinate aggressive contexts. Semantic agreement is strong.
+
+  - name: girney
+    in_primary_inventory: true
+    alternative_names:
+      - gurney
+      - gurney warble
+      - girney vocalization
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - quiet
+      - repetitive
+      - frequency_modulated
+    acoustic_description: A soft clear call with tonal or warbling elements, often produced in short repeated bouts. Free-ranging recordings link the vocal component to a stereotyped lip-smacking facial movement.
+    semantic_keywords:
+      - affiliation
+      - submission
+      - contact
+    semantic_description: Produced during close-range friendly or appeasing social interactions. Free-ranging multimodal observations report that girneys are accompanied by lipsmacking, supporting use in affiliative or low-tension social contact.
+    acoustic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
+      - id: partan_2002
+        url: https://doi.org/10.1163/15685390260337877
+    semantic_references:
+      - id: rowell_hinde_1962
+        url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
+      - id: partan_2002
+        url: https://doi.org/10.1163/15685390260337877
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Girney-like calls are part of the Rowell and Hinde 1962 repertoire and are explicitly identified in Partan 2002 free-ranging multimodal observations. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Rowell and Hinde 1962 supports a clear-call category and Partan 2002 confirms the vocal label in free-ranging observations, but fine-scale acoustic measurements are sparse. Acoustic agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Both Rowell and Hinde 1962 and Partan 2002 associate girneys with friendly or affiliative social behaviour, but functional tests are limited. Semantic agreement is medium.
+
+  - name: noisy scream
+    in_primary_inventory: false
+    alternative_names:
+      - noisy recruitment scream
+    scope: &juvenile_adult_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - loud
+      - long
+      - graded
+    acoustic_description: A loud scream with broad noisy energy and little stable tonal structure. It is one of the five acoustically distinct recruitment scream classes described from free-ranging rhesus macaques.
+    semantic_keywords:
+      - aggression
+      - submission
+      - recruitment
+      - threat
+    semantic_description: Produced by victims during agonistic encounters, especially in contexts involving contact aggression from higher-ranking opponents. Playback work shows that mothers can respond differentially to scream information in the absence of other cues.
+    acoustic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: gouzoules_etal_1998
+        url: https://doi.org/10.1006/anbe.1997.0583
+    semantic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: gouzoules_etal_1998
+        url: https://doi.org/10.1006/anbe.1997.0583
+    playback_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Gouzoules et al. 1984 identifies noisy screams as one of five acoustically distinct free-ranging recruitment scream classes, and Gouzoules et al. 1998 retains the class in later analyses of dominance and conflict severity. Existence agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Gouzoules et al. 1984 and Gouzoules et al. 1998 agree on noisy screams as a distinct class, with later work using them in predictions about contact aggression. Acoustic agreement is strong.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Gouzoules et al. 1984 and Gouzoules et al. 1998 both link noisy screams to agonistic recruitment and severe or contact aggression contexts. Playback evidence in Gouzoules et al. 1984 supports semantic agreement.
+
+  - name: arched scream
+    in_primary_inventory: false
+    alternative_names:
+      - arched recruitment scream
+      - screech
+    scope: *juvenile_adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - loud
+      - long
+    acoustic_description: A loud, tonal scream with a sharply rising and then falling frequency contour, often forming one or more arch-shaped peaks. It is shorter and broader in bandwidth than tonal screams in comparative psychophysical descriptions.
+    semantic_keywords:
+      - aggression
+      - submission
+      - recruitment
+      - threat
+    semantic_description: Produced during agonistic encounters as part of the recruitment-scream system. The class is associated with particular opponent and aggression categories rather than simply with undifferentiated arousal.
+    acoustic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: leprell_etal_2002
+        url: https://doi.org/10.1006/anbe.2001.1888
+    semantic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: leprell_etal_2002
+        url: https://doi.org/10.1006/anbe.2001.1888
+    playback_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Arched screams are a named class in Gouzoules et al. 1984 and were used as a perceptual class in Le Prell et al. 2002. Existence agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Gouzoules et al. 1984 describes the arched contour, and Le Prell et al. 2002 tests discrimination between arched and tonal screams based on those acoustic criteria. Acoustic agreement is strong.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Gouzoules et al. 1984 gives free-ranging functional evidence for opponent/aggression-class signalling, but Le Prell et al. 2002 is mainly perceptual and captive. Semantic agreement is therefore medium.
+
+  - name: tonal scream
+    in_primary_inventory: false
+    alternative_names:
+      - tonal recruitment scream
+    scope: *juvenile_adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - loud
+      - long
+    acoustic_description: A long tonal scream with a clear fundamental-frequency contour and a distinctive tonal mid-section. Compared with arched screams, tonal screams are longer, lower in frequency, and narrower in bandwidth.
+    semantic_keywords:
+      - aggression
+      - submission
+      - recruitment
+      - threat
+    semantic_description: Produced in agonistic encounters as a recruitment scream, especially in non-contact aggression contexts involving higher-ranking opponents. It encodes aspects of the social conflict rather than only caller arousal.
+    acoustic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: gouzoules_etal_1998
+        url: https://doi.org/10.1006/anbe.1997.0583
+      - id: leprell_etal_2002
+        url: https://doi.org/10.1006/anbe.2001.1888
+    semantic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: gouzoules_etal_1998
+        url: https://doi.org/10.1006/anbe.1997.0583
+    playback_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Tonal screams are named by Gouzoules et al. 1984, used in Gouzoules et al. 1998 analyses, and tested against arched screams in Le Prell et al. 2002. Existence agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Gouzoules et al. 1984 and Le Prell et al. 2002 agree on the tonal mid-section and distinctions from arched screams. Acoustic agreement is strong.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Gouzoules et al. 1984 and Gouzoules et al. 1998 both associate tonal screams with agonistic recruitment and particular non-contact or rank-related conflict contexts. Semantic agreement is strong.
+
+  - name: pulsed scream
+    in_primary_inventory: false
+    alternative_names:
+      - pulsed recruitment scream
+    scope: *juvenile_adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - pulsed
+      - repetitive
+      - short
+      - noisy
+      - loud
+    acoustic_description: A scream composed of short pulses, with individual pulses ranging from noisy to more tonal structure. Later acoustic work describes pulsed screams as shorter than tonal screams and often less stable in tonality.
+    semantic_keywords:
+      - aggression
+      - submission
+      - recruitment
+      - threat
+    semantic_description: Produced during agonistic encounters as part of the recruitment-scream set. The class contributes information about the opponent and aggression event in combination with other scream classes.
+    acoustic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: leprell_etal_2002
+        url: https://doi.org/10.1006/anbe.2001.1888
+      - id: fishell_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.05.017
+    semantic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: gouzoules_etal_1998
+        url: https://doi.org/10.1006/anbe.1997.0583
+      - id: fishell_etal_2022
+        url: https://doi.org/10.1016/j.anbehav.2022.05.017
+    playback_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Pulsed screams are one of the five Gouzoules et al. 1984 free-ranging scream classes and are retained in later acoustic analyses such as Le Prell et al. 2002 and Fishell et al. 2022. Existence agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Gouzoules et al. 1984, Le Prell et al. 2002, and Fishell et al. 2022 consistently distinguish pulsed screams by their brief pulsed structure. Acoustic agreement is strong.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Gouzoules et al. 1984 and Gouzoules et al. 1998 support agonistic recruitment functions, while Fishell et al. 2022 emphasizes emotional arousal in a socially housed developmental sample. Agreement is medium because later work shifts emphasis from referential context to arousal.
+
+  - name: undulating scream
+    in_primary_inventory: false
+    alternative_names:
+      - undulated scream
+      - undulating recruitment scream
+    scope: *juvenile_adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - long
+      - loud
+    acoustic_description: A long tonal scream with repeated up-and-down frequency modulation and several harmonic bands. It is one of the five scream classes separated from noisy, arched, tonal, and pulsed screams.
+    semantic_keywords:
+      - aggression
+      - submission
+      - recruitment
+      - threat
+    semantic_description: Produced during agonistic recruitment contexts, especially non-contact aggression in later analyses of rank-difference encounters. It helps encode features of the conflict and likely opponent class.
+    acoustic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: gouzoules_etal_1998
+        url: https://doi.org/10.1006/anbe.1997.0583
+    semantic_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+      - id: gouzoules_etal_1998
+        url: https://doi.org/10.1006/anbe.1997.0583
+    playback_references:
+      - id: gouzoules_etal_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80336-X
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Undulating or undulated screams are named in Gouzoules et al. 1984 and retained in Gouzoules et al. 1998 as one of the five recruitment scream classes. Existence agreement is strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The sources agree on undulating screams as a distinct tonal class, but fewer later acoustic tests focus on this subtype than on arched, tonal, or pulsed screams. Acoustic agreement is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Gouzoules et al. 1984 and Gouzoules et al. 1998 consistently place undulating screams in the free-ranging agonistic recruitment system and link them to social-conflict variables. Semantic agreement is strong.
+
 references:
   rowell_hinde_1962:
-    citation: "Rowell, T. E., & Hinde, R. A. (1962). Vocal communication by the rhesus monkey (Macaca mulatta). Proceedings of the Zoological Society of London, 138, 279-294."
-    url: https://doi.org/10.1111/j.1469-7998.1962.tb05697.x
-    doi: 10.1111/j.1469-7998.1962.tb05697.x
+    citation: Rowell, T. E., and Hinde, R. A. 1962. Vocal communication by the rhesus monkey (Macaca mulatta). Proceedings of the Zoological Society of London 138(2):279-294.
+    doi: 10.1111/j.1469-7998.1962.tb05698.x
+    url: https://doi.org/10.1111/j.1469-7998.1962.tb05698.x
   hauser_1991:
-    citation: "Hauser, M. D. (1991). Sources of acoustic variation in rhesus macaque vocalizations. Ethology, 89, 29-46."
-    url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+    citation: Hauser, M. D. 1991. Sources of acoustic variation in rhesus macaque (Macaca mulatta) vocalizations. Ethology 89:29-46.
     doi: 10.1111/j.1439-0310.1991.tb00291.x
-  gouzoules_etal_1984:
-    citation: "Gouzoules, S., Gouzoules, H., & Marler, P. (1984). Rhesus monkey screams: representational signalling in the recruitment of agonistic aid. Animal Behaviour, 32, 182-193."
-    url: https://doi.org/10.1016/S0003-3472(84)80336-X
-    doi: 10.1016/S0003-3472(84)80336-X
-  partan_2002:
-    citation: "Partan, S. R. (2002). Single and multichannel signal composition: facial expressions and vocalizations of rhesus macaques. Behaviour, 139, 993-1027."
-    url: https://doi.org/10.1163/15685390260337964
-    doi: 10.1163/15685390260337964
+    url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+  hauser_marler_1993a:
+    citation: Hauser, M. D., and Marler, P. 1993. Food-associated calls in rhesus macaques (Macaca mulatta). I. Socioecological factors. Behavioral Ecology 4(3):194-205.
+    doi: 10.1093/beheco/4.3.194
+    url: https://doi.org/10.1093/beheco/4.3.194
+  hauser_marler_1993b:
+    citation: Hauser, M. D., and Marler, P. 1993. Food-associated calls in rhesus macaques (Macaca mulatta). II. Costs and benefits of call production and suppression. Behavioral Ecology 4(3):206-212.
+    doi: 10.1093/beheco/4.3.206
+    url: https://doi.org/10.1093/beheco/4.3.206
   hauser_1998:
-    citation: "Hauser, M. D. (1998). Functional referents and acoustic similarity: field playback experiments with rhesus monkeys. Animal Behaviour, 55, 1647-1658."
-    url: https://doi.org/10.1006/anbe.1997.0715
-    doi: 10.1006/anbe.1997.0715
+    citation: Hauser, M. D. 1998. Functional referents and acoustic similarity; field playback experiments with rhesus monkeys. Animal Behaviour 55(6):1647-1658.
+    doi: 10.1006/anbe.1997.0712
+    url: https://doi.org/10.1006/anbe.1997.0712
+  rendall_etal_1996:
+    citation: Rendall, D., Rodman, P. S., and Emond, R. E. 1996. Vocal recognition of individuals and kin in free-ranging rhesus monkeys. Animal Behaviour 51(5):1007-1015.
+    doi: 10.1006/anbe.1996.0103
+    url: https://doi.org/10.1006/anbe.1996.0103
+  partan_2002:
+    citation: Partan, S. R. 2002. Single and multichannel signal composition; facial expressions and vocalizations of rhesus macaques (Macaca mulatta). Behaviour 139(8):993-1027.
+    doi: 10.1163/15685390260337877
+    url: https://doi.org/10.1163/15685390260337877
+  gouzoules_etal_1984:
+    citation: Gouzoules, S., Gouzoules, H., and Marler, P. 1984. Rhesus monkey (Macaca mulatta) screams; representational signalling in the recruitment of agonistic aid. Animal Behaviour 32(1):182-193.
+    doi: 10.1016/S0003-3472(84)80336-X
+    url: https://doi.org/10.1016/S0003-3472(84)80336-X
+  gouzoules_etal_1998:
+    citation: Gouzoules, H., Gouzoules, S., and Tomaszycki, M. 1998. Agonistic screams and the classification of dominance relationships; are monkeys fuzzy logicians? Animal Behaviour 55(1):51-60.
+    doi: 10.1006/anbe.1997.0583
+    url: https://doi.org/10.1006/anbe.1997.0583
+  leprell_etal_2002:
+    citation: Le Prell, C. G., Hauser, M. D., and Moody, D. B. 2002. Discrete or graded variation within rhesus monkey screams? Psychophysical experiments on classification. Animal Behaviour 63(1):47-62.
+    doi: 10.1006/anbe.2001.1888
+    url: https://doi.org/10.1006/anbe.2001.1888
+  fishell_etal_2022:
+    citation: Fishell, A. K., et al. 2022. Vocal expression of emotional arousal across two call types in young rhesus macaques. Animal Behaviour 190:125-138.
+    doi: 10.1016/j.anbehav.2022.05.017
+    url: https://doi.org/10.1016/j.anbehav.2022.05.017
