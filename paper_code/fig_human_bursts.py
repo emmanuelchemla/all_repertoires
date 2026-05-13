@@ -91,7 +91,10 @@ def load_animals():
 
 def load_humans():
     """Load human burst calls from JSON."""
-    with open(ROOT / "human_bursts" / "manual" / "human_vocal_bursts.json") as f:
+    humans_path = ROOT / "human_bursts" / "manual" / "human_vocal_bursts.json"
+    if not humans_path.exists():
+        humans_path = ROOT / "database_humans.json"
+    with open(humans_path) as f:
         hdb = json.load(f)
     # Single "species" entry for humans
     return hdb["species"][0]["calls"]
