@@ -31,13 +31,14 @@ from umap import UMAP
 # ------------------------------------------------------------------ #
 
 SEM_CATEGORY = {
-    "alarm": "danger",      "predator": "danger",   "threat": "danger",
-    "distress": "distress", "infant": "distress",
-    "contact": "cohesion",  "coordination": "cohesion",
-    "long_distance": "cohesion", "affiliative": "cohesion",
-    "aggression": "social", "display": "social",    "sex": "social",
-    "dominance": "social",  "submission": "social", "territory": "social",
-    "food": "foraging",     "recruitment": "foraging",
+    "alarm": "danger", "predator": "danger", "threat": "danger", "aggression": "danger",
+    "distress": "distress", "submission": "distress", "begging": "distress",
+    "contact": "cohesion", "group_coordination": "cohesion",
+    "affiliation": "cohesion", "attention": "cohesion", "spacing": "cohesion",
+    "display": "social", "mating": "social", "courtship": "social",
+    "play": "social", "territorial": "social", "caregiving": "social",
+    "food": "foraging", "recruitment": "foraging",
+    "identity": "other", "combinatorial": "other",
 }
 CAT_COLORS = {
     "danger":   "#d62728",

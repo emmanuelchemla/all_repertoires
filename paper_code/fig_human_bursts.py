@@ -361,8 +361,12 @@ HUMAN_SEMANTIC_PANELS = [
     ("Alarm / Ref.",  ["alarm", "referential"]),
 ]
 
-# Keywords shared with animal PMI (for correlation)
-SHARED_KEYWORDS = ["alarm", "affiliative", "display", "contact", "distress", "referential"]
+# Keywords shared with animal PMI (for correlation).
+# Note: the animal repertoires/ ontology uses "affiliation" rather than
+# the older "affiliative" tag still used in the human burst database.
+SHARED_KEYWORDS_HUMAN  = ["alarm", "affiliative", "display", "contact", "distress", "referential"]
+SHARED_KEYWORDS_ANIMAL = ["alarm", "affiliation", "display", "contact", "distress", "referential"]
+SHARED_KEYWORDS = SHARED_KEYWORDS_HUMAN  # legacy alias for any external callers
 
 
 def fig_h2_pmi(human_calls, animal_calls):
@@ -381,14 +385,20 @@ def fig_h2_pmi(human_calls, animal_calls):
     print(f"  Animal PMI matrix: {a_pmi.shape}  sem={len(a_sem_labels)}")
 
     # ── Pearson r on shared keywords ────────────────────────────────
-    shared = [kw for kw in SHARED_KEYWORDS if kw in h_sem_labels and kw in a_sem_labels]
-    if shared:
-        h_cols = [h_sem_labels.index(kw) for kw in shared]
-        a_cols = [a_sem_labels.index(kw) for kw in shared]
+    # Map human-side keyword → matched animal-side keyword (ontologies
+    # differ in spelling for the same concept, e.g. affiliative ↔ affiliation).
+    shared_pairs = [
+        (h_kw, a_kw)
+        for h_kw, a_kw in zip(SHARED_KEYWORDS_HUMAN, SHARED_KEYWORDS_ANIMAL)
+        if h_kw in h_sem_labels and a_kw in a_sem_labels
+    ]
+    if shared_pairs:
+        h_cols = [h_sem_labels.index(h_kw) for h_kw, _ in shared_pairs]
+        a_cols = [a_sem_labels.index(a_kw) for _, a_kw in shared_pairs]
         h_vec = h_pmi[:, h_cols].ravel()
         a_vec = a_pmi[:, a_cols].ravel()
         r_val, p_val = pearsonr(h_vec, a_vec)
-        shared_str = ", ".join(shared)
+        shared_str = ", ".join(h_kw for h_kw, _ in shared_pairs)
         annot_text = f"PMI correlation with non-human animals: r = {r_val:.2f}  (shared keywords: {shared_str})"
         print(f"  {annot_text}")
     else:

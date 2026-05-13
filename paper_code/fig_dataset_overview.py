@@ -33,17 +33,22 @@ CLASS_COLORS = {
 }
 
 # Semantic keyword → broad category for colouring panel A
+# Uses the controlled vocabulary defined in repertoires/schema.json.
 SEM_CATEGORY = {
-    "alarm":     "danger",   "predator": "danger",  "threat": "danger",
-    "distress":  "distress", "infant":   "distress",
-    "contact":   "cohesion", "coordination": "cohesion",
-    "long_distance": "cohesion", "affiliative": "cohesion",
-    "aggression":"social",   "display":  "social",  "sex": "social",
-    "dominance": "social",   "submission":"social",  "territory": "social",
-    "food":      "foraging", "recruitment":"foraging",
-    "learning":  "other",    "sequence": "other",   "individual_identity": "other",
-    "referential":"other",   "syntax":   "other",   "turn_taking": "other",
-    "group_identity": "other",
+    # danger / threat signals
+    "alarm": "danger", "predator": "danger", "threat": "danger", "aggression": "danger",
+    # distress / submissive signalling
+    "distress": "distress", "submission": "distress", "begging": "distress",
+    # cohesion / contact / coordination
+    "contact": "cohesion", "group_coordination": "cohesion",
+    "affiliation": "cohesion", "attention": "cohesion", "spacing": "cohesion",
+    # broader social interaction
+    "display": "social", "mating": "social", "courtship": "social",
+    "play": "social", "territorial": "social", "caregiving": "social",
+    # foraging
+    "food": "foraging", "recruitment": "foraging",
+    # other (identity, structural)
+    "identity": "other", "combinatorial": "other",
 }
 
 CAT_COLORS = {

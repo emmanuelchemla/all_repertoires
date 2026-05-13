@@ -65,21 +65,18 @@ GROUP_BG_COLORS = {
 
 SEMANTIC_PANELS = [
     ("Danger / threat",  ["alarm", "predator", "threat", "aggression"]),
-    ("Distress / Infant",["distress", "infant"]),
-    ("Cohesion",         ["contact", "coordination", "long_distance", "affiliative"]),
-    ("Social",           ["display", "sex", "territory"]),
+    ("Distress",         ["distress", "submission", "begging"]),
+    ("Cohesion",         ["contact", "group_coordination", "affiliation", "attention", "spacing"]),
+    ("Social",           ["display", "mating", "courtship", "play", "territorial", "caregiving"]),
     ("Foraging",         ["food", "recruitment"]),
-    ("Cognitive",        ["individual_identity", "learning", "referential"]),
+    ("Identity",         ["identity", "combinatorial"]),
 ]
 
 SEMANTIC = [s for _, panel in SEMANTIC_PANELS for s in panel]
 
 SEMANTIC_LABELS = {
-    "distress":            "adult distress",
-    "infant":              "infant calls",
-    "long_distance":       "long-distance",
-    "individual_identity": "indiv. identity",
-    "learning":            "vocal learning",
+    "group_coordination": "coordination",
+    "territorial":        "territory",
 }
 
 # ------------------------------------------------------------------ #
