@@ -5,6 +5,8 @@ description: Use this skill whenever creating, editing, or reviewing a species r
 
 # Species repertoire skill
 
+The goal of this skill is to create a file with a comprehensive wild vocal repertoire for a species.
+
 ## File layout
 
 - One YAML file per species at `species/<scientific-name-kebab-case>.yaml` (e.g. `corvus-corax.yaml`).
