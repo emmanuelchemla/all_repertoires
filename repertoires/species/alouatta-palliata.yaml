@@ -1,0 +1,143 @@
+scientific_name: Alouatta palliata
+common_name: Mantled Howler Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Atelidae
+  genus: Alouatta
+  species: palliata
+primary_inventory:
+  id: baldwin_baldwin_1976
+  rationale: Baldwin and Baldwin 1976 is used as the primary inventory because it is a field-based description of the mantled howler vocal repertoire in Panama, identifying 26 vocalization types and presenting sonagrams for most of them. This compact file includes the best-supported high-level call types rather than every fine subtype.
+calls:
+  - name: roar
+    alternative_names:
+      - howl
+      - loud call
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, repetitive, multi_component]
+    acoustic_description: Very loud, low-frequency long call composed of repeated roar elements, often produced in bouts by multiple group members.
+    semantic_keywords: [territorial, spacing, group_coordination, display]
+    semantic_description: Produced during dawn choruses, intergroup spacing, and disturbance contexts where callers advertise group presence and location.
+    acoustic_references:
+      - id: baldwin_baldwin_1976
+        url: https://doi.org/10.1159/000155744
+      - id: whitehead_1987
+        url: https://doi.org/10.1007/BF02381948
+    semantic_references:
+      - id: baldwin_baldwin_1976
+        url: https://doi.org/10.1159/000155744
+      - id: whitehead_1987
+        url: https://doi.org/10.1007/BF02381948
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Roars are central in Baldwin and Baldwin 1976 and in Whitehead 1987 studies of howler loud calling.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Both sources support a loud, low-frequency, repeated long-call structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial spacing and group advertisement functions are consistently associated with mantled howler loud calls.
+
+  - name: bark
+    alternative_names:
+      - woof
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, short, abrupt, noisy]
+    acoustic_description: Short, abrupt, low-frequency bark-like call that may occur singly or in repeated sequences.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced during disturbance, vigilance, and close-range threat contexts, often drawing attention to an external event.
+    acoustic_references:
+      - id: baldwin_baldwin_1976
+        url: https://doi.org/10.1159/000155744
+      - id: da_cunha_byrne_2006
+        url: https://doi.org/10.1007/s00265-006-0209-5
+    semantic_references:
+      - id: baldwin_baldwin_1976
+        url: https://doi.org/10.1159/000155744
+      - id: da_cunha_byrne_2006
+        url: https://doi.org/10.1007/s00265-006-0209-5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Bark and woof-like calls are described in the inventory, but howler studies often focus more heavily on roars.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The abrupt bark-like structure is supported, though fine subdivisions vary among descriptions.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and attention contexts are supported observationally, with less focused testing than loud roars.
+
+  - name: grunt
+    alternative_names:
+      - low grunt
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, quiet, noisy, graded]
+    acoustic_description: Short low-frequency rough call, generally quieter and shorter than barks or roars.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close-range social and movement contexts, including routine within-group coordination.
+    acoustic_references:
+      - id: baldwin_baldwin_1976
+        url: https://doi.org/10.1159/000155744
+    semantic_references:
+      - id: baldwin_baldwin_1976
+        url: https://doi.org/10.1159/000155744
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Grunts are part of the described repertoire, but they have less independent acoustic literature than loud calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The description relies mainly on Baldwin and Baldwin 1976, so fine acoustic agreement is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Close-range contact use is described in the inventory, but context-specific functions are broad.
+
+  - name: scream
+    alternative_names:
+      - squeal
+    in_primary_inventory: true
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, long, noisy, frequency_modulated]
+    acoustic_description: Loud high-frequency harsh call, often extended and strongly modulated.
+    semantic_keywords: [distress, aggression, alarm]
+    semantic_description: Produced in high-arousal contexts such as aggression, distress, or sudden disturbance.
+    acoustic_references:
+      - id: baldwin_baldwin_1976
+        url: https://doi.org/10.1159/000155744
+    semantic_references:
+      - id: baldwin_baldwin_1976
+        url: https://doi.org/10.1159/000155744
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Screams are recognized in the primary inventory, but labels can overlap with other high-arousal calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic support comes mainly from the inventory sonagrams and qualitative descriptions.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Distress and aggression contexts are supported observationally but not narrowly resolved.
+references:
+  baldwin_baldwin_1976:
+    citation: "Baldwin, J. D., & Baldwin, J. I. (1976). Vocalizations of howler monkeys (Alouatta palliata) in southwestern Panama. Folia Primatologica, 26, 81-108."
+    url: https://doi.org/10.1159/000155744
+    doi: 10.1159/000155744
+  whitehead_1987:
+    citation: "Whitehead, J. M. (1987). Vocally mediated reciprocity between neighbouring groups of mantled howling monkeys, Alouatta palliata palliata. Animal Behaviour, 35, 1615-1627."
+    url: https://doi.org/10.1016/S0003-3472(87)80054-4
+    doi: 10.1016/S0003-3472(87)80054-4
+  da_cunha_byrne_2006:
+    citation: "da Cunha, R. G. T., & Byrne, R. W. (2006). Roars of black howler monkeys advertise the presence of neighbours. Behavioral Ecology and Sociobiology, 60, 487-494."
+    url: https://doi.org/10.1007/s00265-006-0209-5
+    doi: 10.1007/s00265-006-0209-5
