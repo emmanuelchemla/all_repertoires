@@ -95,9 +95,10 @@ Applies to all three agreement labels.
 
 A common drift is to let function leak into acoustic descriptions (e.g. "alarm-like trill"). Acoustic = what it sounds like to a spectrogram. Semantic = when/why it is produced and to what effect. If a description mixes both, split it.
 
-## Multi-agent etiquette
+## Workflow
 
-- Before generating a species file, pick a species from `species_index.yaml` that does not yet have a file at `species/<kebab-name>.yaml`.
-- One agent per species file per session. The git layer is your conflict detector.
-- Do not edit `schema.json` or this skill as a side-effect of species work. Propose schema changes separately.
-- After any edit: run `validate.py`. If it fails, fix before reporting done.
+1. Checkout to main, pull, then checkout to a branch name `adding-species-$DATETIME`
+2. Open a PR immediately; include model and thinking effort in the description.
+3. Spawn **one subagent per species** in parallel. Each picks an unfinished species from `species_index.yaml` (no file yet at `species/<kebab-name>.yaml`), writes its YAML, runs `validate.py`, and makes exactly one commit. Never touch `schema.json` or this skill as a side-effect. 
+4. Do **not** use `database.json` as a source. Build every repertoire from scratch using primary literature only.
+5. When all commits are in, **auto-merge the PR**.
