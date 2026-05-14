@@ -97,8 +97,7 @@ A common drift is to let function leak into acoustic descriptions (e.g. "alarm-l
 
 ## Workflow
 
-1. Checkout to main, pull, then checkout to a branch name `adding-species-$DATETIME`
-2. Open a PR immediately; include model and thinking effort in the description.
-3. Spawn **one subagent per species** in parallel. Each picks an unfinished species from `species_index.yaml` (no file yet at `species/<kebab-name>.yaml`), writes its YAML, runs `validate.py`, and makes exactly one commit. Never touch `schema.json` or this skill as a side-effect. 
+1. Checkout to main and pull.
+2. Spawn **one subagent per species** in parallel. Each picks an unfinished species from `species_index.yaml` (no file yet at `species/<kebab-name>.yaml`), writes its YAML, runs `validate.py`, and makes exactly one commit directly to main and pushes. 
+3. Never touch `schema.json` or this skill as a side-effect. 
 4. Do **not** use `database.json` as a source. Build every repertoire from scratch using primary literature only.
-5. When all commits are in, **auto-merge the PR**.
