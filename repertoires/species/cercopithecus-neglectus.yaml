@@ -1,0 +1,79 @@
+scientific_name: Cercopithecus neglectus
+common_name: De Brazza's Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Cercopithecus
+  species: neglectus
+primary_inventory:
+  rationale: No single dedicated wild repertoire inventory was identified for De Brazza's monkey. Calls are therefore included from comparative guenon literature and field accounts that describe distinct acoustic and social contexts.
+calls:
+  - name: boom
+    alternative_names: [male boom, long-distance call]
+    in_primary_inventory: false
+    scope: &adult_male_scope
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, loud, long]
+    acoustic_description: A loud low-frequency call with a resonant tonal quality and relatively long duration compared with close-range calls.
+    semantic_keywords: [spacing, territorial, contact, identity]
+    semantic_description: Produced by adult males in long-distance advertisement, spacing, and group-location contexts.
+    acoustic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    semantic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Comparative guenon accounts treat booms as a recurring male call class, but species-specific De Brazza data are sparse.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic description rests mostly on comparative qualitative descriptions.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Long-distance male advertisement is consistent across guenon comparative sources, though playback evidence is limited for this species.
+  - name: alarm bark
+    alternative_names: [bark, cough]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, noisy, short, loud, abrupt]
+    acoustic_description: A short harsh broadband call with abrupt onset, often repeated during agitation.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Given during disturbance or predator-oriented vigilance, recruiting attention from nearby group members.
+    acoustic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+      - id: struhsaker_1967
+        url: https://doi.org/10.1007/BF01730404
+    semantic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+      - id: struhsaker_1967
+        url: https://doi.org/10.1007/BF01730404
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm barks are a standard cercopithecine category, but De Brazza-specific naming is not strongly standardized.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on short harsh alarm calls in guenons, with limited fine-scale measurements for De Brazza's monkey.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and vigilance contexts are supported in comparative accounts; predator specificity is conservatively broad.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  gautier_1988:
+    citation: "Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced from vocalizations. In A Primate Radiation: Evolutionary Biology of the African Guenons."
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  struhsaker_1967:
+    citation: "Struhsaker, T. T. (1967). Auditory communication among vervet monkeys (Cercopithecus aethiops). In Social Communication among Primates."
+    url: https://doi.org/10.1007/BF01730404

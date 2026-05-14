@@ -1,0 +1,82 @@
+scientific_name: Corvus monedula
+common_name: Western Jackdaw
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Corvus
+  species: monedula
+primary_inventory:
+  rationale: Western jackdaw vocalizations are described across behavioral and playback studies rather than in one single modern repertoire inventory. Calls are included from well-supported social and alarm contexts.
+calls:
+  - name: contact call
+    alternative_names: [chack, kek call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, noisy, short, loud]
+    acoustic_description: A short, harsh, broadband call with abrupt onset, often repeated by individuals in flocks.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used for social contact, flock cohesion, and individual or relationship-mediated interactions.
+    acoustic_references:
+      - id: lorenz_1931
+        url: https://doi.org/10.1111/j.1439-0310.1931.tb01072.x
+      - id: woods_etal_2018
+        url: https://doi.org/10.1038/s41598-018-27561-8
+    semantic_references:
+      - id: lorenz_1931
+        url: https://doi.org/10.1111/j.1439-0310.1931.tb01072.x
+      - id: woods_etal_2018
+        url: https://doi.org/10.1038/s41598-018-27561-8
+    playback_references:
+      - id: woods_etal_2018
+        url: https://doi.org/10.1038/s41598-018-27561-8
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The short jackdaw contact call is central to descriptions and playback studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on short harsh calls, but labels and variants differ.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Social contact and relationship-sensitive response functions are supported by playback work.
+  - name: alarm call
+    alternative_names: [mobbing call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [broadband, noisy, loud, repetitive]
+    acoustic_description: A harsh repeated broadband call produced in high-arousal bouts.
+    semantic_keywords: [alarm, predator, group_coordination]
+    semantic_description: Produced during predator or threat events and contributes to mobbing or group alerting.
+    acoustic_references:
+      - id: lorenz_1931
+        url: https://doi.org/10.1111/j.1439-0310.1931.tb01072.x
+      - id: woods_etal_2018
+        url: https://doi.org/10.1038/s41598-018-27561-8
+    semantic_references:
+      - id: lorenz_1931
+        url: https://doi.org/10.1111/j.1439-0310.1931.tb01072.x
+      - id: woods_etal_2018
+        url: https://doi.org/10.1038/s41598-018-27561-8
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm and contact calls can overlap acoustically, but alarm calling is recognized as a distinct context class.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Harsh repeated structure is supported, but alarm subtypes are not always separated.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Threat and group-alerting contexts are supported, though detailed predator specificity is less resolved.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  lorenz_1931:
+    citation: "Lorenz, K. (1931). Contributions to the ethology of social corvids. Journal fuer Ornithologie."
+    url: https://doi.org/10.1111/j.1439-0310.1931.tb01072.x
+  woods_etal_2018:
+    citation: "Woods, R. D., Kings, M., McIvor, G. E., & Thornton, A. (2018). Caller characteristics influence recruitment to collective anti-predator events in jackdaws. Scientific Reports, 8, 7343."
+    url: https://doi.org/10.1038/s41598-018-27561-8
+    doi: 10.1038/s41598-018-27561-8

@@ -1,0 +1,76 @@
+scientific_name: Eupsittula canicularis
+common_name: Orange-fronted Parakeet
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittacidae
+  genus: Eupsittula
+  species: canicularis
+primary_inventory:
+  rationale: Orange-fronted parakeet calls are represented in parrot contact-call and vocal-learning studies rather than one exhaustive inventory. This file includes the core social call classes.
+calls:
+  - name: contact call
+    alternative_names: [flight call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, loud, short]
+    acoustic_description: A loud frequency-modulated tonal call used in flight and social spacing, with individual and group variation.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used to maintain contact among flock members and coordinate movement.
+    acoustic_references:
+      - id: bradbury_2003
+        url: https://doi.org/10.1016/S0003-3472(03)00008-5
+      - id: bradbury_balsby_2016
+        url: https://doi.org/10.1093/acprof:oso/9780198728204.001.0001
+    semantic_references:
+      - id: bradbury_2003
+        url: https://doi.org/10.1016/S0003-3472(03)00008-5
+      - id: bradbury_balsby_2016
+        url: https://doi.org/10.1093/acprof:oso/9780198728204.001.0001
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Contact calls are central to orange-fronted parakeet and broader parrot vocal-learning studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on loud frequency-modulated contact calls, while variants are socially plastic.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Flock contact and coordination are well supported.
+  - name: alarm call
+    alternative_names: [squawk]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [broadband, noisy, loud, repetitive]
+    acoustic_description: Loud harsh broadband calls produced in repeated aroused bouts.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced during disturbance or threat events and alerts flock members.
+    acoustic_references:
+      - id: bradbury_balsby_2016
+        url: https://doi.org/10.1093/acprof:oso/9780198728204.001.0001
+    semantic_references:
+      - id: bradbury_balsby_2016
+        url: https://doi.org/10.1093/acprof:oso/9780198728204.001.0001
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm squawks are recognized in parrot accounts but are less species-specific than contact calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic support is mostly qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Threat and attention contexts are supported at the broad parrot level.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  bradbury_2003:
+    citation: "Bradbury, J. W. (2003). Vocal communication in wild parrots. Animal Behaviour, 65, 197-203."
+    url: https://doi.org/10.1016/S0003-3472(03)00008-5
+    doi: 10.1016/S0003-3472(03)00008-5
+  bradbury_balsby_2016:
+    citation: "Bradbury, J. W., & Balsby, T. J. S. (2016). The Functions of Vocal Learning in Parrots. Oxford University Press."
+    url: https://doi.org/10.1093/acprof:oso/9780198728204.001.0001

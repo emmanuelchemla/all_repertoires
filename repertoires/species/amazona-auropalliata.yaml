@@ -1,0 +1,82 @@
+scientific_name: Amazona auropalliata
+common_name: Yellow-naped Amazon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittacidae
+  genus: Amazona
+  species: auropalliata
+primary_inventory:
+  rationale: Yellow-naped amazon vocalizations are described in dialect and contact-call studies rather than a complete inventory. This file includes the best-supported social call classes.
+calls:
+  - name: contact call
+    alternative_names: [dialect call, flight call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: true
+      note: "Contact calls show regional dialect structure in Wright 1996 and related studies."
+    acoustic_keywords: [frequency_modulated, tonal, loud, short]
+    acoustic_description: A loud, short to medium-duration frequency-modulated call with tonal structure and regional acoustic variants.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used for long-distance contact, flock coordination, and social identity in dialect groups.
+    acoustic_references:
+      - id: wright_1996
+        url: https://doi.org/10.1098/rspb.1996.0136
+      - id: wright_wilkinson_2001
+        url: https://doi.org/10.1098/rspb.2001.1823
+    semantic_references:
+      - id: wright_1996
+        url: https://doi.org/10.1098/rspb.1996.0136
+      - id: wright_wilkinson_2001
+        url: https://doi.org/10.1098/rspb.2001.1823
+    playback_references:
+      - id: wright_wilkinson_2001
+        url: https://doi.org/10.1098/rspb.2001.1823
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Contact calls are the focal call class in yellow-naped amazon dialect studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on frequency-modulated contact calls with dialect variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact, coordination, and social-identity functions are supported by dialect and playback studies.
+  - name: alarm call
+    alternative_names: [squawk, harsh call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [broadband, noisy, loud, short]
+    acoustic_description: A loud harsh broadband call, often produced in repeated bouts during arousal.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced during disturbance or threat contexts, alerting nearby flock members.
+    acoustic_references:
+      - id: bradbury_balsby_2016
+        url: https://doi.org/10.1093/acprof:oso/9780198728204.001.0001
+    semantic_references:
+      - id: bradbury_balsby_2016
+        url: https://doi.org/10.1093/acprof:oso/9780198728204.001.0001
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm calls are recognized in parrot communication accounts, though less quantified for this species than contact calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is mostly qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Threat and disturbance use is supported broadly for parrots and species accounts.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  wright_1996:
+    citation: "Wright, T. F. (1996). Regional dialects in the contact call of a parrot. Proceedings of the Royal Society B, 263, 867-872."
+    url: https://doi.org/10.1098/rspb.1996.0136
+    doi: 10.1098/rspb.1996.0136
+  wright_wilkinson_2001:
+    citation: "Wright, T. F., & Wilkinson, G. S. (2001). Population genetic structure and vocal dialects in an Amazon parrot. Proceedings of the Royal Society B, 268, 609-616."
+    url: https://doi.org/10.1098/rspb.2001.1823
+    doi: 10.1098/rspb.2001.1823
+  bradbury_balsby_2016:
+    citation: "Bradbury, J. W., & Balsby, T. J. S. (2016). The Functions of Vocal Learning in Parrots. Oxford University Press."
+    url: https://doi.org/10.1093/acprof:oso/9780198728204.001.0001

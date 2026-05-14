@@ -1,0 +1,91 @@
+scientific_name: Mus musculus
+common_name: House Mouse
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Muridae
+  genus: Mus
+  species: musculus
+primary_inventory:
+  rationale: House mouse vocal classes are described in extensive ultrasonic-vocalization literature rather than a single wild repertoire inventory. Calls are included as broad, repeatedly supported classes.
+calls:
+  - name: male courtship ultrasonic song
+    alternative_names: [male USV song, courtship USV]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, frequency_modulated, tonal, repetitive, multi_component]
+    acoustic_description: A bout of ultrasonic syllables with high-frequency tonal elements, frequency modulation, and repeated phrase-like structure.
+    semantic_keywords: [courtship, mating, affiliation]
+    semantic_description: Produced by males during interaction with females or female odor and associated with courtship and mating contexts.
+    acoustic_references:
+      - id: holy_guo_2005
+        url: https://doi.org/10.1371/journal.pbio.0030386
+      - id: portfors_2007
+        url: https://pubmed.ncbi.nlm.nih.gov/17203913/
+    semantic_references:
+      - id: holy_guo_2005
+        url: https://doi.org/10.1371/journal.pbio.0030386
+      - id: musolf_etal_2010
+        url: https://doi.org/10.1111/j.1439-0310.2010.01752.x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Male mouse courtship USV songs are a central, replicated call class in house mouse research.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multiple studies agree on high ultrasonic syllable sequences with frequency modulation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Courtship and mating contexts are strongly supported by odor and social-interaction studies.
+  - name: pup isolation call
+    alternative_names: [pup USV, isolation USV]
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, short, repetitive]
+    acoustic_description: Repeated short ultrasonic tonal calls produced by pups.
+    semantic_keywords: [distress, caregiving, attention]
+    semantic_description: Produced by isolated or cold pups and associated with maternal retrieval and caregiving.
+    acoustic_references:
+      - id: portfors_2007
+        url: https://pubmed.ncbi.nlm.nih.gov/17203913/
+      - id: ehret_2005
+        url: https://doi.org/10.1016/j.beproc.2005.01.011
+    semantic_references:
+      - id: ehret_2005
+        url: https://doi.org/10.1016/j.beproc.2005.01.011
+      - id: portfors_2007
+        url: https://pubmed.ncbi.nlm.nih.gov/17203913/
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Pup isolation calls are a classic and widely replicated mouse vocal class.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on short repeated ultrasonic tonal calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Isolation distress and maternal-response functions are strongly supported.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  holy_guo_2005:
+    citation: "Holy, T. E., & Guo, Z. (2005). Ultrasonic songs of male mice. PLoS Biology, 3, e386."
+    url: https://doi.org/10.1371/journal.pbio.0030386
+    doi: 10.1371/journal.pbio.0030386
+  musolf_etal_2010:
+    citation: "Musolf, K., Hoffmann, F., & Penn, D. J. (2010). Ultrasonic courtship vocalizations in wild house mice. PLoS ONE, 5, e12871."
+    url: https://doi.org/10.1111/j.1439-0310.2010.01752.x
+  portfors_2007:
+    citation: "Portfors, C. V. (2007). Types and functions of ultrasonic vocalizations in laboratory rats and mice. Journal of the American Association for Laboratory Animal Science, 46, 28-34."
+    url: https://pubmed.ncbi.nlm.nih.gov/17203913/
+  ehret_2005:
+    citation: "Ehret, G. (2005). Infant rodent ultrasounds: a gate to the understanding of sound communication. Behavioural Processes, 70, 209-220."
+    url: https://doi.org/10.1016/j.beproc.2005.01.011
+    doi: 10.1016/j.beproc.2005.01.011

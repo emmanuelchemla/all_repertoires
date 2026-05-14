@@ -1,0 +1,80 @@
+scientific_name: Cyanocitta cristata
+common_name: Blue Jay
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Cyanocitta
+  species: cristata
+primary_inventory:
+  rationale: Blue jay vocalizations are described across natural-history and behavioral studies rather than one modern exhaustive inventory. This file includes robust named call classes.
+calls:
+  - name: jay call
+    alternative_names: [jeer, contact call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, noisy, loud, short, repetitive]
+    acoustic_description: A loud, harsh, broadband call often repeated in bouts.
+    semantic_keywords: [contact, alarm, territorial, group_coordination]
+    semantic_description: Used in contact, territorial advertisement, and aroused disturbance contexts.
+    acoustic_references:
+      - id: smith_1977
+        url: https://sora.unm.edu/node/127990
+      - id: tarvin_woolfenden_1999
+        url: https://doi.org/10.2173/bna.469
+    semantic_references:
+      - id: smith_1977
+        url: https://sora.unm.edu/node/127990
+      - id: tarvin_woolfenden_1999
+        url: https://doi.org/10.2173/bna.469
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The loud jay or jeer call is a standard blue jay call class in species accounts and behavioral descriptions.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on loud harsh structure, but detailed acoustic analyses are limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and alarm/territorial contexts are supported, but the call is multifunctional.
+  - name: hawk mimic call
+    alternative_names: [mimicry call, red-shouldered hawk call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [frequency_modulated, tonal, loud, long]
+    acoustic_description: A loud tonal or harmonic call that resembles raptor calls, with extended frequency-modulated elements.
+    semantic_keywords: [alarm, predator, display, attention]
+    semantic_description: Produced in predator-related, social, or attention-getting contexts and can imitate hawk vocalizations.
+    acoustic_references:
+      - id: smith_1977
+        url: https://sora.unm.edu/node/127990
+      - id: tarvin_woolfenden_1999
+        url: https://doi.org/10.2173/bna.469
+    semantic_references:
+      - id: smith_1977
+        url: https://sora.unm.edu/node/127990
+      - id: tarvin_woolfenden_1999
+        url: https://doi.org/10.2173/bna.469
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Hawk mimicry is well known in blue jays, but it is a flexible mimicry category rather than a single invariant call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on raptor-like acoustic output, but exemplars vary with the model call.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Predator-related and social uses are reported, but function is not tightly resolved.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  smith_1977:
+    citation: "Smith, W. J. (1977). The Behavior of Communicating: An Ethological Approach. Harvard University Press."
+    url: https://sora.unm.edu/node/127990
+  tarvin_woolfenden_1999:
+    citation: "Tarvin, K. A., & Woolfenden, G. E. (1999). Blue Jay (Cyanocitta cristata). Birds of North America."
+    url: https://doi.org/10.2173/bna.469
+    doi: 10.2173/bna.469

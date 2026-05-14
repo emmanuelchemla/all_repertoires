@@ -1,0 +1,83 @@
+scientific_name: Mandrillus leucophaeus
+common_name: Drill
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Mandrillus
+  species: leucophaeus
+primary_inventory:
+  rationale: Drill vocalizations are less comprehensively inventoried than mandrill calls. This file uses close comparative support from Mandrillus studies and includes only broad, repeatedly described call categories.
+calls:
+  - name: loud call
+    alternative_names: [crow, long-distance call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, tonal]
+    acoustic_description: A loud, low-frequency, resonant long call with tonal structure.
+    semantic_keywords: [spacing, contact, identity, display]
+    semantic_description: Produced by adult males in long-range spacing and advertisement contexts.
+    acoustic_references:
+      - id: kudo_1987
+        url: https://doi.org/10.1159/000156303
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    semantic_references:
+      - id: kudo_1987
+        url: https://doi.org/10.1159/000156303
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Drill-specific data are sparse; the call is included because Mandrillus comparative sources describe analogous male long calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is inferred from limited comparative accounts.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Long-distance male display use is likely but not strongly experimentally established for drills.
+  - name: grunt
+    alternative_names: [contact grunt]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, short, quiet]
+    acoustic_description: A short, low-amplitude, low-frequency noisy vocalization.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used during close-range social contact and group coordination.
+    acoustic_references:
+      - id: kudo_1987
+        url: https://doi.org/10.1159/000156303
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    semantic_references:
+      - id: kudo_1987
+        url: https://doi.org/10.1159/000156303
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Grunt-like calls are expected and described comparatively, but drill-specific published support is limited.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The description is conservative because detailed drill acoustic measurements are sparse.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Close-range contact context is likely from comparative reports, but not well tested.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  kudo_1987:
+    citation: "Kudo, H. (1987). The study of vocal communication of wild mandrills in Cameroon in relation to their social structure. Primates, 28, 289-308."
+    url: https://doi.org/10.1159/000156303
+  gautier_1988:
+    citation: "Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced from vocalizations. In A Primate Radiation: Evolutionary Biology of the African Guenons."
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5

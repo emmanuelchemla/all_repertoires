@@ -1,0 +1,83 @@
+scientific_name: Forpus passerinus
+common_name: Green-rumped Parrotlet
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittacidae
+  genus: Forpus
+  species: passerinus
+primary_inventory:
+  rationale: Green-rumped parrotlet calls are described in field studies of individual recognition, vocal labels, and social communication rather than one formal repertoire inventory. Included calls are conservative classes from that literature.
+calls:
+  - name: contact call
+    alternative_names: [signature call, name-like call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, short, loud]
+    acoustic_description: A short, loud, frequency-modulated tonal call with individually distinctive acoustic structure.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Used for contact and individual recognition, including parent-offspring and social-label contexts.
+    acoustic_references:
+      - id: berg_etal_2011
+        url: https://doi.org/10.1098/rspb.2010.2715
+      - id: wanker_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2005.04.009
+    semantic_references:
+      - id: berg_etal_2011
+        url: https://doi.org/10.1098/rspb.2010.2715
+      - id: wanker_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2005.04.009
+    playback_references:
+      - id: wanker_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2005.04.009
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Contact calls are the focal call class in green-rumped parrotlet identity and vocal-label studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on individually distinctive frequency-modulated contact calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact and identity functions are supported by field and playback studies.
+  - name: begging call
+    alternative_names: [nestling call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, short]
+    acoustic_description: Repeated high-frequency calls produced by dependent young.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Used by nestlings and fledglings to solicit care and feeding from adults.
+    acoustic_references:
+      - id: berg_etal_2011
+        url: https://doi.org/10.1098/rspb.2010.2715
+    semantic_references:
+      - id: berg_etal_2011
+        url: https://doi.org/10.1098/rspb.2010.2715
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Begging calls are described in family communication, though contact-call identity work is more central.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Detailed acoustic treatment is limited compared with contact calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Care solicitation by young is directly supported by breeding studies.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  berg_etal_2011:
+    citation: "Berg, K. S., Delgado, S., Cortopassi, K. A., Beissinger, S. R., & Bradbury, J. W. (2011). Vertical transmission of learned signatures in a wild parrot. Proceedings of the Royal Society B, 279, 585-591."
+    url: https://doi.org/10.1098/rspb.2010.2715
+    doi: 10.1098/rspb.2010.2715
+  wanker_etal_2005:
+    citation: "Wanker, R., Sugama, Y., & Prinage, S. (2005). Vocal labelling of family members in spectacled parrotlets. Animal Behaviour, 70, 111-118."
+    url: https://doi.org/10.1016/j.anbehav.2005.04.009
+    doi: 10.1016/j.anbehav.2005.04.009

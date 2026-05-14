@@ -1,0 +1,68 @@
+scientific_name: Miopithecus talapoin
+common_name: Talapoin Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Miopithecus
+  species: talapoin
+primary_inventory:
+  rationale: Talapoin monkey vocalizations are documented in comparative primate and guenon literature, but no single exhaustive wild inventory is used. Included calls are conservative social and alarm categories.
+calls:
+  - name: twitter
+    alternative_names: [contact twitter, chatter]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, pulsed, quiet]
+    acoustic_description: A quiet, rapidly repeated series of high-frequency short elements.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close-range social contact and coordination among group members.
+    acoustic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    semantic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Twitter-like social calls are described for small guenons, but talapoin-specific literature is limited.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is qualitative and not strongly replicated.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Close-range contact use is consistent with comparative descriptions.
+  - name: alarm bark
+    alternative_names: [bark, alarm call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [broadband, noisy, short, loud]
+    acoustic_description: A short harsh broadband call, louder than close-range contact calls and often repeated during arousal.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced during disturbance and predator-related vigilance to alert nearby group members.
+    acoustic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    semantic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm barks are recognized in comparative guenon repertoires, but talapoin-specific call names vary.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic description is based on broad qualitative accounts.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm use is supported, but predator-specific semantics are not strongly established.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  gautier_1988:
+    citation: "Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced from vocalizations. In A Primate Radiation: Evolutionary Biology of the African Guenons."
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5

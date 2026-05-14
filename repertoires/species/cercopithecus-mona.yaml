@@ -1,0 +1,72 @@
+scientific_name: Cercopithecus mona
+common_name: Mona Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Cercopithecus
+  species: mona
+primary_inventory:
+  rationale: Mona monkey vocalizations are described in comparative guenon accounts rather than one single inventory paper. The included calls are broad named classes supported in that literature.
+calls:
+  - name: boom
+    alternative_names: [male boom]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, tonal, long]
+    acoustic_description: A loud, resonant, low-frequency male vocalization with a relatively sustained tonal element.
+    semantic_keywords: [spacing, territorial, contact]
+    semantic_description: Produced in long-distance contexts by adult males, likely supporting intergroup spacing and group location.
+    acoustic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    semantic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Booms are documented as a guenon male call class, but mona-specific datasets are limited.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic characterization is primarily qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Long-distance spacing use follows comparative accounts but lacks extensive mona-specific experiments.
+  - name: alarm bark
+    alternative_names: [bark, hack]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, noisy, short, loud, abrupt]
+    acoustic_description: A short harsh call with broadband energy, abrupt onset, and repeated delivery during arousal.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced during predator-related disturbance or strong vigilance, alerting nearby group members.
+    acoustic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    semantic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm barks are a recognized guenon call category, though mona-specific naming is not standardized.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The broad harsh structure is supported, but detailed acoustic measurements are sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm contexts are supported in comparative guenon literature, with limited species-specific playback evidence.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  gautier_1988:
+    citation: "Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced from vocalizations. In A Primate Radiation: Evolutionary Biology of the African Guenons."
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5

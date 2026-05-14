@@ -1,0 +1,76 @@
+scientific_name: Ateles geoffroyi
+common_name: Geoffroy's Spider Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Atelidae
+  genus: Ateles
+  species: geoffroyi
+primary_inventory:
+  rationale: Geoffroy's spider monkey vocalizations are described in field studies of fission-fusion communication rather than in one single comprehensive inventory. This file includes broadly supported call classes.
+calls:
+  - name: whinny
+    alternative_names: [long call, whinny call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, long, loud]
+    acoustic_description: A long, loud, frequency-modulated tonal call with repeated or undulating elements.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used for long-distance contact and coordination among dispersed subgroup members in fission-fusion ranging.
+    acoustic_references:
+      - id: ramos_fernandez_2005
+        url: https://doi.org/10.1007/s10764-005-4362-2
+    semantic_references:
+      - id: ramos_fernandez_2005
+        url: https://doi.org/10.1007/s10764-005-4362-2
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Whinnies are a central named call type in Geoffroy's spider monkey communication studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Acoustic form is well described in the species, though fewer independent sources quantify it.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Long-distance contact in fission-fusion movement is directly supported by field studies.
+  - name: bark
+    alternative_names: [alarm bark]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [broadband, noisy, short, loud, abrupt]
+    acoustic_description: A short harsh broadband call with abrupt onset, often produced during aroused events.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced in disturbance and potential predator contexts, alerting nearby individuals.
+    acoustic_references:
+      - id: eisenberg_1976
+        url: https://doi.org/10.1159/000155730
+      - id: ramos_fernandez_2005
+        url: https://doi.org/10.1007/s10764-005-4362-2
+    semantic_references:
+      - id: eisenberg_1976
+        url: https://doi.org/10.1159/000155730
+      - id: ramos_fernandez_2005
+        url: https://doi.org/10.1007/s10764-005-4362-2
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Barks are described in Ateles vocal repertoires, though less intensively than whinnies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on short harsh calls, with limited detailed quantification.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and disturbance use is supported, but exact predator specificity remains broad.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  ramos_fernandez_2005:
+    citation: "Ramos-Fernandez, G. (2005). Vocal communication in a fission-fusion society: do spider monkeys stay in touch with close associates? International Journal of Primatology, 26, 1077-1092."
+    url: https://doi.org/10.1007/s10764-005-4362-2
+    doi: 10.1007/s10764-005-4362-2
+  eisenberg_1976:
+    citation: "Eisenberg, J. F. (1976). Communication mechanisms and social integration in the black spider monkey. Smithsonian Contributions to Zoology."
+    url: https://doi.org/10.1159/000155730

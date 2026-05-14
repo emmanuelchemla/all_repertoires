@@ -1,0 +1,89 @@
+scientific_name: Phyllostomus discolor
+common_name: Pale Spear-nosed Bat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Chiroptera
+  family: Phyllostomidae
+  genus: Phyllostomus
+  species: discolor
+primary_inventory:
+  rationale: Pale spear-nosed bat communication is described in vocal-learning, social-call, and maternal-recognition studies rather than one exhaustive wild inventory. This file includes repeatedly studied call classes.
+calls:
+  - name: isolation call
+    alternative_names: [pup isolation call, infant call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, frequency_modulated, tonal, repetitive]
+    acoustic_description: Repeated high-frequency frequency-modulated calls produced by pups.
+    semantic_keywords: [distress, caregiving, identity, contact]
+    semantic_description: Produced by isolated pups and used in mother-young contact and individual recognition.
+    acoustic_references:
+      - id: esch_etal_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.05.029
+      - id: knornschild_2014
+        url: https://doi.org/10.3389/fevo.2014.00073
+    semantic_references:
+      - id: esch_etal_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.05.029
+      - id: knornschild_2014
+        url: https://doi.org/10.3389/fevo.2014.00073
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Pup isolation calls are directly studied in Phyllostomus discolor and related bat communication work.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on high frequency-modulated pup calls, with some age-related variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Isolation, maternal contact, and identity functions are well supported.
+  - name: contact call
+    alternative_names: [social call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, short, repetitive]
+    acoustic_description: A short frequency-modulated social call with tonal components, often exchanged in groups.
+    semantic_keywords: [contact, affiliation, group_coordination, identity]
+    semantic_description: Used in social contact and coordination among roosting or interacting bats.
+    acoustic_references:
+      - id: knornschild_2014
+        url: https://doi.org/10.3389/fevo.2014.00073
+      - id: lattenkamp_etal_2018
+        url: https://doi.org/10.3389/fevo.2018.00185
+    semantic_references:
+      - id: knornschild_2014
+        url: https://doi.org/10.3389/fevo.2014.00073
+      - id: lattenkamp_etal_2018
+        url: https://doi.org/10.3389/fevo.2018.00185
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Social contact calls are repeatedly described, but labels vary across bat-vocalization studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Frequency-modulated social-call structure is supported, while subtype boundaries are broad.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social contact and coordination are supported, but natural wild context data are limited.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  esch_etal_2009:
+    citation: "Esch, T., et al. (2009). Development of isolation calls in the pale spear-nosed bat Phyllostomus discolor. Animal Behaviour, 78, 631-638."
+    url: https://doi.org/10.1016/j.anbehav.2009.05.029
+    doi: 10.1016/j.anbehav.2009.05.029
+  knornschild_2014:
+    citation: "Knornschild, M. (2014). Vocal production learning in bats. Frontiers in Ecology and Evolution, 2, 73."
+    url: https://doi.org/10.3389/fevo.2014.00073
+    doi: 10.3389/fevo.2014.00073
+  lattenkamp_etal_2018:
+    citation: "Lattenkamp, E. Z., et al. (2018). Vocal learning in pale spear-nosed bats. Frontiers in Ecology and Evolution, 6, 185."
+    url: https://doi.org/10.3389/fevo.2018.00185
+    doi: 10.3389/fevo.2018.00185

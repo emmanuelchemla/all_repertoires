@@ -1,0 +1,85 @@
+scientific_name: Rattus norvegicus
+common_name: Brown Rat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Muridae
+  genus: Rattus
+  species: norvegicus
+primary_inventory:
+  rationale: Brown rat vocalization classes are established in laboratory and ethological reviews rather than a single wild inventory. This file includes the core ultrasonic and audible classes that are repeatedly treated as distinct.
+calls:
+  - name: 22 kHz ultrasonic vocalization
+    alternative_names: [22-kHz USV, alarm call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, long, repetitive]
+    acoustic_description: A long ultrasonic call with energy around the low ultrasonic band, often produced in long bouts.
+    semantic_keywords: [alarm, distress, submission]
+    semantic_description: Produced during negative affect, fear conditioning, predator odor, social defeat, and other aversive situations.
+    acoustic_references:
+      - id: brudzynski_2007
+        url: https://doi.org/10.1016/j.neubiorev.2007.07.007
+      - id: portfors_2007
+        url: https://doi.org/10.1016/j.neubiorev.2007.04.004
+    semantic_references:
+      - id: brudzynski_2007
+        url: https://doi.org/10.1016/j.neubiorev.2007.07.007
+      - id: knutson_etal_2002
+        url: https://doi.org/10.1126/science.1067345
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The 22 kHz USV is one of the two standard adult rat ultrasonic call classes in reviews and experiments.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources consistently describe long ultrasonic calls in the 22 kHz class.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Negative affect and alarm contexts are widely supported across experimental paradigms.
+  - name: 50 kHz ultrasonic vocalization
+    alternative_names: [50-kHz USV, trill]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [high_frequency, frequency_modulated, tonal, short, repetitive]
+    acoustic_description: A short ultrasonic call in the high ultrasonic band, often frequency modulated and produced in rapid bouts.
+    semantic_keywords: [affiliation, play, courtship, contact]
+    semantic_description: Produced during appetitive, social, play, mating, and reward-related contexts.
+    acoustic_references:
+      - id: brudzynski_2007
+        url: https://doi.org/10.1016/j.neubiorev.2007.07.007
+      - id: knutson_etal_2002
+        url: https://doi.org/10.1126/science.1067345
+    semantic_references:
+      - id: knutson_etal_2002
+        url: https://doi.org/10.1126/science.1067345
+      - id: portfors_2007
+        url: https://doi.org/10.1016/j.neubiorev.2007.04.004
+    playback_references:
+      - id: knutson_etal_2002
+        url: https://doi.org/10.1126/science.1067345
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The 50 kHz USV is a standard adult rat call class treated separately from 22 kHz calls.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Reviews agree on short high ultrasonic and often frequency-modulated structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Appetitive and social contexts are strongly supported, including playback and behavioral studies.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  brudzynski_2007:
+    citation: "Brudzynski, S. M. (2007). Ultrasonic calls of rats as indicator variables of negative or positive states. Neuroscience & Biobehavioral Reviews, 31, 1111-1115."
+    url: https://doi.org/10.1016/j.neubiorev.2007.07.007
+    doi: 10.1016/j.neubiorev.2007.07.007
+  portfors_2007:
+    citation: "Portfors, C. V. (2007). Types and functions of ultrasonic vocalizations in laboratory rats and mice. Journal of the American Association for Laboratory Animal Science, 46, 28-34."
+    url: https://pubmed.ncbi.nlm.nih.gov/17203913/
+  knutson_etal_2002:
+    citation: "Knutson, B., Burgdorf, J., & Panksepp, J. (2002). Ultrasonic vocalizations as indices of affective states in rats. Psychological Bulletin, 128, 961-977."
+    url: https://doi.org/10.1126/science.1067345

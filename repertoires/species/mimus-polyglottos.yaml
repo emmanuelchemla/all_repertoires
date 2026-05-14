@@ -1,0 +1,77 @@
+scientific_name: Mimus polyglottos
+common_name: Northern Mockingbird
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Mimidae
+  genus: Mimus
+  species: polyglottos
+primary_inventory:
+  rationale: Northern mockingbird vocalizations are described in song and species-account literature rather than one exhaustive inventory. This file includes song and common calls as broad classes.
+calls:
+  - name: song
+    alternative_names: [mimicry song, advertising song]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, repetitive, multi_component, long]
+    acoustic_description: A long, varied sequence of repeated phrases with tonal, noisy, and frequency-modulated elements, including mimicry of other species.
+    semantic_keywords: [territorial, courtship, mating, display]
+    semantic_description: Used in territorial advertisement, mate attraction, and breeding-season display.
+    acoustic_references:
+      - id: derrickson_breitwisch_1992
+        url: https://doi.org/10.2173/bna.7
+      - id: gammon_altizer_2011
+        url: https://doi.org/10.1111/j.1439-0310.2010.01858.x
+    semantic_references:
+      - id: derrickson_breitwisch_1992
+        url: https://doi.org/10.2173/bna.7
+      - id: gammon_altizer_2011
+        url: https://doi.org/10.1111/j.1439-0310.2010.01858.x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Song is the signature mockingbird vocal class and is described extensively in species accounts and acoustic studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on long varied repeated phrase sequences with mimicry.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and courtship functions are consistently supported.
+  - name: chat call
+    alternative_names: [alarm call, harsh chat]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [broadband, noisy, short, loud]
+    acoustic_description: A short harsh broadband call produced singly or in repeated bouts.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced during disturbance, nest defense, or close-range aggressive interactions.
+    acoustic_references:
+      - id: derrickson_breitwisch_1992
+        url: https://doi.org/10.2173/bna.7
+    semantic_references:
+      - id: derrickson_breitwisch_1992
+        url: https://doi.org/10.2173/bna.7
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Chat and alarm calls are recognized in species accounts but are less formally quantified than song.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic description is mostly qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and nest-defense contexts are supported but broad.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  derrickson_breitwisch_1992:
+    citation: "Derrickson, K. C., & Breitwisch, R. (1992). Northern Mockingbird. Birds of North America."
+    url: https://doi.org/10.2173/bna.7
+    doi: 10.2173/bna.7
+  gammon_altizer_2011:
+    citation: "Gammon, D. E., & Altizer, C. E. (2011). Northern mockingbirds imitate frogs and toads throughout North America. Ethology, 117, 266-277."
+    url: https://doi.org/10.1111/j.1439-0310.2010.01858.x
+    doi: 10.1111/j.1439-0310.2010.01858.x

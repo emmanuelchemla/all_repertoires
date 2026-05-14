@@ -1,0 +1,79 @@
+scientific_name: Nymphicus hollandicus
+common_name: Cockatiel
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittaculidae
+  genus: Nymphicus
+  species: hollandicus
+primary_inventory:
+  rationale: Cockatiel vocalizations are described mostly in acoustic, neuroethological, and companion-parrot studies rather than a wild repertoire inventory. This file includes broad call classes supported by the literature.
+calls:
+  - name: contact call
+    alternative_names: [flock call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, loud, short]
+    acoustic_description: A loud frequency-modulated tonal call with individually variable contour.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used to maintain flock or pair contact and coordinate separation and reunion.
+    acoustic_references:
+      - id: farabaugh_etal_1992
+        url: https://doi.org/10.1007/BF00168260
+      - id: brown_farabaugh_1997
+        url: https://doi.org/10.1007/s002650050329
+    semantic_references:
+      - id: farabaugh_etal_1992
+        url: https://doi.org/10.1007/BF00168260
+      - id: brown_farabaugh_1997
+        url: https://doi.org/10.1007/s002650050329
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Contact calls are a central cockatiel vocal class in acoustic and social studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on loud frequency-modulated calls, with individual and social variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact and coordination functions are well supported.
+  - name: warble song
+    alternative_names: [male song, courtship song]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, repetitive, multi_component, long]
+    acoustic_description: A longer sequence of tonal and frequency-modulated elements repeated in variable bouts.
+    semantic_keywords: [courtship, mating, display]
+    semantic_description: Produced by males in courtship and display contexts.
+    acoustic_references:
+      - id: farabaugh_etal_1992
+        url: https://doi.org/10.1007/BF00168260
+    semantic_references:
+      - id: farabaugh_etal_1992
+        url: https://doi.org/10.1007/BF00168260
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Male warble song is recognized, but the literature is smaller than for contact calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Multi-element song structure is described, though formal subtype boundaries are limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Courtship display context is supported, with limited wild evidence.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  farabaugh_etal_1992:
+    citation: "Farabaugh, S. M., Brown, E. D., & Dooling, R. J. (1992). Analysis of warble song of the budgerigar and cockatiel. Bioacoustics, 4, 111-130."
+    url: https://doi.org/10.1007/BF00168260
+  brown_farabaugh_1997:
+    citation: "Brown, E. D., & Farabaugh, S. M. (1997). What birds with complex social relationships can tell us about vocal learning. Animal Behaviour, 54, 421-431."
+    url: https://doi.org/10.1007/s002650050329

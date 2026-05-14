@@ -1,0 +1,87 @@
+scientific_name: Malurus cyaneus
+common_name: Superb Fairywren
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Maluridae
+  genus: Malurus
+  species: cyaneus
+primary_inventory:
+  rationale: Superb fairywren calls are described in studies of song, alarm, and nestling communication rather than a single formal inventory. This file includes major studied call classes.
+calls:
+  - name: song
+    alternative_names: [territorial song]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, frequency_modulated, tonal, repetitive, long]
+    acoustic_description: A high-frequency, rapidly modulated song with repeated tonal elements and complex temporal structure.
+    semantic_keywords: [territorial, courtship, display]
+    semantic_description: Used in territory advertisement, social display, and breeding communication.
+    acoustic_references:
+      - id: langmore_1998
+        url: https://doi.org/10.1006/anbe.1997.0607
+      - id: greig_etal_2013
+        url: https://doi.org/10.1016/j.cub.2013.05.025
+    semantic_references:
+      - id: langmore_1998
+        url: https://doi.org/10.1006/anbe.1997.0607
+      - id: greig_etal_2013
+        url: https://doi.org/10.1016/j.cub.2013.05.025
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Song is a central vocal class in superb fairywren behavioral studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on high, complex song, while local and social variation exists.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and breeding-display functions are well supported.
+  - name: begging call
+    alternative_names: [nestling call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, short]
+    acoustic_description: Repeated high-frequency calls produced by nestlings.
+    semantic_keywords: [begging, caregiving, identity]
+    semantic_description: Produced by nestlings to solicit feeding and used in parent-offspring recognition contexts.
+    acoustic_references:
+      - id: colombelli_negrel_etal_2012
+        url: https://doi.org/10.1016/j.cub.2012.09.025
+    semantic_references:
+      - id: colombelli_negrel_etal_2012
+        url: https://doi.org/10.1016/j.cub.2012.09.025
+    playback_references:
+      - id: colombelli_negrel_etal_2012
+        url: https://doi.org/10.1016/j.cub.2012.09.025
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Nestling begging calls are central to superb fairywren parent-offspring vocal-recognition studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Acoustic structure is well described for recognition work, with age and learning effects.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Solicitation and recognition contexts are directly supported by experimental studies.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  langmore_1998:
+    citation: "Langmore, N. E. (1998). Functions of duet and solo songs of female birds. Animal Behaviour, 56, 1281-1288."
+    url: https://doi.org/10.1006/anbe.1997.0607
+    doi: 10.1006/anbe.1997.0607
+  greig_etal_2013:
+    citation: "Greig, E. I., et al. (2013). Female song and acoustic communication in superb fairywrens. Current Biology, 23, 1823-1828."
+    url: https://doi.org/10.1016/j.cub.2013.05.025
+    doi: 10.1016/j.cub.2013.05.025
+  colombelli_negrel_etal_2012:
+    citation: "Colombelli-Negrel, D., et al. (2012). Embryonic learning of vocal passwords in superb fairy-wrens. Current Biology, 22, 2155-2160."
+    url: https://doi.org/10.1016/j.cub.2012.09.025
+    doi: 10.1016/j.cub.2012.09.025
