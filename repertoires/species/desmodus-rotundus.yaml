@@ -1,0 +1,271 @@
+scientific_name: Desmodus rotundus
+common_name: Common vampire bat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Chiroptera
+  family: Phyllostomidae
+  genus: Desmodus
+  species: rotundus
+primary_inventory:
+  id: carter_etal_2012
+  rationale: Carter et al. 2012 is used as the primary_inventory spine because it is the peer-reviewed acoustic study that explicitly enumerates the vampire-bat vocal repertoire from which it isolates and quantifies contact calls, distinguishing them from echolocation pulses, distress calls, social calls produced during agonistic and affiliative interactions, and pup isolation calls. It provides direct acoustic measurements for D. rotundus contact calls. Because that spine focuses on contact calls, complementary studies on echolocation (Rodriguez-San Pedro and Allendes 2017; Schmidt et al. 1978), agonistic social calls (Schmidt and van de Flierdt 1973), pup development (Schmidt and Manske 1973), and contact-call function (Carter and Wilkinson 2016; Carter et al. 2020; Stockmaier et al. 2020) are used to support the other inventory calls.
+calls:
+  - name: contact call
+    in_primary_inventory: true
+    alternative_names:
+      - isolation call
+      - adult contact call
+      - individual contact call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: true
+      note: Carter et al. 2012 explicitly documents systematic acoustic variation in contact calls by population, colony, and individual, with population-distinct call structures recorded from Mexican and Trinidadian wild-caught bats.
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - short
+      - graded
+    acoustic_description: A tonal, multi-harmonic, downward frequency-modulated call lasting on average around 9 ms. The fundamental sweep typically starts near 36 kHz and ends near 19 kHz, with the first and second harmonics carrying more energy than the fundamental. Most contact calls in D. rotundus consist of a single note, with the steepest frequency slopes among the three vampire bat species and individually distinctive spectral features.
+    semantic_keywords:
+      - contact
+      - identity
+      - affiliation
+      - recruitment
+      - food
+    semantic_description: Produced by adult bats when physically isolated from conspecifics but within audible range. Contact calls function in individual recognition, maintenance of cooperative bonds among preferred roost mates, and attraction of past food-sharing partners. Calling rate decreases when callers are immune-challenged, supporting a signaling role tied to social engagement and partner choice.
+    acoustic_references:
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+      - id: carter_wilkinson_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.005
+    semantic_references:
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+      - id: carter_wilkinson_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.005
+      - id: stockmaier_etal_2020
+        url: https://doi.org/10.1098/rsbl.2020.0272
+    playback_references:
+      - id: carter_wilkinson_2016
+        url: https://doi.org/10.1016/j.anbehav.2016.03.005
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Carter et al. 2012 explicitly defines and quantifies adult contact calls in isolated D. rotundus, Carter and Wilkinson 2016 uses these calls in playback experiments with past food donors, and Stockmaier et al. 2020 measures contact-calling rate in immune-challenged bats. Three independent studies agree the contact call is a discrete repertoire element.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Carter et al. 2012 reports mean duration around 9 ms with a downward frequency sweep from approximately 36 to 19 kHz and energy concentrated in harmonics above the fundamental, and Carter and Wilkinson 2016 uses recordings consistent with this structure for playback synthesis. Agreement is strong for the multi-harmonic, downward FM, single-note form.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Carter et al. 2012 establishes the isolation/contact context and individual signature, Carter and Wilkinson 2016 demonstrates with playback that contact calls preferentially attract past food-sharing partners, and Stockmaier et al. 2020 shows that sick bats reduce contact calling. Independent acoustic, experimental, and physiological evidence converges on a social-recognition and partner-recruitment function.
+
+  - name: pup isolation call
+    in_primary_inventory: true
+    alternative_names:
+      - infant isolation call
+      - juvenile contact cry
+      - pup contact call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - harmonic
+      - short
+    acoustic_description: A frequency-modulated tonal vocalization produced by nonvolant pups, recorded in early descriptive studies as small contact cries with peak energy in the audible to low-ultrasonic range around 6 to 12 kHz. The calls have a harmonic structure and are typically produced as short single notes during separation and feeding interactions with the mother.
+    semantic_keywords:
+      - distress
+      - caregiving
+      - contact
+      - begging
+    semantic_description: Produced by pups when separated from the mother or during mother-pup feeding interactions including milk nursing and regurgitated-blood transfer. Schmidt and Manske 1973 documents these calls within the broader ontogenetic and behavioral development of vampire bat pups, and Carter et al. 2012 confirms that pups produce isolation calls distinct from adult contact calls.
+    acoustic_references:
+      - id: schmidt_manske_1973
+        url: https://www.zobodat.at/pdf/Zeitschrift-Saugetierkunde_38_0014-0033.pdf
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+    semantic_references:
+      - id: schmidt_manske_1973
+        url: https://www.zobodat.at/pdf/Zeitschrift-Saugetierkunde_38_0014-0033.pdf
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Schmidt and Manske 1973 describes mother-pup acoustic interactions during ontogeny, and Carter et al. 2012 lists pup isolation calls as a vampire-bat repertoire category distinct from adult contact calls. The label is medium because focused acoustic analyses of D. rotundus pup calls are limited and individual studies do not always report measured parameters in detail.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Acoustic detail is concentrated in older descriptive work reporting pup cries near 6-12 kHz, with Carter et al. 2012 acknowledging the call type but not providing quantitative D. rotundus pup parameters. The label is medium because the form is described but not replicated with modern spectrographic measurements in independent sources.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Schmidt and Manske 1973 places pup calls in mother-offspring contexts during nursing and food transfer, and Carter et al. 2012 reaffirms the maternal-recognition function. The label is medium because direct experimental tests of mother-pup recognition specifically in D. rotundus are sparse compared with related phyllostomid species.
+
+  - name: distress call
+    in_primary_inventory: true
+    alternative_names:
+      - capture distress call
+      - alarm cry
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - harmonic
+      - loud
+      - repetitive
+      - graded
+    acoustic_description: A loud, noisy, broadband vocalization produced as multi-note bouts during handling and capture. Spectrograms show energy spread across a wide frequency band with multiple harmonics, contrasted with the narrowband downward-FM structure of contact calls in the same individuals.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced when bats are physically restrained, captured, or otherwise in extreme distress. Carter et al. 2012 explicitly distinguishes distress calls from contact and echolocation calls within the same individuals, treating them as a separate functional category associated with threat or capture rather than routine social communication.
+    acoustic_references:
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+    semantic_references:
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Carter et al. 2012 lists distress calls as one of the vampire-bat vocalization categories and contrasts their spectrographic form with contact calls and echolocation pulses. The label is medium because comprehensive standalone analyses of distress calls in D. rotundus are limited and they are typically reported only as a contrast class.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Carter et al. 2012 provides the main published spectrographic comparison showing broadband, noisy multi-note distress vocalizations distinct from the tonal harmonic contact call. Agreement is medium because independent acoustic replication with quantitative parameters is scarce.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Carter et al. 2012 ties distress calls to handling and capture contexts in line with how distress calls are described in other bat species. The label is medium because no D. rotundus playback or receiver-response study has formally validated the alarm or anti-predator function.
+
+  - name: echolocation call
+    in_primary_inventory: true
+    alternative_names:
+      - echolocation pulse
+      - sonar pulse
+      - search-phase call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - broadband
+      - short
+      - quiet
+      - multi_component
+      - harmonic
+    acoustic_description: A short multi-harmonic ultrasonic pulse. Free-flying foraging recordings from Chile describe signal design with a brief quasi-constant-frequency component at the pulse onset followed by a downward frequency-modulated sweep, calls of about 5.5 ms emitted as single pulses or groups of two to three pulses with frequencies spanning roughly 35-85 kHz. Earlier behavioral studies characterize the species as a low-amplitude or whispering echolocator.
+    semantic_keywords:
+      - spacing
+      - food
+      - attention
+    semantic_description: Used during orientation, navigation, and prey/host approach in flight. Schmidt et al. 1978 and related behavioral work show that D. rotundus uses echolocation in spatial discrimination, and Rodriguez-San Pedro and Allendes 2017 documents call structure during natural foraging flights, supporting an orientation and target-detection role in the open and edge habitats where the species commutes to feeding sites.
+    acoustic_references:
+      - id: rodriguez_san_pedro_allendes_2017
+        url: https://doi.org/10.1080/09524622.2016.1231079
+      - id: schmidt_etal_1978
+        url: https://doi.org/10.1007/BF00610932
+    semantic_references:
+      - id: rodriguez_san_pedro_allendes_2017
+        url: https://doi.org/10.1080/09524622.2016.1231079
+      - id: schmidt_etal_1978
+        url: https://doi.org/10.1007/BF00610932
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Echolocation pulses in D. rotundus are described independently in classic laboratory experiments by Schmidt et al. 1978, in free-flying field recordings by Rodriguez-San Pedro and Allendes 2017, and they are explicitly listed alongside contact and distress calls in Carter et al. 2012. The call type is unambiguous.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Rodriguez-San Pedro and Allendes 2017 quantifies free-flying call duration around 5.5 ms with a quasi-constant-frequency onset and downward FM sweep across roughly 35-85 kHz with multiple harmonics, consistent with the short multi-harmonic FM pulses inferred in earlier work by Schmidt et al. 1978. Independent sources agree on a short, multi-harmonic, FM pulse design.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Rodriguez-San Pedro and Allendes 2017 and Schmidt et al. 1978 place echolocation pulses in orientation and target-discrimination contexts, and Carter et al. 2012 treats echolocation pulses as a separate functional category from social calls. The label is medium because dedicated D. rotundus foraging-context echolocation studies are few and most behavioral evidence is laboratory-based.
+
+  - name: agonistic social call
+    in_primary_inventory: false
+    alternative_names:
+      - aggression call
+      - feeding-site agonistic vocalization
+      - confrontation call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - harmonic
+      - short
+      - repetitive
+      - graded
+    acoustic_description: A class of broadband, noisy social calls produced as short bouts during direct face-to-face conflict, distinct from the narrowband downward-FM contact calls. Schmidt and van de Flierdt 1973 describes calls accompanying threat displays at the feeding site, generally as multi-harmonic noisy syllables with variable note number depending on encounter intensity.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+      - food
+    semantic_description: Produced during intraspecific agonistic interactions, particularly contests over access to feeding sites and resource defense in roosting and feeding situations. Schmidt and van de Flierdt 1973 documents these social calls during experimentally staged confrontations at feeding places, and Carter et al. 2012 separately notes the existence of social calls produced during agonistic and affiliative interactions in the vampire-bat repertoire.
+    acoustic_references:
+      - id: schmidt_vandeflierdt_1973
+        url: https://doi.org/10.1111/j.1439-0310.1973.tb01098.x
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+    semantic_references:
+      - id: schmidt_vandeflierdt_1973
+        url: https://doi.org/10.1111/j.1439-0310.1973.tb01098.x
+      - id: carter_etal_2012
+        url: https://doi.org/10.1371/journal.pone.0038791
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Schmidt and van de Flierdt 1973 documents social vocalizations during intraspecific aggression at feeding sites and Carter et al. 2012 mentions the broader category of social calls produced in agonistic and affiliative interactions, but no modern study has provided a focused acoustic taxonomy of D. rotundus agonistic calls. The label is weak because the category sits at the boundary of being a single call type versus a graded class.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Schmidt and van de Flierdt 1973 provides the main behavioral and partial acoustic description from staged confrontations, but quantitative spectrographic parameters remain limited and have not been replicated. Agreement is weak because the call class is recognized but not acoustically standardized.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The agonistic feeding-site context is consistently reported in Schmidt and van de Flierdt 1973, and Carter et al. 2012 explicitly associates a class of vampire-bat social calls with agonistic interactions. The label is medium because the context is replicable but receiver responses have not been tested with playback.
+
+references:
+  carter_etal_2012:
+    citation: "Carter, G. G., Logsdon, R., Arnold, B. D., Menchaca, A., and Medellin, R. A. 2012. Adult vampire bats produce contact calls when isolated: acoustic variation by species, population, colony, and individual. PLoS ONE 7(6): e38791."
+    url: https://doi.org/10.1371/journal.pone.0038791
+    doi: 10.1371/journal.pone.0038791
+  carter_wilkinson_2016:
+    citation: "Carter, G. G., and Wilkinson, G. S. 2016. Common vampire bat contact calls attract past food-sharing partners. Animal Behaviour 116: 45-51."
+    url: https://doi.org/10.1016/j.anbehav.2016.03.005
+    doi: 10.1016/j.anbehav.2016.03.005
+  stockmaier_etal_2020:
+    citation: "Stockmaier, S., Bolnick, D. I., Page, R. A., Josic, D., and Carter, G. G. 2020. Immune-challenged vampire bats produce fewer contact calls. Biology Letters 16(7): 20200272."
+    url: https://doi.org/10.1098/rsbl.2020.0272
+    doi: 10.1098/rsbl.2020.0272
+  schmidt_manske_1973:
+    citation: "Schmidt, U., and Manske, U. 1973. Die Jugendentwicklung der Vampirfledermäuse (Desmodus rotundus). Zeitschrift für Säugetierkunde 38: 14-33."
+    url: https://www.zobodat.at/pdf/Zeitschrift-Saugetierkunde_38_0014-0033.pdf
+  schmidt_etal_1978:
+    citation: "Schmidt, U., Schlegel, P., Schweizer, H., and Neuweiler, G. 1978. Echolocation in vampire bats Desmodus rotundus: spatial parameter discrimination. Journal of Comparative Physiology A 153: 39-50."
+    url: https://doi.org/10.1007/BF00610932
+    doi: 10.1007/BF00610932
+  rodriguez_san_pedro_allendes_2017:
+    citation: "Rodriguez-San Pedro, A., and Allendes, J. L. 2017. Echolocation calls of free-flying common vampire bats Desmodus rotundus (Chiroptera: Phyllostomidae) in Chile. Bioacoustics 26(2): 153-160."
+    url: https://doi.org/10.1080/09524622.2016.1231079
+    doi: 10.1080/09524622.2016.1231079
+  schmidt_vandeflierdt_1973:
+    citation: "Schmidt, U., and van de Flierdt, K. 1973. Innerartliche Aggression bei Vampirfledermäusen (Desmodus rotundus) am Futterplatz. Zeitschrift für Tierpsychologie 32(2): 139-146."
+    url: https://doi.org/10.1111/j.1439-0310.1973.tb01098.x
+    doi: 10.1111/j.1439-0310.1973.tb01098.x
