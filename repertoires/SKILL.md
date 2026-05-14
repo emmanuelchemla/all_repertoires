@@ -26,7 +26,7 @@ The goal of this skill is to create a file with a comprehensive wild vocal reper
 - `calls`: list of call-type objects (see below). See inclusion rules below.
 - `provenance`: append-only list of agent events. Add one entry each time you generate or materially update the file:
   - `timestamp`: ISO 8601 UTC, e.g. `2026-05-14T10:23:00Z`.
-  - `model`: full model ID, e.g. `claude-opus-4-7`.
+  - `model`: full model ID, e.g. `claude-opus-4-7`. If you are not able to introspect with full certainty this and the `thinking` value, and the user hasn't reported it, ask the user directly.
   - `thinking`: one of `low` | `medium` | `high` | `extra_high` | `max`.
   - `action`: `generated` (first entry only) or `updated`.
   Never remove or modify existing entries.
@@ -106,6 +106,7 @@ A common drift is to let function leak into acoustic descriptions (e.g. "alarm-l
 ## Workflow
 
 1. Checkout to main and pull.
-2. Spawn **one subagent per species** in parallel. Each picks an unfinished species from `species_index.yaml` (no file yet at `species/<kebab-name>.yaml`), writes its YAML, runs `validate.py`, and makes exactly one commit directly to main and pushes. 
-3. Never touch `schema.json` or this skill as a side-effect. 
-4. Do **not** use `database.json` as a source. Build every repertoire from scratch using primary literature only.
+2. Pick unfinished species from `species_index.yaml` (no file yet at `species/<kebab-name>.yaml`) and generate YAML repertoire files for all
+3. Run `validate.py` and commit directly to main and pushes. 
+4. Never touch `schema.json` or this skill as a side-effect. 
+5. Do **not** use `database.json` as a source. Build every repertoire from scratch using primary literature only.
