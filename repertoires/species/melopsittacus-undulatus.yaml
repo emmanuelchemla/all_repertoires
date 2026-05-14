@@ -1,0 +1,144 @@
+scientific_name: Melopsittacus undulatus
+common_name: Budgerigar
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittaculidae
+  genus: Melopsittacus
+  species: undulatus
+primary_inventory:
+  id: brockway_1964
+  rationale: Brockway 1964 is used as the primary inventory because it describes the budgerigar's vocal behavior and major call classes. Later studies of learned contact calls and warble song provide focused acoustic and perceptual evidence.
+calls:
+  - name: contact call
+    alternative_names:
+      - flight call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, frequency_modulated, short]
+    acoustic_description: Short, learned, frequency-modulated tonal call, often individually distinctive.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Used for flock contact, pair contact, and individual recognition during separation or movement.
+    acoustic_references:
+      - id: brockway_1964
+        url: https://doi.org/10.1016/S0003-3472(64)80060-3
+      - id: farabaugh_etal_1994
+        url: https://doi.org/10.1121/1.410218
+    semantic_references:
+      - id: farabaugh_etal_1994
+        url: https://doi.org/10.1121/1.410218
+      - id: tu_etal_2011
+        url: https://doi.org/10.1121/1.3531932
+    playback_references:
+      - id: farabaugh_etal_1994
+        url: https://doi.org/10.1121/1.410218
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Contact calls are a central budgerigar call type in Brockway 1964 and later vocal-learning studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Short learned frequency-modulated structure is well supported.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact and recognition functions are supported by acoustic and playback/perceptual studies.
+
+  - name: warble song
+    alternative_names:
+      - warble
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [long, multi_component, frequency_modulated, tonal, repetitive]
+    acoustic_description: Long rambling sequence of many learned elements, including tonal and modulated syllables.
+    semantic_keywords: [courtship, affiliation, display]
+    semantic_description: Produced mainly by males in courtship and affiliative social interactions.
+    acoustic_references:
+      - id: brockway_1964
+        url: https://doi.org/10.1016/S0003-3472(64)80060-3
+      - id: tu_etal_2011
+        url: https://doi.org/10.1121/1.3531932
+    semantic_references:
+      - id: brockway_1964
+        url: https://doi.org/10.1016/S0003-3472(64)80060-3
+      - id: tu_etal_2011
+        url: https://doi.org/10.1121/1.3531932
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Warble song is a major budgerigar vocal type and is specifically compared with contact calls by Tu et al. 2011.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Long, multi-element learned song structure is consistently described.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Courtship and affiliative contexts are well described, but functions are less experimentally resolved than contact calls.
+
+  - name: alarm call
+    alternative_names:
+      - distress call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, short, abrupt]
+    acoustic_description: Short, loud, high-frequency call with abrupt onset.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced during disturbance, threat, or predator-related alarm, drawing attention from flock members.
+    acoustic_references:
+      - id: brockway_1964
+        url: https://doi.org/10.1016/S0003-3472(64)80060-3
+    semantic_references:
+      - id: brockway_1964
+        url: https://doi.org/10.1016/S0003-3472(64)80060-3
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm calls are included in the vocal behavior inventory, but focused studies mostly address contact calls and song.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is sparse compared with learned contact calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm context is described observationally.
+
+  - name: begging call
+    alternative_names:
+      - juvenile begging call
+    in_primary_inventory: true
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, tonal, long]
+    acoustic_description: Repeated high-frequency tonal calls produced by young birds in bouts.
+    semantic_keywords: [begging, caregiving, food]
+    semantic_description: Produced by nestlings or juveniles to solicit feeding and parental care.
+    acoustic_references:
+      - id: brockway_1964
+        url: https://doi.org/10.1016/S0003-3472(64)80060-3
+    semantic_references:
+      - id: brockway_1964
+        url: https://doi.org/10.1016/S0003-3472(64)80060-3
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Begging calls are described in budgerigar vocal behavior but are less studied than adult learned vocalizations.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description relies mainly on the primary behavior inventory.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Feeding solicitation context is well established observationally.
+references:
+  brockway_1964:
+    citation: "Brockway, B. F. (1964). Ethological studies of the budgerigar: reproductive behavior. Behaviour, 23, 294-324."
+    url: https://doi.org/10.1163/156853964X00118
+    doi: 10.1163/156853964X00118
+  farabaugh_etal_1994:
+    citation: "Farabaugh, S. M., Linzenbold, A., & Dooling, R. J. (1994). Vocal plasticity in budgerigars: evidence for social factors in the learning of contact calls. Journal of Comparative Psychology, 108, 81-92."
+    url: https://doi.org/10.1037/0735-7036.108.1.81
+    doi: 10.1037/0735-7036.108.1.81
+  tu_etal_2011:
+    citation: "Tu, H. W., Osmanski, M. S., & Dooling, R. J. (2011). Learned vocalizations in budgerigars: the relationship between contact calls and warble song. Journal of the Acoustical Society of America, 129, 2289-2297."
+    url: https://doi.org/10.1121/1.3557035
+    doi: 10.1121/1.3557035
