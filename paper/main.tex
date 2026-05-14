@@ -33,7 +33,7 @@
 \newcommand{\dbname}{AnimalLex\xspace}
 \newcommand{\nspecies}{57\xspace}
 \newcommand{\ncalls}{373\xspace}
-\newcommand{\plotdir}{figures/old_database_keyword_inference}
+\newcommand{\plotdir}{figures/new_database_keyword_inference}
 
 % ------------------------------------------------------------------ %
 %  PACKAGES
@@ -42,7 +42,15 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage[section]{placeins}
+\usepackage{xparse}
 \usepackage{draftwatermark}
+
+% Gracefully replace missing figures with placeholder boxes
+\let\origincludegraphics\includegraphics
+\RenewDocumentCommand\includegraphics{O{} m}{%
+  \IfFileExists{#2}{\origincludegraphics[#1]{#2}}%
+    {\fbox{\parbox{8cm}{\centering\small[Figure not available:\\\detokenize{#2}]}}}%
+}
 \SetWatermarkText{\shortstack{Do not distribute}}
 \SetWatermarkScale{0.5}
 \definecolor{watermarkRed}{rgb}{0.85, 0.1, 0.1}
