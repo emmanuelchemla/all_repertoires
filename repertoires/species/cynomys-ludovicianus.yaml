@@ -1,0 +1,294 @@
+scientific_name: Cynomys ludovicianus
+common_name: Black-tailed prairie dog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Sciuridae
+  genus: Cynomys
+  species: ludovicianus
+primary_inventory:
+  id: smith_etal_1977
+  rationale: "Smith et al. 1977 is used as the primary_inventory spine because it is the most comprehensive systematic vocalization inventory for free-living black-tailed prairie dogs, presenting spectrographic descriptions and contextual data for the species' eleven principal vocal display classes (barks, jump-yip, snarls, tooth chatter, fight squeals, screams, chuckles, and related sounds). Waring 1970 covers the same repertoire and is cited alongside as the parallel inventory, but Smith et al. 1977 is the more frequently cited spine for later referential alarm-call work by Slobodchikoff and colleagues. The acoustically-distinct anti-predator bark is retained as a single call here; population-specific referential alarm subtypes documented by Slobodchikoff and colleagues are described in the semantic_description and agreement explanations rather than split into new call entries, because the underlying claim of within-bark referential predator categorization remains contested in the broader animal-communication literature."
+calls:
+  - name: anti-predator bark
+    in_primary_inventory: true
+    alternative_names:
+      - alarm bark
+      - warning bark
+      - predator bark
+      - ahk-ahk call
+      - chirp
+    scope: &all_life_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - harmonic
+      - broadband
+      - short
+      - repetitive
+      - loud
+      - graded
+    acoustic_description: "A brief, loud, harmonically-structured bark with internal frequency modulation, typically given in long repeated bouts when a colony member is alerted. Individual barks are short notes with broadband and harmonic components; bouts can continue for many minutes. Frederiksen and Slobodchikoff 2007 quantify acoustic variation in the bark across predator-eliciting contexts in this species."
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - recruitment
+    semantic_description: "Produced when a prairie dog detects a terrestrial or aerial predator (coyotes, badgers, hawks, snakes, domestic dogs) or a human intruder. Receivers respond by orienting toward the caller, becoming vigilant, and frequently retreating to or entering burrows. Loughry 1987 and Loughry 1988 describe alarm responses to snakes in this species, and Frederiksen and Slobodchikoff 2007 report that fine-scale acoustic variation within barks differs across predator-eliciting contexts and argue for referential specificity. The functionally-referential interpretation, advanced for prairie dogs by the Slobodchikoff group, is treated cautiously in broader reviews of alarm-call semantics that emphasize urgency- or arousal-based alternatives."
+    acoustic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+      - id: frederiksen_slobodchikoff_2007
+        url: https://doi.org/10.1080/08927014.2007.9522578
+    semantic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+      - id: loughry_1987
+        url: https://doi.org/10.1163/156853987X00224
+      - id: loughry_1988
+        url: https://doi.org/10.1007/BF00395699
+      - id: frederiksen_slobodchikoff_2007
+        url: https://doi.org/10.1080/08927014.2007.9522578
+    playback_references:
+      - id: loughry_1988
+        url: https://doi.org/10.1007/BF00395699
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Waring 1970 and Smith et al. 1977 both treat the alarm/anti-predator bark as a primary discrete call class. Loughry 1987 and 1988 and Frederiksen and Slobodchikoff 2007 build directly on this category. There is consensus that a stereotyped repeated bark exists, though authors disagree on whether to split it into multiple predator-specific subtypes."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Smith et al. 1977 and Waring 1970 give independent spectrographic descriptions of the bark, and Frederiksen and Slobodchikoff 2007 provides quantitative acoustic analyses for this species. The basic acoustic form is consistently described across studies."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "All major sources agree barks are anti-predator alarm calls associated with intruders. Frederiksen and Slobodchikoff 2007's claim that black-tailed prairie dog bark variation referentially encodes predator class extends the broader programme advanced by Slobodchikoff and colleagues for Gunnison's prairie dogs, but functionally-referential interpretations of prairie dog alarm calls are treated cautiously in broader reviews of animal alarm-call semantics that emphasize urgency- or arousal-based alternatives (e.g., Wheeler and Fischer 2012). Agreement on the basic anti-predator context is strong, but the referential interpretation is medium because of this ongoing debate."
+
+  - name: jump-yip
+    in_primary_inventory: true
+    alternative_names:
+      - territorial call
+      - all-clear call
+      - jump-yip display
+      - wee-oo call
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - frequency_modulated
+      - harmonic
+      - tonal
+      - multi_component
+      - loud
+    acoustic_description: "A loud two-note tonal vocalization with a distinct upward inflection (often transcribed wee-oo), produced as the prairie dog throws its head back and rears upright on its hindlegs. The call is harmonically structured with clear frequency modulation across the two acoustic components and is acoustically distinct from the broadband anti-predator bark."
+    semantic_keywords:
+      - territorial
+      - display
+      - group_coordination
+      - contact
+    semantic_description: "Given as part of the jump-yip display, which propagates contagiously through colonies. Smith et al. 1976 and 1977 documented the display in territorial and coordination contexts and in apparent all-clear announcements following alarm bouts. More recent work by Hare et al. 2014 used contagion of jump-yips as a probe of social attentiveness and group coordination."
+    acoustic_references:
+      - id: smith_etal_1976
+        url: https://doi.org/10.1016/S0003-3472(76)80073-1
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    semantic_references:
+      - id: smith_etal_1976
+        url: https://doi.org/10.1016/S0003-3472(76)80073-1
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: hare_etal_2014
+        url: https://doi.org/10.1098/rspb.2013.2153
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "The jump-yip is described as a discrete display with a stereotyped two-note call by Waring 1970, Smith et al. 1976 (a dedicated paper on the display), and Smith et al. 1977. Hare et al. 2014 uses the display as a measurable behavioural unit, confirming its discreteness."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Smith et al. 1976 dedicates a full paper to the jump-yip with spectrographic analysis, and Waring 1970 and Smith et al. 1977 give independent spectrographic descriptions of the same wee-oo two-note structure."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Smith et al. 1976 and Smith et al. 1977 interpret jump-yips as territorial and all-clear coordination signals, while Hare et al. 2014 supports a social-coordination/awareness role through contagion analyses. There is no single agreed-upon functional label across studies, hence medium rather than strong."
+
+  - name: snarl
+    in_primary_inventory: true
+    alternative_names:
+      - growl
+      - threat snarl
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - short
+    acoustic_description: "A short, low-frequency, noisy broadband vocalization given at close range. Smith et al. 1977 and Waring 1970 both describe it as harsh and noisy, contrasting with the tonal jump-yip and the harmonic anti-predator bark."
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+    semantic_description: "Produced in agonistic encounters between coterie members or intruders, typically at close range and accompanying threat postures. Treated by both inventory papers as a close-range agonistic signal rather than an alarm call."
+    acoustic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    semantic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Both Waring 1970 and Smith et al. 1977 list the snarl as a distinct vocal category in the agonistic repertoire. Later work focuses on alarm calls and the jump-yip, so the snarl is replicated across the two inventory papers but has not been independently re-analyzed in detail."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Acoustic detail rests on Waring 1970 and Smith et al. 1977 only, with no later quantitative spectrographic re-analysis. The description is qualitatively consistent but limited."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Both inventories agree on the agonistic close-range context. There is no playback or experimental verification, but the contextual data are consistent across the two independent inventory papers."
+
+  - name: tooth chatter
+    in_primary_inventory: true
+    alternative_names:
+      - tooth chattering
+      - teeth chatter
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - pulsed
+      - repetitive
+      - noisy
+      - quiet
+      - short
+    acoustic_description: "A rapidly repeated tooth-produced chattering sound, mechanically generated rather than voiced. Both inventory papers describe it as a short pulsed noisy sound distinct from the voiced barks, snarls, and jump-yips."
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+    semantic_description: "Produced in close-range agonistic and defensive interactions, typically as a low-intensity threat signal. Both Waring 1970 and Smith et al. 1977 treat it as a threat/agonistic display rather than an alarm vocalization."
+    acoustic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    semantic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Both inventory papers list tooth chatter as a discrete sound class in the agonistic repertoire. It is conserved across Sciuridae (e.g., Marmota, Spermophilus), strengthening confidence in its existence as a distinct sound type."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Acoustic description is qualitative and based on the two inventory papers only; no dedicated quantitative spectrographic study exists for prairie dog tooth chatter."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Both inventories agree on the close-range agonistic/threat context, but there is no later experimental verification."
+
+  - name: fear scream
+    in_primary_inventory: true
+    alternative_names:
+      - scream
+      - distress scream
+      - fight squeal
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - noisy
+      - long
+      - loud
+      - graded
+    acoustic_description: "A long, loud, high-frequency noisy scream, often with irregular broadband structure. Smith et al. 1977 and Waring 1970 distinguish it from the harmonic anti-predator bark and the tonal jump-yip by its noisiness, length, and high amplitude."
+    semantic_keywords:
+      - distress
+      - alarm
+      - attention
+    semantic_description: "Produced in extreme distress, particularly during predator capture, severe fighting, or handling. Both inventory papers associate the scream with intense fear or pain rather than predator detection at distance."
+    acoustic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    semantic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Both inventories describe the scream as a distinct distress vocalization. Later prairie dog acoustic work has focused on alarm barks, so independent replication of the scream category is limited to these two inventory papers."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Acoustic detail rests on Waring 1970 and Smith et al. 1977 only and is qualitative; no later quantitative analysis has been published."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "The distress context is consistently described by both inventory papers, but there is no later experimental work or playback validation for prairie dog screams specifically."
+
+  - name: chuckle
+    in_primary_inventory: true
+    alternative_names:
+      - locomotion chuckle
+      - movement chuckle
+    scope: *all_life_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - pulsed
+      - repetitive
+      - quiet
+      - short
+    acoustic_description: "A quiet, low-frequency, pulsed sound produced during locomotion or in low-arousal social contexts. Both Waring 1970 and Smith et al. 1977 describe it as a soft repeated sound quite distinct from the loud bark, jump-yip, and scream categories."
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: "Reported during quiet movement among coterie members and in low-arousal close-range social interactions, including foraging together. Both inventory papers treat it as a non-agonistic short-range communication."
+    acoustic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    semantic_references:
+      - id: smith_etal_1977
+        url: https://doi.org/10.1016/0003-3472(77)90079-7
+      - id: waring_1970
+        url: https://doi.org/10.2307/2424015
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Listed as a discrete short-range sound by both Waring 1970 and Smith et al. 1977. Independent replication beyond these inventories is limited, so the call is retained but with medium confidence."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Description is qualitative and based on the two inventories; no dedicated spectrographic study of the chuckle has been published."
+    semantic_description_agreement: weak
+    semantic_description_explanation: "Both inventories link the chuckle to quiet social and locomotion contexts, but the description is brief and not experimentally verified, so confidence is weak."
+
+references:
+  smith_etal_1977:
+    citation: "Smith, W. J., Smith, S. L., Oppenheimer, E. C., and Devilla, J. G. 1977. Vocalizations of the black-tailed prairie dog, Cynomys ludovicianus. Animal Behaviour 25(1):152-164."
+    url: https://doi.org/10.1016/0003-3472(77)90079-7
+    doi: 10.1016/0003-3472(77)90079-7
+  smith_etal_1976:
+    citation: "Smith, W. J., Smith, S. L., DeVilla, J. G., and Oppenheimer, E. C. 1976. The jump-yip display of the black-tailed prairie dog Cynomys ludovicianus. Animal Behaviour 24(3):609-621."
+    url: https://doi.org/10.1016/S0003-3472(76)80073-1
+    doi: 10.1016/S0003-3472(76)80073-1
+  waring_1970:
+    citation: "Waring, G. H. 1970. Sound communications of black-tailed, white-tailed, and Gunnison's prairie dogs. American Midland Naturalist 83(1):167-185."
+    url: https://doi.org/10.2307/2424015
+    doi: 10.2307/2424015
+  loughry_1987:
+    citation: "Loughry, W. J. 1987. The dynamics of snake harassment by black-tailed prairie dogs. Behaviour 103(1-3):27-48."
+    url: https://doi.org/10.1163/156853987X00224
+    doi: 10.1163/156853987X00224
+  loughry_1988:
+    citation: "Loughry, W. J. 1988. Population differences in how black-tailed prairie dogs deal with snakes. Behavioral Ecology and Sociobiology 22(1):61-67."
+    url: https://doi.org/10.1007/BF00395699
+    doi: 10.1007/BF00395699
+  frederiksen_slobodchikoff_2007:
+    citation: "Frederiksen, J. K., and Slobodchikoff, C. N. 2007. Referential specificity in the alarm calls of the black-tailed prairie dog. Ethology Ecology and Evolution 19(1):87-99."
+    url: https://doi.org/10.1080/08927014.2007.9522578
+    doi: 10.1080/08927014.2007.9522578
+  hare_etal_2014:
+    citation: "Hare, J. F., Campbell, K. L., and Senkiw, R. W. 2014. Catch the wave: prairie dogs assess neighbours' awareness using contagious displays. Proceedings of the Royal Society B 281(1777):20132153."
+    url: https://doi.org/10.1098/rspb.2013.2153
+    doi: 10.1098/rspb.2013.2153
+  wheeler_fischer_2012:
+    citation: "Wheeler, B. C., and Fischer, J. 2012. Functionally referential signals: a promising paradigm whose time has passed. Evolutionary Anthropology 21(5):195-205."
+    url: https://doi.org/10.1002/evan.21319
+    doi: 10.1002/evan.21319
