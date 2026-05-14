@@ -75,23 +75,29 @@
 % ------------------------------------------------------------------ %
 %  FONTS
 % ------------------------------------------------------------------ %
-\setmainfont{TiemposText}[
-  Path           = ./fonts/,
-  UprightFont    = TiemposText-Regular.otf,
-  ItalicFont     = TiemposText-RegularItalic.otf,
-  BoldFont       = TiemposText-Semibold.otf,
-  BoldItalicFont = TiemposText-SemiboldItalic.otf,
-  Ligatures      = TeX,
-]
-
-\newfontfamily\headingfont{TiemposText}[
-  Path           = ./fonts/,
-  UprightFont    = TiemposText-Medium.otf,
-  ItalicFont     = TiemposText-MediumItalic.otf,
-  BoldFont       = TiemposText-Semibold.otf,
-  BoldItalicFont = TiemposText-SemiboldItalic.otf,
-  Ligatures      = TeX,
-]
+% Tiempos is the preferred ESP font; fall back to a TeX-Live-shipped Pagella
+% (similar serif) if the licensed Tiempos files are not present locally.
+\IfFontExistsTF{TiemposText-Regular.otf}{
+  \setmainfont{TiemposText}[
+    Path           = ./fonts/,
+    UprightFont    = TiemposText-Regular.otf,
+    ItalicFont     = TiemposText-RegularItalic.otf,
+    BoldFont       = TiemposText-Semibold.otf,
+    BoldItalicFont = TiemposText-SemiboldItalic.otf,
+    Ligatures      = TeX,
+  ]
+  \newfontfamily\headingfont{TiemposText}[
+    Path           = ./fonts/,
+    UprightFont    = TiemposText-Medium.otf,
+    ItalicFont     = TiemposText-MediumItalic.otf,
+    BoldFont       = TiemposText-Semibold.otf,
+    BoldItalicFont = TiemposText-SemiboldItalic.otf,
+    Ligatures      = TeX,
+  ]
+}{
+  \setmainfont{STIX Two Text}[Ligatures=TeX]
+  \newfontfamily\headingfont{STIX Two Text}[Ligatures=TeX]
+}
 
 % ------------------------------------------------------------------ %
 %  TYPOGRAPHY
@@ -157,7 +163,7 @@
 \newcommand{\extralogos}[1]{\renewcommand{\espExtraLogos}{#1}}
 
 \renewcommand{\maketitle}{%
-  \noindent\includegraphics[height=1.4cm]{logos/esp-logo.png}%
+  \IfFileExists{logos/esp-logo.png}{\noindent\includegraphics[height=1.4cm]{logos/esp-logo.png}}{}%
   \espExtraLogos\par
   \vskip 2em
   {\noindent\headingfont\LARGE\color{espBlack}%
