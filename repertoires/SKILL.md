@@ -26,7 +26,7 @@ The goal of this skill is to create a file with a comprehensive wild vocal reper
 - `calls`: list of call-type objects (see below). See inclusion rules below.
 - `provenance`: append-only list of agent events. Add one entry each time you generate or materially update the file:
   - `timestamp`: ISO 8601 UTC, e.g. `2026-05-14T10:23:00Z`.
-  - `model`: full model ID, e.g. `claude-opus-4-7`. If you are not able to introspect with full certainty this and the `thinking` value, and the user hasn't reported it, ask the user directly.
+  - `model`: full model ID, e.g. `claude-opus-4-7`. If you are not able to introspect `model` and `thinking` values with absolute certainty, and the user hasn't reported it, ask the user directly. Do not guess this.
   - `thinking`: one of `low` | `medium` | `high` | `extra_high` | `max`.
   - `action`: `generated` (first entry only) or `updated`.
   Never remove or modify existing entries.
