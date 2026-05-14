@@ -75,23 +75,42 @@
 % ------------------------------------------------------------------ %
 %  FONTS
 % ------------------------------------------------------------------ %
-\setmainfont{TiemposText}[
-  Path           = ./fonts/,
-  UprightFont    = TiemposText-Regular.otf,
-  ItalicFont     = TiemposText-RegularItalic.otf,
-  BoldFont       = TiemposText-Semibold.otf,
-  BoldItalicFont = TiemposText-SemiboldItalic.otf,
-  Ligatures      = TeX,
-]
+\IfFileExists{./fonts/TiemposText-Regular.otf}{%
+  \setmainfont{TiemposText}[
+    Path           = ./fonts/,
+    UprightFont    = TiemposText-Regular.otf,
+    ItalicFont     = TiemposText-RegularItalic.otf,
+    BoldFont       = TiemposText-Semibold.otf,
+    BoldItalicFont = TiemposText-SemiboldItalic.otf,
+    Ligatures      = TeX,
+  ]
 
-\newfontfamily\headingfont{TiemposText}[
-  Path           = ./fonts/,
-  UprightFont    = TiemposText-Medium.otf,
-  ItalicFont     = TiemposText-MediumItalic.otf,
-  BoldFont       = TiemposText-Semibold.otf,
-  BoldItalicFont = TiemposText-SemiboldItalic.otf,
-  Ligatures      = TeX,
-]
+  \newfontfamily\headingfont{TiemposText}[
+    Path           = ./fonts/,
+    UprightFont    = TiemposText-Medium.otf,
+    ItalicFont     = TiemposText-MediumItalic.otf,
+    BoldFont       = TiemposText-Semibold.otf,
+    BoldItalicFont = TiemposText-SemiboldItalic.otf,
+    Ligatures      = TeX,
+  ]
+}{%
+  \setmainfont{Times New Roman}[
+    Path           = /System/Library/Fonts/Supplemental/,
+    UprightFont    = Times New Roman.ttf,
+    ItalicFont     = Times New Roman Italic.ttf,
+    BoldFont       = Times New Roman Bold.ttf,
+    BoldItalicFont = Times New Roman Bold Italic.ttf,
+    Ligatures      = TeX,
+  ]
+  \newfontfamily\headingfont{Times New Roman}[
+    Path           = /System/Library/Fonts/Supplemental/,
+    UprightFont    = Times New Roman Bold.ttf,
+    ItalicFont     = Times New Roman Bold Italic.ttf,
+    BoldFont       = Times New Roman Bold.ttf,
+    BoldItalicFont = Times New Roman Bold Italic.ttf,
+    Ligatures      = TeX,
+  ]
+}
 
 % ------------------------------------------------------------------ %
 %  TYPOGRAPHY
@@ -155,9 +174,16 @@
 \newcommand\venue[1]{\renewcommand\@venue{#1}}
 \newcommand{\espExtraLogos}{}
 \newcommand{\extralogos}[1]{\renewcommand{\espExtraLogos}{#1}}
+\newcommand{\esplogo}{%
+  \IfFileExists{logos/esp-logo.png}{%
+    \includegraphics[height=1.4cm]{logos/esp-logo.png}%
+  }{%
+    \includegraphics[height=1.4cm]{figures/esp-logo.png}%
+  }%
+}
 
 \renewcommand{\maketitle}{%
-  \noindent\includegraphics[height=1.4cm]{logos/esp-logo.png}%
+  \noindent\esplogo%
   \espExtraLogos\par
   \vskip 2em
   {\noindent\headingfont\LARGE\color{espBlack}%
