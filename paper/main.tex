@@ -33,6 +33,7 @@
 \newcommand{\dbname}{AnimalLex\xspace}
 \newcommand{\nspecies}{57\xspace}
 \newcommand{\ncalls}{373\xspace}
+\newcommand{\plotdir}{figures/old_database_keyword_inference}
 
 % ------------------------------------------------------------------ %
 %  PACKAGES
@@ -82,7 +83,7 @@ Here we test for a biological code at scale by assembling \dbname, a curated dat
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/fig1_dataset_overview.png}
+	\includegraphics[width=\textwidth]{\plotdir/fig1_dataset_overview.png}
 	\caption{%
 		\textbf{\dbname: a curated cross-species lexical repertoire.}
 		\textbf{(A)}~Frequency of semantic ontology keywords across all \ncalls calls, colored by communicative category. Coordination, contact, alarm, and affective signaling dominate; rarer categories include referential signaling, individual identity, and learning-related calls.
@@ -101,9 +102,9 @@ The most common semantic categories are coordination ($n = 106$), affective sign
 \begin{figure}[!h]
 	\centering
 	\begin{tabular}{ccc}
-		\includegraphics[width=0.32\textwidth]{../plots/fig2A_semantic_umap.pdf} &
-		\includegraphics[width=0.32\textwidth]{../plots/fig2B_acoustic_umap.pdf} &
-		\includegraphics[width=0.32\textwidth]{../plots/fig2C_mantel.pdf}
+		\includegraphics[width=0.32\textwidth]{\plotdir/fig2A_semantic_umap.pdf} &
+		\includegraphics[width=0.32\textwidth]{\plotdir/fig2B_acoustic_umap.pdf} &
+		\includegraphics[width=0.32\textwidth]{\plotdir/fig2C_mantel.pdf}
 	\end{tabular}
 	\caption{%
 		\textbf{Alignment of acoustic and semantic embedding spaces.}
@@ -121,7 +122,7 @@ Examining subsets of pairs by taxonomic relationship reveals additional structur
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/fig_supp_mantel_matrix.pdf}
+	\includegraphics[width=\textwidth]{\plotdir/fig_supp_mantel_matrix.pdf}
 	\caption{%
 		\textbf{Species-pairwise acoustic--semantic correlation.}
 		Each cell shows the Pearson~$r$ between the vector of all acoustic-similarity values and the vector of all semantic-similarity values for every species pair.
@@ -137,7 +138,7 @@ To decompose the signal into interpretable units, we computed the pointwise mutu
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/pmi_heatmap_paper.png}
+	\includegraphics[width=\textwidth]{\plotdir/pmi_heatmap_paper.png}
 	\caption{%
 		\textbf{Keyword-level structure of the biological code.}
 		Pointwise mutual information (PMI, bits) between semantic functions (columns, grouped into panels by category) and acoustic features (rows, grouped by type), estimated across all \ncalls calls in \dbname.
@@ -184,7 +185,7 @@ The previous section demonstrates that there is stability in the form-to-meaning
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/fig4_landmark_h.pdf}
+	\includegraphics[width=\textwidth]{\plotdir/fig4_landmark_h.pdf}
 	\caption{%
 		\textbf{Cross-species call groups sharing acoustic and semantic form.}
 		Each panel shows one group of calls---one per species---belonging to a single semantic category (dark header).
@@ -502,13 +503,13 @@ Figure~\ref{fig:acoustic_umap}, Figure~\ref{fig:merged}, Figure~\ref{fig:landmar
 \begin{figure}[p]
 	\centering
 	\begin{minipage}[c]{0.30\textwidth}
-		\includegraphics[width=\linewidth]{../plots/fig2A_semantic_umap.pdf}\\[2pt]
-		\includegraphics[width=\linewidth]{../plots/fig2B_acoustic_umap.pdf}\\[2pt]
-		\includegraphics[width=\linewidth]{../plots/fig2C_mantel.pdf}
+		\includegraphics[width=\linewidth]{\plotdir/fig2A_semantic_umap.pdf}\\[2pt]
+		\includegraphics[width=\linewidth]{\plotdir/fig2B_acoustic_umap.pdf}\\[2pt]
+		\includegraphics[width=\linewidth]{\plotdir/fig2C_mantel.pdf}
 	\end{minipage}%
 	\hfill
 	\begin{minipage}[c]{0.68\textwidth}
-		\includegraphics[width=\linewidth]{../plots/pmi_heatmap_paper.pdf}
+		\includegraphics[width=\linewidth]{\plotdir/pmi_heatmap_paper.pdf}
 	\end{minipage}
 	\caption{%
 		\textbf{[Draft] Merged Figs.~2+3 candidate.}

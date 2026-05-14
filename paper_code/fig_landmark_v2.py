@@ -8,6 +8,7 @@ Selection criterion: most taxonomic classes, then most species.
 Output: plots/fig4_landmark_v2.pdf
 """
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -26,6 +27,8 @@ from matplotlib.patches import FancyBboxPatch
 from matplotlib.lines import Line2D
 from matplotlib.gridspec import GridSpec
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+
+from paper_code.data_sources import artifact_path
 from matplotlib.image import BboxImage
 from matplotlib.transforms import Bbox, TransformedBbox
 from matplotlib.legend_handler import HandlerBase
@@ -674,9 +677,21 @@ def draw_card_narrow(ax, group, calls):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "plots")
+    args = parser.parse_args()
+    out_dir = args.output_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     calls = load()
-    ac_emb = np.load(ROOT / "paper_code" / "ac_emb.npy")
-    se_emb = np.load(ROOT / "paper_code" / "se_emb.npy")
+    ac_path = artifact_path("ac_emb", "old", "npy")
+    se_path = artifact_path("se_emb", "old", "npy")
+    if not ac_path.exists():
+        ac_path = ROOT / "paper_code" / "ac_emb.npy"
+    if not se_path.exists():
+        se_path = ROOT / "paper_code" / "se_emb.npy"
+    ac_emb = np.load(ac_path)
+    se_emb = np.load(se_path)
     print(f"{len(calls)} calls from {len({c['species'] for c in calls})} species")
 
     ac = normalize(ac_emb.astype(float))
@@ -755,7 +770,7 @@ def main():
         columnspacing=1.2,
     )
 
-    out = ROOT / "plots" / "fig4_landmark_v2.pdf"
+    out = out_dir / "fig4_landmark_v2.pdf"
     fig.savefig(out, dpi=200, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved → {out}")
@@ -803,7 +818,7 @@ def main():
         handleheight=2,
     )
 
-    out2 = ROOT / "plots" / "fig4_landmark_h.pdf"
+    out2 = out_dir / "fig4_landmark_h.pdf"
     fig2.savefig(out2, dpi=200, bbox_inches="tight")
     plt.close(fig2)
     print(f"Saved → {out2}")

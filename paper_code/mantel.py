@@ -1,12 +1,15 @@
 """
 Compute Mantel test statistics for the paper.
-Reuses the embedding cache and load_calls from app/utils.py.
+Reuses the embedding cache and shared paper data-source loader.
 
 Run from the project root:
-    python paper_code/mantel.py
+    python paper_code/mantel.py --data-source old
+    python paper_code/mantel.py --data-source new
 """
+import argparse
 import sys
 from pathlib import Path
+from typing import Dict, Iterable, List, Tuple
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
@@ -14,12 +17,62 @@ sys.path.insert(0, str(ROOT))
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from app.utils import load_calls, embed_texts
+from paper_code.data_sources import DATA_SOURCES, artifact_path, load_calls
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 CACHE_PATH = ROOT / ".embedding_cache.json"
-DB_PATH = ROOT / "database.json"
 N_PERM = 9999
+
+
+def load_cache(cache_path: Path, model: str) -> Dict[str, List[float]]:
+    if not cache_path.exists():
+        return {}
+    try:
+        payload = json.loads(cache_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    if payload.get("model") != model:
+        return {}
+    return payload.get("embeddings", {})
+
+
+def save_cache(cache_path: Path, model: str, cache: Dict[str, List[float]]) -> None:
+    cache_path.write_text(json.dumps({"model": model, "embeddings": cache}), encoding="utf-8")
+
+
+def batch_iter(seq: List[str], batch_size: int) -> Iterable[List[str]]:
+    for i in range(0, len(seq), batch_size):
+        yield seq[i : i + batch_size]
+
+
+def embed_texts(
+    texts: List[str],
+    model_name: str,
+    cache_path: Path,
+    encoder: SentenceTransformer,
+    batch_size: int = 64,
+) -> Tuple[np.ndarray, Dict[str, List[float]]]:
+    cache = load_cache(cache_path, model_name)
+    vectors: List[List[float]] = []
+    missing: List[str] = [t for t in texts if t not in cache]
+
+    for chunk in batch_iter(missing, batch_size):
+        if not chunk:
+            continue
+        embeds = encoder.encode(
+            chunk,
+            batch_size=batch_size,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+        )
+        for text, emb in zip(chunk, embeds):
+            cache[text] = emb.tolist()
+
+    for text in texts:
+        vectors.append(cache[text])
+
+    save_cache(cache_path, model_name, cache)
+    return np.array(vectors, dtype=np.float32), cache
 
 
 def mantel(a_vec, s_vec, n_perm=N_PERM, seed=42):
@@ -136,9 +189,19 @@ def bootstrap_ci_partial(Sa, Ss, C, n_boot=500, seed=0):
     return ci_lo, ci_hi
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-source", choices=DATA_SOURCES, default="old")
+    return parser.parse_args()
+
+
 def main():
-    calls = load_calls(DB_PATH)
-    print(f"Loaded {len(calls)} calls from {len({c['species'] for c in calls})} species")
+    args = parse_args()
+    calls = load_calls(args.data_source)
+    print(
+        f"Loaded {len(calls)} calls from {len({c['species'] for c in calls})} "
+        f"species, source={args.data_source}"
+    )
 
     acoustic_texts = [str(c["acoustic_description"]) for c in calls]
     semantic_texts = [str(c["semantic_description"]) for c in calls]
@@ -148,6 +211,12 @@ def main():
     encoder = SentenceTransformer(EMBEDDING_MODEL)
     ac_emb, _ = embed_texts(acoustic_texts, EMBEDDING_MODEL, CACHE_PATH, encoder)
     se_emb, _ = embed_texts(semantic_texts, EMBEDDING_MODEL, CACHE_PATH, encoder)
+
+    ac_out = artifact_path("ac_emb", args.data_source, "npy")
+    se_out = artifact_path("se_emb", args.data_source, "npy")
+    np.save(ac_out, ac_emb)
+    np.save(se_out, se_emb)
+    print(f"Saved embeddings → {ac_out}, {se_out}")
 
     Sa = similarity_matrix(ac_emb)
     Ss = similarity_matrix(se_emb)
@@ -204,7 +273,7 @@ def main():
         sig = "***" if p < 0.001 else ("**" if p < 0.01 else ("*" if p < 0.05 else "n.s."))
         print(f"  {label:<35s}  r={r:+.3f}  [{ci_lo:+.3f}, {ci_hi:+.3f}]  p={p:.4f} {sig}  (n={k})")
 
-    out = ROOT / "paper_code" / "mantel_results.json"
+    out = artifact_path("mantel_results", args.data_source, "json")
     with open(out, "w") as f:
         json.dump(results, f, indent=2)
     print(f"\nSaved → {out}")

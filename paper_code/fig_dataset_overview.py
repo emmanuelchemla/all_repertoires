@@ -8,6 +8,7 @@ Figure 1: Dataset overview — 4 panels.
 Output: plots/fig1_dataset_overview.png
 """
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -283,6 +284,12 @@ def panel_CD(ax, species_list):
 # ------------------------------------------------------------------ #
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "plots")
+    args = parser.parse_args()
+    out_dir = args.output_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     species_list, calls = load()
     print(f"{len(calls)} calls, {len(species_list)} species")
 
@@ -299,7 +306,7 @@ def main():
     panel_B(ax_B, calls)
     panel_CD(ax_CD, species_list)
 
-    out = ROOT / "plots" / "fig1_dataset_overview.png"
+    out = out_dir / "fig1_dataset_overview.png"
     fig.savefig(out, dpi=200, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved → {out}")

@@ -9,7 +9,7 @@ Design:
 - Saved to plots/pmi_heatmap_paper.pdf/.png
 """
 
-import json
+import argparse
 import sys
 from pathlib import Path
 
@@ -21,35 +21,63 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+from paper_code.data_sources import DATA_SOURCES, load_calls
+
 # ------------------------------------------------------------------ #
 # Acoustic features — meaningful order, grouped
 # ------------------------------------------------------------------ #
 
-ACOUSTIC = [
+OLD_ACOUSTIC = [
+    ("high-frequency", "high-frequency", ["high-frequency", "high frequency", "high-pitched", "high pitched", "ultrasonic"]),
+    ("low-frequency", "low-frequency", ["low-frequency", "low frequency", "low-pitched", "low pitched", "infrasound"]),
+    ("frequency-modulated", "frequency-modulated", ["frequency-modulated", "frequency modulated", "fm sweep", "sweep", "upsweep", "downsweep", "modulated"]),
+    ("short", "short", ["short ", "brief", "abrupt"]),
+    ("long / sustained", "long / sustained", ["long ", "prolonged", "sustained", "extended"]),
+    ("loud", "loud", ["loud", "intense", "powerful", "far-carrying"]),
+    ("soft / quiet", "soft / quiet", ["soft ", "quiet", "low amplitude", "low-amplitude", "subtle"]),
+    ("broadband / noisy", "broadband / noisy", ["broadband", "broad-band", "noisy", "noise", "atonal", "wideband"]),
+    ("tonal", "tonal", ["tonal", "pure tone", "narrowband", "narrow-band", "sinusoidal"]),
+    ("harmonic", "harmonic", ["harmonic", "overtone", "formant"]),
+    ("pulsed", "pulsed", ["pulsed", "pulse", "click", "burst", "staccato"]),
+    ("repetitive", "repetitive", ["repetitive", "repeated", "series", "bout", "sequence of"]),
+]
+
+NEW_ACOUSTIC = [
     # ── Frequency (strongest overall signal) ──────────────────────
-    ("high-frequency",      ["high-frequency", "high frequency", "high-pitched", "high pitched", "ultrasonic"]),
-    ("low-frequency",       ["low-frequency", "low frequency", "low-pitched", "low pitched", "infrasound"]),
-    ("frequency-modulated", ["frequency-modulated", "frequency modulated", "fm sweep", "sweep", "upsweep", "downsweep", "modulated"]),
+    ("high_frequency", "high-frequency", ["high-frequency", "high frequency", "high-pitched", "high pitched", "ultrasonic"]),
+    ("low_frequency", "low-frequency", ["low-frequency", "low frequency", "low-pitched", "low pitched", "infrasound"]),
+    ("frequency_modulated", "frequency-modulated", ["frequency-modulated", "frequency modulated", "fm sweep", "sweep", "upsweep", "downsweep", "modulated"]),
     # ── Duration ──────────────────────────────────────────────────
-    ("short",               ["short ", "brief", "abrupt"]),
-    ("long / sustained",    ["long ", "prolonged", "sustained", "extended"]),
+    ("short", "short", ["short ", "brief"]),
+    ("long", "long / sustained", ["long ", "prolonged", "sustained", "extended"]),
+    ("abrupt", "abrupt", ["abrupt", "rapid onset"]),
     # ── Amplitude ─────────────────────────────────────────────────
-    ("loud",                ["loud", "intense", "powerful", "far-carrying"]),
-    ("soft / quiet",        ["soft ", "quiet", "low amplitude", "low-amplitude", "subtle"]),
+    ("loud", "loud", ["loud", "intense", "powerful", "far-carrying"]),
+    ("quiet", "soft / quiet", ["soft ", "quiet", "low amplitude", "low-amplitude", "subtle"]),
     # ── Texture / temporal pattern ────────────────────────────────
-    ("broadband / noisy",   ["broadband", "broad-band", "noisy", "noise", "atonal", "wideband"]),
-    ("tonal",               ["tonal", "pure tone", "narrowband", "narrow-band", "sinusoidal"]),
-    ("harmonic",            ["harmonic", "overtone", "formant"]),
-    ("pulsed",              ["pulsed", "pulse", "click", "burst", "staccato"]),
-    ("repetitive",          ["repetitive", "repeated", "series", "bout", "sequence of"]),
+    ("broadband", "broadband", ["broadband", "broad-band", "wideband"]),
+    ("noisy", "noisy", ["noisy", "noise", "atonal", "harsh"]),
+    ("tonal", "tonal", ["tonal", "pure tone", "narrowband", "narrow-band", "sinusoidal"]),
+    ("harmonic", "harmonic", ["harmonic", "overtone", "formant"]),
+    ("pulsed", "pulsed", ["pulsed", "pulse", "click", "burst", "staccato"]),
+    ("repetitive", "repetitive", ["repetitive", "repeated", "series", "bout", "sequence of"]),
+    ("multi_component", "multi-component", ["multi-component", "multi component", "multi-note", "multi note", "multi-syllable", "complex"]),
+    ("graded", "graded", ["graded", "variable", "gradation"]),
 ]
 
 # (group label, number of consecutive rows)
-ACOUSTIC_GROUPS = [
+OLD_ACOUSTIC_GROUPS = [
     ("Frequency",          3),
     ("Duration",           2),
     ("Amplitude",          2),
     ("Texture / pattern",  5),
+]
+
+NEW_ACOUSTIC_GROUPS = [
+    ("Frequency",          3),
+    ("Duration",           3),
+    ("Amplitude",          2),
+    ("Texture / pattern",  8),
 ]
 
 GROUP_BG_COLORS = {
@@ -63,7 +91,7 @@ GROUP_BG_COLORS = {
 # Semantic functions — split into panels, ordered within each
 # ------------------------------------------------------------------ #
 
-SEMANTIC_PANELS = [
+OLD_SEMANTIC_PANELS = [
     ("Danger / threat",  ["alarm", "predator", "threat", "aggression"]),
     ("Distress / Infant",["distress", "infant"]),
     ("Cohesion",         ["contact", "coordination", "long_distance", "affiliative"]),
@@ -72,49 +100,140 @@ SEMANTIC_PANELS = [
     ("Cognitive",        ["individual_identity", "learning", "referential"]),
 ]
 
-SEMANTIC = [s for _, panel in SEMANTIC_PANELS for s in panel]
+NEW_SEMANTIC_PANELS = [
+    ("Danger / threat",  ["alarm", "predator", "threat", "aggression"]),
+    ("Distress / care",  ["distress", "infant", "begging", "caregiving"]),
+    ("Cohesion",         ["contact", "coordination", "group_coordination", "long_distance", "affiliative", "affiliation", "spacing"]),
+    ("Social",           ["display", "sex", "courtship", "mating", "territory", "territorial", "submission", "identity", "attention", "play", "combinatorial"]),
+    ("Foraging",         ["food", "recruitment"]),
+    ("Cognitive",        ["individual_identity", "learning", "referential"]),
+]
+
+OLD_SEMANTIC = [s for _, panel in OLD_SEMANTIC_PANELS for s in panel]
+NEW_SEMANTIC = [s for _, panel in NEW_SEMANTIC_PANELS for s in panel]
 
 SEMANTIC_LABELS = {
     "distress":            "adult distress",
     "infant":              "infant calls",
     "long_distance":       "long-distance",
+    "group_coordination":  "coordination",
     "individual_identity": "indiv. identity",
+    "affiliative":         "affiliation",
+    "territory":           "territorial",
+    "sex":                 "mating",
     "learning":            "vocal learning",
+    "multi_component":     "multi-component",
 }
 
-# ------------------------------------------------------------------ #
-# Load data and compute PMI
-# ------------------------------------------------------------------ #
-
-def load_calls():
-    with open(ROOT / "database.json") as f:
-        db = json.load(f)
-    return [c for s in db["species"] for c in s.get("calls", [])]
-
-
-def extract_acoustic_flags(desc: str, patterns: list[str]) -> bool:
+def extract_keyword_flags(desc: str, patterns: list[str]) -> bool:
     desc = desc.lower()
     return any(p in desc for p in patterns)
 
 
-def compute_pmi(calls, min_calls=4):
-    n = len(calls)
-    ac_mat  = np.zeros((n, len(ACOUSTIC)),  dtype=float)
-    sem_mat = np.zeros((n, len(SEMANTIC)), dtype=float)
+def _semantic_patterns():
+    return {
+        "alarm": ["alarm"],
+        "predator": ["predator", "raptor", "snake"],
+        "threat": ["threat", "defensive"],
+        "aggression": ["aggression", "aggressive", "agonistic"],
+        "distress": ["distress", "disturbed", "capture", "pain"],
+        "infant": ["infant", "juvenile", "nestling", "pup", "calf"],
+        "begging": ["begging", "solicitation", "solicit"],
+        "caregiving": ["caregiving", "parent", "maternal", "offspring"],
+        "contact": ["contact"],
+        "coordination": ["coordination", "coordinate"],
+        "group_coordination": ["group coordination", "coordinate", "cohesion"],
+        "long_distance": ["long-distance", "long distance", "far"],
+        "affiliative": ["affiliative", "affiliation"],
+        "affiliation": ["affiliation", "affiliative"],
+        "spacing": ["spacing", "separation"],
+        "display": ["display"],
+        "sex": ["sex", "sexual"],
+        "courtship": ["courtship"],
+        "mating": ["mating", "mate", "sexual"],
+        "territory": ["territory", "territorial"],
+        "territorial": ["territorial", "territory"],
+        "submission": ["submission", "submissive"],
+        "identity": ["identity", "individual", "recognition"],
+        "attention": ["attention", "alert"],
+        "play": ["play"],
+        "combinatorial": ["combinatorial", "combination"],
+        "food": ["food", "foraging", "feeding"],
+        "recruitment": ["recruitment", "recruit"],
+        "individual_identity": ["individual identity", "individual recognition"],
+        "learning": ["learning", "learned"],
+        "referential": ["referential"],
+    }
 
-    for i, c in enumerate(calls):
-        desc = c.get("acoustic_description", "")
-        for j, (_, patterns) in enumerate(ACOUSTIC):
-            ac_mat[i, j] = float(extract_acoustic_flags(desc, patterns))
-        kws = set(c.get("ontology_keywords", []))
-        for j, sk in enumerate(SEMANTIC):
-            sem_mat[i, j] = float(sk in kws)
+
+def _provided_keyword_matrix(calls, field, labels):
+    mat = np.zeros((len(calls), len(labels)), dtype=float)
+    missing = 0
+    for i, call in enumerate(calls):
+        kws = set(call.get(field) or [])
+        if not kws:
+            missing += 1
+        for j, key in enumerate(labels):
+            mat[i, j] = float(key in kws)
+    return mat, missing
+
+
+def _extracted_keyword_matrix(calls, desc_field, specs):
+    mat = np.zeros((len(calls), len(specs)), dtype=float)
+    for i, call in enumerate(calls):
+        desc = str(call.get(desc_field, ""))
+        for j, (_key, _label, patterns) in enumerate(specs):
+            mat[i, j] = float(extract_keyword_flags(desc, patterns))
+    return mat
+
+
+def compute_pmi(calls, data_source, extract_keywords_from_text, min_calls=4):
+    n = len(calls)
+    acoustic_specs = OLD_ACOUSTIC if data_source == "old" else NEW_ACOUSTIC
+    acoustic_groups = OLD_ACOUSTIC_GROUPS if data_source == "old" else NEW_ACOUSTIC_GROUPS
+    semantic_keys_all = OLD_SEMANTIC if data_source == "old" else NEW_SEMANTIC
+    semantic_panels = OLD_SEMANTIC_PANELS if data_source == "old" else NEW_SEMANTIC_PANELS
+    ac_keys = [key for key, _label, _patterns in acoustic_specs]
+    ac_labels = [label for _key, label, _patterns in acoustic_specs]
+
+    if extract_keywords_from_text:
+        ac_mat = _extracted_keyword_matrix(calls, "acoustic_description", acoustic_specs)
+        print("  Acoustic keywords: extracted from acoustic_description")
+    else:
+        ac_mat, missing_ac = _provided_keyword_matrix(calls, "acoustic_keywords", ac_keys)
+        if missing_ac:
+            raise ValueError(
+                f"{data_source!r} data has no provided acoustic_keywords for "
+                f"{missing_ac}/{n} calls. Re-run with --extract-keywords-from-text."
+            )
+        print("  Acoustic keywords: provided by data source")
+
+    if data_source == "old" and extract_keywords_from_text:
+        sem_keys = semantic_keys_all
+        sem_mat, _ = _provided_keyword_matrix(calls, "ontology_keywords", sem_keys)
+        print("  Semantic keywords: provided ontology_keywords (old pipeline)")
+    elif extract_keywords_from_text:
+        sem_keys = semantic_keys_all
+        patterns = _semantic_patterns()
+        sem_specs = [(key, key, patterns.get(key, [key.replace("_", " ")])) for key in sem_keys]
+        sem_mat = _extracted_keyword_matrix(calls, "semantic_description", sem_specs)
+        print("  Semantic keywords: extracted from semantic_description")
+    else:
+        sem_keys = semantic_keys_all
+        sem_mat, missing_sem = _provided_keyword_matrix(calls, "semantic_keywords", sem_keys)
+        if missing_sem:
+            raise ValueError(
+                f"{data_source!r} data has no provided semantic_keywords for {missing_sem}/{n} calls."
+            )
+        print("  Semantic keywords: provided by data source")
 
     sem_counts = sem_mat.sum(axis=0)
     keep = sem_counts >= min_calls
     sem_mat = sem_mat[:, keep]
-    sem_labels = [s for s, k in zip(SEMANTIC, keep) if k]
+    sem_labels = [s for s, k in zip(sem_keys, keep) if k]
     print(f"  Semantic keywords kept (≥{min_calls} calls): {sem_labels}")
+    if not sem_labels:
+        raise ValueError(f"No semantic keywords met min_calls={min_calls}")
 
     p_ac    = ac_mat.mean(axis=0)
     p_sem   = sem_mat.mean(axis=0)
@@ -127,26 +246,27 @@ def compute_pmi(calls, min_calls=4):
             0.0,
         )
 
-    ac_labels = [label for label, _ in ACOUSTIC]
-    return pmi, ac_labels, sem_labels, p_ac, p_sem, p_joint
+    return pmi, ac_labels, sem_labels, p_ac, p_sem, p_joint, acoustic_groups, semantic_panels
 
 
 # ------------------------------------------------------------------ #
 # Plot
 # ------------------------------------------------------------------ #
 
-def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
+def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path, acoustic_groups, semantic_panels):
     import matplotlib.patches as mpatches
 
     n_rows = pmi.shape[0]
 
     # Build panels, filtering to keywords that survived min_calls
     panels = []
-    for panel_name, features in SEMANTIC_PANELS:
+    for panel_name, features in semantic_panels:
         idxs = [sem_labels.index(f) for f in features if f in sem_labels]
         if idxs:
             disp = [SEMANTIC_LABELS.get(sem_labels[i], sem_labels[i]) for i in idxs]
             panels.append((panel_name, idxs, disp))
+    if not panels:
+        raise ValueError("No semantic panels contain retained keywords")
 
     panel_sizes = [len(p[1]) for p in panels]
     n_panels    = len(panels)
@@ -237,7 +357,7 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
 
         # Horizontal dashed separators between acoustic groups
         row = 0
-        for _, grp_count in ACOUSTIC_GROUPS:
+        for _, grp_count in acoustic_groups:
             row += grp_count
             if row < n_rows:
                 ax.axhline(row - 0.5, color="#888888", linewidth=0.8,
@@ -252,7 +372,7 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
     strip_left_data  = strip_right_data - strip_w / cell
 
     row = 0
-    for grp_name, grp_count in ACOUSTIC_GROUPS:
+    for grp_name, grp_count in acoustic_groups:
         y_top = row - 0.5
         y_bot = row + grp_count - 0.5
         color = GROUP_BG_COLORS[grp_name]
@@ -310,10 +430,29 @@ def plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out_path):
 # Main
 # ------------------------------------------------------------------ #
 
+def parse_args():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-source", choices=DATA_SOURCES, default="old")
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "plots")
+    parser.add_argument(
+        "--extract-keywords-from-text",
+        action="store_true",
+        help="Extract acoustic/semantic keywords from descriptions instead of using provided keyword fields.",
+    )
+    return parser.parse_args()
+
+
 def main():
-    calls = load_calls()
-    print(f"{len(calls)} calls")
-    pmi, ac_labels, sem_labels, p_ac, p_sem, p_joint = compute_pmi(calls)
+    args = parse_args()
+    out_dir = args.output_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    calls = load_calls(args.data_source)
+    print(f"{len(calls)} calls from {args.data_source!r} data")
+    pmi, ac_labels, sem_labels, p_ac, p_sem, p_joint, acoustic_groups, semantic_panels = compute_pmi(
+        calls,
+        data_source=args.data_source,
+        extract_keywords_from_text=args.extract_keywords_from_text,
+    )
 
     print("\nTop 10 PMI associations:")
     flat_idx = np.argsort(pmi.flatten())[::-1]
@@ -326,8 +465,8 @@ def main():
         r, c = divmod(idx, len(sem_labels))
         print(f"  {ac_labels[r]:25s} × {sem_labels[c]:20s}  PMI={pmi[r,c]:.2f}")
 
-    out = ROOT / "plots" / "pmi_heatmap_paper.png"
-    plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out)
+    out = out_dir / "pmi_heatmap_paper.png"
+    plot_pmi(pmi, ac_labels, sem_labels, p_ac, p_sem, out, acoustic_groups, semantic_panels)
 
 
 if __name__ == "__main__":
