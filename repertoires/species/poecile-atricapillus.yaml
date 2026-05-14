@@ -1,0 +1,160 @@
+scientific_name: Poecile atricapillus
+common_name: Black-capped Chickadee
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Paridae
+  genus: Poecile
+  species: atricapillus
+primary_inventory:
+  id: ficken_etal_1978
+  rationale: Ficken et al. 1978 is used as the primary inventory because it classically describes the vocal repertoire of the black-capped chickadee. Later seasonal and functional studies refine major song and call classes.
+calls:
+  - name: fee-bee song
+    alternative_names:
+      - whistled song
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, long, frequency_modulated, repetitive]
+    acoustic_description: Clear, whistled two-note song with a higher fee note and lower bee note, sometimes repeated in bouts.
+    semantic_keywords: [territorial, courtship, identity]
+    semantic_description: Produced mainly in breeding and territorial contexts, carrying information about caller identity and social status.
+    acoustic_references:
+      - id: ficken_etal_1978
+        url: https://sora.unm.edu/node/22808
+      - id: hoese_etal_2000
+        url: https://doi.org/10.1086/303326
+    semantic_references:
+      - id: hoese_etal_2000
+        url: https://doi.org/10.1086/303326
+      - id: foote_etal_2010
+        url: https://doi.org/10.1111/j.1439-0310.2010.01755.x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Fee-bee song is a primary vocalization in Ficken et al. 1978 and many later chickadee studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The two-note whistled structure is highly consistent across sources.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial, courtship, and identity roles are strongly supported in song studies.
+
+  - name: chick-a-dee call
+    alternative_names:
+      - chickadee call
+      - dee call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [multi_component, repetitive, high_frequency, tonal, graded]
+    acoustic_description: Complex multi-note call composed of introductory and repeated dee notes, with note number and composition varying across contexts.
+    semantic_keywords: [alarm, predator, contact, group_coordination, attention]
+    semantic_description: Used in mobbing, predator-risk assessment, flock contact, and social coordination; dee-note number can vary with threat level.
+    acoustic_references:
+      - id: ficken_etal_1978
+        url: https://sora.unm.edu/node/22808
+      - id: templeton_etal_2005
+        url: https://doi.org/10.1126/science.1108841
+    semantic_references:
+      - id: templeton_etal_2005
+        url: https://doi.org/10.1126/science.1108841
+      - id: smith_1991
+        url: https://doi.org/10.7591/9781501717963
+    playback_references:
+      - id: templeton_etal_2005
+        url: https://doi.org/10.1126/science.1108841
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The chick-a-dee call is the signature call type of the species and is supported by repertoire and playback studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multi-component note structure and graded note composition are well described.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Predator-risk and social-coordination functions are strongly supported by playback and field studies.
+
+  - name: gargle
+    alternative_names:
+      - gargle call
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [long, multi_component, frequency_modulated, noisy]
+    acoustic_description: Complex, rapidly modulated call with multiple note types and harsh components.
+    semantic_keywords: [threat, aggression, territorial]
+    semantic_description: Produced during aggressive interactions, dominance disputes, and territorial encounters.
+    acoustic_references:
+      - id: ficken_etal_1978
+        url: https://sora.unm.edu/node/22808
+      - id: smith_1991
+        url: https://doi.org/10.7591/9781501717963
+    semantic_references:
+      - id: ficken_etal_1978
+        url: https://sora.unm.edu/node/22808
+      - id: smith_1991
+        url: https://doi.org/10.7591/9781501717963
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Gargles are a classic named call in the chickadee repertoire and are described in detail by Smith 1991.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The complex harsh structure is stable, though gargles are individually variable.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Aggressive and dominance contexts are consistently reported.
+
+  - name: tseet
+    alternative_names:
+      - contact call
+      - high see
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, short, quiet]
+    acoustic_description: Short, high-frequency, narrow-band note often produced singly.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used for flock contact and close-range coordination among group members.
+    acoustic_references:
+      - id: ficken_etal_1978
+        url: https://sora.unm.edu/node/22808
+      - id: smith_1991
+        url: https://doi.org/10.7591/9781501717963
+    semantic_references:
+      - id: ficken_etal_1978
+        url: https://sora.unm.edu/node/22808
+      - id: smith_1991
+        url: https://doi.org/10.7591/9781501717963
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Tseet/contact calls are included in repertoire accounts, though less studied than song and chick-a-dee calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Short high tonal structure is consistent across descriptions.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and coordination context is supported observationally.
+references:
+  ficken_etal_1978:
+    citation: "Ficken, M. S., Ficken, R. W., & Witkin, S. R. (1978). Vocal repertoire of the black-capped chickadee. The Auk, 95, 34-48."
+    url: https://sora.unm.edu/node/22808
+  hoese_etal_2000:
+    citation: "Hoese, W. J., Podos, J., Boetticher, N. C., & Nowicki, S. (2000). Vocal tract function in birdsong production: experimental manipulation of beak movements. Journal of Experimental Biology, 203, 1845-1855."
+    url: https://doi.org/10.1242/jeb.203.12.1845
+    doi: 10.1242/jeb.203.12.1845
+  foote_etal_2010:
+    citation: "Foote, J. R., Fitzsimmons, L. P., Mennill, D. J., & Ratcliffe, L. M. (2010). Black-capped chickadee dawn choruses are interactive communication networks. Behaviour, 147, 1219-1248."
+    url: https://doi.org/10.1163/000579510X510547
+    doi: 10.1163/000579510X510547
+  templeton_etal_2005:
+    citation: "Templeton, C. N., Greene, E., & Davis, K. (2005). Allometry of alarm calls: black-capped chickadees encode information about predator size. Science, 308, 1934-1937."
+    url: https://doi.org/10.1126/science.1108841
+    doi: 10.1126/science.1108841
+  smith_1991:
+    citation: "Smith, S. M. (1991). The Black-capped Chickadee: Behavioral Ecology and Natural History. Cornell University Press."
+    url: https://doi.org/10.7591/9781501717963
