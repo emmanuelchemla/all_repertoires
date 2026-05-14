@@ -1,0 +1,384 @@
+scientific_name: Sapajus apella
+common_name: Tufted capuchin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cebidae
+  genus: Sapajus
+  species: apella
+primary_inventory:
+  id: dibitetti_2003
+  rationale: Di Bitetti 2003 (Behaviour 140) is the most comprehensive single peer-reviewed paper that explicitly enumerates and acoustically characterises multiple discrete call types in the tufted capuchin vocal repertoire, including the dominant contact note, the food-associated grgr, and the whistle series (with both food-associated and non-feeding/long-distance variants). It serves as the spine for the call list. The study was conducted at Iguazú National Park, Argentina, and was published under the name Cebus apella nigritus before the 2012 robust capuchin split (Lynch Alfaro et al. 2012) reclassified Iguazú populations as Sapajus nigritus. Because all major vocal-repertoire papers on tufted capuchins were published under the sensu lato Cebus apella species concept and the named call types are repeatedly reported across Amazonian and Guianan populations now assigned to Sapajus apella sensu stricto (e.g. Boinski et al. 1999 from Suriname; Resende et al. 2007 across Brazilian and Surinamese populations), this file applies that pre-split literature to Sapajus apella sensu stricto, noting taxonomic provenance throughout.
+calls:
+  - name: contact note
+    in_primary_inventory: true
+    alternative_names:
+      - contact call
+      - huh
+      - close contact call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - quiet
+      - broadband
+      - graded
+    acoustic_description: A short, low-amplitude, broadband call described as the most commonly produced vocalisation in the tufted capuchin repertoire. Individual notes are brief pulses with a concave frequency contour; rapid concatenation of similar pulses forms the grgr call, indicating that the contact note belongs to a graded acoustic continuum with related calls.
+    semantic_keywords:
+      - contact
+      - spacing
+      - group_coordination
+    semantic_description: Produced at high rates during routine group activities, particularly travel and foraging, and interpreted as a within-group spacing signal that maintains acoustic contact among group members when visual contact is broken by vegetation. Not specifically linked to food discovery, predator detection, or aggressive contexts.
+    acoustic_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+      - id: dibitetti_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.07.017
+    semantic_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+      - id: dibitetti_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.07.017
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Di Bitetti 2003 and Di Bitetti 2005 independently identify and analyse contact notes as a discrete and dominant call category in wild tufted capuchins, and Lisboa et al. 2021 reports a homologous contact note in the sister species Sapajus libidinosus, supporting cross-population recognition of the call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Di Bitetti 2003 and Di Bitetti 2005 provide spectrographic and acoustic descriptions of contact notes and the related grgr; the calls are explicitly graded with grgr, so the boundary is partly continuous rather than sharply discrete. Agreement is medium because dedicated acoustic analyses of the contact note in isolation are limited.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Di Bitetti 2003 and Di Bitetti 2005 both describe contact notes as the high-rate baseline call during routine activity, consistent with the within-group spacing/contact function reported across Cebus/Sapajus contact-call literature.
+
+  - name: gr-gr
+    in_primary_inventory: true
+    alternative_names:
+      - grgr
+      - food-associated grgr
+      - rapid contact-note series
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - repetitive
+      - pulsed
+      - broadband
+      - graded
+    acoustic_description: A rapid series of short notes whose individual elements resemble contact notes, but concatenated tightly enough that the bout is perceived as a broken, pulsed sound rather than a series of separate calls. The whole series has its own concave frequency contour and is acoustically distinct from a string of isolated contact notes.
+    semantic_keywords:
+      - food
+      - recruitment
+      - attention
+    semantic_description: Produced when an individual encounters or feeds on food. Di Bitetti 2003 shows that grgrs are emitted with food and that conspecifics approach callers selectively, supporting a functionally referential signalling of food. Di Bitetti 2005 shows production is sensitive to the presence and behaviour of nearby audience members.
+    acoustic_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+      - id: dibitetti_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.07.017
+    semantic_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+      - id: dibitetti_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.07.017
+    playback_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Di Bitetti 2003 names and acoustically separates grgr from isolated contact notes, and Di Bitetti 2005 uses the same category in an independent dataset on audience effects. Lisboa et al. 2021 lists a homologous grgr in Sapajus libidinosus, supporting recognition of the call as a distinct named type across Sapajus.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Di Bitetti 2003 provides spectrographic comparison of grgrs and isolated contact-note series and explicitly notes the perceptual and acoustic distinctiveness of the rapid pulsed series; Di Bitetti 2005 uses the same acoustic category in a separate behavioural analysis. Agreement on the basic acoustic form is strong.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Di Bitetti 2003 demonstrates the food-associated context and elicited approach in a playback experiment, and Di Bitetti 2005 shows audience-sensitive production in a feeding context, jointly supporting a strong food/recruitment interpretation.
+
+  - name: food-associated whistle series
+    in_primary_inventory: true
+    alternative_names:
+      - food whistle series
+      - feeding whistle
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - high_frequency
+      - frequency_modulated
+      - repetitive
+      - multi_component
+    acoustic_description: A series of tonal, frequency-modulated whistles emitted in succession, forming a structured bout. Di Bitetti 2003 distinguishes the feeding variant acoustically from whistles emitted in non-feeding contexts, indicating that food-associated whistle series form an acoustically distinct subtype of whistle series.
+    semantic_keywords:
+      - food
+      - recruitment
+      - attention
+    semantic_description: Produced when an individual discovers food. Di Bitetti 2003 reports that the first call given by a finder during a food discovery is typically a food-associated whistle, and playback of these whistles elicits approach by conspecifics; Di Bitetti 2005 shows the call is also modulated by audience composition during feeding.
+    acoustic_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+      - id: dibitetti_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.07.017
+    semantic_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+      - id: dibitetti_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.07.017
+    playback_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Di Bitetti 2003 explicitly names food-associated whistle series and contrasts them with non-feeding whistle series, and Di Bitetti 2005 uses the same category in an independent audience-effects study. Lisboa et al. 2021 names a homologous food-associated whistle series in Sapajus libidinosus.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Di Bitetti 2003 provides acoustic separation between feeding and non-feeding whistle subtypes; however, the available accessible descriptions emphasise context and rate more than fine spectral measurement, so agreement on detailed acoustic structure is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Di Bitetti 2003 documents the food-discovery context and shows that playback elicits approach, and Di Bitetti 2005 corroborates the food context and adds audience-sensitive modulation. The food/recruitment interpretation is strongly supported.
+
+  - name: long-distance whistle series
+    in_primary_inventory: true
+    alternative_names:
+      - non-feeding whistle series
+      - lost whistle
+      - inter-group whistle
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - high_frequency
+      - frequency_modulated
+      - loud
+      - long
+      - repetitive
+    acoustic_description: A loud, long, tonal whistle series similar in basic form to the food-associated whistle but acoustically distinguishable from it. Whistles in this category are emitted as long-distance signals propagating beyond the immediate group, with structure compatible with carrying distance.
+    semantic_keywords:
+      - contact
+      - spacing
+      - group_coordination
+      - territorial
+    semantic_description: Produced in non-feeding contexts, especially by individuals that are spatially separated from the group and during inter-group encounters. Functions in long-distance coordination, between-group spacing, and reunion with the social group rather than in food signalling.
+    acoustic_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+    semantic_references:
+      - id: dibitetti_2003
+        url: https://doi.org/10.1163/156853903322127959
+      - id: lisboa_etal_2021
+        url: https://doi.org/10.1159/000517917
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Di Bitetti 2003 explicitly separates non-feeding from food-associated whistle series and identifies them as the same broad whistle category in different contexts; Lisboa et al. 2021 distinguishes long-distance and inter-group encounter whistle-series variants in the sister species Sapajus libidinosus. The named subtype is well anchored, but whether long-distance and inter-group whistles form one or two subtypes is not fully resolved for Sapajus apella sensu stricto.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Di Bitetti 2003 provides the acoustic separation from feeding whistles but does not present a dedicated fine-structure analysis of the non-feeding subtype, and there is no independent acoustic re-analysis specifically on Sapajus apella sensu stricto. Agreement on coarse acoustic form is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Di Bitetti 2003 reports use in non-feeding, long-distance contexts and Lisboa et al. 2021 describes parallel long-distance and inter-group encounter whistle series in Sapajus libidinosus, supporting the long-distance contact and inter-group function with medium certainty.
+
+  - name: bark
+    in_primary_inventory: false
+    alternative_names:
+      - aerial predator alarm
+      - aerial alarm bark
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - short
+      - abrupt
+      - broadband
+      - noisy
+    acoustic_description: A short, loud, broadband, noisy call. Wheeler 2010 acoustically separates barks from other alarm-context calls (hiccups, peeps) and shows that barks have distinct spectro-temporal structure consistent with a sharp, abrupt alarm note.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Elicited essentially exclusively by aerial threats (e.g. raptor models). Wheeler 2010 treats barks as a functionally referential aerial-predator alarm in tufted capuchins because production is tightly bound to aerial stimuli and the call elicits appropriate antipredator responses in conspecifics.
+    acoustic_references:
+      - id: wheeler_2010
+        url: https://doi.org/10.1007/s00265-010-0914-3
+    semantic_references:
+      - id: wheeler_2010
+        url: https://doi.org/10.1007/s00265-010-0914-3
+      - id: wheeler_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.09.007
+    playback_references:
+      - id: wheeler_2010
+        url: https://doi.org/10.1007/s00265-010-0914-3
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Wheeler 2008 and Wheeler 2010 independently identify barks as a distinct alarm call type in wild tufted capuchins at Iguazú, acoustically and contextually separated from hiccups and peeps. Lisboa et al. 2021 also recognises an alarm bark in Sapajus libidinosus.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Wheeler 2010 provides dedicated acoustic and contextual analysis of barks but is the principal source for fine acoustic structure in tufted capuchins, so independent acoustic replication for Sapajus apella sensu stricto is limited. Agreement is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Wheeler 2008 and Wheeler 2010 both show that barks are produced almost exclusively to aerial threats and treat them as functionally referential aerial alarms, with congruent results across natural observation and decoy experiments. Agreement is strong.
+
+  - name: hiccup
+    in_primary_inventory: false
+    alternative_names:
+      - terrestrial alarm
+      - generalised disturbance call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - broadband
+      - repetitive
+    acoustic_description: A short, abrupt, broadband call acoustically separable from barks and peeps. Wheeler 2010 distinguishes hiccups from barks based on spectro-temporal structure and notes that hiccup bouts can be repeated in series during sustained disturbance.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: Most commonly given in response to terrestrial threats (predator and snake decoys), but also produced in a range of non-predatory disturbance contexts. Wheeler 2010 therefore characterises hiccups as a generalised disturbance/urgency call rather than a strictly predator-specific signal.
+    acoustic_references:
+      - id: wheeler_2010
+        url: https://doi.org/10.1007/s00265-010-0914-3
+    semantic_references:
+      - id: wheeler_2010
+        url: https://doi.org/10.1007/s00265-010-0914-3
+      - id: wheeler_2008
+        url: https://doi.org/10.1016/j.anbehav.2008.09.007
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Wheeler 2008 and Wheeler 2010 identify hiccups as a discrete alarm-context call type in wild tufted capuchins, but the same call is reported in non-predatory disturbance contexts, so its boundary with general disturbance calls is partly continuous. Existence as a named category is supported, with medium confidence on category sharpness.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Wheeler 2010 provides the main acoustic description for hiccups in tufted capuchins; independent replication of the fine acoustic structure is limited, so agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Wheeler 2008 and Wheeler 2010 agree that hiccups occur with terrestrial threats but also note their broader use in non-predatory disturbance, so the call appears better described as a generalised disturbance/urgency signal than a terrestrial-predator-specific alarm. Agreement is medium.
+
+  - name: peep
+    in_primary_inventory: false
+    alternative_names:
+      - terrestrial alarm peep
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+    acoustic_description: A short, tonal, relatively high-frequency call described by Wheeler 2010 as acoustically separable from barks and hiccups. Detailed acoustic structure is reported less extensively than for barks.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Reported by Wheeler 2010 as preferentially produced to terrestrial threats. Whether peeps elicit predator-specific responses in conspecifics is not yet experimentally established, so the functional referentiality of the call is currently uncertain.
+    acoustic_references:
+      - id: wheeler_2010
+        url: https://doi.org/10.1007/s00265-010-0914-3
+    semantic_references:
+      - id: wheeler_2010
+        url: https://doi.org/10.1007/s00265-010-0914-3
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Wheeler 2010 names the peep as a third alarm-context call type, but it is documented in essentially a single primary source on Sapajus nigritus/apella sensu lato and there is no independent peer-reviewed acoustic re-analysis specifically for Sapajus apella sensu stricto. Agreement on existence as a separate type is weak.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Only Wheeler 2010 provides an acoustic description of the peep in tufted capuchins; the call has not been re-analysed in independent acoustic studies. Agreement is weak.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Wheeler 2010 reports a terrestrial-threat association but explicitly leaves open whether peeps elicit predator-specific responses, so the contextual interpretation is sparsely supported. Agreement is weak.
+
+  - name: wah-wah
+    in_primary_inventory: false
+    alternative_names:
+      - rumble
+      - wah wah wah
+      - explosive-noise call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - pulsed
+      - broadband
+      - harmonic
+      - multi_component
+      - repetitive
+    acoustic_description: A repetitive series of broadband elements with some tonal components, lasting on the order of seconds. Resende et al. 2007 describe it as a series of harsh pulses, with each pulse lasting on the order of 100–120 ms and energy concentrated between roughly 0.9 and 3 kHz, with components reaching up to 7–10 kHz.
+    semantic_keywords:
+      - alarm
+      - threat
+      - display
+    semantic_description: Produced in response to sudden loud low-frequency stimuli such as thunder, falling trees, gunshots, fireworks, and other explosive noises. Resende et al. 2007 report the same call to the same class of stimuli in geographically distant tufted capuchin populations (Argentina, Suriname, and multiple Brazilian sites), suggesting a species-typical response.
+    acoustic_references:
+      - id: resende_etal_2007
+        url: https://doi.org/10.1896/044.014.0105
+    semantic_references:
+      - id: resende_etal_2007
+        url: https://doi.org/10.1896/044.014.0105
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Resende et al. 2007 explicitly name the wah-wah/rumble as a distinct vocalisation, supported by congruent occurrence across multiple distant populations (Iguazú after Di Bitetti, Suriname after Boinski, and several Brazilian sites). The compiled cross-site evidence supports existence as a recognised call type, with primary characterisation concentrated in a single paper.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Resende et al. 2007 provides the main acoustic description, including pulse duration and frequency-energy range. Independent acoustic re-analysis is limited, so agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Resende et al. 2007 documents a consistent contingency on sudden loud low-frequency stimuli across multiple populations, but the underlying communicative function (alarm-like, threat display, agitated arousal) is not fully resolved. Agreement on the contextual trigger is medium.
+
+references:
+  dibitetti_2003:
+    citation: "Di Bitetti, M. S. (2003). Food-associated calls of tufted capuchin monkeys (Cebus apella nigritus) are functionally referential signals. Behaviour, 140(5), 565-592."
+    doi: 10.1163/156853903322127959
+    url: https://doi.org/10.1163/156853903322127959
+  dibitetti_2005:
+    citation: "Di Bitetti, M. S. (2005). Food-associated calls and audience effects in tufted capuchin monkeys, Cebus apella nigritus. Animal Behaviour, 69(4), 911-919."
+    doi: 10.1016/j.anbehav.2004.07.017
+    url: https://doi.org/10.1016/j.anbehav.2004.07.017
+  wheeler_2008:
+    citation: "Wheeler, B. C. (2008). Selfish or altruistic? An analysis of alarm call function in wild capuchin monkeys, Cebus apella nigritus. Animal Behaviour, 76(5), 1465-1475."
+    doi: 10.1016/j.anbehav.2008.09.007
+    url: https://doi.org/10.1016/j.anbehav.2008.09.007
+  wheeler_2010:
+    citation: "Wheeler, B. C. (2010). Production and perception of situationally variable alarm calls in wild tufted capuchin monkeys (Cebus apella nigritus). Behavioral Ecology and Sociobiology, 64(6), 989-1000."
+    doi: 10.1007/s00265-010-0914-3
+    url: https://doi.org/10.1007/s00265-010-0914-3
+  resende_etal_2007:
+    citation: "Resende, B. D. de, Oliveira, D. A. G., Ramos da Silva, E. D., & Ottoni, E. B. (2007). Capuchin monkey (Cebus apella) vocalizations in response to loud explosive noises. Neotropical Primates, 14(1), 27-30."
+    doi: 10.1896/044.014.0105
+    url: https://doi.org/10.1896/044.014.0105
+  lisboa_etal_2021:
+    citation: "Lisboa, C. A., Mendes, F. D. C., Silveira, M., & Aguiar, L. M. de S. (2021). The vocal repertoire of the bearded capuchin (Cebidae: Sapajus libidinosus): implications for understanding the complexity of Neotropical primate communication. Folia Primatologica, 92(3), 151-163."
+    doi: 10.1159/000517917
+    url: https://doi.org/10.1159/000517917
