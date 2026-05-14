@@ -1,0 +1,76 @@
+scientific_name: Allochrocebus lhoesti
+common_name: L'Hoest's Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Allochrocebus
+  species: lhoesti
+primary_inventory:
+  rationale: L'Hoest's monkey has published field and comparative descriptions of calls but no single comprehensive inventory was used here. Calls are included conservatively from those sources.
+calls:
+  - name: pyow
+    alternative_names: [alarm call, loud call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, short, loud]
+    acoustic_description: A short, loud, relatively low-frequency call with noisy spectral energy and abrupt onset.
+    semantic_keywords: [alarm, predator, group_coordination]
+    semantic_description: Associated with alarm and disturbance, especially during predator-related arousal and group response.
+    acoustic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+      - id: ouattara_etal_2009
+        url: https://doi.org/10.1073/pnas.0908118106
+    semantic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+      - id: ouattara_etal_2009
+        url: https://doi.org/10.1073/pnas.0908118106
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Pyow-like alarm calls are described across related guenons and used cautiously here for L'Hoest's monkey.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Species-specific measurements are limited, though the broad low harsh structure is consistent across related taxa.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm use is supported by comparative guenon literature; exact predator specificity is not strongly replicated for this species.
+  - name: contact call
+    alternative_names: [chirp, social call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [frequency_modulated, tonal, short, repetitive]
+    acoustic_description: A short, often frequency-modulated call produced singly or in repeated exchanges.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close to medium range social coordination and contact maintenance among group members.
+    acoustic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    semantic_references:
+      - id: gautier_1988
+        url: https://doi.org/10.1007/978-1-4612-3858-1_5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Contact calls are a common guenon category, but L'Hoest's monkey has limited focused publications.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic description is based on qualitative comparative accounts.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and group-coordination use is consistent with cercopithecine social-call literature.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  gautier_1988:
+    citation: "Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced from vocalizations. In A Primate Radiation: Evolutionary Biology of the African Guenons."
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  ouattara_etal_2009:
+    citation: "Ouattara, K., Lemasson, A., & Zuberbuehler, K. (2009). Campbell's monkeys concatenate vocalizations into context-specific call sequences. Proceedings of the National Academy of Sciences, 106, 22026-22031."
+    url: https://doi.org/10.1073/pnas.0908118106
+    doi: 10.1073/pnas.0908118106

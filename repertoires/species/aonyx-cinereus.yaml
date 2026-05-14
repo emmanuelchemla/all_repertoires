@@ -1,0 +1,82 @@
+scientific_name: Aonyx cinereus
+common_name: Asian Small-clawed Otter
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Mustelidae
+  genus: Aonyx
+  species: cinereus
+primary_inventory:
+  id: lemasson_etal_2013
+  rationale: Lemasson et al. 2013 is used as the primary inventory because it explicitly describes a vocal repertoire for Asian small-clawed otters and classifies context-dependent vocalization units and types.
+calls:
+  - name: chirp
+    alternative_names: [contact chirp]
+    in_primary_inventory: true
+    scope: &all_life_both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, frequency_modulated, tonal, short, repetitive]
+    acoustic_description: A short, high-frequency, often frequency-modulated tonal call, sometimes repeated in bouts.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in social contact, separation, and group-coordination contexts.
+    acoustic_references:
+      - id: lemasson_etal_2013
+        url: https://doi.org/10.1007/s00114-013-1015-7
+      - id: scheifele_etal_2015
+        url: https://doi.org/10.1121/1.4921458
+    semantic_references:
+      - id: lemasson_etal_2013
+        url: https://doi.org/10.1007/s00114-013-1015-7
+      - id: scheifele_etal_2015
+        url: https://doi.org/10.1121/1.4921458
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Chirp-like calls are part of the Lemasson et al. 2013 otter repertoire and are also recognized in later classification work.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on short high calls; detailed boundaries among chirp subtypes are more limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and coordination contexts are supported, though much work is from managed groups rather than wild observations.
+  - name: scream
+    alternative_names: [distress scream]
+    in_primary_inventory: true
+    scope: *all_life_both_scope
+    acoustic_keywords: [high_frequency, loud, long, noisy]
+    acoustic_description: A loud, high-frequency, extended call with noisy energy and strong amplitude.
+    semantic_keywords: [distress, attention, group_coordination]
+    semantic_description: Produced during distress or high arousal, drawing attention from group members.
+    acoustic_references:
+      - id: lemasson_etal_2013
+        url: https://doi.org/10.1007/s00114-013-1015-7
+      - id: scheifele_etal_2015
+        url: https://doi.org/10.1121/1.4921458
+    semantic_references:
+      - id: lemasson_etal_2013
+        url: https://doi.org/10.1007/s00114-013-1015-7
+      - id: scheifele_etal_2015
+        url: https://doi.org/10.1121/1.4921458
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Screams are classified as a distinct otter vocalization in Lemasson et al. 2013.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Broad acoustic structure is consistent, but fine measurements are limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Distress and arousal contexts are clear, with limited wild playback evidence.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  lemasson_etal_2013:
+    citation: "Lemasson, A., Mikus, M.-A., Blois-Heulin, C., & Lode, T. (2013). Vocal repertoire, individual acoustic distinctiveness, and social networks in a group of Asian small-clawed otters. Naturwissenschaften, 100, 275-279."
+    url: https://doi.org/10.1007/s00114-013-1015-7
+    doi: 10.1007/s00114-013-1015-7
+  scheifele_etal_2015:
+    citation: "Scheifele, P. M., et al. (2015). Vocal classification of vocalizations of Asian small-clawed otters. Journal of the Acoustical Society of America, 137, 2305."
+    url: https://doi.org/10.1121/1.4921458
+    doi: 10.1121/1.4921458

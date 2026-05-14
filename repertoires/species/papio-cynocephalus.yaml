@@ -1,0 +1,90 @@
+scientific_name: Papio cynocephalus
+common_name: Yellow Baboon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Papio
+  species: cynocephalus
+primary_inventory:
+  rationale: Yellow baboon calls are described across field studies of baboon vocal communication rather than a single inventory paper. Calls are selected from well-supported Papio call classes.
+calls:
+  - name: grunt
+    alternative_names: [contact grunt, affiliative grunt]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, short, quiet]
+    acoustic_description: A short, low-amplitude, low-frequency noisy call, often produced in bouts during close approach.
+    semantic_keywords: [affiliation, contact, submission]
+    semantic_description: Used during close-range affiliative approaches, reassurance, and low-risk social contact.
+    acoustic_references:
+      - id: cheney_seyfarth_2007
+        url: https://press.uchicago.edu/ucp/books/book/chicago/B/bo3641602.html
+      - id: rendall_etal_1999
+        url: https://doi.org/10.1016/S0003-3472(99)80013-3
+    semantic_references:
+      - id: cheney_seyfarth_2007
+        url: https://press.uchicago.edu/ucp/books/book/chicago/B/bo3641602.html
+      - id: rendall_etal_1999
+        url: https://doi.org/10.1016/S0003-3472(99)80013-3
+    playback_references:
+      - id: rendall_etal_1999
+        url: https://doi.org/10.1016/S0003-3472(99)80013-3
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Grunts are a central baboon call type in Cheney and Seyfarth 2007 and Rendall et al. 1999.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on short low noisy calls, although grunt subtypes are graded.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Affiliative and social-management functions are supported by field observation and playback studies.
+  - name: wahoo
+    alternative_names: [loud call, contest call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, multi_component, long]
+    acoustic_description: A loud, multi-component male call with a low-frequency bark-like onset and extended following element.
+    semantic_keywords: [threat, aggression, display, spacing]
+    semantic_description: Produced by adult males during arousal, contest, display, and spacing contexts.
+    acoustic_references:
+      - id: fischer_etal_2002
+        url: https://doi.org/10.1007/s00265-002-0507-z
+      - id: cheney_seyfarth_2007
+        url: https://press.uchicago.edu/ucp/books/book/chicago/B/bo3641602.html
+    semantic_references:
+      - id: fischer_etal_2002
+        url: https://doi.org/10.1007/s00265-002-0507-z
+      - id: cheney_seyfarth_2007
+        url: https://press.uchicago.edu/ucp/books/book/chicago/B/bo3641602.html
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Wahoos are widely recognized as a male baboon loud call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on a loud multi-component structure, with variation in detailed acoustic measures across populations.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contest and display contexts are supported, but the call spans several arousal contexts.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  cheney_seyfarth_2007:
+    citation: "Cheney, D. L., & Seyfarth, R. M. (2007). Baboon Metaphysics: The Evolution of a Social Mind. University of Chicago Press."
+    url: https://press.uchicago.edu/ucp/books/book/chicago/B/bo3641602.html
+  rendall_etal_1999:
+    citation: "Rendall, D., Seyfarth, R. M., Cheney, D. L., & Owren, M. J. (1999). The meaning and function of grunt variants in baboons. Animal Behaviour, 57, 583-592."
+    url: https://doi.org/10.1016/S0003-3472(99)80013-3
+    doi: 10.1016/S0003-3472(99)80013-3
+  fischer_etal_2002:
+    citation: "Fischer, J., Hammerschmidt, K., Cheney, D. L., & Seyfarth, R. M. (2002). Acoustic features of male baboon loud calls. Behavioral Ecology and Sociobiology, 51, 140-148."
+    url: https://doi.org/10.1007/s00265-002-0507-z
+    doi: 10.1007/s00265-002-0507-z

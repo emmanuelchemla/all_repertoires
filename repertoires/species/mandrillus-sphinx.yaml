@@ -1,0 +1,82 @@
+scientific_name: Mandrillus sphinx
+common_name: Mandrill
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Mandrillus
+  species: sphinx
+primary_inventory:
+  rationale: Mandrill vocal communication is described in field and comparative primate studies, but this file does not rely on a single exhaustive inventory. It includes robust, named call classes only.
+calls:
+  - name: crow
+    alternative_names: [long-distance crow, male crow]
+    in_primary_inventory: false
+    scope: &adult_male_scope
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, tonal]
+    acoustic_description: A loud, low-pitched, long call with resonant tonal quality and extended duration.
+    semantic_keywords: [spacing, contact, identity, display]
+    semantic_description: Produced by adult males in long-distance advertisement, spacing, and social-display contexts.
+    acoustic_references:
+      - id: kudo_1987
+        url: https://doi.org/10.1159/000156303
+      - id: levrero_etal_2019
+        url: https://doi.org/10.1038/s41598-019-52004-z
+    semantic_references:
+      - id: kudo_1987
+        url: https://doi.org/10.1159/000156303
+      - id: levrero_etal_2019
+        url: https://doi.org/10.1038/s41598-019-52004-z
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The crow is a named mandrill call class in Kudo 1987 and subsequent acoustic work.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on a loud low long-call structure, though detailed measurements focus mainly on male calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Long-distance and male display contexts are supported; fine functional categories remain broad.
+  - name: grunt
+    alternative_names: [two-phase grunt, contact grunt]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, short, quiet]
+    acoustic_description: A short low-frequency call with noisy or pulsed quality, often produced in close-range bouts.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close-range social contact, movement, and affiliative interactions.
+    acoustic_references:
+      - id: kudo_1987
+        url: https://doi.org/10.1159/000156303
+      - id: levrero_etal_2019
+        url: https://doi.org/10.1038/s41598-019-52004-z
+    semantic_references:
+      - id: kudo_1987
+        url: https://doi.org/10.1159/000156303
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Grunts are described as mandrill social calls, but close-range call variants can be graded.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Kudo 1987 and later work support low short calls, with limited agreement on subtypes.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact use is supported, but context categories overlap with other close-range calls.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  kudo_1987:
+    citation: "Kudo, H. (1987). The study of vocal communication of wild mandrills in Cameroon in relation to their social structure. Primates, 28, 289-308."
+    url: https://doi.org/10.1159/000156303
+  levrero_etal_2019:
+    citation: "Levrero, F., et al. (2019). Social shaping of voices does not impair phenotype matching of kinship in mandrills. Scientific Reports, 9, 19496."
+    url: https://doi.org/10.1038/s41598-019-52004-z
+    doi: 10.1038/s41598-019-52004-z

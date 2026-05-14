@@ -1,0 +1,75 @@
+scientific_name: Aphelocoma coerulescens
+common_name: Florida Scrub-Jay
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Aphelocoma
+  species: coerulescens
+primary_inventory:
+  rationale: Florida scrub-jay vocal behavior is described in cooperative-breeding and sentinel studies rather than a single formal repertoire inventory. Calls here are well-supported social and alarm classes.
+calls:
+  - name: sentinel alarm call
+    alternative_names: [hawk alarm, aerial alarm]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, noisy, short, loud, repetitive]
+    acoustic_description: A repeated, sharp, high-frequency alarm call with noisy energy and abrupt elements.
+    semantic_keywords: [alarm, predator, group_coordination]
+    semantic_description: Given by sentinels or group members in response to predators, alerting kin and group members.
+    acoustic_references:
+      - id: mcgowan_woolfenden_1989
+        url: https://sora.unm.edu/node/24608
+      - id: woolfenden_fitzpatrick_1984
+        url: https://press.princeton.edu/books/paperback/9780691083433/the-florida-scrub-jay
+    semantic_references:
+      - id: mcgowan_woolfenden_1989
+        url: https://sora.unm.edu/node/24608
+      - id: woolfenden_fitzpatrick_1984
+        url: https://press.princeton.edu/books/paperback/9780691083433/the-florida-scrub-jay
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Alarm calling is central to Florida scrub-jay cooperative and sentinel behavior studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Alarm acoustic structure is described, though many studies focus more on behavior than spectrograms.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Predator-alerting and group-response functions are repeatedly supported in field studies.
+  - name: contact call
+    alternative_names: [group contact call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [frequency_modulated, tonal, short, repetitive]
+    acoustic_description: Short calls with tonal or slightly noisy frequency-modulated elements, often exchanged among group members.
+    semantic_keywords: [contact, affiliation, group_coordination, identity]
+    semantic_description: Used for maintaining contact and coordinating movements within cooperative family groups.
+    acoustic_references:
+      - id: woolfenden_fitzpatrick_1984
+        url: https://press.princeton.edu/books/paperback/9780691083433/the-florida-scrub-jay
+    semantic_references:
+      - id: woolfenden_fitzpatrick_1984
+        url: https://press.princeton.edu/books/paperback/9780691083433/the-florida-scrub-jay
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Social contact calls are described for family groups, but formal acoustic categorization is limited.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Detailed acoustic measurements are sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and group-coordination contexts are supported by natural history and behavioral studies.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  mcgowan_woolfenden_1989:
+    citation: "McGowan, K. J., & Woolfenden, G. E. (1989). A sentinel system in the Florida scrub jay. Animal Behaviour, 37, 1000-1006."
+    url: https://sora.unm.edu/node/24608
+  woolfenden_fitzpatrick_1984:
+    citation: "Woolfenden, G. E., & Fitzpatrick, J. W. (1984). The Florida Scrub Jay: Demography of a Cooperative-Breeding Bird. Princeton University Press."
+    url: https://press.princeton.edu/books/paperback/9780691083433/the-florida-scrub-jay

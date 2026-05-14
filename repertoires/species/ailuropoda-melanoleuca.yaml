@@ -1,0 +1,84 @@
+scientific_name: Ailuropoda melanoleuca
+common_name: Giant Panda
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Ursidae
+  genus: Ailuropoda
+  species: melanoleuca
+primary_inventory:
+  rationale: Giant panda vocal communication is described mostly in reproductive and mother-infant studies rather than one wild repertoire inventory. This file includes widely recognized call classes with conservative agreement labels.
+calls:
+  - name: bleat
+    alternative_names: [contact bleat]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, short, repetitive]
+    acoustic_description: A short tonal call with frequency modulation, often produced in repeated series.
+    semantic_keywords: [contact, courtship, affiliation]
+    semantic_description: Produced during close-range social and reproductive interactions, especially courtship and mate contact.
+    acoustic_references:
+      - id: kleiman_etal_1979
+        url: https://doi.org/10.1002/zoo.1430010105
+      - id: charlton_etal_2009
+        url: https://doi.org/10.1098/rsbl.2009.0201
+    semantic_references:
+      - id: kleiman_etal_1979
+        url: https://doi.org/10.1002/zoo.1430010105
+      - id: charlton_etal_2009
+        url: https://doi.org/10.1098/rsbl.2009.0201
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Bleats are a standard named giant panda call in behavioral and acoustic studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on tonal frequency-modulated structure, but much evidence is from managed settings.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social and courtship contexts are supported, though wild evidence is limited.
+  - name: moan
+    alternative_names: [aggressive moan]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [low_frequency, noisy, long, graded]
+    acoustic_description: A low, extended, noisy or harmonic call that grades in intensity with caller arousal.
+    semantic_keywords: [threat, aggression, submission]
+    semantic_description: Produced during agonistic or tense close-range interactions.
+    acoustic_references:
+      - id: kleiman_etal_1979
+        url: https://doi.org/10.1002/zoo.1430010105
+      - id: charlton_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.030
+    semantic_references:
+      - id: kleiman_etal_1979
+        url: https://doi.org/10.1002/zoo.1430010105
+      - id: charlton_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.030
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Moans are reported as a distinct call class, but some agonistic calls grade into one another.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Low extended structure is consistent, while arousal-related variation is substantial.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Agonistic use is supported, but exact motivational boundaries are graded.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  kleiman_etal_1979:
+    citation: "Kleiman, D. G., Peters, G., & others. (1979). Vocalizations of the giant panda. Zoo Biology, 1, 47-55."
+    url: https://doi.org/10.1002/zoo.1430010105
+  charlton_etal_2009:
+    citation: "Charlton, B. D., Zhihe, Z., & Snyder, R. J. (2009). Vocal cues to male androgen levels in giant pandas. Biology Letters, 5, 591-594."
+    url: https://doi.org/10.1098/rsbl.2009.0201
+    doi: 10.1098/rsbl.2009.0201
+  charlton_etal_2010:
+    citation: "Charlton, B. D., Zhihe, Z., & Snyder, R. J. (2010). Giant panda vocalizations reveal information about sex and caller identity. Animal Behaviour, 79, 117-123."
+    url: https://doi.org/10.1016/j.anbehav.2010.06.030
+    doi: 10.1016/j.anbehav.2010.06.030

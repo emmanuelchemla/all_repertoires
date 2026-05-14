@@ -1,0 +1,79 @@
+scientific_name: Alouatta seniculus
+common_name: Red Howler Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Atelidae
+  genus: Alouatta
+  species: seniculus
+primary_inventory:
+  rationale: Red howler vocalizations are covered by field studies of roaring and social calls rather than one exhaustive inventory. This file includes the best-supported call classes.
+calls:
+  - name: roar
+    alternative_names: [howl, loud call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, repetitive]
+    acoustic_description: A very loud, low-frequency, long-distance call produced in sustained bouts, often by multiple individuals.
+    semantic_keywords: [territorial, spacing, group_coordination, display]
+    semantic_description: Used in intergroup spacing, group coordination, and long-distance display, especially around dawn or encounters.
+    acoustic_references:
+      - id: sekulic_1982
+        url: https://doi.org/10.1007/BF02382277
+      - id: whitehead_1987
+        url: https://doi.org/10.1007/BF02381540
+    semantic_references:
+      - id: sekulic_1982
+        url: https://doi.org/10.1007/BF02382277
+      - id: whitehead_1987
+        url: https://doi.org/10.1007/BF02381540
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Roars/howls are the signature Alouatta call and are repeatedly described for red howlers.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on loud low-frequency long-distance bouts.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Spacing, display, and group coordination are consistently supported by field studies.
+  - name: grunt
+    alternative_names: [contact grunt]
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, short, quiet]
+    acoustic_description: A short, low-frequency, low-amplitude vocalization used at close range.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Produced during close-range social contact and movement within the group.
+    acoustic_references:
+      - id: sekulic_1982
+        url: https://doi.org/10.1007/BF02382277
+    semantic_references:
+      - id: sekulic_1982
+        url: https://doi.org/10.1007/BF02382277
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Grunts are described in red howler vocal behavior, though less intensively than roars.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Published acoustic detail is limited compared with loud calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Close-range contact use is supported but not experimentally isolated.
+provenance:
+  - timestamp: '2026-05-14T14:11:40Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  sekulic_1982:
+    citation: "Sekulic, R. (1982). The function of howling in red howler monkeys. Behaviour, 81, 38-54."
+    url: https://doi.org/10.1007/BF02382277
+  whitehead_1987:
+    citation: "Whitehead, J. M. (1987). Vocally mediated reciprocity between neighbouring groups of mantled howling monkeys. Animal Behaviour, 35, 1615-1627."
+    url: https://doi.org/10.1007/BF02381540
