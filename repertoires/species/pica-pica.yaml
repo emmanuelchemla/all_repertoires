@@ -1,0 +1,516 @@
+scientific_name: Pica pica
+common_name: Eurasian Magpie
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Pica
+  species: pica
+primary_inventory:
+  id: birkhead_1991
+  rationale: Birkhead's 1991 monograph "The Magpies" is used as the primary inventory spine because it is the canonical comprehensive treatment of magpie behaviour, including a dedicated description of the adult vocal repertoire that synthesises the earlier descriptive work of Goodwin 1952, Holyoak 1974 and Baeyens 1979 and remains the most widely cited single-source repertoire for Pica pica. No single peer-reviewed paper enumerates the full adult repertoire of Eurasian magpies, so the book chapter is used as the inventory. Calls describing the nestling-fledgling repertoire (Redondo & Exposito 1990) are added outside the primary inventory because they were not part of Birkhead's adult-focused account.
+calls:
+  - name: Chatter
+    alternative_names:
+      - chatter call
+      - chak-chak
+      - rattle
+      - alarm chatter
+      - schackern
+    in_primary_inventory: true
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - repetitive
+      - pulsed
+      - loud
+      - multi_component
+      - graded
+    acoustic_description: A loud, harsh, rattling trill made of distinct short syllables repeated rapidly. The call has a broad frequency range and a wooden, staccato quality; series can range from a few syllables to over a hundred and vary in duration and emission rate. Both members of a pair often produce overlapping or alternating bouts.
+    semantic_keywords:
+      - alarm
+      - predator
+      - territorial
+      - threat
+      - group_coordination
+      - spacing
+    semantic_description: Given in a wide range of disturbance contexts, including mobbing of foxes, domestic cats, raptors and people near the nest, and during territorial encounters with conspecific intruders. Playback work shows that magpies treat strange chatters as territorial challenges, with longer chatter durations eliciting faster vocal responses and stronger approach.
+    acoustic_references:
+      - id: birkhead_1991
+      - id: baeyens_1981
+        url: https://www.jstor.org/stable/4533
+      - id: kuspiel_etal_2025
+        url: https://doi.org/10.1007/s10071-025-01975-w
+    semantic_references:
+      - id: birkhead_1991
+      - id: baeyens_1981
+        url: https://www.jstor.org/stable/4533
+      - id: kuspiel_etal_2025
+        url: https://doi.org/10.1007/s10071-025-01975-w
+      - id: kuspiel_etal_2024
+        url: https://doi.org/10.1111/eth.13515
+    playback_references:
+      - id: kuspiel_etal_2025
+        url: https://doi.org/10.1007/s10071-025-01975-w
+      - id: kuspiel_etal_2024
+        url: https://doi.org/10.1111/eth.13515
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Chatter is treated as the defining and most conspicuous magpie call by Goodwin 1952, Holyoak 1974, Baeyens 1981 and Birkhead 1991, and is the focus of recent playback experiments by Kuspiel et al. 2024 and 2025. Independent sources converge on a single, named broadband rattle.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Birkhead 1991, Baeyens 1981 and Kuspiel et al. 2025 give consistent acoustic descriptions and measurements of a loud broadband rattle made of distinct repeated syllables with variable duration.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Multiple field observations (Goodwin 1952, Baeyens 1981, Birkhead 1991) and playback experiments (Kuspiel et al. 2024, 2025) agree that the chatter functions in both predator mobbing and territorial defence, with magpies treating strangers' chatters as intrusions.
+
+  - name: Cheeuch
+    alternative_names:
+      - yelp
+      - shriek
+      - keee-uk
+      - squeal
+      - greeting call
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - short
+      - loud
+    acoustic_description: A single shrill upward-inflected note transcribed as "cheeuch" or "keee-uk", with a fairly tonal harmonic structure and a fundamental that slides upwards through the call. It is louder and clearer than the chatter and has been described as a yelp- or shriek-like sound.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - courtship
+      - attention
+    semantic_description: Given by mated birds at and near the nest, used by the female to solicit food from her partner, as a greeting between pair members on reunion, and in mate-attraction contexts. Goodwin and Birkhead derive its form from the begging calls of older nestlings.
+    acoustic_references:
+      - id: birkhead_1991
+      - id: goodwin_1952
+    semantic_references:
+      - id: birkhead_1991
+      - id: goodwin_1952
+      - id: baeyens_1979
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Goodwin 1952 first named "cheeuch" as a distinct call, and Birkhead 1991 retains it as a named adult call derived from nestling begging. Independent acoustic analyses under this exact name are limited, so existence is medium rather than strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Goodwin 1952 and Birkhead 1991 agree on a single upward-inflected shrill note; the Birds of the World account independently transcribes a comparable "keee-uk" form. Detailed quantitative spectrographic descriptions are sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Goodwin 1952, Baeyens 1979 and Birkhead 1991 agree on a pair-affiliative and food-solicitation context, but the call has not been isolated experimentally.
+
+  - name: Tchurch
+    alternative_names:
+      - scolding call
+      - throaty scold
+      - explosive scold
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - abrupt
+      - short
+      - loud
+    acoustic_description: A throaty, explosive, low-frequency broadband call given as a single harsh element or short couplet, more guttural than the chatter and lacking its rattling repetition.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+    semantic_description: Produced in agonistic interactions among adults of both sexes, typically during chases and close conflicts over food, perches or territorial boundaries.
+    acoustic_references:
+      - id: birkhead_1991
+      - id: goodwin_1952
+    semantic_references:
+      - id: birkhead_1991
+      - id: goodwin_1952
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Goodwin 1952 named "tchurch" as a distinct agonistic call and Birkhead 1991 retains it in the adult magpie repertoire. Later studies tend to subsume harsh agonistic calls into chatter-related categories, so the boundary is only medium.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic descriptions of tchurch are short and largely qualitative in Goodwin 1952 and Birkhead 1991. There are no published spectrographic measurements isolating it from chatter.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Goodwin 1952 and Birkhead 1991 agree on an agonistic chase context, but the call has not been tested in playback or analysed in independent field studies under this name.
+
+  - name: Babble song
+    alternative_names:
+      - subsong
+      - nest babbling
+      - warbling song
+      - quiet song
+    in_primary_inventory: true
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - long
+      - frequency_modulated
+      - multi_component
+      - tonal
+      - graded
+    acoustic_description: A long, soft, rambling stream of warbles, whistles, gurgles and quieter chatter-like elements, sometimes including mimicry of other species. Notes are highly variable, often barely audible at a distance, and produced in extended bouts.
+    semantic_keywords:
+      - affiliation
+      - courtship
+      - display
+    semantic_description: Given by paired adults at and near the nest, and by unpaired or young birds in undisturbed contexts, often in the presence of the mate. Described as occurring during relaxed social situations and associated with pair-bond maintenance and mate attraction.
+    acoustic_references:
+      - id: birkhead_1991
+      - id: baeyens_1979
+    semantic_references:
+      - id: birkhead_1991
+      - id: baeyens_1979
+      - id: goodwin_1952
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Goodwin 1952, Baeyens 1979 and Birkhead 1991 all describe a quiet warbled song or "babble" in magpies, but the call is intrinsically graded and has not been formally separated as a discrete type in quantitative studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The three classic sources agree on a soft, varied warble with mimicry, but its graded structure and low amplitude have limited detailed spectrographic study.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Functional accounts in Goodwin 1952, Baeyens 1979 and Birkhead 1991 are observational, linking babble song to pair-bond and nest-side contexts without experimental tests.
+
+  - name: Husky call
+    alternative_names:
+      - prolonged husky call
+      - low husky call
+      - female nest call
+    in_primary_inventory: true
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - long
+      - quiet
+    acoustic_description: A prolonged, low-pitched, husky call with a noisy, breathy quality, of relatively long duration and moderate to low amplitude.
+    semantic_description: Given by females during nest building and at other times when the female appears to be attracting the male to the nest; Holyoak heard it about twenty times and only from birds judged to be females, and Birkhead retains it as a female-specific nest-attraction call.
+    semantic_keywords:
+      - courtship
+      - mating
+      - attention
+      - affiliation
+    acoustic_references:
+      - id: birkhead_1991
+      - id: holyoak_1974
+        url: https://doi.org/10.1080/00063657409476407
+    semantic_references:
+      - id: birkhead_1991
+      - id: holyoak_1974
+        url: https://doi.org/10.1080/00063657409476407
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Holyoak 1974 named the prolonged husky call from a small number of observations, and Birkhead 1991 included it in the adult repertoire. No independent acoustic study of the named type has been published.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Descriptions in Holyoak 1974 and Birkhead 1991 are qualitative and based on limited observations, with no spectrographic analysis isolating the call.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Holyoak 1974 and Birkhead 1991 agree on a female-only nest-attraction context, but the evidence base is small and observational, with no playback or experimental test.
+
+  - name: Begging trill
+    alternative_names:
+      - nestling begging trill
+      - BT
+      - tonal begging call
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - high_frequency
+      - repetitive
+      - pulsed
+      - quiet
+    acoustic_description: A repeated tonal trill of short pulsed elements with a relatively pure spectral structure given by very young nestlings. Element rate and pitch increase with hunger and the call gradually acquires frequency modulation and noisier structure with age.
+    semantic_keywords:
+      - begging
+      - caregiving
+    semantic_description: Produced by hatchlings and small nestlings in the nest during food solicitation toward provisioning parents; calling intensity and rate are modulated by hunger and brood size.
+    acoustic_references:
+      - id: redondo_exposito_1990
+        url: https://doi.org/10.1111/j.1439-0310.1990.tb00805.x
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    semantic_references:
+      - id: redondo_exposito_1990
+        url: https://doi.org/10.1111/j.1439-0310.1990.tb00805.x
+      - id: redondo_castro_1992b
+        url: https://doi.org/10.1111/j.1439-0310.1992.tb00961.x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Redondo & Exposito 1990 and Redondo, Arias de Reyna & Cases 1996 explicitly name the begging trill as the first call type in the nestling repertoire and follow its development into adult harsh calls.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The two Redondo papers describe and measure a tonal pulsed trill that becomes increasingly noisy and frequency-modulated with age, with consistent acoustic structure across studies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The begging-and-caregiving context is clear and consistent in Redondo & Exposito 1990 and Redondo & Castro 1992, but it is sometimes treated as part of a graded begging continuum rather than a discrete signal.
+
+  - name: Begging scream
+    alternative_names:
+      - fledgling begging call
+      - BS
+      - harsh begging call
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - loud
+      - long
+      - frequency_modulated
+      - graded
+    acoustic_description: A loud, harsh, broadband scream that develops from the begging trill around 16-18 days post-hatching as the tonal trill acquires increasingly noisy, frequency-modulated structure. The mature form is loud and broad in frequency, structurally close to adult harsh calls.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Given by older nestlings and fledglings while soliciting food from parents; calling rate and amplitude track hunger and are linked to higher provisioning rates from parents but also to elevated predation risk.
+    acoustic_references:
+      - id: redondo_exposito_1990
+        url: https://doi.org/10.1111/j.1439-0310.1990.tb00805.x
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    semantic_references:
+      - id: redondo_exposito_1990
+        url: https://doi.org/10.1111/j.1439-0310.1990.tb00805.x
+      - id: redondo_castro_1992a
+        url: https://doi.org/10.1111/j.1474-919X.1992.tb08395.x
+      - id: redondo_castro_1992b
+        url: https://doi.org/10.1111/j.1439-0310.1992.tb00961.x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Redondo & Exposito 1990 and Redondo, Arias de Reyna & Cases 1996 both name the begging scream as the developed nestling form, and Redondo & Castro 1992a, b treat it as the begging signal whose intensity is measured in the field.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The acoustic transition from tonal trill to harsh broadband scream is documented in detail by Redondo & Exposito 1990 with spectrographic measurements and corroborated by Redondo, Arias de Reyna & Cases 1996.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Begging context is strongly supported, but interpretations differ on whether the scream signals need or quality; Redondo & Castro 1992a additionally link it to increased predation risk.
+
+  - name: Soft whistle
+    alternative_names:
+      - nestling soft whistle
+      - SW
+      - tonal whistle
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - quiet
+      - short
+      - high_frequency
+    acoustic_description: A soft, brief, high-pitched tonal whistle with a pure spectral structure, much more tonal than the begging trill and clearly separable from it on spectrograms.
+    semantic_keywords:
+      - affiliation
+      - caregiving
+    semantic_description: Produced by nestlings in apparently low-arousal contexts, interpreted by Redondo and colleagues as a signal of nestling good condition that may bias parental provisioning toward broods with high survival prospects.
+    acoustic_references:
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    semantic_references:
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: The soft whistle is named as a distinct nestling call type in Redondo, Arias de Reyna & Cases 1996, but is not independently described under this label in other primary literature.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Spectrographic description is provided by Redondo, Arias de Reyna & Cases 1996 only; no independent replication of the named type exists.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The condition-signalling interpretation in Redondo, Arias de Reyna & Cases 1996 is based on observational data within a single study system.
+
+  - name: Nestling alarm call
+    alternative_names:
+      - AC
+      - nestling alarm
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - short
+      - abrupt
+    acoustic_description: A loud, broadband, short call structurally similar to but cruder than the adult chatter syllable, easily localised at a distance.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Given by nestlings and fledglings when potential predators approach the nest, attracting parents to defend the brood. Structurally adapted for long-distance detection and localisation.
+    acoustic_references:
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    semantic_references:
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Redondo, Arias de Reyna & Cases 1996 named the nestling alarm call as a discrete category in the early repertoire, but it has not been independently described as a separate type under this name.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic description rests on one primary source (Redondo, Arias de Reyna & Cases 1996); no quantitative replication exists.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Anti-predator and parent-attraction functions are described by Redondo, Arias de Reyna & Cases 1996 but not tested by playback.
+
+  - name: Distress call
+    alternative_names:
+      - DC
+      - nestling distress call
+      - capture call
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - noisy
+      - broadband
+      - long
+      - frequency_modulated
+    acoustic_description: A very loud, harsh, broadband call with marked frequency modulation, structurally easy to localise and detect at a distance, given in long bouts when the nestling is in extreme distress.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+    semantic_description: Produced by nestlings and fledglings when handled, captured or in apparent acute distress; attracts parents to the nest area for defence against potential predators.
+    acoustic_references:
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    semantic_references:
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Distress call is named as one of the six nestling call types in Redondo, Arias de Reyna & Cases 1996, but is not described independently as a distinct named type in other primary sources on Pica pica.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Description rests on a single primary source; no independent acoustic study under this name exists.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Distress and parental-attraction functions are reported observationally by Redondo, Arias de Reyna & Cases 1996, without experimental confirmation.
+
+  - name: Brief contact note
+    alternative_names:
+      - BCN
+      - contact note
+      - fledgling contact call
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - quiet
+      - tonal
+      - abrupt
+    acoustic_description: A very brief, low-amplitude, quasi-tonal note given singly or in short series, with simple spectral structure and little frequency modulation.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - play
+    semantic_description: Given by fledglings during bouts of locomotor activity such as exploration and play, interpreted as maintaining cohesion of the brood under poor visibility.
+    acoustic_references:
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    semantic_references:
+      - id: redondo_arias_decasas_1996
+        url: https://doi.org/10.1007/BF01647274
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: The brief contact note is named in Redondo, Arias de Reyna & Cases 1996 as a discrete fledgling call type but has not been replicated as a distinct type by other studies.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic description comes from a single primary source, without independent spectrographic replication.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Contact and group-cohesion interpretation in Redondo, Arias de Reyna & Cases 1996 is observational and not experimentally tested.
+
+references:
+  birkhead_1991:
+    citation: "Birkhead, T. R. 1991. The Magpies: The Ecology and Behaviour of Black-billed and Yellow-billed Magpies. T. & A. D. Poyser, London."
+  goodwin_1952:
+    citation: "Goodwin, D. 1952. A comparative study of voice and some aspects of behaviour in two Old-World jays. Behaviour 4:293-316."
+  holyoak_1974:
+    citation: "Holyoak, D. T. 1974. Territorial and feeding behaviour of the Magpie. Bird Study 21:117-128."
+    url: https://doi.org/10.1080/00063657409476407
+    doi: 10.1080/00063657409476407
+  baeyens_1979:
+    citation: "Baeyens, G. 1979. Description of the social behaviour of the Magpie (Pica pica). Ardea 67:28-41."
+  baeyens_1981:
+    citation: "Baeyens, G. 1981. The role of the sexes in territory defence in the Magpie (Pica pica). Ardea 69:69-82."
+    url: https://www.jstor.org/stable/4533
+  redondo_exposito_1990:
+    citation: "Redondo, T., and F. Exposito. 1990. Structural variations in the begging calls of nestling Magpies Pica pica and their role in the development of adult voice. Ethology 84:307-318."
+    url: https://doi.org/10.1111/j.1439-0310.1990.tb00805.x
+    doi: 10.1111/j.1439-0310.1990.tb00805.x
+  redondo_castro_1992a:
+    citation: "Redondo, T., and F. Castro. 1992. The increase in risk of predation with begging activity in broods of Magpies Pica pica. Ibis 134:180-187."
+    url: https://doi.org/10.1111/j.1474-919X.1992.tb08395.x
+    doi: 10.1111/j.1474-919X.1992.tb08395.x
+  redondo_castro_1992b:
+    citation: "Redondo, T., and F. Castro. 1992. Signalling of nutritional need by Magpie nestlings. Ethology 92:193-204."
+    url: https://doi.org/10.1111/j.1439-0310.1992.tb00961.x
+    doi: 10.1111/j.1439-0310.1992.tb00961.x
+  redondo_arias_decasas_1996:
+    citation: "Redondo, T., L. Arias de Reyna, and J. L. Cases. 1996. Early stages of vocal ontogeny in the Magpie (Pica pica). Journal fur Ornithologie 137:113-123."
+    url: https://doi.org/10.1007/BF01647274
+    doi: 10.1007/BF01647274
+  kuspiel_etal_2024:
+    citation: "Kuspiel, M., Lindeman, A., and Naguib, M. 2024. Pair-coordinated calling: Eurasian Magpies respond differently to simulated intruder pairs that overlap or alternate their calls. Ethology 130:e13515."
+    url: https://doi.org/10.1111/eth.13515
+    doi: 10.1111/eth.13515
+  kuspiel_etal_2025:
+    citation: "Kuspiel, M., Lindeman, A., and Naguib, M. 2025. The duration of alarm- and territorial defence calls alters receiver response in Eurasian magpies. Animal Cognition 28:59."
+    url: https://doi.org/10.1007/s10071-025-01975-w
+    doi: 10.1007/s10071-025-01975-w
