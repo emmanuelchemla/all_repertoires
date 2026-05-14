@@ -1,0 +1,141 @@
+scientific_name: Symphalangus syndactylus
+common_name: Siamang
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hylobatidae
+  genus: Symphalangus
+  species: syndactylus
+primary_inventory:
+  id: geissmann_2000
+  rationale: Geissmann 2000 is used as the compact inventory spine because it explicitly describes siamang song bouts, note classes, note types, and sequence organization, while comparing earlier terminology. The core entries below focus on the best-supported song and call classes with wild functional context from Chivers 1976.
+calls:
+  - name: duet song
+    alternative_names:
+      - song bout
+      - pair duet
+    in_primary_inventory: true
+    scope: &adult_both
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, repetitive, multi_component, frequency_modulated]
+    acoustic_description: Long, loud, coordinated song bout in which mates combine sex-linked notes and repeated great-call and interlude sequences in a structured duet.
+    semantic_keywords: [territorial, spacing, affiliation, group_coordination, display]
+    semantic_description: Produced mainly by mated pairs for long-distance intergroup spacing and pair-level coordination; duet intensity is also associated with pair-bond measures.
+    acoustic_references:
+      - id: geissmann_2000
+        url: https://www.gibbons.de/main/papers/2000siamangduet/2000siamangduet.html
+      - id: geissmann_orgeldinger_2000
+        url: https://doi.org/10.1006/anbe.2000.1540
+    semantic_references:
+      - id: chivers_1976
+        url: https://doi.org/10.1163/156853976x00136
+      - id: geissmann_orgeldinger_2000
+        url: https://doi.org/10.1006/anbe.2000.1540
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Geissmann 2000, Chivers 1976, and Geissmann and Orgeldinger 2000 all treat coordinated duet songs as a central siamang vocal behavior.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Geissmann 2000 provides detailed sequence structure, and Geissmann and Orgeldinger 2000 independently describes the songs as loud, long, and well coordinated.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Chivers 1976 supports intergroup spacing, while Geissmann and Orgeldinger 2000 supports a pair-bond association; these functions are complementary rather than conflicting.
+
+  - name: female great call
+    alternative_names:
+      - great call
+      - great call sequence
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, repetitive, multi_component, frequency_modulated, graded]
+    acoustic_description: Female phrase built from accelerated bark series, usually embedded in a longer great-call sequence with tightly timed male contributions.
+    semantic_keywords: [territorial, spacing, group_coordination, display]
+    semantic_description: Repeated as the conspicuous female component of duet songs during long-distance pair displays and intergroup spacing.
+    acoustic_references:
+      - id: geissmann_2000
+        url: https://www.gibbons.de/main/papers/2000siamangduet/2000siamangduet.html
+    semantic_references:
+      - id: geissmann_2000
+        url: https://www.gibbons.de/main/papers/2000siamangduet/2000siamangduet.html
+      - id: chivers_1976
+        url: https://doi.org/10.1163/156853976x00136
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Geissmann 2000 identifies the female great call as the central recurrent phrase of siamang duet structure, consistent with earlier siamang song descriptions reviewed there.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The accelerated female bark-series form is clear, but Geissmann 2000 notes that authors have used partly inconsistent labels for sequence boundaries and component notes.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The role follows from duet-song context in Geissmann 2000 and intergroup spacing in Chivers 1976, but the female phrase is not usually tested separately from the whole duet.
+
+  - name: boom
+    alternative_names:
+      - short boom
+      - long boom
+      - ascending boom
+    in_primary_inventory: true
+    scope: *adult_both
+    acoustic_keywords: [low_frequency, tonal, loud, graded]
+    acoustic_description: Resonant boom note produced with the mouth nearly closed and the throat sac inflated; short, long, and ascending variants grade into one another.
+    semantic_keywords: [display, territorial, spacing, alarm]
+    semantic_description: Used as a frequent component of duet-song interlude and great-call sequences, and also occurs in alarm call bouts with barks.
+    acoustic_references:
+      - id: geissmann_2000
+        url: https://www.gibbons.de/main/papers/2000siamangduet/2000siamangduet.html
+    semantic_references:
+      - id: geissmann_2000
+        url: https://www.gibbons.de/main/papers/2000siamangduet/2000siamangduet.html
+      - id: chivers_1976
+        url: https://doi.org/10.1163/156853976x00136
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Geissmann 2000 enumerates boom note types and links them to prior siamang song terminology, making the class well established.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree that booms are throat-sac song notes, but Geissmann 2000 reports uncertainty and disagreement over production mechanics and recognizes graded variants.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Song and alarm-bout contexts are described by Geissmann 2000, with broader spacing function supported by Chivers 1976; note-specific function remains less isolated.
+
+  - name: bark
+    alternative_names:
+      - long bark
+      - short fast bark
+      - short slow bark
+    in_primary_inventory: true
+    scope: *adult_both
+    acoustic_keywords: [loud, short, abrupt, repetitive, graded]
+    acoustic_description: Loud open-mouth bark notes given singly or in series; long, short fast, and short slow variants form a graded system and often alternate with booms.
+    semantic_keywords: [display, territorial, spacing, alarm, group_coordination]
+    semantic_description: Common in duet songs, especially female great calls and interlude sequences, and also produced in alarm call bouts where mates may call in bursts together.
+    acoustic_references:
+      - id: geissmann_2000
+        url: https://www.gibbons.de/main/papers/2000siamangduet/2000siamangduet.html
+    semantic_references:
+      - id: geissmann_2000
+        url: https://www.gibbons.de/main/papers/2000siamangduet/2000siamangduet.html
+      - id: chivers_1976
+        url: https://doi.org/10.1163/156853976x00136
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Barks are listed by Geissmann 2000 as one of the most frequent siamang song vocalizations and are also named in earlier siamang studies reviewed there.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The bark class is well supported, but Geissmann 2000 treats bark types as graded and notes prior terminological inconsistency.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Geissmann 2000 supports song and alarm contexts, while Chivers 1976 supports between-group spacing for loud calls; the specific contribution of bark notes within those bouts is broader than one function.
+references:
+  geissmann_2000:
+    citation: "Geissmann, T. (2000). Duet songs of the siamang, Hylobates syndactylus: I. Structure and organisation. Primate Report, 56, 33-60."
+    url: https://www.gibbons.de/main/papers/2000siamangduet/2000siamangduet.html
+  chivers_1976:
+    citation: "Chivers, D. J. (1976). Communication within and between family groups of siamang (Symphalangus syndactylus). Behaviour, 57, 116-135."
+    url: https://doi.org/10.1163/156853976x00136
+    doi: 10.1163/156853976x00136
+  geissmann_orgeldinger_2000:
+    citation: "Geissmann, T., & Orgeldinger, M. (2000). The relationship between duet songs and pair bonds in siamangs, Hylobates syndactylus. Animal Behaviour, 60(6), 805-809."
+    url: https://doi.org/10.1006/anbe.2000.1540
+    doi: 10.1006/anbe.2000.1540

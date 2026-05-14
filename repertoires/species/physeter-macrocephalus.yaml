@@ -1,0 +1,193 @@
+scientific_name: Physeter macrocephalus
+common_name: Sperm Whale
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Cetacea
+  family: Physeteridae
+  genus: Physeter
+  species: macrocephalus
+primary_inventory:
+  rationale: No single peer-reviewed paper is used as a full species-wide repertoire inventory; sperm whale sound production is usually summarized across studies as four main click-pattern classes, with foraging clicks and social codas treated in separate literatures. This compact file therefore includes the four best-supported click and coda sound types and marks them as outside a primary inventory.
+calls:
+  - name: usual click
+    alternative_names:
+      - regular click
+      - echolocation click
+      - search click
+    in_primary_inventory: false
+    scope: &general_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, broadband, pulsed, short, repetitive, loud]
+    acoustic_description: Loud, directional, broadband impulsive clicks produced in long trains, commonly with inter-click intervals around a fraction of a second to a few seconds during dives.
+    semantic_keywords: [food, attention]
+    semantic_description: Used mainly during deep foraging dives for long-range echolocation, prey searching, orientation, and environmental inspection.
+    acoustic_references:
+      - id: madsen_etal_2002
+        url: https://doi.org/10.1242/jeb.205.13.1899
+      - id: mohl_etal_2003
+        url: https://doi.org/10.1121/1.1586258
+      - id: wahlberg_2002
+        url: https://doi.org/10.1016/S0022-0981(02)00411-2
+    semantic_references:
+      - id: jaquet_etal_2001
+        url: https://doi.org/10.1121/1.1360718
+      - id: watwood_etal_2006
+        url: https://doi.org/10.1111/j.1365-2656.2006.01101.x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Jaquet et al. 2001, Wahlberg 2002, Madsen et al. 2002, and later monitoring summaries all recognize usual or regular clicks as one of the main sperm whale click classes.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Madsen et al. 2002, Mohl et al. 2003, and Wahlberg 2002 agree that usual clicks are loud broadband pulses produced in regular trains, although measured spectra vary with recording angle.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Jaquet et al. 2001 and Watwood et al. 2006 support the association with foraging dives and search-phase echolocation; this is the least contested function of the repertoire.
+
+  - name: creak
+    alternative_names:
+      - buzz
+      - rapid-click buzz
+      - click buzz
+    in_primary_inventory: false
+    scope: *general_scope
+    acoustic_keywords: [high_frequency, broadband, pulsed, short, repetitive, abrupt]
+    acoustic_description: Rapid series of short broadband clicks with much shorter inter-click intervals than usual clicks, often forming a dense buzz near the end of a click train.
+    semantic_keywords: [food, attention]
+    semantic_description: Produced during close-range prey approach and capture attempts in the bottom phase of foraging dives, analogous to terminal buzzes in other echolocating predators.
+    acoustic_references:
+      - id: miller_etal_2004
+        url: https://doi.org/10.1098/rspb.2004.2863
+      - id: wahlberg_2002
+        url: https://doi.org/10.1016/S0022-0981(02)00411-2
+    semantic_references:
+      - id: miller_etal_2004
+        url: https://doi.org/10.1098/rspb.2004.2863
+      - id: watwood_etal_2006
+        url: https://doi.org/10.1111/j.1365-2656.2006.01101.x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Creaks are separated from usual clicks by rapid repetition rate in Jaquet et al. 2001, Wahlberg 2002, and Miller et al. 2004, with consistent use of the creak or buzz terminology.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Miller et al. 2004 and Wahlberg 2002 agree on rapid-click structure and short inter-click intervals relative to usual clicks.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Miller et al. 2004 found creaks concentrated during deep, maneuvering portions of foraging dives, and Watwood et al. 2006 supports their role in prey-capture attempts across tagged whales.
+
+  - name: coda
+    alternative_names:
+      - coda click sequence
+      - patterned click sequence
+      - social coda
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: true
+      note: Coda repertoires vary among social units and vocal clans, as shown by Rendell and Whitehead 2003 and later coda-structure work.
+    acoustic_keywords: [broadband, pulsed, short, repetitive, multi_component, graded]
+    acoustic_description: Short stereotyped sequences of broadband clicks, usually defined by the number of clicks and the rhythm or timing of inter-click intervals within the sequence.
+    semantic_keywords: [contact, affiliation, group_coordination, identity, combinatorial]
+    semantic_description: Produced in social exchanges, especially by female and immature social units, and used in contact, social coordination, identity marking, and clan-specific communication.
+    acoustic_references:
+      - id: watkins_schevill_1977
+        url: https://doi.org/10.1121/1.381678
+      - id: rendell_whitehead_2003
+        url: https://doi.org/10.1098/rspb.2002.2239
+      - id: sharma_etal_2024
+        url: https://doi.org/10.1038/s41467-024-47221-8
+    semantic_references:
+      - id: weilgart_whitehead_1993
+        url: https://doi.org/10.1139/z93-098
+      - id: rendell_whitehead_2003
+        url: https://doi.org/10.1098/rspb.2002.2239
+      - id: sharma_etal_2024
+        url: https://doi.org/10.1038/s41467-024-47221-8
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Watkins and Schevill 1977 named codas, Weilgart and Whitehead 1993 linked them to social communication, and Rendell and Whitehead 2003 plus Sharma et al. 2024 treat codas as the central social click sequence.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Watkins and Schevill 1977, Rendell and Whitehead 2003, and Sharma et al. 2024 all define codas by patterned click timing, with later work refining rhythm, tempo, rubato, and ornamentation.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social and identity-related use is strongly supported by Weilgart and Whitehead 1993 and Rendell and Whitehead 2003, but Sharma et al. 2024 notes that the meaning of many coda features remains unresolved.
+
+  - name: slow click
+    alternative_names:
+      - clang
+      - male slow click
+      - surface click
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, broadband, pulsed, short, repetitive, loud]
+    acoustic_description: Loud clicks produced with much longer inter-click intervals than usual clicks, often in repeated sequences with lower-frequency emphasis and longer apparent duration.
+    semantic_keywords: [contact, spacing, courtship, identity]
+    semantic_description: Produced by mature or maturing males at the surface, during ascent, and on feeding or breeding grounds; proposed functions include long-range male communication, identity or state signaling, and mating-system interactions.
+    acoustic_references:
+      - id: jaquet_etal_2001
+        url: https://doi.org/10.1121/1.1360718
+      - id: oliveira_etal_2013
+        url: https://doi.org/10.1121/1.4795798
+      - id: wahlberg_2002
+        url: https://doi.org/10.1016/S0022-0981(02)00411-2
+    semantic_references:
+      - id: jaquet_etal_2001
+        url: https://doi.org/10.1121/1.1360718
+      - id: oliveira_etal_2013
+        url: https://doi.org/10.1121/1.4795798
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Slow clicks are one of the four standard click categories summarized by Jaquet et al. 2001 and are the focus of Oliveira et al. 2013, which analyzed tagged male sperm whales.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Jaquet et al. 2001, Wahlberg 2002, and Oliveira et al. 2013 agree that slow clicks have long inter-click intervals and male-biased production, but detailed acoustic measurements vary by setting and recording geometry.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Oliveira et al. 2013 supports long-range male communication and rejects a simple foraging-buzz explanation, while Jaquet et al. 2001 treats the function as still partly unresolved.
+references:
+  jaquet_etal_2001:
+    citation: "Jaquet, N., Dawson, S., & Douglas, L. (2001). Vocal behavior of male sperm whales: Why do they click? Journal of the Acoustical Society of America, 109, 2254-2259."
+    url: https://doi.org/10.1121/1.1360718
+    doi: 10.1121/1.1360718
+  madsen_etal_2002:
+    citation: "Madsen, P. T., Payne, R., Kristiansen, N. U., Wahlberg, M., Kerr, I., & Mohl, B. (2002). Sperm whale sound production studied with ultrasound time/depth-recording tags. Journal of Experimental Biology, 205, 1899-1906."
+    url: https://doi.org/10.1242/jeb.205.13.1899
+    doi: 10.1242/jeb.205.13.1899
+  miller_etal_2004:
+    citation: "Miller, P. J. O., Johnson, M. P., & Tyack, P. L. (2004). Sperm whale behaviour indicates the use of echolocation click buzzes 'creaks' in prey capture. Proceedings of the Royal Society B: Biological Sciences, 271, 2239-2247."
+    url: https://doi.org/10.1098/rspb.2004.2863
+    doi: 10.1098/rspb.2004.2863
+  mohl_etal_2003:
+    citation: "Mohl, B., Wahlberg, M., Madsen, P. T., Heerfordt, A., & Lund, A. (2003). The monopulsed nature of sperm whale clicks. Journal of the Acoustical Society of America, 114, 1143-1154."
+    url: https://doi.org/10.1121/1.1586258
+    doi: 10.1121/1.1586258
+  oliveira_etal_2013:
+    citation: "Oliveira, C., Wahlberg, M., Johnson, M., Miller, P. J. O., & Madsen, P. T. (2013). The function of male sperm whale slow clicks in a high latitude habitat: Communication, echolocation, or prey debilitation? Journal of the Acoustical Society of America, 133, 3135-3144."
+    url: https://doi.org/10.1121/1.4795798
+    doi: 10.1121/1.4795798
+  rendell_whitehead_2003:
+    citation: "Rendell, L. E., & Whitehead, H. (2003). Vocal clans in sperm whales (Physeter macrocephalus). Proceedings of the Royal Society B: Biological Sciences, 270, 225-231."
+    url: https://doi.org/10.1098/rspb.2002.2239
+    doi: 10.1098/rspb.2002.2239
+  sharma_etal_2024:
+    citation: "Sharma, P., Gero, S., Payne, R., Gruber, D. F., Rus, D., Torralba, A., & Andreas, J. (2024). Contextual and combinatorial structure in sperm whale vocalisations. Nature Communications, 15, 3617."
+    url: https://doi.org/10.1038/s41467-024-47221-8
+    doi: 10.1038/s41467-024-47221-8
+  wahlberg_2002:
+    citation: "Wahlberg, M. (2002). The acoustic behaviour of diving sperm whales observed with a hydrophone array. Journal of Experimental Marine Biology and Ecology, 281, 53-62."
+    url: https://doi.org/10.1016/S0022-0981(02)00411-2
+    doi: 10.1016/S0022-0981(02)00411-2
+  watkins_schevill_1977:
+    citation: "Watkins, W. A., & Schevill, W. E. (1977). Sperm whale codas. Journal of the Acoustical Society of America, 62, 1485-1490."
+    url: https://doi.org/10.1121/1.381678
+    doi: 10.1121/1.381678
+  watwood_etal_2006:
+    citation: "Watwood, S. L., Miller, P. J. O., Johnson, M., Madsen, P. T., & Tyack, P. L. (2006). Deep-diving foraging behaviour of sperm whales (Physeter macrocephalus). Journal of Animal Ecology, 75, 814-825."
+    url: https://doi.org/10.1111/j.1365-2656.2006.01101.x
+    doi: 10.1111/j.1365-2656.2006.01101.x
+  weilgart_whitehead_1993:
+    citation: "Weilgart, L., & Whitehead, H. (1993). Coda communication by sperm whales (Physeter macrocephalus) off the Galapagos Islands. Canadian Journal of Zoology, 71, 744-752."
+    url: https://doi.org/10.1139/z93-098
+    doi: 10.1139/z93-098

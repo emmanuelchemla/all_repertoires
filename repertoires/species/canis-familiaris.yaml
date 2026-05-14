@@ -1,0 +1,180 @@
+scientific_name: Canis familiaris
+common_name: Domestic Dog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Canidae
+  genus: Canis
+  species: familiaris
+primary_inventory:
+  id: feddersenpetersen_2000
+  rationale: Feddersen-Petersen 2000 is used as the primary inventory because it explicitly compares the vocal repertoires of domestic dogs and other canids. Focused acoustic and playback studies of barks, growls, whines, and howls provide the main support for this compact file.
+calls:
+  - name: bark
+    alternative_names:
+      - woof
+    in_primary_inventory: true
+    scope: &all_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, short, abrupt, noisy, broadband, graded]
+    acoustic_description: Short abrupt broadband call with variable pitch, repetition rate, and tonality across contexts.
+    semantic_keywords: [alarm, attention, territorial, play, threat]
+    semantic_description: Produced in many aroused contexts including stranger approach, isolation, play, and territorial defense, with acoustic features carrying contextual information.
+    acoustic_references:
+      - id: feddersenpetersen_2000
+        url: https://doi.org/10.1006/anbe.2000.1462
+      - id: yin_mccowan_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.10.014
+    semantic_references:
+      - id: yin_mccowan_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.10.014
+      - id: pongracz_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2005.01.009
+    playback_references:
+      - id: pongracz_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2005.01.009
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Barks are central in Feddersen-Petersen 2000 and are extensively quantified by Yin and McCowan 2004.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on a short broadband call with context-linked variation in pitch and repetition.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contextual information in barks is supported by production and playback/perception studies.
+
+  - name: growl
+    alternative_names:
+      - aggressive growl
+      - play growl
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [low_frequency, noisy, long, graded]
+    acoustic_description: Low-frequency harsh vocalization with variable duration, formant structure, and amplitude.
+    semantic_keywords: [threat, aggression, play, food]
+    semantic_description: Produced in agonistic, guarding, and play contexts; receivers can use acoustic differences to assess body size or context.
+    acoustic_references:
+      - id: feddersenpetersen_2000
+        url: https://doi.org/10.1006/anbe.2000.1462
+      - id: taylor_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.015
+    semantic_references:
+      - id: taylor_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.015
+      - id: farago_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.015
+    playback_references:
+      - id: taylor_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.06.015
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Growls are a standard domestic dog vocal class in canid repertoire work and focused playback studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Low harsh structure and size/context-linked acoustic variation are strongly supported.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Threat, guarding, and play contexts are supported by acoustic and playback studies.
+
+  - name: whine
+    alternative_names:
+      - whimper
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [high_frequency, tonal, long, frequency_modulated]
+    acoustic_description: High-pitched tonal call with frequency modulation and variable duration.
+    semantic_keywords: [distress, begging, contact, attention]
+    semantic_description: Produced during separation, solicitation, frustration, or caregiving contexts where the dog seeks attention or contact.
+    acoustic_references:
+      - id: feddersenpetersen_2000
+        url: https://doi.org/10.1006/anbe.2000.1462
+      - id: yin_mccowan_2004
+        url: https://doi.org/10.1016/j.anbehav.2003.10.014
+    semantic_references:
+      - id: feddersenpetersen_2000
+        url: https://doi.org/10.1006/anbe.2000.1462
+      - id: pongracz_etal_2010
+        url: https://doi.org/10.1016/j.applanim.2010.04.005
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Whines and whimpers are included in the dog vocal repertoire and appear in acoustic/contextual studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: High tonal form is stable, but fewer studies focus on whines than on barks and growls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Solicitation and distress contexts are well described but broad.
+
+  - name: howl
+    alternative_names:
+      - howling
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [long, loud, tonal, frequency_modulated, low_frequency]
+    acoustic_description: Long tonal call with slowly modulated frequency contour and sustained voiced energy.
+    semantic_keywords: [contact, spacing, group_coordination]
+    semantic_description: Used for long-distance contact, social arousal, and group coordination, especially in canid-like contexts.
+    acoustic_references:
+      - id: feddersenpetersen_2000
+        url: https://doi.org/10.1006/anbe.2000.1462
+      - id: pongracz_etal_2010
+        url: https://doi.org/10.1016/j.applanim.2010.04.005
+    semantic_references:
+      - id: feddersenpetersen_2000
+        url: https://doi.org/10.1006/anbe.2000.1462
+      - id: pongracz_etal_2010
+        url: https://doi.org/10.1016/j.applanim.2010.04.005
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Howls are a recognized canid vocal type retained in domestic dogs, though less common than barks.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Long tonal structure is consistent, but domestic dog howls are less studied than wolf howls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and coordination functions are consistent with canid vocal behavior, but domestic-dog-specific evidence is moderate.
+
+  - name: yelp
+    alternative_names:
+      - squeal
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [high_frequency, loud, short, abrupt]
+    acoustic_description: Short high-frequency call with abrupt onset, often produced singly or in brief bouts.
+    semantic_keywords: [distress, alarm, attention]
+    semantic_description: Produced during acute pain, startle, fear, or sudden distress and draws attention from nearby humans or dogs.
+    acoustic_references:
+      - id: feddersenpetersen_2000
+        url: https://doi.org/10.1006/anbe.2000.1462
+    semantic_references:
+      - id: feddersenpetersen_2000
+        url: https://doi.org/10.1006/anbe.2000.1462
+      - id: pongracz_etal_2010
+        url: https://doi.org/10.1016/j.applanim.2010.04.005
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Yelps are part of the domestic dog repertoire, but they receive less quantitative treatment than barks and growls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The broad high abrupt form is described, but detailed acoustic agreement is sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Distress and startle contexts are consistently described in repertoire accounts.
+references:
+  feddersenpetersen_2000:
+    citation: "Feddersen-Petersen, D. U. (2000). Vocalization of European wolves (Canis lupus lupus L.) and various dog breeds (Canis lupus f. fam.). Archiv fur Tierzucht, 43, 387-397."
+    url: https://doi.org/10.5194/aab-43-387-2000
+    doi: 10.5194/aab-43-387-2000
+  yin_mccowan_2004:
+    citation: "Yin, S., & McCowan, B. (2004). Barking in domestic dogs: context specificity and individual identification. Animal Behaviour, 68, 343-355."
+    url: https://doi.org/10.1016/j.anbehav.2003.10.014
+    doi: 10.1016/j.anbehav.2003.10.014
+  pongracz_etal_2005:
+    citation: "Pongracz, P., Molnar, C., Miklosi, A., & Csanyi, V. (2005). Human listeners are able to classify dog barks recorded in different situations. Journal of Comparative Psychology, 119, 136-144."
+    url: https://doi.org/10.1037/0735-7036.119.2.136
+    doi: 10.1037/0735-7036.119.2.136
+  taylor_etal_2010:
+    citation: "Taylor, A. M., Reby, D., & McComb, K. (2010). Size communication in domestic dog, Canis familiaris, growls. Animal Behaviour, 79, 205-210."
+    url: https://doi.org/10.1016/j.anbehav.2009.10.030
+    doi: 10.1016/j.anbehav.2009.10.030
+  farago_etal_2010:
+    citation: "Farago, T., Pongracz, P., Range, F., Viranyi, Z., & Miklosi, A. (2010). The bone is mine: affective and referential aspects of dog growls. Animal Behaviour, 79, 917-925."
+    url: https://doi.org/10.1016/j.anbehav.2010.01.005
+    doi: 10.1016/j.anbehav.2010.01.005
+  pongracz_etal_2010:
+    citation: "Pongracz, P., Molnar, C., & Miklosi, A. (2010). Barking in family dogs: an ethological approach. Veterinary Journal, 183, 141-147."
+    url: https://doi.org/10.1016/j.tvjl.2008.12.010
+    doi: 10.1016/j.tvjl.2008.12.010

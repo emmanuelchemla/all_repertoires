@@ -1,0 +1,142 @@
+scientific_name: Delphinapterus leucas
+common_name: Beluga whale
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Cetacea
+  family: Monodontidae
+  genus: Delphinapterus
+  species: leucas
+primary_inventory:
+  id: sjare_smith_1986
+  rationale: Sjare and Smith 1986 is used as the primary inventory because it explicitly catalogued the wild vocal repertoire of belugas summering in Cunningham Inlet, separating whistles, pulsed tones, noisy calls, and click trains. Later regional studies support these broad sound classes but vary in subtype labels, so this compact file keeps only core, well-supported categories.
+calls:
+  - name: whistle
+    alternative_names:
+      - tonal whistle
+      - frequency-modulated whistle
+    in_primary_inventory: true
+    scope: &general_scope
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, high_frequency, long, graded]
+    acoustic_description: Narrow-band tonal signal with a continuous or smoothly modulated frequency contour, sometimes repeated in bouts and acoustically distinct from pulsed and noisy calls.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Produced in social contexts where animals maintain or re-establish contact, coordinate close grouping, or interact affiliatively.
+    acoustic_references:
+      - id: sjare_smith_1986
+        url: https://doi.org/10.1139/z86-063
+      - id: chmelnitsky_ferguson_2012
+    semantic_references:
+      - id: sjare_smith_1986
+        url: https://doi.org/10.1139/z86-063
+      - id: vergara_etal_2010
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Sjare and Smith 1986, Chmelnitsky and Ferguson 2012, and Vergara et al. 2010 all treat whistles as a recognizable beluga sound class.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The tonal, frequency-modulated structure is consistent across the Cunningham Inlet inventory and later Churchill River and contact-call work.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social contact use is supported by Sjare and Smith 1986 and Vergara et al. 2010, but many whistle variants are still classified acoustically rather than by tested receiver response.
+
+  - name: pulsed tone
+    alternative_names:
+      - pulsed call
+      - pulse tone
+      - burst-pulsed call
+    in_primary_inventory: true
+    scope: *general_scope
+    acoustic_keywords: [pulsed, repetitive, frequency_modulated, tonal, multi_component, graded]
+    acoustic_description: Tonal or partly tonal call built from rapidly repeated pulses, often with visible pulse structure and variable modulation across a call or bout.
+    semantic_keywords: [contact, group_coordination, display]
+    semantic_description: Used during social activity and group movement; some variants occur in higher-arousal displays or interactive bouts.
+    acoustic_references:
+      - id: sjare_smith_1986
+        url: https://doi.org/10.1139/z86-063
+      - id: karlsen_etal_2002
+        url: https://doi.org/10.1007/s00300-002-0411-6
+    semantic_references:
+      - id: sjare_smith_1986
+        url: https://doi.org/10.1139/z86-063
+      - id: karlsen_etal_2002
+        url: https://doi.org/10.1007/s00300-002-0411-6
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Pulsed tones are a primary Sjare and Smith 1986 category and are also represented in the adult male Svalbard repertoire described by Karlsen et al. 2002.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on repeated pulse structure, but the boundary between pulsed tones, trills, and burst-pulsed variants is graded across inventories.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Social-context evidence exists in Sjare and Smith 1986 and Karlsen et al. 2002, but specific meanings of pulsed-tone subtypes are not well resolved.
+
+  - name: noisy call
+    alternative_names:
+      - noisy vocalization
+      - harsh call
+      - broadband call
+    in_primary_inventory: true
+    scope: *general_scope
+    acoustic_keywords: [broadband, noisy, pulsed, short, loud, graded]
+    acoustic_description: Broadband harsh vocalization with noisy or rapidly pulsed structure, often shorter and less tonally organized than whistles or pulsed tones.
+    semantic_keywords: [aggression, threat, display, attention]
+    semantic_description: Reported in active social interactions and high-arousal contexts, including agonistic or attention-getting exchanges.
+    acoustic_references:
+      - id: sjare_smith_1986
+        url: https://doi.org/10.1139/z86-063
+      - id: chmelnitsky_ferguson_2012
+    semantic_references:
+      - id: sjare_smith_1986
+        url: https://doi.org/10.1139/z86-063
+      - id: karlsen_etal_2002
+        url: https://doi.org/10.1007/s00300-002-0411-6
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Noisy calls are a named broad category in Sjare and Smith 1986 and are compatible with later repertoire classifications that include harsh broadband social calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Agreement is good for broadband noisy structure, while subtype boundaries differ among inventories and some calls grade toward burst-pulsed sounds.
+    semantic_description_agreement: weak
+    semantic_description_explanation: High-arousal and agonistic contexts are described, especially in social observations, but receiver effects and subtype-specific functions remain weakly tested.
+
+  - name: echolocation click train
+    alternative_names:
+      - click train
+      - sonar clicks
+      - echolocation clicks
+    in_primary_inventory: true
+    scope: *general_scope
+    acoustic_keywords: [high_frequency, broadband, pulsed, short, repetitive, abrupt]
+    acoustic_description: Train of very short broadband clicks repeated at variable inter-click intervals, with timing often changing as the animal inspects objects or prey.
+    semantic_keywords: [food, attention, group_coordination]
+    semantic_description: Used mainly during orientation, inspection, travel, and foraging; this entry treats click trains as a core sound type while interpreting communication function conservatively.
+    acoustic_references:
+      - id: sjare_smith_1986
+        url: https://doi.org/10.1139/z86-063
+      - id: au_etal_1985
+    semantic_references:
+      - id: sjare_smith_1986
+        url: https://doi.org/10.1139/z86-063
+      - id: au_etal_1985
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Click trains are included in Sjare and Smith 1986 and are a standard, independently studied beluga sound class in echolocation work.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sjare and Smith 1986 and Au et al. 1985 agree on repeated broadband click structure, with echolocation studies adding detailed timing and spectral measurements.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Orientation and foraging contexts are well supported, but click trains are not primarily social calls, so communication keywords are applied cautiously.
+references:
+  sjare_smith_1986:
+    citation: "Sjare, B. L., & Smith, T. G. (1986). The vocal repertoire of white whales, Delphinapterus leucas, summering in Cunningham Inlet, Northwest Territories. Canadian Journal of Zoology, 64, 407-415."
+    url: https://doi.org/10.1139/z86-063
+    doi: 10.1139/z86-063
+  karlsen_etal_2002:
+    citation: "Karlsen, J. D., Bisther, A., Lydersen, C., Haug, T., & Kovacs, K. M. (2002). Summer vocalisations of adult male white whales (Delphinapterus leucas) in Svalbard, Norway. Polar Biology, 25, 808-817."
+    url: https://doi.org/10.1007/s00300-002-0411-6
+    doi: 10.1007/s00300-002-0411-6
+  chmelnitsky_ferguson_2012:
+    citation: "Chmelnitsky, E. G., & Ferguson, S. H. (2012). Beluga whale, Delphinapterus leucas, vocalizations from the Churchill River, Manitoba, Canada. Journal of the Acoustical Society of America, 131, 4821-4835."
+  vergara_etal_2010:
+    citation: "Vergara, V., Michaud, R., & Barrett-Lennard, L. G. (2010). Can you hear me? Impacts of underwater noise on communication space of adult, sub-adult and calf contact calls of endangered St. Lawrence belugas (Delphinapterus leucas). Polar Research, 29, 181-192."
+  au_etal_1985:
+    citation: "Au, W. W. L., Penner, R. H., & Turl, C. W. (1985). Propagation of beluga echolocation signals. Journal of the Acoustical Society of America, 78, 1932-1941."

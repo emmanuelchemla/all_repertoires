@@ -1,0 +1,151 @@
+scientific_name: Nomascus concolor
+common_name: Black Crested Gibbon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hylobatidae
+  genus: Nomascus
+  species: concolor
+primary_inventory:
+  rationale: Published work on Nomascus concolor is centered on loud songs, duet timing, and male-song individuality rather than a full species-wide vocal inventory. This compact file therefore treats the well-described song types as literature-supported additions and marks each as outside a primary inventory.
+calls:
+  - name: duet song
+    alternative_names:
+      - duet bout
+      - loud duet
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, repetitive, multi_component, frequency_modulated]
+    acoustic_description: Long loud song bout in which male phrases alternate with female great calls, sometimes including closely synchronized female great calls in multi-female groups.
+    semantic_keywords: [territorial, spacing, group_coordination, affiliation, display]
+    semantic_description: Produced in long-distance singing contexts linked to intergroup spacing, resource and mate defense, pair bonding, and group cohesion.
+    acoustic_references:
+      - id: fan_etal_2010
+        url: https://doi.org/10.3724/SP.J.1141.2010.03293
+      - id: fan_etal_2009
+        url: https://doi.org/10.1002/ajp.20686
+    semantic_references:
+      - id: fan_etal_2009
+        url: https://doi.org/10.1002/ajp.20686
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Fan et al. 2009 describe duetted songs in a habituated group, and Fan et al. 2010 analyze duet sonograms and timing in multiple groups.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Fan et al. 2010 and Fan et al. 2009 agree that the duet is a long, loud, coordinated sequence built from male phrases and female great calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Fan et al. 2009 support several song functions, but explicitly conclude that several hypotheses remain plausible rather than isolating one function.
+
+  - name: female great call
+    alternative_names:
+      - great call
+      - stereotyped great call
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, tonal, frequency_modulated, multi_component]
+    acoustic_description: Loud stereotyped female song phrase forming the principal female contribution to duet bouts; in groups with two adult females, great calls can be produced synchronously.
+    semantic_keywords: [territorial, spacing, affiliation, display]
+    semantic_description: Given during duet songs and associated with mate defense, pair-bond advertisement, group cohesion, and signaling spatial relationships among group members.
+    acoustic_references:
+      - id: fan_etal_2010
+        url: https://doi.org/10.3724/SP.J.1141.2010.03293
+      - id: fan_etal_2009
+        url: https://doi.org/10.1002/ajp.20686
+    semantic_references:
+      - id: fan_etal_2009
+        url: https://doi.org/10.1002/ajp.20686
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Female great calls are explicitly reported in duet descriptions by Fan et al. 2009 and in the sonogram analysis by Fan et al. 2010.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The same two studies agree that great calls are stereotyped female duet components, with Fan et al. 2010 providing the acoustic timing basis.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The social contexts are well described by Fan et al. 2009, but the call's functions are inferred as part of duet behavior rather than isolated experimentally.
+
+  - name: male coda phrase
+    alternative_names:
+      - coda phrase
+      - male song phrase
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, tonal, repetitive, frequency_modulated, multi_component]
+    acoustic_description: Stereotyped male phrase within song bouts, with measurable acoustic variables that show individual distinctiveness and multi-year stability.
+    semantic_keywords: [identity, territorial, spacing, display]
+    semantic_description: Used as the male component of long-distance song, carrying information useful for individual or group monitoring during territorial spacing.
+    acoustic_references:
+      - id: sun_etal_2011
+        url: https://doi.org/10.1002/ajp.20917
+      - id: fan_etal_2011
+        url: https://doi.org/10.1159/000329128
+    semantic_references:
+      - id: sun_etal_2011
+        url: https://doi.org/10.1002/ajp.20917
+      - id: fan_etal_2011
+        url: https://doi.org/10.1159/000329128
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Sun et al. 2011 analyze 127 coda phrases from male song bouts, and Fan et al. 2011 independently examine male-song acoustic stability.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Both Sun et al. 2011 and Fan et al. 2011 quantify male song phrases and agree that they are stereotyped enough for individual classification.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Identity information is strongly supported acoustically, while territorial and spacing roles are inferred from the broader long-distance song context.
+
+  - name: male solo song
+    alternative_names:
+      - solo bout
+      - solo song bout
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, repetitive, tonal, frequency_modulated]
+    acoustic_description: Loud extended male-only song bout built from repeated male song phrases and lacking the alternating female great-call component of duets.
+    semantic_keywords: [courtship, mating, display]
+    semantic_description: Reported especially for non-mated or subadult males; mate attraction is plausible but not conclusively demonstrated.
+    acoustic_references:
+      - id: fan_etal_2009
+        url: https://doi.org/10.1002/ajp.20686
+      - id: sun_etal_2011
+        url: https://doi.org/10.1002/ajp.20917
+    semantic_references:
+      - id: fan_etal_2009
+        url: https://doi.org/10.1002/ajp.20686
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Fan et al. 2009 report solo bouts, and Sun et al. 2011 supports the male-song phrase structure, but solo song is less extensively separated from male song generally.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Male song acoustics are well supported, but the solo-bout form is less independently quantified than duet songs or male coda phrases.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Fan et al. 2009 identify mate attraction as likely for subadult solos, while noting that the evidence was not convincing.
+references:
+  fan_etal_2009:
+    citation: "Fan, P.-F., Xiao, W., Huo, S., & Jiang, X.-L. (2009). Singing behavior and singing functions of black-crested gibbons (Nomascus concolor jingdongensis) at Mt. Wuliang, central Yunnan, China. American Journal of Primatology, 71(7), 539-547."
+    url: https://doi.org/10.1002/ajp.20686
+    doi: 10.1002/ajp.20686
+  fan_etal_2010:
+    citation: "Fan, P.-F., Jiang, X.-L., Liu, C.-M., & Luo, W.-S. (2010). Sonogram structure and timing of duets of western black crested gibbon in Wuliang Mountain. Zoological Research, 31(3), 293-302."
+    url: https://doi.org/10.3724/SP.J.1141.2010.03293
+    doi: 10.3724/SP.J.1141.2010.03293
+  sun_etal_2011:
+    citation: "Sun, G.-Z., Huang, B., Guan, Z.-H., Geissmann, T., & Jiang, X.-L. (2011). Individuality in male songs of wild black crested gibbons (Nomascus concolor). American Journal of Primatology, 73(5), 431-438."
+    url: https://doi.org/10.1002/ajp.20917
+    doi: 10.1002/ajp.20917
+  fan_etal_2011:
+    citation: "Fan, P.-F., Xiao, W., Feng, J.-J., & Scott, M. B. (2011). Population differences and acoustic stability in male songs of wild western black crested gibbons (Nomascus concolor) in Mt. Wuliang, Yunnan. Folia Primatologica, 82(2), 83-93."
+    url: https://doi.org/10.1159/000329128
+    doi: 10.1159/000329128
