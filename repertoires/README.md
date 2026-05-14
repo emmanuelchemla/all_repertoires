@@ -8,6 +8,6 @@ The repertoire database is organized as follows:
 - To add new species, prompt `Codex GPT-5.5 Extra High` (or `Claude Code Opus 4.7 Extra High`) with something like:
 
 ```
-Invoke the species-repertoire skill to add 10 new species.
+Follow `repertoires/SKILL.md` to add 10 new species.
 ```
 
