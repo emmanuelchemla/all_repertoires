@@ -1,0 +1,108 @@
+scientific_name: Corvus brachyrhynchos
+common_name: American Crow
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Corvus
+  species: brachyrhynchos
+primary_inventory:
+  rationale: American crow vocal communication is described across behavioral and acoustic studies rather than in one single modern wild-repertoire inventory. This file therefore marks all calls as outside a primary inventory.
+calls:
+  - name: caw
+    alternative_names: [ka, long-distance call]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, loud, short, repetitive]
+    acoustic_description: A loud harsh broadband note, often repeated in bouts with variable spacing and intensity.
+    semantic_keywords: [contact, alarm, territorial, identity, group_coordination]
+    semantic_description: Used across long-distance contact, territory advertisement, mobbing, and disturbance contexts.
+    acoustic_references:
+      - id: chamberlain_auger_1990
+        url: https://sora.unm.edu/node/24612
+      - id: yorzinski_etal_2006
+        url: https://doi.org/10.1111/j.1439-0310.2006.01266.x
+    semantic_references:
+      - id: chamberlain_auger_1990
+        url: https://sora.unm.edu/node/24612
+      - id: yorzinski_etal_2006
+        url: https://doi.org/10.1111/j.1439-0310.2006.01266.x
+    playback_references:
+      - id: yorzinski_etal_2006
+        url: https://doi.org/10.1111/j.1439-0310.2006.01266.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Caws are the dominant named vocal class in American crow acoustic and behavioral studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on harsh repeated notes, but caws are graded and contextually variable.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact, alarm, and territorial uses are all supported, so the semantic category is broad rather than one-to-one.
+
+  - name: rattle
+    alternative_names: [soft rattle, companion call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [repetitive, pulsed, quiet, multi_component]
+    acoustic_description: A quiet, rapidly repeated series of short elements, often more pulsed and less harsh than caws.
+    semantic_keywords: [affiliation, contact, identity]
+    semantic_description: Produced in close-range social contexts, especially among pair or family-group members.
+    acoustic_references:
+      - id: chamberlain_auger_1990
+        url: https://sora.unm.edu/node/24612
+    semantic_references:
+      - id: chamberlain_auger_1990
+        url: https://sora.unm.edu/node/24612
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Rattles are described as a distinct soft vocalization, but have fewer focused studies than caws.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Published acoustic detail is limited mostly to descriptive accounts.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Close-range affiliative use is reported, but experimental support is sparse.
+
+  - name: juvenile begging call
+    alternative_names: [begging call, food call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, noisy, repetitive, loud]
+    acoustic_description: Repeated high-pitched noisy calls produced in rapid bouts by dependent young.
+    semantic_keywords: [begging, caregiving, food, attention]
+    semantic_description: Produced by fledglings or nestlings soliciting food or parental attention.
+    acoustic_references:
+      - id: kilham_1989
+        url: https://sora.unm.edu/node/134346
+    semantic_references:
+      - id: kilham_1989
+        url: https://sora.unm.edu/node/134346
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Begging calls are described for dependent young, though not usually as a central adult repertoire class.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic support is mostly qualitative.
+    semantic_description_agreement: strong
+    semantic_description_explanation: The solicitation context is direct and consistent.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  chamberlain_auger_1990:
+    citation: "Chamberlain-Auger, J. A., Auger, P. J., & Strauss, E. G. (1990). Breeding biology of American Crows. Wilson Bulletin, 102, 615-622."
+    url: https://sora.unm.edu/node/24612
+  yorzinski_etal_2006:
+    citation: "Yorzinski, J. L., Vehrencamp, S. L., Clark, A. B., & McGowan, K. J. (2006). The inflected alarm caw of the American Crow: differences in acoustic structure among contexts. Ethology, 112, 1-11."
+    url: https://doi.org/10.1111/j.1439-0310.2006.01266.x
+    doi: 10.1111/j.1439-0310.2006.01266.x
+  kilham_1989:
+    citation: "Kilham, L. (1989). The American Crow and the Common Raven. Texas A&M University Press."
+    url: https://sora.unm.edu/node/134346

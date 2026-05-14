@@ -1,0 +1,119 @@
+scientific_name: Agelaius phoeniceus
+common_name: Red-winged Blackbird
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Icteridae
+  genus: Agelaius
+  species: phoeniceus
+primary_inventory:
+  rationale: Red-winged blackbird vocal signals are described across primary behavioral studies rather than in a single complete wild-repertoire table. This file therefore marks all calls as outside a primary inventory.
+calls:
+  - name: song
+    alternative_names: [oak-a-lee song, territorial song]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, noisy, multi_component, loud, long]
+    acoustic_description: A loud multi-part male song with an introductory phrase followed by a buzzy terminal trill.
+    semantic_keywords: [territorial, courtship, display, identity]
+    semantic_description: Produced by males during territorial advertisement, mate attraction, and visual epaulet displays.
+    acoustic_references:
+      - id: bray_etal_2022
+        url: https://doi.org/10.22621/cfn.v136i1.2877
+      - id: searcy_yasukawa_1995
+        url: https://doi.org/10.2307/4162
+    semantic_references:
+      - id: searcy_yasukawa_1995
+        url: https://doi.org/10.2307/4162
+      - id: peek_1972
+        url: https://doi.org/10.2307/4084252
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Male song is the central vocal signal in behavioral and sexual-selection studies of the species.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on a multi-part song with a prominent buzzy component.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial advertisement and courtship functions are strongly supported.
+
+  - name: check call
+    alternative_names: [alarm call, chack call]
+    in_primary_inventory: false
+    scope: &both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, noisy, repetitive, loud]
+    acoustic_description: A sharp harsh note, often repeated rapidly during agitation.
+    semantic_keywords: [alarm, predator, attention, aggression]
+    semantic_description: Produced near nests, predators, or intruders and often accompanies mobbing or defensive behavior.
+    acoustic_references:
+      - id: nero_1956
+        url: https://sora.unm.edu/node/14540
+    semantic_references:
+      - id: nero_1956
+        url: https://sora.unm.edu/node/14540
+      - id: peek_1972
+        url: https://doi.org/10.2307/4084252
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Check calls are consistently described in breeding behavior accounts but receive less acoustic analysis than song.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The harsh short structure is well recognized, but detailed measurements are limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and nest-defense contexts are clear observationally.
+
+  - name: female chatter
+    alternative_names: [chatter call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [repetitive, noisy, multi_component, graded]
+    acoustic_description: A variable series of noisy notes and rattling elements.
+    semantic_keywords: [aggression, threat, contact, caregiving]
+    semantic_description: Produced by females in nest defense, social interactions, and close-range communication.
+    acoustic_references:
+      - id: nero_1956
+        url: https://sora.unm.edu/node/14540
+    semantic_references:
+      - id: nero_1956
+        url: https://sora.unm.edu/node/14540
+      - id: searcy_yasukawa_1995
+        url: https://doi.org/10.2307/4162
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Female chatter is recognized in behavioral accounts, but boundaries with other harsh calls can be graded.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is sparse and mostly descriptive.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Nest and social contexts are supported, but functions are broad.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  nero_1956:
+    citation: "Nero, R. W. (1956). A behavior study of the red-winged blackbird. Wilson Bulletin, 68, 5-37."
+    url: https://sora.unm.edu/node/14540
+  peek_1972:
+    citation: "Peek, F. W. (1972). An experimental study of the territorial function of vocal and visual display in the male red-winged blackbird. Animal Behaviour, 20, 112-118."
+    url: https://doi.org/10.1016/S0003-3472(72)80180-0
+    doi: 10.1016/S0003-3472(72)80180-0
+  searcy_yasukawa_1995:
+    citation: "Searcy, W. A., & Yasukawa, K. (1995). Polygyny and sexual selection in red-winged blackbirds. Princeton University Press."
+    url: https://doi.org/10.2307/j.ctv173f1
+    doi: 10.2307/j.ctv173f1
+  bray_etal_2022:
+    citation: "Bray, B. P. M., Binley, A. D., English, W., Hudgins, E. J., & Mennill, D. J. (2022). A highly anomalous Red-winged Blackbird song. Canadian Field-Naturalist, 136, 1-4."
+    url: https://doi.org/10.22621/cfn.v136i1.2877
+    doi: 10.22621/cfn.v136i1.2877

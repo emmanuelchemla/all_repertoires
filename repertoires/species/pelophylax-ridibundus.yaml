@@ -1,0 +1,108 @@
+scientific_name: Pelophylax ridibundus
+common_name: Marsh Frog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Ranidae
+  genus: Pelophylax
+  species: ridibundus
+primary_inventory:
+  rationale: No single modern paper was used as a complete wild repertoire inventory. The account combines primary studies on mating, territorial, and release calls, with all calls marked as outside a primary inventory.
+calls:
+  - name: mating call
+    alternative_names: [advertisement call]
+    in_primary_inventory: false
+    scope: &adult_male_scope
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, pulsed, repetitive, long, loud]
+    acoustic_description: A loud, repeated pulsed call arranged in note groups, with call rate and pulse structure varying among populations and temperatures.
+    semantic_keywords: [mating, courtship, territorial, identity]
+    semantic_description: Produced by breeding males in choruses to attract females and advertise species and position.
+    acoustic_references:
+      - id: lukanov_etal_2014
+        url: https://doi.org/10.1080/00222933.2013.791942
+      - id: schneider_sinsch_2007
+        url: https://doi.org/10.1163/156853907781492735
+    semantic_references:
+      - id: lukanov_etal_2014
+        url: https://doi.org/10.1080/00222933.2013.791942
+      - id: schneider_sinsch_2007
+        url: https://doi.org/10.1163/156853907781492735
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Mating calls are the principal signal in comparative acoustic studies of Pelophylax ridibundus and related water frogs.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Lukanov et al. 2014 and Schneider and Sinsch 2007 agree on repeated pulsed mating calls, while documenting geographic and temperature-related variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Breeding-chorus and mate-attraction contexts are consistent across the water-frog literature.
+
+  - name: territorial call
+    alternative_names: [aggressive call, encounter call]
+    in_primary_inventory: false
+    scope: *adult_male_scope
+    acoustic_keywords: [pulsed, noisy, short, repetitive, graded]
+    acoustic_description: Shorter pulsed calls or note bursts that are harsher and less regular than advertisement sequences.
+    semantic_keywords: [territorial, aggression, threat, spacing]
+    semantic_description: Produced by males during close-range interactions in dense choruses or territory disputes.
+    acoustic_references:
+      - id: schneider_sinsch_2007
+        url: https://doi.org/10.1163/156853907781492735
+    semantic_references:
+      - id: schneider_sinsch_2007
+        url: https://doi.org/10.1163/156853907781492735
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Aggressive and territorial calls are recognized in Pelophylax bioacoustic studies, but naming and boundaries vary.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Available descriptions separate these calls from mating calls, but quantitative treatment is more limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Male-male spacing is consistently described, although fewer studies isolate this call experimentally.
+
+  - name: release call
+    alternative_names: [amplexus release call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, pulsed, repetitive, abrupt]
+    acoustic_description: A short series of pulsed notes produced during handling or unwanted clasping.
+    semantic_keywords: [distress, submission, attention]
+    semantic_description: Produced by restrained adults and by individuals rejecting clasping.
+    acoustic_references:
+      - id: zinenko_etal_2022
+        url: https://doi.org/10.3390/ani12212982
+    semantic_references:
+      - id: zinenko_etal_2022
+        url: https://doi.org/10.3390/ani12212982
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Zinenko et al. 2022 explicitly compares release calls of Pelophylax ridibundus with hybrid water frogs.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Release-call structure is quantified in a focused study, but independent replication is limited.
+    semantic_description_agreement: strong
+    semantic_description_explanation: The release and restraint context is direct and unambiguous in the source study.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  lukanov_etal_2014:
+    citation: "Lukanov, S., Simeonovska-Nikolova, D., Tzankov, N., & Naumov, B. (2014). A comparative study of the mating call of Pelophylax ridibundus and Pelophylax kurtmuelleri from syntopic and allotopic populations. Journal of Natural History, 49, 257-276."
+    url: https://doi.org/10.1080/00222933.2013.791942
+    doi: 10.1080/00222933.2013.791942
+  schneider_sinsch_2007:
+    citation: "Schneider, H., & Sinsch, U. (2007). Contributions of bioacoustics to the taxonomy of the Anura. Behaviour, 144, 737-760."
+    url: https://doi.org/10.1163/156853907781492735
+    doi: 10.1163/156853907781492735
+  zinenko_etal_2022:
+    citation: "Zinenko, O., Korniushin, A., Borkin, L., & Litvinchuk, S. (2022). Differences in release calls of hybrid water frogs and their parental species Pelophylax ridibundus in Ukraine. Animals, 12, 2982."
+    url: https://doi.org/10.3390/ani12212982
+    doi: 10.3390/ani12212982

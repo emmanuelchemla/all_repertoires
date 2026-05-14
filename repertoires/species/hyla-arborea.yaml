@@ -1,0 +1,112 @@
+scientific_name: Hyla arborea
+common_name: European Tree Frog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Hylidae
+  genus: Hyla
+  species: arborea
+primary_inventory:
+  rationale: No single paper was treated as a complete wild vocal-repertoire inventory for Hyla arborea. The file therefore combines primary studies of advertisement, aggressive, and release calls, and marks all calls as outside a primary inventory.
+calls:
+  - name: advertisement call
+    alternative_names: [mating call]
+    in_primary_inventory: false
+    scope: &adult_male_scope
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, pulsed, repetitive, loud]
+    acoustic_description: A repeated series of short pulsed notes with a tonal dominant frequency, produced in sustained nocturnal calling bouts.
+    semantic_keywords: [mating, courtship, territorial, identity]
+    semantic_description: Produced by calling males during the breeding season to attract females and advertise position in choruses.
+    acoustic_references:
+      - id: castellano_etal_2002
+        url: https://doi.org/10.1046/j.1439-0310.2002.00761.x
+      - id: schneider_2004
+        url: https://doi.org/10.1163/1568539042360137
+    semantic_references:
+      - id: castellano_etal_2002
+        url: https://doi.org/10.1046/j.1439-0310.2002.00761.x
+      - id: friedl_klump_2002
+        url: https://doi.org/10.1006/anbe.2002.3085
+    playback_references:
+      - id: friedl_klump_2002
+        url: https://doi.org/10.1006/anbe.2002.3085
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Castellano et al. 2002, Schneider 2004, and Friedl and Klump 2002 all treat the male advertisement call as the central breeding signal.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: The pulsed, repeated note structure is consistent across acoustic studies, with variation mainly in population and body-size effects.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Mate attraction and male spacing functions are repeatedly supported in field and playback studies.
+
+  - name: aggressive call
+    alternative_names: [encounter call, territorial call]
+    in_primary_inventory: false
+    scope: *adult_male_scope
+    acoustic_keywords: [low_frequency, noisy, pulsed, short, graded]
+    acoustic_description: A shorter, harsher pulsed call than the advertisement call, often with lower dominant frequency and irregular note timing.
+    semantic_keywords: [aggression, threat, territorial, spacing]
+    semantic_description: Produced by males during close-range chorus interactions or escalated spacing disputes.
+    acoustic_references:
+      - id: schneider_2004
+        url: https://doi.org/10.1163/1568539042360137
+    semantic_references:
+      - id: schneider_2004
+        url: https://doi.org/10.1163/1568539042360137
+      - id: friedl_klump_2002
+        url: https://doi.org/10.1006/anbe.2002.3085
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Aggressive or encounter calls are described in primary studies, but are less frequently analyzed than the advertisement call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree that the call differs from advertisement notes, although detailed measurements are less numerous.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The close-range male competition context is consistent, but experimental evidence is thinner than for mate attraction.
+
+  - name: release call
+    alternative_names: [distress release call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, noisy, repetitive, abrupt]
+    acoustic_description: Short, abrupt, noisy pulses produced in rapid series during physical restraint.
+    semantic_keywords: [distress, submission, attention]
+    semantic_description: Produced by clasped or handled individuals, especially during unwanted amplexus or capture.
+    acoustic_references:
+      - id: schneider_2004
+        url: https://doi.org/10.1163/1568539042360137
+    semantic_references:
+      - id: schneider_2004
+        url: https://doi.org/10.1163/1568539042360137
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Release calls are reported for the species but are not as well represented in quantitative studies as advertisement calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is based on limited descriptions, so fine structure remains weakly supported.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The restraint and release context is standard for anuran release calls and is reported for Hyla arborea.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  castellano_etal_2002:
+    citation: "Castellano, S., Cuatto, B., Rinella, R., Rosso, A., & Giacoma, C. (2002). The advertisement call of the European treefrogs, Hyla arborea: a multi-level study of variation. Ethology, 108, 75-89."
+    url: https://doi.org/10.1046/j.1439-0310.2002.00761.x
+    doi: 10.1046/j.1439-0310.2002.00761.x
+  schneider_2004:
+    citation: "Schneider, H. (2004). Bioacoustic studies in European tree frogs of the Hyla arborea group. Behaviour, 141, 585-604."
+    url: https://doi.org/10.1163/1568539042360137
+    doi: 10.1163/1568539042360137
+  friedl_klump_2002:
+    citation: "Friedl, T. W. P., & Klump, G. M. (2002). The vocal behaviour of male European treefrogs during close-range encounters. Animal Behaviour, 63, 1017-1026."
+    url: https://doi.org/10.1006/anbe.2002.3085
+    doi: 10.1006/anbe.2002.3085

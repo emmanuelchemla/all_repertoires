@@ -1,0 +1,121 @@
+scientific_name: Melospiza melodia
+common_name: Song Sparrow
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Passerellidae
+  genus: Melospiza
+  species: melodia
+primary_inventory:
+  rationale: Song sparrow vocal literature is extensive but dispersed across song-repertoire, territorial, and call studies. No single complete wild repertoire paper is used as the inventory spine, so all calls are marked outside a primary inventory.
+calls:
+  - name: song
+    alternative_names: [territorial song]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: true
+      note: "Repertoire size and song sharing vary among populations, as shown by Hill et al. 1999 and Beecher et al. 2000."
+    acoustic_keywords: [tonal, frequency_modulated, long, multi_component, repetitive]
+    acoustic_description: A complex multi-syllable song type built from introductory notes, trills, and terminal syllables; males sing several song types in a repertoire.
+    semantic_keywords: [territorial, courtship, identity, aggression]
+    semantic_description: Produced by males during breeding and territorial interactions; switching and matching patterns mediate agonistic exchanges.
+    acoustic_references:
+      - id: harris_lemon_1972
+        url: https://doi.org/10.1139/z72-167
+      - id: hill_etal_1999
+        url: https://doi.org/10.1007/s002650050628
+    semantic_references:
+      - id: searcy_etal_1985
+        url: https://doi.org/10.1016/S0003-3472(85)80127-5
+      - id: beecher_etal_2000
+        url: https://doi.org/10.1093/beheco/11.1.55
+    playback_references:
+      - id: searcy_etal_1985
+        url: https://doi.org/10.1016/S0003-3472(85)80127-5
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Song is the dominant and best studied signal class in Melospiza melodia.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multiple studies agree on multi-syllable song types and individual repertoires.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and courtship functions are supported by field and playback studies.
+
+  - name: chip call
+    alternative_names: [alarm chip, call note]
+    in_primary_inventory: false
+    scope: &both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, broadband, noisy]
+    acoustic_description: A short sharp broadband chip, often repeated during agitation.
+    semantic_keywords: [alarm, contact, attention]
+    semantic_description: Used in disturbance, near-nest alarm, and close-range contact contexts.
+    acoustic_references:
+      - id: nice_1943
+        url: https://doi.org/10.2307/1943595
+    semantic_references:
+      - id: nice_1943
+        url: https://doi.org/10.2307/1943595
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Chip calls are consistently described in natural-history accounts, but receive less quantitative study than song.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic descriptions are mostly qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and contact contexts are clear but not as experimentally developed as song functions.
+
+  - name: begging call
+    alternative_names: [nestling begging call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, noisy, repetitive, loud]
+    acoustic_description: Repeated high-frequency noisy calls produced in bouts by nestlings and fledglings.
+    semantic_keywords: [begging, food, caregiving, attention]
+    semantic_description: Produced by dependent young to solicit feeding from parents.
+    acoustic_references:
+      - id: nice_1943
+        url: https://doi.org/10.2307/1943595
+    semantic_references:
+      - id: nice_1943
+        url: https://doi.org/10.2307/1943595
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Begging calls are part of the breeding repertoire but are not the main focus of song-sparrow acoustic research.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Detailed acoustic treatment is sparse.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Food-solicitation context is direct and consistent.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  harris_lemon_1972:
+    citation: "Harris, M. A., & Lemon, R. E. (1972). Songs of song sparrows: individual variation and dialects. Canadian Journal of Zoology, 50, 301-309."
+    url: https://doi.org/10.1139/z72-167
+    doi: 10.1139/z72-167
+  hill_etal_1999:
+    citation: "Hill, C. E., Campbell, S. E., Nordby, J. C., Burt, J. M., & Beecher, M. D. (1999). Song sharing in two populations of song sparrows. Behavioral Ecology and Sociobiology, 46, 341-349."
+    url: https://doi.org/10.1007/s002650050628
+    doi: 10.1007/s002650050628
+  searcy_etal_1985:
+    citation: "Searcy, W. A., McArthur, P. D., Peters, S. S., & Marler, P. (1985). Song switching and agonistic stimulation in the song sparrow: five tests. Animal Behaviour, 33, 135-149."
+    url: https://doi.org/10.1016/S0003-3472(85)80127-5
+    doi: 10.1016/S0003-3472(85)80127-5
+  beecher_etal_2000:
+    citation: "Beecher, M. D., Campbell, S. E., & Nordby, J. C. (2000). Territory tenure in song sparrows is related to song sharing with neighbours, but not to repertoire size. Animal Behaviour, 59, 29-37."
+    url: https://doi.org/10.1006/anbe.1999.1304
+    doi: 10.1006/anbe.1999.1304
+  nice_1943:
+    citation: "Nice, M. M. (1943). Studies in the life history of the song sparrow II: the behavior of the song sparrow and other passerines. Transactions of the Linnaean Society of New York, 6, 1-328."
+    url: https://doi.org/10.2307/1943595

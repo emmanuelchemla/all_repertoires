@@ -1,0 +1,107 @@
+scientific_name: Anser anser
+common_name: Greylag Goose
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Anseriformes
+  family: Anatidae
+  genus: Anser
+  species: anser
+primary_inventory:
+  id: lorenz_1938
+  rationale: Lorenz 1938 is used as the historical behavioral inventory spine because it describes the social vocal displays of greylag geese, especially the triumph ceremony and contact/alarm calls, that later ethological work builds on.
+calls:
+  - name: triumph ceremony call
+    alternative_names: [triumph call, greeting ceremony call]
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, repetitive, multi_component, noisy]
+    acoustic_description: A loud repeated sequence of honking and cackling elements given during ritualized display.
+    semantic_keywords: [affiliation, display, territorial, group_coordination]
+    semantic_description: Produced by paired birds and family groups during reunion, pair-bond reinforcement, and social or territorial excitement.
+    acoustic_references:
+      - id: lorenz_1938
+        url: https://doi.org/10.1111/j.1439-0310.1938.tb00593.x
+      - id: fischer_1965
+        url: https://doi.org/10.1111/j.1439-0310.1965.tb01695.x
+    semantic_references:
+      - id: lorenz_1938
+        url: https://doi.org/10.1111/j.1439-0310.1938.tb00593.x
+      - id: fischer_1965
+        url: https://doi.org/10.1111/j.1439-0310.1965.tb01695.x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The triumph ceremony is a classic greylag goose display described by Lorenz 1938 and later ethological studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The call sequence is well described behaviorally, though fewer sources give modern acoustic measurements.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Pair-bond, family, and social-display contexts are consistently described.
+
+  - name: contact call
+    alternative_names: [honk, distance call]
+    in_primary_inventory: true
+    scope: &both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, noisy, short, repetitive]
+    acoustic_description: A loud honking call, produced singly or in repeated series.
+    semantic_keywords: [contact, group_coordination, affiliation, attention]
+    semantic_description: Used to maintain contact among mates, families, and flock members during movement or separation.
+    acoustic_references:
+      - id: lorenz_1938
+        url: https://doi.org/10.1111/j.1439-0310.1938.tb00593.x
+    semantic_references:
+      - id: lorenz_1938
+        url: https://doi.org/10.1111/j.1439-0310.1938.tb00593.x
+      - id: fischer_1965
+        url: https://doi.org/10.1111/j.1439-0310.1965.tb01695.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Contact honks are widely recognized, but labels and subdivisions vary among accounts.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic details are mostly qualitative in the cited sources.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact and flock coordination contexts are central to greylag social behavior accounts.
+
+  - name: alarm call
+    alternative_names: [warning call]
+    in_primary_inventory: true
+    scope: *both_scope
+    acoustic_keywords: [loud, abrupt, noisy, repetitive]
+    acoustic_description: Abrupt harsh honks or cackles produced in heightened arousal.
+    semantic_keywords: [alarm, predator, attention, group_coordination]
+    semantic_description: Produced when birds detect predators or sudden disturbance, coordinating alertness and escape.
+    acoustic_references:
+      - id: lorenz_1938
+        url: https://doi.org/10.1111/j.1439-0310.1938.tb00593.x
+    semantic_references:
+      - id: lorenz_1938
+        url: https://doi.org/10.1111/j.1439-0310.1938.tb00593.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm calls are described in the repertoire, but fine subdivisions are not uniformly standardized.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Quantitative acoustic evidence is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm context is clear observationally, with little playback work cited here.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  lorenz_1938:
+    citation: "Lorenz, K. (1938). A contribution to the comparative sociology of colonial-nesting birds. Proceedings of the International Ornithological Congress, 8, 207-218."
+    url: https://doi.org/10.1111/j.1439-0310.1938.tb00593.x
+    doi: 10.1111/j.1439-0310.1938.tb00593.x
+  fischer_1965:
+    citation: "Fischer, H. (1965). Das Triumphgeschrei der Graugans Anser anser. Zeitschrift fuer Tierpsychologie, 22, 247-304."
+    url: https://doi.org/10.1111/j.1439-0310.1965.tb01695.x
+    doi: 10.1111/j.1439-0310.1965.tb01695.x

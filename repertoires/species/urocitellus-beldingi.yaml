@@ -1,0 +1,117 @@
+scientific_name: Urocitellus beldingi
+common_name: Belding's Ground Squirrel
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Sciuridae
+  genus: Urocitellus
+  species: beldingi
+primary_inventory:
+  id: robinson_1984
+  rationale: Robinson 1984 is used as the primary inventory because it explicitly treats the vocalizations of wild Belding's ground squirrels and distinguishes the main alarm-call classes used in later functional studies.
+calls:
+  - name: trill
+    alternative_names: [churr, multiple-note alarm call]
+    in_primary_inventory: true
+    scope: &both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, pulsed, loud, multi_component]
+    acoustic_description: A rapid series of repeated notes, often with individually variable note shape and bout duration.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced most often to terrestrial predators or immediate ground threats and elicits vigilance or escape responses.
+    acoustic_references:
+      - id: robinson_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80151-7
+      - id: mccowan_hooper_2002
+        url: https://doi.org/10.1121/1.1458029
+    semantic_references:
+      - id: sherman_1977
+        url: https://doi.org/10.1126/science.860175
+      - id: robinson_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80151-7
+    playback_references:
+      - id: robinson_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80151-7
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Trills are named by Robinson 1984 and central to Sherman 1977 and later acoustic analyses.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Robinson 1984 and McCowan and Hooper 2002 agree on a repeated-note alarm structure while adding individual variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Predator-alarm use and receiver responses are supported by production and playback evidence.
+
+  - name: whistle
+    alternative_names: [chirp, single-note alarm call]
+    in_primary_inventory: true
+    scope: *both_scope
+    acoustic_keywords: [high_frequency, tonal, short, abrupt, loud]
+    acoustic_description: A single short high-frequency note, sometimes repeated at variable rates in alarm bouts.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Given especially to aerial predators and distant threats, prompting alertness and rapid movement toward cover.
+    acoustic_references:
+      - id: robinson_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80151-7
+      - id: sherman_1985
+        url: https://doi.org/10.1007/BF00301254
+    semantic_references:
+      - id: sherman_1985
+        url: https://doi.org/10.1007/BF00301254
+      - id: sherman_1977
+        url: https://doi.org/10.1126/science.860175
+    playback_references:
+      - id: robinson_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80151-7
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Single-note alarm whistles or chirps are consistently recognized as a distinct class.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on a short high-frequency note, although naming alternates between whistle and chirp.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Aerial-predator association is strong, but call rate and threat context can vary with situation.
+
+  - name: squeal
+    alternative_names: [distress call]
+    in_primary_inventory: true
+    scope: *both_scope
+    acoustic_keywords: [high_frequency, noisy, long, loud, graded]
+    acoustic_description: A loud, high-pitched, noisy call with variable duration produced during close physical disturbance.
+    semantic_keywords: [distress, aggression, submission, attention]
+    semantic_description: Produced during capture, close aggression, or intense social disturbance.
+    acoustic_references:
+      - id: robinson_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80151-7
+    semantic_references:
+      - id: robinson_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80151-7
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Robinson 1984 includes distress-like vocalizations, but the alarm calls dominate subsequent research.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Fine acoustic structure is less quantified than trill and whistle calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Distress contexts are clear observationally but not heavily tested.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  robinson_1984:
+    citation: "Robinson, S. R. (1984). Vocalizations of Belding's ground squirrels. Animal Behaviour, 32, 753-764."
+    url: https://doi.org/10.1016/S0003-3472(84)80151-7
+    doi: 10.1016/S0003-3472(84)80151-7
+  sherman_1977:
+    citation: "Sherman, P. W. (1977). Nepotism and the evolution of alarm calls. Science, 197, 1246-1253."
+    url: https://doi.org/10.1126/science.860175
+    doi: 10.1126/science.860175
+  sherman_1985:
+    citation: "Sherman, P. W. (1985). Alarm calls of Belding's ground squirrels to aerial predators: nepotism or self-preservation? Behavioral Ecology and Sociobiology, 17, 313-323."
+    url: https://doi.org/10.1007/BF00301254
+    doi: 10.1007/BF00301254
+  mccowan_hooper_2002:
+    citation: "McCowan, B., & Hooper, S. L. (2002). Individual acoustic variation in Belding's ground squirrel alarm chirps in the High Sierra Nevada. Journal of the Acoustical Society of America, 111, 1157-1160."
+    url: https://doi.org/10.1121/1.1458029
+    doi: 10.1121/1.1458029

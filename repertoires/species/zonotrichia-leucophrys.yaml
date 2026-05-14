@@ -1,0 +1,113 @@
+scientific_name: Zonotrichia leucophrys
+common_name: White-crowned Sparrow
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Passerellidae
+  genus: Zonotrichia
+  species: leucophrys
+primary_inventory:
+  rationale: The species has extensive primary literature on song dialects and individual call classes, but no single paper is used here as a complete wild repertoire inventory. All calls are therefore marked outside a primary inventory.
+calls:
+  - name: song
+    alternative_names: [territorial song]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: true
+      note: "Song dialects and phrase structure vary geographically, as shown by Marler and Tamura 1964 and Baptista 1977."
+    acoustic_keywords: [tonal, frequency_modulated, long, multi_component, repetitive]
+    acoustic_description: A multi-part whistled song with an introductory whistle followed by trills or buzzes and terminal phrase elements; local dialects alter phrase form.
+    semantic_keywords: [territorial, courtship, identity]
+    semantic_description: Produced by males in breeding contexts for territorial advertisement, mate attraction, and local identity signaling.
+    acoustic_references:
+      - id: marler_tamura_1964
+        url: https://doi.org/10.1126/science.146.3650.1483
+      - id: baptista_1977
+        url: https://doi.org/10.2307/4085550
+    semantic_references:
+      - id: marler_tamura_1964
+        url: https://doi.org/10.1126/science.146.3650.1483
+      - id: nelson_1999
+        url: https://doi.org/10.1006/anbe.1999.1238
+    playback_references:
+      - id: nelson_1999
+        url: https://doi.org/10.1006/anbe.1999.1238
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Song is one of the best studied signals in this species, with independent dialect and playback literatures.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on multi-part whistled songs while documenting dialect variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial, mate-attraction, and identity functions are strongly supported.
+
+  - name: chip call
+    alternative_names: [alarm chip, pink call]
+    in_primary_inventory: false
+    scope: &both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, noisy, high_frequency]
+    acoustic_description: A short sharp broadband chip or metallic note.
+    semantic_keywords: [alarm, contact, attention]
+    semantic_description: Used as an alarm or contact call, especially near cover, nests, or disturbance.
+    acoustic_references:
+      - id: marler_1956
+        url: https://sora.unm.edu/node/20649
+    semantic_references:
+      - id: marler_1956
+        url: https://sora.unm.edu/node/20649
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Chip calls are standard field-recognized vocalizations, though much less studied than song.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Fine acoustic evidence is limited relative to song dialect research.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and contact contexts are reported consistently but not as extensively tested.
+
+  - name: seet call
+    alternative_names: [thin alarm call]
+    in_primary_inventory: false
+    scope: *both_scope
+    acoustic_keywords: [high_frequency, tonal, short, quiet]
+    acoustic_description: A thin, high-frequency, short tonal note with little frequency sweep.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced in alarm contexts, especially when callers are alert to nearby danger.
+    acoustic_references:
+      - id: marler_1956
+        url: https://sora.unm.edu/node/20649
+    semantic_references:
+      - id: marler_1956
+        url: https://sora.unm.edu/node/20649
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Seet-like alarms are recognized in passerine field accounts for this species, but source coverage is modest.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The description rests mainly on qualitative call accounts.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm context is clear but not strongly experimental.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  marler_tamura_1964:
+    citation: "Marler, P., & Tamura, M. (1964). Culturally transmitted patterns of vocal behavior in sparrows. Science, 146, 1483-1486."
+    url: https://doi.org/10.1126/science.146.3650.1483
+    doi: 10.1126/science.146.3650.1483
+  baptista_1977:
+    citation: "Baptista, L. F. (1977). Geographic variation in song and dialects of the Puget Sound white-crowned sparrow. Condor, 79, 356-370."
+    url: https://doi.org/10.2307/4085550
+    doi: 10.2307/4085550
+  nelson_1999:
+    citation: "Nelson, D. A. (1999). Ecological influences on vocal development in the white-crowned sparrow. Animal Behaviour, 58, 21-36."
+    url: https://doi.org/10.1006/anbe.1999.1238
+    doi: 10.1006/anbe.1999.1238
+  marler_1956:
+    citation: "Marler, P. (1956). Behaviour of the chaffinch Fringilla coelebs. Behaviour Supplement, 5, 1-184."
+    url: https://sora.unm.edu/node/20649

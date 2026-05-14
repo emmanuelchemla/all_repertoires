@@ -1,0 +1,113 @@
+scientific_name: Otospermophilus beecheyi
+common_name: California Ground Squirrel
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Sciuridae
+  genus: Otospermophilus
+  species: beecheyi
+primary_inventory:
+  id: owings_borchelt_1975
+  rationale: Owings and Borchelt 1975 is used as the primary inventory spine because it describes the behavior and alarm vocalizations of wild California ground squirrels, with later studies refining chatter and whistle functions.
+calls:
+  - name: chatter
+    alternative_names: [chatters, broadband chatter]
+    in_primary_inventory: true
+    scope: &both_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, noisy, repetitive, abrupt, loud]
+    acoustic_description: A repeated broadband noisy call produced in bouts, with harsh elements that can continue while the caller monitors a predator.
+    semantic_keywords: [alarm, predator, threat, attention]
+    semantic_description: Produced in encounters with terrestrial predators, especially snakes, and can signal continuing vigilance or harassment.
+    acoustic_references:
+      - id: owings_leger_1980
+        url: https://doi.org/10.1111/j.1439-0310.1980.tb01070.x
+      - id: owings_borchelt_1975
+        url: https://doi.org/10.1007/BF00303940
+    semantic_references:
+      - id: owings_leger_1980
+        url: https://doi.org/10.1111/j.1439-0310.1980.tb01070.x
+      - id: owings_hennessy_1984
+        url: https://doi.org/10.1016/S0003-3472(84)80343-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Chatter is a focal California ground squirrel alarm vocalization in Owings and Leger 1980 and later functional studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on a repeated harsh broadband structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Predator and snake-related alarm contexts are consistently reported.
+
+  - name: whistle
+    alternative_names: [alarm whistle]
+    in_primary_inventory: true
+    scope: *both_scope
+    acoustic_keywords: [high_frequency, tonal, short, abrupt, loud]
+    acoustic_description: A short tonal high-frequency note, usually more discrete than chatter elements.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced during alarm, particularly when callers detect distant or aerial threats.
+    acoustic_references:
+      - id: owings_borchelt_1975
+        url: https://doi.org/10.1007/BF00303940
+      - id: owings_hennessy_1988
+        url: https://doi.org/10.1016/S0003-3472(88)80224-0
+    semantic_references:
+      - id: owings_hennessy_1988
+        url: https://doi.org/10.1016/S0003-3472(88)80224-0
+      - id: owings_borchelt_1975
+        url: https://doi.org/10.1007/BF00303940
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Whistles are recognized in the alarm repertoire, but chatter has received more detailed predator-specific analysis.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Short tonal form is consistently described, with less measurement than chatter.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm function is clear, but precise predator specificity varies across accounts.
+
+  - name: squeal
+    alternative_names: [distress call]
+    in_primary_inventory: true
+    scope: *both_scope
+    acoustic_keywords: [high_frequency, noisy, long, loud, graded]
+    acoustic_description: A loud high-pitched noisy call with variable duration and intensity.
+    semantic_keywords: [distress, aggression, submission]
+    semantic_description: Produced during capture, pain, or intense close social conflict.
+    acoustic_references:
+      - id: owings_borchelt_1975
+        url: https://doi.org/10.1007/BF00303940
+    semantic_references:
+      - id: owings_borchelt_1975
+        url: https://doi.org/10.1007/BF00303940
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Distress-like calls are part of the behavioral repertoire but are not the central subject of the alarm-call literature.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic support is mostly qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Distress contexts are observed directly, though not strongly experimental.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  owings_borchelt_1975:
+    citation: "Owings, D. H., & Borchelt, P. L. (1975). The behavior of California ground squirrels. Animal Behaviour, 23, 872-887."
+    url: https://doi.org/10.1016/0003-3472(75)90109-6
+    doi: 10.1016/0003-3472(75)90109-6
+  owings_leger_1980:
+    citation: "Owings, D. H., & Leger, D. W. (1980). Chatter vocalizations of California ground squirrels: predator- and social-role specificity. Zeitschrift fuer Tierpsychologie, 54, 163-184."
+    url: https://doi.org/10.1111/j.1439-0310.1980.tb01070.x
+    doi: 10.1111/j.1439-0310.1980.tb01070.x
+  owings_hennessy_1984:
+    citation: "Owings, D. H., & Hennessy, D. F. (1984). The importance of variation in sciurid visual and vocal communication. Animal Behaviour, 32, 303-315."
+    url: https://doi.org/10.1016/S0003-3472(84)80343-7
+    doi: 10.1016/S0003-3472(84)80343-7
+  owings_hennessy_1988:
+    citation: "Owings, D. H., & Hennessy, D. F. (1988). Calling and vigilance in California ground squirrels: a test of the tonic communication hypothesis. Animal Behaviour, 36, 1533-1540."
+    url: https://doi.org/10.1016/S0003-3472(88)80224-0
+    doi: 10.1016/S0003-3472(88)80224-0

@@ -1,0 +1,145 @@
+scientific_name: Canis latrans
+common_name: Coyote
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Canidae
+  genus: Canis
+  species: latrans
+primary_inventory:
+  id: lehner_1978
+  rationale: Lehner 1978 is used as the primary inventory spine because it enumerates and contextualizes the major coyote vocal classes, including howls, barks, yelps, whines, and growls, that later acoustic work analyzes.
+calls:
+  - name: howl
+    alternative_names: [lone howl]
+    in_primary_inventory: true
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [long, tonal, frequency_modulated, loud]
+    acoustic_description: A long tonal vocalization with frequency modulation and sustained energy, often produced singly.
+    semantic_keywords: [contact, spacing, territorial, identity]
+    semantic_description: Used for long-distance contact, spacing, and territorial advertisement by individuals or separated pack members.
+    acoustic_references:
+      - id: lehner_1978
+        url: https://doi.org/10.1016/S0003-3472(78)80076-8
+      - id: mitchell_etal_2006
+        url: https://doi.org/10.1644/05-MAMM-A-120R1.1
+    semantic_references:
+      - id: lehner_1978
+        url: https://doi.org/10.1016/S0003-3472(78)80076-8
+      - id: gese_ruff_1998
+        url: https://doi.org/10.2307/3802352
+    playback_references:
+      - id: gese_ruff_1998
+        url: https://doi.org/10.2307/3802352
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Howls are consistently recognized by Lehner 1978, Gese and Ruff 1998, and Mitchell et al. 2006.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Long tonal frequency-modulated structure is consistent across descriptive and acoustic studies.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Long-distance contact and spacing functions are supported by observational and playback work.
+
+  - name: group-yip-howl
+    alternative_names: [group howl, yip-howl chorus]
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords: [loud, multi_component, repetitive, tonal, noisy]
+    acoustic_description: A chorus combining howls with short yips and barks, producing a multi-voiced, rapidly changing sequence.
+    semantic_keywords: [group_coordination, territorial, affiliation, display]
+    semantic_description: Produced by pairs or groups during reunion, territorial advertisement, and social excitement.
+    acoustic_references:
+      - id: lehner_1978
+        url: https://doi.org/10.1016/S0003-3472(78)80076-8
+      - id: mitchell_etal_2006
+        url: https://doi.org/10.1644/05-MAMM-A-120R1.1
+    semantic_references:
+      - id: lehner_1978
+        url: https://doi.org/10.1016/S0003-3472(78)80076-8
+      - id: gese_ruff_1998
+        url: https://doi.org/10.2307/3802352
+    playback_references:
+      - id: gese_ruff_1998
+        url: https://doi.org/10.2307/3802352
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Group-yip-howls are a standard named coyote chorus type in repertoire and field studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The multi-component chorus structure is clear, but element composition varies by group and arousal.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Group coordination and territorial display contexts are consistently reported.
+
+  - name: bark
+    alternative_names: [woof, bark-howl]
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, broadband, noisy, loud]
+    acoustic_description: A short abrupt broadband vocalization, sometimes repeated or combined with howls.
+    semantic_keywords: [alarm, threat, aggression, attention]
+    semantic_description: Produced during disturbance, close threat, den defense, or aggressive encounters.
+    acoustic_references:
+      - id: lehner_1978
+        url: https://doi.org/10.1016/S0003-3472(78)80076-8
+    semantic_references:
+      - id: lehner_1978
+        url: https://doi.org/10.1016/S0003-3472(78)80076-8
+      - id: gese_ruff_1998
+        url: https://doi.org/10.2307/3802352
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Barks are included in Lehner's repertoire and commonly noted in defensive contexts.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Broad short structure is clear, though combinations with howls produce graded categories.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and threat contexts are consistent, but bark-howl transitions blur functions.
+
+  - name: whine
+    alternative_names: [whimper]
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, quiet, graded]
+    acoustic_description: A relatively high-pitched tonal call with variable duration and intensity.
+    semantic_keywords: [submission, affiliation, begging, caregiving]
+    semantic_description: Produced during close affiliative, appeasement, pup-care, or food-solicitation interactions.
+    acoustic_references:
+      - id: lehner_1978
+        url: https://doi.org/10.1016/S0003-3472(78)80076-8
+    semantic_references:
+      - id: lehner_1978
+        url: https://doi.org/10.1016/S0003-3472(78)80076-8
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Whines and whimpers are recognized by Lehner 1978, but are less studied than long-distance howls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Published acoustic detail is limited compared with howls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Submissive and affiliative close-range contexts are consistent but mostly observational.
+provenance:
+  - timestamp: '2026-05-14T12:36:52Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  lehner_1978:
+    citation: "Lehner, P. N. (1978). Coyote vocalizations: a lexicon and comparisons with other canids. Animal Behaviour, 26, 712-722."
+    url: https://doi.org/10.1016/S0003-3472(78)80076-8
+    doi: 10.1016/S0003-3472(78)80076-8
+  gese_ruff_1998:
+    citation: "Gese, E. M., & Ruff, R. L. (1998). Howling by coyotes: variation among social classes, seasons, and pack sizes. Canadian Journal of Zoology, 76, 1037-1043."
+    url: https://doi.org/10.1139/z98-047
+    doi: 10.1139/z98-047
+  mitchell_etal_2006:
+    citation: "Mitchell, B. R., Makagon, M. M., Jaeger, M. M., & Barrett, R. H. (2006). Information content of coyote barks and howls. Bioacoustics, 16, 289-314."
+    url: https://doi.org/10.1080/09524622.2006.9753584
+    doi: 10.1080/09524622.2006.9753584
