@@ -1,0 +1,151 @@
+scientific_name: Psittacus erithacus
+common_name: Grey Parrot
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittacidae
+  genus: Psittacus
+  species: erithacus
+primary_inventory:
+  rationale: No single peer-reviewed paper provides a comprehensive enumerated repertoire of wild Psittacus erithacus vocalizations. Cruickshank et al. 1993 is the principal field study of wild Grey Parrot vocal behavior but focuses on vocal mimicry of heterospecific sounds rather than producing a complete inventory of species-typical calls. Venuto et al. 2001 and Giret et al. 2012 provide acoustic detail mainly for captive birds. Because no inventory paper exists, primary_inventory.id is omitted and every call is marked in_primary_inventory false. Captive trained referential vocalizations (e.g. Pepperberg's English-word repertoire) are deliberately excluded as they are not natural call types in wild birds.
+calls:
+  - name: contact call
+    alternative_names:
+      - whistle contact call
+      - flock contact call
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, short, loud]
+    acoustic_description: Tonal, frequency-modulated whistle-like call, often individually distinctive in structure, given singly or in short exchanges.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Used between flock members and pair partners to maintain contact and coordinate movement, including during roost departure and arrival and while foraging.
+    acoustic_references:
+      - id: cruickshank_etal_1993
+        url: https://doi.org/10.1111/j.1474-919X.1993.tb02844.x
+      - id: venuto_etal_2001
+        url: https://doi.org/10.1080/09524622.2001.9753467
+    semantic_references:
+      - id: cruickshank_etal_1993
+        url: https://doi.org/10.1111/j.1474-919X.1993.tb02844.x
+      - id: may_2004
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Contact whistles are recognized as a core component of Grey Parrot vocal behavior in wild observations (Cruickshank et al. 1993; May 2004) and captive acoustic analyses (Venuto et al. 2001), though the species has no formal inventory paper.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Tonal, frequency-modulated whistle structure is described by Venuto et al. 2001 and noted in Cruickshank et al. 1993; quantitative acoustic detail is limited compared to species like budgerigar.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Flock-cohesion and pair-contact functions are supported by field observations (Cruickshank et al. 1993; May 2004) but have not been experimentally tested with playback in this species.
+
+  - name: alarm call
+    alternative_names:
+      - screech
+      - warning call
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, broadband, noisy, abrupt, high_frequency]
+    acoustic_description: Loud, harsh, broadband screeching call with abrupt onset; less tonal than contact whistles.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced during disturbance, predator encounters, and intrusions at roost or nest sites, eliciting flight or vigilance in nearby conspecifics.
+    acoustic_references:
+      - id: cruickshank_etal_1993
+        url: https://doi.org/10.1111/j.1474-919X.1993.tb02844.x
+      - id: may_2004
+    semantic_references:
+      - id: cruickshank_etal_1993
+        url: https://doi.org/10.1111/j.1474-919X.1993.tb02844.x
+      - id: may_2004
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Loud screeching alarm vocalizations are consistently noted in wild Grey Parrots by Cruickshank et al. 1993 and May 2004, though not formally separated into named subtypes.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic descriptions are largely qualitative; no fine-grained spectrographic study isolates alarm screeches from other harsh calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Predator and disturbance contexts are reported by multiple field observers, but the function has not been experimentally tested.
+
+  - name: vocal mimicry
+    alternative_names:
+      - heterospecific mimicry
+      - imitative vocalization
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [multi_component, frequency_modulated, graded, tonal]
+    acoustic_description: Highly variable imitations of heterospecific bird and mammal vocalizations, reproducing the spectro-temporal structure of model sounds with high fidelity; structure varies with the model.
+    semantic_keywords: [display, affiliation, identity]
+    semantic_description: Produced by wild Grey Parrots at roost and during social contexts; documented as imitation of sympatric bird and mammal calls. Function is not fully resolved but candidate roles include social signaling and possibly group identity.
+    acoustic_references:
+      - id: cruickshank_etal_1993
+        url: https://doi.org/10.1111/j.1474-919X.1993.tb02844.x
+      - id: giret_etal_2012
+        url: https://doi.org/10.1007/s10164-011-0307-8
+    semantic_references:
+      - id: cruickshank_etal_1993
+        url: https://doi.org/10.1111/j.1474-919X.1993.tb02844.x
+      - id: giret_etal_2012
+        url: https://doi.org/10.1007/s10164-011-0307-8
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Wild vocal mimicry of heterospecifics is the central finding of Cruickshank et al. 1993 and is consistent with later captive acoustic analyses (Giret et al. 2012); it is recognized as a distinct feature of the species' vocal output, separate from species-typical calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Mimicry's variability is well documented but acoustic structure depends on the model; Cruickshank et al. 1993 and Giret et al. 2012 describe high-fidelity reproduction.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Function of wild mimicry remains hypothetical; only context-of-occurrence data are available, with no experimental test.
+
+  - name: begging call
+    alternative_names:
+      - nestling call
+      - juvenile food call
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, noisy, long]
+    acoustic_description: Repeated, harsh, high-frequency calls produced in bouts by nestlings and dependent young.
+    semantic_keywords: [begging, caregiving, food]
+    semantic_description: Produced by nestlings and recently fledged young to solicit feeding and parental care.
+    acoustic_references:
+      - id: may_2004
+      - id: venuto_etal_2001
+        url: https://doi.org/10.1080/09524622.2001.9753467
+    semantic_references:
+      - id: may_2004
+      - id: venuto_etal_2001
+        url: https://doi.org/10.1080/09524622.2001.9753467
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Begging calls of young are described in field accounts (May 2004) and consistent with general psittacine biology; not separately quantified in a dedicated wild study.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is largely qualitative and based on field and captive observation rather than systematic spectrographic analysis.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Food-solicitation context is well established for psittacines and reported in Grey Parrots, though without experimental tests in the wild.
+references:
+  cruickshank_etal_1993:
+    citation: "Cruickshank, A. J., Gautier, J.-P., & Chappuis, C. (1993). Vocal mimicry in wild African Grey Parrots Psittacus erithacus. Ibis, 135, 293-299."
+    url: https://doi.org/10.1111/j.1474-919X.1993.tb02844.x
+    doi: 10.1111/j.1474-919X.1993.tb02844.x
+  venuto_etal_2001:
+    citation: "Venuto, V., Ferraiuolo, V., Bottoni, L., & Massa, R. (2001). Distress call in six species of African Poicephalus parrots and in the Grey Parrot (Psittacus erithacus). Bioacoustics, 11, 327-338."
+    url: https://doi.org/10.1080/09524622.2001.9753467
+    doi: 10.1080/09524622.2001.9753467
+  giret_etal_2012:
+    citation: "Giret, N., Roy, P., Albert, A., Pachet, F., Kreutzer, M., & Bovet, D. (2012). Finding good acoustic features for parrot vocalizations: the feature generation approach. Journal of Ethology, 30, 175-181."
+    url: https://doi.org/10.1007/s10164-011-0307-8
+    doi: 10.1007/s10164-011-0307-8
+  may_2004:
+    citation: "May, D. L. (2004). The vocal repertoire of Grey Parrots (Psittacus erithacus) living in the Congo Basin (Central African Republic, Cameroon). Doctoral dissertation, University of Arizona."
+    url: https://www.proquest.com/docview/305126884
