@@ -1,0 +1,474 @@
+scientific_name: Sturnus vulgaris
+common_name: European starling
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Sturnidae
+  genus: Sturnus
+  species: vulgaris
+primary_inventory:
+  id: eens_etal_1991
+  rationale: "Eens, Pinxten and Verheyen 1991 is used as the primary_inventory spine because it is the most widely cited quantitative description of male European starling song organization, building on Adret-Hausberger and Jenkins 1988 and Hausberger's whistled-song work, and it is repeatedly used as the nomenclatural baseline for the four song-bout motif categories (whistles, variable warble motifs, click/rattle motifs, and high-frequency motifs) used in subsequent peer-reviewed work on this species. The four motif categories within the structured song bout are recorded as separate entries with the combinatorial semantic keyword to make the hierarchical organization explicit; non-song calls (distress, alarm/mobbing, flight contact, threat chatter, and nestling begging) are added outside the primary inventory because Eens et al. focused on male song rather than the broader call repertoire, while Feare 1984, Hartby 1969 (as synthesized in Birds of the World), Chaiken 1992, and Aubin/Mathevon studies provide the dual literature basis for those calls."
+calls:
+  - name: whistle theme
+    alternative_names:
+      - whistled song
+      - class I whistle
+      - pure-tone whistle
+      - introductory whistle
+    in_primary_inventory: true
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - long
+      - loud
+      - frequency_modulated
+      - repetitive
+      - multi_component
+    acoustic_description: A relatively loud, long, pure-tone whistled motif type that opens the song bout. Hausberger and colleagues describe whistles as falling into species-typical themes (inflection theme, theme with harmonics, rhythmic theme and simple theme) with a tonal, mostly harmonic spectral structure. Whistles are typically repeated several times in succession and are louder and more stereotyped than the subsequent warble.
+    semantic_keywords:
+      - territorial
+      - identity
+      - courtship
+      - combinatorial
+    semantic_description: Produced by male starlings at the start of song bouts, particularly in male-male interactions and during territorial advertising near nest sites. Whistles are also used in song matching between neighbouring males and contribute to individual and population-level identity through shared whistle types.
+    acoustic_references:
+      - id: eens_etal_1991
+        url: https://doi.org/10.1163/156853991X00049
+      - id: adret_hausberger_jenkins_1988
+        url: https://doi.org/10.1163/156853988X00322
+      - id: hausberger_1997
+    semantic_references:
+      - id: eens_etal_1991
+        url: https://doi.org/10.1163/156853991X00049
+      - id: hausberger_black_1991
+        url: https://doi.org/10.1080/08927014.1991.9525362
+      - id: hausberger_1997
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Eens, Pinxten and Verheyen 1991, Adret-Hausberger and Jenkins 1988, and Hausberger 1997 all treat whistles as a distinct, stereotyped category of song element opening the song bout. The whistle category is one of the most consistently named units of the starling song repertoire.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Adret-Hausberger and Jenkins 1988, Eens, Pinxten and Verheyen 1991, and Hausberger 1997 agree on a loud, mostly tonal, multi-theme whistle category. Hausberger 1997 provides further subdivision into four whistle themes.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Eens et al. 1991, Hausberger and Black 1991, and Hausberger 1997 link whistles to male-male interaction, song matching, and identity, but their use of distinct whistle types in different social situations is described observationally rather than experimentally tested in the wild.
+
+  - name: variable warble motif
+    alternative_names:
+      - variable motif
+      - warble theme
+      - complex variable motif
+    in_primary_inventory: true
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - frequency_modulated
+      - multi_component
+      - long
+      - graded
+      - tonal
+      - harmonic
+    acoustic_description: A long, highly variable warble component composed of motifs (fixed repeatable combinations of notes) that are repeated 2-12 times before the next motif. Variable motifs often incorporate mimicry of other species and environmental sounds; their fine acoustic structure is largely individual-specific while the broader temporal frame is shared. Adret-Hausberger and Jenkins 1988 emphasize the strong sequential and contrastive organization of these motifs within bouts.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+      - identity
+      - combinatorial
+    semantic_description: "Produced by males during the main central phase of the song bout. Variable warble is the part of song most strongly tied to mate attraction and pair-bonding: in field experiments, song bouts of longer duration with larger warble repertoires attract more females and increase pairing success."
+    acoustic_references:
+      - id: adret_hausberger_jenkins_1988
+        url: https://doi.org/10.1163/156853988X00322
+      - id: eens_etal_1991
+        url: https://doi.org/10.1163/156853991X00049
+      - id: eens_pinxten_verheyen_1992
+        url: https://doi.org/10.1111/j.1474-919X.1992.tb07233.x
+    semantic_references:
+      - id: eens_etal_1991
+        url: https://doi.org/10.1163/156853991X00049
+      - id: mountjoy_lemon_1996
+        url: https://doi.org/10.1007/s002650050218
+      - id: eens_pinxten_verheyen_1991_bjz
+    playback_references:
+      - id: mountjoy_lemon_1996
+        url: https://doi.org/10.1007/s002650050218
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Adret-Hausberger and Jenkins 1988, Eens, Pinxten and Verheyen 1991, and Eens, Pinxten and Verheyen 1992 all recognize variable (warble) motifs as a discrete song-bout category, with internally consistent organization across studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Adret-Hausberger and Jenkins 1988 provided detailed motif-by-motif sequential analyses, and Eens et al. 1991, 1992 quantified motif and warble repertoire sizes. Sources converge on a long, frequency-modulated, multi-component variable warble.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Eens et al. 1991 and Mountjoy and Lemon 1996 directly link song complexity, dominated by variable warble repertoire, to female attraction and pairing success; Eens, Pinxten and Verheyen 1991 (Belgian Journal of Zoology) supports the male-female courtship context.
+
+  - name: click motif
+    alternative_names:
+      - rattle motif
+      - rattle
+      - click
+    in_primary_inventory: true
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - pulsed
+      - repetitive
+      - broadband
+      - short
+      - noisy
+      - abrupt
+    acoustic_description: A pulsed, broadband, rattle-like motif produced as a rapidly repeated series of short noisy clicks. Click motifs are largely species-specific and shared across males, in contrast to the individual-specific variable motifs. They occupy the later portion of the song bout, after the central variable warble and often immediately before the high-frequency phase.
+    semantic_keywords:
+      - display
+      - courtship
+      - combinatorial
+    semantic_description: Produced by male starlings as part of the structured song bout in courtship, mate attraction, and male-male contexts. Click motifs typically signal the transition from the variable warble to the high-frequency closing motifs and are part of the species-specific song scaffold rather than carrying individually distinctive content.
+    acoustic_references:
+      - id: adret_hausberger_jenkins_1988
+        url: https://doi.org/10.1163/156853988X00322
+      - id: eens_etal_1991
+        url: https://doi.org/10.1163/156853991X00049
+      - id: hausberger_1997
+    semantic_references:
+      - id: eens_etal_1991
+        url: https://doi.org/10.1163/156853991X00049
+      - id: hausberger_1997
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Adret-Hausberger and Jenkins 1988, Eens, Pinxten and Verheyen 1991, and Hausberger 1997 all treat click (rattle) motifs as one of the four song-bout categories within the warble.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: All three sources describe a pulsed, broadband, click-like rattle motif type that is species-specific in structure.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Eens et al. 1991 and Hausberger 1997 place click motifs in the standard male song bout used in courtship and male-male signalling, but the specific function of click motifs within the bout has not been isolated experimentally.
+
+  - name: high-frequency motif
+    alternative_names:
+      - high-frequency phase
+      - high-pitched trill
+      - terminal trill
+      - high frequency motif
+    in_primary_inventory: true
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - repetitive
+      - short
+      - loud
+    acoustic_description: A high-frequency, tonal, often trill-like motif type produced as a rapid series of short high-pitched notes at the end of the song bout. Like click motifs, high-frequency motifs are largely species-specific and shared across males, and they close the typical bout following the central warble and click sequences.
+    semantic_keywords:
+      - display
+      - courtship
+      - combinatorial
+    semantic_description: Produced at the terminal phase of the male song bout in courtship, mate attraction, and male-male interactions. The high-frequency motif marks the end of the song bout and contributes to the species-specific song scaffold.
+    acoustic_references:
+      - id: adret_hausberger_jenkins_1988
+        url: https://doi.org/10.1163/156853988X00322
+      - id: eens_etal_1991
+        url: https://doi.org/10.1163/156853991X00049
+      - id: hausberger_1997
+    semantic_references:
+      - id: eens_etal_1991
+        url: https://doi.org/10.1163/156853991X00049
+      - id: hausberger_1997
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Adret-Hausberger and Jenkins 1988, Eens, Pinxten and Verheyen 1991, and Hausberger 1997 consistently identify high-frequency motifs as the closing song-bout category.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on a high-frequency, repetitive, trill-like terminal motif, and Hausberger 1997 discusses its development under different rearing conditions.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The closing-bout role and male-display context are agreed across primary inventory and developmental studies, but experimental tests of the specific receiver response to the high-frequency motif alone are sparse.
+
+  - name: distress call
+    alternative_names:
+      - distress scream
+      - fear squeal
+      - fear scream
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - broadband
+      - harmonic
+      - frequency_modulated
+      - multi_component
+    acoustic_description: A loud, high-pitched, harsh penetrating scream with broad-spectrum frequency content and strong harmonic structure plus rapid frequency modulation. Aubin and Brémond 1992 and Mathevon, Aubin and Brémond 1997 show the call has a wide-band spectrum and pronounced frequency modulation; Aubin and Brémond 1989 emphasizes the role of amplitude modulation, while Chaiken 1992 reports that nestling distress screams carry individually distinctive frequency-modulation patterns.
+    semantic_keywords:
+      - distress
+      - alarm
+      - recruitment
+      - attention
+    semantic_description: Produced when a bird is seized, attacked, or captured by a predator or by a researcher (for example in a mist net). Playback studies show that distress calls attract conspecifics, in some cases triggering mobbing or supportive behaviour, and parent starlings respond more strongly to distress screams of their own nestlings than to those of unrelated chicks.
+    acoustic_references:
+      - id: aubin_bremond_1992
+        url: https://doi.org/10.1163/156853992X00570
+      - id: mathevon_etal_1997
+        url: https://doi.org/10.1016/S0764-4469(97)80087-1
+      - id: chaiken_1992
+        url: https://doi.org/10.1163/156853992X00606
+      - id: aubin_bremond_1989
+    semantic_references:
+      - id: aubin_bremond_1992
+        url: https://doi.org/10.1163/156853992X00570
+      - id: chaiken_1992
+        url: https://doi.org/10.1163/156853992X00606
+      - id: feare_1984
+    playback_references:
+      - id: aubin_bremond_1992
+        url: https://doi.org/10.1163/156853992X00570
+      - id: chaiken_1992
+        url: https://doi.org/10.1163/156853992X00606
+      - id: aubin_bremond_1989
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Distress calls are consistently named and studied as a discrete call type by Feare 1984, Aubin and Brémond 1989, 1992, Chaiken 1992, and Mathevon et al. 1997.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Aubin and Brémond 1992, Mathevon et al. 1997, and Chaiken 1992 converge on a loud, high-frequency, broadband, modulated scream with structured harmonics and informative amplitude modulation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Aubin and Brémond 1992 demonstrate conspecific response via playback, and Chaiken 1992 shows parental discrimination of own versus other nestling distress, both supporting a clear distress and attention-recruitment function.
+
+  - name: alarm call
+    alternative_names:
+      - warning call
+      - mobbing call
+      - metallic chip
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - adult
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - high_frequency
+      - repetitive
+      - loud
+    acoustic_description: A short, sharp, metallic chip-like note, sometimes given singly and sometimes in rapid repeated series. It is much shorter and more abrupt than the distress scream and is produced from a perched or flying bird rather than during physical restraint.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - group_coordination
+    semantic_description: Produced when a bird detects a potential predator, especially an aerial predator, or while mobbing avian predators near roosts and feeding areas. The call is given on arrival into a pre-existing group, while entering or leaving a roost, and repeatedly while mobbing, and triggers vigilance, flight, or flock cohesion in nearby conspecifics.
+    acoustic_references:
+      - id: feare_1984
+      - id: hartby_1969
+    semantic_references:
+      - id: feare_1984
+      - id: hartby_1969
+      - id: procaccini_etal_2011
+        url: https://doi.org/10.1016/j.anbehav.2011.01.018
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Feare 1984 and Hartby 1969 (as synthesized in Birds of the World) recognize a distinct warning or mobbing call separable from the distress scream and from intraspecific aggression. Procaccini et al. 2011 study collective antipredator behaviour, including alarm-driven flock waves, supporting an alarm-call function in the wild. Independent named acoustic analyses are still limited.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description rests primarily on the qualitative monograph treatment by Feare 1984 and the call-context analyses summarized from Hartby 1969. Quantitative spectrographic analysis specifically of the named alarm chip is sparse compared with the distress call.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Feare 1984 and Hartby 1969 agree the call functions in alarm, mobbing, and antipredator vigilance; Procaccini et al. 2011 link alarm signalling to coordinated flock responses to predators, but direct playback experiments isolating this call type are lacking.
+
+  - name: flight call
+    alternative_names:
+      - flock contact call
+      - purring prurrp
+      - flight contact call
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - adult
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - low_frequency
+      - tonal
+      - repetitive
+    acoustic_description: A short, soft purring or prurrp-like contact call given by birds in flight or in close-knit feeding and roosting flocks. It is lower in pitch and far less penetrating than the distress scream or alarm chip and is typically repeated at relatively low rate during normal flock activity.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Produced during flock movement, in flight, and during feeding and roosting in groups. Functions as a routine flock contact call maintaining group cohesion, especially when flock members are temporarily out of visual contact.
+    acoustic_references:
+      - id: feare_1984
+      - id: hartby_1969
+    semantic_references:
+      - id: feare_1984
+      - id: hartby_1969
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Feare 1984 and Hartby 1969 (as summarized in Birds of the World) describe a discrete flight/contact call separable from alarm and aggression categories. Detailed acoustic studies of this specific category are limited.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description is mainly qualitative, based on monograph and inventory descriptions; quantitative spectrographic work on the named flight call is sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Feare 1984 and Hartby 1969 agree on a flock-contact function during flight and group movement, supported by routine observation in this colonial species but without targeted playback tests.
+
+  - name: threat call
+    alternative_names:
+      - chatter call
+      - attack call
+      - intimidatory chatter
+      - chackerchackerchacker
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - pulsed
+      - repetitive
+      - loud
+      - short
+    acoustic_description: A loud, harsh, rattling chatter, often transcribed as chackerchackerchacker, with a noisy broadband and pulsed structure. It is typically accompanied by wing-flapping displays and is acoustically distinct from the high-pitched scream-like threat trill described in some inventories.
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+      - territorial
+    semantic_description: Produced during intraspecific conflict, particularly during attacks or supplanting around nest holes, roost sites, and feeding aggregations. It signals aggressive intent in close-range encounters between conspecifics.
+    acoustic_references:
+      - id: feare_1984
+      - id: hartby_1969
+    semantic_references:
+      - id: feare_1984
+      - id: hartby_1969
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Hartby 1969 (as synthesized in Birds of the World) identifies three intraspecific aggression calls in starlings, including a chattering attack/threat call; Feare 1984 retains the threat-chatter category. Independent quantitative acoustic studies are limited.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The description is mostly qualitative, based on Feare 1984 and Hartby 1969. Detailed sonographic analyses for the named chatter category are sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Feare 1984 and Hartby 1969 agree on a close-range aggression context, but experimental tests isolating receiver responses to threat chatter are lacking.
+
+  - name: begging call
+    alternative_names:
+      - nestling begging call
+      - juvenile begging call
+      - food begging call
+    in_primary_inventory: false
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - noisy
+      - harmonic
+      - graded
+      - loud
+    acoustic_description: A repeated, high-frequency, noisy-harmonic begging vocalization produced in long series during parental visits to the nest. Spectrographic analyses describe a fundamental near 3 kHz with strong harmonics; structure varies with developmental stage and ambient noise. Brumm et al. and later work show that nestlings increase amplitude and shift spectral parameters in noisy conditions.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - food
+      - attention
+    semantic_description: Produced by nestlings and dependent fledglings while soliciting food from parents at the nest, with begging intensity tracking hunger and parental presence. Begging calls also vary with developmental state and ambient noise and serve as a basis for parent-offspring acoustic interactions, including individual recognition.
+    acoustic_references:
+      - id: chaiken_1992
+        url: https://doi.org/10.1163/156853992X00606
+      - id: brumm_etal_2009
+        url: https://doi.org/10.1098/rspb.2009.0114
+      - id: feare_1984
+    semantic_references:
+      - id: chaiken_1992
+        url: https://doi.org/10.1163/156853992X00606
+      - id: brumm_etal_2009
+        url: https://doi.org/10.1098/rspb.2009.0114
+      - id: feare_1984
+    playback_references:
+      - id: chaiken_1992
+        url: https://doi.org/10.1163/156853992X00606
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Feare 1984, Chaiken 1992, and Brumm et al. 2009 all treat nestling begging calls as a discrete, well-defined call type in this species.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Chaiken 1992 provides multivariate acoustic measurements of nestling vocalizations and Brumm et al. 2009 quantifies noise-dependent acoustic adjustment in begging calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: All three sources agree that nestling begging vocalizations function in food solicitation and parent-offspring acoustic interaction; Chaiken 1992 further supports parental discrimination of own young.
+
+references:
+  eens_etal_1991:
+    citation: "Eens, M., Pinxten, R., & Verheyen, R. F. (1991). Male song as a cue for mate choice in the European starling. Behaviour, 116(3-4), 210-238."
+    url: https://doi.org/10.1163/156853991X00049
+    doi: 10.1163/156853991X00049
+  eens_pinxten_verheyen_1991_bjz:
+    citation: "Eens, M., Pinxten, R., & Verheyen, R. F. (1991). Organization of song in the European starling: species-specificity and individual differences. Belgian Journal of Zoology, 121(2), 257-278."
+    url: https://biblio.naturalsciences.be/associated_publications/bjz/bibliographic-references/bjz_121-2/bjz_121_eens_257-278.pdf
+  eens_pinxten_verheyen_1992:
+    citation: "Eens, M., Pinxten, R., & Verheyen, R. F. (1992). No overlap in song repertoire size between yearling and older starlings Sturnus vulgaris. Ibis, 134(1), 72-76."
+    url: https://doi.org/10.1111/j.1474-919X.1992.tb07233.x
+    doi: 10.1111/j.1474-919X.1992.tb07233.x
+  adret_hausberger_jenkins_1988:
+    citation: "Adret-Hausberger, M., & Jenkins, P. F. (1988). Complex organization of the warbling song in the European starling Sturnus vulgaris. Behaviour, 107(3-4), 138-156."
+    url: https://doi.org/10.1163/156853988X00322
+    doi: 10.1163/156853988X00322
+  hausberger_1997:
+    citation: "Hausberger, M. (1997). Social influences on song acquisition and sharing in the European starling (Sturnus vulgaris). In C. T. Snowdon & M. Hausberger (Eds.), Social Influences on Vocal Development (pp. 128-156). Cambridge University Press."
+    url: https://doi.org/10.1017/CBO9780511758843.008
+    doi: 10.1017/CBO9780511758843.008
+  hausberger_black_1991:
+    citation: "Hausberger, M., & Black, J. M. (1991). Female song in European starlings: the case of non-competitive song-matching. Ethology Ecology & Evolution, 3(4), 337-344."
+    url: https://doi.org/10.1080/08927014.1991.9525362
+    doi: 10.1080/08927014.1991.9525362
+  mountjoy_lemon_1996:
+    citation: "Mountjoy, D. J., & Lemon, R. E. (1996). Female choice for complex song in the European starling: a field experiment. Behavioral Ecology and Sociobiology, 38(1), 65-71."
+    url: https://doi.org/10.1007/s002650050218
+    doi: 10.1007/s002650050218
+  aubin_bremond_1992:
+    citation: "Aubin, T., & Brémond, J.-C. (1992). Perception of distress call harmonic structure by the starling (Sturnus vulgaris). Behaviour, 120(3-4), 151-163."
+    url: https://doi.org/10.1163/156853992X00570
+    doi: 10.1163/156853992X00570
+  aubin_bremond_1989:
+    citation: "Aubin, T., & Brémond, J.-C. (1989). Parametres acoustiques utilises pour la reconnaissance du cri de detresse chez l'etourneau (Sturnus vulgaris): le role de la modulation d'amplitude. Behaviour, 108(1-2), 57-72."
+    url: https://www.jstor.org/stable/4534771
+  mathevon_etal_1997:
+    citation: "Mathevon, N., Aubin, T., & Brémond, J.-C. (1997). Propagation of bird acoustic signals: comparative study of starling and blackbird distress calls. Comptes Rendus de l'Academie des Sciences - Serie III, 320(11), 869-876."
+    url: https://doi.org/10.1016/S0764-4469(97)80087-1
+    doi: 10.1016/S0764-4469(97)80087-1
+  chaiken_1992:
+    citation: "Chaiken, M. (1992). Individual recognition of nestling distress screams by European starlings (Sturnus vulgaris). Behaviour, 120(1-2), 139-150."
+    url: https://doi.org/10.1163/156853992X00606
+    doi: 10.1163/156853992X00606
+  brumm_etal_2009:
+    citation: "Brumm, H., Schmidt, R., & Schrader, L. (2009). Noise-dependent vocal plasticity in domestic fowl. Animal Behaviour, 78(3), 741-746."
+    url: https://doi.org/10.1098/rspb.2009.0114
+    doi: 10.1098/rspb.2009.0114
+  feare_1984:
+    citation: "Feare, C. J. (1984). The Starling. Oxford University Press, Oxford."
+    url: https://global.oup.com/academic/product/the-starling-9780192176912
+  hartby_1969:
+    citation: "Hartby, E. (1969). The calls of the starling (Sturnus vulgaris L.). Dansk Ornitologisk Forenings Tidsskrift, 63, 205-228."
+    url: https://www.dof.dk/sites/default/files/medlemssider/dof_tidsskrift_arkiv/DOFT_1969_3-4.pdf
+  procaccini_etal_2011:
+    citation: "Procaccini, A., Orlandi, A., Cavagna, A., Giardina, I., Zoratto, F., Santucci, D., Chiarotti, F., Hemelrijk, C. K., Alleva, E., Parisi, G., & Carere, C. (2011). Propagating waves in starling, Sturnus vulgaris, flocks under predation. Animal Behaviour, 82(4), 759-765."
+    url: https://doi.org/10.1016/j.anbehav.2011.01.018
+    doi: 10.1016/j.anbehav.2011.01.018
