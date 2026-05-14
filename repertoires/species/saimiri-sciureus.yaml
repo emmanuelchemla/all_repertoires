@@ -1,0 +1,594 @@
+scientific_name: Saimiri sciureus
+common_name: Common squirrel monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cebidae
+  genus: Saimiri
+  species: sciureus
+primary_inventory:
+  id: winter_etal_1966
+  rationale: Winter, Ploog and Latta 1966 is the canonical and widely cited primary inventory of the squirrel monkey vocal repertoire. It enumerates and spectrographically illustrates roughly 26 call types grouped into broad acoustic-functional classes (peep-like, cackling, twitter, err-chuck, shriek/yap, growl/purr, and noisy/groan calls) and remains the foundation cited by virtually all subsequent Saimiri vocal research (Newman, Symmes, Biben, Schott, Boinski). Most of Winter et al. 1966 used animals identified as Saimiri sciureus in the pre-1984 taxonomy; this same source population underlies the Newman and Symmes laboratory recordings on which much of the subsequent acoustic and developmental work depends. Because Saimiri taxonomy has since been split (S. sciureus, S. boliviensis, S. oerstedii, S. ustus, S. vanzolinii), some classic work conflates these taxa, which is noted in individual call agreement explanations.
+calls:
+  - name: isolation peep
+    in_primary_inventory: true
+    alternative_names:
+      - peep
+      - isolation call
+      - long peep
+      - type II peep
+    scope: &adult_both_scope
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - frequency_modulated
+      - loud
+    acoustic_description: A long, narrowband, tonal call with a relatively flat or slightly inverted-U frequency contour and a fundamental frequency typically in the upper kilohertz range. Compared with shorter peep variants it has greater duration and reduced frequency modulation, and individual callers show stable spectral signatures.
+    semantic_description: Produced when an animal is visually separated from group members, including infants separated from the mother and adults out of visual contact with the troop. Receivers can discriminate individual callers, supporting an identity and contact function across separation contexts.
+    semantic_keywords:
+      - contact
+      - identity
+      - distress
+      - group_coordination
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: newman_1985
+      - id: symmes_etal_1979
+        url: https://doi.org/10.1016/0003-3472(79)90060-1
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: newman_1985
+      - id: biben_etal_1986
+        url: https://doi.org/10.1163/156853986X01018
+    playback_references:
+      - id: kaplan_etal_1978
+        url: https://doi.org/10.1007/BF02373236
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Isolation peeps are described in the Winter et al. 1966 inventory and have been independently analyzed in detail by Symmes, Newman and Talmage-Riggs and colleagues from the late 1970s onward, with consistent recognition across decades of Saimiri research.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Symmes et al. 1979 quantitatively characterize long peep classes, Newman 1985 confirms stable individual spectral signatures, and Winter et al. 1966 supplies the original spectrographic description. The tonal long-peep structure is strongly supported.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Winter et al. 1966, Biben et al. 1986 and Kaplan et al. 1978 all show that isolation peeps are produced during visual separation and that conspecifics respond differentially to familiar vs unfamiliar callers, supporting a contact/identity function.
+
+  - name: chuck
+    in_primary_inventory: true
+    alternative_names:
+      - err-chuck
+      - chuck call
+      - contact chuck
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - frequency_modulated
+      - short
+      - tonal
+      - harmonic
+    acoustic_description: A short, frequency-modulated call with a brief introductory low-amplitude noisy or tonal segment followed by a rapid downward-then-upward (or upward) frequency sweep with harmonic structure. It is acoustically compact compared with peeps and is one of the most stereotyped call types in the repertoire.
+    semantic_description: Produced at high rates during foraging and close-range social activity within the troop, often in antiphonal exchanges between affiliated individuals. Chucks are exchanged preferentially between socially bonded females and have been interpreted as a close-range affiliative contact signal.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - identity
+      - group_coordination
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: smith_etal_1982
+      - id: boinski_mitchell_1992
+        url: https://doi.org/10.1111/j.1439-0310.1992.tb00966.x
+    semantic_references:
+      - id: biben_etal_1986
+        url: https://doi.org/10.1163/156853986X01018
+      - id: biben_1993
+        url: https://doi.org/10.1002/ajp.1350290204
+      - id: boinski_mitchell_1992
+        url: https://doi.org/10.1111/j.1439-0310.1992.tb00966.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Chucks are explicitly listed by Winter et al. 1966 (as err-chuck/chuck), acoustically analyzed by Smith et al. 1982, and described in both captive social and wild foraging contexts by Biben 1993 and Boinski and Mitchell 1992. The call type is unambiguous across sources.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Smith et al. 1982 provide detailed acoustic measurements of chuck subtypes, Winter et al. 1966 give the original spectrograms, and Boinski and Mitchell 1992 confirm the frequency-modulated structure in wild Saimiri. Sources converge on the same compact FM signal.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Biben et al. 1986 and Biben 1993 link chucks to antiphonal exchanges among preferred social partners, while Boinski and Mitchell 1992 show similar contact use in wild troops. Affiliative contact use is strongly supported.
+
+  - name: twitter
+    in_primary_inventory: true
+    alternative_names:
+      - twittering
+      - food twitter
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - repetitive
+      - multi_component
+      - tonal
+    acoustic_description: A rapidly repeated sequence of short frequency-modulated tonal elements, producing a chattering or twittering quality. Successive elements are tightly spaced and the overall call has multiple components rather than a single sustained note.
+    semantic_description: Produced during high-arousal social activity, particularly when encountering or sharing food, during group movement, and at reunion. The call accompanies excited social states more broadly than the chuck and is not associated with isolation or alarm.
+    semantic_keywords:
+      - food
+      - affiliation
+      - group_coordination
+      - attention
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+      - id: boinski_mitchell_1995
+        url: https://doi.org/10.1002/ajp.1350350205
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Twitters are included in the Winter et al. 1966 inventory and treated as a distinct call class by Schott 1975 and in field work by Boinski and Mitchell 1995. Independent sources agree on the call's existence.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Winter et al. 1966 and Schott 1975 agree on the multi-element FM structure, but fewer detailed quantitative analyses exist for twitters than for peeps and chucks. Agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Winter et al. 1966 and Schott 1975 associate twitters with excited social and food-related contexts, and Boinski and Mitchell 1995 report similar usage in wild troops, but no playback experiments isolate twitter-specific function. The label is medium.
+
+  - name: cackle
+    in_primary_inventory: true
+    alternative_names:
+      - cackling
+      - cackle series
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - repetitive
+      - pulsed
+      - loud
+    acoustic_description: A rapidly repeated series of short broadband pulses with noisy spectral content, lower-pitched and harsher than twitters. Successive pulses are produced in extended bouts that can last several seconds.
+    semantic_description: Produced during agonistic interactions, particularly by callers during intra-group conflict and competitive encounters. Cackle bouts often accompany chasing, mild aggression and high-arousal disturbance contexts.
+    semantic_keywords:
+      - threat
+      - aggression
+      - attention
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Cackling calls are described by Winter et al. 1966 as a distinct repertoire class and re-described by Schott 1975 in his quantitative captive analysis. Independent recognition supports a strong label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Winter et al. 1966 and Schott 1975 agree on the pulsed broadband structure, but later quantitative acoustic work has focused more on peeps and chucks than on cackles, limiting independent measurement.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Winter et al. 1966 and Schott 1975 link cackling to agonistic and high-arousal contexts. Functional studies (e.g. playback) are lacking, so the agonistic interpretation is supported but the label is medium.
+
+  - name: shriek
+    in_primary_inventory: true
+    alternative_names:
+      - yap
+      - alarm shriek
+      - mobbing call
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - loud
+      - abrupt
+      - short
+    acoustic_description: A loud, high-pitched broadband call with abrupt onset and substantial noise content. Spectrograms show a wide bandwidth with energy spread across several kilohertz, distinguishing it from the narrowband tonal peep family.
+    semantic_description: Produced to aerial threats such as raptors and during high-intensity disturbance or mobbing. The call accompanies escape behaviour and is also given during severe agonistic encounters with conspecifics or potential predators.
+    semantic_keywords:
+      - alarm
+      - predator
+      - distress
+      - threat
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: boinski_etal_2003
+        url: https://doi.org/10.1163/156853903771980666
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Shrieks (Winter et al. 1966 group them with yaps) are a long-standing repertoire entry and are recognized in field accounts of Saimiri alarm calling (e.g. Boinski et al. 2003). The category is consistently identified.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Winter et al. 1966 and Schott 1975 give the main acoustic descriptions; later work treats shrieks as part of the noisy alarm grade with limited new quantitative detail. Agreement is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Winter et al. 1966 documents alarm use, and field reviews by Boinski et al. 2003 link shriek-like calls to aerial predators and severe disturbance. Functional specificity has rarely been tested experimentally for S. sciureus, so the label is medium.
+
+  - name: yap
+    in_primary_inventory: true
+    alternative_names:
+      - alarm yap
+      - terrestrial alarm
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - repetitive
+    acoustic_description: A short, repeated broadband call with a barking quality, lower-pitched than the shriek but still noisy and abrupt. Successive yaps are typically produced in series during sustained alarm contexts.
+    semantic_description: Produced toward terrestrial or non-aerial disturbances, including unfamiliar conspecifics and ground-level threats, and during mobbing of stationary targets. It is part of the broader Saimiri alarm grade together with shrieks.
+    semantic_keywords:
+      - alarm
+      - threat
+      - predator
+      - attention
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: boinski_etal_2003
+        url: https://doi.org/10.1163/156853903771980666
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Winter et al. 1966 list yaps as a separate inventory entry, and Schott 1975 retains the category. Some later sources merge yaps with shrieks into a single alarm grade, hence the medium label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Winter et al. 1966 and Schott 1975 agree on the short, repeated broadband structure, but the boundary with shrieks is acoustically graded and rarely re-measured in modern studies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Winter et al. 1966 link yaps to non-aerial disturbance and Boinski et al. 2003 to general alarm contexts in Saimiri. Predator-class specificity is not strongly demonstrated, so the label is medium.
+
+  - name: growl
+    in_primary_inventory: true
+    alternative_names:
+      - growling
+      - low growl
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - long
+    acoustic_description: A low-frequency, noisy, broadband call with a rough or grating spectral quality and relatively long duration. Energy is concentrated in the lower kilohertz range, distinguishing growls from the high-pitched peep and shriek families.
+    semantic_description: Produced during agonistic and threat interactions at close range, often directed at conspecifics during dominance or competitive encounters. The call accompanies aggressive posturing rather than escape or predator-directed behaviour.
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Growls are listed by Winter et al. 1966 within their broader noisy/agonistic call group and retained by Schott 1975. Modern reanalyses are rare, so the label is medium rather than strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The low-frequency noisy structure is consistent across Winter et al. 1966 and Schott 1975. Acoustic measurement is limited and the category grades into other agonistic noisy calls, supporting a medium label.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Both Winter et al. 1966 and Schott 1975 associate growls with intra-group agonistic interactions, but no dedicated functional study isolates growl-specific use. The label is medium.
+
+  - name: purr
+    in_primary_inventory: true
+    alternative_names:
+      - purring
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - pulsed
+      - quiet
+      - repetitive
+    acoustic_description: A low-frequency, low-amplitude, pulsed call with a rolling rhythmic quality, produced as an extended sequence of regularly spaced narrowband pulses. It is among the quieter calls in the repertoire and contrasts with the loud peep and shriek classes.
+    semantic_description: Produced at close range during relaxed affiliative contact, including huddling, social resting and gentle interactions with infants. It is associated with low-arousal positive social states rather than alarm or aggression.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - caregiving
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Purrs are part of the Winter et al. 1966 inventory and are retained by Schott 1975, but they have not been re-examined in dedicated quantitative studies, supporting a medium label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Winter et al. 1966 and Schott 1975 agree on a low-frequency pulsed quiet call, but quantitative measurements are limited and the category boundary with growls is not crisp.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Both inventory sources link purrs to relaxed close-range affiliative contexts. Functional evidence beyond observation is limited, so the label is medium.
+
+  - name: caw
+    in_primary_inventory: true
+    alternative_names:
+      - caw call
+      - kaw
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+    acoustic_description: A short broadband call with a harsh, crow-like quality and abrupt onset. The call lacks the long tonal sweep of peeps and the rhythmic pulsing of cackles, occupying an intermediate position in the noisy short-call grade.
+    semantic_description: Produced during mild disturbance and orienting toward novel or surprising stimuli. It can also accompany agonistic encounters but is less intense and less prolonged than cackles or shrieks.
+    semantic_keywords:
+      - attention
+      - alarm
+      - threat
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Caws appear in the Winter et al. 1966 inventory and are retained by Schott 1975, but they have not been independently re-analyzed, supporting a medium label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The original acoustic descriptions are consistent between Winter et al. 1966 and Schott 1975 but quantitative reanalysis is lacking, and the call grades into other noisy short calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Winter et al. 1966 and Schott 1975 both associate caws with mild disturbance and orienting contexts. Without functional tests, the label is medium.
+
+  - name: groan
+    in_primary_inventory: true
+    alternative_names:
+      - groaning
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - long
+      - quiet
+    acoustic_description: A low-frequency, noisy, relatively long call with a strained or grating quality, lower in amplitude than growls and lacking pulse structure. Energy is concentrated below approximately 1 kHz.
+    semantic_description: Produced in close-range agonistic and defensive contexts, often by subordinates during conflict or by animals receiving aggression. It accompanies submissive or defensive postures rather than active threat.
+    semantic_keywords:
+      - submission
+      - distress
+      - threat
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Groans are entered as a separate type by Winter et al. 1966 and by Schott 1975, but are not the focus of dedicated subsequent analyses, supporting a medium label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Both Winter et al. 1966 and Schott 1975 describe groans as low-frequency noisy long calls, but the boundary with growls is graded and quantitative comparisons are limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The two inventory sources agree on a submissive/defensive role within agonistic encounters. No playback work has tested this specifically, so the label is medium.
+
+  - name: infant trill
+    in_primary_inventory: true
+    alternative_names:
+      - trill
+      - infant chirp
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - short
+      - repetitive
+    acoustic_description: A short, high-frequency tonal call with rapid frequency modulation, often produced in series. It is acoustically simpler than the adult chuck and shorter than the isolation peep.
+    semantic_description: Produced by infants and young juveniles, especially while clinging to the mother or during transfer between carriers, and during low-intensity separation or close-range social contact. It precedes or accompanies affiliative interactions with the mother and other group members.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - begging
+      - caregiving
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: lieblich_etal_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80001-5
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: lieblich_etal_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80001-5
+      - id: biben_etal_1986
+        url: https://doi.org/10.1163/156853986X01018
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Winter et al. 1966 separate an infant trill/chirp class from adult peeps, and Lieblich et al. 1980 and Biben et al. 1986 describe infant vocal development consistent with this category. Some later authors fold these calls into the broader peep grade, supporting a medium label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Winter et al. 1966 and Lieblich et al. 1980 agree on rapid FM tonal structure but use slightly different naming. Independent quantitative analyses of the infant trill specifically are limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Winter et al. 1966 and Biben et al. 1986 link the call to mother-infant and close-range affiliative contexts, with Lieblich et al. 1980 documenting developmental change. The label is medium given limited recent functional work.
+
+  - name: trill peep
+    in_primary_inventory: true
+    alternative_names:
+      - short peep
+      - type I peep
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - frequency_modulated
+    acoustic_description: A short narrowband tonal call with a moderate frequency-modulated contour, intermediate in duration between the infant trill and the long isolation peep. Symmes et al. 1979 classify squirrel monkey peeps into multiple acoustic subtypes, of which this is the shorter, more modulated variant.
+    semantic_description: Produced in low-intensity social contexts at moderate range, including approach, mild excitement and short-distance group coordination. It is more general than the isolation peep and is not specifically tied to visual separation.
+    semantic_keywords:
+      - contact
+      - attention
+      - affiliation
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: symmes_etal_1979
+        url: https://doi.org/10.1016/0003-3472(79)90060-1
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: symmes_etal_1979
+        url: https://doi.org/10.1016/0003-3472(79)90060-1
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Winter et al. 1966 distinguish multiple peep variants and Symmes et al. 1979 quantitatively split the peep grade into several acoustic subtypes. Some authors treat the entire peep family as a single graded class, supporting a medium existence label for this subtype.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Symmes et al. 1979 give quantitative acoustic boundaries between short and long peep classes, but the boundary is graded. The shorter peep is recognizable but not crisp, so the label is medium.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Winter et al. 1966 and Symmes et al. 1979 indicate a low-intensity contact role for short peeps, but most semantic work on Saimiri peeps has focused on the long isolation peep. The functional specificity of the short variant is weakly supported.
+
+  - name: pulsed call
+    in_primary_inventory: true
+    alternative_names:
+      - pulse call
+      - mate call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - pulsed
+      - low_frequency
+      - repetitive
+      - long
+    acoustic_description: A long sequence of regularly spaced low- to mid-frequency pulses with a slow rhythmic cadence, often delivered in extended bouts. Pulse rate and bout structure differ from the rapid pulsing of cackles.
+    semantic_description: Produced by males during the breeding season, often while displaying to females or during reproductive arousal. It is one of the call types associated with the seasonal fatted-male condition characteristic of breeding Saimiri males.
+    semantic_keywords:
+      - courtship
+      - display
+      - mating
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: schott_1975
+        url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Pulsed/mate-like vocalizations are described by Winter et al. 1966 and Schott 1975 in the context of male sexual displays, but later quantitative work on this specific call type is sparse, supporting a medium label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Winter et al. 1966 and Schott 1975 agree on a rhythmic pulsed structure, but detailed acoustic measurements are limited and the category may grade into other male display calls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Both inventory sources associate the call with male reproductive displays, but specific functional tests are lacking. The mating/display interpretation is supported but the label is medium.
+
+  - name: squeal
+    in_primary_inventory: true
+    alternative_names:
+      - infant squeal
+      - distress squeal
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - frequency_modulated
+    acoustic_description: A loud, high-pitched, tonal call with strong frequency modulation and relatively long duration. It can grade toward shriek-like noisier variants at peak amplitude.
+    semantic_description: Produced by infants and young juveniles in high-distress contexts, including being separated from the mother, falling, or being attacked. It is associated with peak arousal during distress and typically elicits retrieval by the mother.
+    semantic_keywords:
+      - distress
+      - caregiving
+      - begging
+    acoustic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: lieblich_etal_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80001-5
+    semantic_references:
+      - id: winter_etal_1966
+        url: https://doi.org/10.1007/BF00237707
+      - id: lieblich_etal_1980
+        url: https://doi.org/10.1016/S0003-3472(80)80001-5
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Winter et al. 1966 list squeals separately, and Lieblich et al. 1980 describe similar high-distress infant calls during development. Boundaries with shrieks and isolation peeps are graded, supporting a medium label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Both inventory sources agree on a loud, modulated, high-pitched call, but quantitative reanalysis is limited and the call grades into shriek and peep classes at peak arousal.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Winter et al. 1966 and Lieblich et al. 1980 link squeals to high-distress infant contexts and maternal retrieval. The label is medium given limited modern functional study.
+
+references:
+  winter_etal_1966:
+    citation: "Winter P, Ploog D, Latta J. 1966. Vocal repertoire of the squirrel monkey (Saimiri sciureus), its analysis and significance. Experimental Brain Research 1: 359-384."
+    doi: 10.1007/BF00237707
+    url: https://doi.org/10.1007/BF00237707
+  schott_1975:
+    citation: "Schott D. 1975. Quantitative analysis of the vocal repertoire of squirrel monkeys (Saimiri sciureus). Zeitschrift fuer Tierpsychologie 38(3): 225-250."
+    doi: 10.1111/j.1439-0310.1975.tb01001.x
+    url: https://doi.org/10.1111/j.1439-0310.1975.tb01001.x
+  symmes_etal_1979:
+    citation: "Symmes D, Newman JD, Talmage-Riggs G, Lieblich AK. 1979. Individuality and stability of isolation peeps in squirrel monkeys. Animal Behaviour 27: 1142-1152."
+    doi: 10.1016/0003-3472(79)90060-1
+    url: https://doi.org/10.1016/0003-3472(79)90060-1
+  newman_1985:
+    citation: "Newman JD. 1985. The infant cry of primates: an evolutionary perspective. In: Lester BM, Boukydis CFZ (eds) Infant Crying: Theoretical and Research Perspectives, pp. 307-323. Plenum Press, New York."
+  biben_etal_1986:
+    citation: "Biben M, Symmes D, Masataka N. 1986. Temporal and structural analysis of affiliative vocal exchanges in squirrel monkeys (Saimiri sciureus). Behaviour 98: 259-273."
+    doi: 10.1163/156853986X01018
+    url: https://doi.org/10.1163/156853986X01018
+  biben_1993:
+    citation: "Biben M. 1993. Recognition of order effects in squirrel monkey antiphonal call sequences. American Journal of Primatology 29: 109-124."
+    doi: 10.1002/ajp.1350290204
+    url: https://doi.org/10.1002/ajp.1350290204
+  smith_etal_1982:
+    citation: "Smith HJ, Newman JD, Symmes D. 1982. Vocal concomitants of affiliative behavior in squirrel monkeys. In: Snowdon CT, Brown CH, Petersen MR (eds) Primate Communication, pp. 30-49. Cambridge University Press, Cambridge."
+  boinski_mitchell_1992:
+    citation: "Boinski S, Mitchell CL. 1992. Ecological and social factors affecting the vocal behavior of adult female squirrel monkeys. Ethology 92(4): 316-330."
+    doi: 10.1111/j.1439-0310.1992.tb00966.x
+    url: https://doi.org/10.1111/j.1439-0310.1992.tb00966.x
+  boinski_mitchell_1995:
+    citation: "Boinski S, Mitchell CL. 1995. Wild squirrel monkey (Saimiri sciureus) caregiver calls: contexts and acoustic structure. American Journal of Primatology 35: 129-137."
+    doi: 10.1002/ajp.1350350205
+    url: https://doi.org/10.1002/ajp.1350350205
+  boinski_etal_2003:
+    citation: "Boinski S, Kauffman L, Westoll A, Stickler CM, Cropp S, Ehmke E. 2003. Are vigilance, risk from avian predators and group size consequences of habitat structure? A comparison of three species of squirrel monkey (Saimiri oerstedii, S. boliviensis, and S. sciureus). Behaviour 140: 1421-1467."
+    doi: 10.1163/156853903771980666
+    url: https://doi.org/10.1163/156853903771980666
+  lieblich_etal_1980:
+    citation: "Lieblich AK, Symmes D, Newman JD, Shapiro M. 1980. Development of the isolation peep in laboratory-bred squirrel monkeys. Animal Behaviour 28: 1-9."
+    doi: 10.1016/S0003-3472(80)80001-5
+    url: https://doi.org/10.1016/S0003-3472(80)80001-5
+  kaplan_etal_1978:
+    citation: "Kaplan JN, Winship-Ball A, Sim L. 1978. Maternal discrimination of infant vocalizations in squirrel monkeys. Primates 19(1): 187-193."
+    doi: 10.1007/BF02373236
+    url: https://doi.org/10.1007/BF02373236
