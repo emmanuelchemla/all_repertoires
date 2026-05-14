@@ -1,0 +1,143 @@
+scientific_name: Heterocephalus glaber
+common_name: Naked Mole-rat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Heterocephalidae
+  genus: Heterocephalus
+  species: glaber
+primary_inventory:
+  id: pepper_etal_1991
+  rationale: Pepper et al. 1991 is used as the primary inventory because it describes the naked mole-rat vocal repertoire and identifies numerous distinct call types. Barker et al. 2021 is added for focused evidence on soft chirp dialects and social recognition.
+calls:
+  - name: soft chirp
+    alternative_names:
+      - contact chirp
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: true
+      note: Soft chirps vary by colony dialect and are culturally transmitted, as shown by Barker et al. 2021.
+    acoustic_keywords: [short, tonal, high_frequency, repetitive]
+    acoustic_description: Short tonal chirp call, often produced in repeated exchanges and varying subtly across colonies.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Used for close-range colony contact and identity signaling, including dialect-based colony membership information.
+    acoustic_references:
+      - id: pepper_etal_1991
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+      - id: barker_etal_2021
+        url: https://doi.org/10.1126/science.abc6588
+    semantic_references:
+      - id: barker_etal_2021
+        url: https://doi.org/10.1126/science.abc6588
+      - id: pepper_etal_1991
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+    playback_references:
+      - id: barker_etal_2021
+        url: https://doi.org/10.1126/science.abc6588
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Soft chirps are included in the classic repertoire and are the focus of Barker et al. 2021.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on short chirp structure and colony-level acoustic variation.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact and colony-identity functions are strongly supported by playback and dialect evidence.
+
+  - name: alarm chirp
+    alternative_names:
+      - alarm call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, loud, high_frequency, repetitive]
+    acoustic_description: Repeated high-frequency chirp produced at higher intensity than soft contact chirps.
+    semantic_keywords: [alarm, attention, group_coordination]
+    semantic_description: Produced during disturbance or danger in the tunnel system, alerting nearby colony members.
+    acoustic_references:
+      - id: pepper_etal_1991
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+      - id: muller_etal_2020
+        url: https://doi.org/10.1016/j.heares.2020.108048
+    semantic_references:
+      - id: pepper_etal_1991
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm chirps are described in the repertoire, though less intensively studied than soft chirps.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: High repeated chirp structure is supported, but detailed alarm-call quantification is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Disturbance/alarm context is described observationally.
+
+  - name: grunt
+    alternative_names:
+      - low grunt
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, noisy, graded]
+    acoustic_description: Short low-frequency rough call, acoustically distinct from tonal chirps.
+    semantic_keywords: [aggression, threat, submission]
+    semantic_description: Produced during close social interactions, especially agonistic or dominance-related encounters.
+    acoustic_references:
+      - id: pepper_etal_1991
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+    semantic_references:
+      - id: pepper_etal_1991
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Grunts are included in the classic repertoire, but modern studies focus more on chirps.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic support is mostly from repertoire descriptions.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Agonistic context is supported observationally, but functional tests are limited.
+
+  - name: pup call
+    alternative_names:
+      - juvenile call
+    in_primary_inventory: true
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, short, repetitive]
+    acoustic_description: High-frequency tonal call produced by young animals, often in repeated bouts.
+    semantic_keywords: [begging, caregiving, contact]
+    semantic_description: Produced by pups during care solicitation, isolation, or contact with carers.
+    acoustic_references:
+      - id: pepper_etal_1991
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+      - id: muller_etal_2020
+        url: https://doi.org/10.1016/j.heares.2020.108048
+    semantic_references:
+      - id: pepper_etal_1991
+        url: https://doi.org/10.1111/j.1439-0310.1991.tb00291.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Juvenile-only vocalizations are described in the repertoire and later reviews of naked mole-rat vocalization.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: High tonal pup-call structure is supported, but detailed subtype boundaries are sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Care and contact contexts are supported by repertoire accounts.
+references:
+  pepper_etal_1991:
+    citation: "Pepper, J. W., Braude, S. H., Lacey, E. A., & Sherman, P. W. (1991). Vocalizations of the naked mole-rat. In The Biology of the Naked Mole-Rat. Princeton University Press."
+    url: https://doi.org/10.1515/9781400857527.243
+  barker_etal_2021:
+    citation: "Barker, A. J., Veviurko, G., Bennett, N. C., Hart, D. W., Mograby, L., & Lewin, G. R. (2021). Cultural transmission of vocal dialect in the naked mole-rat. Science, 371, 503-507."
+    url: https://doi.org/10.1126/science.abc6588
+    doi: 10.1126/science.abc6588
+  muller_etal_2020:
+    citation: "Muller, M., et al. (2020). Hearing and vocalizations in the naked mole-rat. Hearing Research, 391, 108048."
+    url: https://doi.org/10.1016/j.heares.2020.108048
+    doi: 10.1016/j.heares.2020.108048

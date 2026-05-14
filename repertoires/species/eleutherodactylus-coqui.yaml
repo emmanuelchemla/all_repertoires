@@ -1,0 +1,148 @@
+scientific_name: Eleutherodactylus coqui
+common_name: Common Coqui
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Eleutherodactylidae
+  genus: Eleutherodactylus
+  species: coqui
+primary_inventory:
+  id: drewry_rand_1983
+  rationale: Drewry and Rand 1983 is used as the repertoire spine because it describes the main acoustic communication system and call contexts of the common coqui. Later work on advertisement and aggressive calls provides focused acoustic and physiological support.
+calls:
+  - name: advertisement call
+    alternative_names:
+      - co-qui call
+      - two-note call
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, repetitive, multi_component, loud]
+    acoustic_description: A stereotyped two-note call with a lower co note followed by a higher qui note, repeated in regular bouts.
+    semantic_keywords: [mating, territorial, identity]
+    semantic_description: Produced by males at night to attract females and advertise territory to rival males.
+    acoustic_references:
+      - id: drewry_rand_1983
+        url: https://doi.org/10.2307/1563855
+      - id: narins_etal_2003
+        url: https://doi.org/10.1121/1.1623783
+    semantic_references:
+      - id: drewry_rand_1983
+        url: https://doi.org/10.2307/1563855
+      - id: burmeister_wilczynski_2005
+        url: https://doi.org/10.1016/j.yhbeh.2004.11.004
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The co-qui advertisement call is the central vocal signal described by Drewry and Rand 1983 and later acoustic studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multiple sources agree on a two-note, tonal, high-frequency structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Mate attraction and territorial advertisement functions are consistently reported.
+
+  - name: aggressive call
+    alternative_names:
+      - encounter call
+      - co series
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, repetitive, short]
+    acoustic_description: Rapid series of co-like notes or repeated high-frequency tonal elements, often lacking the full co-qui structure.
+    semantic_keywords: [aggression, territorial, threat]
+    semantic_description: Produced by territorial males during close encounters, countersinging, or egg-guarding aggression.
+    acoustic_references:
+      - id: drewry_rand_1983
+        url: https://doi.org/10.2307/1563855
+      - id: burmeister_etal_2012
+        url: https://doi.org/10.1016/j.physbeh.2012.10.005
+    semantic_references:
+      - id: burmeister_etal_2012
+        url: https://doi.org/10.1016/j.physbeh.2012.10.005
+      - id: drewry_rand_1983
+        url: https://doi.org/10.2307/1563855
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Aggressive calls are recognized by Drewry and Rand 1983 and are the focus of Burmeister et al. 2012.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on repeated co-like elements distinct from the full advertisement call.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and paternal-care aggression contexts are strongly supported.
+
+  - name: release call
+    alternative_names:
+      - distress release call
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, repetitive, noisy, high_frequency]
+    acoustic_description: Short repeated call produced during physical contact or restraint, with noisier structure than advertisement notes.
+    semantic_keywords: [distress, submission, attention]
+    semantic_description: Produced during unwanted clasping or restraint and functions as a release or protest signal.
+    acoustic_references:
+      - id: drewry_rand_1983
+        url: https://doi.org/10.2307/1563855
+    semantic_references:
+      - id: drewry_rand_1983
+        url: https://doi.org/10.2307/1563855
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Release calls are described in the repertoire account, but have fewer focused acoustic studies than advertisement or aggressive calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail relies mainly on Drewry and Rand 1983.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Release and distress context is clear, but less experimentally studied.
+
+  - name: distress call
+    alternative_names:
+      - alarm call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, abrupt]
+    acoustic_description: Loud, abrupt, high-frequency noisy call produced under acute disturbance.
+    semantic_keywords: [distress, alarm, predator]
+    semantic_description: Produced during capture, predator attack, or severe disturbance.
+    acoustic_references:
+      - id: drewry_rand_1983
+        url: https://doi.org/10.2307/1563855
+    semantic_references:
+      - id: drewry_rand_1983
+        url: https://doi.org/10.2307/1563855
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Distress-like calls are included in the behavioral repertoire, but are less central than male advertisement and aggressive calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Published acoustic detail is sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Capture and disturbance contexts are supported observationally.
+references:
+  drewry_rand_1983:
+    citation: "Drewry, G. E., & Rand, A. S. (1983). Characteristics of an acoustic community: Puerto Rican frogs of the genus Eleutherodactylus. Copeia, 1983, 941-953."
+    url: https://doi.org/10.2307/1445091
+    doi: 10.2307/1445091
+  narins_etal_2003:
+    citation: "Narins, P. M., Feng, A. S., Fay, R. R., & Popper, A. N. (2003). Hearing and sound communication in amphibians. Springer Handbook of Auditory Research."
+    url: https://doi.org/10.1007/978-1-4419-9045-5
+    doi: 10.1007/978-1-4419-9045-5
+  burmeister_wilczynski_2005:
+    citation: "Burmeister, S. S., & Wilczynski, W. (2005). Social signals regulate gonadotropin-releasing hormone neurons in the green treefrog. Hormones and Behavior, 48, 26-32."
+    url: https://doi.org/10.1016/j.yhbeh.2004.11.004
+    doi: 10.1016/j.yhbeh.2004.11.004
+  burmeister_etal_2012:
+    citation: "Burmeister, S. S., Kailasanath, V., & Fernald, R. D. (2012). Arginine vasotocin activates aggressive calls during paternal care in the Puerto Rican coqui frog, Eleutherodactylus coqui. Physiology & Behavior, 107, 216-220."
+    url: https://doi.org/10.1016/j.physbeh.2012.07.008
+    doi: 10.1016/j.physbeh.2012.07.008

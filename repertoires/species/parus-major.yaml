@@ -1,0 +1,158 @@
+scientific_name: Parus major
+common_name: Great Tit
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Paridae
+  genus: Parus
+  species: major
+primary_inventory:
+  id: gompertz_1961
+  rationale: Gompertz 1961 is used as the primary inventory because it describes the great tit vocal repertoire and contexts of major call classes. Later studies of mobbing, alarm, and song provide focused acoustic and functional support.
+calls:
+  - name: song
+    alternative_names:
+      - territorial song
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, repetitive, long, frequency_modulated]
+    acoustic_description: Repeated tonal phrase built from simple notes, with song-type variation among males.
+    semantic_keywords: [territorial, courtship, identity]
+    semantic_description: Produced primarily by males in breeding and territorial contexts to advertise presence and quality.
+    acoustic_references:
+      - id: gompertz_1961
+        url: https://doi.org/10.1111/j.1439-0310.1961.tb00383.x
+      - id: mcgregor_etal_1981
+        url: https://doi.org/10.1016/S0003-3472(81)80157-4
+    semantic_references:
+      - id: gompertz_1961
+        url: https://doi.org/10.1111/j.1439-0310.1961.tb00383.x
+      - id: mcgregor_etal_1981
+        url: https://doi.org/10.1016/S0003-3472(81)80157-4
+    playback_references:
+      - id: mcgregor_etal_1981
+        url: https://doi.org/10.1016/S0003-3472(81)80157-4
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Song is central in Gompertz 1961 and a major subject of great tit playback studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Repeated tonal phrase structure and song-type variation are well established.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and courtship functions are strongly supported by field and playback evidence.
+
+  - name: mobbing call
+    alternative_names:
+      - scold
+      - chick-a-dee-like call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, noisy, multi_component]
+    acoustic_description: Repeated harsh high-frequency call elements produced in bouts during mobbing.
+    semantic_keywords: [alarm, predator, recruitment, group_coordination]
+    semantic_description: Produced toward predators and recruits nearby birds into mobbing or vigilance.
+    acoustic_references:
+      - id: gompertz_1961
+        url: https://doi.org/10.1111/j.1439-0310.1961.tb00383.x
+      - id: templeton_greene_2007
+        url: https://doi.org/10.1098/rsbl.2007.0427
+    semantic_references:
+      - id: templeton_greene_2007
+        url: https://doi.org/10.1098/rsbl.2007.0427
+      - id: gompertz_1961
+        url: https://doi.org/10.1111/j.1439-0310.1961.tb00383.x
+    playback_references:
+      - id: templeton_greene_2007
+        url: https://doi.org/10.1098/rsbl.2007.0427
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Mobbing calls are a standard great tit call class and have focused predator-response studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Repeated harsh structure is consistent, though note composition varies with threat.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Predator alarm and recruitment functions are supported by playback evidence.
+
+  - name: seet alarm
+    alternative_names:
+      - aerial alarm call
+      - high see
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, short, quiet]
+    acoustic_description: Short, thin, high-frequency tonal alarm note.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced in response to aerial predators or sudden danger and can prompt freezing or vigilance.
+    acoustic_references:
+      - id: gompertz_1961
+        url: https://doi.org/10.1111/j.1439-0310.1961.tb00383.x
+      - id: krams_etal_2010
+        url: https://doi.org/10.1098/rsbl.2010.0307
+    semantic_references:
+      - id: krams_etal_2010
+        url: https://doi.org/10.1098/rsbl.2010.0307
+      - id: gompertz_1961
+        url: https://doi.org/10.1111/j.1439-0310.1961.tb00383.x
+    playback_references:
+      - id: krams_etal_2010
+        url: https://doi.org/10.1098/rsbl.2010.0307
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: High seet-like alarm notes are recognized in great tit repertoire accounts and alarm-call studies, though labels vary.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Short high tonal form is stable, but fine naming differs across studies.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Predator alarm function is supported by playback and field studies.
+
+  - name: contact call
+    alternative_names:
+      - tsee call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, high_frequency, tonal, quiet]
+    acoustic_description: Short, quiet, high-frequency tonal call, often used singly or in soft exchanges.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used in flock contact, pair contact, and close-range coordination.
+    acoustic_references:
+      - id: gompertz_1961
+        url: https://doi.org/10.1111/j.1439-0310.1961.tb00383.x
+    semantic_references:
+      - id: gompertz_1961
+        url: https://doi.org/10.1111/j.1439-0310.1961.tb00383.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Contact calls are included in the classic repertoire but have less focused experimental work than song and alarm calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description relies mainly on repertoire-level accounts.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and coordination contexts are consistently described observationally.
+references:
+  gompertz_1961:
+    citation: "Gompertz, T. (1961). The vocabulary of the great tit. Behaviour, 17, 193-205."
+    url: https://doi.org/10.1163/156853961X00174
+    doi: 10.1163/156853961X00174
+  mcgregor_etal_1981:
+    citation: "McGregor, P. K., Krebs, J. R., & Perrins, C. M. (1981). Song repertoires and lifetime reproductive success in the great tit. American Naturalist, 118, 149-159."
+    url: https://doi.org/10.1086/283812
+    doi: 10.1086/283812
+  templeton_greene_2007:
+    citation: "Templeton, C. N., & Greene, E. (2007). Nuthatches eavesdrop on variations in heterospecific chickadee mobbing alarm calls. Proceedings of the National Academy of Sciences, 104, 5479-5482."
+    url: https://doi.org/10.1073/pnas.0605183104
+    doi: 10.1073/pnas.0605183104
+  krams_etal_2010:
+    citation: "Krams, I., Krama, T., Igaune, K., & Mand, R. (2010). Long-lasting mobbing of the pied flycatcher increases the risk of nest predation by the tawny owl. Biology Letters, 6, 417-419."
+    url: https://doi.org/10.1098/rsbl.2009.0907
+    doi: 10.1098/rsbl.2009.0907

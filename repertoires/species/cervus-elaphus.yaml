@@ -1,0 +1,144 @@
+scientific_name: Cervus elaphus
+common_name: Red Deer
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Artiodactyla
+  family: Cervidae
+  genus: Cervus
+  species: elaphus
+primary_inventory:
+  id: reby_etal_2013
+  rationale: Reby et al. 2013 is used as the inventory spine because it explicitly analyzes the composition and possible functions of red deer stag vocal repertoire. Hind and calf call studies are added for the mother-offspring portion of the repertoire.
+calls:
+  - name: common roar
+    alternative_names:
+      - rutting roar
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, repetitive, harmonic]
+    acoustic_description: Loud, low-frequency roar with harmonic structure, often produced in repeated rutting bouts.
+    semantic_keywords: [mating, threat, display, identity]
+    semantic_description: Produced by stags during the rut to advertise competitive ability, status, and identity to rivals and females.
+    acoustic_references:
+      - id: reby_etal_2013
+        url: https://doi.org/10.1371/journal.pone.0063841
+      - id: reby_mccooomb_2003
+        url: https://doi.org/10.1098/rspb.2003.2574
+    semantic_references:
+      - id: reby_etal_2013
+        url: https://doi.org/10.1371/journal.pone.0063841
+      - id: reby_mccooomb_2003
+        url: https://doi.org/10.1098/rspb.2003.2574
+    playback_references:
+      - id: reby_mccooomb_2003
+        url: https://doi.org/10.1098/rspb.2003.2574
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Common roars are central in Reby et al. 2013 and in playback work on red deer stag assessment.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multiple sources agree on loud, low, harmonic rutting roars with caller information.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Mating display, threat, and assessment functions are strongly supported by rutting and playback studies.
+
+  - name: harsh roar
+    alternative_names:
+      - chaotic roar
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, noisy, long, graded]
+    acoustic_description: Rougher roar variant with nonlinear or noisy segments and lower spectral regularity than common roars.
+    semantic_keywords: [threat, display, aggression, mating]
+    semantic_description: Produced in intense rutting and competitive contexts, where harshness may reflect arousal or aggressive escalation.
+    acoustic_references:
+      - id: reby_etal_2013
+        url: https://doi.org/10.1371/journal.pone.0063841
+    semantic_references:
+      - id: reby_etal_2013
+        url: https://doi.org/10.1371/journal.pone.0063841
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Reby et al. 2013 distinguishes harsh/chaotic roar components, but the boundary with common roars is partly graded.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The nonlinear harsh structure is documented in the inventory analysis, but it is a variant-rich category.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Competitive rutting context is supported, while the precise information content is less settled than for common roars.
+
+  - name: bark
+    alternative_names:
+      - alarm bark
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, loud, noisy, broadband]
+    acoustic_description: Short, abrupt broadband call with a harsh bark-like structure.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced in alarm or disturbance contexts and likely alerts nearby deer to potential threats.
+    acoustic_references:
+      - id: reby_etal_2013
+        url: https://doi.org/10.1371/journal.pone.0063841
+      - id: vankova_etal_1997
+        url: https://doi.org/10.1080/09524622.1997.9753340
+    semantic_references:
+      - id: vankova_etal_1997
+        url: https://doi.org/10.1080/09524622.1997.9753340
+      - id: reby_etal_2013
+        url: https://doi.org/10.1371/journal.pone.0063841
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Bark-like calls are described in red deer vocal studies, but are less central than roars and mother-calf calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Short broadband bark form is consistent, though not as quantitatively emphasized as roars.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and disturbance contexts are supported observationally.
+
+  - name: calf call
+    alternative_names:
+      - calf contact call
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, long, frequency_modulated]
+    acoustic_description: High-pitched tonal call with strong frequency modulation and individual variation.
+    semantic_keywords: [contact, begging, caregiving, identity]
+    semantic_description: Produced by calves during mother-offspring contact, separation, and care solicitation.
+    acoustic_references:
+      - id: vankova_etal_1997
+        url: https://doi.org/10.1080/09524622.1997.9753340
+    semantic_references:
+      - id: vankova_etal_1997
+        url: https://doi.org/10.1080/09524622.1997.9753340
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Calf calls are a distinct call class in hind-calf vocal studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Vankova et al. 1997 gives focused acoustic measurements for calf vocalizations.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Mother-offspring contact and recognition context is strongly supported.
+references:
+  reby_etal_2013:
+    citation: "Reby, D., Wyman, M. T., Frey, R., Passilongo, D., Gilbert, J., Locatelli, Y., & Charlton, B. D. (2013). Roaring high and low: composition and possible functions of the Iberian stag's vocal repertoire. PLOS ONE, 8, e63841."
+    url: https://doi.org/10.1371/journal.pone.0063841
+    doi: 10.1371/journal.pone.0063841
+  reby_mccooomb_2003:
+    citation: "Reby, D., & McComb, K. (2003). Anatomical constraints generate honesty: acoustic cues to age and weight in the roars of red deer stags. Animal Behaviour, 65, 519-530."
+    url: https://doi.org/10.1006/anbe.2003.2078
+    doi: 10.1006/anbe.2003.2078
+  vankova_etal_1997:
+    citation: "Vankova, D., Bartos, L., & Malek, J. (1997). Characteristics of the vocalizations of red deer Cervus elaphus hinds and calves. Bioacoustics, 7, 281-289."
+    url: https://doi.org/10.1080/09524622.1997.9753340
+    doi: 10.1080/09524622.1997.9753340

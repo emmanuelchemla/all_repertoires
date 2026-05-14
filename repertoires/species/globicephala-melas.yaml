@@ -1,0 +1,154 @@
+scientific_name: Globicephala melas
+common_name: Long-finned Pilot Whale
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Cetacea
+  family: Delphinidae
+  genus: Globicephala
+  species: melas
+primary_inventory:
+  id: courts_etal_2020
+  rationale: Courts et al. 2020 is used as the primary inventory because it categorizes long-finned pilot whale vocalizations into stereotypical, variable, biphonic, multi-component, sequenced, whistle, burst-pulse, and click-like forms across a large field dataset.
+calls:
+  - name: stereotyped call
+    alternative_names:
+      - discrete call
+      - contour call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: true
+      note: Vocal repertoires can be group- or population-specific, as shown by Vester et al. 2014 and Courts et al. 2020.
+    acoustic_keywords: [tonal, frequency_modulated, multi_component, long]
+    acoustic_description: Recurrent frequency-modulated call type with stable contour features and sometimes multiple components.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Used in social contact and group coordination, with repertoire composition carrying group-level identity information.
+    acoustic_references:
+      - id: courts_etal_2020
+        url: https://doi.org/10.1038/s41598-020-74111-y
+      - id: vester_etal_2014
+        url: https://arxiv.org/abs/1410.4711
+    semantic_references:
+      - id: vester_etal_2014
+        url: https://arxiv.org/abs/1410.4711
+      - id: courts_etal_2020
+        url: https://doi.org/10.1038/s41598-020-74111-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Stereotyped calls are a central category in Courts et al. 2020 and group-specific repertoire work by Vester et al. 2014.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on stable call contours and multi-component variation.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social and identity roles are supported by repertoire structure, but specific receiver responses are not fully resolved.
+
+  - name: variable call
+    alternative_names:
+      - graded call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, graded, multi_component, long]
+    acoustic_description: Frequency-modulated call with flexible contour and component structure rather than a fixed stereotyped form.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Produced in social contexts and likely contributes to flexible group coordination.
+    acoustic_references:
+      - id: courts_etal_2020
+        url: https://doi.org/10.1038/s41598-020-74111-y
+      - id: zwamborn_whitehead_2017
+        url: https://doi.org/10.1080/09524622.2016.1233457
+    semantic_references:
+      - id: zwamborn_whitehead_2017
+        url: https://doi.org/10.1080/09524622.2016.1233457
+      - id: courts_etal_2020
+        url: https://doi.org/10.1038/s41598-020-74111-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Variable calls are explicitly categorized by Courts et al. 2020 and appear in sequence-focused studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The category is acoustically broad by definition, despite clear support for variable modulated forms.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social coordination is supported by context, but exact functions vary.
+
+  - name: whistle
+    alternative_names:
+      - tonal whistle
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, high_frequency, frequency_modulated, long]
+    acoustic_description: Narrow-band tonal vocalization with modulated frequency contour and occasional harmonics.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used during social interactions and group cohesion, consistent with whistle use in odontocetes.
+    acoustic_references:
+      - id: courts_etal_2020
+        url: https://doi.org/10.1038/s41598-020-74111-y
+      - id: visser_etal_2017
+        url: https://doi.org/10.1007/s00265-017-2397-y
+    semantic_references:
+      - id: visser_etal_2017
+        url: https://doi.org/10.1007/s00265-017-2397-y
+      - id: courts_etal_2020
+        url: https://doi.org/10.1038/s41598-020-74111-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Whistles are a standard pilot whale sound class in Courts et al. 2020 and context studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Tonal, frequency-modulated whistle structure is consistent across sources.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Social contact use is supported, but detailed signal meaning is less resolved.
+
+  - name: echolocation click train
+    alternative_names:
+      - click train
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, broadband, short, pulsed, repetitive]
+    acoustic_description: Series of brief broadband clicks with variable inter-click intervals.
+    semantic_keywords: [food, attention, group_coordination]
+    semantic_description: Used during orientation and foraging, with clicking activity changing across behavioral contexts.
+    acoustic_references:
+      - id: courts_etal_2020
+        url: https://doi.org/10.1038/s41598-020-74111-y
+      - id: visser_etal_2017
+        url: https://doi.org/10.1007/s00265-017-2397-y
+    semantic_references:
+      - id: visser_etal_2017
+        url: https://doi.org/10.1007/s00265-017-2397-y
+      - id: courts_etal_2020
+        url: https://doi.org/10.1038/s41598-020-74111-y
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Click trains are recognized in the primary acoustic classification and behavioral-context work.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Repeated broadband click structure is well established.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Foraging and orientation functions are clear, while communicative use is treated cautiously.
+references:
+  courts_etal_2020:
+    citation: "Courts, R., Erbe, C., Wellard, R., Boisseau, O., Jenner, K. C., Jenner, M.-N., & Parnum, I. (2020). Australian long-finned pilot whales emit stereotypical, variable, biphonic, multi-component, and sequenced vocalisations. Scientific Reports, 10, 20609."
+    url: https://doi.org/10.1038/s41598-020-74111-y
+    doi: 10.1038/s41598-020-74111-y
+  vester_etal_2014:
+    citation: "Vester, H., Hammerschmidt, K., Timme, M., & Hallerberg, S. (2014). Bag-of-calls analysis reveals group-specific vocal repertoire in long-finned pilot whales. arXiv:1410.4711."
+    url: https://arxiv.org/abs/1410.4711
+  zwamborn_whitehead_2017:
+    citation: "Zwamborn, E. M. J., & Whitehead, H. (2017). Repeated call sequences and behavioural context in long-finned pilot whales off Cape Breton, Nova Scotia, Canada. Bioacoustics, 26, 169-183."
+    url: https://doi.org/10.1080/09524622.2016.1233457
+    doi: 10.1080/09524622.2016.1233457
+  visser_etal_2017:
+    citation: "Visser, F., et al. (2017). Vocal foragers and silent crowds: context-dependent vocal variation in Northeast Atlantic long-finned pilot whales. Behavioral Ecology and Sociobiology, 71, 170."
+    url: https://doi.org/10.1007/s00265-017-2397-y
+    doi: 10.1007/s00265-017-2397-y
