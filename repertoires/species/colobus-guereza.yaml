@@ -1,0 +1,330 @@
+scientific_name: Colobus guereza
+common_name: Mantled guereza
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Colobus
+  species: guereza
+primary_inventory:
+  id: marler_1972
+  rationale: "Marler 1972 (Behaviour 42:175-197) is used as the primary inventory because it is the foundational and most widely cited enumeration of the Colobus guereza vocal repertoire. Marler reports six sound categories based on field observation and spectrographic analysis of Budongo Forest groups in Uganda: roaring, snorting, purring, cawing, squeaking and screaming, and tongue clicking. Later wild work (Oates 1977; Harris and colleagues; Schel and colleagues) reuses and refines these categories. This file lists the six Marler categories and treats Marler's grouped squeak and scream entry as a single graded distress class, as Marler himself did."
+calls:
+  - name: roar
+    in_primary_inventory: true
+    alternative_names:
+      - roaring
+      - roaring phrase
+      - male roar
+      - long-distance call
+      - dawn chorus call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - low_frequency
+      - long
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: "A loud, low-pitched, long-distance vocalization produced by adult males as a sequence of discrete roaring phrases. Harris et al. 2006 quantify formant dispersion and report that roars are produced with the subhyoid air sac inflated rather than with marked laryngeal movement, and that formant dispersion is lower than expected for body size. Schel and Zuberbuhler 2009 describe roaring phrases as acoustically variable units that can be assembled into longer or shorter sequences depending on context, and Schel and Zuberbuhler 2012 reports that the duration of the first roaring phrase is longer in predawn roars than in eagle-context roars and that call repetition rate is faster in eagle-context roars."
+    semantic_keywords:
+      - territorial
+      - spacing
+      - display
+      - alarm
+      - predator
+      - group_coordination
+    semantic_description: "Produced by the single resident adult male of a group, mainly at night and dawn during contagious choruses, but also during the day in response to leopards and crowned eagles or to neighboring groups. Marler 1969 and 1972 interpret roaring as a long-distance intergroup spacing signal rather than as direct territorial defense. Harris et al. 2012 frames dawn chorusing as a competitive male display directed at rivals and possibly at within-group females, while Schel and Zuberbuhler 2009 and Schel et al. 2010 show that predator-context roars are structured into predator-specific sequences and that receivers respond in predator-specific ways."
+    acoustic_references:
+      - id: marler_1972
+      - id: harris_etal_2006
+        url: https://doi.org/10.1111/j.1439-0310.2006.01247.x
+      - id: schel_tranquilli_zuberbuhler_2009
+        url: https://doi.org/10.1037/a0014280
+      - id: schel_zuberbuhler_2012
+        url: https://doi.org/10.1016/j.beproc.2012.05.004
+    semantic_references:
+      - id: marler_1969
+        url: https://doi.org/10.1126/science.163.3862.93
+      - id: marler_1972
+      - id: schel_tranquilli_zuberbuhler_2009
+        url: https://doi.org/10.1037/a0014280
+      - id: schel_candiotti_zuberbuhler_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.07.034
+      - id: harris_etal_2012_dawn
+        url: https://doi.org/10.1007/s00265-011-1282-3
+    playback_references:
+      - id: schel_candiotti_zuberbuhler_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.07.034
+      - id: schel_zuberbuhler_2012
+        url: https://doi.org/10.1016/j.beproc.2012.05.004
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Roaring is the most thoroughly documented Colobus guereza call type: Marler 1969 and 1972 introduce it as the central long-distance male call, Harris et al. 2006 and Harris et al. 2012 study its acoustic structure and chorusing, and Schel and Zuberbuhler 2009, Schel et al. 2010, and Schel and Zuberbuhler 2012 quantify predator-context roaring. Agreement is strong across independent sources."
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: "Harris et al. 2006 provides quantitative acoustic and anatomical evidence (formant dispersion, subhyoid air sac), Schel and Zuberbuhler 2009 and 2012 give measurements of phrase duration, repetition rate, and predator-context sequence assembly, and Harris et al. 2012 confirms acoustic individuality. Independent acoustic agreement is strong."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Marler 1969 and 1972 link roaring to intergroup spacing, Harris et al. 2012 supports a competitive male display function in dawn chorusing, and Schel and Zuberbuhler 2009, Schel et al. 2010, and Schel and Zuberbuhler 2012 demonstrate predator-specific production and receiver responses. Multiple independent semantic lines converge."
+
+  - name: snort
+    in_primary_inventory: true
+    alternative_names:
+      - male snort
+      - alarm snort
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - broadband
+      - noisy
+      - abrupt
+      - low_frequency
+    acoustic_description: "A short, broadband noisy call with a sudden onset. Schel and Zuberbuhler 2009 measure snorts as having most energy below about 4 kHz with a main peak near 1 kHz, distinct from the more tonal and structured roaring phrases. Marler 1972 describes snorts as brief explosive sounds delivered singly or as the leading unit before a roaring sequence."
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - attention
+    semantic_description: "Produced by adult males, and occasionally by females in disturbed contexts, as a response to potential predators or as a low-level threat or pre-aggression warning. Schel and Zuberbuhler 2009 show that leopard encounters typically elicit a snort followed by a few roaring phrases, while eagle encounters elicit sequences with no snorts and many phrases, making snort presence a predator-context cue."
+    acoustic_references:
+      - id: marler_1972
+      - id: schel_tranquilli_zuberbuhler_2009
+        url: https://doi.org/10.1037/a0014280
+    semantic_references:
+      - id: marler_1972
+      - id: schel_tranquilli_zuberbuhler_2009
+        url: https://doi.org/10.1037/a0014280
+      - id: schel_candiotti_zuberbuhler_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.07.034
+    playback_references:
+      - id: schel_candiotti_zuberbuhler_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.07.034
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: "Snorts are one of Marler 1972's six core call categories and are quantified as a distinct alarm call type by Schel and Zuberbuhler 2009 and used in the Schel et al. 2010 playback experiments. Agreement across independent sources is strong."
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: "Schel and Zuberbuhler 2009 gives quantitative acoustic detail (broadband structure, frequency content), and Marler 1972 provides the qualitative spectrographic baseline. Few additional independent acoustic studies exist for guereza snorts, so agreement is medium rather than strong."
+    semantic_description_agreement: strong
+    semantic_description_explanation: "Marler 1972 describes snorts in threat and alarm contexts, Schel and Zuberbuhler 2009 quantitatively links snort presence to leopard-context sequences, and Schel et al. 2010 demonstrates that receivers respond in predator-specific ways to snort-containing sequences. Multiple independent semantic sources converge."
+
+  - name: purr
+    in_primary_inventory: true
+    alternative_names:
+      - purring
+      - soft purr
+      - group-movement purr
+    scope:
+      life_stages:
+        - adult
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - quiet
+      - long
+      - tonal
+    acoustic_description: "A soft, low-pitched purring sound described by Marler 1972 as audible only at close range and rarely encountered in field recordings. Detailed modern spectrographic measurements specific to guereza purrs are not available beyond Marler's qualitative description."
+    semantic_keywords:
+      - group_coordination
+      - contact
+      - affiliation
+    semantic_description: "Produced before or during group movements, apparently coordinating departure or progression. Marler 1972 reports that purring accompanies group movement; Oates 1977 includes it in the close-range social repertoire associated with group cohesion."
+    acoustic_references:
+      - id: marler_1972
+      - id: oates_1977
+        url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    semantic_references:
+      - id: marler_1972
+      - id: oates_1977
+        url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Purring is included as one of Marler 1972's six categories and is mentioned in Oates 1977's detailed social-behavior account, but it is rarely targeted by later acoustic or experimental work. Agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "Only qualitative descriptions of guereza purrs are available, with no published quantitative spectrographic analysis specific to this call type. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Marler 1972 and Oates 1977 consistently associate purrs with group-movement and close-range social contexts, but no playback or quantitative production study tests this function. Semantic agreement is medium."
+
+  - name: caw
+    in_primary_inventory: true
+    alternative_names:
+      - cawing
+      - mild distress call
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - noisy
+      - broadband
+      - repetitive
+      - graded
+    acoustic_description: "A short, harsh, repeated cawing sound described by Marler 1972 for adult females, juveniles, and infants. Spectrographic detail beyond Marler's account is limited, and the call shades acoustically toward squeaking under higher arousal."
+    semantic_keywords:
+      - distress
+      - threat
+      - attention
+      - alarm
+    semantic_description: "Used in situations of mild distress or mild threat. Marler 1972 reports it from adult females, juveniles, and infants in low-level disturbance contexts, distinct from the more intense squeak and scream class. Oates 1977 retains it in the close-range disturbance repertoire."
+    acoustic_references:
+      - id: marler_1972
+      - id: oates_1977
+        url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    semantic_references:
+      - id: marler_1972
+      - id: oates_1977
+        url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Cawing is one of Marler 1972's six categories and appears in Oates 1977's social-behavior account, but it has not been the subject of dedicated follow-up acoustic or playback work. Agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The available acoustic information is qualitative, with no modern quantitative analysis specific to cawing. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Marler 1972 and Oates 1977 agree that cawing is produced in mild-distress and mild-threat contexts by females, juveniles, and infants, but functional inferences are not experimentally tested. Semantic agreement is medium."
+
+  - name: squeak and scream
+    in_primary_inventory: true
+    alternative_names:
+      - squeak
+      - scream
+      - squeaking
+      - screaming
+      - distress scream
+      - acute-distress call
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - graded
+    acoustic_description: "A graded high-pitched, high-amplitude class of calls ranging from shorter squeaks to longer, noisier screams. Marler 1972 treats squeaks and screams as a continuous graded category given in increasing arousal, and provides the qualitative spectrographic baseline. No modern quantitative acoustic analysis specifically targets this guereza call class."
+    semantic_keywords:
+      - distress
+      - aggression
+      - submission
+      - caregiving
+      - recruitment
+    semantic_description: "Produced by adult females, juveniles, and infants in acute distress, including situations in which an infant is threatened or handled, during severe agonistic interactions, and during disturbances by neighboring groups or humans. Marler 1972 and Oates 1977 agree that the call functions in soliciting maternal or group attention and in expressing strong agonistic arousal."
+    acoustic_references:
+      - id: marler_1972
+      - id: oates_1977
+        url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    semantic_references:
+      - id: marler_1972
+      - id: oates_1977
+        url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Marler 1972 explicitly groups squeaks and screams as a single graded category in his six-class repertoire and Oates 1977 reuses the same grouping. Later guereza work focuses on roars and snorts and does not test squeak-scream boundaries, so existence as a discrete class is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The acoustic description rests almost entirely on Marler 1972's qualitative spectrograms, with no follow-up quantitative analyses targeted on guereza squeaks and screams. Acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Marler 1972 and Oates 1977 consistently place this class in acute-distress and severe-agonistic contexts. Lacking call-specific playback or quantitative production tests, semantic agreement is medium."
+
+  - name: tongue click
+    in_primary_inventory: true
+    alternative_names:
+      - tongue clicking
+      - click
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - broadband
+      - abrupt
+      - quiet
+      - pulsed
+    acoustic_description: "A brief, broadband, non-phonated click produced by sharp movement of the tongue against the palate. Marler 1972 explicitly classes it as a non-vocal sound and reports it as a short, sharp transient audible only at close to moderate range. No detailed quantitative kinematic or acoustic analysis specific to guereza is published."
+    semantic_keywords:
+      - threat
+      - territorial
+      - display
+      - aggression
+    semantic_description: "Used in close-range agonistic and territorial contexts. Marler 1972 reports tongue clicks in territorial-defense interactions, and Oates 1977 describes the click in inter- and intra-group threat displays. It is treated as a mild aggressive signal rather than a predator alarm."
+    acoustic_references:
+      - id: marler_1972
+      - id: oates_1977
+        url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    semantic_references:
+      - id: marler_1972
+      - id: oates_1977
+        url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: "Tongue clicking is included in Marler 1972 as the sole non-vocal sound in his six-category inventory and is reused by Oates 1977, but modern acoustic or playback work does not isolate it. Agreement is medium."
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: "The acoustic description rests on Marler 1972's qualitative spectrographic baseline. No quantitative measurements specific to guereza tongue clicks are available, so acoustic agreement is weak."
+    semantic_description_agreement: medium
+    semantic_description_explanation: "Marler 1972 and Oates 1977 agree on a close-range agonistic and territorial threat context for tongue clicking. Without experimental tests, semantic agreement is medium rather than strong."
+
+references:
+  marler_1969:
+    citation: "Marler P. 1969. Colobus guereza: territoriality and group composition. Science 163(3862): 93-95."
+    url: https://doi.org/10.1126/science.163.3862.93
+    doi: 10.1126/science.163.3862.93
+  marler_1972:
+    citation: "Marler P. 1972. Vocalizations of East African monkeys II: black and white colobus. Behaviour 42(3-4): 175-197."
+    url: https://brill.com/view/journals/beh/42/3-4/article-p175_1.xml
+    doi: 10.1163/156853972X00248
+  oates_1977:
+    citation: "Oates JF. 1977. The social life of a black-and-white colobus monkey, Colobus guereza. Zeitschrift fur Tierpsychologie 45(1): 1-60."
+    url: https://doi.org/10.1111/j.1439-0310.1977.tb01007.x
+    doi: 10.1111/j.1439-0310.1977.tb01007.x
+  harris_etal_2006:
+    citation: "Harris TR, Fitch WT, Goldstein LM, Fashing PJ. 2006. Black and white colobus monkey (Colobus guereza) roars as a source of both honest and exaggerated information about body mass. Ethology 112(9): 911-920."
+    url: https://doi.org/10.1111/j.1439-0310.2006.01247.x
+    doi: 10.1111/j.1439-0310.2006.01247.x
+  harris_etal_2012_dawn:
+    citation: "Harris TR, Fischer J, Fashing PJ. 2012. Dawn chorusing in guereza colobus monkeys. Behavioral Ecology and Sociobiology 66(4): 561-571."
+    url: https://doi.org/10.1007/s00265-011-1282-3
+    doi: 10.1007/s00265-011-1282-3
+  schel_tranquilli_zuberbuhler_2009:
+    citation: "Schel AM, Tranquilli S, Zuberbuhler K. 2009. The alarm call system of two species of black-and-white colobus monkeys (Colobus polykomos and Colobus guereza). Journal of Comparative Psychology 123(2): 136-150."
+    url: https://doi.org/10.1037/a0014280
+    doi: 10.1037/a0014280
+  schel_candiotti_zuberbuhler_2010:
+    citation: "Schel AM, Candiotti A, Zuberbuhler K. 2010. Predator-deterring alarm call sequences in Guereza colobus monkeys are meaningful to conspecifics. Animal Behaviour 80(5): 799-808."
+    url: https://doi.org/10.1016/j.anbehav.2010.07.034
+    doi: 10.1016/j.anbehav.2010.07.034
+  schel_zuberbuhler_2012:
+    citation: "Schel AM, Zuberbuhler K. 2012. Predator and non-predator long-distance calls in Guereza colobus monkeys. Behavioural Processes 91(1): 41-49."
+    url: https://doi.org/10.1016/j.beproc.2012.05.004
+    doi: 10.1016/j.beproc.2012.05.004
