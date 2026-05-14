@@ -1,0 +1,148 @@
+scientific_name: Lycaon pictus
+common_name: African Wild Dog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Canidae
+  genus: Lycaon
+  species: pictus
+primary_inventory:
+  id: robbins_mcenery_1983
+  rationale: No single recent paper provides a complete modern acoustic inventory for African wild dogs. Robbins and McEnery 1983 is used as the primary inventory because it describes the species' vocal behavior and named call types in social context, supplemented by later work on group coordination and voting calls.
+calls:
+  - name: hoo call
+    alternative_names:
+      - hoo
+      - rally hoo
+    in_primary_inventory: true
+    scope: &all_scope
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [long, tonal, low_frequency, loud, frequency_modulated]
+    acoustic_description: Long, far-carrying tonal call with low-frequency energy and frequency modulation.
+    semantic_keywords: [contact, group_coordination, spacing]
+    semantic_description: Used as a long-distance contact call when pack members are separated or during rallying before movement.
+    acoustic_references:
+      - id: robbins_mcenery_1983
+        url: https://doi.org/10.1007/BF00303177
+      - id: walker_etal_2017
+        url: https://doi.org/10.1098/rspb.2017.0347
+    semantic_references:
+      - id: robbins_mcenery_1983
+        url: https://doi.org/10.1007/BF00303177
+      - id: walker_etal_2017
+        url: https://doi.org/10.1098/rspb.2017.0347
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Hoo calls are a classic African wild dog contact call in Robbins and McEnery 1983 and are referenced in later rally behavior work.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Long tonal structure is supported, but detailed modern acoustic measurements are limited.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Long-distance contact and rally coordination functions are consistently described.
+
+  - name: twitter
+    alternative_names:
+      - greeting twitter
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [high_frequency, repetitive, tonal, short]
+    acoustic_description: Rapid series of high-frequency tonal notes produced in close-range bouts.
+    semantic_keywords: [affiliation, group_coordination, contact]
+    semantic_description: Used during greetings, rallies, and affiliative pack interactions.
+    acoustic_references:
+      - id: robbins_mcenery_1983
+        url: https://doi.org/10.1007/BF00303177
+    semantic_references:
+      - id: robbins_mcenery_1983
+        url: https://doi.org/10.1007/BF00303177
+      - id: walker_etal_2017
+        url: https://doi.org/10.1098/rspb.2017.0347
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Twitters are named in the classic repertoire and associated with pack greetings, but later work focuses more on rally decisions than acoustic classification.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is mostly qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Greeting and rally contexts are supported observationally, but receiver effects are not well tested.
+
+  - name: bark
+    alternative_names:
+      - alarm bark
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [loud, short, abrupt, noisy, broadband]
+    acoustic_description: Short abrupt broadband call with harsh bark-like quality.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced during disturbance or threat contexts to alert pack members.
+    acoustic_references:
+      - id: robbins_mcenery_1983
+        url: https://doi.org/10.1007/BF00303177
+    semantic_references:
+      - id: robbins_mcenery_1983
+        url: https://doi.org/10.1007/BF00303177
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Bark calls are described in the repertoire, though they are less intensively studied than hoo and rally sounds.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The abrupt broadband form is supported by qualitative descriptions but lacks extensive quantitative treatment.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm and threat contexts are reported observationally.
+
+  - name: whine
+    alternative_names:
+      - whimper
+    in_primary_inventory: true
+    scope: *all_scope
+    acoustic_keywords: [high_frequency, tonal, long, frequency_modulated]
+    acoustic_description: High-pitched tonal call with variable duration and pitch modulation.
+    semantic_keywords: [submission, affiliation, begging, contact]
+    semantic_description: Produced in submissive, affiliative, or care-related close interactions within the pack.
+    acoustic_references:
+      - id: robbins_mcenery_1983
+        url: https://doi.org/10.1007/BF00303177
+    semantic_references:
+      - id: robbins_mcenery_1983
+        url: https://doi.org/10.1007/BF00303177
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Whines are included in the classic wild dog repertoire but are not a major focus of later quantitative studies.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic support is mostly qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Submission and affiliation contexts are consistent with canid social behavior and the inventory description.
+
+  - name: sneeze
+    alternative_names:
+      - rally sneeze
+    in_primary_inventory: false
+    scope: *all_scope
+    acoustic_keywords: [short, abrupt, noisy, broadband]
+    acoustic_description: Short, abrupt nasal exhalation sound with broadband noise.
+    semantic_keywords: [group_coordination, attention]
+    semantic_description: Produced during rallies and associated with collective movement decisions, where sneeze counts predict departure likelihood.
+    acoustic_references:
+      - id: walker_etal_2017
+        url: https://doi.org/10.1098/rspb.2017.0347
+    semantic_references:
+      - id: walker_etal_2017
+        url: https://doi.org/10.1098/rspb.2017.0347
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Sneeze vocalizations are not a classic inventory call in the same way as hoos or barks, but Walker et al. 2017 treats them as a distinct rally signal.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description is broad because the focused study emphasizes voting function more than detailed spectrographic classification.
+    semantic_description_agreement: strong
+    semantic_description_explanation: The association with rally decision-making is strongly supported by Walker et al. 2017.
+references:
+  robbins_mcenery_1983:
+    citation: "Robbins, R. L., & McCreery, E. K. (1983). Vocal communication in free-ranging African wild dogs (Lycaon pictus). Behaviour, 84, 144-162."
+    url: https://doi.org/10.1163/156853983X00316
+    doi: 10.1163/156853983X00316
+  walker_etal_2017:
+    citation: "Walker, R. H., King, A. J., McNutt, J. W., & Jordan, N. R. (2017). Sneeze to leave: African wild dogs (Lycaon pictus) use variable quorum thresholds facilitated by sneezes in collective decisions. Proceedings of the Royal Society B, 284, 20170347."
+    url: https://doi.org/10.1098/rspb.2017.0347
+    doi: 10.1098/rspb.2017.0347
