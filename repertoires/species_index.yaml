@@ -28,6 +28,16 @@ families:
     - { scientific_name: Papio anubis, common_name: Olive Baboon }
     - { scientific_name: Theropithecus gelada, common_name: Gelada }
     - { scientific_name: Colobus guereza, common_name: Mantled Guereza }
+    - { scientific_name: Cercopithecus ascanius, common_name: Red-tailed Monkey }
+    - { scientific_name: Cercopithecus neglectus, common_name: De Brazza's Monkey }
+    - { scientific_name: Cercopithecus pogonias, common_name: Crowned Guenon }
+    - { scientific_name: Cercopithecus mona, common_name: Mona Monkey }
+    - { scientific_name: Allochrocebus lhoesti, common_name: L'Hoest's Monkey }
+    - { scientific_name: Erythrocebus patas, common_name: Patas Monkey }
+    - { scientific_name: Miopithecus talapoin, common_name: Talapoin Monkey }
+    - { scientific_name: Mandrillus sphinx, common_name: Mandrill }
+    - { scientific_name: Mandrillus leucophaeus, common_name: Drill }
+    - { scientific_name: Papio cynocephalus, common_name: Yellow Baboon }
 
   Atelidae:
     - { scientific_name: Alouatta palliata, common_name: Mantled Howler Monkey }
@@ -162,6 +172,7 @@ families:
 
   Estrildidae:
     - { scientific_name: Taeniopygia guttata, common_name: Zebra Finch }
+    - { scientific_name: Lonchura striata domestica, common_name: Bengalese Finch }
 
   Fringillidae:
     - { scientific_name: Serinus canaria, common_name: Canary }
@@ -180,6 +191,15 @@ families:
 
   Mimidae:
     - { scientific_name: Mimus polyglottos, common_name: Northern Mockingbird }
+
+  Troglodytidae:
+    - { scientific_name: Pheugopedius euophrys, common_name: Plain-tailed Wren }
+
+  Ploceidae:
+    - { scientific_name: Plocepasser mahali, common_name: White-browed Sparrow-weaver }
+
+  Pomatostomidae:
+    - { scientific_name: Pomatostomus ruficeps, common_name: Chestnut-crowned Babbler }
 
   Maluridae:
     - { scientific_name: Malurus cyaneus, common_name: Superb Fairywren }

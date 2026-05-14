@@ -655,6 +655,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Demartsev et al. 2018 strongly supports the low-conflict sunning context and turn-taking dynamics, while explicitly leaving precise informational content and bonding function open. The semantic label is therefore medium.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   manser_1999:
     citation: "Manser MB. 1999. Response of foraging group members to sentinel calls in suricates, Suricata suricatta. Proceedings of the Royal Society B 266(1423): 1013-1019."

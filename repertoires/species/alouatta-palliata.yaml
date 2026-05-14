@@ -128,6 +128,11 @@ calls:
     acoustic_description_explanation: Acoustic support comes mainly from the inventory sonagrams and qualitative descriptions.
     semantic_description_agreement: medium
     semantic_description_explanation: Distress and aggression contexts are supported observationally but not narrowly resolved.
+provenance:
+  - timestamp: '2026-05-14T06:47:53Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   baldwin_baldwin_1976:
     citation: "Baldwin, J. D., & Baldwin, J. I. (1976). Vocalizations of howler monkeys (Alouatta palliata) in southwestern Panama. Folia Primatologica, 26, 81-108."

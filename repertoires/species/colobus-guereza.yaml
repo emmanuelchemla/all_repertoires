@@ -295,6 +295,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: "Marler 1972 and Oates 1977 agree on a close-range agonistic and territorial threat context for tongue clicking. Without experimental tests, semantic agreement is medium rather than strong."
 
+provenance:
+  - timestamp: '2026-05-14T09:09:16Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   marler_1969:
     citation: "Marler P. 1969. Colobus guereza: territoriality and group composition. Science 163(3862): 93-95."

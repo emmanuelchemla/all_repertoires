@@ -605,6 +605,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Kruuk 1972 and Mills 1990 agree that soft squeals occur during reunion with a clan mate after separation. The context is consistent but based on observation rather than playback.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   kruuk_1972:
     citation: "Kruuk H. 1972. The Spotted Hyena: A Study of Predation and Social Behavior. Chicago: University of Chicago Press."

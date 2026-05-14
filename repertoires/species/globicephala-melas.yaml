@@ -136,6 +136,11 @@ calls:
     acoustic_description_explanation: Repeated broadband click structure is well established.
     semantic_description_agreement: medium
     semantic_description_explanation: Foraging and orientation functions are clear, while communicative use is treated cautiously.
+provenance:
+  - timestamp: '2026-05-14T08:55:16Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   courts_etal_2020:
     citation: "Courts, R., Erbe, C., Wellard, R., Boisseau, O., Jenner, K. C., Jenner, M.-N., & Parnum, I. (2020). Australian long-finned pilot whales emit stereotypical, variable, biphonic, multi-component, and sequenced vocalisations. Scientific Reports, 10, 20609."

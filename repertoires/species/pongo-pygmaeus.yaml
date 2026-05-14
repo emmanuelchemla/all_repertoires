@@ -122,6 +122,11 @@ calls:
     acoustic_description_explanation: Published acoustic quantification is sparse compared with long calls, so agreement is weak beyond the broad noisy pulsed form.
     semantic_description_agreement: medium
     semantic_description_explanation: Feeding and relaxed close-range use is supported by the inventory, but functions are not as experimentally resolved as alarm kiss squeaks.
+provenance:
+  - timestamp: '2026-05-13T19:00:11Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   hardus_etal_2009:
     citation: "Hardus, M. E., Lameira, A. R. E., Singleton, I., Morrogh-Bernard, H. C., Knott, C. D., Ancrenaz, M., Utami Atmoko, S. S., & Wich, S. A. (2009). A description of the orangutan's vocal and sound repertoire, with a focus on geographic variation. In Orangutans: Geographic Variation in Behavioral Ecology and Conservation. Oxford University Press."

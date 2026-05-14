@@ -253,6 +253,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Macedonia 1993 and Macedonia and Evans 1993 agree that antiraptor calls are produced in aerial predator contexts and elicit predator-appropriate responses. The semantic description is strongly supported.
 
+provenance:
+  - timestamp: '2026-05-14T05:53:01Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   bolt_2020:
     citation: "Bolt LM. 2020. Affiliative contact calls during group travel: chirp and wail vocalization use in the male ring-tailed lemur (Lemur catta). Folia Primatologica 91(6):575-594."

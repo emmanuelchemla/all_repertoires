@@ -153,6 +153,11 @@ calls:
     acoustic_description_explanation: The broad high abrupt form is described, but detailed acoustic agreement is sparse.
     semantic_description_agreement: medium
     semantic_description_explanation: Distress and startle contexts are consistently described in repertoire accounts.
+provenance:
+  - timestamp: '2026-05-14T06:48:48Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   feddersenpetersen_2000:
     citation: "Feddersen-Petersen, D. U. (2000). Vocalization of European wolves (Canis lupus lupus L.) and various dog breeds (Canis lupus f. fam.). Archiv fur Tierzucht, 43, 387-397."

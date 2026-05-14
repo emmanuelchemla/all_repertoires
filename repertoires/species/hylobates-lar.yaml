@@ -126,6 +126,11 @@ calls:
     acoustic_description_explanation: Comparative song literature supports the repeated tonal phrase form, but lar-specific quantitative descriptions focus more heavily on hoos and female great calls.
     semantic_description_agreement: medium
     semantic_description_explanation: Territorial display is well supported for songs as a whole, but isolated male-phrase function is less directly tested.
+provenance:
+  - timestamp: '2026-05-13T19:00:18Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   clarke_etal_2015:
     citation: "Clarke, E., Reichard, U. H., & Zuberbuhler, K. (2015). Context-specific close-range 'hoo' calls in wild gibbons (Hylobates lar). BMC Evolutionary Biology, 15, 56."

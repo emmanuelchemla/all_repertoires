@@ -437,6 +437,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Berthet et al. 2025 links peep yelps to joining and coordination in group encounters, night nesting, and travel-related combinations, while Clay and Zuberbuhler 2009 and 2011 document their role in food-associated sequences. The broad coordinative reading is well supported but context-sensitive.
 
+provenance:
+  - timestamp: '2026-05-13T11:10:53Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   wegdell_etal_2025:
     citation: "Wegdell F, Schamberg I, Berthet M, Rothacher Y, Dellwo V, Surbeck M, Townsend SW. 2025. An updated vocal repertoire of wild adult bonobos (Pan paniscus). PLoS One 20(9): e0330250."

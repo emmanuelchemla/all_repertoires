@@ -125,6 +125,11 @@ calls:
     acoustic_description_explanation: Detailed acoustic studies focus mainly on song rather than begging calls.
     semantic_description_agreement: strong
     semantic_description_explanation: Food solicitation and caregiving context are well established.
+provenance:
+  - timestamp: '2026-05-14T08:56:01Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   leitner_etal_2001:
     citation: "Leitner, S., Voigt, C., & Gahr, M. (2001). Seasonal changes in the song pattern of the non-domesticated island canary (Serinus canaria), a field study. Behaviour, 138, 885-904."

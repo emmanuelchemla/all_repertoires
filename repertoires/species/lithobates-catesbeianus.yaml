@@ -325,6 +325,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Capranica 1968 links distress calling to repeated noxious stimulation, and Toledo and Haddad 2009 record distress calls in defensive handling contexts. Agreement is strong for a predator-like distress or defensive function.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   capranica_1968:
     citation: "Capranica RR. 1968. The vocal repertoire of the bullfrog (Rana catesbeiana). Behaviour 31(3-4): 302-324."

@@ -168,6 +168,11 @@ calls:
     acoustic_description_explanation: Tonal rolling structure is consistent, though detailed measurement is limited.
     semantic_description_agreement: medium
     semantic_description_explanation: Greeting and affiliation contexts are supported, but formal experimental evidence is limited.
+provenance:
+  - timestamp: '2026-05-13T19:00:56Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   moelk_1944:
     citation: "Moelk, M. (1944). Vocalizing in the house-cat; a phonetic and functional study. The American Journal of Psychology, 57, 184-205."

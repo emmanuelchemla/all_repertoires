@@ -129,6 +129,11 @@ calls:
     acoustic_description_explanation: Published acoustic detail is sparse.
     semantic_description_agreement: medium
     semantic_description_explanation: Capture and disturbance contexts are supported observationally.
+provenance:
+  - timestamp: '2026-05-14T08:55:04Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   drewry_rand_1983:
     citation: "Drewry, G. E., & Rand, A. S. (1983). Characteristics of an acoustic community: Puerto Rican frogs of the genus Eleutherodactylus. Copeia, 1983, 941-953."

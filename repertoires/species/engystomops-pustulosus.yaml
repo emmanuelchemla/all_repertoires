@@ -145,6 +145,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Rand and Ryan 1981 and Ryan and Rand 1990 show female preference for chuck-bearing calls, Ryan 1980 establishes female mate choice on male calls, and Bernal et al. 2009 shows both female phonotaxis and male calling responses to graded complexity. These sources agree that complex calls function in sexual advertisement and male-male chorus competition, with ecological costs modulating chuck production.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   ryan_1980:
     citation: "Ryan MJ. 1980. Female mate choice in a Neotropical frog. Science 209(4455): 523-525."

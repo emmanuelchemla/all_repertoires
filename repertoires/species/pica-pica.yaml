@@ -476,6 +476,11 @@ calls:
     semantic_description_agreement: weak
     semantic_description_explanation: Contact and group-cohesion interpretation in Redondo, Arias de Reyna & Cases 1996 is observational and not experimentally tested.
 
+provenance:
+  - timestamp: '2026-05-14T09:11:52Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   birkhead_1991:
     citation: "Birkhead, T. R. 1991. The Magpies: The Ecology and Behaviour of Black-billed and Yellow-billed Magpies. T. & A. D. Poyser, London."

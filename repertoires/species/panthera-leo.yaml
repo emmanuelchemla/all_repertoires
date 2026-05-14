@@ -509,6 +509,11 @@ calls:
     acoustic_description_explanation: The short abrupt broadband form is supported by classic field accounts, but quantitative acoustic data are lacking. Fine acoustic agreement is weak.
     semantic_description_agreement: medium
     semantic_description_explanation: Rudnai 1973 and Schaller 1972 agree on alarm or disturbance contexts. Experimental evidence is absent, so semantic agreement is medium.
+provenance:
+  - timestamp: '2026-05-13T15:40:06Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   rudnai_1973:
     citation: "Rudnai, J. A. (1973). The Social Life of the Lion: A Study of the Behaviour of Wild Lions (Panthera leo massaica [Newmann]) in the Nairobi National Park, Kenya. Medical and Technical Publishing."

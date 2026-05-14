@@ -632,6 +632,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: "Weir et al. 2022 and Sadhukhan et al. 2019 place squeaks in close-range affiliative or friendly contexts, and Weir et al. 2022 reports individual acoustic identity. Agreement is medium because playback tests are lacking and some older sources folded the call into whimper."
 
+provenance:
+  - timestamp: '2026-05-13T10:53:24Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   schassburger_1993:
     citation: "Schassburger RM. 1993. Vocal communication in the timber wolf, Canis lupus, Linnaeus: structure, motivation, and ontogeny. Advances in Ethology 30. Berlin: Paul Parey Scientific Publishers."

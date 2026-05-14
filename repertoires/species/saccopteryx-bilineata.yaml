@@ -459,6 +459,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Ratcliffe et al. 2011 supports a foraging/orientation role, Burchardt et al. 2019 treats echolocation sequences alongside social vocalizations, and Knornschild and von Helversen 2008 finds mother echolocation pulse trains carry weaker individual distinctiveness. Agreement is medium because sonar and social-information roles are partly separate.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   behr_helversen_2004:
     citation: "Behr O, von Helversen O. 2004. Bat serenades - complex courtship songs of the sac-winged bat (Saccopteryx bilineata). Behavioral Ecology and Sociobiology 56(2): 106-115."

@@ -241,6 +241,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: The agonistic feeding-site context is consistently reported in Schmidt and van de Flierdt 1973, and Carter et al. 2012 explicitly associates a class of vampire-bat social calls with agonistic interactions. The label is medium because the context is replicable but receiver responses have not been tested with playback.
 
+provenance:
+  - timestamp: '2026-05-14T09:12:04Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   carter_etal_2012:
     citation: "Carter, G. G., Logsdon, R., Arnold, B. D., Menchaca, A., and Medellin, R. A. 2012. Adult vampire bats produce contact calls when isolated: acoustic variation by species, population, colony, and individual. PLoS ONE 7(6): e38791."

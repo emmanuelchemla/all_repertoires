@@ -454,6 +454,11 @@ calls:
     acoustic_description_explanation: Collins et al. 2006 and Collins et al. 2011 both analyze temporal, fundamental-frequency, and spectral features of pup calls, but categorical acoustic labels are broad. Agreement is medium for the summary description.
     semantic_description_agreement: strong
     semantic_description_explanation: Collins et al. 2006 supports an identity and maternal-recognition role, and Collins et al. 2011 shows elevated calling and arousal-linked acoustic shifts during reunion and lone-pup contexts. The caregiving and contact context is strongly supported.
+provenance:
+  - timestamp: '2026-05-13T15:45:01Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   abgrall_etal_2003:
     citation: Abgrall, P., Terhune, J. M., and Burton, H. R. 2003. Variation of Weddell seal (Leptonychotes weddellii) underwater vocalizations over mesogeographic ranges. Aquatic Mammals 29(2):268-277.

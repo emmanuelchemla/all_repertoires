@@ -139,6 +139,11 @@ calls:
     acoustic_description_explanation: The acoustic description relies mainly on repertoire-level accounts.
     semantic_description_agreement: medium
     semantic_description_explanation: Contact and coordination contexts are consistently described observationally.
+provenance:
+  - timestamp: '2026-05-14T08:55:47Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   gompertz_1961:
     citation: "Gompertz, T. (1961). The vocabulary of the great tit. Behaviour, 17, 193-205."

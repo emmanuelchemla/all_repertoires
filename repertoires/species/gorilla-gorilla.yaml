@@ -143,6 +143,11 @@ calls:
     acoustic_description_explanation: Salmi et al. 2013 distinguishes screams acoustically, but detailed independent western gorilla measurements are limited.
     semantic_description_agreement: medium
     semantic_description_explanation: Aggression and alarm contexts are supported by Salmi et al. 2013, with some age-sex specificity and limited playback evidence.
+provenance:
+  - timestamp: '2026-05-13T19:00:02Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   salmi_etal_2013:
     citation: "Salmi, R., Hammerschmidt, K., & Doran-Sheehy, D. M. (2013). Western gorilla vocal repertoire and contextual use of vocalizations. Ethology, 119(10), 831-847."

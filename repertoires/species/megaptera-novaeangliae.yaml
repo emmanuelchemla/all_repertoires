@@ -116,6 +116,11 @@ calls:
     acoustic_description_explanation: The long low-frequency form is supported by focused feeding-call work, with population differences likely.
     semantic_description_agreement: strong
     semantic_description_explanation: The association with cooperative feeding is strong in Cerchio and Dahlheim 2001.
+provenance:
+  - timestamp: '2026-05-13T19:02:24Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   dunlop_etal_2007:
     citation: "Dunlop, R. A., Cato, D. H., & Noad, M. J. (2007). The social vocalization repertoire of east Australian migrating humpback whales (Megaptera novaeangliae). Journal of the Acoustical Society of America, 122, 2893-2905."

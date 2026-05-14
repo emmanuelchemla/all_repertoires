@@ -263,6 +263,11 @@ calls:
     acoustic_description_explanation: "Arnold and Zuberbuhler 2006 and 2008 agree on the ordered pyow-then-hack structure, and Schlenker et al. 2016 explicitly models the sequence as a small number of pyows followed by hacks. Acoustic agreement is strong for sequence form."
     semantic_description_agreement: medium
     semantic_description_explanation: "Arnold and Zuberbuhler 2008 provides playback evidence for group progression, but Schlenker et al. 2016 debates the compositional interpretation and Mehon et al. 2024 shows population differences in call ordering. The group-movement association is strong locally but medium across the species."
+provenance:
+  - timestamp: '2026-05-13T15:32:41Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   arnold_zuberbuhler_2006:
     citation: "Arnold, K., & Zuberbuhler, K. (2006). The alarm-calling system of adult male putty-nosed monkeys, Cercopithecus nictitans martini. Animal Behaviour, 72(3), 643-653."

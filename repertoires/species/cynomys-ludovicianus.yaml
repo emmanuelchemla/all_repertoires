@@ -259,6 +259,11 @@ calls:
     semantic_description_agreement: weak
     semantic_description_explanation: "Both inventories link the chuckle to quiet social and locomotion contexts, but the description is brief and not experimentally verified, so confidence is weak."
 
+provenance:
+  - timestamp: '2026-05-14T09:09:06Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   smith_etal_1977:
     citation: "Smith, W. J., Smith, S. L., Oppenheimer, E. C., and Devilla, J. G. 1977. Vocalizations of the black-tailed prairie dog, Cynomys ludovicianus. Animal Behaviour 25(1):152-164."

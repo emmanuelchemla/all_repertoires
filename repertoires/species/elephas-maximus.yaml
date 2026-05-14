@@ -572,6 +572,11 @@ calls:
     acoustic_description_explanation: The component structure and approximate frequencies are described by de Silva 2010, but sample size is very small and production details remain uncertain. Acoustic agreement is weak.
     semantic_description_agreement: weak
     semantic_description_explanation: de Silva 2010 observed the call in musth male contests and courtship/guarding, but no independent production or playback study confirms the contextual range.
+provenance:
+  - timestamp: '2026-05-13T15:39:26Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   desilva_2010:
     citation: "de Silva, S. 2010. Acoustic communication in the Asian elephant, Elephas maximus maximus. Behaviour 147:825-852."

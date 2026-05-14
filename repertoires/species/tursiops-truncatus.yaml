@@ -368,6 +368,11 @@ calls:
     acoustic_description_explanation: Wahlberg et al. 2011 provides wild source parameters for Tursiops clicks, while Nowacek 2005 and Jones et al. 2020 agree on trains of short broadband clicks with behavior-linked rate variation. Agreement is strong for the broad acoustic form.
     semantic_description_agreement: strong
     semantic_description_explanation: Nowacek 2005 links echolocation to specific wild foraging behaviors and habitat use, Wahlberg et al. 2011 frames the measured sounds as biosonar clicks from free-ranging animals, and Jones et al. 2020 reviews echolocation use in object detection and prey capture. Agreement is strong for inspection and foraging contexts.
+provenance:
+  - timestamp: '2026-05-13T15:38:15Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   gridley_etal_2015:
     citation: Gridley, T., Nastasi, A., Kriesell, H. J., and Elwen, S. H. (2015). The acoustic repertoire of wild common bottlenose dolphins (Tursiops truncatus) in Walvis Bay, Namibia. Bioacoustics, 24(2), 153-174.

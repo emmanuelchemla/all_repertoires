@@ -361,6 +361,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Bezerra and Souto 2008 and Agamaite et al. 2015 both link ock to mobbing or alarm-related contexts, but no dedicated playback or production experiment isolates ock function from neighbouring tsik and egg calls. The label is therefore medium.
 
+provenance:
+  - timestamp: '2026-05-13T11:10:53Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   bezerra_souto_2008:
     citation: "Bezerra BM, Souto A. 2008. Structure and usage of the vocal repertoire of Callithrix jacchus. International Journal of Primatology 29(3): 671-701."

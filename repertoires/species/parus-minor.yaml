@@ -180,6 +180,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Suzuki, Wheatcroft, and Griesser 2016 experimentally shows that receivers combine the scanning response to ABC with the approach response to D only when the order is natural. This is strong playback evidence for compositional interpretation.
 
+provenance:
+  - timestamp: '2026-05-13T11:10:53Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   suzuki_2012:
     citation: "Suzuki TN. 2012. Referential mobbing calls elicit different predator-searching behaviours in Japanese great tits. Animal Behaviour 84(1): 53-57."

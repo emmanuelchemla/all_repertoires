@@ -250,6 +250,11 @@ calls:
     acoustic_description_explanation: Fichtel et al. 2005 explicitly separates this alarm category acoustically from the aerial/human/conspecific category, while documenting graded subtypes within it. Gros-Louis et al. 2008 provides repertoire-level support. Agreement is strong for the broad acoustic class.
     semantic_description_agreement: medium
     semantic_description_explanation: Sources agree that the call class occurs with terrestrial predators and snakes, but Fichtel et al. 2005 notes that similar variants also occur to caimans and conspecific aggression. Semantic specificity is therefore medium.
+provenance:
+  - timestamp: '2026-05-14T05:46:14Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   boinski_1993:
     citation: "Boinski, S. (1993). Vocal coordination of troop movement among white-faced capuchin monkeys, Cebus capucinus. American Journal of Primatology, 30, 85-100."

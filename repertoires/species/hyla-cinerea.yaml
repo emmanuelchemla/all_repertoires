@@ -176,6 +176,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Oldham and Gerhardt 1975, Fellers 1979, Perrill et al. 1982, Reichert and Hobel 2018, and Hobel and Rodriguez 2022 consistently place aggressive or encounter calls outside the female-attraction role of advertisement calls and in male-male or aversive contexts. The label is medium rather than strong because direct Hyla cinerea field studies of naturally produced aggressive calls are fewer than for advertisement calls, and some evidence comes from synthetic playback or comparative treefrog framing.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   oldham_gerhardt_1975:
     citation: "Oldham RS, Gerhardt HC. 1975. Behavioral isolating mechanisms of the treefrogs Hyla cinerea and Hyla gratiosa. Copeia 1975(2): 223-231."

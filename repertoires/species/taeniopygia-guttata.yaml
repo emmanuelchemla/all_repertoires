@@ -664,6 +664,11 @@ calls:
     semantic_description_agreement: weak
     semantic_description_explanation: Mariette and Buchanan 2016 and Katsis et al. 2018 use incubation-call playbacks as developmental acoustic treatments, but McDiarmid et al. 2018 shows production depends on heat rather than reproductive stage, and Anttonen et al. 2025 argues heat whistles are inaudible nonadaptive by-products of panting. Semantic agreement is therefore weak.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   zann_1990:
     citation: "Zann RA. 1990. Song and call learning in wild zebra finches in south-east Australia. Animal Behaviour 40(5): 811-828."

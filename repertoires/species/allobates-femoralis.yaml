@@ -199,6 +199,11 @@ calls:
       close-range male-female courtship and that the call accompanies female
       following during the courtship march toward oviposition.
 
+provenance:
+  - timestamp: '2026-05-13T15:38:57Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   roithmair_1992:
     citation: "Roithmair ME. 1992. Territoriality and male mating success in the dart-poison frog, Epipedobates femoralis (Dendrobatidae, Anura). Ethology 92(4): 331-343."

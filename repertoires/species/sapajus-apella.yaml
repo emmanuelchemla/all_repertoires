@@ -357,6 +357,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Resende et al. 2007 documents a consistent contingency on sudden loud low-frequency stimuli across multiple populations, but the underlying communicative function (alarm-like, threat display, agitated arousal) is not fully resolved. Agreement on the contextual trigger is medium.
 
+provenance:
+  - timestamp: '2026-05-14T09:11:52Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   dibitetti_2003:
     citation: "Di Bitetti, M. S. (2003). Food-associated calls of tufted capuchin monkeys (Cebus apella nigritus) are functionally referential signals. Behaviour, 140(5), 565-592."

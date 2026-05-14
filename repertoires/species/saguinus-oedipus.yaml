@@ -515,6 +515,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Bauers and Snowdon 1990 link chucks to close-range social use, but no playback work has independently tested the function.
 
+provenance:
+  - timestamp: '2026-05-14T09:07:59Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   cleveland_snowdon_1982:
     citation: "Cleveland J, Snowdon CT. 1982. The complex vocal repertoire of the adult cotton-top tamarin (Saguinus oedipus oedipus). Zeitschrift fuer Tierpsychologie 58(3): 231-270."

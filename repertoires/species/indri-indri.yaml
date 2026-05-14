@@ -134,6 +134,11 @@ calls:
     acoustic_description_explanation: Short low rough form is supported by the repertoire account and later clustering work.
     semantic_description_agreement: weak
     semantic_description_explanation: Close-range context is plausible from observations, but specific function is not strongly tested.
+provenance:
+  - timestamp: '2026-05-14T08:55:32Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   maretti_etal_2010:
     citation: "Maretti, G., Sorrentino, V., Finomana, A., Gamba, M., & Giacoma, C. (2010). Quantitative description of the vocal repertoire of the indri (Indri indri). Journal of the Acoustical Society of America, 127, 1267-1277."

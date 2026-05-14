@@ -138,6 +138,11 @@ calls:
     acoustic_description_explanation: Detailed acoustic measurements are sparse, so the acoustic label is weak.
     semantic_description_agreement: medium
     semantic_description_explanation: Female aggression and pup defense contexts are supported observationally.
+provenance:
+  - timestamp: '2026-05-14T06:48:37Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   sanvito_etal_2007:
     citation: "Sanvito, S., Galimberti, F., & Miller, E. H. (2007). Vocal signalling of male southern elephant seals is honest but imprecise. Animal Behaviour, 73, 287-299."

@@ -289,6 +289,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: The agonistic and territorial context is supported by Müller and Manser 2007 ('nasty neighbours') and the repertoire-level summary of Manser et al. 2014. The label is medium rather than strong because the partition of aggression calls into within- and between-group subtypes and their fine-grained semantics have not been tested experimentally.
 
+provenance:
+  - timestamp: '2026-05-14T09:08:40Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   jansen_etal_2012:
     citation: "Jansen DAWAM, Cant MA, Manser MB. 2012. Segmental concatenation of individual signatures and context cues in banded mongoose (Mungos mungo) close calls. BMC Biology 10: 97."

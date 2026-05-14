@@ -463,6 +463,11 @@ calls:
     semantic_description_agreement: weak
     semantic_description_explanation: The only clear behavioral evidence is captive and limited, and Poole 2011 does not confirm a communicative wild context. The semantic label is weak despite inventory inclusion.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   soltis_2010:
     citation: "Soltis J. 2010. Vocal communication in African elephants (Loxodonta africana). Zoo Biology 29(2): 192-209."

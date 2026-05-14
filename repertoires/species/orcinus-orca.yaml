@@ -140,6 +140,11 @@ calls:
     acoustic_description_explanation: Broadband repeated click structure is well established in acoustic measurements.
     semantic_description_agreement: medium
     semantic_description_explanation: Foraging and orientation roles are clear, but this schema treats clicks as communicative attention/context signals only cautiously.
+provenance:
+  - timestamp: '2026-05-13T19:01:13Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   ford_1987:
     citation: "Ford, J. K. B. (1987). A catalogue of underwater calls produced by killer whales (Orcinus orca) in British Columbia. Canadian Data Report of Fisheries and Aquatic Sciences 633."

@@ -131,6 +131,11 @@ calls:
     acoustic_description_explanation: High-frequency harsh structure is consistent, but detailed measurements are sparser than whinny studies.
     semantic_description_agreement: medium
     semantic_description_explanation: Threat and reproductive contexts are consistently described but can overlap with other high-arousal contexts.
+provenance:
+  - timestamp: '2026-05-14T08:55:10Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   waring_2003:
     citation: "Waring, G. H. (2003). Horse Behavior. Noyes Publications."

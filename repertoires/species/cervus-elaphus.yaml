@@ -129,6 +129,11 @@ calls:
     acoustic_description_explanation: Vankova et al. 1997 gives focused acoustic measurements for calf vocalizations.
     semantic_description_agreement: strong
     semantic_description_explanation: Mother-offspring contact and recognition context is strongly supported.
+provenance:
+  - timestamp: '2026-05-14T08:53:53Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   reby_etal_2013:
     citation: "Reby, D., Wyman, M. T., Frey, R., Passilongo, D., Gilbert, J., Locatelli, Y., & Charlton, B. D. (2013). Roaring high and low: composition and possible functions of the Iberian stag's vocal repertoire. PLOS ONE, 8, e63841."

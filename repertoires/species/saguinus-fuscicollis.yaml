@@ -130,6 +130,11 @@ calls:
     acoustic_description_explanation: Moynihan 1970 and predator-response work support short repeated alarm calls, though fine structure is sparse.
     semantic_description_agreement: strong
     semantic_description_explanation: Predator and vigilance contexts are strongly supported in callitrichid observational literature.
+provenance:
+  - timestamp: '2026-05-14T06:48:01Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   moynihan_1970:
     citation: "Moynihan, M. (1970). Some behavior patterns of platyrrhine monkeys II. Saguinus geoffroyi and some other tamarins. Smithsonian Contributions to Zoology, 28, 1-77."

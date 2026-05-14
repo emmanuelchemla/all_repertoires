@@ -375,6 +375,11 @@ calls:
     acoustic_description_explanation: "Zanoli et al. 2022 provides f0-based acoustic validation and low classification error for end-copulation calls, though independent acoustic replications are not yet available."
     semantic_description_agreement: medium
     semantic_description_explanation: "Zanoli et al. 2022 found the call only at the final stage of copulation and linked it to mating completion, but the interpretation would be stronger with additional populations or playback/receiver-response studies."
+provenance:
+  - timestamp: '2026-05-13T15:33:08Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   gustison_etal_2012:
     citation: "Gustison, M. L., le Roux, A., & Bergman, T. J. (2012). Derived vocalizations of geladas (Theropithecus gelada) and the evolution of vocal complexity in primates. Philosophical Transactions of the Royal Society B: Biological Sciences, 367(1597), 1847-1859."

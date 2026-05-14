@@ -539,6 +539,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Gouzoules et al. 1984 and Gouzoules et al. 1998 consistently place undulating screams in the free-ranging agonistic recruitment system and link them to social-conflict variables. Semantic agreement is strong.
 
+provenance:
+  - timestamp: '2026-05-13T15:33:52Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   rowell_hinde_1962:
     citation: Rowell, T. E., and Hinde, R. A. 1962. Vocal communication by the rhesus monkey (Macaca mulatta). Proceedings of the Zoological Society of London 138(2):279-294.

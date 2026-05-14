@@ -232,6 +232,11 @@ calls:
     acoustic_description_explanation: Green 1975 and Yoshida 1988a support an alarm-call class and acoustic comparison with other high-arousal calls, but the sources used here do not provide as much replicated quantitative detail as for coos. Agreement is medium.
     semantic_description_agreement: strong
     semantic_description_explanation: Itani 1963 and Yoshida 1988b both support warning use, and the playback study directly tests free-ranging responses to conspecific alarm calls. Semantic agreement is strong.
+provenance:
+  - timestamp: '2026-05-14T05:47:17Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   blount_1985:
     citation: 'Blount, B. G. (1985). "Girney" vocalizations among Japanese macaque females: context and function. Primates, 26(4), 424-435.'

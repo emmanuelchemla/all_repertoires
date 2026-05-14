@@ -512,6 +512,11 @@ calls:
     semantic_description_agreement: weak
     semantic_description_explanation: Fedurek et al. 2017 and Girard-Buttoz et al. 2022 support a pant-hoot let-down/display interpretation, but the unit is too rare in the primary inventory for strong standalone semantic claims.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   girardbuttoz_etal_2022:
     citation: "Girard-Buttoz C, Zaccarella E, Bortolato T, Friederici AD, Wittig RM, Crockford C. 2022. Chimpanzees produce diverse vocal sequences with ordered and recombinatorial properties. Communications Biology 5: 410."

@@ -129,6 +129,11 @@ calls:
     acoustic_description_explanation: High tonal pup-call structure is supported, but detailed subtype boundaries are sparse.
     semantic_description_agreement: medium
     semantic_description_explanation: Care and contact contexts are supported by repertoire accounts.
+provenance:
+  - timestamp: '2026-05-14T08:55:24Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   pepper_etal_1991:
     citation: "Pepper, J. W., Braude, S. H., Lacey, E. A., & Sherman, P. W. (1991). Vocalizations of the naked mole-rat. In The Biology of the Naked Mole-Rat. Princeton University Press."

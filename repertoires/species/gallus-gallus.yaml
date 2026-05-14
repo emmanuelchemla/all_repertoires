@@ -463,6 +463,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Collias 1987 ties these calls to feeding, brooding, and secure contact, while Collias and Collias 1967 supports the broader field context of hen-chick association. Agreement is moderate because the entry groups closely related juvenile contact variants.
 
+provenance:
+  - timestamp: '2026-05-13T15:47:42Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   collias_1987:
     citation: "Collias NE. 1987. The vocal repertoire of the red junglefowl: a spectrographic classification and the code of communication. The Condor 89(3): 510-524."

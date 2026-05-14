@@ -255,6 +255,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Favaro et al. 2014, Seddon and van Heezik 1993a, and Seddon and van Heezik 1993b all place chick calls in food solicitation, parental care, and parent-offspring recognition contexts.
 
+provenance:
+  - timestamp: '2026-05-14T05:45:44Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   eggleton_siegfried_1979:
     citation: "Eggleton P, Siegfried WR. 1979. Displays of the Jackass Penguin. Ostrich 50(3): 139-167."

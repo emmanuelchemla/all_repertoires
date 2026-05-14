@@ -415,6 +415,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: All three sources agree that nestling begging vocalizations function in food solicitation and parent-offspring acoustic interaction; Chaiken 1992 further supports parental discrimination of own young.
 
+provenance:
+  - timestamp: '2026-05-14T09:11:21Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   eens_etal_1991:
     citation: "Eens, M., Pinxten, R., & Verheyen, R. F. (1991). Male song as a cue for mate choice in the European starling. Behaviour, 116(3-4), 210-238."

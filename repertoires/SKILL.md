@@ -22,6 +22,12 @@ description: Use this skill whenever creating, editing, or reviewing a species r
   - Pick the most comprehensive paper that explicitly enumerates the species' vocal repertoire and is widely cited as such. Set `id` to its reference ID; explain the pick in `rationale`.
   - If no such paper exists, omit `id` and use `rationale` to explain why. Every call must then be marked `in_primary_inventory: false`.
 - `calls`: list of call-type objects (see below). See inclusion rules below.
+- `provenance`: append-only list of agent events. Add one entry each time you generate or materially update the file:
+  - `timestamp`: ISO 8601 UTC, e.g. `2026-05-14T10:23:00Z`.
+  - `model`: full model ID, e.g. `claude-opus-4-7`.
+  - `thinking`: one of `low` | `medium` | `high` | `extra_high` | `max`.
+  - `action`: `generated` (first entry only) or `updated`.
+  Never remove or modify existing entries.
 - `references`: bibliography for the whole file. Cite with **stable string IDs** in `lastname_year` form (`smith_2019`, `marler_etal_1967`).
 
 ### Inclusion rules

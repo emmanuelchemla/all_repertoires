@@ -137,6 +137,11 @@ calls:
     acoustic_description_explanation: The acoustic description is broad because the focused study emphasizes voting function more than detailed spectrographic classification.
     semantic_description_agreement: strong
     semantic_description_explanation: The association with rally decision-making is strongly supported by Walker et al. 2017.
+provenance:
+  - timestamp: '2026-05-14T06:48:56Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   robbins_mcenery_1983:
     citation: "Robbins, R. L., & McCreery, E. K. (1983). Vocal communication in free-ranging African wild dogs (Lycaon pictus). Behaviour, 84, 144-162."

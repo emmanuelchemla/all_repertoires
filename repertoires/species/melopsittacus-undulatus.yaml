@@ -129,6 +129,11 @@ calls:
     acoustic_description_explanation: The acoustic description relies mainly on the primary behavior inventory.
     semantic_description_agreement: medium
     semantic_description_explanation: Feeding solicitation context is well established observationally.
+provenance:
+  - timestamp: '2026-05-14T08:55:40Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   brockway_1964:
     citation: "Brockway, B. F. (1964). Ethological studies of the budgerigar: reproductive behavior. Behaviour, 23, 294-324."

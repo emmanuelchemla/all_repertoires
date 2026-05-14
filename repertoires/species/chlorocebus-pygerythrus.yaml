@@ -871,6 +871,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: "The mother-offspring reunion context is consistent in inventory sources, but lacks dedicated playback or production analysis. Semantic agreement is medium."
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   struhsaker_1967:
     citation: "Struhsaker TT. 1967. Auditory communication among vervet monkeys (Cercopithecus aethiops). In: Altmann SA, editor. Social Communication among Primates. Chicago: University of Chicago Press. p. 281-324."

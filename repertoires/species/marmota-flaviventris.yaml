@@ -243,6 +243,11 @@ calls:
     acoustic_description_explanation: "The acoustic description rests mainly on Waring 1966 and Frase and Hoffmann 1980's qualitative account of a quiet tooth chatter; later work does not provide a dedicated spectrographic analysis. Acoustic agreement is therefore weak."
     semantic_description_agreement: medium
     semantic_description_explanation: "Waring 1966 and Frase and Hoffmann 1980 agree that tooth chatter is used in threat contexts, but there is little later experimental work on this sound. Semantic agreement is medium."
+provenance:
+  - timestamp: '2026-05-13T15:42:26Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   waring_1966:
     citation: "Waring, G. H. 1966. Sounds and communications of the yellow-bellied marmot (Marmota flaviventris). Animal Behaviour 14(1):177-183."

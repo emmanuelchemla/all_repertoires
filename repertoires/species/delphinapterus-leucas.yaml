@@ -125,6 +125,11 @@ calls:
     acoustic_description_explanation: Sjare and Smith 1986 and Au et al. 1985 agree on repeated broadband click structure, with echolocation studies adding detailed timing and spectral measurements.
     semantic_description_agreement: medium
     semantic_description_explanation: Orientation and foraging contexts are well supported, but click trains are not primarily social calls, so communication keywords are applied cautiously.
+provenance:
+  - timestamp: '2026-05-14T06:48:22Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   sjare_smith_1986:
     citation: "Sjare, B. L., & Smith, T. G. (1986). The vocal repertoire of white whales, Delphinapterus leucas, summering in Cunningham Inlet, Northwest Territories. Canadian Journal of Zoology, 64, 407-415."

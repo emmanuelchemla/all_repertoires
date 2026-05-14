@@ -784,6 +784,11 @@ calls:
     acoustic_description_explanation: "Coye et al. 2022 gives the component structure of R-W, but W-combination-specific measurements are not as extensively reported as the arched contact calls. Acoustic agreement is medium."
     semantic_description_agreement: strong
     semantic_description_explanation: "Coye et al. 2022 identifies R-W as an alarm combination, and Stephan and Zuberbuhler 2014 and 2016 support female predator-specific alarm use and coordination. Semantic agreement is strong."
+provenance:
+  - timestamp: '2026-05-13T15:37:28Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   coye_etal_2022:
     citation: "Coye, C., Zuberbuhler, K., and Lemasson, A. 2022. The evolution of vocal communication: inertia and divergence in two closely related primates. International Journal of Primatology 43:712-732."

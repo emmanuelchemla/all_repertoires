@@ -146,6 +146,11 @@ calls:
     acoustic_description_explanation: Jaquet et al. 2001, Wahlberg 2002, and Oliveira et al. 2013 agree that slow clicks have long inter-click intervals and male-biased production, but detailed acoustic measurements vary by setting and recording geometry.
     semantic_description_agreement: medium
     semantic_description_explanation: Oliveira et al. 2013 supports long-range male communication and rejects a simple foraging-buzz explanation, while Jaquet et al. 2001 treats the function as still partly unresolved.
+provenance:
+  - timestamp: '2026-05-14T06:48:30Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   jaquet_etal_2001:
     citation: "Jaquet, N., Dawson, S., & Douglas, L. (2001). Vocal behavior of male sperm whales: Why do they click? Journal of the Acoustical Society of America, 109, 2254-2259."

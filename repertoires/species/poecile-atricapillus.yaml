@@ -139,6 +139,11 @@ calls:
     acoustic_description_explanation: Short high tonal structure is consistent across descriptions.
     semantic_description_agreement: medium
     semantic_description_explanation: Contact and coordination context is supported observationally.
+provenance:
+  - timestamp: '2026-05-14T08:55:54Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   ficken_etal_1978:
     citation: "Ficken, M. S., Ficken, R. W., & Witkin, S. R. (1978). Vocal repertoire of the black-capped chickadee. The Auk, 95, 34-48."

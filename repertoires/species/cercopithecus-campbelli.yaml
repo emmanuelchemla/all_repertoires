@@ -418,6 +418,11 @@ calls:
     acoustic_description_explanation: Coye et al. 2018 supports the low-pitched unit merged with a high-pitched arched unit and distinguishes front/back combined forms, but independent acoustic inventories are limited. Acoustic agreement is medium.
     semantic_description_agreement: medium
     semantic_description_explanation: Coye et al. 2018 links combined calls with identity-rich contact contexts in wild groups, but direct playback evidence for these female contact combinations is limited. Semantic agreement is medium.
+provenance:
+  - timestamp: '2026-05-13T15:34:40Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   zuberbuhler_2001:
     citation: "Zuberbuhler, K. (2001). Predator-specific alarm calls in Campbell's monkeys, Cercopithecus campbelli. Behavioral Ecology and Sociobiology, 50(5), 414-422."

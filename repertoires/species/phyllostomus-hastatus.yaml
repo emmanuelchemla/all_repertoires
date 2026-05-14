@@ -157,6 +157,11 @@ calls:
     acoustic_description_explanation: Bohn et al. 2004 provides a clear frequency and duration summary for short low-amplitude 80-40 kHz sweeps, and Koay et al. 2002 independently discusses low-intensity brief sonar pulses. The label is medium because this file does not rely on a modern call-parameter inventory dedicated solely to P. hastatus echolocation.
     semantic_description_agreement: strong
     semantic_description_explanation: Bohn et al. 2004, Koay et al. 2002, and Kalko and Condon 1998 all place echolocation calls in orientation and foraging contexts, with Kalko and Condon 1998 providing direct evidence that P. hastatus uses echolocation to find displayed fruit. Agreement is strong for the navigation and food-detection context.
+provenance:
+  - timestamp: '2026-05-13T15:41:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   bohn_etal_2004:
     citation: "Bohn, K. M., Boughman, J. W., Wilkinson, G. S., and Moss, C. F. 2004. Auditory sensitivity and frequency selectivity in greater spear-nosed bats suggest specializations for acoustic communication. Journal of Comparative Physiology A 190:185-192."

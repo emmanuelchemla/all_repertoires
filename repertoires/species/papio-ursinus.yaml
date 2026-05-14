@@ -125,6 +125,11 @@ calls:
     acoustic_description_explanation: The two-part loud-call structure is consistently described in baboon literature.
     semantic_description_agreement: medium
     semantic_description_explanation: Display and assessment roles are supported, but specific contexts vary with age, status, and social setting.
+provenance:
+  - timestamp: '2026-05-13T19:00:29Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   fischer_etal_2001:
     citation: "Fischer, J., Hammerschmidt, K., Cheney, D. L., & Seyfarth, R. M. (2001). Baboon responses to graded bark variants. Animal Behaviour, 61, 925-931."

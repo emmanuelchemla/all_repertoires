@@ -127,6 +127,11 @@ calls:
     acoustic_description_explanation: The bark class is well supported, but Geissmann 2000 treats bark types as graded and notes prior terminological inconsistency.
     semantic_description_agreement: medium
     semantic_description_explanation: Geissmann 2000 supports song and alarm contexts, while Chivers 1976 supports between-group spacing for loud calls; the specific contribution of bark notes within those bouts is broader than one function.
+provenance:
+  - timestamp: '2026-05-14T06:47:35Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   geissmann_2000:
     citation: "Geissmann, T. (2000). Duet songs of the siamang, Hylobates syndactylus: I. Structure and organisation. Primate Report, 56, 33-60."

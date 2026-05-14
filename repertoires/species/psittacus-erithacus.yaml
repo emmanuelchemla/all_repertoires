@@ -133,6 +133,11 @@ calls:
     acoustic_description_explanation: Acoustic detail is largely qualitative and based on field and captive observation rather than systematic spectrographic analysis.
     semantic_description_agreement: medium
     semantic_description_explanation: Food-solicitation context is well established for psittacines and reported in Grey Parrots, though without experimental tests in the wild.
+provenance:
+  - timestamp: '2026-05-14T09:07:37Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   cruickshank_etal_1993:
     citation: "Cruickshank, A. J., Gautier, J.-P., & Chappuis, C. (1993). Vocal mimicry in wild African Grey Parrots Psittacus erithacus. Ibis, 135, 293-299."

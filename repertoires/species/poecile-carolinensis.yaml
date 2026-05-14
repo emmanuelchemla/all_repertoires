@@ -737,6 +737,11 @@ calls:
     acoustic_description_explanation: The broadband acoustic characterization comes primarily from Smith.
     semantic_description_agreement: weak
     semantic_description_explanation: Distress and defensive threat are plausible from handling contexts, but there is no independent receiver or playback evidence for Hiss as a distinct signal.
+provenance:
+  - timestamp: '2026-05-13T10:53:24Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   smith_1972:
     citation: "Smith, S. T. (1972). Communication and other social behavior in Parus carolinensis. Publications of the Nuttall Ornithological Club, 11, 1-125."

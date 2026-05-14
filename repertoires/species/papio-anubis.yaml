@@ -541,6 +541,11 @@ calls:
     acoustic_description_explanation: "Wild olive baboon evidence strongly supports the call's occurrence, but Bouquet et al. 2018 focuses on function and call probability rather than detailed acoustic measurements. Acoustic agreement is therefore weak."
     semantic_description_agreement: strong
     semantic_description_explanation: "Bouquet et al. 2018 directly analyzes copulation events in wild olive baboons and compares functional hypotheses for calling after mounts. The mating context is strongly supported."
+provenance:
+  - timestamp: '2026-05-13T15:33:44Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   bouquet_etal_2018:
     citation: "Bouquet, Y., Stephan, C., Johnson, C. A., Rothman, J. M., Neumann, C., & Zuberbuhler, K. (2018). Comparing functions of copulation calls in wild olive baboons, Papio anubis, using multimodel inference. Animal Behaviour, 135, 187-197."

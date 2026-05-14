@@ -547,6 +547,11 @@ calls:
     semantic_description_agreement: medium
     semantic_description_explanation: Winter et al. 1966 and Lieblich et al. 1980 link squeals to high-distress infant contexts and maternal retrieval. The label is medium given limited modern functional study.
 
+provenance:
+  - timestamp: '2026-05-14T09:10:25Z'
+    model: claude-opus-4-7
+    thinking: extra_high
+    action: generated
 references:
   winter_etal_1966:
     citation: "Winter P, Ploog D, Latta J. 1966. Vocal repertoire of the squirrel monkey (Saimiri sciureus), its analysis and significance. Experimental Brain Research 1: 359-384."

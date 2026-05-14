@@ -502,6 +502,11 @@ calls:
     acoustic_description_explanation: The sources distinguish chii as a long juvenile yell, but detailed measurements are mostly framed around the broader haa/food-call complex rather than chii alone.
     semantic_description_agreement: medium
     semantic_description_explanation: Multiple food-call studies agree that chii is juvenile-linked and food-contextual, but its exact transition from begging to recruitment remains less directly tested than adult haa calling.
+provenance:
+  - timestamp: '2026-05-13T15:40:41Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   brown_1974:
     citation: Brown, R. N. 1974. Aspects of vocal behavior of the raven (Corvus corax) in interior Alaska. M.S. thesis, University of Alaska, Fairbanks.

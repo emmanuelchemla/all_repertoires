@@ -248,6 +248,11 @@ calls:
     semantic_description_agreement: strong
     semantic_description_explanation: Holland et al. 2004 supports obstacle avoidance by impulse sonar, Smarsh et al. 2021 shows early-life hearing, click production, and beam steering, and Prat et al. 2016 treats echolocation clicks separately from social calls. The orientation context is strongly agreed, even though it is non-social.
 
+provenance:
+  - timestamp: '2026-05-13T10:39:03Z'
+    model: gpt-5.5
+    thinking: extra_high
+    action: generated
 references:
   prat_etal_2015:
     citation: "Prat Y, Taub M, Yovel Y. 2015. Vocal learning in a social mammal: demonstrated by isolation and playback experiments in bats. Science Advances 1(2): e1500019."
