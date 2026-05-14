@@ -1,0 +1,149 @@
+scientific_name: Saguinus fuscicollis
+common_name: Saddle-back Tamarin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Saguinus
+  species: fuscicollis
+primary_inventory:
+  id: moynihan_1970
+  rationale: Moynihan 1970 is used as the primary inventory because it is a comparative description of callitrichid communication that includes saddle-back tamarin vocal signals. Later studies of long-call divergence and antiphonal calling provide stronger support for major call functions.
+calls:
+  - name: long call
+    alternative_names:
+      - loud long call
+      - species call
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: true
+      note: Long-call acoustic structure differs among allopatric Saguinus fuscicollis populations and subspecies, as shown by Hodun et al. 1981 and Bradley and McClung 2015.
+    acoustic_keywords: [high_frequency, loud, long, tonal, frequency_modulated, multi_component]
+    acoustic_description: Loud, high-frequency, multi-note call with tonal frequency-modulated elements arranged in a stereotyped sequence.
+    semantic_keywords: [contact, spacing, identity, group_coordination]
+    semantic_description: Used for long-distance contact, group spacing, and population or species recognition.
+    acoustic_references:
+      - id: hodun_etal_1981
+        url: https://doi.org/10.1007/BF00295541
+      - id: bradley_mcclung_2015
+        url: https://doi.org/10.1002/ajp.22390
+    semantic_references:
+      - id: hodun_etal_1981
+        url: https://doi.org/10.1007/BF00295541
+      - id: bradley_mcclung_2015
+        url: https://doi.org/10.1002/ajp.22390
+    playback_references:
+      - id: bradley_mcclung_2015
+        url: https://doi.org/10.1002/ajp.22390
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Long calls are the central call type in Hodun et al. 1981 and Bradley and McClung 2015 for saddle-back tamarins.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Both sources support structured high-frequency long calls, while also documenting population divergence.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Long-distance contact, spacing, and recognition functions are strongly supported, including playback evidence.
+
+  - name: chirp
+    alternative_names:
+      - short chirp
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, short, tonal, abrupt]
+    acoustic_description: Short, high-frequency tonal note, often produced singly or in brief series.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Used in close-range contact and alerting contexts during movement or social interaction.
+    acoustic_references:
+      - id: moynihan_1970
+        url: https://doi.org/10.5479/si.00810282.28
+    semantic_references:
+      - id: moynihan_1970
+        url: https://doi.org/10.5479/si.00810282.28
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Chirp-like short calls are included in classic callitrichid descriptions, but saddle-back tamarin studies focus more on long calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic support is mostly qualitative in the primary inventory.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and alerting use is supported observationally but is not as experimentally developed as long calls.
+
+  - name: trill
+    alternative_names:
+      - twitter
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, tonal, frequency_modulated, long]
+    acoustic_description: Rapid sequence of high-frequency tonal elements with repeated modulations.
+    semantic_keywords: [affiliation, contact, food]
+    semantic_description: Used in close-range affiliative or feeding-associated contexts.
+    acoustic_references:
+      - id: moynihan_1970
+        url: https://doi.org/10.5479/si.00810282.28
+    semantic_references:
+      - id: moynihan_1970
+        url: https://doi.org/10.5479/si.00810282.28
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Trill or twitter-like calls are part of classic tamarin signal repertoires, though labels vary among callitrichid accounts.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Detailed species-specific acoustic measurement is limited.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The close-range social and feeding context is plausible from inventory descriptions but not strongly tested.
+
+  - name: alarm call
+    alternative_names:
+      - mobbing call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, short, repetitive, noisy]
+    acoustic_description: Repeated short, high-frequency calls with noisy components and abrupt onsets.
+    semantic_keywords: [alarm, predator, group_coordination, attention]
+    semantic_description: Produced in response to predators or disturbances and can coordinate vigilance or mobbing by group members.
+    acoustic_references:
+      - id: moynihan_1970
+        url: https://doi.org/10.5479/si.00810282.28
+      - id: cain_etal_2003
+        url: https://doi.org/10.1023/A:1026221411232
+    semantic_references:
+      - id: moynihan_1970
+        url: https://doi.org/10.5479/si.00810282.28
+      - id: cain_etal_2003
+        url: https://doi.org/10.1023/A:1026221411232
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Alarm calling is recognized in callitrichid repertoires and predator-response work, but saddle-back tamarin-specific acoustic categories are less standardized.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Moynihan 1970 and predator-response work support short repeated alarm calls, though fine structure is sparse.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Predator and vigilance contexts are strongly supported in callitrichid observational literature.
+references:
+  moynihan_1970:
+    citation: "Moynihan, M. (1970). Some behavior patterns of platyrrhine monkeys II. Saguinus geoffroyi and some other tamarins. Smithsonian Contributions to Zoology, 28, 1-77."
+    url: https://doi.org/10.5479/si.00810282.28
+    doi: 10.5479/si.00810282.28
+  hodun_etal_1981:
+    citation: "Hodun, A., Snowdon, C. T., & Soini, P. (1981). Subspecific variation in the long calls of the saddle-back tamarin. Animal Behaviour, 29, 134-144."
+    url: https://doi.org/10.1016/S0003-3472(81)80159-8
+    doi: 10.1016/S0003-3472(81)80159-8
+  bradley_mcclung_2015:
+    citation: "Bradley, C. E., & McClung, M. R. (2015). Vocal divergence and discrimination of long calls in tamarins: A comparison of allopatric populations of Saguinus fuscicollis nigrifrons and S. f. lagonotus. American Journal of Primatology, 77, 679-687."
+    url: https://doi.org/10.1002/ajp.22390
+    doi: 10.1002/ajp.22390
+  cain_etal_2003:
+    citation: "Caine, N. G., Weldon, P. J., & Schaaf, M. J. (2003). The use of predator odors by saddle-back tamarins. International Journal of Primatology, 24, 247-267."
+    url: https://doi.org/10.1023/A:1023089409419
+    doi: 10.1023/A:1023089409419
