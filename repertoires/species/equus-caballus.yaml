@@ -1,0 +1,149 @@
+scientific_name: Equus caballus
+common_name: Domestic Horse
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Perissodactyla
+  family: Equidae
+  genus: Equus
+  species: caballus
+primary_inventory:
+  id: waring_2003
+  rationale: Waring 2003 is used as the repertoire spine because it summarizes the main domestic horse vocal and audible signal classes in social context. Focused acoustic studies of whinnies and snorts provide stronger support for the best-studied call types.
+calls:
+  - name: whinny
+    alternative_names:
+      - neigh
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, frequency_modulated, multi_component, tonal]
+    acoustic_description: A long, loud, frequency-modulated call with source-filter structure and often two simultaneous frequency components.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Produced during separation, reunion, or social arousal and carries information about caller identity and emotional state.
+    acoustic_references:
+      - id: waring_2003
+        url: https://doi.org/10.1016/B978-0-8155-1502-2.50011-7
+      - id: briefer_etal_2015
+        url: https://doi.org/10.1038/srep09982
+    semantic_references:
+      - id: briefer_etal_2015
+        url: https://doi.org/10.1038/srep09982
+      - id: lemasson_etal_2009
+        url: https://doi.org/10.1016/j.anbehav.2009.06.007
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Whinnies are a standard horse vocal type in Waring 2003 and are the focus of Briefer et al. 2015 and Lemasson et al. 2009.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Independent studies agree on a long, modulated, individually variable call structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact, identity, and affective-state information are supported by focused acoustic and behavioral studies.
+
+  - name: nicker
+    alternative_names:
+      - whicker
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, quiet, short, pulsed]
+    acoustic_description: A quiet, low-frequency pulsed call produced with the mouth closed, often in short bouts.
+    semantic_keywords: [affiliation, contact, caregiving, food]
+    semantic_description: Used during close affiliative approaches, mare-foal interactions, and food-related anticipation.
+    acoustic_references:
+      - id: waring_2003
+        url: https://doi.org/10.1016/B978-0-8155-1502-2.50011-7
+      - id: briefer_etal_2015
+        url: https://doi.org/10.1038/srep09982
+    semantic_references:
+      - id: waring_2003
+        url: https://doi.org/10.1016/B978-0-8155-1502-2.50011-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Nickers are a standard named horse call in Waring 2003 and are included in focused acoustic comparisons.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The quiet, low pulsed structure is consistent, but less quantified than whinnies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Affiliative and food/care contexts are consistently described, but receiver experiments are limited.
+
+  - name: snort
+    alternative_names:
+      - blow
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, noisy, broadband, loud]
+    acoustic_description: A short broadband nasal exhalation with abrupt onset and mostly aperiodic energy.
+    semantic_keywords: [alarm, attention, affiliation]
+    semantic_description: Produced during exploration, alerting, and positive or negative arousal depending on context; recent work links some snorts with positive welfare states.
+    acoustic_references:
+      - id: waring_2003
+        url: https://doi.org/10.1016/B978-0-8155-1502-2.50011-7
+      - id: stomp_etal_2018
+        url: https://doi.org/10.1371/journal.pone.0202499
+    semantic_references:
+      - id: stomp_etal_2018
+        url: https://doi.org/10.1371/journal.pone.0202499
+      - id: waring_2003
+        url: https://doi.org/10.1016/B978-0-8155-1502-2.50011-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Snorts and blows are recognized in the repertoire and specifically studied by Stomp et al. 2018.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on a nasal broadband exhalation, though function varies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contexts include alerting and welfare-related arousal, so the semantic label is broader than one function.
+
+  - name: squeal
+    alternative_names:
+      - threat squeal
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, long, noisy, frequency_modulated]
+    acoustic_description: A loud high-frequency harsh or tonal call with strong modulation and variable duration.
+    semantic_keywords: [threat, aggression, mating]
+    semantic_description: Produced during agonistic encounters, sexual interactions, or close approaches when social tension is high.
+    acoustic_references:
+      - id: waring_2003
+        url: https://doi.org/10.1016/B978-0-8155-1502-2.50011-7
+      - id: briefer_etal_2015
+        url: https://doi.org/10.1038/srep09982
+    semantic_references:
+      - id: waring_2003
+        url: https://doi.org/10.1016/B978-0-8155-1502-2.50011-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Squeals are a standard named horse call in repertoire descriptions and acoustic comparisons.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: High-frequency harsh structure is consistent, but detailed measurements are sparser than whinny studies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Threat and reproductive contexts are consistently described but can overlap with other high-arousal contexts.
+references:
+  waring_2003:
+    citation: "Waring, G. H. (2003). Horse Behavior. Noyes Publications."
+    url: https://doi.org/10.1016/B978-0-8155-1502-2.50011-7
+  briefer_etal_2015:
+    citation: "Briefer, E. F., Maigrot, A. L., Mandel, R., Freymond, S. B., Bachmann, I., & Hillmann, E. (2015). Segregation of information about emotional arousal and valence in horse whinnies. Scientific Reports, 5, 9989."
+    url: https://doi.org/10.1038/srep09982
+    doi: 10.1038/srep09982
+  lemasson_etal_2009:
+    citation: "Lemasson, A., Boutin, A., Boivin, S., Blois-Heulin, C., & Hausberger, M. (2009). Horse whinnies: a source of social information. Animal Cognition, 12, 693-704."
+    url: https://doi.org/10.1007/s10071-009-0229-9
+    doi: 10.1007/s10071-009-0229-9
+  stomp_etal_2018:
+    citation: "Stomp, M., Leroux, M., Cellier, M., Henry, S., Lemasson, A., & Hausberger, M. (2018). An unexpected acoustic indicator of positive emotions in horses. PLOS ONE, 13, e0202499."
+    url: https://doi.org/10.1371/journal.pone.0202499
+    doi: 10.1371/journal.pone.0202499
