@@ -1,0 +1,320 @@
+scientific_name: Mungos mungo
+common_name: Banded Mongoose
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Herpestidae
+  genus: Mungos
+  species: mungo
+primary_inventory:
+  id: manser_etal_2014
+  rationale: Manser et al. 2014 is used as the peer-reviewed repertoire spine because it explicitly summarises the banded mongoose vocal repertoire alongside meerkat and dwarf mongoose calls within a comparative herpestid framework, naming the close call, alarm calls, recruitment call, lead/move call, pup begging call and aggressive vocalisations and citing the underlying primary studies. The close call is treated separately because its detailed segmental analysis only became possible with Jansen et al. 2012, which is therefore used as the primary acoustic source. Calls flagged in_primary_inventory are those explicitly named in the 2014 spine; subtypes such as the segmental signature/context cue components of the close call are kept inside the close-call entry rather than split out, per the variants-belong-in-explanations rule.
+calls:
+  - name: close call
+    in_primary_inventory: true
+    alternative_names:
+      - contact call
+      - close calls
+      - foraging call
+    scope: &adult_juvenile_both_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - quiet
+      - harmonic
+      - multi_component
+      - graded
+      - repetitive
+    acoustic_description: "A short, quiet, harmonic call produced almost continuously while foraging. Jansen et al. 2012 show that each close call is composed of two concatenated acoustic segments: an initial vowel-like, harmonic component that carries individual signatures, followed by a second, more variable noisy or harmonic segment whose acoustic features change with foraging context. The two-segment structure makes the call multi-component and graded along the context segment while remaining individually distinctive in the first segment."
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+      - combinatorial
+    semantic_description: Produced during foraging to maintain spatial cohesion and signal individual presence in dense vegetation, where group members are usually visually obscured. The first segment encodes caller identity and the second segment is associated with the caller's current activity (e.g. searching, digging, handling prey), so receivers can in principle extract both who is calling and what they are doing.
+    acoustic_references:
+      - id: jansen_etal_2012
+        url: https://doi.org/10.1186/1741-7007-10-97
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    semantic_references:
+      - id: jansen_etal_2012
+        url: https://doi.org/10.1186/1741-7007-10-97
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Manser et al. 2014 explicitly lists the close call as the principal foraging contact call of banded mongooses, and Jansen et al. 2012 provides the focused acoustic analysis of the same call. Both treat it as a discrete repertoire element rather than a context-specific subtype.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Jansen et al. 2012 measures the segmental structure of close calls in detail (vowel-like signature segment plus context-dependent second segment), and Manser et al. 2014 confirms the two-segment description in its comparative repertoire review. Agreement on the broad acoustic structure is therefore strong, even if exactly which subcategories of the second segment exist is treated as graded rather than discrete.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Jansen et al. 2012 directly links the two close-call segments to caller identity and current foraging activity from wild recordings, and Manser et al. 2014 reiterates the cohesion-plus-information function. The foraging-cohesion role of close calls is consistently described across primary and review sources.
+
+  - name: aerial alarm call
+    in_primary_inventory: true
+    alternative_names:
+      - aerial predator alarm
+      - high-urgency alarm
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - short
+      - loud
+      - graded
+    acoustic_description: A short, high-frequency, frequency-modulated alarm call given to aerial threats. Furrer and Manser 2009 show that banded mongoose alarm calls vary acoustically with predator type and that aerial alarms occupy a distinct region of acoustic space from terrestrial alarms, with within-class gradation reflecting urgency.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: Produced when aerial predators (raptors) or aerial threats are detected. Receivers respond with predator-class-appropriate escape behaviour, and call rate and acoustic urgency scale with perceived risk. Furrer and Manser 2009 use both call structure and behavioural context to support a functionally referential interpretation of banded mongoose alarm calls.
+    acoustic_references:
+      - id: furrer_manser_2009
+        url: https://doi.org/10.1086/596532
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    semantic_references:
+      - id: furrer_manser_2009
+        url: https://doi.org/10.1086/596532
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Furrer and Manser 2009 separates banded mongoose aerial alarms from terrestrial alarms on acoustic and contextual grounds, and Manser et al. 2014 lists predator-type alarm calls as a core class of the repertoire. The aerial alarm is independently recognised in both sources.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Furrer and Manser 2009 quantifies the acoustic separation between aerial and terrestrial alarms and the urgency-related gradation within each class. Manser et al. 2014 supports the same description at the review level, but few independent acoustic studies of banded mongoose aerial alarms exist beyond this work, so the label is medium.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Furrer and Manser 2009 provides combined acoustic and behavioural support for an aerial-predator referent and an urgency dimension. The aerial-predator context is consistent with the comparative review in Manser et al. 2014, but unlike meerkats there are no large-scale playback experiments published for banded mongoose aerial alarms, so the label is medium.
+
+  - name: terrestrial alarm call
+    in_primary_inventory: true
+    alternative_names:
+      - terrestrial predator alarm
+      - ground predator alarm
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - loud
+      - graded
+    acoustic_description: A short, broadband and relatively noisy alarm call given to terrestrial threats. Furrer and Manser 2009 found that terrestrial alarms occupy a different acoustic region from aerial alarms in banded mongooses, with acoustic structure also varying with urgency.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: Produced when terrestrial predators or ground-level threats are detected, eliciting ground-predator-appropriate vigilance and escape behaviour. As with aerial alarms, urgency-related acoustic variation matches behavioural urgency cues, supporting a functionally referential interpretation alongside an urgency dimension.
+    acoustic_references:
+      - id: furrer_manser_2009
+        url: https://doi.org/10.1086/596532
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    semantic_references:
+      - id: furrer_manser_2009
+        url: https://doi.org/10.1086/596532
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Furrer and Manser 2009 identifies terrestrial alarm calls as a separate predator-type alarm category in banded mongooses, and Manser et al. 2014 retains this distinction in its repertoire summary.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Furrer and Manser 2009 measures the acoustic separation between terrestrial and aerial alarms and within-class urgency gradation. The review in Manser et al. 2014 echoes this, but few other studies provide direct acoustic descriptions of banded mongoose terrestrial alarms.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The ground-predator referent and urgency dimension are supported acoustically and behaviourally in Furrer and Manser 2009 and summarised in Manser et al. 2014. Without independent playback tests, the semantic label is medium.
+
+  - name: recruitment call
+    in_primary_inventory: true
+    alternative_names:
+      - mobbing call
+      - recruitment alarm
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - repetitive
+      - graded
+    acoustic_description: A repetitive, broadband call produced when group members are recruited to a localised threat or stimulus on the ground (for example a snake or a recently fled predator). Furrer and Manser 2009 distinguish recruitment calls from aerial and terrestrial alarm calls within the banded mongoose alarm system.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - group_coordination
+    semantic_description: Used when an individual draws other group members toward a stationary or localised threat, typically a terrestrial predator that needs mobbing or inspection rather than immediate flight. Receivers approach the caller rather than fleeing, consistent with a recruitment-to-cue function described comparatively in Manser et al. 2014.
+    acoustic_references:
+      - id: furrer_manser_2009
+        url: https://doi.org/10.1086/596532
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    semantic_references:
+      - id: furrer_manser_2009
+        url: https://doi.org/10.1086/596532
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Manser et al. 2014 lists recruitment calls among the banded mongoose alarm classes, and Furrer and Manser 2009 separates recruitment-type calls from aerial and terrestrial alarms. Some sources fold recruitment into a broader terrestrial alarm category, so the existence label is medium rather than strong.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Furrer and Manser 2009 contains the primary acoustic comparison among banded mongoose alarm subtypes including recruitment, and Manser et al. 2014 supports the same partition at the review level. Direct parameter-level descriptions are sparser than for aerial or terrestrial alarms.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The mobbing/recruitment context is supported by Furrer and Manser 2009 and the comparative review of Manser et al. 2014, but unlike meerkats there are no published playback experiments isolating banded mongoose recruitment-call function, so the label is medium.
+
+  - name: lead call
+    in_primary_inventory: true
+    alternative_names:
+      - moving call
+      - movement initiation call
+      - departure call
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - multi_component
+    acoustic_description: A loud, repetitive call produced by individuals attempting to initiate group movement or a change of foraging patch. Furrer et al. 2012 characterises lead calls behaviourally and acoustically as a distinct vocalisation associated with group departures, and Manser et al. 2014 retains it as a movement-coordination call class in the repertoire summary.
+    semantic_keywords:
+      - group_coordination
+      - recruitment
+      - spacing
+    semantic_description: Given when one or several individuals attempt to lead the group away from a current foraging area or sleeping site. Furrer et al. 2012 show that lead calling occurs across age and sex classes, with calling effort and propensity influenced by foraging success and recent activity, and that successful group departures are typically preceded by repeated lead calling.
+    acoustic_references:
+      - id: furrer_etal_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.04.034
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    semantic_references:
+      - id: furrer_etal_2012
+        url: https://doi.org/10.1016/j.anbehav.2012.04.034
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Furrer et al. 2012 treats lead calls as a named, discrete call type in banded mongooses and Manser et al. 2014 lists them alongside other herpestid movement-coordination calls. Both sources agree it is separate from close and alarm calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Furrer et al. 2012 describes lead calls primarily in terms of behavioural context and calling rate, with less parameter-rich acoustic detail than Furrer and Manser 2009 provides for alarms. Manser et al. 2014 reiterates the description at the review level. The label is therefore medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Furrer et al. 2012 provides strong observational and statistical support that lead calls initiate group movement, with variation across individuals and contexts. Manser et al. 2014 corroborates the movement-coordination function. Agreement on context of use is strong.
+
+  - name: pup begging call
+    in_primary_inventory: true
+    alternative_names:
+      - begging call
+      - pup contact-begging call
+    scope: &pup_both_scope
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - repetitive
+      - graded
+    acoustic_description: A repetitive, high-frequency call produced by dependent pups that follow individual adult escorts during foraging. Bell 2008 measures begging-call rate and acoustic properties and links them to pup hunger state, with structure that grades with body condition and growth as pups mature.
+    semantic_keywords:
+      - begging
+      - food
+      - caregiving
+      - identity
+    semantic_description: Produced by pups while accompanying their escort adult to solicit food, attention and protection. Bell 2008 shows that pups strategically adjust begging effort according to recent feeding, and Müller and Manser 2008 show that escort adults and their pups recognise one another's contact-begging vocalisations, supporting an individually directed begging-cum-contact function.
+    acoustic_references:
+      - id: bell_2008
+        url: https://doi.org/10.1098/rspb.2008.0378
+      - id: muller_manser_2008
+        url: https://doi.org/10.1016/j.anbehav.2007.10.021
+    semantic_references:
+      - id: bell_2008
+        url: https://doi.org/10.1098/rspb.2008.0378
+      - id: muller_manser_2008
+        url: https://doi.org/10.1016/j.anbehav.2007.10.021
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    playback_references:
+      - id: muller_manser_2008
+        url: https://doi.org/10.1016/j.anbehav.2007.10.021
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Pup begging calls are described as a distinct call type by Bell 2008 and Müller and Manser 2008, and Manser et al. 2014 includes them in the comparative herpestid repertoire summary. Sources agree it is separate from adult close and alarm calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Bell 2008 provides direct measurements of begging call rate and structure linked to hunger and body condition, and Müller and Manser 2008 give complementary recordings of the same call from the escort-recognition perspective. The label is medium because parameter-level descriptions are less extensive than for adult calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Bell 2008 experimentally shows strategic adjustment of begging according to hunger and provisioning, and Müller and Manser 2008 uses cross-fostering and playbacks to show that the same calls are used in individual escort recognition. The begging-plus-individual-contact function is therefore strongly supported.
+
+  - name: aggression call
+    in_primary_inventory: true
+    alternative_names:
+      - aggressive call
+      - screech
+      - fight call
+    scope: *adult_juvenile_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - harmonic
+      - graded
+    acoustic_description: A loud, broadband and noisy vocalisation produced during agonistic interactions, including within-group conflicts and inter-group encounters at territory boundaries. Müller and Manser 2007 describe heightened vocal activity during inter-group fights and Manser et al. 2014 lists banded mongoose aggressive calls as a distinct repertoire class.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+      - spacing
+    semantic_description: Produced during fights, threats and territorial encounters between groups. Müller and Manser 2007 show that banded mongoose groups respond more aggressively to neighbouring than to unfamiliar groups, with elevated vocal output during these conflicts, consistent with an agonistic and territorial use of the call.
+    acoustic_references:
+      - id: muller_manser_2007
+        url: https://doi.org/10.1098/rspb.2006.0222
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    semantic_references:
+      - id: muller_manser_2007
+        url: https://doi.org/10.1098/rspb.2006.0222
+      - id: manser_etal_2014
+        url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    playback_references:
+      - id: muller_manser_2007
+        url: https://doi.org/10.1098/rspb.2006.0222
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Manser et al. 2014 explicitly lists aggressive vocalisations among banded mongoose calls, and Müller and Manser 2007 documents their use during inter-group encounters. The label is medium because no dedicated acoustic study has yet partitioned aggression calls into clearly named subtypes, and some sources fold within-group screeches and inter-group fight calls into a single broad class.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Müller and Manser 2007 reports inter-group calling and aggression but does not provide a quantitative spectro-temporal description of the calls, and Manser et al. 2014 treats them only at the level of the call class. Detailed acoustic parameters are not yet published, so the label is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The agonistic and territorial context is supported by Müller and Manser 2007 ('nasty neighbours') and the repertoire-level summary of Manser et al. 2014. The label is medium rather than strong because the partition of aggression calls into within- and between-group subtypes and their fine-grained semantics have not been tested experimentally.
+
+references:
+  jansen_etal_2012:
+    citation: "Jansen DAWAM, Cant MA, Manser MB. 2012. Segmental concatenation of individual signatures and context cues in banded mongoose (Mungos mungo) close calls. BMC Biology 10: 97."
+    url: https://doi.org/10.1186/1741-7007-10-97
+    doi: 10.1186/1741-7007-10-97
+  furrer_manser_2009:
+    citation: "Furrer RD, Manser MB. 2009. The evolution of urgency-based and functionally referential alarm calls in ground-dwelling species. The American Naturalist 173(3): 400-410."
+    url: https://doi.org/10.1086/596532
+    doi: 10.1086/596532
+  furrer_etal_2012:
+    citation: "Furrer RD, Kunc HP, Manser MB. 2012. Variable initiators of group departure in a cooperative breeder: the influence of sex, age, and foraging success. Animal Behaviour 84(1): 205-212."
+    url: https://doi.org/10.1016/j.anbehav.2012.04.034
+    doi: 10.1016/j.anbehav.2012.04.034
+  muller_manser_2007:
+    citation: "Müller CA, Manser MB. 2007. 'Nasty neighbours' rather than 'dear enemies' in a social carnivore. Proceedings of the Royal Society B 274(1612): 959-965."
+    url: https://doi.org/10.1098/rspb.2006.0222
+    doi: 10.1098/rspb.2006.0222
+  muller_manser_2008:
+    citation: "Müller CA, Manser MB. 2008. Mutual recognition of pups and providers in the cooperatively breeding banded mongoose. Animal Behaviour 75(5): 1683-1692."
+    url: https://doi.org/10.1016/j.anbehav.2007.10.021
+    doi: 10.1016/j.anbehav.2007.10.021
+  bell_2008:
+    citation: "Bell MBV. 2008. Strategic adjustment of begging effort by banded mongoose pups. Proceedings of the Royal Society B 275(1647): 1313-1319."
+    url: https://doi.org/10.1098/rspb.2008.0378
+    doi: 10.1098/rspb.2008.0378
+  manser_etal_2014:
+    citation: "Manser MB, Jansen DAWAM, Graw B, Hollen LI, Bousquet CAH, Furrer RD, le Roux A. 2014. Vocal complexity in meerkats and other mongoose species. Advances in the Study of Behavior 46: 281-310."
+    url: https://doi.org/10.1016/B978-0-12-800286-5.00006-7
+    doi: 10.1016/B978-0-12-800286-5.00006-7
