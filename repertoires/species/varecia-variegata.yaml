@@ -1,0 +1,120 @@
+scientific_name: Varecia variegata
+common_name: Black-and-white ruffed lemur
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Lemuridae
+  genus: Varecia
+  species: variegata
+primary_inventory:
+  id: batist_etal_2023
+  rationale: Batist et al. 2023 is the primary inventory because it is the dedicated quantitative acoustic repertoire study for wild black-and-white ruffed lemurs and enumerates named call types. This compact core file keeps four well-supported calls that are also useful in the Batist et al. 2022 behavioral call-usage study.
+calls:
+  - name: roar-shriek
+    alternative_names:
+      - roar shriek
+    in_primary_inventory: true
+    scope: &adult_both
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, noisy, broadband, multi_component, repetitive, graded]
+    acoustic_description: Loud, harsh, multi-component calling made of roar-like and shriek-like elements in repeated bouts. The call belongs to the species' graded loud-call complex and is acoustically distinct from short barks and close-range growls.
+    semantic_keywords: [contact, group_coordination, territorial, spacing, display]
+    semantic_description: Produced in high-arousal long-distance contexts, including group coordination, spacing, and conspicuous chorus-like exchanges between or within groups.
+    acoustic_references:
+      - id: batist_etal_2023
+        url: https://pubmed.ncbi.nlm.nih.gov/37584832/
+    semantic_references:
+      - id: batist_etal_2022
+        url: https://doi.org/10.1007/s10329-021-00956-0
+      - id: pereira_etal_1988
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Batist et al. 2023 includes roar-shriek in the quantified acoustic repertoire, Batist et al. 2022 analyzes its field usage, and Pereira et al. 1988 describes the loud-call behavior of this species.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Batist et al. 2023 gives the main quantitative acoustic basis, while older sources support the broad loud-call category more than detailed spectrographic boundaries.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Batist et al. 2022 and Pereira et al. 1988 agree on conspicuous social and spacing contexts, but the call is broad and graded rather than tied to one narrow function.
+
+  - name: abrupt roar
+    in_primary_inventory: true
+    scope: *adult_both
+    acoustic_keywords: [loud, abrupt, short, low_frequency, noisy, broadband]
+    acoustic_description: A short, forceful, low-frequency noisy roar with abrupt onset. It is shorter and less bout-like than the roar-shriek and sits within the species' harsh loud-call set.
+    semantic_keywords: [alarm, attention, group_coordination, threat]
+    semantic_description: Given in high-arousal alerting contexts, including disturbance or tense social situations where nearby group members are likely to orient or coordinate.
+    acoustic_references:
+      - id: batist_etal_2023
+        url: https://pubmed.ncbi.nlm.nih.gov/37584832/
+    semantic_references:
+      - id: batist_etal_2022
+        url: https://doi.org/10.1007/s10329-021-00956-0
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Batist et al. 2023 treats abrupt roar as a distinct acoustic type and Batist et al. 2022 tracks its use, but the loud-call system is graded and older studies do not always use the same label.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Quantitative support comes mainly from Batist et al. 2023; agreement is medium because related roar-like calls can overlap acoustically.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Batist et al. 2022 supports high-arousal alerting usage, but the semantic range is broader than a single experimentally isolated function.
+
+  - name: bark
+    in_primary_inventory: true
+    scope: *adult_both
+    acoustic_keywords: [loud, short, abrupt, noisy, broadband, repetitive]
+    acoustic_description: Short, loud, harsh broadband call often produced singly or in short series. Batist et al. 2023 quantitatively separates barks from growls and longer roar-shriek calls.
+    semantic_keywords: [alarm, predator, attention, group_coordination]
+    semantic_description: Used as an alerting call in disturbance and predator-related contexts, drawing attention and helping coordinate group responses.
+    acoustic_references:
+      - id: batist_etal_2023
+        url: https://pubmed.ncbi.nlm.nih.gov/37584832/
+    semantic_references:
+      - id: batist_etal_2022
+        url: https://doi.org/10.1007/s10329-021-00956-0
+      - id: macedonia_1990
+    playback_references:
+      - id: macedonia_1990
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Batist et al. 2023 quantifies bark acoustics, Batist et al. 2022 analyzes bark usage in wild groups, and Macedonia 1990 includes ruffed lemur antipredator playback evidence involving bark-like alarm calls.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Batist et al. 2023 provides the strongest call-specific acoustic evidence; other studies support the alarm-call category but are less focused on bark acoustics.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Batist et al. 2022 and Macedonia 1990 both support alarm or predator-related use, including receiver responses in playback work.
+
+  - name: growl
+    in_primary_inventory: true
+    scope: *adult_both
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: Low, harsh, noisy call with graded structure, lower-frequency emphasis, and longer duration than a bark. Batist et al. 2023 provides quantitative measurements separating growls from the other harsh call types.
+    semantic_keywords: [threat, aggression, submission, attention]
+    semantic_description: Produced in close-range high-arousal social contexts, especially tense or agonistic interactions where callers direct attention to a nearby animal.
+    acoustic_references:
+      - id: batist_etal_2023
+        url: https://pubmed.ncbi.nlm.nih.gov/37584832/
+    semantic_references:
+      - id: batist_etal_2022
+        url: https://doi.org/10.1007/s10329-021-00956-0
+      - id: pereira_etal_1988
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Batist et al. 2023 and Batist et al. 2022 both retain growl as a named type, but the call is graded and less independently replicated than the bark or roar-shriek.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Batist et al. 2023 gives direct quantitative support, while Pereira et al. 1988 provides behavioral-repertoire support without the same acoustic detail.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Batist et al. 2022 and Pereira et al. 1988 support agonistic or tense social contexts, but call-specific experimental evidence is limited.
+
+references:
+  batist_etal_2022:
+    citation: "Batist CM, Razafindraibe H, Randriamanantena D, Baden AL. 2022. Factors affecting call usage in wild black-and-white ruffed lemurs (Varecia variegata) at Mangevo, Ranomafana National Park. Primates 63:243-258."
+    url: https://doi.org/10.1007/s10329-021-00956-0
+    doi: 10.1007/s10329-021-00956-0
+  batist_etal_2023:
+    citation: "Batist CM, Razafindraibe H, Randriamanantena D, Baden AL. 2023. Quantitative acoustic analysis of the vocal repertoire of wild black-and-white ruffed lemurs (Varecia variegata). International Journal of Primatology."
+    url: https://pubmed.ncbi.nlm.nih.gov/37584832/
+  macedonia_1990:
+    citation: "Macedonia JM. 1990. What is communicated in the antipredator calls of lemurs: evidence from playback experiments with ringtailed and ruffed lemurs. Ethology 86:177-190."
+  pereira_etal_1988:
+    citation: "Pereira ME, Seeligson ML, Macedonia JM. 1988. The behavioral repertoire of the black-and-white ruffed lemur, Varecia variegata variegata (Primates: Lemuridae). Folia Primatologica 51:1-32."
