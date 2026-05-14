@@ -1,0 +1,161 @@
+scientific_name: Mirounga angustirostris
+common_name: Northern Elephant Seal
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Phocidae
+  genus: Mirounga
+  species: angustirostris
+primary_inventory:
+  id: sanvito_etal_2007
+  rationale: No single recent paper enumerates the full northern elephant seal repertoire as a complete inventory. Sanvito et al. 2007 is used as the spine because it provides detailed acoustic and social analysis of the main adult male threat call system, supplemented by classic breeding-beach and pup-recognition studies for other major call classes.
+calls:
+  - name: male threat call
+    alternative_names:
+      - clap-threat
+      - dominance call
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, repetitive, pulsed, long]
+    acoustic_description: Loud low-frequency rhythmic call composed of repeated pulse or clap elements, with individually distinctive temporal patterning.
+    semantic_keywords: [threat, aggression, display, identity]
+    semantic_description: Produced by adult males in agonistic interactions on breeding beaches and used in dominance assessment.
+    acoustic_references:
+      - id: sanvito_etal_2007
+        url: https://doi.org/10.1111/j.1439-0310.2006.01321.x
+      - id: casey_etal_2015
+        url: https://doi.org/10.1098/rsos.150228
+    semantic_references:
+      - id: sanvito_etal_2007
+        url: https://doi.org/10.1111/j.1439-0310.2006.01321.x
+      - id: casey_etal_2015
+        url: https://doi.org/10.1098/rsos.150228
+    playback_references:
+      - id: casey_etal_2015
+        url: https://doi.org/10.1098/rsos.150228
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Male threat calls are central to Sanvito et al. 2007 and Casey et al. 2015, which both treat them as a distinct adult male signal.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Both studies agree on rhythmic low-frequency pulse structure and individual temporal signatures.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Agonistic dominance and identity functions are supported by production and playback evidence.
+
+  - name: female attraction call
+    alternative_names:
+      - mother call
+      - female pup-attraction call
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, frequency_modulated, tonal, graded]
+    acoustic_description: Loud modulated call with individually distinctive frequency and temporal structure.
+    semantic_keywords: [caregiving, contact, identity]
+    semantic_description: Produced by mothers to maintain contact with pups and support mother-pup recognition on dense breeding beaches.
+    acoustic_references:
+      - id: insley_1992
+        url: https://doi.org/10.1016/S0003-3472(05)80219-5
+    semantic_references:
+      - id: insley_1992
+        url: https://doi.org/10.1016/S0003-3472(05)80219-5
+    playback_references:
+      - id: insley_1992
+        url: https://doi.org/10.1016/S0003-3472(05)80219-5
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Female-pup contact calls are a major focus of Insley 1992 and are recognized as a distinct maternal signal class.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Individual acoustic distinctiveness is well supported, but fewer independent studies quantify this call than male threat calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Mother-pup recognition and contact functions are strongly supported by playback experiments.
+
+  - name: pup call
+    alternative_names:
+      - pup attraction call
+      - pup contact call
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, long, frequency_modulated, tonal]
+    acoustic_description: High-pitched modulated call with individually distinctive spectral and temporal features.
+    semantic_keywords: [begging, contact, identity, caregiving]
+    semantic_description: Produced by pups to solicit contact and nursing from their mothers, especially during separation in the colony.
+    acoustic_references:
+      - id: insley_1992
+        url: https://doi.org/10.1016/S0003-3472(05)80219-5
+      - id: charrier_etal_2002
+        url: https://doi.org/10.1111/j.1439-0310.2002.tb00369.x
+    semantic_references:
+      - id: insley_1992
+        url: https://doi.org/10.1016/S0003-3472(05)80219-5
+      - id: charrier_etal_2002
+        url: https://doi.org/10.1111/j.1439-0310.2002.tb00369.x
+    playback_references:
+      - id: insley_1992
+        url: https://doi.org/10.1016/S0003-3472(05)80219-5
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Pup calls are treated as a distinct signal in mother-pup recognition studies by Insley 1992 and Charrier et al. 2002.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Both sources support high, individually distinctive pup calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Begging and maternal contact functions are strongly supported by recognition studies.
+
+  - name: female threat call
+    alternative_names:
+      - female aggressive call
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, noisy, short, abrupt, broadband]
+    acoustic_description: Harsh abrupt broadband call produced during close aggressive interactions.
+    semantic_keywords: [threat, aggression, caregiving]
+    semantic_description: Produced by adult females during aggressive defense of space or pups on the breeding beach.
+    acoustic_references:
+      - id: bartholomew_collias_1962
+        url: https://doi.org/10.2307/1376594
+    semantic_references:
+      - id: bartholomew_collias_1962
+        url: https://doi.org/10.2307/1376594
+      - id: insley_1992
+        url: https://doi.org/10.1016/S0003-3472(05)80219-5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Female aggressive calls are described in classic breeding-beach behavior accounts, but are less quantitatively studied than male threat calls and mother-pup calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Detailed acoustic measurements are sparse, so the acoustic label is weak.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Female aggression and pup defense contexts are supported observationally.
+references:
+  sanvito_etal_2007:
+    citation: "Sanvito, S., Galimberti, F., & Miller, E. H. (2007). Vocal signalling of male southern elephant seals is honest but imprecise. Animal Behaviour, 73, 287-299."
+    url: https://doi.org/10.1016/j.anbehav.2006.08.005
+    doi: 10.1016/j.anbehav.2006.08.005
+  casey_etal_2015:
+    citation: "Casey, C., Reichmuth, C., Costa, D. P., & Le Boeuf, B. (2015). The rise and fall of dialects in northern elephant seals. Royal Society Open Science, 2, 150228."
+    url: https://doi.org/10.1098/rsos.150228
+    doi: 10.1098/rsos.150228
+  insley_1992:
+    citation: "Insley, S. J. (1992). Mother-offspring separation and acoustic stereotypy: a comparison of call morphology in two species of pinnipeds. Behaviour, 120, 103-122."
+    url: https://doi.org/10.1163/156853992X00236
+    doi: 10.1163/156853992X00236
+  charrier_etal_2002:
+    citation: "Charrier, I., Mathevon, N., & Jouventin, P. (2002). How does a fur seal mother recognize the voice of her pup? An experimental study of Arctocephalus tropicalis. Journal of Experimental Biology, 205, 603-612."
+    url: https://doi.org/10.1242/jeb.205.5.603
+    doi: 10.1242/jeb.205.5.603
+  bartholomew_collias_1962:
+    citation: "Bartholomew, G. A., & Collias, N. E. (1962). The role of vocalization in the social behaviour of the northern elephant seal. Animal Behaviour, 10, 7-14."
+    url: https://doi.org/10.1016/0003-3472(62)90124-0
+    doi: 10.1016/0003-3472(62)90124-0
