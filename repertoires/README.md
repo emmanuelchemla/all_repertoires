@@ -8,6 +8,6 @@ The repertoire database is organized as follows:
 - To add new species, prompt `Codex GPT-5.5 Extra High` (or `Claude Code Opus 4.7 Extra High`) with something like:
 
 ```
-Invoke the species-repertoire skill to add 10 new species, one subagent per species, on a new branch with one commit per species and a single PR. Completely ignore database.json for this request.
+Invoke the species-repertoire skill to add 10 new species.
 ```
 
