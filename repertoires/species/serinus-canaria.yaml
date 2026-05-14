@@ -1,0 +1,140 @@
+scientific_name: Serinus canaria
+common_name: Canary
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Fringillidae
+  genus: Serinus
+  species: canaria
+primary_inventory:
+  id: leitner_etal_2001
+  rationale: Leitner et al. 2001 is used as the primary inventory because it documents the song pattern of non-domesticated island canaries in the field. General canary vocal-behavior work is used for additional call classes, with caution because much detailed song work uses domesticated strains.
+calls:
+  - name: song
+    alternative_names:
+      - male song
+    in_primary_inventory: true
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [long, repetitive, multi_component, tonal, frequency_modulated]
+    acoustic_description: Long learned song composed of repeated syllables and phrases with broad frequency modulation and song-type variation.
+    semantic_keywords: [courtship, territorial, identity]
+    semantic_description: Produced mainly by males during breeding contexts for mate attraction and territory advertisement.
+    acoustic_references:
+      - id: leitner_etal_2001
+        url: https://doi.org/10.1163/156853901753172656
+      - id: hartley_suthers_1989
+        url: https://doi.org/10.1126/science.246.4932.826
+    semantic_references:
+      - id: leitner_etal_2001
+        url: https://doi.org/10.1163/156853901753172656
+      - id: hartley_suthers_1989
+        url: https://doi.org/10.1126/science.246.4932.826
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Male song is the central canary vocal type in field and laboratory studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multi-syllable learned song structure is strongly supported across sources.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Courtship and territorial functions are consistently reported.
+
+  - name: contact call
+    alternative_names:
+      - flock call
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, high_frequency, tonal]
+    acoustic_description: Short high-frequency tonal call used singly or in brief exchanges.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used for flock cohesion, pair contact, and close-range coordination.
+    acoustic_references:
+      - id: leitner_etal_2001
+        url: https://doi.org/10.1163/156853901753172656
+      - id: guttinger_1985
+        url: https://doi.org/10.1007/BF00199362
+    semantic_references:
+      - id: guttinger_1985
+        url: https://doi.org/10.1007/BF00199362
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Contact calls are recognized in canary vocal behavior, though song dominates the literature.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Detailed acoustic quantification is limited compared with song.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Flock and pair contact contexts are supported observationally.
+
+  - name: alarm call
+    alternative_names:
+      - warning call
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, high_frequency, abrupt, loud]
+    acoustic_description: Short high-frequency call with abrupt onset and high amplitude relative to contact calls.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced during disturbance or predator-related vigilance to alert nearby birds.
+    acoustic_references:
+      - id: guttinger_1985
+        url: https://doi.org/10.1007/BF00199362
+    semantic_references:
+      - id: guttinger_1985
+        url: https://doi.org/10.1007/BF00199362
+    playback_references: []
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Alarm calls are recognized in passerine and canary vocal behavior, but canary-specific acoustic literature is sparse.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic description is broad and lightly sourced.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Alarm context is well established observationally, though not strongly tested.
+
+  - name: begging call
+    alternative_names:
+      - nestling call
+    in_primary_inventory: false
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, tonal, long]
+    acoustic_description: Repeated high-frequency tonal calls produced in begging bouts.
+    semantic_keywords: [begging, caregiving, food]
+    semantic_description: Produced by nestlings and fledglings to solicit feeding from parents.
+    acoustic_references:
+      - id: guttinger_1985
+        url: https://doi.org/10.1007/BF00199362
+    semantic_references:
+      - id: guttinger_1985
+        url: https://doi.org/10.1007/BF00199362
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Begging calls are a standard juvenile passerine call type and are described in canary vocal behavior.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Detailed acoustic studies focus mainly on song rather than begging calls.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Food solicitation and caregiving context are well established.
+references:
+  leitner_etal_2001:
+    citation: "Leitner, S., Voigt, C., & Gahr, M. (2001). Seasonal changes in the song pattern of the non-domesticated island canary (Serinus canaria), a field study. Behaviour, 138, 885-904."
+    url: https://doi.org/10.1163/156853901753172656
+    doi: 10.1163/156853901753172656
+  hartley_suthers_1989:
+    citation: "Hartley, R. S., & Suthers, R. A. (1989). Airflow and pressure during canary song: direct evidence for mini-breaths. Journal of Comparative Physiology A, 165, 15-26."
+    url: https://doi.org/10.1007/BF00613796
+    doi: 10.1007/BF00613796
+  guttinger_1985:
+    citation: "Guttinger, H. R. (1985). Consequences of domestication on the song structures in the canary. Behaviour, 94, 254-278."
+    url: https://doi.org/10.1163/156853985X00313
+    doi: 10.1163/156853985X00313
