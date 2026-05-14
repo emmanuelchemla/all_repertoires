@@ -40,4 +40,6 @@ dist/
 # Project outputs
 plots/
 .embedding_cache.json
+analysis/.embedding_cache.npz
+analysis/results.json
 human_bursts/
