@@ -1,0 +1,542 @@
+scientific_name: Saguinus oedipus
+common_name: Cotton-top Tamarin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Saguinus
+  species: oedipus
+primary_inventory:
+  id: cleveland_snowdon_1982
+  rationale: Cleveland and Snowdon 1982 ("The complex vocal repertoire of the adult cotton-top tamarin") is the canonical and most comprehensive enumeration of the species' vocal repertoire, describing the major adult call categories (long calls, chirps, whistles, trills, twitters, squeaks, chatters and combinations) with quantitative acoustic measurements and contextual observations. It is universally cited as the spine reference for Saguinus oedipus vocal behaviour and remains the benchmark inventory used by all subsequent acoustic and functional work on this species.
+calls:
+  - name: normal long call
+    alternative_names:
+      - long call
+      - NLC
+    in_primary_inventory: true
+    scope: &adult_both_scope
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - long
+      - loud
+      - multi_component
+      - repetitive
+    acoustic_description: A loud, long-duration call composed of a series of frequency-modulated whistle-like notes (typically several "J-shaped" or rising-falling components) with concentrated energy in the upper kilohertz range. Notes are separated by brief inter-note intervals and produced in stereotyped multi-note sequences.
+    semantic_keywords:
+      - contact
+      - spacing
+      - group_coordination
+      - identity
+      - territorial
+    semantic_description: Produced when groups or individuals are visually separated and used in long-distance contact, intergroup spacing, and reunion contexts. The call carries individually distinctive features that support caller recognition and is exchanged antiphonally between separated animals.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+      - id: weiss_etal_2001
+        url: https://doi.org/10.1037/0735-7036.115.3.258
+      - id: miller_etal_2005
+        url: https://doi.org/10.1163/1568539054352860
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+      - id: weiss_etal_2001
+        url: https://doi.org/10.1037/0735-7036.115.3.258
+      - id: ghazanfar_etal_2002
+        url: https://doi.org/10.1006/anbe.2002.3074
+    playback_references:
+      - id: weiss_etal_2001
+        url: https://doi.org/10.1037/0735-7036.115.3.258
+      - id: ghazanfar_etal_2002
+        url: https://doi.org/10.1006/anbe.2002.3074
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The normal long call is the central long-distance call documented by Cleveland and Snowdon 1982 and is treated as the canonical long call in all subsequent acoustic and playback work (e.g. Weiss et al. 2001, Miller et al. 2005, Ghazanfar et al. 2002).
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Multiple independent quantitative studies (Cleveland and Snowdon 1982; Weiss et al. 2001; Miller et al. 2005) agree on the multi-note frequency-modulated whistle structure and its individual distinctiveness.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Contact, spacing and identity functions are supported by Cleveland and Snowdon 1982 and confirmed experimentally with playback by Weiss et al. 2001 and Ghazanfar et al. 2002.
+
+  - name: quiet long call
+    alternative_names:
+      - QLC
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - long
+      - quiet
+      - multi_component
+    acoustic_description: A reduced-amplitude version of the normal long call, retaining the multi-note frequency-modulated whistle structure but produced at noticeably lower intensity and often with fewer notes.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Produced during close-range or within-group contact contexts, including affiliative interactions and short-distance coordination when group members are nearby but not in continuous visual contact.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Cleveland and Snowdon 1982 distinguish the quiet long call as a separate subtype of long call. Subsequent acoustic work focuses on the normal long call, so independent corroboration of the quiet variant is more limited.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The amplitude-and-context-based distinction from the normal long call is detailed in Cleveland and Snowdon 1982, but few later studies separately measure the quiet variant.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Cleveland and Snowdon 1982 link the quiet long call to within-group close-range contact, but its functional separation from the normal long call has not been independently tested by playback.
+
+  - name: combination long call
+    alternative_names:
+      - CLC
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - long
+      - loud
+      - multi_component
+      - broadband
+    acoustic_description: A compound long-call form that combines whistle-like long-call notes with additional broadband or chirp-like components, producing a more acoustically heterogeneous and often longer multi-note structure than the normal long call.
+    semantic_keywords:
+      - alarm
+      - threat
+      - group_coordination
+      - spacing
+    semantic_description: Produced in higher-arousal or disturbance contexts, including mild alarm, intergroup encounters, and territorial spacing situations where additional broadband elements appear to signal increased motivation or threat.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Cleveland and Snowdon 1982 describe the combination long call as a distinct subtype produced in arousal-related contexts, but later quantitative studies have largely concentrated on the normal long call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The compound multi-note structure is described in Cleveland and Snowdon 1982 but has not been re-quantified by independent acoustic studies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The arousal- and disturbance-related context is supported by Cleveland and Snowdon 1982, but no playback work has independently tested this functional category.
+
+  - name: type A chirp
+    alternative_names:
+      - alarm chirp
+      - chirp A
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - frequency_modulated
+      - tonal
+      - abrupt
+    acoustic_description: A short, high-frequency tonal note with a brief frequency-modulated contour, produced singly or in repeated series with relatively stereotyped acoustic form.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced in response to general disturbances and potentially threatening stimuli, particularly novel or startling events, and elicits orientation and vigilance from group members.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The type A chirp is one of several acoustically distinguished chirp types described in Cleveland and Snowdon 1982 and is recognized in later work using their classification.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Cleveland and Snowdon 1982 provide quantitative acoustic measurements that distinguish chirp type A from other chirp types, but further independent re-measurement is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The alarm- and disturbance-related context is described in Cleveland and Snowdon 1982; playback or production tests separating the chirp subtypes functionally are limited.
+
+  - name: type B chirp
+    alternative_names:
+      - chirp B
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - frequency_modulated
+      - tonal
+    acoustic_description: A short, high-frequency tonal note acoustically distinguishable from type A by differences in peak frequency, duration and frequency-modulation pattern, as described in the original chirp classification.
+    semantic_keywords:
+      - alarm
+      - attention
+      - group_coordination
+    semantic_description: Produced in contexts related to vigilance and mild disturbance, often during interactions with conspecifics or low-intensity arousal events, and serves to draw attention of group members.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Cleveland and Snowdon 1982 distinguish type B chirps as a separate chirp subtype on quantitative acoustic grounds. Recognition of fine chirp subtypes by later authors is variable.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The acoustic separation from other chirp types rests primarily on the quantitative classification in Cleveland and Snowdon 1982.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Functional separation of chirp B from neighbouring chirp types in Cleveland and Snowdon 1982 is based on observation rather than experimental test.
+
+  - name: type C chirp
+    alternative_names:
+      - food chirp
+      - chirp C
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - frequency_modulated
+      - tonal
+    acoustic_description: A short, high-frequency tonal chirp note distinguished from other chirp types by its specific frequency contour and timing, as quantified in the original repertoire classification.
+    semantic_keywords:
+      - food
+      - recruitment
+      - group_coordination
+    semantic_description: Produced in food-associated contexts, particularly during encounters with and processing of preferred food items, and functions as part of the food-related calling that recruits or coordinates group members at food sources.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+      - id: roush_snowdon_2000
+        url: https://doi.org/10.1046/j.1439-0310.2000.00582.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+      - id: roush_snowdon_2000
+        url: https://doi.org/10.1046/j.1439-0310.2000.00582.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: The food-associated chirp (Cleveland and Snowdon 1982's type C chirp) is recognized and used as the principal food-calling category in subsequent ontogenetic and functional studies (e.g. Roush and Snowdon 2000).
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Cleveland and Snowdon 1982 provide the foundational acoustic classification, and Roush and Snowdon 2000 also characterize the food-associated chirp acoustically, supporting its acoustic distinctness.
+    semantic_description_agreement: strong
+    semantic_description_explanation: The food-associated context is strongly supported by Cleveland and Snowdon 1982 and confirmed by detailed studies of food calling in cotton-top tamarins by Roush and Snowdon 2000.
+
+  - name: type D chirp
+    alternative_names:
+      - chirp D
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - frequency_modulated
+      - tonal
+    acoustic_description: A short, high-frequency tonal chirp variant with frequency-modulation characteristics distinct from chirp types A, B and C, as quantified in the original chirp classification.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Produced in close-range social contexts, including ongoing group coordination and attention-orienting interactions during movement and routine activity.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Type D chirp is part of the multi-class chirp classification proposed by Cleveland and Snowdon 1982, but recognition of all chirp subtypes by later authors is variable.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic separation from neighbouring chirp types rests on the quantitative classification of Cleveland and Snowdon 1982 and has had limited independent re-measurement.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The close-range social-context description derives from Cleveland and Snowdon 1982 and has not been further tested functionally.
+
+  - name: type E chirp
+    alternative_names:
+      - chirp E
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - frequency_modulated
+      - tonal
+    acoustic_description: An additional short, high-frequency chirp subtype with its own characteristic frequency contour and duration as quantified in the original chirp classification.
+    semantic_keywords:
+      - contact
+      - group_coordination
+    semantic_description: Used during routine within-group coordination and close-range social contact, often during travel or feeding activity.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Cleveland and Snowdon 1982 enumerate type E as one of the quantitatively distinguishable chirp subtypes. Independent recognition of the full set of chirp variants is limited.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic separation from neighbouring chirp types relies on a single quantitative classification.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The within-group coordination context is described in Cleveland and Snowdon 1982 but has not been confirmed by independent studies.
+
+  - name: type F chirp
+    alternative_names:
+      - chirp F
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - frequency_modulated
+      - tonal
+    acoustic_description: A final short, high-frequency tonal chirp subtype defined acoustically by its frequency-modulation parameters and duration relative to the other chirp types in the original classification.
+    semantic_keywords:
+      - contact
+      - attention
+    semantic_description: Produced in close-range social contexts associated with attention orientation and brief interactions among group members.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: weak
+    call_type_existence_explanation: Type F chirp is the most acoustically restricted chirp subtype in the Cleveland and Snowdon 1982 classification and is rarely separately tracked in subsequent studies.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic distinctness depends on the original quantitative classification with limited independent corroboration.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The close-range social-context description rests on observations in Cleveland and Snowdon 1982 and has not been tested experimentally.
+
+  - name: initially rising whistle
+    alternative_names:
+      - IRW
+      - rising whistle
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - long
+    acoustic_description: A relatively long, narrowband tonal whistle whose fundamental frequency rises during the initial portion of the call before stabilizing or slightly modulating, producing a distinctive frequency contour.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced in response to aerial or visually salient threats and during high-vigilance contexts, alerting group members to overhead or distant disturbance and prompting concealment or scanning behaviour.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: The initially rising whistle is described as one of the distinct whistle subtypes in Cleveland and Snowdon 1982; later acoustic work focuses on long calls rather than the whistle subtypes.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The frequency-contour features are quantitatively detailed in Cleveland and Snowdon 1982 but have not been re-measured by independent later studies.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Cleveland and Snowdon 1982 link this whistle subtype to alarm and vigilance contexts; this functional category has not been independently tested by playback.
+
+  - name: inverted U whistle
+    alternative_names:
+      - IUW
+      - inverted-U whistle
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - long
+    acoustic_description: A long, narrowband tonal whistle whose fundamental frequency rises to a peak and then falls in an inverted U-shaped contour, distinguishing it from the initially rising whistle.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Produced in social-contact and mild-vigilance contexts during group activity, particularly when group members are coordinating travel or attending to environmental changes.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: The inverted U whistle is described as a distinct whistle subtype in Cleveland and Snowdon 1982 on the basis of its frequency contour. Independent recognition is limited because later work has focused on long calls and chirps.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The frequency contour and duration features are described and measured in Cleveland and Snowdon 1982 but have not been re-quantified by other studies.
+    semantic_description_agreement: weak
+    semantic_description_explanation: The contact and vigilance context is described by Cleveland and Snowdon 1982 but has not been functionally tested.
+
+  - name: trill
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+    acoustic_description: A sequence of high-frequency tonal elements with rapid, repeated sinusoidal frequency modulation, producing an audibly trilling quality across the call's duration.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Produced in close-range affiliative contexts and routine within-group contact, particularly during social interactions and proximity between group members.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Trill calls are widely recognized in callitrichid vocal repertoires and are described as a distinct category in Cleveland and Snowdon 1982.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The repeated frequency-modulated structure is described in Cleveland and Snowdon 1982; independent acoustic re-measurement in cotton-top tamarins is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Close-range affiliative use is described in Cleveland and Snowdon 1982 but has not been confirmed by additional functional studies in this species.
+
+  - name: twitter
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - repetitive
+      - multi_component
+    acoustic_description: A phrased call composed of a rapid sequence of short, high-frequency frequency-modulated elements, often produced in tight bursts.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Produced in close-range social interactions and during group movement, functioning in within-group coordination and affiliative exchange.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Twitter calls are described in Cleveland and Snowdon 1982 and are part of the standard callitrichid call set recognized in comparative work.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Cleveland and Snowdon 1982 quantitatively describe the phrased frequency-modulated structure; independent re-measurement specifically in cotton-top tamarins is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Cleveland and Snowdon 1982 link twitters to close-range social use; specific functional tests in this species are limited.
+
+  - name: squeak
+    alternative_names:
+      - alarm squeak
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - abrupt
+      - loud
+    acoustic_description: A very short, high-pitched, high-amplitude tonal call with abrupt onset, often produced in rapid bursts during high-arousal events.
+    semantic_keywords:
+      - alarm
+      - distress
+      - predator
+    semantic_description: Produced during sudden disturbance, capture or close-range predator encounters, signalling high arousal or distress and prompting strong response by group members.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Squeak calls are described as a distinct high-arousal category in Cleveland and Snowdon 1982; later research has not focused on this call type in cotton-top tamarins specifically.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Acoustic features are described in Cleveland and Snowdon 1982 but have not been re-measured independently.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The distress and high-arousal context is described in Cleveland and Snowdon 1982; experimental tests of squeak function are lacking.
+
+  - name: chatter
+    alternative_names:
+      - chatter call
+      - agonistic chatter
+    in_primary_inventory: true
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - repetitive
+      - short
+      - abrupt
+    acoustic_description: A rapid series of short, broadband noisy elements producing a chattering sound, with abrupt onsets and irregular spectral structure relative to the tonal whistle and chirp calls.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+    semantic_description: Produced in agonistic contexts including intra- and inter-group aggressive interactions, threat displays and confrontations over resources or social position.
+    acoustic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    semantic_references:
+      - id: cleveland_snowdon_1982
+        url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Chatter calls are clearly described as a distinct agonistic category in Cleveland and Snowdon 1982 and are part of the standard set of callitrichid agonistic vocalizations.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Cleveland and Snowdon 1982 detail the rapid, broadband, noisy structure of chatter; independent re-measurement in cotton-top tamarins is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: The aggressive and threat-related context is supported by Cleveland and Snowdon 1982 and is consistent with comparative callitrichid descriptions of agonistic calls.
+
+  - name: chuck
+    alternative_names:
+      - chuck call
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords:
+      - short
+      - broadband
+      - noisy
+      - low_frequency
+      - abrupt
+    acoustic_description: A short, low- to mid-frequency broadband noisy call with abrupt onset, acoustically distinct from the high-frequency tonal chirps and whistles.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Produced in close-range social and feeding contexts, used as a low-intensity within-group contact and coordination signal.
+    acoustic_references:
+      - id: bauers_snowdon_1990
+        url: https://doi.org/10.1002/ajp.1350210107
+    semantic_references:
+      - id: bauers_snowdon_1990
+        url: https://doi.org/10.1002/ajp.1350210107
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Bauers and Snowdon 1990 describe the chuck call as a distinct category in cotton-top tamarins, building on but not directly listed in the Cleveland and Snowdon 1982 inventory.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Bauers and Snowdon 1990 provide an acoustic description of chucks; further independent acoustic re-measurement is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Bauers and Snowdon 1990 link chucks to close-range social use, but no playback work has independently tested the function.
+
+references:
+  cleveland_snowdon_1982:
+    citation: "Cleveland J, Snowdon CT. 1982. The complex vocal repertoire of the adult cotton-top tamarin (Saguinus oedipus oedipus). Zeitschrift fuer Tierpsychologie 58(3): 231-270."
+    url: https://doi.org/10.1111/j.1439-0310.1982.tb01359.x
+    doi: 10.1111/j.1439-0310.1982.tb01359.x
+  weiss_etal_2001:
+    citation: "Weiss DJ, Garibaldi BT, Hauser MD. 2001. The production and perception of long calls by cotton-top tamarins (Saguinus oedipus): acoustic analyses and playback experiments. Journal of Comparative Psychology 115(3): 258-271."
+    url: https://doi.org/10.1037/0735-7036.115.3.258
+    doi: 10.1037/0735-7036.115.3.258
+  miller_etal_2005:
+    citation: "Miller CT, Miller J, Gil-da-Costa R, Hauser MD. 2005. Selective phonotaxis by cotton-top tamarins (Saguinus oedipus). Behaviour 142(5): 633-653."
+    url: https://doi.org/10.1163/1568539054352860
+    doi: 10.1163/1568539054352860
+  ghazanfar_etal_2002:
+    citation: "Ghazanfar AA, Smith-Rohrberg D, Pollen AA, Hauser MD. 2002. Temporal cues in the antiphonal long-calling behaviour of cotton-top tamarins. Animal Behaviour 64(3): 427-438."
+    url: https://doi.org/10.1006/anbe.2002.3074
+    doi: 10.1006/anbe.2002.3074
+  roush_snowdon_2000:
+    citation: "Roush RS, Snowdon CT. 2000. Quality, quantity, distribution and audience effects on food calling in cotton-top tamarins. Ethology 106(8): 673-690."
+    url: https://doi.org/10.1046/j.1439-0310.2000.00582.x
+    doi: 10.1046/j.1439-0310.2000.00582.x
+  bauers_snowdon_1990:
+    citation: "Bauers KA, Snowdon CT. 1990. Discrimination of chirp vocalizations in the cotton-top tamarin. American Journal of Primatology 21(1): 53-60."
+    url: https://doi.org/10.1002/ajp.1350210107
+    doi: 10.1002/ajp.1350210107
