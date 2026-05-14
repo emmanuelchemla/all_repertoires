@@ -1,0 +1,79 @@
+scientific_name: Plocepasser mahali
+common_name: White-browed Sparrow-weaver
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Ploceidae
+  genus: Plocepasser
+  species: mahali
+primary_inventory:
+  rationale: White-browed sparrow-weaver vocalizations are described in duet, dominance, and cooperative-breeding studies rather than one exhaustive inventory. Calls here are conservative, well-supported classes.
+calls:
+  - name: duet song
+    alternative_names: [dawn duet, antiphonal song]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, repetitive, multi_component, long]
+    acoustic_description: A coordinated multi-component song in which male and female elements are combined into repeated duet sequences.
+    semantic_keywords: [territorial, courtship, affiliation, group_coordination]
+    semantic_description: Used in pair or group coordination, territorial advertisement, and social display within cooperative groups.
+    acoustic_references:
+      - id: wingfield_etal_1991
+        url: https://doi.org/10.1016/S0003-3472(05)80615-2
+      - id: york_etal_2019
+        url: https://doi.org/10.1098/rspb.2019.1043
+    semantic_references:
+      - id: wingfield_etal_1991
+        url: https://doi.org/10.1016/S0003-3472(05)80615-2
+      - id: york_etal_2019
+        url: https://doi.org/10.1098/rspb.2019.1043
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Duet song is a repeatedly studied vocal class in this species.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on coordinated multi-component song, with ongoing work on syntax and individual roles.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and social-coordination roles are supported by cooperative-breeding studies.
+  - name: contact call
+    alternative_names: [short call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [short, tonal, frequency_modulated]
+    acoustic_description: Short tonal or frequency-modulated calls produced outside full song bouts.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used to maintain contact among group members during close-range social activity.
+    acoustic_references:
+      - id: collius_collius_1978
+        url: https://doi.org/10.2307/4085601
+    semantic_references:
+      - id: collius_collius_1978
+        url: https://doi.org/10.2307/4085601
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Contact calls are reported in social behavior descriptions, but are less formally analysed than duet song.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Acoustic detail is mostly qualitative.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Group contact use is supported in behavioral accounts.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  wingfield_etal_1991:
+    citation: "Wingfield, J. C., et al. (1991). Social status and circulating levels of hormones in white-browed sparrow-weavers. Animal Behaviour, 42, 495-508."
+    url: https://doi.org/10.1016/S0003-3472(05)80615-2
+  york_etal_2019:
+    citation: "York, J. E., et al. (2019). Dominance-related vocal performance in white-browed sparrow-weavers. Proceedings of the Royal Society B, 286, 20191043."
+    url: https://doi.org/10.1098/rspb.2019.1043
+    doi: 10.1098/rspb.2019.1043
+  collius_collius_1978:
+    citation: "Collias, N. E., & Collias, E. C. (1978). Cooperative breeding behavior in the white-browed sparrow-weaver. Auk, 95, 472-484."
+    url: https://doi.org/10.2307/4085601

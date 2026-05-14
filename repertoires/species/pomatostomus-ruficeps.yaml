@@ -1,0 +1,73 @@
+scientific_name: Pomatostomus ruficeps
+common_name: Chestnut-crowned Babbler
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Pomatostomidae
+  genus: Pomatostomus
+  species: ruficeps
+primary_inventory:
+  rationale: Chestnut-crowned babbler vocalizations are documented in studies of combinatorial calls and cooperative social behavior, not a complete inventory. This file includes the best-supported call elements and combinations.
+calls:
+  - name: A note
+    alternative_names: [flight note element]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, tonal, frequency_modulated]
+    acoustic_description: A short, discrete tonal note that can occur as part of larger call sequences.
+    semantic_keywords: [group_coordination, contact, combinatorial]
+    semantic_description: Used as a component in combinatorial vocal sequences, especially flight-related calls.
+    acoustic_references:
+      - id: engesser_etal_2016
+        url: https://doi.org/10.1073/pnas.1600974113
+    semantic_references:
+      - id: engesser_etal_2016
+        url: https://doi.org/10.1073/pnas.1600974113
+    playback_references:
+      - id: engesser_etal_2016
+        url: https://doi.org/10.1073/pnas.1600974113
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: A notes are experimentally studied as discrete combinatorial elements by Engesser et al. 2016.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The element is clearly defined, though most support comes from one focused research group.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Playback work supports sequence-dependent function for A-note combinations.
+  - name: B note
+    alternative_names: [prompt note element]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [short, tonal, frequency_modulated]
+    acoustic_description: A short discrete tonal note acoustically distinct from the A note and used in ordered sequences.
+    semantic_keywords: [group_coordination, contact, combinatorial]
+    semantic_description: Used as a component in combinatorial calls, especially prompt-related sequences.
+    acoustic_references:
+      - id: engesser_etal_2016
+        url: https://doi.org/10.1073/pnas.1600974113
+    semantic_references:
+      - id: engesser_etal_2016
+        url: https://doi.org/10.1073/pnas.1600974113
+    playback_references:
+      - id: engesser_etal_2016
+        url: https://doi.org/10.1073/pnas.1600974113
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: B notes are experimentally separated from A notes in combinatorial-call studies.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The note is clearly defined, with limited independent replication.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Playback work demonstrates different responses to note ordering and combination.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  engesser_etal_2016:
+    citation: "Engesser, S., Ridley, A. R., & Townsend, S. W. (2016). Meaningful call combinations and compositional processing in the chestnut-crowned babbler. Proceedings of the National Academy of Sciences, 113, 5976-5981."
+    url: https://doi.org/10.1073/pnas.1600974113
+    doi: 10.1073/pnas.1600974113

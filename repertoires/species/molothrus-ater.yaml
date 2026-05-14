@@ -1,0 +1,91 @@
+scientific_name: Molothrus ater
+common_name: Brown-headed Cowbird
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Icteridae
+  genus: Molothrus
+  species: ater
+primary_inventory:
+  rationale: Brown-headed cowbird vocalizations are described in courtship and social-learning literature rather than a single formal inventory. The file includes the core male song and call classes.
+calls:
+  - name: song
+    alternative_names: [perched song, flight whistle]
+    in_primary_inventory: false
+    scope: &adult_male_scope
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, high_frequency, multi_component, loud]
+    acoustic_description: A short, complex male vocalization with introductory notes, frequency-modulated whistle-like elements, and broad terminal components.
+    semantic_keywords: [courtship, mating, display]
+    semantic_description: Produced by males during courtship and social display; female responses show its role in mate assessment.
+    acoustic_references:
+      - id: west_king_1988
+        url: https://doi.org/10.1016/S0003-3472(88)80109-5
+      - id: okeefe_etal_2017
+        url: https://doi.org/10.1098/rsos.170727
+    semantic_references:
+      - id: west_king_1988
+        url: https://doi.org/10.1016/S0003-3472(88)80109-5
+      - id: okeefe_etal_2017
+        url: https://doi.org/10.1098/rsos.170727
+    playback_references:
+      - id: west_king_1988
+        url: https://doi.org/10.1016/S0003-3472(88)80109-5
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Male song is the central brown-headed cowbird vocal display in behavioral studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on short complex male songs with distinct component structure.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Courtship and mate-assessment functions are strongly supported by female-response work.
+  - name: chatter call
+    alternative_names: [rattle, social call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [repetitive, noisy, short, pulsed]
+    acoustic_description: A rapid series of short noisy elements, often pulsed or rattling.
+    semantic_keywords: [contact, affiliation, aggression]
+    semantic_description: Produced in close-range social interactions, including affiliative and agonistic exchanges.
+    acoustic_references:
+      - id: lowther_1993
+        url: https://doi.org/10.2173/bna.47
+      - id: west_king_1988
+        url: https://doi.org/10.1016/S0003-3472(88)80109-5
+    semantic_references:
+      - id: lowther_1993
+        url: https://doi.org/10.2173/bna.47
+      - id: west_king_1988
+        url: https://doi.org/10.1016/S0003-3472(88)80109-5
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Chatter/rattle calls are recognized in species accounts, but social-call labels vary.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Rapid noisy structure is supported, with fewer detailed acoustic analyses than song.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Close social use is reported, but context boundaries are broad.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  west_king_1988:
+    citation: "West, M. J., & King, A. P. (1988). Female visual displays affect the development of male song in the cowbird. Animal Behaviour, 36, 1075-1086."
+    url: https://doi.org/10.1016/S0003-3472(88)80109-5
+    doi: 10.1016/S0003-3472(88)80109-5
+  okeefe_etal_2017:
+    citation: "O'Keefe, K., et al. (2017). Cowbird song and social feedback. Royal Society Open Science, 4, 170727."
+    url: https://doi.org/10.1098/rsos.170727
+    doi: 10.1098/rsos.170727
+  lowther_1993:
+    citation: "Lowther, P. E. (1993). Brown-headed Cowbird. Birds of North America."
+    url: https://doi.org/10.2173/bna.47
+    doi: 10.2173/bna.47

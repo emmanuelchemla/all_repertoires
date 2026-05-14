@@ -1,0 +1,92 @@
+scientific_name: Lonchura striata domestica
+common_name: Bengalese Finch
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Estrildidae
+  genus: Lonchura
+  species: striata domestica
+primary_inventory:
+  rationale: Bengalese finch vocalizations are described mainly in domesticated songbird studies rather than a wild repertoire inventory. This file includes only the core vocal classes repeatedly separated in the song-learning literature.
+calls:
+  - name: song
+    alternative_names: [undirected song, directed song]
+    in_primary_inventory: false
+    scope: &adult_male_scope
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, harmonic, repetitive, multi_component]
+    acoustic_description: A learned sequence of repeated syllables and motifs with tonal and frequency-modulated elements arranged into variable phrase structure.
+    semantic_keywords: [courtship, mating, display]
+    semantic_description: Produced by adult males during courtship and social display, with directed song given toward females and undirected song in non-directed contexts.
+    acoustic_references:
+      - id: oukanoya_yamaguchi_1997
+        url: https://doi.org/10.1006/anbe.1996.0427
+      - id: sakata_brainard_2006
+        url: https://doi.org/10.1038/nature04467
+    semantic_references:
+      - id: oukanoya_yamaguchi_1997
+        url: https://doi.org/10.1006/anbe.1996.0427
+      - id: sakata_brainard_2006
+        url: https://doi.org/10.1038/nature04467
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Song is the central, repeatedly studied Bengalese finch vocal class in Okanoya and Yamaguchi 1997 and later song-control studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on learned multi-syllable motif sequences with variable syntax.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Courtship and display contexts are consistently reported, especially for directed male song.
+  - name: distance call
+    alternative_names: [contact call, long call]
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, short, loud]
+    acoustic_description: A short tonal contact call with frequency modulation and relatively high amplitude compared with soft close calls.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used for maintaining contact between separated birds and carrying individual or sex-related information.
+    acoustic_references:
+      - id: takahasi_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.05.024
+      - id: yoneda_oukanoya_1991
+        url: https://doi.org/10.1007/BF00168955
+    semantic_references:
+      - id: takahasi_etal_2010
+        url: https://doi.org/10.1016/j.anbehav.2010.05.024
+      - id: yoneda_oukanoya_1991
+        url: https://doi.org/10.1007/BF00168955
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Distance calls are recognized in estrildid and Bengalese finch studies, but are less intensively studied than song.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Sources agree on a short tonal contact call, with limited subtype resolution.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact function is supported, while detailed social semantics are less developed than for song.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  oukanoya_yamaguchi_1997:
+    citation: "Okanoya, K., & Yamaguchi, A. (1997). Adult Bengalese finches learn to produce songs whose complexity depends on social context. Animal Behaviour, 53, 783-790."
+    url: https://doi.org/10.1006/anbe.1996.0427
+    doi: 10.1006/anbe.1996.0427
+  sakata_brainard_2006:
+    citation: "Sakata, J. T., & Brainard, M. S. (2006). Real-time contributions of auditory feedback to avian vocal motor control. Nature, 444, 685-688."
+    url: https://doi.org/10.1038/nature04467
+    doi: 10.1038/nature04467
+  takahasi_etal_2010:
+    citation: "Takahasi, M., et al. (2010). Vocal learning in Bengalese finches. Animal Behaviour, 80, 1003-1012."
+    url: https://doi.org/10.1016/j.anbehav.2010.05.024
+    doi: 10.1016/j.anbehav.2010.05.024
+  yoneda_oukanoya_1991:
+    citation: "Yoneda, T., & Okanoya, K. (1991). Ontogeny of sexually dimorphic distance calls in Bengalese finches. Animal Behaviour, 42, 629-637."
+    url: https://doi.org/10.1007/BF00168955

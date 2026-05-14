@@ -1,0 +1,77 @@
+scientific_name: Pheugopedius euophrys
+common_name: Plain-tailed Wren
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Troglodytidae
+  genus: Pheugopedius
+  species: euophrys
+primary_inventory:
+  rationale: Plain-tailed wren vocal behavior is best documented through duet and chorusing studies rather than a whole-repertoire inventory. This file includes the central duet-song and call classes.
+calls:
+  - name: duet song
+    alternative_names: [antiphonal duet, chorused song]
+    in_primary_inventory: false
+    scope: &adult_both_scope
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, repetitive, multi_component, long]
+    acoustic_description: A coordinated antiphonal vocal sequence in which male and female syllables interleave rapidly into a multi-component song.
+    semantic_keywords: [territorial, courtship, affiliation, group_coordination]
+    semantic_description: Used by pairs or groups in territorial defense, pair coordination, and social display.
+    acoustic_references:
+      - id: mann_etal_2006
+        url: https://doi.org/10.1098/rspb.2006.3633
+      - id: fortune_etal_2011
+        url: https://doi.org/10.1126/science.1209862
+    semantic_references:
+      - id: mann_etal_2006
+        url: https://doi.org/10.1098/rspb.2006.3633
+      - id: fortune_etal_2011
+        url: https://doi.org/10.1126/science.1209862
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Antiphonal duet song is the defining studied vocal class of plain-tailed wrens.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on precisely coordinated, interleaved male and female song components.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and pair/group-coordination roles are strongly supported by duet studies.
+  - name: call
+    alternative_names: [contact call]
+    in_primary_inventory: false
+    scope: *adult_both_scope
+    acoustic_keywords: [short, frequency_modulated, tonal]
+    acoustic_description: Short tonal or frequency-modulated notes outside full duet-song sequences.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Used for close-range contact or attention among pair or group members.
+    acoustic_references:
+      - id: mann_etal_2006
+        url: https://doi.org/10.1098/rspb.2006.3633
+    semantic_references:
+      - id: mann_etal_2006
+        url: https://doi.org/10.1098/rspb.2006.3633
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Non-song calls are acknowledged, but the literature focuses mostly on duet song.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Detailed acoustic descriptions of non-song calls are sparse.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Contact use is plausible and described generally, but less directly studied than duet function.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  mann_etal_2006:
+    citation: "Mann, N. I., Dingess, K. A., Slater, P. J. B., & Graves, J. A. (2006). Antiphonal four-part synchronized chorusing in a Neotropical wren. Proceedings of the Royal Society B, 273, 3269-3275."
+    url: https://doi.org/10.1098/rspb.2006.3633
+    doi: 10.1098/rspb.2006.3633
+  fortune_etal_2011:
+    citation: "Fortune, E. S., et al. (2011). Neural mechanisms for the coordination of duet singing in wrens. Science, 334, 666-670."
+    url: https://doi.org/10.1126/science.1209862
+    doi: 10.1126/science.1209862

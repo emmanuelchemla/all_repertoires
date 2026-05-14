@@ -1,0 +1,83 @@
+scientific_name: Junco hyemalis
+common_name: Dark-eyed Junco
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Passerellidae
+  genus: Junco
+  species: hyemalis
+primary_inventory:
+  rationale: Dark-eyed junco vocalizations are described in species accounts and song studies rather than one single repertoire inventory. Calls here are broad classes with repeated support.
+calls:
+  - name: song
+    alternative_names: [trill song, advertising song]
+    in_primary_inventory: false
+    scope: &adult_male_scope
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, repetitive, long, frequency_modulated]
+    acoustic_description: A sustained trill-like song made of repeated tonal syllables with modest frequency modulation.
+    semantic_keywords: [territorial, courtship, mating, display]
+    semantic_description: Produced by males during territory advertisement and breeding-season courtship.
+    acoustic_references:
+      - id: nolan_etal_2002
+        url: https://doi.org/10.2173/bna.716
+      - id: reichard_etal_2011
+        url: https://doi.org/10.1093/beheco/arr094
+    semantic_references:
+      - id: nolan_etal_2002
+        url: https://doi.org/10.2173/bna.716
+      - id: reichard_etal_2011
+        url: https://doi.org/10.1093/beheco/arr094
+    playback_references:
+      - id: reichard_etal_2011
+        url: https://doi.org/10.1093/beheco/arr094
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Song is the primary named junco breeding vocalization in species accounts and behavioral studies.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on a repeated trill-like song, though local dialect and performance vary.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial and courtship functions are consistently supported by field and playback work.
+  - name: chip call
+    alternative_names: [contact chip, alarm chip]
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, high_frequency, noisy]
+    acoustic_description: A short abrupt chip with high-frequency noisy energy.
+    semantic_keywords: [contact, alarm, attention]
+    semantic_description: Used in contact, mild alarm, and attention-getting contexts around flock or territory members.
+    acoustic_references:
+      - id: nolan_etal_2002
+        url: https://doi.org/10.2173/bna.716
+    semantic_references:
+      - id: nolan_etal_2002
+        url: https://doi.org/10.2173/bna.716
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Chip calls are recognized in species accounts, but are broader and less experimentally resolved than song.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The short chip structure is clear, with limited acoustic quantification.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and alarm uses are supported, but context boundaries are broad.
+provenance:
+  - timestamp: '2026-05-14T14:21:33Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  nolan_etal_2002:
+    citation: "Nolan, V., Ketterson, E. D., Cristol, D. A., Rogers, C. M., Clotfelter, E. D., Titus, R. C., Schoech, S. J., & Snajdr, E. (2002). Dark-eyed Junco. Birds of North America."
+    url: https://doi.org/10.2173/bna.716
+    doi: 10.2173/bna.716
+  reichard_etal_2011:
+    citation: "Reichard, D. G., Rice, R. J., Vanderbilt, C. C., & Ketterson, E. D. (2011). Deciphering information encoded in birdsong: male songbirds with fertile mates respond most strongly to complex, low-amplitude songs used in courtship. Behavioral Ecology, 22, 773-782."
+    url: https://doi.org/10.1093/beheco/arr094
+    doi: 10.1093/beheco/arr094
