@@ -1,0 +1,302 @@
+scientific_name: Zalophus californianus
+common_name: California sea lion
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Otariidae
+  genus: Zalophus
+  species: californianus
+primary_inventory:
+  id: peterson_bartholomew_1969
+  rationale: "Peterson and Bartholomew 1969 is used as the primary_inventory spine because it is the dedicated field account of airborne vocal communication in breeding California sea lions and names the principal male, female, and pup call categories. This file follows that study's wild-supported repertoire, adds later evidence for male bark timing and mother-pup recognition, and omits underwater whinnies, buzzes, and click trains because the named non-bark underwater categories are supported mainly by captive or conditioned-vocalization work rather than clearly contextualized wild call types."
+calls:
+  - name: male bark
+    in_primary_inventory: true
+    alternative_names:
+      - adult male bark
+      - bull bark
+      - territorial bark
+      - underwater bark
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - harmonic
+      - frequency_modulated
+      - short
+      - abrupt
+      - repetitive
+      - loud
+      - graded
+    acoustic_description: A loud, repeated bark given in series, with rhythm, repetition rate, loudness, and direction varying across contexts. Male barks are lower-pitched than female barks; barks recorded in water or transmitted into water show rich harmonic structure, an up-down-up frequency-modulated contour, and sometimes a terminal upward sweep.
+    semantic_keywords:
+      - territorial
+      - threat
+      - courtship
+      - display
+      - spacing
+      - play
+    semantic_description: Produced especially by adult males during breeding-colony territorial and social-status interactions, including threats toward rivals, boundary displays, and herding or courtship contexts. Immature males can also use an adult-like bark during play.
+    acoustic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+      - id: schusterman_balliet_1969
+        url: https://doi.org/10.1038/2221179a0
+      - id: schusterman_1977
+        url: https://doi.org/10.1016/S0091-6773(77)90964-6
+    semantic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+      - id: schusterman_1977
+        url: https://doi.org/10.1016/S0091-6773(77)90964-6
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Peterson and Bartholomew 1969 identify the bark as the single major adult-male vocalization, Schusterman and Balliet 1969 document bark structure in male sea lions recorded in water during the breeding season, and Schusterman 1977 analyzes bark-series timing. The broad male bark type is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Peterson and Bartholomew 1969 and Schusterman 1977 agree that male barks are repeated series with variable timing, while Schusterman and Balliet 1969 provides harmonic and frequency-modulation detail. Agreement is strong for the broad acoustic form, although exact rates vary with context.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Peterson and Bartholomew 1969 and Schusterman 1977 both tie male barking to territorial, status, boundary, and herding contexts in breeding colonies, with immature play use noted by Peterson and Bartholomew. The social context of the call is well supported.
+
+  - name: female bark
+    in_primary_inventory: true
+    alternative_names:
+      - adult female bark
+      - threat bark
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - abrupt
+      - loud
+      - graded
+    acoustic_description: A bark-like airborne call that is higher in pitch than the male bark and is treated separately from the harsher squeal, belch, and growl sounds used in more intense close-range encounters.
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+      - caregiving
+    semantic_description: Used by adult females as a mild threat in aggressive contexts, including close social situations associated with pup defense or mother-infant interactions at breeding colonies.
+    acoustic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+    semantic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Peterson and Bartholomew 1969 names a female bark distinct from the male bark and from harsher female aggressive sounds. Agreement is medium because later work gives much more attention to male barking and mother-pup calls than to the female bark as a separate quantified type.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The higher-pitched, bark-like description comes mainly from Peterson and Bartholomew 1969, with little independent acoustic quantification for adult female barks. Agreement is weak for detailed acoustic structure.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Peterson and Bartholomew 1969 explicitly links female bark use to mild threat and female aggressive or mother-infant contexts. The context is clear in the primary inventory but has limited call-specific replication.
+
+  - name: pup-attraction call
+    in_primary_inventory: true
+    alternative_names:
+      - PAC
+      - female pup-attraction call
+      - mother call
+      - maternal attraction call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - long
+      - loud
+      - graded
+    acoustic_description: A loud, highly directional, bawling airborne call produced by females. The call varies markedly among individuals, with individually distinctive structure useful in the noisy colony setting.
+    semantic_keywords:
+      - contact
+      - caregiving
+      - identity
+      - attention
+    semantic_description: Used by mothers to locate their pups during reunion sequences after separation. The call elicits pup replies and supports individual recognition between mother and pup.
+    acoustic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+      - id: schusterman_etal_1992
+        url: https://doi.org/10.1007/978-1-4615-3406-8_34
+    semantic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+      - id: gisiner_schusterman_1991
+        url: https://doi.org/10.1016/S0003-3472(05)80488-9
+      - id: hanggi_1992
+        url: https://doi.org/10.1111/j.1748-7692.1992.tb00061.x
+      - id: schusterman_etal_1992
+        url: https://doi.org/10.1007/978-1-4615-3406-8_34
+    playback_references:
+      - id: hanggi_1992
+        url: https://doi.org/10.1111/j.1748-7692.1992.tb00061.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Peterson and Bartholomew 1969 names the pup-attraction call as a major female call, and later mother-pup recognition work by Gisiner and Schusterman 1991, Hanggi 1992, and Schusterman et al. 1992 treats maternal calls as central to reunions. The call type is strongly supported.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Peterson and Bartholomew 1969 provides the loud, directional, bawling description and notes marked individual variation, while Schusterman et al. 1992 discusses acoustic signaling in mother-pup reunions. Agreement is medium because accessible quantitative acoustic detail is concentrated in a small set of sources.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Peterson and Bartholomew 1969, Gisiner and Schusterman 1991, Hanggi 1992, and Schusterman et al. 1992 all support the reunion and recognition function of maternal calls. The contact and identity context is strong.
+
+  - name: mother-response call
+    in_primary_inventory: true
+    alternative_names:
+      - MRC
+      - pup response call
+      - pup reply call
+      - mother-attraction call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - long
+      - loud
+      - graded
+    acoustic_description: A pup call with broadly similar structure to the female pup-attraction call and marked individual variation among pups. It is given as an airborne response during mother-pup calling exchanges.
+    semantic_keywords:
+      - contact
+      - begging
+      - caregiving
+      - identity
+      - attention
+    semantic_description: Produced by pups during reunion sequences with their mothers, helping the pair locate one another and maintain individual contact after separation.
+    acoustic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+      - id: schusterman_etal_1992
+        url: https://doi.org/10.1007/978-1-4615-3406-8_34
+    semantic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+      - id: gisiner_schusterman_1991
+        url: https://doi.org/10.1016/S0003-3472(05)80488-9
+      - id: hanggi_1992
+        url: https://doi.org/10.1111/j.1748-7692.1992.tb00061.x
+      - id: schusterman_etal_1992
+        url: https://doi.org/10.1007/978-1-4615-3406-8_34
+    playback_references:
+      - id: hanggi_1992
+        url: https://doi.org/10.1111/j.1748-7692.1992.tb00061.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Peterson and Bartholomew 1969 names mother-response calls, and later recognition studies by Gisiner and Schusterman 1991, Hanggi 1992, and Schusterman et al. 1992 reinforce the central role of pup calls in reunion. The call type is strongly supported.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Peterson and Bartholomew 1969 describes the call as structurally similar to the pup-attraction call and individually variable, and Schusterman et al. 1992 treats pup calls within mother-pup acoustic signaling. Agreement is medium because detailed acoustic parameters are not widely replicated in accessible field sources.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Peterson and Bartholomew 1969, Gisiner and Schusterman 1991, Hanggi 1992, and Schusterman et al. 1992 converge on the role of pup calls in mother-pup reunion and recognition. Semantic agreement is strong.
+
+  - name: bleat
+    in_primary_inventory: true
+    alternative_names:
+      - pup bleat
+      - infant bleat
+      - alarm bleat
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - graded
+    acoustic_description: The earliest pup vocalization, described as a bleat rather than an adult-like bark. During early development pups begin to modify this bleat toward a bark-like form.
+    semantic_keywords:
+      - alarm
+      - threat
+      - distress
+    semantic_description: Used by pups in alarm and threat contexts during early life, before the pup vocal repertoire shifts toward more bark-like calls.
+    acoustic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+    semantic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Peterson and Bartholomew 1969 names the pup bleat and describes its early ontogenetic position. Agreement is medium because later California sea lion recognition studies focus more on reunion calls than on the bleat as a separate type.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description is based mainly on Peterson and Bartholomew 1969's qualitative account of the bleat and its transition toward bark. Quantitative replication is limited, so agreement is weak for fine acoustic structure.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Peterson and Bartholomew 1969 explicitly assigns alarm and threat use to the pup bleat. The context is clear in the primary inventory but sparsely replicated.
+
+  - name: growl
+    in_primary_inventory: true
+    alternative_names:
+      - female growl
+      - aggressive growl
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - loud
+      - graded
+    acoustic_description: A harsh, noisy aggressive call included with the female close-range altercation sounds. It is described qualitatively rather than as a finely quantified acoustic class.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+    semantic_description: Used by adult females in vigorous short-range altercations, especially more intense aggressive encounters than those associated with the mild female bark.
+    acoustic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+    semantic_references:
+      - id: peterson_bartholomew_1969
+        url: https://doi.org/10.1016/0003-3472(69)90108-0
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Peterson and Bartholomew 1969 names growls as part of the adult-female aggressive repertoire. Agreement is medium because the category is present in the primary inventory but receives little independent call-specific treatment.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Peterson and Bartholomew 1969 gives a qualitative harsh/noisy description for growls together with other female altercation sounds. Agreement is weak for detailed acoustic boundaries.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Peterson and Bartholomew 1969 clearly places growls in vigorous short-range adult-female altercations. The behavioral context is supported by the primary source but not widely replicated by call-specific studies.
+references:
+  gisiner_schusterman_1991:
+    citation: "Gisiner, R., and Schusterman, R. J. 1991. California sea lion pups play an active role in reunions with their mothers. Animal Behaviour 41(2):364-366."
+    doi: 10.1016/S0003-3472(05)80488-9
+    url: https://doi.org/10.1016/S0003-3472(05)80488-9
+  hanggi_1992:
+    citation: "Hanggi, E. B. 1992. The importance of vocal cues in mother-pup recognition in a California sea lion. Marine Mammal Science 8(4):430-432."
+    doi: 10.1111/j.1748-7692.1992.tb00061.x
+    url: https://doi.org/10.1111/j.1748-7692.1992.tb00061.x
+  peterson_bartholomew_1969:
+    citation: "Peterson, R. S., and Bartholomew, G. A. 1969. Airborne vocal communication in the California sea lion, Zalophus californianus. Animal Behaviour 17(1):17-24."
+    doi: 10.1016/0003-3472(69)90108-0
+    url: https://doi.org/10.1016/0003-3472(69)90108-0
+  schusterman_1977:
+    citation: "Schusterman, R. J. 1977. Temporal patterning in sea lion barking (Zalophus californianus). Behavioral Biology 20(3):404-408."
+    doi: 10.1016/S0091-6773(77)90964-6
+    url: https://doi.org/10.1016/S0091-6773(77)90964-6
+  schusterman_balliet_1969:
+    citation: "Schusterman, R. J., and Balliet, R. F. 1969. Underwater barking by male sea lions (Zalophus californianus). Nature 222(5199):1179-1181."
+    doi: 10.1038/2221179a0
+    url: https://doi.org/10.1038/2221179a0
+  schusterman_etal_1992:
+    citation: "Schusterman, R. J., Hanggi, E. B., and Gisiner, R. 1992. Acoustic signaling in mother-pup reunions, interspecies bonding, and affiliation by kinship in California sea lions (Zalophus californianus). In Marine Mammal Sensory Systems, edited by J. A. Thomas, R. A. Kastelein, and A. Y. Supin, pp. 533-551. Plenum Press, New York."
+    doi: 10.1007/978-1-4615-3406-8_34
+    url: https://doi.org/10.1007/978-1-4615-3406-8_34
