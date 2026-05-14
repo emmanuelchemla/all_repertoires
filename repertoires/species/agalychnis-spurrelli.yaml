@@ -1,0 +1,224 @@
+scientific_name: Agalychnis spurrelli
+common_name: Gliding treefrog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Phyllomedusidae
+  genus: Agalychnis
+  species: spurrelli
+primary_inventory:
+  id: cossio_medina_barcenas_2020
+  rationale: >-
+    Cossio and Medina-Barcenas 2020 is used as the primary_inventory spine
+    because it is a species-specific field study explicitly describing the
+    acoustic repertoire and calling behavior of Agalychnis spurrelli. It
+    describes the advertisement call and two aggressive calls from wild males at
+    Kingfisher pond on Barro Colorado Island, Panama.
+calls:
+  - name: advertisement call
+    alternative_names:
+      - mating call
+      - male advertisement call
+    in_primary_inventory: true
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: true
+      note: >-
+        The primary detailed repertoire data come from Barro Colorado Island,
+        Panama; earlier descriptions from Panama and Ecuador differ in duration
+        and frequency, suggesting population and sampling effects.
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - harmonic
+      - pulsed
+      - short
+      - repetitive
+      - loud
+    acoustic_description: >-
+      A single-note pulsed call, usually about 0.20 s long in the Barro
+      Colorado sample, with roughly 14-30 pulses per call, pulse rates around
+      61-99 pulses/s, and dominant frequency near 750-1055 Hz. Earlier
+      descriptions reported a longer single note with lower dominant frequency,
+      indicating geographic or sampling variation.
+    semantic_keywords:
+      - courtship
+      - mating
+      - identity
+      - attention
+    semantic_description: >-
+      Produced by adult males during nocturnal breeding activity. Choruses began
+      after midnight and continued toward dawn, and males used advertisement
+      calls during reproductive activity before switching to aggressive calls
+      during close male-male interactions.
+    acoustic_references:
+      - id: cossio_medina_barcenas_2020
+        url: https://doi.org/10.2994/SAJH-D-18-00040.1
+      - id: duellman_1970
+        url: https://www.biodiversitylibrary.org/item/25382
+      - id: rivera_correa_etal_2021
+        url: https://doi.org/10.1080/23766808.2021.1957651
+    semantic_references:
+      - id: cossio_medina_barcenas_2020
+        url: https://doi.org/10.2994/SAJH-D-18-00040.1
+      - id: rivera_correa_etal_2021
+        url: https://doi.org/10.1080/23766808.2021.1957651
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: >-
+      Cossio and Medina-Barcenas 2020 describes the advertisement call in the
+      species repertoire, Duellman 1970 previously described the species'
+      advertisement call, and Rivera-Correa et al. 2021 lists A. spurrelli among
+      Colombian anurans with described advertisement calls. Agreement is medium
+      because quantitative parameters differ among small regional samples.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: >-
+      Cossio and Medina-Barcenas 2020 gives detailed measurements from 16 males,
+      while Duellman 1970 and Ortega-Andrade 2008 as summarized by Cossio and
+      Medina-Barcenas reported somewhat different duration and frequency values.
+      The call type is stable, but acoustic parameters vary geographically or
+      with sample size.
+    semantic_description_agreement: strong
+    semantic_description_explanation: >-
+      Cossio and Medina-Barcenas 2020 places the call in male breeding choruses,
+      and the broader anuran literature reviewed by Rivera-Correa et al. 2021
+      treats advertisement calls as the main reproductive signal class. The
+      courtship and mating context is well supported.
+
+  - name: aggressive call A
+    alternative_names:
+      - call A
+    in_primary_inventory: true
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - pulsed
+      - long
+      - repetitive
+      - loud
+      - tonal
+    acoustic_description: >-
+      A longer single-note pulsed call than the advertisement call, averaging
+      about 0.59 s in the Barro Colorado sample, with roughly 28-65 pulses, pulse
+      rates that can exceed 100 pulses/s, and dominant frequency near 781-1063
+      Hz. It is produced singly and sometimes before or in combination with
+      aggressive call B.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+      - spacing
+    semantic_description: >-
+      Produced on nights with many calling males and during close male-male
+      calling bouts, especially when neighboring males were about 0.23-1.2 m
+      apart. Males often produced call A before switching to call B as calling
+      intensity increased.
+    acoustic_references:
+      - id: cossio_medina_barcenas_2020
+        url: https://doi.org/10.2994/SAJH-D-18-00040.1
+    semantic_references:
+      - id: cossio_medina_barcenas_2020
+        url: https://doi.org/10.2994/SAJH-D-18-00040.1
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: >-
+      Cossio and Medina-Barcenas 2020 newly detected aggressive call A and
+      illustrated it separately from the advertisement call and aggressive call
+      B. Agreement is medium because the call is clearly described but currently
+      rests mainly on this one species-specific field inventory.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: >-
+      Detailed acoustic measurements for aggressive call A are available from
+      Cossio and Medina-Barcenas 2020, but there are not yet independent
+      species-specific replications or playback-based boundary tests.
+    semantic_description_agreement: medium
+    semantic_description_explanation: >-
+      Cossio and Medina-Barcenas 2020 links call A to high-density choruses and
+      close male-male interactions and describes a graded aggressive sequence
+      from advertisement calls to call A and then call B. The context is clear,
+      but the authors also note that playback tests are still needed.
+
+  - name: aggressive call B
+    alternative_names:
+      - call B
+      - weak call
+    in_primary_inventory: true
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - low_frequency
+      - pulsed
+      - multi_component
+      - long
+      - repetitive
+      - tonal
+      - graded
+    acoustic_description: >-
+      A longer multi-note aggressive call, averaging about 0.97 s but ranging
+      widely, with about 2-22 short notes per call and dominant frequency near
+      750-848 Hz. Each note contains multiple pulses, and males can produce call
+      B alone or after call A in aggressive sequences.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+      - spacing
+    semantic_description: >-
+      Produced during intense male-male calling and close-range interactions in
+      dense choruses. Earlier field observations described a similar weak call in
+      the presence of another male, and Cossio and Medina-Barcenas interpreted
+      it as part of the aggressive repertoire.
+    acoustic_references:
+      - id: cossio_medina_barcenas_2020
+        url: https://doi.org/10.2994/SAJH-D-18-00040.1
+      - id: scott_starrett_1974
+        url: https://pubs.usgs.gov/publication/1007684
+    semantic_references:
+      - id: cossio_medina_barcenas_2020
+        url: https://doi.org/10.2994/SAJH-D-18-00040.1
+      - id: scott_starrett_1974
+        url: https://pubs.usgs.gov/publication/1007684
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: >-
+      Cossio and Medina-Barcenas 2020 describes aggressive call B as a distinct
+      call type, while Scott and Starrett 1974 had earlier described a weak call
+      emitted by males in another male's presence. Agreement is medium because
+      the older source supplied limited acoustic detail.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: >-
+      Cossio and Medina-Barcenas 2020 provides detailed measurements for call B,
+      and Scott and Starrett 1974 supports the existence of a comparable weak
+      call but reported only limited acoustic parameters. The broad acoustic
+      identity is supported, but fine boundaries need more replication.
+    semantic_description_agreement: medium
+    semantic_description_explanation: >-
+      Cossio and Medina-Barcenas 2020 and Scott and Starrett 1974 both associate
+      the call with male-male contexts. Agreement is medium because Cossio and
+      Medina-Barcenas explicitly state that playback experiments are needed to
+      test male responses to the different call types.
+
+provenance:
+  - timestamp: '2026-05-14T12:58:14Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  cossio_medina_barcenas_2020:
+    citation: "Cossio R, Medina-Barcenas E. 2020. Acoustic repertoire and calling behavior of the gliding treefrog, Agalychnis spurrelli (Anura: Hylidae). South American Journal of Herpetology 17: 71-78."
+    url: https://doi.org/10.2994/SAJH-D-18-00040.1
+    doi: 10.2994/SAJH-D-18-00040.1
+  duellman_1970:
+    citation: "Duellman WE. 1970. The hylid frogs of Middle America. Monograph of the Museum of Natural History, University of Kansas 1: 1-753."
+    url: https://www.biodiversitylibrary.org/item/25382
+  scott_starrett_1974:
+    citation: "Scott NJ Jr, Starrett A. 1974. An unusual breeding aggregation of frogs, with notes on the ecology of Agalychnis spurrelli (Anura: Hylidae). Bulletin of the Southern California Academy of Sciences 73: 86-94."
+    url: https://pubs.usgs.gov/publication/1007684
+  rivera_correa_etal_2021:
+    citation: "Rivera-Correa M, Ospina-L AM, Rojas-Montoya M, et al. 2021. Cantos de las ranas y los sapos de Colombia: estado actual del conocimiento y perspectivas de investigacion en ecoacustica. Neotropical Biodiversity 7: 357-378."
+    url: https://doi.org/10.1080/23766808.2021.1957651
+    doi: 10.1080/23766808.2021.1957651

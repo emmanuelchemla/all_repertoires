@@ -1,0 +1,207 @@
+scientific_name: Boana ericae
+common_name: Erica's treefrog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Hylidae
+  genus: Boana
+  species: ericae
+primary_inventory:
+  id: andreani_etal_2022
+  rationale: >-
+    Andreani et al. 2022 is used as the primary_inventory spine because it is a
+    species-specific wild study explicitly framed around the vocal repertoire of
+    Boana ericae. It reports that three distinct call types, A, B, and C, are
+    currently known, records ten males in Chapada dos Veadeiros, and expands the
+    acoustic description of the repertoire with additional note types within the
+    vocalizations.
+calls:
+  - name: call A
+    alternative_names:
+      - type A call
+      - advertisement call
+    in_primary_inventory: true
+    scope: &adult_male_scope
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: true
+      note: >-
+        The detailed repertoire evidence comes from males recorded in the
+        Chapada dos Veadeiros region of central Brazil, the known endemic range
+        emphasized by Andreani et al. 2022.
+    acoustic_keywords:
+      - high_frequency
+      - pulsed
+      - short
+      - repetitive
+      - tonal
+      - harmonic
+    acoustic_description: >-
+      A short, pulsed hylid call in the Boana pulchella group, with dominant
+      energy in the low-kilohertz range. Comparative Boana work treats B. ericae
+      calls as lower-frequency than several close relatives, with dominant
+      frequencies around 2.0-3.6 kHz, and Andreani et al. measured call A as the
+      primary advertisement signal.
+    semantic_keywords:
+      - courtship
+      - mating
+      - identity
+      - attention
+    semantic_description: >-
+      Produced by adult males in reproductive calling contexts and associated
+      with attracting reproductive partners. The call is the principal
+      advertisement signal used in the breeding chorus.
+    acoustic_references:
+      - id: andreani_etal_2022
+        url: https://doi.org/10.1080/01650521.2022.2133410
+      - id: marinho_etal_2022
+        url: https://doi.org/10.1670/21-045
+    semantic_references:
+      - id: andreani_etal_2022
+        url: https://doi.org/10.1080/01650521.2022.2133410
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: >-
+      Andreani et al. 2022 explicitly lists call A as one of three distinct
+      Boana ericae call types, and comparative Boana work by Marinho et al.
+      2022 independently recognizes B. ericae as having A, B, and C calls. The
+      label is medium because most detailed species-specific evidence comes from
+      one repertoire paper.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: >-
+      Andreani et al. 2022 provides the detailed acoustic treatment, while
+      Marinho et al. 2022 supports the broad frequency range and multi-call
+      structure in comparison with related species. Agreement is medium because
+      independent full acoustic descriptions for B. ericae remain sparse.
+    semantic_description_agreement: medium
+    semantic_description_explanation: >-
+      Andreani et al. 2022 identifies call A with attraction of reproductive
+      partners. This fits the standard hylid advertisement-call role, but
+      species-specific semantic evidence is concentrated in a single inventory.
+
+  - name: call B
+    alternative_names:
+      - type B call
+    in_primary_inventory: true
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - pulsed
+      - repetitive
+      - short
+      - tonal
+      - graded
+    acoustic_description: >-
+      A pulsed call type forming part of the male repertoire. It is described
+      separately from calls A and C in the species-specific inventory, and it
+      falls within the same lower-frequency Boana ericae acoustic range reported
+      for the species relative to close congeners.
+    semantic_keywords:
+      - display
+      - attention
+      - spacing
+    semantic_description: >-
+      Heard in male calling contexts, but the specific social function is less
+      clearly resolved than for the mate-attraction call A and territorial call
+      C. It is retained as a distinct call type because the repertoire inventory
+      separates it acoustically.
+    acoustic_references:
+      - id: andreani_etal_2022
+        url: https://doi.org/10.1080/01650521.2022.2133410
+      - id: marinho_etal_2022
+        url: https://doi.org/10.1670/21-045
+    semantic_references:
+      - id: andreani_etal_2022
+        url: https://doi.org/10.1080/01650521.2022.2133410
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: >-
+      Andreani et al. 2022 and Marinho et al. 2022 both refer to a B. ericae
+      call B as part of a three-call repertoire. Agreement is medium because the
+      detailed behavioral meaning of this call is not as explicit as for calls A
+      and C.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: >-
+      The species-specific inventory separates call B acoustically, and
+      comparative Boana work confirms that B. ericae has multiple named call
+      types. The exact acoustic description is less independently replicated
+      than for advertisement calls in better-studied frogs.
+    semantic_description_agreement: weak
+    semantic_description_explanation: >-
+      Andreani et al. 2022 establishes that call B occurs in the male repertoire,
+      but readily available species-specific sources do not assign it a precise,
+      experimentally tested function. The semantic label is therefore cautious.
+
+  - name: call C
+    alternative_names:
+      - type C call
+      - territorial call
+      - aggressive call
+    in_primary_inventory: true
+    scope: *adult_male_scope
+    acoustic_keywords:
+      - high_frequency
+      - pulsed
+      - repetitive
+      - long
+      - tonal
+      - harmonic
+    acoustic_description: >-
+      A pulsed call type described separately from calls A and B. Comparative
+      work notes that B. ericae call C is a trill of pulses and shorter than the
+      similar trilled B call of B. guarinimirim, with reported B. ericae call C
+      durations of about 104-560 ms.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - threat
+      - aggression
+    semantic_description: >-
+      Produced in male territorial or aggressive contexts and interpreted as a
+      spacing signal during reproductive activity.
+    acoustic_references:
+      - id: andreani_etal_2022
+        url: https://doi.org/10.1080/01650521.2022.2133410
+      - id: marinho_etal_2022
+        url: https://doi.org/10.1670/21-045
+    semantic_references:
+      - id: andreani_etal_2022
+        url: https://doi.org/10.1080/01650521.2022.2133410
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: >-
+      Andreani et al. 2022 identifies call C as one of the known B. ericae call
+      types, and Marinho et al. 2022 independently references the B. ericae C
+      call in comparisons of Boana repertoires. Agreement is medium because the
+      main detailed treatment is recent and species-specific replication is
+      limited.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: >-
+      Andreani et al. 2022 provides the primary species-specific description,
+      while Marinho et al. 2022 confirms that the C call is a trilled pulsed call
+      and gives a comparative duration range. These sources agree broadly, but
+      detailed independent measurements remain limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: >-
+      Andreani et al. 2022 assigns a territorial function to call C in B. ericae.
+      The context is plausible and clearly stated, but lacks multiple
+      independent field or playback tests.
+
+provenance:
+  - timestamp: '2026-05-14T12:58:14Z'
+    model: gpt-5.5
+    thinking: medium
+    action: generated
+references:
+  andreani_etal_2022:
+    citation: "Andreani TL, Oliveira SR, Caramaschi U, Bastos RP, Morais AR. 2022. Vocal repertoire and acoustic variation in a treefrog (Boana ericae) (Amphibia, Anura, Hylidae) endemic to the Chapada dos Veadeiros, Central Brazil. Studies on Neotropical Fauna and Environment 59: 339-348."
+    url: https://doi.org/10.1080/01650521.2022.2133410
+    doi: 10.1080/01650521.2022.2133410
+  marinho_etal_2022:
+    citation: "Marinho P, Carvalho TR, Santos MTT, Bang DL, Vidigal I, Giaretta AA. 2022. A new cryptic species of Boana (Hylinae: Cophomantini) of the B. polytaenia clade from the Brazilian Atlantic Forest. Journal of Herpetology 56: 278-290."
+    url: https://doi.org/10.1670/21-045
+    doi: 10.1670/21-045
