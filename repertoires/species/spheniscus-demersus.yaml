@@ -1,0 +1,297 @@
+scientific_name: Spheniscus demersus
+common_name: African penguin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Sphenisciformes
+  family: Spheniscidae
+  genus: Spheniscus
+  species: demersus
+primary_inventory:
+  id: favaro_etal_2014
+  rationale: "Favaro et al. 2014 is used as the primary_inventory spine because it provides the only detailed spectrographic and statistical classification of the African penguin repertoire, validating six vocal categories from audio-video recordings. This file retains five categories with broader wild, field, or cross-context support: contact call, agonistic call, ecstatic display song, mutual display song, and begging peep. The captive-colony begging moan is omitted because Favaro et al. 2014 reported it as newly described in juveniles and clear wild support was not found. Eggleton and Siegfried 1979 anchors adult display and agonistic contexts in wild African penguins, and Seddon and van Heezik 1993 field studies support chick begging and parent-offspring recognition."
+calls:
+  - name: contact call
+    in_primary_inventory: true
+    alternative_names:
+      - haw
+      - isolation call
+      - long-distance contact call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - harmonic
+      - tonal
+      - frequency_modulated
+    acoustic_description: A brief single-utterance call, usually about half a second long, with clear harmonic structure and source-filter shaping. Earlier Spheniscus work described the same haw-like call as a short, simple vocalization, while later African-penguin work found individually distinctive spectral and temporal features in contact calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Produced by juveniles and adults when visually separated from colony members, mates, or nearby group members. It is used in locating or maintaining cohesion with other penguins, and its acoustic structure can carry caller identity information.
+    acoustic_references:
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: thumser_ficken_1998
+        url: https://doi.org/10.5038/2074-1235.26.1.399
+      - id: favaro_etal_2015
+        url: https://doi.org/10.1038/srep17255
+    semantic_references:
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: thumser_ficken_1998
+        url: https://doi.org/10.5038/2074-1235.26.1.399
+      - id: favaro_etal_2015
+        url: https://doi.org/10.1038/srep17255
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Favaro et al. 2014 statistically validates the contact call, Thumser and Ficken 1998 describe the corresponding haw call in captive African penguins and other Spheniscus species, and Favaro et al. 2015 analyzes contact calls as an established African-penguin vocal type.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Favaro et al. 2014 and Thumser and Ficken 1998 agree on a short single contact call, and Favaro et al. 2015 adds detailed source-filter and individuality measurements. Agreement is strong despite variation among individuals.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Favaro et al. 2014 and Thumser and Ficken 1998 agree that the call is used when birds are separated from mates or groups, and Favaro et al. 2015 supports identity information. Agreement is medium because much of the quantitative evidence is from captive or managed colonies, with wild use inferred from field-oriented accounts.
+
+  - name: agonistic call
+    in_primary_inventory: true
+    alternative_names:
+      - yell
+      - aggressive bark
+      - aggressive bray
+      - growl
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - harmonic
+      - noisy
+      - abrupt
+      - graded
+    acoustic_description: A short single utterance with a harmonic base but relatively rough, noisy quality, reflected in high jitter and shimmer values compared with most other African-penguin call types. It is brief, abrupt, and acoustically close to the contact call in duration while sounding harsher.
+    semantic_keywords:
+      - aggression
+      - threat
+      - territorial
+      - spacing
+    semantic_description: Given during fights, nest or territory intrusions, chases, close approaches, and high-arousal feeding or crowding events. It is associated with point, gape, peck, and chase displays and functions as a threat or escalation signal.
+    acoustic_references:
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: thumser_ficken_1998
+        url: https://doi.org/10.5038/2074-1235.26.1.399
+    semantic_references:
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: eggleton_siegfried_1979
+        url: https://doi.org/10.1080/00306525.1979.9634105
+      - id: thumser_ficken_1998
+        url: https://doi.org/10.5038/2074-1235.26.1.399
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Favaro et al. 2014 treats the agonistic call as a statistically validated category, Thumser and Ficken 1998 describes a warning yell in Spheniscus penguins, and Eggleton and Siegfried 1979 reported several wild aggressive vocal categories. Agreement is medium because Favaro et al. 2014 argues that earlier aggressive barking, growling, and aggressive braying probably merge into one agonistic call.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Favaro et al. 2014 provides the main quantitative acoustic description, while Thumser and Ficken 1998 supports a short warning-call category but used different nomenclature and did not provide the same African-penguin-specific measurements. Agreement is therefore moderate.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Favaro et al. 2014, Eggleton and Siegfried 1979, and Thumser and Ficken 1998 all associate this class of calls with threats, fights, close approaches, pecking, chasing, and nest or space defence.
+
+  - name: ecstatic display song
+    in_primary_inventory: true
+    alternative_names:
+      - ecstatic song
+      - bray
+      - jackass bray
+      - display song
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - long
+      - repetitive
+      - multi_component
+      - harmonic
+      - frequency_modulated
+      - graded
+    acoustic_description: The longest and loudest African-penguin vocalization, built as a multi-syllable phrase. It begins with repeated short syllables, usually culminates in a longer syllable, and may include an inhalation syllable; later rhythm analyses show that male songs accelerate and grow louder as the sequence progresses.
+    semantic_keywords:
+      - courtship
+      - mating
+      - territorial
+      - display
+      - identity
+    semantic_description: Produced during the breeding season by single displaying adults, especially males, in the characteristic head-up, wings-out ecstatic display. Field and colony studies associate it with mate attraction, advertisement of nest occupancy, territorial defence, and individually distinctive display.
+    acoustic_references:
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: thumser_ficken_1998
+        url: https://doi.org/10.5038/2074-1235.26.1.399
+      - id: favaro_etal_2015
+        url: https://doi.org/10.1038/srep17255
+      - id: hersh_etal_2025
+        url: https://doi.org/10.1111/nyas.15383
+    semantic_references:
+      - id: eggleton_siegfried_1979
+        url: https://doi.org/10.1080/00306525.1979.9634105
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: favaro_etal_2015
+        url: https://doi.org/10.1038/srep17255
+      - id: favaro_etal_2021
+        url: https://doi.org/10.1111/ibi.12970
+      - id: hacker_etal_2023
+        url: https://doi.org/10.3390/biology12091191
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Eggleton and Siegfried 1979 described the wild ecstatic display, Favaro et al. 2014 statistically validated the song as a core adult call type, Thumser and Ficken 1998 measured the corresponding Spheniscus bray, and later studies use the category for individuality and passive acoustic monitoring.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Favaro et al. 2014, Thumser and Ficken 1998, Favaro et al. 2015, and Hersh et al. 2025 agree on a long multi-syllable display song with individually variable temporal and frequency features. The 2025 rhythm work refines the tempo and intensity pattern without contradicting the earlier descriptions.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Eggleton and Siegfried 1979, Favaro et al. 2014, Favaro et al. 2021, and Hacker et al. 2023 all link ecstatic display song to breeding displays, nest or territory advertisement, and mate-related signalling. Favaro et al. 2015 supports the identity component.
+
+  - name: mutual display song
+    in_primary_inventory: true
+    alternative_names:
+      - mutual ecstatic song
+      - pair display song
+      - mutual display call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - multi_component
+      - pulsed
+      - noisy
+      - harmonic
+      - low_frequency
+    acoustic_description: A relatively short display vocalization that begins with pulsed noisy energy and ends in a clear low-pitched harmonic component. The call has high jitter and shimmer values, and paired birds often produce overlapping songs during duet-like nest displays.
+    semantic_keywords:
+      - affiliation
+      - courtship
+      - territorial
+      - group_coordination
+      - display
+    semantic_description: Produced by pairs at the nest, especially when a mate arrives or during mutual display. Pairs may vocalize together, and the same display-song context can be used against penguins approaching too close to the nest territory.
+    acoustic_references:
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+    semantic_references:
+      - id: eggleton_siegfried_1979
+        url: https://doi.org/10.1080/00306525.1979.9634105
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: favaro_etal_2021
+        url: https://doi.org/10.1111/ibi.12970
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Eggleton and Siegfried 1979 described mutual display in wild African penguins, Favaro et al. 2014 statistically validated the mutual display song in the repertoire, and Favaro et al. 2021 counted mutual display songs in field passive-acoustic recordings from Stony Point.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Favaro et al. 2014 provides the detailed quantitative acoustic description. Other sources support the display context but do not give independent African-penguin acoustic measurements for this exact call type, so acoustic agreement is weak.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Eggleton and Siegfried 1979 and Favaro et al. 2014 agree that mutual display song is pair- and nest-associated, and Favaro et al. 2021 confirms that this display-song category is detectable in a wild breeding colony.
+
+  - name: begging peep
+    in_primary_inventory: true
+    alternative_names:
+      - peep
+      - chick begging call
+      - begging call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - repetitive
+      - harmonic
+      - tonal
+    acoustic_description: A short, high-pitched chick call with harmonic energy that can extend far above the adult-call frequency range. Individual peeps are brief, but chicks repeat them in long sequences, and later developmental work shows that begging-call fundamental frequency declines as chicks age and gain mass.
+    semantic_keywords:
+      - begging
+      - food
+      - caregiving
+      - attention
+      - identity
+    semantic_description: Produced by nest chicks when soliciting food or parental attention, often in long calling bouts until feeding occurs. Field transfer experiments indicate that parent recognition of chicks develops during the nestling period and is probably mediated by chick begging calls.
+    acoustic_references:
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: zanoli_etal_2025
+        url: https://doi.org/10.1111/ibi.13364
+    semantic_references:
+      - id: favaro_etal_2014
+        url: https://doi.org/10.1371/journal.pone.0103460
+      - id: seddon_vanheezik_1993a
+        url: https://digitalcommons.usf.edu/jfo/vol64/iss1/4/
+      - id: seddon_vanheezik_1993b
+        url: https://doi.org/10.1080/00306525.1993.9634188
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Favaro et al. 2014 validates begging peep as the nesting-chick call, Thumser and Ficken 1998 reports peeps in Spheniscus chicks including African penguins, and Seddon and van Heezik 1993 field studies support chick begging calls and parent-offspring recognition in wild Jackass/African penguins.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Favaro et al. 2014 provides the core acoustic measurements for begging peeps, and Zanoli et al. 2025 independently analyzes acoustic development in African-penguin begging calls. Agreement is medium because the later developmental study focuses on hand-reared chicks and ontogeny rather than repertoire boundaries.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Favaro et al. 2014, Seddon and van Heezik 1993a, and Seddon and van Heezik 1993b all place chick calls in food solicitation, parental care, and parent-offspring recognition contexts.
+
+references:
+  eggleton_siegfried_1979:
+    citation: "Eggleton P, Siegfried WR. 1979. Displays of the Jackass Penguin. Ostrich 50(3): 139-167."
+    url: https://doi.org/10.1080/00306525.1979.9634105
+    doi: 10.1080/00306525.1979.9634105
+  favaro_etal_2014:
+    citation: "Favaro L, Ozella L, Pessani D. 2014. The vocal repertoire of the African Penguin (Spheniscus demersus): structure and function of calls. PLoS ONE 9(7): e103460."
+    url: https://doi.org/10.1371/journal.pone.0103460
+    doi: 10.1371/journal.pone.0103460
+  favaro_etal_2015:
+    citation: "Favaro L, Gamba M, Alfieri C, Pessani D, McElligott AG. 2015. Vocal individuality cues in the African penguin (Spheniscus demersus): a source-filter theory approach. Scientific Reports 5: 17255."
+    url: https://doi.org/10.1038/srep17255
+    doi: 10.1038/srep17255
+  favaro_etal_2021:
+    citation: "Favaro L, Cresta E, Friard O, Ludynia K, Mathevon N, Pichegru L, Reby D, Gamba M. 2021. Passive acoustic monitoring of the endangered African Penguin (Spheniscus demersus) using autonomous recording units and ecoacoustic indices. Ibis 163(4): 1472-1480."
+    url: https://doi.org/10.1111/ibi.12970
+    doi: 10.1111/ibi.12970
+  hacker_etal_2023:
+    citation: "Hacker F, Terranova F, Petersen GS, Tourtigues E, Friard O, Gamba M, Ludynia K, Gridley T, Pichegru L, Mathevon N, Reby D, Favaro L. 2023. Effect of environmental variables on African penguin vocal activity: implications for acoustic censusing. Biology 12(9): 1191."
+    url: https://doi.org/10.3390/biology12091191
+    doi: 10.3390/biology12091191
+  hersh_etal_2025:
+    citation: "Hersh TA, Jadoul Y, Gamba M, Ravignani A, Favaro L. 2025. Accelerando and crescendo in African penguin ecstatic display songs. Annals of the New York Academy of Sciences 1549(1): 112-119."
+    url: https://doi.org/10.1111/nyas.15383
+    doi: 10.1111/nyas.15383
+  seddon_vanheezik_1993a:
+    citation: "Seddon PJ, Van Heezik Y. 1993. Parent-offspring recognition in the Jackass Penguin. Journal of Field Ornithology 64(1): 27-31."
+    url: https://digitalcommons.usf.edu/jfo/vol64/iss1/4/
+  seddon_vanheezik_1993b:
+    citation: "Seddon PJ, Van Heezik Y. 1993. Behaviour of the Jackass Penguin chick. Ostrich 64(1): 8-12."
+    url: https://doi.org/10.1080/00306525.1993.9634188
+    doi: 10.1080/00306525.1993.9634188
+  thumser_ficken_1998:
+    citation: "Thumser NN, Ficken MS. 1998. A comparison of the vocal repertoires of captive Spheniscus penguins. Marine Ornithology 26: 41-48."
+    url: https://doi.org/10.5038/2074-1235.26.1.399
+    doi: 10.5038/2074-1235.26.1.399
+  zanoli_etal_2025:
+    citation: "Zanoli A, Tenneriello C, Morandi I, Terranova F, Cadman M, Ludynia K, Mathevon N, Reby D, Favaro L. 2025. Acoustic cues to development of African Penguins (Spheniscus demersus) begging calls. Ibis 167(1): 286-294."
+    url: https://doi.org/10.1111/ibi.13364
+    doi: 10.1111/ibi.13364

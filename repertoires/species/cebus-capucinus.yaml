@@ -1,0 +1,285 @@
+scientific_name: Cebus capucinus
+common_name: White-faced capuchin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cebidae
+  genus: Cebus
+  species: capucinus
+primary_inventory:
+  id: groslouis_etal_2008
+  rationale: Gros-Louis et al. 2008 is the primary_inventory spine because it is the most detailed field-based overview of the white-faced capuchin vocal repertoire, combining acoustic analyses with contextual data from wild monkeys and explicitly treating the repertoire as a mixture of graded and discrete vocalizations. The main repertoire and associated focused studies used Cebus capucinus for Costa Rican white-faced capuchins; many later taxonomies split those Central American populations as Cebus imitator. This file keeps the requested Cebus capucinus binomial while noting that much of the best wild vocal evidence is from the older C. capucinus sensu lato usage.
+calls:
+  - name: trill
+    in_primary_inventory: true
+    alternative_names:
+      - trill vocalization
+      - troop-movement trill
+      - infant trill
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - long
+    acoustic_description: A high-frequency, tonal call made as a rapid trill or series of brief tonal elements. Published acoustic and spectrographic work treats it as a recognizable call type rather than a broad alarm or agonistic grade.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - attention
+    semantic_description: Produced during group travel and movement initiation, especially by animals near the leading edge of a moving group, and also during close social approaches by infants and adult females. Infant trills often precede affiliative contact such as climbing on, touching, grooming, or food inspection.
+    acoustic_references:
+      - id: groslouis_etal_2008
+        url: https://doi.org/10.1007/s10764-008-9263-8
+      - id: groslouis_2002
+        url: https://doi.org/10.1002/ajp.10042
+    semantic_references:
+      - id: boinski_1993
+        url: https://doi.org/10.1002/ajp.1350300202
+      - id: boinski_campbell_1995
+        url: https://doi.org/10.1163/156853995X00054
+      - id: groslouis_2002
+        url: https://doi.org/10.1002/ajp.10042
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Boinski 1993, Boinski and Campbell 1995, Gros-Louis 2002, and Gros-Louis et al. 2008 all recognize trills as a named white-faced capuchin call, with independent field datasets at Santa Rosa, La Selva, and Lomas Barbudal.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Gros-Louis 2002 identifies trills as high-frequency vocalizations and Gros-Louis et al. 2008 includes them in the acoustic repertoire, but the accessible dedicated studies emphasize usage more than fine acoustic measurement. Agreement is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Boinski 1993 and Boinski and Campbell 1995 independently link trills to troop movement coordination, while Gros-Louis 2002 shows close social use, especially by infants. The broader contact and coordination interpretation is strongly supported.
+
+  - name: huh
+    in_primary_inventory: true
+    alternative_names:
+      - huh vocalization
+      - close contact call
+      - spacing call
+      - food-associated huh
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - quiet
+      - abrupt
+      - graded
+    acoustic_description: A short, close-distance call that is readily identifiable in spectrogram-based field samples. It is quieter and less elaborate than long-distance arrawh calls, and the published descriptions treat it as a compact call often repeated during close-range foraging situations.
+    semantic_keywords:
+      - spacing
+      - food
+      - contact
+      - attention
+    semantic_description: Given at high rates during foraging, especially within dense fruit patches and when neighbors are nearby. Rather than simply recruiting others to food, huh calling is associated with subsequent increases in nearest-neighbor distance and is interpreted as regulating spacing while foraging.
+    acoustic_references:
+      - id: boinski_campbell_1996
+        url: https://doi.org/10.1111/j.1439-0310.1996.tb01204.x
+      - id: groslouis_etal_2008
+        url: https://doi.org/10.1007/s10764-008-9263-8
+    semantic_references:
+      - id: boinski_campbell_1996
+        url: https://doi.org/10.1111/j.1439-0310.1996.tb01204.x
+      - id: groslouis_etal_2008
+        url: https://doi.org/10.1007/s10764-008-9263-8
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Boinski and Campbell 1996 analyzed more than 1600 huhs from field recordings, and Gros-Louis et al. 2008 includes huh-type calls in the broader repertoire. The named call type is strongly supported.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Boinski and Campbell 1996 provides spectrographic support and the repertoire study recognizes the call, but published accessible summaries provide less fine acoustic detail than for alarm calls. Acoustic agreement is therefore medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Boinski and Campbell 1996 experimentally compared observed neighbor-distance changes with null models and found huhs predicted increased spacing; Gros-Louis et al. 2008 places the call in the same wild repertoire context. The spacing/foraging interpretation is strong.
+
+  - name: arrawh
+    in_primary_inventory: true
+    alternative_names:
+      - lost call
+      - loud arrawh
+      - lost whistle
+      - long-distance call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - long
+      - tonal
+      - frequency_modulated
+      - repetitive
+    acoustic_description: A high-amplitude, long-distance call, commonly described as one of the loudest calls in the repertoire. It is whistle-like enough to be called a lost whistle in some sources and contains acoustic cues that permit individual differentiation among callers.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - spacing
+      - identity
+    semantic_description: Emitted when an animal is separated from visual contact with its group or responding to separated group members. Receivers respond selectively to lost calls, especially those of socially dominant individuals, indicating a role in restoring group cohesion and conveying caller identity or location.
+    acoustic_references:
+      - id: groslouis_etal_2008
+        url: https://doi.org/10.1007/s10764-008-9263-8
+      - id: digweed_etal_2007
+        url: https://doi.org/10.1002/ajp.20398
+    semantic_references:
+      - id: digweed_etal_2007
+        url: https://doi.org/10.1002/ajp.20398
+      - id: groslouis_etal_2008
+        url: https://doi.org/10.1007/s10764-008-9263-8
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Arrawh/lost calls are included in the Gros-Louis et al. 2008 repertoire and are the focus of Digweed et al. 2007, which examined responses to naturally occurring lost calls. The call type is well established.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Gros-Louis et al. 2008 supports the loud long-distance arrawh category, and Digweed et al. 2007 shows lost calls contain individual acoustic differentiation. Fine structure is less extensively summarized than for alarm calls, so agreement is medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Digweed et al. 2007 shows selective social responses to lost calls, while Gros-Louis et al. 2008 identifies the same call in separation contexts. Agreement is strong for contact and group-cohesion use.
+
+  - name: aerial predator alarm
+    in_primary_inventory: true
+    alternative_names:
+      - aerial alarm
+      - avian predator alarm
+      - alarm call category 1
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - short
+      - loud
+      - abrupt
+      - graded
+    acoustic_description: A short, loud alarm subtype within the first broad acoustic alarm category. Acoustic analyses separate this category from terrestrial/snake alarms and show measurable differences among calls given to aerial predators, humans, and unfamiliar capuchins, while also recognizing graded transitions among subtypes.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - attention
+    semantic_description: Given to aerial predators and associated with antipredator responses such as immediate descent from exposed treetop positions. Related calls in the same acoustic category also occur to humans and unfamiliar conspecifics, so this label captures the aerial-predator subtype within a broader disturbance category.
+    acoustic_references:
+      - id: fichtel_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.09.020
+      - id: groslouis_etal_2008
+        url: https://doi.org/10.1007/s10764-008-9263-8
+    semantic_references:
+      - id: digweed_etal_2005
+        url: https://doi.org/10.1163/156853905774405344
+      - id: fichtel_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.09.020
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Fichtel et al. 2005 acoustically separates the aerial/human/conspecific alarm category from terrestrial/snake alarms, Digweed et al. 2005 reports an aerial predator alarm variant, and Gros-Louis et al. 2008 includes alarm calls in the repertoire. Existence agreement is strong.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Fichtel et al. 2005 provides the dedicated acoustic analysis and Gros-Louis et al. 2008 integrates the category into the repertoire; both support a distinct broad acoustic category with graded subtypes. Agreement is strong at the category level.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Digweed et al. 2005 describes aerial alarms as tied to avian predators and descent responses, but Fichtel et al. 2005 shows the broader acoustic category also includes calls to humans and conspecifics. The aerial-predator use is supported, with medium specificity.
+
+  - name: terrestrial predator alarm
+    in_primary_inventory: true
+    alternative_names:
+      - terrestrial alarm
+      - snake alarm
+      - terrestrial/snake alarm
+      - alarm call category 2
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - noisy
+      - short
+      - repetitive
+      - graded
+    acoustic_description: A short, noisy alarm class in the second broad acoustic category identified for white-faced capuchins. Calls in this class differ from aerial-alarm calls, but variants grade into one another across terrestrial predators, snakes, caimans, and high-intensity aggressive contexts.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - aggression
+      - attention
+    semantic_description: Produced to snakes, terrestrial predators, and caimans, and also during highly aggressive interactions between conspecifics. The call therefore appears to combine threat alerting with urgency or arousal rather than mapping cleanly onto a single predator class.
+    acoustic_references:
+      - id: fichtel_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.09.020
+      - id: groslouis_etal_2008
+        url: https://doi.org/10.1007/s10764-008-9263-8
+    semantic_references:
+      - id: fichtel_etal_2005
+        url: https://doi.org/10.1016/j.anbehav.2004.09.020
+      - id: digweed_etal_2005
+        url: https://doi.org/10.1163/156853905774405344
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Fichtel et al. 2005, Digweed et al. 2005, and Gros-Louis et al. 2008 all support a terrestrial/snake-related alarm class in wild white-faced capuchins. The broad class is strongly supported.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Fichtel et al. 2005 explicitly separates this alarm category acoustically from the aerial/human/conspecific category, while documenting graded subtypes within it. Gros-Louis et al. 2008 provides repertoire-level support. Agreement is strong for the broad acoustic class.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Sources agree that the call class occurs with terrestrial predators and snakes, but Fichtel et al. 2005 notes that similar variants also occur to caimans and conspecific aggression. Semantic specificity is therefore medium.
+references:
+  boinski_1993:
+    citation: "Boinski, S. (1993). Vocal coordination of troop movement among white-faced capuchin monkeys, Cebus capucinus. American Journal of Primatology, 30, 85-100."
+    doi: 10.1002/ajp.1350300202
+    url: https://doi.org/10.1002/ajp.1350300202
+  boinski_campbell_1995:
+    citation: "Boinski, S., & Campbell, A. F. (1995). Use of trill vocalizations to coordinate troop movement among white-faced capuchins: A second field test. Behaviour, 132, 875-901."
+    doi: 10.1163/156853995X00054
+    url: https://doi.org/10.1163/156853995X00054
+  boinski_campbell_1996:
+    citation: "Boinski, S., & Campbell, A. F. (1996). The huh vocalization of white-faced capuchins: A spacing call disguised as a food call? Ethology, 102, 826-840."
+    doi: 10.1111/j.1439-0310.1996.tb01204.x
+    url: https://doi.org/10.1111/j.1439-0310.1996.tb01204.x
+  digweed_etal_2005:
+    citation: "Digweed, S. M., Fedigan, L. M., & Rendall, D. (2005). Variable specificity in the anti-predator vocalizations and behaviour of the white-faced capuchin, Cebus capucinus. Behaviour, 142, 997-1021."
+    doi: 10.1163/156853905774405344
+    url: https://doi.org/10.1163/156853905774405344
+  digweed_etal_2007:
+    citation: "Digweed, S. M., Fedigan, L. M., & Rendall, D. (2007). Who cares who calls? Selective responses to the lost calls of socially dominant group members in the white-faced capuchin (Cebus capucinus). American Journal of Primatology, 69, 829-835."
+    doi: 10.1002/ajp.20398
+    url: https://doi.org/10.1002/ajp.20398
+  fichtel_etal_2005:
+    citation: "Fichtel, C., Perry, S., & Gros-Louis, J. (2005). Alarm calls of white-faced capuchin monkeys: An acoustic analysis. Animal Behaviour, 70, 165-176."
+    doi: 10.1016/j.anbehav.2004.09.020
+    url: https://doi.org/10.1016/j.anbehav.2004.09.020
+  groslouis_2002:
+    citation: "Gros-Louis, J. (2002). Contexts and behavioral correlates of trill vocalizations in wild white-faced capuchin monkeys (Cebus capucinus). American Journal of Primatology, 57, 189-202."
+    doi: 10.1002/ajp.10042
+    url: https://doi.org/10.1002/ajp.10042
+  groslouis_etal_2008:
+    citation: "Gros-Louis, J. J., Perry, S. E., Fichtel, C., Wikberg, E., Gilkenson, H., Wofsy, S., & Fuentes, A. (2008). Vocal Repertoire of Cebus capucinus: Acoustic Structure, Context, and Usage. International Journal of Primatology, 29, 641-670."
+    doi: 10.1007/s10764-008-9263-8
+    url: https://doi.org/10.1007/s10764-008-9263-8

@@ -1,0 +1,284 @@
+scientific_name: Lemur catta
+common_name: Ring-tailed lemur
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Lemuridae
+  genus: Lemur
+  species: catta
+primary_inventory:
+  id: macedonia_1993
+  rationale: Macedonia 1993 is used as the primary_inventory spine because it is the dedicated quantitative and spectrographic repertoire study for ring-tailed lemurs, describing adult and immature call structure, usage, inferred function, variability, and development. This compact file keeps a conservative subset of named adult or non-infant call types that have support from the repertoire paper plus later contact-call, travel-call, or alarm-call studies.
+calls:
+  - name: moan
+    in_primary_inventory: true
+    alternative_names:
+      - contact moan
+      - cohesion call
+    scope: &broad_noninfant_scope
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - graded
+      - long
+    acoustic_description: A tonal, harmonic contact call with graded frequency modulation and individually variable temporal and frequency features. Macedonia's repertoire work treats moans and related contact calls as structurally distinct affiliative vocalizations, and later contact-call studies confirm measurable individual differences.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+      - affiliation
+    semantic_description: Produced in low- to moderate-arousal cohesion contexts while animals maintain contact with group members during travel, foraging, or temporary spacing. Contact-call studies support use in locating familiar individuals and maintaining group cohesion.
+    acoustic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: macedonia_1986
+        url: https://doi.org/10.1002/ajp.1350110208
+      - id: oda_2002
+        url: https://doi.org/10.1159/000064785
+    semantic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: oda_1999
+        url: https://doi.org/10.1159/000021684
+      - id: kulahci_etal_2014
+        url: https://doi.org/10.1098/rspb.2014.0071
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Macedonia 1993 names moans as part of the adult ring-tailed lemur repertoire, and Macedonia 1986, Oda 1999, Oda 2002, and Kulahci et al. 2014 all support contact-call identity or cohesion functions in the same species.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Macedonia 1993 provides the repertoire-level acoustic description, while Macedonia 1986 and Oda 2002 support individual acoustic distinctiveness in contact calls. Agreement is medium because later studies often pool contact-call variants rather than isolating moans alone.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Macedonia 1993 and Oda 1999 place contact calls in cohesion and location contexts, and Kulahci et al. 2014 shows that receivers can match vocal contact calls with individual identity information. The contact and identity context is strongly supported.
+
+  - name: chirp
+    in_primary_inventory: true
+    alternative_names:
+      - travel chirp
+      - affiliative chirp
+    scope: *broad_noninfant_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - frequency_modulated
+      - repetitive
+    acoustic_description: A brief, high-frequency affiliative call that can be produced in repeated bouts during group travel. Macedonia's repertoire analysis treats chirps as a distinct call type, and later field work analyses chirps separately from wails during male travel.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - attention
+    semantic_description: Given during group movement and travel, where it is associated with cohesion and socially positive movement contexts. Field observations of males at Beza Mahafaly show chirp use during group travel and affiliative travel situations.
+    acoustic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: bolt_2020
+        url: https://doi.org/10.1159/000508808
+    semantic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: bolt_2020
+        url: https://doi.org/10.1159/000508808
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Macedonia 1993 includes chirp in the named repertoire, and Bolt 2020 independently studies chirp use in wild male ring-tailed lemurs during group travel.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Macedonia 1993 provides the detailed repertoire classification and Bolt 2020 retains chirps as a distinct travel call, but the later study is more behavioral than spectrographic. Acoustic agreement is therefore medium.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Macedonia 1993 and Bolt 2020 agree that chirps are affiliative contact calls linked to group movement and cohesion, giving strong semantic support.
+
+  - name: wail
+    in_primary_inventory: true
+    alternative_names:
+      - early-high wail
+      - late-high wail
+      - contact wail
+    scope: *broad_noninfant_scope
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - long
+      - loud
+      - graded
+    acoustic_description: A loud, high-frequency tonal contact call with strong frequency modulation. Macedonia separates wail variants by arousal-related contour and timing, and Bolt 2020 treats wails as distinct from chirps in field analyses of group travel.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - attention
+    semantic_description: Used in moderate- to high-arousal contact and cohesion contexts, especially during travel or separation risk. Later field work links wail production by males to group travel and affiliative contact during movement.
+    acoustic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: bolt_2020
+        url: https://doi.org/10.1159/000508808
+    semantic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: bolt_2020
+        url: https://doi.org/10.1159/000508808
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Macedonia 1993 identifies early-high and late-high wails as named contact-call types, and Bolt 2020 independently analyses wail use in wild male ring-tailed lemurs.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Macedonia 1993 provides the main acoustic classification and Bolt 2020 supports the distinction in field data. Agreement is medium because the variants are graded by arousal and not always treated as separate call types in later work.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Both Macedonia 1993 and Bolt 2020 place wails in travel, affiliation, and group-cohesion contexts, so the broad semantic description is strongly supported.
+
+  - name: howl
+    in_primary_inventory: true
+    alternative_names:
+      - male howl
+      - advertisement howl
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - long
+      - low_frequency
+      - harmonic
+      - frequency_modulated
+    acoustic_description: A loud, long-distance male call with tonal harmonic structure and frequency modulation. In the repertoire it is one of the conspicuous adult male advertisement calls and is acoustically distinct from short affiliative calls such as chirps or purrs.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - display
+      - territorial
+      - spacing
+    semantic_description: Produced by non-infant males as an advertisement or long-range contact call, often contributing to group location and presence signalling during intergroup or spacing contexts.
+    acoustic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+    semantic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: oda_1999
+        url: https://doi.org/10.1159/000021684
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Macedonia 1993 names howl as a ring-tailed lemur call type and describes its male-biased use. Agreement is medium because later ring-tailed lemur vocal studies focus more on contact calls and alarm calls than on replicated acoustic analysis of howls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: The acoustic description is based mainly on Macedonia 1993, with little independent call-specific acoustic quantification located for howls.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Macedonia 1993 supports the male advertisement and long-range contact context, and Oda 1999 supports the broader contact-call role in group coordination. The call-specific semantic basis is moderate.
+
+  - name: yip
+    in_primary_inventory: true
+    alternative_names:
+      - subordinate yip
+      - fear yip
+    scope: *broad_noninfant_scope
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - abrupt
+      - tonal
+      - graded
+    acoustic_description: A short, high-pitched agonistic call with abrupt onset and graded intensity. Macedonia treats yips as a named non-infant call type within the agonistic portion of the repertoire.
+    semantic_keywords:
+      - submission
+      - distress
+      - aggression
+      - threat
+    semantic_description: Produced in mild fear or subordinate contexts, especially when a lower-ranking animal approaches or is approached by a dominant animal. It signals non-dominant status or appeasement during close social tension.
+    acoustic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+    semantic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Macedonia 1993 identifies yip as a named agonistic call, but the category has less independent later treatment than the species' contact and alarm calls.
+    acoustic_description_agreement: weak
+    acoustic_description_explanation: Macedonia 1993 provides the principal acoustic evidence for yips; independent acoustic replication of this exact label is limited.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Macedonia 1993 links yips to mild fear, submission, and dominance-related approach contexts. The context is clear in the inventory, though call-specific experimental evidence is sparse.
+
+  - name: rasp
+    in_primary_inventory: true
+    alternative_names:
+      - aerial predator alarm
+      - anti-raptor alarm
+    scope: *broad_noninfant_scope
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - abrupt
+      - repetitive
+      - graded
+    acoustic_description: A harsh, noisy alarm call associated with aerial predator contexts. Macedonia's repertoire study treats it as distinct from other alerting and antipredator calls, and comparative alarm-call work uses ring-tailed lemur antiraptor calls as a functionally specific alarm class.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - group_coordination
+    semantic_description: Produced to raptors or low-flying aerial threats and used in a predator-specific antipredator system. Comparative playback and alarm-call analyses report that ring-tailed lemurs respond to antiraptor and anticarnivore alarms with different appropriate escape behavior.
+    acoustic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: macedonia_evans_1993
+        url: https://doi.org/10.1111/j.1439-0310.1993.tb00988.x
+    semantic_references:
+      - id: macedonia_1993
+        url: https://doi.org/10.1159/000156749
+      - id: macedonia_evans_1993
+        url: https://doi.org/10.1111/j.1439-0310.1993.tb00988.x
+    playback_references:
+      - id: macedonia_evans_1993
+        url: https://doi.org/10.1111/j.1439-0310.1993.tb00988.x
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Macedonia 1993 names rasp in the antipredator repertoire, and Macedonia and Evans 1993 treats ring-tailed lemur antiraptor calls as part of a predator-class-specific alarm system.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Macedonia 1993 provides the call-specific acoustic description, while Macedonia and Evans 1993 supports the broader antiraptor alarm category. Agreement is medium because later work emphasizes meaning and response specificity more than fine acoustic detail.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Macedonia 1993 and Macedonia and Evans 1993 agree that antiraptor calls are produced in aerial predator contexts and elicit predator-appropriate responses. The semantic description is strongly supported.
+
+references:
+  bolt_2020:
+    citation: "Bolt LM. 2020. Affiliative contact calls during group travel: chirp and wail vocalization use in the male ring-tailed lemur (Lemur catta). Folia Primatologica 91(6):575-594."
+    url: https://doi.org/10.1159/000508808
+    doi: 10.1159/000508808
+  kulahci_etal_2014:
+    citation: "Kulahci IG, Drea CM, Rubenstein DI, Ghazanfar AA. 2014. Individual recognition through olfactory-auditory matching in lemurs. Proceedings of the Royal Society B 281:20140071."
+    url: https://doi.org/10.1098/rspb.2014.0071
+    doi: 10.1098/rspb.2014.0071
+  macedonia_1986:
+    citation: "Macedonia JM. 1986. Individuality in a contact call of the ringtailed lemur (Lemur catta). American Journal of Primatology 11(2):163-179."
+    url: https://doi.org/10.1002/ajp.1350110208
+    doi: 10.1002/ajp.1350110208
+  macedonia_1993:
+    citation: "Macedonia JM. 1993. The vocal repertoire of the ringtailed lemur (Lemur catta). Folia Primatologica 61(4):186-217."
+    url: https://doi.org/10.1159/000156749
+    doi: 10.1159/000156749
+  macedonia_evans_1993:
+    citation: "Macedonia JM, Evans CS. 1993. Essay on contemporary issues in ethology: variation among mammalian alarm call systems and the problem of meaning in animal signals. Ethology 93(3):177-197."
+    url: https://doi.org/10.1111/j.1439-0310.1993.tb00988.x
+    doi: 10.1111/j.1439-0310.1993.tb00988.x
+  oda_1999:
+    citation: "Oda R. 1999. Scent marking and contact call production in ring-tailed lemurs (Lemur catta). Folia Primatologica 70(2):121-124."
+    url: https://doi.org/10.1159/000021684
+    doi: 10.1159/000021684
+  oda_2002:
+    citation: "Oda R. 2002. Individual distinctiveness of the contact calls of ring-tailed lemurs. Folia Primatologica 73(2-3):132-136."
+    url: https://doi.org/10.1159/000064785
+    doi: 10.1159/000064785
