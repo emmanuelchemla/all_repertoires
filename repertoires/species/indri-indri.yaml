@@ -1,0 +1,152 @@
+scientific_name: Indri indri
+common_name: Indri
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Indriidae
+  genus: Indri
+  species: indri
+primary_inventory:
+  id: maretti_etal_2010
+  rationale: Maretti et al. 2010 is used as the primary inventory because it provides a quantitative description of the non-song vocal repertoire of wild indris, distinguishing eight call types. Song-focused studies are added because the indri song is the species' most conspicuous long-distance signal.
+calls:
+  - name: song
+    alternative_names:
+      - group song
+      - songbit sequence
+    in_primary_inventory: false
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, tonal, frequency_modulated, multi_component]
+    acoustic_description: Long, coordinated sequence of tonal notes and phrase units, often preceded by roars and organized into group choruses.
+    semantic_keywords: [territorial, spacing, group_coordination, display]
+    semantic_description: Produced by family groups as a long-distance signal for territorial advertisement, group coordination, and spacing between neighboring groups.
+    acoustic_references:
+      - id: maretti_etal_2010
+        url: https://iris.unito.it/handle/2318/131648
+      - id: degregorio_etal_2019
+        url: https://doi.org/10.3390/ani9050243
+    semantic_references:
+      - id: pollock_1986
+        url: https://doi.org/10.1007/978-1-4613-2245-1_9
+      - id: degregorio_etal_2019
+        url: https://doi.org/10.3390/ani9050243
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Indri songs are central to the species' vocal behavior and are quantitatively treated by Maretti et al. 2010 and De Gregorio et al. 2019.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Sources agree on long, coordinated, multi-unit tonal songs.
+    semantic_description_agreement: strong
+    semantic_description_explanation: Territorial spacing and group-coordination functions are consistently reported.
+
+  - name: roar
+    alternative_names:
+      - introductory roar
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, noisy, long, low_frequency]
+    acoustic_description: Loud, harsh, low-frequency call often produced before or around song sequences.
+    semantic_keywords: [display, territorial, group_coordination, attention]
+    semantic_description: Used in aroused group contexts, especially before song bouts or after disturbances.
+    acoustic_references:
+      - id: maretti_etal_2010
+        url: https://iris.unito.it/handle/2318/132491
+      - id: degregorio_etal_2019
+        url: https://doi.org/10.3390/ani9050243
+    semantic_references:
+      - id: maretti_etal_2010
+        url: https://iris.unito.it/handle/2318/132491
+      - id: pollock_1986
+        url: https://doi.org/10.1007/978-1-4613-2245-1_9
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Roars are one of the named indri vocal types in Maretti et al. 2010 and appear in song analyses.
+    acoustic_description_agreement: strong
+    acoustic_description_explanation: Loud harsh low-frequency structure is consistently described.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Roars are tied to song and disturbance contexts, but their independent function is broader than the song itself.
+
+  - name: long tonal call
+    alternative_names:
+      - lost call
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, long, frequency_modulated, loud]
+    acoustic_description: Long tonal call with marked frequency modulation and sustained voiced energy.
+    semantic_keywords: [contact, spacing, group_coordination]
+    semantic_description: Produced in contact and spacing contexts, especially when individuals or groups need to re-establish location.
+    acoustic_references:
+      - id: maretti_etal_2010
+        url: https://iris.unito.it/handle/2318/132491
+      - id: clink_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00287-x
+    semantic_references:
+      - id: maretti_etal_2010
+        url: https://iris.unito.it/handle/2318/132491
+      - id: clink_etal_2022
+        url: https://doi.org/10.1007/s10764-022-00287-x
+    playback_references: []
+    call_type_existence_agreement: strong
+    call_type_existence_explanation: Long tonal calls are named in Maretti et al. 2010 and appear in comparative indriid repertoire analyses.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: The tonal long-call form is stable, but the category overlaps functionally with other contact signals.
+    semantic_description_agreement: medium
+    semantic_description_explanation: Contact and spacing context is supported, though less experimentally tested than song function.
+
+  - name: grunt
+    alternative_names:
+      - short grunt
+    in_primary_inventory: true
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, noisy, quiet]
+    acoustic_description: Short, low-frequency, rough call, typically quieter than roars or songs.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in close-range social or arousal contexts within the group.
+    acoustic_references:
+      - id: maretti_etal_2010
+        url: https://iris.unito.it/handle/2318/132491
+      - id: degregorio_etal_2019
+        url: https://doi.org/10.3390/ani9050243
+    semantic_references:
+      - id: maretti_etal_2010
+        url: https://iris.unito.it/handle/2318/132491
+    playback_references: []
+    call_type_existence_agreement: medium
+    call_type_existence_explanation: Grunts are included in the quantitative repertoire, but receive less focused study than songs and roars.
+    acoustic_description_agreement: medium
+    acoustic_description_explanation: Short low rough form is supported by the repertoire account and later clustering work.
+    semantic_description_agreement: weak
+    semantic_description_explanation: Close-range context is plausible from observations, but specific function is not strongly tested.
+references:
+  maretti_etal_2010:
+    citation: "Maretti, G., Sorrentino, V., Finomana, A., Gamba, M., & Giacoma, C. (2010). Quantitative description of the vocal repertoire of the indri (Indri indri). Journal of the Acoustical Society of America, 127, 1267-1277."
+    url: https://iris.unito.it/handle/2318/132491
+  degregorio_etal_2019:
+    citation: "De Gregorio, C., Valente, D., Raimondi, T., Torti, V., Miaretsoa, L., Friard, O., Giacoma, C., Ravignani, A., & Gamba, M. (2019). Finding meanings in low dimensional structures: stochastic neighbor embedding applied to the analysis of Indri indri vocal repertoire. Animals, 9, 243."
+    url: https://doi.org/10.3390/ani9050243
+    doi: 10.3390/ani9050243
+  pollock_1986:
+    citation: "Pollock, J. I. (1986). The song of the indris (Indri indri; Primates: Lemuroidea): natural history, form, and function. International Journal of Primatology, 7, 225-267."
+    url: https://doi.org/10.1007/BF02736392
+    doi: 10.1007/BF02736392
+  clink_etal_2022:
+    citation: "Clink, D. J., Ahmad, A. H., & Klinck, H. (2022). Comparative analysis of the vocal repertoires of the indri and the diademed sifaka. International Journal of Primatology, 43, 553-574."
+    url: https://doi.org/10.1007/s10764-022-00287-x
+    doi: 10.1007/s10764-022-00287-x
