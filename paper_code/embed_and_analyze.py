@@ -309,9 +309,11 @@ def main():
         "harmonic", "noisy", "frequency-modulated",
     ]
     semantic_keywords = [
-        "alarm", "contact", "affective", "coordination",
-        "distress", "predator", "aggression", "infant",
-        "display", "long_distance", "food", "territory",
+        "alarm", "predator", "threat", "aggression",
+        "distress", "submission", "begging",
+        "contact", "group_coordination", "affiliation", "attention", "spacing",
+        "display", "mating", "courtship", "play", "territorial", "caregiving",
+        "food", "recruitment", "identity", "combinatorial",
     ]
     pmi, _, _ = compute_pmi(records, acoustic_keywords, semantic_keywords)
     plot_pmi_heatmap(pmi, acoustic_keywords, semantic_keywords,

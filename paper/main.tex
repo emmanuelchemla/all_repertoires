@@ -31,8 +31,8 @@
 %  CUSTOM COMMANDS
 % ------------------------------------------------------------------ %
 \newcommand{\dbname}{AnimalLex\xspace}
-\newcommand{\nspecies}{57\xspace}
-\newcommand{\ncalls}{373\xspace}
+\newcommand{\nspecies}{31\xspace}
+\newcommand{\ncalls}{307\xspace}
 
 % ------------------------------------------------------------------ %
 %  PACKAGES
@@ -44,7 +44,7 @@
 \usepackage{draftwatermark}
 \SetWatermarkText{\shortstack{Do not distribute}}
 \SetWatermarkScale{0.5}
-\SetWatermarkColor[rgb]{0.85, 0.1, 0.1}
+\SetWatermarkColor[rgb]{{0.85, 0.1, 0.1}}
 
 \begin{document}
 \thispagestyle{firstpage}
@@ -84,16 +84,16 @@ Here we test for a biological code at scale by assembling \dbname, a curated dat
 	\includegraphics[width=\textwidth]{../plots/fig1_dataset_overview.png}
 	\caption{%
 		\textbf{\dbname: a curated cross-species lexical repertoire.}
-		\textbf{(A)}~Frequency of semantic ontology keywords across all \ncalls calls, colored by communicative category. Coordination, contact, alarm, and affective signaling dominate; rarer categories include referential signaling, individual identity, and learning-related calls.
+		\textbf{(A)}~Frequency of semantic ontology keywords across all \ncalls calls, colored by communicative category (cohesion, danger, social, distress, foraging, identity/structural). Attention, group coordination, contact, and alarm dominate; rarer categories include individual identity and combinatorial structure.
 		\textbf{(B)}~Frequency of acoustic features extracted by term-matching from free-text descriptions. Tonal, high-frequency, and repetitive features are most common; soft/quiet and harmonic features are rarer.
-		\textbf{(C)}~Calls per species, grouped by taxonomic group (Apes, Old World monkeys, other primates, Carnivora, other mammals, Passeriformes, Psittaciformes, Amphibia) and colored by family. Within each group, species are sorted by repertoire size. Repertoire sizes range from 2 to 32; the largest is the Bornean orangutan (32 calls), reflecting the depth of primary literature on great apes.
+		\textbf{(C)}~Calls per species, grouped by taxonomic group (Apes, Old World monkeys, other primates, Carnivora, other mammals, Passeriformes, Psittaciformes, Amphibia) and colored by family. Within each group, species are sorted by repertoire size. Repertoire sizes range from 2 to 20; the largest curated repertoires (20 calls each) are the vervet monkey and the Carolina chickadee.
 	}
 	\label{fig:dataset}
 \end{figure}
 
-\dbname was assembled by prompting a large language model (GPT-4o) to structure knowledge from peer-reviewed literature for each target species, producing entries that record call name, free-text acoustic description, free-text semantic description, standardized ontology keywords, subjective reliability, and primary references. Entries were then reviewed and corrected by domain experts (see Methods). The \nspecies species span three vertebrate classes: 43 mammals, 9 birds, and 5 amphibians, covering taxa from African savanna elephants (\textit{Loxodonta africana}) and gray wolves (\textit{Canis lupus}) to Carolina chickadees (\textit{Poecile carolinensis}) and t\'{u}ngara frogs (\textit{Engystomops pustulosus}).
+\dbname was assembled by prompting a large language model (GPT-4o) to structure knowledge from peer-reviewed literature for each target species, producing entries that record call name, free-text acoustic description, free-text semantic description, standardized ontology keywords, subjective reliability, and primary references. Entries were then reviewed and corrected by domain experts (see Methods). The \nspecies species span three vertebrate classes: 22 mammals, 5 birds, and 4 amphibians, covering taxa from African savanna elephants (\textit{Loxodonta africana}) and gray wolves (\textit{Canis lupus}) to Carolina chickadees (\textit{Poecile carolinensis}) and t\'{u}ngara frogs (\textit{Engystomops pustulosus}).
 
-The most common semantic categories are coordination ($n = 106$), affective signaling ($n = 98$), contact and cohesion ($n = 94$), distress ($n = 72$), and alarm ($n = 71$; Fig.~\ref{fig:dataset}A). Less frequent but theoretically important categories include referential signals ($n = 5$), individual-identity calls ($n = 8$), and learning-associated vocalizations ($n = 10$). On the acoustic side, descriptions span the full range of spectro-temporal parameters: tonal vs.\ broadband energy, frequency range and modulation, temporal patterning (pulsed, repetitive, graded), and call-internal structure (notes, syllables, phrases; Fig.~\ref{fig:dataset}B). Together these two annotation axes provide the substrate for testing form-to-meaning alignment.
+Pooled across calls, cohesion-related tags (attention, group coordination, contact, affiliation, spacing) are the most frequent broad category ($n = 435$), followed by danger signals (alarm, predator, threat, aggression; $n = 310$), social interactions (display, mating, courtship, play, territorial, caregiving; $n = 213$), distress and submission ($n = 107$), foraging ($n = 70$), and identity/combinatorial tags ($n = 66$; Fig.~\ref{fig:dataset}A). The single most common keywords are \emph{attention} ($n = 112$), \emph{group\_coordination} ($n = 105$), \emph{contact} ($n = 93$), \emph{alarm} ($n = 89$), and \emph{threat} ($n = 87$). On the acoustic side, descriptions span the full range of spectro-temporal parameters: tonal vs.\ broadband energy, frequency range and modulation, temporal patterning (pulsed, repetitive, graded), and call-internal structure (notes, syllables, phrases; Fig.~\ref{fig:dataset}B). Together these two annotation axes provide the substrate for testing form-to-meaning alignment.
 
 \section{Acoustic and semantic spaces are aligned across the tree of life}
 
@@ -108,15 +108,15 @@ The most common semantic categories are coordination ($n = 106$), affective sign
 		\textbf{Alignment of acoustic and semantic embedding spaces.}
 		\textbf{(A)}~Semantic UMAP: each point is a call, colored by communicative category (legend inside panel). Alarm/threat calls (red) cluster together; contact/cohesion calls (blue) form a separate region.
 		\textbf{(B)}~Acoustic UMAP: the same calls positioned by their acoustic description embedding. The topological similarity to~(A)---shared cluster identities despite independent embeddings---is the visual signature of the biological code.
-		\textbf{(C)}~Mantel scatter: 1,000 randomly sampled pairs per group, pairwise acoustic distance vs.\ semantic distance, colored by taxonomic relationship. $r$ values from permutation Mantel tests on all pairs; same-family cross-species pairs ($r=0.49$) show the strongest alignment.
+		\textbf{(C)}~Mantel scatter: 1,000 randomly sampled pairs per group, pairwise acoustic distance vs.\ semantic distance, colored by taxonomic relationship. $r$ values from permutation Mantel tests on all pairs; within-species pairs ($r=0.27$) show the strongest alignment, while same-family ($r=0.14$) and cross-family ($r=0.17$) pairs remain significantly aligned.
 	}
 	\label{fig:embeddings}
 \end{figure}
 
 
-We embedded each call's acoustic and semantic descriptions separately into a shared sentence-transformer space (see Methods) and computed pairwise cosine similarities across all $\ncalls(\ncalls-1)/2 = 69{,}378$ call pairs. A Mantel test \cite{mantel1967detection} of the correlation between acoustic and semantic similarity matrices yields $r = 0.31$, $p < 0.001$ (9,999 permutations; Fig.~\ref{fig:embeddings}C, Fig.~\ref{fig:mantel_matrix} and Supplementary Material~\ref{sec:supp_bootstrap}). A partial Mantel test controlling for species identity yields an identical coefficient ($r = 0.31$, $p < 0.001$), confirming that the correlation is not driven by the trivial within-species similarity structure: calls from the same species are not the reason acoustic and semantic spaces are aligned.
+We embedded each call's acoustic and semantic descriptions separately into a shared sentence-transformer space (see Methods) and computed pairwise cosine similarities across all $\ncalls(\ncalls-1)/2 = 46{,}971$ call pairs. A Mantel test \cite{mantel1967detection} of the correlation between acoustic and semantic similarity matrices yields $r = 0.19$, $p < 0.001$ (9,999 permutations; Fig.~\ref{fig:embeddings}C, Fig.~\ref{fig:mantel_matrix} and Supplementary Material~\ref{sec:supp_bootstrap}). A partial Mantel test controlling for species identity yields a nearly identical coefficient ($r = 0.17$, $p < 0.001$), confirming that the correlation is not driven by the trivial within-species similarity structure: calls from the same species are not the reason acoustic and semantic spaces are aligned.
 
-Examining subsets of pairs by taxonomic relationship reveals additional structure. Pairs from the same family but different species show the strongest correlation ($r = 0.49$, $p < 0.001$, $n = 13{,}021$ pairs), while within-species pairs (pooled across all species; $r = 0.23$, $p < 0.001$, $n = 1{,}551$) and cross-family pairs ($r = 0.23$, $p < 0.001$, $n = 54{,}806$) are weaker and similar to each other. The same-family peak suggests that acoustic-semantic alignment is most visible when species share evolutionary history but have begun to acoustically diverge---consistent with a code that is phylogenetically conserved while acoustic surface form drifts. Figure~\ref{fig:mantel_matrix} shows the full pairwise Mantel correlations, and reveal clusters of species with similar form-to-meaning mappings, within and across families.
+Examining subsets of pairs by taxonomic relationship reveals additional structure. Within-species pairs (pooled across all species) show the strongest correlation ($r = 0.27$, $p < 0.001$, $n = 1{,}738$ pairs); cross-family pairs ($r = 0.17$, $p < 0.001$, $n = 41{,}666$) and same-family cross-species pairs ($r = 0.14$, $p < 0.001$, $n = 3{,}567$) are weaker but remain highly significant. The persistence of significant alignment at the cross-family level---spanning mammals, birds, and amphibians---is consistent with a code that is phylogenetically conserved while acoustic surface form drifts across lineages. Figure~\ref{fig:mantel_matrix} shows the full pairwise Mantel correlations, revealing clusters of species with similar form-to-meaning mappings, within and across families.
 
 \begin{figure}[!h]
 	\centering
@@ -132,7 +132,7 @@ Examining subsets of pairs by taxonomic relationship reveals additional structur
 
 \section{Form-to-meaning mapping: cracking the code?}
 
-To decompose the signal into interpretable units, we computed the pointwise mutual information (PMI) between acoustic features and semantic keywords across all calls (Fig.~\ref{fig:pmi}). Several strong, interpretable associations emerge. High-frequency calls are over-represented in infant-directed and food contexts (PMI~$\approx$~2.1--2.3) and sharply under-represented in display and aggression contexts (PMI~$\approx$~$-3.3$ to~$-3.4$). Broadband and noisy calls are enriched for aggression and threat semantics (PMI~$\approx$~1.7), consistent with the ``harsh = aggressive'' frequency code \cite{morton1977on}. Long/sustained and loud features co-occur with long-distance cohesion calls (PMI~$\approx$~1.8--2.0), consistent with propagation demands. These keyword-level associations provide a transparent, mechanistic decomposition of the biological code and replicate functional acoustic ecology predictions across \nspecies species simultaneously.
+To decompose the signal into interpretable units, we computed the pointwise mutual information (PMI) between acoustic features and semantic keywords across all calls (Fig.~\ref{fig:pmi}). Several interpretable associations emerge. Long-sustained and loud calls are over-represented in territorial and display contexts (PMI~$\approx$~0.8--0.9), consistent with long-range broadcast and arousal demands. Pulsed and harmonic acoustics co-occur with display, food, and mating signals (PMI~$\approx$~0.9), and high-frequency calls are over-represented in distress and begging contexts (PMI~$\approx$~0.8). Conversely, soft/quiet acoustics are sharply under-represented in territorial signals (PMI~$\approx$~$-3.0$) while themselves being characteristic of close-range affiliation and caregiving (PMI~$\approx$~1.0). These keyword-level associations provide a transparent, mechanistic decomposition of the biological code and replicate functional acoustic ecology predictions across \nspecies species simultaneously.
 
 \begin{figure}[!h]
 	\centering
@@ -159,7 +159,7 @@ To decompose the signal into interpretable units, we computed the pointwise mutu
 		\emph{MRR}~=~mean reciprocal rank of the true call among all test-set calls ranked by similarity to the prediction (higher is better, max 1).
 		The random baseline shuffles acoustic--semantic pairings within each test set.
 		Retrieval ($k=1$) returns the nearest neighbour in acoustic space among training calls.
-		Within-repertoire values are means over 10 random folds; held-out species and family values are means over leave-one-out folds (55 and 26 folds respectively).
+		Within-repertoire values are means over 10 random folds; held-out species and family values are means over leave-one-out folds (31 and 22 folds respectively).
 	}
 	\label{tab:prediction}
 	\begin{tabular}{lcccccc}
@@ -168,15 +168,15 @@ To decompose the signal into interpretable units, we computed the pointwise mutu
 		\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
 		\textbf{Model}    & Cos.          & MRR           & Cos.          & MRR           & Cos.          & MRR           \\
 		\midrule
-		Random            & 0.36          & 0.11          & 0.46          & 0.41          & 0.47          & 0.42          \\
-		Retrieval ($k=1$) & 0.67          & \textbf{0.51} & 0.68          & 0.78          & 0.60          & 0.67          \\
-		Linear (ridge)    & \textbf{0.74} & 0.46          & \textbf{0.74} & \textbf{0.80} & \textbf{0.68} & \textbf{0.70} \\
-		MLP               & 0.71          & 0.45          & 0.73          & \textbf{0.80} & 0.66          & 0.68          \\
+		Random            & 0.40          & 0.13          & 0.57          & 0.35          & 0.59          & 0.38          \\
+		Retrieval ($k=1$) & 0.54          & \textbf{0.48} & 0.44          & \textbf{0.43} & 0.43          & \textbf{0.43} \\
+		Linear (ridge)    & \textbf{0.66} & 0.32          & \textbf{0.63} & 0.39          & \textbf{0.64} & 0.39          \\
+		MLP               & 0.61          & 0.22          & 0.60          & 0.38          & 0.60          & 0.37          \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-The previous section demonstrates that there is stability in the form-to-meaning mapping. We trained models to exploit this regularity: predicting semantic embeddings from acoustic embeddings under three hold-out conditions of increasing ambition (Table~\ref{tab:prediction}). Within-repertoire, ridge regression achieves a mean cosine similarity of 0.74 and MRR of 0.46---substantially above the random baseline (cos.\ 0.36, MRR 0.11). Generalization to held-out species is equally strong (cos.\ 0.74, MRR 0.80), and remains well above chance even when entire families are held out (cos.\ 0.68, MRR 0.70). The retrieval baseline approaches ridge regression in MRR for held-out conditions, indicating that the acoustic-to-semantic mapping is largely a global alignment of the two spaces rather than a complex nonlinear transformation. The MLP offers no consistent advantage over ridge regression, consistent with this interpretation. Together these results show that the biological code identified by the Mantel analysis is not an artefact of within-species structure: it generalises to species and entire families unseen at training time. In other words, our existing knowledge of species transfers to new species.
+The previous section demonstrates that there is stability in the form-to-meaning mapping. We trained models to exploit this regularity: predicting semantic embeddings from acoustic embeddings under three hold-out conditions of increasing ambition (Table~\ref{tab:prediction}). Within-repertoire, ridge regression achieves a mean cosine similarity of 0.66 and MRR of 0.32---substantially above the random baseline (cos.\ 0.40, MRR 0.13). Generalization to held-out species (cos.\ 0.63, MRR 0.39) and to entire held-out families (cos.\ 0.64, MRR 0.39) remains clearly above chance, with little drop relative to the within-repertoire setting. The retrieval baseline approaches ridge regression in MRR for held-out conditions, indicating that the acoustic-to-semantic mapping is largely a global alignment of the two spaces rather than a complex nonlinear transformation. The MLP offers no consistent advantage over ridge regression, consistent with this interpretation. Together these results show that the biological code identified by the Mantel analysis is not an artefact of within-species structure: it generalises to species and entire families unseen at training time. In other words, our existing knowledge of species transfers to new species.
 
 \section{Lexical translation across species}
 
@@ -369,14 +369,12 @@ The species-level analysis below reveals why: the code runs in opposite directio
 Figure~\ref{fig:human_mantel_row} adds a ``human row'' to the species-pairwise Mantel matrix (Fig.~\ref{fig:mantel_matrix}): for each animal species, the Pearson $r$ between acoustic and semantic cosine similarities across all $30 \times n_s$ human--animal call pairs.
 Within each class, species are sorted by their $r$ value (highest first), revealing the graded structure of human-animal correspondence.
 
-The two findings above are now reconcilable.
-\emph{Mammals} show a consistently positive mean correlation ($\bar{r} = 0.082$), with the strongest alignment in a bat (Egyptian fruit bat, $r = 0.65$), a prosimian (Indri, $r = 0.53$), and several Old World monkeys and apes (Crowned guenon, Chacma baboon, Mandrill; $r \approx 0.38$--$0.41$).
-\emph{Amphibians} are weakly positive ($\bar{r} = 0.039$).
-\emph{Birds}, strikingly, are on average \emph{negative} ($\bar{r} = -0.126$): for most avian species, the calls that sound most like human bursts tend to carry \emph{opposite} semantic functions.
-This inversion --- where the acoustic-semantic code runs in an opposing direction between birds and humans --- is the main driver of the near-zero aggregate PMI correlation.
-Averaged across all three classes, their contributions partially cancel, bringing the keyword-level correlation to $r \approx 0$.
-
-The picture that emerges is therefore: at the keyword level, the code appears globally flat because mammalian and avian influences offset each other; breaking by species exposes the underlying structure --- genuine acoustic--semantic sharing with mammals (amplified by evolutionary and ecological proximity), and a largely inverted mapping with birds, whose vocal priorities (territory, mate attraction, species recognition via song) differ fundamentally from human affective burst functions.
+The species-level breakdown clarifies the pattern.
+\emph{Mammals} show a weakly positive mean correlation ($\bar{r} = 0.017$), with the strongest alignment in an Old World monkey (Olive baboon, $r = 0.26$), a gelada ($r = 0.19$), and a delphinid (Common bottlenose dolphin, $r = 0.18$).
+\emph{Amphibians} are similarly weakly positive ($\bar{r} = 0.071$), driven by the American bullfrog ($r = 0.24$) and t\'{u}ngara frog ($r = 0.16$).
+\emph{Birds} are also weakly positive on average ($\bar{r} = 0.026$).
+Out of \nspecies animal species, 17 show a positive $r$ and 14 a negative $r$ when compared to the human burst repertoire, with means concentrated around zero in every class.
+The near-zero aggregate PMI correlation therefore reflects a genuinely small mean effect rather than the cancellation of opposing class-level signals: cross-taxon human--animal alignment in this dataset is heterogeneous and modest.
 
 \begin{figure}[htbp]
 	\centering
@@ -385,8 +383,8 @@ The picture that emerges is therefore: at the keyword level, the code appears gl
 		\textbf{Human vocal bursts in the cross-species Mantel matrix.}
 		Each bar shows the Pearson $r$ between acoustic and semantic cosine similarities for all human--animal call pairs involving that species ($30 \times n_s$ pairs; species with fewer than 6 pairs excluded).
 		Within each taxonomic class, species are sorted by $r$ value (highest first); class colors match Fig.~\ref{fig:mantel_matrix}.
-		The red vertical line marks the non-human overall Mantel $r = 0.215$.
-		Mammals are predominantly positive, amphibians weakly positive, and birds predominantly negative --- their class-level averages partially cancel in aggregate keyword comparisons.
+		The red vertical line marks the non-human overall Mantel $r = 0.194$.
+		Class-level means are all weakly positive (Mammalia $\bar{r}=0.017$, Aves $\bar{r}=0.026$, Amphibia $\bar{r}=0.071$); individual species span both signs, with the largest positive correlations in Old World monkeys, a delphinid, and an anuran.
 	}
 	\label{fig:human_mantel_row}
 \end{figure}
@@ -398,10 +396,10 @@ The picture that emerges is therefore: at the keyword level, the code appears gl
 
 Figure~\ref{fig:supp_sensitivity} presents two sensitivity analyses.
 Panel~A shows Mantel~$r$ (with 95\% bootstrap confidence intervals, $n_\text{boot}=500$) computed separately for within-class and cross-class species pairs.
-The form-to-meaning alignment is positive and significant within Mammalia ($r = 0.364$), Aves ($r = 0.377$), and Amphibia ($r = 0.694$), and holds for most cross-class comparisons; the negative value for Aves~$\times$~Amphibia reflects the small sample ($n = 731$ pairs).
+The form-to-meaning alignment is positive within Mammalia ($r = 0.211$), Aves ($r = 0.269$), and Amphibia ($r = 0.508$), and holds for most cross-class comparisons.
 
 Panel~B quantifies how the mutual nearest-neighbour graph changes when the strictness of the cross-modal agreement criterion is relaxed from top-1 to top-$k$ ($k \in \{1,2,3\}$).
-At $k=1$ (the main analysis), 4 cliques span all three classes; relaxing to $k=2$ yields 235 such cliques, and $k=3$ yields 10{,}690.
+At $k=1$ (the main analysis), no clique simultaneously spans all three classes; relaxing to $k=2$ yields 29 such three-class cliques, and $k=3$ yields 128.
 The main-text result is therefore conservative: the qualitative finding strengthens as the criterion is relaxed.
 
 \begin{figure}[!h]
@@ -428,12 +426,12 @@ Table~\ref{tab:supp_mantel_ci} reproduces the Mantel test results from the main 
 		\toprule
 		\textbf{Test}                   & $r$      & \textbf{95\% CI}    & $p$      \\
 		\midrule
-		All pairs                       & $+0.309$ & $[+0.300,\;+0.319]$ & $<0.001$ \\
-		Within species (pooled)         & $+0.233$ & ---                 & $<0.001$ \\
-		Same family, cross-species      & $+0.488$ & ---                 & $<0.001$ \\
-		Cross-family                    & $+0.233$ & ---                 & $<0.001$ \\
-		Partial $\mid$ species identity & $+0.309$ & $[+0.273,\;+0.388]$ & $<0.001$ \\
-		Partial $\mid$ family identity  & $+0.296$ & $[+0.261,\;+0.374]$ & $<0.001$ \\
+		All pairs                       & $+0.194$ & $[+0.185,\;+0.203]$ & $<0.001$ \\
+		Within species (pooled)         & $+0.275$ & $[+0.231,\;+0.317]$ & $<0.001$ \\
+		Same family, cross-species      & $+0.143$ & $[+0.108,\;+0.174]$ & $<0.001$ \\
+		Cross-family                    & $+0.169$ & $[+0.159,\;+0.179]$ & $<0.001$ \\
+		Partial $\mid$ species identity & $+0.173$ & $[+0.159,\;+0.274]$ & $<0.001$ \\
+		Partial $\mid$ family identity  & $+0.190$ & $[+0.194,\;+0.303]$ & $<0.001$ \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -450,7 +448,9 @@ See Figure~\ref{fig:calls_per_species}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.9\textwidth]{../plots/calls_per_species.png}
+	\IfFileExists{../plots/calls_per_species.png}{%
+		\includegraphics[width=.9\textwidth]{../plots/calls_per_species.png}%
+	}{\fbox{\parbox{.9\textwidth}{\centering\vspace{2em}[figure file \texttt{calls\_per\_species.png} missing]\vspace{2em}}}}
 	\caption{%
 		\textbf{Calls per species in \dbname}, sorted by count. Color encodes taxonomic class. The median repertoire size is [X] calls; the largest repertoire (\textit{Loxodonta africana}) contains [X] calls.
 	}
@@ -461,9 +461,8 @@ See Figure~\ref{fig:calls_per_species}
 \section{Complete cross-species call groups}
 \label{sec:supp_cliques}
 
-Figure~\ref{fig:supp_cliques} summarises all 297 cross-species call groups (maximal cliques in the mutual-NN graph with $\geq 2$ distinct species) identified in \dbname.
-Groups range in size from 2 to 26 calls, and span all five semantic categories.
-Cohesion groups are the most frequent (134), followed by social (60), danger (49), and distress (44).
+Figure~\ref{fig:supp_cliques} summarises all 59 cross-species call groups (maximal cliques in the mutual-NN graph with $\geq 2$ distinct species) identified in \dbname.
+At top-1 strictness all groups are pairs of two species; relaxing the mutual-NN criterion (Sec.~\ref{sec:supp_sensitivity}) yields larger groups spanning all three classes.
 
 Table~\ref{tab:supp_cliques} lists all groups sorted by taxonomic diversity (number of classes, then number of species).
 
@@ -491,7 +490,9 @@ Figure~\ref{fig:acoustic_umap}, Figure~\ref{fig:merged}, Figure~\ref{fig:landmar
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{../plots/acoustic_umap.png}
+	\IfFileExists{../plots/acoustic_umap.png}{%
+		\includegraphics[width=\textwidth]{../plots/acoustic_umap.png}%
+	}{\fbox{\parbox{\textwidth}{\centering\vspace{2em}[figure file \texttt{acoustic\_umap.png} missing]\vspace{2em}}}}
 	\caption{%
 		\textbf{Acoustic embedding space (UMAP).} Each point is a call in \dbname, positioned by acoustic description embedding and colored by taxonomic class. Clusters correspond to spectro-temporal call types (tonal long calls, broadband alarm bursts, etc.) that recur across classes, illustrating the convergent acoustic solutions captured by the database.
 	}

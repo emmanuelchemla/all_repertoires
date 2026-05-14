@@ -75,23 +75,31 @@
 % ------------------------------------------------------------------ %
 %  FONTS
 % ------------------------------------------------------------------ %
-\setmainfont{TiemposText}[
-  Path           = ./fonts/,
-  UprightFont    = TiemposText-Regular.otf,
-  ItalicFont     = TiemposText-RegularItalic.otf,
-  BoldFont       = TiemposText-Semibold.otf,
-  BoldItalicFont = TiemposText-SemiboldItalic.otf,
-  Ligatures      = TeX,
-]
-
-\newfontfamily\headingfont{TiemposText}[
-  Path           = ./fonts/,
-  UprightFont    = TiemposText-Medium.otf,
-  ItalicFont     = TiemposText-MediumItalic.otf,
-  BoldFont       = TiemposText-Semibold.otf,
-  BoldItalicFont = TiemposText-SemiboldItalic.otf,
-  Ligatures      = TeX,
-]
+% If the proprietary TiemposText OTFs are bundled under ./fonts/ we use
+% them; otherwise we fall back to a generic system serif so the paper
+% still compiles for reviewers who don't have the brand fonts.
+\IfFileExists{./fonts/TiemposText-Regular.otf}{
+  \setmainfont{TiemposText}[
+    Path           = ./fonts/,
+    UprightFont    = TiemposText-Regular.otf,
+    ItalicFont     = TiemposText-RegularItalic.otf,
+    BoldFont       = TiemposText-Semibold.otf,
+    BoldItalicFont = TiemposText-SemiboldItalic.otf,
+    Ligatures      = TeX,
+  ]
+  \newfontfamily\headingfont{TiemposText}[
+    Path           = ./fonts/,
+    UprightFont    = TiemposText-Medium.otf,
+    ItalicFont     = TiemposText-MediumItalic.otf,
+    BoldFont       = TiemposText-Semibold.otf,
+    BoldItalicFont = TiemposText-SemiboldItalic.otf,
+    Ligatures      = TeX,
+  ]
+}{
+  \ClassWarning{esp-paper}{TiemposText not found in ./fonts/; falling back to Hoefler Text}
+  \setmainfont{Hoefler Text}[Ligatures = TeX]
+  \newfontfamily\headingfont{Hoefler Text}[Ligatures = TeX]
+}
 
 % ------------------------------------------------------------------ %
 %  TYPOGRAPHY
@@ -157,7 +165,9 @@
 \newcommand{\extralogos}[1]{\renewcommand{\espExtraLogos}{#1}}
 
 \renewcommand{\maketitle}{%
-  \noindent\includegraphics[height=1.4cm]{logos/esp-logo.png}%
+  \IfFileExists{logos/esp-logo.png}{%
+    \noindent\includegraphics[height=1.4cm]{logos/esp-logo.png}%
+  }{}%
   \espExtraLogos\par
   \vskip 2em
   {\noindent\headingfont\LARGE\color{espBlack}%
