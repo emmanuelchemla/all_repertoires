@@ -8,13 +8,16 @@ Figure 1: Dataset overview — 4 panels.
 Output: plots/fig1_dataset_overview.png
 """
 
+import argparse
 import json
 import sys
 from pathlib import Path
-from collections import Counter
+from collections import Counter, defaultdict
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
+
+from paper_code.data_sources import DATA_SOURCES, load_calls
 
 import matplotlib
 matplotlib.use("Agg")
@@ -34,16 +37,26 @@ CLASS_COLORS = {
 
 # Semantic keyword → broad category for colouring panel A
 SEM_CATEGORY = {
+    # danger
     "alarm":     "danger",   "predator": "danger",  "threat": "danger",
-    "distress":  "distress", "infant":   "distress",
-    "contact":   "cohesion", "coordination": "cohesion",
-    "long_distance": "cohesion", "affiliative": "cohesion",
+    # distress
+    "distress":  "distress", "infant":   "distress", "begging": "distress",
+    "caregiving":"distress",
+    # cohesion
+    "contact":   "cohesion", "coordination": "cohesion", "group_coordination": "cohesion",
+    "long_distance": "cohesion", "affiliative": "cohesion", "affiliation": "cohesion",
+    # social
     "aggression":"social",   "display":  "social",  "sex": "social",
     "dominance": "social",   "submission":"social",  "territory": "social",
+    "spacing":   "social",   "territorial": "social", "courtship": "social",
+    "mating":    "social",
+    # foraging
     "food":      "foraging", "recruitment":"foraging",
+    # other
     "learning":  "other",    "sequence": "other",   "individual_identity": "other",
     "referential":"other",   "syntax":   "other",   "turn_taking": "other",
-    "group_identity": "other",
+    "group_identity": "other", "identity": "other", "attention": "other",
+    "play":      "other",    "combinatorial": "other",
 }
 
 CAT_COLORS = {
@@ -76,24 +89,65 @@ AC_CAT_COLORS = {
     "spectral":  "#bcbd22",
     "temporal":  "#17becf",
     "amplitude": "#8c564b",
+    "structure": "#aec7e8",
+}
+
+# Pre-existing acoustic_keywords in new data → (display label, category)
+ACOUSTIC_KEYWORD_MAP = {
+    "high_frequency":    ("high-frequency",   "frequency"),
+    "low_frequency":     ("low-frequency",    "frequency"),
+    "tonal":             ("tonal",            "spectral"),
+    "broadband":         ("broadband",        "spectral"),
+    "noisy":             ("broadband",        "spectral"),
+    "harmonic":          ("harmonic",         "spectral"),
+    "frequency_modulated":("freq-modulated",  "spectral"),
+    "pulsed":            ("pulsed",           "temporal"),
+    "repetitive":        ("repetitive",       "temporal"),
+    "short":             ("short",            "temporal"),
+    "abrupt":            ("abrupt",           "temporal"),
+    "long":              ("long / sustained", "temporal"),
+    "graded":            ("graded",           "temporal"),
+    "loud":              ("loud",             "amplitude"),
+    "quiet":             ("soft / quiet",     "amplitude"),
+    "multi_component":   ("multi-component",  "structure"),
 }
 
 # ------------------------------------------------------------------ #
 # Load data
 # ------------------------------------------------------------------ #
 
-def load():
-    with open(ROOT / "database.json") as f:
-        db = json.load(f)
-    species_list = db["species"]
-    calls = []
-    for s in species_list:
-        for c in s.get("calls", []):
-            calls.append({**c,
-                          "species": s["species_name"],
-                          "class":   s.get("class", ""),
-                          "order":   s.get("order", ""),
-                          "family":  s.get("family", "")})
+def load(data_source="old"):
+    if data_source == "old":
+        with open(ROOT / "database.json") as f:
+            db = json.load(f)
+        species_list = db["species"]
+        calls = []
+        for s in species_list:
+            for c in s.get("calls", []):
+                calls.append({**c,
+                              "species": s["species_name"],
+                              "class":   s.get("class", ""),
+                              "order":   s.get("order", ""),
+                              "family":  s.get("family", "")})
+        return species_list, calls
+
+    # new data source: reconstruct species_list from YAML calls
+    calls = load_calls(data_source)
+    sp_dict = {}
+    for c in calls:
+        sp = c["species"]
+        if sp not in sp_dict:
+            # common name is everything before the "(" in "Common Name (Sci name)"
+            common = sp.split("(")[0].strip() if "(" in sp else sp
+            sp_dict[sp] = {
+                "species_name": common,
+                "class":  c.get("class", ""),
+                "order":  c.get("order", ""),
+                "family": c.get("family", ""),
+                "calls":  [],
+            }
+        sp_dict[sp]["calls"].append(c)
+    species_list = list(sp_dict.values())
     return species_list, calls
 
 # ------------------------------------------------------------------ #
@@ -128,17 +182,30 @@ def panel_A(ax, calls, top_n=16):
 # Panel B – acoustic keywords
 # ------------------------------------------------------------------ #
 
-def panel_B(ax, calls, top_n=12):
-    counts = {}
-    cats   = {}
-    for label, patterns, cat in ACOUSTIC_PATTERNS:
-        c = sum(1 for call in calls
-                if any(p in call.get("acoustic_description","").lower()
-                       for p in patterns))
-        counts[label] = c
-        cats[label]   = cat
+def panel_B(ax, calls, top_n=12, use_keywords=False):
+    if use_keywords:
+        # Use pre-existing acoustic_keywords from the new data source
+        counts = Counter()
+        cats   = {}
+        for call in calls:
+            for kw in (call.get("acoustic_keywords") or []):
+                if kw in ACOUSTIC_KEYWORD_MAP:
+                    label, cat = ACOUSTIC_KEYWORD_MAP[kw]
+                    counts[label] += 1
+                    cats[label] = cat
+        items = counts.most_common(top_n)
+    else:
+        # Text pattern-matching for old data source
+        counts = {}
+        cats   = {}
+        for label, patterns, cat in ACOUSTIC_PATTERNS:
+            c = sum(1 for call in calls
+                    if any(p in call.get("acoustic_description","").lower()
+                           for p in patterns))
+            counts[label] = c
+            cats[label]   = cat
+        items = sorted(counts.items(), key=lambda x: -x[1])[:top_n]
 
-    items = sorted(counts.items(), key=lambda x: -x[1])[:top_n]
     labels = [k for k, _ in items]
     values = [v for _, v in items]
     colors = [AC_CAT_COLORS[cats[k]] for k in labels]
@@ -170,10 +237,18 @@ GROUPS = [
     ("Other\nprimates",      lambda s: s.get("order") == "Primates"
                                         and s.get("family") not in {"Hominidae","Hylobatidae","Cercopithecidae"}),
     ("Carnivora",            lambda s: s.get("order") == "Carnivora"),
+    ("Cetacea",              lambda s: s.get("order") == "Cetacea"),
+    ("Proboscidea",          lambda s: s.get("order") == "Proboscidea"),
+    ("Rodentia",             lambda s: s.get("order") == "Rodentia"),
+    ("Chiroptera",           lambda s: s.get("order") == "Chiroptera"),
     ("Other\nmammals",       lambda s: s.get("class") == "Mammalia"
-                                        and s.get("order") not in {"Primates","Carnivora"}),
+                                        and s.get("order") not in {
+                                            "Primates","Carnivora","Cetacea",
+                                            "Proboscidea","Rodentia","Chiroptera"}),
     ("Passeriformes",        lambda s: s.get("order") == "Passeriformes"),
     ("Psittaciformes",       lambda s: s.get("order") == "Psittaciformes"),
+    ("Other\nbirds",         lambda s: s.get("class") == "Aves"
+                                        and s.get("order") not in {"Passeriformes","Psittaciformes"}),
     ("Amphibia",             lambda s: s.get("class") == "Amphibia"),
 ]
 
@@ -205,6 +280,17 @@ FAMILY_COLORS = {
     "Hylidae":          "#fdb863",
     "Leptodactylidae":  "#b35806",
     "Ranidae":          "#7f3b08",
+    # new-database families
+    "Sciuridae":        "#d9d9d9",
+    "Delphinidae":      "#41b6c4",
+    "Phocidae":         "#225ea8",
+    "Otariidae":        "#1d91c0",
+    "Felidae":          "#e31a1c",
+    "Phyllostomidae":   "#fecc5c",
+    "Phasianidae":      "#addd8e",
+    "Passerellidae":    "#78c679",
+    "Psittaculidae":    "#31a354",
+    "Icteridae":        "#006837",
 }
 
 GROUP_BG = ["#f7f7f7", "#ffffff"]  # alternating backgrounds
@@ -283,7 +369,14 @@ def panel_CD(ax, species_list):
 # ------------------------------------------------------------------ #
 
 def main():
-    species_list, calls = load()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-source", choices=DATA_SOURCES, default="old")
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "plots")
+    args = parser.parse_args()
+    out_dir = args.output_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    species_list, calls = load(args.data_source)
     print(f"{len(calls)} calls, {len(species_list)} species")
 
     fig = plt.figure(figsize=(16, 11))
@@ -296,10 +389,10 @@ def main():
     ax_CD = fig.add_subplot(gs[1, :])   # merged bottom row
 
     panel_A(ax_A, calls)
-    panel_B(ax_B, calls)
+    panel_B(ax_B, calls, use_keywords=(args.data_source == "new"))
     panel_CD(ax_CD, species_list)
 
-    out = ROOT / "plots" / "fig1_dataset_overview.png"
+    out = out_dir / "fig1_dataset_overview.png"
     fig.savefig(out, dpi=200, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved → {out}")
