@@ -12,10 +12,12 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from collections import Counter
+from collections import Counter, defaultdict
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
+
+from paper_code.data_sources import DATA_SOURCES, load_calls
 
 import matplotlib
 matplotlib.use("Agg")
@@ -35,16 +37,26 @@ CLASS_COLORS = {
 
 # Semantic keyword → broad category for colouring panel A
 SEM_CATEGORY = {
+    # danger
     "alarm":     "danger",   "predator": "danger",  "threat": "danger",
-    "distress":  "distress", "infant":   "distress",
-    "contact":   "cohesion", "coordination": "cohesion",
-    "long_distance": "cohesion", "affiliative": "cohesion",
+    # distress
+    "distress":  "distress", "infant":   "distress", "begging": "distress",
+    "caregiving":"distress",
+    # cohesion
+    "contact":   "cohesion", "coordination": "cohesion", "group_coordination": "cohesion",
+    "long_distance": "cohesion", "affiliative": "cohesion", "affiliation": "cohesion",
+    # social
     "aggression":"social",   "display":  "social",  "sex": "social",
     "dominance": "social",   "submission":"social",  "territory": "social",
+    "spacing":   "social",   "territorial": "social", "courtship": "social",
+    "mating":    "social",
+    # foraging
     "food":      "foraging", "recruitment":"foraging",
+    # other
     "learning":  "other",    "sequence": "other",   "individual_identity": "other",
     "referential":"other",   "syntax":   "other",   "turn_taking": "other",
-    "group_identity": "other",
+    "group_identity": "other", "identity": "other", "attention": "other",
+    "play":      "other",    "combinatorial": "other",
 }
 
 CAT_COLORS = {
@@ -83,18 +95,38 @@ AC_CAT_COLORS = {
 # Load data
 # ------------------------------------------------------------------ #
 
-def load():
-    with open(ROOT / "database.json") as f:
-        db = json.load(f)
-    species_list = db["species"]
-    calls = []
-    for s in species_list:
-        for c in s.get("calls", []):
-            calls.append({**c,
-                          "species": s["species_name"],
-                          "class":   s.get("class", ""),
-                          "order":   s.get("order", ""),
-                          "family":  s.get("family", "")})
+def load(data_source="old"):
+    if data_source == "old":
+        with open(ROOT / "database.json") as f:
+            db = json.load(f)
+        species_list = db["species"]
+        calls = []
+        for s in species_list:
+            for c in s.get("calls", []):
+                calls.append({**c,
+                              "species": s["species_name"],
+                              "class":   s.get("class", ""),
+                              "order":   s.get("order", ""),
+                              "family":  s.get("family", "")})
+        return species_list, calls
+
+    # new data source: reconstruct species_list from YAML calls
+    calls = load_calls(data_source)
+    sp_dict = {}
+    for c in calls:
+        sp = c["species"]
+        if sp not in sp_dict:
+            # common name is everything before the "(" in "Common Name (Sci name)"
+            common = sp.split("(")[0].strip() if "(" in sp else sp
+            sp_dict[sp] = {
+                "species_name": common,
+                "class":  c.get("class", ""),
+                "order":  c.get("order", ""),
+                "family": c.get("family", ""),
+                "calls":  [],
+            }
+        sp_dict[sp]["calls"].append(c)
+    species_list = list(sp_dict.values())
     return species_list, calls
 
 # ------------------------------------------------------------------ #
@@ -171,10 +203,18 @@ GROUPS = [
     ("Other\nprimates",      lambda s: s.get("order") == "Primates"
                                         and s.get("family") not in {"Hominidae","Hylobatidae","Cercopithecidae"}),
     ("Carnivora",            lambda s: s.get("order") == "Carnivora"),
+    ("Cetacea",              lambda s: s.get("order") == "Cetacea"),
+    ("Proboscidea",          lambda s: s.get("order") == "Proboscidea"),
+    ("Rodentia",             lambda s: s.get("order") == "Rodentia"),
+    ("Chiroptera",           lambda s: s.get("order") == "Chiroptera"),
     ("Other\nmammals",       lambda s: s.get("class") == "Mammalia"
-                                        and s.get("order") not in {"Primates","Carnivora"}),
+                                        and s.get("order") not in {
+                                            "Primates","Carnivora","Cetacea",
+                                            "Proboscidea","Rodentia","Chiroptera"}),
     ("Passeriformes",        lambda s: s.get("order") == "Passeriformes"),
     ("Psittaciformes",       lambda s: s.get("order") == "Psittaciformes"),
+    ("Other\nbirds",         lambda s: s.get("class") == "Aves"
+                                        and s.get("order") not in {"Passeriformes","Psittaciformes"}),
     ("Amphibia",             lambda s: s.get("class") == "Amphibia"),
 ]
 
@@ -206,6 +246,17 @@ FAMILY_COLORS = {
     "Hylidae":          "#fdb863",
     "Leptodactylidae":  "#b35806",
     "Ranidae":          "#7f3b08",
+    # new-database families
+    "Sciuridae":        "#d9d9d9",
+    "Delphinidae":      "#41b6c4",
+    "Phocidae":         "#225ea8",
+    "Otariidae":        "#1d91c0",
+    "Felidae":          "#e31a1c",
+    "Phyllostomidae":   "#fecc5c",
+    "Phasianidae":      "#addd8e",
+    "Passerellidae":    "#78c679",
+    "Psittaculidae":    "#31a354",
+    "Icteridae":        "#006837",
 }
 
 GROUP_BG = ["#f7f7f7", "#ffffff"]  # alternating backgrounds
@@ -285,12 +336,13 @@ def panel_CD(ax, species_list):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-source", choices=DATA_SOURCES, default="old")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "plots")
     args = parser.parse_args()
     out_dir = args.output_dir
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    species_list, calls = load()
+    species_list, calls = load(args.data_source)
     print(f"{len(calls)} calls, {len(species_list)} species")
 
     fig = plt.figure(figsize=(16, 11))
