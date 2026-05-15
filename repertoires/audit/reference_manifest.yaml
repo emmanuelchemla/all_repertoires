@@ -1,0 +1,1464 @@
+generated_at: '2026-05-15T10:47:54.977070+00:00'
+pilot_species:
+- pongo-pygmaeus
+- cercopithecus-neglectus
+- globicephala-melas
+- saccopteryx-bilineata
+- corvus-brachyrhynchos
+- leptonychotes-weddellii
+- forpus-passerinus
+- hyla-arborea
+- phyllostomus-discolor
+- rousettus-aegyptiacus
+references:
+- species: pongo-pygmaeus
+  reference_id: hardus_etal_2009
+  citation: 'Hardus, M. E., Lameira, A. R. E., Singleton, I., Morrogh-Bernard, H.
+    C., Knott, C. D., Ancrenaz, M., Utami Atmoko, S. S., & Wich, S. A. (2009). A description
+    of the orangutan''s vocal and sound repertoire, with a focus on geographic variation.
+    In Orangutans: Geographic Variation in Behavioral Ecology and Conservation. Oxford
+    University Press.'
+  doi: 10.1093/acprof:oso/9780199213276.003.0004
+  url: https://doi.org/10.1093/acprof:oso/9780199213276.003.0004
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: A description of the orangutan's vocal and sound repertoire, with a focus
+      on geographic variation
+    year: 2008
+    container: Orangutans
+    authors:
+    - Hardus, Madeleine E.
+    - Lameira, Adriano R.
+    - Singleton, Ian
+    - Morrogh-Bernard, Helen C.
+    - Knott, Cheryl D.
+    - Ancrenaz, Marc
+    - Utami Atmoko, S. Suci
+    - Wich, Serge A.
+    doi: 10.1093/acprof:oso/9780199213276.003.0004
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: pongo-pygmaeus
+  reference_id: delgado_2006
+  citation: 'Delgado, R. A. (2006). Sexual selection in the loud calls of male primates:
+    signal content and function. International Journal of Primatology, 27, 5-25.'
+  doi: 10.1007/s10764-005-9001-y
+  url: https://doi.org/10.1007/s10764-005-9001-y
+  metadata_status: needs_review
+  metadata_issues:
+  - Returned DOI 10.1007/s10764-005-9001-4 differs from YAML DOI 10.1007/s10764-005-9001-y.
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: 'Sexual Selection in the Loud Calls of Male Primates: Signal Content and
+      Function'
+    year: 2006
+    container: International Journal of Primatology
+    authors:
+    - Delgado, Roberto A.
+    doi: 10.1007/s10764-005-9001-4
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: pongo-pygmaeus
+  reference_id: hardus_etal_2009_tool
+  citation: 'Hardus, M. E., Lameira, A. R. E., van Schaik, C. P., & Wich, S. A. (2009).
+    Tool use in wild orang-utans modifies sound production: a functionally deceptive
+    innovation? Proceedings of the Royal Society B, 276, 3689-3694.'
+  doi: 10.1098/rspb.2009.1027
+  url: https://doi.org/10.1098/rspb.2009.1027
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Tool use in wild orang-utans modifies sound production: a functionally
+      deceptive innovation?'
+    year: 2009
+    container: 'Proceedings of the Royal Society B: Biological Sciences'
+    authors:
+    - Hardus, Madeleine E.
+    - Lameira, Adriano R.
+    - Van Schaik, Carel P.
+    - Wich, Serge A.
+    doi: 10.1098/rspb.2009.1027
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: cercopithecus-neglectus
+  reference_id: gautier_1988
+  citation: 'Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced
+    from vocalizations. In A Primate Radiation: Evolutionary Biology of the African
+    Guenons.'
+  doi: 10.1007/978-1-4612-3858-1_5
+  url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: Gautier‐Hion, A., Bourlière, F., Gautier, J.‐P., and Kingdon, J. (eds.),
+      1988. <b>A Primate Radiation. Evolutionary Biology of the African Guenons.</b>
+      Cambridge University Press, Cambridge, GB. 567 pp., £60.00, $120.00
+    year: 1989
+    container: Journal of Evolutionary Biology
+    authors:
+    - Harvey, Paul H.
+    doi: 10.1046/j.1420-9101.1989.2050390.x
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: cercopithecus-neglectus
+  reference_id: struhsaker_1967
+  citation: Struhsaker, T. T. (1967). Auditory communication among vervet monkeys
+    (Cercopithecus aethiops). In Social Communication among Primates.
+  doi: 10.1007/BF01730404
+  url: https://doi.org/10.1007/BF01730404
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: Social Structure Among Vervet Monkeys (Cercopithecus Aethiops)
+    year: 1967
+    container: Behaviour
+    authors:
+    - Struhsaker, Thomas T.
+    doi: 10.1163/156853967x00073
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: globicephala-melas
+  reference_id: courts_etal_2020
+  citation: Courts, R., Erbe, C., Wellard, R., Boisseau, O., Jenner, K. C., Jenner,
+    M.-N., & Parnum, I. (2020). Australian long-finned pilot whales emit stereotypical,
+    variable, biphonic, multi-component, and sequenced vocalisations. Scientific Reports,
+    10, 20609.
+  doi: 10.1038/s41598-020-74111-y
+  url: https://doi.org/10.1038/s41598-020-74111-y
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata title weakly matches citation text (similarity=0.179).
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Australian long-finned pilot whales (Globicephala melas) emit stereotypical,
+      variable, biphonic, multi-component, and sequenced vocalisations, similar to
+      those recorded in the northern hemisphere
+    year: 2020
+    container: Scientific Reports
+    authors:
+    - Courts, Rachael
+    - Erbe, Christine
+    - Wellard, Rebecca
+    - Boisseau, Oliver
+    - Jenner, K. Curt
+    - Jenner, Micheline-N.
+    doi: 10.1038/s41598-020-74111-y
+  oa_pdf_candidates:
+  - https://www.nature.com/articles/s41598-020-74111-y.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/courts_etal_2020.pdf
+    bytes: 3019640
+    sha256: b0ac4e187a52a144cca6bdc3a3826e15c6a02504cc84190fac71cce07643dde3
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 65260
+- species: globicephala-melas
+  reference_id: vester_etal_2014
+  citation: Vester, H., Hammerschmidt, K., Timme, M., & Hallerberg, S. (2014). Bag-of-calls
+    analysis reveals group-specific vocal repertoire in long-finned pilot whales.
+    arXiv:1410.4711.
+  doi: https://arxiv.org/abs/1410.4711
+  url: https://arxiv.org/abs/1410.4711
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata year 2017 is not present in citation.
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: Vocal repertoire of long-finned pilot whales (<i>Globicephala melas</i>)
+      in northern Norway
+    year: 2017
+    container: The Journal of the Acoustical Society of America
+    authors:
+    - Vester, Heike
+    - Hallerberg, Sarah
+    - Timme, Marc
+    - Hammerschmidt, Kurt
+    doi: 10.1121/1.4983685
+  oa_pdf_candidates:
+  - https://arxiv.org/pdf/1410.4711.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/vester_etal_2014.pdf
+    bytes: 1868622
+    sha256: 4f11616cb120ce7378f95d27280b467e3eedf21677a23cc8ad51cfbad6e48670
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 46383
+- species: globicephala-melas
+  reference_id: zwamborn_whitehead_2017
+  citation: Zwamborn, E. M. J., & Whitehead, H. (2017). Repeated call sequences and
+    behavioural context in long-finned pilot whales off Cape Breton, Nova Scotia,
+    Canada. Bioacoustics, 26, 169-183.
+  doi: 10.1080/09524622.2016.1233457
+  url: https://doi.org/10.1080/09524622.2016.1233457
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Repeated call sequences and behavioural context in long-finned pilot whales
+      off Cape Breton, Nova Scotia, Canada
+    year: 2017
+    container: Bioacoustics
+    authors:
+    - Zwamborn, Elizabeth M. J.
+    - Whitehead, Hal
+    doi: 10.1080/09524622.2016.1233457
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: globicephala-melas
+  reference_id: visser_etal_2017
+  citation: 'Visser, F., et al. (2017). Vocal foragers and silent crowds: context-dependent
+    vocal variation in Northeast Atlantic long-finned pilot whales. Behavioral Ecology
+    and Sociobiology, 71, 170.'
+  doi: 10.1007/s00265-017-2397-y
+  url: https://doi.org/10.1007/s00265-017-2397-y
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Vocal foragers and silent crowds: context-dependent vocal variation in
+      Northeast Atlantic long-finned pilot whales'
+    year: 2017
+    container: Behavioral Ecology and Sociobiology
+    authors:
+    - Visser, Fleur
+    - Kok, Annebelle C.M.
+    - Oudejans, Machiel G.
+    - Scott-Hayward, Lindesay A.S.
+    - DeRuiter, Stacy L.
+    - Alves, Ana C.
+    - Antunes, Ricardo N.
+    - Isojunno, Saana
+    doi: 10.1007/s00265-017-2397-y
+  oa_pdf_candidates:
+  - https://link.springer.com/content/pdf/10.1007/s00265-017-2397-y.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/visser_etal_2017.pdf
+    bytes: 4871974
+    sha256: 088f32275ede3aa8df18c93945e56655f20489784c1957ebe9fd69fa0d7a7d5a
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 61730
+- species: saccopteryx-bilineata
+  reference_id: behr_helversen_2004
+  citation: 'Behr O, von Helversen O. 2004. Bat serenades - complex courtship songs
+    of the sac-winged bat (Saccopteryx bilineata). Behavioral Ecology and Sociobiology
+    56(2): 106-115.'
+  doi: 10.1007/s00265-004-0768-7
+  url: https://doi.org/10.1007/s00265-004-0768-7
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Bat serenades—complex courtship songs of the sac-winged bat (Saccopteryx
+      bilineata)
+    year: 2004
+    container: Behavioral Ecology and Sociobiology
+    authors:
+    - Behr, Oliver
+    - von Helversen, Otto
+    doi: 10.1007/s00265-004-0768-7
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: davidson_wilkinson_2004
+  citation: 'Davidson SM, Wilkinson GS. 2004. Function of male song in the greater
+    white-lined bat, Saccopteryx bilineata. Animal Behaviour 67(5): 883-891.'
+  doi: 10.1016/j.anbehav.2003.06.016
+  url: https://doi.org/10.1016/j.anbehav.2003.06.016
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Function of male song in the greater white-lined bat, Saccopteryx bilineata
+    year: 2004
+    container: Animal Behaviour
+    authors:
+    - Davidson, Susan M
+    - Wilkinson, Gerald S
+    doi: 10.1016/j.anbehav.2003.06.016
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: behr_etal_2006
+  citation: 'Behr O, von Helversen O, Heckel G, Nagy M, Voigt CC, Mayer F. 2006. Territorial
+    songs indicate male quality in the sac-winged bat Saccopteryx bilineata (Chiroptera,
+    Emballonuridae). Behavioral Ecology 17(5): 810-817.'
+  doi: 10.1093/beheco/arl013
+  url: https://doi.org/10.1093/beheco/arl013
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Territorial songs indicate male quality in the sac-winged bat Saccopteryx
+      bilineata (Chiroptera, Emballonuridae)
+    year: 2006
+    container: Behavioral Ecology
+    authors:
+    - Behr, Oliver
+    - von Helversen, Otto
+    - Heckel, Gerald
+    - Nagy, Martina
+    - Voigt, Christian C.
+    - Mayer, Frieder
+    doi: 10.1093/beheco/arl013
+  oa_pdf_candidates:
+  - https://academic.oup.com/beheco/article-pdf/17/5/810/17275227/arl013.pdf
+  access_status: download_failed
+  access_error: 'https://academic.oup.com/beheco/article-pdf/17/5/810/17275227/arl013.pdf:
+    HTTPError: HTTP Error 403: Forbidden'
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: voigt_etal_2008
+  citation: 'Voigt CC, Behr O, Caspers B, von Helversen O, Knornschild M, Mayer F,
+    Nagy M. 2008. Songs, scents, and senses: sexual selection in the greater sac-winged
+    bat, Saccopteryx bilineata. Journal of Mammalogy 89(6): 1401-1410.'
+  doi: 10.1644/08-MAMM-S-060.1
+  url: https://doi.org/10.1644/08-MAMM-S-060.1
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Songs, Scents, and Senses: Sexual Selection in the Greater Sac-Winged
+      Bat,<i>Saccopteryx bilineata</i>'
+    year: 2008
+    container: Journal of Mammalogy
+    authors:
+    - Voigt, Christian C.
+    - Behr, Oliver
+    - Caspers, Barbara
+    - von Helversen, Otto
+    - Knörnschild, Mirjam
+    - Mayer, Frieder
+    - Nagy, Martina
+    doi: 10.1644/08-mamm-s-060.1
+  oa_pdf_candidates:
+  - https://academic.oup.com/jmammal/article-pdf/89/6/1401/2697626/89-6-1401.pdf
+  access_status: download_failed
+  access_error: 'https://academic.oup.com/jmammal/article-pdf/89/6/1401/2697626/89-6-1401.pdf:
+    HTTPError: HTTP Error 403: Forbidden'
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: behr_etal_2009
+  citation: 'Behr O, Knornschild M, von Helversen O. 2009. Territorial counter-singing
+    in male sac-winged bats (Saccopteryx bilineata): low-frequency songs trigger a
+    stronger response. Behavioral Ecology and Sociobiology 63(3): 433-442.'
+  doi: 10.1007/s00265-008-0677-2
+  url: https://doi.org/10.1007/s00265-008-0677-2
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Territorial counter-singing in male sac-winged bats (Saccopteryx bilineata):
+      low-frequency songs trigger a stronger response'
+    year: 2009
+    container: Behavioral Ecology and Sociobiology
+    authors:
+    - Behr, Oliver
+    - Knörnschild, Mirjam
+    - von Helversen, Otto
+    doi: 10.1007/s00265-008-0677-2
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: knornschild_helversen_2008
+  citation: 'Knornschild M, von Helversen O. 2008. Nonmutual vocal mother-pup recognition
+    in the greater sac-winged bat. Animal Behaviour 76(3): 1001-1009.'
+  doi: 10.1016/j.anbehav.2008.05.018
+  url: https://doi.org/10.1016/j.anbehav.2008.05.018
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Nonmutual vocal mother–pup recognition in the greater sac-winged bat
+    year: 2008
+    container: Animal Behaviour
+    authors:
+    - Knörnschild, Mirjam
+    - von Helversen, Otto
+    doi: 10.1016/j.anbehav.2008.05.018
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: knornschild_etal_2012
+  citation: 'Knornschild M, Nagy M, Metz M, Mayer F, von Helversen O. 2012. Learned
+    vocal group signatures in the polygynous bat Saccopteryx bilineata. Animal Behaviour
+    84(4): 761-769.'
+  doi: 10.1016/j.anbehav.2012.06.029
+  url: https://doi.org/10.1016/j.anbehav.2012.06.029
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Learned vocal group signatures in the polygynous bat Saccopteryx bilineata
+    year: 2012
+    container: Animal Behaviour
+    authors:
+    - Knörnschild, Mirjam
+    - Nagy, Martina
+    - Metz, Markus
+    - Mayer, Frieder
+    - von Helversen, Otto
+    doi: 10.1016/j.anbehav.2012.06.029
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: fernandez_knornschild_2017
+  citation: 'Fernandez AA, Knornschild M. 2017. Isolation calls of the bat Saccopteryx
+    bilineata encode multiple messages. Animal Behavior and Cognition 4(2): 169-186.'
+  doi: 10.12966/abc.04.05.2017
+  url: https://doi.org/10.12966/abc.04.05.2017
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Isolation calls of the bat Saccopteryx bilineata encode multiple messages
+    year: 2017
+    container: Animal Behavior and Cognition
+    authors:
+    - Fernandez, Ahana Aurora
+    - Knornschild, Mirjam
+    doi: 10.12966/abc.04.05.2017
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: knornschild_etal_2017
+  citation: 'Knornschild M, Bluml S, Steidl P, Eckenweber M, Nagy M. 2017. Bat songs
+    as acoustic beacons - male territorial songs attract dispersing females. Scientific
+    Reports 7: 13918.'
+  doi: 10.1038/s41598-017-14434-5
+  url: https://doi.org/10.1038/s41598-017-14434-5
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Bat songs as acoustic beacons - male territorial songs attract dispersing
+      females
+    year: 2017
+    container: Scientific Reports
+    authors:
+    - Knörnschild, Mirjam
+    - Blüml, Simone
+    - Steidl, Patrick
+    - Eckenweber, Maria
+    - Nagy, Martina
+    doi: 10.1038/s41598-017-14434-5
+  oa_pdf_candidates:
+  - https://www.nature.com/articles/s41598-017-14434-5.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/knornschild_etal_2017.pdf
+    bytes: 1710223
+    sha256: 864f784545dfd99c1e59416338828a91ab9ef8b270683ab82d380dfad921adc9
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 64879
+- species: saccopteryx-bilineata
+  reference_id: fernandez_knornschild_2020
+  citation: 'Fernandez AA, Knornschild M. 2020. Pup directed vocalizations of adult
+    females and males in a vocal learning bat. Frontiers in Ecology and Evolution
+    8: 265.'
+  doi: 10.3389/fevo.2020.00265
+  url: https://doi.org/10.3389/fevo.2020.00265
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Pup Directed Vocalizations of Adult Females and Males in a Vocal Learning
+      Bat
+    year: 2020
+    container: Frontiers in Ecology and Evolution
+    authors:
+    - Fernandez, Ahana Aurora
+    - Knörnschild, Mirjam
+    doi: 10.3389/fevo.2020.00265
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: eckenweber_knornschild_2016
+  citation: 'Eckenweber M, Knornschild M. 2016. Responsiveness to conspecific distress
+    calls is influenced by day-roost proximity in bats (Saccopteryx bilineata). Royal
+    Society Open Science 3(5): 160151.'
+  doi: 10.1098/rsos.160151
+  url: https://doi.org/10.1098/rsos.160151
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Responsiveness to conspecific distress calls is influenced by day-roost
+      proximity in bats (<i>Saccopteryx bilineata</i>)
+    year: 2016
+    container: Royal Society Open Science
+    authors:
+    - Eckenweber, Maria
+    - Knörnschild, Mirjam
+    doi: 10.1098/rsos.160151
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: ratcliffe_etal_2011
+  citation: 'Ratcliffe JM, Jakobsen L, Kalko EKV, Surlykke A. 2011. Frequency alternation
+    and an offbeat rhythm indicate foraging behavior in the echolocating bat, Saccopteryx
+    bilineata. Journal of Comparative Physiology A 197(5): 413-423.'
+  doi: 10.1007/s00359-011-0630-0
+  url: https://doi.org/10.1007/s00359-011-0630-0
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Frequency alternation and an offbeat rhythm indicate foraging behavior
+      in the echolocating bat, Saccopteryx bilineata
+    year: 2011
+    container: Journal of Comparative Physiology A
+    authors:
+    - Ratcliffe, John M.
+    - Jakobsen, Lasse
+    - Kalko, Elisabeth K. V.
+    - Surlykke, Annemarie
+    doi: 10.1007/s00359-011-0630-0
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: saccopteryx-bilineata
+  reference_id: burchardt_etal_2019
+  citation: 'Burchardt LS, Norton P, Behr O, Scharff C, Knornschild M. 2019. General
+    isochronous rhythm in echolocation calls and social vocalizations of the bat Saccopteryx
+    bilineata. Royal Society Open Science 6(1): 181076.'
+  doi: 10.1098/rsos.181076
+  url: https://doi.org/10.1098/rsos.181076
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: General isochronous rhythm in echolocation calls and social vocalizations
+      of the bat<i>Saccopteryx bilineata</i>
+    year: 2019
+    container: Royal Society Open Science
+    authors:
+    - Burchardt, Lara S.
+    - Norton, Philipp
+    - Behr, Oliver
+    - Scharff, Constance
+    - Knörnschild, Mirjam
+    doi: 10.1098/rsos.181076
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: corvus-brachyrhynchos
+  reference_id: chamberlain_auger_1990
+  citation: Chamberlain-Auger, J. A., Auger, P. J., & Strauss, E. G. (1990). Breeding
+    biology of American Crows. Wilson Bulletin, 102, 615-622.
+  doi: https://sora.unm.edu/node/24612
+  url: https://sora.unm.edu/node/24612
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata title weakly matches citation text (similarity=0.117).
+  - Metadata year 1874 is not present in citation.
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: Monson's Improved Auger
+    year: 1874
+    container: Scientific American
+    authors: []
+    doi: 10.1038/scientificamerican02141874-102a
+  oa_pdf_candidates:
+  - https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=9512&context=wilson_bulletin
+  access_status: download_failed
+  access_error: 'https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=9512&context=wilson_bulletin:
+    HTTPError: HTTP Error 403: Forbidden'
+  pdf: {}
+- species: corvus-brachyrhynchos
+  reference_id: yorzinski_etal_2006
+  citation: 'Yorzinski, J. L., Vehrencamp, S. L., Clark, A. B., & McGowan, K. J. (2006).
+    The inflected alarm caw of the American Crow: differences in acoustic structure
+    among contexts. Ethology, 112, 1-11.'
+  doi: 10.1111/j.1439-0310.2006.01266.x
+  url: https://doi.org/10.1111/j.1439-0310.2006.01266.x
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata title weakly matches citation text (similarity=0.147).
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Costs of Reproduction in Male <i>Bicyclus anynana</i> and <i>Pieris napi</i>
+      Butterflies: Effects of Mating History and Food Limitation'
+    year: 2006
+    container: Ethology
+    authors:
+    - Ferkau, Carina
+    - Fischer, Klaus
+    doi: 10.1111/j.1439-0310.2006.01266.x
+  oa_pdf_candidates:
+  - https://yorzinskilab.org/wp-content/uploads/2021/02/yorzinski_etal_2006.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/yorzinski_etal_2006.pdf
+    bytes: 384549
+    sha256: c99308c55c2f40123c5d76eea7e2caeab45bb2ffe15f5e921fe72b0d4c38492a
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 43295
+- species: corvus-brachyrhynchos
+  reference_id: kilham_1989
+  citation: Kilham, L. (1989). The American Crow and the Common Raven. Texas A&M University
+    Press.
+  doi: https://sora.unm.edu/node/134346
+  url: https://sora.unm.edu/node/134346
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: The American Crow and the Common Raven, by Lawrence Kilham [Review]
+    year: 1990
+    container: The Canadian field-naturalist
+    authors:
+    - Houston, C Stuart
+    doi: 10.5962/p.356371
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: abgrall_etal_2003
+  citation: Abgrall, P., Terhune, J. M., and Burton, H. R. 2003. Variation of Weddell
+    seal (Leptonychotes weddellii) underwater vocalizations over mesogeographic ranges.
+    Aquatic Mammals 29(2):268-277.
+  doi: 10.1578/016754203101024202
+  url: https://doi.org/10.1578/016754203101024202
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Variation of Weddell seal (&lt;I&gt;Leptonychotes weddellii&lt;/I&gt;)
+      underwater vocalizations over mesogeographic ranges
+    year: 2003
+    container: Aquatic Mammals
+    authors:
+    - Abgrall, Patrick
+    - Terhune, John M.
+    - Burton, Harry R.
+    doi: 10.1578/016754203101024202
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: collins_etal_2005
+  citation: Collins, K. T., Rogers, T. L., Terhune, J. M., McGreevy, P. D., Wheatley,
+    K. E., and Harcourt, R. G. 2005. Individual variation of in-air female pup contact
+    calls in Weddell seals, Leptonychotes weddellii. Behaviour 142(2):167-189.
+  doi: 10.1163/1568539053627668
+  url: https://doi.org/10.1163/1568539053627668
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Individual variation of in-air female 'pup contact' calls in Weddell seals,
+      Leptonychotes weddellii
+    year: 2005
+    container: Behaviour
+    authors:
+    - Rogers, T.L.
+    - Collins, K.T.
+    - Harcourt, R.G.
+    - Wheatley, K.E.
+    - McGreevy, P.D.
+    - Terhune, J.M.
+    doi: 10.1163/1568539053627668
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: collins_etal_2006
+  citation: Collins, K. T., Terhune, J. M., Rogers, T. L., Wheatley, K. E., and Harcourt,
+    R. G. 2006. Vocal individuality of in-air Weddell seal (Leptonychotes weddellii)
+    pup primary calls. Marine Mammal Science 22(4):933-951.
+  doi: 10.1111/j.1748-7692.2006.00074.x
+  url: https://doi.org/10.1111/j.1748-7692.2006.00074.x
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: VOCAL INDIVIDUALITY OF IN‐AIR WEDDELL SEAL (<i>LEPTONYCHOTES WEDDELLII</i>)
+      PUP “PRIMARY” CALLS
+    year: 2006
+    container: Marine Mammal Science
+    authors:
+    - Collins, Kym T.
+    - Terhune, John M.
+    - Rogers, Tracey L.
+    - Wheatley, Kathryn E.
+    - Harcourt, Robert G.
+    doi: 10.1111/j.1748-7692.2006.00074.x
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: collins_etal_2011
+  citation: Collins, K. T., McGreevy, P. D., Wheatley, K. E., and Harcourt, R. G.
+    2011. The influence of behavioural context on Weddell seal (Leptonychotes weddellii)
+    airborne mother-pup vocalisation. Behavioural Processes 87(3):286-290.
+  doi: 10.1016/j.beproc.2011.06.005
+  url: https://doi.org/10.1016/j.beproc.2011.06.005
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: The influence of behavioural context on Weddell seal (Leptonychotes weddellii)
+      airborne mother-pup vocalisation
+    year: 2011
+    container: Behavioural Processes
+    authors:
+    - Collins, Kym T.
+    - McGreevy, Paul D.
+    - Wheatley, Kathryn E.
+    - Harcourt, Robert G.
+    doi: 10.1016/j.beproc.2011.06.005
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: cziko_etal_2020
+  citation: Cziko, P. A., Munger, L. M., Santos, N. R., and Terhune, J. M. 2020. Weddell
+    seals produce ultrasonic vocalizations. Journal of the Acoustical Society of America
+    148(6):3784-3796.
+  doi: 10.1121/10.0002867
+  url: https://doi.org/10.1121/10.0002867
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Weddell seals produce ultrasonic vocalizations
+    year: 2020
+    container: The Journal of the Acoustical Society of America
+    authors:
+    - Cziko, Paul A.
+    - Munger, Lisa M.
+    - Santos, Nicholas R.
+    - Terhune, John M.
+    doi: 10.1121/10.0002867
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: moors_terhune_2004
+  citation: Moors, H. B., and Terhune, J. M. 2004. Repetition patterns in Weddell
+    seal (Leptonychotes weddellii) underwater multiple element calls. Journal of the
+    Acoustical Society of America 116(2):1261-1270.
+  doi: 10.1121/1.1763956
+  url: https://doi.org/10.1121/1.1763956
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Repetition patterns in Weddell seal (<i>Leptonychotes weddellii</i>) underwater
+      multiple element calls
+    year: 2004
+    container: The Journal of the Acoustical Society of America
+    authors:
+    - Moors, Hilary B.
+    - Terhune, John M.
+    doi: 10.1121/1.1763956
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: oetelaar_etal_2003
+  citation: Oetelaar, M. L., Terhune, J. M., and Burton, H. R. 2003. Can the sex of
+    a Weddell seal (Leptonychotes weddellii) be identified by its surface call? Aquatic
+    Mammals 29(2):261-267.
+  doi: 10.1578/016754203101024194
+  url: https://doi.org/10.1578/016754203101024194
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Can the sex of a Weddell seal (&lt;I&gt;Leptonychotes weddellii&lt;/I&gt;)
+      be identified by its surface call?
+    year: 2003
+    container: Aquatic Mammals
+    authors:
+    - Oetelaar, Melanie L.
+    - Terhune, John M.
+    - Burton, Harry R.
+    doi: 10.1578/016754203101024194
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: pahl_etal_1996
+  citation: Pahl, B. C., Terhune, J. M., and Burton, H. R. 1996. Proportional weekly
+    use of underwater call types by Weddell seals, Leptonychotes weddellii, during
+    the breeding season at the Vestfold Hills. Australian Journal of Zoology 44(1):75-79.
+  doi: 10.1071/ZO9960075
+  url: https://doi.org/10.1071/ZO9960075
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Proportional Weekly Use of Underwater Call Types by Weddell Seals, Leptonychotes
+      Weddellii (Pinnipedia: Phocidae), During the Breeding Season at the Vestfold
+      Hills'
+    year: 1996
+    container: Australian Journal of Zoology
+    authors:
+    - Pahl, BC
+    - Terhune, JM
+    - Burton, HR
+    doi: 10.1071/zo9960075
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: pahl_etal_1997
+  citation: Pahl, B. C., Terhune, J. M., and Burton, H. R. 1997. Repertoire and geographic
+    variation in underwater vocalisations of Weddell seals, Leptonychotes weddellii,
+    at the Vestfold Hills, Antarctica. Australian Journal of Zoology 45(2):171-187.
+  doi: 10.1071/ZO95044
+  url: https://doi.org/10.1071/ZO95044
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: "Repertoire and Geographic Variation in Underwater Vocalisations of Weddell\
+      \ Seals (\n                    <i>Leptonychotes weddellii</i>\n            \
+      \        , Pinnipedia : Phocidae) at the Vestfold Hills, Antarctica"
+    year: 1997
+    container: Australian Journal of Zoology
+    authors:
+    - Pahl, B. C.
+    - Terhune, J. M.
+    - Burton, H. R.
+    doi: 10.1071/zo95044
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: russell_etal_2016
+  citation: 'Russell, L., Purdy, J., and Davis, R. 2016. Social context predicts vocalization
+    use in the courtship behaviors of Weddell seals (Leptonychotes weddellii): A case
+    study. Animal Behavior and Cognition 3(2):95-119.'
+  doi: 10.12966/abc.04.05.2016
+  url: https://doi.org/10.12966/abc.04.05.2016
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Social Context Predicts Vocalization Use in the Courtship Behaviors of
+      Weddell Seals (Leptonychotes weddellii): A Case Study'
+    year: 2016
+    container: Animal Behavior and Cognition
+    authors:
+    - Russell, Ludivine
+    - Purdy, Jesse
+    - Davis, Randall
+    doi: 10.12966/abc.04.05.2016
+  oa_pdf_candidates:
+  - https://doi.org/10.12966/abc.04.05.2016
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/russell_etal_2016.pdf
+    bytes: 2100559
+    sha256: b29a26c3424bbd85cba063d62b6700fbe91942bdc6a1a93ca50a65308ecaa814
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 88670
+- species: leptonychotes-weddellii
+  reference_id: terhune_dellapa_2006
+  citation: Terhune, J. M., and Dell'Apa, A. 2006. Stereotyped calling patterns of
+    a male Weddell seal (Leptonychotes weddellii). Aquatic Mammals 32(2):175-181.
+  doi: 10.1578/AM.32.2.2006.175
+  url: https://doi.org/10.1578/AM.32.2.2006.175
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Stereotyped Calling Patterns of a Male Weddell Seal (&lt;I&gt;Leptonychotes
+      weddellii&lt;/I&gt;)
+    year: 2006
+    container: Aquatic Mammals
+    authors:
+    - Terhune, John M.
+    - Dell'Apa, Andrea
+    doi: 10.1578/am.32.2.2006.175
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: thomas_kuechle_1982
+  citation: Thomas, J. A., and Kuechle, V. B. 1982. Quantitative analysis of Weddell
+    seal (Leptonychotes weddellii) underwater vocalizations at McMurdo Sound, Antarctica.
+    Journal of the Acoustical Society of America 72(6):1730-1738.
+  doi: 10.1121/1.388667
+  url: https://doi.org/10.1121/1.388667
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata title weakly matches citation text (similarity=0.23).
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: "Quantitative analysis of Weddell seal (<i>L</i>\n                  <i>e</i>\n\
+      \                  <i>p</i>\n                  <i>t</i>\n                  <i>o</i>\n\
+      \                  <i>n</i>\n                  <i>y</i>\n                  <i>c</i>\n\
+      \                  <i>h</i>\n                  <i>o</i>\n                  <i>t</i>\n\
+      \                  <i>e</i>\n                  <i>s</i> <i>w</i>\n         \
+      \         <i>e</i>\n                  <i>d</i>\n                  <i>d</i>\n\
+      \                  <i>e</i>\n                  <i>l</i>\n                  <i>l</i>\n\
+      \                  <i>i</i>) underwater vocalizations at McMurdo Sound, Antarctica"
+    year: 1982
+    container: The Journal of the Acoustical Society of America
+    authors:
+    - Thomas, Jeanette A.
+    - Kuechle, Valerian B.
+    doi: 10.1121/1.388667
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: thomas_stirling_1983
+  citation: Thomas, J. A., and Stirling, I. 1983. Geographic variation in the underwater
+    vocalizations of Weddell seals (Leptonychotes weddellii) from Palmer Peninsula
+    and McMurdo Sound, Antarctica. Canadian Journal of Zoology 61(10):2203-2212.
+  doi: 10.1139/z83-291
+  url: https://doi.org/10.1139/z83-291
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Geographic variation in the underwater vocalizations of Weddell seals (<i>Leptonychotes
+      weddelli</i>) from Palmer Peninsula and McMurdo Sound, Antarctica
+    year: 1983
+    container: Canadian Journal of Zoology
+    authors:
+    - Thomas, Jeànette A.
+    - Stirling, Ian
+    doi: 10.1139/z83-291
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: leptonychotes-weddellii
+  reference_id: watkins_schevill_1968
+  citation: Watkins, W. A., and Schevill, W. E. 1968. Underwater playback of their
+    own sounds to Leptonychotes, Weddell seals. Journal of Mammalogy 49(2):287-296.
+  doi: 10.2307/1377986
+  url: https://doi.org/10.2307/1377986
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Underwater Playback of Their Own Sounds to Leptonychotes (Weddell Seals)
+    year: 1968
+    container: Journal of Mammalogy
+    authors:
+    - Watkins, William A.
+    - Schevill, William E.
+    doi: 10.2307/1377986
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: forpus-passerinus
+  reference_id: berg_etal_2011
+  citation: Berg, K. S., Delgado, S., Cortopassi, K. A., Beissinger, S. R., & Bradbury,
+    J. W. (2011). Vertical transmission of learned signatures in a wild parrot. Proceedings
+    of the Royal Society B, 279, 585-591.
+  doi: 10.1098/rspb.2010.2715
+  url: https://doi.org/10.1098/rspb.2010.2715
+  metadata_status: needs_review
+  metadata_issues:
+  - Returned DOI 10.1098/rspb.2011.0932 differs from YAML DOI 10.1098/rspb.2010.2715.
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: Vertical transmission of learned signatures in a wild parrot
+    year: 2012
+    container: 'Proceedings of the Royal Society B: Biological Sciences'
+    authors:
+    - Berg, Karl S.
+    - Delgado, Soraya
+    - Cortopassi, Kathryn A.
+    - Beissinger, Steven R.
+    - Bradbury, Jack W.
+    doi: 10.1098/rspb.2011.0932
+  oa_pdf_candidates:
+  - https://www.utrgv.edu/avianecology/_files/documents/publications/2012-berg-etal.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/berg_etal_2011.pdf
+    bytes: 343429
+    sha256: b0d2d0744c07ba515e1dfda35b10cc18f447246166acc519debb5f419387d634
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 32688
+- species: forpus-passerinus
+  reference_id: wanker_etal_2005
+  citation: Wanker, R., Sugama, Y., & Prinage, S. (2005). Vocal labelling of family
+    members in spectacled parrotlets. Animal Behaviour, 70, 111-118.
+  doi: 10.1016/j.anbehav.2005.04.009
+  url: https://doi.org/10.1016/j.anbehav.2005.04.009
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: How does an informed minority of scouts guide a honeybee swarm as it flies
+      to its new home?
+    year: 2006
+    container: Animal Behaviour
+    authors:
+    - Beekman, Madeleine
+    - Fathke, Robert L.
+    - Seeley, Thomas D.
+    doi: 10.1016/j.anbehav.2005.04.009
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: hyla-arborea
+  reference_id: castellano_etal_2002
+  citation: 'Castellano, S., Cuatto, B., Rinella, R., Rosso, A., & Giacoma, C. (2002).
+    The advertisement call of the European treefrogs, Hyla arborea: a multi-level
+    study of variation. Ethology, 108, 75-89.'
+  doi: 10.1046/j.1439-0310.2002.00761.x
+  url: https://doi.org/10.1046/j.1439-0310.2002.00761.x
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'The Advertisement Call of the European Treefrogs (<i>Hyla arborea</i>):
+      A Multilevel Study of Variation'
+    year: 2002
+    container: Ethology
+    authors:
+    - Castellano, Sergio
+    - Cuatto, Barbara
+    - Rinella, Rosalba
+    - Rosso, Alessandra
+    - Giacoma, Cristina
+    doi: 10.1046/j.1439-0310.2002.00761.x
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: hyla-arborea
+  reference_id: schneider_2004
+  citation: Schneider, H. (2004). Bioacoustic studies in European tree frogs of the
+    Hyla arborea group. Behaviour, 141, 585-604.
+  doi: 10.1163/1568539042360137
+  url: https://doi.org/10.1163/1568539042360137
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata year 2023 is not present in citation.
+  - Returned DOI 10.3897/arphapreprints.e108466 differs from YAML DOI 10.1163/1568539042360137.
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: 'Genetic diversity of European tree frogs (Hyla arborea group): A systematic
+      review'
+    year: 2023
+    container: null
+    authors:
+    - Birbele, Elza
+    - Di Marzio, Alessandro
+    - Grauda, Dace
+    - Vimercati, Giovanni
+    - Deksne, Gunita
+    doi: 10.3897/arphapreprints.e108466
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: hyla-arborea
+  reference_id: friedl_klump_2002
+  citation: Friedl, T. W. P., & Klump, G. M. (2002). The vocal behaviour of male European
+    treefrogs during close-range encounters. Animal Behaviour, 63, 1017-1026.
+  doi: 10.1006/anbe.2002.3085
+  url: https://doi.org/10.1006/anbe.2002.3085
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Availability and adaptive value of reproductive and postreproductive Japanese
+      macaque mothers and grandmothers
+    year: 2002
+    container: Animal Behaviour
+    authors:
+    - MacDonald Pavelka, Mary S.
+    - Fedigan, Linda M.
+    - Zohar, Sandra
+    doi: 10.1006/anbe.2002.3085
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: phyllostomus-discolor
+  reference_id: esch_etal_2009
+  citation: Esch, T., et al. (2009). Development of isolation calls in the pale spear-nosed
+    bat Phyllostomus discolor. Animal Behaviour, 78, 631-638.
+  doi: 10.1016/j.anbehav.2009.05.029
+  url: https://doi.org/10.1016/j.anbehav.2009.05.029
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata title weakly matches citation text (similarity=0.23).
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Honeybees consider flower danger in their waggle dance
+    year: 2009
+    container: Animal Behaviour
+    authors:
+    - Abbott, Kevin R.
+    - Dukas, Reuven
+    doi: 10.1016/j.anbehav.2009.05.029
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: phyllostomus-discolor
+  reference_id: knornschild_2014
+  citation: Knornschild, M. (2014). Vocal production learning in bats. Frontiers in
+    Ecology and Evolution, 2, 73.
+  doi: 10.3389/fevo.2014.00073
+  url: https://doi.org/10.3389/fevo.2014.00073
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata title weakly matches citation text (similarity=0.149).
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: A statistical approach to identify candidate cues for nestmate recognition
+    year: 2014
+    container: Frontiers in Ecology and Evolution
+    authors:
+    - van Zweden, Jelle S.
+    - Pontieri, Luigi
+    - Pedersen, Jes S.
+    doi: 10.3389/fevo.2014.00073
+  oa_pdf_candidates:
+  - https://mirjam-knoernschild.org/wp-content/uploads/2012/06/Knoernschild-2014.pdf
+  - https://www.frontiersin.org/articles/10.3389/fevo.2014.00073/pdf
+  - https://lirias.kuleuven.be/bitstream/123456789/543945/1/fevo-02-00073.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/knornschild_2014.pdf
+    bytes: 2648491
+    sha256: b383b78a99c3f61b811bcae4e636db7742990107174fce6c841b6dd71e94b87c
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 59807
+- species: phyllostomus-discolor
+  reference_id: lattenkamp_etal_2018
+  citation: Lattenkamp, E. Z., et al. (2018). Vocal learning in pale spear-nosed bats.
+    Frontiers in Ecology and Evolution, 6, 185.
+  doi: 10.3389/fevo.2018.00185
+  url: https://doi.org/10.3389/fevo.2018.00185
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Temporal Decline in Pathogen-Mediated Release of Methyl Salicylate Associated
+      With Decreasing Vector Preference for Infected Over Uninfected Plants
+    year: 2018
+    container: Frontiers in Ecology and Evolution
+    authors:
+    - Martini, Xavier
+    - Coy, Monique
+    - Kuhns, Emily
+    - Stelinski, Lukasz L.
+    doi: 10.3389/fevo.2018.00185
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: rousettus-aegyptiacus
+  reference_id: prat_etal_2015
+  citation: 'Prat Y, Taub M, Yovel Y. 2015. Vocal learning in a social mammal: demonstrated
+    by isolation and playback experiments in bats. Science Advances 1(2): e1500019.'
+  doi: 10.1126/sciadv.1500019
+  url: https://doi.org/10.1126/sciadv.1500019
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Vocal learning in a social mammal: Demonstrated by isolation and playback
+      experiments in bats'
+    year: 2015
+    container: Science Advances
+    authors:
+    - Prat, Yosef
+    - Taub, Mor
+    - Yovel, Yossi
+    doi: 10.1126/sciadv.1500019
+  oa_pdf_candidates:
+  - https://www.science.org/doi/pdf/10.1126/sciadv.1500019?download=true
+  access_status: download_failed
+  access_error: 'https://www.science.org/doi/pdf/10.1126/sciadv.1500019?download=true:
+    HTTPError: HTTP Error 403: Forbidden'
+  pdf: {}
+- species: rousettus-aegyptiacus
+  reference_id: prat_etal_2016
+  citation: 'Prat Y, Taub M, Yovel Y. 2016. Everyday bat vocalizations contain information
+    about emitter, addressee, context, and behavior. Scientific Reports 6: 39419.'
+  doi: 10.1038/srep39419
+  url: https://doi.org/10.1038/srep39419
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Everyday bat vocalizations contain information about emitter, addressee,
+      context, and behavior
+    year: 2016
+    container: Scientific Reports
+    authors:
+    - Prat, Yosef
+    - Taub, Mor
+    - Yovel, Yossi
+    doi: 10.1038/srep39419
+  oa_pdf_candidates:
+  - https://www.nature.com/articles/srep39419.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/prat_etal_2016.pdf
+    bytes: 2297447
+    sha256: c389924dbed4858b7611c2a335fb675892874f265fabae8e5de3dd73af7655b1
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 47534
+- species: rousettus-aegyptiacus
+  reference_id: prat_etal_2017
+  citation: 'Prat Y, Taub M, Pratt E, Yovel Y. 2017. An annotated dataset of Egyptian
+    fruit bat vocalizations across varying contexts and during vocal ontogeny. Scientific
+    Data 4: 170143.'
+  doi: 10.1038/sdata.2017.143
+  url: https://doi.org/10.1038/sdata.2017.143
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: An annotated dataset of Egyptian fruit bat vocalizations across varying
+      contexts and during vocal ontogeny
+    year: 2017
+    container: Scientific Data
+    authors:
+    - Prat, Yosef
+    - Taub, Mor
+    - Pratt, Ester
+    - Yovel, Yossi
+    doi: 10.1038/sdata.2017.143
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: rousettus-aegyptiacus
+  reference_id: prat_azoulay_etal_2017
+  citation: 'Prat Y, Azoulay L, Dor R, Yovel Y. 2017. Crowd vocal learning induces
+    vocal dialects in bats: playback of conspecifics shapes fundamental frequency
+    usage by pups. PLoS Biology 15(10): e2002556.'
+  doi: 10.1371/journal.pbio.2002556
+  url: https://doi.org/10.1371/journal.pbio.2002556
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: 'Crowd vocal learning induces vocal dialects in bats: Playback of conspecifics
+      shapes fundamental frequency usage by pups'
+    year: 2017
+    container: PLOS Biology
+    authors:
+    - Prat, Yosef
+    - Azoulay, Lindsay
+    - Dor, Roi
+    - Yovel, Yossi
+    doi: 10.1371/journal.pbio.2002556
+  oa_pdf_candidates:
+  - https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2002556&type=printable
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/prat_azoulay_etal_2017.pdf
+    bytes: 7048507
+    sha256: 2e52c80ff9419540e3b50fce2a23e6441f681e7b3bbabaef3744f8632868511f
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 50269
+- species: rousettus-aegyptiacus
+  reference_id: herbert_1983
+  citation: 'Herbert H. 1983. Vocal communication in the megachiropteran bat Rousettus
+    aegyptiacus: development of isolation calls during postnatal ontogenesis. Zeitschrift
+    fuer Saeugetierkunde 48: 187-189.'
+  doi: https://www.zobodat.at/pdf/Zeitschrift-Saeugetierkunde_48_0187-0189.pdf
+  url: https://www.zobodat.at/pdf/Zeitschrift-Saeugetierkunde_48_0187-0189.pdf
+  metadata_status: needs_review
+  metadata_issues:
+  - Metadata year 2003 is not present in citation.
+  metadata_error: null
+  openalex_error: 'HTTPError: HTTP Error 404: Not Found'
+  metadata:
+    title: Echolocation Performance and Call Structure in the Megachiropteran Fruit-Bat
+      Rousettus aegyptiacus
+    year: 2003
+    container: Acta Chiropterologica
+    authors: []
+    doi: 10.3161/001.005.0205
+  oa_pdf_candidates:
+  - https://www.zobodat.at/pdf/Zeitschrift-Saeugetierkunde_48_0187-0189.pdf
+  access_status: downloaded
+  access_error: null
+  pdf:
+    path: papers/oa/herbert_1983.pdf
+    bytes: 410562
+    sha256: 18df97f62f6aa08f26637ef958359e388f37862bf1c27e12b857a485c1088c52
+    valid_pdf_header: true
+    text_extractable: true
+    text_characters: 8226
+- species: rousettus-aegyptiacus
+  reference_id: holland_etal_2004
+  citation: 'Holland RA, Waters DA, Rayner JMV. 2004. Echolocation signal structure
+    in the Megachiropteran bat Rousettus aegyptiacus Geoffroy 1810. Journal of Experimental
+    Biology 207(25): 4361-4369.'
+  doi: 10.1242/jeb.01288
+  url: https://doi.org/10.1242/jeb.01288
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Echolocation signal structure in the Megachiropteran bat <i>Rousettus aegyptiacus</i>
+      Geoffroy 1810
+    year: 2004
+    container: Journal of Experimental Biology
+    authors:
+    - Holland, Richard A.
+    - Waters, Dean A.
+    - Rayner, Jeremy M. V.
+    doi: 10.1242/jeb.01288
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
+- species: rousettus-aegyptiacus
+  reference_id: smarsh_etal_2021
+  citation: 'Smarsh GC, Tarnovsky Y, Yovel Y. 2021. Hearing, echolocation, and beam
+    steering from day 0 in tongue-clicking bats. Proceedings of the Royal Society
+    B 288(1961): 20211714.'
+  doi: 10.1098/rspb.2021.1714
+  url: https://doi.org/10.1098/rspb.2021.1714
+  metadata_status: verified
+  metadata_issues: []
+  metadata_error: null
+  openalex_error: null
+  metadata:
+    title: Hearing, echolocation, and beam steering from day 0 in tongue-clicking
+      bats
+    year: 2021
+    container: 'Proceedings of the Royal Society B: Biological Sciences'
+    authors:
+    - Smarsh, Grace C.
+    - Tarnovsky, Yifat
+    - Yovel, Yossi
+    doi: 10.1098/rspb.2021.1714
+  oa_pdf_candidates: []
+  access_status: no_oa_pdf_found
+  access_error: No legal OA PDF URL found from DOI/OpenAlex/direct URL checks.
+  pdf: {}
