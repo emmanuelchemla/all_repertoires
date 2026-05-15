@@ -89,6 +89,27 @@ AC_CAT_COLORS = {
     "spectral":  "#bcbd22",
     "temporal":  "#17becf",
     "amplitude": "#8c564b",
+    "structure": "#aec7e8",
+}
+
+# Pre-existing acoustic_keywords in new data → (display label, category)
+ACOUSTIC_KEYWORD_MAP = {
+    "high_frequency":    ("high-frequency",   "frequency"),
+    "low_frequency":     ("low-frequency",    "frequency"),
+    "tonal":             ("tonal",            "spectral"),
+    "broadband":         ("broadband",        "spectral"),
+    "noisy":             ("broadband",        "spectral"),
+    "harmonic":          ("harmonic",         "spectral"),
+    "frequency_modulated":("freq-modulated",  "spectral"),
+    "pulsed":            ("pulsed",           "temporal"),
+    "repetitive":        ("repetitive",       "temporal"),
+    "short":             ("short",            "temporal"),
+    "abrupt":            ("abrupt",           "temporal"),
+    "long":              ("long / sustained", "temporal"),
+    "graded":            ("graded",           "temporal"),
+    "loud":              ("loud",             "amplitude"),
+    "quiet":             ("soft / quiet",     "amplitude"),
+    "multi_component":   ("multi-component",  "structure"),
 }
 
 # ------------------------------------------------------------------ #
@@ -161,17 +182,30 @@ def panel_A(ax, calls, top_n=16):
 # Panel B – acoustic keywords
 # ------------------------------------------------------------------ #
 
-def panel_B(ax, calls, top_n=12):
-    counts = {}
-    cats   = {}
-    for label, patterns, cat in ACOUSTIC_PATTERNS:
-        c = sum(1 for call in calls
-                if any(p in call.get("acoustic_description","").lower()
-                       for p in patterns))
-        counts[label] = c
-        cats[label]   = cat
+def panel_B(ax, calls, top_n=12, use_keywords=False):
+    if use_keywords:
+        # Use pre-existing acoustic_keywords from the new data source
+        counts = Counter()
+        cats   = {}
+        for call in calls:
+            for kw in (call.get("acoustic_keywords") or []):
+                if kw in ACOUSTIC_KEYWORD_MAP:
+                    label, cat = ACOUSTIC_KEYWORD_MAP[kw]
+                    counts[label] += 1
+                    cats[label] = cat
+        items = counts.most_common(top_n)
+    else:
+        # Text pattern-matching for old data source
+        counts = {}
+        cats   = {}
+        for label, patterns, cat in ACOUSTIC_PATTERNS:
+            c = sum(1 for call in calls
+                    if any(p in call.get("acoustic_description","").lower()
+                           for p in patterns))
+            counts[label] = c
+            cats[label]   = cat
+        items = sorted(counts.items(), key=lambda x: -x[1])[:top_n]
 
-    items = sorted(counts.items(), key=lambda x: -x[1])[:top_n]
     labels = [k for k, _ in items]
     values = [v for _, v in items]
     colors = [AC_CAT_COLORS[cats[k]] for k in labels]
@@ -355,7 +389,7 @@ def main():
     ax_CD = fig.add_subplot(gs[1, :])   # merged bottom row
 
     panel_A(ax_A, calls)
-    panel_B(ax_B, calls)
+    panel_B(ax_B, calls, use_keywords=(args.data_source == "new"))
     panel_CD(ax_CD, species_list)
 
     out = out_dir / "fig1_dataset_overview.png"
