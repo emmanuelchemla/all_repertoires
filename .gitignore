@@ -10,6 +10,8 @@
 *.blg
 *.xdv
 *.bbl
+*.fdb_latexmk
+*.fls
 /paper/fonts
 /paper/logos
 
@@ -41,3 +43,14 @@ dist/
 plots/
 .embedding_cache.json
 human_bursts/
+
+# Caches
+.hf-cache/
+.mpl-cache/
+.numba_cache/
+
+# Generated artifacts
+analysis/
+paper_code/*.npz
+paper_code/results.json
+paper_code/mantel_results_*.json
