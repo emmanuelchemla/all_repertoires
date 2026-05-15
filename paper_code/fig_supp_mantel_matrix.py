@@ -36,6 +36,7 @@ CLASS_COLORS = {
     "Mammalia": "#4C72B0",
 }
 MIN_PAIRS = 6  # skip species pairs with fewer cross-species pairs than this
+MIN_CALLS_PER_SPECIES = 6  # drop species with fewer calls than this
 
 
 def normalize(e):
@@ -63,9 +64,18 @@ def compute_pairwise_r(calls, Sa, Ss):
     sp_names = np.array([c["species"] for c in calls])
     sp_classes = {c["species"]: c["class"] for c in calls}
 
+    # Drop species with too few calls
+    from collections import Counter
+    call_counts = Counter(sp_names)
+    eligible = {s for s, n in call_counts.items() if n >= MIN_CALLS_PER_SPECIES}
+    dropped = set(call_counts) - eligible
+    if dropped:
+        print(f"  Dropped {len(dropped)} species with <{MIN_CALLS_PER_SPECIES} calls: "
+              + ", ".join(sorted(dropped)[:5]) + ("…" if len(dropped) > 5 else ""))
+
     # Sorted species list: by (class_order, species_name)
     all_species = sorted(
-        set(sp_names),
+        eligible,
         key=lambda s: (CLASS_ORDER.get(sp_classes.get(s, ""), 9), s),
     )
     n_sp = len(all_species)
