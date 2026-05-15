@@ -9,76 +9,318 @@ taxonomy:
   genus: Cercopithecus
   species: ascanius
 primary_inventory:
-  rationale: Red-tailed monkey calls are treated across field studies of guenon contact and alarm communication rather than in one exhaustive repertoire inventory. This file therefore marks all calls as outside a primary inventory and includes only call classes repeatedly described for wild groups.
+  rationale: Red-tailed monkey calls are treated across field studies of guenon contact
+    and alarm communication rather than in one exhaustive repertoire inventory. This
+    file therefore marks all calls as outside a primary inventory and includes only
+    call classes repeatedly described for wild groups.
 calls:
-  - name: pyow-like alarm call
-    alternative_names: [alarm call, terrestrial alarm]
-    in_primary_inventory: false
-    scope: &adult_both_scope
-      life_stages: [adult]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [low_frequency, noisy, short, loud]
-    acoustic_description: A short, harsh, low-frequency call with broadband energy and abrupt onset, usually produced singly or in short series.
-    semantic_keywords: [alarm, predator, group_coordination]
-    semantic_description: Given during disturbance and predator-related events, especially when group members orient or move in response to terrestrial threats.
-    acoustic_references:
-      - id: struhsaker_1967
-        url: https://doi.org/10.1007/BF01730404
-      - id: candiotti_etal_2012
-        url: https://doi.org/10.1016/j.anbehav.2012.03.040
-    semantic_references:
-      - id: struhsaker_1967
-        url: https://doi.org/10.1007/BF01730404
-      - id: candiotti_etal_2012
-        url: https://doi.org/10.1016/j.anbehav.2012.03.040
-    playback_references: []
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Struhsaker 1967 and Candiotti et al. 2012 support alarm-call categories in red-tailed monkeys, but naming varies across guenon studies.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Sources agree on short harsh calls, while fine acoustic boundaries among guenon alarm classes are not always separated consistently.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Predator and disturbance contexts are supported, but threat-type specificity is less resolved than in better-studied guenons.
-  - name: contact call
-    alternative_names: [chirp, antiphonal contact call]
-    in_primary_inventory: false
-    scope: *adult_both_scope
-    acoustic_keywords: [frequency_modulated, tonal, short, repetitive]
-    acoustic_description: A short tonal or slightly noisy frequency-modulated call often exchanged in bouts between separated or moving individuals.
-    semantic_keywords: [contact, group_coordination, affiliation]
-    semantic_description: Used during spacing and group movement, including antiphonal exchanges that maintain contact among group members.
-    acoustic_references:
-      - id: wiper_etal_2022
-        url: https://doi.org/10.1163/1568539X-bja10173
-      - id: candiotti_etal_2012
-        url: https://doi.org/10.1016/j.anbehav.2012.03.040
-    semantic_references:
-      - id: wiper_etal_2022
-        url: https://doi.org/10.1163/1568539X-bja10173
-      - id: struhsaker_1967
-        url: https://doi.org/10.1007/BF01730404
-    playback_references: []
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Contact calls are directly analysed by Wiper et al. 2022 and fit broader guenon call descriptions from Struhsaker 1967.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Wiper et al. 2022 gives detailed acoustic measurements, while older sources are more qualitative.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Antiphonal exchange and inter-individual spacing functions are supported by Wiper et al. 2022 and by field behavioral descriptions.
+- name: pyow-like alarm call
+  alternative_names:
+  - alarm call
+  - terrestrial alarm
+  in_primary_inventory: false
+  scope: &id001
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - short
+  - loud
+  acoustic_description: A short, harsh, low-frequency call with broadband energy and
+    abrupt onset, usually produced singly or in short series.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  semantic_description: Given during disturbance and predator-related events, especially
+    when group members orient or move in response to terrestrial threats.
+  acoustic_references:
+  - id: struhsaker_1967
+    url: https://doi.org/10.1007/BF01730404
+  - id: candiotti_etal_2012
+    url: https://doi.org/10.1016/j.anbehav.2012.03.040
+  semantic_references:
+  - id: struhsaker_1967
+    url: https://doi.org/10.1007/BF01730404
+  - id: candiotti_etal_2012
+    url: https://doi.org/10.1016/j.anbehav.2012.03.040
+  playback_references: []
+  call_type_existence_agreement: medium
+  call_type_existence_explanation: Struhsaker 1967 and Candiotti et al. 2012 support
+    alarm-call categories in red-tailed monkeys, but naming varies across guenon studies.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Sources agree on short harsh calls, while fine
+    acoustic boundaries among guenon alarm classes are not always separated consistently.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Predator and disturbance contexts are supported,
+    but threat-type specificity is less resolved than in better-studied guenons.
+- name: contact call
+  alternative_names:
+  - chirp
+  - antiphonal contact call
+  in_primary_inventory: false
+  scope: *id001
+  acoustic_keywords:
+  - frequency_modulated
+  - tonal
+  - short
+  - repetitive
+  acoustic_description: A short tonal or slightly noisy frequency-modulated call often
+    exchanged in bouts between separated or moving individuals.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Used during spacing and group movement, including antiphonal
+    exchanges that maintain contact among group members.
+  acoustic_references:
+  - id: wiper_etal_2022
+    url: https://doi.org/10.1163/1568539X-bja10173
+  - id: candiotti_etal_2012
+    url: https://doi.org/10.1016/j.anbehav.2012.03.040
+  semantic_references:
+  - id: wiper_etal_2022
+    url: https://doi.org/10.1163/1568539X-bja10173
+  - id: struhsaker_1967
+    url: https://doi.org/10.1007/BF01730404
+  playback_references: []
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Contact calls are directly analysed by Wiper et
+    al. 2022 and fit broader guenon call descriptions from Struhsaker 1967.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Wiper et al. 2022 gives detailed acoustic measurements,
+    while older sources are more qualitative.
+  semantic_description_agreement: strong
+  semantic_description_explanation: Antiphonal exchange and inter-individual spacing
+    functions are supported by Wiper et al. 2022 and by field behavioral descriptions.
+- name: eagle alarm call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Short, sharp, high-amplitude call given singly or in brief
+    series.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Alarm signaling aerial predators, especially crowned-hawk
+    eagles; elicits downward scanning and rapid movement into cover.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - alarm
+  - predator
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: leopard alarm call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Lower-frequency, harsher alarm call than eagle alarms; often
+    produced in short bouts.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Alarm signaling terrestrial predators such as leopards; elicits
+    climbing and arboreal escape responses.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - alarm
+  - predator
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: snake alarm call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Rapid series of harsh, staccato notes.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Alarm signaling snakes and ground-based threats; often elicits
+    approach, scanning, and mobbing.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - alarm
+  - predator
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: boom
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Low-frequency, resonant long-distance call produced singly
+    or in pairs.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Long-distance spacing, contact, and group coordination; often
+    produced by males in non-urgent contexts.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - contact
+  - coordination
+  - long_distance
+  - display
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: grunt
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Low-frequency, short-duration call, often produced in series
+    at close range.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Close-range social contact and coordination in low-arousal
+    contexts.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - contact
+  - coordination
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: scream
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-amplitude, broadband scream, often in bouts.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Distress and escalation during aggressive interactions.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - aggression
+  - threat
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: infant distress call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-pitched repetitive distress vocalization.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Care solicitation and distress signaling toward caregivers.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - infant
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
 provenance:
-  - timestamp: '2026-05-14T14:11:40Z'
-    model: gpt-5.5
-    thinking: medium
-    action: generated
+- timestamp: '2026-05-14T14:11:40Z'
+  model: gpt-5.5
+  thinking: medium
+  action: generated
 references:
   struhsaker_1967:
-    citation: "Struhsaker, T. T. (1967). Auditory communication among vervet monkeys (Cercopithecus aethiops). In Social Communication among Primates."
+    citation: Struhsaker, T. T. (1967). Auditory communication among vervet monkeys
+      (Cercopithecus aethiops). In Social Communication among Primates.
     url: https://doi.org/10.1007/BF01730404
   candiotti_etal_2012:
-    citation: "Candiotti, A., Zuberbuehler, K., & Lemasson, A. (2012). Convergence and divergence in Diana monkey and red-tailed monkey vocalizations. Animal Behaviour, 83, 1391-1398."
+    citation: Candiotti, A., Zuberbuehler, K., & Lemasson, A. (2012). Convergence
+      and divergence in Diana monkey and red-tailed monkey vocalizations. Animal Behaviour,
+      83, 1391-1398.
     url: https://doi.org/10.1016/j.anbehav.2012.03.040
     doi: 10.1016/j.anbehav.2012.03.040
   wiper_etal_2022:
-    citation: "Wiper, S., et al. (2022). Contact call acoustic structure is associated with inter-individual distances during antiphonal vocal exchanges in wild red-tailed monkeys. Behaviour, 159, 915-941."
+    citation: Wiper, S., et al. (2022). Contact call acoustic structure is associated
+      with inter-individual distances during antiphonal vocal exchanges in wild red-tailed
+      monkeys. Behaviour, 159, 915-941.
     url: https://doi.org/10.1163/1568539X-bja10173
     doi: 10.1163/1568539X-bja10173
