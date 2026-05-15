@@ -9,71 +9,224 @@ taxonomy:
   genus: Cercopithecus
   species: pogonias
 primary_inventory:
-  rationale: Crowned guenon vocalizations are documented mainly in comparative guenon work rather than a single exhaustive repertoire inventory. Calls here are conservative classes from those sources.
+  rationale: Crowned guenon vocalizations are documented mainly in comparative guenon
+    work rather than a single exhaustive repertoire inventory. Calls here are conservative
+    classes from those sources.
 calls:
-  - name: boom
-    alternative_names: [male boom, boom call]
-    in_primary_inventory: false
-    scope: &adult_male_scope
-      life_stages: [adult]
-      sexes: [male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [low_frequency, loud, tonal, long]
-    acoustic_description: A resonant low-frequency male call with a relatively long tonal element and high amplitude.
-    semantic_keywords: [spacing, territorial, contact, identity]
-    semantic_description: Used by adult males as a long-distance spacing and advertisement call.
-    acoustic_references:
-      - id: gautier_1988
-        url: https://doi.org/10.1007/978-1-4612-3858-1_5
-    semantic_references:
-      - id: gautier_1988
-        url: https://doi.org/10.1007/978-1-4612-3858-1_5
-    playback_references: []
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: The boom is recognized in comparative guenon accounts, but species-specific replication is limited.
-    acoustic_description_agreement: weak
-    acoustic_description_explanation: Published acoustic detail is mostly descriptive.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Long-distance male advertisement is consistent with comparative guenon interpretation.
-  - name: hack
-    alternative_names: [ka call, alarm call]
-    in_primary_inventory: false
-    scope: &adult_both_scope
-      life_stages: [adult]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [broadband, noisy, short, loud, repetitive]
-    acoustic_description: A harsh short broadband call often produced in repeated series.
-    semantic_keywords: [alarm, predator, group_coordination]
-    semantic_description: Associated with alarm, disturbance, and group alerting in forest guenons.
-    acoustic_references:
-      - id: gautier_1988
-        url: https://doi.org/10.1007/978-1-4612-3858-1_5
-      - id: zuberbuehler_2001
-        url: https://doi.org/10.1006/anbe.2000.1685
-    semantic_references:
-      - id: gautier_1988
-        url: https://doi.org/10.1007/978-1-4612-3858-1_5
-      - id: zuberbuehler_2001
-        url: https://doi.org/10.1006/anbe.2000.1685
-    playback_references: []
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Hack-like alarm calls are described in guenons, but names and splits vary among species.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Comparative sources agree on short harsh structure, but species-specific measurements are limited.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Alarm use is well established in guenons; exact predator mapping in crowned guenons is conservatively treated as broad.
+- name: boom
+  alternative_names:
+  - male boom
+  - boom call
+  in_primary_inventory: false
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - tonal
+  - long
+  acoustic_description: A resonant low-frequency male call with a relatively long
+    tonal element and high amplitude.
+  semantic_keywords:
+  - spacing
+  - territorial
+  - contact
+  - identity
+  semantic_description: Used by adult males as a long-distance spacing and advertisement
+    call.
+  acoustic_references:
+  - id: gautier_1988
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  semantic_references:
+  - id: gautier_1988
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  playback_references: []
+  call_type_existence_agreement: medium
+  call_type_existence_explanation: The boom is recognized in comparative guenon accounts,
+    but species-specific replication is limited.
+  acoustic_description_agreement: weak
+  acoustic_description_explanation: Published acoustic detail is mostly descriptive.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Long-distance male advertisement is consistent
+    with comparative guenon interpretation.
+- name: hack
+  alternative_names:
+  - ka call
+  - alarm call
+  in_primary_inventory: false
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - short
+  - loud
+  - repetitive
+  acoustic_description: A harsh short broadband call often produced in repeated series.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  semantic_description: Associated with alarm, disturbance, and group alerting in
+    forest guenons.
+  acoustic_references:
+  - id: gautier_1988
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  - id: zuberbuehler_2001
+    url: https://doi.org/10.1006/anbe.2000.1685
+  semantic_references:
+  - id: gautier_1988
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  - id: zuberbuehler_2001
+    url: https://doi.org/10.1006/anbe.2000.1685
+  playback_references: []
+  call_type_existence_agreement: medium
+  call_type_existence_explanation: Hack-like alarm calls are described in guenons,
+    but names and splits vary among species.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Comparative sources agree on short harsh structure,
+    but species-specific measurements are limited.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Alarm use is well established in guenons; exact
+    predator mapping in crowned guenons is conservatively treated as broad.
+- name: hack (sharp warning/alarm call)
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Loud, sharp, harsh call (often in bouts), acoustically distinct
+    from low-frequency booms.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: High-arousal warning/alarm in disturbance and predator contexts;
+    in polyspecific troops, adult males are reported to play a prominent role in aerial-danger
+    warning relative to some associates.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - alarm
+  - predator
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: grunt
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Low-frequency, short-duration call, often produced in series
+    at close range.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Close-range contact and coordination in low-arousal contexts.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - contact
+  - coordination
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: scream
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-amplitude, broadband scream, often in bouts.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Distress and escalation during aggressive interactions.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - aggression
+  - threat
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: infant distress call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-pitched repetitive distress vocalization.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Care solicitation and distress signaling toward caregivers.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - infant
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
 provenance:
-  - timestamp: '2026-05-14T14:11:40Z'
-    model: gpt-5.5
-    thinking: medium
-    action: generated
+- timestamp: '2026-05-14T14:11:40Z'
+  model: gpt-5.5
+  thinking: medium
+  action: generated
 references:
   gautier_1988:
-    citation: "Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced from vocalizations. In A Primate Radiation: Evolutionary Biology of the African Guenons."
+    citation: 'Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced
+      from vocalizations. In A Primate Radiation: Evolutionary Biology of the African
+      Guenons.'
     url: https://doi.org/10.1007/978-1-4612-3858-1_5
   zuberbuehler_2001:
-    citation: "Zuberbuehler, K. (2001). Predator-specific alarm calls in Campbell's monkeys, Cercopithecus campbelli. Behavioral Ecology and Sociobiology, 50, 414-422."
+    citation: Zuberbuehler, K. (2001). Predator-specific alarm calls in Campbell's
+      monkeys, Cercopithecus campbelli. Behavioral Ecology and Sociobiology, 50, 414-422.
     url: https://doi.org/10.1006/anbe.2000.1685

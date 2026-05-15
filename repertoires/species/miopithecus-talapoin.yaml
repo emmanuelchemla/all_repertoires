@@ -9,60 +9,292 @@ taxonomy:
   genus: Miopithecus
   species: talapoin
 primary_inventory:
-  rationale: Talapoin monkey vocalizations are documented in comparative primate and guenon literature, but no single exhaustive wild inventory is used. Included calls are conservative social and alarm categories.
+  rationale: Talapoin monkey vocalizations are documented in comparative primate and
+    guenon literature, but no single exhaustive wild inventory is used. Included calls
+    are conservative social and alarm categories.
 calls:
-  - name: twitter
-    alternative_names: [contact twitter, chatter]
-    in_primary_inventory: false
-    scope: &adult_both_scope
-      life_stages: [adult]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [high_frequency, repetitive, pulsed, quiet]
-    acoustic_description: A quiet, rapidly repeated series of high-frequency short elements.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in close-range social contact and coordination among group members.
-    acoustic_references:
-      - id: gautier_1988
-        url: https://doi.org/10.1007/978-1-4612-3858-1_5
-    semantic_references:
-      - id: gautier_1988
-        url: https://doi.org/10.1007/978-1-4612-3858-1_5
-    playback_references: []
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Twitter-like social calls are described for small guenons, but talapoin-specific literature is limited.
-    acoustic_description_agreement: weak
-    acoustic_description_explanation: Acoustic detail is qualitative and not strongly replicated.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Close-range contact use is consistent with comparative descriptions.
-  - name: alarm bark
-    alternative_names: [bark, alarm call]
-    in_primary_inventory: false
-    scope: *adult_both_scope
-    acoustic_keywords: [broadband, noisy, short, loud]
-    acoustic_description: A short harsh broadband call, louder than close-range contact calls and often repeated during arousal.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Produced during disturbance and predator-related vigilance to alert nearby group members.
-    acoustic_references:
-      - id: gautier_1988
-        url: https://doi.org/10.1007/978-1-4612-3858-1_5
-    semantic_references:
-      - id: gautier_1988
-        url: https://doi.org/10.1007/978-1-4612-3858-1_5
-    playback_references: []
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Alarm barks are recognized in comparative guenon repertoires, but talapoin-specific call names vary.
-    acoustic_description_agreement: weak
-    acoustic_description_explanation: Acoustic description is based on broad qualitative accounts.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Alarm use is supported, but predator-specific semantics are not strongly established.
+- name: twitter
+  alternative_names:
+  - contact twitter
+  - chatter
+  in_primary_inventory: false
+  scope: &id001
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - pulsed
+  - quiet
+  acoustic_description: A quiet, rapidly repeated series of high-frequency short elements.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in close-range social contact and coordination among
+    group members.
+  acoustic_references:
+  - id: gautier_1988
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  semantic_references:
+  - id: gautier_1988
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  playback_references: []
+  call_type_existence_agreement: medium
+  call_type_existence_explanation: Twitter-like social calls are described for small
+    guenons, but talapoin-specific literature is limited.
+  acoustic_description_agreement: weak
+  acoustic_description_explanation: Acoustic detail is qualitative and not strongly
+    replicated.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Close-range contact use is consistent with comparative
+    descriptions.
+- name: alarm bark
+  alternative_names:
+  - bark
+  - alarm call
+  in_primary_inventory: false
+  scope: *id001
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - short
+  - loud
+  acoustic_description: A short harsh broadband call, louder than close-range contact
+    calls and often repeated during arousal.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced during disturbance and predator-related vigilance
+    to alert nearby group members.
+  acoustic_references:
+  - id: gautier_1988
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  semantic_references:
+  - id: gautier_1988
+    url: https://doi.org/10.1007/978-1-4612-3858-1_5
+  playback_references: []
+  call_type_existence_agreement: medium
+  call_type_existence_explanation: Alarm barks are recognized in comparative guenon
+    repertoires, but talapoin-specific call names vary.
+  acoustic_description_agreement: weak
+  acoustic_description_explanation: Acoustic description is based on broad qualitative
+    accounts.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Alarm use is supported, but predator-specific
+    semantics are not strongly established.
+- name: contact twitter
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-pitched, tonal or slightly modulated call produced frequently
+    at close to medium range.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Contact and group cohesion signal; maintains spatial cohesion
+    during movement and foraging.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - contact
+  - coordination
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: chirp
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Short, high-frequency tonal call, often produced singly or
+    in brief series.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Short-range contact and attention-getting signal in low-arousal
+    contexts.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - contact
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: alarm chirp
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Rapid, higher-amplitude version of contact chirps, sometimes
+    repeated in short bursts.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: General alarm or alert to sudden disturbances or potential
+    predators.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - alarm
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: scream
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-amplitude, broadband scream, often produced in bouts.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Distress and escalation during aggressive or high-arousal
+    social interactions.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - aggression
+  - threat
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: whine
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-pitched, tonal, plaintive vocalization, often prolonged.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Distress, protest, or appeasement in social interactions.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: grunt
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Low-frequency, short-duration call produced at close range.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Close-range social contact and coordination in low-arousal
+    contexts.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - contact
+  - coordination
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: infant distress call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-pitched repetitive distress vocalization.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Care solicitation and distress signaling toward caregivers.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - infant
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
 provenance:
-  - timestamp: '2026-05-14T14:11:40Z'
-    model: gpt-5.5
-    thinking: medium
-    action: generated
+- timestamp: '2026-05-14T14:11:40Z'
+  model: gpt-5.5
+  thinking: medium
+  action: generated
 references:
   gautier_1988:
-    citation: "Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced from vocalizations. In A Primate Radiation: Evolutionary Biology of the African Guenons."
+    citation: 'Gautier, J.-P. (1988). Interspecific affinities among guenons as deduced
+      from vocalizations. In A Primate Radiation: Evolutionary Biology of the African
+      Guenons.'
     url: https://doi.org/10.1007/978-1-4612-3858-1_5

@@ -21,7 +21,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
-from scipy.cluster.hierarchy import linkage, leaves_list
+from scipy.cluster.hierarchy import linkage, leaves_list, optimal_leaf_ordering
 
 from paper_code.data_sources import DATA_SOURCES, load_calls, load_embedding_artifacts
 
@@ -36,6 +36,7 @@ CLASS_COLORS = {
     "Mammalia": "#4C72B0",
 }
 MIN_PAIRS = 6  # skip species pairs with fewer cross-species pairs than this
+MIN_CALLS_PER_SPECIES = 4  # drop species with ≤3 calls from the matrix
 
 
 def normalize(e):
@@ -63,9 +64,18 @@ def compute_pairwise_r(calls, Sa, Ss):
     sp_names = np.array([c["species"] for c in calls])
     sp_classes = {c["species"]: c["class"] for c in calls}
 
+    # Drop species below the minimum call threshold
+    from collections import Counter
+    call_counts = Counter(sp_names)
+    eligible = {s for s, n in call_counts.items() if n >= MIN_CALLS_PER_SPECIES}
+    dropped = set(call_counts) - eligible
+    if dropped:
+        print(f"  Dropped {len(dropped)} species with <{MIN_CALLS_PER_SPECIES} calls: "
+              + ", ".join(sorted(dropped)[:5]) + ("…" if len(dropped) > 5 else ""))
+
     # Sorted species list: by (class_order, species_name)
     all_species = sorted(
-        set(sp_names),
+        eligible,
         key=lambda s: (CLASS_ORDER.get(sp_classes.get(s, ""), 9), s),
     )
     n_sp = len(all_species)
@@ -113,6 +123,7 @@ def reorder_within_classes(species, R, classes):
         # Use full row of R (correlation profile with all species), NaN → 0
         block = np.nan_to_num(R[start:end, :], nan=0.0)
         Z = linkage(block, method="average", metric="euclidean")
+        Z = optimal_leaf_ordering(Z, block)
         leaf_order = leaves_list(Z)
         new_order.extend(start + i for i in leaf_order)
     return new_order

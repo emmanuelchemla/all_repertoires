@@ -9,68 +9,248 @@ taxonomy:
   genus: Erythrocebus
   species: patas
 primary_inventory:
-  rationale: Patas monkey vocalizations are best represented by field studies of alarm and social calls rather than a single comprehensive repertoire inventory. Calls are therefore outside a primary inventory.
+  rationale: Patas monkey vocalizations are best represented by field studies of alarm
+    and social calls rather than a single comprehensive repertoire inventory. Calls
+    are therefore outside a primary inventory.
 calls:
-  - name: chirp
-    alternative_names: [alarm chirp]
-    in_primary_inventory: false
-    scope: &adult_both_scope
-      life_stages: [adult]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [high_frequency, frequency_modulated, short, abrupt]
-    acoustic_description: A short high-frequency call with abrupt onset and frequency modulation, often given in repeated sequences.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Given during predator-related vigilance and disturbance, especially in open-country contexts where group members orient to danger.
-    acoustic_references:
-      - id: hall_1965
-        url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
-      - id: enstam_isherwood_2002
-        url: https://doi.org/10.1007/s00265-002-0501-5
-    semantic_references:
-      - id: hall_1965
-        url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
-      - id: enstam_isherwood_2002
-        url: https://doi.org/10.1007/s00265-002-0501-5
-    playback_references: []
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Chirps are reported in patas monkey alarm contexts by field studies, but nomenclature is not as standardized as in vervets.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Sources agree on short high calls, with moderate acoustic detail.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Alarm and predator-related contexts are consistently reported by Hall 1965 and Enstam and Isherwood 2002.
-  - name: grunt
-    alternative_names: [contact grunt]
-    in_primary_inventory: false
-    scope: *adult_both_scope
-    acoustic_keywords: [low_frequency, noisy, short, quiet]
-    acoustic_description: A short low-amplitude noisy call with low-frequency energy, produced at close range.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used during close-range social movement and affiliative contact within groups.
-    acoustic_references:
-      - id: hall_1965
-        url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
-    semantic_references:
-      - id: hall_1965
-        url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
-    playback_references: []
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Grunt-like social calls are described in patas monkeys and other cercopithecines, but detailed patas-specific work is limited.
-    acoustic_description_agreement: weak
-    acoustic_description_explanation: Acoustic support is mostly qualitative.
-    semantic_description_agreement: medium
-    semantic_description_explanation: Close-range contact use is plausible and reported, though not experimentally isolated.
+- name: chirp
+  alternative_names:
+  - alarm chirp
+  in_primary_inventory: false
+  scope: &id001
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - frequency_modulated
+  - short
+  - abrupt
+  acoustic_description: A short high-frequency call with abrupt onset and frequency
+    modulation, often given in repeated sequences.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Given during predator-related vigilance and disturbance, especially
+    in open-country contexts where group members orient to danger.
+  acoustic_references:
+  - id: hall_1965
+    url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
+  - id: enstam_isherwood_2002
+    url: https://doi.org/10.1007/s00265-002-0501-5
+  semantic_references:
+  - id: hall_1965
+    url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
+  - id: enstam_isherwood_2002
+    url: https://doi.org/10.1007/s00265-002-0501-5
+  playback_references: []
+  call_type_existence_agreement: medium
+  call_type_existence_explanation: Chirps are reported in patas monkey alarm contexts
+    by field studies, but nomenclature is not as standardized as in vervets.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Sources agree on short high calls, with moderate
+    acoustic detail.
+  semantic_description_agreement: strong
+  semantic_description_explanation: Alarm and predator-related contexts are consistently
+    reported by Hall 1965 and Enstam and Isherwood 2002.
+- name: grunt
+  alternative_names:
+  - contact grunt
+  in_primary_inventory: false
+  scope: *id001
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - short
+  - quiet
+  acoustic_description: A short low-amplitude noisy call with low-frequency energy,
+    produced at close range.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used during close-range social movement and affiliative contact
+    within groups.
+  acoustic_references:
+  - id: hall_1965
+    url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
+  semantic_references:
+  - id: hall_1965
+    url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
+  playback_references: []
+  call_type_existence_agreement: medium
+  call_type_existence_explanation: Grunt-like social calls are described in patas
+    monkeys and other cercopithecines, but detailed patas-specific work is limited.
+  acoustic_description_agreement: weak
+  acoustic_description_explanation: Acoustic support is mostly qualitative.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Close-range contact use is plausible and reported,
+    though not experimentally isolated.
+- name: loud bark
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Loud, harsh bark audible over long distances; often produced
+    singly or in short bouts.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Alarm and disturbance signal, particularly in response to
+    predators or sudden environmental threats.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - alarm
+  - predator
+  - long_distance
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: male loud call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Low-frequency, far-carrying call produced by adult males,
+    often from exposed positions.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Long-distance spacing, advertisement of male presence, and
+    group coordination.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - contact
+  - coordination
+  - long_distance
+  - display
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: eagle alarm call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Sharp, abrupt alarm call given singly or in short series.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Alarm signaling aerial predators; elicits rapid scanning and
+    fleeing into cover when available.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - alarm
+  - predator
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: scream
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-amplitude, broadband scream.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Distress and escalation during aggressive interactions or
+    predator attacks.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - aggression
+  - threat
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: infant distress call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-pitched repetitive distress vocalization.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Care solicitation and distress signaling toward caregivers.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - infant
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
 provenance:
-  - timestamp: '2026-05-14T14:11:40Z'
-    model: gpt-5.5
-    thinking: medium
-    action: generated
+- timestamp: '2026-05-14T14:11:40Z'
+  model: gpt-5.5
+  thinking: medium
+  action: generated
 references:
   hall_1965:
-    citation: "Hall, K. R. L. (1965). Behaviour and ecology of the wild patas monkey, Erythrocebus patas, in Uganda. Journal of Zoology, 148, 15-87."
+    citation: Hall, K. R. L. (1965). Behaviour and ecology of the wild patas monkey,
+      Erythrocebus patas, in Uganda. Journal of Zoology, 148, 15-87.
     url: https://doi.org/10.1111/j.1439-0310.1965.tb02640.x
   enstam_isherwood_2002:
-    citation: "Enstam, K. L., & Isherwood, I. S. (2002). Comparison of responses to alarm calls by patas and vervet monkeys. Behavioral Ecology and Sociobiology, 52, 286-293."
+    citation: Enstam, K. L., & Isherwood, I. S. (2002). Comparison of responses to
+      alarm calls by patas and vervet monkeys. Behavioral Ecology and Sociobiology,
+      52, 286-293.
     url: https://doi.org/10.1007/s00265-002-0501-5
     doi: 10.1007/s00265-002-0501-5

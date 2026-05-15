@@ -10,277 +10,532 @@ taxonomy:
   species: fuscata
 primary_inventory:
   id: green_1975
-  rationale: Green 1975 is used as the primary_inventory spine because it is the classic field and spectrographic treatment of Japanese macaque vocal patterning across social situations, covering named categories such as coo, girney, whistle and warble, squawk and squeak, chirp and bark, shriek and scream, whine, gecker, and growled sounds or roars. This file keeps a conservative subset of well-supported call types with field or free-ranging evidence, using Itani 1963 for the earlier wild repertoire framing and later studies for coo-call exchange, contact-call rates, soft affiliative calls, and alarm playback.
+  rationale: Green 1975 is used as the primary_inventory spine because it is the classic
+    field and spectrographic treatment of Japanese macaque vocal patterning across
+    social situations, covering named categories such as coo, girney, whistle and
+    warble, squawk and squeak, chirp and bark, shriek and scream, whine, gecker, and
+    growled sounds or roars. This file keeps a conservative subset of well-supported
+    call types with field or free-ranging evidence, using Itani 1963 for the earlier
+    wild repertoire framing and later studies for coo-call exchange, contact-call
+    rates, soft affiliative calls, and alarm playback.
 calls:
-  - name: coo call
-    in_primary_inventory: true
-    alternative_names:
-      - coo
-      - contact coo
-      - food-associated coo
-      - smooth early high coo
-      - smooth late high coo
-    scope: &broad_scope
-      life_stages:
-        - juvenile
-        - adult
-      sexes:
-        - female
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - tonal
-      - harmonic
-      - frequency_modulated
-      - graded
-      - long
-    acoustic_description: A clear tonal call with harmonic structure and a graded fundamental-frequency contour. Green 1975 divided coos into multiple frequency-pattern subtypes, and later work shows that duration, frequency modulation, and peak-frequency timing vary with caller spacing, activity, and exchange context.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - food
-      - identity
-    semantic_description: Used as a contact call during foraging, moving, separation risk, and vocal exchanges with group members. Field studies treat coos as calls that maintain spatial cohesion, support call-and-response exchanges, and can occur in food-related or provisioning contexts.
-    acoustic_references:
-      - id: green_1975
-        url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
-      - id: sugiura_2007
-        url: https://doi.org/10.1002/ajp.20447
-      - id: katsu_etal_2025
-        url: https://doi.org/10.1007/s10329-025-01213-4
-    semantic_references:
-      - id: green_1975
-        url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
-      - id: sugiura_1993
-        url: https://doi.org/10.1163/156853993X00588
-      - id: koda_etal_2008
-        url: https://doi.org/10.1002/ajp.20597
-    playback_references:
-      - id: sugiura_1993
-        url: https://doi.org/10.1163/156853993X00588
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Green 1975 treats coos as a central Japanese macaque call category, and later field studies by Sugiura 1993, Sugiura 2007, Koda et al. 2008, and Katsu et al. 2025 continue to use coo calls as a standard category. Existence agreement is strong.
-    acoustic_description_agreement: strong
-    acoustic_description_explanation: Green 1975, Sugiura 2007, and Katsu et al. 2025 agree that coos are tonal, frequency-modulated, and graded, while differing mainly in which contextual factors best explain the acoustic variation. Agreement is strong for the broad acoustic form.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Green 1975, Sugiura 1993, Sugiura 2007, and Koda et al. 2008 consistently place coos in contact, cohesion, exchange, foraging, and movement contexts, with Sugiura 1993 adding playback support for response matching. Agreement is strong.
-
-  - name: short low coo
-    in_primary_inventory: true
-    alternative_names:
-      - short, low coo
-      - soft coo
-      - close-range coo
-    scope: &adult_female_scope
-      life_stages:
-        - adult
-      sexes:
-        - female
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - tonal
-      - quiet
-      - short
-      - frequency_modulated
-    acoustic_description: A short, low-amplitude subtype of the coo call. In free-ranging observations it is one of the soft calls used in brief exchanged bouts, distinct by ear from grunts and girneys and shorter and quieter than broader coo-call forms.
-    semantic_keywords:
-      - affiliation
-      - contact
-      - attention
-      - group_coordination
-    semantic_description: Used at close range in non-agonistic, face-to-face social interactions. When exchanged between partners, short low coos are associated with non-hostile intent and are often followed by affiliative interactions.
-    acoustic_references:
-      - id: green_1975
-        url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
-      - id: katsu_etal_2019
-        url: https://doi.org/10.1093/cz/zoy077
-    semantic_references:
-      - id: katsu_etal_2016
-        url: https://doi.org/10.1163/1568539X-00003330
-      - id: katsu_etal_2019
-        url: https://doi.org/10.1093/cz/zoy077
-    playback_references: []
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Katsu et al. 2019 explicitly names short low coos as one of three acoustically distinct short-call types in free-ranging Japanese macaques, and links the type back to Green 1975 coo-call categories. Existence agreement is strong.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Katsu et al. 2019 provides a clear acoustic contrast with other soft calls, but the label is a subtype within the broader coo category rather than a heavily replicated standalone class. Agreement is medium.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Katsu et al. 2016 and Katsu et al. 2019 both place short low coos with grunts and girneys in close-range non-agonistic interactions and exchanged bouts associated with affiliative outcomes. Agreement is strong.
-
-  - name: girney
-    in_primary_inventory: true
-    alternative_names:
-      - gyu
-      - atonal girney
-      - tonal girney
-      - greeting call
-    scope: *adult_female_scope
-    acoustic_keywords:
-      - tonal
-      - noisy
-      - quiet
-      - repetitive
-      - graded
-      - multi_component
-    acoustic_description: A soft, close-range call class with both tonal and atonal variants. Green 1975 and Blount 1985 describe girneys as morphologically variable and temporally labile, while later free-ranging work distinguishes girneys from atonal grunts as the more tonal short-call type.
-    semantic_keywords:
-      - affiliation
-      - submission
-      - caregiving
-      - attention
-    semantic_description: Used mainly by females in close proximity to higher-ranking animals, mothers with infants, grooming partners, or former opponents. Field and free-ranging studies interpret the call as communicating appeasement or non-hostile intent in socially delicate affiliative approaches.
-    acoustic_references:
-      - id: green_1975
-        url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
-      - id: blount_1985
-        url: https://doi.org/10.1007/BF02382457
-      - id: katsu_etal_2019
-        url: https://doi.org/10.1093/cz/zoy077
-    semantic_references:
-      - id: blount_1985
-        url: https://doi.org/10.1007/BF02382457
-      - id: katsu_etal_2016
-        url: https://doi.org/10.1163/1568539X-00003330
-      - id: katsu_etal_2017
-        url: https://doi.org/10.1371/journal.pone.0178655
-    playback_references: []
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Girneys are named by Green 1975, analyzed in detail by Blount 1985, and retained as a distinct short-call type by Katsu et al. 2016, Katsu et al. 2017, and Katsu et al. 2019. Existence agreement is strong.
-    acoustic_description_agreement: strong
-    acoustic_description_explanation: Green 1975 and Blount 1985 agree that girneys are variable close-range calls, and Katsu et al. 2019 confirms their distinctiveness from grunts and short low coos in free-ranging recordings. Agreement is strong.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Blount 1985, Katsu et al. 2016, and Katsu et al. 2017 converge on appeasement, non-hostile intent, and affiliative or post-conflict use in close-range female interactions. Agreement is strong.
-
-  - name: grunt
-    in_primary_inventory: false
-    alternative_names:
-      - soft grunt
-      - affiliative grunt
-      - short call
-    scope: *adult_female_scope
-    acoustic_keywords:
-      - low_frequency
-      - noisy
-      - quiet
-      - short
-      - repetitive
-    acoustic_description: A short, soft, low-amplitude atonal call, often given in bouts during close-range interactions. Free-ranging studies distinguish grunts acoustically from the more tonal girneys and from short low coos.
-    semantic_keywords:
-      - affiliation
-      - contact
-      - submission
-      - attention
-    semantic_description: Used in non-agonistic face-to-face interactions and in some post-conflict affiliative contexts. In exchanged bouts with grunts, girneys, or coos, affiliative interactions are more likely to follow and the calls communicate non-hostile intent.
-    acoustic_references:
-      - id: katsu_etal_2016
-        url: https://doi.org/10.1163/1568539X-00003330
-      - id: katsu_etal_2019
-        url: https://doi.org/10.1093/cz/zoy077
-    semantic_references:
-      - id: katsu_etal_2016
-        url: https://doi.org/10.1163/1568539X-00003330
-      - id: katsu_etal_2017
-        url: https://doi.org/10.1371/journal.pone.0178655
-      - id: katsu_etal_2019
-        url: https://doi.org/10.1093/cz/zoy077
-    playback_references: []
-    call_type_existence_agreement: strong
-    call_type_existence_explanation: Katsu et al. 2016, Katsu et al. 2017, and Katsu et al. 2019 repeatedly treat grunts as a distinct Japanese macaque short-call type in free-ranging observations. It is marked outside the primary inventory because Green 1975's main category labels do not use grunt as a top-level name.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: The recent free-ranging studies agree that grunts are atonal and distinct from girneys and short low coos, but detailed acoustic parameterization is limited in the sources used here. Agreement is medium.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Katsu et al. 2016, Katsu et al. 2017, and Katsu et al. 2019 consistently place grunts in non-hostile affiliative, close-range, and post-conflict interaction contexts. Agreement is strong.
-
-  - name: alarm call
-    in_primary_inventory: true
-    alternative_names:
-      - warning call
-      - late-high alarm
-      - alarm bark
-    scope: *broad_scope
-    acoustic_keywords:
-      - loud
-      - high_frequency
-      - abrupt
-      - frequency_modulated
-      - graded
-    acoustic_description: A conspicuous warning-class vocalization with high-arousal acoustic structure. Green 1975 treats alarm-related forms among frequency-patterned calls, and later work on alarm and estrous calls emphasizes that alarm calls can be acoustically close to other high-arousal female calls.
-    semantic_keywords:
-      - alarm
-      - predator
-      - attention
-      - group_coordination
-    semantic_description: Produced when an individual detects danger or disturbance and functions to alert nearby group members. Playback work with free-ranging Japanese macaques tested receiver responses to conspecific alarm calls, supporting the call's warning role.
-    acoustic_references:
-      - id: green_1975
-        url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
-      - id: yoshida_1988a
-        url: https://web.db.tokushima-u.ac.jp/cgi-bin/edb_browse?EID=80320
-    semantic_references:
-      - id: itani_1963
-        url: https://doi.org/10.1007/BF01659149
-      - id: yoshida_1988b
-        url: https://ir.library.osaka-u.ac.jp/repo/ouka/all/7587/
-    playback_references:
-      - id: yoshida_1988b
-        url: https://ir.library.osaka-u.ac.jp/repo/ouka/all/7587/
-    call_type_existence_agreement: medium
-    call_type_existence_explanation: Itani 1963 includes warning vocalizations, Green 1975 includes alarm-related patterned calls, and Yoshida 1988b used alarm-call playbacks. The broader warning class is secure, but exact label boundaries with bark, chirp, and estrous calls are less standardized, so agreement is medium.
-    acoustic_description_agreement: medium
-    acoustic_description_explanation: Green 1975 and Yoshida 1988a support an alarm-call class and acoustic comparison with other high-arousal calls, but the sources used here do not provide as much replicated quantitative detail as for coos. Agreement is medium.
-    semantic_description_agreement: strong
-    semantic_description_explanation: Itani 1963 and Yoshida 1988b both support warning use, and the playback study directly tests free-ranging responses to conspecific alarm calls. Semantic agreement is strong.
+- name: coo call
+  in_primary_inventory: true
+  alternative_names:
+  - coo
+  - contact coo
+  - food-associated coo
+  - smooth early high coo
+  - smooth late high coo
+  scope: &id002
+    life_stages:
+    - juvenile
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - frequency_modulated
+  - graded
+  - long
+  acoustic_description: A clear tonal call with harmonic structure and a graded fundamental-frequency
+    contour. Green 1975 divided coos into multiple frequency-pattern subtypes, and
+    later work shows that duration, frequency modulation, and peak-frequency timing
+    vary with caller spacing, activity, and exchange context.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - food
+  - identity
+  semantic_description: Used as a contact call during foraging, moving, separation
+    risk, and vocal exchanges with group members. Field studies treat coos as calls
+    that maintain spatial cohesion, support call-and-response exchanges, and can occur
+    in food-related or provisioning contexts.
+  acoustic_references:
+  - id: green_1975
+    url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
+  - id: sugiura_2007
+    url: https://doi.org/10.1002/ajp.20447
+  - id: katsu_etal_2025
+    url: https://doi.org/10.1007/s10329-025-01213-4
+  semantic_references:
+  - id: green_1975
+    url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
+  - id: sugiura_1993
+    url: https://doi.org/10.1163/156853993X00588
+  - id: koda_etal_2008
+    url: https://doi.org/10.1002/ajp.20597
+  playback_references:
+  - id: sugiura_1993
+    url: https://doi.org/10.1163/156853993X00588
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Green 1975 treats coos as a central Japanese macaque
+    call category, and later field studies by Sugiura 1993, Sugiura 2007, Koda et
+    al. 2008, and Katsu et al. 2025 continue to use coo calls as a standard category.
+    Existence agreement is strong.
+  acoustic_description_agreement: strong
+  acoustic_description_explanation: Green 1975, Sugiura 2007, and Katsu et al. 2025
+    agree that coos are tonal, frequency-modulated, and graded, while differing mainly
+    in which contextual factors best explain the acoustic variation. Agreement is
+    strong for the broad acoustic form.
+  semantic_description_agreement: strong
+  semantic_description_explanation: Green 1975, Sugiura 1993, Sugiura 2007, and Koda
+    et al. 2008 consistently place coos in contact, cohesion, exchange, foraging,
+    and movement contexts, with Sugiura 1993 adding playback support for response
+    matching. Agreement is strong.
+- name: short low coo
+  in_primary_inventory: true
+  alternative_names:
+  - short, low coo
+  - soft coo
+  - close-range coo
+  scope: &id001
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - quiet
+  - short
+  - frequency_modulated
+  acoustic_description: A short, low-amplitude subtype of the coo call. In free-ranging
+    observations it is one of the soft calls used in brief exchanged bouts, distinct
+    by ear from grunts and girneys and shorter and quieter than broader coo-call forms.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - attention
+  - group_coordination
+  semantic_description: Used at close range in non-agonistic, face-to-face social
+    interactions. When exchanged between partners, short low coos are associated with
+    non-hostile intent and are often followed by affiliative interactions.
+  acoustic_references:
+  - id: green_1975
+    url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
+  - id: katsu_etal_2019
+    url: https://doi.org/10.1093/cz/zoy077
+  semantic_references:
+  - id: katsu_etal_2016
+    url: https://doi.org/10.1163/1568539X-00003330
+  - id: katsu_etal_2019
+    url: https://doi.org/10.1093/cz/zoy077
+  playback_references: []
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Katsu et al. 2019 explicitly names short low coos
+    as one of three acoustically distinct short-call types in free-ranging Japanese
+    macaques, and links the type back to Green 1975 coo-call categories. Existence
+    agreement is strong.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Katsu et al. 2019 provides a clear acoustic contrast
+    with other soft calls, but the label is a subtype within the broader coo category
+    rather than a heavily replicated standalone class. Agreement is medium.
+  semantic_description_agreement: strong
+  semantic_description_explanation: Katsu et al. 2016 and Katsu et al. 2019 both place
+    short low coos with grunts and girneys in close-range non-agonistic interactions
+    and exchanged bouts associated with affiliative outcomes. Agreement is strong.
+- name: girney
+  in_primary_inventory: true
+  alternative_names:
+  - gyu
+  - atonal girney
+  - tonal girney
+  - greeting call
+  scope: *id001
+  acoustic_keywords:
+  - tonal
+  - noisy
+  - quiet
+  - repetitive
+  - graded
+  - multi_component
+  acoustic_description: A soft, close-range call class with both tonal and atonal
+    variants. Green 1975 and Blount 1985 describe girneys as morphologically variable
+    and temporally labile, while later free-ranging work distinguishes girneys from
+    atonal grunts as the more tonal short-call type.
+  semantic_keywords:
+  - affiliation
+  - submission
+  - caregiving
+  - attention
+  semantic_description: Used mainly by females in close proximity to higher-ranking
+    animals, mothers with infants, grooming partners, or former opponents. Field and
+    free-ranging studies interpret the call as communicating appeasement or non-hostile
+    intent in socially delicate affiliative approaches.
+  acoustic_references:
+  - id: green_1975
+    url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
+  - id: blount_1985
+    url: https://doi.org/10.1007/BF02382457
+  - id: katsu_etal_2019
+    url: https://doi.org/10.1093/cz/zoy077
+  semantic_references:
+  - id: blount_1985
+    url: https://doi.org/10.1007/BF02382457
+  - id: katsu_etal_2016
+    url: https://doi.org/10.1163/1568539X-00003330
+  - id: katsu_etal_2017
+    url: https://doi.org/10.1371/journal.pone.0178655
+  playback_references: []
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Girneys are named by Green 1975, analyzed in detail
+    by Blount 1985, and retained as a distinct short-call type by Katsu et al. 2016,
+    Katsu et al. 2017, and Katsu et al. 2019. Existence agreement is strong.
+  acoustic_description_agreement: strong
+  acoustic_description_explanation: Green 1975 and Blount 1985 agree that girneys
+    are variable close-range calls, and Katsu et al. 2019 confirms their distinctiveness
+    from grunts and short low coos in free-ranging recordings. Agreement is strong.
+  semantic_description_agreement: strong
+  semantic_description_explanation: Blount 1985, Katsu et al. 2016, and Katsu et al.
+    2017 converge on appeasement, non-hostile intent, and affiliative or post-conflict
+    use in close-range female interactions. Agreement is strong.
+- name: grunt
+  in_primary_inventory: false
+  alternative_names:
+  - soft grunt
+  - affiliative grunt
+  - short call
+  scope: *id001
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - quiet
+  - short
+  - repetitive
+  acoustic_description: A short, soft, low-amplitude atonal call, often given in bouts
+    during close-range interactions. Free-ranging studies distinguish grunts acoustically
+    from the more tonal girneys and from short low coos.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - submission
+  - attention
+  semantic_description: Used in non-agonistic face-to-face interactions and in some
+    post-conflict affiliative contexts. In exchanged bouts with grunts, girneys, or
+    coos, affiliative interactions are more likely to follow and the calls communicate
+    non-hostile intent.
+  acoustic_references:
+  - id: katsu_etal_2016
+    url: https://doi.org/10.1163/1568539X-00003330
+  - id: katsu_etal_2019
+    url: https://doi.org/10.1093/cz/zoy077
+  semantic_references:
+  - id: katsu_etal_2016
+    url: https://doi.org/10.1163/1568539X-00003330
+  - id: katsu_etal_2017
+    url: https://doi.org/10.1371/journal.pone.0178655
+  - id: katsu_etal_2019
+    url: https://doi.org/10.1093/cz/zoy077
+  playback_references: []
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Katsu et al. 2016, Katsu et al. 2017, and Katsu
+    et al. 2019 repeatedly treat grunts as a distinct Japanese macaque short-call
+    type in free-ranging observations. It is marked outside the primary inventory
+    because Green 1975's main category labels do not use grunt as a top-level name.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: The recent free-ranging studies agree that grunts
+    are atonal and distinct from girneys and short low coos, but detailed acoustic
+    parameterization is limited in the sources used here. Agreement is medium.
+  semantic_description_agreement: strong
+  semantic_description_explanation: Katsu et al. 2016, Katsu et al. 2017, and Katsu
+    et al. 2019 consistently place grunts in non-hostile affiliative, close-range,
+    and post-conflict interaction contexts. Agreement is strong.
+- name: alarm call
+  in_primary_inventory: true
+  alternative_names:
+  - warning call
+  - late-high alarm
+  - alarm bark
+  scope: *id002
+  acoustic_keywords:
+  - loud
+  - high_frequency
+  - abrupt
+  - frequency_modulated
+  - graded
+  acoustic_description: A conspicuous warning-class vocalization with high-arousal
+    acoustic structure. Green 1975 treats alarm-related forms among frequency-patterned
+    calls, and later work on alarm and estrous calls emphasizes that alarm calls can
+    be acoustically close to other high-arousal female calls.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  - group_coordination
+  semantic_description: Produced when an individual detects danger or disturbance
+    and functions to alert nearby group members. Playback work with free-ranging Japanese
+    macaques tested receiver responses to conspecific alarm calls, supporting the
+    call's warning role.
+  acoustic_references:
+  - id: green_1975
+    url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
+  - id: yoshida_1988a
+    url: https://web.db.tokushima-u.ac.jp/cgi-bin/edb_browse?EID=80320
+  semantic_references:
+  - id: itani_1963
+    url: https://doi.org/10.1007/BF01659149
+  - id: yoshida_1988b
+    url: https://ir.library.osaka-u.ac.jp/repo/ouka/all/7587/
+  playback_references:
+  - id: yoshida_1988b
+    url: https://ir.library.osaka-u.ac.jp/repo/ouka/all/7587/
+  call_type_existence_agreement: medium
+  call_type_existence_explanation: Itani 1963 includes warning vocalizations, Green
+    1975 includes alarm-related patterned calls, and Yoshida 1988b used alarm-call
+    playbacks. The broader warning class is secure, but exact label boundaries with
+    bark, chirp, and estrous calls are less standardized, so agreement is medium.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Green 1975 and Yoshida 1988a support an alarm-call
+    class and acoustic comparison with other high-arousal calls, but the sources used
+    here do not provide as much replicated quantitative detail as for coos. Agreement
+    is medium.
+  semantic_description_agreement: strong
+  semantic_description_explanation: Itani 1963 and Yoshida 1988b both support warning
+    use, and the playback study directly tests free-ranging responses to conspecific
+    alarm calls. Semantic agreement is strong.
+- name: coo
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Clear, tonal call with smooth frequency modulation; often
+    produced singly or in short bouts.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Long- and medium-distance contact, group cohesion, and recruitment;
+    acoustically variant by context.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - contact
+  - coordination
+  - long_distance
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: scream
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-amplitude, broadband scream, often produced in bouts.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Distress, submission, and escalation during aggressive interactions.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - aggression
+  - threat
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: bark
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Abrupt, loud, harsh call.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Alarm, disturbance, or high-arousal social contexts.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - alarm
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: threat growl
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: Low-frequency, harsh growl-like vocalization.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Threat and aggressive signaling at close range.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - aggression
+  - threat
+  - display
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: copulation scream
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-pitched scream produced during copulation.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Sexual context signal; may influence mating dynamics.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - sex
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+- name: infant distress call
+  alternative_names: []
+  in_primary_inventory: true
+  call_type_existence_agreement: strong
+  call_type_existence_explanation: Well-documented call type in this and closely related
+    Cercopithecidae species; ported from curated old database.
+  acoustic_description: High-pitched repetitive distress vocalization.
+  acoustic_description_agreement: medium
+  acoustic_description_explanation: Ported from old database.
+  acoustic_keywords: []
+  acoustic_references: []
+  semantic_description: Care solicitation and distress signaling toward caregivers.
+  semantic_description_agreement: medium
+  semantic_description_explanation: Ported from old database.
+  semantic_keywords:
+  - affective
+  - distress
+  - infant
+  semantic_references: []
+  playback_references: []
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
 provenance:
-  - timestamp: '2026-05-14T05:47:17Z'
-    model: gpt-5.5
-    thinking: extra_high
-    action: generated
+- timestamp: '2026-05-14T05:47:17Z'
+  model: gpt-5.5
+  thinking: extra_high
+  action: generated
 references:
   blount_1985:
-    citation: 'Blount, B. G. (1985). "Girney" vocalizations among Japanese macaque females: context and function. Primates, 26(4), 424-435.'
+    citation: 'Blount, B. G. (1985). "Girney" vocalizations among Japanese macaque
+      females: context and function. Primates, 26(4), 424-435.'
     url: https://doi.org/10.1007/BF02382457
     doi: 10.1007/BF02382457
   green_1975:
-    citation: "Green, S. M. (1975). Variation of vocal pattern with social situation in the Japanese monkey (Macaca fuscata): a field study. In L. A. Rosenblum (Ed.), Primate Behavior, Volume 4 (pp. 1-102). Academic Press."
+    citation: 'Green, S. M. (1975). Variation of vocal pattern with social situation
+      in the Japanese monkey (Macaca fuscata): a field study. In L. A. Rosenblum (Ed.),
+      Primate Behavior, Volume 4 (pp. 1-102). Academic Press.'
     url: https://doi.org/10.1016/B978-0-12-534004-5.50006-3
     doi: 10.1016/B978-0-12-534004-5.50006-3
   itani_1963:
-    citation: Itani, J. (1963). Vocal communication of the wild Japanese monkey. Primates, 4, 11-66.
+    citation: Itani, J. (1963). Vocal communication of the wild Japanese monkey. Primates,
+      4, 11-66.
     url: https://doi.org/10.1007/BF01659149
     doi: 10.1007/BF01659149
   katsu_etal_2016:
-    citation: Katsu, N., Yamada, K., & Nakamichi, M. (2016). Function of grunts, girneys and coo calls of Japanese macaques (Macaca fuscata) in relation to call usage, age and dominance relationships. Behaviour, 153(2), 125-142.
+    citation: Katsu, N., Yamada, K., & Nakamichi, M. (2016). Function of grunts, girneys
+      and coo calls of Japanese macaques (Macaca fuscata) in relation to call usage,
+      age and dominance relationships. Behaviour, 153(2), 125-142.
     url: https://doi.org/10.1163/1568539X-00003330
     doi: 10.1163/1568539X-00003330
   katsu_etal_2017:
-    citation: Katsu, N., Yamada, K., & Nakamichi, M. (2017). Vocalizations during post-conflict affiliations from victims toward aggressors based on uncertainty in Japanese macaques. PLOS ONE, 12(5), e0178655.
+    citation: Katsu, N., Yamada, K., & Nakamichi, M. (2017). Vocalizations during
+      post-conflict affiliations from victims toward aggressors based on uncertainty
+      in Japanese macaques. PLOS ONE, 12(5), e0178655.
     url: https://doi.org/10.1371/journal.pone.0178655
     doi: 10.1371/journal.pone.0178655
   katsu_etal_2019:
-    citation: Katsu, N., Yamada, K., Okanoya, K., & Nakamichi, M. (2019). Temporal adjustment of short calls according to a partner during vocal turn-taking in Japanese macaques. Current Zoology, 65(1), 99-105.
+    citation: Katsu, N., Yamada, K., Okanoya, K., & Nakamichi, M. (2019). Temporal
+      adjustment of short calls according to a partner during vocal turn-taking in
+      Japanese macaques. Current Zoology, 65(1), 99-105.
     url: https://doi.org/10.1093/cz/zoy077
     doi: 10.1093/cz/zoy077
   katsu_etal_2025:
-    citation: Katsu, N., Inami, K., & Yamada, K. (2025). The effects of background noise and behavioral context on the acoustic characteristics of coo calls in Japanese macaques. Primates.
+    citation: Katsu, N., Inami, K., & Yamada, K. (2025). The effects of background
+      noise and behavioral context on the acoustic characteristics of coo calls in
+      Japanese macaques. Primates.
     url: https://doi.org/10.1007/s10329-025-01213-4
     doi: 10.1007/s10329-025-01213-4
   koda_etal_2008:
-    citation: Koda, H., Shimooka, Y., & Sugiura, H. (2008). Effects of caller activity and habitat visibility on contact call rate of wild Japanese macaques (Macaca fuscata). American Journal of Primatology, 70(11), 1055-1063.
+    citation: Koda, H., Shimooka, Y., & Sugiura, H. (2008). Effects of caller activity
+      and habitat visibility on contact call rate of wild Japanese macaques (Macaca
+      fuscata). American Journal of Primatology, 70(11), 1055-1063.
     url: https://doi.org/10.1002/ajp.20597
     doi: 10.1002/ajp.20597
   sugiura_1993:
-    citation: Sugiura, H. (1993). Temporal and acoustic correlates in vocal exchange of coo calls in Japanese macaques. Behaviour, 124(3-4), 207-225.
+    citation: Sugiura, H. (1993). Temporal and acoustic correlates in vocal exchange
+      of coo calls in Japanese macaques. Behaviour, 124(3-4), 207-225.
     url: https://doi.org/10.1163/156853993X00588
     doi: 10.1163/156853993X00588
   sugiura_2007:
-    citation: Sugiura, H. (2007). Effects of proximity and behavioral context on acoustic variation in the coo calls of Japanese macaques. American Journal of Primatology, 69(12), 1412-1424.
+    citation: Sugiura, H. (2007). Effects of proximity and behavioral context on acoustic
+      variation in the coo calls of Japanese macaques. American Journal of Primatology,
+      69(12), 1412-1424.
     url: https://doi.org/10.1002/ajp.20447
     doi: 10.1002/ajp.20447
   yoshida_1988a:
-    citation: "Yoshida, A. (1988). Alarm and estrous calls of a female Japanese monkey (Macaca fuscata): a case study. Research Report of the Arashiyama West and East Groups of Japanese Monkeys, Faculty of Human Sciences of Osaka University, 57-65."
+    citation: 'Yoshida, A. (1988). Alarm and estrous calls of a female Japanese monkey
+      (Macaca fuscata): a case study. Research Report of the Arashiyama West and East
+      Groups of Japanese Monkeys, Faculty of Human Sciences of Osaka University, 57-65.'
     url: https://web.db.tokushima-u.ac.jp/cgi-bin/edb_browse?EID=80320
   yoshida_1988b:
-    citation: Yoshida, A. (1988). Response to experimental playbacks of conspecific alarm call in free-ranging Japanese macaques (Macaca fuscata). Memoirs of the Faculty of Human Sciences, Osaka University, 14, 89-100.
+    citation: Yoshida, A. (1988). Response to experimental playbacks of conspecific
+      alarm call in free-ranging Japanese macaques (Macaca fuscata). Memoirs of the
+      Faculty of Human Sciences, Osaka University, 14, 89-100.
     url: https://ir.library.osaka-u.ac.jp/repo/ouka/all/7587/
