@@ -1,0 +1,18 @@
+{
+  "taxon_id": 88028,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Semnopithecus",
+  "scientific_name": "Semnopithecus",
+  "taxonomic_rank": "genus",
+  "study_times": [],
+  "studies": [],
+  "is_leaf": null,
+  "ncbi_id": 88028,
+  "rank": {
+    "this": {
+      "name": "genus",
+      "prettyName": "genus"
+    }
+  },
+  "isLeaf": true
+}

@@ -1,0 +1,18 @@
+{
+  "taxon_id": 102108,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Cercopithecus pogonias",
+  "scientific_name": "Cercopithecus pogonias",
+  "taxonomic_rank": "species",
+  "study_times": [],
+  "studies": [],
+  "is_leaf": null,
+  "ncbi_id": 102108,
+  "rank": {
+    "this": {
+      "name": "species",
+      "prettyName": "species"
+    }
+  },
+  "isLeaf": true
+}

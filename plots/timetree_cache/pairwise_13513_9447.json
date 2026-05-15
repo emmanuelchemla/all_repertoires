@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 13513,
+  "taxon_b_id": 9447,
+  "scientific_name_a": "Eulemur",
+  "scientific_name_b": "Lemur catta",
+  "all_total": 17,
+  "precomputed_age": 19.73,
+  "precomputed_ci_low": 14.668,
+  "precomputed_ci_high": 21.94079,
+  "adjusted_age": 0
+}

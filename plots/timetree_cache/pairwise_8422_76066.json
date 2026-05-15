@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 8422,
+  "taxon_b_id": 76066,
+  "scientific_name_a": "Dryophytes cinereus",
+  "scientific_name_b": "Engystomops pustulosus",
+  "all_total": 15,
+  "precomputed_age": 72.60023,
+  "precomputed_ci_low": 65.4,
+  "precomputed_ci_high": 97,
+  "adjusted_age": 0
+}

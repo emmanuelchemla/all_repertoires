@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 213890,
+  "taxon_b_id": 69501,
+  "scientific_name_a": "Parus minor",
+  "scientific_name_b": "Pheugopedius euophrys",
+  "all_total": 8,
+  "precomputed_age": 29.793515,
+  "precomputed_ci_low": 21.544868,
+  "precomputed_ci_high": 36.99,
+  "adjusted_age": 25.49572
+}

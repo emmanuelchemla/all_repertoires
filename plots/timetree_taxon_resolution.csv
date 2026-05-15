@@ -1,0 +1,56 @@
+species,timetree_query,query_source,resolved,taxon_id,ncbi_id,scientific_name,taxonomic_rank,raw_error,class,order,family,genus
+Carolina chickadee (Poecile carolinensis),Poecile carolinensis,parenthetical_scientific_name,True,48892,48892,Poecile carolinensis,species,,Aves,Passeriformes,Paridae,Poecile
+Meerkat (Suricata suricatta),Suricata suricatta,parenthetical_scientific_name,True,37032,37032,Suricata suricatta,species,,Mammalia,Carnivora,Herpestidae,Suricata
+Spotted hyena (Crocuta crocuta),Crocuta crocuta,parenthetical_scientific_name,True,9678,9678,Crocuta crocuta,species,,Mammalia,Carnivora,Hyaenidae,Crocuta
+Poison dart frogs (Dendrobatidae; various genera),Dendrobatidae,manual_composite_override,True,43469,43469,Dendrobatidae,family,,Amphibia,Anura,Dendrobatidae,
+Green tree frog (Hyla cinerea),Hyla cinerea,parenthetical_scientific_name,True,8422,8422,Dryophytes cinereus,species,,Amphibia,Anura,Hylidae,Hyla
+Túngara frog (Engystomops pustulosus),Engystomops pustulosus,parenthetical_scientific_name,True,76066,76066,Engystomops pustulosus,species,,Amphibia,Anura,Leptodactylidae,Engystomops
+American bullfrog (Lithobates catesbeianus),Lithobates catesbeianus,parenthetical_scientific_name,True,8400,8400,Aquarana catesbeiana,species,,Amphibia,Anura,Ranidae,Lithobates
+African savanna elephant (Loxodonta africana),Loxodonta africana,parenthetical_scientific_name,True,9785,9785,Loxodonta africana,species,,Mammalia,Proboscidea,Elephantidae,Loxodonta
+Gray wolf (Canis lupus),Canis lupus,parenthetical_scientific_name,True,9612,9612,Canis lupus,species,,Mammalia,Carnivora,Canidae,Canis
+Egyptian fruit bat (Rousettus aegyptiacus),Rousettus aegyptiacus,parenthetical_scientific_name,True,9407,9407,Rousettus aegyptiacus,species,,Mammalia,Chiroptera,Pteropodidae,Rousettus
+Greater sac-winged bat (Saccopteryx bilineata),Saccopteryx bilineata,parenthetical_scientific_name,True,59482,59482,Saccopteryx bilineata,species,,Mammalia,Chiroptera,Emballonuridae,Saccopteryx
+Bengalese finch (Lonchura striata domestica),Lonchura striata domestica,parenthetical_scientific_name,True,299123,299123,Lonchura striata domestica,subspecies,,Aves,Passeriformes,Estrildidae,Lonchura
+Japanese tit (Parus minor),Parus minor,parenthetical_scientific_name,True,213890,213890,Parus minor,species,,Aves,Passeriformes,Paridae,Parus
+Plain-tailed wren (Pheugopedius euophrys),Pheugopedius euophrys,parenthetical_scientific_name,True,2724890,2724890,Pheugopedius euophrys,species,,Aves,Passeriformes,Troglodytidae,Pheugopedius
+White-browed sparrow-weaver (Plocepasser mahali),Plocepasser mahali,parenthetical_scientific_name,True,99181,99181,Plocepasser mahali,species,,Aves,Passeriformes,Ploceidae,Plocepasser
+Chestnut-crowned babbler (Pomatostomus ruficeps),Pomatostomus ruficeps,parenthetical_scientific_name,True,9176,9176,Pomatostomus ruficeps,species,,Aves,Passeriformes,Pomatostomidae,Pomatostomus
+European starling (Sturnus vulgaris),Sturnus vulgaris,parenthetical_scientific_name,True,9172,9172,Sturnus vulgaris,species,,Aves,Passeriformes,Sturnidae,Sturnus
+African grey parrot (Psittacus erithacus),Psittacus erithacus,parenthetical_scientific_name,True,57247,57247,Psittacus erithacus,species,,Aves,Psittaciformes,Psittacidae,Psittacus
+Mandrill (Mandrillus sphinx),Mandrillus sphinx,parenthetical_scientific_name,True,9561,9561,Mandrillus sphinx,species,,Mammalia,Primates,Cercopithecidae,Mandrillus
+Drill (Mandrillus leucophaeus),Mandrillus leucophaeus,parenthetical_scientific_name,True,9568,9568,Mandrillus leucophaeus,species,,Mammalia,Primates,Cercopithecidae,Mandrillus
+Red colobus (Piliocolobus spp.),Piliocolobus,manual_composite_override,True,591932,591932,Piliocolobus,genus,,Mammalia,Primates,Cercopithecidae,Piliocolobus
+Black-and-white colobus (Colobus guereza),Colobus guereza,parenthetical_scientific_name,True,33548,33548,Colobus guereza,species,,Mammalia,Primates,Cercopithecidae,Colobus
+Langurs (Semnopithecus spp. / Trachypithecus spp.),Semnopithecus,manual_composite_override,True,88028,88028,Semnopithecus,genus,,Mammalia,Primates,Cercopithecidae,
+Chimpanzee (Pan troglodytes),Pan troglodytes,parenthetical_scientific_name,True,9598,9598,Pan troglodytes,species,,Mammalia,Primates,Hominidae,Pan
+Bonobo (Pan paniscus),Pan paniscus,parenthetical_scientific_name,True,9597,9597,Pan paniscus,species,,Mammalia,Primates,Hominidae,Pan
+Western Gorilla (Gorilla gorilla),Gorilla gorilla,parenthetical_scientific_name,True,9593,9593,Gorilla gorilla,species,,Mammalia,Primates,Hominidae,Gorilla
+Eastern Gorilla (Gorilla beringei),Gorilla beringei,parenthetical_scientific_name,True,499232,499232,Gorilla beringei,species,,Mammalia,Primates,Hominidae,Gorilla
+Bornean Orangutan (Pongo pygmaeus),Pongo pygmaeus,parenthetical_scientific_name,True,9600,9600,Pongo pygmaeus,species,,Mammalia,Primates,Hominidae,Pongo
+Siamang (Symphalangus syndactylus),Symphalangus syndactylus,parenthetical_scientific_name,True,9590,9590,Symphalangus syndactylus,species,,Mammalia,Primates,Hylobatidae,Symphalangus
+"Gibbons (Hylobates spp., Nomascus spp., Hoolock spp.)",Hylobates,manual_composite_override,True,9578,9578,Hylobates,genus,,Mammalia,Primates,Hylobatidae,
+Brown lemurs (Eulemur spp.),Eulemur,manual_composite_override,True,13513,13513,Eulemur,genus,,Mammalia,Primates,Lemuridae,Eulemur
+Indri (Indri indri),Indri indri,parenthetical_scientific_name,True,34827,34827,Indri indri,species,,Mammalia,Primates,Indriidae,Indri
+Rhesus macaque (Macaca mulatta),Macaca mulatta,parenthetical_scientific_name,True,9544,9544,Macaca mulatta,species,,Mammalia,Primates,Cercopithecidae,Macaca
+Japanese macaque (Macaca fuscata),Macaca fuscata,parenthetical_scientific_name,True,9542,9542,Macaca fuscata,species,,Mammalia,Primates,Cercopithecidae,Macaca
+Vervet monkey (Chlorocebus pygerythrus),Chlorocebus pygerythrus,parenthetical_scientific_name,True,60710,60710,Chlorocebus pygerythrus,species,,Mammalia,Primates,Cercopithecidae,Chlorocebus
+Campbell's monkey (Cercopithecus campbelli),Cercopithecus campbelli,parenthetical_scientific_name,True,303588,303588,Cercopithecus campbelli,species,,Mammalia,Primates,Cercopithecidae,Cercopithecus
+Olive baboon (Papio anubis),Papio anubis,parenthetical_scientific_name,True,9555,9555,Papio anubis,species,,Mammalia,Primates,Cercopithecidae,Papio
+Yellow baboon (Papio cynocephalus),Papio cynocephalus,parenthetical_scientific_name,True,9556,9556,Papio cynocephalus,species,,Mammalia,Primates,Cercopithecidae,Papio
+Ring-tailed lemur (Lemur catta),Lemur catta,parenthetical_scientific_name,True,9447,9447,Lemur catta,species,,Mammalia,Primates,Lemuridae,Lemur
+Mouse lemurs (Microcebus spp.),Microcebus,manual_composite_override,True,13149,13149,Microcebus,genus,,Mammalia,Primates,Cheirogaleidae,Microcebus
+Tufted capuchin (Sapajus apella),Sapajus apella,parenthetical_scientific_name,True,9515,9515,Sapajus apella,species,,Mammalia,Primates,Cebidae,Sapajus
+Common marmoset (Callithrix jacchus),Callithrix jacchus,parenthetical_scientific_name,True,9483,9483,Callithrix jacchus,species,,Mammalia,Primates,Callitrichidae,Callithrix
+Howler monkey (Alouatta spp.),Alouatta,manual_composite_override,True,9499,9499,Alouatta,genus,,Mammalia,Primates,Atelidae,Alouatta
+Diana monkey (Cercopithecus diana),Cercopithecus diana,parenthetical_scientific_name,True,36224,36224,Cercopithecus diana,species,,Mammalia,Primates,Cercopithecidae,Cercopithecus
+Putty-nosed monkey (Cercopithecus nictitans),Cercopithecus nictitans,parenthetical_scientific_name,True,36228,36228,Cercopithecus nictitans,species,,Mammalia,Primates,Cercopithecidae,Cercopithecus
+Red-tailed monkey (Cercopithecus ascanius),Cercopithecus ascanius,parenthetical_scientific_name,True,36223,36223,Cercopithecus ascanius,species,,Mammalia,Primates,Cercopithecidae,Cercopithecus
+De Brazza’s monkey (Cercopithecus neglectus),Cercopithecus neglectus,parenthetical_scientific_name,True,36227,36227,Cercopithecus neglectus,species,,Mammalia,Primates,Cercopithecidae,Cercopithecus
+L’Hoest’s monkey (Allochrocebus lhoesti),Allochrocebus lhoesti,parenthetical_scientific_name,True,100224,100224,Allochrocebus lhoesti,species,,Mammalia,Primates,Cercopithecidae,Allochrocebus
+Patas monkey (Erythrocebus patas),Erythrocebus patas,parenthetical_scientific_name,True,9538,9538,Erythrocebus patas,species,,Mammalia,Primates,Cercopithecidae,Erythrocebus
+Talapoin monkey (Miopithecus talapoin),Miopithecus talapoin,parenthetical_scientific_name,True,36231,36231,Miopithecus talapoin,species,,Mammalia,Primates,Cercopithecidae,Miopithecus
+Gelada (Theropithecus gelada),Theropithecus gelada,parenthetical_scientific_name,True,9565,9565,Theropithecus gelada,species,,Mammalia,Primates,Cercopithecidae,Theropithecus
+Crowned monkey / Crowned guenon (Cercopithecus pogonias),Cercopithecus pogonias,parenthetical_scientific_name,True,102108,102108,Cercopithecus pogonias,species,,Mammalia,Primates,Cercopithecidae,Cercopithecus
+Mona monkey (Cercopithecus mona),Cercopithecus mona,parenthetical_scientific_name,True,36226,36226,Cercopithecus mona,species,,Mammalia,Primates,Cercopithecidae,Cercopithecus
+Chacma baboon (Papio ursinus),Papio ursinus,parenthetical_scientific_name,True,36229,36229,Papio ursinus,species,,Mammalia,Primates,Cercopithecidae,Papio
+Zebra finch (Taeniopygia guttata),Taeniopygia guttata,parenthetical_scientific_name,True,59729,59729,Taeniopygia guttata,species,,Aves,Passeriformes,Estrildidae,Taeniopygia

@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 303588,
+  "taxon_b_id": 36227,
+  "scientific_name_a": "Cercopithecus campbelli",
+  "scientific_name_b": "Cercopithecus neglectus",
+  "all_total": 5,
+  "precomputed_age": 8.61071,
+  "precomputed_ci_low": 7.0046,
+  "precomputed_ci_high": 11.448,
+  "adjusted_age": 6.66127
+}

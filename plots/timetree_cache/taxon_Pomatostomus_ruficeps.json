@@ -1,0 +1,18 @@
+{
+  "taxon_id": 9176,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Pomatostomus ruficeps",
+  "scientific_name": "Pomatostomus ruficeps",
+  "taxonomic_rank": "species",
+  "study_times": [],
+  "studies": [],
+  "is_leaf": null,
+  "ncbi_id": 9176,
+  "rank": {
+    "this": {
+      "name": "species",
+      "prettyName": "species"
+    }
+  },
+  "isLeaf": true
+}

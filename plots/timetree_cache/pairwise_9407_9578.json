@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9407,
+  "taxon_b_id": 9578,
+  "scientific_name_a": "Rousettus aegyptiacus",
+  "scientific_name_b": "Hylobates",
+  "all_total": 63,
+  "precomputed_age": 94,
+  "precomputed_ci_low": 91.5,
+  "precomputed_ci_high": 97.4,
+  "adjusted_age": 0
+}

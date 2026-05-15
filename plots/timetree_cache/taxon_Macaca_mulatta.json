@@ -1,0 +1,104 @@
+{
+  "taxon_id": 9544,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Macaca mulatta",
+  "scientific_name": "Macaca mulatta",
+  "taxonomic_rank": "species",
+  "study_times": [
+    {
+      "f_time_estimate": "1.32596",
+      "0": "1.32596"
+    }
+  ],
+  "studies": [
+    {}
+  ],
+  "is_leaf": null,
+  "ncbi_id": 9544,
+  "rank": {
+    "this": {
+      "name": "species",
+      "prettyName": "species"
+    },
+    "lessSpecific": [
+      {
+        "name": "superkingdom"
+      },
+      {
+        "name": "kingdom"
+      },
+      {
+        "name": "subkingdom"
+      },
+      {
+        "name": "superphylum"
+      },
+      {
+        "name": "phylum"
+      },
+      {
+        "name": "subphylum"
+      },
+      {
+        "name": "superclass"
+      },
+      {
+        "name": "class"
+      },
+      {
+        "name": "subclass"
+      },
+      {
+        "name": "infraclass"
+      },
+      {
+        "name": "superorder"
+      },
+      {
+        "name": "order"
+      },
+      {
+        "name": "suborder"
+      },
+      {
+        "name": "infraorder"
+      },
+      {
+        "name": "parvorder"
+      },
+      {
+        "name": "superfamily"
+      },
+      {
+        "name": "family"
+      },
+      {
+        "name": "subfamily"
+      },
+      {
+        "name": "tribe"
+      },
+      {
+        "name": "subtribe"
+      },
+      {
+        "name": "genus"
+      },
+      {
+        "name": "subgenus"
+      },
+      {
+        "name": "species_group"
+      },
+      {
+        "name": "species_subgroup"
+      }
+    ],
+    "moreSpecific": [
+      {
+        "name": "subspecies"
+      }
+    ]
+  },
+  "isLeaf": false
+}

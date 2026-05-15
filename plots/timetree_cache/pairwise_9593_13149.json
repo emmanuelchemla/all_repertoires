@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9593,
+  "taxon_b_id": 13149,
+  "scientific_name_a": "Gorilla gorilla",
+  "scientific_name_b": "Microcebus",
+  "all_total": 50,
+  "precomputed_age": 73.75492,
+  "precomputed_ci_low": 71.4,
+  "precomputed_ci_high": 77.5,
+  "adjusted_age": 0
+}

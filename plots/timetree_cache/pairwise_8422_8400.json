@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 8422,
+  "taxon_b_id": 8400,
+  "scientific_name_a": "Dryophytes cinereus",
+  "scientific_name_b": "Aquarana catesbeiana",
+  "all_total": 26,
+  "precomputed_age": 150.01515,
+  "precomputed_ci_low": 134.147,
+  "precomputed_ci_high": 160.0088,
+  "adjusted_age": 149.09458
+}

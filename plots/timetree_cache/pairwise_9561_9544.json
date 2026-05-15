@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9561,
+  "taxon_b_id": 9544,
+  "scientific_name_a": "Mandrillus sphinx",
+  "scientific_name_b": "Macaca mulatta",
+  "all_total": 42,
+  "precomputed_age": 10.454,
+  "precomputed_ci_low": 8.78921,
+  "precomputed_ci_high": 11.05064,
+  "adjusted_age": 0
+}

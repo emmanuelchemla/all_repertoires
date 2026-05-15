@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9597,
+  "taxon_b_id": 36226,
+  "scientific_name_a": "Pan paniscus",
+  "scientific_name_b": "Cercopithecus mona",
+  "all_total": 83,
+  "precomputed_age": 28.82,
+  "precomputed_ci_low": 26.8,
+  "precomputed_ci_high": 30.6,
+  "adjusted_age": 0
+}

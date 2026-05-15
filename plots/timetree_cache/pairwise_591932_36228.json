@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 591932,
+  "taxon_b_id": 36228,
+  "scientific_name_a": "Piliocolobus",
+  "scientific_name_b": "Cercopithecus nictitans",
+  "all_total": 29,
+  "precomputed_age": 17.755,
+  "precomputed_ci_low": 15.5,
+  "precomputed_ci_high": 19.8,
+  "adjusted_age": 17.755
+}

@@ -38,6 +38,5 @@ dist/
 *.egg-info/
 
 # Project outputs
-plots/
 .embedding_cache.json
 human_bursts/

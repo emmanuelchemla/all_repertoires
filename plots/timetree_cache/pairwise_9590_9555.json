@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9590,
+  "taxon_b_id": 9555,
+  "scientific_name_a": "Symphalangus syndactylus",
+  "scientific_name_b": "Papio anubis",
+  "all_total": 83,
+  "precomputed_age": 28.82,
+  "precomputed_ci_low": 26.8,
+  "precomputed_ci_high": 30.6,
+  "adjusted_age": 0
+}

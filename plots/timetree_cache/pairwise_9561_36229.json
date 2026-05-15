@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9561,
+  "taxon_b_id": 36229,
+  "scientific_name_a": "Mandrillus sphinx",
+  "scientific_name_b": "Papio ursinus",
+  "all_total": 11,
+  "precomputed_age": 7.5,
+  "precomputed_ci_low": 6.1,
+  "precomputed_ci_high": 11.737,
+  "adjusted_age": 0
+}

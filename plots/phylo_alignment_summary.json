@@ -1,0 +1,68 @@
+{
+  "n_species_pairs": 1485,
+  "n_species": 55,
+  "divergence_source_counts": {
+    "TimeTree API pairwise summaryjson": 1478,
+    "coarse_taxonomic_heuristic": 7
+  },
+  "pearson_log10_mya_vs_fisher_z": {
+    "r": -0.44612059536699633,
+    "p": 1.5838103739999722e-73
+  },
+  "spearman_mya_vs_alignment_r": {
+    "rho": -0.44215821971300556,
+    "p": 4.1260134109045874e-72
+  },
+  "species_label_matrix_permutation_p": 0.0001,
+  "weighted_linear_model": {
+    "formula": "alignment_fisher_z ~ log10_divergence_mya",
+    "slope": -0.21818609536433273,
+    "slope_p": 4.791694332975357e-62,
+    "r2": 0.17004000339341563,
+    "aic": 576.9388022964149
+  },
+  "weighted_linear_model_with_pair_class": {
+    "formula": "alignment_fisher_z ~ log10_divergence_mya + C(pair_class)",
+    "slope": -0.268493315506428,
+    "slope_p": 6.233411294095087e-34,
+    "r2": 0.1886927263104322,
+    "aic": 549.1838049642165
+  },
+  "by_relation": [
+    {
+      "relation": "same_genus",
+      "n_pairs_of_species": 28,
+      "median_alignment_r": 0.5421035385647632,
+      "mean_alignment_r": 0.5089002487458448,
+      "median_divergence_mya": 5.3208625000000005
+    },
+    {
+      "relation": "same_family",
+      "n_pairs_of_species": 217,
+      "median_alignment_r": 0.5095345168387729,
+      "mean_alignment_r": 0.4762425553321071,
+      "median_divergence_mya": 12.32716
+    },
+    {
+      "relation": "same_order",
+      "n_pairs_of_species": 423,
+      "median_alignment_r": 0.31827146555530883,
+      "mean_alignment_r": 0.29965127750887494,
+      "median_divergence_mya": 42.9
+    },
+    {
+      "relation": "same_class",
+      "n_pairs_of_species": 235,
+      "median_alignment_r": 0.11055757705297412,
+      "mean_alignment_r": 0.14475945031543774,
+      "median_divergence_mya": 94.0
+    },
+    {
+      "relation": "cross_class",
+      "n_pairs_of_species": 582,
+      "median_alignment_r": 0.11457799676011858,
+      "mean_alignment_r": 0.10242351278267883,
+      "median_divergence_mya": 318.95
+    }
+  ]
+}

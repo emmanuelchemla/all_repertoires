@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9597,
+  "taxon_b_id": 9600,
+  "scientific_name_a": "Pan paniscus",
+  "scientific_name_b": "Pongo pygmaeus",
+  "all_total": 72,
+  "precomputed_age": 15.2,
+  "precomputed_ci_low": 14.5,
+  "precomputed_ci_high": 16.3,
+  "adjusted_age": 0
+}

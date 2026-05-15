@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9556,
+  "taxon_b_id": 36229,
+  "scientific_name_a": "Papio cynocephalus",
+  "scientific_name_b": "Papio ursinus",
+  "all_total": 4,
+  "precomputed_age": 1.277215,
+  "precomputed_ci_low": 0.7104,
+  "precomputed_ci_high": 1.91,
+  "adjusted_age": 1.27722
+}

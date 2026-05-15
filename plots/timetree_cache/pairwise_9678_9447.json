@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9678,
+  "taxon_b_id": 9447,
+  "scientific_name_a": "Crocuta crocuta",
+  "scientific_name_b": "Lemur catta",
+  "all_total": 63,
+  "precomputed_age": 94,
+  "precomputed_ci_low": 91.5,
+  "precomputed_ci_high": 97.4,
+  "adjusted_age": 0
+}

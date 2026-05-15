@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9515,
+  "taxon_b_id": 9483,
+  "scientific_name_a": "Sapajus apella",
+  "scientific_name_b": "Callithrix jacchus",
+  "all_total": 26,
+  "precomputed_age": 17.88348,
+  "precomputed_ci_low": 17.1,
+  "precomputed_ci_high": 19.10146,
+  "adjusted_age": 0
+}

@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 40157,
+  "taxon_b_id": 99181,
+  "scientific_name_a": "Lonchura striata domestica",
+  "scientific_name_b": "Plocepasser mahali",
+  "all_total": 5,
+  "precomputed_age": 19.8884,
+  "precomputed_ci_low": 13.6916,
+  "precomputed_ci_high": 33.60349,
+  "adjusted_age": 15.76086
+}

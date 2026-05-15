@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9561,
+  "taxon_b_id": 9568,
+  "scientific_name_a": "Mandrillus sphinx",
+  "scientific_name_b": "Mandrillus leucophaeus",
+  "all_total": 7,
+  "precomputed_age": 2.876,
+  "precomputed_ci_low": 1,
+  "precomputed_ci_high": 3.85168,
+  "adjusted_age": 0
+}

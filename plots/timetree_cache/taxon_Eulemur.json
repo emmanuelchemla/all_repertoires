@@ -1,0 +1,88 @@
+{
+  "taxon_id": 13513,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Eulemur",
+  "scientific_name": "Eulemur",
+  "taxonomic_rank": "genus",
+  "study_times": [],
+  "studies": [],
+  "is_leaf": null,
+  "ncbi_id": 13513,
+  "rank": {
+    "this": {
+      "name": "genus",
+      "prettyName": "genus"
+    },
+    "lessSpecific": [
+      {
+        "name": "superkingdom"
+      },
+      {
+        "name": "kingdom"
+      },
+      {
+        "name": "subkingdom"
+      },
+      {
+        "name": "superphylum"
+      },
+      {
+        "name": "phylum"
+      },
+      {
+        "name": "subphylum"
+      },
+      {
+        "name": "superclass"
+      },
+      {
+        "name": "class"
+      },
+      {
+        "name": "subclass"
+      },
+      {
+        "name": "infraclass"
+      },
+      {
+        "name": "superorder"
+      },
+      {
+        "name": "order"
+      },
+      {
+        "name": "suborder"
+      },
+      {
+        "name": "infraorder"
+      },
+      {
+        "name": "parvorder"
+      },
+      {
+        "name": "superfamily"
+      },
+      {
+        "name": "family"
+      },
+      {
+        "name": "subfamily"
+      },
+      {
+        "name": "tribe"
+      },
+      {
+        "name": "subtribe"
+      }
+    ],
+    "moreSpecific": [
+      {
+        "name": "species"
+      },
+      {
+        "name": "subspecies"
+      }
+    ]
+  },
+  "isLeaf": false
+}

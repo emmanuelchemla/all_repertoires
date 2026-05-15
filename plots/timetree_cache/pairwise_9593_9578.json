@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9593,
+  "taxon_b_id": 9578,
+  "scientific_name_a": "Gorilla gorilla",
+  "scientific_name_b": "Hylobates",
+  "all_total": 64,
+  "precomputed_age": 19.45714,
+  "precomputed_ci_low": 18.8,
+  "precomputed_ci_high": 20.3,
+  "adjusted_age": 0
+}

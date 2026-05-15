@@ -1,0 +1,18 @@
+{
+  "taxon_id": 2724890,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Pheugopedius euophrys",
+  "scientific_name": "Pheugopedius euophrys",
+  "taxonomic_rank": "species",
+  "study_times": [],
+  "studies": [],
+  "is_leaf": null,
+  "ncbi_id": 2724890,
+  "rank": {
+    "this": {
+      "name": "species",
+      "prettyName": "species"
+    }
+  },
+  "isLeaf": true
+}

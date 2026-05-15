@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 88029,
+  "taxon_b_id": 9598,
+  "scientific_name_a": "Semnopithecus",
+  "scientific_name_b": "Pan troglodytes",
+  "all_total": 83,
+  "precomputed_age": 28.82,
+  "precomputed_ci_low": 26.8,
+  "precomputed_ci_high": 30.6,
+  "adjusted_age": 0
+}

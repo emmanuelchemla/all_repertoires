@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 8400,
+  "taxon_b_id": 9544,
+  "scientific_name_a": "Aquarana catesbeiana",
+  "scientific_name_b": "Macaca mulatta",
+  "all_total": 32,
+  "precomputed_age": 351.686545,
+  "precomputed_ci_low": 348.4,
+  "precomputed_ci_high": 355.7,
+  "adjusted_age": 351.68654
+}

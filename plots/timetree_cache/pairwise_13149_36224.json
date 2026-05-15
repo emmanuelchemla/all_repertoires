@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 13149,
+  "taxon_b_id": 36224,
+  "scientific_name_a": "Microcebus",
+  "scientific_name_b": "Cercopithecus diana",
+  "all_total": 50,
+  "precomputed_age": 73.75492,
+  "precomputed_ci_low": 71.4,
+  "precomputed_ci_high": 77.5,
+  "adjusted_age": 0
+}
