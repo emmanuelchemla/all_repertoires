@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 40157,
+  "taxon_b_id": 9172,
+  "scientific_name_a": "Lonchura striata domestica",
+  "scientific_name_b": "Sturnus vulgaris",
+  "all_total": 7,
+  "precomputed_age": 35.99253,
+  "precomputed_ci_low": 21.364678,
+  "precomputed_ci_high": 72,
+  "adjusted_age": 25.22398
+}

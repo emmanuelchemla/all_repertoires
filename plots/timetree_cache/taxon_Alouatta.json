@@ -1,0 +1,115 @@
+{
+  "taxon_id": 9499,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Alouatta",
+  "scientific_name": "Alouatta",
+  "taxonomic_rank": "genus",
+  "study_times": [
+    {
+      "f_time_estimate": "6.8",
+      "0": "6.8"
+    },
+    {
+      "f_time_estimate": "6.03",
+      "0": "6.03"
+    },
+    {
+      "f_time_estimate": "2.86322",
+      "0": "2.86322"
+    },
+    {
+      "f_time_estimate": "4.1218",
+      "0": "4.1218"
+    },
+    {
+      "f_time_estimate": "3.97686",
+      "0": "3.97686"
+    }
+  ],
+  "studies": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "is_leaf": null,
+  "ncbi_id": 9499,
+  "rank": {
+    "this": {
+      "name": "genus",
+      "prettyName": "genus"
+    },
+    "lessSpecific": [
+      {
+        "name": "superkingdom"
+      },
+      {
+        "name": "kingdom"
+      },
+      {
+        "name": "subkingdom"
+      },
+      {
+        "name": "superphylum"
+      },
+      {
+        "name": "phylum"
+      },
+      {
+        "name": "subphylum"
+      },
+      {
+        "name": "superclass"
+      },
+      {
+        "name": "class"
+      },
+      {
+        "name": "subclass"
+      },
+      {
+        "name": "infraclass"
+      },
+      {
+        "name": "superorder"
+      },
+      {
+        "name": "order"
+      },
+      {
+        "name": "suborder"
+      },
+      {
+        "name": "infraorder"
+      },
+      {
+        "name": "parvorder"
+      },
+      {
+        "name": "superfamily"
+      },
+      {
+        "name": "family"
+      },
+      {
+        "name": "subfamily"
+      },
+      {
+        "name": "tribe"
+      },
+      {
+        "name": "subtribe"
+      }
+    ],
+    "moreSpecific": [
+      {
+        "name": "species"
+      },
+      {
+        "name": "subspecies"
+      }
+    ]
+  },
+  "isLeaf": false
+}

@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9565,
+  "taxon_b_id": 36229,
+  "scientific_name_a": "Theropithecus gelada",
+  "scientific_name_b": "Papio ursinus",
+  "all_total": 20,
+  "precomputed_age": 4.52,
+  "precomputed_ci_low": 4,
+  "precomputed_ci_high": 4.83554,
+  "adjusted_age": 0
+}

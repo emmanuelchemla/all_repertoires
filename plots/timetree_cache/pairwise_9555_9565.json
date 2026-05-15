@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9555,
+  "taxon_b_id": 9565,
+  "scientific_name_a": "Papio anubis",
+  "scientific_name_b": "Theropithecus gelada",
+  "all_total": 20,
+  "precomputed_age": 4.52,
+  "precomputed_ci_low": 4,
+  "precomputed_ci_high": 4.83554,
+  "adjusted_age": 0
+}

@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 37032,
+  "taxon_b_id": 9678,
+  "scientific_name_a": "Suricata suricatta",
+  "scientific_name_b": "Crocuta crocuta",
+  "all_total": 9,
+  "precomputed_age": 32.3519,
+  "precomputed_ci_low": 27,
+  "precomputed_ci_high": 38.26,
+  "adjusted_age": 0
+}

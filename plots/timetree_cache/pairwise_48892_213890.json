@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 48892,
+  "taxon_b_id": 213890,
+  "scientific_name_a": "Poecile carolinensis",
+  "scientific_name_b": "Parus minor",
+  "all_total": 3,
+  "precomputed_age": 10.77034,
+  "precomputed_ci_low": 0,
+  "precomputed_ci_high": 12.41,
+  "adjusted_age": 11.23517
+}

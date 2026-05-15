@@ -1,0 +1,18 @@
+{
+  "taxon_id": 299123,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Lonchura striata domestica",
+  "scientific_name": "Lonchura striata domestica",
+  "taxonomic_rank": "subspecies",
+  "study_times": [],
+  "studies": [],
+  "is_leaf": null,
+  "ncbi_id": 299123,
+  "rank": {
+    "this": {
+      "name": "subspecies",
+      "prettyName": "subspecies"
+    }
+  },
+  "isLeaf": true
+}

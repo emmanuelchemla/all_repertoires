@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9593,
+  "taxon_b_id": 499232,
+  "scientific_name_a": "Gorilla gorilla",
+  "scientific_name_b": "Gorilla beringei",
+  "all_total": 6,
+  "precomputed_age": 2.26895,
+  "precomputed_ci_low": 0.68006,
+  "precomputed_ci_high": 5.5,
+  "adjusted_age": 2.26895
+}

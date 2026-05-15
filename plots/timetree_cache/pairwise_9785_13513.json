@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9785,
+  "taxon_b_id": 13513,
+  "scientific_name_a": "Loxodonta africana",
+  "scientific_name_b": "Eulemur",
+  "all_total": 27,
+  "precomputed_age": 99.1887,
+  "precomputed_ci_low": 94.7,
+  "precomputed_ci_high": 101.9,
+  "adjusted_age": 99.1887
+}

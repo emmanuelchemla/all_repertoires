@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9407,
+  "taxon_b_id": 59482,
+  "scientific_name_a": "Rousettus aegyptiacus",
+  "scientific_name_b": "Saccopteryx bilineata",
+  "all_total": 29,
+  "precomputed_age": 62,
+  "precomputed_ci_low": 57.9,
+  "precomputed_ci_high": 64,
+  "adjusted_age": 0
+}

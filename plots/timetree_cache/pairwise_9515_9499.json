@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9515,
+  "taxon_b_id": 9499,
+  "scientific_name_a": "Sapajus apella",
+  "scientific_name_b": "Alouatta",
+  "all_total": 23,
+  "precomputed_age": 19.6,
+  "precomputed_ci_low": 18.1,
+  "precomputed_ci_high": 21.80027,
+  "adjusted_age": 0
+}

@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9593,
+  "taxon_b_id": 100224,
+  "scientific_name_a": "Gorilla gorilla",
+  "scientific_name_b": "Allochrocebus lhoesti",
+  "all_total": 83,
+  "precomputed_age": 28.82,
+  "precomputed_ci_low": 26.8,
+  "precomputed_ci_high": 30.6,
+  "adjusted_age": 0
+}

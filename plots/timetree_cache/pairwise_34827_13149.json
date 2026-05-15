@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 34827,
+  "taxon_b_id": 13149,
+  "scientific_name_a": "Indri indri",
+  "scientific_name_b": "Microcebus",
+  "all_total": 19,
+  "precomputed_age": 35.94,
+  "precomputed_ci_low": 32.37793,
+  "precomputed_ci_high": 37.44,
+  "adjusted_age": 0
+}

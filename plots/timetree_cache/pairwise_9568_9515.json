@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9568,
+  "taxon_b_id": 9515,
+  "scientific_name_a": "Mandrillus leucophaeus",
+  "scientific_name_b": "Sapajus apella",
+  "all_total": 68,
+  "precomputed_age": 42.9,
+  "precomputed_ci_low": 40,
+  "precomputed_ci_high": 44.2,
+  "adjusted_age": 0
+}

@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9590,
+  "taxon_b_id": 9578,
+  "scientific_name_a": "Symphalangus syndactylus",
+  "scientific_name_b": "Hylobates",
+  "all_total": 11,
+  "precomputed_age": 7.409,
+  "precomputed_ci_low": 6.39,
+  "precomputed_ci_high": 8,
+  "adjusted_age": 0
+}

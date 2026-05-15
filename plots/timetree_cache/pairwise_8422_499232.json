@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 8422,
+  "taxon_b_id": 499232,
+  "scientific_name_a": "Dryophytes cinereus",
+  "scientific_name_b": "Gorilla beringei",
+  "all_total": 32,
+  "precomputed_age": 351.686545,
+  "precomputed_ci_low": 348.4,
+  "precomputed_ci_high": 355.7,
+  "adjusted_age": 351.68654
+}

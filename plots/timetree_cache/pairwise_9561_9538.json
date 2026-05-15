@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9561,
+  "taxon_b_id": 9538,
+  "scientific_name_a": "Mandrillus sphinx",
+  "scientific_name_b": "Erythrocebus patas",
+  "all_total": 28,
+  "precomputed_age": 12.32716,
+  "precomputed_ci_low": 11.5,
+  "precomputed_ci_high": 13.0889,
+  "adjusted_age": 0
+}

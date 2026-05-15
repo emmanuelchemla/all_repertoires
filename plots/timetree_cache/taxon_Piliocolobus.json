@@ -1,0 +1,110 @@
+{
+  "taxon_id": 591932,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Piliocolobus",
+  "scientific_name": "Piliocolobus",
+  "taxonomic_rank": "genus",
+  "study_times": [
+    {
+      "f_time_estimate": "3.3273",
+      "0": "3.3273"
+    },
+    {
+      "f_time_estimate": "3.6327",
+      "0": "3.6327"
+    },
+    {
+      "f_time_estimate": "4.35",
+      "0": "4.35"
+    },
+    {
+      "f_time_estimate": "6.4",
+      "0": "6.4"
+    }
+  ],
+  "studies": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "is_leaf": null,
+  "ncbi_id": 591932,
+  "rank": {
+    "this": {
+      "name": "genus",
+      "prettyName": "genus"
+    },
+    "lessSpecific": [
+      {
+        "name": "superkingdom"
+      },
+      {
+        "name": "kingdom"
+      },
+      {
+        "name": "subkingdom"
+      },
+      {
+        "name": "superphylum"
+      },
+      {
+        "name": "phylum"
+      },
+      {
+        "name": "subphylum"
+      },
+      {
+        "name": "superclass"
+      },
+      {
+        "name": "class"
+      },
+      {
+        "name": "subclass"
+      },
+      {
+        "name": "infraclass"
+      },
+      {
+        "name": "superorder"
+      },
+      {
+        "name": "order"
+      },
+      {
+        "name": "suborder"
+      },
+      {
+        "name": "infraorder"
+      },
+      {
+        "name": "parvorder"
+      },
+      {
+        "name": "superfamily"
+      },
+      {
+        "name": "family"
+      },
+      {
+        "name": "subfamily"
+      },
+      {
+        "name": "tribe"
+      },
+      {
+        "name": "subtribe"
+      }
+    ],
+    "moreSpecific": [
+      {
+        "name": "species"
+      },
+      {
+        "name": "subspecies"
+      }
+    ]
+  },
+  "isLeaf": false
+}

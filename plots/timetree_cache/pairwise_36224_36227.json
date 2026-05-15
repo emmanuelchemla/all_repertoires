@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 36224,
+  "taxon_b_id": 36227,
+  "scientific_name_a": "Cercopithecus diana",
+  "scientific_name_b": "Cercopithecus neglectus",
+  "all_total": 4,
+  "precomputed_age": 5.86525,
+  "precomputed_ci_low": 5.2228,
+  "precomputed_ci_high": 8.348,
+  "adjusted_age": 0
+}

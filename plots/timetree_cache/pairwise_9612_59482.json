@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9612,
+  "taxon_b_id": 59482,
+  "scientific_name_a": "Canis lupus",
+  "scientific_name_b": "Saccopteryx bilineata",
+  "all_total": 18,
+  "precomputed_age": 81.026045,
+  "precomputed_ci_low": 68.4,
+  "precomputed_ci_high": 82.6,
+  "adjusted_age": 81.02605
+}

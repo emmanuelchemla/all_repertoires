@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 43469,
+  "taxon_b_id": 76066,
+  "scientific_name_a": "Dendrobatidae",
+  "scientific_name_b": "Engystomops pustulosus",
+  "all_total": 5,
+  "precomputed_age": 64.82355,
+  "precomputed_ci_low": 59.7,
+  "precomputed_ci_high": 130,
+  "adjusted_age": 68.02595
+}

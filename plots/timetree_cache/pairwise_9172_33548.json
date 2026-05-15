@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 9172,
+  "taxon_b_id": 33548,
+  "scientific_name_a": "Sturnus vulgaris",
+  "scientific_name_b": "Colobus guereza",
+  "all_total": 30,
+  "precomputed_age": 318.95,
+  "precomputed_ci_low": 316,
+  "precomputed_ci_high": 322.37,
+  "adjusted_age": 0
+}

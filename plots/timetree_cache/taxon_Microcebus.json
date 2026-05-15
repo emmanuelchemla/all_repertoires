@@ -1,0 +1,132 @@
+{
+  "taxon_id": 13149,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Microcebus",
+  "scientific_name": "Microcebus",
+  "taxonomic_rank": "genus",
+  "study_times": [
+    {
+      "f_time_estimate": "13.1",
+      "0": "13.1"
+    },
+    {
+      "f_time_estimate": "11.71217",
+      "0": "11.71217"
+    },
+    {
+      "f_time_estimate": "9.7",
+      "0": "9.7"
+    },
+    {
+      "f_time_estimate": "8.89998",
+      "0": "8.89998"
+    },
+    {
+      "f_time_estimate": "7.0463",
+      "0": "7.0463"
+    },
+    {
+      "f_time_estimate": "6.80935",
+      "0": "6.80935"
+    },
+    {
+      "f_time_estimate": "10.95581",
+      "0": "10.95581"
+    },
+    {
+      "f_time_estimate": "8.60424",
+      "0": "8.60424"
+    },
+    {
+      "f_time_estimate": "10.402",
+      "0": "10.402"
+    }
+  ],
+  "studies": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "is_leaf": null,
+  "ncbi_id": 13149,
+  "rank": {
+    "this": {
+      "name": "genus",
+      "prettyName": "genus"
+    },
+    "lessSpecific": [
+      {
+        "name": "superkingdom"
+      },
+      {
+        "name": "kingdom"
+      },
+      {
+        "name": "subkingdom"
+      },
+      {
+        "name": "superphylum"
+      },
+      {
+        "name": "phylum"
+      },
+      {
+        "name": "subphylum"
+      },
+      {
+        "name": "superclass"
+      },
+      {
+        "name": "class"
+      },
+      {
+        "name": "subclass"
+      },
+      {
+        "name": "infraclass"
+      },
+      {
+        "name": "superorder"
+      },
+      {
+        "name": "order"
+      },
+      {
+        "name": "suborder"
+      },
+      {
+        "name": "infraorder"
+      },
+      {
+        "name": "parvorder"
+      },
+      {
+        "name": "superfamily"
+      },
+      {
+        "name": "family"
+      },
+      {
+        "name": "subfamily"
+      },
+      {
+        "name": "tribe"
+      },
+      {
+        "name": "subtribe"
+      }
+    ],
+    "moreSpecific": [
+      {
+        "name": "species"
+      }
+    ]
+  },
+  "isLeaf": false
+}

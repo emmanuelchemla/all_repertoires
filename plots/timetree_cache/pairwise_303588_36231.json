@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 303588,
+  "taxon_b_id": 36231,
+  "scientific_name_a": "Cercopithecus campbelli",
+  "scientific_name_b": "Miopithecus talapoin",
+  "all_total": 8,
+  "precomputed_age": 8.859425,
+  "precomputed_ci_low": 7.5516,
+  "precomputed_ci_high": 12.946,
+  "adjusted_age": 8.85942
+}

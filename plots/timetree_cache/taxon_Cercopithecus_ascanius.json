@@ -1,0 +1,104 @@
+{
+  "taxon_id": 36223,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Cercopithecus ascanius",
+  "scientific_name": "Cercopithecus ascanius",
+  "taxonomic_rank": "species",
+  "study_times": [
+    {
+      "f_time_estimate": "0.59291",
+      "0": "0.59291"
+    }
+  ],
+  "studies": [
+    {}
+  ],
+  "is_leaf": null,
+  "ncbi_id": 36223,
+  "rank": {
+    "this": {
+      "name": "species",
+      "prettyName": "species"
+    },
+    "lessSpecific": [
+      {
+        "name": "superkingdom"
+      },
+      {
+        "name": "kingdom"
+      },
+      {
+        "name": "subkingdom"
+      },
+      {
+        "name": "superphylum"
+      },
+      {
+        "name": "phylum"
+      },
+      {
+        "name": "subphylum"
+      },
+      {
+        "name": "superclass"
+      },
+      {
+        "name": "class"
+      },
+      {
+        "name": "subclass"
+      },
+      {
+        "name": "infraclass"
+      },
+      {
+        "name": "superorder"
+      },
+      {
+        "name": "order"
+      },
+      {
+        "name": "suborder"
+      },
+      {
+        "name": "infraorder"
+      },
+      {
+        "name": "parvorder"
+      },
+      {
+        "name": "superfamily"
+      },
+      {
+        "name": "family"
+      },
+      {
+        "name": "subfamily"
+      },
+      {
+        "name": "tribe"
+      },
+      {
+        "name": "subtribe"
+      },
+      {
+        "name": "genus"
+      },
+      {
+        "name": "subgenus"
+      },
+      {
+        "name": "species_group"
+      },
+      {
+        "name": "species_subgroup"
+      }
+    ],
+    "moreSpecific": [
+      {
+        "name": "subspecies"
+      }
+    ]
+  },
+  "isLeaf": false
+}

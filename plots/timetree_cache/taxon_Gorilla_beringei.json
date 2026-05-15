@@ -1,0 +1,93 @@
+{
+  "taxon_id": 499232,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Gorilla beringei",
+  "scientific_name": "Gorilla beringei",
+  "taxonomic_rank": "species",
+  "study_times": [],
+  "studies": [],
+  "is_leaf": null,
+  "ncbi_id": 499232,
+  "rank": {
+    "this": {
+      "name": "species",
+      "prettyName": "species"
+    },
+    "lessSpecific": [
+      {
+        "name": "superkingdom"
+      },
+      {
+        "name": "kingdom"
+      },
+      {
+        "name": "subkingdom"
+      },
+      {
+        "name": "superphylum"
+      },
+      {
+        "name": "phylum"
+      },
+      {
+        "name": "subphylum"
+      },
+      {
+        "name": "superclass"
+      },
+      {
+        "name": "class"
+      },
+      {
+        "name": "subclass"
+      },
+      {
+        "name": "infraclass"
+      },
+      {
+        "name": "superorder"
+      },
+      {
+        "name": "order"
+      },
+      {
+        "name": "suborder"
+      },
+      {
+        "name": "infraorder"
+      },
+      {
+        "name": "parvorder"
+      },
+      {
+        "name": "superfamily"
+      },
+      {
+        "name": "family"
+      },
+      {
+        "name": "subfamily"
+      },
+      {
+        "name": "tribe"
+      },
+      {
+        "name": "subtribe"
+      },
+      {
+        "name": "genus"
+      },
+      {
+        "name": "subgenus"
+      },
+      {
+        "name": "species_group"
+      },
+      {
+        "name": "species_subgroup"
+      }
+    ],
+    "moreSpecific": []
+  },
+  "isLeaf": true
+}

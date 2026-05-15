@@ -1,0 +1,136 @@
+{
+  "taxon_id": 43469,
+  "c_syn_type": "scientific name",
+  "c_syn_name": "Dendrobatidae",
+  "scientific_name": "Dendrobatidae",
+  "taxonomic_rank": "family",
+  "study_times": [
+    {
+      "f_time_estimate": "34.4",
+      "0": "34.4"
+    },
+    {
+      "f_time_estimate": "35.5",
+      "0": "35.5"
+    },
+    {
+      "f_time_estimate": "36.25359",
+      "0": "36.25359"
+    },
+    {
+      "f_time_estimate": "36.8466",
+      "0": "36.8466"
+    },
+    {
+      "f_time_estimate": "37.29388",
+      "0": "37.29388"
+    },
+    {
+      "f_time_estimate": "37.978",
+      "0": "37.978"
+    },
+    {
+      "f_time_estimate": "44.3548",
+      "0": "44.3548"
+    },
+    {
+      "f_time_estimate": "44.7725",
+      "0": "44.7725"
+    },
+    {
+      "f_time_estimate": "46.79",
+      "0": "46.79"
+    },
+    {
+      "f_time_estimate": "55.1894",
+      "0": "55.1894"
+    },
+    {
+      "f_time_estimate": "63.1",
+      "0": "63.1"
+    }
+  ],
+  "studies": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "is_leaf": null,
+  "ncbi_id": 43469,
+  "rank": {
+    "this": {
+      "name": "family",
+      "prettyName": "family"
+    },
+    "lessSpecific": [
+      {
+        "name": "superkingdom"
+      },
+      {
+        "name": "kingdom"
+      },
+      {
+        "name": "subkingdom"
+      },
+      {
+        "name": "superphylum"
+      },
+      {
+        "name": "phylum"
+      },
+      {
+        "name": "subphylum"
+      },
+      {
+        "name": "superclass"
+      },
+      {
+        "name": "class"
+      },
+      {
+        "name": "subclass"
+      },
+      {
+        "name": "infraclass"
+      },
+      {
+        "name": "superorder"
+      },
+      {
+        "name": "order"
+      },
+      {
+        "name": "suborder"
+      },
+      {
+        "name": "infraorder"
+      },
+      {
+        "name": "parvorder"
+      },
+      {
+        "name": "superfamily"
+      }
+    ],
+    "moreSpecific": [
+      {
+        "name": "subfamily"
+      },
+      {
+        "name": "genus"
+      },
+      {
+        "name": "species"
+      }
+    ]
+  },
+  "isLeaf": false
+}

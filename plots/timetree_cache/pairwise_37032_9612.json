@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 37032,
+  "taxon_b_id": 9612,
+  "scientific_name_a": "Suricata suricatta",
+  "scientific_name_b": "Canis lupus",
+  "all_total": 45,
+  "precomputed_age": 55.361635,
+  "precomputed_ci_low": 52.9,
+  "precomputed_ci_high": 57.27,
+  "adjusted_age": 55.36164
+}

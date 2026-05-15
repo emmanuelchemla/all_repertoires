@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 43469,
+  "taxon_b_id": 8422,
+  "scientific_name_a": "Dendrobatidae",
+  "scientific_name_b": "Dryophytes cinereus",
+  "all_total": 15,
+  "precomputed_age": 72.60023,
+  "precomputed_ci_low": 65.4,
+  "precomputed_ci_high": 97,
+  "adjusted_age": 0
+}

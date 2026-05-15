@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 591932,
+  "taxon_b_id": 88029,
+  "scientific_name_a": "Piliocolobus",
+  "scientific_name_b": "Semnopithecus",
+  "all_total": 20,
+  "precomputed_age": 12.78655,
+  "precomputed_ci_low": 10.323,
+  "precomputed_ci_high": 14.12,
+  "adjusted_age": 0
+}

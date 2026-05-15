@@ -1,0 +1,11 @@
+{
+  "taxon_a_id": 36224,
+  "taxon_b_id": 59729,
+  "scientific_name_a": "Cercopithecus diana",
+  "scientific_name_b": "Taeniopygia guttata",
+  "all_total": 30,
+  "precomputed_age": 318.95,
+  "precomputed_ci_low": 316,
+  "precomputed_ci_high": 322.37,
+  "adjusted_age": 0
+}
