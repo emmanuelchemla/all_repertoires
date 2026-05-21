@@ -1,9 +1,9 @@
 {
   "counts": {
-    "selected_species": 55,
+    "selected_species": 58,
     "retrieved_automatically": 13,
     "retrieved_manually": 23,
-    "missing": 19,
+    "missing": 22,
     "scan_or_scan_derived": 14
   },
   "table": [
@@ -125,6 +125,19 @@
       "scan": "No"
     },
     {
+      "species": "Indri indri",
+      "common_name": "Indri",
+      "file_stem": "indri-indri",
+      "reference_id": "maretti_etal_2010",
+      "citation": "Maretti, G., Sorrentino, V., Finomana, A., Gamba, M., & Giacoma, C. (2010). Not just a pretty song: an overview of the vocal repertoire of Indri indri. Journal of Anthropological Sciences, 88, 151-165.",
+      "doi": "",
+      "url": "https://iris.unito.it/handle/2318/70165",
+      "pdf_file": "indri-indri__maretti_etal_2010.pdf",
+      "retrieved": "No",
+      "reason": "Newly promoted inventory paper; automatic/manual PDF retrieval has not yet been run for this source.",
+      "scan": "No"
+    },
+    {
       "species": "Leptonychotes weddellii",
       "common_name": "Weddell seal",
       "file_stem": "leptonychotes-weddellii",
@@ -229,6 +242,19 @@
       "scan": "No"
     },
     {
+      "species": "Saccopteryx bilineata",
+      "common_name": "Greater sac-winged bat",
+      "file_stem": "saccopteryx-bilineata",
+      "reference_id": "behr_helversen_2004",
+      "citation": "Behr O, von Helversen O. 2004. Bat serenades - complex courtship songs of the sac-winged bat (Saccopteryx bilineata). Behavioral Ecology and Sociobiology 56(2): 106-115.",
+      "doi": "10.1007/s00265-004-0768-7",
+      "url": "https://doi.org/10.1007/s00265-004-0768-7",
+      "pdf_file": "saccopteryx-bilineata__behr_helversen_2004.pdf",
+      "retrieved": "No",
+      "reason": "Newly promoted inventory paper; automatic/manual PDF retrieval has not yet been run for this source.",
+      "scan": "No"
+    },
+    {
       "species": "Saguinus oedipus",
       "common_name": "Cotton-top Tamarin",
       "file_stem": "saguinus-oedipus",
@@ -252,6 +278,19 @@
       "pdf_file": "taeniopygia-guttata__zann_1996.pdf",
       "retrieved": "No",
       "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF.",
+      "scan": "No"
+    },
+    {
+      "species": "Urocitellus beldingi",
+      "common_name": "Belding's Ground Squirrel",
+      "file_stem": "urocitellus-beldingi",
+      "reference_id": "robinson_1984",
+      "citation": "Robinson, S. R. (1984). Vocalizations of Belding's ground squirrels. Animal Behaviour, 32, 753-764.",
+      "doi": "10.1016/S0003-3472(84)80151-7",
+      "url": "https://doi.org/10.1016/S0003-3472(84)80151-7",
+      "pdf_file": "urocitellus-beldingi__robinson_1984.pdf",
+      "retrieved": "No",
+      "reason": "Newly promoted inventory paper; automatic/manual PDF retrieval has not yet been run for this source.",
       "scan": "No"
     },
     {
@@ -1412,6 +1451,19 @@
       "scan": "No"
     },
     {
+      "species": "Indri indri",
+      "common_name": "Indri",
+      "file_stem": "indri-indri",
+      "reference_id": "maretti_etal_2010",
+      "citation": "Maretti, G., Sorrentino, V., Finomana, A., Gamba, M., & Giacoma, C. (2010). Not just a pretty song: an overview of the vocal repertoire of Indri indri. Journal of Anthropological Sciences, 88, 151-165.",
+      "doi": "",
+      "url": "https://iris.unito.it/handle/2318/70165",
+      "pdf_file": "indri-indri__maretti_etal_2010.pdf",
+      "retrieved": "No",
+      "reason": "Newly promoted inventory paper; automatic/manual PDF retrieval has not yet been run for this source.",
+      "scan": "No"
+    },
+    {
       "species": "Leptonychotes weddellii",
       "common_name": "Weddell seal",
       "file_stem": "leptonychotes-weddellii",
@@ -1516,6 +1568,19 @@
       "scan": "No"
     },
     {
+      "species": "Saccopteryx bilineata",
+      "common_name": "Greater sac-winged bat",
+      "file_stem": "saccopteryx-bilineata",
+      "reference_id": "behr_helversen_2004",
+      "citation": "Behr O, von Helversen O. 2004. Bat serenades - complex courtship songs of the sac-winged bat (Saccopteryx bilineata). Behavioral Ecology and Sociobiology 56(2): 106-115.",
+      "doi": "10.1007/s00265-004-0768-7",
+      "url": "https://doi.org/10.1007/s00265-004-0768-7",
+      "pdf_file": "saccopteryx-bilineata__behr_helversen_2004.pdf",
+      "retrieved": "No",
+      "reason": "Newly promoted inventory paper; automatic/manual PDF retrieval has not yet been run for this source.",
+      "scan": "No"
+    },
+    {
       "species": "Saguinus oedipus",
       "common_name": "Cotton-top Tamarin",
       "file_stem": "saguinus-oedipus",
@@ -1539,6 +1604,19 @@
       "pdf_file": "taeniopygia-guttata__zann_1996.pdf",
       "retrieved": "No",
       "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF.",
+      "scan": "No"
+    },
+    {
+      "species": "Urocitellus beldingi",
+      "common_name": "Belding's Ground Squirrel",
+      "file_stem": "urocitellus-beldingi",
+      "reference_id": "robinson_1984",
+      "citation": "Robinson, S. R. (1984). Vocalizations of Belding's ground squirrels. Animal Behaviour, 32, 753-764.",
+      "doi": "10.1016/S0003-3472(84)80151-7",
+      "url": "https://doi.org/10.1016/S0003-3472(84)80151-7",
+      "pdf_file": "urocitellus-beldingi__robinson_1984.pdf",
+      "retrieved": "No",
+      "reason": "Newly promoted inventory paper; automatic/manual PDF retrieval has not yet been run for this source.",
       "scan": "No"
     }
   ],

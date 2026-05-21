@@ -1,6 +1,6 @@
 scientific_name: Urocitellus beldingi
 common_name: Belding's Ground Squirrel
-has_full_inventory: false
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata
@@ -11,7 +11,7 @@ taxonomy:
   species: beldingi
 primary_inventory:
   id: robinson_1984
-  rationale: Robinson 1984 is used as the primary inventory because it explicitly treats the vocalizations of wild Belding's ground squirrels and distinguishes the main alarm-call classes used in later functional studies.
+  rationale: Robinson 1984 is used as the primary_inventory spine because it is a peer-reviewed field study explicitly titled around the vocalizations of wild Belding's ground squirrels, uses sonagrams and acoustic measurements, and distinguishes the main trill, chirp/whistle, and distress-like vocal classes across predator, post-copulatory, and agonistic contexts. Later alarm-call studies refine the best-studied predator contexts, but Robinson 1984 is broad enough to pass the full-inventory subset threshold.
 calls:
   - name: trill
     alternative_names: [churr, multiple-note alarm call]
