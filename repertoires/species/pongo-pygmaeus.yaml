@@ -1,5 +1,6 @@
 scientific_name: Pongo pygmaeus
 common_name: Bornean Orangutan
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

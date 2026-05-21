@@ -1,5 +1,6 @@
 scientific_name: Mungos mungo
 common_name: Banded Mongoose
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

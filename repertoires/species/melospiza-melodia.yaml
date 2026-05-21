@@ -1,5 +1,6 @@
 scientific_name: Melospiza melodia
 common_name: Song Sparrow
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

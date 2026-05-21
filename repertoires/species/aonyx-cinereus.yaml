@@ -1,5 +1,6 @@
 scientific_name: Aonyx cinereus
 common_name: Asian Small-clawed Otter
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

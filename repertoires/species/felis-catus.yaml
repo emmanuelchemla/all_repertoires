@@ -1,5 +1,6 @@
 scientific_name: Felis catus
 common_name: Domestic Cat
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

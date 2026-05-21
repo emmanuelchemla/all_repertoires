@@ -1,5 +1,6 @@
 scientific_name: Corvus brachyrhynchos
 common_name: American Crow
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

@@ -1,5 +1,6 @@
 scientific_name: Corvus corax
 common_name: Common raven
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

@@ -1,5 +1,6 @@
 scientific_name: Varecia variegata
 common_name: Black-and-white ruffed lemur
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

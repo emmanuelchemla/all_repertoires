@@ -1,5 +1,6 @@
 scientific_name: Saccopteryx bilineata
 common_name: Greater sac-winged bat
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

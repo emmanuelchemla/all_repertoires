@@ -1,5 +1,6 @@
 scientific_name: Rattus norvegicus
 common_name: Brown Rat
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

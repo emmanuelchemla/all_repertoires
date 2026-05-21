@@ -1,5 +1,6 @@
 scientific_name: Crocuta crocuta
 common_name: Spotted hyena
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

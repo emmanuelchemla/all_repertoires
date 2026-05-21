@@ -1,5 +1,6 @@
 scientific_name: Phyllostomus hastatus
 common_name: Greater spear-nosed bat
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

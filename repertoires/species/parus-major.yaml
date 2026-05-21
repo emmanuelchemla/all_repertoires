@@ -1,5 +1,6 @@
 scientific_name: Parus major
 common_name: Great Tit
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

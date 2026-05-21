@@ -1,5 +1,6 @@
 scientific_name: Pelophylax ridibundus
 common_name: Marsh Frog
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

@@ -1,5 +1,6 @@
 scientific_name: Colobus guereza
 common_name: Mantled guereza
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

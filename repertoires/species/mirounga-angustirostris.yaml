@@ -1,5 +1,6 @@
 scientific_name: Mirounga angustirostris
 common_name: Northern Elephant Seal
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

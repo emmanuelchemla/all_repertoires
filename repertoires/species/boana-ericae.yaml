@@ -1,5 +1,6 @@
 scientific_name: Boana ericae
 common_name: Erica's treefrog
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

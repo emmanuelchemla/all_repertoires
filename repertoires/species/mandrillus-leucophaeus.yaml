@@ -1,5 +1,6 @@
 scientific_name: Mandrillus leucophaeus
 common_name: Drill
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

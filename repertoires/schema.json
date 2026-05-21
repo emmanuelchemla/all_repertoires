@@ -2,11 +2,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "SpeciesRepertoire",
   "type": "object",
-  "required": ["scientific_name", "common_name", "taxonomy", "primary_inventory", "calls", "references", "provenance"],
+  "required": ["scientific_name", "common_name", "has_full_inventory", "taxonomy", "primary_inventory", "calls", "references", "provenance"],
   "additionalProperties": false,
   "properties": {
     "scientific_name": { "type": "string", "minLength": 3 },
     "common_name": { "type": "string", "minLength": 1 },
+    "has_full_inventory": {
+      "type": "boolean",
+      "description": "True when the primary_inventory source is a satisfactory full or near-full repertoire inventory for high-confidence subset analyses."
+    },
     "taxonomy": { "$ref": "#/$defs/taxonomy" },
     "primary_inventory": { "$ref": "#/$defs/primary_inventory" },
     "calls": {

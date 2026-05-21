@@ -1,5 +1,6 @@
 scientific_name: Cercopithecus pogonias
 common_name: Crowned Guenon
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

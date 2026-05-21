@@ -1,5 +1,6 @@
 scientific_name: Hyla arborea
 common_name: European Tree Frog
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

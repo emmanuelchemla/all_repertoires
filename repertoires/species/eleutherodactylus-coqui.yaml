@@ -1,5 +1,6 @@
 scientific_name: Eleutherodactylus coqui
 common_name: Common Coqui
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

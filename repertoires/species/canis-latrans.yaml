@@ -1,5 +1,6 @@
 scientific_name: Canis latrans
 common_name: Coyote
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

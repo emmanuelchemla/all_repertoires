@@ -1,5 +1,6 @@
 scientific_name: Lonchura striata domestica
 common_name: Bengalese Finch
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

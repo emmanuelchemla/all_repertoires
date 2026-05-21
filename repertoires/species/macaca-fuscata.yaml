@@ -1,5 +1,6 @@
 scientific_name: Macaca fuscata
 common_name: Japanese macaque
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

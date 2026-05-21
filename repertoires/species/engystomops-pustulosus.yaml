@@ -1,5 +1,6 @@
 scientific_name: Engystomops pustulosus
 common_name: Tungara frog
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

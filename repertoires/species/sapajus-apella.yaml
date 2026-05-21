@@ -1,5 +1,6 @@
 scientific_name: Sapajus apella
 common_name: Tufted capuchin
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

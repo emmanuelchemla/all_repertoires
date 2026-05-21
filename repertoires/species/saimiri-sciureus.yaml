@@ -1,5 +1,6 @@
 scientific_name: Saimiri sciureus
 common_name: Common squirrel monkey
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

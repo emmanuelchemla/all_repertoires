@@ -1,5 +1,6 @@
 scientific_name: Spheniscus demersus
 common_name: African penguin
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

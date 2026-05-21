@@ -1,5 +1,6 @@
 scientific_name: Papio ursinus
 common_name: Chacma Baboon
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

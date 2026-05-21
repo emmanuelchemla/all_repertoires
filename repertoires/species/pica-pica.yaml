@@ -1,5 +1,6 @@
 scientific_name: Pica pica
 common_name: Eurasian Magpie
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

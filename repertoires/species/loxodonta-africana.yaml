@@ -1,5 +1,6 @@
 scientific_name: Loxodonta africana
 common_name: African savanna elephant
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

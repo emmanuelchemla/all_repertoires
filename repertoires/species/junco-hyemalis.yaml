@@ -1,5 +1,6 @@
 scientific_name: Junco hyemalis
 common_name: Dark-eyed Junco
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

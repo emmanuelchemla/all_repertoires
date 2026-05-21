@@ -1,5 +1,6 @@
 scientific_name: Mimus polyglottos
 common_name: Northern Mockingbird
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

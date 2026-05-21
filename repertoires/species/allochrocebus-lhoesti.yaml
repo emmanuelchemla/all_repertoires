@@ -1,5 +1,6 @@
 scientific_name: Allochrocebus lhoesti
 common_name: L'Hoest's Monkey
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

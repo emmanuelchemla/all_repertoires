@@ -1,5 +1,6 @@
 scientific_name: Sturnus vulgaris
 common_name: European starling
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

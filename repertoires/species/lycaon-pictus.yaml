@@ -1,5 +1,6 @@
 scientific_name: Lycaon pictus
 common_name: African Wild Dog
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

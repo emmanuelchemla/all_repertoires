@@ -1,5 +1,6 @@
 scientific_name: Cervus elaphus
 common_name: Red Deer
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

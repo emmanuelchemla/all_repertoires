@@ -1,5 +1,6 @@
 scientific_name: Mus musculus
 common_name: House Mouse
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

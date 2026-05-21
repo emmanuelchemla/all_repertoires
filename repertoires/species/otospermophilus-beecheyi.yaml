@@ -1,5 +1,6 @@
 scientific_name: Otospermophilus beecheyi
 common_name: California Ground Squirrel
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

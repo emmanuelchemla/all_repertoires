@@ -1,0 +1,567 @@
+{
+  "retrieved": [
+    {
+      "species": "Canis familiaris",
+      "common_name": "Domestic Dog",
+      "file_stem": "canis-familiaris",
+      "reference_id": "feddersenpetersen_2000",
+      "citation": "Feddersen-Petersen, D. U. (2000). Vocalization of European wolves (Canis lupus lupus L.) and various dog breeds (Canis lupus f. fam.). Archiv fur Tierzucht, 43, 387-397.",
+      "doi": "10.5194/aab-43-387-2000",
+      "url": "https://doi.org/10.5194/aab-43-387-2000",
+      "path": "repertoires/inventory_papers/canis-familiaris__feddersenpetersen_2000.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Globicephala melas",
+      "common_name": "Long-finned Pilot Whale",
+      "file_stem": "globicephala-melas",
+      "reference_id": "courts_etal_2020",
+      "citation": "Courts, R., Erbe, C., Wellard, R., Boisseau, O., Jenner, K. C., Jenner, M.-N., & Parnum, I. (2020). Australian long-finned pilot whales emit stereotypical, variable, biphonic, multi-component, and sequenced vocalisations. Scientific Reports, 10, 20609.",
+      "doi": "10.1038/s41598-020-74111-y",
+      "url": "https://doi.org/10.1038/s41598-020-74111-y",
+      "path": "repertoires/inventory_papers/globicephala-melas__courts_etal_2020.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Hyla cinerea",
+      "common_name": "Green treefrog",
+      "file_stem": "hyla-cinerea",
+      "reference_id": "reichert_hobel_2018",
+      "citation": "Reichert MS, Hobel G. 2018. Phenotypic integration and the evolution of signal repertoires: a case study of treefrog acoustic communication. Ecology and Evolution 8(6): 3410-3429.",
+      "doi": "10.1002/ece3.3927",
+      "url": "https://doi.org/10.1002/ece3.3927",
+      "path": "repertoires/inventory_papers/hyla-cinerea__reichert_hobel_2018.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Orcinus orca",
+      "common_name": "Killer Whale",
+      "file_stem": "orcinus-orca",
+      "reference_id": "ford_1987",
+      "citation": "Ford, J. K. B. (1987). A catalogue of underwater calls produced by killer whales (Orcinus orca) in British Columbia. Canadian Data Report of Fisheries and Aquatic Sciences 633.",
+      "doi": "",
+      "url": "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf",
+      "path": "repertoires/inventory_papers/orcinus-orca__ford_1987.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Pan paniscus",
+      "common_name": "Bonobo",
+      "file_stem": "pan-paniscus",
+      "reference_id": "wegdell_etal_2025",
+      "citation": "Wegdell F, Schamberg I, Berthet M, Rothacher Y, Dellwo V, Surbeck M, Townsend SW. 2025. An updated vocal repertoire of wild adult bonobos (Pan paniscus). PLoS One 20(9): e0330250.",
+      "doi": "10.1371/journal.pone.0330250",
+      "url": "https://doi.org/10.1371/journal.pone.0330250",
+      "path": "repertoires/inventory_papers/pan-paniscus__wegdell_etal_2025.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Pan troglodytes",
+      "common_name": "Chimpanzee",
+      "file_stem": "pan-troglodytes",
+      "reference_id": "girardbuttoz_etal_2022",
+      "citation": "Girard-Buttoz C, Zaccarella E, Bortolato T, Friederici AD, Wittig RM, Crockford C. 2022. Chimpanzees produce diverse vocal sequences with ordered and recombinatorial properties. Communications Biology 5: 410.",
+      "doi": "10.1038/s42003-022-03350-8",
+      "url": "https://doi.org/10.1038/s42003-022-03350-8",
+      "path": "repertoires/inventory_papers/pan-troglodytes__girardbuttoz_etal_2022.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Panthera leo",
+      "common_name": "Lion",
+      "file_stem": "panthera-leo",
+      "reference_id": "rudnai_1973",
+      "citation": "Rudnai, J. A. (1973). The Social Life of the Lion: A Study of the Behaviour of Wild Lions (Panthera leo massaica [Newmann]) in the Nairobi National Park, Kenya. Medical and Technical Publishing.",
+      "doi": "10.1007/978-94-011-7140-3",
+      "url": "https://link.springer.com/book/10.1007/978-94-011-7140-3",
+      "path": "repertoires/inventory_papers/panthera-leo__rudnai_1973.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Poecile carolinensis",
+      "common_name": "Carolina chickadee",
+      "file_stem": "poecile-carolinensis",
+      "reference_id": "smith_1972",
+      "citation": "Smith, S. T. (1972). Communication and other social behavior in Parus carolinensis. Publications of the Nuttall Ornithological Club, 11, 1-125.",
+      "doi": "",
+      "url": "https://archive.org/details/communicationoth00smit",
+      "path": "repertoires/inventory_papers/poecile-carolinensis__smith_1972.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Rousettus aegyptiacus",
+      "common_name": "Egyptian fruit bat",
+      "file_stem": "rousettus-aegyptiacus",
+      "reference_id": "prat_etal_2016",
+      "citation": "Prat Y, Taub M, Yovel Y. 2016. Everyday bat vocalizations contain information about emitter, addressee, context, and behavior. Scientific Reports 6: 39419.",
+      "doi": "10.1038/srep39419",
+      "url": "https://doi.org/10.1038/srep39419",
+      "path": "repertoires/inventory_papers/rousettus-aegyptiacus__prat_etal_2016.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Spheniscus demersus",
+      "common_name": "African penguin",
+      "file_stem": "spheniscus-demersus",
+      "reference_id": "favaro_etal_2014",
+      "citation": "Favaro L, Ozella L, Pessani D. 2014. The vocal repertoire of the African Penguin (Spheniscus demersus): structure and function of calls. PLoS ONE 9(7): e103460.",
+      "doi": "10.1371/journal.pone.0103460",
+      "url": "https://doi.org/10.1371/journal.pone.0103460",
+      "path": "repertoires/inventory_papers/spheniscus-demersus__favaro_etal_2014.pdf",
+      "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Tursiops truncatus",
+      "common_name": "Common bottlenose dolphin",
+      "file_stem": "tursiops-truncatus",
+      "reference_id": "luis_etal_2021",
+      "citation": "Luis, A. R., May-Collado, L. J., Rako-Gospic, N., Gridley, T., Papale, E., Azevedo, A., Silva, M. A., Buscaino, G., Herzing, D., and dos Santos, M. E. (2021). Vocal universals and geographic variations in the acoustic repertoire of the common bottlenose dolphin. Scientific Reports, 11, 11847.",
+      "doi": "10.1038/s41598-021-90710-9",
+      "url": "https://doi.org/10.1038/s41598-021-90710-9",
+      "path": "repertoires/inventory_papers/tursiops-truncatus__luis_etal_2021.pdf",
+      "source": "verified accessible PDF retrieved"
+    }
+  ],
+  "manual": [
+    {
+      "species": "Agalychnis spurrelli",
+      "common_name": "Gliding treefrog",
+      "file_stem": "agalychnis-spurrelli",
+      "reference_id": "cossio_medina_barcenas_2020",
+      "citation": "Cossio R, Medina-Barcenas E. 2020. Acoustic repertoire and calling behavior of the gliding treefrog, Agalychnis spurrelli (Anura: Hylidae). South American Journal of Herpetology 17: 71-78.",
+      "doi": "10.2994/SAJH-D-18-00040.1",
+      "url": "https://doi.org/10.2994/SAJH-D-18-00040.1",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Alouatta palliata",
+      "common_name": "Mantled Howler Monkey",
+      "file_stem": "alouatta-palliata",
+      "reference_id": "baldwin_baldwin_1976",
+      "citation": "Baldwin, J. D., & Baldwin, J. I. (1976). Vocalizations of howler monkeys (Alouatta palliata) in southwestern Panama. Folia Primatologica, 26, 81-108.",
+      "doi": "10.1159/000155744",
+      "url": "https://doi.org/10.1159/000155744",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Aonyx cinereus",
+      "common_name": "Asian Small-clawed Otter",
+      "file_stem": "aonyx-cinereus",
+      "reference_id": "lemasson_etal_2013",
+      "citation": "Lemasson, A., Mikus, M.-A., Blois-Heulin, C., & Lode, T. (2013). Vocal repertoire, individual acoustic distinctiveness, and social networks in a group of Asian small-clawed otters. Naturwissenschaften, 100, 275-279.",
+      "doi": "10.1007/s00114-013-1015-7",
+      "url": "https://doi.org/10.1007/s00114-013-1015-7",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Boana ericae",
+      "common_name": "Erica's treefrog",
+      "file_stem": "boana-ericae",
+      "reference_id": "andreani_etal_2022",
+      "citation": "Andreani TL, Oliveira SR, Caramaschi U, Bastos RP, Morais AR. 2022. Vocal repertoire and acoustic variation in a treefrog (Boana ericae) (Amphibia, Anura, Hylidae) endemic to the Chapada dos Veadeiros, Central Brazil. Studies on Neotropical Fauna and Environment 59: 339-348.",
+      "doi": "10.1080/01650521.2022.2133410",
+      "url": "https://doi.org/10.1080/01650521.2022.2133410",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Callithrix jacchus",
+      "common_name": "Common marmoset",
+      "file_stem": "callithrix-jacchus",
+      "reference_id": "bezerra_souto_2008",
+      "citation": "Bezerra BM, Souto A. 2008. Structure and usage of the vocal repertoire of Callithrix jacchus. International Journal of Primatology 29(3): 671-701.",
+      "doi": "10.1007/s10764-008-9250-0",
+      "url": "https://doi.org/10.1007/s10764-008-9250-0",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Canis latrans",
+      "common_name": "Coyote",
+      "file_stem": "canis-latrans",
+      "reference_id": "lehner_1978",
+      "citation": "Lehner, P. N. (1978). Coyote vocalizations: a lexicon and comparisons with other canids. Animal Behaviour, 26, 712-722.",
+      "doi": "10.1016/S0003-3472(78)80076-8",
+      "url": "https://doi.org/10.1016/S0003-3472(78)80076-8",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Canis lupus",
+      "common_name": "Gray wolf",
+      "file_stem": "canis-lupus",
+      "reference_id": "schassburger_1993",
+      "citation": "Schassburger RM. 1993. Vocal communication in the timber wolf, Canis lupus, Linnaeus: structure, motivation, and ontogeny. Advances in Ethology 30. Berlin: Paul Parey Scientific Publishers.",
+      "doi": "",
+      "url": "https://library.wur.nl/WebQuery/titel/578119",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Cebus capucinus",
+      "common_name": "White-faced capuchin",
+      "file_stem": "cebus-capucinus",
+      "reference_id": "groslouis_etal_2008",
+      "citation": "Gros-Louis, J. J., Perry, S. E., Fichtel, C., Wikberg, E., Gilkenson, H., Wofsy, S., & Fuentes, A. (2008). Vocal Repertoire of Cebus capucinus: Acoustic Structure, Context, and Usage. International Journal of Primatology, 29, 641-670.",
+      "doi": "10.1007/s10764-008-9263-8",
+      "url": "https://doi.org/10.1007/s10764-008-9263-8",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Cercopithecus diana",
+      "common_name": "Diana monkey",
+      "file_stem": "cercopithecus-diana",
+      "reference_id": "coye_etal_2022",
+      "citation": "Coye, C., Zuberbuhler, K., and Lemasson, A. 2022. The evolution of vocal communication: inertia and divergence in two closely related primates. International Journal of Primatology 43:712-732.",
+      "doi": "10.1007/s10764-022-00294-y",
+      "url": "https://doi.org/10.1007/s10764-022-00294-y",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Chlorocebus pygerythrus",
+      "common_name": "Vervet monkey",
+      "file_stem": "chlorocebus-pygerythrus",
+      "reference_id": "struhsaker_1967",
+      "citation": "Struhsaker TT. 1967. Auditory communication among vervet monkeys (Cercopithecus aethiops). In: Altmann SA, editor. Social Communication among Primates. Chicago: University of Chicago Press. p. 281-324.",
+      "doi": "",
+      "url": "https://scholars.duke.edu/publication/1562008",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Colobus guereza",
+      "common_name": "Mantled guereza",
+      "file_stem": "colobus-guereza",
+      "reference_id": "marler_1972",
+      "citation": "Marler P. 1972. Vocalizations of East African monkeys II: black and white colobus. Behaviour 42(3-4): 175-197.",
+      "doi": "10.1163/156853972X00248",
+      "url": "https://brill.com/view/journals/beh/42/3-4/article-p175_1.xml",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Corvus corax",
+      "common_name": "Common raven",
+      "file_stem": "corvus-corax",
+      "reference_id": "conner_1985",
+      "citation": "Conner, R. N. 1985. Vocalizations of Common Ravens in Virginia. The Condor 87:379-388.",
+      "doi": "10.2307/1367219",
+      "url": "https://digitalcommons.usf.edu/condor/vol87/iss3/11",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Crocuta crocuta",
+      "common_name": "Spotted hyena",
+      "file_stem": "crocuta-crocuta",
+      "reference_id": "kruuk_1972",
+      "citation": "Kruuk H. 1972. The Spotted Hyena: A Study of Predation and Social Behavior. Chicago: University of Chicago Press.",
+      "doi": "",
+      "url": "https://portals.iucn.org/library/node/18008",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Cynomys ludovicianus",
+      "common_name": "Black-tailed prairie dog",
+      "file_stem": "cynomys-ludovicianus",
+      "reference_id": "smith_etal_1977",
+      "citation": "Smith, W. J., Smith, S. L., Oppenheimer, E. C., and Devilla, J. G. 1977. Vocalizations of the black-tailed prairie dog, Cynomys ludovicianus. Animal Behaviour 25(1):152-164.",
+      "doi": "10.1016/0003-3472(77)90079-7",
+      "url": "https://doi.org/10.1016/0003-3472(77)90079-7",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Delphinapterus leucas",
+      "common_name": "Beluga whale",
+      "file_stem": "delphinapterus-leucas",
+      "reference_id": "sjare_smith_1986",
+      "citation": "Sjare, B. L., & Smith, T. G. (1986). The vocal repertoire of white whales, Delphinapterus leucas, summering in Cunningham Inlet, Northwest Territories. Canadian Journal of Zoology, 64, 407-415.",
+      "doi": "10.1139/z86-063",
+      "url": "https://doi.org/10.1139/z86-063",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Elephas maximus",
+      "common_name": "Asian elephant",
+      "file_stem": "elephas-maximus",
+      "reference_id": "desilva_2010",
+      "citation": "de Silva, S. 2010. Acoustic communication in the Asian elephant, Elephas maximus maximus. Behaviour 147:825-852.",
+      "doi": "10.1163/000579510X495762",
+      "url": "https://doi.org/10.1163/000579510X495762",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Eleutherodactylus coqui",
+      "common_name": "Common Coqui",
+      "file_stem": "eleutherodactylus-coqui",
+      "reference_id": "drewry_rand_1983",
+      "citation": "Drewry, G. E., & Rand, A. S. (1983). Characteristics of an acoustic community: Puerto Rican frogs of the genus Eleutherodactylus. Copeia, 1983, 941-953.",
+      "doi": "10.2307/1445091",
+      "url": "https://doi.org/10.2307/1445091",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Engystomops pustulosus",
+      "common_name": "Tungara frog",
+      "file_stem": "engystomops-pustulosus",
+      "reference_id": "rand_ryan_1981",
+      "citation": "Rand AS, Ryan MJ. 1981. The adaptive significance of a complex vocal repertoire in a Neotropical frog. Zeitschrift fuer Tierpsychologie 57(3-4): 209-214.",
+      "doi": "10.1111/j.1439-0310.1981.tb01923.x",
+      "url": "https://doi.org/10.1111/j.1439-0310.1981.tb01923.x",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Felis catus",
+      "common_name": "Domestic Cat",
+      "file_stem": "felis-catus",
+      "reference_id": "moelk_1944",
+      "citation": "Moelk, M. (1944). Vocalizing in the house-cat; a phonetic and functional study. The American Journal of Psychology, 57, 184-205.",
+      "doi": "10.2307/1416947",
+      "url": "https://doi.org/10.2307/1416947",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Gallus gallus",
+      "common_name": "Red junglefowl",
+      "file_stem": "gallus-gallus",
+      "reference_id": "collias_1987",
+      "citation": "Collias NE. 1987. The vocal repertoire of the red junglefowl: a spectrographic classification and the code of communication. The Condor 89(3): 510-524.",
+      "doi": "10.2307/1368641",
+      "url": "https://doi.org/10.2307/1368641",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Gorilla gorilla",
+      "common_name": "Western Gorilla",
+      "file_stem": "gorilla-gorilla",
+      "reference_id": "salmi_etal_2013",
+      "citation": "Salmi, R., Hammerschmidt, K., & Doran-Sheehy, D. M. (2013). Western gorilla vocal repertoire and contextual use of vocalizations. Ethology, 119(10), 831-847.",
+      "doi": "10.1111/eth.12122",
+      "url": "https://doi.org/10.1111/eth.12122",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Heterocephalus glaber",
+      "common_name": "Naked Mole-rat",
+      "file_stem": "heterocephalus-glaber",
+      "reference_id": "pepper_etal_1991",
+      "citation": "Pepper, J. W., Braude, S. H., Lacey, E. A., & Sherman, P. W. (1991). Vocalizations of the naked mole-rat. In The Biology of the Naked Mole-Rat. Princeton University Press.",
+      "doi": "",
+      "url": "https://doi.org/10.1515/9781400857527.243",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Lemur catta",
+      "common_name": "Ring-tailed lemur",
+      "file_stem": "lemur-catta",
+      "reference_id": "macedonia_1993",
+      "citation": "Macedonia JM. 1993. The vocal repertoire of the ringtailed lemur (Lemur catta). Folia Primatologica 61(4):186-217.",
+      "doi": "10.1159/000156749",
+      "url": "https://doi.org/10.1159/000156749",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Leptonychotes weddellii",
+      "common_name": "Weddell seal",
+      "file_stem": "leptonychotes-weddellii",
+      "reference_id": "thomas_kuechle_1982",
+      "citation": "Thomas, J. A., and Kuechle, V. B. 1982. Quantitative analysis of Weddell seal (Leptonychotes weddellii) underwater vocalizations at McMurdo Sound, Antarctica. Journal of the Acoustical Society of America 72(6):1730-1738.",
+      "doi": "10.1121/1.388667",
+      "url": "https://doi.org/10.1121/1.388667",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Lithobates catesbeianus",
+      "common_name": "American bullfrog",
+      "file_stem": "lithobates-catesbeianus",
+      "reference_id": "capranica_1968",
+      "citation": "Capranica RR. 1968. The vocal repertoire of the bullfrog (Rana catesbeiana). Behaviour 31(3-4): 302-324.",
+      "doi": "10.1163/156853968X00306",
+      "url": "https://doi.org/10.1163/156853968X00306",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Loxodonta africana",
+      "common_name": "African savanna elephant",
+      "file_stem": "loxodonta-africana",
+      "reference_id": "soltis_2010",
+      "citation": "Soltis J. 2010. Vocal communication in African elephants (Loxodonta africana). Zoo Biology 29(2): 192-209.",
+      "doi": "10.1002/zoo.20251",
+      "url": "https://doi.org/10.1002/zoo.20251",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Lycaon pictus",
+      "common_name": "African Wild Dog",
+      "file_stem": "lycaon-pictus",
+      "reference_id": "robbins_mcenery_1983",
+      "citation": "Robbins, R. L., & McCreery, E. K. (1983). Vocal communication in free-ranging African wild dogs (Lycaon pictus). Behaviour, 84, 144-162.",
+      "doi": "10.1163/156853983X00316",
+      "url": "https://doi.org/10.1163/156853983X00316",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Macaca fuscata",
+      "common_name": "Japanese macaque",
+      "file_stem": "macaca-fuscata",
+      "reference_id": "green_1975",
+      "citation": "Green, S. M. (1975). Variation of vocal pattern with social situation in the Japanese monkey (Macaca fuscata): a field study. In L. A. Rosenblum (Ed.), Primate Behavior, Volume 4 (pp. 1-102). Academic Press.",
+      "doi": "10.1016/B978-0-12-534004-5.50006-3",
+      "url": "https://doi.org/10.1016/B978-0-12-534004-5.50006-3",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Macaca mulatta",
+      "common_name": "Rhesus macaque",
+      "file_stem": "macaca-mulatta",
+      "reference_id": "rowell_hinde_1962",
+      "citation": "Rowell, T. E., and Hinde, R. A. 1962. Vocal communication by the rhesus monkey (Macaca mulatta). Proceedings of the Zoological Society of London 138(2):279-294.",
+      "doi": "10.1111/j.1469-7998.1962.tb05698.x",
+      "url": "https://doi.org/10.1111/j.1469-7998.1962.tb05698.x",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Marmota flaviventris",
+      "common_name": "Yellow-bellied marmot",
+      "file_stem": "marmota-flaviventris",
+      "reference_id": "waring_1966",
+      "citation": "Waring, G. H. 1966. Sounds and communications of the yellow-bellied marmot (Marmota flaviventris). Animal Behaviour 14(1):177-183.",
+      "doi": "10.1016/S0003-3472(66)80028-3",
+      "url": "https://doi.org/10.1016/S0003-3472(66)80028-3",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Megaptera novaeangliae",
+      "common_name": "Humpback Whale",
+      "file_stem": "megaptera-novaeangliae",
+      "reference_id": "dunlop_etal_2007",
+      "citation": "Dunlop, R. A., Cato, D. H., & Noad, M. J. (2007). The social vocalization repertoire of east Australian migrating humpback whales (Megaptera novaeangliae). Journal of the Acoustical Society of America, 122, 2893-2905.",
+      "doi": "10.1121/1.2783115",
+      "url": "https://doi.org/10.1121/1.2783115",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Mungos mungo",
+      "common_name": "Banded Mongoose",
+      "file_stem": "mungos-mungo",
+      "reference_id": "manser_etal_2014",
+      "citation": "Manser MB, Jansen DAWAM, Graw B, Hollen LI, Bousquet CAH, Furrer RD, le Roux A. 2014. Vocal complexity in meerkats and other mongoose species. Advances in the Study of Behavior 46: 281-310.",
+      "doi": "10.1016/B978-0-12-800286-5.00006-7",
+      "url": "https://doi.org/10.1016/B978-0-12-800286-5.00006-7",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Papio anubis",
+      "common_name": "Olive baboon",
+      "file_stem": "papio-anubis",
+      "reference_id": "ransom_1981",
+      "citation": "Ransom, T. W. (1981). Beach troop of the Gombe. Lewisburg, PA: Bucknell University Press.",
+      "doi": "",
+      "url": "https://www1.bucknell.edu/script/upress/book.asp?id=2078",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Parus major",
+      "common_name": "Great Tit",
+      "file_stem": "parus-major",
+      "reference_id": "gompertz_1961",
+      "citation": "Gompertz, T. (1961). The vocabulary of the great tit. Behaviour, 17, 193-205.",
+      "doi": "10.1163/156853961X00174",
+      "url": "https://doi.org/10.1163/156853961X00174",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Pica pica",
+      "common_name": "Eurasian Magpie",
+      "file_stem": "pica-pica",
+      "reference_id": "birkhead_1991",
+      "citation": "Birkhead, T. R. 1991. The Magpies: The Ecology and Behaviour of Black-billed and Yellow-billed Magpies. T. & A. D. Poyser, London.",
+      "doi": "",
+      "url": "",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Poecile atricapillus",
+      "common_name": "Black-capped Chickadee",
+      "file_stem": "poecile-atricapillus",
+      "reference_id": "ficken_etal_1978",
+      "citation": "Ficken, M. S., Ficken, R. W., & Witkin, S. R. (1978). Vocal repertoire of the black-capped chickadee. The Auk, 95, 34-48.",
+      "doi": "",
+      "url": "https://sora.unm.edu/node/22808",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Pongo pygmaeus",
+      "common_name": "Bornean Orangutan",
+      "file_stem": "pongo-pygmaeus",
+      "reference_id": "hardus_etal_2009",
+      "citation": "Hardus, M. E., Lameira, A. R. E., Singleton, I., Morrogh-Bernard, H. C., Knott, C. D., Ancrenaz, M., Utami Atmoko, S. S., & Wich, S. A. (2009). A description of the orangutan's vocal and sound repertoire, with a focus on geographic variation. In Orangutans: Geographic Variation in Behavioral Ecology and Conservation. Oxford University Press.",
+      "doi": "10.1093/acprof:oso/9780199213276.003.0004",
+      "url": "https://doi.org/10.1093/acprof:oso/9780199213276.003.0004",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Saguinus oedipus",
+      "common_name": "Cotton-top Tamarin",
+      "file_stem": "saguinus-oedipus",
+      "reference_id": "cleveland_snowdon_1982",
+      "citation": "Cleveland J, Snowdon CT. 1982. The complex vocal repertoire of the adult cotton-top tamarin (Saguinus oedipus oedipus). Zeitschrift fuer Tierpsychologie 58(3): 231-270.",
+      "doi": "10.1111/j.1439-0310.1982.tb01359.x",
+      "url": "https://doi.org/10.1111/j.1439-0310.1982.tb01359.x",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Saimiri sciureus",
+      "common_name": "Common squirrel monkey",
+      "file_stem": "saimiri-sciureus",
+      "reference_id": "winter_etal_1966",
+      "citation": "Winter P, Ploog D, Latta J. 1966. Vocal repertoire of the squirrel monkey (Saimiri sciureus), its analysis and significance. Experimental Brain Research 1: 359-384.",
+      "doi": "10.1007/BF00237707",
+      "url": "https://doi.org/10.1007/BF00237707",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Suricata suricatta",
+      "common_name": "Meerkat",
+      "file_stem": "suricata-suricatta",
+      "reference_id": "manser_etal_2014",
+      "citation": "Manser MB, Jansen DAWAM, Graw B, Hollen LI, Bousquet CAH, Furrer RD, le Roux A. 2014. Vocal complexity in meerkats and other mongoose species. Advances in the Study of Behavior 46: 281-310.",
+      "doi": "10.1016/B978-0-12-800286-5.00006-7",
+      "url": "https://doi.org/10.1016/B978-0-12-800286-5.00006-7",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Taeniopygia guttata",
+      "common_name": "Zebra finch",
+      "file_stem": "taeniopygia-guttata",
+      "reference_id": "zann_1996",
+      "citation": "Zann RA. 1996. The Zebra Finch: A Synthesis of Field and Laboratory Studies. Oxford University Press.",
+      "doi": "10.1093/oso/9780198540793.001.0001",
+      "url": "https://doi.org/10.1093/oso/9780198540793.001.0001",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Theropithecus gelada",
+      "common_name": "Gelada",
+      "file_stem": "theropithecus-gelada",
+      "reference_id": "gustison_etal_2012",
+      "citation": "Gustison, M. L., le Roux, A., & Bergman, T. J. (2012). Derived vocalizations of geladas (Theropithecus gelada) and the evolution of vocal complexity in primates. Philosophical Transactions of the Royal Society B: Biological Sciences, 367(1597), 1847-1859.",
+      "doi": "10.1098/rstb.2011.0218",
+      "url": "https://doi.org/10.1098/rstb.2011.0218",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Varecia variegata",
+      "common_name": "Black-and-white ruffed lemur",
+      "file_stem": "varecia-variegata",
+      "reference_id": "batist_etal_2023",
+      "citation": "Batist CM, Razafindraibe H, Randriamanantena D, Baden AL. 2023. Quantitative acoustic analysis of the vocal repertoire of wild black-and-white ruffed lemurs (Varecia variegata). International Journal of Primatology.",
+      "doi": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37584832/",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    },
+    {
+      "species": "Zalophus californianus",
+      "common_name": "California sea lion",
+      "file_stem": "zalophus-californianus",
+      "reference_id": "peterson_bartholomew_1969",
+      "citation": "Peterson, R. S., and Bartholomew, G. A. 1969. Airborne vocal communication in the California sea lion, Zalophus californianus. Animal Behaviour 17(1):17-24.",
+      "doi": "10.1016/0003-3472(69)90108-0",
+      "url": "https://doi.org/10.1016/0003-3472(69)90108-0",
+      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 scientific_name: Zalophus californianus
 common_name: California sea lion
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

@@ -1,5 +1,6 @@
 scientific_name: Leptonychotes weddellii
 common_name: Weddell seal
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

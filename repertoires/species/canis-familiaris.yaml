@@ -1,5 +1,6 @@
 scientific_name: Canis familiaris
 common_name: Domestic Dog
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

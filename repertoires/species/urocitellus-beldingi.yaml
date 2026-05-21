@@ -1,5 +1,6 @@
 scientific_name: Urocitellus beldingi
 common_name: Belding's Ground Squirrel
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

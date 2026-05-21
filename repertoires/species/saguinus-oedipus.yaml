@@ -1,5 +1,6 @@
 scientific_name: Saguinus oedipus
 common_name: Cotton-top Tamarin
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

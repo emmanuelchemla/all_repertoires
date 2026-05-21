@@ -1,5 +1,6 @@
 scientific_name: Anser anser
 common_name: Greylag Goose
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata
