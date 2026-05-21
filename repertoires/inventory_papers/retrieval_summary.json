@@ -12,6 +12,17 @@
       "source": "verified accessible PDF retrieved"
     },
     {
+      "species": "Cercopithecus diana",
+      "common_name": "Diana monkey",
+      "file_stem": "cercopithecus-diana",
+      "reference_id": "coye_etal_2022",
+      "citation": "Coye, C., Zuberbuhler, K., and Lemasson, A. 2022. The evolution of vocal communication: inertia and divergence in two closely related primates. International Journal of Primatology 43:712-732.",
+      "doi": "10.1007/s10764-022-00294-y",
+      "url": "https://doi.org/10.1007/s10764-022-00294-y",
+      "path": "repertoires/inventory_papers/cercopithecus-diana__coye_etal_2022.pdf",
+      "source": "verified PDF retrieved from the University of St Andrews research repository (author accepted manuscript)"
+    },
+    {
       "species": "Globicephala melas",
       "common_name": "Long-finned Pilot Whale",
       "file_stem": "globicephala-melas",
@@ -34,15 +45,15 @@
       "source": "verified accessible PDF retrieved"
     },
     {
-      "species": "Orcinus orca",
-      "common_name": "Killer Whale",
-      "file_stem": "orcinus-orca",
-      "reference_id": "ford_1987",
-      "citation": "Ford, J. K. B. (1987). A catalogue of underwater calls produced by killer whales (Orcinus orca) in British Columbia. Canadian Data Report of Fisheries and Aquatic Sciences 633.",
-      "doi": "",
-      "url": "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf",
-      "path": "repertoires/inventory_papers/orcinus-orca__ford_1987.pdf",
-      "source": "verified accessible PDF retrieved"
+      "species": "Lemur catta",
+      "common_name": "Ring-tailed lemur",
+      "file_stem": "lemur-catta",
+      "reference_id": "macedonia_1993",
+      "citation": "Macedonia JM. 1993. The vocal repertoire of the ringtailed lemur (Lemur catta). Folia Primatologica 61(4):186-217.",
+      "doi": "10.1159/000156749",
+      "url": "https://doi.org/10.1159/000156749",
+      "path": "repertoires/inventory_papers/lemur-catta__macedonia_1993.pdf",
+      "source": "verified visually from author-hosted PDF; image scan with no extractable text"
     },
     {
       "species": "Pan paniscus",
@@ -87,6 +98,17 @@
       "url": "https://archive.org/details/communicationoth00smit",
       "path": "repertoires/inventory_papers/poecile-carolinensis__smith_1972.pdf",
       "source": "verified accessible PDF retrieved"
+    },
+    {
+      "species": "Pongo pygmaeus",
+      "common_name": "Bornean Orangutan",
+      "file_stem": "pongo-pygmaeus",
+      "reference_id": "hardus_etal_2009",
+      "citation": "Hardus, M. E., Lameira, A. R. E., Singleton, I., Morrogh-Bernard, H. C., Knott, C. D., Ancrenaz, M., Utami Atmoko, S. S., & Wich, S. A. (2009). A description of the orangutan's vocal and sound repertoire, with a focus on geographic variation. In Orangutans: Geographic Variation in Behavioral Ecology and Conservation. Oxford University Press.",
+      "doi": "10.1093/acprof:oso/9780199213276.003.0004",
+      "url": "https://doi.org/10.1093/acprof:oso/9780199213276.003.0004",
+      "path": "repertoires/inventory_papers/pongo-pygmaeus__hardus_etal_2009.pdf",
+      "source": "verified PDF chapter retrieved from an author/field-site host"
     },
     {
       "species": "Rousettus aegyptiacus",
@@ -201,16 +223,6 @@
       "citation": "Gros-Louis, J. J., Perry, S. E., Fichtel, C., Wikberg, E., Gilkenson, H., Wofsy, S., & Fuentes, A. (2008). Vocal Repertoire of Cebus capucinus: Acoustic Structure, Context, and Usage. International Journal of Primatology, 29, 641-670.",
       "doi": "10.1007/s10764-008-9263-8",
       "url": "https://doi.org/10.1007/s10764-008-9263-8",
-      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
-    },
-    {
-      "species": "Cercopithecus diana",
-      "common_name": "Diana monkey",
-      "file_stem": "cercopithecus-diana",
-      "reference_id": "coye_etal_2022",
-      "citation": "Coye, C., Zuberbuhler, K., and Lemasson, A. 2022. The evolution of vocal communication: inertia and divergence in two closely related primates. International Journal of Primatology 43:712-732.",
-      "doi": "10.1007/s10764-022-00294-y",
-      "url": "https://doi.org/10.1007/s10764-022-00294-y",
       "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
     },
     {
@@ -344,16 +356,6 @@
       "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
     },
     {
-      "species": "Lemur catta",
-      "common_name": "Ring-tailed lemur",
-      "file_stem": "lemur-catta",
-      "reference_id": "macedonia_1993",
-      "citation": "Macedonia JM. 1993. The vocal repertoire of the ringtailed lemur (Lemur catta). Folia Primatologica 61(4):186-217.",
-      "doi": "10.1159/000156749",
-      "url": "https://doi.org/10.1159/000156749",
-      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
-    },
-    {
       "species": "Leptonychotes weddellii",
       "common_name": "Weddell seal",
       "file_stem": "leptonychotes-weddellii",
@@ -444,6 +446,16 @@
       "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
     },
     {
+      "species": "Orcinus orca",
+      "common_name": "Killer Whale",
+      "file_stem": "orcinus-orca",
+      "reference_id": "ford_1987",
+      "citation": "Ford, J. K. B. (1987). A catalogue of underwater calls produced by killer whales (Orcinus orca) in British Columbia. Canadian Data Report of Fisheries and Aquatic Sciences 633.",
+      "doi": "",
+      "url": "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/111122.pdf",
+      "reason": "Existing downloaded file was removed because it did not match the selected Ford 1987 killer-whale inventory; automatic retrieval did not yield a verified PDF."
+    },
+    {
       "species": "Papio anubis",
       "common_name": "Olive baboon",
       "file_stem": "papio-anubis",
@@ -481,16 +493,6 @@
       "citation": "Ficken, M. S., Ficken, R. W., & Witkin, S. R. (1978). Vocal repertoire of the black-capped chickadee. The Auk, 95, 34-48.",
       "doi": "",
       "url": "https://sora.unm.edu/node/22808",
-      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
-    },
-    {
-      "species": "Pongo pygmaeus",
-      "common_name": "Bornean Orangutan",
-      "file_stem": "pongo-pygmaeus",
-      "reference_id": "hardus_etal_2009",
-      "citation": "Hardus, M. E., Lameira, A. R. E., Singleton, I., Morrogh-Bernard, H. C., Knott, C. D., Ancrenaz, M., Utami Atmoko, S. S., & Wich, S. A. (2009). A description of the orangutan's vocal and sound repertoire, with a focus on geographic variation. In Orangutans: Geographic Variation in Behavioral Ecology and Conservation. Oxford University Press.",
-      "doi": "10.1093/acprof:oso/9780199213276.003.0004",
-      "url": "https://doi.org/10.1093/acprof:oso/9780199213276.003.0004",
       "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
     },
     {
@@ -562,6 +564,44 @@
       "doi": "10.1016/0003-3472(69)90108-0",
       "url": "https://doi.org/10.1016/0003-3472(69)90108-0",
       "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+    }
+  ],
+  "scanned_or_scan_derived_retrieved": [
+    {
+      "species": "Lemur catta",
+      "common_name": "Ring-tailed lemur",
+      "file_stem": "lemur-catta",
+      "reference_id": "macedonia_1993",
+      "citation": "Macedonia JM. 1993. The vocal repertoire of the ringtailed lemur (Lemur catta). Folia Primatologica 61(4):186-217.",
+      "doi": "10.1159/000156749",
+      "url": "https://doi.org/10.1159/000156749",
+      "path": "repertoires/inventory_papers/lemur-catta__macedonia_1993.pdf",
+      "note": "Author-hosted PDF verified visually, but it is an image scan; pdftotext extracts no usable text. Replace if a born-digital/text PDF is found.",
+      "extractable_words": 0
+    },
+    {
+      "species": "Panthera leo",
+      "common_name": "Lion",
+      "file_stem": "panthera-leo",
+      "reference_id": "rudnai_1973",
+      "citation": "Rudnai, J. A. (1973). The Social Life of the Lion: A Study of the Behaviour of Wild Lions (Panthera leo massaica [Newmann]) in the Nairobi National Park, Kenya. Medical and Technical Publishing.",
+      "doi": "10.1007/978-94-011-7140-3",
+      "url": "https://link.springer.com/book/10.1007/978-94-011-7140-3",
+      "path": "repertoires/inventory_papers/panthera-leo__rudnai_1973.pdf",
+      "note": "Retrieved PDF appears to be a scanned book with very limited extractable text/OCR. Replace if a cleaner text PDF is found.",
+      "extractable_words": 459
+    },
+    {
+      "species": "Poecile carolinensis",
+      "common_name": "Carolina chickadee",
+      "file_stem": "poecile-carolinensis",
+      "reference_id": "smith_1972",
+      "citation": "Smith, S. T. (1972). Communication and other social behavior in Parus carolinensis. Publications of the Nuttall Ornithological Club, 11, 1-125.",
+      "doi": "",
+      "url": "https://archive.org/details/communicationoth00smit",
+      "path": "repertoires/inventory_papers/poecile-carolinensis__smith_1972.pdf",
+      "note": "Retrieved PDF appears to be a library scan/OCR copy rather than a born-digital PDF. Replace if a cleaner text PDF is found.",
+      "extractable_words": 49022
     }
   ]
 }
