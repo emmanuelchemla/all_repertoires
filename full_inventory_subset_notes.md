@@ -2,6 +2,8 @@
 
 For the dataset MVP, we are focusing on the species subset for which we have a conservative, high-confidence full or near-full inventory paper. The goal is not to claim that the rest of the dataset is unusable, but to create a cleaner subset where the repertoire backbone is especially defensible.
 
+Current status: the subset contains 55 species. We have retrieved 36 inventory-paper PDFs so far: 13 automatically with Codex and 23 manually from the HTML table. The remaining 19 selected inventory papers still need verified PDFs.
+
 A full or near-full inventory paper means a source that explicitly enumerates a broad species repertoire, or the main named repertoire classes, across ordinary adult vocal behavior. Canonical broad adult or modality-specific repertoire inventories are acceptable. Narrow studies are excluded: alarm-only papers, song-only papers, food-call papers, courtship-only papers, single-call-family papers, or cases where the rationale says no satisfactory inventory exists. Borderline cases default to excluded.
 
 This subset is marked with the top-level `has_full_inventory` field in each species YAML. Species with `has_full_inventory: true` should have a `primary_inventory.id` pointing to the inventory source used as the high-confidence spine.
