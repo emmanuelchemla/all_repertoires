@@ -1,5 +1,6 @@
 scientific_name: Rousettus aegyptiacus
 common_name: Egyptian fruit bat
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

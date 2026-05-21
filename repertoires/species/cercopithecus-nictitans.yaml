@@ -1,5 +1,6 @@
 scientific_name: Cercopithecus nictitans
 common_name: Putty-nosed monkey
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

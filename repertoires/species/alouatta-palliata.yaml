@@ -1,5 +1,6 @@
 scientific_name: Alouatta palliata
 common_name: Mantled Howler Monkey
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

@@ -1,5 +1,6 @@
 scientific_name: Orcinus orca
 common_name: Killer Whale
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

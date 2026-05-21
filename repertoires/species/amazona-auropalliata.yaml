@@ -1,5 +1,6 @@
 scientific_name: Amazona auropalliata
 common_name: Yellow-naped Amazon
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

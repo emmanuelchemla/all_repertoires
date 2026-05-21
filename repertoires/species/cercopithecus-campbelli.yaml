@@ -1,5 +1,6 @@
 scientific_name: Cercopithecus campbelli
 common_name: Campbell's monkey
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

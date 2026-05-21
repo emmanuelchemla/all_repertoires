@@ -1,5 +1,6 @@
 scientific_name: Desmodus rotundus
 common_name: Common vampire bat
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

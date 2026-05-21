@@ -1,5 +1,6 @@
 scientific_name: Cercopithecus mona
 common_name: Mona Monkey
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

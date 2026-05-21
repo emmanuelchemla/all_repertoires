@@ -1,5 +1,6 @@
 scientific_name: Cercopithecus diana
 common_name: Diana monkey
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

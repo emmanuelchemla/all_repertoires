@@ -1,5 +1,6 @@
 scientific_name: Cyanocitta cristata
 common_name: Blue Jay
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

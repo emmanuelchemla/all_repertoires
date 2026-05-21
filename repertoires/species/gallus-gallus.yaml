@@ -1,5 +1,6 @@
 scientific_name: Gallus gallus
 common_name: Red junglefowl
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

@@ -1,5 +1,6 @@
 scientific_name: Agalychnis spurrelli
 common_name: Gliding treefrog
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

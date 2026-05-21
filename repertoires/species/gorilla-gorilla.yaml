@@ -1,5 +1,6 @@
 scientific_name: Gorilla gorilla
 common_name: Western Gorilla
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

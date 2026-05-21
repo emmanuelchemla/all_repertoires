@@ -1,5 +1,6 @@
 scientific_name: Indri indri
 common_name: Indri
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata
@@ -10,13 +11,13 @@ taxonomy:
   species: indri
 primary_inventory:
   id: maretti_etal_2010
-  rationale: Maretti et al. 2010 is used as the primary inventory because it provides a quantitative description of the non-song vocal repertoire of wild indris, distinguishing eight call types. Song-focused studies are added because the indri song is the species' most conspicuous long-distance signal.
+  rationale: Maretti et al. 2010 is used as the primary_inventory spine because it is a peer-reviewed field overview of the wild adult Indri indri vocal repertoire. It explicitly treats the song as the conspicuous long-distance signal and enumerates eight additional adult vocal types--roar, honk, hum, long tonal call, short tonal call, kiss, wheeze, and grunt--with acoustic measurements and contextual observations.
 calls:
   - name: song
     alternative_names:
       - group song
       - songbit sequence
-    in_primary_inventory: false
+    in_primary_inventory: true
     scope:
       life_stages: [juvenile, adult]
       sexes: [female, male]
@@ -141,8 +142,8 @@ provenance:
     action: generated
 references:
   maretti_etal_2010:
-    citation: "Maretti, G., Sorrentino, V., Finomana, A., Gamba, M., & Giacoma, C. (2010). Quantitative description of the vocal repertoire of the indri (Indri indri). Journal of the Acoustical Society of America, 127, 1267-1277."
-    url: https://iris.unito.it/handle/2318/132491
+    citation: "Maretti, G., Sorrentino, V., Finomana, A., Gamba, M., & Giacoma, C. (2010). Not just a pretty song: an overview of the vocal repertoire of Indri indri. Journal of Anthropological Sciences, 88, 151-165."
+    url: https://iris.unito.it/handle/2318/70165
   degregorio_etal_2019:
     citation: "De Gregorio, C., Valente, D., Raimondi, T., Torti, V., Miaretsoa, L., Friard, O., Giacoma, C., Ravignani, A., & Gamba, M. (2019). Finding meanings in low dimensional structures: stochastic neighbor embedding applied to the analysis of Indri indri vocal repertoire. Animals, 9, 243."
     url: https://doi.org/10.3390/ani9050243

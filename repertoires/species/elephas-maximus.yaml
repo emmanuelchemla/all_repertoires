@@ -1,5 +1,6 @@
 scientific_name: Elephas maximus
 common_name: Asian elephant
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

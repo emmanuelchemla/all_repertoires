@@ -1,5 +1,6 @@
 scientific_name: Marmota flaviventris
 common_name: Yellow-bellied marmot
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

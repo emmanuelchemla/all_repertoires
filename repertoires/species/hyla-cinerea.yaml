@@ -1,5 +1,6 @@
 scientific_name: Hyla cinerea
 common_name: Green treefrog
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

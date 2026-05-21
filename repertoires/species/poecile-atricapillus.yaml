@@ -1,5 +1,6 @@
 scientific_name: Poecile atricapillus
 common_name: Black-capped Chickadee
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

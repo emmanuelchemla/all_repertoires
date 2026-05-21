@@ -1,5 +1,6 @@
 scientific_name: Chlorocebus pygerythrus
 common_name: Vervet monkey
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

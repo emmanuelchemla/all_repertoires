@@ -1,5 +1,6 @@
 scientific_name: Erythrocebus patas
 common_name: Patas Monkey
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

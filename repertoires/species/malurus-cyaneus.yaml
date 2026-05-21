@@ -1,5 +1,6 @@
 scientific_name: Malurus cyaneus
 common_name: Superb Fairywren
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

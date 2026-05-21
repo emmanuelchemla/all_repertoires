@@ -1,5 +1,6 @@
 scientific_name: Melopsittacus undulatus
 common_name: Budgerigar
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

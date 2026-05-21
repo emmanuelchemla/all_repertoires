@@ -1,5 +1,6 @@
 scientific_name: Phyllostomus discolor
 common_name: Pale Spear-nosed Bat
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

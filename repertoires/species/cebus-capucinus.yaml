@@ -1,5 +1,6 @@
 scientific_name: Cebus capucinus
 common_name: White-faced capuchin
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

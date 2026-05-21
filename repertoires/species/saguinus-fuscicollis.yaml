@@ -1,5 +1,6 @@
 scientific_name: Saguinus fuscicollis
 common_name: Saddle-back Tamarin
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

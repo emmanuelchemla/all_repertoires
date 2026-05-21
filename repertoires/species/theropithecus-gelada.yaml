@@ -1,5 +1,6 @@
 scientific_name: Theropithecus gelada
 common_name: Gelada
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

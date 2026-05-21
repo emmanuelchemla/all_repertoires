@@ -1,5 +1,6 @@
 scientific_name: Urocitellus beldingi
 common_name: Belding's Ground Squirrel
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata
@@ -9,8 +10,8 @@ taxonomy:
   genus: Urocitellus
   species: beldingi
 primary_inventory:
-  id: robinson_1984
-  rationale: Robinson 1984 is used as the primary inventory because it explicitly treats the vocalizations of wild Belding's ground squirrels and distinguishes the main alarm-call classes used in later functional studies.
+  id: leger_etal_1984
+  rationale: Leger et al. 1984 is used as the primary_inventory spine because it is a peer-reviewed field study explicitly titled around the vocalizations of wild Belding's ground squirrels, uses sonagrams and acoustic measurements, and distinguishes the main trill, chirp/whistle, and distress-like vocal classes across predator, post-copulatory, and agonistic contexts. Later alarm-call studies refine the best-studied predator contexts, but Leger et al. 1984 is broad enough to pass the full-inventory subset threshold.
 calls:
   - name: trill
     alternative_names: [churr, multiple-note alarm call]
@@ -25,22 +26,22 @@ calls:
     semantic_keywords: [alarm, predator, attention]
     semantic_description: Produced most often to terrestrial predators or immediate ground threats and elicits vigilance or escape responses.
     acoustic_references:
-      - id: robinson_1984
+      - id: leger_etal_1984
         url: https://doi.org/10.1016/S0003-3472(84)80151-7
       - id: mccowan_hooper_2002
         url: https://doi.org/10.1121/1.1458029
     semantic_references:
       - id: sherman_1977
         url: https://doi.org/10.1126/science.860175
-      - id: robinson_1984
+      - id: leger_etal_1984
         url: https://doi.org/10.1016/S0003-3472(84)80151-7
     playback_references:
-      - id: robinson_1984
+      - id: leger_etal_1984
         url: https://doi.org/10.1016/S0003-3472(84)80151-7
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Trills are named by Robinson 1984 and central to Sherman 1977 and later acoustic analyses.
+    call_type_existence_explanation: Trills are named by Leger et al. 1984 and central to Sherman 1977 and later acoustic analyses.
     acoustic_description_agreement: strong
-    acoustic_description_explanation: Robinson 1984 and McCowan and Hooper 2002 agree on a repeated-note alarm structure while adding individual variation.
+    acoustic_description_explanation: Leger et al. 1984 and McCowan and Hooper 2002 agree on a repeated-note alarm structure while adding individual variation.
     semantic_description_agreement: strong
     semantic_description_explanation: Predator-alarm use and receiver responses are supported by production and playback evidence.
 
@@ -53,7 +54,7 @@ calls:
     semantic_keywords: [alarm, predator, attention]
     semantic_description: Given especially to aerial predators and distant threats, prompting alertness and rapid movement toward cover.
     acoustic_references:
-      - id: robinson_1984
+      - id: leger_etal_1984
         url: https://doi.org/10.1016/S0003-3472(84)80151-7
       - id: sherman_1985
         url: https://doi.org/10.1007/BF00301254
@@ -63,7 +64,7 @@ calls:
       - id: sherman_1977
         url: https://doi.org/10.1126/science.860175
     playback_references:
-      - id: robinson_1984
+      - id: leger_etal_1984
         url: https://doi.org/10.1016/S0003-3472(84)80151-7
     call_type_existence_agreement: strong
     call_type_existence_explanation: Single-note alarm whistles or chirps are consistently recognized as a distinct class.
@@ -81,14 +82,14 @@ calls:
     semantic_keywords: [distress, aggression, submission, attention]
     semantic_description: Produced during capture, close aggression, or intense social disturbance.
     acoustic_references:
-      - id: robinson_1984
+      - id: leger_etal_1984
         url: https://doi.org/10.1016/S0003-3472(84)80151-7
     semantic_references:
-      - id: robinson_1984
+      - id: leger_etal_1984
         url: https://doi.org/10.1016/S0003-3472(84)80151-7
     playback_references: []
     call_type_existence_agreement: medium
-    call_type_existence_explanation: Robinson 1984 includes distress-like vocalizations, but the alarm calls dominate subsequent research.
+    call_type_existence_explanation: Leger et al. 1984 includes distress-like vocalizations, but the alarm calls dominate subsequent research.
     acoustic_description_agreement: weak
     acoustic_description_explanation: Fine acoustic structure is less quantified than trill and whistle calls.
     semantic_description_agreement: medium
@@ -99,8 +100,8 @@ provenance:
     thinking: medium
     action: generated
 references:
-  robinson_1984:
-    citation: "Robinson, S. R. (1984). Vocalizations of Belding's ground squirrels. Animal Behaviour, 32, 753-764."
+  leger_etal_1984:
+    citation: "Leger, D. W., Berney-Key, S. D., & Sherman, P. W. (1984). Vocalizations of Belding's ground squirrels (Spermophilus beldingi). Animal Behaviour, 32, 753-764."
     url: https://doi.org/10.1016/S0003-3472(84)80151-7
     doi: 10.1016/S0003-3472(84)80151-7
   sherman_1977:

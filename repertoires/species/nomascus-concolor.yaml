@@ -1,5 +1,6 @@
 scientific_name: Nomascus concolor
 common_name: Black Crested Gibbon
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

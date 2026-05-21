@@ -1,5 +1,6 @@
 scientific_name: Equus caballus
 common_name: Domestic Horse
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

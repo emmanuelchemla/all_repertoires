@@ -1,5 +1,6 @@
 scientific_name: Cercopithecus neglectus
 common_name: De Brazza's Monkey
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

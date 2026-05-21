@@ -1,5 +1,6 @@
 scientific_name: Corvus monedula
 common_name: Western Jackdaw
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

@@ -1,5 +1,6 @@
 scientific_name: Ailuropoda melanoleuca
 common_name: Giant Panda
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

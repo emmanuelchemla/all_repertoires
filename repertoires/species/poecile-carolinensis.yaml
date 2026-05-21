@@ -1,5 +1,6 @@
 scientific_name: Poecile carolinensis
 common_name: Carolina chickadee
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

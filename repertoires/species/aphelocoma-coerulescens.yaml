@@ -1,5 +1,6 @@
 scientific_name: Aphelocoma coerulescens
 common_name: Florida Scrub-Jay
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

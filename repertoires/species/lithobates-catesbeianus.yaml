@@ -1,5 +1,6 @@
 scientific_name: Lithobates catesbeianus
 common_name: American bullfrog
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

@@ -1,5 +1,6 @@
 scientific_name: Psittacus erithacus
 common_name: Grey Parrot
+has_full_inventory: false
 taxonomy:
   kingdom: Animalia
   phylum: Chordata

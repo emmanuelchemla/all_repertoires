@@ -1,5 +1,6 @@
 scientific_name: Lemur catta
 common_name: Ring-tailed lemur
+has_full_inventory: true
 taxonomy:
   kingdom: Animalia
   phylum: Chordata
