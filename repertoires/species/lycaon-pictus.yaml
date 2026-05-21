@@ -10,8 +10,8 @@ taxonomy:
   genus: Lycaon
   species: pictus
 primary_inventory:
-  id: robbins_mcenery_1983
-  rationale: No single recent paper provides a complete modern acoustic inventory for African wild dogs. Robbins and McEnery 1983 is used as the primary inventory because it describes the species' vocal behavior and named call types in social context, supplemented by later work on group coordination and voting calls.
+  id: robbins_2000
+  rationale: Robbins 2000 is used as the primary inventory because it explicitly presents the vocal repertoire of free-ranging African wild dogs, including named vocal classes, subclasses, acoustic structure, and social context, supplemented by later work on group coordination and voting calls.
 calls:
   - name: hoo call
     alternative_names:
@@ -28,18 +28,18 @@ calls:
     semantic_keywords: [contact, group_coordination, spacing]
     semantic_description: Used as a long-distance contact call when pack members are separated or during rallying before movement.
     acoustic_references:
-      - id: robbins_mcenery_1983
-        url: https://doi.org/10.1007/BF00303177
+      - id: robbins_2000
+        url: https://doi.org/10.1163/156853900501926
       - id: walker_etal_2017
         url: https://doi.org/10.1098/rspb.2017.0347
     semantic_references:
-      - id: robbins_mcenery_1983
-        url: https://doi.org/10.1007/BF00303177
+      - id: robbins_2000
+        url: https://doi.org/10.1163/156853900501926
       - id: walker_etal_2017
         url: https://doi.org/10.1098/rspb.2017.0347
     playback_references: []
     call_type_existence_agreement: strong
-    call_type_existence_explanation: Hoo calls are a classic African wild dog contact call in Robbins and McEnery 1983 and are referenced in later rally behavior work.
+    call_type_existence_explanation: Hoo calls are a classic African wild dog contact call in Robbins 2000 and are referenced in later rally behavior work.
     acoustic_description_agreement: medium
     acoustic_description_explanation: Long tonal structure is supported, but detailed modern acoustic measurements are limited.
     semantic_description_agreement: strong
@@ -55,11 +55,11 @@ calls:
     semantic_keywords: [affiliation, group_coordination, contact]
     semantic_description: Used during greetings, rallies, and affiliative pack interactions.
     acoustic_references:
-      - id: robbins_mcenery_1983
-        url: https://doi.org/10.1007/BF00303177
+      - id: robbins_2000
+        url: https://doi.org/10.1163/156853900501926
     semantic_references:
-      - id: robbins_mcenery_1983
-        url: https://doi.org/10.1007/BF00303177
+      - id: robbins_2000
+        url: https://doi.org/10.1163/156853900501926
       - id: walker_etal_2017
         url: https://doi.org/10.1098/rspb.2017.0347
     playback_references: []
@@ -80,11 +80,11 @@ calls:
     semantic_keywords: [alarm, threat, attention]
     semantic_description: Produced during disturbance or threat contexts to alert pack members.
     acoustic_references:
-      - id: robbins_mcenery_1983
-        url: https://doi.org/10.1007/BF00303177
+      - id: robbins_2000
+        url: https://doi.org/10.1163/156853900501926
     semantic_references:
-      - id: robbins_mcenery_1983
-        url: https://doi.org/10.1007/BF00303177
+      - id: robbins_2000
+        url: https://doi.org/10.1163/156853900501926
     playback_references: []
     call_type_existence_agreement: medium
     call_type_existence_explanation: Bark calls are described in the repertoire, though they are less intensively studied than hoo and rally sounds.
@@ -103,11 +103,11 @@ calls:
     semantic_keywords: [submission, affiliation, begging, contact]
     semantic_description: Produced in submissive, affiliative, or care-related close interactions within the pack.
     acoustic_references:
-      - id: robbins_mcenery_1983
-        url: https://doi.org/10.1007/BF00303177
+      - id: robbins_2000
+        url: https://doi.org/10.1163/156853900501926
     semantic_references:
-      - id: robbins_mcenery_1983
-        url: https://doi.org/10.1007/BF00303177
+      - id: robbins_2000
+        url: https://doi.org/10.1163/156853900501926
     playback_references: []
     call_type_existence_agreement: medium
     call_type_existence_explanation: Whines are included in the classic wild dog repertoire but are not a major focus of later quantitative studies.
@@ -144,10 +144,10 @@ provenance:
     thinking: extra_high
     action: generated
 references:
-  robbins_mcenery_1983:
-    citation: "Robbins, R. L., & McCreery, E. K. (1983). Vocal communication in free-ranging African wild dogs (Lycaon pictus). Behaviour, 84, 144-162."
-    url: https://doi.org/10.1163/156853983X00316
-    doi: 10.1163/156853983X00316
+  robbins_2000:
+    citation: "Robbins, R. L. (2000). Vocal communication in free-ranging African wild dogs (Lycaon pictus). Behaviour, 137(10), 1271-1298."
+    url: https://doi.org/10.1163/156853900501926
+    doi: 10.1163/156853900501926
   walker_etal_2017:
     citation: "Walker, R. H., King, A. J., McNutt, J. W., & Jordan, N. R. (2017). Sneeze to leave: African wild dogs (Lycaon pictus) use variable quorum thresholds facilitated by sneezes in collective decisions. Proceedings of the Royal Society B, 284, 20170347."
     url: https://doi.org/10.1098/rspb.2017.0347
