@@ -130,8 +130,8 @@
       "reference_id": "cossio_medina_barcenas_2020",
       "citation": "Cossio R, Medina-Barcenas E. 2020. Acoustic repertoire and calling behavior of the gliding treefrog, Agalychnis spurrelli (Anura: Hylidae). South American Journal of Herpetology 17: 71-78.",
       "doi": "10.2994/SAJH-D-18-00040.1",
-      "url": "https://doi.org/10.2994/SAJH-D-18-00040.1",
-      "reason": "Automatic DOI/landing-page/PDF retrieval did not yield a verified PDF."
+      "url": "https://bioone.org/journals/south-american-journal-of-herpetology/volume-17/issue-1/SAJH-D-18-00040.1/Acoustic-Repertoire-and-Calling-Behavior-of-the-Gliding-Treefrog-Agalychnis/10.2994/SAJH-D-18-00040.1.pdf",
+      "reason": "Direct BioOne PDF is available in an interactive browser, but command-line retrieval returns an Incapsula guard page rather than PDF bytes."
     },
     {
       "species": "Alouatta palliata",
