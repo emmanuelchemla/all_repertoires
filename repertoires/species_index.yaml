@@ -1,7 +1,7 @@
 # Core species candidates for the repertoire database.
 # Grouped by family. A species is "done" iff species/<kebab-name>.yaml exists.
 
-# Species were selected to prioritize taxa for which vocal repertoires are likely to support comparative analysis of call-type structure. We favored species with discrete, named, and literature-supported vocal or acoustic signal classes, especially where both acoustic form and behavioral context have been described from wild populations. To reduce redundancy, closely related species with similar expected repertoires were pruned unless they added clear comparative value, while taxa with strongly graded, weakly contextualized, or primarily individual-level acoustic variation were retained only when they represented especially important systems such as cetacean vocal culture. The resulting core set comprised 100 species across 47 families, including 28 primates, 28 birds, 12 rodents and bats, 10 terrestrial carnivores, 9 marine mammals, 9 frogs, and 4 elephants or ungulates.
+# Species were selected to prioritize taxa for which vocal repertoires are likely to support comparative analysis of call-type structure. We favored species with discrete, named, and literature-supported vocal or acoustic signal classes, especially where both acoustic form and behavioral context have been described from wild populations. To reduce redundancy, closely related species with similar expected repertoires were pruned unless they added clear comparative value, while taxa with strongly graded, weakly contextualized, or primarily individual-level acoustic variation were retained only when they represented especially important systems such as cetacean vocal culture. The resulting core set comprises 117 species across 51 families.
 
 families:
 
@@ -38,6 +38,7 @@ families:
     - { scientific_name: Mandrillus sphinx, common_name: Mandrill }
     - { scientific_name: Mandrillus leucophaeus, common_name: Drill }
     - { scientific_name: Papio cynocephalus, common_name: Yellow Baboon }
+    - { scientific_name: Papio ursinus, common_name: Chacma Baboon }
 
   Atelidae:
     - { scientific_name: Alouatta palliata, common_name: Mantled Howler Monkey }
@@ -96,6 +97,7 @@ families:
 
   Felidae:
     - { scientific_name: Panthera leo, common_name: Lion }
+    - { scientific_name: Felis catus, common_name: Domestic Cat }
 
   Hyaenidae:
     - { scientific_name: Crocuta crocuta, common_name: Spotted Hyena }
@@ -223,6 +225,11 @@ families:
 
   Anatidae:
     - { scientific_name: Anser anser, common_name: Greylag Goose }
+
+  # ---- Penguins ----
+
+  Spheniscidae:
+    - { scientific_name: Spheniscus demersus, common_name: African Penguin }
 
   # ---- Anurans ----
 
