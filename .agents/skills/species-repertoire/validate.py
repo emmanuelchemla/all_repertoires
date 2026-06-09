@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate a species repertoire YAML file against schema.json.
 
-Usage: python validate.py species/<file>.yaml [more files...]
+Usage: python .agents/skills/species-repertoire/validate.py repertoires/species/<file>.yaml [more files...]
 Exits 0 on success, 1 on any failure.
 """
 import json

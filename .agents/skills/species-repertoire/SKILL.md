@@ -9,9 +9,10 @@ The goal of this skill is to create a file with a comprehensive wild vocal reper
 
 ## File layout
 
-- One YAML file per species at `species/<scientific-name-kebab-case>.yaml` (e.g. `corvus-corax.yaml`).
+- One YAML file per species at `repertoires/species/<scientific-name-kebab-case>.yaml` (e.g. `repertoires/species/corvus-corax.yaml`).
 - One file = one species = atomic unit of parallel work. Never split a species across files.
-- Schema lives at `schema.json`. Run `python validate.py species/<file>.yaml` before committing.
+- Schema lives with this skill at `.agents/skills/species-repertoire/schema.json`.
+- Validator lives with this skill at `.agents/skills/species-repertoire/validate.py`. Run `python .agents/skills/species-repertoire/validate.py repertoires/species/<file>.yaml` before committing.
 
 ## Field conventions
 
@@ -106,7 +107,7 @@ A common drift is to let function leak into acoustic descriptions (e.g. "alarm-l
 ## Workflow
 
 1. Checkout to main and pull.
-2. Pick unfinished species from `species_index.yaml` (no file yet at `species/<kebab-name>.yaml`) and generate YAML repertoire files for all
-3. Run `validate.py` and commit directly to main and pushes. 
-4. Never touch `schema.json` or this skill as a side-effect. 
+2. Pick unfinished species from `repertoires/species_index.yaml` (no file yet at `repertoires/species/<kebab-name>.yaml`) and generate YAML repertoire files for all.
+3. Run `python .agents/skills/species-repertoire/validate.py repertoires/species/<file>.yaml` and commit directly to main and push.
+4. Never touch `schema.json`, `validate.py`, or this skill as a side-effect.
 5. Do **not** use `database.json` as a source. Build every repertoire from scratch using primary literature only.
