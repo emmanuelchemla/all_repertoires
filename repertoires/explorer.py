@@ -26,11 +26,16 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument(
         "--db",
-        default="llm_literature_extraction",
+        default="llm_knowledge+search",
         help="Database to load: llm_literature_extraction, llm_knowledge+search, or a path to a species YAML directory.",
     )
     args, _ = parser.parse_known_args()
     return args
+
+
+def selected_db(default: str) -> str:
+    db = st.query_params.get("db")
+    return db if isinstance(db, str) and db else default
 
 
 def resolve_species_dir(db: str) -> Path:
@@ -400,15 +405,18 @@ def main() -> None:
     st.set_page_config(page_title="Species Repertoires", layout="wide")
     st.title("🐾 Species Repertoires")
 
-    options = db_options(args.db)
+    initial_db = selected_db(args.db)
+    options = db_options(initial_db)
     with st.sidebar:
         st.header("Database")
         db_choice = st.selectbox(
             "Select database",
             options,
-            index=options.index(args.db),
+            index=options.index(initial_db),
             format_func=lambda db: db.replace("_", " "),
         )
+        if st.query_params.get("db") != db_choice:
+            st.query_params["db"] = db_choice
         species_dir = resolve_species_dir(db_choice)
         st.caption(str(species_dir))
         st.divider()
