@@ -1,18 +1,18 @@
 ---
-name: species-repertoire
-description: Use this skill whenever creating, editing, or reviewing a species repertoire YAML file under repertoires/species/. Triggers on any work involving call types, acoustic/semantic descriptions, or repertoire bibliography. Provides the schema, conventions, agreement rubrics, and validation steps that keep multi-agent edits consistent.
+name: llm-literature-extraction-repertoire
+description: Use this skill whenever creating, editing, or reviewing a literature-extraction species vocal repertoire YAML file under repertoires/llm_literature_extraction/species/. This workflow is based on LLM extraction from primary literature, requires cited acoustic and semantic evidence, and provides the schema, conventions, agreement rubrics, and validation steps that keep multi-agent edits consistent.
 ---
 
-# Species repertoire skill
+# LLM literature extraction repertoire skill
 
 The goal of this skill is to create a file with a comprehensive wild vocal repertoire for a species.
 
 ## File layout
 
-- One YAML file per species at `repertoires/species/<scientific-name-kebab-case>.yaml` (e.g. `repertoires/species/corvus-corax.yaml`).
+- One YAML file per species at `repertoires/llm_literature_extraction/species/<scientific-name-kebab-case>.yaml` (e.g. `repertoires/llm_literature_extraction/species/corvus-corax.yaml`).
 - One file = one species = atomic unit of parallel work. Never split a species across files.
-- Schema lives with this skill at `.agents/skills/species-repertoire/schema.json`.
-- Validator lives with this skill at `.agents/skills/species-repertoire/validate.py`. Run `python .agents/skills/species-repertoire/validate.py repertoires/species/<file>.yaml` before committing.
+- Schema lives with this skill at `.agents/skills/llm-literature-extraction-repertoire/schema.json`.
+- Validator lives with this skill at `.agents/skills/llm-literature-extraction-repertoire/validate.py`. Run `python .agents/skills/llm-literature-extraction-repertoire/validate.py repertoires/llm_literature_extraction/species/<file>.yaml` before committing.
 
 ## Field conventions
 
@@ -107,7 +107,7 @@ A common drift is to let function leak into acoustic descriptions (e.g. "alarm-l
 ## Workflow
 
 1. Checkout to main and pull.
-2. Pick unfinished species from `repertoires/species_index.yaml` (no file yet at `repertoires/species/<kebab-name>.yaml`) and generate YAML repertoire files for all.
-3. Run `python .agents/skills/species-repertoire/validate.py repertoires/species/<file>.yaml` and commit directly to main and push.
+2. Pick unfinished species from `repertoires/llm_literature_extraction/species_index.yaml` (no file yet at `repertoires/llm_literature_extraction/species/<kebab-name>.yaml`) and generate YAML repertoire files for all.
+3. Run `python .agents/skills/llm-literature-extraction-repertoire/validate.py repertoires/llm_literature_extraction/species/<file>.yaml` and commit directly to main and push.
 4. Never touch `schema.json`, `validate.py`, or this skill as a side-effect.
 5. Do **not** use `database.json` as a source. Build every repertoire from scratch using primary literature only.

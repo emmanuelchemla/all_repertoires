@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Validate a species repertoire YAML file against schema.json.
+"""Validate a search repertoire YAML file against schema.json.
 
-Usage: python .agents/skills/species-repertoire/validate.py repertoires/species/<file>.yaml [more files...]
+Usage: python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/llm_knowledge+search/species/<file>.yaml [more files...]
 Exits 0 on success, 1 on any failure.
 """
 import json
@@ -9,11 +9,11 @@ import sys
 from pathlib import Path
 
 import yaml
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).parent
 SCHEMA = json.loads((ROOT / "schema.json").read_text())
-VALIDATOR = Draft202012Validator(SCHEMA)
+VALIDATOR = Draft202012Validator(SCHEMA, format_checker=FormatChecker())
 
 
 def check(path: Path) -> list[str]:
@@ -24,7 +24,6 @@ def check(path: Path) -> list[str]:
         loc = "/".join(str(p) for p in err.absolute_path) or "<root>"
         errors.append(f"{loc}: {err.message}")
 
-    ref_ids = set((data.get("references") or {}).keys())
     taxonomy = data.get("taxonomy") or {}
     if taxonomy.get("genus") and taxonomy.get("species") and data.get("scientific_name"):
         expected = f"{taxonomy['genus']} {taxonomy['species']}"
@@ -33,17 +32,8 @@ def check(path: Path) -> list[str]:
                 f"taxonomy: genus + species is '{expected}', expected scientific_name '{data['scientific_name']}'"
             )
 
-    inventory = data.get("primary_inventory") or {}
-    inventory_id = inventory.get("id")
-    if inventory_id and inventory_id not in ref_ids:
-        errors.append(f"primary_inventory.id: unknown reference id '{inventory_id}'")
-
+    ref_ids = set((data.get("references") or {}).keys())
     for i, call in enumerate(data.get("calls") or []):
-        if not inventory_id and call.get("in_primary_inventory"):
-            errors.append(
-                f"calls[{i}].in_primary_inventory: must be false when primary_inventory.id is absent"
-            )
-
         scope = call.get("scope") or {}
         note = (scope.get("note") or "").strip()
         if scope.get("population_specific"):
@@ -52,10 +42,9 @@ def check(path: Path) -> list[str]:
         elif note:
             errors.append(f"calls[{i}].scope.note: must be empty when population_specific is false")
 
-        for field in ("acoustic_references", "semantic_references", "playback_references"):
-            for c in call.get(field) or []:
-                if c["id"] not in ref_ids:
-                    errors.append(f"calls[{i}].{field}: unknown reference id '{c['id']}'")
+        for rid in call.get("references") or []:
+            if rid not in ref_ids:
+                errors.append(f"calls[{i}].references: unknown reference id '{rid}'")
 
     return errors
 
@@ -71,8 +60,8 @@ def main() -> int:
         if errs:
             failed = True
             print(f"FAIL {path}")
-            for e in errs:
-                print(f"  - {e}")
+            for err in errs:
+                print(f"  - {err}")
         else:
             print(f"OK   {path}")
     return 1 if failed else 0
