@@ -6,6 +6,7 @@ Run:
 """
 from __future__ import annotations
 
+import argparse
 from html import escape
 from pathlib import Path
 
@@ -13,20 +14,52 @@ import streamlit as st
 import yaml
 
 ROOT = Path(__file__).parent
-SPECIES_DIR = ROOT / "species"
 
 
-def species_cache_key() -> tuple[tuple[str, int], ...]:
+DB_DIRS = {
+    "llm_literature_extraction": ROOT / "llm_literature_extraction" / "species",
+    "llm_knowledge+search": ROOT / "llm_knowledge+search" / "species",
+}
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument(
+        "--db",
+        default="llm_knowledge+search",
+        help="Database to load: llm_literature_extraction, llm_knowledge+search, or a path to a species YAML directory.",
+    )
+    args, _ = parser.parse_known_args()
+    return args
+
+
+def selected_db(default: str) -> str:
+    db = st.query_params.get("db")
+    return db if isinstance(db, str) and db else default
+
+
+def resolve_species_dir(db: str) -> Path:
+    return DB_DIRS.get(db, Path(db)).expanduser()
+
+
+def db_options(initial_db: str) -> list[str]:
+    options = list(DB_DIRS)
+    if initial_db not in options:
+        options.append(initial_db)
+    return options
+
+
+def species_cache_key(species_dir: Path) -> tuple[tuple[str, int], ...]:
     return tuple(
         (path.name, path.stat().st_mtime_ns)
-        for path in sorted(SPECIES_DIR.glob("*.yaml"))
+        for path in sorted(species_dir.glob("*.yaml"))
     )
 
 
 @st.cache_data
-def load_species(_cache_key: tuple[tuple[str, int], ...]) -> dict[str, dict]:
+def load_species(species_dir: Path, _cache_key: tuple[tuple[str, int], ...]) -> dict[str, dict]:
     out: dict[str, dict] = {}
-    for path in sorted(SPECIES_DIR.glob("*.yaml")):
+    for path in sorted(species_dir.glob("*.yaml")):
         out[path.stem] = yaml.safe_load(path.read_text())
     return out
 
@@ -172,9 +205,13 @@ def agreement_summary_badges(calls: list[dict], key: str) -> str:
     return f"<div style='line-height:2'>{bits}</div>"
 
 
-def render_citation(c: dict, refs: dict) -> str:
-    rid = c.get("id", "?")
-    url = c.get("url") or (refs.get(rid) or {}).get("url") or (refs.get(rid) or {}).get("doi")
+def render_citation(c: dict | str, refs: dict) -> str:
+    if isinstance(c, str):
+        rid = c
+        url = (refs.get(rid) or {}).get("url") or (refs.get(rid) or {}).get("doi")
+    else:
+        rid = c.get("id", "?")
+        url = c.get("url") or (refs.get(rid) or {}).get("url") or (refs.get(rid) or {}).get("doi")
     if url and not url.startswith("http"):
         url = f"https://doi.org/{url}"
     label = f"[{rid}]"
@@ -284,6 +321,24 @@ def render_semantic_keywords(call: dict) -> None:
     )
 
 
+def render_sources(label: str, citations: list, refs: dict) -> None:
+    if citations:
+        st.caption(
+            f"{label}: " + ", ".join(render_citation(c, refs) for c in citations)
+        )
+
+
+def has_agreement_fields(call: dict) -> bool:
+    return any(
+        key in call
+        for key in (
+            "call_type_existence_agreement",
+            "acoustic_description_agreement",
+            "semantic_description_agreement",
+        )
+    )
+
+
 def render_call(call: dict, refs: dict) -> None:
     addition = call.get("in_primary_inventory") is False
     badge = (
@@ -299,33 +354,34 @@ def render_call(call: dict, refs: dict) -> None:
     render_acoustic_keywords(call)
     render_semantic_keywords(call)
 
-    cols = st.columns(3)
-    triples = [
-        ("Call type existence", "call_type_existence_agreement", "call_type_existence_explanation"),
-        ("Acoustic description", "acoustic_description_agreement", "acoustic_description_explanation"),
-        ("Semantic description", "semantic_description_agreement", "semantic_description_explanation"),
-    ]
-    for col, (label, agreement_key, expl_key) in zip(cols, triples):
-        with col:
-            agreement = call.get(agreement_key, "unknown")
-            st.markdown(
-                f"**{label}** &nbsp; {agreement_badge(agreement)}",
-                unsafe_allow_html=True,
-            )
-            with st.expander("why?"):
-                st.write(call.get(expl_key, "—"))
+    if call.get("confidence"):
+        st.markdown(f"**Confidence:** `{escape(str(call['confidence']))}`")
+
+    if has_agreement_fields(call):
+        cols = st.columns(3)
+        triples = [
+            ("Call type existence", "call_type_existence_agreement", "call_type_existence_explanation"),
+            ("Acoustic description", "acoustic_description_agreement", "acoustic_description_explanation"),
+            ("Semantic description", "semantic_description_agreement", "semantic_description_explanation"),
+        ]
+        for col, (label, agreement_key, expl_key) in zip(cols, triples):
+            with col:
+                agreement = call.get(agreement_key, "unknown")
+                st.markdown(
+                    f"**{label}** &nbsp; {agreement_badge(agreement)}",
+                    unsafe_allow_html=True,
+                )
+                if call.get(expl_key):
+                    with st.expander("why?"):
+                        st.write(call[expl_key])
 
     st.markdown("**Acoustic description**")
-    st.write(call["acoustic_description"])
-    st.caption(
-        "Sources: " + ", ".join(render_citation(c, refs) for c in call["acoustic_references"])
-    )
+    st.write(call.get("acoustic_description", ""))
+    render_sources("Sources", call.get("acoustic_references") or call.get("references") or [], refs)
 
     st.markdown("**Semantic description**")
-    st.write(call["semantic_description"])
-    st.caption(
-        "Sources: " + ", ".join(render_citation(c, refs) for c in call["semantic_references"])
-    )
+    st.write(call.get("semantic_description", ""))
+    render_sources("Sources", call.get("semantic_references") or call.get("references") or [], refs)
 
     pb = call.get("playback_references") or []
     audio = call.get("audio_samples") or []
@@ -344,12 +400,30 @@ def render_call(call: dict, refs: dict) -> None:
 
 
 def main() -> None:
+    args = parse_args()
+
     st.set_page_config(page_title="Species Repertoires", layout="wide")
     st.title("🐾 Species Repertoires")
 
-    species = load_species(species_cache_key())
+    initial_db = selected_db(args.db)
+    options = db_options(initial_db)
+    with st.sidebar:
+        st.header("Database")
+        db_choice = st.selectbox(
+            "Select database",
+            options,
+            index=options.index(initial_db),
+            format_func=lambda db: db.replace("_", " "),
+        )
+        if st.query_params.get("db") != db_choice:
+            st.query_params["db"] = db_choice
+        species_dir = resolve_species_dir(db_choice)
+        st.caption(str(species_dir))
+        st.divider()
+
+    species = load_species(species_dir, species_cache_key(species_dir))
     if not species:
-        st.info("No species files found in `species/`. Add a YAML file to get started.")
+        st.info(f"No species files found in `{species_dir}`. Add a YAML file to get started.")
         return
 
     with st.sidebar:
@@ -362,17 +436,25 @@ def main() -> None:
             "Select species", list(species.keys()), format_func=lambda k: labels[k]
         )
         st.divider()
-        st.header("Filters")
-        existence_filter = st.multiselect(
-            "Call type existence",
-            ["strong", "medium", "weak"],
-            default=["strong", "medium", "weak"],
-        )
-        inventory_filter = st.radio(
-            "Primary inventory",
-            ["all", "only inventory", "only additions"],
-            index=0,
-        )
+        all_loaded_calls = [call for data in species.values() for call in data.get("calls", [])]
+        has_agreements = any(has_agreement_fields(call) for call in all_loaded_calls)
+        has_inventory_flags = any("in_primary_inventory" in call for call in all_loaded_calls)
+        existence_filter = ["strong", "medium", "weak"]
+        inventory_filter = "all"
+        if has_agreements or has_inventory_flags:
+            st.header("Filters")
+        if has_agreements:
+            existence_filter = st.multiselect(
+                "Call type existence",
+                ["strong", "medium", "weak"],
+                default=["strong", "medium", "weak"],
+            )
+        if has_inventory_flags:
+            inventory_filter = st.radio(
+                "Primary inventory",
+                ["all", "only inventory", "only additions"],
+                index=0,
+            )
         st.divider()
         st.caption(f"{len(species)} species, {sum(len(v.get('calls', [])) for v in species.values())} calls total")
 
@@ -383,17 +465,18 @@ def main() -> None:
     if line := taxonomy_line(data):
         st.caption(line)
 
-    inventory = data.get("primary_inventory") or {}
-    inv_id = inventory.get("id")
-    rationale = inventory.get("rationale", "")
-    if inv_id:
-        citation = render_citation({"id": inv_id}, refs)
-        st.markdown(f"📖 **Primary inventory:** {citation}")
-    else:
-        st.markdown("📖 **Primary inventory:** *none — every call is an addition*")
-    if rationale:
-        with st.expander("inventory rationale"):
-            st.write(rationale)
+    inventory = data.get("primary_inventory")
+    inv_id = (inventory or {}).get("id")
+    rationale = (inventory or {}).get("rationale", "")
+    if inventory:
+        if inv_id:
+            citation = render_citation({"id": inv_id}, refs)
+            st.markdown(f"📖 **Primary inventory:** {citation}")
+        else:
+            st.markdown("📖 **Primary inventory:** *none — every call is an addition*")
+        if rationale:
+            with st.expander("inventory rationale"):
+                st.write(rationale)
 
     all_calls = data.get("calls", [])
     if not all_calls:
@@ -401,7 +484,7 @@ def main() -> None:
         return
 
     def keep(call: dict) -> bool:
-        if normalize_agreement(call.get("call_type_existence_agreement")) not in existence_filter:
+        if has_agreements and normalize_agreement(call.get("call_type_existence_agreement")) not in existence_filter:
             return False
         if inventory_filter == "only inventory" and not call.get("in_primary_inventory"):
             return False
@@ -423,16 +506,21 @@ def main() -> None:
             st.caption(f"filtered from {len(all_calls)}")
         elif inv_id:
             st.caption(f"{n_from_inv} from inventory · {len(calls) - n_from_inv} additions")
-        else:
+        elif has_inventory_flags:
             st.caption(f"{len(calls)} additions")
-    for metric, label, key in (
-        (m2, "Existence", "call_type_existence_agreement"),
-        (m3, "Acoustic", "acoustic_description_agreement"),
-        (m4, "Semantic", "semantic_description_agreement"),
-    ):
-        with metric:
-            st.caption(label)
-            st.markdown(agreement_summary_badges(calls, key), unsafe_allow_html=True)
+    if has_agreements:
+        for metric, label, key in (
+            (m2, "Existence", "call_type_existence_agreement"),
+            (m3, "Acoustic", "acoustic_description_agreement"),
+            (m4, "Semantic", "semantic_description_agreement"),
+        ):
+            with metric:
+                st.caption(label)
+                st.markdown(agreement_summary_badges(calls, key), unsafe_allow_html=True)
+    else:
+        for metric, label in ((m2, "High"), (m3, "Medium"), (m4, "Low")):
+            with metric:
+                st.metric(f"{label} confidence", sum(1 for c in calls if c.get("confidence") == label.lower()))
     st.divider()
 
     for call in calls:
