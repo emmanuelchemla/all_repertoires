@@ -49,7 +49,7 @@ python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/ll
   - `tonal`, `broadband`, `noisy`, `harmonic`
   - `short`, `long`, `abrupt`, `repetitive`, `pulsed`, `multi_component`
   - `loud`, `quiet`, `graded`
-- `acoustic_description`: what the call sounds like. Avoid function/context here.
+- `acoustic_description`: what the call sounds like, describe spectro-temporal structure such as pitch, tonality/noisiness, duration, contour, rhythm/repetition, component structure, amplitude when relevant. Avoid function/context here.
 - `semantic_keywords`: controlled function/context tags. Use only:
   - `contact`, `group_coordination`, `affiliation`
   - `threat`, `aggression`, `submission`
@@ -61,7 +61,7 @@ python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/ll
   - `identity`, `attention`
   - `play`, `display`
   - `combinatorial`
-- `semantic_description`: when or why the call is produced. Avoid acoustic terms here.
+- `semantic_description`: when or why the call is produced, context of production. Avoid acoustic terms here.
 - `confidence`: `low`, `medium`, or `high`.
 - `references`: optional list of reference IDs from the top-level `references` map.
 
