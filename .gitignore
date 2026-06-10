@@ -38,3 +38,19 @@ dist/
 # Project outputs
 .embedding_cache.json
 human_bursts/
+
+# Local agent/editor state
+.claude/
+
+# Local-only plot exports; canonical paper figures in plots/ remain versioned.
+plots/acoustic_umap3d.png
+plots/fig2_embeddings.png
+plots/fig_human_correspondents.png
+plots/fig_human_mantel_row.png
+plots/fig_human_pmi.png
+plots/fig_merged.pdf
+plots/keyword_freq.png
+plots/keyword_heatmap.png
+plots/keyword_heatmap_bin.png
+plots/semantic_umap.png
+plots/semantic_umap3d.png
