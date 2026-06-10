@@ -1,5 +1,6 @@
 # Core species candidates for the repertoire database.
-# Grouped by family. A species is "done" iff species/<kebab-name>.yaml exists.
+# Grouped by family. For each repertoire database, a species is "done" iff
+# <database>/species/<kebab-name>.yaml exists.
 
 # Species were selected to prioritize taxa for which vocal repertoires are likely to support comparative analysis of call-type structure. We favored species with discrete, named, and literature-supported vocal or acoustic signal classes, especially where both acoustic form and behavioral context have been described from wild populations. To reduce redundancy, closely related species with similar expected repertoires were pruned unless they added clear comparative value, while taxa with strongly graded, weakly contextualized, or primarily individual-level acoustic variation were retained only when they represented especially important systems such as cetacean vocal culture. The resulting core set comprises 117 species across 51 families.
 

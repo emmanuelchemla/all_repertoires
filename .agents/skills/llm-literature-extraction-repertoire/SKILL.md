@@ -107,7 +107,7 @@ A common drift is to let function leak into acoustic descriptions (e.g. "alarm-l
 ## Workflow
 
 1. Checkout to main and pull.
-2. Pick unfinished species from `repertoires/llm_literature_extraction/species_index.yaml` (no file yet at `repertoires/llm_literature_extraction/species/<kebab-name>.yaml`) and generate YAML repertoire files for all.
+2. Pick unfinished species from `repertoires/species_index.yaml` (no file yet at `repertoires/llm_literature_extraction/species/<kebab-name>.yaml`) and generate YAML repertoire files for all.
 3. Run `python .agents/skills/llm-literature-extraction-repertoire/validate.py repertoires/llm_literature_extraction/species/<file>.yaml` and commit directly to main and push.
 4. Never touch `schema.json`, `validate.py`, or this skill as a side-effect.
 5. Do **not** use `database.json` as a source. Build every repertoire from scratch using primary literature only.
