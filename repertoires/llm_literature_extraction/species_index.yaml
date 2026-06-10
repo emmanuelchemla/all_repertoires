@@ -1,284 +1,292 @@
 # Core species candidates for the repertoire database.
 # Grouped by family. A species is "done" iff species/<kebab-name>.yaml exists.
 
-# Species were selected to prioritize taxa for which vocal repertoires are likely to support comparative analysis of call-type structure. We favored species with discrete, named, and literature-supported vocal or acoustic signal classes, especially where both acoustic form and behavioral context have been described from wild populations. To reduce redundancy, closely related species with similar expected repertoires were pruned unless they added clear comparative value, while taxa with strongly graded, weakly contextualized, or primarily individual-level acoustic variation were retained only when they represented especially important systems such as cetacean vocal culture. The resulting core set comprises 132 species across 58 families.
+# Species were selected to prioritize taxa for which vocal repertoires are likely to support comparative analysis of call-type structure. We favored species with discrete, named, and literature-supported vocal or acoustic signal classes, especially where both acoustic form and behavioral context have been described from wild populations. To reduce redundancy, closely related species with similar expected repertoires were pruned unless they added clear comparative value, while taxa with strongly graded, weakly contextualized, or primarily individual-level acoustic variation were retained only when they represented especially important systems such as cetacean vocal culture. The resulting core set comprises 129 species across 58 families.
+
+# Study-fit tags support broad cross-species call-type analyses:
+# - semantic_knowledge: likely availability of context/function descriptions for multiple call types (high | medium | low).
+# - acoustic_knowledge: likely availability of acoustic descriptions or measurements for call types (high | medium | low).
+# - repertoire_scope: likely number and discreteness of documented call types (high | medium | low).
+# - call_type_study_fit: include by default (include), include only after targeted literature check (caution), or exclude from broad call-type analyses (exclude).
+# - study_group_species: optional list of taxa that may be pooled with the anchor species for repertoire extraction rather than entered as separate target species.
+# - study_group_note: optional short label explaining why the anchor and listed taxa may need to be treated as one study group.
 
 families:
 
   # ---- Primates ----
 
   Hominidae:
-    - { scientific_name: Pan troglodytes, common_name: Chimpanzee }
-    - { scientific_name: Pan paniscus, common_name: Bonobo }
-    - { scientific_name: Gorilla gorilla, common_name: Western Gorilla }
-    - { scientific_name: Pongo pygmaeus, common_name: Bornean Orangutan }
+    - { scientific_name: Pan troglodytes, common_name: Chimpanzee, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Pan paniscus, common_name: Bonobo, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Gorilla gorilla, common_name: Western Gorilla, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Pongo pygmaeus, common_name: Bornean Orangutan, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Hylobatidae:
-    - { scientific_name: Hylobates lar, common_name: White-handed Gibbon }
-    - { scientific_name: Symphalangus syndactylus, common_name: Siamang }
-    - { scientific_name: Nomascus concolor, common_name: Black Crested Gibbon }
+    - { scientific_name: Hylobates lar, common_name: White-handed Gibbon, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Symphalangus syndactylus, common_name: Siamang, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Nomascus concolor, common_name: Black Crested Gibbon, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Cercopithecidae:
-    - { scientific_name: Chlorocebus pygerythrus, common_name: Vervet Monkey }
-    - { scientific_name: Cercopithecus diana, common_name: Diana Monkey }
-    - { scientific_name: Cercopithecus campbelli, common_name: Campbell's Monkey }
-    - { scientific_name: Cercopithecus nictitans, common_name: Putty-nosed Monkey }
-    - { scientific_name: Macaca mulatta, common_name: Rhesus Macaque }
-    - { scientific_name: Macaca fuscata, common_name: Japanese Macaque }
-    - { scientific_name: Macaca sylvanus, common_name: Barbary Macaque }
-    - { scientific_name: Papio anubis, common_name: Olive Baboon }
-    - { scientific_name: Theropithecus gelada, common_name: Gelada }
-    - { scientific_name: Colobus guereza, common_name: Mantled Guereza }
-    - { scientific_name: Cercopithecus ascanius, common_name: Red-tailed Monkey }
-    - { scientific_name: Cercopithecus neglectus, common_name: De Brazza's Monkey }
-    - { scientific_name: Cercopithecus pogonias, common_name: Crowned Guenon }
-    - { scientific_name: Cercopithecus mona, common_name: Mona Monkey }
-    - { scientific_name: Allochrocebus lhoesti, common_name: L'Hoest's Monkey }
-    - { scientific_name: Erythrocebus patas, common_name: Patas Monkey }
-    - { scientific_name: Miopithecus talapoin, common_name: Talapoin Monkey }
-    - { scientific_name: Mandrillus sphinx, common_name: Mandrill }
-    - { scientific_name: Mandrillus leucophaeus, common_name: Drill }
-    - { scientific_name: Papio cynocephalus, common_name: Yellow Baboon }
-    - { scientific_name: Papio ursinus, common_name: Chacma Baboon }
+    - { scientific_name: Chlorocebus pygerythrus, common_name: Vervet Monkey, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Cercopithecus diana, common_name: Diana Monkey, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Cercopithecus campbelli, common_name: Campbell's Monkey, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Cercopithecus nictitans, common_name: Putty-nosed Monkey, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Macaca mulatta, common_name: Rhesus Macaque, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Macaca fuscata, common_name: Japanese Macaque, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Macaca sylvanus, common_name: Barbary Macaque, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Papio anubis, common_name: Olive Baboon, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Theropithecus gelada, common_name: Gelada, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Colobus guereza, common_name: Mantled Guereza, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Cercopithecus ascanius, common_name: Red-tailed Monkey, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Cercopithecus neglectus, common_name: De Brazza's Monkey, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Cercopithecus pogonias, common_name: Crowned Guenon, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Cercopithecus mona, common_name: Mona Monkey, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Allochrocebus lhoesti, common_name: L'Hoest's Monkey, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Erythrocebus patas, common_name: Patas Monkey, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Miopithecus talapoin, common_name: Talapoin Monkey, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Mandrillus sphinx, common_name: Mandrill, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Mandrillus leucophaeus, common_name: Drill, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
+    - { scientific_name: Papio cynocephalus, common_name: Yellow Baboon, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Papio ursinus, common_name: Chacma Baboon, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Atelidae:
-    - { scientific_name: Alouatta palliata, common_name: Mantled Howler Monkey }
-    - { scientific_name: Alouatta seniculus, common_name: Red Howler Monkey }
-    - { scientific_name: Ateles geoffroyi, common_name: Geoffroy's Spider Monkey }
+    - { scientific_name: Alouatta palliata, common_name: Mantled Howler Monkey, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Alouatta seniculus, common_name: Red Howler Monkey, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Ateles geoffroyi, common_name: Geoffroy's Spider Monkey, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Cebidae:
-    - { scientific_name: Cebus capucinus, common_name: White-faced Capuchin }
-    - { scientific_name: Sapajus apella, common_name: Tufted Capuchin }
-    - { scientific_name: Saimiri sciureus, common_name: Common Squirrel Monkey }
+    - { scientific_name: Cebus capucinus, common_name: White-faced Capuchin, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Sapajus apella, common_name: Tufted Capuchin, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Saimiri sciureus, common_name: Common Squirrel Monkey, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Callitrichidae:
-    - { scientific_name: Callithrix jacchus, common_name: Common Marmoset }
-    - { scientific_name: Cebuella pygmaea, common_name: Pygmy Marmoset }
-    - { scientific_name: Saguinus oedipus, common_name: Cotton-top Tamarin }
-    - { scientific_name: Saguinus fuscicollis, common_name: Saddle-back Tamarin }
-    - { scientific_name: Saguinus mystax, common_name: Moustached Tamarin }
-    - { scientific_name: Leontopithecus rosalia, common_name: Golden Lion Tamarin }
+    - { scientific_name: Callithrix jacchus, common_name: Common Marmoset, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Cebuella pygmaea, common_name: Pygmy Marmoset, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Saguinus oedipus, common_name: Cotton-top Tamarin, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Saguinus fuscicollis, common_name: Saddle-back Tamarin, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Saguinus mystax, common_name: Moustached Tamarin, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Leontopithecus rosalia, common_name: Golden Lion Tamarin, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Pitheciidae:
-    - { scientific_name: Plecturocebus cupreus, common_name: Coppery Titi }
-    - { scientific_name: Plecturocebus donacophilus, common_name: White-eared Titi }
-    - { scientific_name: Callicebus nigrifrons, common_name: Black-fronted Titi }
-    - { scientific_name: Cheracebus lugens, common_name: Black Titi }
+    # Titi repertoire evidence is strong enough for inclusion, but historical taxonomy and study labels
+    # can make it unclear which split species a call belongs to. Use C. nigrifrons as the anchor entry
+    # and pool the listed titis for extraction unless a paper clearly supports a species-specific split.
+    - { scientific_name: Callicebus nigrifrons, common_name: Black-fronted Titi, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include, study_group_species: [Plecturocebus cupreus, Plecturocebus donacophilus, Cheracebus lugens, Callicebus personatus, Callicebus melanochir], study_group_note: titi_superspecies_for_repertoire_extraction }
 
   Aotidae:
-    - { scientific_name: Aotus azarae, common_name: Azara's Owl Monkey }
+    - { scientific_name: Aotus azarae, common_name: Azara's Owl Monkey, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
 
   Lemuridae:
-    - { scientific_name: Lemur catta, common_name: Ring-tailed Lemur }
-    - { scientific_name: Varecia variegata, common_name: Black-and-white Ruffed Lemur }
+    - { scientific_name: Lemur catta, common_name: Ring-tailed Lemur, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Varecia variegata, common_name: Black-and-white Ruffed Lemur, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Indriidae:
-    - { scientific_name: Indri indri, common_name: Indri }
+    - { scientific_name: Indri indri, common_name: Indri, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Cetaceans ----
 
   Delphinidae:
-    - { scientific_name: Tursiops truncatus, common_name: Common Bottlenose Dolphin }
-    - { scientific_name: Orcinus orca, common_name: Killer Whale }
-    - { scientific_name: Globicephala melas, common_name: Long-finned Pilot Whale }
+    - { scientific_name: Tursiops truncatus, common_name: Common Bottlenose Dolphin, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
+    - { scientific_name: Orcinus orca, common_name: Killer Whale, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
+    - { scientific_name: Globicephala melas, common_name: Long-finned Pilot Whale, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
 
   Monodontidae:
-    - { scientific_name: Delphinapterus leucas, common_name: Beluga }
+    - { scientific_name: Delphinapterus leucas, common_name: Beluga, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
 
   Physeteridae:
-    - { scientific_name: Physeter macrocephalus, common_name: Sperm Whale }
+    - { scientific_name: Physeter macrocephalus, common_name: Sperm Whale, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
 
   Balaenopteridae:
-    - { scientific_name: Megaptera novaeangliae, common_name: Humpback Whale }
+    - { scientific_name: Megaptera novaeangliae, common_name: Humpback Whale, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
 
   # ---- Pinnipeds ----
 
   Phocidae:
-    - { scientific_name: Leptonychotes weddellii, common_name: Weddell Seal }
-    - { scientific_name: Mirounga angustirostris, common_name: Northern Elephant Seal }
+    - { scientific_name: Leptonychotes weddellii, common_name: Weddell Seal, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Mirounga angustirostris, common_name: Northern Elephant Seal, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Otariidae:
-    - { scientific_name: Zalophus californianus, common_name: California Sea Lion }
+    - { scientific_name: Zalophus californianus, common_name: California Sea Lion, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Carnivores ----
 
   Canidae:
-    - { scientific_name: Canis lupus, common_name: Gray Wolf }
-    - { scientific_name: Canis familiaris, common_name: Domestic Dog }
-    - { scientific_name: Lycaon pictus, common_name: African Wild Dog }
-    - { scientific_name: Canis latrans, common_name: Coyote }
+    - { scientific_name: Canis lupus, common_name: Gray Wolf, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Canis familiaris, common_name: Domestic Dog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Lycaon pictus, common_name: African Wild Dog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Canis latrans, common_name: Coyote, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Felidae:
-    - { scientific_name: Panthera leo, common_name: Lion }
-    - { scientific_name: Felis catus, common_name: Domestic Cat }
+    - { scientific_name: Panthera leo, common_name: Lion, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Felis catus, common_name: Domestic Cat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Hyaenidae:
-    - { scientific_name: Crocuta crocuta, common_name: Spotted Hyena }
+    - { scientific_name: Crocuta crocuta, common_name: Spotted Hyena, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Herpestidae:
-    - { scientific_name: Suricata suricatta, common_name: Meerkat }
-    - { scientific_name: Mungos mungo, common_name: Banded Mongoose }
+    - { scientific_name: Suricata suricatta, common_name: Meerkat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Mungos mungo, common_name: Banded Mongoose, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Mustelidae:
-    - { scientific_name: Aonyx cinereus, common_name: Asian Small-clawed Otter }
+    - { scientific_name: Aonyx cinereus, common_name: Asian Small-clawed Otter, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Ursidae:
-    - { scientific_name: Ailuropoda melanoleuca, common_name: Giant Panda }
+    - { scientific_name: Ailuropoda melanoleuca, common_name: Giant Panda, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
 
   # ---- Rodents ----
 
   Sciuridae:
-    - { scientific_name: Marmota flaviventris, common_name: Yellow-bellied Marmot }
-    - { scientific_name: Urocitellus beldingi, common_name: Belding's Ground Squirrel }
-    - { scientific_name: Otospermophilus beecheyi, common_name: California Ground Squirrel }
-    - { scientific_name: Cynomys ludovicianus, common_name: Black-tailed Prairie Dog }
+    - { scientific_name: Marmota flaviventris, common_name: Yellow-bellied Marmot, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Urocitellus beldingi, common_name: Belding's Ground Squirrel, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Otospermophilus beecheyi, common_name: California Ground Squirrel, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Cynomys ludovicianus, common_name: Black-tailed Prairie Dog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Muridae:
-    - { scientific_name: Rattus norvegicus, common_name: Brown Rat }
-    - { scientific_name: Mus musculus, common_name: House Mouse }
+    - { scientific_name: Rattus norvegicus, common_name: Brown Rat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Mus musculus, common_name: House Mouse, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Heterocephalidae:
-    - { scientific_name: Heterocephalus glaber, common_name: Naked Mole-rat }
+    - { scientific_name: Heterocephalus glaber, common_name: Naked Mole-rat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Octodontidae:
-    - { scientific_name: Octodon degus, common_name: Common Degu }
+    - { scientific_name: Octodon degus, common_name: Common Degu, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Bats ----
 
   Phyllostomidae:
-    - { scientific_name: Phyllostomus hastatus, common_name: Greater Spear-nosed Bat }
-    - { scientific_name: Phyllostomus discolor, common_name: Pale Spear-nosed Bat }
-    - { scientific_name: Desmodus rotundus, common_name: Common Vampire Bat }
+    - { scientific_name: Phyllostomus hastatus, common_name: Greater Spear-nosed Bat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Phyllostomus discolor, common_name: Pale Spear-nosed Bat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Desmodus rotundus, common_name: Common Vampire Bat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Emballonuridae:
-    - { scientific_name: Saccopteryx bilineata, common_name: Greater Sac-winged Bat }
+    - { scientific_name: Saccopteryx bilineata, common_name: Greater Sac-winged Bat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Pteropodidae:
-    - { scientific_name: Rousettus aegyptiacus, common_name: Egyptian Fruit Bat }
+    - { scientific_name: Rousettus aegyptiacus, common_name: Egyptian Fruit Bat, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Elephants ----
 
   Elephantidae:
-    - { scientific_name: Loxodonta africana, common_name: African Savanna Elephant }
-    - { scientific_name: Elephas maximus, common_name: Asian Elephant }
+    - { scientific_name: Loxodonta africana, common_name: African Savanna Elephant, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Elephas maximus, common_name: Asian Elephant, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Ungulates ----
 
   Equidae:
-    - { scientific_name: Equus caballus, common_name: Domestic Horse }
+    - { scientific_name: Equus caballus, common_name: Domestic Horse, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Cervidae:
-    - { scientific_name: Cervus elaphus, common_name: Red Deer }
+    - { scientific_name: Cervus elaphus, common_name: Red Deer, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Hyraxes ----
 
   Procaviidae:
-    - { scientific_name: Procavia capensis, common_name: Rock Hyrax }
+    - { scientific_name: Procavia capensis, common_name: Rock Hyrax, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Corvids ----
 
   Corvidae:
-    - { scientific_name: Corvus corax, common_name: Common Raven }
-    - { scientific_name: Corvus brachyrhynchos, common_name: American Crow }
-    - { scientific_name: Corvus monedula, common_name: Western Jackdaw }
-    - { scientific_name: Pica pica, common_name: Eurasian Magpie }
-    - { scientific_name: Aphelocoma coerulescens, common_name: Florida Scrub-Jay }
-    - { scientific_name: Cyanocitta cristata, common_name: Blue Jay }
+    - { scientific_name: Corvus corax, common_name: Common Raven, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Corvus brachyrhynchos, common_name: American Crow, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Corvus monedula, common_name: Western Jackdaw, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Pica pica, common_name: Eurasian Magpie, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Aphelocoma coerulescens, common_name: Florida Scrub-Jay, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Cyanocitta cristata, common_name: Blue Jay, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Songbirds ----
 
   Paridae:
-    - { scientific_name: Poecile atricapillus, common_name: Black-capped Chickadee }
-    - { scientific_name: Poecile carolinensis, common_name: Carolina Chickadee }
-    - { scientific_name: Parus major, common_name: Great Tit }
-    - { scientific_name: Parus minor, common_name: Japanese Tit }
+    - { scientific_name: Poecile atricapillus, common_name: Black-capped Chickadee, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Poecile carolinensis, common_name: Carolina Chickadee, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Parus major, common_name: Great Tit, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Parus minor, common_name: Japanese Tit, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Estrildidae:
-    - { scientific_name: Taeniopygia guttata, common_name: Zebra Finch }
-    - { scientific_name: Lonchura striata domestica, common_name: Bengalese Finch }
+    - { scientific_name: Taeniopygia guttata, common_name: Zebra Finch, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Lonchura striata domestica, common_name: Bengalese Finch, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Fringillidae:
-    - { scientific_name: Serinus canaria, common_name: Canary }
+    - { scientific_name: Serinus canaria, common_name: Canary, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Passerellidae:
-    - { scientific_name: Zonotrichia leucophrys, common_name: White-crowned Sparrow }
-    - { scientific_name: Melospiza melodia, common_name: Song Sparrow }
-    - { scientific_name: Junco hyemalis, common_name: Dark-eyed Junco }
+    - { scientific_name: Zonotrichia leucophrys, common_name: White-crowned Sparrow, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Melospiza melodia, common_name: Song Sparrow, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Junco hyemalis, common_name: Dark-eyed Junco, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Sturnidae:
-    - { scientific_name: Sturnus vulgaris, common_name: European Starling }
+    - { scientific_name: Sturnus vulgaris, common_name: European Starling, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Icteridae:
-    - { scientific_name: Molothrus ater, common_name: Brown-headed Cowbird }
-    - { scientific_name: Agelaius phoeniceus, common_name: Red-winged Blackbird }
+    - { scientific_name: Molothrus ater, common_name: Brown-headed Cowbird, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Agelaius phoeniceus, common_name: Red-winged Blackbird, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Mimidae:
-    - { scientific_name: Mimus polyglottos, common_name: Northern Mockingbird }
+    - { scientific_name: Mimus polyglottos, common_name: Northern Mockingbird, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Troglodytidae:
-    - { scientific_name: Pheugopedius euophrys, common_name: Plain-tailed Wren }
+    - { scientific_name: Pheugopedius euophrys, common_name: Plain-tailed Wren, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Leiothrichidae:
-    - { scientific_name: Turdoides bicolor, common_name: Southern Pied Babbler }
-    - { scientific_name: Argya squamiceps, common_name: Arabian Babbler }
+    - { scientific_name: Turdoides bicolor, common_name: Southern Pied Babbler, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Argya squamiceps, common_name: Arabian Babbler, semantic_knowledge: medium, acoustic_knowledge: medium, repertoire_scope: medium, call_type_study_fit: caution }
 
   Ploceidae:
-    - { scientific_name: Plocepasser mahali, common_name: White-browed Sparrow-weaver }
+    - { scientific_name: Plocepasser mahali, common_name: White-browed Sparrow-weaver, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Pomatostomidae:
-    - { scientific_name: Pomatostomus ruficeps, common_name: Chestnut-crowned Babbler }
+    - { scientific_name: Pomatostomus ruficeps, common_name: Chestnut-crowned Babbler, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Maluridae:
-    - { scientific_name: Malurus cyaneus, common_name: Superb Fairywren }
+    - { scientific_name: Malurus cyaneus, common_name: Superb Fairywren, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Artamidae:
-    - { scientific_name: Gymnorhina tibicen, common_name: Australian Magpie }
+    - { scientific_name: Gymnorhina tibicen, common_name: Australian Magpie, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Parrots ----
 
   Psittacidae:
-    - { scientific_name: Psittacus erithacus, common_name: Grey Parrot }
-    - { scientific_name: Amazona auropalliata, common_name: Yellow-naped Amazon }
-    - { scientific_name: Eupsittula canicularis, common_name: Orange-fronted Parakeet }
-    - { scientific_name: Forpus passerinus, common_name: Green-rumped Parrotlet }
+    - { scientific_name: Psittacus erithacus, common_name: Grey Parrot, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Amazona auropalliata, common_name: Yellow-naped Amazon, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Eupsittula canicularis, common_name: Orange-fronted Parakeet, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Forpus passerinus, common_name: Green-rumped Parrotlet, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Psittaculidae:
-    - { scientific_name: Melopsittacus undulatus, common_name: Budgerigar }
-    - { scientific_name: Nymphicus hollandicus, common_name: Cockatiel }
+    - { scientific_name: Melopsittacus undulatus, common_name: Budgerigar, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Nymphicus hollandicus, common_name: Cockatiel, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Strigopidae:
-    - { scientific_name: Nestor notabilis, common_name: Kea }
+    - { scientific_name: Nestor notabilis, common_name: Kea, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Fowl ----
 
   Phasianidae:
-    - { scientific_name: Gallus gallus, common_name: Red Junglefowl }
+    - { scientific_name: Gallus gallus, common_name: Red Junglefowl, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Anatidae:
-    - { scientific_name: Anser anser, common_name: Greylag Goose }
+    - { scientific_name: Anser anser, common_name: Greylag Goose, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Penguins ----
 
   Spheniscidae:
-    - { scientific_name: Spheniscus demersus, common_name: African Penguin }
+    - { scientific_name: Spheniscus demersus, common_name: African Penguin, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   # ---- Anurans ----
 
   Eleutherodactylidae:
-    - { scientific_name: Eleutherodactylus coqui, common_name: Common Coqui }
+    - { scientific_name: Eleutherodactylus coqui, common_name: Common Coqui, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Dendrobatidae:
-    - { scientific_name: Allobates femoralis, common_name: Brilliant-thighed Poison Frog }
+    - { scientific_name: Allobates femoralis, common_name: Brilliant-thighed Poison Frog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Hylidae:
-    - { scientific_name: Hyla arborea, common_name: European Tree Frog }
-    - { scientific_name: Hyla cinerea, common_name: Green Treefrog }
-    - { scientific_name: Agalychnis spurrelli, common_name: Gliding Treefrog }
-    - { scientific_name: Boana ericae, common_name: Erica's Treefrog }
+    - { scientific_name: Hyla arborea, common_name: European Tree Frog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Hyla cinerea, common_name: Green Treefrog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Agalychnis spurrelli, common_name: Gliding Treefrog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Boana ericae, common_name: Erica's Treefrog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Ranidae:
-    - { scientific_name: Lithobates catesbeianus, common_name: American Bullfrog }
-    - { scientific_name: Pelophylax ridibundus, common_name: Marsh Frog }
+    - { scientific_name: Lithobates catesbeianus, common_name: American Bullfrog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
+    - { scientific_name: Pelophylax ridibundus, common_name: Marsh Frog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
 
   Leptodactylidae:
-    - { scientific_name: Engystomops pustulosus, common_name: Tungara Frog }
+    - { scientific_name: Engystomops pustulosus, common_name: Tungara Frog, semantic_knowledge: high, acoustic_knowledge: high, repertoire_scope: high, call_type_study_fit: include }
