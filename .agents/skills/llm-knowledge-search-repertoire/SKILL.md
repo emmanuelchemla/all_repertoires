@@ -67,7 +67,7 @@ python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/ll
 
 ## Inclusion guidance
 
-- Aim for a useful complete repertoire, but not exhaustive literature reconciliation.
+- Aim for a useful comprehensive and complete repertoire, but not exhaustive literature reconciliation.
 - Include common, named call types and well-known variants when they are useful for comparative analysis.
 - Merge obvious synonyms into `alternative_names`.
 - Keep broad graded categories broad unless a split is widely recognized or helpful.
