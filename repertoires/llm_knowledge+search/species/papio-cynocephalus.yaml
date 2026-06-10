@@ -1,0 +1,40 @@
+scientific_name: Papio cynocephalus
+common_name: Yellow Baboon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Papio
+  species: cynocephalus
+calls:
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short low call with relatively smooth structure, often repeated in social interaction.
+    semantic_keywords: [contact, affiliation, group_coordination, attention]
+    semantic_description: Used in routine social communication and to signal benign intent.
+    confidence: high
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A sharp forceful call with abrupt onset and harsher quality than grunts.
+    semantic_keywords: [alarm, attention, threat]
+    semantic_description: Produced in alert or disturbance contexts.
+    confidence: high
+  - name: wahoo
+    acoustic_keywords: [multi_component, loud, long, tonal, broadband]
+    acoustic_description: A loud display-like call with compound structure repeated in bouts.
+    semantic_keywords: [display, threat, alarm, attention]
+    semantic_description: Associated with adult male display and high-arousal long-range communication.
+    confidence: high
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: A high-arousal call with strong noisy energy and variable contour.
+    semantic_keywords: [distress, aggression, submission, attention]
+    semantic_description: Produced in conflicts and victim responses.
+    confidence: high
+provenance:
+  - timestamp: "2026-06-10T21:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for yellow baboon using standard baboon call classes.

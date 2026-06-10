@@ -1,0 +1,40 @@
+scientific_name: Indri indri
+common_name: Indri
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Indriidae
+  genus: Indri
+  species: indri
+calls:
+  - name: song bout
+    acoustic_keywords: [long, loud, repetitive, multi_component, harmonic]
+    acoustic_description: A prolonged, often group-coordinated song composed of repeated phrase patterns and strong harmonic structure.
+    semantic_keywords: [territorial, group_coordination, affiliation, display, identity]
+    semantic_description: Used in territorial advertisement, pair or group cohesion, and long-range social display.
+    confidence: high
+  - name: roar
+    acoustic_keywords: [loud, long, noisy, broadband, repetitive]
+    acoustic_description: A forceful, harsh vocal element with stronger noisy energy than the more tonal song sections.
+    semantic_keywords: [territorial, threat, attention, display]
+    semantic_description: Contributes to high-arousal long-range display and territorial calling.
+    confidence: medium
+  - name: kiss
+    acoustic_keywords: [short, abrupt, quiet, pulsed, repetitive]
+    acoustic_description: A brief percussive or click-like call element with abrupt onset.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Used in close-range coordination and local social attention.
+    confidence: medium
+  - name: wheeze
+    acoustic_keywords: [noisy, broadband, short, abrupt, graded]
+    acoustic_description: A harsh breathy call with less tonality than full song elements.
+    semantic_keywords: [attention, threat, distress]
+    semantic_description: Included as a local arousal-related call used outside the main song bout.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T20:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for indri centered on the species' well-known song system and supporting local call classes.

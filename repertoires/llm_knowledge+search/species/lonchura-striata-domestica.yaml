@@ -1,0 +1,40 @@
+scientific_name: Lonchura striata domestica
+common_name: Bengalese Finch
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Estrildidae
+  genus: Lonchura
+  species: striata domestica
+calls:
+  - name: song
+    acoustic_keywords: [multi_component, tonal, harmonic, repetitive, long]
+    acoustic_description: A learned, phrase-structured song made of repeated syllable sequences with rich variation.
+    semantic_keywords: [courtship, mating, display, identity]
+    semantic_description: Produced mainly by males in courtship and sexual display.
+    confidence: high
+  - name: distance call
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, short, loud]
+    acoustic_description: A brief but salient tonal contact call with clear harmonic structure.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in pair or flock contact, especially when individuals are separated.
+    confidence: medium
+  - name: chatter
+    acoustic_keywords: [short, repetitive, tonal, quiet, multi_component]
+    acoustic_description: A local conversational sequence of short notes with less formal structure than full song.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine close-range social interaction.
+    confidence: medium
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
+    acoustic_description: A repeated high-pitched solicitation call typical of dependent young.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Produced by juveniles to solicit food and care.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Bengalese finch using major song, contact, and begging call categories.

@@ -1,0 +1,40 @@
+scientific_name: Saimiri sciureus
+common_name: Common Squirrel Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cebidae
+  genus: Saimiri
+  species: sciureus
+calls:
+  - name: chuck
+    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
+    acoustic_description: A short local call with simple structure, often repeated in low-arousal interaction.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine within-group social contact.
+    confidence: medium
+  - name: peep
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A brief high-pitched tonal note with lighter structure than alarm calls.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in local social communication and cohesion.
+    confidence: medium
+  - name: twitter
+    acoustic_keywords: [high_frequency, repetitive, tonal, short, graded]
+    acoustic_description: A rapid sequence of high notes with more continuous repetition than single peeps.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used in active social and movement contexts.
+    confidence: medium
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A loud high-arousal call with noisy spectral structure.
+    semantic_keywords: [distress, alarm, attention]
+    semantic_description: Produced in danger or severe social conflict.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for common squirrel monkey using standard small-call social categories and distress calls.

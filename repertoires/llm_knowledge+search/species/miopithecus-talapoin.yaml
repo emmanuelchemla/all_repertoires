@@ -1,0 +1,40 @@
+scientific_name: Miopithecus talapoin
+common_name: Talapoin Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Miopithecus
+  species: talapoin
+calls:
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short low social call with relatively simple tonal structure.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine social communication and benign approaches.
+    confidence: medium
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A brief high-pitched tonal call used in local communication.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in short-range social coordination and group cohesion.
+    confidence: medium
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced in disturbance and danger contexts.
+    confidence: medium
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A high-intensity noisy call with strong arousal.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Produced in severe conflict or immediate danger.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T22:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for talapoin monkey using conservative cercopithecid social and alarm categories.

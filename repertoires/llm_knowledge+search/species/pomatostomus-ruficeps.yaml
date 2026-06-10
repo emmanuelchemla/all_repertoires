@@ -1,0 +1,40 @@
+scientific_name: Pomatostomus ruficeps
+common_name: Chestnut-crowned Babbler
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Pomatostomidae
+  genus: Pomatostomus
+  species: ruficeps
+calls:
+  - name: flight call
+    acoustic_keywords: [short, abrupt, tonal, repetitive, loud]
+    acoustic_description: A short call with clear onset used during movement and transitions between perches.
+    semantic_keywords: [group_coordination, contact, attention]
+    semantic_description: Helps coordinate collective movement among group members.
+    confidence: medium
+  - name: chatter
+    acoustic_keywords: [short, repetitive, multi_component, tonal, quiet]
+    acoustic_description: A rapid sequence of brief notes used in close-range social interaction.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Common during foraging and local group cohesion.
+    confidence: high
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
+    acoustic_description: A persistent higher-pitched repeated call than adult social notes.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Produced by dependent young to solicit feeding and care.
+    confidence: medium
+  - name: recruitment chatter
+    acoustic_keywords: [repetitive, multi_component, noisy, abrupt, loud]
+    acoustic_description: A more excited and louder chatter bout than routine contact chatter.
+    semantic_keywords: [recruitment, group_coordination, attention]
+    semantic_description: Used to draw group members to a location or focal event.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for chestnut-crowned babbler focused on cooperative-group chatter and movement calls.

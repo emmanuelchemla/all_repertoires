@@ -1,0 +1,40 @@
+scientific_name: Corvus brachyrhynchos
+common_name: American Crow
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Corvus
+  species: brachyrhynchos
+calls:
+  - name: caw
+    acoustic_keywords: [low_frequency, noisy, short, repetitive, loud]
+    acoustic_description: A resonant harsh call with rough spectral quality and repeated delivery.
+    semantic_keywords: [contact, identity, attention]
+    semantic_description: Used broadly in social communication, spacing, and caller awareness.
+    confidence: high
+  - name: scold call
+    acoustic_keywords: [noisy, broadband, abrupt, repetitive, loud]
+    acoustic_description: A harsher more agitated call series than ordinary caws.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced in mobbing and disturbance situations.
+    confidence: high
+  - name: rattle
+    acoustic_keywords: [repetitive, abrupt, noisy, short, multi_component]
+    acoustic_description: A rapid series of rough notes distinct from simple caws.
+    semantic_keywords: [display, affiliation, attention]
+    semantic_description: Used in close social interaction and display.
+    confidence: medium
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
+    acoustic_description: A repeated higher-pitched call produced persistently by young.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Used by juveniles to solicit food and care.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for American crow using major caw, scold, and social call classes.

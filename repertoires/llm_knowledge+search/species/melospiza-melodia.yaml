@@ -1,0 +1,71 @@
+scientific_name: Melospiza melodia
+common_name: Song Sparrow
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Passerellidae
+  genus: Melospiza
+  species: melodia
+calls:
+  - name: song
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - multi_component
+      - repetitive
+      - long
+    acoustic_description: A structured learned song composed of repeated syllable sequences and distinctive phrase patterns.
+    semantic_keywords:
+      - territorial
+      - courtship
+      - mating
+      - identity
+      - display
+    semantic_description: Used in territory advertisement, mate attraction, and male display.
+    confidence: high
+  - name: chip call
+    acoustic_keywords:
+      - short
+      - abrupt
+      - tonal
+      - repetitive
+    acoustic_description: A brief, sharply delivered call with simple structure and clear onset.
+    semantic_keywords:
+      - contact
+      - attention
+      - alarm
+    semantic_description: Used as a common everyday call and in heightened attention or mild disturbance contexts.
+    confidence: medium
+  - name: tseet call
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - loud
+    acoustic_description: A thinner, higher-pitched call than the chip, with a narrowband tonal quality.
+    semantic_keywords:
+      - alarm
+      - attention
+      - predator
+    semantic_description: Used in more urgent alarm or high-alert situations.
+    confidence: medium
+  - name: flight call
+    acoustic_keywords:
+      - short
+      - tonal
+      - frequency_modulated
+      - repetitive
+    acoustic_description: A brief call given in movement contexts, generally simple and suited to short-range contact.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Helps coordinate movement or maintain awareness during short-range displacement.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T20:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for song sparrow using broad song and common call categories with conservative confidence on non-song call splits.

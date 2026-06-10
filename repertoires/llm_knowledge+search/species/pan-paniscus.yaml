@@ -1,0 +1,208 @@
+scientific_name: Pan paniscus
+common_name: Bonobo
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hominidae
+  genus: Pan
+  species: paniscus
+calls:
+  - name: high hoot
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - long
+      - loud
+    acoustic_description: A relatively high-pitched hoot with clear tonal structure, often louder and more conspicuous than softer peaceful-context calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+      - display
+    semantic_description: Used across socially aroused situations including coordination and attention-getting, often contributing to broader vocal sequences.
+    confidence: high
+    references:
+      - wegdell_2025
+  - name: low hoot
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - harmonic
+      - long
+      - quiet
+    acoustic_description: A lower-pitched, more subdued hoot with a relatively smooth harmonic structure and longer duration than brief peeps.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Common in lower-arousal social contexts and contributes to maintaining cohesion or low-intensity social coordination.
+    confidence: high
+    references:
+      - wegdell_2025
+  - name: peep
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - quiet
+    acoustic_description: A very short, high-pitched, tonal call with simple contour and little noisy structure.
+    semantic_keywords:
+      - contact
+      - attention
+      - affiliation
+    semantic_description: Frequent in peaceful interactions and flexible social contexts, often serving as a soft contact or socially directed call.
+    confidence: high
+    references:
+      - wegdell_2025
+      - genty_2019
+  - name: peep yelp
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - short
+      - tonal
+      - repetitive
+    acoustic_description: A short, high-pitched call with stronger modulation and more dynamic contour than a plain peep.
+    semantic_keywords:
+      - affiliation
+      - attention
+      - contact
+      - play
+    semantic_description: Common in peaceful vocal exchanges and flexible across affiliative or socially engaged contexts.
+    confidence: high
+    references:
+      - wegdell_2025
+      - genty_2019
+  - name: pant grunt
+    acoustic_keywords:
+      - low_frequency
+      - quiet
+      - pulsed
+      - repetitive
+      - graded
+    acoustic_description: A soft, repeated series of low grunts interspersed with panting, delivered at close range.
+    semantic_keywords:
+      - submission
+      - affiliation
+      - attention
+    semantic_description: A greeting-related submissive or deferential signal, especially in socially asymmetrical encounters.
+    confidence: high
+    references:
+      - wegdell_2025
+  - name: grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - pulsed
+      - graded
+    acoustic_description: A short low call with a relatively simple structure, less prolonged and less modulated than hoots or whistles.
+    semantic_keywords:
+      - contact
+      - food
+      - group_coordination
+    semantic_description: Used flexibly across social and ecological contexts, including low-level coordination and potentially food-associated situations.
+    confidence: medium
+    references:
+      - wegdell_2025
+  - name: whistle
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - long
+      - frequency_modulated
+    acoustic_description: A tonal, high-pitched call with narrowband structure and a clearly whistled quality.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Likely functions in longer-range social contact and coordination, and is a common element in bonobo call combinations.
+    confidence: high
+    references:
+      - wegdell_2025
+  - name: yelp
+    acoustic_keywords:
+      - high_frequency
+      - abrupt
+      - short
+      - tonal
+      - loud
+    acoustic_description: A brief, sharp, high-pitched call with a sudden onset and more forceful delivery than peeps.
+    semantic_keywords:
+      - attention
+      - group_coordination
+      - display
+    semantic_description: Produced in more activated social contexts and often embedded in call combinations associated with coordinated social action.
+    confidence: high
+    references:
+      - wegdell_2025
+  - name: scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - graded
+    acoustic_description: A piercing, high-arousal vocalization with noisy energy and strong variation in contour and amplitude.
+    semantic_keywords:
+      - distress
+      - aggression
+      - submission
+      - attention
+    semantic_description: Produced in conflict, victimization, and intense arousal, broadcasting distress or escalating social tension.
+    confidence: high
+    references:
+      - wegdell_2025
+  - name: laughter
+    alternative_names:
+      - laugh
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - repetitive
+      - pulsed
+      - short
+    acoustic_description: A rhythmic series of breathy noisy notes produced in repeated pulses during active interaction.
+    semantic_keywords:
+      - play
+      - affiliation
+    semantic_description: Associated with play and positively valenced social engagement.
+    confidence: high
+    references:
+      - wegdell_2025
+  - name: contest hoot
+    acoustic_keywords:
+      - loud
+      - long
+      - tonal
+      - frequency_modulated
+      - multi_component
+    acoustic_description: A conspicuous hoot used in high-arousal situations, acoustically more forceful and display-like than quieter contact hoots.
+    semantic_keywords:
+      - threat
+      - display
+      - aggression
+      - attention
+    semantic_description: Produced in competitive or socially tense contexts as part of display and contest behaviour.
+    confidence: high
+    references:
+      - wegdell_2025
+references:
+  wegdell_2025:
+    citation: "Wegdell, F., Schamberg, I., Berthet, M., Rothacher, Y., Dellwo, V., Surbeck, M., et al. 2025. An updated vocal repertoire of wild adult bonobos (Pan paniscus). PLOS ONE 20:e0330250."
+    url: https://doi.org/10.1371/journal.pone.0330250
+    doi: 10.1371/journal.pone.0330250
+  genty_2019:
+    citation: "Demuru, E., Ferrari, P.F., and Palagi, E. 2019. Social bonding drives vocal exchanges in bonobos. Scientific Reports 9:18287."
+    url: https://doi.org/10.1038/s41598-018-36024-9
+    doi: 10.1038/s41598-018-36024-9
+  fruth_2016:
+    citation: "Fruth, B., Hickey, J.R., Andre, C., Furuichi, T., Hart, J., Hart, T., Kuehl, H., et al. 2016. Pan paniscus. The IUCN Red List of Threatened Species 2016."
+provenance:
+  - timestamp: "2026-06-10T19:35:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for bonobo vocal repertoire anchored on the 2025 quantitative validation of 11 adult call types.

@@ -1,0 +1,88 @@
+scientific_name: Colobus guereza
+common_name: Mantled Guereza
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Colobus
+  species: guereza
+calls:
+  - name: snort
+    acoustic_keywords:
+      - abrupt
+      - short
+      - broadband
+      - noisy
+      - repetitive
+    acoustic_description: A brief harsh expiratory call with abrupt onset and noisy spectrum, often produced in short sequences.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used in anti-predator contexts, especially as part of responses to aerial or terrestrial threats, and contributes to predator-specific call sequences.
+    confidence: high
+    references:
+      - schel_zuberbuhler_2009
+      - arnold_zuberbuhler_2006
+  - name: roaring phrase
+    alternative_names:
+      - roar
+      - roaring sequence
+    acoustic_keywords:
+      - loud
+      - long
+      - noisy
+      - repetitive
+      - multi_component
+    acoustic_description: A loud, acoustically variable phrase of roaring elements that can be repeated in bouts and combined with snorts.
+    semantic_keywords:
+      - alarm
+      - predator
+      - territorial
+      - display
+    semantic_description: Produced in long-distance anti-predator and display contexts; sequence structure varies with context, including eagle and leopard encounters and non-predator predawn calling.
+    confidence: high
+    references:
+      - schel_zuberbuhler_2009
+      - arnold_zuberbuhler_2006
+  - name: predawn roar
+    acoustic_keywords:
+      - loud
+      - long
+      - noisy
+      - repetitive
+    acoustic_description: A long-distance roaring bout similar in basic structure to alarm roars but typically with longer initial phrases and slower early repetition.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - identity
+      - display
+    semantic_description: Given outside immediate predator encounters, especially around dawn, likely for spacing, territory advertisement, and male presence display.
+    confidence: medium
+    references:
+      - schel_zuberbuhler_2009
+  - name: contact call
+    acoustic_keywords:
+      - short
+      - tonal
+      - quiet
+      - repetitive
+    acoustic_description: A quieter, short-range call type reported less prominently than the species' better-studied loud alarms and roars.
+    semantic_keywords:
+      - contact
+      - group_coordination
+    semantic_description: Included conservatively as a likely low-amplitude social call used in ordinary within-group coordination, though the literature sampled here emphasizes long-distance alarm calls.
+    confidence: low
+references:
+  schel_zuberbuhler_2009:
+    citation: "Schel, A.M., Tranquilli, S., and Zuberbuhler, K. 2009. The alarm call system of two species of black-and-white colobus monkeys, Colobus polykomos and Colobus guereza. Journal of Comparative Psychology 123:136-150."
+    url: https://pubmed.ncbi.nlm.nih.gov/19450021/
+  arnold_zuberbuhler_2006:
+    citation: "Arnold, K. and Zuberbuhler, K. 2006. Predator and non-predator long-distance calls in guereza colobus monkeys: context-specific differences in call sequences. Animal Behaviour."
+provenance:
+  - timestamp: "2026-06-10T20:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for guereza emphasizing the well-supported alarm call system and keeping non-alarm social calls conservative.

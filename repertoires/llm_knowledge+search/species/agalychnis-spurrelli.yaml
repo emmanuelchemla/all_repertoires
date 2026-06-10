@@ -1,0 +1,34 @@
+scientific_name: Agalychnis spurrelli
+common_name: Gliding Leaf Frog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Phyllomedusidae
+  genus: Agalychnis
+  species: spurrelli
+calls:
+  - name: advertisement call
+    acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
+    acoustic_description: A repeated mating-season call with relatively stable tonal structure delivered in bouts.
+    semantic_keywords: [courtship, mating, attention]
+    semantic_description: Used by males to attract females at breeding sites.
+    confidence: medium
+  - name: territorial call
+    acoustic_keywords: [abrupt, repetitive, tonal, loud, graded]
+    acoustic_description: A more forceful and locally directed call than the main advertisement signal.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in male-male spacing and conflict at calling sites.
+    confidence: low
+  - name: release call
+    acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
+    acoustic_description: A brief high-intensity call produced during unwanted clasping or close physical interference.
+    semantic_keywords: [submission, attention, mating]
+    semantic_description: Used to terminate inappropriate amplexus or close contact.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T21:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for gliding leaf frog using standard anuran advertisement, territorial, and release-call categories.

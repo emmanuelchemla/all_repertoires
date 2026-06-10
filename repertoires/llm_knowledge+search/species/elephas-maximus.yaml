@@ -1,0 +1,40 @@
+scientific_name: Elephas maximus
+common_name: Asian Elephant
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Proboscidea
+  family: Elephantidae
+  genus: Elephas
+  species: maximus
+calls:
+  - name: rumble
+    acoustic_keywords: [low_frequency, long, harmonic, tonal, loud]
+    acoustic_description: A low-frequency, often infrasonic call with sustained harmonic structure and long duration.
+    semantic_keywords: [contact, group_coordination, affiliation, identity]
+    semantic_description: Used for long-range social contact, cohesion, and coordination among family members.
+    confidence: high
+  - name: trumpet
+    acoustic_keywords: [loud, high_frequency, harmonic, abrupt, long]
+    acoustic_description: A loud resonant call with strong upper harmonics and conspicuous onset.
+    semantic_keywords: [attention, display, distress, threat]
+    semantic_description: Produced in intense arousal including excitement, alarm, aggression, or distress.
+    confidence: high
+  - name: roar
+    acoustic_keywords: [loud, noisy, long, broadband, graded]
+    acoustic_description: A harsh high-amplitude call with more broadband energy than a rumble.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Associated with aggressive display or severe disturbance.
+    confidence: medium
+  - name: squeak
+    acoustic_keywords: [high_frequency, short, tonal, loud, repetitive]
+    acoustic_description: A shorter higher-pitched call than trumpet or rumble, with a clearer tonal quality.
+    semantic_keywords: [caregiving, begging, attention, distress]
+    semantic_description: Common in calf and close social interactions requiring immediate attention.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Asian elephant using core low-frequency rumbles and major arousal-related call classes.

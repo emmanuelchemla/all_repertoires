@@ -1,0 +1,40 @@
+scientific_name: Pongo pygmaeus
+common_name: Bornean Orangutan
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hominidae
+  genus: Pongo
+  species: pygmaeus
+calls:
+  - name: long call
+    acoustic_keywords: [low_frequency, loud, long, repetitive, multi_component]
+    acoustic_description: A prolonged far-carrying sequence of low-frequency elements often preceded or followed by shorter notes.
+    semantic_keywords: [territorial, spacing, display, identity, attention]
+    semantic_description: Produced especially by flanged males for long-range advertisement, spacing, and social display.
+    confidence: high
+  - name: kiss squeak
+    acoustic_keywords: [high_frequency, abrupt, short, repetitive, noisy]
+    acoustic_description: A short high-intensity call produced by suction-like mouth action, often acoustically sharp and abrupt.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Used in disturbance, fear, or aversive contexts to signal alarm and appear larger or more threatening.
+    confidence: high
+  - name: grumph
+    acoustic_keywords: [low_frequency, short, noisy, abrupt, graded]
+    acoustic_description: A short low call with rough structure and less carrying power than the long call.
+    semantic_keywords: [affiliation, contact, attention]
+    semantic_description: Used in close-range social interaction and low-level arousal contexts.
+    confidence: medium
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A loud harsh call with strong noisy energy and high arousal.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Produced in acute conflict or immediate danger.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Bornean orangutan centered on the long call and kiss squeak system.

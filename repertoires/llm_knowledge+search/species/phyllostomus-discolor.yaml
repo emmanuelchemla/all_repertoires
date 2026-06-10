@@ -1,0 +1,40 @@
+scientific_name: Phyllostomus discolor
+common_name: Pale Spear-nosed Bat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Chiroptera
+  family: Phyllostomidae
+  genus: Phyllostomus
+  species: discolor
+calls:
+  - name: isolation call
+    acoustic_keywords: [high_frequency, tonal, long, repetitive, loud]
+    acoustic_description: A higher-amplitude call with sustained structure, produced more persistently than ordinary social calls.
+    semantic_keywords: [begging, caregiving, contact, attention]
+    semantic_description: Used by separated young or isolated individuals to elicit care or reunion.
+    confidence: high
+  - name: social screech
+    acoustic_keywords: [high_frequency, noisy, abrupt, short, repetitive]
+    acoustic_description: A harsh short social call with greater noisy energy than isolation calls.
+    semantic_keywords: [aggression, attention, contact]
+    semantic_description: Used in close-range social negotiation and conflict.
+    confidence: medium
+  - name: contact call
+    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
+    acoustic_description: A lower-amplitude social call with simpler structure than distress or aggressive calls.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine within-roost social communication.
+    confidence: medium
+  - name: maternal directive call
+    acoustic_keywords: [tonal, frequency_modulated, short, repetitive, quiet]
+    acoustic_description: A patterned social call used in maternal interactions and infant guidance.
+    semantic_keywords: [caregiving, attention, contact]
+    semantic_description: Included as a broad maternal communication category given the species' strong evidence for vocal learning and mother-pup exchange.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for pale spear-nosed bat emphasizing isolation, social, and maternal communication categories.

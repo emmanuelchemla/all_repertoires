@@ -1,0 +1,40 @@
+scientific_name: Molothrus ater
+common_name: Brown-headed Cowbird
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Icteridae
+  genus: Molothrus
+  species: ater
+calls:
+  - name: song-spread display song
+    acoustic_keywords: [tonal, harmonic, multi_component, long, loud]
+    acoustic_description: A patterned display song with repeated phrase structure and strong tonal or buzzy components.
+    semantic_keywords: [courtship, mating, display, identity]
+    semantic_description: Used by males in sexual display and courtship.
+    confidence: high
+  - name: chatter
+    acoustic_keywords: [short, repetitive, noisy, multi_component, loud]
+    acoustic_description: A rapid sequence of short notes with more local and variable structure than display song.
+    semantic_keywords: [affiliation, contact, attention]
+    semantic_description: Used in ordinary social interaction and female responsiveness contexts.
+    confidence: medium
+  - name: flight whistle
+    acoustic_keywords: [tonal, harmonic, short, frequency_modulated, loud]
+    acoustic_description: A brief tonal call used during movement and contact.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Helps maintain flock awareness and short-range coordination.
+    confidence: medium
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
+    acoustic_description: A persistent solicitation call produced by young.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Used by nestlings or fledglings to solicit provisioning.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for brown-headed cowbird emphasizing male display song and common social calls.

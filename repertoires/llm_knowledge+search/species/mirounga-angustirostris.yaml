@@ -1,0 +1,160 @@
+scientific_name: Mirounga angustirostris
+common_name: Northern Elephant Seal
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Phocidae
+  genus: Mirounga
+  species: angustirostris
+calls:
+  - name: clap threat call
+    alternative_names:
+      - clap threat
+      - male clap
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - abrupt
+      - pulsed
+      - repetitive
+      - broadband
+    acoustic_description: Loud, percussive, pulse-like bursts with a clap-like quality, often delivered in repeated sequences during high arousal.
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+      - display
+    semantic_description: Main adult male threat signal during competitive encounters, dominance display, and spacing within breeding colonies.
+    confidence: high
+    references:
+      - bartholomew_collins_1965
+      - leboeuf_peterson_1969
+  - name: adult male roar
+    alternative_names:
+      - roar
+      - aggressive roar
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - long
+      - broadband
+    acoustic_description: Harsh, lower-pitched, forceful calls that are longer and more sustained than clap bursts.
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+    semantic_description: Used in escalated competitive interactions among males and as part of status advertisement on crowded breeding beaches.
+    confidence: medium
+    references:
+      - bartholomew_collins_1965
+  - name: mother-pup attraction call
+    alternative_names:
+      - female attraction call
+      - maternal contact call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - repetitive
+      - loud
+      - frequency_modulated
+    acoustic_description: Repeated, individually distinctive calls with clearer tonal structure than male threat signals, often exchanged during reunions.
+    semantic_keywords:
+      - contact
+      - caregiving
+      - identity
+      - group_coordination
+    semantic_description: Produced by mothers to locate, attract, and confirm identity with their dependent pups during separations in dense colonies.
+    confidence: high
+    references:
+      - insley_2000
+      - leboeuf_peterson_1969
+  - name: pup attraction call
+    alternative_names:
+      - pup contact call
+      - reunion call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - repetitive
+      - loud
+      - frequency_modulated
+    acoustic_description: Repeated, somewhat tonal calls given by pups, typically shorter and higher in pitch than adult female calls.
+    semantic_keywords:
+      - contact
+      - caregiving
+      - identity
+      - distress
+    semantic_description: Used by pups to regain contact with mothers and solicit reunion or nursing after separation.
+    confidence: high
+    references:
+      - insley_2000
+      - leboeuf_peterson_1969
+  - name: pup distress cry
+    alternative_names:
+      - distress call
+      - scream
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - broadband
+      - abrupt
+    acoustic_description: High, intense, broadband cries or screams with abrupt onset, often acoustically harsher than ordinary attraction calls.
+    semantic_keywords:
+      - distress
+      - caregiving
+      - attention
+    semantic_description: Produced by pups during acute disturbance, injury risk, or forceful social contact, drawing maternal or nearby adult attention.
+    confidence: medium
+    references:
+      - leboeuf_peterson_1969
+references:
+  bartholomew_collins_1965:
+    citation: Bartholomew, G.A. and Collias, N.E. 1965. The role of vocalization in the social behavior of the northern elephant seal. Animal Behaviour 13(1):7-14.
+    doi: 10.1016/0003-3472(65)90062-0
+  insley_2000:
+    citation: Insley, S.J. 2000. Long-term vocal recognition in the northern fur seal and northern elephant seal. In Hearing by Whales and Dolphins. Springer.
+  leboeuf_peterson_1969:
+    citation: Le Boeuf, B.J. and Peterson, R.S. 1969. Social status and mating activity in elephant seals. Science 163(3872):91-93.
+    doi: 10.1126/science.163.3872.91
+  iucn_2015:
+    citation: Lowry, L. 2015. Mirounga angustirostris. The IUCN Red List of Threatened Species 2015 e.T13583A45227247.
+    url: https://www.iucnredlist.org/species/13583/45227247
+provenance:
+  - timestamp: "2026-06-10T19:05:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft emphasizing breeding-colony threat and mother-pup contact signals with conservative call boundaries.

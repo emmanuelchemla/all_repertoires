@@ -1,0 +1,40 @@
+scientific_name: Anser anser
+common_name: Greylag Goose
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Anseriformes
+  family: Anatidae
+  genus: Anser
+  species: anser
+calls:
+  - name: honk
+    acoustic_keywords: [loud, harmonic, long, repetitive, tonal]
+    acoustic_description: A resonant nasal call with strong harmonic structure and repeated delivery.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in flock cohesion, pair contact, and movement coordination.
+    confidence: high
+  - name: greeting call
+    acoustic_keywords: [repetitive, tonal, multi_component, loud, harmonic]
+    acoustic_description: A more patterned call sequence than a single honk, often exchanged between pair members.
+    semantic_keywords: [affiliation, group_coordination, display]
+    semantic_description: Used in pair-bonding and social greeting contexts.
+    confidence: medium
+  - name: alarm call
+    acoustic_keywords: [abrupt, loud, noisy, short, repetitive]
+    acoustic_description: A sharper more urgent vocalization than ordinary contact honks.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced in disturbance and danger situations.
+    confidence: medium
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
+    acoustic_description: A repeated solicitation call given by goslings.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Used by young to obtain parental care and contact.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for greylag goose using major honk, greeting, and alarm call classes.

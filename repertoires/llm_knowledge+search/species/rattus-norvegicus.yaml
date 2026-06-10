@@ -1,0 +1,40 @@
+scientific_name: Rattus norvegicus
+common_name: Brown Rat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Muridae
+  genus: Rattus
+  species: norvegicus
+calls:
+  - name: 22-kHz call
+    acoustic_keywords: [high_frequency, tonal, long, quiet, harmonic]
+    acoustic_description: A long-duration ultrasonic call with relatively stable tonal structure around the 22 kHz range.
+    semantic_keywords: [distress, threat, attention]
+    semantic_description: Produced in aversive, fearful, or defensive situations and associated with negative affect.
+    confidence: high
+  - name: 50-kHz call
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, harmonic]
+    acoustic_description: A shorter ultrasonic call or call series around the 50 kHz range, often frequency modulated.
+    semantic_keywords: [affiliation, play, attention]
+    semantic_description: Associated with positive social interactions, play, and appetitive or reward-related states.
+    confidence: high
+  - name: audible squeak
+    acoustic_keywords: [high_frequency, abrupt, loud, noisy, short]
+    acoustic_description: A brief audible high-pitched call with abrupt onset and harsh quality.
+    semantic_keywords: [distress, submission, attention]
+    semantic_description: Produced during handling, pain, or acute social conflict.
+    confidence: medium
+  - name: bruxing-associated call
+    acoustic_keywords: [quiet, pulsed, short, graded, low_frequency]
+    acoustic_description: A softer low-amplitude sound associated with close-range social or self-directed states, acoustically less stereotyped than ultrasonic calls.
+    semantic_keywords: [affiliation, caregiving, attention]
+    semantic_description: Included conservatively as a low-intensity social sound around relaxed or tactile interactions.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T20:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for brown rat emphasizing the standard 22-kHz and 50-kHz vocal systems and a few audible call categories.

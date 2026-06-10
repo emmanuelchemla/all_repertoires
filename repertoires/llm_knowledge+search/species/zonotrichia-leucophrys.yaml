@@ -1,0 +1,113 @@
+scientific_name: Zonotrichia leucophrys
+common_name: White-crowned Sparrow
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Passerellidae
+  genus: Zonotrichia
+  species: leucophrys
+calls:
+  - name: song
+    alternative_names:
+      - territorial song
+      - dialect song
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - repetitive
+      - frequency_modulated
+      - long
+      - multi_component
+    acoustic_description: A stereotyped whistle-and-trill song with distinct introductory phrases and terminal trilled or buzz-like components, varying among dialect populations.
+    semantic_keywords:
+      - territorial
+      - courtship
+      - mating
+      - identity
+    semantic_description: Main adult male advertisement used in territory defense and mate attraction, with socially learned local dialect structure.
+    confidence: high
+    references:
+      - marler_tamura_1964
+      - hough_etal_2000
+  - name: tseet flight call
+    alternative_names:
+      - flight call
+      - tseep
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - abrupt
+    acoustic_description: Brief, high-pitched, simple notes given in flight or at takeoff, much shorter and less elaborate than full song.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Helps maintain flock or pair coordination during movement and short-distance displacement.
+    confidence: medium
+    references:
+      - baptista_king_1982
+      - xenocanto_whitecrowned
+  - name: chip contact call
+    alternative_names:
+      - chip call
+      - social chip
+    acoustic_keywords:
+      - short
+      - tonal
+      - quiet
+      - repetitive
+    acoustic_description: Short, simple chip notes exchanged at close range, less intense than alarm calls and less prolonged than song.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Used in everyday social interactions, local spacing, and close-range cohesion.
+    confidence: medium
+    references:
+      - baptista_king_1982
+  - name: buzz alarm call
+    alternative_names:
+      - alarm buzz
+      - threat call
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - repetitive
+      - abrupt
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    acoustic_description: Harsher, more buzzing vocalization than simple chips, often produced rapidly in agitated contexts.
+    semantic_description: Used in alarm and disturbance situations, especially around nests or when predators are nearby.
+    confidence: medium
+    references:
+      - baptista_king_1982
+references:
+  baptista_king_1982:
+    citation: Baptista, L.F. and King, J.R. 1982. The non-song vocal repertoire of the White-crowned Sparrow. Condor 84(1):27-39.
+    url: https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=11835&context=condor
+  hough_etal_2000:
+    citation: Hough, G.E., Nelson, D.A., and Volman, S.F. 2000. Re-expression of songs deleted during vocal development in white-crowned sparrows, Zonotrichia leucophrys. Animal Behaviour 60(3):279-287.
+    url: https://pubmed.ncbi.nlm.nih.gov/11007636/
+    doi: 10.1006/anbe.2000.1498
+  marler_tamura_1964:
+    citation: Marler, P. and Tamura, M. 1964. Culturally transmitted patterns of vocal behavior in sparrows. Science 146(3650):1483-1486.
+    doi: 10.1126/science.146.3650.1483
+  xenocanto_whitecrowned:
+    citation: Xeno-canto. White-crowned Sparrow (Zonotrichia leucophrys) recordings including song and flight calls.
+    url: https://xeno-canto.org/species/Zonotrichia-leucophrys
+provenance:
+  - timestamp: "2026-06-10T20:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft emphasizing the classic song dialect system and a broad set of non-song call categories.

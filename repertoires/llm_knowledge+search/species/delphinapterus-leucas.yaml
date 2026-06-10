@@ -1,0 +1,40 @@
+scientific_name: Delphinapterus leucas
+common_name: Beluga Whale
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Artiodactyla
+  family: Monodontidae
+  genus: Delphinapterus
+  species: leucas
+calls:
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A tonal narrowband call with variable modulation and sustained duration.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in social contact and coordination within groups.
+    confidence: high
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short high-pitched call with simpler structure than whistles.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in local social interaction and group communication.
+    confidence: medium
+  - name: pulse train
+    acoustic_keywords: [pulsed, repetitive, broadband, short, multi_component]
+    acoustic_description: A repeated train of brief pulses rather than a continuous tonal call.
+    semantic_keywords: [group_coordination, attention, display]
+    semantic_description: Used in active social contexts and possibly in close-range interaction.
+    confidence: medium
+  - name: burst call
+    acoustic_keywords: [broadband, abrupt, noisy, short, pulsed]
+    acoustic_description: A compact broadband burst with abrupt onset and little sustained tonality.
+    semantic_keywords: [attention, threat, group_coordination]
+    semantic_description: Likely used in abrupt social or arousal-related contexts.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for beluga whale using standard whistle and pulsed social call categories.

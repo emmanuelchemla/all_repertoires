@@ -1,0 +1,40 @@
+scientific_name: Aonyx cinereus
+common_name: Asian Small-clawed Otter
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Mustelidae
+  genus: Aonyx
+  species: cinereus
+calls:
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A short, high-pitched tonal call often repeated in quick succession.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine close-range social interactions and to maintain cohesion among nearby group members.
+    confidence: medium
+  - name: chatter
+    acoustic_keywords: [short, repetitive, multi_component, noisy, tonal]
+    acoustic_description: A rapid sequence of brief notes with mixed tonal and harsh elements.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Produced during active social interactions, feeding, or excited group activity.
+    confidence: medium
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A clearer, more sustained whistle-like call with strong tonal structure.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Likely used for contact over somewhat greater distance and carries caller-specific information.
+    confidence: medium
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A loud, high-pitched harsh call with strong noisy energy and abrupt onset.
+    semantic_keywords: [distress, threat, attention]
+    semantic_description: Given in high-arousal conflict or distress situations to recruit immediate attention.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T20:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Asian small-clawed otter built from general web-backed repertoire descriptions and conservative call classes.

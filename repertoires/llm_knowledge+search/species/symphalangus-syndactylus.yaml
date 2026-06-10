@@ -1,0 +1,144 @@
+scientific_name: Symphalangus syndactylus
+common_name: Siamang
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hylobatidae
+  genus: Symphalangus
+  species: syndactylus
+calls:
+  - name: duet song bout
+    alternative_names:
+      - duet
+      - great call duet
+    acoustic_keywords:
+      - long
+      - loud
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: A prolonged, high-amplitude song bout built from repeated phrases and coordinated contributions by pair members, often combining low booming elements with louder ringing screams and bark-like notes.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - affiliation
+      - display
+      - combinatorial
+    semantic_description: Produced mainly by pair-bonded adults as a coordinated display for pair cohesion and advertisement of occupancy to neighboring groups.
+    confidence: high
+    references:
+      - geissmann_2000
+      - palombit_1992
+  - name: boom
+    alternative_names:
+      - booms
+      - resonant boom
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - pulsed
+      - repetitive
+    acoustic_description: Deep, resonant low-frequency pulses produced in repeated series, carrying farther than most higher-pitched elements.
+    semantic_keywords:
+      - territorial
+      - display
+      - group_coordination
+    semantic_description: Characteristic adult male contribution to long-range song displays, especially during duet performance and advertisement toward other groups.
+    confidence: high
+    references:
+      - geissmann_2000
+      - palombit_1992
+  - name: long bark
+    alternative_names:
+      - bark
+      - bark note
+    acoustic_keywords:
+      - abrupt
+      - loud
+      - broadband
+      - short
+    acoustic_description: Loud, bark-like notes with abrupt onset and broad spectral energy, standing out clearly from the more tonal song elements.
+    semantic_keywords:
+      - territorial
+      - attention
+      - display
+    semantic_description: Used as a conspicuous display element within the adult song repertoire and in aroused situations requiring attention at longer range.
+    confidence: medium
+    references:
+      - geissmann_2000
+  - name: ululating scream
+    alternative_names:
+      - scream
+      - female scream
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - long
+      - frequency_modulated
+      - tonal
+    acoustic_description: High-pitched, far-carrying screams with strong modulation and a wavering or ululating quality, often among the most salient elements of the bout.
+    semantic_keywords:
+      - territorial
+      - affiliation
+      - display
+    semantic_description: Prominent adult female display signal in pair song, contributing to coordinated territorial advertisement and pair-level performance.
+    confidence: high
+    references:
+      - geissmann_2000
+      - palombit_1992
+  - name: bitonal scream
+    alternative_names:
+      - two-voiced scream
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - harmonic
+      - long
+      - frequency_modulated
+    acoustic_description: A loud scream with two simultaneous tonal bands or strongly dual-structured frequency components, giving it a bitonal quality.
+    semantic_keywords:
+      - territorial
+      - display
+      - identity
+    semantic_description: Treated here as a distinctive female display element within song bouts; likely important for individual or pair distinctiveness, though exact functional separation from other screams is uncertain.
+    confidence: medium
+    references:
+      - geissmann_2000
+references:
+  geissmann_2000:
+    citation: Geissmann, T., Bohlen-Eyring, S., and Heuck, A. 2000. The male song of the siamang (Hylobates syndactylus). Contributions to Zoology 69(1-2):3-14.
+    url: https://www.repository.naturalis.nl/document/149536
+  palombit_1992:
+    citation: Palombit, R.A. 1992. A preliminary study of vocal communication in wild siamang (Hylobates syndactylus). Primates 33(3):325-335.
+    doi: 10.1007/BF02381196
+  iucn_2020:
+    citation: Nijman, V. and Geissmann, T. 2020. Symphalangus syndactylus. The IUCN Red List of Threatened Species 2020 e.T39779A17967839.
+    url: https://www.iucnredlist.org/species/39779/17967839
+provenance:
+  - timestamp: "2026-06-10T19:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft emphasizing broad, well-described siamangs song elements and conservative confidence labels.

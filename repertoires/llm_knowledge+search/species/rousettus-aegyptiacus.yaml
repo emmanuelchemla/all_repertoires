@@ -1,0 +1,40 @@
+scientific_name: Rousettus aegyptiacus
+common_name: Egyptian Fruit Bat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Chiroptera
+  family: Pteropodidae
+  genus: Rousettus
+  species: aegyptiacus
+calls:
+  - name: social squabble call
+    acoustic_keywords: [broadband, noisy, abrupt, short, repetitive]
+    acoustic_description: A harsh short call with abrupt onset and broad spectral energy, often in repeated series.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Used during social disputes over perch space, food, or body contact.
+    confidence: high
+  - name: isolation call
+    acoustic_keywords: [high_frequency, tonal, repetitive, loud, long]
+    acoustic_description: A more sustained higher-pitched call than routine squabble notes.
+    semantic_keywords: [contact, caregiving, begging, attention]
+    semantic_description: Produced by isolated young or separated individuals to elicit contact or care.
+    confidence: medium
+  - name: courtship trill
+    acoustic_keywords: [tonal, repetitive, frequency_modulated, long, harmonic]
+    acoustic_description: A more patterned and modulated call than aggressive signals, with repeated syllabic structure.
+    semantic_keywords: [courtship, mating, display]
+    semantic_description: Included as a reproductive social signal in mating-related interactions.
+    confidence: medium
+  - name: click sequence
+    acoustic_keywords: [pulsed, repetitive, abrupt, short, broadband]
+    acoustic_description: A repeated sequence of click-like pulses distinct from the voiced social repertoire.
+    semantic_keywords: [group_coordination, attention]
+    semantic_description: Used in active orientation and colony movement contexts in addition to general biosonar function.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Egyptian fruit bat emphasizing well-known social conflict and separation-related call classes.

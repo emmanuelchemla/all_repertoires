@@ -1,0 +1,40 @@
+scientific_name: Melopsittacus undulatus
+common_name: Budgerigar
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittaculidae
+  genus: Melopsittacus
+  species: undulatus
+calls:
+  - name: warble song
+    acoustic_keywords: [multi_component, tonal, harmonic, repetitive, long]
+    acoustic_description: A variable song-like sequence of whistles and modulated syllables delivered in prolonged bouts.
+    semantic_keywords: [courtship, mating, display, affiliation]
+    semantic_description: Used mainly in courtship and positive social display.
+    confidence: high
+  - name: contact call
+    acoustic_keywords: [short, tonal, harmonic, repetitive, loud]
+    acoustic_description: A brief, clear call with stable tonal structure used repeatedly during flock interactions.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Maintains flock or pair contact and supports ongoing group cohesion.
+    confidence: high
+  - name: chatter
+    acoustic_keywords: [short, repetitive, multi_component, tonal, quiet]
+    acoustic_description: A rapid sequence of local social notes with less formal structure than warble song.
+    semantic_keywords: [affiliation, contact, group_coordination]
+    semantic_description: Used in close-range routine flock interaction.
+    confidence: medium
+  - name: screech
+    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
+    acoustic_description: A high-intensity harsh call with strong high-frequency energy and abrupt onset.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced in disturbance or distress contexts requiring rapid attention from conspecifics.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T20:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for budgerigar emphasizing major social and courtship vocal classes.

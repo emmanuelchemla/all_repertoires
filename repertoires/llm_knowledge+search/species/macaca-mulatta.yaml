@@ -1,0 +1,40 @@
+scientific_name: Macaca mulatta
+common_name: Rhesus Macaque
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Macaca
+  species: mulatta
+calls:
+  - name: coo call
+    acoustic_keywords: [tonal, harmonic, long, quiet, frequency_modulated]
+    acoustic_description: A relatively tonal, longer call with smooth contour and harmonic structure.
+    semantic_keywords: [affiliation, contact, group_coordination]
+    semantic_description: Used in low-arousal social contact and friendly interactions.
+    confidence: high
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short lower-pitched call simpler than a coo, often repeated in social interactions.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in routine social communication and approaches.
+    confidence: high
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A high-arousal distress vocalization with strong noisy energy and variable contour.
+    semantic_keywords: [distress, submission, aggression, attention]
+    semantic_description: Common in conflict, especially victim and subordinance contexts.
+    confidence: high
+  - name: girney
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A softer higher-pitched call associated with affiliative and infant-related interactions.
+    semantic_keywords: [affiliation, caregiving, attention]
+    semantic_description: Often linked to mother-infant and friendly social exchange.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for rhesus macaque using the classic coo, grunt, scream, and affiliative girney categories.

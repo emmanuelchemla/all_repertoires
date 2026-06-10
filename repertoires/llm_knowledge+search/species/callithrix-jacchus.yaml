@@ -1,0 +1,48 @@
+scientific_name: Callithrix jacchus
+common_name: Common Marmoset
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Callithrix
+  species: jacchus
+calls:
+  - name: phee call
+    acoustic_keywords: [tonal, harmonic, long, loud, frequency_modulated]
+    acoustic_description: A whistle-like, relatively long call with strong tonal structure and variable contour.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in long-distance contact, especially when group members are separated or out of sight.
+    confidence: high
+    references: [jacchus_structure]
+  - name: trill
+    acoustic_keywords: [short, tonal, repetitive, quiet, frequency_modulated]
+    acoustic_description: A short modulated contact call with lower amplitude than the phee.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close-range antiphonal and routine social interactions.
+    confidence: high
+    references: [jacchus_structure]
+  - name: twitter
+    acoustic_keywords: [high_frequency, short, repetitive, tonal, graded]
+    acoustic_description: A rapid series of high notes with lighter structure than phee calls.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in local social communication and routine group monitoring.
+    confidence: medium
+    references: [jacchus_structure]
+  - name: tsik call
+    acoustic_keywords: [abrupt, short, noisy, broadband, repetitive]
+    acoustic_description: A sharp brief call with abrupt onset and harsher quality than the main contact calls.
+    semantic_keywords: [alarm, attention, threat]
+    semantic_description: Produced in vigilance or disturbance contexts.
+    confidence: medium
+    references: [jacchus_structure]
+references:
+  jacchus_structure:
+    citation: "Bezerra, B.M. and Souto, A. 2008. Structure and usage of the vocal repertoire of Callithrix jacchus."
+    url: https://www.academia.edu/3190201/Structure_and_Usage_of_the_Vocal_Repertoire_of_Callithrix_jacchus
+provenance:
+  - timestamp: "2026-06-10T20:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for common marmoset anchored on the standard phee, trill, twitter, and tsik call system.

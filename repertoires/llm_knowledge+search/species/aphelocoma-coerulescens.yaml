@@ -1,0 +1,40 @@
+scientific_name: Aphelocoma coerulescens
+common_name: Florida Scrub-Jay
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Aphelocoma
+  species: coerulescens
+calls:
+  - name: jeer call
+    acoustic_keywords: [loud, noisy, broadband, abrupt, short]
+    acoustic_description: A harsh conspicuous call with abrupt delivery and broad spectral energy.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Used in disturbance and anti-predator contexts.
+    confidence: medium
+  - name: contact call
+    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
+    acoustic_description: A simpler lower-amplitude call than the main alarm repertoire.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used in local social cohesion within cooperative family groups.
+    confidence: medium
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
+    acoustic_description: A repeated higher-pitched solicitation call than adult contact notes.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Used by dependent young to solicit food and care.
+    confidence: medium
+  - name: mobbing chatter
+    acoustic_keywords: [repetitive, noisy, multi_component, abrupt, loud]
+    acoustic_description: An excited series of short harsh notes louder and more rapid than routine social chatter.
+    semantic_keywords: [alarm, recruitment, group_coordination, attention]
+    semantic_description: Used to recruit group members during mobbing or shared vigilance.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Florida scrub-jay using cooperative corvid alarm and social call categories.

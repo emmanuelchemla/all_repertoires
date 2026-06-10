@@ -1,0 +1,40 @@
+scientific_name: Chlorocebus pygerythrus
+common_name: Vervet Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Chlorocebus
+  species: pygerythrus
+calls:
+  - name: leopard alarm bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A short harsh bark with abrupt onset and strong noisy structure.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Associated with terrestrial predator detection, especially leopards.
+    confidence: high
+  - name: eagle alarm cough
+    acoustic_keywords: [abrupt, short, noisy, repetitive, broadband]
+    acoustic_description: A short abrupt call distinct from barks and used in aerial danger contexts.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Associated with aerial predator detection, especially eagles.
+    confidence: high
+  - name: snake alarm chutter
+    acoustic_keywords: [repetitive, noisy, broadband, short, graded]
+    acoustic_description: A repeated harsher call type with more sustained series structure than single alarm barks.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Associated with snake encounters and promotes specific vigilance responses.
+    confidence: high
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short low social call with simpler structure than alarm signals.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in ordinary within-group social communication.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for vervet monkey centered on the classic predator-specific alarm call system.

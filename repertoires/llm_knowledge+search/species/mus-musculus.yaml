@@ -1,0 +1,40 @@
+scientific_name: Mus musculus
+common_name: House Mouse
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Muridae
+  genus: Mus
+  species: musculus
+calls:
+  - name: ultrasonic courtship song
+    acoustic_keywords: [high_frequency, tonal, repetitive, multi_component, long]
+    acoustic_description: A sequence of ultrasonic syllables arranged into patterned bouts with variable pitch contours.
+    semantic_keywords: [courtship, mating, display, identity]
+    semantic_description: Produced mainly by males during courtship and sexual advertisement.
+    confidence: high
+  - name: pup isolation call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, tonal]
+    acoustic_description: A repeated ultrasonic call emitted persistently by separated pups.
+    semantic_keywords: [begging, caregiving, contact, attention]
+    semantic_description: Elicits maternal retrieval and care.
+    confidence: high
+  - name: audible squeak
+    acoustic_keywords: [high_frequency, abrupt, noisy, short, loud]
+    acoustic_description: A brief audible distress call with abrupt onset and harsh quality.
+    semantic_keywords: [distress, submission, attention]
+    semantic_description: Produced in acute conflict, pain, or handling.
+    confidence: medium
+  - name: ultrasonic social call
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A shorter and less elaborate ultrasonic vocalization than full courtship song.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in general social interaction outside intense courtship.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for house mouse emphasizing courtship song, pup isolation calls, and other social vocal classes.

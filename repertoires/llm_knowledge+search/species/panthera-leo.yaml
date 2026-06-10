@@ -1,0 +1,85 @@
+scientific_name: Panthera leo
+common_name: Lion
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Felidae
+  genus: Panthera
+  species: leo
+calls:
+  - name: roar
+    acoustic_keywords:
+      - loud
+      - long
+      - low_frequency
+      - harmonic
+      - repetitive
+    acoustic_description: A powerful low-frequency call or call series with sustained voiced energy, often delivered in repeated bouts over long distance.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - group_coordination
+      - identity
+      - display
+    semantic_description: Used for long-range advertisement, pride spacing, contact, and social display.
+    confidence: high
+  - name: growl
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - long
+      - graded
+    acoustic_description: A low rough call with strong noisy energy, variable from short rumbling notes to sustained aggressive growls.
+    semantic_keywords:
+      - threat
+      - aggression
+      - attention
+    semantic_description: Produced in close-range conflict, warning, or defensive interactions.
+    confidence: high
+  - name: grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - pulsed
+      - tonal
+    acoustic_description: A short low call with relatively simple structure and less intensity than roars or growls.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Used in routine close social interactions within prides.
+    confidence: medium
+  - name: moan
+    acoustic_keywords:
+      - low_frequency
+      - long
+      - tonal
+      - harmonic
+    acoustic_description: A prolonged lower-amplitude call with smoother tonal structure than a roar.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - attention
+    semantic_description: Used in social communication at shorter range or intermediate arousal.
+    confidence: medium
+  - name: meow
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - short
+      - frequency_modulated
+    acoustic_description: A shorter higher-pitched call with clearer tonal contour than the deeper adult long-distance calls.
+    semantic_keywords:
+      - contact
+      - caregiving
+      - begging
+    semantic_description: Common in close-range interactions, particularly between mothers and cubs or in soliciting contexts.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T20:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for lion using broad felid call classes and conservative confidence outside the core roar signal.

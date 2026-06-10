@@ -1,0 +1,113 @@
+scientific_name: Poecile atricapillus
+common_name: Black-capped Chickadee
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Paridae
+  genus: Poecile
+  species: atricapillus
+calls:
+  - name: chick-a-dee call
+    alternative_names:
+      - chickadee call
+      - A-B-C-D call
+    acoustic_keywords:
+      - repetitive
+      - multi_component
+      - tonal
+      - noisy
+      - graded
+    acoustic_description: A variable call composed of multiple note classes, often ending in one or more dee notes and showing flexible ordering and note number across renditions.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - alarm
+      - attention
+      - combinatorial
+    semantic_description: Core social call used in flock cohesion, information sharing, and predator-related signalling, with changes in note structure linked to context.
+    confidence: high
+    references:
+      - ficken_etal_1978
+      - templeton_etal_2005
+  - name: fee-bee song
+    alternative_names:
+      - whistled song
+      - advertising song
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - short
+      - repetitive
+      - loud
+    acoustic_description: Short, clear whistled song typically built from two notes in fixed order and often repeated from exposed perches.
+    semantic_keywords:
+      - territorial
+      - courtship
+      - mating
+      - identity
+    semantic_description: Primary adult male song for territory advertisement and mate attraction, especially at dawn during the breeding season.
+    confidence: high
+    references:
+      - foote_etal_2008
+      - ficken_etal_1978
+  - name: gargle
+    alternative_names:
+      - gargle call
+      - agonistic gargle
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - repetitive
+      - abrupt
+      - loud
+    acoustic_description: Rapid, harsh, rattling series of notes with noisy broadband structure and marked acoustic complexity.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+      - attention
+    semantic_description: Commonly given in agonistic or dominance-related interactions and during assertive social exchanges.
+    confidence: medium
+    references:
+      - ficken_etal_1978
+  - name: high zee call
+    alternative_names:
+      - high see
+      - see call
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - quiet
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    acoustic_description: Very high, thin, short notes that are simpler and less noisy than chick-a-dee calls.
+    semantic_description: Associated with predator warning, especially rapid alerting to aerial or urgent threats.
+    confidence: medium
+    references:
+      - ficken_etal_1978
+references:
+  ficken_etal_1978:
+    citation: Ficken, M.S., Ficken, R.W., and Witkin, S.R. 1978. Vocal repertoire of the Black-capped Chickadee. Auk 95(1):34-48.
+    url: https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=20220&context=auk
+  foote_etal_2008:
+    citation: Foote, J.R., Fitzsimmons, L.P., Mennill, D.J., Ratcliffe, L.M., and Sturdy, C.B. 2008. Seasonal and diurnal patterns of black-capped chickadee (Poecile atricapillus) vocal production. Behaviour 145(3):371-386.
+    url: https://pubmed.ncbi.nlm.nih.gov/18243575/
+  templeton_etal_2005:
+    citation: "Templeton, C.N., Greene, E., and Davis, K. 2005. Allometry of alarm calls: black-capped chickadees encode information about predator size. Science 308(5730):1934-1937."
+    doi: 10.1126/science.1108841
+provenance:
+  - timestamp: "2026-06-10T20:10:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft emphasizing the classic chick-a-dee system, fee-bee song, and broad agonistic and alarm-related calls.

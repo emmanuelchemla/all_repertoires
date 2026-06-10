@@ -1,0 +1,34 @@
+scientific_name: Hyla arborea
+common_name: European Treefrog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Hylidae
+  genus: Hyla
+  species: arborea
+calls:
+  - name: advertisement call
+    acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
+    acoustic_description: A repeated breeding-season call with stable tonal structure and stereotyped pulse pattern.
+    semantic_keywords: [courtship, mating, attention]
+    semantic_description: Used by males to attract females in breeding choruses.
+    confidence: high
+  - name: encounter call
+    acoustic_keywords: [abrupt, repetitive, tonal, loud, graded]
+    acoustic_description: A shorter more forceful call than the advertisement call, directed to nearby rivals.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in close-range male-male interactions around calling sites.
+    confidence: medium
+  - name: release call
+    acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
+    acoustic_description: A brief call produced during unwanted physical contact or clasping.
+    semantic_keywords: [submission, attention, mating]
+    semantic_description: Signals inappropriate amplexus and prompts release.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for European treefrog using standard hylid breeding call categories.

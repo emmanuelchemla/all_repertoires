@@ -1,0 +1,40 @@
+scientific_name: Ateles geoffroyi
+common_name: Geoffroy's Spider Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Atelidae
+  genus: Ateles
+  species: geoffroyi
+calls:
+  - name: whinny
+    acoustic_keywords: [high_frequency, tonal, long, frequency_modulated, loud]
+    acoustic_description: A far-carrying modulated call with relatively clear tonal structure and prolonged duration.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in long-distance contact among dispersed subgroup members.
+    confidence: high
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced in disturbance or high-arousal situations.
+    confidence: medium
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A high-arousal noisy call with strong intensity and variable contour.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Used in severe social conflict or immediate danger.
+    confidence: medium
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A softer shorter-range call with simpler structure than the long-distance whinny.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in local social communication.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Geoffroy's spider monkey centered on long-distance whinny calls.

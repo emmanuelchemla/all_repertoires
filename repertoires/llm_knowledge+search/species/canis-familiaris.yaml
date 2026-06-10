@@ -1,0 +1,40 @@
+scientific_name: Canis familiaris
+common_name: Domestic Dog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Canidae
+  genus: Canis
+  species: familiaris
+calls:
+  - name: bark
+    acoustic_keywords: [broadband, abrupt, loud, short, repetitive]
+    acoustic_description: A short explosive call with abrupt onset and broad spectral energy, often produced in repeated bouts.
+    semantic_keywords: [alarm, attention, threat, group_coordination]
+    semantic_description: Used across alerting, territorial, social excitement, and defensive contexts.
+    confidence: high
+  - name: growl
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A low rough call with variable duration and strong threat-like quality.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used in warning, resource defense, and close-range conflict.
+    confidence: high
+  - name: whine
+    acoustic_keywords: [high_frequency, tonal, harmonic, short, graded]
+    acoustic_description: A relatively high-pitched tonal call, often narrowband and modulated.
+    semantic_keywords: [contact, begging, affiliation, attention]
+    semantic_description: Used in solicitation, frustration, greeting, and social appeasement.
+    confidence: high
+  - name: howl
+    acoustic_keywords: [long, tonal, harmonic, loud, frequency_modulated]
+    acoustic_description: A prolonged harmonic vocalization with sustained voiced energy and variable contour.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in long-distance social communication and coordinated vocal response.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for domestic dog using the core bark, growl, whine, and howl repertoire.

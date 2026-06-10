@@ -1,0 +1,40 @@
+scientific_name: Allochrocebus lhoesti
+common_name: L'Hoest's Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Allochrocebus
+  species: lhoesti
+calls:
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short low call with relatively smooth structure, often produced in repeated bouts.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine social communication and benign approaches.
+    confidence: medium
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Used in disturbance and alert contexts.
+    confidence: medium
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: A high-arousal call with strong noisy energy and variable contour.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Produced in severe social conflict or distress.
+    confidence: medium
+  - name: contact call
+    acoustic_keywords: [short, tonal, quiet, repetitive, high_frequency]
+    acoustic_description: A softer shorter call than barks or screams, likely used locally.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Included as a broad short-range social call category.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for L'Hoest's monkey using conservative guenon-like call categories.

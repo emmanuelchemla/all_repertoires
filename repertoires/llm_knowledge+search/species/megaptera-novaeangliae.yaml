@@ -1,0 +1,107 @@
+scientific_name: Megaptera novaeangliae
+common_name: Humpback Whale
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Artiodactyla
+  family: Balaenopteridae
+  genus: Megaptera
+  species: novaeangliae
+calls:
+  - name: song phrase
+    alternative_names:
+      - song unit sequence
+    acoustic_keywords:
+      - long
+      - tonal
+      - harmonic
+      - repetitive
+      - multi_component
+    acoustic_description: A structured, repeated sequence of units organized into phrases and themes, containing both tonal and pulsed components over extended durations.
+    semantic_keywords:
+      - mating
+      - display
+      - identity
+      - combinatorial
+    semantic_description: Produced mainly by males on breeding grounds and associated with sexual advertisement and display.
+    confidence: high
+    references:
+      - dosits
+      - humpback_song
+  - name: moan
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - long
+      - harmonic
+    acoustic_description: A sustained low-frequency tonal call with relatively smooth frequency contour and prolonged duration.
+    semantic_keywords:
+      - contact
+      - group_coordination
+    semantic_description: Used in nonsong social communication and likely serves medium- to long-range contact functions.
+    confidence: medium
+    references:
+      - dunlop_2007
+      - social_calls_2024
+  - name: grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - pulsed
+      - broadband
+    acoustic_description: A short low-frequency call with compact duration and stronger pulsed or rough qualities than a moan.
+    semantic_keywords:
+      - contact
+      - attention
+    semantic_description: Included as a common social sound type used in shorter-range interactions outside full song.
+    confidence: medium
+    references:
+      - dunlop_2007
+  - name: cry
+    acoustic_keywords:
+      - high_frequency
+      - long
+      - frequency_modulated
+      - tonal
+    acoustic_description: A more strongly modulated, higher-pitched call than a moan, often with a plaintive rising or falling contour.
+    semantic_keywords:
+      - contact
+      - attention
+      - affiliation
+    semantic_description: Used in social contexts and may help maintain coordination among nearby whales.
+    confidence: medium
+    references:
+      - dunlop_2007
+  - name: thwop
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - short
+      - pulsed
+    acoustic_description: A brief impulsive call with abrupt onset and broad spectral energy, distinct from sustained tonal calls.
+    semantic_keywords:
+      - attention
+      - group_coordination
+    semantic_description: A short social sound likely used in immediate interaction and attention-getting contexts.
+    confidence: low
+    references:
+      - dunlop_2007
+references:
+  dunlop_2007:
+    citation: "Dunlop, R.A., Cato, D.H., and Noad, M.J. 2007. The social vocalization repertoire of east Australian migrating humpback whales. Journal of the Acoustical Society of America 122:2893-2905."
+    url: https://pubs.aip.org/asa/jasa/article/122/5/2893/415/The-social-vocalization-repertoire-of-east
+  humpback_song:
+    citation: "Hauer-Jensen, M. 2018. Analysis of humpback whale songs: applying the traditional method."
+    url: https://www.mbari.org/wp-content/uploads/Hauer-Jensen.pdf
+  dosits:
+    citation: "Discovery of Sound in the Sea. Humpback whale audio gallery."
+    url: https://dosits.org/galleries/audio-gallery/marine-mammals/baleen-whales/humpback-whale/
+  social_calls_2024:
+    citation: "Humpback whale (Megaptera novaeangliae) social calls in southern New South Wales. Marine Mammal Science 2024."
+    url: https://onlinelibrary.wiley.com/doi/10.1111/mms.13138
+provenance:
+  - timestamp: "2026-06-10T20:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for humpback whale using broad song and social-call categories rather than an exhaustive unit catalog.

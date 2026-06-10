@@ -1,0 +1,91 @@
+scientific_name: Psittacus erithacus
+common_name: Grey Parrot
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittacidae
+  genus: Psittacus
+  species: erithacus
+calls:
+  - name: contact whistle
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - long
+      - loud
+    acoustic_description: A clear tonal whistle with strong modulation and individually distinctive structure.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Used to maintain contact and social cohesion within mobile flocks and carries strong individual signature information.
+    confidence: high
+    references:
+      - boucherie_2023
+      - may_2004
+  - name: chatter
+    acoustic_keywords:
+      - short
+      - repetitive
+      - multi_component
+      - tonal
+      - noisy
+    acoustic_description: A rapid series of short notes forming social chatter, often more locally directed and variable than long whistles.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - group_coordination
+    semantic_description: Used in routine social interaction and local flock coordination.
+    confidence: medium
+    references:
+      - may_2004
+  - name: alarm screech
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - noisy
+      - abrupt
+      - repetitive
+    acoustic_description: A loud harsh call with strong high-frequency energy and abrupt delivery.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: Produced in disturbance or danger contexts to rapidly alert nearby conspecifics.
+    confidence: medium
+    references:
+      - may_2004
+  - name: mimicry sequence
+    acoustic_keywords:
+      - multi_component
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - long
+    acoustic_description: A learned sequence incorporating imitated heterospecific or environmental sounds into the bird's vocal output.
+    semantic_keywords:
+      - identity
+      - display
+      - attention
+    semantic_description: Included as a socially relevant learned vocal category because wild grey parrots can imitate heterospecific sounds and such learned signals may contribute to social display or identity.
+    confidence: medium
+    references:
+      - bradbury_2004
+references:
+  boucherie_2023:
+    citation: "Boucherie, P.H., et al. 2023. Evidence for vocal signatures and voice-prints in a wild parrot. Current Biology."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10548090/
+  may_2004:
+    citation: "May, D. 2004. The vocal repertoire of grey parrots (Psittacus erithacus) living in the Congo Basin."
+    url: https://arizona.openrepository.com/arizona/handle/10150/280626
+  bradbury_2004:
+    citation: "Bradbury, J.W., Cortopassi, K.A., and Clemmons, J.R. 2001. Vocal mimicry in wild African Grey Parrots Psittacus erithacus. Ibis."
+    url: https://www.researchgate.net/publication/229631205_Vocal_Mimicry_in_Wild_African_Gray_Parrots_Psittacus-Erithacus
+provenance:
+  - timestamp: "2026-06-10T20:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for grey parrot emphasizing signature-rich contact whistles and keeping other call classes broad.

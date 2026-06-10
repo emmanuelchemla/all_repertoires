@@ -1,0 +1,117 @@
+scientific_name: Canis latrans
+common_name: Coyote
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Canidae
+  genus: Canis
+  species: latrans
+calls:
+  - name: lone howl
+    alternative_names:
+      - howl
+      - long howl
+    acoustic_keywords:
+      - long
+      - loud
+      - tonal
+      - frequency_modulated
+    acoustic_description: Sustained, carrying howls with clear tonal structure and rising-falling pitch contours, often produced as single long notes or loose series.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - identity
+      - group_coordination
+    semantic_description: Used for long-distance advertisement of presence, spacing between social groups, and communication with family members or neighbors.
+    confidence: high
+    references:
+      - mitchell_etal_2006
+      - project_coyote_howls
+  - name: group yip-howl
+    alternative_names:
+      - group howl
+      - yodel howl
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - multi_component
+      - frequency_modulated
+    acoustic_description: Collective bouts combining overlapping howls, yips, and short cries, creating a conspicuous, polyphonic chorus.
+    semantic_keywords:
+      - group_coordination
+      - territorial
+      - affiliation
+      - display
+    semantic_description: Family-group chorus used in social cohesion and territorial advertisement, especially around rendezvous sites and boundaries.
+    confidence: high
+    references:
+      - mitchell_etal_2006
+      - project_coyote_howls
+  - name: bark-howl
+    alternative_names:
+      - alarm bark-howl
+      - barked howl
+    acoustic_keywords:
+      - multi_component
+      - abrupt
+      - tonal
+      - broadband
+      - loud
+    acoustic_description: Composite vocalization in which a noisy bark segment is followed or fused with a more tonal howl segment.
+    semantic_keywords:
+      - threat
+      - alarm
+      - territorial
+      - attention
+    semantic_description: Associated with agitation, intrusion, or defensive alerting when callers are aroused and directing attention toward a disturbance.
+    confidence: medium
+    references:
+      - mitchell_etal_2006
+  - name: growl
+    acoustic_keywords:
+      - low_frequency
+      - broadband
+      - quiet
+      - abrupt
+    acoustic_description: Low, rough, broadband vocalization usually produced at close range and often with low amplitude relative to howls.
+    semantic_keywords:
+      - threat
+      - aggression
+      - spacing
+    semantic_description: Used in close social conflict, warning, and escalation control during aggressive or defensive interactions.
+    confidence: medium
+  - name: whine-yelp
+    alternative_names:
+      - whine
+      - yelp
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - frequency_modulated
+    acoustic_description: Shorter, higher-pitched calls than howls, including plaintive whines and sharper yelp-like notes.
+    semantic_keywords:
+      - distress
+      - affiliation
+      - contact
+      - caregiving
+    semantic_description: Used in close social interactions, appeasement, juvenile-parent communication, and distress-related contexts.
+    confidence: medium
+references:
+  mitchell_etal_2006:
+    citation: Mitchell, B.R., Makagon, M.M., Jaeger, M.M., and Barrett, R.H. 2006. Information content of coyote barks and howls. Bioacoustics 15(3):289-314.
+    url: https://scispace.com/pdf/information-content-of-coyote-barks-and-howls-b7mnxgt859.pdf
+    doi: 10.1080/09524622.2006.9753555
+  project_coyote_howls:
+    citation: Bekoff, M. and Fox, C.H. 2018. Coyotes howl to chat with their neighbors. Project Coyote.
+    url: https://projectcoyote.org/wp-content/uploads/2018/08/SFChronicle_Coyote-Howl-Chat_BekoffFoxOpEd.pdf
+  iucn_2018:
+    citation: Sillero-Zubiri, C. 2018. Canis latrans. The IUCN Red List of Threatened Species 2018 e.T3745A103893556.
+    url: https://www.iucnredlist.org/species/3745/103893556
+provenance:
+  - timestamp: "2026-06-10T19:55:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft emphasizing broad coyote vocal classes with conservative confidence labels around close-range social calls.

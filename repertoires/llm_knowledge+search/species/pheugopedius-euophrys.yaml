@@ -1,0 +1,40 @@
+scientific_name: Pheugopedius euophrys
+common_name: Plain-tailed Wren
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Troglodytidae
+  genus: Pheugopedius
+  species: euophrys
+calls:
+  - name: duet song
+    acoustic_keywords: [multi_component, tonal, harmonic, repetitive, long]
+    acoustic_description: A tightly coordinated song in which pair members alternate or overlap phrase components with strong temporal precision.
+    semantic_keywords: [territorial, affiliation, group_coordination, display, identity]
+    semantic_description: Used in pair-bond maintenance and territorial advertisement.
+    confidence: high
+  - name: solo song
+    acoustic_keywords: [tonal, harmonic, repetitive, long, frequency_modulated]
+    acoustic_description: An extended song delivered by a single bird with repeated phrase structure.
+    semantic_keywords: [courtship, territorial, display, identity]
+    semantic_description: Used in advertisement and territorial contexts outside full duets.
+    confidence: medium
+  - name: contact chatter
+    acoustic_keywords: [short, repetitive, multi_component, tonal, quiet]
+    acoustic_description: A local sequence of brief social notes with less formal structure than song.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close-range social interaction and movement coordination.
+    confidence: medium
+  - name: alarm call
+    acoustic_keywords: [abrupt, short, noisy, repetitive, loud]
+    acoustic_description: A shorter harsher call than routine songs and chatters.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced in disturbance and danger contexts.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for plain-tailed wren emphasizing the highly coordinated duet repertoire.

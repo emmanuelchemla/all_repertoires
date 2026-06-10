@@ -1,0 +1,40 @@
+scientific_name: Nymphicus hollandicus
+common_name: Cockatiel
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Psittaculidae
+  genus: Nymphicus
+  species: hollandicus
+calls:
+  - name: whistle song
+    acoustic_keywords: [tonal, harmonic, repetitive, long, multi_component]
+    acoustic_description: A learned whistle-rich song with repeated patterned phrases and clear tonal structure.
+    semantic_keywords: [courtship, mating, display, identity]
+    semantic_description: Produced mainly by males in courtship and social display.
+    confidence: high
+  - name: contact call
+    acoustic_keywords: [short, tonal, harmonic, repetitive, loud]
+    acoustic_description: A brief clear call with stable tonal structure used repeatedly in flock communication.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Maintains pair or flock contact and supports cohesion.
+    confidence: high
+  - name: chatter
+    acoustic_keywords: [short, repetitive, multi_component, tonal, quiet]
+    acoustic_description: A rapid local sequence of social notes with less formal structure than song.
+    semantic_keywords: [affiliation, contact, group_coordination]
+    semantic_description: Used in close-range routine social interaction.
+    confidence: medium
+  - name: screech
+    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
+    acoustic_description: A harsh higher-intensity call with abrupt onset and strong high-frequency energy.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced in disturbance, fear, or distress contexts.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for cockatiel emphasizing major song, contact, and alarm call classes.

@@ -1,0 +1,137 @@
+scientific_name: Papio ursinus
+common_name: Chacma Baboon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Papio
+  species: ursinus
+calls:
+  - name: grunt
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - short
+      - repetitive
+      - graded
+    acoustic_description: A short, low-pitched vocalization with relatively smooth tonal structure, often produced in repeated series at close range.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+      - attention
+    semantic_description: Used in routine social interactions, approaches, greetings, and low-level coordination, often signaling benign intent.
+    confidence: high
+    references:
+      - hammerschmidt_fischer_2019
+      - pruetz_ursinus
+  - name: rhythmic grunt
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - repetitive
+      - pulsed
+      - quiet
+    acoustic_description: A repeated series of evenly timed grunts with stable low-frequency structure and less abrupt delivery than alarm or display calls.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - submission
+    semantic_description: Often associated with friendly approaches and reassurance, helping reduce uncertainty in close social interactions.
+    confidence: medium
+    references:
+      - chacma_contact
+  - name: wahoo
+    acoustic_keywords:
+      - loud
+      - multi_component
+      - long
+      - broadband
+      - tonal
+    acoustic_description: A loud two-part call in which an initial bark-like element is followed by a lower hoot- or grunt-like element, often repeated in bouts.
+    semantic_keywords:
+      - alarm
+      - threat
+      - display
+      - attention
+    semantic_description: Produced mainly by adult males during predator-related alarm or aggressive display situations, advertising arousal and presence over longer range.
+    confidence: high
+    references:
+      - kitchen_2013
+      - wahoo_2018
+  - name: bark
+    acoustic_keywords:
+      - broadband
+      - abrupt
+      - loud
+      - short
+      - graded
+    acoustic_description: A sharp, forceful call with abrupt onset and harsher spectral energy than grunts, ranging from clearer to harsher variants.
+    semantic_keywords:
+      - alarm
+      - attention
+      - contact
+    semantic_description: Used in disturbance and alarm contexts, with some bark variants also serving contact or spacing functions depending on context.
+    confidence: high
+    references:
+      - fischer_2001
+      - hammerschmidt_fischer_2019
+  - name: scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - graded
+    acoustic_description: A high-pitched, noisy vocalization with strong arousal-dependent variability in duration and contour.
+    semantic_keywords:
+      - distress
+      - aggression
+      - submission
+      - attention
+    semantic_description: Common in escalated aggression, victimization, and intense social conflict, broadcasting distress and recruiting attention from bystanders.
+    confidence: high
+    references:
+      - hammerschmidt_fischer_2019
+      - pruetz_ursinus
+  - name: yak
+    acoustic_keywords:
+      - abrupt
+      - short
+      - noisy
+      - repetitive
+      - graded
+    acoustic_description: A short, rough call type with harsher quality than grunts and less extended structure than wahoos.
+    semantic_keywords:
+      - submission
+      - distress
+      - attention
+    semantic_description: Associated with retreat, social unease, or threat-related interactions, especially when individuals withdraw from a conflict or danger source.
+    confidence: medium
+    references:
+      - pruetz_ursinus
+      - hammerschmidt_fischer_2019
+references:
+  hammerschmidt_fischer_2019:
+    citation: "Hammerschmidt, K. and Fischer, J. 2019. Baboon vocal repertoires and the evolution of primate vocal diversity. Journal of Human Evolution 126:1-13."
+    doi: 10.1016/j.jhevol.2018.10.010
+  kitchen_2013:
+    citation: "Kitchen, D.M., Cheney, D.L., and Seyfarth, R.M. 2013. Male baboon responses to experimental manipulations of loud calls: testing an honest signal of fighting ability. Behavioral Ecology and Sociobiology 67:1825-1835."
+    url: https://web-facstaff.sas.upenn.edu/~seyfarth/Publications/kitchen%20et%20al.%202013.pdf
+  wahoo_2018:
+    citation: "Boe, L.-J., Berthommier, F., Legou, T., Captier, G., Kemp, C., Sawallis, T.R., Becker, Y., Rey, A., Fagot, J., and Badin, P. 2019. What's up with wahoo? Exploring baboon vocalizations with speech science techniques. Bioacoustics 28:261-281."
+  fischer_2001:
+    citation: "Fischer, J., Metz, M., Cheney, D.L., and Seyfarth, R.M. 2001. Acoustic features of female chacma baboon barks. Ethology 107:33-54."
+  pruetz_ursinus:
+    citation: "Animal Diversity Web. Papio ursinus account."
+    url: https://animaldiversity.org/accounts/Papio_ursinus/
+  chacma_contact:
+    citation: "New England Primate Conservancy. Chacma Baboon (Papio ursinus)."
+    url: https://neprimateconservancy.org/chacma-baboon/
+provenance:
+  - timestamp: "2026-06-10T19:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for chacma baboon using broad, well-attested call classes and conservative confidence labels for finer social-call distinctions.

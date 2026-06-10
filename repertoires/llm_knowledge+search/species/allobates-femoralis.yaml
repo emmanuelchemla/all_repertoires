@@ -1,0 +1,40 @@
+scientific_name: Allobates femoralis
+common_name: Brilliant-thighed Frog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Aromobatidae
+  genus: Allobates
+  species: femoralis
+calls:
+  - name: advertisement call
+    acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
+    acoustic_description: A repeated breeding call delivered in bouts with stable temporal patterning.
+    semantic_keywords: [courtship, mating, attention]
+    semantic_description: Used by males to attract females and advertise occupancy of calling sites.
+    confidence: high
+  - name: territorial call
+    acoustic_keywords: [abrupt, repetitive, tonal, loud, graded]
+    acoustic_description: A more forceful and locally directed call than the advertisement call.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in male-male spacing and competitive interactions.
+    confidence: medium
+  - name: courtship call
+    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
+    acoustic_description: A lower-amplitude call than advertisement, used during close-range reproductive interaction.
+    semantic_keywords: [courtship, mating, affiliation]
+    semantic_description: Used when interacting directly with potential mates at close range.
+    confidence: medium
+  - name: release call
+    acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
+    acoustic_description: A brief call produced in response to unwanted clasping or interference.
+    semantic_keywords: [submission, attention, mating]
+    semantic_description: Signals inappropriate contact and promotes release.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T22:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Allobates femoralis using standard poison-frog breeding and territorial call categories.

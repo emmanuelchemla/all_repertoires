@@ -1,0 +1,40 @@
+scientific_name: Gorilla gorilla
+common_name: Western Gorilla
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hominidae
+  genus: Gorilla
+  species: gorilla
+calls:
+  - name: grumble
+    acoustic_keywords: [low_frequency, tonal, quiet, short, repetitive]
+    acoustic_description: A low-pitched soft call with relatively simple tonal structure, often produced in low-amplitude sequences.
+    semantic_keywords: [affiliation, contact, group_coordination]
+    semantic_description: Used in peaceful feeding and close-range social contexts to coordinate and maintain cohesion.
+    confidence: high
+  - name: hoot
+    acoustic_keywords: [low_frequency, harmonic, long, loud, frequency_modulated]
+    acoustic_description: A louder and more resonant call than the grumble, with more sustained voiced structure.
+    semantic_keywords: [contact, attention, display]
+    semantic_description: Used in more conspicuous social contexts and local display.
+    confidence: medium
+  - name: belch vocalization
+    acoustic_keywords: [low_frequency, short, pulsed, quiet, repetitive]
+    acoustic_description: A soft pulsed call with abrupt onset and low amplitude.
+    semantic_keywords: [affiliation, contact, caregiving]
+    semantic_description: Associated with relaxed, friendly interactions and reassurance.
+    confidence: medium
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A high-intensity harsh call with strong noisy energy and marked arousal.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Produced in intense conflict, threat, or disturbance situations.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T20:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for western gorilla centered on well-known low-intensity cohesion calls plus higher-arousal signals.

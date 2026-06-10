@@ -1,0 +1,40 @@
+scientific_name: Orcinus orca
+common_name: Orca
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Artiodactyla
+  family: Delphinidae
+  genus: Orcinus
+  species: orca
+calls:
+  - name: pulsed call
+    acoustic_keywords: [pulsed, repetitive, broadband, multi_component, loud]
+    acoustic_description: A structured pulsed vocalization with repeated temporal patterning and strong broadband energy.
+    semantic_keywords: [contact, identity, group_coordination, combinatorial]
+    semantic_description: Central to pod-specific social communication and caller-group identity.
+    confidence: high
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A narrowband modulated tonal call with sustained contour.
+    semantic_keywords: [contact, affiliation, identity]
+    semantic_description: Used in social contact and coordination within groups.
+    confidence: medium
+  - name: echolocation click train
+    acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
+    acoustic_description: A train of brief broadband clicks lacking sustained tonality.
+    semantic_keywords: [food, attention, group_coordination]
+    semantic_description: Primarily used in biosonar but informative in foraging and coordinated movement contexts.
+    confidence: medium
+  - name: scream
+    acoustic_keywords: [high_frequency, noisy, loud, abrupt, short]
+    acoustic_description: A harsher higher-frequency social call than whistles or structured pulsed calls.
+    semantic_keywords: [attention, threat, group_coordination]
+    semantic_description: Used in highly aroused social contexts.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for orca centered on pod-structured pulsed calls plus whistles and clicks.

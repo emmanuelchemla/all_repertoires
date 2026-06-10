@@ -1,0 +1,40 @@
+scientific_name: Felis catus
+common_name: Domestic Cat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Felidae
+  genus: Felis
+  species: catus
+calls:
+  - name: meow
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, short, graded]
+    acoustic_description: A variable voiced call with modulated contour and clearer tonality than hisses or growls.
+    semantic_keywords: [contact, attention, begging, affiliation]
+    semantic_description: Used in social solicitation, greeting, and human- or conspecific-directed attention-getting.
+    confidence: high
+  - name: purr
+    acoustic_keywords: [low_frequency, pulsed, repetitive, quiet, graded]
+    acoustic_description: A low-amplitude rhythmic vocalization with repeated pulsed structure.
+    semantic_keywords: [affiliation, caregiving, contact]
+    semantic_description: Associated with relaxed affiliation but also with solicitation and close social contact.
+    confidence: high
+  - name: hiss
+    acoustic_keywords: [broadband, noisy, abrupt, long, loud]
+    acoustic_description: A harsh unvoiced call with strong broadband energy and sustained warning quality.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used as a defensive warning in close-range conflict.
+    confidence: high
+  - name: growl
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A rough low call with variable duration and threat-like quality.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Produced in resource defense, warning, and close-range conflict.
+    confidence: high
+provenance:
+  - timestamp: "2026-06-10T22:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for domestic cat using the core meow, purr, hiss, and growl repertoire.

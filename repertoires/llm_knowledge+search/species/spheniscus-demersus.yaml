@@ -1,0 +1,41 @@
+scientific_name: Spheniscus demersus
+common_name: African Penguin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Sphenisciformes
+  family: Spheniscidae
+  genus: Spheniscus
+  species: demersus
+calls:
+  - name: ecstatic display song
+    acoustic_keywords: [long, loud, repetitive, multi_component, harmonic]
+    acoustic_description: A prolonged display sequence combining repeated syllables into a conspicuous rhythmic bout.
+    semantic_keywords: [territorial, display, mating, attention]
+    semantic_description: Used in sexual and territorial display, especially by breeding adults at colony sites.
+    confidence: high
+  - name: bray call
+    alternative_names: [donkey call]
+    acoustic_keywords: [loud, long, harmonic, frequency_modulated, repetitive]
+    acoustic_description: A far-carrying, donkey-like vocalization with strong harmonic structure and repeated syllabic pattern.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used for partner or colony contact and long-range social advertisement.
+    confidence: high
+  - name: contact call
+    acoustic_keywords: [short, tonal, harmonic, repetitive, quiet]
+    acoustic_description: A shorter, softer call than the main display signals, with simple harmonic structure.
+    semantic_keywords: [contact, affiliation, caregiving]
+    semantic_description: Used in close-range pair, parent-offspring, and neighbor interactions.
+    confidence: medium
+  - name: threat call
+    acoustic_keywords: [abrupt, noisy, broadband, short, repetitive]
+    acoustic_description: A sharp, harsh call with abrupt delivery and a noisier structure than contact calls.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Produced in nest defense, agonistic encounters, or close-range colony disputes.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T20:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for African penguin using standard colony display and contact call categories.

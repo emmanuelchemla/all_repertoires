@@ -1,0 +1,139 @@
+scientific_name: Plocepasser mahali
+common_name: White-browed Sparrow-weaver
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Passeridae
+  genus: Plocepasser
+  species: mahali
+calls:
+  - name: duet song
+    alternative_names:
+      - duet
+      - pair duet
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - repetitive
+      - multi_component
+      - long
+    acoustic_description: A structured song composed of alternating or tightly coordinated syllables from two partners, with repeated phrase patterns and fine temporal precision.
+    semantic_keywords:
+      - territorial
+      - affiliation
+      - group_coordination
+      - display
+      - identity
+    semantic_description: Produced chiefly by the dominant breeding pair for territory defense, pair-bond maintenance, and coordinated social display.
+    confidence: high
+    references:
+      - voigt_2006
+      - nature_2019
+  - name: chorus song
+    alternative_names:
+      - group chorus
+    acoustic_keywords:
+      - multi_component
+      - repetitive
+      - tonal
+      - harmonic
+      - loud
+    acoustic_description: A multi-bird song bout in which duet structure is expanded by additional group members, creating a layered and socially coordinated chorus.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - display
+      - affiliation
+    semantic_description: Used in collective territorial advertisement and cooperative group display, especially in established social groups occupying year-round territories.
+    confidence: high
+    references:
+      - voigt_2006
+      - wingfield_lewis_1993
+  - name: solo song
+    alternative_names:
+      - male solo song
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - long
+      - repetitive
+      - frequency_modulated
+    acoustic_description: An extended, stereotyped song of many syllables delivered by a single male, acoustically richer and longer than simple calls.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+      - identity
+    semantic_description: Characteristic of dominant males and associated with sexual advertisement and mate-related display.
+    confidence: high
+    references:
+      - voigt_2006
+      - voigt_2013
+  - name: contact chatter
+    acoustic_keywords:
+      - short
+      - repetitive
+      - tonal
+      - quiet
+      - multi_component
+    acoustic_description: A series of brief social notes given in frequent succession, forming a conversational chatter during routine group activity.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Used to maintain cohesion among group members around nests, foraging sites, and perches during low-arousal social activity.
+    confidence: medium
+    references:
+      - animaldiversity
+      - xenocanto
+  - name: scold call
+    acoustic_keywords:
+      - abrupt
+      - short
+      - broadband
+      - noisy
+      - repetitive
+    acoustic_description: A harsh series of sharp call notes with abrupt delivery and a noisier spectrum than the main songs.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: Given in response to disturbance, nearby threats, or nest-area intrusion, functioning as an alert and mobbing-related call.
+    confidence: medium
+    references:
+      - xenocanto
+      - macaulay_14462
+references:
+  voigt_2006:
+    citation: "Voigt, C., Leitner, S., and Gahr, M. 2006. Repertoire and structure of duet and solo songs in cooperatively breeding white-browed sparrow weavers. Behaviour 143:159-182."
+    url: https://brill.com/view/journals/beh/143/2/article-p159_2.xml
+  nature_2019:
+    citation: "Benichov, J.I., Benezra, S.E., Vallentin, D., Globerson, E., Long, M.A., and Tchernichovski, O. 2019. Duets recorded in the wild reveal that interindividually coordinated motor control enables cooperative behavior. Nature Communications 10:2577."
+    url: https://www.nature.com/articles/s41467-019-10593-3
+  wingfield_lewis_1993:
+    citation: "Wingfield, J.C. and Lewis, D.M. 1993. Hormonal and behavioural responses to simulated territorial intrusion in the cooperatively breeding white-browed sparrow weaver, Plocepasser mahali. Animal Behaviour 45:1-11."
+  voigt_2013:
+    citation: "Voigt, C. and Leitner, S. 2013. Testosterone-dependency of male solo song in a duetting songbird: evidence from females. Hormones and Behavior 63:122-127."
+  animaldiversity:
+    citation: "Animal Diversity Web. Plocepasser mahali account."
+    url: https://animaldiversity.org/accounts/Plocepasser_mahali/
+  xenocanto:
+    citation: "Xeno-canto. Plocepasser mahali recordings."
+    url: https://xeno-canto.org/species/Plocepasser-mahali
+  macaulay_14462:
+    citation: "Macaulay Library ML14462. White-browed Sparrow-Weaver recording notes."
+    url: https://macaulaylibrary.org/audio/14462
+provenance:
+  - timestamp: "2026-06-10T19:20:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for white-browed sparrow-weaver focused on duet, chorus, solo song, and common social or disturbance call classes.

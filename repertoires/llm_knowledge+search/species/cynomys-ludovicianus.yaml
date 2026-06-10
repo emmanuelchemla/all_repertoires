@@ -1,0 +1,40 @@
+scientific_name: Cynomys ludovicianus
+common_name: Black-tailed Prairie Dog
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Sciuridae
+  genus: Cynomys
+  species: ludovicianus
+calls:
+  - name: jump-yip display call
+    acoustic_keywords: [short, tonal, repetitive, loud, multi_component]
+    acoustic_description: A conspicuous vocal display paired with the characteristic jump-yip posture and often repeated by nearby individuals.
+    semantic_keywords: [display, group_coordination, territorial, attention]
+    semantic_description: Used in social display, group coordination, and colony-level signaling.
+    confidence: high
+  - name: alarm bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A sharp short alarm call with abrupt onset and strong spectral energy.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced in response to threats and central to predator warning.
+    confidence: high
+  - name: contact chirp
+    acoustic_keywords: [short, tonal, quiet, repetitive, high_frequency]
+    acoustic_description: A softer and shorter tonal call than the major alarm barks.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in local social communication among nearby colony members.
+    confidence: medium
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
+    acoustic_description: A higher-pitched repeated call produced persistently by young.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Used by juveniles to solicit care or provisioning.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for black-tailed prairie dog emphasizing the well-known alarm and jump-yip display repertoire.

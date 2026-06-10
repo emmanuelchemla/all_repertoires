@@ -1,0 +1,40 @@
+scientific_name: Crocuta crocuta
+common_name: Spotted Hyena
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Hyaenidae
+  genus: Crocuta
+  species: crocuta
+calls:
+  - name: whoop
+    acoustic_keywords: [loud, long, harmonic, frequency_modulated, repetitive]
+    acoustic_description: A far-carrying call with strong tonal structure and repeated rising or wavering elements.
+    semantic_keywords: [contact, group_coordination, territorial, identity]
+    semantic_description: Used for long-distance contact, spacing, and social coordination among clan members.
+    confidence: high
+  - name: giggle
+    acoustic_keywords: [high_frequency, repetitive, noisy, short, graded]
+    acoustic_description: A rapid sequence of high-pitched notes with excited or submissive quality.
+    semantic_keywords: [submission, distress, attention]
+    semantic_description: Produced in social excitement, feeding competition, and submissive situations.
+    confidence: high
+  - name: growl
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A rough low call with strong noisy energy and threat-like quality.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used in close-range warning and competitive interactions.
+    confidence: medium
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A shorter lower-intensity call than whoops or growls.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in ordinary close social communication.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for spotted hyena using the hallmark whoop and giggle repertoire plus common threat calls.

@@ -1,0 +1,40 @@
+scientific_name: Loxodonta africana
+common_name: African Savanna Elephant
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Proboscidea
+  family: Elephantidae
+  genus: Loxodonta
+  species: africana
+calls:
+  - name: rumble
+    acoustic_keywords: [low_frequency, long, harmonic, tonal, loud]
+    acoustic_description: A low-frequency, often infrasonic call with sustained harmonic structure and prolonged duration.
+    semantic_keywords: [contact, group_coordination, affiliation, identity]
+    semantic_description: Used in long-range social contact and coordination among family members and allies.
+    confidence: high
+  - name: trumpet
+    acoustic_keywords: [loud, high_frequency, harmonic, abrupt, long]
+    acoustic_description: A loud resonant arousal call with strong upper harmonics and conspicuous onset.
+    semantic_keywords: [attention, display, distress, threat]
+    semantic_description: Produced in excitement, alarm, aggression, or distress.
+    confidence: high
+  - name: roar
+    acoustic_keywords: [loud, noisy, long, broadband, graded]
+    acoustic_description: A harsh broadband call with more noisy energy than a rumble.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Associated with aggressive display and intense disturbance.
+    confidence: medium
+  - name: snort
+    acoustic_keywords: [abrupt, broadband, short, pulsed, loud]
+    acoustic_description: A short expulsive sound with broad spectral energy and abrupt onset.
+    semantic_keywords: [attention, threat, alarm]
+    semantic_description: Used in immediate vigilance and short-range alerting.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for African savanna elephant emphasizing the core rumble system and major arousal calls.

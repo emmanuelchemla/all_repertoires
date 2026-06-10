@@ -1,0 +1,40 @@
+scientific_name: Urocitellus beldingi
+common_name: Belding's Ground Squirrel
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Sciuridae
+  genus: Urocitellus
+  species: beldingi
+calls:
+  - name: trill alarm call
+    acoustic_keywords: [high_frequency, tonal, long, loud, frequency_modulated]
+    acoustic_description: A sustained tonal alarm call with clear structure and relatively long duration.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used especially in response to aerial or uncertain threats to warn conspecifics.
+    confidence: high
+  - name: churr alarm call
+    acoustic_keywords: [repetitive, abrupt, noisy, short, broadband]
+    acoustic_description: A rapid series of harsher short notes with less tonality than the trill.
+    semantic_keywords: [alarm, predator, threat, attention]
+    semantic_description: Often associated with terrestrial predators or closer-range high-risk situations.
+    confidence: high
+  - name: contact call
+    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
+    acoustic_description: A softer and shorter local call than the main alarm repertoire.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used in lower-arousal local social communication.
+    confidence: medium
+  - name: distress squeal
+    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
+    acoustic_description: A harsh high-pitched call with abrupt onset and strong distress quality.
+    semantic_keywords: [distress, attention, predator]
+    semantic_description: Produced in capture or acute danger situations.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Belding's ground squirrel emphasizing the classic trill versus churr alarm system.

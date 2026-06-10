@@ -1,0 +1,139 @@
+scientific_name: Cercopithecus ascanius
+common_name: Red-tailed Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Cercopithecus
+  species: ascanius
+calls:
+  - name: chirp
+    alternative_names:
+      - contact chirp
+      - birdlike chirp
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - quiet
+    acoustic_description: Short, birdlike tonal notes, usually given singly or in brief exchanges and suited to short-range audibility in forest habitat.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Used to maintain contact among nearby group members during routine movement, foraging, and peaceful social spacing.
+    confidence: high
+    references:
+      - kingdon_1984
+      - mclester_2022
+  - name: twitter
+    alternative_names:
+      - contact twitter
+      - twitter series
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - tonal
+      - quiet
+    acoustic_description: A rapid series of small high-pitched notes with a twittering quality, often more repetitive than a single chirp.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Likely used in close social monitoring and cohesion, especially when individuals are moving through visually restricted vegetation.
+    confidence: medium
+    references:
+      - marler_1973
+      - maryland_zoo
+  - name: trill
+    alternative_names:
+      - trill contact call
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - repetitive
+      - short
+    acoustic_description: Brief, fine-structured note sequences with a trilled or wavering contour, intermediate between simple chirps and longer twitter-like series.
+    semantic_keywords:
+      - contact
+      - attention
+    semantic_description: Treated here as a probable short-range contact or attention-getting variant within the everyday cohesion repertoire, but its boundary from other contact calls is uncertain.
+    confidence: low
+    references:
+      - marler_1973
+  - name: hack-pop alarm call
+    alternative_names:
+      - hack
+      - pop
+      - warning cough
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - abrupt
+      - short
+      - loud
+      - broadband
+    acoustic_description: Loud, abrupt, cough-like explosive notes, sometimes described as pops or hacks, produced as discrete warning sounds rather than soft contact notes.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+    semantic_description: Adult males give these calls in alarm situations, including predator-related disturbance, to alert group members and coordinate antipredator responses.
+    confidence: high
+    references:
+      - marler_1973
+      - mclester_etal_2019
+      - maryland_zoo
+  - name: alarm chirp series
+    alternative_names:
+      - staccato chirps
+      - alarm chirps
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - abrupt
+      - loud
+    acoustic_description: Repeated sharp chirp-like notes delivered in a more insistent and staccato pattern than routine contact chirps.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+    semantic_description: Produced during or after alarm events as part of the group's broader antipredator signalling, sometimes continuing after an initial male warning cough.
+    confidence: medium
+    references:
+      - mclester_etal_2019
+      - maryland_zoo
+references:
+  de_jong_butynski_2019:
+    citation: de Jong, Y.A. and Butynski, T.M. 2019. Cercopithecus ascanius. The IUCN Red List of Threatened Species 2019 e.T4212A17947340.
+    url: https://www.iucnredlist.org/species/4212/17947340
+  kingdon_1984:
+    citation: Kingdon, J. 1984. East African Mammals, Volume II Part B. Academic Press.
+  marler_1973:
+    citation: Marler, P. 1973. A comparison of vocalizations of red-tailed monkeys and blue monkeys, Cercopithecus ascanius and C. mitis, in Uganda. Zeitschrift fur Tierpsychologie 33(3):223-247.
+    url: https://pubmed.ncbi.nlm.nih.gov/4206429/
+    doi: 10.1111/j.1439-0310.1973.tb02093.x
+  mclester_2022:
+    citation: McLester, E. 2022. Contact call acoustic structure is associated with inter-individual distances during antiphonal vocal exchanges in wild red-tailed monkeys (Cercopithecus ascanius schmidti). Behaviour 159(10):1323-1347.
+    url: https://www.edwardmclester.com/downloads/McLester%202022%20Contact%20call%20acoustic%20structure%20is%20associated%20with%20inter-individual%20distances%20during%20antiphonal%20vocal%20exchanges%20in%20wild%20red-tailed%20monkeys.pdf
+    doi: 10.1163/1568539X-bja10158
+  mclester_etal_2019:
+    citation: McLester, E., Sweeney, K., Stewart, F.A., and Piel, A.K. 2019. Leopard (Panthera pardus) predation on a red-tailed monkey (Cercopithecus ascanius) in the Issa Valley, western Tanzania. Primates 60(1):15-19.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6331503/
+    doi: 10.1007/s10329-018-0700-9
+  maryland_zoo:
+    citation: The Maryland Zoo. Red-tailed guenon species profile.
+    url: https://www.marylandzoo.org/animal/red-tailed-guenon/
+provenance:
+  - timestamp: "2026-06-10T18:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for one missing species, using cautious call boundaries and explicit confidence labels.

@@ -1,0 +1,40 @@
+scientific_name: Leptonychotes weddellii
+common_name: Weddell Seal
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Phocidae
+  genus: Leptonychotes
+  species: weddellii
+calls:
+  - name: trill
+    acoustic_keywords: [tonal, harmonic, repetitive, long, frequency_modulated]
+    acoustic_description: A tonal call with repeated rapidly modulated structure and clear harmonic content.
+    semantic_keywords: [contact, display, identity]
+    semantic_description: Used in underwater social communication and display.
+    confidence: medium
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A shorter higher-pitched call than trills, often occurring in series.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in local social communication.
+    confidence: medium
+  - name: growl
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A rough low call with noisier structure and more threat-like quality.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Associated with conflict or aroused close-range encounters.
+    confidence: medium
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, long, frequency_modulated, loud]
+    acoustic_description: A sustained narrowband call with stronger tonality and smoother contour than growls.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Included as a broad long-range social call type in the underwater repertoire.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Weddell seal using major underwater social signal categories with conservative confidence.

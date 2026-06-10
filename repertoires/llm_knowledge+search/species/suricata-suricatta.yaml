@@ -1,0 +1,160 @@
+scientific_name: Suricata suricatta
+common_name: Meerkat
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Carnivora
+  family: Herpestidae
+  genus: Suricata
+  species: suricatta
+calls:
+  - name: aerial alarm call
+    acoustic_keywords:
+      - abrupt
+      - short
+      - noisy
+      - broadband
+      - graded
+    acoustic_description: A brief alarm call with abrupt onset and relatively harsh spectral structure, often emitted in rapid sequences under high threat.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Given to flying or overhead predators and elicits rapid vigilance and refuge-seeking responses from group members.
+    confidence: high
+    references:
+      - manser_2000
+      - townsend_2017
+  - name: terrestrial alarm call
+    acoustic_keywords:
+      - short
+      - tonal
+      - harmonic
+      - graded
+      - repetitive
+    acoustic_description: A short alarm call that is typically more harmonic and less harsh at lower urgency, but can become noisier and more abrupt as urgency increases.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced when a ground-based predator or comparable terrestrial threat is detected, allowing listeners to adjust their escape and scanning behavior.
+    confidence: high
+    references:
+      - manser_2000
+      - manser_seyfarth_cheney_2001
+  - name: recruitment alarm call
+    alternative_names:
+      - mobbing recruitment call
+    acoustic_keywords:
+      - repetitive
+      - abrupt
+      - noisy
+      - broadband
+      - loud
+    acoustic_description: A repeated, high-arousal alarm series with harsh elements that stands out strongly from low-risk calls.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - group_coordination
+    semantic_description: Used when group members are recruited to inspect, mob, or collectively respond to a threat such as a snake or other target requiring coordinated attention.
+    confidence: high
+    references:
+      - townsend_2017
+      - manser_2000
+  - name: close call
+    acoustic_keywords:
+      - quiet
+      - short
+      - tonal
+      - harmonic
+      - repetitive
+    acoustic_description: A soft, low-amplitude call given frequently during foraging, with simple short tonal structure.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Maintains contact and spacing among foraging group members and helps coordinate group cohesion under low perceived risk.
+    confidence: high
+    references:
+      - townsend_2011
+  - name: sentinel call
+    alternative_names:
+      - watchman's song
+    acoustic_keywords:
+      - tonal
+      - repetitive
+      - quiet
+      - short
+      - graded
+    acoustic_description: A repeated sequence of low-amplitude tonal calls that can vary subtly with changes in perceived safety and vigilance state.
+    semantic_keywords:
+      - group_coordination
+      - attention
+      - contact
+    semantic_description: Produced by guarding individuals to signal ongoing vigilance and modulate the perceived safety of foraging group mates.
+    confidence: high
+    references:
+      - bousquet_2015
+      - manser_2000
+  - name: moving call
+    acoustic_keywords:
+      - tonal
+      - short
+      - repetitive
+      - quiet
+    acoustic_description: A short, repeated call type used in locomotor contexts, acoustically similar to other low-arousal social calls but typically given in movement bouts.
+    semantic_keywords:
+      - group_coordination
+      - contact
+      - attention
+    semantic_description: Associated with coordinated group movement and helps keep individuals together while shifting position between patches or burrows.
+    confidence: medium
+    references:
+      - townsend_close_2010
+  - name: begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - repetitive
+      - short
+      - loud
+    acoustic_description: A repeated, high-pitched call often delivered persistently by dependent young during provisioning interactions.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Elicits food transfer or attention from helpers and breeders during juvenile provisioning and post-emergence care.
+    confidence: medium
+    references:
+      - townsend_close_2010
+references:
+  jordan_san_2015:
+    citation: "Jordan, N.R. and Do Linh San, E. 2015. Suricata suricatta. The IUCN Red List of Threatened Species 2015: e.T41624A45209377."
+  manser_2000:
+    citation: "Manser, M.B. 2001. The acoustic structure of suricates' alarm calls varies with predator type and the level of response urgency. Proceedings of the Royal Society B 268:2315-2324."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1088882/
+  manser_seyfarth_cheney_2001:
+    citation: "Manser, M.B., Seyfarth, R.M., and Cheney, D.L. 2002. Suricate alarm calls signal predator class and urgency. Trends in Cognitive Sciences 6:55-57."
+    url: https://web.sas.upenn.edu/seyfarth/files/2017/04/manser-et-al-tics-2e15bz0.pdf
+  townsend_2011:
+    citation: "Townsend, S.W., Zottl, M., and Manser, M.B. 2011. All clear? Meerkats attend to contextual information in close calls to coordinate vigilance. Behavioral Ecology and Sociobiology 65:1927-1934."
+  bousquet_2015:
+    citation: "Bousquet, C.A.H., Sumpter, D.J.T., and Manser, M.B. 2015. Moving calls: a vocal mechanism underlying quorum decisions in cohesive groups. Proceedings of the Royal Society B 282:20142334."
+  townsend_close_2010:
+    citation: "Townsend, S.W., Rasmussen, M., Clutton-Brock, T., and Manser, M.B. 2012. Flexible alarm calling in meerkats: the role of the social environment and predation urgency. Behavioral Ecology 23:1360-1364."
+  townsend_2017:
+    citation: "Townsend, S.W., Koski, S.E., Byrne, R.W., Slocombe, K.E., Bickel, B., Boeckle, M., Braga Goncalves, I., Burkart, J.M., Flower, T., Gaunet, F., et al. 2017. Exorcising Grice's ghost: an empirical approach to studying intentional communication in animals. Biological Reviews 92:1427-1433."
+provenance:
+  - timestamp: "2026-06-10T19:20:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for meerkat vocal repertoire emphasizing alarm, sentinel, and cohesion calls with conservative treatment of lower-level social call splits.

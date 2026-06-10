@@ -1,0 +1,40 @@
+scientific_name: Nomascus concolor
+common_name: Black Crested Gibbon
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Hylobatidae
+  genus: Nomascus
+  species: concolor
+calls:
+  - name: duet song
+    acoustic_keywords: [long, loud, repetitive, multi_component, harmonic]
+    acoustic_description: A prolonged coordinated song with repeated phrase patterns and pair contributions.
+    semantic_keywords: [territorial, affiliation, group_coordination, display, identity]
+    semantic_description: Used by pair-bonded adults for long-range territorial advertisement and pair cohesion.
+    confidence: high
+  - name: great call
+    acoustic_keywords: [loud, long, frequency_modulated, tonal, harmonic]
+    acoustic_description: A distinctive high-amplitude phrase type with strong modulation and far-carrying quality.
+    semantic_keywords: [territorial, display, affiliation]
+    semantic_description: A prominent display element in pair song performance.
+    confidence: high
+  - name: male coda
+    acoustic_keywords: [short, repetitive, tonal, harmonic, abrupt]
+    acoustic_description: A sequence of shorter phrase endings or terminal notes contrasting with longer great-call structure.
+    semantic_keywords: [group_coordination, display, identity]
+    semantic_description: Contributes to coordinated duet structure and pair-level song identity.
+    confidence: medium
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A short bark-like call with abrupt onset and harsher structure than the main song elements.
+    semantic_keywords: [attention, threat, alarm]
+    semantic_description: Used in high-arousal local contexts outside the core song bout.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T22:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for black crested gibbon centered on the duet and great-call system.

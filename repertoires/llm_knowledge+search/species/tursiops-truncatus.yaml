@@ -1,0 +1,40 @@
+scientific_name: Tursiops truncatus
+common_name: Common Bottlenose Dolphin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Artiodactyla
+  family: Delphinidae
+  genus: Tursiops
+  species: truncatus
+calls:
+  - name: signature whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A narrowband modulated whistle with a characteristic individually distinctive contour.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Used for individual identification, contact, and reunion among group members.
+    confidence: high
+  - name: burst-pulsed sound
+    acoustic_keywords: [pulsed, repetitive, broadband, abrupt, noisy]
+    acoustic_description: A rapidly pulsed broadband sound distinct from tonal whistles.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Often associated with aroused social interactions and close-range confrontation.
+    confidence: high
+  - name: echolocation click train
+    acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
+    acoustic_description: A train of brief broadband clicks lacking sustained tonality.
+    semantic_keywords: [food, attention, group_coordination]
+    semantic_description: Primarily used in biosonar but socially informative during foraging and movement.
+    confidence: medium
+  - name: squawk
+    acoustic_keywords: [noisy, broadband, abrupt, short, repetitive]
+    acoustic_description: A harsher broadband sound intermediate between burst-pulsed sounds and whistles.
+    semantic_keywords: [attention, threat, group_coordination]
+    semantic_description: Used in active social contexts requiring immediate response.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T21:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for bottlenose dolphin centered on signature whistles and pulsed social sounds.

@@ -1,0 +1,94 @@
+scientific_name: Eleutherodactylus coqui
+common_name: Coqui
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Amphibia
+  order: Anura
+  family: Eleutherodactylidae
+  genus: Eleutherodactylus
+  species: coqui
+calls:
+  - name: advertisement call
+    alternative_names:
+      - co-qui call
+    acoustic_keywords:
+      - multi_component
+      - repetitive
+      - tonal
+      - loud
+      - frequency_modulated
+    acoustic_description: A stereotyped two-note call repeated in bouts, with a lower first note followed by a more tonal second note.
+    semantic_keywords:
+      - courtship
+      - mating
+      - territorial
+      - attention
+    semantic_description: The species-typical male advertisement call used in both mate attraction and territorial signaling.
+    confidence: high
+    references:
+      - narins_capranica
+      - coqui_review
+  - name: co note
+    acoustic_keywords:
+      - short
+      - tonal
+      - abrupt
+      - loud
+    acoustic_description: The first note of the advertisement call, shorter and lower than the second note.
+    semantic_keywords:
+      - territorial
+      - aggression
+      - attention
+    semantic_description: Functions primarily in male-male territorial or aggressive signaling.
+    confidence: high
+    references:
+      - narins_capranica
+      - female_frog_review
+  - name: qui note
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - loud
+    acoustic_description: The second note of the advertisement call, typically more tonal and higher than the initial co note.
+    semantic_keywords:
+      - courtship
+      - mating
+      - attention
+    semantic_description: Functions primarily in attracting females.
+    confidence: high
+    references:
+      - narins_capranica
+      - female_frog_review
+  - name: aggressive call
+    acoustic_keywords:
+      - abrupt
+      - repetitive
+      - tonal
+      - loud
+      - graded
+    acoustic_description: A call variant emphasizing the territorial component of the vocal system, often shorter or more forceful than full advertisement sequences.
+    semantic_keywords:
+      - territorial
+      - aggression
+      - attention
+    semantic_description: Produced in close male-male interactions and escalated territorial contexts.
+    confidence: medium
+    references:
+      - coqui_review
+provenance:
+  - timestamp: "2026-06-10T20:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for coqui centered on the well-established two-note call system and its split territorial versus mate-attraction functions.
+references:
+  narins_capranica:
+    citation: "Narins, P.M. and Capranica, R.R. 1976. Communicative significance of the two-note call of the treefrog Eleutherodactylus coqui."
+    url: https://www.researchgate.net/publication/246954747_Communicative_significance_of_the_two-note_call_of_the_treefrog_Eleutherodactylus_coqui
+  coqui_review:
+    citation: "Narins, P.M. 2022. The big potential of the small frog Eleutherodactylus coqui. Journal of Experimental Biology 225."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8824473/
+  female_frog_review:
+    citation: "The silent half: diversity, function and the critical knowledge gap on female frog calls. Proceedings of the Royal Society B 2025."
+    url: https://royalsocietypublishing.org/rspb/article/292/2047/20250454/234464/The-silent-half-diversity-function-and-the

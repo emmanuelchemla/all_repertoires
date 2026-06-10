@@ -1,0 +1,40 @@
+scientific_name: Erythrocebus patas
+common_name: Patas Monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Erythrocebus
+  species: patas
+calls:
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short low-pitched call with relatively simple structure, often repeated.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine group social interactions and benign approaches.
+    confidence: medium
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A sharp harsh call with abrupt onset and stronger noise than grunts.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used in alerting the group to disturbance or danger.
+    confidence: high
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A high-intensity arousal call with strong noisy energy.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Produced in acute conflict or danger.
+    confidence: medium
+  - name: contact call
+    acoustic_keywords: [short, tonal, quiet, repetitive, high_frequency]
+    acoustic_description: A softer shorter call used in nearby communication.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Included as a broad local cohesion call category.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for patas monkey using conservative cercopithecid call categories.

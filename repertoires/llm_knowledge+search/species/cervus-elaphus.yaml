@@ -1,0 +1,40 @@
+scientific_name: Cervus elaphus
+common_name: Red Deer
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Artiodactyla
+  family: Cervidae
+  genus: Cervus
+  species: elaphus
+calls:
+  - name: roar
+    acoustic_keywords: [low_frequency, loud, long, harmonic, repetitive]
+    acoustic_description: A powerful rutting call with sustained voiced energy and strong low-frequency emphasis.
+    semantic_keywords: [courtship, mating, territorial, display, identity]
+    semantic_description: Used mainly by males during the rut to advertise fighting ability and attract or retain females.
+    confidence: high
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, loud, short, noisy]
+    acoustic_description: A sharp abrupt call with broad spectral energy and more alarm-like quality than a roar.
+    semantic_keywords: [alarm, attention, threat]
+    semantic_description: Used in disturbance or immediate vigilance contexts.
+    confidence: medium
+  - name: mew
+    acoustic_keywords: [tonal, harmonic, short, quiet, frequency_modulated]
+    acoustic_description: A softer shorter call than the main male roar, with clearer tonal structure.
+    semantic_keywords: [contact, affiliation, caregiving]
+    semantic_description: Used especially in hind-calf or close social communication.
+    confidence: medium
+  - name: groan
+    acoustic_keywords: [low_frequency, long, noisy, graded, harmonic]
+    acoustic_description: A lower-intensity but sustained call related to social or reproductive arousal.
+    semantic_keywords: [mating, display, attention]
+    semantic_description: Included as a lower-intensity rut-associated call class.
+    confidence: low
+provenance:
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for red deer centered on the well-known rut roar system.

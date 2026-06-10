@@ -1,0 +1,40 @@
+scientific_name: Theropithecus gelada
+common_name: Gelada
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Theropithecus
+  species: gelada
+calls:
+  - name: moan
+    acoustic_keywords: [low_frequency, tonal, long, harmonic, repetitive]
+    acoustic_description: A low, smooth, sustained call with clear tonal structure.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine social contact and low-arousal within-group interaction.
+    confidence: high
+  - name: wobble vocalization
+    acoustic_keywords: [multi_component, tonal, harmonic, repetitive, frequency_modulated]
+    acoustic_description: A more complex rhythmic vocalization than simple moans, often with repeated patterned structure.
+    semantic_keywords: [affiliation, display, identity, combinatorial]
+    semantic_description: Used in socially rich affiliative exchanges and contributes to the species' notable vocal complexity.
+    confidence: high
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A loud harsh call with strong noisy energy and marked arousal.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Produced in conflict and acute social tension.
+    confidence: medium
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A short abrupt call with harsher structure than affiliative vocalizations.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Used in alerting and high-arousal situations.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for gelada emphasizing the well-known complex affiliative repertoire plus major arousal calls.

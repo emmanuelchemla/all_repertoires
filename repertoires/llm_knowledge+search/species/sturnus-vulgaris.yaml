@@ -1,0 +1,109 @@
+scientific_name: Sturnus vulgaris
+common_name: European Starling
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Sturnidae
+  genus: Sturnus
+  species: vulgaris
+calls:
+  - name: whistled song
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - loud
+      - short
+      - repetitive
+    acoustic_description: A short, clear, stereotyped whistle-rich song with strong tonal structure and relatively discrete phrase boundaries.
+    semantic_keywords:
+      - territorial
+      - display
+      - identity
+      - attention
+    semantic_description: Often used in male display and territorial contexts and serves as a prominent advertisement signal.
+    confidence: high
+    references:
+      - cornell_starling
+      - vassar_starling
+  - name: warbling song
+    acoustic_keywords:
+      - multi_component
+      - tonal
+      - noisy
+      - long
+      - repetitive
+    acoustic_description: A longer, more variable, jumbled song containing whistles, warbles, rattles, trills, and imitated sounds.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+      - combinatorial
+    semantic_description: Used mainly in sexual display and prolonged social advertisement, especially toward females.
+    confidence: high
+    references:
+      - cornell_starling
+      - vassar_starling
+  - name: chatter
+    acoustic_keywords:
+      - short
+      - noisy
+      - repetitive
+      - multi_component
+      - quiet
+    acoustic_description: A local social sequence of short harsher notes with less formal phrase structure than song.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Used during routine social interactions and flock-level coordination.
+    confidence: medium
+    references:
+      - cornell_starling
+  - name: rattle
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - repetitive
+      - abrupt
+      - short
+    acoustic_description: A rapid harsh series with strong noisy energy and mechanical or rattling quality.
+    semantic_keywords:
+      - attention
+      - threat
+      - display
+    semantic_description: Included as a conspicuous component of starling vocal output in aroused display or close social interaction.
+    confidence: medium
+    references:
+      - vassar_starling
+  - name: mimicry sequence
+    acoustic_keywords:
+      - multi_component
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - long
+    acoustic_description: A vocal sequence containing copied heterospecific or environmental sounds embedded within normal starling song structure.
+    semantic_keywords:
+      - display
+      - identity
+      - attention
+      - combinatorial
+    semantic_description: A learned display-rich component of starling song that may contribute to sexual and social signaling.
+    confidence: medium
+    references:
+      - cornell_starling
+      - vassar_starling
+references:
+  cornell_starling:
+    citation: "Cornell Lab of Ornithology. European Starling sounds."
+    url: https://www.allaboutbirds.org/guide/European_Starling/sounds
+  vassar_starling:
+    citation: "Vassar College Sensory Ecology. European Starling song."
+    url: https://pages.vassar.edu/sensoryecology/european-starling-song/
+provenance:
+  - timestamp: "2026-06-10T20:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for European starling using the standard whistled versus warbling song split plus broad social call classes.

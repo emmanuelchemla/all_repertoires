@@ -1,0 +1,125 @@
+scientific_name: Varecia variegata
+common_name: Black-and-white Ruffed Lemur
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Lemuridae
+  genus: Varecia
+  species: variegata
+calls:
+  - name: roar-shriek chorus
+    alternative_names:
+      - roar shriek
+      - chorus
+    acoustic_keywords:
+      - loud
+      - long
+      - noisy
+      - multi_component
+      - repetitive
+    acoustic_description: A conspicuous long-distance chorus composed of harsh roaring and shrieking elements from one or several callers, often with repeated phrases and high amplitude.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - display
+      - attention
+    semantic_description: Used in long-range advertisement, intergroup spacing, and high-arousal social coordination; it is the species' best-known conspicuous display call.
+    confidence: high
+    references:
+      - batist_2023
+      - pereira_1988
+  - name: roar
+    acoustic_keywords:
+      - loud
+      - long
+      - noisy
+      - broadband
+    acoustic_description: A harsh, far-carrying low-to-mid frequency call with strong noisy energy, typically less sharply high-pitched than the shriek components of choruses.
+    semantic_keywords:
+      - territorial
+      - display
+      - attention
+    semantic_description: Produced in long-distance advertisement and aroused social situations, either singly or as a component of larger chorus bouts.
+    confidence: high
+    references:
+      - batist_2023
+      - gamba_2005
+  - name: hum
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - harmonic
+      - quiet
+      - long
+    acoustic_description: A softer, lower-amplitude, more tonal call with smoother harmonic structure than the loud roaring signals.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - caregiving
+    semantic_description: Likely used in close social interactions and lower-arousal contexts such as within-group coordination or affiliative contact.
+    confidence: medium
+    references:
+      - batist_2023
+  - name: growl
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - long
+      - graded
+    acoustic_description: A low, rough, growling call with noisy spectral structure and variable duration.
+    semantic_keywords:
+      - threat
+      - aggression
+      - attention
+    semantic_description: Associated with agonistic or defensive interactions at closer range.
+    confidence: medium
+    references:
+      - batist_2023
+  - name: chatter
+    acoustic_keywords:
+      - short
+      - repetitive
+      - tonal
+      - multi_component
+      - quiet
+    acoustic_description: A rapid series of brief notes forming a chattering bout that is quieter and more locally directed than the main long-distance calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Used in routine social coordination and low-intensity interactions among nearby group members.
+    confidence: medium
+    references:
+      - batist_2023
+  - name: quack
+    acoustic_keywords:
+      - short
+      - abrupt
+      - broadband
+      - noisy
+    acoustic_description: A short, abrupt call with a compact, somewhat rough spectrum distinct from tonal hums and extended roars.
+    semantic_keywords:
+      - attention
+      - alarm
+    semantic_description: Included as a brief arousal-related call type used to draw attention in local interactions, though context boundaries remain uncertain.
+    confidence: low
+    references:
+      - batist_2023
+references:
+  batist_2023:
+    citation: "Batist, J., Baden, A.L., Tecot, S.R., and Erb, J. 2023. Bioacoustic characterization of the black-and-white ruffed lemur (Varecia variegata) vocal repertoire. Folia Primatologica."
+    url: https://files.commons.gc.cuny.edu/wp-content/blogs.dir/11772/files/2023/10/Batist_2023_acoustic-repertoire-ruffed-lemurs.pdf
+  pereira_1988:
+    citation: "Pereira, M.E., Seeligson, M.L., and Macedonia, J.M. 1988. A behavioral repertoire of the black-and-white ruffed lemur, Varecia variegata variegata. Folia Primatologica 51:1-32."
+    url: https://www.macedonialab.com/uploads/7/8/3/3/7833444/004_pereira_seeligson_macedonia_1988_varecia_behavioral_repertoire.pdf
+  gamba_2005:
+    citation: "Gamba, M., Colombo, C., and Giacoma, C. 2005. Vocal production mechanisms in ruffed lemurs. MAVEBA."
+    url: https://www.isca-archive.org/maveba_2005/gamba05_maveba.pdf
+provenance:
+  - timestamp: "2026-06-10T20:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for black-and-white ruffed lemur using the recent quantitative repertoire paper and conservative context labeling for less-certain short calls.

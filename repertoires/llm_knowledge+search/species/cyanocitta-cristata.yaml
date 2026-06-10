@@ -1,0 +1,40 @@
+scientific_name: Cyanocitta cristata
+common_name: Blue Jay
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Corvidae
+  genus: Cyanocitta
+  species: cristata
+calls:
+  - name: jeer call
+    acoustic_keywords: [loud, noisy, broadband, abrupt, short]
+    acoustic_description: A harsh conspicuous call with broad spectral energy and abrupt delivery.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Used in disturbance, mobbing, and predator-related contexts.
+    confidence: high
+  - name: rattle
+    acoustic_keywords: [repetitive, abrupt, noisy, short, multi_component]
+    acoustic_description: A rapid click-like or rattling series with sharp repeated elements.
+    semantic_keywords: [attention, group_coordination, threat]
+    semantic_description: Used in local social alerting and sometimes in close territorial or flock interactions.
+    confidence: medium
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A clearer, more tonal call than jeer notes, with stronger whistle-like structure.
+    semantic_keywords: [contact, affiliation, identity]
+    semantic_description: Used in ordinary social communication and pair or flock contact.
+    confidence: medium
+  - name: mimicry sequence
+    acoustic_keywords: [multi_component, tonal, frequency_modulated, repetitive, long]
+    acoustic_description: A learned vocal sequence incorporating copied sounds into longer bouts.
+    semantic_keywords: [display, identity, attention, combinatorial]
+    semantic_description: Blue jays readily imitate other sounds, and these sequences likely contribute to social signaling and attention capture.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for blue jay using the characteristic jeer plus common social and mimetic call classes.

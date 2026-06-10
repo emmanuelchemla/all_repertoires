@@ -1,0 +1,94 @@
+scientific_name: Saguinus oedipus
+common_name: Cotton-top Tamarin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Saguinus
+  species: oedipus
+calls:
+  - name: combination long call
+    alternative_names:
+      - CLC
+      - long call
+    acoustic_keywords:
+      - long
+      - multi_component
+      - harmonic
+      - frequency_modulated
+      - loud
+    acoustic_description: A long-distance call composed of multiple chirp- and whistle-like elements arranged into a stereotyped sequence.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+      - territorial
+    semantic_description: Used in long-range spacing and group coordination and carries socially important information for antiphonal exchanges.
+    confidence: high
+    references:
+      - egnor_2006
+      - ghazanfar_2001
+  - name: chirp
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - repetitive
+    acoustic_description: A brief high-pitched tonal note, often serving as one component within larger long-call sequences.
+    semantic_keywords:
+      - contact
+      - attention
+      - affiliation
+    semantic_description: Used in short-range social communication and as a structural unit within larger contact calls.
+    confidence: medium
+    references:
+      - ghazanfar_2001
+  - name: whistle
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - long
+      - loud
+    acoustic_description: A clear narrowband element with longer duration than chirps and a smoother whistle-like contour.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Functions in long-range contact and is an important component of the species' extended contact system.
+    confidence: medium
+    references:
+      - ghazanfar_2001
+  - name: alarm call
+    acoustic_keywords:
+      - abrupt
+      - noisy
+      - broadband
+      - short
+      - repetitive
+    acoustic_description: A conspicuous abrupt call type, harsher than the contact repertoire and suited for fast attention capture.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced in threatening situations and can combine with contact-like elements in more complex sequences.
+    confidence: medium
+    references:
+      - tamarin_repertoire
+provenance:
+  - timestamp: "2026-06-10T20:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft for cotton-top tamarin focused on the well-known combination long call and broad supporting call classes.
+references:
+  egnor_2006:
+    citation: "Egnor, S.E.R., Iguina, C.G., and Hauser, M.D. 2006. Noise-induced vocal modulation in cotton-top tamarins (Saguinus oedipus). American Journal of Primatology 68:1183-1190."
+    url: https://pubmed.ncbi.nlm.nih.gov/17096420/
+  ghazanfar_2001:
+    citation: "Ghazanfar, A.A., Morrill, R.J., and Kayser, C. 2001. Temporal cues in the antiphonal long-calling behaviour of cottontop tamarins."
+    url: https://asifg.mycpanel.princeton.edu/publications/pdfs/ghazanfar%20et%20al%20-%20tamarin%20temporal%20cues.pdf
+  tamarin_repertoire:
+    citation: "The complex vocal repertoire of the adult cotton-top tamarin (Saguinus oedipus oedipus)."
+    url: https://www.researchgate.net/publication/229576970_The_Complex_Vocal_Repertoire_of_the_Adult_Cotton-top_Tamarin_Saguinus_oedipus_oedipus1

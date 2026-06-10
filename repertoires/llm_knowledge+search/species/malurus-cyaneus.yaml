@@ -1,0 +1,40 @@
+scientific_name: Malurus cyaneus
+common_name: Superb Fairywren
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Maluridae
+  genus: Malurus
+  species: cyaneus
+calls:
+  - name: song
+    acoustic_keywords: [tonal, harmonic, repetitive, long, loud]
+    acoustic_description: A clear phrase-structured song with repeated motifs and tonal syllables.
+    semantic_keywords: [territorial, courtship, mating, identity]
+    semantic_description: Used in territory advertisement and sexual display.
+    confidence: high
+  - name: trill call
+    acoustic_keywords: [short, tonal, repetitive, frequency_modulated, quiet]
+    acoustic_description: A short modulated call used in local social interaction.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Maintains cohesion among group members and pair partners.
+    confidence: medium
+  - name: alarm call
+    acoustic_keywords: [high_frequency, abrupt, short, repetitive, loud]
+    acoustic_description: A shorter and more urgent call than routine contact notes.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used in direct threat contexts and can recruit vigilance.
+    confidence: high
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
+    acoustic_description: A repeated solicitation call given by dependent young.
+    semantic_keywords: [begging, caregiving, attention]
+    semantic_description: Used by offspring to solicit feeding and care.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T22:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for superb fairywren using broad song, contact, and alarm categories.

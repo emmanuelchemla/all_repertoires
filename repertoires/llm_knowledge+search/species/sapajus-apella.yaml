@@ -1,0 +1,40 @@
+scientific_name: Sapajus apella
+common_name: Tufted Capuchin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cebidae
+  genus: Sapajus
+  species: apella
+calls:
+  - name: trill
+    acoustic_keywords: [short, tonal, repetitive, frequency_modulated, quiet]
+    acoustic_description: A short modulated contact call, often delivered in repeated series.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used in routine social coordination and maintaining proximity among group members.
+    confidence: high
+  - name: twitter
+    acoustic_keywords: [high_frequency, short, repetitive, tonal, graded]
+    acoustic_description: A rapid sequence of high notes with lighter tonal quality than barks.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in ordinary social interaction and local communication.
+    confidence: medium
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A short harsh call with abrupt onset and broad spectral energy.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Produced in disturbance and high-arousal alert contexts.
+    confidence: high
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: A loud high-arousal vocalization with noisy energy and strong variation in contour.
+    semantic_keywords: [distress, aggression, submission, attention]
+    semantic_description: Common in aggressive encounters and victim responses.
+    confidence: high
+provenance:
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for tufted capuchin using generalized capuchin call classes with conservative boundaries.

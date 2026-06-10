@@ -1,0 +1,40 @@
+scientific_name: Saguinus fuscicollis
+common_name: Saddle-back Tamarin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Saguinus
+  species: fuscicollis
+calls:
+  - name: long call
+    acoustic_keywords: [long, multi_component, harmonic, frequency_modulated, loud]
+    acoustic_description: A long-distance call composed of multiple whistle-like or chirp-like elements in sequence.
+    semantic_keywords: [contact, group_coordination, identity, territorial]
+    semantic_description: Used in long-range spacing and coordination between group members.
+    confidence: high
+  - name: chirp
+    acoustic_keywords: [short, high_frequency, tonal, repetitive, quiet]
+    acoustic_description: A brief high note often used as a building block in broader long-call structure.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in local social communication.
+    confidence: medium
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A more sustained narrowband element than a chirp, often part of longer call bouts.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used for distance contact and caller recognition.
+    confidence: medium
+  - name: alarm call
+    acoustic_keywords: [abrupt, noisy, broadband, short, repetitive]
+    acoustic_description: A conspicuous abrupt call type harsher than contact signals.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced in threatening situations requiring rapid group attention.
+    confidence: medium
+provenance:
+  - timestamp: "2026-06-10T21:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for saddle-back tamarin centered on long-distance contact and alarm categories.
