@@ -1,7 +1,7 @@
 # Core species candidates for the repertoire database.
 # Grouped by family. A species is "done" iff species/<kebab-name>.yaml exists.
 
-# Species were selected to prioritize taxa for which vocal repertoires are likely to support comparative analysis of call-type structure. We favored species with discrete, named, and literature-supported vocal or acoustic signal classes, especially where both acoustic form and behavioral context have been described from wild populations. To reduce redundancy, closely related species with similar expected repertoires were pruned unless they added clear comparative value, while taxa with strongly graded, weakly contextualized, or primarily individual-level acoustic variation were retained only when they represented especially important systems such as cetacean vocal culture. The resulting core set comprises 117 species across 51 families.
+# Species were selected to prioritize taxa for which vocal repertoires are likely to support comparative analysis of call-type structure. We favored species with discrete, named, and literature-supported vocal or acoustic signal classes, especially where both acoustic form and behavioral context have been described from wild populations. To reduce redundancy, closely related species with similar expected repertoires were pruned unless they added clear comparative value, while taxa with strongly graded, weakly contextualized, or primarily individual-level acoustic variation were retained only when they represented especially important systems such as cetacean vocal culture. The resulting core set comprises 132 species across 58 families.
 
 families:
 
@@ -25,6 +25,7 @@ families:
     - { scientific_name: Cercopithecus nictitans, common_name: Putty-nosed Monkey }
     - { scientific_name: Macaca mulatta, common_name: Rhesus Macaque }
     - { scientific_name: Macaca fuscata, common_name: Japanese Macaque }
+    - { scientific_name: Macaca sylvanus, common_name: Barbary Macaque }
     - { scientific_name: Papio anubis, common_name: Olive Baboon }
     - { scientific_name: Theropithecus gelada, common_name: Gelada }
     - { scientific_name: Colobus guereza, common_name: Mantled Guereza }
@@ -52,8 +53,20 @@ families:
 
   Callitrichidae:
     - { scientific_name: Callithrix jacchus, common_name: Common Marmoset }
+    - { scientific_name: Cebuella pygmaea, common_name: Pygmy Marmoset }
     - { scientific_name: Saguinus oedipus, common_name: Cotton-top Tamarin }
     - { scientific_name: Saguinus fuscicollis, common_name: Saddle-back Tamarin }
+    - { scientific_name: Saguinus mystax, common_name: Moustached Tamarin }
+    - { scientific_name: Leontopithecus rosalia, common_name: Golden Lion Tamarin }
+
+  Pitheciidae:
+    - { scientific_name: Plecturocebus cupreus, common_name: Coppery Titi }
+    - { scientific_name: Plecturocebus donacophilus, common_name: White-eared Titi }
+    - { scientific_name: Callicebus nigrifrons, common_name: Black-fronted Titi }
+    - { scientific_name: Cheracebus lugens, common_name: Black Titi }
+
+  Aotidae:
+    - { scientific_name: Aotus azarae, common_name: Azara's Owl Monkey }
 
   Lemuridae:
     - { scientific_name: Lemur catta, common_name: Ring-tailed Lemur }
@@ -127,6 +140,9 @@ families:
   Heterocephalidae:
     - { scientific_name: Heterocephalus glaber, common_name: Naked Mole-rat }
 
+  Octodontidae:
+    - { scientific_name: Octodon degus, common_name: Common Degu }
+
   # ---- Bats ----
 
   Phyllostomidae:
@@ -153,6 +169,11 @@ families:
 
   Cervidae:
     - { scientific_name: Cervus elaphus, common_name: Red Deer }
+
+  # ---- Hyraxes ----
+
+  Procaviidae:
+    - { scientific_name: Procavia capensis, common_name: Rock Hyrax }
 
   # ---- Corvids ----
 
@@ -197,6 +218,10 @@ families:
   Troglodytidae:
     - { scientific_name: Pheugopedius euophrys, common_name: Plain-tailed Wren }
 
+  Leiothrichidae:
+    - { scientific_name: Turdoides bicolor, common_name: Southern Pied Babbler }
+    - { scientific_name: Argya squamiceps, common_name: Arabian Babbler }
+
   Ploceidae:
     - { scientific_name: Plocepasser mahali, common_name: White-browed Sparrow-weaver }
 
@@ -205,6 +230,9 @@ families:
 
   Maluridae:
     - { scientific_name: Malurus cyaneus, common_name: Superb Fairywren }
+
+  Artamidae:
+    - { scientific_name: Gymnorhina tibicen, common_name: Australian Magpie }
 
   # ---- Parrots ----
 
@@ -217,6 +245,9 @@ families:
   Psittaculidae:
     - { scientific_name: Melopsittacus undulatus, common_name: Budgerigar }
     - { scientific_name: Nymphicus hollandicus, common_name: Cockatiel }
+
+  Strigopidae:
+    - { scientific_name: Nestor notabilis, common_name: Kea }
 
   # ---- Fowl ----
 
