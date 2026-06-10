@@ -10,6 +10,7 @@ The goal of this skill is to create a wild vocal repertoire for a species using 
 ## File layout
 
 - One YAML file per species at `repertoires/llm_knowledge+search/species/<scientific-name-kebab-case>.yaml`.
+- `repertoires/species_index.yaml` is the shared candidate queue. A species is unfinished for this database iff it appears in that index and there is no matching YAML file under `repertoires/llm_knowledge+search/species/`.
 - One file = one species = atomic unit of work.
 - Schema lives with this skill at `.agents/skills/llm-knowledge-search-repertoire/schema.json`.
 - Validator lives with this skill at `.agents/skills/llm-knowledge-search-repertoire/validate.py`.
@@ -24,7 +25,6 @@ python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/ll
 - Use online search when it can improve accuracy, especially for uncertain species, call names, newer literature, taxonomy, or audio samples.
 - References are encouraged, but not required. It is acceptable to include a call based on LLM knowledge and search synthesis without a stable citation.
 - Never overstate evidence. Every call must include `confidence`: `low`, `medium`, or `high`.
-- Do not include calls known only from captivity when there is no wild evidence.
 
 ## Top-level fields
 
@@ -75,7 +75,7 @@ python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/ll
 
 ## Workflow
 
-1. Identify the target species and file path under `repertoires/llm_knowledge+search/species/`.
+1. Pick species from `repertoires/species_index.yaml` for which `repertoires/llm_knowledge+search/species/<scientific-name-kebab-case>.yaml` does not exist yet.
 2. Search the web for current taxonomy and obvious repertoire/call-type sources when useful.
 3. Draft a lean YAML file with broad call coverage and honest evidence labels.
 4. Validate with `.agents/skills/llm-knowledge-search-repertoire/validate.py`.

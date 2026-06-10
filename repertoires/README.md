@@ -2,7 +2,7 @@ The repertoire databases are organized as follows:
 
 - Literature-extraction DB: `llm_literature_extraction/species/<scientific-name-kebab-case>.yaml` (e.g. `pan-paniscus.yaml`).
 - LLM-knowledge-plus-search DB: `llm_knowledge+search/species/<scientific-name-kebab-case>.yaml`.
-- `llm_literature_extraction/species_index.yaml` lists candidate species grouped by family. A species is "done" iff its file exists in `llm_literature_extraction/species/`.
+- `species_index.yaml` lists candidate species grouped by family. A species is "done" iff its file exists in `llm_literature_extraction/species/`.
 - LLM agents grow the literature-extraction database using `.agents/skills/llm-literature-extraction-repertoire/SKILL.md`, which defines the curation rules.
 - The schema and validator live with that skill. Before committing, an agent always validates with `python .agents/skills/llm-literature-extraction-repertoire/validate.py repertoires/llm_literature_extraction/species/<file>.yaml` from the repository root.
 - We additionally have an `explorer.py` interactive web app which allows us to explore the database.
