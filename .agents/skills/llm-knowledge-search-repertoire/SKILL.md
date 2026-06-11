@@ -23,6 +23,7 @@ python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/ll
 ## Source policy
 
 - Use online search when it can improve accuracy, especially for uncertain species, call names, newer literature, taxonomy, or audio samples.
+- DO NOT REUSE any information from other repertoires you find in the repo. Each repertoire DB must be built independently.
 - References are encouraged, but not required. It is acceptable to include a call based on LLM knowledge and search synthesis without a stable citation.
 - Never overstate evidence. Every call must include `confidence`: `low`, `medium`, or `high`.
 
@@ -67,7 +68,10 @@ python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/ll
 
 ## Inclusion guidance
 
-- Aim for a useful comprehensive and complete repertoire, but not exhaustive literature reconciliation.
+- Aim for high-recall expert-facing completeness, not minimalist safety.
+- Prefer inclusion over omission when a call class is plausibly recognized in species accounts, reviews, or primary studies.
+- If uncertainty is mainly about boundary strength, include the call with `confidence: low` or `medium` instead of silently collapsing or omitting it.
+- For rich-repertoire species (for example great apes, cetaceans, parrots, corvids, macaques, elephants), assign one species per worker when possible, or at most two closely related species.
 - Include common, named call types and well-known variants when they are useful for comparative analysis.
 - Merge obvious synonyms into `alternative_names`.
 - Keep broad graded categories broad unless a split is widely recognized or helpful.
@@ -75,7 +79,7 @@ python .agents/skills/llm-knowledge-search-repertoire/validate.py repertoires/ll
 
 ## Workflow
 
-1. Pick species from `repertoires/species_index.yaml` for which `repertoires/llm_knowledge+search/species/<scientific-name-kebab-case>.yaml` does not exist yet.
+1. Pick one species from `repertoires/species_index.yaml` for which `repertoires/llm_knowledge+search/species/<scientific-name-kebab-case>.yaml` does not exist yet.
 2. Search the web for current taxonomy and obvious repertoire/call-type sources when useful.
 3. Draft a lean YAML file with broad call coverage and honest evidence labels.
 4. Validate with `.agents/skills/llm-knowledge-search-repertoire/validate.py`.
