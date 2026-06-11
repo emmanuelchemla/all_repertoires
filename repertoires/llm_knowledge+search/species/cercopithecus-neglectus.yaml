@@ -69,6 +69,44 @@ calls:
     confidence: medium
     references:
       - lemasson_etal_2013
+  - name: threat call
+    alternative_names:
+      - aggressive call
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - short
+      - repetitive
+      - abrupt
+    acoustic_description: A harsh noisy call type used in short agonistic bouts, acoustically rougher than the tonal contact calls.
+    semantic_keywords:
+      - aggression
+      - threat
+      - attention
+    semantic_description: Produced by aggressors during antagonistic interactions and treated as a distinct major call class in comparative analyses of the species' repertoire.
+    confidence: medium
+    references:
+      - bouchet_etal_2012
+      - bouchet_etal_2013
+  - name: warning bark
+    alternative_names:
+      - bark
+      - alarm bark
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - loud
+    acoustic_description: A short, forceful bark with abrupt onset and broad spectral energy, more conspicuous than quiet contact grunts.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: Used in response to threats and disturbance; included conservatively as the species' short warning/alarm call alongside the male boom.
+    confidence: medium
+    references:
+      - neprimate_conservancy_2023
   - name: isolation call
     scope:
       life_stages:
@@ -121,6 +159,13 @@ references:
     citation: Lemasson, A., Remeuf, K., Rossard, A., and Zimmermann, E. 2013. Cross-taxa similarities in affect-induced changes of vocal behavior and voice in arboreal monkeys. PLOS ONE 7(9):e45106.
     url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0045106
     doi: 10.1371/journal.pone.0045106
+  bouchet_etal_2013:
+    citation: "Bouchet, H., Blois-Heulin, C., Pellier, A.-S., Zuberbuhler, K., and Lemasson, A. 2013. Social complexity parallels vocal complexity: a comparison of three non-human primate species. Frontiers in Psychology 4:390."
+    url: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2013.00390/full
+    doi: 10.3389/fpsyg.2013.00390
+  neprimate_conservancy_2023:
+    citation: New England Primate Conservancy. 2023. De Brazza's Monkey (Cercopithecus neglectus) species profile.
+    url: https://neprimateconservancy.org/debrazzas-monkey/
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
@@ -134,3 +179,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Replaced unsupported alarm-bark placeholders with the better-supported boom, contact, multi-unit contact, isolation, and distress classes from stable species sources and comparative vocal literature.
+  - timestamp: "2026-06-11T13:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass added the comparative-repertoire threat call and a conservative warning bark class while keeping the contact-centered structure intact.

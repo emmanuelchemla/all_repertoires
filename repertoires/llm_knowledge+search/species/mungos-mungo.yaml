@@ -112,6 +112,59 @@ calls:
   confidence: medium
   references:
   - banded_mongoose_calls
+- name: distress call
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - short
+  - repetitive
+  - loud
+  acoustic_description: A louder, more urgent repeated call than routine close-forage
+    calls, with a harsher and more aroused sound quality.
+  semantic_keywords:
+  - distress
+  - attention
+  - caregiving
+  semantic_description: Produced when an individual is threatened, restrained, injured,
+    or otherwise in acute need of assistance, drawing attention from nearby group
+    members.
+  confidence: medium
+  references:
+  - rasso_1986
+- name: threat call
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - abrupt
+  - short
+  - graded
+  acoustic_description: A rough, lower-pitched threatening vocalization, harsher
+    and less tonal than routine cohesion calls.
+  semantic_keywords:
+  - threat
+  - aggression
+  - spacing
+  semantic_description: Used in close-range antagonistic encounters to warn or displace
+    conspecifics.
+  confidence: medium
+  references:
+  - rasso_1986
+- name: grooming call
+  acoustic_keywords:
+  - short
+  - quiet
+  - tonal
+  - graded
+  acoustic_description: A soft, low-amplitude social call with less abrupt structure
+    than alarm or recruitment calls.
+  semantic_keywords:
+  - affiliation
+  - contact
+  semantic_description: Associated with relaxed affiliative interactions, especially
+    close social contact such as grooming.
+  confidence: low
+  references:
+  - rasso_1986
 references:
   jansen_2012:
     citation: Jansen, D.A.W.A.M. and Cant, M.A. 2013. Segmental concatenation of individual
@@ -142,3 +195,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness update added broad distress, threat, and grooming
+    call classes from externally described banded mongoose repertoire summaries while
+    keeping close-call and recruitment structure intact.

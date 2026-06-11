@@ -61,6 +61,23 @@ calls:
   references:
   - derrickson_1987
   - vassar_mockingbird
+- name: soft hew call
+  alternative_names:
+  - pair-contact hew
+  acoustic_keywords:
+  - short
+  - tonal
+  - abrupt
+  - quiet
+  acoustic_description: Softer, simpler hew-like notes delivered at lower amplitude than the louder mobbing hew.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - caregiving
+  semantic_description: Exchanged by mates during incubation and nestling periods, including when the female leaves the nest, and functions as close-range pair or nest-contact signaling.
+  confidence: high
+  references:
+  - allaboutbirds_mockingbird
 - name: chat call
   alternative_names:
   - chatburst
@@ -157,3 +174,7 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:15:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness sweep separated the softer mate-exchanged hew from the louder mobbing hew because Cornell explicitly distinguishes the two contexts.

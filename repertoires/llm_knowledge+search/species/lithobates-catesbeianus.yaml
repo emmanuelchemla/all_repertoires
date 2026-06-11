@@ -22,6 +22,19 @@ calls:
     semantic_description: Main adult male breeding-season signal used to attract females and broadcast occupancy to nearby males in choruses.
     confidence: high
     references: [capranica_1968, bee_2004, adw_bullfrog]
+  - name: territorial call
+    alternative_names: [male territorial call, challenge call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, abrupt, loud]
+    acoustic_description: A shorter low-pitched challenge call distinct from the long advertisement bellow and lacking the full multi-croak jug-o-rum sequence.
+    semantic_keywords: [territorial, aggression, spacing, attention]
+    semantic_description: Used by resident males to signal that a site is occupied and to challenge intruding bullfrogs before or during territorial escalation.
+    confidence: medium
+    references: [capranica_1968]
   - name: aggressive warning call
     alternative_names: [aggressive call, territorial call, warning call]
     scope:
@@ -92,3 +105,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision clarified the named alarm squeak category and tightened reference support for the classic bullfrog repertoire.
+  - timestamp: "2026-06-11T13:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass restored a distinct territorial challenge call supported by the classic bullfrog repertoire literature, separate from warning and encounter calls.

@@ -63,6 +63,23 @@ calls:
     confidence: medium
     references:
       - pepper_1991
+  - name: hiss
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - short
+      - loud
+    acoustic_description: A brief harsh broadband exhalatory call with noisier structure than chirps or grunts and an abrupt onset.
+    semantic_keywords:
+      - aggression
+      - threat
+      - attention
+    semantic_description: Used in close-range dominance, aggressive encounters, or direct social challenge inside the tunnel system.
+    confidence: medium
+    references:
+      - pepper_1991
+      - ielc_2026
   - name: alarm shriek
     alternative_names:
       - alarm call
@@ -116,6 +133,9 @@ references:
     doi: 10.1126/science.abc6588
   pepper_1991:
     citation: Pepper, J.W., Braude, S.H., Lacey, E.A., Sherman, P.W., and Faulkes, C.G. 1991. Vocalizations of the naked mole-rat. In P.W. Sherman, J.U.M. Jarvis, and R.D. Alexander, eds., The Biology of the Naked Mole-Rat. Princeton University Press.
+  ielc_2026:
+    citation: International Elephant Learning Centre. Naked mole-rat factsheet.
+    url: https://www.ielc.lib.ia.us/learning-center/2024-zoology-events/naked-mole-rat-factsheet
 provenance:
   - timestamp: "2026-06-10T21:30:00+02:00"
     model: GPT-5 Codex
@@ -129,3 +149,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Refocused the repertoire on the best-supported social signature chirp system plus conservative grunt, squeak, alarm, and pup-solicitation classes.
+  - timestamp: "2026-06-11T12:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a defensible hiss-based threat or dominance class from external sources and kept the remainder of the repertoire broad to avoid speculative over-splitting.

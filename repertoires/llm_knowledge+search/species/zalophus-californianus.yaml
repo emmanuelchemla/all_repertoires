@@ -41,6 +41,8 @@ calls:
   semantic_description: Used in close-range warning and conflict.
   confidence: medium
 - name: pup call
+  alternative_names:
+  - pup bleat
   acoustic_keywords:
   - high_frequency
   - tonal
@@ -56,7 +58,12 @@ calls:
   - attention
   semantic_description: Used in mother-pup recognition and reunion.
   confidence: high
-- name: female call
+  references:
+  - peterson_bartholomew_1967
+- name: female attraction call
+  alternative_names:
+  - female call
+  - mother attraction call
   acoustic_keywords:
   - tonal
   - harmonic
@@ -68,8 +75,12 @@ calls:
   - contact
   - affiliation
   - caregiving
-  semantic_description: Used in local social and maternal interactions.
+  - identity
+  semantic_description: Used by adult females during local social and especially mother-pup
+    reunion interactions in dense colonies.
   confidence: medium
+  references:
+  - schusterman_1967
 - name: roar
   acoustic_keywords:
   - low_frequency
@@ -87,22 +98,61 @@ calls:
   semantic_description: Used in high-arousal male display and conflict contexts during
     territorial or breeding interactions.
   confidence: medium
-- name: mother-pup attraction call
+- name: grunt
   acoustic_keywords:
-  - tonal
-  - harmonic
+  - low_frequency
+  - broadband
   - short
-  - repetitive
-  - loud
-  acoustic_description: A repeated tonal call used in recognition and reunion, more
-    patterned than abrupt barks.
+  - graded
+  - quiet
+  acoustic_description: A short, lower-amplitude, low-frequency social sound with
+    less explosive onset than a bark and less duration than a growl.
   semantic_keywords:
   - contact
-  - caregiving
-  - identity
-  semantic_description: Used by females and pups during reunion and local recognition
-    in dense colonies.
+  - attention
+  - spacing
+  semantic_description: Used at close range in routine interaction, low-level warning,
+    or mild social negotiation.
   confidence: medium
+  references:
+  - seaworld_zalophus
+- name: pup alarm call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - abrupt
+  - repetitive
+  - noisy
+  acoustic_description: A more urgent and harsher pup vocalization than the ordinary
+    reunion bleat, often emitted as repeated high-pitched bursts.
+  semantic_keywords:
+  - alarm
+  - distress
+  - attention
+  - caregiving
+  semantic_description: Produced by pups during acute disturbance, separation, or
+    threat, prompting attention from nearby adults.
+  confidence: medium
+  references:
+  - seaworld_zalophus
+references:
+  peterson_bartholomew_1967:
+    citation: Peterson, R.S. and Bartholomew, G.A. 1967. The natural history and
+      behavior of the California sea lion. American Society of Mammalogists Special
+      Publication.
+  schusterman_1967:
+    citation: Schusterman, R.J. 1967. Mother-infant relations in the California sea
+      lion. Animal Behaviour.
+  seaworld_zalophus:
+    citation: SeaWorld. California sea lion vocalizations and communication overview.
+    url: https://seaworld.org/animals/all-about/california-sea-lion/communication/
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -114,3 +164,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness update added grunt and pup alarm as broad missing
+    colony call classes and consolidated female and maternal reunion signalling into
+    a cleaner attraction-call category.

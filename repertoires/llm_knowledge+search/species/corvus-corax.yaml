@@ -46,6 +46,25 @@ calls:
     confidence: medium
     references:
       - raven_cornell
+  - name: nest-disturbance rasp
+    alternative_names:
+      - rasping nest call
+      - rasp call
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - abrupt
+      - loud
+    acoustic_description: Deep harsh rasping calls that sound rougher and less rolling than the classic croak.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: Associated especially with nest disturbance and other close, high-arousal defensive situations.
+    confidence: high
+    references:
+      - raven_cornell
   - name: knock call
     acoustic_keywords:
       - abrupt
@@ -139,3 +158,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the main raven contact, alarm, pair-display, song-like, and juvenile solicitation classes with stable external sound references.
+  - timestamp: '2026-06-11T16:15:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Second-pass completeness sweep added the distinct nest-disturbance rasp described by Cornell while leaving the broader alarm and display classes otherwise conservative.

@@ -33,24 +33,37 @@ calls:
     references: [narins_capranica_1976]
   - name: aggressive call
     acoustic_keywords: [abrupt, repetitive, tonal, loud, graded]
-    acoustic_description: A call variant emphasizing the territorial component of the vocal system, often shorter or more forceful than full advertisement sequences.
+    acoustic_description: A territorially escalated vocal variant that may emphasize the co component and append extra co and qui syllables relative to the standard two-note call.
     semantic_keywords: [territorial, aggression, attention]
     semantic_description: Produced in close male-male interactions and escalated territorial contexts.
     confidence: medium
-    references: [narins_2022]
+    references: [narins_2022, stewart_rand_1991, stewart_rand_1992]
   - name: courtship call
     acoustic_keywords: [tonal, repetitive, quiet, short, graded]
-    acoustic_description: A lower-amplitude close-range call variant quieter than the full advertisement sequence.
+    acoustic_description: A lower-amplitude close-range call variant quieter than the full advertisement sequence and sometimes simplified relative to the typical two-note pattern.
     semantic_keywords: [courtship, mating, affiliation]
     semantic_description: Used during direct male-female interaction at close range.
-    confidence: low
+    confidence: medium
+    references: [michael_1996, townsend_stewart_1986]
 references:
+  michael_1996:
+    citation: "Michael, S.F. 1996. Courtship calls of three species of Eleutherodactylus from Puerto Rico (Anura: Leptodactylidae). Herpetologica 52:116-120."
+    url: https://www.jstor.org/stable/3892963
   narins_capranica_1976:
     citation: "Narins, P.M. and Capranica, R.R. 1976. Communicative significance of the two-note call of the treefrog Eleutherodactylus coqui."
     url: https://www.researchgate.net/publication/246954747_Communicative_significance_of_the_two-note_call_of_the_treefrog_Eleutherodactylus_coqui
   narins_2022:
     citation: "Narins, P.M. 2022. The big potential of the small frog Eleutherodactylus coqui. Journal of Experimental Biology 225."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8824473/
+  stewart_rand_1991:
+    citation: "Stewart, M.M. and Rand, A.S. 1991. Vocalizations and the defense of retreat sites by male and female frogs, Eleutherodactylus coqui. Copeia 1991(4):1013-1024."
+    url: https://www.jstor.org/stable/1446096
+  stewart_rand_1992:
+    citation: "Stewart, M.M. and Rand, A.S. 1992. Diel variation in the use of aggressive calls by the frog Eleutherodactylus coqui. Herpetologica 48(1):49-56."
+    url: https://www.jstor.org/stable/3892918
+  townsend_stewart_1986:
+    citation: "Townsend, D.S. and Stewart, M.M. 1986. Courtship and mating behavior of a Puerto Rican frog, Eleutherodactylus coqui. Herpetologica 42(2):165-170."
+    url: https://www.jstor.org/stable/3892382
 provenance:
   - timestamp: '2026-06-10T20:15:00+02:00'
     model: GPT-5 Codex
@@ -64,3 +77,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision tightened the repertoire around the well-supported two-note system and removed a generic review citation that was not species-specific.
+  - timestamp: '2026-06-11T13:05:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass added species-specific support for aggressive and courtship calling while avoiding speculative new call splits beyond the established two-note system.

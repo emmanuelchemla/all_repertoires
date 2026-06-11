@@ -30,6 +30,13 @@ calls:
     semantic_description: Used in disturbance and warning contexts and distinguished behaviorally from advertisement and release calling.
     confidence: medium
     references: [adw_cinerea]
+  - name: rain call
+    acoustic_keywords: [repetitive, tonal, graded]
+    acoustic_description: A distinct non-advertisement call type reported as different from mating, warning, and release calls, but with limited accessible detail on its exact spectro-temporal structure.
+    semantic_keywords: [attention, group_coordination]
+    semantic_description: Produced when frogs appear to sense imminent rain, outside the direct mate-attraction context of the advertisement call.
+    confidence: low
+    references: [adw_cinerea]
   - name: release call
     acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
     acoustic_description: A brief protest call produced during unwanted physical contact or clasping.
@@ -58,3 +65,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision tightened species-specific support and kept the repertoire focused on the best-supported named call classes.
+  - timestamp: "2026-06-11T13:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass added the externally documented rain call from the Animal Diversity Web account and kept it low confidence because accessible acoustic detail is sparse.

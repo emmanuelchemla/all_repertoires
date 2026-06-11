@@ -98,6 +98,30 @@ calls:
     references:
       - allaboutbirds_carolina
       - hatti_1985
+  - name: nest hiss
+    alternative_names:
+      - hissing display
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - loud
+      - short
+    acoustic_description: Explosive hiss-like sound lacking the clear tonal structure of song or the discrete note patterning of chick-a-dee calls.
+    semantic_keywords:
+      - threat
+      - attention
+    semantic_description: Produced by an incubating female at the nest when an intruder approaches the cavity, as part of a close-range defensive display.
+    confidence: high
+    references:
+      - allaboutbirds_carolina
   - name: begging call
     scope:
       life_stages:
@@ -143,3 +167,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass retained the Carolina Chickadee core named call classes, added an explicit juvenile begging class, and strengthened broad stable reference support.
+  - timestamp: '2026-06-11T16:15:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Second-pass completeness sweep added the nest hiss defensive sound described for incubating females while leaving the broader call system unsplit.

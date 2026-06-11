@@ -94,18 +94,54 @@ calls:
   - name: contact call
     alternative_names:
       - social contact call
+      - clear call
     acoustic_keywords:
       - short
       - tonal
       - quiet
       - repetitive
-    acoustic_description: Soft short-range calls with simpler structure than the predator alarms and suited to local audibility.
+    acoustic_description: Soft short-range tonal calls, often described as clear-sounding and acoustically simpler than the predator alarms.
     semantic_keywords:
       - contact
       - group_coordination
       - affiliation
-    semantic_description: Used in routine within-group spacing and social cohesion outside immediate alarm contexts.
-    confidence: medium
+      - attention
+    semantic_description: Produced at high rates by females, subadults, and juveniles for close-range cohesion and coordinated vigilance, especially when group members are spread out or visibility is poor.
+    confidence: high
+    references:
+      - uster_zuberbuhler_2001
+  - name: trill
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - repetitive
+      - frequency_modulated
+    acoustic_description: A short, higher-pitched tonal call with a more modulated, trilling quality than the clear call.
+    semantic_keywords:
+      - contact
+      - attention
+      - group_coordination
+    semantic_description: Included as a distinct close-range call type reported for females, subadults, and juveniles; likely used in local arousal and coordination rather than as a long-distance alarm.
+    confidence: low
+    references:
+      - uster_zuberbuhler_2001
+  - name: bark
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - loud
+    acoustic_description: A harsh short call with abrupt onset and broader spectral energy than the tonal clear and trill calls.
+    semantic_keywords:
+      - threat
+      - alarm
+      - attention
+    semantic_description: Reported among the non-male call types and likely used in acute disturbance or social conflict at shorter range than the adult male loud alarms.
+    confidence: low
+    references:
+      - uster_zuberbuhler_2001
   - name: scream
     acoustic_keywords:
       - high_frequency
@@ -127,6 +163,9 @@ references:
     doi: 10.1098/rsos.150639
   zuberbuhler_2000:
     citation: Zuberbuhler, K. 2000. Predator-specific alarm calls in Campbell's monkeys, Diana monkeys, and putty-nosed monkeys. Behaviour 137(1):1-27.
+  uster_zuberbuhler_2001:
+    citation: Uster, D. and Zuberbuhler, K. 2001. The functional significance of Diana monkey clear calls. Behaviour 138(6):741-756.
+    url: https://libra.unine.ch/bitstreams/ff6e54d3-ec39-4117-a838-f1092d49c7ae/download
   iucn_2019:
     citation: Oates, J.F. and Gonedele Bi, S. 2019. Cercopithecus diana. The IUCN Red List of Threatened Species 2019 e.T4216A17947498.
     url: https://www.iucnredlist.org/species/4216/17947498
@@ -143,3 +182,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Removed duplicated leopard-alarm content and refocused the repertoire on the established male predator alarms, female alarm response calls, social contact calls, and distress vocalizations.
+  - timestamp: "2026-06-11T13:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass renamed the core social call as clear call/contact call and added source-backed trill and bark classes for the female/subadult vocal repertoire.

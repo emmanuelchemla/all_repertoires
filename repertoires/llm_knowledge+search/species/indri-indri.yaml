@@ -26,24 +26,60 @@ calls:
   - name: roar
     acoustic_keywords: [loud, long, noisy, broadband, repetitive]
     acoustic_description: A forceful harsh vocal element with stronger noisy energy than the more tonal song sections.
-    semantic_keywords: [territorial, threat, attention, display]
-    semantic_description: Contributes to high-arousal long-range display and territorial calling.
-    confidence: medium
-    references: [pollock_1986]
+    semantic_keywords: [alarm, predator, attention, display]
+    semantic_description: Given especially to aerial predators and also as an introductory element of songs, making it both an alarm and long-range display component.
+    confidence: high
+    references: [giacoma_2010, pollock_1986]
+  - name: honk
+    alternative_names: [clacson]
+    acoustic_keywords: [loud, tonal, repetitive, abrupt, harmonic]
+    acoustic_description: A series of short loud tonal notes, often rhythmic and sometimes preceded by a voiced inhalation.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used mainly against terrestrial predators or other dangerous intruders, including humans in non-habituated groups.
+    confidence: high
+    references: [giacoma_2010]
+  - name: hum
+    acoustic_keywords: [low_frequency, quiet, short, repetitive, tonal]
+    acoustic_description: A low-intensity low-pitched call, often produced repeatedly back-to-back with little carrying power.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used during rest, foraging, and travel to maintain close contact within the group.
+    confidence: high
+    references: [giacoma_2010]
   - name: kiss
     acoustic_keywords: [short, abrupt, quiet, pulsed, repetitive]
     acoustic_description: A brief percussive click-like or smacking local call with abrupt onset and little tonal structure.
-    semantic_keywords: [contact, attention, group_coordination]
-    semantic_description: Used in close-range coordination and local social attention outside the long song bouts.
+    semantic_keywords: [attention, threat, group_coordination]
+    semantic_description: Produced in vigilance and stress-related contexts, often before songs or as the opening element of the kiss-wheeze cry sometimes called the cri d'amour.
+    confidence: high
+    references: [giacoma_2010, pollock_1986]
+  - name: wheeze
+    acoustic_keywords: [quiet, short, noisy, abrupt, repetitive]
+    acoustic_description: A rapid exhaled call, often paired with a preceding kiss and acoustically more breathy and noisy than tonal short-range calls.
+    semantic_keywords: [attention, threat, aggression]
+    semantic_description: Used in vigilance, intragroup competition, and responses to potentially dangerous or noxious stimuli.
+    confidence: high
+    references: [giacoma_2010]
+  - name: long tonal call
+    acoustic_keywords: [tonal, long, frequency_modulated, harmonic, repetitive]
+    acoustic_description: A longer tonal call with clearer pitch structure and greater duration than the short tonal call.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Produced in agonistic interactions and often emitted as a sequence during physical conflict between group members.
     confidence: medium
-    references: [pollock_1986]
+    references: [giacoma_2010]
+  - name: short tonal call
+    acoustic_keywords: [tonal, short, abrupt, frequency_modulated, harmonic]
+    acoustic_description: A short harsh tonal call, briefer and sharper than the long tonal call.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Used in physical aggression and often interspersed between long tonal calls during intragroup conflicts.
+    confidence: medium
+    references: [giacoma_2010]
   - name: grunt
     acoustic_keywords: [low_frequency, short, pulsed, graded, quiet]
-    acoustic_description: A short low call with simple rough or pulsed structure and less carrying power than roars or song phrases.
-    semantic_keywords: [contact, affiliation, attention]
-    semantic_description: Used in nearby routine social interactions and low-arousal coordination.
-    confidence: low
-    references: [pollock_1986]
+    acoustic_description: A short low-pitched pulsed call, often given in series and with less carrying power than roars, honks, or songs.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used in tense, vigilance, and agonistic situations, including intragroup conflict and warning contexts.
+    confidence: high
+    references: [giacoma_2010, pollock_1986]
 references:
   giacoma_2010:
     citation: "Giacoma, C., Sorrentino, V., Rabarivola, C., and Gamba, M. 2010. Sex differences in the song of Indri indri. International Journal of Primatology 31:539-551."
@@ -64,3 +100,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Replaced the duplicate kiss entries with a cleaner song-centred inventory and added classic indri song references.
+  - timestamp: "2026-06-11T13:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass expanded the file to the source-backed adult repertoire by adding honk, hum, wheeze, and tonal agonistic calls and by tightening the alarm contexts of roar, kiss, and grunt.

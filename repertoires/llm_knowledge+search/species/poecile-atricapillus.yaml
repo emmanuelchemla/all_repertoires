@@ -96,6 +96,31 @@ calls:
     confidence: medium
     references:
       - ficken_etal_1978
+      - blackcapped_cornell
+  - name: nest hiss
+    alternative_names:
+      - hissing display
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - loud
+      - short
+    acoustic_description: Explosive hiss-like burst lacking the tonal structure of chick-a-dee calls or fee-bee song.
+    semantic_keywords:
+      - threat
+      - attention
+    semantic_description: Produced by nestlings when an intruder peers into the cavity, functioning as a close-range defensive startle signal.
+    confidence: high
+    references:
+      - blackcapped_cornell
   - name: begging call
     scope:
       life_stages:
@@ -120,6 +145,9 @@ calls:
     references:
       - ficken_etal_1978
 references:
+  blackcapped_cornell:
+    citation: Cornell Lab of Ornithology. Black-capped Chickadee sounds.
+    url: https://www.allaboutbirds.org/guide/Black-capped_Chickadee/sounds
   ficken_etal_1978:
     citation: "Ficken, M. S., Ficken, R. W., and Witkin, S. R. 1978. Vocal repertoire of the Black-capped Chickadee. Auk 95(1):34-48."
     url: https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=20220&context=auk
@@ -138,3 +166,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass retained the classic Black-capped Chickadee core repertoire while adding an explicit juvenile begging class and tightening wording around major named calls.
+  - timestamp: '2026-06-11T16:15:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Second-pass completeness sweep added the externally described nest hiss defensive sound while keeping broader named call boundaries conservative.

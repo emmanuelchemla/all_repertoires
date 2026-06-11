@@ -80,6 +80,23 @@ calls:
   confidence: medium
   references:
   - xenocanto_canary
+- name: alarm call
+  acoustic_keywords:
+  - short
+  - high_frequency
+  - abrupt
+  - loud
+  - tonal
+  acoustic_description: Sharp, clipped single notes or short note strings that are more abrupt and tense than the routine twitter contact call.
+  semantic_keywords:
+  - alarm
+  - attention
+  - predator
+  semantic_description: Given in disturbance or predator contexts and treated here as a broad alarm class documented in field recording archives.
+  confidence: low
+  references:
+  - xenocanto_canary
+  - birdfinding_canary
 - name: female copulation solicitation call
   alternative_names:
   - female sexual call
@@ -130,6 +147,9 @@ calls:
   references:
   - voigt_2007
 references:
+  birdfinding_canary:
+    citation: Birdfinding.info. Atlantic Canary voice summary with linked field recordings.
+    url: https://birdfinding.info/atlantic-canary/
   birda_canary:
     citation: Birda. Atlantic Canary species profile and voice summary.
     url: https://app.birda.org/species-guide/34121/Atlantic_Canary
@@ -166,3 +186,7 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:15:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness sweep added a broad low-confidence alarm-call class supported by field-recording archives while avoiding finer unsupported splits.

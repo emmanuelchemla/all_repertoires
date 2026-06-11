@@ -77,6 +77,43 @@ calls:
     confidence: medium
     references:
       - jackdaw_cornell
+  - name: soft song
+    alternative_names:
+      - song
+      - quiet song
+    acoustic_keywords:
+      - quiet
+      - multi_component
+      - tonal
+      - noisy
+      - long
+    acoustic_description: Soft, extended sequences that string together several jackdaw call types with variable loudness over multi-note bouts.
+    semantic_keywords:
+      - display
+      - affiliation
+      - identity
+    semantic_description: Infrequent low-intensity vocal display used in close social settings rather than as the routine flock contact signal.
+    confidence: medium
+    references:
+      - jackdaw_cornell
+  - name: food call
+    alternative_names:
+      - provisioning call
+      - feeding call
+    acoustic_keywords:
+      - short
+      - tonal
+      - repetitive
+      - graded
+    acoustic_description: Short call notes used during provisioning contexts, acoustically simpler than extended chatter or soft song.
+    semantic_keywords:
+      - food
+      - caregiving
+      - attention
+    semantic_description: Given by adults when provisioning nestlings and likely serves to stimulate nestling begging and orient attention to feeding events.
+    confidence: medium
+    references:
+      - jackdaw_foodcall
   - name: begging call
     scope:
       life_stages:
@@ -107,6 +144,9 @@ references:
   jackdaw_cornell:
     citation: Cornell Lab of Ornithology. Western Jackdaw sounds.
     url: https://www.allaboutbirds.org/guide/Western_Jackdaw/sounds
+  jackdaw_foodcall:
+    citation: "Madden, J. R., et al. 2014. Jackdaw nestlings can discriminate between conspecific calls but do not beg specifically to their parents' calls. Behavioral Ecology 25(3):565-574."
+    url: https://academic.oup.com/beheco/article/25/3/565/513806
 provenance:
   - timestamp: '2026-06-10T20:45:00+02:00'
     model: GPT-5 Codex
@@ -120,3 +160,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the expected Western Jackdaw contact, flight, alarm, chatter, and juvenile begging classes with stable external references.
+  - timestamp: '2026-06-11T16:15:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Second-pass completeness sweep added a conservative soft song class and adult food call using external sound-page and provisioning-call evidence.

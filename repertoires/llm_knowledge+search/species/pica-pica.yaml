@@ -70,6 +70,24 @@ calls:
     references:
       - wildechoes_magpie
       - xenocanto_magpie
+  - name: loud squawk
+    alternative_names:
+      - squawk
+    acoustic_keywords:
+      - loud
+      - noisy
+      - broadband
+      - abrupt
+      - short
+    acoustic_description: Loud, rough, clipped squawking notes that are less extended than chatter and more forceful than the softer warbling song.
+    semantic_keywords:
+      - attention
+      - threat
+      - territorial
+    semantic_description: Conspicuous high-arousal signal used in social disturbance and assertive encounters where immediate attention is important.
+    confidence: medium
+    references:
+      - cornell_magpie
   - name: begging call
     alternative_names:
       - juvenile begging call
@@ -114,6 +132,9 @@ calls:
     references:
       - xenocanto_magpie
 references:
+  cornell_magpie:
+    citation: Cornell Lab of Ornithology. Eurasian Magpie sounds.
+    url: https://www.allaboutbirds.org/guide/Eurasian_Magpie/sounds
   szipl_etal_2024:
     citation: "Szipl, G., Sillaber, I., Kosztolányi, A., and Wascher, C. A. F. 2024. The duration of alarm- and territorial defence calls alters receiver behaviour in magpies."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12267378/
@@ -132,3 +153,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the main Eurasian Magpie chatter, harsh, song-like, juvenile begging, and food-associated classes and tightened stable reference support.
+  - timestamp: '2026-06-11T16:15:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Second-pass completeness sweep added a separate loud squawk class because Cornell explicitly distinguishes it from the common harsh rattle and soft song.

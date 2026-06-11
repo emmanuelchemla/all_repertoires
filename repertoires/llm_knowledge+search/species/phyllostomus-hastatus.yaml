@@ -10,38 +10,33 @@ taxonomy:
   species: hastatus
 calls:
 - name: screech call
+  alternative_names:
+  - group call
+  - group-specific screech call
   acoustic_keywords:
   - high_frequency
   - noisy
   - abrupt
   - short
   - repetitive
-  acoustic_description: A harsh short social call with abrupt onset and strong noisy
-    energy.
-  semantic_keywords:
-  - aggression
-  - attention
-  - contact
-  semantic_description: Used in close-range social negotiation and conflict.
-  confidence: high
-- name: group contact call
-  acoustic_keywords:
-  - short
-  - tonal
-  - repetitive
-  - quiet
-  - graded
-  acoustic_description: A lower-amplitude social call with simpler structure than
-    harsh screeches.
+  acoustic_description: A harsh, conspicuous social call with abrupt onset and strong
+    noisy energy, often produced as repeated short units.
   semantic_keywords:
   - contact
-  - affiliation
   - group_coordination
   - identity
-  semantic_description: Used in routine within-roost communication and maintaining
-    group cohesion.
-  confidence: medium
+  - food
+  - recruitment
+  semantic_description: The best-supported adult social call class for this species,
+    used in group cohesion and coordination and strongly associated with stable social-group
+    identity, including calls produced around foraging departures and returns.
+  confidence: high
+  references:
+  - boughman_1997
+  - wilkinson_boughman_1998
 - name: isolation call
+  alternative_names:
+  - infant isolation call
   acoustic_keywords:
   - high_frequency
   - tonal
@@ -57,55 +52,19 @@ calls:
   - attention
   semantic_description: Produced by separated young or isolated individuals to elicit
     care or reunion.
-  confidence: medium
-- name: food-recruitment screech
-  acoustic_keywords:
-  - noisy
-  - repetitive
-  - abrupt
-  - loud
-  - short
-  acoustic_description: A conspicuous harsher call type used in active social contexts
-    around resources.
-  semantic_keywords:
-  - food
-  - recruitment
-  - group_coordination
-  - attention
-  semantic_description: Included as a broad recruitment-like category for this socially
-    coordinated bat species.
-  confidence: low
-- name: maternal directive call
-  acoustic_keywords:
-  - short
-  - tonal
-  - repetitive
-  - quiet
-  - graded
-  acoustic_description: A repeated social call used in close-range mother-young interactions
-    and less harsh than screech calls.
-  semantic_keywords:
-  - caregiving
-  - attention
-  - contact
-  semantic_description: Used by mothers to manage offspring movement or maintain close
-    coordination.
-  confidence: medium
-- name: squabble call
-  acoustic_keywords:
-  - high_frequency
-  - noisy
-  - short
-  - repetitive
-  - abrupt
-  acoustic_description: A harsh repeated call produced during noisy conflict or competition,
-    especially around roosting or social interactions.
-  semantic_keywords:
-  - aggression
-  - threat
-  - attention
-  semantic_description: Given in disputes among group members in close quarters.
-  confidence: medium
+  confidence: high
+  references:
+  - boughman_1998
+references:
+  boughman_1997:
+    citation: Boughman, J.W. 1997. Greater spear-nosed bats give group-distinctive
+      calls. Behavioral Ecology and Sociobiology 40:61-70.
+  boughman_1998:
+    citation: Boughman, J.W. 1998. Vocal learning by greater spear-nosed bats. Proceedings
+      of the Royal Society B 265:227-233.
+  wilkinson_boughman_1998:
+    citation: Wilkinson, G.S. and Boughman, J.W. 1998. Social calls coordinate foraging
+      in greater spear-nosed bats. Animal Behaviour.
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -117,3 +76,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness update collapsed speculative subtypes into the
+    two best-supported major classes for this species, adult screech/group calls
+    and infant isolation calls, and added external references.
