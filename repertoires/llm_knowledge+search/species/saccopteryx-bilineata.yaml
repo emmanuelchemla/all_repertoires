@@ -9,32 +9,175 @@ taxonomy:
   genus: Saccopteryx
   species: bilineata
 calls:
-  - name: territorial song
-    acoustic_keywords: [multi_component, tonal, noisy, repetitive, long]
-    acoustic_description: A prolonged, structured social vocalization made of repeated syllable types with mixed tonal and noisy elements.
-    semantic_keywords: [territorial, courtship, display, identity]
-    semantic_description: Used by males in territory defense and sexual display.
-    confidence: high
-  - name: isolation call
-    acoustic_keywords: [high_frequency, tonal, long, repetitive, loud]
-    acoustic_description: A stronger and more persistent call than routine social notes, often given by separated young.
-    semantic_keywords: [begging, caregiving, contact, attention]
-    semantic_description: Elicits maternal retrieval or care.
-    confidence: high
-  - name: contact call
-    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
-    acoustic_description: A lower-amplitude social call with simpler structure than the territorial song.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in routine roost social communication.
-    confidence: medium
-  - name: aggression call
-    acoustic_keywords: [noisy, broadband, abrupt, short, repetitive]
-    acoustic_description: A harsher short call with more broadband structure than affiliative signals.
-    semantic_keywords: [aggression, threat, attention]
-    semantic_description: Used in close-range social conflict or displacement.
-    confidence: medium
+- name: territorial song
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - noisy
+  - repetitive
+  - long
+  acoustic_description: A prolonged, structured social vocalization made of repeated
+    syllable types with mixed tonal and noisy elements.
+  semantic_keywords:
+  - territorial
+  - courtship
+  - display
+  - identity
+  semantic_description: Used by males in territory defense and sexual display.
+  confidence: high
+- name: isolation call
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - long
+  - repetitive
+  - loud
+  acoustic_description: A stronger and more persistent call than routine social notes,
+    often given by separated young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - contact
+  - attention
+  semantic_description: Elicits maternal retrieval or care.
+  confidence: high
+- name: contact call
+  alternative_names:
+  - whistle
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  - graded
+  acoustic_description: A lower-amplitude social call with simpler structure than
+    the territorial song.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in routine roost social communication.
+  confidence: medium
+  references:
+  - behr_vonhelversen_2004
+- name: bark
+  acoustic_keywords:
+  - broadband
+  - short
+  - abrupt
+  - loud
+  - repetitive
+  acoustic_description: A short, forceful, broadband call with abrupt onset, acoustically
+    simpler and more percussive than song phrases.
+  semantic_keywords:
+  - territorial
+  - attention
+  - spacing
+  semantic_description: Used in defensive or aroused social interactions, especially
+    around perches and colony space.
+  confidence: medium
+  references:
+  - behr_vonhelversen_2004
+- name: chatter call
+  acoustic_keywords:
+  - short
+  - repetitive
+  - noisy
+  - multi_component
+  - abrupt
+  acoustic_description: A rapidly repeated sequence of short elements, sounding more
+    clipped and less tonal than whistles.
+  semantic_keywords:
+  - contact
+  - attention
+  - affiliation
+  semantic_description: Used in close-range interactive exchanges within roost groups.
+  confidence: medium
+  references:
+  - behr_vonhelversen_2004
+- name: aggression call
+  alternative_names:
+  - screech
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - abrupt
+  - short
+  - repetitive
+  acoustic_description: A harsher short call with more broadband structure than affiliative
+    signals.
+  semantic_keywords:
+  - aggression
+  - threat
+  - attention
+  semantic_description: Used in close-range social conflict or displacement.
+  confidence: medium
+  references:
+  - behr_vonhelversen_2004
+- name: courtship song
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - repetitive
+  - long
+  - frequency_modulated
+  acoustic_description: A structured vocal display sequence richer and more elaborate
+    than simple contact calls, with repeated phrase components.
+  semantic_keywords:
+  - courtship
+  - mating
+  - display
+  - identity
+  semantic_description: Used by males during sexual display and mate attraction within
+    their territory.
+  confidence: medium
+  references:
+  - behr_vonhelversen_2004
+- name: pup attraction call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A repeated short call used in mother-pup interactions and
+    softer than aggression calls.
+  semantic_keywords:
+  - caregiving
+  - contact
+  - attention
+  semantic_description: Produced by mothers to attract or guide pups in roosting contexts.
+  confidence: low
+  references:
+  - knoernschild_etal_2013
+references:
+  behr_vonhelversen_2004:
+    citation: Behr, O. and von Helversen, O. 2004. Bat serenades - complex courtship
+      songs of the sac-winged bat (Saccopteryx bilineata). Behavioral Ecology and
+      Sociobiology 56:106-115.
+  knoernschild_etal_2013:
+    citation: Knornschild, M., Feifel, M., and Kalko, E.K.V. 2013. Mother-offspring
+      recognition in the bat Saccopteryx bilineata. Animal Behaviour.
 provenance:
-  - timestamp: "2026-06-10T21:45:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for greater sac-winged bat emphasizing its well-known male song system and social calls.
+- timestamp: '2026-06-10T21:45:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for greater sac-winged bat emphasizing its well-known
+    male song system and social calls.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness update added named adult social call classes reported
+    alongside song in the greater sac-winged bat, especially bark and chatter, and
+    linked broad contact and aggression categories to whistle and screech labels.

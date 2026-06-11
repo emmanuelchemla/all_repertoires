@@ -9,82 +9,71 @@ taxonomy:
   genus: Globicephala
   species: melas
 calls:
-- name: whistle
-  acoustic_keywords:
-  - tonal
-  - harmonic
-  - frequency_modulated
-  - long
-  - loud
-  acoustic_description: A narrowband modulated tonal call with sustained contour.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - identity
-  semantic_description: Used in social contact and coordination within groups.
-  confidence: high
-- name: pulsed call
-  acoustic_keywords:
-  - pulsed
-  - repetitive
-  - broadband
-  - multi_component
-  - loud
-  acoustic_description: A structured pulsed social call with repeated temporal patterning and strong broadband energy.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - attention
-  semantic_description: Used in social interaction and active group coordination.
-  confidence: medium
-- name: click train
-  acoustic_keywords:
-  - pulsed
-  - repetitive
-  - broadband
-  - short
-  - abrupt
-  acoustic_description: A train of brief broadband clicks lacking sustained tonality.
-  semantic_keywords:
-  - food
-  - attention
-  - group_coordination
-  semantic_description: Primarily biosonar-related but socially informative during foraging and movement.
-  confidence: medium
-- name: burst-pulsed call
-  acoustic_keywords:
-  - noisy
-  - pulsed
-  - broadband
-  - abrupt
-  - repetitive
-  acoustic_description: A harsher pulsed call with more compact temporal structure than whistles.
-  semantic_keywords:
-  - attention
-  - threat
-  - group_coordination
-  semantic_description: Used in aroused social situations requiring immediate response.
-  confidence: low
-- name: squeal
-  acoustic_keywords:
-  - high_frequency
-  - noisy
-  - long
-  - frequency_modulated
-  - loud
-  acoustic_description: A higher-pitched and more intense call than a simple whistle, often with strong modulation and harsher quality.
-  semantic_keywords:
-  - attention
-  - affiliation
-  - group_coordination
-  semantic_description: Used in active social interactions and high-arousal group communication.
-  confidence: low
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A narrowband modulated tonal call with sustained contour, ranging from simple smooth shapes to more complex multi-segment whistles.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in social contact and coordination within groups and likely contributes to group or individual distinctiveness.
+    confidence: high
+    references: [vester_2017, delemas_2005]
+  - name: pulsed call
+    acoustic_keywords: [pulsed, repetitive, broadband, multi_component, loud]
+    acoustic_description: A structured pulsed social call with repeated temporal patterning and strong broadband energy, often more complex than simple click trains.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used in social interaction and active group coordination.
+    confidence: high
+    references: [vester_2017, rsos_2024]
+  - name: pulsed chirp
+    acoustic_keywords: [high_frequency, pulsed, repetitive, broadband, short]
+    acoustic_description: A short rapidly pulsed call with a more chirped or trilled impression than longer pulsed calls.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in nearby social interaction and flexible short-range communication.
+    confidence: medium
+    references: [delemas_2005]
+  - name: burst-pulsed call
+    acoustic_keywords: [noisy, pulsed, broadband, abrupt, repetitive]
+    acoustic_description: A harsher pulsed call with compact temporal structure and less smooth contour than whistles.
+    semantic_keywords: [attention, threat, group_coordination]
+    semantic_description: Used in aroused social situations requiring immediate response.
+    confidence: medium
+    references: [vester_2017, rsos_2024]
+  - name: click train
+    acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
+    acoustic_description: A train of brief broadband clicks lacking sustained tonality.
+    semantic_keywords: [food, attention, group_coordination]
+    semantic_description: Primarily biosonar-related but socially informative during foraging and coordinated movement.
+    confidence: high
+    references: [vester_2017, nemiroff_2009]
+  - name: buzz
+    acoustic_keywords: [pulsed, repetitive, broadband, abrupt, short]
+    acoustic_description: A very fast click sequence with much shorter intervals than ordinary click trains, creating a buzzing sound.
+    semantic_keywords: [food, attention]
+    semantic_description: Associated mainly with prey pursuit and very close-range foraging.
+    confidence: medium
+    references: [vester_2017]
+references:
+  delemas_2005:
+    citation: "de Maréz, T., Pavan, G., and Fossati, C. 2005. Acoustic repertoire of long-finned pilot whales in the northwestern Mediterranean. European Research on Cetaceans 19:111-114."
+    url: https://www.cetaces.org/wp-content/uploads/2009/07/Delmas05.pdf
+  nemiroff_2009:
+    citation: "Nemiroff, L. and Whitehead, H. 2009. Structural characteristics of calls produced by long-finned pilot whales. Behaviour."
+    url: https://whitelab.biology.dal.ca/hw/Nemiroff_2009.pdf
+  rsos_2024:
+    citation: "Visser, F., et al. 2024. A first vocal repertoire characterization of long-finned pilot whales. Royal Society Open Science 11:231973."
+    url: https://royalsocietypublishing.org/rsos/article/11/11/231973/92459/A-first-vocal-repertoire-characterization-of-long
+  vester_2017:
+    citation: "Vester, H., Timme, M., and Miller, P.J.O. 2017. Vocal repertoire of long-finned pilot whales (Globicephala melas) in northern Norway. Journal of the Acoustical Society of America 141:4288-4295."
+    url: https://cfaed.tu-dresden.de/files/user/mtimme/publications/Vester_et_al_Vocal%20Repertoire%20of%20long-finned%20pilot%20whales%20in%20northern%20norway_JASA_2017.pdf
 provenance:
-- timestamp: '2026-06-10T22:30:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for long-finned pilot whale centered on whistles and pulsed social sounds.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T22:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for long-finned pilot whale centered on whistles and pulsed social sounds.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T10:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Expanded to include commonly recognized pilot-whale pulsed chirps and buzzes while anchoring the file to recent repertoire papers.

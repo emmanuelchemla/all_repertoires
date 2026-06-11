@@ -10,47 +10,69 @@ taxonomy:
   species: pogonias
 calls:
 - name: boom
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
   acoustic_keywords:
   - low_frequency
   - loud
   - short
   - pulsed
   - repetitive
-  acoustic_description: A low-frequency pulse-like call with strong amplitude and relatively simple structure.
+  acoustic_description: A deep resonant booming call given as repeated low-frequency pulses that carry well through closed forest.
   semantic_keywords:
-  - alarm
-  - attention
   - group_coordination
-  semantic_description: Used in conspicuous long-range signaling and alerting.
+  - territorial
+  - spacing
+  - attention
+  semantic_description: Used in long-range contact and spacing, especially when the group is spread out, and also appears to advertise male presence to neighbors.
   confidence: medium
-- name: bark
+  references:
+  - neprimate_2025
+  - kingdon_2013
+- name: hack
+  alternative_names:
+  - bark
+  - sharp hack call
   acoustic_keywords:
   - abrupt
   - broadband
   - noisy
   - short
   - loud
-  acoustic_description: A short harsh call with abrupt onset and broad spectral energy.
+  acoustic_description: A short harsh call with abrupt onset and broad spectral energy, distinct from the lower-frequency boom.
   semantic_keywords:
   - alarm
   - threat
   - attention
-  semantic_description: Produced in disturbance and danger contexts.
+  semantic_description: Produced in disturbance, territorial warning, and likely predator-alert contexts.
   confidence: medium
-- name: contact call
+  references:
+  - neprimate_2025
+  - kingdon_2013
+- name: chirp
+  alternative_names:
+  - contact chirp
+  - short contact call
   acoustic_keywords:
+  - high_frequency
   - short
   - tonal
   - quiet
   - repetitive
-  - graded
-  acoustic_description: A softer short-range call with less harsh structure than barks.
+  acoustic_description: A brief high-pitched tonal call used at short range, acoustically lighter than the male loud calls.
   semantic_keywords:
   - contact
   - affiliation
   - group_coordination
-  semantic_description: Used in routine local social communication.
+  semantic_description: Used in nearby social coordination and cohesion within the group.
   confidence: low
+  references:
+  - kingdon_2013
 - name: scream
   acoustic_keywords:
   - high_frequency
@@ -58,27 +80,21 @@ calls:
   - noisy
   - long
   - abrupt
-  acoustic_description: A high-intensity distress call with noisy energy and variable contour.
+  acoustic_description: A high-intensity harsh call with broad noisy energy and variable duration.
   semantic_keywords:
   - distress
   - aggression
   - attention
-  semantic_description: Produced in severe conflict or danger.
+  semantic_description: Produced during acute conflict, capture risk, or severe social distress.
   confidence: low
-- name: hack
-  acoustic_keywords:
-  - abrupt
-  - noisy
-  - broadband
-  - short
-  - loud
-  acoustic_description: A harsh, abrupt call distinct from lower-frequency booms and ordinary contact sounds.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Used in high-arousal alert or disturbance contexts.
-  confidence: low
+  references:
+  - kingdon_2013
+references:
+  kingdon_2013:
+    citation: "Kingdon, J., Happold, D., Butynski, T., Hoffmann, M., Happold, M., and Kalina, J. 2013. Mammals of Africa. Volume II: Primates. Bloomsbury Publishing."
+  neprimate_2025:
+    citation: New England Primate Conservancy. 2025. Crowned Monkey, Cercopithecus pogonias.
+    url: https://neprimateconservancy.org/crowned-monkey/
 provenance:
 - timestamp: '2026-06-10T21:15:00+02:00'
   model: GPT-5 Codex
@@ -88,3 +104,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Conservative revision emphasized the best-supported male boom and hack classes and trimmed the repertoire to broad call types that remain plausible without overclaiming.

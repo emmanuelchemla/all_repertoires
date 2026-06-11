@@ -9,32 +9,108 @@ taxonomy:
   genus: Loxodonta
   species: africana
 calls:
-  - name: rumble
-    acoustic_keywords: [low_frequency, long, harmonic, tonal, loud]
-    acoustic_description: A low-frequency, often infrasonic call with sustained harmonic structure and prolonged duration.
-    semantic_keywords: [contact, group_coordination, affiliation, identity]
-    semantic_description: Used in long-range social contact and coordination among family members and allies.
-    confidence: high
-  - name: trumpet
-    acoustic_keywords: [loud, high_frequency, harmonic, abrupt, long]
-    acoustic_description: A loud resonant arousal call with strong upper harmonics and conspicuous onset.
-    semantic_keywords: [attention, display, distress, threat]
-    semantic_description: Produced in excitement, alarm, aggression, or distress.
-    confidence: high
-  - name: roar
-    acoustic_keywords: [loud, noisy, long, broadband, graded]
-    acoustic_description: A harsh broadband call with more noisy energy than a rumble.
-    semantic_keywords: [aggression, threat, attention]
-    semantic_description: Associated with aggressive display and intense disturbance.
-    confidence: medium
-  - name: snort
-    acoustic_keywords: [abrupt, broadband, short, pulsed, loud]
-    acoustic_description: A short expulsive sound with broad spectral energy and abrupt onset.
-    semantic_keywords: [attention, threat, alarm]
-    semantic_description: Used in immediate vigilance and short-range alerting.
-    confidence: medium
+- name: rumble
+  acoustic_keywords:
+  - low_frequency
+  - long
+  - harmonic
+  - tonal
+  - loud
+  acoustic_description: A low-frequency, often infrasonic call with sustained harmonic
+    structure and prolonged duration.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  - identity
+  semantic_description: Used in long-range social contact and coordination among family
+    members and allies.
+  confidence: high
+- name: trumpet
+  acoustic_keywords:
+  - loud
+  - high_frequency
+  - harmonic
+  - abrupt
+  - long
+  acoustic_description: A loud resonant arousal call with strong upper harmonics and
+    conspicuous onset.
+  semantic_keywords:
+  - attention
+  - display
+  - distress
+  - threat
+  semantic_description: Produced in excitement, alarm, aggression, or distress.
+  confidence: high
+- name: roar
+  acoustic_keywords:
+  - loud
+  - noisy
+  - long
+  - broadband
+  - graded
+  acoustic_description: A harsh broadband call with more noisy energy than a rumble.
+  semantic_keywords:
+  - aggression
+  - threat
+  - attention
+  semantic_description: Associated with aggressive display and intense disturbance.
+  confidence: medium
+- name: snort
+  acoustic_keywords:
+  - abrupt
+  - broadband
+  - short
+  - pulsed
+  - loud
+  acoustic_description: A short expulsive sound with broad spectral energy and abrupt
+    onset.
+  semantic_keywords:
+  - attention
+  - threat
+  - alarm
+  semantic_description: Used in immediate vigilance and short-range alerting.
+  confidence: medium
+- name: squeak
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - graded
+  acoustic_description: A short higher-pitched call contrasting with the lower-frequency
+    rumble and more forceful trumpet.
+  semantic_keywords:
+  - contact
+  - attention
+  - caregiving
+  semantic_description: Used especially in close-range interactions involving calves
+    or tightly associated individuals.
+  confidence: medium
+- name: greeting rumble
+  acoustic_keywords:
+  - low_frequency
+  - long
+  - harmonic
+  - frequency_modulated
+  - quiet
+  acoustic_description: A low rumble with smooth contour and lower amplitude than
+    a trumpet, often rich in harmonic energy.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - group_coordination
+  semantic_description: Used in reunions and close affiliative greeting contexts to
+    maintain social bonds.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T21:15:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for African savanna elephant emphasizing the core rumble system and major arousal calls.
+- timestamp: '2026-06-10T21:15:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for African savanna elephant emphasizing the core
+    rumble system and major arousal calls.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

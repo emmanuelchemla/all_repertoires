@@ -13,28 +13,58 @@ calls:
     acoustic_keywords: [short, tonal, repetitive, frequency_modulated, quiet]
     acoustic_description: A short modulated contact call, often delivered in repeated series.
     semantic_keywords: [contact, group_coordination, affiliation]
-    semantic_description: Used in routine social coordination and maintaining proximity among group members.
-    confidence: high
+    semantic_description: Used in routine social coordination and proximity maintenance.
+    confidence: medium
+    references: [sapajus_repertoire_2021]
   - name: twitter
     acoustic_keywords: [high_frequency, short, repetitive, tonal, graded]
     acoustic_description: A rapid sequence of high notes with lighter tonal quality than barks.
     semantic_keywords: [contact, affiliation, attention]
     semantic_description: Used in ordinary social interaction and local communication.
     confidence: medium
+    references: [sapajus_repertoire_2021]
   - name: bark
     acoustic_keywords: [abrupt, broadband, noisy, short, loud]
     acoustic_description: A short harsh call with abrupt onset and broad spectral energy.
     semantic_keywords: [alarm, threat, attention]
     semantic_description: Produced in disturbance and high-arousal alert contexts.
     confidence: high
+    references: [sapajus_repertoire_2021]
   - name: scream
     acoustic_keywords: [high_frequency, loud, noisy, long, graded]
-    acoustic_description: A loud high-arousal vocalization with noisy energy and strong variation in contour.
+    acoustic_description: A loud high-arousal vocalization with noisy energy and strong contour variation.
     semantic_keywords: [distress, aggression, submission, attention]
     semantic_description: Common in aggressive encounters and victim responses.
     confidence: high
+    references: [sapajus_repertoire_2021]
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, long, frequency_modulated, loud]
+    acoustic_description: A clearer narrowband call with more sustained tonal structure than short trills or twitters.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in distance communication and cohesion.
+    confidence: low
+    references: [sapajus_repertoire_2021]
+  - name: food-associated call
+    alternative_names: [food call]
+    acoustic_keywords: [short, tonal, repetitive, graded, quiet]
+    acoustic_description: A repeated short tonal call type used in food situations, structurally closer to local contact calls than to barks.
+    semantic_keywords: [food, recruitment, attention]
+    semantic_description: Produced around food discovery or feeding competition and can affect nearby individuals.
+    confidence: low
+    references: [capuchin_food_calls]
+references:
+  sapajus_repertoire_2021:
+    citation: "de la Torre, S. and Snowdon, C.T. 2021. The Vocal Repertoire of the Bearded Capuchin (Cebidae: Sapajus libidinosus): An Update and Reassessment."
+    url: https://karger.com/fpr/article/92/3/151/828340/The-Vocal-Repertoire-of-the-Bearded-Capuchin
+  capuchin_food_calls:
+    citation: "Gros-Louis, J. 2004. The function of food-associated calls in white-faced capuchin monkeys, Cebus capucinus, from the perspective of the signaller."
+    url: https://www.sciencedirect.com/science/article/abs/pii/S000334720300161X
 provenance:
   - timestamp: "2026-06-10T21:00:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for tufted capuchin using generalized capuchin call classes with conservative boundaries.
+  - timestamp: "2026-06-11T12:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision expanded major capuchin call coverage and external references without using other repo repertoires.

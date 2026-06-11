@@ -9,103 +9,62 @@ taxonomy:
   genus: Alouatta
   species: seniculus
 calls:
-- name: howl bout
-  acoustic_keywords:
-  - low_frequency
-  - loud
-  - long
-  - repetitive
-  - multi_component
-  acoustic_description: A prolonged low-frequency bout of roaring and howling elements delivered in repeated phrases.
-  semantic_keywords:
-  - territorial
-  - spacing
-  - group_coordination
-  - display
-  semantic_description: Used for long-range intergroup spacing and collective advertisement.
-  confidence: high
-  references:
-  - seniculus_howling
-- name: roar
-  acoustic_keywords:
-  - low_frequency
-  - loud
-  - noisy
-  - long
-  - broadband
-  acoustic_description: A harsh powerful low-frequency call with stronger noisy energy than quieter local calls.
-  semantic_keywords:
-  - territorial
-  - threat
-  - attention
-  - display
-  semantic_description: Contributes to high-arousal long-range displays and confrontational calling.
-  confidence: high
-  references:
-  - seniculus_howling
-- name: grunt
-  acoustic_keywords:
-  - low_frequency
-  - short
-  - tonal
-  - repetitive
-  - quiet
-  acoustic_description: A softer short-range low call with simpler structure than the main howl repertoire.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - group_coordination
-  semantic_description: Used in local social interaction within the group.
-  confidence: medium
-  references:
-  - alouatta_general
-- name: distress call
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - abrupt
-  - short
-  acoustic_description: A sharper and higher-pitched call than the main low-frequency display calls.
-  semantic_keywords:
-  - distress
-  - attention
-  - threat
-  semantic_description: Produced in immediate danger or social conflict.
-  confidence: low
-- name: bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A short harsh call with abrupt onset and stronger broadband energy than ordinary grunts.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Used in disturbance and high-arousal local contexts outside the main howl bout.
-  confidence: low
-  references:
-  - alouatta_general
+  - name: howl bout
+    alternative_names: [group howl]
+    acoustic_keywords: [low_frequency, loud, long, repetitive, multi_component]
+    acoustic_description: A prolonged low-frequency bout of roaring and howling phrases arranged in repeated sequences.
+    semantic_keywords: [territorial, spacing, group_coordination, display]
+    semantic_description: Used for long-range intergroup spacing, collective advertisement, and coordinated display.
+    confidence: high
+    references: [sekulic_1982]
+  - name: roar
+    acoustic_keywords: [low_frequency, loud, noisy, long, broadband]
+    acoustic_description: A harsh, powerful, low-pitched call element with strong noisy energy and greater duration than quiet local calls.
+    semantic_keywords: [territorial, threat, display, attention]
+    semantic_description: Contributes to escalated calling during intergroup encounters and other long-distance displays.
+    confidence: high
+    references: [sekulic_1982]
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A short harsh call with abrupt onset and broad spectral spread.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Used in disturbance and acute arousal outside extended howl sequences.
+    confidence: medium
+    references: [alouatta_overview]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A soft short-range low call with simpler structure than the long-distance display repertoire.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in nearby social interaction and local cohesion.
+    confidence: medium
+    references: [alouatta_overview]
+  - name: distress call
+    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
+    acoustic_description: A sharper and more high-pitched high-arousal call than the standard low-frequency display calls.
+    semantic_keywords: [distress, attention, threat]
+    semantic_description: Produced in immediate danger or intense social conflict.
+    confidence: low
 references:
-  seniculus_howling:
-    citation: "Sekulic, R. 1982. The Function of Howling in Red Howler Monkeys (Alouatta seniculus)."
+  sekulic_1982:
+    citation: "Sekulic, R. 1982. The Function of Howling in Red Howler Monkeys (Alouatta seniculus). Behaviour 81:38-54."
     url: https://www.jstor.org/stable/4534196
-  alouatta_general:
+  alouatta_overview:
     citation: "Animal Diversity Web. Alouatta genus account."
     url: https://animaldiversity.org/accounts/Alouatta/
 provenance:
-- timestamp: '2026-06-10T21:45:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for red howler monkey centered on the hallmark long-distance howl system.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
-- timestamp: '2026-06-11T11:20:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Added independent references for long-distance and short-distance red howler call categories without using the literature-extraction repertoire.
+  - timestamp: '2026-06-10T21:45:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for red howler monkey centered on the hallmark long-distance howl system.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T11:20:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Added independent references for long-distance and short-distance red howler call categories without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T12:10:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision strengthened major call classes and reference support using external sources only.

@@ -9,83 +9,110 @@ taxonomy:
   genus: Otospermophilus
   species: beecheyi
 calls:
-- name: whistle alarm call
-  acoustic_keywords:
-  - high_frequency
-  - tonal
-  - long
-  - loud
-  - frequency_modulated
-  acoustic_description: A sustained alarm whistle with clear tonal structure and relatively long duration.
-  semantic_keywords:
-  - alarm
-  - predator
-  - attention
-  semantic_description: Used especially in response to aerial threats and to alert nearby squirrels.
-  confidence: high
-- name: chatter alarm call
-  acoustic_keywords:
-  - repetitive
-  - abrupt
-  - noisy
-  - short
-  - broadband
-  acoustic_description: A rapid series of short harsher notes with less tonality than the whistle call.
-  semantic_keywords:
-  - alarm
-  - predator
-  - threat
-  - attention
-  semantic_description: Often associated with terrestrial predators or closer-range high-risk situations.
-  confidence: high
-- name: trill
-  acoustic_keywords:
-  - short
-  - tonal
-  - repetitive
-  - quiet
-  - graded
-  acoustic_description: A lower-amplitude repeated call simpler than the major alarm calls.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - attention
-  semantic_description: Used in lower-arousal social contexts and local communication.
-  confidence: medium
-- name: distress squeal
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - abrupt
-  - short
-  acoustic_description: A harsh high-pitched call with abrupt onset and strong distress quality.
-  semantic_keywords:
-  - distress
-  - attention
-  - predator
-  semantic_description: Produced during capture or acute danger.
-  confidence: medium
-- name: growl-chatter
-  acoustic_keywords:
-  - repetitive
-  - noisy
-  - broadband
-  - short
-  - abrupt
-  acoustic_description: A harsher close-range call with repeated rough elements, more aggressive than local trills.
-  semantic_keywords:
-  - threat
-  - alarm
-  - attention
-  semantic_description: Used in close-range confrontation or heightened disturbance.
-  confidence: low
+  - name: whistle alarm call
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - frequency_modulated
+    acoustic_description: A sustained tonal alarm whistle with relatively long duration and clear harmonic structure.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used especially in response to aerial threats and to alert nearby squirrels at longer range.
+    confidence: high
+    references:
+      - owings_virginia_1978
+      - mcrae_2020
+  - name: chat call
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - repetitive
+    acoustic_description: A short multi-note harsh call, less prolonged than chatter sequences and with less tonality than whistles.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Associated especially with terrestrial predators and lower-level but still urgent ground threat.
+    confidence: high
+    references:
+      - owings_leger_gelfand_1980
+      - mcrae_2020
+  - name: chatter alarm call
+    acoustic_keywords:
+      - repetitive
+      - abrupt
+      - noisy
+      - short
+      - broadband
+    acoustic_description: A rapid series of short harsh notes, more extended and rougher than a single chat call.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - attention
+    semantic_description: Often associated with large terrestrial predators or very close high-risk situations.
+    confidence: high
+    references:
+      - owings_virginia_1978
+      - mcrae_2020
+  - name: grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - noisy
+      - quiet
+      - graded
+    acoustic_description: A low-amplitude short call used at close range and less stereotyped than the principal alarm calls.
+    semantic_keywords:
+      - aggression
+      - threat
+      - attention
+    semantic_description: Used during agonistic encounters and dominance-related close social interactions.
+    confidence: medium
+    references:
+      - kirk_2019
+  - name: distress squeal
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - abrupt
+      - short
+    acoustic_description: A harsh high-pitched call with abrupt onset and strong distress quality.
+    semantic_keywords:
+      - distress
+      - attention
+      - predator
+    semantic_description: Produced during capture or acute danger.
+    confidence: medium
+references:
+  kirk_2019:
+    citation: Kirk, D.A. 2019. Sound communication in the California ground squirrel. Master's thesis, California State University, Fullerton.
+    url: https://scholarworks.calstate.edu/concern/theses/rj4307446?locale=it
+  mcrae_2020:
+    citation: "McRae, T.R. and Green, S.M. 2020. A review of squirrel alarm-calling behavior: what we know and what we do not know. Animal Behavior and Cognition 7(2):168-191."
+    url: https://www.animalbehaviorandcognition.org/uploads/journals/27/AB_C_2020_Vol7%282%29_McRae.pdf
+  owings_leger_gelfand_1980:
+    citation: "Owings, D.H., Leger, D.W., and Gelfand, D.L. 1980. Single-note vocalizations of California ground squirrels: graded signals and situation-specificity of predator and socially evoked calls. Zeitschrift fur Tierpsychologie 52(3):227-246."
+  owings_virginia_1978:
+    citation: Owings, D.H. and Virginia, R.A. 1978. Alarm calls of California ground squirrels (Spermophilus beecheyi). Zeitschrift fur Tierpsychologie 46(1):58-70.
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1439-0310.1978.tb01438.x
 provenance:
-- timestamp: '2026-06-10T21:00:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for California ground squirrel emphasizing the classic whistle versus chatter alarm system.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for California ground squirrel emphasizing the classic whistle versus chatter alarm system.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Reworked the repertoire around the expert-expected whistle, chat, and chatter alarm system and added a conservative agonistic grunt category.

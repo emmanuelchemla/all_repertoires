@@ -10,54 +10,128 @@ taxonomy:
   species: pygerythrus
 calls:
   - name: leopard alarm bark
-    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A short harsh bark with abrupt onset and strong noisy structure.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Associated with terrestrial predator detection, especially leopards.
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - loud
+    acoustic_description: Short harsh barks with abrupt onset and strong noisy structure.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Associated especially with terrestrial predator detection, classically leopards.
     confidence: high
+    references:
+      - struhsaker_1967
+      - seyfarth_cheney_marler_1980
   - name: eagle alarm cough
-    acoustic_keywords: [abrupt, short, noisy, repetitive, broadband]
-    acoustic_description: A short abrupt call distinct from barks and used in aerial danger contexts.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Associated with aerial predator detection, especially eagles.
+    acoustic_keywords:
+      - abrupt
+      - short
+      - noisy
+      - repetitive
+      - broadband
+    acoustic_description: Short abrupt cough-like calls, often produced in series and acoustically distinct from leopard barks.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Associated especially with aerial predator detection, classically raptors such as eagles.
     confidence: high
+    references:
+      - struhsaker_1967
+      - seyfarth_cheney_marler_1980
   - name: snake alarm chutter
-    acoustic_keywords: [repetitive, noisy, broadband, short, graded]
-    acoustic_description: A repeated harsher call type with more sustained series structure than single alarm barks.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Associated with snake encounters and promotes specific vigilance responses.
+    acoustic_keywords:
+      - repetitive
+      - noisy
+      - broadband
+      - short
+      - graded
+    acoustic_description: Repeated harsher calls with a chuttering quality and more extended series structure than single alarm barks.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Associated especially with snake encounters and promoting inspection and mobbing-like vigilance.
     confidence: high
-  - name: grunt
-    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
-    acoustic_description: A short low social call with simpler structure than alarm signals.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in ordinary within-group social communication.
-    confidence: medium
+    references:
+      - struhsaker_1967
+      - seyfarth_cheney_marler_1980
   - name: uh call
-    acoustic_keywords: [low_frequency, short, abrupt, quiet, graded]
-    acoustic_description: A short, low-intensity alarm vocalization quieter than the major predator alarms.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Used for minor terrestrial threats or lower-intensity disturbance that prompts inspection rather than immediate escape.
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - abrupt
+      - quiet
+      - graded
+    acoustic_description: A short low-intensity call, quieter and less explosive than the classic predator-specific alarms.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used for lower-intensity terrestrial disturbances and ambiguous threats that prompt monitoring rather than immediate escape.
     confidence: medium
-    references: [vervet_alarm_system]
+    references:
+      - cheney_seyfarth_1990
   - name: nyow call
-    acoustic_keywords: [short, loud, abrupt, noisy, graded]
-    acoustic_description: A moderate-intensity abrupt alarm call distinct from both quiet uh calls and the better-known classic predator alarms.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Used in intermediate-threat situations involving minor predators or sudden terrestrial disturbance.
+    acoustic_keywords:
+      - short
+      - loud
+      - abrupt
+      - noisy
+      - graded
+    acoustic_description: A moderately loud abrupt call distinct from both quiet uh calls and the classic predator-specific alarms.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used in intermediate-threat situations involving sudden terrestrial disturbance or minor predators.
     confidence: medium
-    references: [vervet_alarm_system]
+    references:
+      - cheney_seyfarth_1990
+  - name: grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - tonal
+      - repetitive
+      - graded
+    acoustic_description: Short low social calls with relatively smooth structure and less harsh energy than alarm calls.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Used in ordinary within-group social communication during travel, foraging, and peaceful approaches.
+    confidence: medium
+    references:
+      - struhsaker_1967
   - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A high-arousal distress call with strong noisy energy and more sustained structure than the alarm barks or coughs.
-    semantic_keywords: [distress, aggression, attention]
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - abrupt
+    acoustic_description: High-arousal distress calls with intense noisy energy and more sustained duration than alarm barks or coughs.
+    semantic_keywords:
+      - distress
+      - aggression
+      - attention
     semantic_description: Produced in severe conflict, capture, or panic situations.
     confidence: medium
-    references: [vervet_alarm_system]
+    references:
+      - struhsaker_1967
 references:
-  vervet_alarm_system:
-    citation: "Struhsaker, T.T. 1967. Auditory communication among vervet monkeys and later syntheses of the vervet alarm-call system."
-    url: https://scholars.duke.edu/publication/1562008
+  cheney_seyfarth_1990:
+    citation: Cheney, D.L. and Seyfarth, R.M. 1990. How Monkeys See the World. University of Chicago Press.
+  seyfarth_cheney_marler_1980:
+    citation: "Seyfarth, R.M., Cheney, D.L., and Marler, P. 1980. Monkey responses to three different alarm calls: evidence of predator classification and semantic communication. Science 210(4471):801-803."
+    doi: 10.1126/science.7433999
+  struhsaker_1967:
+    citation: Struhsaker, T.T. 1967. Auditory communication among vervet monkeys (Cercopithecus aethiops). In S.A. Altmann, ed., Social Communication among Primates. University of Chicago Press.
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
@@ -67,3 +141,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Independent exhaustiveness pass added additional classic vervet call classes from the species alarm-call literature.
+  - timestamp: "2026-06-11T11:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Tightened the repertoire around classic predator alarms plus commonly described social and distress calls, and replaced the weak placeholder reference with specific classic sources.

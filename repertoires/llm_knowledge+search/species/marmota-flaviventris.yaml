@@ -9,82 +9,99 @@ taxonomy:
   genus: Marmota
   species: flaviventris
 calls:
-- name: whistle alarm call
-  acoustic_keywords:
-  - high_frequency
-  - tonal
-  - long
-  - loud
-  - frequency_modulated
-  acoustic_description: A sustained whistle with clear tonal structure and strong amplitude.
-  semantic_keywords:
-  - alarm
-  - predator
-  - attention
-  semantic_description: Used to warn group members of predators and other dangers.
-  confidence: high
-- name: trill
-  acoustic_keywords:
-  - short
-  - tonal
-  - repetitive
-  - quiet
-  - graded
-  acoustic_description: A lower-amplitude repeated call with simpler structure than the main alarm whistle.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - affiliation
-  semantic_description: Used in routine local communication among nearby individuals.
-  confidence: medium
-- name: scream
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - abrupt
-  - short
-  acoustic_description: A harsh abrupt call with stronger distress quality than the main alarm whistle.
-  semantic_keywords:
-  - distress
-  - predator
-  - attention
-  semantic_description: Produced in capture or acute danger situations.
-  confidence: medium
-- name: chatter
-  acoustic_keywords:
-  - repetitive
-  - abrupt
-  - noisy
-  - short
-  - broadband
-  acoustic_description: A rapid series of short harsher notes than the whistle alarm.
-  semantic_keywords:
-  - threat
-  - alarm
-  - attention
-  semantic_description: Associated with close-range agitation or threat.
-  confidence: low
-- name: teeth chatter call
-  acoustic_keywords:
-  - repetitive
-  - abrupt
-  - noisy
-  - short
-  - broadband
-  acoustic_description: A rapid sequence of harsh elements used at close range and more aggressive than the main alarm whistle.
-  semantic_keywords:
-  - threat
-  - attention
-  - alarm
-  semantic_description: Used in agitation or close-range confrontational contexts.
-  confidence: low
+  - name: whistle alarm call
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - frequency_modulated
+    acoustic_description: A sustained whistle with clear tonal structure and strong amplitude; call rate and some fine structure vary with perceived risk.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used to warn nearby marmots of predators and other dangers, especially in the classic long-range alarm context.
+    confidence: high
+    references:
+      - blumstein_armitage_1997
+      - blumstein_2025
+  - name: chuck call
+    alternative_names:
+      - chucking call
+      - chuck
+    acoustic_keywords:
+      - short
+      - tonal
+      - repetitive
+      - loud
+      - abrupt
+    acoustic_description: Shorter, chunkier alarm notes than whistles, given as repeated discrete elements rather than long sustained tones.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used in some alarm situations as an alternative to whistles, especially in the classic whistle-versus-chuck distinction in this species.
+    confidence: high
+    references:
+      - blumstein_armitage_1997
+      - marmot_burrow
+  - name: rapid trill alarm
+    alternative_names:
+      - trill
+      - fast chirp series
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - repetitive
+      - loud
+      - frequency_modulated
+    acoustic_description: A rapid series of tightly spaced chirp-like alarm elements that sounds more urgent than ordinary whistles or chucking notes.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced when animals are especially frightened or risk is acute.
+    confidence: medium
+    references:
+      - marmot_burrow
+  - name: scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - abrupt
+      - short
+    acoustic_description: A harsh high-intensity call with stronger distress quality and noisier structure than the normal alarm whistles.
+    semantic_keywords:
+      - distress
+      - predator
+      - attention
+    semantic_description: Produced in capture or acute danger situations.
+    confidence: medium
+    references:
+      - blumstein_2025
+references:
+  blumstein_2025:
+    citation: "Blumstein, D.T. 2025. Nonlinear phenomena in marmot alarm calls: a mechanism that allows alarm signals to arouse and convey fear. Philosophical Transactions of the Royal Society B 380:20240008."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11966161/
+    doi: 10.1098/rstb.2024.0008
+  blumstein_armitage_1997:
+    citation: "Blumstein, D.T. and Armitage, K.B. 1997. Alarm calling in yellow-bellied marmots: I. The meaning of situationally variable alarm calls. Animal Behaviour 53(1):143-171."
+    url: https://blumsteinlab.eeb.ucla.edu/wp-content/uploads/sites/104/2017/08/BlumsteinArmitage1997_AB.pdf
+  marmot_burrow:
+    citation: UCLA Marmot Burrow. Yellow-bellied Marmot Alarm Calling Factsheet.
+    url: https://www.marmotburrow.ucla.edu/YBAC.html
 provenance:
-- timestamp: '2026-06-10T21:30:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for yellow-bellied marmot emphasizing alarm whistles and local social calls.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for yellow-bellied marmot emphasizing alarm whistles and local social calls.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Removed duplicate close-range chatter placeholders and rebuilt the marmot repertoire around the established whistle, chuck, rapid-trill, and distress scream structure.

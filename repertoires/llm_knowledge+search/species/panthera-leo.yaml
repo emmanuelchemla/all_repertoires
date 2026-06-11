@@ -10,76 +10,74 @@ taxonomy:
   species: leo
 calls:
   - name: roar
-    acoustic_keywords:
-      - loud
-      - long
-      - low_frequency
-      - harmonic
-      - repetitive
+    acoustic_keywords: [loud, long, low_frequency, harmonic, repetitive]
     acoustic_description: A powerful low-frequency call or call series with sustained voiced energy, often delivered in repeated bouts over long distance.
-    semantic_keywords:
-      - territorial
-      - spacing
-      - group_coordination
-      - identity
-      - display
+    semantic_keywords: [territorial, spacing, group_coordination, identity, display]
     semantic_description: Used for long-range advertisement, pride spacing, contact, and social display.
     confidence: high
+    references: [lion_roar_2007, lion_roar_data_2025]
+  - name: moan
+    acoustic_keywords: [low_frequency, long, tonal, harmonic, graded]
+    acoustic_description: A prolonged lower-amplitude call with smoother tonal structure than a roar.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in social communication at shorter range or intermediate arousal and also as a component within roaring bouts.
+    confidence: high
+    references: [lion_roar_data_2025, lion_landscapes]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, pulsed, tonal, graded]
+    acoustic_description: A short low call with relatively simple structure and less intensity than roars or growls.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in routine close social interactions within prides.
+    confidence: high
+    references: [lion_roar_data_2025, lion_landscapes]
   - name: growl
-    acoustic_keywords:
-      - low_frequency
-      - noisy
-      - broadband
-      - long
-      - graded
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
     acoustic_description: A low rough call with strong noisy energy, variable from short rumbling notes to sustained aggressive growls.
-    semantic_keywords:
-      - threat
-      - aggression
-      - attention
+    semantic_keywords: [threat, aggression, attention]
     semantic_description: Produced in close-range conflict, warning, or defensive interactions.
     confidence: high
-  - name: grunt
-    acoustic_keywords:
-      - low_frequency
-      - short
-      - pulsed
-      - tonal
-    acoustic_description: A short low call with relatively simple structure and less intensity than roars or growls.
-    semantic_keywords:
-      - contact
-      - affiliation
-      - group_coordination
-    semantic_description: Used in routine close social interactions within prides.
+    references: [lion_landscapes]
+  - name: hiss
+    acoustic_keywords: [broadband, noisy, abrupt, long, loud]
+    acoustic_description: A harsh unvoiced warning sound with strong broadband energy and sustained expulsive quality.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used in close-range defensive warning and escalated antagonistic encounters.
     confidence: medium
-  - name: moan
-    acoustic_keywords:
-      - low_frequency
-      - long
-      - tonal
-      - harmonic
-    acoustic_description: A prolonged lower-amplitude call with smoother tonal structure than a roar.
-    semantic_keywords:
-      - contact
-      - affiliation
-      - attention
-    semantic_description: Used in social communication at shorter range or intermediate arousal.
+    references: [lion_landscapes]
+  - name: snarl
+    acoustic_keywords: [broadband, noisy, abrupt, long, loud]
+    acoustic_description: A harsh aggressive vocalization, often rougher and more forceful than an ordinary growl.
+    semantic_keywords: [threat, aggression, display]
+    semantic_description: Used in intense close-range intimidation and conflict.
     confidence: medium
+    references: [lion_landscapes]
   - name: meow
-    acoustic_keywords:
-      - tonal
-      - harmonic
-      - short
-      - frequency_modulated
+    acoustic_keywords: [tonal, harmonic, short, frequency_modulated, graded]
     acoustic_description: A shorter higher-pitched call with clearer tonal contour than the deeper adult long-distance calls.
-    semantic_keywords:
-      - contact
-      - caregiving
-      - begging
+    semantic_keywords: [contact, caregiving, begging]
     semantic_description: Common in close-range interactions, particularly between mothers and cubs or in soliciting contexts.
     confidence: medium
+    references: [lion_cub_calls_2023]
+references:
+  lion_roar_2007:
+    citation: "McComb, K., Packer, C., and Pusey, A. 2007. Do acoustic features of lion, Panthera leo, roars reflect sex and male condition? Journal of the Acoustical Society of America 121:3947-3953."
+    url: https://pubs.aip.org/asa/jasa/article/121/6/3947/537239/Do-acoustic-features-of-lion-Panthera-leo-roars
+  lion_roar_data_2025:
+    citation: "Growcott, J., et al. 2025. Roar data: Redefining a lion's roar using machine learning. Ecology and Evolution 15:e72474."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12998244/
+  lion_landscapes:
+    citation: "Lion Landscapes. Roaring."
+    url: https://www.lionlandscapes.org/lion-roaring
+  lion_cub_calls_2023:
+    citation: "Volodin, I.A., et al. 2023. Behavioral-psychological motivations encoded in the vocal characteristics of calls by African lion cubs. Animals 13:1309."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10127000/
+    doi: 10.3390/ani13081309
 provenance:
   - timestamp: "2026-06-10T20:15:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft for lion using broad felid call classes and conservative confidence outside the core roar signal.
+  - timestamp: "2026-06-11T11:19:45Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative completeness pass added obvious lion close-range call classes and refreshed references with stable external sources.

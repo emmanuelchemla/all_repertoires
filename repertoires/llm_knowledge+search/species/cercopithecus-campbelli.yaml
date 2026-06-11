@@ -9,83 +9,150 @@ taxonomy:
   genus: Cercopithecus
   species: campbelli
 calls:
-- name: boom
-  acoustic_keywords:
-  - low_frequency
-  - loud
-  - short
-  - pulsed
-  - repetitive
-  acoustic_description: A low-frequency pulsed call with high amplitude and simple structure.
-  semantic_keywords:
-  - alarm
-  - attention
-  - group_coordination
-  semantic_description: Used in conspicuous long-range signaling and as a contextual prelude to other calls.
-  confidence: high
-- name: krak call
-  acoustic_keywords:
-  - abrupt
-  - noisy
-  - broadband
-  - short
-  - loud
-  acoustic_description: A short harsh alarm call with abrupt onset and strong noisy structure.
-  semantic_keywords:
-  - alarm
-  - predator
-  - attention
-  semantic_description: Associated especially with leopard-related or general terrestrial threat contexts.
-  confidence: high
-- name: hok call
-  acoustic_keywords:
-  - abrupt
-  - noisy
-  - broadband
-  - short
-  - loud
-  acoustic_description: A sharp harsh call similar in broad structure to krak calls but used in different threat contexts.
-  semantic_keywords:
-  - alarm
-  - predator
-  - attention
-  semantic_description: Associated especially with eagle-related or aerial threat contexts.
-  confidence: high
-- name: contact call
-  acoustic_keywords:
-  - short
-  - tonal
-  - quiet
-  - repetitive
-  - graded
-  acoustic_description: A softer short-range call than alarm calls, with less harsh structure.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - group_coordination
-  semantic_description: Used in ordinary local social communication.
-  confidence: low
-- name: krak-oo
-  acoustic_keywords:
-  - abrupt
-  - noisy
-  - short
-  - repetitive
-  - multi_component
-  acoustic_description: A compound alarm call with a harsh krak-like onset and an appended oo-like suffix.
-  semantic_keywords:
-  - alarm
-  - predator
-  - attention
-  - combinatorial
-  semantic_description: Used in lower-intensity or more generalized alert contexts than the most urgent unsuffixed alarm calls.
-  confidence: medium
+  - name: boom
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - short
+      - pulsed
+      - repetitive
+    acoustic_description: Low-frequency pulsed calls with strong amplitude and relatively simple structure, usually given in short sequences.
+    semantic_keywords:
+      - group_coordination
+      - attention
+      - territorial
+      - identity
+    semantic_description: Used in long-range signalling, including spacing and contextual prefaces to other loud calls.
+    confidence: high
+    references:
+      - zuberbuhler_2002
+      - ouattara_etal_2009
+  - name: krak
+    acoustic_keywords:
+      - abrupt
+      - noisy
+      - broadband
+      - short
+      - loud
+    acoustic_description: Short harsh alarm calls with abrupt onset and strong noisy structure.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Associated especially with leopard-related or urgent terrestrial threat contexts.
+    confidence: high
+    references:
+      - zuberbuhler_2001
+      - ouattara_etal_2009
+  - name: krak-oo
+    acoustic_keywords:
+      - abrupt
+      - noisy
+      - short
+      - repetitive
+      - multi_component
+    acoustic_description: Compound calls with a harsh krak-like onset followed by an appended oo-like suffix.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - combinatorial
+    semantic_description: Used in less specific or lower-urgency disturbance contexts than unsuffixed kraks.
+    confidence: high
+    references:
+      - ouattara_etal_2009
+      - arnold_zuberbuhler_2006
+  - name: hok
+    acoustic_keywords:
+      - abrupt
+      - noisy
+      - broadband
+      - short
+      - loud
+    acoustic_description: Sharp harsh calls acoustically distinct from kraks and typically produced as urgent discrete notes.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Associated especially with eagle-related or aerial predator contexts.
+    confidence: high
+    references:
+      - zuberbuhler_2001
+      - ouattara_etal_2009
+  - name: hok-oo
+    acoustic_keywords:
+      - abrupt
+      - noisy
+      - short
+      - repetitive
+      - multi_component
+    acoustic_description: Compound calls with a hok-like onset followed by an oo suffix, preserving the harsh onset while adding a second component.
+    semantic_keywords:
+      - alarm
+      - attention
+      - combinatorial
+    semantic_description: Used in generalized disturbance and alerting contexts outside the most urgent eagle-specific situations.
+    confidence: high
+    references:
+      - ouattara_etal_2009
+      - arnold_zuberbuhler_2006
+  - name: wak-oo
+    acoustic_keywords:
+      - abrupt
+      - noisy
+      - short
+      - repetitive
+      - multi_component
+    acoustic_description: Compound loud calls with a distinct wak-like onset followed by an oo suffix, given as conspicuous alerting phrases.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+      - combinatorial
+    semantic_description: Used in socially mediated disturbance, falling trees, and other broad alert contexts rather than a single predator class.
+    confidence: high
+    references:
+      - ouattara_etal_2009
+  - name: contact call
+    acoustic_keywords:
+      - short
+      - tonal
+      - quiet
+      - repetitive
+      - graded
+    acoustic_description: Softer short-range calls with smoother structure than loud alarm calls.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Used in ordinary local social communication by group members outside acute alarm contexts.
+    confidence: medium
+    references:
+      - animal_diversity_web
+references:
+  animal_diversity_web:
+    citation: Animal Diversity Web. Campbell's monkey (Cercopithecus campbelli) account.
+    url: https://animaldiversity.org/accounts/Cercopithecus_campbelli/
+  arnold_zuberbuhler_2006:
+    citation: Arnold, K. and Zuberbuhler, K. 2006. Semantic combinations in primate calls. Nature 441:303.
+    doi: 10.1038/441303a
+  ouattara_etal_2009:
+    citation: Ouattara, K., Lemasson, A., and Zuberbuhler, K. 2009. Campbell's monkeys concatenate vocalizations into context-specific call sequences. Proceedings of the National Academy of Sciences 106(51):22026-22031.
+    doi: 10.1073/pnas.0908118106
+  zuberbuhler_2001:
+    citation: Zuberbuhler, K. 2001. Predator-specific alarm calls in Campbell's monkeys, Diana monkeys, and putty-nosed monkeys. Behaviour 137(1):1-27.
+  zuberbuhler_2002:
+    citation: Zuberbuhler, K. 2002. A syntactic rule in forest monkey communication. Animal Behaviour 63:293-299.
 provenance:
-- timestamp: '2026-06-10T22:00:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for Campbell's monkey centered on its well-known alarm call system.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T22:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Campbell's monkey centered on its well-known alarm call system.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Rebuilt the repertoire around the established male loud-call system, including the major unsuffixed and suffixed call classes and a conservative social contact category.

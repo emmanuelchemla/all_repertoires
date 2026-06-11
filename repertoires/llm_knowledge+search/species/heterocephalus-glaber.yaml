@@ -9,82 +9,147 @@ taxonomy:
   genus: Heterocephalus
   species: glaber
 calls:
-- name: chirp
-  acoustic_keywords:
-  - high_frequency
-  - short
-  - tonal
-  - repetitive
-  - quiet
-  acoustic_description: A brief high-pitched social call with relatively simple tonal structure.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - identity
-  semantic_description: Used in colony contact and local interaction.
-  confidence: medium
-- name: grunt
-  acoustic_keywords:
-  - low_frequency
-  - short
-  - repetitive
-  - quiet
-  - graded
-  acoustic_description: A low short call with simple structure and lower amplitude than alarm-like sounds.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - attention
-  semantic_description: Used in ordinary colony social behavior and close-range coordination.
-  confidence: medium
-- name: squeak
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - abrupt
-  - noisy
-  - short
-  acoustic_description: A sharper and higher-intensity call than routine chirps or grunts.
-  semantic_keywords:
-  - distress
-  - submission
-  - attention
-  semantic_description: Produced in acute conflict or discomfort.
-  confidence: medium
-- name: alarm call
-  acoustic_keywords:
-  - abrupt
-  - repetitive
-  - broadband
-  - short
-  - loud
-  acoustic_description: A conspicuous abrupt call type distinct from routine contact vocalizations.
-  semantic_keywords:
-  - alarm
-  - attention
-  - threat
-  semantic_description: Used to alert colony members to immediate disturbance.
-  confidence: low
-- name: signature call
-  acoustic_keywords:
-  - high_frequency
-  - short
-  - tonal
-  - repetitive
-  - graded
-  acoustic_description: A short individually recognizable contact vocalization embedded within the colony social repertoire.
-  semantic_keywords:
-  - identity
-  - contact
-  - group_coordination
-  semantic_description: Used in colony-member recognition and routine social contact.
-  confidence: medium
+  - name: soft chirp
+    alternative_names:
+      - soft chip
+      - signature chirp
+      - greeting call
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - repetitive
+      - quiet
+    acoustic_description: A brief, soft, high-pitched tonal call, often emitted in stereotyped call-and-response exchanges and showing colony-specific acoustic patterning.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+      - affiliation
+    semantic_description: Used as a routine greeting and contact call that conveys individual and colony membership in the dark tunnel system.
+    confidence: high
+    references:
+      - barker_etal_2021
+      - appel_etal_2018
+  - name: grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - repetitive
+      - quiet
+      - graded
+    acoustic_description: A short low call with simple structure and lower amplitude than alarm-like calls.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - attention
+    semantic_description: Used in ordinary close-range colony interactions and spatial coordination underground.
+    confidence: medium
+    references:
+      - pepper_1991
+  - name: squeak
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - abrupt
+      - noisy
+      - short
+    acoustic_description: A sharper, louder call than routine soft chirps or grunts, with abrupt onset and harsher spectral quality.
+    semantic_keywords:
+      - distress
+      - submission
+      - attention
+    semantic_description: Produced in acute conflict, rough handling, or discomfort.
+    confidence: medium
+    references:
+      - pepper_1991
+  - name: hiss
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - short
+      - loud
+    acoustic_description: A brief harsh broadband exhalatory call with noisier structure than chirps or grunts and an abrupt onset.
+    semantic_keywords:
+      - aggression
+      - threat
+      - attention
+    semantic_description: Used in close-range dominance, aggressive encounters, or direct social challenge inside the tunnel system.
+    confidence: medium
+    references:
+      - pepper_1991
+      - ielc_2026
+  - name: alarm shriek
+    alternative_names:
+      - alarm call
+      - shriek
+    acoustic_keywords:
+      - abrupt
+      - repetitive
+      - broadband
+      - short
+      - loud
+    acoustic_description: A conspicuous abrupt loud call type distinct from routine contact vocalizations and suited to travel through tunnels.
+    semantic_keywords:
+      - alarm
+      - attention
+      - threat
+    semantic_description: Used to alert colony members to immediate disturbance or danger in the tunnel system.
+    confidence: medium
+    references:
+      - appel_etal_2018
+  - name: pup begging call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - repetitive
+      - loud
+      - graded
+    acoustic_description: Repeated higher-pitched calls from pups that are more urgent and attention-getting than adult routine contact chirps.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Included conservatively as a juvenile solicitation class expected in the cooperative breeding colony system.
+    confidence: low
+    references:
+      - pepper_1991
+references:
+  appel_etal_2018:
+    citation: Appel, J., Alipour, M., and Lewin, G.R. 2018. Auditory-vocal coupling in the naked mole-rat, a mammal with poor eyesight. Current Biology 28(20):3362-3369.e4.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6208660/
+    doi: 10.1016/j.cub.2018.08.066
+  barker_etal_2021:
+    citation: Barker, A.J., Veviurko, G., Bennett, N.C., Hart, D.W., Mograby, L., and Lewin, G.R. 2021. Cultural transmission of vocal dialect in the naked mole-rat. Science 371(6528):503-507.
+    url: https://www.science.org/doi/10.1126/science.abc6588
+    doi: 10.1126/science.abc6588
+  pepper_1991:
+    citation: Pepper, J.W., Braude, S.H., Lacey, E.A., Sherman, P.W., and Faulkes, C.G. 1991. Vocalizations of the naked mole-rat. In P.W. Sherman, J.U.M. Jarvis, and R.D. Alexander, eds., The Biology of the Naked Mole-Rat. Princeton University Press.
+  ielc_2026:
+    citation: International Elephant Learning Centre. Naked mole-rat factsheet.
+    url: https://www.ielc.lib.ia.us/learning-center/2024-zoology-events/naked-mole-rat-factsheet
 provenance:
-- timestamp: '2026-06-10T21:30:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for naked mole-rat using broad colony social and distress call categories.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for naked mole-rat using broad colony social and distress call categories.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Refocused the repertoire on the best-supported social signature chirp system plus conservative grunt, squeak, alarm, and pup-solicitation classes.
+  - timestamp: "2026-06-11T12:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a defensible hiss-based threat or dominance class from external sources and kept the remainder of the repertoire broad to avoid speculative over-splitting.

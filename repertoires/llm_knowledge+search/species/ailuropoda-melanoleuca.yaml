@@ -16,13 +16,15 @@ calls:
   - frequency_modulated
   - short
   - repetitive
-  acoustic_description: A goat-like call with clear harmonic structure and modulated contour.
+  acoustic_description: A goat-like call with clear harmonic structure and modulated
+    contour.
   semantic_keywords:
   - affiliation
   - contact
   - mating
   - attention
-  semantic_description: Used in friendly or sexual contexts and as a close-range social signal.
+  semantic_description: Used in friendly or sexual contexts and as a close-range social
+    signal.
   confidence: high
 - name: honk
   acoustic_keywords:
@@ -31,7 +33,8 @@ calls:
   - abrupt
   - short
   - noisy
-  acoustic_description: A short, low, forceful call with less tonal structure than a bleat.
+  acoustic_description: A short, low, forceful call with less tonal structure than
+    a bleat.
   semantic_keywords:
   - attention
   - threat
@@ -45,7 +48,8 @@ calls:
   - noisy
   - short
   - loud
-  acoustic_description: A sharp harsh call with abrupt onset and strong broadband energy.
+  acoustic_description: A sharp harsh call with abrupt onset and strong broadband
+    energy.
   semantic_keywords:
   - alarm
   - threat
@@ -59,7 +63,8 @@ calls:
   - tonal
   - repetitive
   - quiet
-  acoustic_description: A higher-pitched short call with relatively lighter tonal structure.
+  acoustic_description: A higher-pitched short call with relatively lighter tonal
+    structure.
   semantic_keywords:
   - contact
   - affiliation
@@ -73,19 +78,67 @@ calls:
   - tonal
   - harmonic
   - graded
-  acoustic_description: A lower-amplitude sustained voiced call smoother than a bark or honk.
+  acoustic_description: A lower-amplitude sustained voiced call smoother than a bark
+    or honk.
   semantic_keywords:
   - contact
   - affiliation
   - attention
-  semantic_description: Used in close social interaction and low-intensity social or reproductive contexts.
+  semantic_description: Used in close social interaction and low-intensity social
+    or reproductive contexts.
+  confidence: medium
+- name: growl
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - broadband
+  - long
+  - graded
+  acoustic_description: A low harsh vocalization with broad spectral energy, rougher
+    and more aggressive-sounding than a moan or bleat.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Used in close-range agonistic or intolerant encounters, especially
+    when escalating conflict.
+  confidence: medium
+- name: cub isolation call
+  scope:
+    life_stages:
+    - infant
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  - loud
+  acoustic_description: A high-pitched repeated call produced by separated cubs, thinner
+    and more urgent than adult social calls.
+  semantic_keywords:
+  - distress
+  - caregiving
+  - attention
+  semantic_description: Produced by cubs when isolated from the mother or when soliciting
+    retrieval and care.
   confidence: medium
 provenance:
 - timestamp: '2026-06-10T21:15:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for giant panda using the standard bleat-centered social repertoire and conservative additional call classes.
+  notes: Broad exploratory draft for giant panda using the standard bleat-centered
+    social repertoire and conservative additional call classes.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

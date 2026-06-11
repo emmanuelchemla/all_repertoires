@@ -9,82 +9,121 @@ taxonomy:
   genus: Allochrocebus
   species: lhoesti
 calls:
-- name: grunt
-  acoustic_keywords:
-  - low_frequency
-  - short
-  - tonal
-  - repetitive
-  - graded
-  acoustic_description: A short low call with relatively smooth structure, often produced in repeated bouts.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - group_coordination
-  semantic_description: Used in routine social communication and benign approaches.
-  confidence: medium
-- name: bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Used in disturbance and alert contexts.
-  confidence: medium
-- name: scream
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - long
-  - graded
-  acoustic_description: A high-arousal call with strong noisy energy and variable contour.
-  semantic_keywords:
-  - distress
-  - aggression
-  - attention
-  semantic_description: Produced in severe social conflict or distress.
-  confidence: medium
-- name: contact call
-  acoustic_keywords:
-  - short
-  - tonal
-  - quiet
-  - repetitive
-  - high_frequency
-  acoustic_description: A softer shorter call than barks or screams, likely used locally.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - affiliation
-  semantic_description: Included as a broad short-range social call category.
-  confidence: low
-- name: pyow
-  acoustic_keywords:
-  - low_frequency
-  - short
-  - noisy
-  - abrupt
-  - loud
-  acoustic_description: A low, abrupt, threat- or alarm-like call harsher than simple contact grunts.
-  semantic_keywords:
-  - alarm
-  - attention
-  - group_coordination
-  semantic_description: Used in conspicuous alerting and long-range attention capture during disturbance.
-  confidence: low
+  - name: boom
+    alternative_names:
+      - loud call
+      - adult male loud call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - short
+      - pulsed
+      - repetitive
+    acoustic_description: Low-frequency, far-carrying calls given as discrete pulsed notes or short bouts, with a simple booming quality rather than harsh noisy structure.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - attention
+      - identity
+    semantic_description: Produced mainly by adult males during long-range advertisement and spacing, and likely also to maintain group awareness in dense forest.
+    confidence: medium
+    references:
+      - groves_2001
+      - neprimateconservancy_2025
+  - name: grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - tonal
+      - repetitive
+      - graded
+    acoustic_description: Short, low-pitched social calls with smoother structure than alarm barks and often produced in repeated bouts.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Used in routine peaceful social communication and short-range coordination during travel and foraging.
+    confidence: medium
+  - name: alarm bark
+    alternative_names:
+      - bark
+      - alarm call
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - loud
+    acoustic_description: Sharp, harsh calls with abrupt onset and broad spectral energy, clearly more forceful than quiet social grunts.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced in acute disturbance or predator-detection contexts to alert nearby group members.
+    confidence: medium
+    references:
+      - neprimateconservancy_2025
+  - name: scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - graded
+    acoustic_description: High-arousal noisy calls with strong amplitude and variable contour, longer and more intense than barks.
+    semantic_keywords:
+      - distress
+      - aggression
+      - attention
+    semantic_description: Given in severe social conflict, capture, or intense distress.
+    confidence: medium
+  - name: isolation call
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - repetitive
+      - loud
+      - graded
+    acoustic_description: Repeated higher-pitched calls that stand out from adult low calls and are suited to eliciting attention from nearby caretakers.
+    semantic_keywords:
+      - distress
+      - caregiving
+      - contact
+    semantic_description: Produced by immature individuals when separated from the group or mother.
+    confidence: medium
+    references:
+      - neprimateconservancy_2025
+references:
+  groves_2001:
+    citation: Groves, C. 2001. Primate Taxonomy. Smithsonian Institution Press.
+  neprimateconservancy_2025:
+    citation: New England Primate Conservancy. 2025. L'Hoest's Monkey (Allochrocebus lhoesti) species profile.
+    url: https://neprimateconservancy.org/lhoests-monkey/
 provenance:
-- timestamp: '2026-06-10T21:15:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for L'Hoest's monkey using conservative guenon-like call categories.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for L'Hoest's monkey using conservative guenon-like call categories.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Replaced generic draft with a faster source-backed repertoire centered on male booms, social grunts, alarm barks, screams, and juvenile isolation calls.

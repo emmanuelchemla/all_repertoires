@@ -9,114 +9,184 @@ taxonomy:
   genus: Serinus
   species: canaria
 calls:
-  - name: song
-    alternative_names:
-      - warbling song
-      - male song
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - tonal
-      - repetitive
-      - frequency_modulated
-      - long
-      - multi_component
-    acoustic_description: Rich, flowing warbling song composed of repeated syllables, trills, whistles, and rapid frequency-modulated note sequences that can be assembled into longer bouts.
-    semantic_keywords:
-      - courtship
-      - mating
-      - territorial
-      - display
-    semantic_description: Main adult male advertisement used in mate attraction and territory-related display, especially during the breeding season.
-    confidence: high
-    references:
-      - nottebohm_1976
-      - vallet_kreutzer_2000
-  - name: twitter contact call
-    alternative_names:
-      - contact call
-      - twitter call
-    acoustic_keywords:
-      - short
-      - tonal
-      - repetitive
-      - quiet
-    acoustic_description: Short, light, twittering notes or brief call strings, simpler and shorter than full song.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - affiliation
-    semantic_description: Used in routine flocking, perching, and local social coordination between nearby individuals.
-    confidence: medium
-    references:
-      - xenocanto_canary
-      - birda_canary
-  - name: flight call
-    alternative_names:
-      - flight note
-    acoustic_keywords:
-      - short
-      - high_frequency
-      - tonal
-      - abrupt
-    acoustic_description: Brief, simple notes delivered in flight or at takeoff, generally more clipped than the contact twitter.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - attention
-    semantic_description: Helps maintain cohesion and coordinate movement when birds depart, pass overhead, or shift positions within flocks.
-    confidence: medium
-    references:
-      - xenocanto_canary
-  - name: female copulation solicitation call
-    alternative_names:
-      - female sexual call
-      - copulation call
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - female
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - short
-      - tonal
-      - repetitive
-    acoustic_description: Short vocal signals given by females in reproductive contexts, typically much simpler than male song.
-    semantic_keywords:
-      - courtship
-      - mating
-      - attention
-    semantic_description: Produced by females in response to male song quality and during sexual signalling in breeding contexts.
-    confidence: medium
-    references:
-      - leitao_etal_2015
+- name: song
+  alternative_names:
+  - warbling song
+  - male song
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - repetitive
+  - frequency_modulated
+  - long
+  - multi_component
+  acoustic_description: Rich, flowing warbling song composed of repeated syllables,
+    trills, whistles, and rapid frequency-modulated note sequences that can be assembled
+    into longer bouts.
+  semantic_keywords:
+  - courtship
+  - mating
+  - territorial
+  - display
+  semantic_description: Main adult male advertisement used in mate attraction and
+    territory-related display, especially during the breeding season.
+  confidence: high
+  references:
+  - nottebohm_1976
+  - vallet_kreutzer_2000
+- name: twitter contact call
+  alternative_names:
+  - contact call
+  - twitter call
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: Short, light, twittering notes or brief call strings, simpler
+    and shorter than full song.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Used in routine flocking, perching, and local social coordination
+    between nearby individuals.
+  confidence: medium
+  references:
+  - xenocanto_canary
+  - birda_canary
+- name: flight call
+  alternative_names:
+  - flight note
+  acoustic_keywords:
+  - short
+  - high_frequency
+  - tonal
+  - abrupt
+  acoustic_description: Brief, simple notes delivered in flight or at takeoff, generally
+    more clipped than the contact twitter.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Helps maintain cohesion and coordinate movement when birds
+    depart, pass overhead, or shift positions within flocks.
+  confidence: medium
+  references:
+  - xenocanto_canary
+- name: alarm call
+  acoustic_keywords:
+  - short
+  - high_frequency
+  - abrupt
+  - loud
+  - tonal
+  acoustic_description: Sharp, clipped single notes or short note strings that are more abrupt and tense than the routine twitter contact call.
+  semantic_keywords:
+  - alarm
+  - attention
+  - predator
+  semantic_description: Given in disturbance or predator contexts and treated here as a broad alarm class documented in field recording archives.
+  confidence: low
+  references:
+  - xenocanto_canary
+  - birdfinding_canary
+- name: female copulation solicitation call
+  alternative_names:
+  - female sexual call
+  - copulation call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  acoustic_description: Short vocal signals given by females in reproductive contexts,
+    typically much simpler than male song.
+  semantic_keywords:
+  - courtship
+  - mating
+  - attention
+  semantic_description: Produced by females in response to male song quality and during
+    sexual signalling in breeding contexts.
+  confidence: medium
+  references:
+  - leitao_etal_2015
+- name: begging call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - loud
+  - graded
+  acoustic_description: A repeated solicitation call produced by nestlings or fledglings.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by young birds to obtain provisioning and parental attention.
+  confidence: medium
+  references:
+  - voigt_2007
 references:
+  birdfinding_canary:
+    citation: Birdfinding.info. Atlantic Canary voice summary with linked field recordings.
+    url: https://birdfinding.info/atlantic-canary/
   birda_canary:
     citation: Birda. Atlantic Canary species profile and voice summary.
     url: https://app.birda.org/species-guide/34121/Atlantic_Canary
   leitao_etal_2015:
-    citation: Leitão, A.V., ten Cate, C., and Riebel, K. 2015. Female signalling to male song in the domestic canary, Serinus canaria. Royal Society Open Science 2:140196.
+    citation: "Leit\xE3o, A.V., ten Cate, C., and Riebel, K. 2015. Female signalling\
+      \ to male song in the domestic canary, Serinus canaria. Royal Society Open Science\
+      \ 2:140196."
     url: https://pubmed.ncbi.nlm.nih.gov/26064577/
     doi: 10.1098/rsos.140196
   nottebohm_1976:
-    citation: Nottebohm, F., Kasparian, S., and Pandazis, C. 1976. Central control of song in the canary, Serinus canarius. Journal of Comparative Neurology 165(4):457-486.
+    citation: Nottebohm, F., Kasparian, S., and Pandazis, C. 1976. Central control
+      of song in the canary, Serinus canarius. Journal of Comparative Neurology 165(4):457-486.
     url: https://pubmed.ncbi.nlm.nih.gov/1262540/
   vallet_kreutzer_2000:
-    citation: Vallet, E. and Kreutzer, M. 2000. Sexually stimulating signals of canary (Serinus canaria) songs. Proceedings of the Royal Society B 267(1444):343-348.
+    citation: Vallet, E. and Kreutzer, M. 2000. Sexually stimulating signals of canary
+      (Serinus canaria) songs. Proceedings of the Royal Society B 267(1444):343-348.
     url: https://pubmed.ncbi.nlm.nih.gov/10883803/
     doi: 10.1098/rspb.2000.1003
   xenocanto_canary:
-    citation: Xeno-canto. Atlantic Canary (Serinus canaria) recordings, including song, call, flight call, and alarm-labelled cuts.
+    citation: Xeno-canto. Atlantic Canary (Serinus canaria) recordings, including
+      song, call, flight call, and alarm-labelled cuts.
     url: https://xeno-canto.org/species/Serinus-canaria
+  voigt_2007:
+    citation: Voigt, C. and Leitner, S. 2007. Ontogeny and social modulation of canary
+      vocal behavior.
 provenance:
-  - timestamp: "2026-06-10T19:25:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Initial LLM knowledge plus web-search draft emphasizing the well-known song system and broad social call classes while keeping wild call boundaries conservative.
+- timestamp: '2026-06-10T19:25:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Initial LLM knowledge plus web-search draft emphasizing the well-known song
+    system and broad social call classes while keeping wild call boundaries conservative.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:15:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness sweep added a broad low-confidence alarm-call class supported by field-recording archives while avoiding finer unsupported splits.

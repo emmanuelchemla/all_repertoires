@@ -9,83 +9,104 @@ taxonomy:
   genus: Macaca
   species: mulatta
 calls:
-- name: coo call
-  acoustic_keywords:
-  - tonal
-  - harmonic
-  - long
-  - quiet
-  - frequency_modulated
-  acoustic_description: A relatively tonal, longer call with smooth contour and harmonic structure.
-  semantic_keywords:
-  - affiliation
-  - contact
-  - group_coordination
-  semantic_description: Used in low-arousal social contact and friendly interactions.
-  confidence: high
-- name: grunt
-  acoustic_keywords:
-  - low_frequency
-  - short
-  - tonal
-  - repetitive
-  - graded
-  acoustic_description: A short lower-pitched call simpler than a coo, often repeated in social interactions.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - attention
-  semantic_description: Used in routine social communication and approaches.
-  confidence: high
-- name: scream
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - long
-  - abrupt
-  acoustic_description: A high-arousal distress vocalization with strong noisy energy and variable contour.
-  semantic_keywords:
-  - distress
-  - submission
-  - aggression
-  - attention
-  semantic_description: Common in conflict, especially victim and subordinance contexts.
-  confidence: high
-- name: girney
-  acoustic_keywords:
-  - high_frequency
-  - tonal
-  - short
-  - repetitive
-  - graded
-  acoustic_description: A softer higher-pitched call associated with affiliative and infant-related interactions.
-  semantic_keywords:
-  - affiliation
-  - caregiving
-  - attention
-  semantic_description: Often linked to mother-infant and friendly social exchange.
-  confidence: medium
-- name: copulation call
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - short
-  - repetitive
-  - graded
-  acoustic_description: A conspicuous arousal-related call distinct from ordinary coos and grunts.
-  semantic_keywords:
-  - mating
-  - attention
-  - affiliation
-  semantic_description: Associated with sexual or post-copulatory social interaction.
-  confidence: low
+  - name: coo call
+    acoustic_keywords: [tonal, harmonic, long, quiet, frequency_modulated]
+    acoustic_description: A relatively tonal call with harmonic structure and a smooth, often gently modulated contour.
+    semantic_keywords: [affiliation, contact, group_coordination]
+    semantic_description: Used in low-arousal social contact, friendly coordination, and some food-associated situations.
+    confidence: high
+    references: [hauser_marler_1993]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short lower-pitched call simpler than a coo and often given in brief repeated series.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in routine social communication, especially during approaches and friendly interactions.
+    confidence: high
+    references: [whitham_etal_2007]
+  - name: girney
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A soft high-pitched call often delivered in repeated affiliative sequences.
+    semantic_keywords: [affiliation, caregiving, attention]
+    semantic_description: Often linked to female affiliative exchange, interest in infants, and tension reduction.
+    confidence: high
+    references: [whitham_etal_2007]
+  - name: gecker
+    acoustic_keywords: [high_frequency, noisy, abrupt, repetitive, graded]
+    acoustic_description: A harsh high-pitched distress call, usually produced in repeated bursts and rougher than girneys.
+    semantic_keywords: [distress, begging, caregiving, attention]
+    semantic_description: Typical of infants and juveniles in distress, protest, and solicitation contexts that recruit maternal or nearby social attention.
+    confidence: medium
+    references: [gecker_2000]
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A high-arousal distress vocalization with strong noisy energy and variable contour.
+    semantic_keywords: [distress, submission, aggression, attention]
+    semantic_description: Common in conflict, especially in victim and subordinate responses.
+    confidence: high
+    references: [rhesus_categories_2006]
+  - name: bark
+    alternative_names: [threat bark, aggressive call]
+    acoustic_keywords: [broadband, noisy, abrupt, short, loud]
+    acoustic_description: A short harsh call with abrupt onset and broader spectral energy than coos, grunts, or girneys.
+    semantic_keywords: [threat, aggression, attention, spacing]
+    semantic_description: Used in aggressive displays and other antagonistic high-arousal interactions.
+    confidence: medium
+    references: [rhesus_categories_2006]
+  - name: copulation scream
+    alternative_names: [copulation call]
+    acoustic_keywords: [high_frequency, loud, short, repetitive, graded]
+    acoustic_description: A conspicuous sexual call series, usually louder and more aroused than affiliative contact calls.
+    semantic_keywords: [mating, attention]
+    semantic_description: Given during or around copulation and other sexual interactions.
+    confidence: medium
+    references: [rhesus_categories_2006]
+  - name: warble
+    acoustic_keywords: [tonal, harmonic, long, frequency_modulated, graded]
+    acoustic_description: A harmonic contoured call, often with a rising and falling melodic shape and longer duration than grunts.
+    semantic_keywords: [food, recruitment, attention]
+    semantic_description: Associated especially with high-quality or rare food discoveries and may attract nearby group members.
+    confidence: high
+    references: [hauser_marler_1993, hauser_1998]
+  - name: harmonic arch
+    acoustic_keywords: [tonal, harmonic, long, frequency_modulated, graded]
+    acoustic_description: A harmonic call with an arched contour that rises toward the middle or end before falling again.
+    semantic_keywords: [food, recruitment, attention]
+    semantic_description: Produced to especially preferred foods and treated by playback work as part of the rhesus food-call system.
+    confidence: high
+    references: [hauser_marler_1993, hauser_1998]
+  - name: chirp
+    acoustic_keywords: [tonal, harmonic, short, frequency_modulated, graded]
+    acoustic_description: A relatively short high-pitched harmonic food call with a compact modulated contour.
+    semantic_keywords: [food, recruitment, attention]
+    semantic_description: Given particularly to high-quality foods and likely contributes to recruitment or socially informative food signalling.
+    confidence: high
+    references: [hauser_marler_1993, hauser_1998]
+references:
+  whitham_etal_2007:
+    citation: "Whitham, J.C., Gerald, M.S., and Maestripieri, D. 2007. Intended receivers and functional significance of grunt and girney vocalizations in free-ranging female rhesus macaques. Ethology 113:862-874."
+    doi: 10.1111/j.1439-0310.2007.01381.x
+  hauser_marler_1993:
+    citation: "Hauser, M.D. and Marler, P. 1993. Food-associated calls in rhesus macaques (Macaca mulatta). I. Socioecological factors influencing call production. Behavioral Ecology 4:194-205."
+    doi: 10.1093/beheco/4.3.194
+  hauser_1998:
+    citation: "Hauser, M.D. 1998. Functional referents and acoustic similarity: field playback experiments with rhesus monkeys. Animal Behaviour 55:1647-1658."
+    doi: 10.1006/anbe.1997.0712
+  rhesus_categories_2006:
+    citation: "Gifford, G.W., Hauser, M.D., and Cohen, Y.E. 2006. Spontaneous processing of abstract categorical information in the ventrolateral prefrontal cortex. Biology Letters 2:261-265."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1618918/
+  gecker_2000:
+    citation: "Owren, M.J. 2000. Acoustic and behavioral analyses of gecker distress vocalizations in young rhesus macaques (Macaca mulatta). Doctoral dissertation, Cornell University."
+    url: https://ecommons.cornell.edu/server/api/core/bitstreams/40cb718d-8018-4ea9-9bc6-fdadad5fa6a0/content
 provenance:
-- timestamp: '2026-06-10T21:15:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for rhesus macaque using the classic coo, grunt, scream, and affiliative girney categories.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for rhesus macaque using the classic coo, grunt, scream, and affiliative girney categories.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:09:02Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added major rhesus food-call and distress/sexual call classes plus stable external references in a speed-focused completeness pass.

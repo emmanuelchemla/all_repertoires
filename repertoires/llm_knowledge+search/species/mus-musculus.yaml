@@ -10,31 +10,114 @@ taxonomy:
   species: musculus
 calls:
   - name: ultrasonic courtship song
-    acoustic_keywords: [high_frequency, tonal, repetitive, multi_component, long]
-    acoustic_description: A sequence of ultrasonic syllables arranged into patterned bouts with variable pitch contours.
-    semantic_keywords: [courtship, mating, display, identity]
-    semantic_description: Produced mainly by males during courtship and sexual advertisement.
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - repetitive
+      - multi_component
+      - long
+    acoustic_description: A sequence of ultrasonic syllables arranged into patterned bouts with variable pitch contours and phrase-level structure.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+      - identity
+    semantic_description: Produced mainly by males during courtship and sexual advertisement toward females.
     confidence: high
+    references:
+      - musolf_penn_2012
+      - matsumoto_etal_2023
   - name: pup isolation call
-    acoustic_keywords: [high_frequency, repetitive, loud, short, tonal]
-    acoustic_description: A repeated ultrasonic call emitted persistently by separated pups.
-    semantic_keywords: [begging, caregiving, contact, attention]
-    semantic_description: Elicits maternal retrieval and care.
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - tonal
+    acoustic_description: Repeated ultrasonic calls emitted persistently by isolated pups, usually at higher frequencies than many adult social calls.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - contact
+      - attention
+    semantic_description: Elicits maternal retrieval and care when pups are separated from the nest or exposed to other stressors.
     confidence: high
+    references:
+      - ehret_2005
+      - zanghieri_etal_2022
+  - name: adult social ultrasonic call
+    alternative_names:
+      - social USV
+      - interaction ultrasonic call
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - repetitive
+      - graded
+    acoustic_description: Shorter and less elaborate ultrasonic vocalizations than full courtship song, often emitted as brief graded social syllables.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - attention
+    semantic_description: Used in general adult social interactions outside intense courtship, including investigation and social encounter contexts.
+    confidence: medium
+    references:
+      - musolf_penn_2012
+      - matsumoto_etal_2023
   - name: audible squeak
-    acoustic_keywords: [high_frequency, abrupt, noisy, short, loud]
+    acoustic_keywords:
+      - high_frequency
+      - abrupt
+      - noisy
+      - short
+      - loud
     acoustic_description: A brief audible distress call with abrupt onset and harsh quality.
-    semantic_keywords: [distress, submission, attention]
-    semantic_description: Produced in acute conflict, pain, or handling.
+    semantic_keywords:
+      - distress
+      - submission
+      - attention
+    semantic_description: Produced in acute conflict, pain, restraint, or rough handling.
     confidence: medium
-  - name: ultrasonic social call
-    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
-    acoustic_description: A shorter and less elaborate ultrasonic vocalization than full courtship song.
-    semantic_keywords: [contact, affiliation, attention]
-    semantic_description: Used in general social interaction outside intense courtship.
+    references:
+      - matsumoto_etal_2023
+  - name: aggressive ultrasonic call
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - repetitive
+      - abrupt
+    acoustic_description: Short ultrasonic calls emitted in tense adult interactions, generally less song-like and more abrupt than courtship vocalizations.
+    semantic_keywords:
+      - aggression
+      - threat
+      - attention
+    semantic_description: Included conservatively for male-male territorial or escalated adult social disputes where ultrasonic calling is documented.
     confidence: medium
+    references:
+      - matsumoto_etal_2023
+references:
+  ehret_2005:
+    citation: "Ehret, G. 2005. Infant rodent ultrasounds: a gate to the understanding of sound communication. Behavior Genetics 35(1):19-29."
+    doi: 10.1007/s10519-004-0853-8
+  matsumoto_etal_2023:
+    citation: Matsumoto, Y.K., Tsunematsu, W., and Okanoya, K. 2023. A review of ultrasonic vocalizations in mice and how they relate to social behavior. Journal of the Acoustical Society of America 154(2):650-664.
+    url: https://pubs.aip.org/asa/jasa/article/154/2/650/2905641/A-review-of-ultrasonic-vocalizations-in-mice-and
+    doi: 10.1121/10.0020736
+  musolf_penn_2012:
+    citation: "Musolf, K. and Penn, D.J. 2012. Ultrasonic vocalizations in house mice: a cryptic mode of acoustic communication. In M. Macholan, S.J.E. Baird, P. Munclinger, and J. Pialek, eds., Evolution of the House Mouse. Cambridge University Press."
+    url: https://www.cambridge.org/core/books/evolution-of-the-house-mouse/ultrasonic-vocalizations-in-house-mice/E8039505E9083D7B3D87C4F7DA2A1CEA
+  zanghieri_etal_2022:
+    citation: Zanghieri, M., Mocaer, E., Pautrat, A., and Granon, S. 2022. Rates of ultrasonic vocalizations are more strongly related than acoustic features to non-vocal behaviors in mouse pups. Frontiers in Behavioral Neuroscience 16:1015484.
+    url: https://www.frontiersin.org/journals/behavioral-neuroscience/articles/10.3389/fnbeh.2022.1015484/full
+    doi: 10.3389/fnbeh.2022.1015484
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for house mouse emphasizing courtship song, pup isolation calls, and other social vocal classes.
+  - timestamp: "2026-06-11T11:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added stable references and expanded the repertoire to distinguish adult social and aggressive ultrasonic classes from the better-known courtship song and pup isolation system.

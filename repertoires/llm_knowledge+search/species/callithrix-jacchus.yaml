@@ -11,74 +11,75 @@ taxonomy:
 calls:
   - name: phee call
     acoustic_keywords: [tonal, harmonic, long, loud, frequency_modulated]
-    acoustic_description: A whistle-like, relatively long call with strong tonal structure and variable contour.
+    acoustic_description: A whistle-like long call with strong tonal structure and variable contour.
     semantic_keywords: [contact, group_coordination, identity]
     semantic_description: Used in long-distance contact, especially when group members are separated or out of sight.
     confidence: high
-    references: [jacchus_structure]
+    references: [bezerra_souto_2008, miller_etal_2010]
   - name: trill
     acoustic_keywords: [short, tonal, repetitive, quiet, frequency_modulated]
     acoustic_description: A short modulated contact call with lower amplitude than the phee.
     semantic_keywords: [contact, affiliation, group_coordination]
     semantic_description: Used in close-range antiphonal and routine social interactions.
     confidence: high
-    references: [jacchus_structure]
+    references: [bezerra_souto_2008, miller_etal_2010]
+  - name: trill-phee
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, multi_component]
+    acoustic_description: A compound call combining a short trill-like introduction with a longer phee-like tonal segment.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in medium- to long-range coordination and appears to bridge local and long-distance contact functions.
+    confidence: high
+    references: [miller_etal_2010]
   - name: twitter
     acoustic_keywords: [high_frequency, short, repetitive, tonal, graded]
     acoustic_description: A rapid series of high notes with lighter structure than phee calls.
     semantic_keywords: [contact, attention, affiliation]
     semantic_description: Used in local social communication and routine group monitoring.
-    confidence: medium
-    references: [jacchus_structure]
+    confidence: high
+    references: [bezerra_souto_2008, miller_etal_2010]
   - name: tsik call
     acoustic_keywords: [abrupt, short, noisy, broadband, repetitive]
     acoustic_description: A sharp brief call with abrupt onset and harsher quality than the main contact calls.
     semantic_keywords: [alarm, attention, threat]
-    semantic_description: Produced in vigilance or disturbance contexts.
-    confidence: medium
-    references: [jacchus_structure]
-  - name: trill-phee
-    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, multi_component]
-    acoustic_description: A compound call combining a short trill-like introduction with a longer phee-like tonal segment.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Used in medium- to long-range social coordination and appears to bridge close-range and long-range contact functions.
+    semantic_description: Produced in vigilance or disturbance contexts, especially fast alerting.
     confidence: high
-    references: [jacchus_repertoire_analysis]
-  - name: chirp
-    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
-    acoustic_description: A brief high-pitched note with cleaner tonal structure than twitter calls.
-    semantic_keywords: [contact, attention, affiliation]
-    semantic_description: Used in short-range social interaction and local attention-getting.
-    confidence: medium
-    references: [jacchus_repertoire_analysis]
+    references: [bezerra_souto_2008, miller_etal_2010]
   - name: egg call
     alternative_names: [ekk call]
     acoustic_keywords: [abrupt, noisy, broadband, short, repetitive]
-    acoustic_description: A harsher abrupt call with more noisy structure than the main contact calls.
+    acoustic_description: A harsher abrupt call with noisier structure than the main contact calls.
     semantic_keywords: [alarm, threat, attention]
-    semantic_description: Associated with vigilance and disturbance, often in higher-arousal contexts than ordinary contact calling.
+    semantic_description: Associated with vigilance and disturbance in higher-arousal contexts than ordinary contact calling.
     confidence: medium
-    references: [jacchus_repertoire_analysis]
+    references: [miller_etal_2010]
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A brief high-pitched note with cleaner tonal structure than the twitter.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in short-range social interaction and local attention-getting.
+    confidence: medium
+    references: [miller_etal_2010]
   - name: peep
     acoustic_keywords: [high_frequency, short, tonal, quiet, graded]
-    acoustic_description: A very short, high-pitched tonal note simpler than twitter or chirp sequences.
+    acoustic_description: A very short high-pitched tonal note simpler than twitter or chirp sequences.
     semantic_keywords: [contact, affiliation, attention]
     semantic_description: Used in local low-intensity social interaction.
-    confidence: low
-    references: [jacchus_repertoire_analysis]
+    confidence: medium
+    references: [miller_etal_2010]
   - name: ock call
     acoustic_keywords: [abrupt, broadband, short, noisy, loud]
-    acoustic_description: A short, rough, abrupt call with stronger broadband energy than phee or trill calls.
+    acoustic_description: A short rough abrupt call with stronger broadband energy than phee or trill calls.
     semantic_keywords: [threat, aggression, attention]
     semantic_description: Used in more forceful or aroused local social situations.
-    confidence: low
-    references: [jacchus_repertoire_analysis]
+    confidence: medium
+    references: [miller_etal_2010]
 references:
-  jacchus_structure:
-    citation: "Bezerra, B.M. and Souto, A. 2008. Structure and usage of the vocal repertoire of Callithrix jacchus."
-    url: https://www.academia.edu/3190201/Structure_and_Usage_of_the_Vocal_Repertoire_of_Callithrix_jacchus
-  jacchus_repertoire_analysis:
-    citation: "Miller, C.T., Mandel, K., and Wang, X. 2010. The communicative content of the common marmoset vocal repertoire and its structure."
+  bezerra_souto_2008:
+    citation: "Bezerra, B.M. and Souto, A. 2008. Structure and Usage of the Vocal Repertoire of Callithrix jacchus. International Journal of Primatology 29:671-701."
+    url: https://link.springer.com/article/10.1007/s10764-008-9250-0
+    doi: 10.1007/s10764-008-9250-0
+  miller_etal_2010:
+    citation: "Miller, C.T., Mandel, K., and Wang, X. 2010. The communicative content of the common marmoset vocal repertoire and its modulation by social context."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4644241/
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
@@ -89,3 +90,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Independent exhaustiveness pass added additional repertoire classes from species-specific vocal repertoire analyses without using the literature-extraction database.
+  - timestamp: "2026-06-11T12:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision normalized call coverage and references using external sources only.

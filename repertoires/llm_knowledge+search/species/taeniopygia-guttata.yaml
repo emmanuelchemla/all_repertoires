@@ -9,86 +9,143 @@ taxonomy:
   genus: Taeniopygia
   species: guttata
 calls:
-  - name: song
-    acoustic_keywords:
-      - tonal
-      - harmonic
-      - multi_component
-      - repetitive
-      - long
-    acoustic_description: A learned courtship song composed of a repeated sequence of syllables with stable phrase structure and rich spectro-temporal variation.
-    semantic_keywords:
-      - courtship
-      - mating
-      - display
-      - identity
-    semantic_description: Produced mainly by males in courtship and display contexts and carries individual information.
-    confidence: high
-    references:
-      - elie_2015
-      - zann_1996
-  - name: distance call
-    acoustic_keywords:
-      - tonal
-      - harmonic
-      - frequency_modulated
-      - loud
-      - short
-    acoustic_description: A louder contact call than routine social notes, typically tonal and modulated, suited for communication over greater distance.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - affiliation
-      - identity
-    semantic_description: Used to maintain pair or flock contact when separated and can encode individual or social information.
-    confidence: high
-    references:
-      - elie_2015
-      - galoch_2025
-  - name: tet call
-    acoustic_keywords:
-      - short
-      - tonal
-      - quiet
-      - repetitive
-    acoustic_description: A brief simple call, typically shorter and less intense than distance calls.
-    semantic_keywords:
-      - contact
-      - group_coordination
-    semantic_description: Used in ordinary close-range flock or pair communication.
-    confidence: medium
-    references:
-      - elie_2015
-      - vocal_repertoire_2018
-  - name: stack call
-    acoustic_keywords:
-      - short
-      - tonal
-      - repetitive
-      - quiet
-    acoustic_description: A compact short call type differing from tet and distance calls in contour and social deployment.
-    semantic_keywords:
-      - contact
-      - affiliation
-      - attention
-    semantic_description: Used in close social interactions within pair or group settings.
-    confidence: medium
-    references:
-      - vocal_repertoire_2018
+- name: song
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - multi_component
+  - repetitive
+  - long
+  acoustic_description: A learned courtship song composed of a repeated sequence of
+    syllables with stable phrase structure and rich spectro-temporal variation.
+  semantic_keywords:
+  - courtship
+  - mating
+  - display
+  - identity
+  semantic_description: Produced mainly by males in courtship and display contexts
+    and carries individual information.
+  confidence: high
+  references:
+  - elie_2015
+  - zann_1996
+- name: distance call
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - frequency_modulated
+  - loud
+  - short
+  acoustic_description: A louder contact call than routine social notes, typically
+    tonal and modulated, suited for communication over greater distance.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  - identity
+  semantic_description: Used to maintain pair or flock contact when separated and
+    can encode individual or social information.
+  confidence: high
+  references:
+  - elie_2015
+  - galoch_2025
+- name: tet call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  acoustic_description: A brief simple call, typically shorter and less intense than
+    distance calls.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  semantic_description: Used in ordinary close-range flock or pair communication.
+  confidence: medium
+  references:
+  - elie_2015
+  - vocal_repertoire_2018
+- name: stack call
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A compact short call type differing from tet and distance
+    calls in contour and social deployment.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - attention
+  semantic_description: Used in close social interactions within pair or group settings.
+  confidence: medium
+  references:
+  - vocal_repertoire_2018
+- name: begging call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - loud
+  - graded
+  acoustic_description: A repeated solicitation call given by dependent young, simpler
+    than adult song and contact calls.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used to elicit provisioning and parental attention from adults.
+  confidence: high
+  references:
+  - zann_1996
+- name: nest call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  acoustic_description: A soft close-range call associated with pair or nest interactions
+    and lower amplitude than distance calls.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - caregiving
+  semantic_description: Used in local pair coordination around the nest and during
+    close social interaction.
+  confidence: medium
+  references:
+  - vocal_repertoire_2018
 references:
   elie_2015:
-    citation: "Elie, J.E. and Theunissen, F.E. 2015. Patterns of call communication between group-housed zebra finches. eLife 4:e07770."
+    citation: Elie, J.E. and Theunissen, F.E. 2015. Patterns of call communication
+      between group-housed zebra finches. eLife 4:e07770.
     url: https://elifesciences.org/articles/07770
   galoch_2025:
-    citation: "Context-dependent modulations in zebra finch distance calls. Scientific Reports 2025."
+    citation: Context-dependent modulations in zebra finch distance calls. Scientific
+      Reports 2025.
     url: https://www.nature.com/articles/s41598-025-93105-2
   vocal_repertoire_2018:
-    citation: "Vignal, C., et al. 2018. The vocal repertoire of the domesticated zebra finch."
+    citation: Vignal, C., et al. 2018. The vocal repertoire of the domesticated zebra
+      finch.
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5973879/
   zann_1996:
-    citation: "Zann, R. 1996. The Zebra Finch: A Synthesis of Field and Laboratory Studies."
+    citation: 'Zann, R. 1996. The Zebra Finch: A Synthesis of Field and Laboratory
+      Studies.'
 provenance:
-  - timestamp: "2026-06-10T20:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Initial LLM knowledge plus web-search draft for zebra finch emphasizing the standard song and major social call classes.
+- timestamp: '2026-06-10T20:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Initial LLM knowledge plus web-search draft for zebra finch emphasizing the
+    standard song and major social call classes.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

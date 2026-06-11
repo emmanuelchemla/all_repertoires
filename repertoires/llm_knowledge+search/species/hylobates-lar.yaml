@@ -11,30 +11,63 @@ taxonomy:
 calls:
   - name: duet song
     acoustic_keywords: [long, loud, repetitive, multi_component, harmonic]
-    acoustic_description: A prolonged coordinated song with repeated phrase patterns and contributions from both pair members.
+    acoustic_description: A prolonged coordinated song with repeated phrase patterns and contributions from both pair members, often delivered as a structured bout over several minutes.
     semantic_keywords: [territorial, affiliation, group_coordination, display, identity]
-    semantic_description: Used by pair-bonded adults for long-range territorial advertisement and pair cohesion.
+    semantic_description: Used by pair-bonded adults for long-range territorial advertisement, pair cohesion, and neighbour assessment.
     confidence: high
-  - name: great call
+    references: [geissmann_2002, raemaekers_1984]
+  - name: female great call
+    alternative_names: [great call]
     acoustic_keywords: [loud, long, frequency_modulated, tonal, harmonic]
-    acoustic_description: A distinctive high-amplitude phrase type with strong modulation and far-carrying quality.
+    acoustic_description: A distinctive high-amplitude phrase with strong pitch modulation and far-carrying tonal structure, typically the most stereotyped female song element.
     semantic_keywords: [territorial, display, affiliation]
-    semantic_description: A prominent display element of female-led or female-emphasized song performance.
+    semantic_description: A prominent female-led display element in duet performance and territorial advertisement.
     confidence: high
+    references: [geissmann_2002, clarke_1977]
   - name: male coda
     acoustic_keywords: [short, repetitive, tonal, harmonic, abrupt]
-    acoustic_description: A sequence of shorter phrase endings or terminal notes contrasting with the longer great call structure.
+    acoustic_description: A sequence of shorter terminal notes or phrase endings that contrasts with the longer female great-call section.
     semantic_keywords: [group_coordination, display, identity]
-    semantic_description: Contributes to coordinated duet structure and pair-level song identity.
+    semantic_description: Contributes to coordinated duet structure and pair-level or male-specific song identity.
+    confidence: high
+    references: [geissmann_2002, clarke_1977]
+  - name: solo song
+    acoustic_keywords: [long, loud, repetitive, harmonic, multi_component]
+    acoustic_description: A prolonged loud song structurally related to duet material but produced by a single caller, usually with repeated phrase types and strong tonality.
+    semantic_keywords: [territorial, spacing, identity, display]
+    semantic_description: Used for long-range advertisement when a pair mate is absent or when individuals sing alone during territorial signalling.
     confidence: medium
+    references: [geissmann_2002, raemaekers_1984]
+  - name: predator song
+    acoustic_keywords: [loud, repetitive, broadband, abrupt, multi_component]
+    acoustic_description: A more abrupt and harsher song-like bout than the routine duet, with repeated forceful notes and reduced smoothness.
+    semantic_keywords: [alarm, predator, group_coordination, attention]
+    semantic_description: Produced in response to dangerous animals and serves to alert nearby group members while coordinating a collective reaction.
+    confidence: medium
+    references: [clarke_1977]
   - name: bark
     acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A short bark-like call with abrupt onset and harsher structure than the main song elements.
-    semantic_keywords: [attention, threat, alarm]
-    semantic_description: Used in high-arousal local contexts outside the core song bout.
+    acoustic_description: A short bark-like call with abrupt onset and harsher structure than the main tonal song elements.
+    semantic_keywords: [attention, alarm, threat]
+    semantic_description: Used in high-arousal local contexts outside the core song bout, including sudden disturbance.
     confidence: low
+    references: [raemaekers_1984]
+references:
+  clarke_1977:
+    citation: "Clarke, E., Reichard, U.H., and Zuberbuhler, K. 2006. The syntax and meaning of wild gibbon songs. PLOS ONE 1:e73."
+    url: https://doi.org/10.1371/journal.pone.0000073
+    doi: 10.1371/journal.pone.0000073
+  geissmann_2002:
+    citation: "Geissmann, T. 2002. Duet-splitting and the evolution of gibbon songs. Biological Reviews 77:57-76."
+    doi: 10.1017/S1464793101005826
+  raemaekers_1984:
+    citation: "Raemaekers, J.J. and Raemaekers, P.M. 1984. The socio-ecology of the gibbon (Hylobates lar) in the Malaysian rainforest. In The Lesser Apes, pp. 279-306."
 provenance:
   - timestamp: "2026-06-10T21:30:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for white-handed gibbon centered on the duet and great call system.
+  - timestamp: "2026-06-11T10:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Expanded the file around canonical white-handed gibbon song classes, including solo and predator-song distinctions plus stable gibbon-song references.

@@ -9,113 +9,172 @@ taxonomy:
   genus: Mimus
   species: polyglottos
 calls:
-  - name: mimicry-rich song
-    alternative_names:
-      - song
-      - advertising song
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - multi_component
-      - repetitive
-      - tonal
-      - noisy
-      - long
-    acoustic_description: Extended song bouts made of repeated phrases that often include mimicry of other species alongside species-typical notes, whistles, and harsher elements.
-    semantic_keywords:
-      - territorial
-      - courtship
-      - mating
-      - display
-      - identity
-    semantic_description: Principal adult male advertisement for mate attraction and territory defense, often delivered for long periods and with very large repertoires.
-    confidence: high
-    references:
-      - allaboutbirds_mockingbird
-  - name: hew call
-    alternative_names:
-      - loud hew
-      - soft hew
-    acoustic_keywords:
-      - short
-      - tonal
-      - abrupt
-      - loud
-    semantic_keywords:
-      - alarm
-      - attention
-      - territorial
-    acoustic_description: Distinctive hew-like notes, often sharply delivered and acoustically simpler than song phrases.
-    semantic_description: Used in a variety of alert, territorial, and disturbance contexts, including some alarm situations.
-    confidence: medium
-    references:
-      - derrickson_1987
-      - vassar_mockingbird
-  - name: chat call
-    alternative_names:
-      - chatburst
-      - chat
-    acoustic_keywords:
-      - noisy
-      - broadband
-      - repetitive
-      - abrupt
-    semantic_keywords:
-      - aggression
-      - threat
-      - alarm
-      - attention
-    acoustic_description: Rapid, harsh, chatter-like sequences with noisy structure and short inter-note intervals.
-    semantic_description: Common in agitated social interactions, territorial conflict, and nest-defense contexts; chat elements also enter adult male song.
-    confidence: high
-    references:
-      - derrickson_1987
-      - antioco_etal_2020
-  - name: begging call
-    alternative_names:
-      - juvenile begging
-    scope:
-      life_stages:
-        - juvenile
-      sexes:
-        - unknown
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - high_frequency
-      - repetitive
-      - tonal
-      - short
-    semantic_keywords:
-      - begging
-      - caregiving
-      - attention
-    acoustic_description: Repeated juvenile calls that are higher-pitched and simpler than adult song and chat calls.
-    semantic_description: Given by dependent young to solicit food and parental attention.
-    confidence: high
-    references:
-      - derrickson_1987
+- name: mimicry-rich song
+  alternative_names:
+  - song
+  - advertising song
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - multi_component
+  - repetitive
+  - tonal
+  - noisy
+  - long
+  acoustic_description: Extended song bouts made of repeated phrases that often include
+    mimicry of other species alongside species-typical notes, whistles, and harsher
+    elements.
+  semantic_keywords:
+  - territorial
+  - courtship
+  - mating
+  - display
+  - identity
+  semantic_description: Principal adult male advertisement for mate attraction and
+    territory defense, often delivered for long periods and with very large repertoires.
+  confidence: high
+  references:
+  - allaboutbirds_mockingbird
+- name: hew call
+  alternative_names:
+  - loud hew
+  - soft hew
+  acoustic_keywords:
+  - short
+  - tonal
+  - abrupt
+  - loud
+  semantic_keywords:
+  - alarm
+  - attention
+  - territorial
+  acoustic_description: Distinctive hew-like notes, often sharply delivered and acoustically
+    simpler than song phrases.
+  semantic_description: Used in a variety of alert, territorial, and disturbance contexts,
+    including some alarm situations.
+  confidence: medium
+  references:
+  - derrickson_1987
+  - vassar_mockingbird
+- name: soft hew call
+  alternative_names:
+  - pair-contact hew
+  acoustic_keywords:
+  - short
+  - tonal
+  - abrupt
+  - quiet
+  acoustic_description: Softer, simpler hew-like notes delivered at lower amplitude than the louder mobbing hew.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - caregiving
+  semantic_description: Exchanged by mates during incubation and nestling periods, including when the female leaves the nest, and functions as close-range pair or nest-contact signaling.
+  confidence: high
+  references:
+  - allaboutbirds_mockingbird
+- name: chat call
+  alternative_names:
+  - chatburst
+  - chat
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - repetitive
+  - abrupt
+  semantic_keywords:
+  - aggression
+  - threat
+  - alarm
+  - attention
+  acoustic_description: Rapid, harsh, chatter-like sequences with noisy structure
+    and short inter-note intervals.
+  semantic_description: Common in agitated social interactions, territorial conflict,
+    and nest-defense contexts; chat elements also enter adult male song.
+  confidence: high
+  references:
+  - derrickson_1987
+  - antioco_etal_2020
+- name: begging call
+  alternative_names:
+  - juvenile begging
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - tonal
+  - short
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  acoustic_description: Repeated juvenile calls that are higher-pitched and simpler
+    than adult song and chat calls.
+  semantic_description: Given by dependent young to solicit food and parental attention.
+  confidence: high
+  references:
+  - derrickson_1987
+- name: alarm churr
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - repetitive
+  - abrupt
+  - short
+  acoustic_description: A harsh rapid scolding sequence acoustically rougher than
+    the hew call and lacking the structure of song.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Used in mobbing, nest defense, and disturbance contexts.
+  confidence: medium
+  references:
+  - farnsworth_2020
 references:
   allaboutbirds_mockingbird:
     citation: Cornell Lab of Ornithology. Northern Mockingbird overview and song discussion.
     url: https://academy.allaboutbirds.org/northern-mockingbird-sings-hundreds-of-borrowed-songs/
   antioco_etal_2020:
-    citation: "Antioco, M., Mowbray, T.B., and Jones, T.M. 2020. Alarm calls of nesting Northern Mockingbirds (Mimus polyglottos): variation with predator type and nestling stage. Wilson Journal of Ornithology 132(4):742-755."
+    citation: 'Antioco, M., Mowbray, T.B., and Jones, T.M. 2020. Alarm calls of nesting
+      Northern Mockingbirds (Mimus polyglottos): variation with predator type and
+      nestling stage. Wilson Journal of Ornithology 132(4):742-755.'
     url: https://bioone.org/journalArticle/Download?urlId=10.1676%2F19-109
     doi: 10.1676/19-109
   derrickson_1987:
-    citation: Derrickson, K.C. 1987. Yearly and situational changes in the estimate of repertoire size in Northern Mockingbirds (Mimus polyglottos). Auk 104(2):198-207.
+    citation: Derrickson, K.C. 1987. Yearly and situational changes in the estimate
+      of repertoire size in Northern Mockingbirds (Mimus polyglottos). Auk 104(2):198-207.
     url: https://repository.si.edu/bitstreams/c9554cff-16f6-4ce9-b382-677c8804edf7/download
   vassar_mockingbird:
-    citation: Vassar College Sensory Ecology Lab. Northern Mockingbird vocalizations overview.
+    citation: Vassar College Sensory Ecology Lab. Northern Mockingbird vocalizations
+      overview.
     url: https://pages.vassar.edu/sensoryecology/northern-mockingbird-vocalizations/
+  farnsworth_2020:
+    citation: Farnsworth, G. and colleagues. Northern Mockingbird (Mimus polyglottos),
+      Birds of the World.
 provenance:
-  - timestamp: "2026-06-10T20:20:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Initial LLM knowledge plus web-search draft emphasizing song, hew, chat, and juvenile begging calls while keeping alarm call boundaries conservative.
+- timestamp: '2026-06-10T20:20:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Initial LLM knowledge plus web-search draft emphasizing song, hew, chat,
+    and juvenile begging calls while keeping alarm call boundaries conservative.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:15:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness sweep separated the softer mate-exchanged hew from the louder mobbing hew because Cornell explicitly distinguishes the two contexts.

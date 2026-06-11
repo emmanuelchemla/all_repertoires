@@ -11,30 +11,59 @@ taxonomy:
 calls:
   - name: duet song
     acoustic_keywords: [long, loud, repetitive, multi_component, harmonic]
-    acoustic_description: A prolonged coordinated song with repeated phrase patterns and pair contributions.
+    acoustic_description: A prolonged coordinated song with repeated phrase patterns and pair contributions, usually composed of stereotyped male and female sections.
     semantic_keywords: [territorial, affiliation, group_coordination, display, identity]
-    semantic_description: Used by pair-bonded adults for long-range territorial advertisement and pair cohesion.
+    semantic_description: Used by pair-bonded adults for long-range territorial advertisement, pair cohesion, and neighbour assessment.
     confidence: high
-  - name: great call
+    references: [geissmann_2002, fan_2011]
+  - name: female great call
+    alternative_names: [great call]
     acoustic_keywords: [loud, long, frequency_modulated, tonal, harmonic]
-    acoustic_description: A distinctive high-amplitude phrase type with strong modulation and far-carrying quality.
+    acoustic_description: A distinctive high-amplitude phrase type with strong modulation and far-carrying tonal structure.
     semantic_keywords: [territorial, display, affiliation]
-    semantic_description: A prominent display element in pair song performance.
+    semantic_description: A prominent female display element in pair-song performance.
     confidence: high
+    references: [geissmann_2002, fan_2011]
   - name: male coda
     acoustic_keywords: [short, repetitive, tonal, harmonic, abrupt]
-    acoustic_description: A sequence of shorter phrase endings or terminal notes contrasting with longer great-call structure.
+    acoustic_description: A sequence of shorter phrase endings or terminal notes that contrasts with the longer female great-call structure.
     semantic_keywords: [group_coordination, display, identity]
     semantic_description: Contributes to coordinated duet structure and pair-level song identity.
+    confidence: high
+    references: [geissmann_2002, fan_2011]
+  - name: male solo song
+    acoustic_keywords: [long, loud, repetitive, harmonic, multi_component]
+    acoustic_description: A long loud song produced by a single male with repeated phrase patterns related to duet material but lacking the female great-call section.
+    semantic_keywords: [territorial, spacing, identity, display]
+    semantic_description: Used in long-range advertisement and spacing, including by solitary or temporarily unpaired males.
     confidence: medium
+    references: [fan_2011, geissmann_2002]
+  - name: female solo song
+    acoustic_keywords: [long, loud, repetitive, harmonic, frequency_modulated]
+    acoustic_description: A prolonged female-produced song centred on great-call-like phrases and repeated tonal modules.
+    semantic_keywords: [territorial, spacing, identity, display]
+    semantic_description: Produced when females sing without a partner contribution, likely retaining long-range advertisement and spacing functions.
+    confidence: medium
+    references: [fan_2011]
   - name: bark
     acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A short bark-like call with abrupt onset and harsher structure than the main song elements.
-    semantic_keywords: [attention, threat, alarm]
+    acoustic_description: A short bark-like call with abrupt onset and harsher structure than the main tonal song elements.
+    semantic_keywords: [attention, alarm, threat]
     semantic_description: Used in high-arousal local contexts outside the core song bout.
     confidence: low
+references:
+  fan_2011:
+    citation: "Fan, P.F., Xiao, W., Huo, S., Bao, Y., and Jiang, X. 2011. Singing behaviour of black crested gibbons (Nomascus concolor jingdongensis) in Mt. Wuliang, central Yunnan, China. Folia Primatologica 82:190-199."
+    doi: 10.1159/000334972
+  geissmann_2002:
+    citation: "Geissmann, T. 2002. Duet-splitting and the evolution of gibbon songs. Biological Reviews 77:57-76."
+    doi: 10.1017/S1464793101005826
 provenance:
   - timestamp: "2026-06-10T22:30:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for black crested gibbon centered on the duet and great-call system.
+  - timestamp: "2026-06-11T10:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Expanded around established concolor song organization, separating female and male song roles while keeping uncertain non-song local calls conservative.

@@ -10,188 +10,87 @@ taxonomy:
   species: troglodytes
 calls:
   - name: pant hoot
-    acoustic_keywords:
-      - long
-      - loud
-      - repetitive
-      - multi_component
-      - frequency_modulated
+    acoustic_keywords: [long, loud, repetitive, multi_component, frequency_modulated]
     acoustic_description: A long-distance sequence that typically begins with soft breathy hoo-like elements, accelerates through panting phases, rises to a loud scream-rich climax, and then tapers off.
-    semantic_keywords:
-      - group_coordination
-      - affiliation
-      - display
-      - identity
-      - combinatorial
-    semantic_description: Used in greetings, travel coordination, party fusion, displays, and excited social situations; it can recruit attention at distance and also carries individual distinctiveness.
+    semantic_keywords: [group_coordination, affiliation, display, identity, combinatorial]
+    semantic_description: Used in greetings, travel coordination, party fusion, displays, and excited social situations; it can recruit attention at distance and carries individual distinctiveness.
     confidence: high
-    references:
-      - crockford_2019
-      - fedurek_2016
-      - girardbuttoz_2022
+    references: [crockford_2019, fedurek_2016, girardbuttoz_2022]
   - name: pant grunt
-    acoustic_keywords:
-      - low_frequency
-      - quiet
-      - repetitive
-      - pulsed
-      - graded
-    acoustic_description: A soft series of low, rhythmic grunts interspersed with audible inhaled panting, often given in repeated bouts at close range.
-    semantic_keywords:
-      - submission
-      - affiliation
-      - attention
-    semantic_description: A formal submissive greeting, usually directed by lower-ranking individuals toward higher-ranking group members, especially during approach and greeting interactions.
+    acoustic_keywords: [low_frequency, quiet, repetitive, pulsed, graded]
+    acoustic_description: A soft series of low rhythmic grunts interspersed with audible inhaled panting, often given in repeated bouts at close range.
+    semantic_keywords: [submission, affiliation, attention]
+    semantic_description: A formal submissive greeting, usually directed by lower-ranking individuals toward higher-ranking group members.
     confidence: high
-    references:
-      - laporte_zuberbuhler_2010
-      - girardbuttoz_2022
+    references: [laporte_zuberbuhler_2010, girardbuttoz_2022]
   - name: rough grunt
-    alternative_names:
-      - food grunt
-    acoustic_keywords:
-      - low_frequency
-      - pulsed
-      - graded
-      - repetitive
-    acoustic_description: A rough-sounding series of low grunts that can vary from softer grunts to harsher, louder food-associated variants.
-    semantic_keywords:
-      - food
-      - recruitment
-      - group_coordination
+    alternative_names: [food grunt]
+    acoustic_keywords: [low_frequency, pulsed, graded, repetitive]
+    acoustic_description: A rough-sounding series of low grunts that can vary from softer grunts to harsher louder food-associated variants.
+    semantic_keywords: [food, recruitment, group_coordination]
     semantic_description: Produced mainly when discovering or feeding on food, often attracting or informing nearby group members and varying with feeding context.
     confidence: high
-    references:
-      - slocombe_zuberbuhler_2005
-      - slocombe_zuberbuhler_2006
-      - girardbuttoz_2022
+    references: [slocombe_zuberbuhler_2005, slocombe_zuberbuhler_2006, girardbuttoz_2022]
   - name: hoo
-    alternative_names:
-      - contact hoo
-    acoustic_keywords:
-      - low_frequency
-      - tonal
-      - quiet
-      - short
-      - repetitive
-    acoustic_description: Soft, low-pitched tonal notes, often given singly or in short repeated series, with relatively little broadband noise.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - attention
-    semantic_description: Used in close to medium-range coordination, including maintaining contact, approaching others, and low-arousal social or travel contexts.
+    alternative_names: [contact hoo]
+    acoustic_keywords: [low_frequency, tonal, quiet, short, repetitive]
+    acoustic_description: Soft low-pitched tonal notes, often given singly or in short repeated series, with relatively little broadband noise.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used in close- to medium-range coordination, including maintaining contact, approaching others, and low-arousal social or travel contexts.
     confidence: medium
-    references:
-      - crockford_2019
-      - girardbuttoz_2022
+    references: [crockford_2019, girardbuttoz_2022]
   - name: alarm hoo
-    acoustic_keywords:
-      - low_frequency
-      - tonal
-      - quiet
-      - repetitive
-      - abrupt
-    acoustic_description: A subdued hoo variant given in short, discrete notes, generally softer and less conspicuous than screams or barks.
-    semantic_keywords:
-      - alarm
-      - predator
-      - attention
+    acoustic_keywords: [low_frequency, tonal, quiet, repetitive, abrupt]
+    acoustic_description: A subdued hoo variant given in short discrete notes, generally softer and less conspicuous than screams or barks.
+    semantic_keywords: [alarm, predator, attention]
     semantic_description: Associated with detection of danger, especially snake-related alarm situations, and appears to function to warn or direct the attention of others.
     confidence: medium
-    references:
-      - schel_etal_2013
+    references: [schel_etal_2013]
   - name: bark
-    acoustic_keywords:
-      - broadband
-      - abrupt
-      - loud
-      - short
-    acoustic_description: A sharp, explosive, bark-like call with abrupt onset and broad spectral energy.
-    semantic_keywords:
-      - threat
-      - aggression
-      - attention
+    acoustic_keywords: [broadband, abrupt, loud, short]
+    acoustic_description: A sharp explosive bark-like call with abrupt onset and broad spectral energy.
+    semantic_keywords: [threat, aggression, attention]
     semantic_description: Given in aroused confrontations, charging displays, or other high-tension situations to threaten others or sharply capture attention.
     confidence: medium
-    references:
-      - crockford_2019
-      - girardbuttoz_2022
+    references: [crockford_2019, girardbuttoz_2022]
+  - name: pant bark
+    acoustic_keywords: [broadband, loud, repetitive, pulsed, multi_component]
+    acoustic_description: A forceful sequence combining bark-like notes with panting rhythm, harsher and more rapidly repeated than single barks.
+    semantic_keywords: [threat, display, aggression, attention]
+    semantic_description: Common in intense displays and highly aroused social encounters where callers sustain aggressive or dominance-related signalling.
+    confidence: medium
+    references: [girardbuttoz_2022, goodall_1986]
   - name: waa bark
-    alternative_names:
-      - wraaa call
-    acoustic_keywords:
-      - loud
-      - broadband
-      - long
-      - frequency_modulated
-      - noisy
-    acoustic_description: A louder, more prolonged bark-like call with a drawn-out harsh vowel-like quality and strong noisy energy.
-    semantic_keywords:
-      - alarm
-      - threat
-      - attention
+    alternative_names: [wraaa call]
+    acoustic_keywords: [loud, broadband, long, frequency_modulated, noisy]
+    acoustic_description: A louder more prolonged bark-like call with a drawn-out harsh vowel-like quality and strong noisy energy.
+    semantic_keywords: [alarm, threat, attention]
     semantic_description: Produced in strongly aroused reactions to unusual or dangerous events and may escalate alarm or disturbance situations.
     confidence: medium
-    references:
-      - girardbuttoz_2022
+    references: [girardbuttoz_2022]
   - name: scream
-    acoustic_keywords:
-      - high_frequency
-      - loud
-      - noisy
-      - long
-      - graded
-    acoustic_description: A high-pitched, piercing, often noisy vocalization that may rise, break, or vary continuously with arousal.
-    semantic_keywords:
-      - distress
-      - aggression
-      - submission
-      - attention
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: A high-pitched piercing often noisy vocalization that may rise, break, or vary continuously with arousal.
+    semantic_keywords: [distress, aggression, submission, attention]
     semantic_description: Common in fights, chases, severe social tension, and victim responses, where it broadcasts distress or intense arousal to nearby listeners.
     confidence: high
-    references:
-      - crockford_2019
-      - girardbuttoz_2022
+    references: [crockford_2019, girardbuttoz_2022]
   - name: whimper
-    acoustic_keywords:
-      - high_frequency
-      - tonal
-      - quiet
-      - short
-      - repetitive
-    acoustic_description: Soft, high-pitched, plaintive notes, often repeated and less intense than full screams.
-    semantic_keywords:
-      - distress
-      - begging
-      - caregiving
-      - affiliation
+    acoustic_keywords: [high_frequency, tonal, quiet, short, repetitive]
+    acoustic_description: Soft high-pitched plaintive notes, often repeated and less intense than full screams.
+    semantic_keywords: [distress, begging, caregiving, affiliation]
     semantic_description: Often associated with mild distress, appeasement, infant or juvenile need, or solicitation of tolerance and care from others.
     confidence: medium
-    references:
-      - crockford_2019
-      - girardbuttoz_2022
+    references: [crockford_2019, girardbuttoz_2022]
   - name: laugh
-    alternative_names:
-      - play laugh
-    acoustic_keywords:
-      - broadband
-      - noisy
-      - pulsed
-      - repetitive
-      - short
-    acoustic_description: A breathy, pulsed, staccato series of exhaled and inhaled noisy elements, often rhythmically repeated during active interaction.
-    semantic_keywords:
-      - play
-      - affiliation
+    alternative_names: [play laugh]
+    acoustic_keywords: [broadband, noisy, pulsed, repetitive, short]
+    acoustic_description: A breathy pulsed staccato series of exhaled and inhaled noisy elements, often rhythmically repeated during active interaction.
+    semantic_keywords: [play, affiliation]
     semantic_description: Produced during rough-and-tumble play, tickling, and other positively valenced playful interactions.
     confidence: medium
-    references:
-      - crockford_2019
+    references: [crockford_2019]
 references:
-  humle_2016:
-    citation: "Humle, T., Maisels, F., Oates, J.F., Plumptre, A., and Williamson, E.A. 2016. Pan troglodytes. The IUCN Red List of Threatened Species 2016: e.T15933A17964454."
-    url: https://dx.doi.org/10.2305/IUCN.UK.2016-2.RLTS.T15933A17964454.en
-    doi: 10.2305/IUCN.UK.2016-2.RLTS.T15933A17964454.en
   crockford_2019:
     citation: "Crockford, C. 2019. Why does the chimpanzee vocal repertoire remain poorly understood and what can be done about it? In The Chimpanzees of the Tai Forest, pp. 394-409."
     url: https://doi.org/10.1017/9781108674218.025
@@ -204,6 +103,8 @@ references:
     citation: "Girard-Buttoz, C., Surbeck, M., Samuni, L., Crockford, C., Townsend, S.W., Fruth, B., and Gruber, T. 2022. Chimpanzees produce diverse vocal sequences with ordered and recombinatorial properties. Communications Biology 5:410."
     url: https://doi.org/10.1038/s42003-022-03350-8
     doi: 10.1038/s42003-022-03350-8
+  goodall_1986:
+    citation: "Goodall, J. 1986. The Chimpanzees of Gombe: Patterns of Behavior. Harvard University Press."
   laporte_zuberbuhler_2010:
     citation: "Laporte, M.N.C. and Zuberbuhler, K. 2010. Vocal greeting behaviour in wild chimpanzee females. Animal Behaviour 80:467-473."
     doi: 10.1016/j.anbehav.2010.06.005
@@ -220,3 +121,7 @@ provenance:
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft for chimpanzee vocal repertoire using broad, relatively stable call classes and conservative confidence labels for uncertain boundaries.
+  - timestamp: "2026-06-11T10:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added pant bark as an obvious major display call and lightly tightened labels around established chimpanzee call classes.

@@ -9,32 +9,94 @@ taxonomy:
   genus: Urocitellus
   species: beldingi
 calls:
+  - name: whistle alarm call
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - frequency_modulated
+    acoustic_description: A sustained tonal alarm call with clear narrow-band structure and relatively long duration.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used especially in response to aerial predators and other threats best handled by immediate vigilance or retreat.
+    confidence: high
+    references:
+      - mateo_2010
+      - mcrae_2020
   - name: trill alarm call
-    acoustic_keywords: [high_frequency, tonal, long, loud, frequency_modulated]
-    acoustic_description: A sustained tonal alarm call with clear structure and relatively long duration.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Used especially in response to aerial or uncertain threats to warn conspecifics.
+    alternative_names:
+      - churr alarm call
+      - trill
+    acoustic_keywords:
+      - repetitive
+      - tonal
+      - loud
+      - short
+      - frequency_modulated
+    acoustic_description: A rapid series of alarm notes, longer as a bout than a single whistle and acoustically associated with repeated elements.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - attention
+    semantic_description: Often associated with terrestrial predators or close high-risk situations.
     confidence: high
-  - name: churr alarm call
-    acoustic_keywords: [repetitive, abrupt, noisy, short, broadband]
-    acoustic_description: A rapid series of harsher short notes with less tonality than the trill.
-    semantic_keywords: [alarm, predator, threat, attention]
-    semantic_description: Often associated with terrestrial predators or closer-range high-risk situations.
-    confidence: high
-  - name: contact call
-    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
-    acoustic_description: A softer and shorter local call than the main alarm repertoire.
-    semantic_keywords: [contact, group_coordination, affiliation]
-    semantic_description: Used in lower-arousal local social communication.
+    references:
+      - leger_etal_1984
+      - mcrae_2020
+  - name: chirp alarm call
+    acoustic_keywords:
+      - short
+      - tonal
+      - loud
+      - abrupt
+      - harmonic
+    acoustic_description: A short narrow-band alarm note, less extended than whistles and less repetitive than trill bouts.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Used for lower-urgency terrestrial disturbance, humans, or lingering vigilance after a predator has been detected.
     confidence: medium
+    references:
+      - exploresound
+      - leger_etal_1984
   - name: distress squeal
-    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - abrupt
+      - short
     acoustic_description: A harsh high-pitched call with abrupt onset and strong distress quality.
-    semantic_keywords: [distress, attention, predator]
+    semantic_keywords:
+      - distress
+      - attention
+      - predator
     semantic_description: Produced in capture or acute danger situations.
     confidence: medium
+references:
+  exploresound:
+    citation: Explore Sound. Ground squirrels have voices that are similar to those of their relatives.
+    url: https://exploresound.org/2020/01/ground-squirrels-have-voices-that-are-similar-to-those-of-their-relatives/
+  leger_etal_1984:
+    citation: Leger, D.W., Berney-Key, S.D., and Sherman, P.W. 1984. Vocalizations of Belding's ground squirrels. Animal Behaviour 32(3):753-764.
+  mateo_2010:
+    citation: Mateo, J.M. 2010. Alarm calls elicit predator-specific physiological responses in juvenile Belding's ground squirrels. Animal Behaviour 80(6):1093-1098.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2936140/
+    doi: 10.1016/j.anbehav.2010.08.002
+  mcrae_2020:
+    citation: "McRae, T.R. and Green, S.M. 2020. A review of squirrel alarm-calling behavior: what we know and what we do not know. Animal Behavior and Cognition 7(2):168-191."
+    url: https://www.animalbehaviorandcognition.org/uploads/journals/27/AB_C_2020_Vol7%282%29_McRae.pdf
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for Belding's ground squirrel emphasizing the classic trill versus churr alarm system.
+  - timestamp: "2026-06-11T11:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Rebuilt the repertoire around the better-supported whistle, trill or churr, and chirp alarm classes and removed the unsupported generic contact placeholder.

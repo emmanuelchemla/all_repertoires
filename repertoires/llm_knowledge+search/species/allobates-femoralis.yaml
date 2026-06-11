@@ -11,51 +11,45 @@ taxonomy:
 calls:
   - name: advertisement call
     acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
-    acoustic_description: A repeated breeding call delivered in bouts with stable temporal patterning.
+    acoustic_description: A repeated breeding call delivered in bouts with stable temporal patterning and clear tonal structure.
     semantic_keywords: [courtship, mating, attention]
-    semantic_description: Used by males to attract females and advertise occupancy of calling sites.
+    semantic_description: Used by territorial males to attract females and advertise occupied calling sites.
     confidence: high
-    references:
-      - allobates_amphibiaweb
-      - allobates_courtship
+    references: [rodriguezlopez_etal_2019, amphibiaweb_femoralis]
   - name: territorial call
     acoustic_keywords: [abrupt, repetitive, tonal, loud, graded]
     acoustic_description: A more forceful and locally directed call than the advertisement call.
     semantic_keywords: [territorial, aggression, attention]
-    semantic_description: Used in male-male spacing and competitive interactions.
+    semantic_description: Used in male-male spacing and competitive interactions over calling territories.
     confidence: medium
-    references:
-      - allobates_advertisement
+    references: [rodriguezlopez_etal_2019]
   - name: courtship call
     alternative_names: [mating call]
     acoustic_keywords: [short, tonal, repetitive, quiet, graded]
-    acoustic_description: A lower-amplitude call than advertisement, used during close-range reproductive interaction.
+    acoustic_description: A lower-amplitude call than advertisement, used in close-range reproductive interaction.
     semantic_keywords: [courtship, mating, affiliation]
-    semantic_description: Used when interacting directly with potential mates at close range.
-    confidence: medium
-    references:
-      - allobates_courtship
+    semantic_description: Used during prolonged close male-female courtship within the male territory.
+    confidence: high
+    references: [montanarin_etal_2011, ringler_etal_2020]
   - name: release call
     acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
-    acoustic_description: A brief call produced in response to unwanted clasping or interference.
+    acoustic_description: A brief protest-like call produced in response to unwanted clasping or close physical interference.
     semantic_keywords: [submission, attention, mating]
     semantic_description: Signals inappropriate contact and promotes release.
     confidence: low
-    references:
-      - allobates_anuran_general
 references:
-  allobates_amphibiaweb:
+  amphibiaweb_femoralis:
     citation: "AmphibiaWeb. Allobates femoralis account."
     url: https://amphibiaweb.org/cgi/amphib_query?where-genus=Allobates&where-species=femoralis
-  allobates_courtship:
+  montanarin_etal_2011:
     citation: "Montanarin, A., Kaefer, I.L., and Lima, A.P. 2011. Courtship and mating behaviour of the brilliant-thighed frog Allobates femoralis from Central Amazonia."
     url: https://www.tandfonline.com/doi/full/10.1080/03949370.2011.554884
-  allobates_advertisement:
-    citation: "Rodriguez-Lopez, C., et al. 2019. Sound Radiation Pattern of the Advertisement Call of the Territorial Frog Allobates femoralis."
+  ringler_etal_2020:
+    citation: "Ringler, E., Ursprung, E., and Ringler, M. 2020. Spatio-Temporal Characteristics of the Prolonged Courtship in Brilliant-Thighed Poison Frogs, Allobates femoralis."
+    url: https://bioone.org/journals/Herpetologica/volume-75/issue-4/Herpetologica-D-19-00010.1/Spatio-Temporal-Characteristics-of-the-Prolonged-Courtship-in-Brilliant-Thighed/10.1655/Herpetologica-D-19-00010.1.pdf
+  rodriguezlopez_etal_2019:
+    citation: "Rodriguez-Lopez, C., Narins, P.M., and Gridi-Papp, M. 2019. Sound Radiation Pattern of the Advertisement Call of the Territorial Frog Allobates femoralis."
     url: https://pubmed.ncbi.nlm.nih.gov/31722233/
-  allobates_anuran_general:
-    citation: "Bee, M.A., and Gerhardt, H.C. 2017. The role of temporal call structure in species recognition of male anurans."
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5321600/
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
@@ -65,3 +59,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added independent species-specific references and clarified the close-range mating-call labeling without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T12:25:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision strengthened species-specific courtship support and kept release calling explicitly low confidence.

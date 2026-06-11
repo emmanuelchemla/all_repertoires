@@ -9,120 +9,59 @@ taxonomy:
   genus: Agalychnis
   species: spurrelli
 calls:
-- name: advertisement call
-  acoustic_keywords:
-  - tonal
-  - repetitive
-  - loud
-  - long
-  - harmonic
-  acoustic_description: A repeated mating-season call with relatively stable tonal structure delivered in bouts.
-  semantic_keywords:
-  - courtship
-  - mating
-  - attention
-  semantic_description: Used by males to attract females at breeding sites.
-  confidence: medium
-  references:
-  - agalychnis_repertoire
-- name: territorial call
-  acoustic_keywords:
-  - abrupt
-  - repetitive
-  - tonal
-  - loud
-  - graded
-  acoustic_description: A more forceful and locally directed call than the main advertisement signal.
-  semantic_keywords:
-  - territorial
-  - aggression
-  - attention
-  semantic_description: Used in male-male spacing and conflict at calling sites.
-  confidence: low
-  references:
-  - agalychnis_repertoire
-- name: release call
-  acoustic_keywords:
-  - short
-  - abrupt
-  - noisy
-  - repetitive
-  - high_frequency
-  acoustic_description: A brief high-intensity call produced during unwanted clasping or close physical interference.
-  semantic_keywords:
-  - submission
-  - attention
-  - mating
-  semantic_description: Used to terminate inappropriate amplexus or close contact.
-  confidence: low
-  references:
-  - phyllomedusidae_release
-- name: courtship call
-  acoustic_keywords:
-  - tonal
-  - repetitive
-  - quiet
-  - short
-  - graded
-  acoustic_description: A lower-amplitude close-range call variant quieter than the main advertisement call and produced during direct interaction with potential mates.
-  semantic_keywords:
-  - courtship
-  - mating
-  - affiliation
-  semantic_description: Used during close-range reproductive interaction when males and females are in immediate proximity.
-  confidence: low
-  references:
-  - agalychnis_repertoire
-- name: aggressive call A
-  acoustic_keywords:
-  - abrupt
-  - noisy
-  - broadband
-  - short
-  - repetitive
-  acoustic_description: A short harsh aggressive signal distinct from the advertisement call and produced in escalated male-male interactions at close range.
-  semantic_keywords:
-  - territorial
-  - aggression
-  - attention
-  semantic_description: Used in aggressive spacing and direct conflict between neighboring calling males.
-  confidence: medium
-  references:
-  - agalychnis_repertoire
-- name: aggressive call B
-  acoustic_keywords:
-  - abrupt
-  - noisy
-  - broadband
-  - short
-  - repetitive
-  - graded
-  acoustic_description: A second aggressive call variant, harsher and more escalated than advertisement calls and associated with high-density choruses and close male proximity.
-  semantic_keywords:
-  - territorial
-  - aggression
-  - attention
-  semantic_description: Used in escalated male-male competition when calling sites are contested.
-  confidence: medium
-  references:
-  - agalychnis_repertoire
+  - name: advertisement call
+    alternative_names: [single-note moan]
+    acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
+    acoustic_description: A repeated, single-note, low-pitched moaning call delivered in bouts with relatively stable tonal structure.
+    semantic_keywords: [courtship, mating, attention]
+    semantic_description: Used by males to attract females and advertise presence at breeding sites.
+    confidence: high
+    references: [rojasnajera_etal_2022, amphibiaweb_spurrelli]
+  - name: aggressive call A
+    acoustic_keywords: [abrupt, noisy, pulsed, short, repetitive]
+    acoustic_description: A long-pulsed single-note aggressive signal that is harsher and more forceful than the advertisement call.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in close male-male spacing and escalation at crowded calling sites.
+    confidence: high
+    references: [rojasnajera_etal_2022]
+  - name: aggressive call B
+    acoustic_keywords: [abrupt, noisy, broadband, multi_component, repetitive]
+    acoustic_description: A multi-note aggressive call with harsher, more abrupt structure than the advertisement call.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in escalated male-male competition when neighboring males are in close proximity.
+    confidence: high
+    references: [rojasnajera_etal_2022]
+  - name: release call
+    acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
+    acoustic_description: A brief, high-intensity protest call produced during unwanted clasping or close physical interference.
+    semantic_keywords: [submission, attention, mating]
+    semantic_description: Used to terminate inappropriate amplexus or forced contact.
+    confidence: medium
+    references: [forti_etal_2020]
 references:
-  agalychnis_repertoire:
-    citation: "Rojas-Nájera, J., et al. 2020. Acoustic Repertoire and Calling Behavior of the Gliding Treefrog Agalychnis spurrelli."
+  rojasnajera_etal_2022:
+    citation: "Rojas-Najera, J., Cardenas-Henao, H., and Amézquita, A. 2022. Acoustic Repertoire and Calling Behavior of the Gliding Treefrog Agalychnis spurrelli."
     url: https://bioone.org/journals/south-american-journal-of-herpetology/volume-17/issue-1/SAJH-D-18-00040.1/Acoustic-Repertoire-and-Calling-Behavior-of-the-Gliding-Treefrog-Agalychnis/10.2994/SAJH-D-18-00040.1.full
-  phyllomedusidae_release:
-    citation: "Forti, L.R., et al. 2018. Release calls of four species of Phyllomedusidae (Amphibia, Anura)."
+  amphibiaweb_spurrelli:
+    citation: "AmphibiaWeb. Agalychnis spurrelli account."
+    url: https://amphibiaweb.org/species/621
+  forti_etal_2020:
+    citation: "Forti, L.R., Tacioli, L., Martins, M., and Toledo, L.F. 2020. Release calls of four species of Phyllomedusidae (Amphibia, Anura)."
     url: https://herpetozoa.pensoft.net/article/35729/
 provenance:
-- timestamp: '2026-06-10T21:45:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for gliding leaf frog using standard anuran advertisement, territorial, and release-call categories.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
-- timestamp: '2026-06-11T00:55:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Added species-specific aggressive call variants and explicit references from independent frog repertoire sources.
+  - timestamp: '2026-06-10T21:45:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for gliding leaf frog using standard anuran advertisement, territorial, and release-call categories.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T00:55:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Added species-specific aggressive call variants and explicit references from independent frog repertoire sources.
+  - timestamp: '2026-06-11T12:25:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision removed generic duplicate categories and centered the repertoire on the species-specific advertisement plus two aggressive calls and release call.

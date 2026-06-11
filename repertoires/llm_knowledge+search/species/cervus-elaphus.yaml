@@ -16,14 +16,16 @@ calls:
   - long
   - harmonic
   - repetitive
-  acoustic_description: A powerful rutting call with sustained voiced energy and strong low-frequency emphasis.
+  acoustic_description: A powerful rutting call with sustained voiced energy and strong
+    low-frequency emphasis.
   semantic_keywords:
   - courtship
   - mating
   - territorial
   - display
   - identity
-  semantic_description: Used mainly by males during the rut to advertise fighting ability and attract or retain females.
+  semantic_description: Used mainly by males during the rut to advertise fighting
+    ability and attract or retain females.
   confidence: high
 - name: bark
   acoustic_keywords:
@@ -32,7 +34,8 @@ calls:
   - loud
   - short
   - noisy
-  acoustic_description: A sharp abrupt call with broad spectral energy and more alarm-like quality than a roar.
+  acoustic_description: A sharp abrupt call with broad spectral energy and more alarm-like
+    quality than a roar.
   semantic_keywords:
   - alarm
   - attention
@@ -46,7 +49,8 @@ calls:
   - short
   - quiet
   - frequency_modulated
-  acoustic_description: A softer shorter call than the main male roar, with clearer tonal structure.
+  acoustic_description: A softer shorter call than the main male roar, with clearer
+    tonal structure.
   semantic_keywords:
   - contact
   - affiliation
@@ -60,7 +64,8 @@ calls:
   - noisy
   - graded
   - harmonic
-  acoustic_description: A lower-intensity but sustained call related to social or reproductive arousal.
+  acoustic_description: A lower-intensity but sustained call related to social or
+    reproductive arousal.
   semantic_keywords:
   - mating
   - display
@@ -74,20 +79,60 @@ calls:
   - short
   - repetitive
   - loud
-  acoustic_description: A higher-pitched and more repetitive call than adult roars, with clearer tonal structure.
+  acoustic_description: A higher-pitched and more repetitive call than adult roars,
+    with clearer tonal structure.
   semantic_keywords:
   - begging
   - caregiving
   - contact
   - attention
-  semantic_description: Used by calves to maintain contact with and solicit attention from their mothers.
+  semantic_description: Used by calves to maintain contact with and solicit attention
+    from their mothers.
   confidence: medium
+- name: distress squeal
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - long
+  - graded
+  acoustic_description: A high, strained vocalization with rising harsh energy, acoustically
+    distinct from rutting roars and brief alarm barks.
+  semantic_keywords:
+  - distress
+  - attention
+  - caregiving
+  semantic_description: Produced in acute distress, restraint, or separation situations,
+    especially by younger individuals.
+  confidence: medium
+- name: contact grunt
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - quiet
+  - repetitive
+  acoustic_description: A brief low call with limited modulation and lower amplitude
+    than a bark or roar.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used at close range in low-arousal social interactions and
+    local coordination.
+  confidence: low
 provenance:
 - timestamp: '2026-06-10T22:15:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for red deer centered on the well-known rut roar system.
+  notes: Broad exploratory draft for red deer centered on the well-known rut roar
+    system.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

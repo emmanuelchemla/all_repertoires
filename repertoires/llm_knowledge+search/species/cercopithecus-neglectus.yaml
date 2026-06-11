@@ -9,82 +9,177 @@ taxonomy:
   genus: Cercopithecus
   species: neglectus
 calls:
-- name: boom
-  acoustic_keywords:
-  - low_frequency
-  - loud
-  - short
-  - pulsed
-  - repetitive
-  acoustic_description: A low pulsed call with strong amplitude and relatively simple acoustic structure.
-  semantic_keywords:
-  - alarm
-  - attention
-  - group_coordination
-  semantic_description: Used in conspicuous long-range alerting and social coordination.
-  confidence: medium
-- name: bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Produced in disturbance and danger contexts.
-  confidence: medium
-- name: contact call
-  acoustic_keywords:
-  - short
-  - tonal
-  - quiet
-  - repetitive
-  - graded
-  acoustic_description: A softer short-range call than barks or booms, with less harsh structure.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - group_coordination
-  semantic_description: Used in ordinary local social communication.
-  confidence: low
-- name: scream
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - long
-  - abrupt
-  acoustic_description: A high-intensity noisy call with strong arousal.
-  semantic_keywords:
-  - distress
-  - aggression
-  - attention
-  semantic_description: Produced in severe conflict or immediate danger.
-  confidence: low
-- name: alarm bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy, more forceful than routine local calls.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Produced in disturbance and danger contexts.
-  confidence: medium
+  - name: boom
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - short
+      - pulsed
+      - repetitive
+    acoustic_description: Low-frequency pulsed calls with simple structure and strong amplitude, typically given in short bouts.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - attention
+      - identity
+    semantic_description: Used mainly by adult males in long-range spacing and territorial advertisement.
+    confidence: high
+    references:
+      - animal_diversity_web
+      - bouchet_etal_2012
+  - name: contact grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - tonal
+      - graded
+      - quiet
+    acoustic_description: Short low-pitched grunts with smoother structure than booms and without the intensity of distress calls.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Used in ordinary local social communication among pair or group members.
+    confidence: medium
+    references:
+      - bouchet_etal_2012
+  - name: compound contact call
+    alternative_names:
+      - grunt-plus-suffix call
+      - multi-unit contact call
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - tonal
+      - multi_component
+      - graded
+    acoustic_description: A low-pitched grunt-like first unit followed optionally by a higher-pitched second component, producing a multi-unit contact call.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Included as a distinct multi-unit contact class because published comparative work specifically notes optional multi-unit contact calls in this species.
+    confidence: medium
+    references:
+      - lemasson_etal_2013
+  - name: threat call
+    alternative_names:
+      - aggressive call
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - short
+      - repetitive
+      - abrupt
+    acoustic_description: A harsh noisy call type used in short agonistic bouts, acoustically rougher than the tonal contact calls.
+    semantic_keywords:
+      - aggression
+      - threat
+      - attention
+    semantic_description: Produced by aggressors during antagonistic interactions and treated as a distinct major call class in comparative analyses of the species' repertoire.
+    confidence: medium
+    references:
+      - bouchet_etal_2012
+      - bouchet_etal_2013
+  - name: warning bark
+    alternative_names:
+      - bark
+      - alarm bark
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - loud
+    acoustic_description: A short, forceful bark with abrupt onset and broad spectral energy, more conspicuous than quiet contact grunts.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: Used in response to threats and disturbance; included conservatively as the species' short warning/alarm call alongside the male boom.
+    confidence: medium
+    references:
+      - neprimate_conservancy_2023
+  - name: isolation call
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - repetitive
+      - loud
+      - graded
+    acoustic_description: Repeated higher-pitched calls that stand out from adult low calls and are suited to eliciting attention from caregivers.
+    semantic_keywords:
+      - distress
+      - caregiving
+      - contact
+    semantic_description: Produced by young individuals when separated from companions or caretakers.
+    confidence: high
+    references:
+      - animal_diversity_web
+  - name: scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - graded
+    acoustic_description: High-arousal noisy calls with sustained duration and strong amplitude.
+    semantic_keywords:
+      - distress
+      - aggression
+      - attention
+    semantic_description: Produced in severe conflict, restraint, or intense distress.
+    confidence: medium
+    references:
+      - bouchet_etal_2012
+references:
+  animal_diversity_web:
+    citation: Animal Diversity Web. De Brazza's monkey (Cercopithecus neglectus) account.
+    url: https://animaldiversity.org/accounts/Cercopithecus_neglectus/
+  bouchet_etal_2012:
+    citation: Bouchet, H., Blois-Heulin, C., and Lemasson, A. 2012. Age- and sex-specific patterns of vocal behavior in De Brazza's monkeys (Cercopithecus neglectus). American Journal of Primatology 74(1):12-18.
+    url: https://pubmed.ncbi.nlm.nih.gov/21932330/
+    doi: 10.1002/ajp.21002
+  lemasson_etal_2013:
+    citation: Lemasson, A., Remeuf, K., Rossard, A., and Zimmermann, E. 2013. Cross-taxa similarities in affect-induced changes of vocal behavior and voice in arboreal monkeys. PLOS ONE 7(9):e45106.
+    url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0045106
+    doi: 10.1371/journal.pone.0045106
+  bouchet_etal_2013:
+    citation: "Bouchet, H., Blois-Heulin, C., Pellier, A.-S., Zuberbuhler, K., and Lemasson, A. 2013. Social complexity parallels vocal complexity: a comparison of three non-human primate species. Frontiers in Psychology 4:390."
+    url: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2013.00390/full
+    doi: 10.3389/fpsyg.2013.00390
+  neprimate_conservancy_2023:
+    citation: New England Primate Conservancy. 2023. De Brazza's Monkey (Cercopithecus neglectus) species profile.
+    url: https://neprimateconservancy.org/debrazzas-monkey/
 provenance:
-- timestamp: '2026-06-10T21:45:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for De Brazza's monkey using conservative guenon alarm and local social categories.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for De Brazza's monkey using conservative guenon alarm and local social categories.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Replaced unsupported alarm-bark placeholders with the better-supported boom, contact, multi-unit contact, isolation, and distress classes from stable species sources and comparative vocal literature.
+  - timestamp: "2026-06-11T13:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass added the comparative-repertoire threat call and a conservative warning bark class while keeping the contact-centered structure intact.

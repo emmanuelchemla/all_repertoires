@@ -10,148 +10,102 @@ taxonomy:
   species: catesbeianus
 calls:
   - name: advertisement call
-    alternative_names:
-      - mating call
-      - jug-o-rum call
+    alternative_names: [mating call, jug-o-rum call]
     scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
+      life_stages: [adult]
+      sexes: [male]
       population_specific: false
       note: ""
-    acoustic_keywords:
-      - low_frequency
-      - loud
-      - long
-      - repetitive
-      - harmonic
-    acoustic_description: A loud, low-pitched, multi-note bellow or rumbling drone, often rendered as jug-o-rum, built from several quasi-harmonic croak notes in sequence.
-    semantic_keywords:
-      - courtship
-      - mating
-      - territorial
-      - identity
+    acoustic_keywords: [low_frequency, loud, long, repetitive, harmonic]
+    acoustic_description: A loud low-pitched multi-note bellow or rumbling drone, often rendered as jug-o-rum, built from several quasi-harmonic croak notes in sequence.
+    semantic_keywords: [courtship, mating, territorial, identity]
     semantic_description: Main adult male breeding-season signal used to attract females and broadcast occupancy to nearby males in choruses.
     confidence: high
-    references:
-      - capranica_1968
-      - bee_2004
-      - animaldiversity_bullfrog
-  - name: aggressive warning call
-    alternative_names:
-      - aggressive call
-      - territorial call
-      - warning call
+    references: [capranica_1968, bee_2004, adw_bullfrog]
+  - name: territorial call
+    alternative_names: [male territorial call, challenge call]
     scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
+      life_stages: [adult]
+      sexes: [male]
       population_specific: false
       note: ""
-    acoustic_keywords:
-      - abrupt
-      - short
-      - broadband
-      - loud
-    acoustic_description: Shorter, more abrupt and spit-like call than the advertisement bellow, lacking the prolonged multi-croak structure.
-    semantic_keywords:
-      - aggression
-      - threat
-      - spacing
-      - territorial
+    acoustic_keywords: [low_frequency, short, abrupt, loud]
+    acoustic_description: A shorter low-pitched challenge call distinct from the long advertisement bellow and lacking the full multi-croak jug-o-rum sequence.
+    semantic_keywords: [territorial, aggression, spacing, attention]
+    semantic_description: Used by resident males to signal that a site is occupied and to challenge intruding bullfrogs before or during territorial escalation.
+    confidence: medium
+    references: [capranica_1968]
+  - name: aggressive warning call
+    alternative_names: [aggressive call, territorial call, warning call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [abrupt, short, broadband, loud]
+    acoustic_description: A shorter, more abrupt, spit-like call than the advertisement bellow, lacking the prolonged multi-croak structure.
+    semantic_keywords: [aggression, threat, spacing, territorial]
     semantic_description: Used in male-male conflict and territorial escalation when a rival approaches or social tension rises in the chorus.
     confidence: high
-    references:
-      - capranica_1968
-      - musicofnature_bullfrog
+    references: [capranica_1968, musicofnature_bullfrog]
   - name: encounter call
-    alternative_names:
-      - approach call
-      - encounter note
+    alternative_names: [approach call, encounter note]
     scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
+      life_stages: [adult]
+      sexes: [male]
       population_specific: false
       note: ""
-    acoustic_keywords:
-      - short
-      - abrupt
-      - broadband
-      - repetitive
-    acoustic_description: Brief call type associated with close social encounters, simpler and shorter than the advertisement call and often given in rapid interaction sequences.
-    semantic_keywords:
-      - aggression
-      - attention
-      - spacing
-    semantic_description: Given during close approach and assessment between rival males, typically early in an agonistic interaction before or during escalation.
+    acoustic_keywords: [short, abrupt, broadband, repetitive]
+    acoustic_description: A brief call type associated with close social encounters, simpler and shorter than the advertisement call and often given in rapid interaction sequences.
+    semantic_keywords: [aggression, attention, spacing]
+    semantic_description: Given during close approach and assessment between rival males, typically early in an agonistic interaction.
     confidence: medium
-    references:
-      - capranica_1968
+    references: [capranica_1968]
   - name: release call
-    alternative_names:
-      - release note
-    acoustic_keywords:
-      - short
-      - abrupt
-      - broadband
-      - repetitive
+    alternative_names: [release note]
+    acoustic_keywords: [short, abrupt, broadband, repetitive]
+    acoustic_description: Short repeated protest-like calls with simple abrupt structure rather than a long resonant bellow.
+    semantic_keywords: [submission, distress, attention]
     semantic_description: Produced when an individual is clasped and needs to terminate unwanted amplexus or forceful grasping.
-    acoustic_description: Short, repeated protest-like calls with simple abrupt structure rather than a long resonant bellow.
-    semantic_keywords:
-      - submission
-      - distress
-      - attention
     confidence: high
-    references:
-      - capranica_1968
-      - animaldiversity_frogcalls
+    references: [capranica_1968, adw_frogcalls]
   - name: distress squeak
-    alternative_names:
-      - alarm squeak
-      - dive squeak
-    acoustic_keywords:
-      - high_frequency
-      - short
-      - abrupt
-      - loud
-    acoustic_description: A sudden high, sharp squeak, much shorter and higher-pitched than breeding calls.
-    semantic_keywords:
-      - distress
-      - alarm
-      - attention
+    alternative_names: [alarm squeak, dive squeak, chirping alarm call]
+    acoustic_keywords: [high_frequency, short, abrupt, loud]
+    acoustic_description: A sudden high sharp squeak, much shorter and higher-pitched than breeding calls.
+    semantic_keywords: [distress, alarm, attention]
     semantic_description: Heard when a startled individual, especially a juvenile at the water edge, flees or dives suddenly after disturbance.
     confidence: medium
-    references:
-      - wdfw_bullfrog
-      - whatfrogs_bullfrog
+    references: [musicofnature_bullfrog, californiaherps_bullfrog]
 references:
-  animaldiversity_bullfrog:
-    citation: Animal Diversity Web. Lithobates catesbeianus species account.
+  adw_bullfrog:
+    citation: "Animal Diversity Web. Lithobates catesbeianus species account."
     url: https://animaldiversity.org/accounts/Lithobates_catesbeianus/
-  animaldiversity_frogcalls:
-    citation: Animal Diversity Web. Frog Calls collection overview.
+  adw_frogcalls:
+    citation: "Animal Diversity Web. Frog Calls collection overview."
     url: https://animaldiversity.org/collections/frog_calls/
   bee_2004:
-    citation: "Bee, M.A. 2004. Within-individual variation in bullfrog vocal signals: implications for a vocally mediated social recognition system. Journal of the Acoustical Society of America 116(6):3770-3781."
+    citation: "Bee, M.A. 2004. Within-individual variation in bullfrog vocal signals: implications for a vocally mediated social recognition system."
     doi: 10.1121/1.1811257
+  californiaherps_bullfrog:
+    citation: "CaliforniaHerps. Sounds of American Bullfrog."
+    url: https://www.californiaherps.com/frogs/pages/l.catesbeianus.sounds.html
   capranica_1968:
-    citation: Capranica, R.R. 1968. The vocal repertoire of the bullfrog (Rana catesbeiana). Behaviour 31(3-4):302-325.
+    citation: "Capranica, R.R. 1968. The vocal repertoire of the bullfrog (Rana catesbeiana). Behaviour 31:302-325."
     doi: 10.1163/156853968X00306
   musicofnature_bullfrog:
-    citation: "Music of Nature. Calls of frogs and toads of the Northeast: Bullfrog."
+    citation: "Music of Nature. Calls of Frogs and Toads of the Northeast: Bullfrog."
     url: https://musicofnature.com/calls-of-frogs-and-toads-of-the-northeast/
-  wdfw_bullfrog:
-    citation: Washington Department of Fish and Wildlife. American bullfrog species page.
-    url: https://wdfw.wa.gov/species-habitats/invasive/rana-catesbeiana
-  whatfrogs_bullfrog:
-    citation: Whatcom County Amphibian Monitoring Program. Identifying calls.
-    url: https://whatfrogs.wordpress.com/identifying-calls/
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft for American bullfrog, emphasizing the classic Capranica repertoire categories with cautious modern supporting sources.
+  - timestamp: "2026-06-11T12:25:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision clarified the named alarm squeak category and tightened reference support for the classic bullfrog repertoire.
+  - timestamp: "2026-06-11T13:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass restored a distinct territorial challenge call supported by the classic bullfrog repertoire literature, separate from warning and encounter calls.

@@ -19,14 +19,14 @@ calls:
       - tonal
       - noisy
       - graded
-    acoustic_description: A variable call composed of multiple note classes, often ending in one or more dee notes and showing flexible ordering and note number across renditions.
+    acoustic_description: Variable call composed of multiple note classes, often ending in one or more dee notes and showing flexible note number and ordering.
     semantic_keywords:
       - contact
       - group_coordination
       - alarm
       - attention
       - combinatorial
-    semantic_description: Core social call used in flock cohesion, information sharing, and predator-related signalling, with changes in note structure linked to context.
+    semantic_description: Core social call used in flock cohesion, information sharing, and predator-related signaling, with note structure varying by context.
     confidence: high
     references:
       - ficken_etal_1978
@@ -47,13 +47,13 @@ calls:
       - short
       - repetitive
       - loud
-    acoustic_description: Short, clear whistled song typically built from two notes in fixed order and often repeated from exposed perches.
+    acoustic_description: Short clear whistled song usually built from two notes in fixed order and repeated from exposed perches.
     semantic_keywords:
       - territorial
       - courtship
       - mating
       - identity
-    semantic_description: Primary adult male song for territory advertisement and mate attraction, especially at dawn during the breeding season.
+    semantic_description: Primary adult male song for territory advertisement and mate attraction, especially in the breeding season.
     confidence: high
     references:
       - foote_etal_2008
@@ -68,13 +68,13 @@ calls:
       - repetitive
       - abrupt
       - loud
-    acoustic_description: Rapid, harsh, rattling series of notes with noisy broadband structure and marked acoustic complexity.
+    acoustic_description: Rapid harsh rattling series of notes with noisy broadband structure and marked acoustic complexity.
     semantic_keywords:
       - aggression
       - threat
       - spacing
       - attention
-    semantic_description: Commonly given in agonistic or dominance-related interactions and during assertive social exchanges.
+    semantic_description: Common in agonistic or dominance-related interaction and other assertive social exchanges.
     confidence: medium
     references:
       - ficken_etal_1978
@@ -87,27 +87,86 @@ calls:
       - tonal
       - short
       - quiet
+    acoustic_description: Very high thin short notes that are simpler and less noisy than chick-a-dee calls.
     semantic_keywords:
       - alarm
       - predator
       - attention
-    acoustic_description: Very high, thin, short notes that are simpler and less noisy than chick-a-dee calls.
     semantic_description: Associated with predator warning, especially rapid alerting to aerial or urgent threats.
     confidence: medium
     references:
       - ficken_etal_1978
+      - blackcapped_cornell
+  - name: nest hiss
+    alternative_names:
+      - hissing display
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - loud
+      - short
+    acoustic_description: Explosive hiss-like burst lacking the tonal structure of chick-a-dee calls or fee-bee song.
+    semantic_keywords:
+      - threat
+      - attention
+    semantic_description: Produced by nestlings when an intruder peers into the cavity, functioning as a close-range defensive startle signal.
+    confidence: high
+    references:
+      - blackcapped_cornell
+  - name: begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Persistent thin solicitation calls produced at higher pitch and rate than routine adult calls.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Produced by nestlings and fledglings to solicit feeding and care.
+    confidence: medium
+    references:
+      - ficken_etal_1978
 references:
+  blackcapped_cornell:
+    citation: Cornell Lab of Ornithology. Black-capped Chickadee sounds.
+    url: https://www.allaboutbirds.org/guide/Black-capped_Chickadee/sounds
   ficken_etal_1978:
-    citation: Ficken, M.S., Ficken, R.W., and Witkin, S.R. 1978. Vocal repertoire of the Black-capped Chickadee. Auk 95(1):34-48.
+    citation: "Ficken, M. S., Ficken, R. W., and Witkin, S. R. 1978. Vocal repertoire of the Black-capped Chickadee. Auk 95(1):34-48."
     url: https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=20220&context=auk
   foote_etal_2008:
-    citation: Foote, J.R., Fitzsimmons, L.P., Mennill, D.J., Ratcliffe, L.M., and Sturdy, C.B. 2008. Seasonal and diurnal patterns of black-capped chickadee (Poecile atricapillus) vocal production. Behaviour 145(3):371-386.
+    citation: "Foote, J. R., Fitzsimmons, L. P., Mennill, D. J., Ratcliffe, L. M., and Sturdy, C. B. 2008. Seasonal and diurnal patterns of black-capped chickadee (Poecile atricapillus) vocal production. Behaviour 145(3):371-386."
     url: https://pubmed.ncbi.nlm.nih.gov/18243575/
   templeton_etal_2005:
-    citation: "Templeton, C.N., Greene, E., and Davis, K. 2005. Allometry of alarm calls: black-capped chickadees encode information about predator size. Science 308(5730):1934-1937."
+    citation: "Templeton, C. N., Greene, E., and Davis, K. 2005. Allometry of alarm calls: black-capped chickadees encode information about predator size. Science 308(5730):1934-1937."
     doi: 10.1126/science.1108841
 provenance:
   - timestamp: "2026-06-10T20:10:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft emphasizing the classic chick-a-dee system, fee-bee song, and broad agonistic and alarm-related calls.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass retained the classic Black-capped Chickadee core repertoire while adding an explicit juvenile begging class and tightening wording around major named calls.
+  - timestamp: '2026-06-11T16:15:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Second-pass completeness sweep added the externally described nest hiss defensive sound while keeping broader named call boundaries conservative.

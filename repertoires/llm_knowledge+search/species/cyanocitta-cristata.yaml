@@ -9,83 +9,123 @@ taxonomy:
   genus: Cyanocitta
   species: cristata
 calls:
-- name: jeer call
-  acoustic_keywords:
-  - loud
-  - noisy
-  - broadband
-  - abrupt
-  - short
-  acoustic_description: A harsh conspicuous call with broad spectral energy and abrupt delivery.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Used in disturbance, mobbing, and predator-related contexts.
-  confidence: high
-- name: rattle
-  acoustic_keywords:
-  - repetitive
-  - abrupt
-  - noisy
-  - short
-  - multi_component
-  acoustic_description: A rapid click-like or rattling series with sharp repeated elements.
-  semantic_keywords:
-  - attention
-  - group_coordination
-  - threat
-  semantic_description: Used in local social alerting and sometimes in close territorial or flock interactions.
-  confidence: medium
-- name: whistle
-  acoustic_keywords:
-  - tonal
-  - harmonic
-  - frequency_modulated
-  - long
-  - loud
-  acoustic_description: A clearer, more tonal call than jeer notes, with stronger whistle-like structure.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - identity
-  semantic_description: Used in ordinary social communication and pair or flock contact.
-  confidence: medium
-- name: mimicry sequence
-  acoustic_keywords:
-  - multi_component
-  - tonal
-  - frequency_modulated
-  - repetitive
-  - long
-  acoustic_description: A learned vocal sequence incorporating copied sounds into longer bouts.
-  semantic_keywords:
-  - display
-  - identity
-  - attention
-  - combinatorial
-  semantic_description: Blue jays readily imitate other sounds, and these sequences likely contribute to social signaling and attention capture.
-  confidence: medium
-- name: pump-handle call
-  acoustic_keywords:
-  - repetitive
-  - abrupt
-  - noisy
-  - short
-  - multi_component
-  acoustic_description: A repeated display-like call pattern distinct from the simple jeer and often given with conspicuous body movement.
-  semantic_keywords:
-  - display
-  - territorial
-  - attention
-  semantic_description: Used in socially conspicuous display and territorial advertisement.
-  confidence: medium
+  - name: jeer call
+    acoustic_keywords:
+      - loud
+      - noisy
+      - broadband
+      - abrupt
+      - short
+    acoustic_description: Harsh conspicuous notes with broad spectral energy and abrupt emphatic delivery.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: Common in disturbance, mobbing, and predator-related contexts.
+    confidence: high
+    references:
+      - bluejay_cornell
+  - name: pump-handle call
+    acoustic_keywords:
+      - repetitive
+      - abrupt
+      - noisy
+      - short
+      - multi_component
+    acoustic_description: Repeated rough display-like note pattern, often more stereotyped than a simple jeer.
+    semantic_keywords:
+      - display
+      - territorial
+      - attention
+    semantic_description: Used in conspicuous social display and territorial advertisement.
+    confidence: medium
+    references:
+      - bluejay_cornell
+  - name: rattle
+    acoustic_keywords:
+      - repetitive
+      - abrupt
+      - noisy
+      - short
+      - multi_component
+    acoustic_description: Rapid click-like or rattling series with sharp repeated elements.
+    semantic_keywords:
+      - attention
+      - group_coordination
+      - threat
+    semantic_description: Used in local alerting and socially tense close-range interactions.
+    confidence: medium
+    references:
+      - bluejay_cornell
+  - name: whistle
+    alternative_names:
+      - contact whistle
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - frequency_modulated
+      - long
+      - loud
+    acoustic_description: Clear whistled notes or phrases with stronger tonal structure than jeers or rattles.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - identity
+    semantic_description: Used in ordinary social communication, pair contact, and flock cohesion.
+    confidence: medium
+    references:
+      - bluejay_cornell
+  - name: quiet song
+    alternative_names:
+      - whisper song
+      - soft song
+    acoustic_keywords:
+      - tonal
+      - multi_component
+      - quiet
+      - frequency_modulated
+      - long
+    acoustic_description: Softer variable sequences of whistles and mixed elements given at lower amplitude than loud display calls.
+    semantic_keywords:
+      - affiliation
+      - courtship
+      - display
+      - identity
+    semantic_description: Used in low-intensity close social interaction, including pair-bond and courtship contexts.
+    confidence: medium
+    references:
+      - bluejay_cornell
+  - name: mimicry sequence
+    acoustic_keywords:
+      - multi_component
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - long
+    acoustic_description: Learned mixed sequences incorporating copied sounds into longer bouts.
+    semantic_keywords:
+      - display
+      - identity
+      - attention
+      - combinatorial
+    semantic_description: Blue jays often imitate other sounds, and these sequences function as conspicuous social displays.
+    confidence: medium
+    references:
+      - bluejay_cornell
+references:
+  bluejay_cornell:
+    citation: Cornell Lab of Ornithology. Blue Jay sounds.
+    url: https://www.allaboutbirds.org/guide/Blue_Jay/sounds
 provenance:
-- timestamp: '2026-06-10T21:00:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for blue jay using the characteristic jeer plus common social and mimetic call classes.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-10T21:00:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for blue jay using the characteristic jeer plus common social and mimetic call classes.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass clarified the expected Blue Jay alarm, display, whistle, quiet song, and mimicry classes with stable top-level references.

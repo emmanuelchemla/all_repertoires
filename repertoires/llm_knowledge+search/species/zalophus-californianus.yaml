@@ -9,32 +9,164 @@ taxonomy:
   genus: Zalophus
   species: californianus
 calls:
-  - name: bark
-    acoustic_keywords: [loud, abrupt, broadband, short, repetitive]
-    acoustic_description: A loud explosive bark with abrupt onset and strong broadband energy.
-    semantic_keywords: [territorial, attention, threat, identity]
-    semantic_description: Used especially by males in colony display, spacing, and social advertisement.
-    confidence: high
-  - name: growl
-    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
-    acoustic_description: A rough low call with threat-like quality and variable duration.
-    semantic_keywords: [threat, aggression, attention]
-    semantic_description: Used in close-range warning and conflict.
-    confidence: medium
-  - name: pup call
-    acoustic_keywords: [high_frequency, tonal, repetitive, loud, graded]
-    acoustic_description: A higher-pitched call with stronger tonal structure than adult male barks.
-    semantic_keywords: [contact, caregiving, identity, attention]
-    semantic_description: Used in mother-pup recognition and reunion.
-    confidence: high
-  - name: female call
-    acoustic_keywords: [tonal, harmonic, short, repetitive, loud]
-    acoustic_description: A shorter, more tonal social call than the main male bark.
-    semantic_keywords: [contact, affiliation, caregiving]
-    semantic_description: Used in local social and maternal interactions.
-    confidence: medium
+- name: bark
+  acoustic_keywords:
+  - loud
+  - abrupt
+  - broadband
+  - short
+  - repetitive
+  acoustic_description: A loud explosive bark with abrupt onset and strong broadband
+    energy.
+  semantic_keywords:
+  - territorial
+  - attention
+  - threat
+  - identity
+  semantic_description: Used especially by males in colony display, spacing, and social
+    advertisement.
+  confidence: high
+- name: growl
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - broadband
+  - long
+  - graded
+  acoustic_description: A rough low call with threat-like quality and variable duration.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Used in close-range warning and conflict.
+  confidence: medium
+- name: pup call
+  alternative_names:
+  - pup bleat
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - repetitive
+  - loud
+  - graded
+  acoustic_description: A higher-pitched call with stronger tonal structure than adult
+    male barks.
+  semantic_keywords:
+  - contact
+  - caregiving
+  - identity
+  - attention
+  semantic_description: Used in mother-pup recognition and reunion.
+  confidence: high
+  references:
+  - peterson_bartholomew_1967
+- name: female attraction call
+  alternative_names:
+  - female call
+  - mother attraction call
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - short
+  - repetitive
+  - loud
+  acoustic_description: A shorter, more tonal social call than the main male bark.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - caregiving
+  - identity
+  semantic_description: Used by adult females during local social and especially mother-pup
+    reunion interactions in dense colonies.
+  confidence: medium
+  references:
+  - schusterman_1967
+- name: roar
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - long
+  - noisy
+  - graded
+  acoustic_description: A longer lower-frequency vocalization more sustained than
+    a bark and rougher than mild mother-pup calls.
+  semantic_keywords:
+  - threat
+  - display
+  - territorial
+  - attention
+  semantic_description: Used in high-arousal male display and conflict contexts during
+    territorial or breeding interactions.
+  confidence: medium
+- name: grunt
+  acoustic_keywords:
+  - low_frequency
+  - broadband
+  - short
+  - graded
+  - quiet
+  acoustic_description: A short, lower-amplitude, low-frequency social sound with
+    less explosive onset than a bark and less duration than a growl.
+  semantic_keywords:
+  - contact
+  - attention
+  - spacing
+  semantic_description: Used at close range in routine interaction, low-level warning,
+    or mild social negotiation.
+  confidence: medium
+  references:
+  - seaworld_zalophus
+- name: pup alarm call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - abrupt
+  - repetitive
+  - noisy
+  acoustic_description: A more urgent and harsher pup vocalization than the ordinary
+    reunion bleat, often emitted as repeated high-pitched bursts.
+  semantic_keywords:
+  - alarm
+  - distress
+  - attention
+  - caregiving
+  semantic_description: Produced by pups during acute disturbance, separation, or
+    threat, prompting attention from nearby adults.
+  confidence: medium
+  references:
+  - seaworld_zalophus
+references:
+  peterson_bartholomew_1967:
+    citation: Peterson, R.S. and Bartholomew, G.A. 1967. The natural history and
+      behavior of the California sea lion. American Society of Mammalogists Special
+      Publication.
+  schusterman_1967:
+    citation: Schusterman, R.J. 1967. Mother-infant relations in the California sea
+      lion. Animal Behaviour.
+  seaworld_zalophus:
+    citation: SeaWorld. California sea lion vocalizations and communication overview.
+    url: https://seaworld.org/animals/all-about/california-sea-lion/communication/
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for California sea lion emphasizing colony bark displays and mother-pup communication.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for California sea lion emphasizing colony bark displays
+    and mother-pup communication.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness update added grunt and pup alarm as broad missing
+    colony call classes and consolidated female and maternal reunion signalling into
+    a cleaner attraction-call category.

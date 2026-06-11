@@ -11,30 +11,64 @@ taxonomy:
 calls:
   - name: long call
     acoustic_keywords: [low_frequency, loud, long, repetitive, multi_component]
-    acoustic_description: A prolonged far-carrying sequence of low-frequency elements often preceded or followed by shorter notes.
+    acoustic_description: A prolonged far-carrying sequence of low-frequency pulses and roars, often built from several phrase types and separated by short pauses.
     semantic_keywords: [territorial, spacing, display, identity, attention]
-    semantic_description: Produced especially by flanged males for long-range advertisement, spacing, and social display.
+    semantic_description: Produced especially by flanged males for long-range advertisement, social spacing, and display toward rivals and potential mates.
     confidence: high
+    references: [delgado_2017, mackinnon_1974]
   - name: kiss squeak
     acoustic_keywords: [high_frequency, abrupt, short, repetitive, noisy]
-    acoustic_description: A short high-intensity call produced by suction-like mouth action, often acoustically sharp and abrupt.
+    acoustic_description: A short high-intensity call produced by suction-like mouth action, usually sharp, brief, and sometimes repeated in rapid series.
     semantic_keywords: [alarm, threat, attention]
-    semantic_description: Used in disturbance, fear, or aversive contexts to signal alarm and appear larger or more threatening.
+    semantic_description: Used in disturbance, fear, or aversive contexts and often accompanies efforts to deter threats or appear larger.
     confidence: high
+    references: [hardus_2009, vanschaik_1986]
   - name: grumph
     acoustic_keywords: [low_frequency, short, noisy, abrupt, graded]
-    acoustic_description: A short low call with rough structure and less carrying power than the long call.
+    acoustic_description: A short low rough call with harsher structure and less carrying power than the long call.
     semantic_keywords: [affiliation, contact, attention]
-    semantic_description: Used in close-range social interaction and low-level arousal contexts.
+    semantic_description: Used in close-range social interaction and low-level arousal contexts, including benign nearby engagement.
     confidence: medium
+    references: [delgado_2017]
+  - name: rolling call
+    acoustic_keywords: [low_frequency, pulsed, repetitive, long, loud]
+    acoustic_description: A repeated series of low pulses delivered in an even rhythmic pattern, less elaborate than a full long call but more extended than isolated grumphs.
+    semantic_keywords: [display, attention, spacing]
+    semantic_description: Used in locally aroused display contexts and short-range advertisement, especially by males.
+    confidence: medium
+    references: [delgado_2017, mackinnon_1974]
+  - name: raspberry
+    acoustic_keywords: [broadband, noisy, short, abrupt, repetitive]
+    acoustic_description: A noisy sputtering oral sound with broad spectral energy and a brief percussive quality.
+    semantic_keywords: [attention, play, affiliation]
+    semantic_description: Used in nearby social engagement, including playful or socially directed interactions, though context boundaries vary.
+    confidence: low
+    references: [delgado_2017]
   - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A loud harsh call with strong noisy energy and high arousal.
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: A loud harsh call with strong noisy energy and high arousal, often prolonged or repeated in escalating bouts.
     semantic_keywords: [distress, aggression, attention]
-    semantic_description: Produced in acute conflict or immediate danger.
+    semantic_description: Produced in acute conflict, capture risk, attacks, or other immediate danger.
     confidence: medium
+    references: [mackinnon_1974, delgado_2017]
+references:
+  delgado_2017:
+    citation: "Delgado, R.A. 2017. Orangutan vocal behavior. In Orangutans: Geographic Variation in Behavioral Ecology and Conservation, pp. 95-116."
+  hardus_2009:
+    citation: "Hardus, M.E., Lameira, A.R., Van Schaik, C.P., and Wich, S.A. 2009. Tool use in wild orang-utans modifies sound production: A functionally deceptive innovation? Proceedings of the Royal Society B 276:3689-3694."
+    url: https://doi.org/10.1098/rspb.2009.1027
+    doi: 10.1098/rspb.2009.1027
+  mackinnon_1974:
+    citation: "MacKinnon, J. 1974. The behaviour and ecology of wild orang-utans (Pongo pygmaeus). Animal Behaviour 22:3-74."
+    doi: 10.1016/S0003-3472(74)80054-0
+  vanschaik_1986:
+    citation: "van Schaik, C.P. 1986. The functional significance of orangutan facial expressions and vocalizations. In Primate Ontogeny, Cognition and Social Behaviour, pp. 383-390."
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for Bornean orangutan centered on the long call and kiss squeak system.
+  - timestamp: "2026-06-11T10:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Expanded the orangutan draft with additional commonly recognized short-range and display call classes and stable classic references.

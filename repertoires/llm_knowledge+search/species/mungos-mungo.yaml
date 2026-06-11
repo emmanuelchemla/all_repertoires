@@ -9,90 +9,195 @@ taxonomy:
   genus: Mungos
   species: mungo
 calls:
-  - name: close-forage call
-    alternative_names:
-      - close call
-    acoustic_keywords:
-      - short
-      - quiet
-      - graded
-      - tonal
-      - repetitive
-    acoustic_description: A frequently emitted short call with fine acoustic gradation and relatively low amplitude during routine foraging.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - affiliation
-    semantic_description: Maintains cohesion among group members during dispersed foraging and can encode both identity and contextual information.
-    confidence: high
-    references:
-      - jansen_2012
-      - rasso_1986
-  - name: moving call
-    acoustic_keywords:
-      - short
-      - tonal
-      - repetitive
-      - quiet
-    acoustic_description: A brief repeated call used during locomotion, distinct from the more context-rich close-forage call.
-    semantic_keywords:
-      - group_coordination
-      - contact
-      - attention
-    semantic_description: Helps coordinate collective movement and keep the group together while travelling.
-    confidence: medium
-    references:
-      - acoustic_adaptation_2022
-  - name: alarm call
-    acoustic_keywords:
-      - abrupt
-      - short
-      - noisy
-      - broadband
-      - repetitive
-    acoustic_description: A sharp, abrupt call with harsher spectral structure than routine social calls.
-    semantic_keywords:
-      - alarm
-      - predator
-      - attention
-    semantic_description: Produced in response to threats and rapidly shifts group vigilance or escape behaviour.
-    confidence: medium
-    references:
-      - acoustic_adaptation_2022
-      - rasso_1986
-  - name: recruitment call
-    alternative_names:
-      - mobbing call
-    acoustic_keywords:
-      - repetitive
-      - abrupt
-      - noisy
-      - loud
-    acoustic_description: A repeated arousal-related call series that is more conspicuous than close-forage calls and suited to mobilizing nearby individuals.
-    semantic_keywords:
-      - recruitment
-      - alarm
-      - group_coordination
-      - predator
-    semantic_description: Used to recruit group members to investigate or collectively respond to threats or salient events.
-    confidence: high
-    references:
-      - fenn_2009
-      - acoustic_adaptation_2022
+- name: close-forage call
+  alternative_names:
+  - close call
+  acoustic_keywords:
+  - short
+  - quiet
+  - graded
+  - tonal
+  - repetitive
+  acoustic_description: A frequently emitted short call with fine acoustic gradation
+    and relatively low amplitude during routine foraging.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Maintains cohesion among group members during dispersed foraging
+    and can encode both identity and contextual information.
+  confidence: high
+  references:
+  - jansen_2012
+  - rasso_1986
+- name: moving call
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A brief repeated call used during locomotion, distinct from
+    the more context-rich close-forage call.
+  semantic_keywords:
+  - group_coordination
+  - contact
+  - attention
+  semantic_description: Helps coordinate collective movement and keep the group together
+    while travelling.
+  confidence: medium
+  references:
+  - acoustic_adaptation_2022
+- name: alarm call
+  acoustic_keywords:
+  - abrupt
+  - short
+  - noisy
+  - broadband
+  - repetitive
+  acoustic_description: A sharp, abrupt call with harsher spectral structure than
+    routine social calls.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced in response to threats and rapidly shifts group vigilance
+    or escape behaviour.
+  confidence: medium
+  references:
+  - acoustic_adaptation_2022
+  - rasso_1986
+- name: recruitment call
+  alternative_names:
+  - mobbing call
+  acoustic_keywords:
+  - repetitive
+  - abrupt
+  - noisy
+  - loud
+  acoustic_description: A repeated arousal-related call series that is more conspicuous
+    than close-forage calls and suited to mobilizing nearby individuals.
+  semantic_keywords:
+  - recruitment
+  - alarm
+  - group_coordination
+  - predator
+  semantic_description: Used to recruit group members to investigate or collectively
+    respond to threats or salient events.
+  confidence: high
+  references:
+  - fenn_2009
+  - acoustic_adaptation_2022
+- name: begging call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - loud
+  - graded
+  acoustic_description: A persistent high call given by pups, thinner and more urgent
+    than ordinary close-forage calls.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Produced by dependent young to solicit food and care from
+    adults.
+  confidence: medium
+  references:
+  - banded_mongoose_calls
+- name: distress call
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - short
+  - repetitive
+  - loud
+  acoustic_description: A louder, more urgent repeated call than routine close-forage
+    calls, with a harsher and more aroused sound quality.
+  semantic_keywords:
+  - distress
+  - attention
+  - caregiving
+  semantic_description: Produced when an individual is threatened, restrained, injured,
+    or otherwise in acute need of assistance, drawing attention from nearby group
+    members.
+  confidence: medium
+  references:
+  - rasso_1986
+- name: threat call
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - abrupt
+  - short
+  - graded
+  acoustic_description: A rough, lower-pitched threatening vocalization, harsher
+    and less tonal than routine cohesion calls.
+  semantic_keywords:
+  - threat
+  - aggression
+  - spacing
+  semantic_description: Used in close-range antagonistic encounters to warn or displace
+    conspecifics.
+  confidence: medium
+  references:
+  - rasso_1986
+- name: grooming call
+  acoustic_keywords:
+  - short
+  - quiet
+  - tonal
+  - graded
+  acoustic_description: A soft, low-amplitude social call with less abrupt structure
+    than alarm or recruitment calls.
+  semantic_keywords:
+  - affiliation
+  - contact
+  semantic_description: Associated with relaxed affiliative interactions, especially
+    close social contact such as grooming.
+  confidence: low
+  references:
+  - rasso_1986
 references:
   jansen_2012:
-    citation: "Jansen, D.A.W.A.M. and Cant, M.A. 2013. Segmental concatenation of individual signatures and context cues in banded mongoose close calls. BMC Biology 11:97."
+    citation: Jansen, D.A.W.A.M. and Cant, M.A. 2013. Segmental concatenation of individual
+      signatures and context cues in banded mongoose close calls. BMC Biology 11:97.
     url: https://pubmed.ncbi.nlm.nih.gov/23206242/
   rasso_1986:
-    citation: "Rasa, O.A.E. 1986. A study of the vocal repertoire of the banded mongoose, Mungos mungo. Zeitschrift fur Tierpsychologie."
+    citation: Rasa, O.A.E. 1986. A study of the vocal repertoire of the banded mongoose,
+      Mungos mungo. Zeitschrift fur Tierpsychologie.
     url: https://www.researchgate.net/publication/309255511_A_study_of_the_vocal_repertoire_of_the_banded_mongoose_Mungos_mungo_Gmelin
   fenn_2009:
-    citation: "Fenn, M.G.P. and Macdonald, D.W. 2009. Banded mongoose recruitment calls convey information about risk and not stimulus type. Animal Behaviour 78:195-201."
+    citation: Fenn, M.G.P. and Macdonald, D.W. 2009. Banded mongoose recruitment calls
+      convey information about risk and not stimulus type. Animal Behaviour 78:195-201.
   acoustic_adaptation_2022:
-    citation: "Garcia Arasco, A., et al. 2022. Acoustic adaptation in mongoose vocalizations. Animal Behaviour 187:71-95."
+    citation: Garcia Arasco, A., et al. 2022. Acoustic adaptation in mongoose vocalizations.
+      Animal Behaviour 187:71-95.
     url: https://www.bio.bris.ac.uk/research/behavior/Vocal_Communication/pdfs/Acoustic_adaptation_test.pdf
+  banded_mongoose_calls:
+    citation: Jansen, D.A.W.A.M. and Manser, M.B. Studies of banded mongoose close
+      calls, movement calls, and recruitment.
 provenance:
-  - timestamp: "2026-06-10T20:15:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Initial LLM knowledge plus web-search draft for banded mongoose emphasizing well-described foraging, recruitment, and alarm calls.
+- timestamp: '2026-06-10T20:15:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Initial LLM knowledge plus web-search draft for banded mongoose emphasizing
+    well-described foraging, recruitment, and alarm calls.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Second-pass completeness update added broad distress, threat, and grooming
+    call classes from externally described banded mongoose repertoire summaries while
+    keeping close-call and recruitment structure intact.

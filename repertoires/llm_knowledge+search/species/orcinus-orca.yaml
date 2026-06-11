@@ -9,83 +9,65 @@ taxonomy:
   genus: Orcinus
   species: orca
 calls:
-- name: pulsed call
-  acoustic_keywords:
-  - pulsed
-  - repetitive
-  - broadband
-  - multi_component
-  - loud
-  acoustic_description: A structured pulsed vocalization with repeated temporal patterning and strong broadband energy.
-  semantic_keywords:
-  - contact
-  - identity
-  - group_coordination
-  - combinatorial
-  semantic_description: Central to pod-specific social communication and caller-group identity.
-  confidence: high
-- name: whistle
-  acoustic_keywords:
-  - tonal
-  - harmonic
-  - frequency_modulated
-  - long
-  - loud
-  acoustic_description: A narrowband modulated tonal call with sustained contour.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - identity
-  semantic_description: Used in social contact and coordination within groups.
-  confidence: medium
-- name: echolocation click train
-  acoustic_keywords:
-  - pulsed
-  - repetitive
-  - broadband
-  - short
-  - abrupt
-  acoustic_description: A train of brief broadband clicks lacking sustained tonality.
-  semantic_keywords:
-  - food
-  - attention
-  - group_coordination
-  semantic_description: Primarily used in biosonar but informative in foraging and coordinated movement contexts.
-  confidence: medium
-- name: scream
-  acoustic_keywords:
-  - high_frequency
-  - noisy
-  - loud
-  - abrupt
-  - short
-  acoustic_description: A harsher higher-frequency social call than whistles or structured pulsed calls.
-  semantic_keywords:
-  - attention
-  - threat
-  - group_coordination
-  semantic_description: Used in highly aroused social contexts.
-  confidence: low
-- name: squeak
-  acoustic_keywords:
-  - high_frequency
-  - noisy
-  - short
-  - frequency_modulated
-  - loud
-  acoustic_description: A shorter, harsher, high-pitched call than typical whistles or pulsed social calls.
-  semantic_keywords:
-  - attention
-  - group_coordination
-  - affiliation
-  semantic_description: Used in active social interaction and high-arousal group communication.
-  confidence: low
+  - name: discrete pulsed call
+    alternative_names: [pulsed call, discrete call]
+    acoustic_keywords: [pulsed, repetitive, broadband, multi_component, loud]
+    acoustic_description: A structured burst-pulse vocalization with repeated temporal patterning, often showing multiple components, abrupt pitch shifts, and sideband-rich contours.
+    semantic_keywords: [contact, identity, group_coordination, combinatorial]
+    semantic_description: Central to pod-specific social communication and caller-group identity, and widely used in cohesion and coordination.
+    confidence: high
+    references: [ford_1989, selbmann_2023]
+  - name: biphonic call
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, multi_component, loud]
+    acoustic_description: A call with two simultaneously modulated components, often combining whistle-like and burst-pulsed elements.
+    semantic_keywords: [identity, contact, group_coordination, display]
+    semantic_description: Used in social communication and treated here as a major structurally distinct orca call class because many repertoires describe such two-voiced calls explicitly.
+    confidence: medium
+    references: [selbmann_2023, rosssea_2020]
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A narrowband modulated tonal call with sustained contour and clearer sinusoidal structure than pulsed calls.
+    semantic_keywords: [contact, affiliation, identity]
+    semantic_description: Used in social contact and coordination within groups.
+    confidence: medium
+    references: [rosssea_2020, wellard_2015]
+  - name: echolocation click train
+    acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
+    acoustic_description: A train of brief broadband clicks lacking sustained tonality.
+    semantic_keywords: [food, attention, group_coordination]
+    semantic_description: Primarily used in biosonar but informative in foraging and coordinated movement contexts.
+    confidence: high
+    references: [rosssea_2020]
+  - name: burst-pulse scream
+    alternative_names: [scream]
+    acoustic_keywords: [high_frequency, noisy, loud, abrupt, short]
+    acoustic_description: A harsher higher-frequency social call than whistles or stereotyped discrete pulsed calls, often sounding compressed and urgent.
+    semantic_keywords: [attention, threat, group_coordination]
+    semantic_description: Used in highly aroused social contexts and abrupt interactions.
+    confidence: low
+    references: [wellard_2015]
+references:
+  ford_1989:
+    citation: "Ford, J.K.B. 1989. Acoustic behaviour of resident killer whales (Orcinus orca) off Vancouver Island, British Columbia. Canadian Journal of Zoology 67:727-745."
+  rosssea_2020:
+    citation: "Wellard, R., et al. 2020. Cold call: the acoustic repertoire of Ross Sea killer whales (Orcinus orca, Type C) in McMurdo Sound, Antarctica. Royal Society Open Science 7:191228."
+    url: https://repository.library.noaa.gov/view/noaa/55028/noaa_55028_DS1.pdf
+  selbmann_2023:
+    citation: "Selbmann, A., et al. 2023. Call type repertoire of killer whales (Orcinus orca) in Iceland and its variation across regions. Marine Mammal Science."
+    url: https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/27965/Selbmann_2023_MMS_Call_type_repertoire_CC.pdf
+  wellard_2015:
+    citation: "Wellard, R., et al. 2015. Vocalisations of killer whales (Orcinus orca) in the Bremer Canyon, Western Australia. PLOS ONE 10:e0136535."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4564243/
 provenance:
-- timestamp: '2026-06-10T22:15:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for orca centered on pod-structured pulsed calls plus whistles and clicks.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T22:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for orca centered on pod-structured pulsed calls plus whistles and clicks.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T10:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Reframed the orca file around discrete pulsed calls, biphonic calls, whistles, and clicks using broad categories stable across populations.

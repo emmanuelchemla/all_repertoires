@@ -9,32 +9,62 @@ taxonomy:
   genus: Physeter
   species: macrocephalus
 calls:
-  - name: usual codas
+  - name: coda
+    alternative_names: [usual codas]
     acoustic_keywords: [pulsed, repetitive, multi_component, short, loud]
-    acoustic_description: A patterned sequence of broadband clicks organized into stereotyped temporal motifs.
+    acoustic_description: A patterned sequence of broadband clicks organized into stereotyped temporal motifs with distinctive inter-click intervals.
     semantic_keywords: [contact, identity, group_coordination, combinatorial]
-    semantic_description: Used in social communication and strongly associated with identity at individual and clan scales.
+    semantic_description: Used in social communication and strongly associated with identity at individual, unit, and vocal clan scales.
     confidence: high
+    references: [rendell_whitehead_2003, jacobs_2024]
+  - name: usual click train
+    acoustic_keywords: [pulsed, repetitive, broadband, long, loud]
+    acoustic_description: A slower regularly spaced series of broadband clicks lacking the tightly patterned short motifs of codas.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Used during movement, diving, and general acoustic orientation, and can also provide social information to nearby whales.
+    confidence: high
+    references: [watwood_2006]
   - name: slow click
     acoustic_keywords: [pulsed, repetitive, broadband, long, loud]
-    acoustic_description: A slower series of powerful clicks with longer inter-click intervals than codas.
-    semantic_keywords: [group_coordination, attention, contact]
-    semantic_description: Used in general social and movement-related contexts outside stereotyped coda exchanges.
-    confidence: medium
+    acoustic_description: A series of powerful clicks with longer inter-click intervals than usual clicks, producing a slower rhythm.
+    semantic_keywords: [display, identity, spacing, attention]
+    semantic_description: Associated especially with adult male display and long-range social advertisement.
+    confidence: high
+    references: [miller_2004, gordon_1987]
   - name: creak
     acoustic_keywords: [pulsed, repetitive, abrupt, short, broadband]
     acoustic_description: A rapid click train with decreasing intervals, distinct from social codas in tempo and context.
     semantic_keywords: [food, attention]
-    semantic_description: Typically associated with prey capture and foraging rather than social signaling.
-    confidence: medium
+    semantic_description: Typically associated with prey capture and close-range foraging rather than social signalling.
+    confidence: high
+    references: [watwood_2006]
   - name: trumpet
     acoustic_keywords: [tonal, harmonic, long, frequency_modulated, loud]
-    acoustic_description: A rarer tonal call type with more sustained non-click structure than the usual pulsed repertoire.
+    acoustic_description: A rarer non-click call type with a sustained modulated tonal quality, clearly distinct from ordinary click patterns.
     semantic_keywords: [display, attention, identity]
-    semantic_description: Included conservatively as a rare but recognizable non-click vocal category.
-    confidence: low
+    semantic_description: Rare but repeatedly reported in social contexts, especially around adult males and communication-rich sequences.
+    confidence: medium
+    references: [pace_2021]
+references:
+  gordon_1987:
+    citation: "Gordon, J.C.D. 1987. The behaviour and ecology of sperm whales off Sri Lanka. PhD thesis, University of Cambridge."
+  jacobs_2024:
+    citation: "Jacobs, A., et al. 2024. The active space of sperm whale codas: inter-click information for social communication. Journal of Experimental Biology."
+    url: https://marinebioacoustics.wordpress.com/wp-content/uploads/2024/02/jacobsetal2024.pdf
+  miller_2004:
+    citation: "Miller, P.J.O., Johnson, M.P., and Tyack, P.L. 2004. Sperm whale behaviour indicates the use of slow clicks in long-range communication. Proceedings of the Royal Society B 271:1323-1329."
+  pace_2021:
+    citation: "Pace, D.S., Lanfredi, C., Airoldi, S., and Mussi, B. 2021. Trumpet sounds emitted by male sperm whales in the Mediterranean Sea. Royal Society Open Science 8:201772."
+  rendell_whitehead_2003:
+    citation: "Rendell, L. and Whitehead, H. 2003. Vocal clans in sperm whales (Physeter macrocephalus). Proceedings of the Royal Society B 270:225-231."
+  watwood_2006:
+    citation: "Watwood, S.L., Miller, P.J.O., Johnson, M., Madsen, P.T., and Tyack, P.L. 2006. Deep-diving foraging behaviour of sperm whales. Journal of Animal Ecology 75:814-825."
 provenance:
   - timestamp: "2026-06-10T21:30:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for sperm whale centered on codas and related click-train categories.
+  - timestamp: "2026-06-11T10:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Expanded the sperm whale file by separating codas, usual click trains, slow clicks, and creaks, while retaining trumpets as a rarer but repeatedly reported class.

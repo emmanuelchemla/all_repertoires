@@ -10,49 +10,126 @@ taxonomy:
   species: brachyrhynchos
 calls:
   - name: caw
-    acoustic_keywords: [low_frequency, noisy, short, repetitive, loud]
-    acoustic_description: A resonant harsh call with rough spectral quality and repeated delivery.
-    semantic_keywords: [contact, identity, attention]
-    semantic_description: Used broadly in social communication, spacing, and caller awareness.
+    alternative_names:
+      - ordinary caw
+      - contact caw
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - repetitive
+      - loud
+    acoustic_description: Resonant rough caw notes, often given singly or in repeated series with moderate variation in pitch and duration.
+    semantic_keywords:
+      - contact
+      - identity
+      - attention
+      - spacing
+    semantic_description: Broad everyday social signal used in contact, awareness, spacing, and caller recognition.
     confidence: high
+    references:
+      - crow_cornell
   - name: scold call
-    acoustic_keywords: [noisy, broadband, abrupt, repetitive, loud]
-    acoustic_description: A harsher more agitated call series than ordinary caws.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Produced in mobbing and disturbance situations.
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - abrupt
+      - repetitive
+      - loud
+    acoustic_description: Faster, harsher, more agitated note series than ordinary caws.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+      - recruitment
+    semantic_description: Common in mobbing and disturbance situations and often draws in nearby crows.
     confidence: high
+    references:
+      - crow_cornell
+      - crow_blog
   - name: rattle
-    acoustic_keywords: [repetitive, abrupt, noisy, short, multi_component]
-    acoustic_description: A rapid series of rough notes distinct from simple caws.
-    semantic_keywords: [display, affiliation, attention]
-    semantic_description: Used in close social interaction and display.
+    alternative_names:
+      - short rattle
+    acoustic_keywords:
+      - repetitive
+      - abrupt
+      - noisy
+      - short
+      - multi_component
+    acoustic_description: Rapid rough series of clipped notes, structurally distinct from evenly spaced caws.
+    semantic_keywords:
+      - display
+      - affiliation
+      - attention
+    semantic_description: Used in close social interaction and conspicuous social display, often at shorter range than loud cawing.
     confidence: medium
-  - name: begging call
-    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
-    acoustic_description: A repeated higher-pitched call produced persistently by young.
-    semantic_keywords: [begging, caregiving, attention]
-    semantic_description: Used by juveniles to solicit food and care.
-    confidence: medium
-  - name: knock call
-    acoustic_keywords: [abrupt, short, broadband, pulsed, quiet]
-    acoustic_description: A single sharp note or percussive bill-produced sound distinct from vocal caws.
-    semantic_keywords: [attention, display]
-    semantic_description: Used in close social interaction and attention-getting, and sometimes as a less conspicuous social signal.
-    confidence: low
-    references: [crow_sounds]
+    references:
+      - crow_blog
   - name: rattle-knock call
-    acoustic_keywords: [repetitive, abrupt, noisy, short, multi_component]
-    acoustic_description: A more complex rough rattle or knock-like sequence distinct from simple caws.
-    semantic_keywords: [affiliation, display, identity]
-    semantic_description: Used in close social display, including pair or family-group interaction.
+    alternative_names:
+      - knock-rattle
+    acoustic_keywords:
+      - repetitive
+      - abrupt
+      - noisy
+      - short
+      - multi_component
+    acoustic_description: More complex rattling or knock-like sequence, rougher and denser than a simple rattle.
+    semantic_keywords:
+      - display
+      - affiliation
+      - identity
+    semantic_description: Associated with pair or family-group social display and close interaction.
     confidence: medium
-    references: [crow_overview]
+    references:
+      - crow_blog
+  - name: begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Higher-pitched repeated solicitation calls delivered persistently by dependent young.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Used by juveniles to solicit food and care from attending adults.
+    confidence: medium
+    references:
+      - crow_cornell
+  - name: food-associated call
+    alternative_names:
+      - food call
+    acoustic_keywords:
+      - short
+      - repetitive
+      - noisy
+      - graded
+      - loud
+    acoustic_description: Variable excited call series, usually caw-based but denser and more insistent than neutral contact calling.
+    semantic_keywords:
+      - food
+      - recruitment
+      - attention
+    semantic_description: Given around contested or noteworthy food resources and can attract or orient other crows.
+    confidence: low
+    references:
+      - crow_blog
 references:
-  crow_sounds:
-    citation: "Cornell Lab of Ornithology. American Crow sounds."
+  crow_cornell:
+    citation: Cornell Lab of Ornithology. American Crow sounds.
     url: https://www.allaboutbirds.org/guide/American_Crow/sounds
-  crow_overview:
-    citation: "Corvid Research blog overview of major American crow call classes."
+  crow_blog:
+    citation: Corvid Research. Overview of major American crow vocalization classes.
     url: https://corvidresearch.blog/tag/crow-vocalizations/
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
@@ -63,3 +140,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Independent exhaustiveness pass added additional independently described American crow social call classes.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass clarified the expected American crow caw, scold, social display, juvenile begging, and food-associated call classes with stable overview references.

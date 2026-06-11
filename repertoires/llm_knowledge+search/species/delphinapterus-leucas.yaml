@@ -9,82 +9,72 @@ taxonomy:
   genus: Delphinapterus
   species: leucas
 calls:
-- name: whistle
-  acoustic_keywords:
-  - tonal
-  - harmonic
-  - frequency_modulated
-  - long
-  - loud
-  acoustic_description: A tonal narrowband call with variable modulation and sustained duration.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - identity
-  semantic_description: Used in social contact and coordination within groups.
-  confidence: high
-- name: chirp
-  acoustic_keywords:
-  - high_frequency
-  - short
-  - tonal
-  - repetitive
-  - graded
-  acoustic_description: A short high-pitched call with simpler structure than whistles.
-  semantic_keywords:
-  - contact
-  - attention
-  - affiliation
-  semantic_description: Used in local social interaction and group communication.
-  confidence: medium
-- name: pulse train
-  acoustic_keywords:
-  - pulsed
-  - repetitive
-  - broadband
-  - short
-  - multi_component
-  acoustic_description: A repeated train of brief pulses rather than a continuous tonal call.
-  semantic_keywords:
-  - group_coordination
-  - attention
-  - display
-  semantic_description: Used in active social contexts and possibly in close-range interaction.
-  confidence: medium
-- name: burst call
-  acoustic_keywords:
-  - broadband
-  - abrupt
-  - noisy
-  - short
-  - pulsed
-  acoustic_description: A compact broadband burst with abrupt onset and little sustained tonality.
-  semantic_keywords:
-  - attention
-  - threat
-  - group_coordination
-  semantic_description: Likely used in abrupt social or arousal-related contexts.
-  confidence: low
-- name: squeal
-  acoustic_keywords:
-  - high_frequency
-  - noisy
-  - long
-  - frequency_modulated
-  - loud
-  acoustic_description: A higher-pitched, more intense call than a simple whistle, often with strong modulation and harsher quality.
-  semantic_keywords:
-  - attention
-  - affiliation
-  - group_coordination
-  semantic_description: Used in active social interactions and high-arousal group communication.
-  confidence: medium
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A sustained narrowband tonal call with smooth or strongly modulated frequency contours and frequent harmonic structure.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in social contact and coordination within groups, and often treated as part of the species' core social repertoire.
+    confidence: high
+    references: [brewer_2023, noyes_2019]
+  - name: pulsed call
+    alternative_names: [pulse train]
+    acoustic_keywords: [pulsed, repetitive, broadband, short, multi_component]
+    acoustic_description: A repeated train of brief pulses rather than a continuous tonal call, often forming compact patterned bouts.
+    semantic_keywords: [group_coordination, attention, affiliation]
+    semantic_description: Used in active social contexts and close-range interaction, especially when callers are behaviourally engaged.
+    confidence: high
+    references: [brewer_2023, noyes_2019]
+  - name: combined call
+    alternative_names: [mixed call]
+    acoustic_keywords: [pulsed, tonal, frequency_modulated, multi_component, long]
+    acoustic_description: A call combining tonal whistle-like components with rapid pulse trains in the same signal or in tightly linked successive components.
+    semantic_keywords: [contact, group_coordination, identity, combinatorial]
+    semantic_description: Used in social communication where callers produce richer multi-component signals than simple whistles or simple pulse trains alone.
+    confidence: high
+    references: [brewer_2023, ames_2020]
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A short high-pitched call with simpler structure than longer whistles and a more compact contour.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in local social interaction and short-range group communication.
+    confidence: medium
+    references: [noyes_2019]
+  - name: high-frequency burst pulse
+    alternative_names: [ultrasonic burst pulse]
+    acoustic_keywords: [high_frequency, pulsed, broadband, repetitive, abrupt]
+    acoustic_description: A rapid burst-pulsed signal concentrated at very high frequencies, lacking the smooth contour of tonal whistles.
+    semantic_keywords: [attention, group_coordination, contact]
+    semantic_description: Reported in noisy environments and treated conservatively here as a high-frequency social signal that may help communication under masking conditions.
+    confidence: medium
+    references: [roy_2021]
+  - name: squeal
+    acoustic_keywords: [high_frequency, noisy, long, frequency_modulated, loud]
+    acoustic_description: A higher-pitched, more intense call than a simple whistle, often with strong modulation and a harsher quality.
+    semantic_keywords: [attention, affiliation, group_coordination]
+    semantic_description: Used in active social interactions and high-arousal group communication.
+    confidence: medium
+    references: [noyes_2019]
+references:
+  ames_2020:
+    citation: "Ames, A.E., Vergara, V., Kuczaj, S.A., and Killebrew, D. 2020. Trajectories of vocal repertoire development in beluga whale calves: Insights from studies a decade apart. Aquatic Mammals 46:397-419."
+    url: https://www.aquaticmammalsjournal.org/wp-content/uploads/2020/07/46.4-Ames.pdf
+  brewer_2023:
+    citation: "Brewer, A., Castellote, M., and Wade, P. 2023. Communication in Cook Inlet beluga whales: Describing the vocal repertoire and caller identity. NOAA Technical Memorandum."
+    url: https://repository.library.noaa.gov/view/noaa/56147/noaa_56147_DS1.pdf
+  noyes_2019:
+    citation: "Noyes, A., Friedlaender, A., and Sayigh, L. 2019. Investigating individual distinctiveness in the calls of wild belugas. Journal of the Acoustical Society of America."
+  roy_2021:
+    citation: "Roy, N., Karpovich, S., and Vergara, V. 2021. Ultrasonic high-frequency burst pulse calls in beluga whales may function in noisy environments. Biology Letters 17:20210274."
 provenance:
-- timestamp: '2026-06-10T21:00:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for beluga whale using standard whistle and pulsed social call categories.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for beluga whale using standard whistle and pulsed social call categories.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T10:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Rebuilt around the modern whistle-pulsed-combined beluga framework and added a conservative high-frequency burst-pulse class with stable references.

@@ -10,138 +10,90 @@ taxonomy:
   species: lupus
 calls:
   - name: howl
-    acoustic_keywords:
-      - long
-      - tonal
-      - harmonic
-      - loud
-      - frequency_modulated
+    acoustic_keywords: [long, tonal, harmonic, loud, frequency_modulated]
     acoustic_description: A prolonged harmonic vocalization with sustained tonal energy and variable pitch contour, sometimes rising or wavering over the course of the call.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - territorial
-      - identity
+    semantic_keywords: [contact, group_coordination, territorial, identity]
     semantic_description: Used for long-distance spacing, pack cohesion, territory advertisement, and locating separated pack members.
     confidence: high
-    references:
-      - hennelly_2019
-      - wolfcenter
+    references: [hennelly_2019, wolfcenter]
   - name: chorus howl
-    alternative_names:
-      - group howl
-      - chorus
-    acoustic_keywords:
-      - long
-      - loud
-      - harmonic
-      - multi_component
-      - repetitive
-    acoustic_description: An overlapping multi-individual bout of howls and related tonal calls that creates a dense, variable chorus with multiple simultaneous voices.
-    semantic_keywords:
-      - group_coordination
-      - territorial
-      - display
-      - identity
+    alternative_names: [group howl, chorus]
+    acoustic_keywords: [long, loud, harmonic, multi_component, repetitive]
+    acoustic_description: An overlapping multi-individual bout of howls and related tonal calls that creates a dense variable chorus with multiple simultaneous voices.
+    semantic_keywords: [group_coordination, territorial, display, identity]
     semantic_description: Produced by several pack members together during social rallies, territorial advertisement, and collective responses to distant wolves or elicited howls.
     confidence: high
-    references:
-      - toohey_2016
-      - wolfcenter
+    references: [toohey_2016, wolfcenter]
   - name: bark
-    acoustic_keywords:
-      - broadband
-      - abrupt
-      - loud
-      - short
-    acoustic_description: A short, explosive, harsh vocalization with abrupt onset and broad spectral energy.
-    semantic_keywords:
-      - alarm
-      - threat
-      - attention
-    semantic_description: Usually given in alert or defensive situations, especially when a nearby disturbance, intruder, or uncertain threat requires immediate attention from pack mates.
-    confidence: medium
-    references:
-      - wolfcenter
+    acoustic_keywords: [broadband, abrupt, loud, short, noisy]
+    acoustic_description: A short explosive harsh vocalization with abrupt onset and broad spectral energy.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Usually given in alert or defensive situations when a nearby disturbance or intruder requires immediate attention from pack mates.
+    confidence: high
+    references: [wolfcenter, livingwithwolves]
   - name: bark-howl
-    acoustic_keywords:
-      - multi_component
-      - broadband
-      - tonal
-      - loud
-      - long
+    acoustic_keywords: [multi_component, broadband, tonal, loud, long]
     acoustic_description: A compound call combining an abrupt bark-like onset with a following more tonal and prolonged howl segment.
-    semantic_keywords:
-      - alarm
-      - territorial
-      - attention
-      - display
-    semantic_description: Likely used in highly aroused alert or territorial contexts where both abrupt attention-getting and longer-range broadcast are advantageous.
-    confidence: low
-    references:
-      - wolfcenter
+    semantic_keywords: [alarm, territorial, attention, display]
+    semantic_description: Used in highly aroused alert or territorial contexts where both abrupt attention-getting and longer-range broadcast are advantageous.
+    confidence: medium
+    references: [wolfcenter]
+  - name: woof
+    acoustic_keywords: [low_frequency, broadband, abrupt, short, quiet]
+    acoustic_description: A brief low rough call, quieter and shorter than a full bark.
+    semantic_keywords: [attention, threat, spacing]
+    semantic_description: Used at close range as a low-intensity alert or warning signal.
+    confidence: medium
+    references: [hennelly_2019, livingwithwolves]
   - name: growl
-    acoustic_keywords:
-      - low_frequency
-      - noisy
-      - broadband
-      - long
-      - graded
-    acoustic_description: A low-pitched, harsh vocalization with rough spectral structure that may vary from short rumbling notes to sustained growling bouts.
-    semantic_keywords:
-      - threat
-      - aggression
-      - submission
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A low-pitched harsh vocalization with rough spectral structure that may vary from short rumbling notes to sustained growling bouts.
+    semantic_keywords: [threat, aggression, submission]
     semantic_description: Associated with close-range aggressive, defensive, or dominance-related interactions, often warning another individual before escalation.
     confidence: high
-    references:
-      - wolfcenter
+    references: [hennelly_2019, wolfcenter]
   - name: whine
-    acoustic_keywords:
-      - high_frequency
-      - tonal
-      - harmonic
-      - short
-      - graded
+    acoustic_keywords: [high_frequency, tonal, harmonic, short, graded]
     acoustic_description: A relatively high-pitched tonal call, often narrowband and modulated, that may be given singly or in short repeated sequences.
-    semantic_keywords:
-      - contact
-      - affiliation
-      - begging
-      - attention
+    semantic_keywords: [contact, affiliation, begging, attention]
     semantic_description: Used in appeasing, greeting, soliciting, or mildly frustrated situations, especially at close range among socially affiliated pack members.
-    confidence: medium
-    references:
-      - wolfcenter
+    confidence: high
+    references: [wolfcenter, livingwithwolves]
   - name: whimper
-    acoustic_keywords:
-      - high_frequency
-      - quiet
-      - tonal
-      - short
-      - repetitive
+    acoustic_keywords: [high_frequency, quiet, tonal, short, repetitive]
     acoustic_description: A softer and thinner high-pitched vocalization than a full whine, often repeated and acoustically plaintive.
-    semantic_keywords:
-      - distress
-      - submission
-      - caregiving
-      - begging
+    semantic_keywords: [distress, submission, caregiving, begging]
     semantic_description: Common in pups and subordinate individuals during distress, appeasement, or close-range solicitation of care or tolerance.
+    confidence: high
+    references: [wolfcenter, livingwithwolves]
+  - name: yelp
+    acoustic_keywords: [high_frequency, abrupt, short, noisy, loud]
+    acoustic_description: A short sharp high-intensity cry with abrupt onset and strong distress quality.
+    semantic_keywords: [distress, attention, submission]
+    semantic_description: Produced in sudden pain, rough social contact, or acute alarm.
     confidence: medium
-    references:
-      - wolfcenter
+    references: [livingwithwolves]
 references:
   hennelly_2019:
     citation: "Hennelly, L., Habib, B., Root-Gutteridge, H., Palacios, V., and Passilongo, D. 2019. Characterising the harmonic vocal repertoire of the Indian wolf (Canis lupus pallipes). PLOS ONE 14:e0216182."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6822943/
+    doi: 10.1371/journal.pone.0216182
   toohey_2016:
     citation: "Toohey, A.C., McTavish, E.J., and Fonseca, P.J. 2016. Decoding group vocalizations: The acoustic energy distribution of wolf choruses. Bioacoustics 25:295-309."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4856277/
+    doi: 10.1080/09524622.2015.1089529
   wolfcenter:
     citation: "International Wolf Center. How do wolves communicate?"
     url: https://wolf.org/wolf-info/basic-wolf-info/biology-and-behavior/communication/
+  livingwithwolves:
+    citation: "Living with Wolves. The language of wolves."
+    url: https://www.livingwithwolves.org/about-wolves/language/
 provenance:
   - timestamp: "2026-06-10T19:20:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft for gray wolf vocal repertoire using broad call classes and conservative confidence for compound calls.
+  - timestamp: "2026-06-11T11:19:45Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative completeness pass added obvious close-range gray wolf calls and refreshed references while keeping species-specific claims cautious.

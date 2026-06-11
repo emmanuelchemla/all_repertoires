@@ -16,7 +16,8 @@ calls:
   - harmonic
   - loud
   - long
-  acoustic_description: A stereotyped territorial song with a recognizable introductory phrase and buzzy trailing component.
+  acoustic_description: A stereotyped territorial song with a recognizable introductory
+    phrase and buzzy trailing component.
   semantic_keywords:
   - territorial
   - courtship
@@ -25,6 +26,8 @@ calls:
   - identity
   semantic_description: Used by males in territory advertisement and mate attraction.
   confidence: high
+  references:
+  - yasukawa_2018
 - name: check call
   acoustic_keywords:
   - short
@@ -37,8 +40,11 @@ calls:
   - alarm
   - attention
   - threat
-  semantic_description: Used in alerting and mobbing contexts and during disturbance near nests.
+  semantic_description: Used in alerting and mobbing contexts and during disturbance
+    near nests.
   confidence: high
+  references:
+  - yasukawa_2018
 - name: chatter
   acoustic_keywords:
   - short
@@ -46,7 +52,8 @@ calls:
   - noisy
   - multi_component
   - quiet
-  acoustic_description: A rapid local sequence of short notes with more variable structure than song.
+  acoustic_description: A rapid local sequence of short notes with more variable structure
+    than song.
   semantic_keywords:
   - contact
   - affiliation
@@ -60,7 +67,8 @@ calls:
   - repetitive
   - quiet
   - graded
-  acoustic_description: A softer repeated call type associated with female social interactions and nest-related contexts.
+  acoustic_description: A softer repeated call type associated with female social
+    interactions and nest-related contexts.
   semantic_keywords:
   - caregiving
   - affiliation
@@ -74,21 +82,76 @@ calls:
   - harmonic
   - loud
   - long
-  acoustic_description: A stereotyped song phrase with introductory notes and a more complex trailing component than simple check calls or chatters.
+  acoustic_description: A stereotyped song phrase with introductory notes and a more
+    complex trailing component than simple check calls or chatters.
   semantic_keywords:
   - territorial
   - courtship
   - mating
   - display
   - identity
-  semantic_description: Used by males for territory advertisement and mate attraction beyond the most canonical song label already in the file.
+  semantic_description: Used by males for territory advertisement and mate attraction
+    beyond the most canonical song label already in the file.
   confidence: medium
+- name: flight call
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  acoustic_description: A short, high, tonal call given in flight or on takeoff, simpler
+    and less buzzy than the territorial song.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used in flock movement, takeoff, and short-range coordination
+    between nearby birds.
+  confidence: medium
+  references:
+  - yasukawa_2018
+- name: begging call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - short
+  - loud
+  - graded
+  acoustic_description: A repeated high-pitched solicitation call delivered persistently
+    by dependent young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Produced by nestlings or fledglings to obtain food and parental
+    attention.
+  confidence: medium
+  references:
+  - yasukawa_2018
 provenance:
 - timestamp: '2026-06-10T20:45:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for red-winged blackbird using the well-known territorial song plus common alarm and social calls.
+  notes: Broad exploratory draft for red-winged blackbird using the well-known territorial
+    song plus common alarm and social calls.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.
+references:
+  yasukawa_2018:
+    citation: Yasukawa, K. and Searcy, W.A. 2018. Red-winged Blackbird (Agelaius phoeniceus),
+      Birds of the World.

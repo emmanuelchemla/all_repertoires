@@ -23,6 +23,8 @@ calls:
   - group_coordination
   semantic_description: Used in routine social communication and benign approaches.
   confidence: medium
+  references:
+  - gautier_1974
 - name: chirp
   acoustic_keywords:
   - high_frequency
@@ -30,13 +32,31 @@ calls:
   - tonal
   - repetitive
   - quiet
-  acoustic_description: A brief high-pitched tonal call used in local communication.
+  acoustic_description: A brief high-pitched tonal call used at short range.
   semantic_keywords:
   - contact
   - attention
   - affiliation
-  semantic_description: Used in short-range social coordination and group cohesion.
+  semantic_description: Used in short-range social coordination and cohesion.
   confidence: medium
+  references:
+  - gautier_1974
+- name: twitter
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  - graded
+  acoustic_description: A rapid sequence of high notes with lighter tonal quality than barks or screams.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used in active social and movement contexts within a nearby audience.
+  confidence: medium
+  references:
+  - gautier_1974
 - name: bark
   acoustic_keywords:
   - abrupt
@@ -51,6 +71,8 @@ calls:
   - attention
   semantic_description: Produced in disturbance and danger contexts.
   confidence: medium
+  references:
+  - gautier_1974
 - name: scream
   acoustic_keywords:
   - high_frequency
@@ -64,21 +86,40 @@ calls:
   - aggression
   - attention
   semantic_description: Produced in severe conflict or immediate danger.
-  confidence: low
-- name: twitter
+  confidence: medium
+  references:
+  - gautier_1974
+- name: infant distress call
+  alternative_names:
+  - infant squeak
+  scope:
+    life_stages:
+    - infant
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
   acoustic_keywords:
   - high_frequency
   - short
-  - repetitive
   - tonal
-  - graded
-  acoustic_description: A rapid sequence of high notes with lighter tonal quality than barks or screams.
+  - repetitive
+  acoustic_description: A thin high-pitched distress call produced by infants and acoustically sharper than routine contact chirps.
   semantic_keywords:
-  - contact
-  - group_coordination
+  - distress
+  - caregiving
   - attention
-  semantic_description: Used in active social and movement contexts.
-  confidence: medium
+  semantic_description: Used to solicit retrieval or attention from caretakers.
+  confidence: low
+  references:
+  - gautier_1974
+  - wolfheim_rowell_1972
+references:
+  gautier_1974:
+    citation: "Gautier, J.-P. 1974. Field and laboratory studies of the vocalizations of talapoin monkeys (Miopithecus talapoin). Behaviour 51:209-273."
+    url: https://brill.com/view/journals/beh/51/3-4/article-p209_4.xml
+  wolfheim_rowell_1972:
+    citation: Wolfheim, J. H. and Rowell, T. E. 1972. Communication among captive talapoin monkeys (Miopithecus talapoin). Behaviour.
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -88,3 +129,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added stable talapoin-specific references and kept the repertoire broad and conservative where named call labels were less recoverable from quick-access sources.

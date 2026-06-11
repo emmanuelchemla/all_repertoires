@@ -9,32 +9,106 @@ taxonomy:
   genus: Saimiri
   species: sciureus
 calls:
+  - name: isolation peep
+    alternative_names: [infant isolation peep]
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, loud]
+    acoustic_description: A repeated high-pitched peep given in bouts, more persistent and attention-getting than routine low-arousal contact peeps.
+    semantic_keywords: [begging, caregiving, contact, attention]
+    semantic_description: Produced by isolated infants and used to recruit maternal attention, retrieval, and recognition.
+    confidence: high
+    references: [snowdon_etal_1985, lieblich_etal_1980]
   - name: chuck
     acoustic_keywords: [short, tonal, repetitive, quiet, graded]
     acoustic_description: A short local call with simple structure, often repeated in low-arousal interaction.
     semantic_keywords: [contact, affiliation, group_coordination]
     semantic_description: Used in routine within-group social contact.
     confidence: medium
+    references: [newman_1985]
   - name: peep
     acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
     acoustic_description: A brief high-pitched tonal note with lighter structure than alarm calls.
     semantic_keywords: [contact, attention, affiliation]
     semantic_description: Used in local social communication and cohesion.
     confidence: medium
+    references: [newman_1985]
+  - name: alarm peep
+    alternative_names: [threat peep]
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, loud]
+    acoustic_description: A peep-like call type with the same basic tonal shape as contact peeps but delivered more forcefully and in threat-related bouts.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced to alert nearby group members to dangerous or highly threatening situations.
+    confidence: high
+    references: [mccowan_etal_2001, newman_1985]
+  - name: yap
+    acoustic_keywords: [short, noisy, abrupt, repetitive, loud]
+    acoustic_description: A harsher and less purely tonal alarm call than the alarm peep, typically delivered as repeated notes in conspicuous bouts.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used in terrestrial-threat or mobbing-like alarm situations rather than the peep-based warning context.
+    confidence: medium
+    references: [herzog_hopf_1984, newman_1985]
   - name: twitter
     acoustic_keywords: [high_frequency, repetitive, tonal, short, graded]
-    acoustic_description: A rapid sequence of high notes with more continuous repetition than single peeps.
+    acoustic_description: A rapid sequence of high notes with more continuous repetition than a single peep.
     semantic_keywords: [contact, group_coordination, attention]
     semantic_description: Used in active social and movement contexts.
     confidence: medium
+    references: [newman_1985]
+  - name: err-chuck
+    acoustic_keywords: [short, multi_component, noisy, repetitive, graded]
+    acoustic_description: A brief composite call with a rough introductory element followed by a chuck-like ending, acoustically more segmented than a simple chuck.
+    semantic_keywords: [affiliation, group_coordination, attention]
+    semantic_description: Used in structured vocal exchanges, especially in close affiliative interactions and mother-infant contexts.
+    confidence: medium
+    references: [biben_etal_1986]
+  - name: cackle
+    acoustic_keywords: [short, repetitive, noisy, graded, multi_component]
+    acoustic_description: A repeated bursty call series with rougher quality than peeps and more segmented structure than a scream.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Used in socially tense or otherwise high-arousal disturbance contexts.
+    confidence: low
+    references: [newman_1985]
   - name: scream
     acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A loud high-arousal call with noisy spectral structure.
+    acoustic_description: A loud high-arousal call with noisy spectral structure and strong amplitude.
     semantic_keywords: [distress, alarm, attention]
-    semantic_description: Produced in danger or severe social conflict.
+    semantic_description: Produced in danger, capture, or severe social conflict.
     confidence: medium
+    references: [newman_1985]
+references:
+  biben_etal_1986:
+    citation: "Biben, M., Symmes, D., and Masataka, N. 1986. Temporal and structural analysis of affiliative vocal exchanges in squirrel monkeys. Behaviour 98(3-4):259-273."
+    url: https://www.jstor.org/stable/4534548
+  herzog_hopf_1984:
+    citation: "Herzog, M. and Hopf, S. 1984. Behavioral responses to species-specific warning calls in infant squirrel monkeys reared in social isolation. American Journal of Primatology 7(2):99-106."
+    url: https://pubmed.ncbi.nlm.nih.gov/32131565/
+  lieblich_etal_1980:
+    citation: "Lieblich, A.K., Symmes, D., and Newman, J.D. 1980. Development of the isolation peep in laboratory-bred squirrel monkeys. Animal Behaviour 28(1):1-9."
+    doi: 10.1016/S0003-3472(80)80002-2
+  mccowan_etal_2001:
+    citation: "McCowan, B., Franceschini, N.V., and Vicino, G.A. 2001. Age differences and developmental trends in alarm peep responses by squirrel monkeys (Saimiri sciureus). American Journal of Primatology 53(1):19-31."
+    url: https://pubmed.ncbi.nlm.nih.gov/11195202/
+    doi: 10.1002/1098-2345(200101)53:1<19::AID-AJP2>3.0.CO;2-#
+  newman_1985:
+    citation: "Newman, J.D. 1985. Squirrel monkey communication. In: Rosenblum, L.A. and Coe, C.L. Handbook of Squirrel Monkey Research."
+    url: https://pubmed.ncbi.nlm.nih.gov/3931840/
+  snowdon_etal_1985:
+    citation: "Snowdon, C.T., Brown, C.H., and Petersen, M.R. 1985. Primate communication. Cambridge University Press."
+    url: https://books.google.com/books?id=jkDc8a-w65IC
 provenance:
   - timestamp: "2026-06-10T21:15:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for common squirrel monkey using standard small-call social categories and distress calls.
+  - timestamp: "2026-06-11T12:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision added a major arousal call class and external reference support using only current-file and web-derived information.
+  - timestamp: "2026-06-11T12:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added isolation peep, alarm peep, and err-chuck as missing major squirrel-monkey call classes and tightened cackle semantics to avoid conflating it with the peep-based alarm system.

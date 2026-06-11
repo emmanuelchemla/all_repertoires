@@ -15,28 +15,18 @@ calls:
     semantic_keywords: [contact, attention, begging, affiliation]
     semantic_description: Used in social solicitation, greeting, and human- or conspecific-directed attention-getting.
     confidence: high
+    references: [feline_vocal]
   - name: purr
     acoustic_keywords: [low_frequency, pulsed, repetitive, quiet, graded]
-    acoustic_description: A low-amplitude rhythmic vocalization with repeated pulsed structure.
+    acoustic_description: A low-amplitude rhythmic vocalization with repeated pulsed structure produced across respiratory cycles.
     semantic_keywords: [affiliation, caregiving, contact]
-    semantic_description: Associated with relaxed affiliation but also with solicitation and close social contact.
+    semantic_description: Associated with relaxed affiliation but also with solicitation, close social contact, and some self-soothing or care-eliciting contexts.
     confidence: high
-  - name: hiss
-    acoustic_keywords: [broadband, noisy, abrupt, long, loud]
-    acoustic_description: A harsh unvoiced call with strong broadband energy and sustained warning quality.
-    semantic_keywords: [threat, aggression, attention]
-    semantic_description: Used as a defensive warning in close-range conflict.
-    confidence: high
-  - name: growl
-    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
-    acoustic_description: A rough low call with variable duration and threat-like quality.
-    semantic_keywords: [threat, aggression, attention]
-    semantic_description: Produced in resource defense, warning, and close-range conflict.
-    confidence: high
+    references: [feline_vocal]
   - name: trill
     alternative_names: [chirrup, murmur]
     acoustic_keywords: [tonal, harmonic, short, frequency_modulated, quiet]
-    acoustic_description: A short, soft, voiced call with a rising tonal contour, often smoother than a meow.
+    acoustic_description: A short soft voiced call with a rising tonal contour, often smoother than a meow.
     semantic_keywords: [affiliation, contact, caregiving, attention]
     semantic_description: Used in friendly greeting, approach, and maternal or soliciting contexts.
     confidence: high
@@ -52,10 +42,38 @@ calls:
   - name: yowl
     alternative_names: [caterwaul]
     acoustic_keywords: [loud, long, tonal, frequency_modulated, graded]
-    acoustic_description: A prolonged, louder, and more intense voiced call than a typical meow, often with stronger modulation.
+    acoustic_description: A prolonged louder and more intense voiced call than a typical meow, often with stronger modulation.
     semantic_keywords: [mating, distress, attention, spacing]
     semantic_description: Used in reproductive contexts, social distress, separation, or long-range solicitation.
     confidence: high
+    references: [feline_vocal]
+  - name: moan
+    acoustic_keywords: [low_frequency, long, tonal, graded, quiet]
+    acoustic_description: A lower and more drawn-out voiced call than a typical meow, often with a complaint-like quality.
+    semantic_keywords: [distress, attention, affiliation]
+    semantic_description: Used in frustration, discomfort, protest, and some socially directed solicitation contexts.
+    confidence: medium
+    references: [feline_vocal]
+  - name: hiss
+    acoustic_keywords: [broadband, noisy, abrupt, long, loud]
+    acoustic_description: A harsh unvoiced call with strong broadband energy and sustained warning quality.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used as a defensive warning in close-range conflict.
+    confidence: high
+    references: [feline_vocal]
+  - name: growl
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A rough low call with variable duration and threat-like quality.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Produced in resource defense, warning, and close-range conflict.
+    confidence: high
+    references: [feline_vocal]
+  - name: snarl
+    acoustic_keywords: [broadband, noisy, abrupt, long, loud]
+    acoustic_description: A harsh aggressive call, often blending rough voicing with stronger noisy energy than an ordinary growl.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used in escalated conflict and close-range intimidation.
+    confidence: medium
     references: [feline_vocal]
   - name: spit
     acoustic_keywords: [abrupt, broadband, noisy, short, loud]
@@ -68,6 +86,7 @@ references:
   feline_vocal:
     citation: "Schotz, S. and van de Weijer, J. 2020. Feline vocal communication. Journal of Veterinary Science 21:e18."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7000907/
+    doi: 10.4142/jvs.2020.21.e18
 provenance:
   - timestamp: "2026-06-10T22:30:00+02:00"
     model: GPT-5 Codex
@@ -77,3 +96,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Independent exhaustiveness pass added additional named domestic cat vocal classes from feline vocal communication reviews.
+  - timestamp: "2026-06-11T11:19:45Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative completeness pass added obvious additional domestic cat call classes while keeping the repertoire anchored to a single stable review source.

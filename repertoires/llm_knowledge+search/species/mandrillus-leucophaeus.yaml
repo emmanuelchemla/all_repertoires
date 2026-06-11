@@ -9,34 +9,41 @@ taxonomy:
   genus: Mandrillus
   species: leucophaeus
 calls:
-- name: grunt
+- name: contact grunt
+  alternative_names:
+  - soft grunt
+  - coo
   acoustic_keywords:
   - low_frequency
   - short
   - tonal
-  - repetitive
+  - quiet
   - graded
-  acoustic_description: A short low social call with relatively simple tonal structure.
+  acoustic_description: A soft short low-pitched social call quieter than alarm and display calls.
   semantic_keywords:
   - contact
   - affiliation
   - group_coordination
-  semantic_description: Used in routine social communication and benign approaches.
+  semantic_description: Used in close-range social coordination, especially during foraging, travel, comfort seeking, and local cohesion.
   confidence: medium
-- name: crowing call
+  references:
+  - eaza_2025
+  - gartlan_1970
+- name: threat grunt
   acoustic_keywords:
-  - loud
-  - long
-  - tonal
-  - frequency_modulated
+  - low_frequency
+  - short
+  - abrupt
   - repetitive
-  acoustic_description: A conspicuous far-carrying call with more prolonged structure than ordinary grunts.
+  acoustic_description: A short low-pitched grunt typically produced in more forceful fashion than the contact grunt.
   semantic_keywords:
-  - display
+  - threat
+  - aggression
   - attention
-  - territorial
-  semantic_description: Used in long-range social advertisement and display.
+  semantic_description: Used in aggressive encounters, often alongside threat postures such as head bobbing or directed approach.
   confidence: medium
+  references:
+  - gartlan_1970
 - name: scream
   acoustic_keywords:
   - high_frequency
@@ -44,41 +51,111 @@ calls:
   - noisy
   - long
   - abrupt
-  acoustic_description: A loud harsh arousal call with strong noisy energy.
+  acoustic_description: A loud shrill distress vocalization with strong noisy energy.
   semantic_keywords:
   - distress
   - aggression
   - attention
-  semantic_description: Produced in conflict and acute social tension.
+  semantic_description: Produced during fear, attack, escape, and severe social conflict.
   confidence: medium
-- name: bark
+  references:
+  - feistner_1989
+  - gartlan_1970
+- name: alarm bark
+  alternative_names:
+  - two-syllable alarm bark
   acoustic_keywords:
   - abrupt
-  - broadband
-  - noisy
   - short
+  - broadband
   - loud
-  acoustic_description: A short harsh call with abrupt onset and broad spectral structure.
+  acoustic_description: A short sharp bark-like warning call, described for drills as a two-syllable alarm bark.
   semantic_keywords:
   - alarm
-  - threat
+  - predator
   - attention
-  semantic_description: Used in disturbance and alert contexts.
+  semantic_description: Given in disturbance and possible predator contexts to trigger vigilance and movement responses.
   confidence: medium
-- name: copulation call
+  references:
+  - feistner_1989
+  - gartlan_1970
+- name: pant-grunt
+  alternative_names:
+  - pant-threat
   acoustic_keywords:
-  - high_frequency
-  - loud
+  - low_frequency
   - short
   - repetitive
-  - graded
-  acoustic_description: A conspicuous arousal-related call distinct from routine grunts or alarm barks.
+  - pulsed
+  acoustic_description: A repeated panting grunt series lower in pitch than juvenile yaks or squeals.
   semantic_keywords:
-  - mating
-  - attention
+  - submission
   - affiliation
-  semantic_description: Associated with sexual or post-copulatory social interaction.
+  - attention
+  semantic_description: Used in greeting and tense social interactions and may overlap with submissive or deferential behavior.
+  confidence: medium
+  references:
+  - feistner_1989
+  - gartlan_1970
+- name: crow
+  acoustic_keywords:
+  - loud
+  - long
+  - tonal
+  - repetitive
+  acoustic_description: A conspicuous far-carrying crow-like call used over longer distances than grunts or barks.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used to communicate between separated individuals and maintain cohesion in large or dispersed groups; the best available sources suggest this is the most conspicuous long-distance drill call.
+  confidence: medium
+  references:
+  - eaza_2025
+  - feistner_1989
+- name: two-phase grunt
+  alternative_names:
+  - two-phase huffing grunt
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - multi_component
+  - repetitive
+  acoustic_description: A low-pitched breathy two-syllable grunt associated with the genus Mandrillus.
+  semantic_keywords:
+  - group_coordination
+  - display
+  - attention
+  semantic_description: Older comparative accounts describe this call for leader males in group movement and cohesion, but the drill evidence is thinner than for mandrills.
   confidence: low
+  references:
+  - feistner_1989
+  - gartlan_1970
+- name: roar
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - long
+  - noisy
+  acoustic_description: A loud low-pitched male call broader and more forceful than the two-phase grunt.
+  semantic_keywords:
+  - display
+  - threat
+  - attention
+  semantic_description: Reported for male drills in high-arousal display and movement-related contexts, but the exact boundary from other male loud calls remains uncertain in the older literature.
+  confidence: low
+  references:
+  - feistner_1989
+  - gartlan_1970
+references:
+  eaza_2025:
+    citation: Vidakovits, I., Fienig, E., and Corlay, M. 2025. EAZA Best Practice Guidelines for the Mandrill (Mandrillus sphinx) and Drill (Mandrillus leucophaeus).
+    doi: 10.82011/BPGMandrillDrill
+  feistner_1989:
+    citation: Feistner, A. T. C. 1989. Social development and ecology of mandrills Mandrillus sphinx in a Gabonese rain forest. PhD thesis, University of Stirling.
+    url: https://dspace.stir.ac.uk/bitstream/1893/2114/4/Feistner-1989-Thesis.pdf
+  gartlan_1970:
+    citation: Gartlan, J. S. 1970. Socio-ecology and individual behavior of the drill, Mandrillus leucophaeus, in Cameroon. PhD thesis, Yale University.
 provenance:
 - timestamp: '2026-06-10T22:15:00+02:00'
   model: GPT-5 Codex
@@ -88,3 +165,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Replaced generic placeholders with a more explicit Mandrillus-style drill repertoire while keeping confidence conservative where the drill-specific literature remains sparse or old.

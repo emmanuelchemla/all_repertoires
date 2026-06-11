@@ -16,7 +16,8 @@ calls:
   - repetitive
   - long
   - loud
-  acoustic_description: A repeated trilled song phrase with relatively stereotyped structure.
+  acoustic_description: A repeated trilled song phrase with relatively stereotyped
+    structure.
   semantic_keywords:
   - territorial
   - courtship
@@ -63,7 +64,8 @@ calls:
   - frequency_modulated
   - repetitive
   - quiet
-  acoustic_description: A brief call given in movement contexts, generally simple and suited to short-range contact.
+  acoustic_description: A brief call given in movement contexts, generally simple
+    and suited to short-range contact.
   semantic_keywords:
   - contact
   - group_coordination
@@ -79,7 +81,8 @@ calls:
   - tonal
   - repetitive
   - quiet
-  acoustic_description: A brief everyday call with simpler structure than songs and urgent alarm notes.
+  acoustic_description: A brief everyday call with simpler structure than songs and
+    urgent alarm notes.
   semantic_keywords:
   - contact
   - attention
@@ -93,12 +96,14 @@ calls:
   - abrupt
   - loud
   - frequency_modulated
-  acoustic_description: A sharp musical single-note call, clearer and more individually discrete than the routine chip note.
+  acoustic_description: A sharp musical single-note call, clearer and more individually
+    discrete than the routine chip note.
   semantic_keywords:
   - aggression
   - spacing
   - attention
-  semantic_description: Used in aggressive spacing interactions and appears to encourage nearby birds to move apart.
+  semantic_description: Used in aggressive spacing interactions and appears to encourage
+    nearby birds to move apart.
   confidence: high
   references:
   - junco_cornell
@@ -109,7 +114,8 @@ calls:
   - multi_component
   - tonal
   - short
-  acoustic_description: A fast series of several short notes delivered in a tight burst during agitated moments.
+  acoustic_description: A fast series of several short notes delivered in a tight
+    burst during agitated moments.
   semantic_keywords:
   - alarm
   - aggression
@@ -118,20 +124,56 @@ calls:
   confidence: high
   references:
   - junco_cornell
+- name: begging call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - loud
+  - graded
+  acoustic_description: A repeated thin call delivered persistently by dependent young,
+    simpler than adult songs and local calls.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by nestlings or fledglings to solicit food and parental
+    care.
+  confidence: medium
+  references:
+  - nolan_2020
 references:
   junco_cornell:
-    citation: "Cornell Lab of Ornithology. Dark-eyed Junco sounds."
+    citation: Cornell Lab of Ornithology. Dark-eyed Junco sounds.
     url: https://www.allaboutbirds.org/guide/Dark-eyed_Junco/sounds
+  nolan_2020:
+    citation: Nolan, V. Jr. and colleagues. Dark-eyed Junco (Junco hyemalis), Birds
+      of the World.
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for dark-eyed junco using broad song and common call categories.
+  notes: Broad exploratory draft for dark-eyed junco using broad song and common call
+    categories.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
 - timestamp: '2026-06-11T11:35:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Added independently described kew and twitter calls plus explicit source grounding for the core dark-eyed junco repertoire.
+  notes: Added independently described kew and twitter calls plus explicit source
+    grounding for the core dark-eyed junco repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

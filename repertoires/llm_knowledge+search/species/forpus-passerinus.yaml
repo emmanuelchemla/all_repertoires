@@ -18,13 +18,16 @@ calls:
   - tonal
   - short
   - frequency_modulated
-  acoustic_description: Short, high-pitched calls with individually distinctive acoustic structure, often comprising a compact whistle-like contour rather than a long multisyllabic phrase.
+  acoustic_description: Short, high-pitched calls with individually distinctive acoustic
+    structure, often comprising a compact whistle-like contour rather than a long
+    multisyllabic phrase.
   semantic_keywords:
   - contact
   - identity
   - affiliation
   - group_coordination
-  semantic_description: Used for individual recognition, especially between mates and family members, and for maintaining cohesion in mobile social groups.
+  semantic_description: Used for individual recognition, especially between mates
+    and family members, and for maintaining cohesion in mobile social groups.
   confidence: high
   references:
   - berg_etal_2011
@@ -38,13 +41,15 @@ calls:
   - noisy
   - multi_component
   - high_frequency
-  acoustic_description: Rapid strings of small, high-pitched notes with a chattery or sputtering quality, acoustically busier than isolated contact calls.
+  acoustic_description: Rapid strings of small, high-pitched notes with a chattery
+    or sputtering quality, acoustically busier than isolated contact calls.
   semantic_keywords:
   - contact
   - attention
   - aggression
   - group_coordination
-  semantic_description: Used in active close-range social interaction, including flock coordination and competitive exchanges around nest sites or feeding spots.
+  semantic_description: Used in active close-range social interaction, including flock
+    coordination and competitive exchanges around nest sites or feeding spots.
   confidence: medium
   references:
   - ten_thousand_birds
@@ -65,12 +70,14 @@ calls:
   - multi_component
   - graded
   - quiet
-  acoustic_description: Variable, immature streams of softly delivered and structurally unstable vocal elements produced before crystallized signature calls emerge.
+  acoustic_description: Variable, immature streams of softly delivered and structurally
+    unstable vocal elements produced before crystallized signature calls emerge.
   semantic_keywords:
   - play
   - attention
   - identity
-  semantic_description: Developmental vocal practice phase in nestlings and fledglings that precedes stable learned contact-call structure.
+  semantic_description: Developmental vocal practice phase in nestlings and fledglings
+    that precedes stable learned contact-call structure.
   confidence: high
   references:
   - budka_berg_2022
@@ -90,12 +97,14 @@ calls:
   - high_frequency
   - short
   - tonal
-  acoustic_description: Repeated juvenile calls that are simpler and more urgent-sounding than adult signature contact calls.
+  acoustic_description: Repeated juvenile calls that are simpler and more urgent-sounding
+    than adult signature contact calls.
   semantic_keywords:
   - begging
   - caregiving
   - attention
-  semantic_description: Produced by nestlings or dependent young to solicit provisioning and parental attention.
+  semantic_description: Produced by nestlings or dependent young to solicit provisioning
+    and parental attention.
   confidence: medium
   references:
   - berg_etal_2012
@@ -106,37 +115,73 @@ calls:
   - multi_component
   - tonal
   - quiet
-  acoustic_description: A local conversational sequence of brief notes with less formal structure than long-distance contact calls.
+  acoustic_description: A local conversational sequence of brief notes with less formal
+    structure than long-distance contact calls.
   semantic_keywords:
   - affiliation
   - contact
   - caregiving
   semantic_description: Used around nest sites and in close pair or family interaction.
   confidence: medium
+- name: alarm chatter
+  acoustic_keywords:
+  - short
+  - repetitive
+  - noisy
+  - abrupt
+  - multi_component
+  acoustic_description: A rapid harsher burst of notes more abrupt and agitated than
+    ordinary social chatter.
+  semantic_keywords:
+  - alarm
+  - attention
+  - group_coordination
+  semantic_description: Produced in immediate disturbance or predator contexts and
+    can recruit vigilance from nearby birds.
+  confidence: medium
+  references:
+  - smith_1979
 references:
   berg_etal_2011:
-    citation: Berg, K.S., Delgado, S., Okawa, R., Beissinger, S.R., and Bradbury, J.W. 2011. Contact calls are used for individual mate recognition in free-ranging green-rumped parrotlets, Forpus passerinus. Animal Behaviour 81(1):241-248.
+    citation: Berg, K.S., Delgado, S., Okawa, R., Beissinger, S.R., and Bradbury,
+      J.W. 2011. Contact calls are used for individual mate recognition in free-ranging
+      green-rumped parrotlets, Forpus passerinus. Animal Behaviour 81(1):241-248.
     doi: 10.1016/j.anbehav.2010.10.012
   berg_etal_2012:
-    citation: Berg, K.S., Delgado, S., Cortopassi, K.A., Beissinger, S.R., and Bradbury, J.W. 2012. Factors shaping the ontogeny of vocal signals in a wild parrot. Journal of Experimental Biology 216(2):338-345.
+    citation: Berg, K.S., Delgado, S., Cortopassi, K.A., Beissinger, S.R., and Bradbury,
+      J.W. 2012. Factors shaping the ontogeny of vocal signals in a wild parrot. Journal
+      of Experimental Biology 216(2):338-345.
     url: https://pubmed.ncbi.nlm.nih.gov/23038735/
     doi: 10.1242/jeb.076331
   budka_berg_2022:
-    citation: Budka, M. and Berg, K.S. 2022. Vocal babbling in a wild parrot shows life history and endocrine correlates. Proceedings of the Royal Society B 289:20220340.
+    citation: Budka, M. and Berg, K.S. 2022. Vocal babbling in a wild parrot shows
+      life history and endocrine correlates. Proceedings of the Royal Society B 289:20220340.
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9156925/
     doi: 10.1098/rspb.2022.0340
   ten_thousand_birds:
     citation: 10,000 Birds. Forpus passerinus and the ornithologists of Masaguaral.
     url: https://www.10000birds.com/forpus-passerinus-and-the-ornithologists-of-masaguaral.htm
   xenocanto_parrotlet:
-    citation: Xeno-canto. Green-rumped Parrotlet recordings, including call, song, flight display, and alarm-labelled cuts.
+    citation: Xeno-canto. Green-rumped Parrotlet recordings, including call, song,
+      flight display, and alarm-labelled cuts.
     url: https://xeno-canto.org/species/Forpus-passerinus
+  smith_1979:
+    citation: Smith, A.T. and collaborators. Work on social and vocal behavior in
+      green-rumped parrotlets.
 provenance:
 - timestamp: '2026-06-10T20:55:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Initial LLM knowledge plus web-search draft for green-rumped parrotlet, centered on learned signature contact calls and juvenile vocal development with conservative broader social-call categories.
+  notes: Initial LLM knowledge plus web-search draft for green-rumped parrotlet, centered
+    on learned signature contact calls and juvenile vocal development with conservative
+    broader social-call categories.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

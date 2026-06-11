@@ -10,123 +10,93 @@ taxonomy:
   species: ursinus
 calls:
   - name: grunt
-    acoustic_keywords:
-      - low_frequency
-      - tonal
-      - short
-      - repetitive
-      - graded
-    acoustic_description: A short, low-pitched vocalization with relatively smooth tonal structure, often produced in repeated series at close range.
-    semantic_keywords:
-      - contact
-      - affiliation
-      - group_coordination
-      - attention
-    semantic_description: Used in routine social interactions, approaches, greetings, and low-level coordination, often signaling benign intent.
+    acoustic_keywords: [low_frequency, tonal, short, repetitive, graded]
+    acoustic_description: Short low-pitched calls with relatively smooth tonal structure, often produced in short repeated sequences.
+    semantic_keywords: [contact, affiliation, group_coordination, attention]
+    semantic_description: Used in routine social interactions, approaches, greetings, and low-arousal coordination, often signaling benign intent.
     confidence: high
-    references:
-      - hammerschmidt_fischer_2019
-      - pruetz_ursinus
+    references: [hammerschmidt_fischer_2019, roberts_2014]
   - name: rhythmic grunt
-    acoustic_keywords:
-      - low_frequency
-      - tonal
-      - repetitive
-      - pulsed
-      - quiet
-    acoustic_description: A repeated series of evenly timed grunts with stable low-frequency structure and less abrupt delivery than alarm or display calls.
-    semantic_keywords:
-      - affiliation
-      - contact
-      - submission
-    semantic_description: Often associated with friendly approaches and reassurance, helping reduce uncertainty in close social interactions.
+    acoustic_keywords: [low_frequency, tonal, repetitive, pulsed, quiet]
+    acoustic_description: Evenly timed grunt series with stable low-frequency structure and a more regular rhythm than ordinary single grunts.
+    semantic_keywords: [affiliation, contact, submission]
+    semantic_description: Often associated with friendly approaches and reassurance in close social interactions where tension reduction is useful.
     confidence: medium
-    references:
-      - chacma_contact
+    references: [chacma_contact]
+  - name: clear bark
+    alternative_names: [contact bark]
+    acoustic_keywords: [broadband, abrupt, short, loud, graded]
+    acoustic_description: Loud abrupt barks that are relatively less harsh and noisy than alarm-like bark variants.
+    semantic_keywords: [contact, group_coordination, spacing, attention]
+    semantic_description: Used to maintain contact or regulate spacing, particularly when callers and receivers are visually separated.
+    confidence: high
+    references: [fischer_2001, hammerschmidt_fischer_2019]
+  - name: harsh bark
+    alternative_names: [alarm bark]
+    acoustic_keywords: [broadband, noisy, abrupt, short, loud]
+    acoustic_description: Explosive harsh barks with strong noisy energy and abrupt onset.
+    semantic_keywords: [alarm, predator, attention, threat]
+    semantic_description: Produced in disturbance and danger contexts to alert others and broadcast high arousal.
+    confidence: high
+    references: [fischer_2001, hammerschmidt_fischer_2019]
   - name: wahoo
-    acoustic_keywords:
-      - loud
-      - multi_component
-      - long
-      - broadband
-      - tonal
-    acoustic_description: A loud two-part call in which an initial bark-like element is followed by a lower hoot- or grunt-like element, often repeated in bouts.
-    semantic_keywords:
-      - alarm
-      - threat
-      - display
-      - attention
-    semantic_description: Produced mainly by adult males during predator-related alarm or aggressive display situations, advertising arousal and presence over longer range.
+    acoustic_keywords: [loud, multi_component, long, broadband, tonal]
+    acoustic_description: A loud two-part call with an initial bark-like syllable followed by a lower more resonant second syllable, often repeated in bouts.
+    semantic_keywords: [alarm, threat, display, attention]
+    semantic_description: Produced mainly by adult males during predator-related alarm or aggressive display situations, advertising arousal over long distances.
     confidence: high
-    references:
-      - kitchen_2013
-      - wahoo_2018
-  - name: bark
-    acoustic_keywords:
-      - broadband
-      - abrupt
-      - loud
-      - short
-      - graded
-    acoustic_description: A sharp, forceful call with abrupt onset and harsher spectral energy than grunts, ranging from clearer to harsher variants.
-    semantic_keywords:
-      - alarm
-      - attention
-      - contact
-    semantic_description: Used in disturbance and alarm contexts, with some bark variants also serving contact or spacing functions depending on context.
-    confidence: high
-    references:
-      - fischer_2001
-      - hammerschmidt_fischer_2019
-  - name: scream
-    acoustic_keywords:
-      - high_frequency
-      - loud
-      - noisy
-      - long
-      - graded
-    acoustic_description: A high-pitched, noisy vocalization with strong arousal-dependent variability in duration and contour.
-    semantic_keywords:
-      - distress
-      - aggression
-      - submission
-      - attention
-    semantic_description: Common in escalated aggression, victimization, and intense social conflict, broadcasting distress and recruiting attention from bystanders.
-    confidence: high
-    references:
-      - hammerschmidt_fischer_2019
-      - pruetz_ursinus
-  - name: yak
-    acoustic_keywords:
-      - abrupt
-      - short
-      - noisy
-      - repetitive
-      - graded
-    acoustic_description: A short, rough call type with harsher quality than grunts and less extended structure than wahoos.
-    semantic_keywords:
-      - submission
-      - distress
-      - attention
-    semantic_description: Associated with retreat, social unease, or threat-related interactions, especially when individuals withdraw from a conflict or danger source.
+    references: [fischer_2002, wahoo_review_2019]
+  - name: roar grunt
+    alternative_names: [roar-grunt]
+    acoustic_keywords: [low_frequency, noisy, multi_component, loud, graded]
+    acoustic_description: A rough low-frequency call with mixed roaring and grunt-like structure and a broader spectral profile than ordinary grunts.
+    semantic_keywords: [threat, display, spacing, attention]
+    semantic_description: Used in aggressive interactions and aroused social displays where the caller attempts to intimidate or displace others.
     confidence: medium
-    references:
-      - pruetz_ursinus
-      - hammerschmidt_fischer_2019
+    references: [hammerschmidt_fischer_2019, guinea_baboon_repertoire_2013]
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: High-pitched noisy calls with strong arousal-dependent variation in duration and contour.
+    semantic_keywords: [distress, aggression, submission, attention]
+    semantic_description: Common in escalated aggression, victimization, and intense social conflict, broadcasting distress and recruiting bystander attention.
+    confidence: high
+    references: [hammerschmidt_fischer_2019]
+  - name: yak
+    acoustic_keywords: [abrupt, short, noisy, repetitive, graded]
+    acoustic_description: Short rough calls with harsher quality than grunts and less extended structure than wahoos.
+    semantic_keywords: [submission, distress, attention, spacing]
+    semantic_description: Associated with retreat, social unease, and threat-related situations, especially when individuals withdraw from conflict.
+    confidence: medium
+    references: [hammerschmidt_fischer_2019, baboon_proto_2017]
+  - name: copulation call
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A conspicuous repeated sexual call series, usually more rhythmic and aroused than ordinary affiliative calls.
+    semantic_keywords: [mating, attention, affiliation]
+    semantic_description: Produced during or immediately around copulation and related sexual interactions.
+    confidence: medium
+    references: [hammerschmidt_fischer_2019]
 references:
   hammerschmidt_fischer_2019:
     citation: "Hammerschmidt, K. and Fischer, J. 2019. Baboon vocal repertoires and the evolution of primate vocal diversity. Journal of Human Evolution 126:1-13."
     doi: 10.1016/j.jhevol.2018.10.010
-  kitchen_2013:
-    citation: "Kitchen, D.M., Cheney, D.L., and Seyfarth, R.M. 2013. Male baboon responses to experimental manipulations of loud calls: testing an honest signal of fighting ability. Behavioral Ecology and Sociobiology 67:1825-1835."
-    url: https://web-facstaff.sas.upenn.edu/~seyfarth/Publications/kitchen%20et%20al.%202013.pdf
-  wahoo_2018:
-    citation: "Boe, L.-J., Berthommier, F., Legou, T., Captier, G., Kemp, C., Sawallis, T.R., Becker, Y., Rey, A., Fagot, J., and Badin, P. 2019. What's up with wahoo? Exploring baboon vocalizations with speech science techniques. Bioacoustics 28:261-281."
+  roberts_2014:
+    citation: "Roberts, A.I. and Roberts, S.G.B. 2014. Wild chacma and olive baboons use social information in grunts to assess nearby social interactions. Biology Letters 10:20140384."
+    doi: 10.1098/rsbl.2014.0384
   fischer_2001:
     citation: "Fischer, J., Metz, M., Cheney, D.L., and Seyfarth, R.M. 2001. Acoustic features of female chacma baboon barks. Ethology 107:33-54."
-  pruetz_ursinus:
-    citation: "Animal Diversity Web. Papio ursinus account."
-    url: https://animaldiversity.org/accounts/Papio_ursinus/
+    url: https://onlinelibrary.wiley.com/doi/10.1046/j.1439-0310.2001.00637.x
+  fischer_2002:
+    citation: "Fischer, J., Kitchen, D.M., Seyfarth, R.M., and Cheney, D.L. 2002. Baboon loud calls advertise male quality: acoustic features and relation to rank, age, and exhaustion. Behavioral Ecology and Sociobiology 53:140-148."
+    url: https://link.springer.com/article/10.1007/s00265-002-0559-4
+  wahoo_review_2019:
+    citation: "Boe, L.-J., Berthommier, F., Legou, T., Captier, G., Kemp, C., Sawallis, T.R., Becker, Y., Rey, A., Fagot, J., and Badin, P. 2019. What's up with wahoo? Exploring baboon vocalizations with speech science techniques. Bioacoustics 28:261-281."
+    url: https://www.tandfonline.com/doi/full/10.1080/09524622.2018.1425162
+  guinea_baboon_repertoire_2013:
+    citation: "Maciej, P., Ndao, I., Hammerschmidt, K., and Fischer, J. 2013. Vocal communication in a complex multi-level society: constrained acoustic structure and flexible call usage in Guinea baboons. Frontiers in Zoology 10:58."
+    doi: 10.1186/1742-9994-10-58
+  baboon_proto_2017:
+    citation: "Boe, L.-J., Berthommier, F., Legou, T., Captier, G., Kemp, C., Sawallis, T.R., Becker, Y., Rey, A., Fagot, J., and Badin, P. 2017. Evidence of a vocalic proto-system in the baboon (Papio papio) suggests pre-hominin speech precursors. PLoS ONE 12:e0169321."
+    doi: 10.1371/journal.pone.0169321
   chacma_contact:
     citation: "New England Primate Conservancy. Chacma Baboon (Papio ursinus)."
     url: https://neprimateconservancy.org/chacma-baboon/
@@ -135,3 +105,7 @@ provenance:
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft for chacma baboon using broad, well-attested call classes and conservative confidence labels for finer social-call distinctions.
+  - timestamp: "2026-06-11T11:09:02Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added clear versus harsh bark, roar grunt, and copulation call coverage plus stronger top-level references in a speed-focused external-source update.

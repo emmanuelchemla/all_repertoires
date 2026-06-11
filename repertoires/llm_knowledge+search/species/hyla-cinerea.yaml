@@ -15,39 +15,43 @@ calls:
     semantic_keywords: [courtship, mating, attention]
     semantic_description: Used by males to attract females in breeding choruses.
     confidence: high
-    references:
-      - hyla_cinerea_ad
+    references: [gerhardt_1978, adw_cinerea]
   - name: encounter call
     acoustic_keywords: [abrupt, repetitive, tonal, loud, graded]
     acoustic_description: A shorter more forceful call than the advertisement call, directed to nearby rivals.
     semantic_keywords: [territorial, aggression, attention]
     semantic_description: Used in close-range male-male interactions around calling positions.
     confidence: medium
-    references:
-      - hyla_cinerea_ad
-  - name: release call
-    acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
-    acoustic_description: A brief call produced during unwanted physical contact or clasping.
-    semantic_keywords: [submission, attention, mating]
-    semantic_description: Signals inappropriate amplexus and prompts release.
-    confidence: medium
-    references:
-      - hyla_cinerea_general
+    references: [adw_cinerea]
   - name: warning call
     acoustic_keywords: [abrupt, short, noisy, loud, repetitive]
-    acoustic_description: A shorter and more urgent call than the mating advertisement signal, with a harsher and more defensive quality.
+    acoustic_description: A shorter and more urgent call than the advertisement signal, with a harsher defensive quality.
     semantic_keywords: [alarm, threat, attention]
     semantic_description: Used in disturbance and warning contexts and distinguished behaviorally from advertisement and release calling.
     confidence: medium
-    references:
-      - hyla_cinerea_general
+    references: [adw_cinerea]
+  - name: rain call
+    acoustic_keywords: [repetitive, tonal, graded]
+    acoustic_description: A distinct non-advertisement call type reported as different from mating, warning, and release calls, but with limited accessible detail on its exact spectro-temporal structure.
+    semantic_keywords: [attention, group_coordination]
+    semantic_description: Produced when frogs appear to sense imminent rain, outside the direct mate-attraction context of the advertisement call.
+    confidence: low
+    references: [adw_cinerea]
+  - name: release call
+    acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
+    acoustic_description: A brief protest call produced during unwanted physical contact or clasping.
+    semantic_keywords: [submission, attention, mating]
+    semantic_description: Signals inappropriate amplexus and prompts release.
+    confidence: medium
+    references: [adw_cinerea]
 references:
-  hyla_cinerea_ad:
-    citation: "Gerhardt, H.C. 1978. Mating Call Recognition in the Green Treefrog (Hyla cinerea)."
-    url: https://journals.biologists.com/jeb/article/74/1/59/22521/Mating-Call-Recognition-in-the-Green-Treefrog-Hyla
-  hyla_cinerea_general:
+  adw_cinerea:
     citation: "Animal Diversity Web. Hyla cinerea account."
     url: https://animaldiversity.org/accounts/Hyla_cinerea/
+  gerhardt_1978:
+    citation: "Gerhardt, H.C. 1978. Mating Call Recognition in the Green Treefrog (Hyla cinerea): The Significance of Some Fine-Temporal Properties."
+    url: https://journals.biologists.com/jeb/article/74/1/59/22521/Mating-Call-Recognition-in-the-Green-Treefrog-Hyla
+    doi: 10.1242/jeb.74.1.59
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
@@ -57,3 +61,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added references and a warning-call category from independent green treefrog sources.
+  - timestamp: "2026-06-11T12:25:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision tightened species-specific support and kept the repertoire focused on the best-supported named call classes.
+  - timestamp: "2026-06-11T13:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Second completeness pass added the externally documented rain call from the Animal Diversity Web account and kept it low confidence because accessible acoustic detail is sparse.

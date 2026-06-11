@@ -19,18 +19,18 @@ calls:
       - tonal
       - noisy
       - graded
-    acoustic_description: A structurally complex call assembled from several note types, commonly including introductory higher notes and lower, harsher terminal dee notes in variable sequences.
+    acoustic_description: Structurally complex call assembled from several note types, commonly including introductory higher notes and lower harsher terminal dee notes in variable sequences.
     semantic_keywords:
       - contact
       - group_coordination
       - alarm
       - attention
       - combinatorial
-    semantic_description: Flexible everyday social call used in flock cohesion, coordination, monitoring of flockmates, and threat-related signalling, with note composition varying across contexts.
+    semantic_description: Flexible everyday social call used in flock cohesion, coordination, monitoring of flockmates, and threat-related signaling.
     confidence: high
     references:
       - freeberg_2008
-      - soha_2010
+      - hatti_1985
   - name: fee-bee song
     alternative_names:
       - four-note whistle
@@ -57,6 +57,7 @@ calls:
     confidence: high
     references:
       - allaboutbirds_carolina
+      - soha_2010
   - name: high see call
     alternative_names:
       - seee
@@ -66,7 +67,7 @@ calls:
       - tonal
       - short
       - quiet
-    acoustic_description: Very high-pitched, thin, narrow-band notes, typically brief and less harsh than chick-a-dee calls.
+    acoustic_description: Very high-pitched thin narrow-band notes, typically brief and less harsh than chick-a-dee calls.
     semantic_keywords:
       - alarm
       - predator
@@ -75,6 +76,7 @@ calls:
     confidence: high
     references:
       - allaboutbirds_carolina
+      - hatti_1985
   - name: gargle call
     alternative_names:
       - gargle
@@ -84,7 +86,8 @@ calls:
       - broadband
       - repetitive
       - abrupt
-    acoustic_description: Rapid, rough, gurgling or raspy note strings with a noisy quality distinct from the clearer whistled song.
+      - loud
+    acoustic_description: Rapid rough gurgling or raspy note strings with a noisy quality distinct from the clearer whistled song.
     semantic_keywords:
       - aggression
       - threat
@@ -94,19 +97,77 @@ calls:
     confidence: medium
     references:
       - allaboutbirds_carolina
+      - hatti_1985
+  - name: nest hiss
+    alternative_names:
+      - hissing display
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - loud
+      - short
+    acoustic_description: Explosive hiss-like sound lacking the clear tonal structure of song or the discrete note patterning of chick-a-dee calls.
+    semantic_keywords:
+      - threat
+      - attention
+    semantic_description: Produced by an incubating female at the nest when an intruder approaches the cavity, as part of a close-range defensive display.
+    confidence: high
+    references:
+      - allaboutbirds_carolina
+  - name: begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Persistent thin solicitation calls from young birds, typically more insistent than adult social notes.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Produced by dependent young to solicit provisioning and care.
+    confidence: medium
+    references:
+      - allaboutbirds_carolina
 references:
   allaboutbirds_carolina:
     citation: Cornell Lab of Ornithology. Carolina Chickadee sounds and vocalization overview.
     url: https://www.allaboutbirds.org/guide/Carolina_Chickadee/sounds
   freeberg_2008:
-    citation: Freeberg, T.M. and Harvey, E.M. 2008. Group size and social interactions are associated with calling behavior in Carolina chickadees (Poecile carolinensis). Journal of Comparative Psychology 122(3):312-318.
+    citation: "Freeberg, T. M. and Harvey, E. M. 2008. Group size and social interactions are associated with calling behavior in Carolina chickadees (Poecile carolinensis). Journal of Comparative Psychology 122(3):312-318."
     url: https://pubmed.ncbi.nlm.nih.gov/18729660/
     doi: 10.1037/0735-7036.122.3.312
+  hatti_1985:
+    citation: "Hailman, J. P., Ficken, M. S., and Ficken, R. W. 1985. The 'chick-a-dee' calls of Parus atricapillus, P. carolinensis, and P. major. Auk 102(3):506-524."
   soha_2010:
-    citation: Soha, J.A. and Marler, P. 2010. A species-specific acoustic cue for selective song learning in the parental tutor song of the Carolina chickadee. Animal Behaviour 80(2):187-198.
+    citation: "Soha, J. A. and Marler, P. 2010. A species-specific acoustic cue for selective song learning in the parental tutor song of the Carolina chickadee. Animal Behaviour 80(2):187-198."
     doi: 10.1016/j.anbehav.2010.04.025
 provenance:
   - timestamp: "2026-06-10T19:20:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft emphasizing the combinatorial chick-a-dee system, male song, and broad alarm and agonistic call categories.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass retained the Carolina Chickadee core named call classes, added an explicit juvenile begging class, and strengthened broad stable reference support.
+  - timestamp: '2026-06-11T16:15:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Second-pass completeness sweep added the nest hiss defensive sound described for incubating females while leaving the broader call system unsplit.
