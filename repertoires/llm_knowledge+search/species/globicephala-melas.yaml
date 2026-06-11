@@ -9,32 +9,82 @@ taxonomy:
   genus: Globicephala
   species: melas
 calls:
-  - name: whistle
-    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
-    acoustic_description: A narrowband modulated tonal call with sustained contour.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Used in social contact and coordination within groups.
-    confidence: high
-  - name: pulsed call
-    acoustic_keywords: [pulsed, repetitive, broadband, multi_component, loud]
-    acoustic_description: A structured pulsed social call with repeated temporal patterning and strong broadband energy.
-    semantic_keywords: [contact, group_coordination, attention]
-    semantic_description: Used in social interaction and active group coordination.
-    confidence: medium
-  - name: click train
-    acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
-    acoustic_description: A train of brief broadband clicks lacking sustained tonality.
-    semantic_keywords: [food, attention, group_coordination]
-    semantic_description: Primarily biosonar-related but socially informative during foraging and movement.
-    confidence: medium
-  - name: burst-pulsed call
-    acoustic_keywords: [noisy, pulsed, broadband, abrupt, repetitive]
-    acoustic_description: A harsher pulsed call with more compact temporal structure than whistles.
-    semantic_keywords: [attention, threat, group_coordination]
-    semantic_description: Used in aroused social situations requiring immediate response.
-    confidence: low
+- name: whistle
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - frequency_modulated
+  - long
+  - loud
+  acoustic_description: A narrowband modulated tonal call with sustained contour.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Used in social contact and coordination within groups.
+  confidence: high
+- name: pulsed call
+  acoustic_keywords:
+  - pulsed
+  - repetitive
+  - broadband
+  - multi_component
+  - loud
+  acoustic_description: A structured pulsed social call with repeated temporal patterning and strong broadband energy.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used in social interaction and active group coordination.
+  confidence: medium
+- name: click train
+  acoustic_keywords:
+  - pulsed
+  - repetitive
+  - broadband
+  - short
+  - abrupt
+  acoustic_description: A train of brief broadband clicks lacking sustained tonality.
+  semantic_keywords:
+  - food
+  - attention
+  - group_coordination
+  semantic_description: Primarily biosonar-related but socially informative during foraging and movement.
+  confidence: medium
+- name: burst-pulsed call
+  acoustic_keywords:
+  - noisy
+  - pulsed
+  - broadband
+  - abrupt
+  - repetitive
+  acoustic_description: A harsher pulsed call with more compact temporal structure than whistles.
+  semantic_keywords:
+  - attention
+  - threat
+  - group_coordination
+  semantic_description: Used in aroused social situations requiring immediate response.
+  confidence: low
+- name: squeal
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - long
+  - frequency_modulated
+  - loud
+  acoustic_description: A higher-pitched and more intense call than a simple whistle, often with strong modulation and harsher quality.
+  semantic_keywords:
+  - attention
+  - affiliation
+  - group_coordination
+  semantic_description: Used in active social interactions and high-arousal group communication.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for long-finned pilot whale centered on whistles and pulsed social sounds.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for long-finned pilot whale centered on whistles and pulsed social sounds.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

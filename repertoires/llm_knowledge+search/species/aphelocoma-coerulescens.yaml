@@ -9,32 +9,138 @@ taxonomy:
   genus: Aphelocoma
   species: coerulescens
 calls:
-  - name: jeer call
-    acoustic_keywords: [loud, noisy, broadband, abrupt, short]
-    acoustic_description: A harsh conspicuous call with abrupt delivery and broad spectral energy.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Used in disturbance and anti-predator contexts.
-    confidence: medium
-  - name: contact call
-    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
-    acoustic_description: A simpler lower-amplitude call than the main alarm repertoire.
-    semantic_keywords: [contact, group_coordination, affiliation]
-    semantic_description: Used in local social cohesion within cooperative family groups.
-    confidence: medium
-  - name: begging call
-    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
-    acoustic_description: A repeated higher-pitched solicitation call than adult contact notes.
-    semantic_keywords: [begging, caregiving, attention]
-    semantic_description: Used by dependent young to solicit food and care.
-    confidence: medium
-  - name: mobbing chatter
-    acoustic_keywords: [repetitive, noisy, multi_component, abrupt, loud]
-    acoustic_description: An excited series of short harsh notes louder and more rapid than routine social chatter.
-    semantic_keywords: [alarm, recruitment, group_coordination, attention]
-    semantic_description: Used to recruit group members during mobbing or shared vigilance.
-    confidence: medium
+- name: jeer call
+  alternative_names:
+  - scold call
+  acoustic_keywords:
+  - loud
+  - noisy
+  - broadband
+  - abrupt
+  - short
+  acoustic_description: A harsh conspicuous call with abrupt delivery and broad spectral energy.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Used in disturbance and anti-predator contexts.
+  confidence: medium
+  references:
+  - scrubjay_cornell
+- name: weep call
+  alternative_names:
+  - contact call
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  - graded
+  acoustic_description: A simpler lower-amplitude call than the main alarm repertoire.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Used in local social cohesion, especially in perched and flight contact among cooperative family-group members.
+  confidence: medium
+  references:
+  - scrubjay_cornell
+- name: begging call
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - loud
+  - short
+  - graded
+  acoustic_description: A repeated higher-pitched solicitation call than adult contact notes.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by dependent young to solicit food and care.
+  confidence: medium
+- name: mobbing chatter
+  acoustic_keywords:
+  - repetitive
+  - noisy
+  - multi_component
+  - abrupt
+  - loud
+  acoustic_description: An excited series of short harsh notes louder and more rapid than routine social chatter.
+  semantic_keywords:
+  - alarm
+  - recruitment
+  - group_coordination
+  - attention
+  semantic_description: Used to recruit group members during mobbing or shared vigilance.
+  confidence: medium
+- name: sentinel alarm call
+  acoustic_keywords:
+  - abrupt
+  - short
+  - noisy
+  - repetitive
+  - loud
+  acoustic_description: A sharper and more urgent alarm series than ordinary local contact calls.
+  semantic_keywords:
+  - alarm
+  - attention
+  - group_coordination
+  - recruitment
+  semantic_description: Used to recruit cooperatively breeding group members to shared vigilance or mobbing.
+  confidence: medium
+  references:
+  - scrubjay_cornell
+- name: growl call
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - broadband
+  - short
+  - graded
+  acoustic_description: A guttural low harsh vocalization, rougher and lower than the scratchy weep call.
+  semantic_keywords:
+  - threat
+  - attention
+  - affiliation
+  semantic_description: Used in close-range social exchanges and agitated interactions within family groups.
+  confidence: medium
+  references:
+  - scrubjay_cornell
+- name: hiccup call
+  acoustic_keywords:
+  - abrupt
+  - short
+  - repetitive
+  - noisy
+  - pulsed
+  acoustic_description: A rapid mechanical-sounding sequence of short notes, distinct from harsher scolds and more patterned than general chatter.
+  semantic_keywords:
+  - alarm
+  - attention
+  - group_coordination
+  semantic_description: Given by alarmed females during conspicuous vigilance displays to alert nearby group members.
+  confidence: high
+  references:
+  - scrubjay_cornell
+  - scrubjay_hiccup
+references:
+  scrubjay_cornell:
+    citation: "Cornell Lab of Ornithology. Florida Scrub-Jay sounds."
+    url: https://www.allaboutbirds.org/guide/Florida_Scrub-Jay/sounds
+  scrubjay_hiccup:
+    citation: "Stith, B.M., et al. 2023. Territory and population attributes affect Florida scrub-jay fecundity."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9841125/
 provenance:
-  - timestamp: "2026-06-10T21:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for Florida scrub-jay using cooperative corvid alarm and social call categories.
+- timestamp: '2026-06-10T21:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for Florida scrub-jay using cooperative corvid alarm and social call categories.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added independently described Florida scrub-jay weep, growl, and female hiccup calls plus clearer reference support for alarm and contact categories.

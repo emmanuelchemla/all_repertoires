@@ -9,32 +9,129 @@ taxonomy:
   genus: Junco
   species: hyemalis
 calls:
-  - name: song
-    acoustic_keywords: [tonal, harmonic, repetitive, long, loud]
-    acoustic_description: A repeated trilled song phrase with relatively stereotyped structure.
-    semantic_keywords: [territorial, courtship, mating, identity]
-    semantic_description: Used by males in territory advertisement and mate attraction.
-    confidence: high
-  - name: chip call
-    acoustic_keywords: [short, abrupt, tonal, repetitive, loud]
-    acoustic_description: A brief sharp call with simple structure and clear onset.
-    semantic_keywords: [contact, attention, alarm]
-    semantic_description: Used in everyday communication and mild disturbance contexts.
-    confidence: medium
-  - name: tseet call
-    acoustic_keywords: [high_frequency, tonal, short, loud, abrupt]
-    acoustic_description: A thinner higher-pitched call than the chip with urgent quality.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Used in higher-alert or more urgent disturbance situations.
-    confidence: medium
-  - name: flight call
-    acoustic_keywords: [short, tonal, frequency_modulated, repetitive, quiet]
-    acoustic_description: A brief call given in movement contexts, generally simple and suited to short-range contact.
-    semantic_keywords: [contact, group_coordination, attention]
-    semantic_description: Helps coordinate movement and maintain awareness during displacement.
-    confidence: low
+- name: song
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - repetitive
+  - long
+  - loud
+  acoustic_description: A repeated trilled song phrase with relatively stereotyped structure.
+  semantic_keywords:
+  - territorial
+  - courtship
+  - mating
+  - identity
+  semantic_description: Used by males in territory advertisement and mate attraction.
+  confidence: high
+  references:
+  - junco_cornell
+- name: chip call
+  acoustic_keywords:
+  - short
+  - abrupt
+  - tonal
+  - repetitive
+  - loud
+  acoustic_description: A brief sharp call with simple structure and clear onset.
+  semantic_keywords:
+  - contact
+  - attention
+  - alarm
+  semantic_description: Used in everyday communication and mild disturbance contexts.
+  confidence: medium
+  references:
+  - junco_cornell
+- name: tseet call
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - short
+  - loud
+  - abrupt
+  acoustic_description: A thinner higher-pitched call than the chip with urgent quality.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used in higher-alert or more urgent disturbance situations.
+  confidence: medium
+- name: flight call
+  acoustic_keywords:
+  - short
+  - tonal
+  - frequency_modulated
+  - repetitive
+  - quiet
+  acoustic_description: A brief call given in movement contexts, generally simple and suited to short-range contact.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Helps coordinate movement and maintain awareness during displacement.
+  confidence: low
+  references:
+  - junco_cornell
+- name: tick call
+  acoustic_keywords:
+  - short
+  - abrupt
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A brief everyday call with simpler structure than songs and urgent alarm notes.
+  semantic_keywords:
+  - contact
+  - attention
+  - group_coordination
+  semantic_description: Used in ordinary flock awareness and close-range social interaction.
+  confidence: low
+- name: kew call
+  acoustic_keywords:
+  - short
+  - tonal
+  - abrupt
+  - loud
+  - frequency_modulated
+  acoustic_description: A sharp musical single-note call, clearer and more individually discrete than the routine chip note.
+  semantic_keywords:
+  - aggression
+  - spacing
+  - attention
+  semantic_description: Used in aggressive spacing interactions and appears to encourage nearby birds to move apart.
+  confidence: high
+  references:
+  - junco_cornell
+- name: twitter call
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - multi_component
+  - tonal
+  - short
+  acoustic_description: A fast series of several short notes delivered in a tight burst during agitated moments.
+  semantic_keywords:
+  - alarm
+  - aggression
+  - attention
+  semantic_description: Heard during altercations or when birds flush suddenly.
+  confidence: high
+  references:
+  - junco_cornell
+references:
+  junco_cornell:
+    citation: "Cornell Lab of Ornithology. Dark-eyed Junco sounds."
+    url: https://www.allaboutbirds.org/guide/Dark-eyed_Junco/sounds
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for dark-eyed junco using broad song and common call categories.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for dark-eyed junco using broad song and common call categories.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:35:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added independently described kew and twitter calls plus explicit source grounding for the core dark-eyed junco repertoire.

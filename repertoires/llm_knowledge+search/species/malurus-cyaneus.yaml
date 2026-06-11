@@ -9,32 +9,122 @@ taxonomy:
   genus: Malurus
   species: cyaneus
 calls:
-  - name: song
-    acoustic_keywords: [tonal, harmonic, repetitive, long, loud]
-    acoustic_description: A clear phrase-structured song with repeated motifs and tonal syllables.
-    semantic_keywords: [territorial, courtship, mating, identity]
-    semantic_description: Used in territory advertisement and sexual display.
-    confidence: high
-  - name: trill call
-    acoustic_keywords: [short, tonal, repetitive, frequency_modulated, quiet]
-    acoustic_description: A short modulated call used in local social interaction.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Maintains cohesion among group members and pair partners.
-    confidence: medium
-  - name: alarm call
-    acoustic_keywords: [high_frequency, abrupt, short, repetitive, loud]
-    acoustic_description: A shorter and more urgent call than routine contact notes.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Used in direct threat contexts and can recruit vigilance.
-    confidence: high
-  - name: begging call
-    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
-    acoustic_description: A repeated solicitation call given by dependent young.
-    semantic_keywords: [begging, caregiving, attention]
-    semantic_description: Used by offspring to solicit feeding and care.
-    confidence: medium
+- name: song
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - repetitive
+  - long
+  - loud
+  acoustic_description: A clear phrase-structured song with repeated motifs and tonal syllables.
+  semantic_keywords:
+  - territorial
+  - courtship
+  - mating
+  - identity
+  semantic_description: Used in territory advertisement and sexual display.
+  confidence: high
+  references:
+  - fairywren_song
+- name: trill call
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - frequency_modulated
+  - quiet
+  acoustic_description: A short modulated call used in local social interaction.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Maintains cohesion among group members and pair partners.
+  confidence: medium
+- name: alarm call
+  acoustic_keywords:
+  - high_frequency
+  - abrupt
+  - short
+  - repetitive
+  - loud
+  acoustic_description: A shorter and more urgent call than routine contact notes.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used in direct threat contexts and can recruit vigilance.
+  confidence: high
+  references:
+  - fairywren_alarm_song
+- name: begging call
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - loud
+  - short
+  - graded
+  acoustic_description: A repeated solicitation call given by dependent young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by offspring to solicit feeding and care.
+  confidence: medium
+- name: aerial alarm call
+  acoustic_keywords:
+  - high_frequency
+  - abrupt
+  - short
+  - repetitive
+  - loud
+  acoustic_description: A shorter and more urgent call than routine contact notes, with strong attention-capturing quality.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used in direct aerial threat contexts and can recruit rapid vigilance or cover-seeking.
+  confidence: medium
+  references:
+  - fairywren_aerial
+- name: seet danger call
+  acoustic_keywords:
+  - high_frequency
+  - frequency_modulated
+  - short
+  - abrupt
+  - tonal
+  acoustic_description: A high-frequency down-sweeping call, shorter and more discrete than full alarm song and structurally close to other rapid anti-predator warning notes.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used as an active nest-warning signal, especially when a threat is close to the nest.
+  confidence: high
+  references:
+  - fairywren_seet
+references:
+  fairywren_song:
+    citation: "Frontiers in Ecology and Evolution. Superb Fairy-Wren (Malurus cyaneus) sons and daughters: sex differences in song and song learning."
+    url: https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2016.00009/full
+  fairywren_alarm_song:
+    citation: "Colombelli-Negrel, D., Robertson, J., and Kleindorfer, S. 2011. Risky revelations: Superb Fairy-wrens Malurus cyaneus respond more strongly to their mate's alarm song."
+    url: https://www.academia.edu/53048261/Risky_revelations_Superb_Fairy_wrens_Malurus_cyaneus_respond_more_strongly_to_their_mate_s_alarm_song
+  fairywren_aerial:
+    citation: "Magrath, R.D., Pitcher, B.J., and Gardner, J.L. 2007. A mutual understanding? Interspecific responses by birds to each other's aerial alarm calls."
+    url: https://academic.oup.com/beheco/article/18/5/944/201629
+  fairywren_seet:
+    citation: "Feeney, W.E., et al. 2025. The 'seet' danger call: an active nest warning in superb fairy-wrens."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12646797/
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for superb fairywren using broad song, contact, and alarm categories.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for superb fairywren using broad song, contact, and alarm categories.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:35:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added independently supported seet danger-call and source grounding for song and alarm categories without using the literature-extraction repertoire.

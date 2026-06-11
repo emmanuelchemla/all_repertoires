@@ -9,32 +9,85 @@ taxonomy:
   genus: Papio
   species: anubis
 calls:
-  - name: grunt
-    acoustic_keywords: [low_frequency, tonal, short, repetitive, graded]
-    acoustic_description: A short low call with relatively smooth tonal structure, often repeated in social sequences.
-    semantic_keywords: [contact, affiliation, group_coordination, attention]
-    semantic_description: Used in routine social interactions and to signal benign intent.
-    confidence: high
-  - name: bark
-    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A sharp forceful call with abrupt onset and harsher quality than a grunt.
-    semantic_keywords: [alarm, attention, threat]
-    semantic_description: Produced in disturbance, alert, or socially tense situations.
-    confidence: high
-  - name: wahoo
-    acoustic_keywords: [multi_component, loud, long, tonal, broadband]
-    acoustic_description: A loud display-like call with a compound structure often repeated in bouts.
-    semantic_keywords: [display, threat, alarm, attention]
-    semantic_description: Associated especially with adult male display and high-arousal long-range communication.
-    confidence: high
-  - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
-    acoustic_description: A high-arousal noisy call with strong variability in contour and duration.
-    semantic_keywords: [distress, aggression, submission, attention]
-    semantic_description: Produced in conflicts and victim responses.
-    confidence: high
+- name: grunt
+  acoustic_keywords:
+  - low_frequency
+  - tonal
+  - short
+  - repetitive
+  - graded
+  acoustic_description: A short low call with relatively smooth tonal structure, often repeated in social sequences.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  - attention
+  semantic_description: Used in routine social interactions and to signal benign intent.
+  confidence: high
+- name: bark
+  acoustic_keywords:
+  - abrupt
+  - broadband
+  - noisy
+  - short
+  - loud
+  acoustic_description: A sharp forceful call with abrupt onset and harsher quality than a grunt.
+  semantic_keywords:
+  - alarm
+  - attention
+  - threat
+  semantic_description: Produced in disturbance, alert, or socially tense situations.
+  confidence: high
+- name: wahoo
+  acoustic_keywords:
+  - multi_component
+  - loud
+  - long
+  - tonal
+  - broadband
+  acoustic_description: A loud display-like call with a compound structure often repeated in bouts.
+  semantic_keywords:
+  - display
+  - threat
+  - alarm
+  - attention
+  semantic_description: Associated especially with adult male display and high-arousal long-range communication.
+  confidence: high
+- name: scream
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - long
+  - graded
+  acoustic_description: A high-arousal noisy call with strong variability in contour and duration.
+  semantic_keywords:
+  - distress
+  - aggression
+  - submission
+  - attention
+  semantic_description: Produced in conflicts and victim responses.
+  confidence: high
+- name: copulation call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - short
+  - repetitive
+  - graded
+  acoustic_description: A conspicuous arousal-related call distinct from routine grunts and barks.
+  semantic_keywords:
+  - mating
+  - attention
+  - affiliation
+  semantic_description: Associated with sexual or post-copulatory social interaction.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T21:00:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for olive baboon using the standard baboon grunt, bark, wahoo, and scream system.
+- timestamp: '2026-06-10T21:00:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for olive baboon using the standard baboon grunt, bark, wahoo, and scream system.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

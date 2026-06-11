@@ -9,127 +9,145 @@ taxonomy:
   genus: Cercopithecus
   species: nictitans
 calls:
-  - name: pyow
-    alternative_names:
-      - pyow alarm call
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - loud
-      - tonal
-      - short
-      - frequency_modulated
-    acoustic_description: Loud, far-carrying calls with relatively clear tonal structure, typically produced as repeated series rather than as isolated soft notes.
-    semantic_keywords:
-      - alarm
-      - predator
-      - group_coordination
-      - identity
-    semantic_description: Commonly associated with leopard-related disturbance and other terrestrial danger contexts, while also broadcasting caller identity over long range.
-    confidence: high
-    references:
-      - arnold_zuberbuhler_2006
-      - lemasson_etal_2014
-  - name: hack
-    alternative_names:
-      - hack alarm call
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - loud
-      - abrupt
-      - broadband
-      - short
-      - repetitive
-    acoustic_description: Loud, abrupt, harsher-sounding calls given in repeated bouts, acoustically less tonal than pyows.
-    semantic_keywords:
-      - alarm
-      - predator
-      - group_coordination
-    semantic_description: Strongly linked to aerial predator contexts, especially crowned eagle encounters, and used to alert and organize group responses.
-    confidence: high
-    references:
-      - arnold_zuberbuhler_2006
-      - lemasson_etal_2014
-  - name: pyow-hack sequence
-    alternative_names:
-      - pyow-hack series
-      - transition series
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - loud
-      - repetitive
-      - multi_component
-      - graded
-    acoustic_description: Structured multi-call sequence in which pyows and hacks occur in a characteristic order with short intervals between elements.
-    semantic_keywords:
-      - group_coordination
-      - recruitment
-      - combinatorial
-      - attention
-    semantic_description: Used to recruit or trigger group movement rather than simply label a specific predator, making it a widely cited example of meaningful call combination.
-    confidence: high
-    references:
-      - arnold_zuberbuhler_2006
-      - schlapfer_etal_2024
-  - name: kek
-    alternative_names:
-      - female kek call
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - female
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - short
-      - abrupt
-      - repetitive
-      - broadband
-    acoustic_description: Shorter-range, abrupt calls that do not carry as far as the adult male loud calls.
-    semantic_keywords:
-      - alarm
-      - group_coordination
-      - attention
-    semantic_description: Females use these calls in response to external disturbances and socially relevant events, often coordinating with the broader alarm system without replacing male long-distance calls.
-    confidence: medium
-    references:
-      - candiotti_etal_2021
+- name: pyow
+  alternative_names:
+  - pyow alarm call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - loud
+  - tonal
+  - short
+  - frequency_modulated
+  acoustic_description: Loud, far-carrying calls with relatively clear tonal structure, typically produced as repeated series rather than as isolated soft notes.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  - identity
+  semantic_description: Commonly associated with leopard-related disturbance and other terrestrial danger contexts, while also broadcasting caller identity over long range.
+  confidence: high
+  references:
+  - arnold_zuberbuhler_2006
+  - lemasson_etal_2014
+- name: hack
+  alternative_names:
+  - hack alarm call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - loud
+  - abrupt
+  - broadband
+  - short
+  - repetitive
+  acoustic_description: Loud, abrupt, harsher-sounding calls given in repeated bouts, acoustically less tonal than pyows.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  semantic_description: Strongly linked to aerial predator contexts, especially crowned eagle encounters, and used to alert and organize group responses.
+  confidence: high
+  references:
+  - arnold_zuberbuhler_2006
+  - lemasson_etal_2014
+- name: pyow-hack sequence
+  alternative_names:
+  - pyow-hack series
+  - transition series
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - loud
+  - repetitive
+  - multi_component
+  - graded
+  acoustic_description: Structured multi-call sequence in which pyows and hacks occur in a characteristic order with short intervals between elements.
+  semantic_keywords:
+  - group_coordination
+  - recruitment
+  - combinatorial
+  - attention
+  semantic_description: Used to recruit or trigger group movement rather than simply label a specific predator, making it a widely cited example of meaningful call combination.
+  confidence: high
+  references:
+  - arnold_zuberbuhler_2006
+  - schlapfer_etal_2024
+- name: kek
+  alternative_names:
+  - female kek call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - abrupt
+  - repetitive
+  - broadband
+  acoustic_description: Shorter-range, abrupt calls that do not carry as far as the adult male loud calls.
+  semantic_keywords:
+  - alarm
+  - group_coordination
+  - attention
+  semantic_description: Females use these calls in response to external disturbances and socially relevant events, often coordinating with the broader alarm system without replacing male long-distance calls.
+  confidence: medium
+  references:
+  - candiotti_etal_2021
+- name: chirp
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A brief high note with cleaner tonal structure than harsh alarm barks.
+  semantic_keywords:
+  - contact
+  - attention
+  - affiliation
+  semantic_description: Used in local social communication and short-range coordination.
+  confidence: low
 references:
   arnold_zuberbuhler_2006:
-    citation: "Arnold, K. and Zuberbühler, K. 2006. Language evolution: semantic combinations in primate calls. Nature 441:303."
+    citation: "Arnold, K. and Zuberb\xFChler, K. 2006. Language evolution: semantic combinations in primate calls. Nature 441:303."
     doi: 10.1038/441303a
   candiotti_etal_2021:
-    citation: Candiotti, A., Zuberbühler, K., and Lemasson, A. 2021. Female putty-nosed monkeys (Cercopithecus nictitans) vocally recruit males for predator defence. Royal Society Open Science 8:202135.
+    citation: "Candiotti, A., Zuberb\xFChler, K., and Lemasson, A. 2021. Female putty-nosed monkeys (Cercopithecus nictitans) vocally recruit males for predator defence. Royal Society Open Science 8:202135."
     url: https://royalsocietypublishing.org/rsos/article/8/3/202135/95998/Female-putty-nosed-monkeys-Cercopithecus-nictitans
     doi: 10.1098/rsos.202135
   lemasson_etal_2014:
-    citation: Lemasson, A., Zuberbühler, K., and Hausberger, M. 2014. Pyow but not hack calls of the male putty-nosed monkey convey individual identity. Animal Behaviour 88:279-284.
+    citation: "Lemasson, A., Zuberb\xFChler, K., and Hausberger, M. 2014. Pyow but not hack calls of the male putty-nosed monkey convey individual identity. Animal Behaviour 88:279-284."
     url: https://libra.unine.ch/server/api/core/bitstreams/34e2ad20-cba2-4c89-a492-fa08763ab007/content
     doi: 10.1016/j.anbehav.2013.12.005
   schlapfer_etal_2024:
-    citation: Schlapfer, P., Candiotti, A., and Zuberbühler, K. 2024. Population differences in putty-nosed monkey (Cercopithecus nictitans) call order reveal flexibility in a combinatorial system. Animal Cognition 27:7.
+    citation: "Schlapfer, P., Candiotti, A., and Zuberb\xFChler, K. 2024. Population differences in putty-nosed monkey (Cercopithecus nictitans) call order reveal flexibility in a combinatorial system. Animal Cognition 27:7."
     url: https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/30771/Population_differences_in_putty-nosed_monkey_Cercopithecus_nictitans_call_order.pdf?isAllowed=y&sequence=1
     doi: 10.1007/s10071-023-01849-2
 provenance:
-  - timestamp: "2026-06-10T19:40:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Initial LLM knowledge plus web-search draft emphasizing the well-established pyow, hack, pyow-hack, and female kek system with conservative functional wording.
+- timestamp: '2026-06-10T19:40:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Initial LLM knowledge plus web-search draft emphasizing the well-established pyow, hack, pyow-hack, and female kek system with conservative functional wording.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

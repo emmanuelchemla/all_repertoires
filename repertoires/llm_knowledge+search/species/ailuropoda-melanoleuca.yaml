@@ -9,32 +9,83 @@ taxonomy:
   genus: Ailuropoda
   species: melanoleuca
 calls:
-  - name: bleat
-    acoustic_keywords: [tonal, harmonic, frequency_modulated, short, repetitive]
-    acoustic_description: A goat-like call with clear harmonic structure and modulated contour.
-    semantic_keywords: [affiliation, contact, mating, attention]
-    semantic_description: Used in friendly or sexual contexts and as a close-range social signal.
-    confidence: high
-  - name: honk
-    acoustic_keywords: [low_frequency, loud, abrupt, short, noisy]
-    acoustic_description: A short, low, forceful call with less tonal structure than a bleat.
-    semantic_keywords: [attention, threat, group_coordination]
-    semantic_description: Used in aroused social contexts and to capture attention.
-    confidence: medium
-  - name: bark
-    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A sharp harsh call with abrupt onset and strong broadband energy.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Associated with disturbance, intolerance, or heightened vigilance.
-    confidence: medium
-  - name: chirp
-    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
-    acoustic_description: A higher-pitched short call with relatively lighter tonal structure.
-    semantic_keywords: [contact, affiliation, attention]
-    semantic_description: Used in close social interaction and local coordination.
-    confidence: low
+- name: bleat
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - frequency_modulated
+  - short
+  - repetitive
+  acoustic_description: A goat-like call with clear harmonic structure and modulated contour.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - mating
+  - attention
+  semantic_description: Used in friendly or sexual contexts and as a close-range social signal.
+  confidence: high
+- name: honk
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - abrupt
+  - short
+  - noisy
+  acoustic_description: A short, low, forceful call with less tonal structure than a bleat.
+  semantic_keywords:
+  - attention
+  - threat
+  - group_coordination
+  semantic_description: Used in aroused social contexts and to capture attention.
+  confidence: medium
+- name: bark
+  acoustic_keywords:
+  - abrupt
+  - broadband
+  - noisy
+  - short
+  - loud
+  acoustic_description: A sharp harsh call with abrupt onset and strong broadband energy.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Associated with disturbance, intolerance, or heightened vigilance.
+  confidence: medium
+- name: chirp
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A higher-pitched short call with relatively lighter tonal structure.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - attention
+  semantic_description: Used in close social interaction and local coordination.
+  confidence: low
+- name: moan
+  acoustic_keywords:
+  - low_frequency
+  - long
+  - tonal
+  - harmonic
+  - graded
+  acoustic_description: A lower-amplitude sustained voiced call smoother than a bark or honk.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - attention
+  semantic_description: Used in close social interaction and low-intensity social or reproductive contexts.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T21:15:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for giant panda using the standard bleat-centered social repertoire and conservative additional call classes.
+- timestamp: '2026-06-10T21:15:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for giant panda using the standard bleat-centered social repertoire and conservative additional call classes.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

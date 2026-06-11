@@ -9,32 +9,82 @@ taxonomy:
   genus: Cercopithecus
   species: mona
 calls:
-  - name: boom
-    acoustic_keywords: [low_frequency, loud, short, pulsed, repetitive]
-    acoustic_description: A low pulsed call with strong amplitude and relatively simple structure.
-    semantic_keywords: [alarm, attention, group_coordination]
-    semantic_description: Used in conspicuous long-range signaling and alerting.
-    confidence: medium
-  - name: bark
-    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Produced in disturbance and danger contexts.
-    confidence: medium
-  - name: contact call
-    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
-    acoustic_description: A softer short-range call than barks, with less harsh structure.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in ordinary local social communication.
-    confidence: low
-  - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A high-intensity noisy call with strong arousal.
-    semantic_keywords: [distress, aggression, attention]
-    semantic_description: Produced in severe conflict or immediate danger.
-    confidence: low
+- name: boom
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - short
+  - pulsed
+  - repetitive
+  acoustic_description: A low pulsed call with strong amplitude and relatively simple structure.
+  semantic_keywords:
+  - alarm
+  - attention
+  - group_coordination
+  semantic_description: Used in conspicuous long-range signaling and alerting.
+  confidence: medium
+- name: bark
+  acoustic_keywords:
+  - abrupt
+  - broadband
+  - noisy
+  - short
+  - loud
+  acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Produced in disturbance and danger contexts.
+  confidence: medium
+- name: contact call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  - graded
+  acoustic_description: A softer short-range call than barks, with less harsh structure.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in ordinary local social communication.
+  confidence: low
+- name: scream
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - long
+  - abrupt
+  acoustic_description: A high-intensity noisy call with strong arousal.
+  semantic_keywords:
+  - distress
+  - aggression
+  - attention
+  semantic_description: Produced in severe conflict or immediate danger.
+  confidence: low
+- name: alarm bark
+  acoustic_keywords:
+  - abrupt
+  - broadband
+  - noisy
+  - short
+  - loud
+  acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy, more forceful than routine local calls.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Produced in disturbance and danger contexts.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T22:00:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for mona monkey using conservative guenon alarm and local social categories.
+- timestamp: '2026-06-10T22:00:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for mona monkey using conservative guenon alarm and local social categories.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

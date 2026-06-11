@@ -33,8 +33,37 @@ calls:
     semantic_keywords: [contact, affiliation, group_coordination]
     semantic_description: Used in ordinary within-group social communication.
     confidence: medium
+  - name: uh call
+    acoustic_keywords: [low_frequency, short, abrupt, quiet, graded]
+    acoustic_description: A short, low-intensity alarm vocalization quieter than the major predator alarms.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used for minor terrestrial threats or lower-intensity disturbance that prompts inspection rather than immediate escape.
+    confidence: medium
+    references: [vervet_alarm_system]
+  - name: nyow call
+    acoustic_keywords: [short, loud, abrupt, noisy, graded]
+    acoustic_description: A moderate-intensity abrupt alarm call distinct from both quiet uh calls and the better-known classic predator alarms.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used in intermediate-threat situations involving minor predators or sudden terrestrial disturbance.
+    confidence: medium
+    references: [vervet_alarm_system]
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A high-arousal distress call with strong noisy energy and more sustained structure than the alarm barks or coughs.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Produced in severe conflict, capture, or panic situations.
+    confidence: medium
+    references: [vervet_alarm_system]
+references:
+  vervet_alarm_system:
+    citation: "Struhsaker, T.T. 1967. Auditory communication among vervet monkeys and later syntheses of the vervet alarm-call system."
+    url: https://scholars.duke.edu/publication/1562008
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for vervet monkey centered on the classic predator-specific alarm call system.
+  - timestamp: "2026-06-11T00:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional classic vervet call classes from the species alarm-call literature.

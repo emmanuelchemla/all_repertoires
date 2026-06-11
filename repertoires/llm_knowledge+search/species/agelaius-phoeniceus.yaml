@@ -9,32 +9,86 @@ taxonomy:
   genus: Agelaius
   species: phoeniceus
 calls:
-  - name: conk-la-ree song
-    acoustic_keywords: [multi_component, tonal, harmonic, loud, long]
-    acoustic_description: A stereotyped territorial song with a recognizable introductory phrase and buzzy trailing component.
-    semantic_keywords: [territorial, courtship, mating, display, identity]
-    semantic_description: Used by males in territory advertisement and mate attraction.
-    confidence: high
-  - name: check call
-    acoustic_keywords: [short, abrupt, tonal, repetitive, loud]
-    acoustic_description: A short sharp call with abrupt onset and simple structure.
-    semantic_keywords: [alarm, attention, threat]
-    semantic_description: Used in alerting and mobbing contexts and during disturbance near nests.
-    confidence: high
-  - name: chatter
-    acoustic_keywords: [short, repetitive, noisy, multi_component, quiet]
-    acoustic_description: A rapid local sequence of short notes with more variable structure than song.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Produced during ordinary flock or pair interactions.
-    confidence: medium
-  - name: female chatter
-    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
-    acoustic_description: A softer repeated call type associated with female social interactions and nest-related contexts.
-    semantic_keywords: [caregiving, affiliation, attention]
-    semantic_description: Used by females in local communication around breeding activities.
-    confidence: medium
+- name: conk-la-ree song
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - harmonic
+  - loud
+  - long
+  acoustic_description: A stereotyped territorial song with a recognizable introductory phrase and buzzy trailing component.
+  semantic_keywords:
+  - territorial
+  - courtship
+  - mating
+  - display
+  - identity
+  semantic_description: Used by males in territory advertisement and mate attraction.
+  confidence: high
+- name: check call
+  acoustic_keywords:
+  - short
+  - abrupt
+  - tonal
+  - repetitive
+  - loud
+  acoustic_description: A short sharp call with abrupt onset and simple structure.
+  semantic_keywords:
+  - alarm
+  - attention
+  - threat
+  semantic_description: Used in alerting and mobbing contexts and during disturbance near nests.
+  confidence: high
+- name: chatter
+  acoustic_keywords:
+  - short
+  - repetitive
+  - noisy
+  - multi_component
+  - quiet
+  acoustic_description: A rapid local sequence of short notes with more variable structure than song.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Produced during ordinary flock or pair interactions.
+  confidence: medium
+- name: female chatter
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  - graded
+  acoustic_description: A softer repeated call type associated with female social interactions and nest-related contexts.
+  semantic_keywords:
+  - caregiving
+  - affiliation
+  - attention
+  semantic_description: Used by females in local communication around breeding activities.
+  confidence: medium
+- name: song
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - harmonic
+  - loud
+  - long
+  acoustic_description: A stereotyped song phrase with introductory notes and a more complex trailing component than simple check calls or chatters.
+  semantic_keywords:
+  - territorial
+  - courtship
+  - mating
+  - display
+  - identity
+  semantic_description: Used by males for territory advertisement and mate attraction beyond the most canonical song label already in the file.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T20:45:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for red-winged blackbird using the well-known territorial song plus common alarm and social calls.
+- timestamp: '2026-06-10T20:45:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for red-winged blackbird using the well-known territorial song plus common alarm and social calls.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

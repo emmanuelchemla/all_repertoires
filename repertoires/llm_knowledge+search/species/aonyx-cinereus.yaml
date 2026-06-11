@@ -9,32 +9,160 @@ taxonomy:
   genus: Aonyx
   species: cinereus
 calls:
-  - name: chirp
-    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
-    acoustic_description: A short, high-pitched tonal call often repeated in quick succession.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in routine close-range social interactions and to maintain cohesion among nearby group members.
-    confidence: medium
-  - name: chatter
-    acoustic_keywords: [short, repetitive, multi_component, noisy, tonal]
-    acoustic_description: A rapid sequence of brief notes with mixed tonal and harsh elements.
-    semantic_keywords: [contact, group_coordination, attention]
-    semantic_description: Produced during active social interactions, feeding, or excited group activity.
-    confidence: medium
-  - name: whistle
-    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
-    acoustic_description: A clearer, more sustained whistle-like call with strong tonal structure.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Likely used for contact over somewhat greater distance and carries caller-specific information.
-    confidence: medium
-  - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A loud, high-pitched harsh call with strong noisy energy and abrupt onset.
-    semantic_keywords: [distress, threat, attention]
-    semantic_description: Given in high-arousal conflict or distress situations to recruit immediate attention.
-    confidence: medium
+- name: chirp
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A short, high-pitched tonal call often repeated in quick succession.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in routine close-range social interactions and to maintain cohesion among nearby group members.
+  confidence: medium
+  references:
+  - aonyx_jmammal
+- name: chatter
+  acoustic_keywords:
+  - short
+  - repetitive
+  - multi_component
+  - noisy
+  - tonal
+  acoustic_description: A rapid sequence of brief notes with mixed tonal and harsh elements.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Produced during active social interactions, feeding, or excited group activity.
+  confidence: medium
+  references:
+  - aonyx_jmammal
+- name: whistle
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - frequency_modulated
+  - long
+  - loud
+  acoustic_description: A clearer, more sustained whistle-like call with strong tonal structure.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Likely used for contact over somewhat greater distance and carries caller-specific information.
+  confidence: medium
+- name: scream
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - long
+  - abrupt
+  acoustic_description: A loud, high-pitched harsh call with strong noisy energy and abrupt onset.
+  semantic_keywords:
+  - distress
+  - threat
+  - attention
+  semantic_description: Given in high-arousal conflict or distress situations to recruit immediate attention.
+  confidence: medium
+  references:
+  - aonyx_jasa
+  - aonyx_review
+- name: growl
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - broadband
+  - long
+  - graded
+  acoustic_description: A rough low call with stronger threat-like quality than chirps or whistles.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Used in close-range warning and competitive social interactions.
+  confidence: medium
+  references:
+  - aonyx_national_zoo
+- name: bark
+  acoustic_keywords:
+  - broadband
+  - abrupt
+  - loud
+  - short
+  - noisy
+  acoustic_description: A short explosive harsh call with stronger broadband energy than chirps or whistles.
+  semantic_keywords:
+  - alarm
+  - attention
+  - group_coordination
+  semantic_description: Used in abrupt alerting and high-arousal social contexts.
+  confidence: medium
+  references:
+  - aonyx_jasa
+  - aonyx_national_zoo
+- name: squeal
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - tonal
+  - long
+  - graded
+  acoustic_description: A high-pitched drawn-out call with stronger tonal continuity than a brief scream.
+  semantic_keywords:
+  - distress
+  - attention
+  - submission
+  semantic_description: Used in aroused discomfort, conflict, or intense solicitation contexts.
+  confidence: medium
+  references:
+  - aonyx_jasa
+- name: whine
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - long
+  - quiet
+  - graded
+  acoustic_description: A relatively narrowband, sustained, plaintive call quieter than a squeal and more tonal than a chatter.
+  semantic_keywords:
+  - contact
+  - begging
+  - attention
+  semantic_description: Used in solicitation and close-range social communication.
+  confidence: medium
+  references:
+  - aonyx_otter_sounds
+references:
+  aonyx_jmammal:
+    citation: "Lemasson, A., et al. 2014. Vocal repertoire, individual acoustic distinctiveness, and social networks in a group of captive Asian small-clawed otters (Aonyx cinerea)."
+    url: https://academic.oup.com/jmammal/article-pdf/95/1/128/2725872/95-1-128.pdf
+  aonyx_jasa:
+    citation: "Scheifele, P., et al. 2015. Vocal classification of vocalizations of a pair of Asian Small-Clawed otters to determine stress."
+    url: https://pubs.aip.org/asa/jasa/article-pdf/138/1/EL105/15316616/el105_1_online.pdf
+  aonyx_otter_sounds:
+    citation: "Mumm, C.A.S. and Knornschild, M. 2025. Otter Sounds."
+    url: https://link.springer.com/content/pdf/10.1007/978-3-031-77022-7_6.pdf
+  aonyx_review:
+    citation: "Hussain, S.A., Gupta, S.K., and de Silva, P.K. 2011. Review: biology and ecology of Asian small-clawed otter Aonyx cinereus."
+    url: https://www.iucnosgbull.org/Volume28/Hussain_et_al_2011.pdf
+  aonyx_national_zoo:
+    citation: "Smithsonian's National Zoo. Meet the Asian Small-Clawed Otter."
+    url: https://nationalzoo.si.edu/animals/news/meet-asian-small-clawed-otter-adorable-and-social-carnivore
 provenance:
-  - timestamp: "2026-06-10T20:45:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for Asian small-clawed otter built from general web-backed repertoire descriptions and conservative call classes.
+- timestamp: '2026-06-10T20:45:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for Asian small-clawed otter built from general web-backed repertoire descriptions and conservative call classes.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added independently sourced bark, squeal, and whine categories plus explicit reference support for the existing otter repertoire.

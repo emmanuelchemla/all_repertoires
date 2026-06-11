@@ -33,8 +33,47 @@ calls:
     semantic_keywords: [threat, aggression, attention]
     semantic_description: Produced in resource defense, warning, and close-range conflict.
     confidence: high
+  - name: trill
+    alternative_names: [chirrup, murmur]
+    acoustic_keywords: [tonal, harmonic, short, frequency_modulated, quiet]
+    acoustic_description: A short, soft, voiced call with a rising tonal contour, often smoother than a meow.
+    semantic_keywords: [affiliation, contact, caregiving, attention]
+    semantic_description: Used in friendly greeting, approach, and maternal or soliciting contexts.
+    confidence: high
+    references: [feline_vocal]
+  - name: chatter
+    alternative_names: [twittering]
+    acoustic_keywords: [repetitive, abrupt, noisy, short, multi_component]
+    acoustic_description: A rapid jaw-produced or mixed voiced-unvoiced sequence of short repeated elements.
+    semantic_keywords: [attention, display]
+    semantic_description: Common when visually tracking inaccessible prey and may reflect predatory arousal and focused attention.
+    confidence: medium
+    references: [feline_vocal]
+  - name: yowl
+    alternative_names: [caterwaul]
+    acoustic_keywords: [loud, long, tonal, frequency_modulated, graded]
+    acoustic_description: A prolonged, louder, and more intense voiced call than a typical meow, often with stronger modulation.
+    semantic_keywords: [mating, distress, attention, spacing]
+    semantic_description: Used in reproductive contexts, social distress, separation, or long-range solicitation.
+    confidence: high
+    references: [feline_vocal]
+  - name: spit
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A very short explosive threat sound, harsher and more abrupt than a hiss.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Produced in acute defensive or escalated close-range conflict.
+    confidence: medium
+    references: [feline_vocal]
+references:
+  feline_vocal:
+    citation: "Schotz, S. and van de Weijer, J. 2020. Feline vocal communication. Journal of Veterinary Science 21:e18."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7000907/
 provenance:
   - timestamp: "2026-06-10T22:30:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for domestic cat using the core meow, purr, hiss, and growl repertoire.
+  - timestamp: "2026-06-11T00:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional named domestic cat vocal classes from feline vocal communication reviews.
