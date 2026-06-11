@@ -31,19 +31,32 @@ calls:
     confidence: high
     references: [whitham_etal_2007]
   - name: gecker
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
     acoustic_keywords: [high_frequency, noisy, abrupt, repetitive, graded]
     acoustic_description: A harsh high-pitched distress call, usually produced in repeated bursts and rougher than girneys.
     semantic_keywords: [distress, begging, caregiving, attention]
     semantic_description: Typical of infants and juveniles in distress, protest, and solicitation contexts that recruit maternal or nearby social attention.
     confidence: medium
     references: [gecker_2000]
-  - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A high-arousal distress vocalization with strong noisy energy and variable contour.
+  - name: noisy scream
+    alternative_names: [scream, atonal scream]
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt, graded]
+    acoustic_description: A high-arousal scream with broad noisy energy, irregular contour, and less tonal structure than arched scream variants.
     semantic_keywords: [distress, submission, aggression, attention]
-    semantic_description: Common in conflict, especially in victim and subordinate responses.
+    semantic_description: Common in intense conflict, especially from victims and subordinates during attacks, chases, and aid-recruitment episodes.
     confidence: high
-    references: [rhesus_categories_2006]
+    references: [gouzoules_etal_1984, gouzoules_etal_1998, leprell_etal_2002]
+  - name: arched scream
+    acoustic_keywords: [high_frequency, tonal, long, frequency_modulated, loud, graded]
+    acoustic_description: A loud partially tonal scream with a pronounced rise-then-fall or arching frequency contour, often more structured than noisy screams.
+    semantic_keywords: [distress, submission, aggression, attention]
+    semantic_description: Produced in agonistic episodes and separation-rejection contexts, especially where conflict severity or rank-related distress is high.
+    confidence: high
+    references: [gouzoules_etal_1998, tomaszycki_etal_2001, leprell_etal_2002]
   - name: bark
     alternative_names: [threat bark, aggressive call]
     acoustic_keywords: [broadband, noisy, abrupt, short, loud]
@@ -51,7 +64,15 @@ calls:
     semantic_keywords: [threat, aggression, attention, spacing]
     semantic_description: Used in aggressive displays and other antagonistic high-arousal interactions.
     confidence: medium
-    references: [rhesus_categories_2006]
+    references: [partan_2002, rhesus_factsheet]
+  - name: shrill bark
+    alternative_names: [alarm bark]
+    acoustic_keywords: [high_frequency, loud, abrupt, short, tonal]
+    acoustic_description: A single loud, high-pitched bark that is sharper and more piercing than the broader harsh aggressive bark.
+    semantic_keywords: [alarm, predator, attention, spacing]
+    semantic_description: Typical alarm or sudden-threat vocalization, often given in threatening situations rather than routine social aggression.
+    confidence: medium
+    references: [rhesus_factsheet, hauser_etal_2002]
   - name: copulation scream
     alternative_names: [copulation call]
     acoustic_keywords: [high_frequency, loud, short, repetitive, graded]
@@ -81,6 +102,37 @@ calls:
     semantic_description: Given particularly to high-quality foods and likely contributes to recruitment or socially informative food signalling.
     confidence: high
     references: [hauser_marler_1993, hauser_1998]
+  - name: gruff
+    acoustic_keywords: [low_frequency, noisy, short, abrupt, graded]
+    acoustic_description: A rougher, harsher short call than a coo, with reduced tonality and a more guttural sound quality.
+    semantic_keywords: [contact, group_coordination, play, attention]
+    semantic_description: Reported as part of the species-typical contact/play movement repertoire, especially in contrast to the more tonal coo.
+    confidence: medium
+    references: [massey_2024]
+  - name: squeak
+    alternative_names: [squawk, screech]
+    acoustic_keywords: [high_frequency, short, abrupt, noisy, graded]
+    acoustic_description: A brief sharp high-pitched call, often harsher and shorter than coos or girneys and less sustained than full screams.
+    semantic_keywords: [distress, aggression, attention, play]
+    semantic_description: Used in agitated aggressive encounters, surprise, and some juvenile high-arousal interactions, with boundaries that likely grade into screams and geckers.
+    confidence: low
+    references: [rowell_hinde_1962, rhesus_factsheet]
+  - name: growl
+    alternative_names: [aggressive growl]
+    acoustic_keywords: [low_frequency, noisy, pulsed, repetitive, loud, graded]
+    acoustic_description: A low rough pulsed call with growly or rattling quality and stronger nonlinear harshness than grunts.
+    semantic_keywords: [threat, aggression, display, spacing]
+    semantic_description: Associated with escalating aggression, close-range threat, and attack-related displays.
+    confidence: medium
+    references: [partan_2002, rhesus_factsheet]
+  - name: pant-threat
+    alternative_names: [threat pant]
+    acoustic_keywords: [noisy, pulsed, repetitive, short, abrupt]
+    acoustic_description: A repeated harsh expiratory series or pulsed threat call, typically shorter-unit and more rhythmically repeated than a growl.
+    semantic_keywords: [threat, aggression, display, attention]
+    semantic_description: Used in overt threat displays and aggressive face-to-face confrontations, often as part of a multimodal aggressive signal.
+    confidence: medium
+    references: [partan_2002, fitch_fritz_2006]
 references:
   whitham_etal_2007:
     citation: "Whitham, J.C., Gerald, M.S., and Maestripieri, D. 2007. Intended receivers and functional significance of grunt and girney vocalizations in free-ranging female rhesus macaques. Ethology 113:862-874."
@@ -97,6 +149,34 @@ references:
   gecker_2000:
     citation: "Owren, M.J. 2000. Acoustic and behavioral analyses of gecker distress vocalizations in young rhesus macaques (Macaca mulatta). Doctoral dissertation, Cornell University."
     url: https://ecommons.cornell.edu/server/api/core/bitstreams/40cb718d-8018-4ea9-9bc6-fdadad5fa6a0/content
+  gouzoules_etal_1984:
+    citation: "Gouzoules, H., Gouzoules, S., and Marler, P. 1984. Rhesus monkey (Macaca mulatta) screams: representational signalling in the recruitment of agonistic aid. Animal Behaviour 32:182-193."
+  gouzoules_etal_1998:
+    citation: "Gouzoules, H., Gouzoules, S., and Tomaszycki, M. 1998. Agonistic screams and the classification of dominance relationships: are monkeys fuzzy logicians? Animal Behaviour 55:51-60."
+    doi: 10.1006/anbe.1997.0583
+  leprell_etal_2002:
+    citation: "Le Prell, C.G., Hauser, M.D., and Moody, D.B. 2002. Discrete or graded variation within rhesus monkey screams? Psychophysical experiments on classification. Animal Behaviour 63:47-62."
+  tomaszycki_etal_2001:
+    citation: "Tomaszycki, M.L., Davis, J.E., Gouzoules, H., and Wallen, K. 2001. Sex differences in infant rhesus macaque separation-rejection vocalizations and effects of prenatal androgens. Hormones and Behavior 39:267-276."
+    doi: 10.1006/hbeh.2001.1659
+  partan_2002:
+    citation: "Partan, S.R. 2002. Single and multichannel signal composition: facial expressions and vocalizations of rhesus macaques (Macaca mulatta). Behaviour 139:993-1027."
+    doi: 10.1163/15685390260337877
+  rowell_hinde_1962:
+    citation: "Rowell, T.E. and Hinde, R.A. 1962. Vocal communication by the rhesus monkey (Macaca mulatta). Proceedings of the Zoological Society of London 138:279-294."
+    doi: 10.1111/j.1469-7998.1962.tb05698.x
+  rhesus_factsheet:
+    citation: "Wisconsin National Primate Research Center. Primate Info Net factsheet: Rhesus macaque (Macaca mulatta)."
+    url: https://primate.wisc.edu/primate-info-net/pin-factsheets/pin-factsheet-rhesus-macaque/
+  hauser_etal_2002:
+    citation: "Ghazanfar, A.A., Flombaum, J.I., Miller, C.T., and Hauser, M.D. 2002. The role of temporal cues in rhesus monkey vocal recognition: orienting asymmetries to shrill barks. Brain, Behavior and Evolution 59:163-172."
+    doi: 10.1159/000063561
+  fitch_fritz_2006:
+    citation: "Fitch, W.T. and Fritz, J.B. 2006. Rhesus macaques spontaneously perceive formants in conspecific vocalizations. Journal of the Acoustical Society of America 120:2132-2141."
+    doi: 10.1121/1.2258499
+  massey_2024:
+    citation: "Massey, D.A. 2024. Delaying the Weaning of Captive Rhesus Macaques (Macaca mulatta): Effects on Welfare Indicators in Infancy and Beyond. PhD thesis, Newcastle University."
+    url: https://theses.ncl.ac.uk/jspui/bitstream/10443/6316/1/Massey%20D%20A%202024.pdf
 provenance:
   - timestamp: "2026-06-10T21:15:00+02:00"
     model: GPT-5 Codex
@@ -110,3 +190,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added major rhesus food-call and distress/sexual call classes plus stable external references in a speed-focused completeness pass.
+  - timestamp: "2026-06-11T13:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 5 recall-oriented pass split noisy versus arched screams, added alarm and aggressive call classes, and appended external references without consulting other repertoire files.

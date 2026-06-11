@@ -65,6 +65,13 @@ calls:
     semantic_description: Used in low-level solicitation, discomfort, or socially directed arousal.
     confidence: low
     references: [dog_soundscape]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, broadband, abrupt, graded]
+    acoustic_description: A brief low rough voiced sound, often softer and more pulse-like than a growl and shorter than a moan.
+    semantic_keywords: [play, affiliation, attention, distress]
+    semantic_description: Used in some play, close social solicitation, exertion, and discomfort contexts, but its boundary from other low-intensity voiced sounds is not always sharp.
+    confidence: low
+    references: [dog_soundscape, canine_communication_overview]
 references:
   dog_soundscape:
     citation: "Pongracz, P., Farago, T., Reicher, V., Kis, A., and Tixier, M. 2024. The dog soundscape: recurrence, emotional impact, acoustics, and contexts of dog sounds. Scientific Reports 14:3017."
@@ -79,6 +86,9 @@ references:
   separation_whining:
     citation: "Tiira, K., Sulkama, S., and Lohi, H. 2021. Separation-related behavior problems in dogs are associated with vocalization patterns. Scientific Reports 11:18482."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8479053/
+  canine_communication_overview:
+    citation: "The Aggie Transcript. 2022. Vocal communication in the domestic dog."
+    url: https://aggietranscript.ucdavis.edu/articles/vocal-communication-domestic-dog
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
@@ -92,3 +102,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative completeness pass added obvious additional dog call classes and refreshed the top-level references with stable external sources.
+  - timestamp: "2026-06-11T12:05:00Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 10 recall review added a tentative grunt class and kept other low-salience dog sounds merged where evidence for stable splits was weak.

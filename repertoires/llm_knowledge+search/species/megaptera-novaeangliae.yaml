@@ -46,6 +46,7 @@ calls:
     confidence: medium
     references: [dunlop_2007, frontiers_2020]
   - name: whoop
+    alternative_names: [whup]
     acoustic_keywords: [tonal, frequency_modulated, long, loud, abrupt]
     acoustic_description: A conspicuous call with a marked frequency sweep and a more emphatic onset than a typical moan.
     semantic_keywords: [attention, contact, group_coordination]
@@ -59,6 +60,13 @@ calls:
     semantic_description: A short social sound likely used in immediate interaction and attention-getting contexts.
     confidence: medium
     references: [dunlop_2007]
+  - name: feeding call
+    acoustic_keywords: [low_frequency, long, tonal, repetitive, loud]
+    acoustic_description: A rhythmic low-frequency call, often around a few hundred hertz, with a more regular repeated pattern than typical social moans or cries.
+    semantic_keywords: [food, recruitment, group_coordination]
+    semantic_description: Reported on feeding grounds where it is associated with coordinated prey-related behaviour and may help organize group feeding.
+    confidence: medium
+    references: [dosits]
 references:
   dosits:
     citation: "Discovery of Sound in the Sea. Humpback whale audio gallery."
@@ -84,3 +92,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded the nonsong humpback inventory with broad, recurring social call classes while keeping song representation at the phrase level.
+  - timestamp: "2026-06-11T18:30:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a broad feeding-call class and normalized whoop/whup naming to improve recall across humpback social-call and feeding-ground summaries.

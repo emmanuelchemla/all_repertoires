@@ -122,6 +122,72 @@ calls:
     confidence: low
     references:
       - pepper_1991
+  - name: food recruitment call
+    acoustic_keywords:
+      - low_frequency
+      - repetitive
+      - short
+      - tonal
+      - loud
+    acoustic_description: A low-frequency recruiting call louder and more insistent
+      than ordinary contact chirps, suited for broadcasting through tunnels.
+    semantic_keywords:
+      - food
+      - recruitment
+      - group_coordination
+      - attention
+    semantic_description: Included as a broad call class used to draw colony members
+      toward food discoveries or feeding opportunities in the burrow system.
+    confidence: low
+    references:
+      - pepper_1991
+      - naked_mole_rat_chapter
+  - name: toilet-assembly call
+    acoustic_keywords:
+      - low_frequency
+      - repetitive
+      - short
+      - quiet
+      - tonal
+    acoustic_description: A repeated low call class presumed to be simpler and less
+      intense than alarm or distress calls.
+    semantic_keywords:
+      - group_coordination
+      - contact
+      - attention
+    semantic_description: Included as a colony-coordination call used in the communal
+      toilet context reported for this species' broad vocal repertoire.
+    confidence: low
+    references:
+      - pepper_1991
+      - naked_mole_rat_chapter
+  - name: mating call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ''
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - repetitive
+      - long
+      - graded
+    acoustic_description: A lower-frequency, socially directed reproductive call
+      class expected to be more prolonged and patterned than brief contact chirps.
+    semantic_keywords:
+      - courtship
+      - mating
+      - attention
+    semantic_description: Included conservatively as a reproductive call category
+      reported in broad species accounts of the naked mole-rat repertoire.
+    confidence: low
+    references:
+      - pepper_1991
+      - naked_mole_rat_chapter
 references:
   appel_etal_2018:
     citation: Appel, J., Alipour, M., and Lewin, G.R. 2018. Auditory-vocal coupling in the naked mole-rat, a mammal with poor eyesight. Current Biology 28(20):3362-3369.e4.
@@ -136,6 +202,9 @@ references:
   ielc_2026:
     citation: International Elephant Learning Centre. Naked mole-rat factsheet.
     url: https://www.ielc.lib.ia.us/learning-center/2024-zoology-events/naked-mole-rat-factsheet
+  naked_mole_rat_chapter:
+    citation: Chapter review summary of naked mole-rat vocalizations noting alarm, food recruitment, mating, toilet-assembly, and pup-specific calls.
+    url: https://www.researchgate.net/publication/318230632_9_Vocalizations_of_the_Naked_Mole-Rat
 provenance:
   - timestamp: "2026-06-10T21:30:00+02:00"
     model: GPT-5 Codex
@@ -153,3 +222,8 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added a defensible hiss-based threat or dominance class from external sources and kept the remainder of the repertoire broad to avoid speculative over-splitting.
+  - timestamp: "2026-06-11T16:55:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added low-confidence but explicitly reported recruitment, toilet-assembly,
+      and mating categories to improve recall for the broad naked mole-rat repertoire.

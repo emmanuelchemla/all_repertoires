@@ -38,13 +38,81 @@ calls:
     semantic_description: Reported in local disturbance and alert contexts.
     confidence: medium
     references: [glander_1992]
+  - name: metallic cluck
+    alternative_names: [deep metallic cluck]
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A short low-amplitude cluck-like call, quieter and more discrete than barks or roars.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used by adult males before and during group travel to initiate or coordinate movement.
+    confidence: medium
+    references: [dacunha_etal_2015]
   - name: grunt
     acoustic_keywords: [low_frequency, short, tonal, repetitive, quiet]
     acoustic_description: A soft, short-range low call with simpler structure and lower amplitude than display calls.
     semantic_keywords: [contact, affiliation, group_coordination]
     semantic_description: Used in nearby social interaction and local cohesion.
     confidence: medium
-    references: [glander_1992]
+    references: [glander_1992, dacunha_etal_2015]
+  - name: cackle laugh
+    alternative_names: [heh, metallic cackling notes]
+    acoustic_keywords: [short, repetitive, noisy, graded, quiet]
+    acoustic_description: A rough bursty series of low-amplitude notes, harsher than a grunt and less explosive than a bark.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Reported in agonistic interactions, especially by threatened animals and in female-female aggression.
+    confidence: medium
+    references: [dacunha_etal_2015]
+  - name: whimper
+    acoustic_keywords: [high_frequency, tonal, long, graded, quiet]
+    acoustic_description: A soft plaintive call that can vary from basic whimper forms to more emphatic or chirping variants.
+    semantic_keywords: [contact, distress, attention]
+    semantic_description: Used by immatures and others during frustration, mild alarm, group progression, greeting, and mother-infant interaction.
+    confidence: medium
+    references: [dacunha_etal_2015]
+  - name: infant caw
+    alternative_names: [caw]
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, noisy, graded, abrupt]
+    acoustic_description: A louder separation-type infant call, more forceful than quiet squeaks and more prolonged than a purr.
+    semantic_keywords: [distress, caregiving, contact]
+    semantic_description: Used by infants when separated from the mother or when maternal contact is refused.
+    confidence: medium
+    references: [dacunha_etal_2015]
+  - name: maternal retrieval call
+    alternative_names: [wrah-has]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, abrupt, noisy, graded, multi_component]
+    acoustic_description: A conspicuous maternal call distinct from the low quiet-contact repertoire and used in infant-recovery situations.
+    semantic_keywords: [caregiving, contact, attention]
+    semantic_description: Given by mothers of dependent infants when the young are astray to facilitate location and retrieval.
+    confidence: medium
+    references: [dacunha_etal_2015]
+  - name: purr
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, quiet, repetitive, graded]
+    acoustic_description: A soft low-amplitude contact sound with smoother quality than squeaks or cries.
+    semantic_keywords: [contact, caregiving, affiliation]
+    semantic_description: Used in mother-infant contact and relationship maintenance.
+    confidence: medium
+    references: [dacunha_etal_2015]
+  - name: hiccup
+    acoustic_keywords: [short, abrupt, repetitive, low_frequency, quiet]
+    acoustic_description: A brief discrete call element delivered in pauses between more sustained loud-call phases.
+    semantic_keywords: [display, group_coordination, attention]
+    semantic_description: Produced by adult males during pauses in roar sessions.
+    confidence: medium
+    references: [dacunha_etal_2015]
   - name: distress call
     acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
     acoustic_description: A sharper, higher-pitched, high-arousal call with more abrupt delivery than the typical low-frequency repertoire.
@@ -58,6 +126,9 @@ references:
   glander_1992:
     citation: "Glander, K.E. 1992. Field guide and account material for mantled howler monkey vocal behaviour summarized in species overviews and long-term field studies."
     url: https://animaldiversity.org/accounts/Alouatta_palliata/
+  dacunha_etal_2015:
+    citation: "da Cunha, R.G.T., de Oliveira, D.A.G., Holzmann, I., and Kitchen, D.M. 2015. Production of loud and quiet calls in howler monkeys. In: Kowalewski, M.M. et al. Howler Monkeys: Behavior, Ecology, and Conservation."
+    url: https://www.researchgate.net/publication/283485508_Production_of_Loud_and_Quiet_Calls_in_Howler_Monkeys
 provenance:
   - timestamp: '2026-06-10T21:15:00+02:00'
     model: GPT-5 Codex
@@ -75,3 +146,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision strengthened major call classes and reference support using external sources only.
+  - timestamp: '2026-06-11T13:20:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide recall pass added quiet-contact, maternal, and low-amplitude display call classes documented for mantled howlers from external review sources only.

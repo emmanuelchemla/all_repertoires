@@ -63,6 +63,27 @@ calls:
     confidence: low
     references:
       - marler_1973
+  - name: grunt
+    alternative_names:
+      - phrased grunt
+      - contact grunt
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - tonal
+      - repetitive
+      - graded
+    acoustic_description: Short low-pitched social calls, often delivered as brief phrases or antiphonal exchanges and acoustically less sharp than alarm chirps.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+      - identity
+    semantic_description: Used for short-range cohesion and turn-taking contact exchanges, especially when group members are nearby but visually obscured.
+    confidence: high
+    references:
+      - marler_1973
+      - mclester_2022
   - name: hack-pop alarm call
     alternative_names:
       - hack
@@ -108,6 +129,40 @@ calls:
     confidence: medium
     references:
       - mclester_etal_2019
+  - name: growl
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - broadband
+      - short
+      - graded
+    acoustic_description: Rougher low-pitched calls with noisier structure than contact grunts and less explosive onset than the main male alarm call.
+    semantic_keywords:
+      - threat
+      - aggression
+      - attention
+    semantic_description: Included as a plausible agonistic or high-arousal social call reported in classic repertoire descriptions, likely used in conflict or tense encounters.
+    confidence: low
+    references:
+      - marler_1973
+  - name: gecker
+    alternative_names:
+      - staccato gecker
+    acoustic_keywords:
+      - high_frequency
+      - abrupt
+      - repetitive
+      - noisy
+      - short
+    acoustic_description: Rapid staccato call bursts made of short abrupt elements, acoustically harsher and more segmented than chirps or trills.
+    semantic_keywords:
+      - distress
+      - attention
+      - alarm
+    semantic_description: Included as a likely high-arousal small-call class used by females, juveniles, or infants during agitation or acute disturbance, though its exact boundary from other sharp calls remains uncertain.
+    confidence: low
+    references:
+      - marler_1973
   - name: scream
     acoustic_keywords:
       - high_frequency
@@ -146,3 +201,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added a clear distress class and tightened the call set around source-backed contact and alarm categories from Marler and later field observations.
+  - timestamp: "2026-06-11T14:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added source-backed grunt plus lower-confidence growl and gecker classes to improve recall for the female and juvenile social-distress repertoire.

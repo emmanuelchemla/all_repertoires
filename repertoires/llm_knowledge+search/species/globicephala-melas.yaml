@@ -51,6 +51,13 @@ calls:
     semantic_description: Associated mainly with prey pursuit and very close-range foraging.
     confidence: medium
     references: [vester_2017]
+  - name: biphonic call
+    acoustic_keywords: [tonal, harmonic, multi_component, frequency_modulated, loud]
+    acoustic_description: A call with two simultaneously expressed frequency components or a clearly layered tonal structure, giving a two-voiced impression relative to ordinary whistles.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Included because long-finned pilot whale repertoires repeatedly mention biphonic or multi-component social calls in addition to simpler whistles and pulsed sounds.
+    confidence: medium
+    references: [rsos_2024]
 references:
   delemas_2005:
     citation: "de Maréz, T., Pavan, G., and Fossati, C. 2005. Acoustic repertoire of long-finned pilot whales in the northwestern Mediterranean. European Research on Cetaceans 19:111-114."
@@ -77,3 +84,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded to include commonly recognized pilot-whale pulsed chirps and buzzes while anchoring the file to recent repertoire papers.
+  - timestamp: "2026-06-11T18:30:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a conservative biphonic-call class to capture pilot-whale repertoire descriptions that distinguish layered or two-voiced calls from ordinary whistles.

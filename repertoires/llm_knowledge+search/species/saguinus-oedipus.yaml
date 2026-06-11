@@ -45,6 +45,38 @@ calls:
     semantic_description: Used in capture, severe conflict, and other extreme disturbance.
     confidence: medium
     references: [cleveland_snowdon_1982]
+  - name: inverted U plus whistle
+    alternative_names: [Inverted U+ whistle, all-clear sequence]
+    acoustic_keywords: [multi_component, frequency_modulated, tonal, long, repetitive]
+    acoustic_description: A compound sequence that combines an alarm-like element with a whistle-like contact element into a stereotyped multi-note phrase.
+    semantic_keywords: [alarm, contact, combinatorial, group_coordination]
+    semantic_description: Reported as a composite signal used after alarm contexts, plausibly serving an all-clear or post-disturbance regrouping function.
+    confidence: medium
+    references: [cleveland_snowdon_1982, zuberbuhler_2009]
+  - name: food chirp
+    alternative_names: [C-call, D-call, food-associated chirp]
+    acoustic_keywords: [short, frequency_modulated, tonal, repetitive, quiet]
+    acoustic_description: A short chirp-class call used in food situations, with context-linked variants rather than a single invariant note shape.
+    semantic_keywords: [food, recruitment, attention]
+    semantic_description: Produced during approach to preferred foods and during feeding, and can inform group members about food-related activity.
+    confidence: high
+    references: [roush_snowdon_2000, roush_snowdon_1994]
+  - name: trill
+    alternative_names: [high chirp trill]
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A brief trilled or rapidly modulated high-pitched call, intermediate in texture between a simple chirp and a longer whistle sequence.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in nearby social communication and likely overlaps functionally with other short contact-like signals.
+    confidence: low
+    references: [cleveland_snowdon_1982, neprimate_conservancy_oedipus]
+  - name: bark bout
+    alternative_names: [staccato call, bark]
+    acoustic_keywords: [short, abrupt, broadband, repetitive, loud]
+    acoustic_description: A staccato bout of short abrupt notes with harsher structure than tonal chirps and whistles.
+    semantic_keywords: [alarm, aggression, attention]
+    semantic_description: Used in conspicuous disturbance, mobbing, or high-arousal alerting situations.
+    confidence: low
+    references: [cleveland_snowdon_1982, primate_vocalizations_archive]
 references:
   cleveland_snowdon_1982:
     citation: "Cleveland, J. and Snowdon, C.T. 1982. The Complex Vocal Repertoire of the Adult Cotton-top Tamarin (Saguinus oedipus oedipus). Zeitschrift fur Tierpsychologie 58:231-270."
@@ -53,6 +85,23 @@ references:
   ghazanfar_etal_2001:
     citation: "Ghazanfar, A.A., Morrill, R.J., and Kayser, C. 2001. Temporal cues in the antiphonal long-calling behaviour of cottontop tamarins."
     url: https://asifg.mycpanel.princeton.edu/publications/pdfs/ghazanfar%20et%20al%20-%20tamarin%20temporal%20cues.pdf
+  roush_snowdon_2000:
+    citation: "Roush, R.S. and Snowdon, C.T. 2000. Quality, Quantity, Distribution and Audience Effects on Food Calling in Cotton-Top Tamarins. Ethology 106:673-690."
+    url: https://onlinelibrary.wiley.com/doi/10.1046/j.1439-0310.2000.00581.x
+    doi: 10.1046/j.1439-0310.2000.00581.x
+  roush_snowdon_1994:
+    citation: "Roush, R.S. and Snowdon, C.T. 1994. Ontogeny of food-associated calls in cotton-top tamarins. Animal Behaviour 47:263-273."
+    url: https://www.researchgate.net/publication/248187154_Ontogeny_of_food-associated_calls_in_cotton-top_tamarins
+    doi: 10.1006/anbe.1994.1038
+  zuberbuhler_2009:
+    citation: "Zuberbuhler, K. 2009. Survivor Signals: The Biology and Psychology of Animal Alarm Calling."
+    url: https://www.shigerumiyagawa.com/s/Zuberbuhler-2009.pdf
+  neprimate_conservancy_oedipus:
+    citation: "New England Primate Conservancy. Cotton-top tamarin species account."
+    url: https://neprimateconservancy.org/cotton-top-tamarin/
+  primate_vocalizations_archive:
+    citation: "Primate Info Net. Primate vocalizations archive listing for Saguinus oedipus examples including bark bout and mobbing calls."
+    url: https://primate.wisc.edu/primate-info-net/av-resources/primate-vocalizations/
 provenance:
   - timestamp: "2026-06-10T20:30:00+02:00"
     model: GPT-5 Codex
@@ -62,3 +111,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision tightened major call classes and references using external sources only.
+  - timestamp: "2026-06-11T13:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: High-recall external-source pass added plausible missing cotton-top tamarin classes, especially combinatorial and food-associated signals, while leaving uncertain short-range call boundaries at low confidence.

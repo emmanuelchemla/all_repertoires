@@ -73,6 +73,71 @@ calls:
     semantic_description: Used in more forceful or aroused local social situations.
     confidence: medium
     references: [miller_etal_2010]
+  - name: chatter
+    acoustic_keywords: [short, repetitive, pulsed, noisy, broadband]
+    acoustic_description: A fast series of short pulsed notes with a rougher and more broadband quality than tonal contact calls.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Used in close-range arousal, agitation, or confrontational social exchanges rather than routine spacing contact.
+    confidence: medium
+    references: [bezerra_souto_2008, pistorio_etal_2020]
+  - name: tse call
+    alternative_names: [tse call, seep call, very brief whistle]
+    acoustic_keywords: [high_frequency, short, tonal, abrupt, quiet]
+    acoustic_description: A very short, high-pitched whistle-like note with little internal modulation and briefer duration than a phee.
+    semantic_keywords: [contact, attention]
+    semantic_description: Used as a brief local signal in nearby social monitoring or mild alerting contexts.
+    confidence: low
+    references: [bezerra_souto_2008, zhang_etal_2025]
+  - name: squeal
+    alternative_names: [loud squeal, submissive squeal]
+    acoustic_keywords: [high_frequency, noisy, long, abrupt, graded]
+    acoustic_description: A high-pitched squealing call with variable harshness and duration, spanning thinner submissive forms and louder intense forms.
+    semantic_keywords: [distress, submission, aggression]
+    semantic_description: Heard during severe social tension, subordination, restraint, or other highly aversive situations.
+    confidence: medium
+    references: [bezerra_souto_2008]
+  - name: moan
+    alternative_names: [moaning]
+    acoustic_keywords: [low_frequency, tonal, long, graded, quiet]
+    acoustic_description: A low-amplitude drawn-out call with a smoother, lower-pitched contour than the sharper whistle and alarm-like calls.
+    semantic_keywords: [affiliation, distress, attention]
+    semantic_description: Reported in emotionally charged close social situations, but its precise functional boundary remains unclear.
+    confidence: low
+    references: [bezerra_souto_2008]
+  - name: alarm call 1
+    acoustic_keywords: [high_frequency, short, tonal, abrupt, repetitive]
+    acoustic_description: A brief alert call type acoustically distinct from ordinary contact notes and from noisier harsh calls.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used in predator- or danger-related alerting contexts as one member of the species' alarm repertoire.
+    confidence: low
+    references: [bezerra_souto_2008]
+  - name: alarm call 2
+    acoustic_keywords: [broadband, noisy, short, abrupt, repetitive]
+    acoustic_description: A harsher, rougher alarm call than alarm call 1, with more broadband energy and a more forceful onset.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Used in predator- or danger-related alerting contexts, plausibly at a different urgency level or stimulus class than alarm call 1.
+    confidence: low
+    references: [bezerra_souto_2008]
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A loud, piercing, noisy call with strong amplitude and longer duration than the short alert calls.
+    semantic_keywords: [distress, alarm, aggression]
+    semantic_description: Produced in extreme arousal such as severe conflict, capture, or intense disturbance.
+    confidence: medium
+    references: [bezerra_souto_2008]
+  - name: infant cry
+    alternative_names: [loud cry]
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, long, tonal, loud, graded]
+    acoustic_description: A sustained infant-specific cry that is louder and more prolonged than brief peeps or tse-like notes.
+    semantic_keywords: [distress, begging, caregiving]
+    semantic_description: Given by infants during separation, discomfort, or solicitation of retrieval and care.
+    confidence: high
+    references: [bezerra_souto_2008, zhang_etal_2025]
 references:
   bezerra_souto_2008:
     citation: "Bezerra, B.M. and Souto, A. 2008. Structure and Usage of the Vocal Repertoire of Callithrix jacchus. International Journal of Primatology 29:671-701."
@@ -81,6 +146,13 @@ references:
   miller_etal_2010:
     citation: "Miller, C.T., Mandel, K., and Wang, X. 2010. The communicative content of the common marmoset vocal repertoire and its modulation by social context."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4644241/
+  pistorio_etal_2020:
+    citation: "Pistorio, A.L., Vintch, B., and Wang, X. 2020. Close-range vocal interaction in the common marmoset (Callithrix jacchus). PLOS ONE 15(1):e0227392."
+    url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0227392
+    doi: 10.1371/journal.pone.0227392
+  zhang_etal_2025:
+    citation: "Zhang, Y., et al. 2025. A large annotated dataset of vocalizations by common marmosets."
+    url: https://hal.science/hal-05073707v1/file/s41597-025-04951-8.pdf
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
@@ -94,3 +166,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision normalized call coverage and references using external sources only.
+  - timestamp: "2026-06-11T13:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: High-recall external-source pass added plausible missing common marmoset call classes, including infant and alarm-related categories, while keeping uncertain boundaries marked low confidence.

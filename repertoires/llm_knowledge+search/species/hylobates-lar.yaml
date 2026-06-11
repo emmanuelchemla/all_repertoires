@@ -52,7 +52,17 @@ calls:
     semantic_description: Used in high-arousal local contexts outside the core song bout, including sudden disturbance.
     confidence: low
     references: [raemaekers_1984]
+  - name: hoo
+    acoustic_keywords: [low_frequency, tonal, quiet, short, graded]
+    acoustic_description: A soft low-amplitude close-range call with relatively little spectral complexity, but with subtle acoustic variation across contexts.
+    semantic_keywords: [contact, group_coordination, predator, territorial, food]
+    semantic_description: Produced by both sexes during feeding, separation from group members, predator encounters, neighbour interactions, and sometimes within duet contexts; best treated as the main quiet social call of the species rather than split into several separate named calls.
+    confidence: high
+    references: [clarke_2015]
 references:
+  clarke_2015:
+    citation: "Clarke, E., Reichard, U.H., and Zuberbuhler, K. 2015. Context-specific close-range 'hoo' calls in wild gibbons (Hylobates lar). BMC Evolutionary Biology 15:56."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4389582/
   clarke_1977:
     citation: "Clarke, E., Reichard, U.H., and Zuberbuhler, K. 2006. The syntax and meaning of wild gibbon songs. PLOS ONE 1:e73."
     url: https://doi.org/10.1371/journal.pone.0000073
@@ -71,3 +81,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded the file around canonical white-handed gibbon song classes, including solo and predator-song distinctions plus stable gibbon-song references.
+  - timestamp: "2026-06-11T14:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide high-recall review added the source-backed quiet hoo call as the main close-range social call instead of splitting its context-specific variants.

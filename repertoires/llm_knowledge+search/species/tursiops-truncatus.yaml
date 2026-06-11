@@ -61,6 +61,27 @@ calls:
     semantic_description: Closely associated with successful prey capture and post-capture arousal.
     confidence: medium
     references: [jones_2019]
+  - name: gulp
+    acoustic_keywords: [pulsed, broadband, short, abrupt, repetitive]
+    acoustic_description: A brief pulsed element with a compact, percussive quality, often appearing as one component within longer bray-like sequences.
+    semantic_keywords: [food, group_coordination, attention]
+    semantic_description: Included as a named broad call class because gulps are repeatedly described as constituent units of bottlenose dolphin bray-call sequences.
+    confidence: medium
+    references: [diazlopez_2022, jones_2019]
+  - name: grunt
+    acoustic_keywords: [low_frequency, pulsed, short, broadband, graded]
+    acoustic_description: A short low-frequency pulsed sound with rougher structure than a whistle and less sequence-level organization than a full bray call.
+    semantic_keywords: [contact, food, attention]
+    semantic_description: Included because grunt-like elements are regularly distinguished in bottlenose call reviews and in descriptions of bray-call sequences.
+    confidence: medium
+    references: [diazlopez_2022, jones_2019]
+  - name: squeak
+    acoustic_keywords: [high_frequency, noisy, short, abrupt, graded]
+    acoustic_description: A short high-pitched harsh signal, typically briefer and less contour-rich than a whistle and often embedded in multi-element sequences.
+    semantic_keywords: [food, attention, affiliation]
+    semantic_description: Included as a recurring named element in bottlenose bray-call and repertoire descriptions rather than collapsing it fully into whistle or burst-pulsed categories.
+    confidence: medium
+    references: [diazlopez_2022, jones_2019]
 references:
   diazlopez_2022:
     citation: "Diaz Lopez, B., et al. 2022. Bray-call sequences in the Mediterranean common bottlenose dolphin. Frontiers in Marine Science 9:818014."
@@ -81,3 +102,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded around the standard bottlenose whistle-burst pulse-click framework and added bray, buzz, and victory squeal as widely discussed major classes.
+  - timestamp: "2026-06-11T18:30:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added broad gulp, grunt, and squeak classes because bottlenose repertoire reviews and bray-call work repeatedly name these elements rather than treating them only as undifferentiated burst-pulsed sound.

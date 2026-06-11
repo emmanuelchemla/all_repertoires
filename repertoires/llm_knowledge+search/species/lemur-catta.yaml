@@ -72,9 +72,55 @@ calls:
     semantic_description: A high-intensity threat or alarm signal produced during serious disturbance, conflict, or sudden danger.
     confidence: high
     references: [macedonia_1993, gould_1999]
+  - name: chirp
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A short bright note or brief series of notes, typically higher and lighter than meows or moans.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used in group positioning, relocation, and travel-related coordination, especially as an affiliative contact signal during movement.
+    confidence: medium
+    references: [macedonia_1993, bolt_2020]
+  - name: chutter
+    acoustic_keywords: [noisy, broadband, repetitive, short, graded]
+    acoustic_description: A rough repeated close-range call series that is harsher and more sputtering than the twitter.
+    semantic_keywords: [submission, distress, attention]
+    semantic_description: Used in agonistic or fearful social interactions, often as a lower-intensity submissive or uneasy signal distinct from louder alarm barking.
+    confidence: medium
+    references: [macedonia_1993, gould_1999]
+  - name: squeal
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, tonal, abrupt, graded]
+    acoustic_description: A sharp high-pitched call with a piercing tonal quality and stronger amplitude than most routine contact calls.
+    semantic_keywords: [aggression, mating, display, attention]
+    semantic_description: A male-specific call used in both agonistic and sexual contexts, making it a socially conspicuous signal during rivalry and reproductive interactions.
+    confidence: high
+    references: [macedonia_1993, bolt_2013]
+  - name: hmm
+    acoustic_keywords: [low_frequency, tonal, quiet, short, repetitive]
+    acoustic_description: A soft low-amplitude nasal-sounding call, usually shorter and less modulated than the moan or meow.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Produced before slow group relocation or to maintain cohesion with nearby group members in low-arousal settings.
+    confidence: medium
+    references: [macedonia_1993, yoder_2010]
+  - name: huh
+    acoustic_keywords: [low_frequency, abrupt, short, tonal, quiet]
+    acoustic_description: A brief low-pitched note with a compact shape and less carrying power than meows, howls, or wails.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Included as a probable short-range movement or relocation signal mentioned in broader species accounts, though its boundary from other low-amplitude cohesion calls remains uncertain.
+    confidence: low
+    references: [yoder_2010]
 references:
+  bolt_2013:
+    citation: "Bolt, L.M., Sauther, M.L., and Cuozzo, F.P. 2013. Squealing rate indicates dominance rank in the male ring-tailed lemur (Lemur catta). American Journal of Primatology 75:728-736."
+    url: https://bezamahafaly.yale.edu/files/2014/12/bolt-2013_2.pdf
   bolt_2014:
     citation: "Bolt, L.M. 2014. Male-specific use of the purr in the ring-tailed lemur (Lemur catta). Folia Primatologica 85:201-214."
+  bolt_2020:
+    citation: "Bolt, L.M. 2020. Affiliative contact calls during group travel: chirp and wail vocalization use in the male ring-tailed lemur (Lemur catta). Folia Primatologica."
+    url: https://protectedareas.mg/document/show/156952
   bolt_2017:
     citation: "Bolt, L.M. 2017. Contact calling behaviour in the male ring-tailed lemur (Lemur catta)."
   gould_1999:
@@ -83,6 +129,9 @@ references:
     citation: "Macedonia, J.M. 1993. The vocal repertoire of the ring-tailed lemur (Lemur catta). Folia Primatologica 61:186-217."
     url: https://doi.org/10.1159/000156749
     doi: 10.1159/000156749
+  yoder_2010:
+    citation: "Yoder, A.D., et al. 2010. Lemur catta (Primates: Lemuridae). Mammalian Species 42:58-74."
+    url: https://academic.oup.com/mspecies/article-pdf/42/854/58/8269093/42-854-58.pdf
 provenance:
   - timestamp: "2026-06-10T19:35:00+02:00"
     model: GPT-5 Codex
@@ -92,3 +141,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added obvious missing ring-tailed lemur contact and distress classes while keeping the draft anchored to the classic Macedonia repertoire paper.
+  - timestamp: "2026-06-11T14:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide high-recall review added omitted ring-tailed lemur contact and agonistic classes including chirp, chutter, squeal, hmm, and a low-confidence huh from broader species accounts.

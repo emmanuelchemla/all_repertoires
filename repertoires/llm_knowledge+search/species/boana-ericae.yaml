@@ -32,6 +32,30 @@ calls:
     semantic_description: Used in territorial defense and conflict among nearby males.
     confidence: high
     references: [morais_etal_2022]
+  - name: accessory note type D
+    alternative_names: [note type D]
+    acoustic_keywords: [short, tonal, frequency_modulated, quiet]
+    acoustic_description: One of three additional note types reported from vocal sequences in this species; treated here as a short accessory note rather than a full independently established call class because the accessible source summarizes it as a note type within larger vocalizations.
+    semantic_keywords: [attention, combinatorial]
+    semantic_description: Reported as part of the expanded vocal repertoire, but its standalone behavioral function is unresolved.
+    confidence: low
+    references: [morais_etal_2022]
+  - name: accessory note type E
+    alternative_names: [note type E]
+    acoustic_keywords: [short, tonal, graded, quiet]
+    acoustic_description: An additional accessory note type reported in the expanded repertoire, apparently embedded in broader vocal sequences rather than clearly documented as an independent social call.
+    semantic_keywords: [attention, combinatorial]
+    semantic_description: Included for recall because the species-specific repertoire paper reports this note type, although its social meaning remains unclear.
+    confidence: low
+    references: [morais_etal_2022]
+  - name: accessory note type F
+    alternative_names: [note type F]
+    acoustic_keywords: [short, tonal, abrupt, quiet]
+    acoustic_description: A third newly reported accessory note type in the expanded Boana ericae repertoire, with limited accessible detail beyond its recognition as a distinct note class.
+    semantic_keywords: [attention, combinatorial]
+    semantic_description: Included as a plausible repertoire element because it was explicitly reported in the species-specific study, but its function and boundary relative to other call types remain uncertain.
+    confidence: low
+    references: [morais_etal_2022]
   - name: release call
     acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
     acoustic_description: A brief higher-intensity protest call produced during unwanted clasping or interference.
@@ -60,3 +84,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision collapsed generic duplicate labels into the published A-B-C species-specific call system.
+  - timestamp: '2026-06-11T14:20:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide review pass added the three accessory note classes D-E-F from the 2022 species-specific repertoire paper at low confidence because the accessible source presents them as note types within broader vocalizations rather than fully resolved standalone calls.

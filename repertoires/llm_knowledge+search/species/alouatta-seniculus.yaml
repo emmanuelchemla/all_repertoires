@@ -30,14 +30,33 @@ calls:
     semantic_keywords: [alarm, threat, attention]
     semantic_description: Used in disturbance and acute arousal outside extended howl sequences.
     confidence: medium
-    references: [alouatta_overview]
+    references: [alouatta_overview, schonybarra_1986]
   - name: grunt
     acoustic_keywords: [low_frequency, short, tonal, repetitive, quiet]
     acoustic_description: A soft short-range low call with simpler structure than the long-distance display repertoire.
     semantic_keywords: [contact, affiliation, group_coordination]
     semantic_description: Used in nearby social interaction and local cohesion.
-    confidence: medium
-    references: [alouatta_overview]
+    confidence: low
+    references: [alouatta_overview, dacunha_etal_2015]
+  - name: whimper
+    acoustic_keywords: [high_frequency, tonal, long, graded, quiet]
+    acoustic_description: A soft plaintive call distinct from the low roaring repertoire and more subdued than outright distress screams.
+    semantic_keywords: [distress, contact, attention]
+    semantic_description: Plausibly used in disturbance, frustration, or reunion-related contexts, as reported broadly for howler monkeys and alluded to for red howlers.
+    confidence: low
+    references: [dacunha_etal_2015, wnprc_redhowler]
+  - name: infant cry
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: A conspicuous immature distress call with more urgency and amplitude than quiet contact grunts.
+    semantic_keywords: [distress, caregiving, contact]
+    semantic_description: Used in stress or separation contexts and likely to recruit maternal assistance or retrieval.
+    confidence: low
+    references: [dacunha_etal_2015, wnprc_redhowler]
   - name: distress call
     acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
     acoustic_description: A sharper and more high-pitched high-arousal call than the standard low-frequency display calls.
@@ -51,6 +70,15 @@ references:
   alouatta_overview:
     citation: "Animal Diversity Web. Alouatta genus account."
     url: https://animaldiversity.org/accounts/Alouatta/
+  schonybarra_1986:
+    citation: "Schön Ybarra, M.A. 1986. Loud calls of adult male red howling monkeys (Alouatta seniculus). Folia Primatologica 47:204-216."
+    url: https://pubmed.ncbi.nlm.nih.gov/3609972/
+  dacunha_etal_2015:
+    citation: "da Cunha, R.G.T., de Oliveira, D.A.G., Holzmann, I., and Kitchen, D.M. 2015. Production of loud and quiet calls in howler monkeys. In: Kowalewski, M.M. et al. Howler Monkeys: Behavior, Ecology, and Conservation."
+    url: https://www.researchgate.net/publication/283485508_Production_of_Loud_and_Quiet_Calls_in_Howler_Monkeys
+  wnprc_redhowler:
+    citation: "Wisconsin National Primate Research Center. Red howler monkey (Alouatta seniculus) factsheet."
+    url: https://primate.wisc.edu/primate-info-net/pin-factsheets/pin-factsheet-red-howler-monkey/
 provenance:
   - timestamp: '2026-06-10T21:45:00+02:00'
     model: GPT-5 Codex
@@ -68,3 +96,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision strengthened major call classes and reference support using external sources only.
+  - timestamp: '2026-06-11T13:20:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide recall pass added low-confidence quiet-call candidates for red howlers where species-specific evidence is sparse but external genus-level support makes inclusion useful.
