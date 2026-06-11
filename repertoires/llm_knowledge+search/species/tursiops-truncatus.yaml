@@ -15,26 +15,69 @@ calls:
     semantic_keywords: [contact, identity, group_coordination]
     semantic_description: Used for individual identification, contact, and reunion among group members.
     confidence: high
+    references: [janik_sayigh_2013, jones_2019]
+  - name: non-signature whistle
+    alternative_names: [whistle]
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A tonal whistle lacking the stereotyped individually distinctive contour of signature whistles, often more variable in shape.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in general social communication and coordination beyond individual signature signalling.
+    confidence: high
+    references: [jones_2019]
   - name: burst-pulsed sound
     acoustic_keywords: [pulsed, repetitive, broadband, abrupt, noisy]
-    acoustic_description: A rapidly pulsed broadband sound distinct from tonal whistles.
+    acoustic_description: A rapidly pulsed broadband sound distinct from tonal whistles, often appearing harsh or compressed.
     semantic_keywords: [threat, aggression, attention]
     semantic_description: Often associated with aroused social interactions and close-range confrontation.
     confidence: high
+    references: [jones_2019, overstrom_1983]
+  - name: bray call sequence
+    alternative_names: [bray]
+    acoustic_keywords: [pulsed, repetitive, multi_component, broadband, long]
+    acoustic_description: A rhythmic multi-unit sequence built from repeated pulsed elements such as gulps, grunts, or squeaks in stereotyped order.
+    semantic_keywords: [food, group_coordination, combinatorial]
+    semantic_description: Often associated with foraging and coordinated social behaviour, especially in populations where bray sequences are common.
+    confidence: medium
+    references: [diazlopez_2022, jones_2019]
   - name: echolocation click train
     acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
     acoustic_description: A train of brief broadband clicks lacking sustained tonality.
     semantic_keywords: [food, attention, group_coordination]
     semantic_description: Primarily used in biosonar but socially informative during foraging and movement.
+    confidence: high
+    references: [jones_2019]
+  - name: terminal buzz
+    alternative_names: [buzz]
+    acoustic_keywords: [pulsed, repetitive, broadband, abrupt, short]
+    acoustic_description: A very rapid click sequence with greatly shortened inter-click intervals compared with ordinary echolocation trains.
+    semantic_keywords: [food, attention]
+    semantic_description: Used at close range during prey pursuit and capture.
+    confidence: high
+    references: [jones_2019]
+  - name: victory squeal
+    acoustic_keywords: [high_frequency, noisy, frequency_modulated, long, pulsed]
+    acoustic_description: A high-pitched squeal-like burst or mixed signal given immediately after prey capture, often with a variable rough or pulsed quality.
+    semantic_keywords: [food, attention]
+    semantic_description: Closely associated with successful prey capture and post-capture arousal.
     confidence: medium
-  - name: squawk
-    acoustic_keywords: [noisy, broadband, abrupt, short, repetitive]
-    acoustic_description: A harsher broadband sound intermediate between burst-pulsed sounds and whistles.
-    semantic_keywords: [attention, threat, group_coordination]
-    semantic_description: Used in active social contexts requiring immediate response.
-    confidence: low
+    references: [jones_2019]
+references:
+  diazlopez_2022:
+    citation: "Diaz Lopez, B., et al. 2022. Bray-call sequences in the Mediterranean common bottlenose dolphin. Frontiers in Marine Science 9:818014."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8945472/
+  janik_sayigh_2013:
+    citation: "Janik, V.M. and Sayigh, L.S. 2013. Communication in bottlenose dolphins: 50 years of signature whistle research. Journal of Comparative Physiology A 199:479-489."
+  jones_2019:
+    citation: "Jones, B., Zapetis, M., Samuelson, M.M., and Ridgway, S. 2019. Sounds produced by bottlenose dolphins (Tursiops): a review of the defining characteristics and acoustic criteria of the dolphin vocal repertoire. Bioacoustics 30:26-66."
+    doi: 10.1080/09524622.2019.1613265
+  overstrom_1983:
+    citation: "Overstrom, N.A. 1983. Association between burst-pulse sounds and aggressive behavior in captive Atlantic bottlenosed dolphins. Zoo Biology 2:93-103."
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for bottlenose dolphin centered on signature whistles and pulsed social sounds.
+  - timestamp: "2026-06-11T10:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Expanded around the standard bottlenose whistle-burst pulse-click framework and added bray, buzz, and victory squeal as widely discussed major classes.

@@ -16,14 +16,16 @@ calls:
   - multi_component
   - repetitive
   - long
-  acoustic_description: A structured learned song composed of repeated syllable sequences and distinctive phrase patterns.
+  acoustic_description: A structured learned song composed of repeated syllable sequences
+    and distinctive phrase patterns.
   semantic_keywords:
   - territorial
   - courtship
   - mating
   - identity
   - display
-  semantic_description: Used in territory advertisement, mate attraction, and male display.
+  semantic_description: Used in territory advertisement, mate attraction, and male
+    display.
   confidence: high
 - name: chip call
   acoustic_keywords:
@@ -31,12 +33,14 @@ calls:
   - abrupt
   - tonal
   - repetitive
-  acoustic_description: A brief, sharply delivered call with simple structure and clear onset.
+  acoustic_description: A brief, sharply delivered call with simple structure and
+    clear onset.
   semantic_keywords:
   - contact
   - attention
   - alarm
-  semantic_description: Used as a common everyday call and in heightened attention or mild disturbance contexts.
+  semantic_description: Used as a common everyday call and in heightened attention
+    or mild disturbance contexts.
   confidence: medium
 - name: tseet call
   acoustic_keywords:
@@ -44,7 +48,8 @@ calls:
   - tonal
   - short
   - loud
-  acoustic_description: A thinner, higher-pitched call than the chip, with a narrowband tonal quality.
+  acoustic_description: A thinner, higher-pitched call than the chip, with a narrowband
+    tonal quality.
   semantic_keywords:
   - alarm
   - attention
@@ -57,12 +62,14 @@ calls:
   - tonal
   - frequency_modulated
   - repetitive
-  acoustic_description: A brief call given in movement contexts, generally simple and suited to short-range contact.
+  acoustic_description: A brief call given in movement contexts, generally simple
+    and suited to short-range contact.
   semantic_keywords:
   - contact
   - group_coordination
   - attention
-  semantic_description: Helps coordinate movement or maintain awareness during short-range displacement.
+  semantic_description: Helps coordinate movement or maintain awareness during short-range
+    displacement.
   confidence: low
 - name: whinny call
   acoustic_keywords:
@@ -71,19 +78,63 @@ calls:
   - long
   - harmonic
   - graded
-  acoustic_description: A more drawn-out and smoothly modulated call than the simple chip or tseet notes.
+  acoustic_description: A more drawn-out and smoothly modulated call than the simple
+    chip or tseet notes.
   semantic_keywords:
   - contact
   - affiliation
   - attention
   semantic_description: Used in low-intensity social interaction and routine communication.
   confidence: medium
+- name: begging call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - loud
+  - graded
+  acoustic_description: A repeated thin solicitation call given by dependent young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by nestlings or fledglings to obtain food and parental
+    attention.
+  confidence: medium
+- name: distress call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - long
+  - graded
+  acoustic_description: A strained high call harsher than routine chip or flight calls.
+  semantic_keywords:
+  - distress
+  - attention
+  semantic_description: Produced during handling, attack, or acute agitation.
+  confidence: medium
 provenance:
 - timestamp: '2026-06-10T20:30:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Initial LLM knowledge plus web-search draft for song sparrow using broad song and common call categories with conservative confidence on non-song call splits.
+  notes: Initial LLM knowledge plus web-search draft for song sparrow using broad
+    song and common call categories with conservative confidence on non-song call
+    splits.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

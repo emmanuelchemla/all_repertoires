@@ -10,31 +10,148 @@ taxonomy:
   species: minor
 calls:
   - name: chick-a-dee-like call
-    acoustic_keywords: [short, repetitive, multi_component, tonal, noisy]
-    acoustic_description: A multi-note call with repeated syllables combining tonal and rougher elements.
-    semantic_keywords: [contact, group_coordination, alarm, combinatorial]
-    semantic_description: Used in flock cohesion and risk-related signaling, with combinations that can alter listener interpretation.
+    alternative_names:
+      - chick-a-dee call
+      - chick-a call
+    acoustic_keywords:
+      - short
+      - repetitive
+      - multi_component
+      - tonal
+      - noisy
+    acoustic_description: Multi-note call with repeated note types combining clearer notes and rougher terminal elements in variable sequences.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - alarm
+      - combinatorial
+      - attention
+    semantic_description: Used in flock cohesion and risk-related signaling, with note combinations affecting listener interpretation.
     confidence: high
+    references:
+      - suzuki_etal_2016
+      - suzuki_etal_2018
   - name: song
-    acoustic_keywords: [tonal, harmonic, repetitive, long, loud]
-    acoustic_description: A clear repeated song phrase with relatively simple stereotyped tonal structure.
-    semantic_keywords: [territorial, courtship, mating, identity]
-    semantic_description: Used by males in territory advertisement and mate attraction.
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - repetitive
+      - long
+      - loud
+    acoustic_description: Clear repeated song phrases with stereotyped tonal structure, often louder and more regular than calls.
+    semantic_keywords:
+      - territorial
+      - courtship
+      - mating
+      - identity
+    semantic_description: Adult male advertisement signal used in territory defense and mate attraction.
     confidence: high
-  - name: alarm call
-    acoustic_keywords: [high_frequency, short, abrupt, repetitive, loud]
-    acoustic_description: A shorter and more urgent call than the routine contact sequence.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Used in direct threat contexts and often recruits flock attention.
+    references:
+      - japanese_tit_cornell
+  - name: jar alarm call
+    alternative_names:
+      - snake alarm call
+    acoustic_keywords:
+      - short
+      - abrupt
+      - noisy
+      - repetitive
+      - loud
+    acoustic_description: Short harsh alarm notes, usually more abrupt and rough than contact combinations.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - recruitment
+    semantic_description: Associated especially with terrestrial predator contexts, including snake-related alarm and mobbing recruitment.
     confidence: high
+    references:
+      - suzuki_2014
+  - name: D recruitment note
+    alternative_names:
+      - recruitment call
+      - nest-entry call
+    acoustic_keywords:
+      - short
+      - tonal
+      - abrupt
+      - repetitive
+      - quiet
+    acoustic_description: Brief discrete notes that can be embedded in larger sequences or given as a short repeated series.
+    semantic_keywords:
+      - recruitment
+      - group_coordination
+      - combinatorial
+      - attention
+    semantic_description: Used to recruit conspecifics or mates toward a target and is especially well known in combinatorial sequences around nest or predator inspection.
+    confidence: high
+    references:
+      - suzuki_etal_2018
   - name: contact note
-    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
-    acoustic_description: A simpler low-amplitude call for ordinary flock communication.
-    semantic_keywords: [contact, affiliation, group_coordination]
+    acoustic_keywords:
+      - short
+      - tonal
+      - quiet
+      - repetitive
+      - graded
+    acoustic_description: Simpler low-amplitude notes for ordinary flock communication, less complex than the full chick-a-dee-like call.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
     semantic_description: Used in low-arousal social cohesion among nearby birds.
     confidence: medium
+    references:
+      - japanese_tit_cornell
+  - name: begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Repeated solicitation calls from young birds, typically thinner and more insistent than adult social notes.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Produced by dependent young to solicit feeding and parental care.
+    confidence: medium
+    references:
+      - japanese_tit_cornell
+references:
+  japanese_tit_cornell:
+    citation: Cornell Lab of Ornithology. Japanese Tit sounds.
+    url: https://www.allaboutbirds.org/guide/Japanese_Tit/sounds
+  suzuki_2014:
+    citation: "Suzuki, T. N. 2014. Communication about predator type by a bird using discrete, graded and combinatorial variation in alarm calls."
+    doi: 10.1007/s10071-014-0796-7
+  suzuki_etal_2016:
+    citation: "Suzuki, T. N., Wheatcroft, D., and Griesser, M. 2016. Experimental evidence for compositional syntax in bird calls."
+    doi: 10.1038/ncomms10986
+  suzuki_etal_2018:
+    citation: "Suzuki, T. N., Wheatcroft, D., and Griesser, M. 2018. Calls combine to produce adaptive behavior in Japanese tits."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5824424/
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for Japanese tit emphasizing combinatorial chickadee-like calls and standard song.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass added the well-known Japanese Tit jar alarm and D recruitment classes, broadened song and begging coverage, and anchored the file with stable external references.

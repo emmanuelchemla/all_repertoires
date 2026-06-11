@@ -18,7 +18,7 @@ calls:
       - short
       - tonal
       - quiet
-    acoustic_description: Short, birdlike tonal notes, usually given singly or in brief exchanges and suited to short-range audibility in forest habitat.
+    acoustic_description: Short birdlike tonal notes, usually given singly or in brief exchanges and suited to short-range audibility in forest habitat.
     semantic_keywords:
       - contact
       - group_coordination
@@ -26,7 +26,7 @@ calls:
     semantic_description: Used to maintain contact among nearby group members during routine movement, foraging, and peaceful social spacing.
     confidence: high
     references:
-      - kingdon_1984
+      - marler_1973
       - mclester_2022
   - name: twitter
     alternative_names:
@@ -37,16 +37,15 @@ calls:
       - repetitive
       - tonal
       - quiet
-    acoustic_description: A rapid series of small high-pitched notes with a twittering quality, often more repetitive than a single chirp.
+    acoustic_description: A rapid series of small high-pitched notes with a twittering quality, more repetitive than a single chirp.
     semantic_keywords:
       - contact
       - group_coordination
       - attention
-    semantic_description: Likely used in close social monitoring and cohesion, especially when individuals are moving through visually restricted vegetation.
+    semantic_description: Used in close social monitoring and cohesion, especially while moving through visually restricted vegetation.
     confidence: medium
     references:
       - marler_1973
-      - maryland_zoo
   - name: trill
     alternative_names:
       - trill contact call
@@ -56,11 +55,11 @@ calls:
       - tonal
       - repetitive
       - short
-    acoustic_description: Brief, fine-structured note sequences with a trilled or wavering contour, intermediate between simple chirps and longer twitter-like series.
+    acoustic_description: Brief note sequences with a trilled or wavering contour, intermediate between simple chirps and longer twitter series.
     semantic_keywords:
       - contact
       - attention
-    semantic_description: Treated here as a probable short-range contact or attention-getting variant within the everyday cohesion repertoire, but its boundary from other contact calls is uncertain.
+    semantic_description: Treated here as a probable short-range contact or attention-getting variant within the everyday cohesion repertoire, but its boundary from other contact calls remains uncertain.
     confidence: low
     references:
       - marler_1973
@@ -81,7 +80,7 @@ calls:
       - short
       - loud
       - broadband
-    acoustic_description: Loud, abrupt, cough-like explosive notes, sometimes described as pops or hacks, produced as discrete warning sounds rather than soft contact notes.
+    acoustic_description: Loud abrupt cough-like explosive notes, sometimes described as pops or hacks, produced as discrete warning sounds rather than soft contact notes.
     semantic_keywords:
       - alarm
       - predator
@@ -91,7 +90,6 @@ calls:
     references:
       - marler_1973
       - mclester_etal_2019
-      - maryland_zoo
   - name: alarm chirp series
     alternative_names:
       - staccato chirps
@@ -106,17 +104,27 @@ calls:
       - alarm
       - predator
       - group_coordination
-    semantic_description: Produced during or after alarm events as part of the group's broader antipredator signalling, sometimes continuing after an initial male warning cough.
+    semantic_description: Produced during or after alarm events as part of the group's broader antipredator signalling, sometimes continuing after an initial male warning call.
     confidence: medium
     references:
       - mclester_etal_2019
-      - maryland_zoo
+  - name: scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - graded
+    acoustic_description: High-arousal noisy calls with sustained duration and variable contour, clearly more intense than chirps or twitters.
+    semantic_keywords:
+      - distress
+      - aggression
+      - attention
+    semantic_description: Produced in severe conflict, capture, or intense distress.
+    confidence: medium
+    references:
+      - marler_1973
 references:
-  de_jong_butynski_2019:
-    citation: de Jong, Y.A. and Butynski, T.M. 2019. Cercopithecus ascanius. The IUCN Red List of Threatened Species 2019 e.T4212A17947340.
-    url: https://www.iucnredlist.org/species/4212/17947340
-  kingdon_1984:
-    citation: Kingdon, J. 1984. East African Mammals, Volume II Part B. Academic Press.
   marler_1973:
     citation: Marler, P. 1973. A comparison of vocalizations of red-tailed monkeys and blue monkeys, Cercopithecus ascanius and C. mitis, in Uganda. Zeitschrift fur Tierpsychologie 33(3):223-247.
     url: https://pubmed.ncbi.nlm.nih.gov/4206429/
@@ -129,11 +137,12 @@ references:
     citation: McLester, E., Sweeney, K., Stewart, F.A., and Piel, A.K. 2019. Leopard (Panthera pardus) predation on a red-tailed monkey (Cercopithecus ascanius) in the Issa Valley, western Tanzania. Primates 60(1):15-19.
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6331503/
     doi: 10.1007/s10329-018-0700-9
-  maryland_zoo:
-    citation: The Maryland Zoo. Red-tailed guenon species profile.
-    url: https://www.marylandzoo.org/animal/red-tailed-guenon/
 provenance:
   - timestamp: "2026-06-10T18:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft for one missing species, using cautious call boundaries and explicit confidence labels.
+  - timestamp: "2026-06-11T11:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a clear distress class and tightened the call set around source-backed contact and alarm categories from Marler and later field observations.

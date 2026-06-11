@@ -11,30 +11,76 @@ taxonomy:
 calls:
   - name: coo call
     acoustic_keywords: [tonal, harmonic, long, quiet, frequency_modulated]
-    acoustic_description: A smooth tonal call with harmonic structure and longer duration than grunts.
+    acoustic_description: A smooth tonal call with harmonic structure and a relatively long, often gently modulated contour.
     semantic_keywords: [affiliation, contact, group_coordination]
-    semantic_description: Used in low-arousal social contact and friendly interactions.
+    semantic_description: Used in low-arousal social contact, vocal exchanges, and friendly coordination between separated partners.
     confidence: high
+    references: [sugiura_1998, katsu_2016]
   - name: grunt
     acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
-    acoustic_description: A short lower-pitched call simpler than the coo.
+    acoustic_description: A short lower-pitched call simpler and more abrupt than the coo.
     semantic_keywords: [contact, affiliation, attention]
-    semantic_description: Used in routine social communication and approaches.
+    semantic_description: Used in routine social communication, especially during approaches and uncertainty-reducing interactions.
     confidence: high
-  - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A high-arousal distress vocalization with strong noisy energy.
-    semantic_keywords: [distress, submission, aggression, attention]
-    semantic_description: Common in conflict and victim responses.
-    confidence: high
+    references: [katsu_2016]
   - name: girney
     acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
-    acoustic_description: A softer higher-pitched call associated with affiliative and infant-related interactions.
+    acoustic_description: A soft high-pitched call, usually brief and often given in repeated affiliative series.
     semantic_keywords: [affiliation, caregiving, attention]
-    semantic_description: Used in mother-infant and friendly social exchanges.
+    semantic_description: Common in affiliative female interactions and infant-related contexts, especially where tension reduction or friendly intent matters.
+    confidence: high
+    references: [blount_1985, katsu_2016]
+  - name: gecker
+    acoustic_keywords: [high_frequency, noisy, abrupt, repetitive, graded]
+    acoustic_description: A harsh high-pitched distress call, often given in rapidly repeated bursts and acoustically rougher than girneys.
+    semantic_keywords: [distress, begging, caregiving, attention]
+    semantic_description: Most typical of infants and juveniles in distress, protest, or solicitation contexts that recruit maternal or nearby social attention.
     confidence: medium
+    references: [owren_1992]
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A loud high-arousal distress vocalization with strong noisy energy and variable contour.
+    semantic_keywords: [distress, submission, aggression, attention]
+    semantic_description: Common in severe conflict and victim responses.
+    confidence: high
+    references: [green_1981]
+  - name: bark
+    alternative_names: [threat bark, aggressive call]
+    acoustic_keywords: [broadband, noisy, abrupt, short, loud]
+    acoustic_description: A short harsh call with abrupt onset and broader spectral energy than coos, grunts, or girneys.
+    semantic_keywords: [threat, aggression, attention, spacing]
+    semantic_description: Used in aggressive displays and other high-arousal antagonistic interactions.
+    confidence: medium
+    references: [green_1981]
+  - name: copulation call
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A conspicuous repeated sexual call series distinct from routine social contact calls.
+    semantic_keywords: [mating, attention]
+    semantic_description: Given around copulation and other sexual interactions.
+    confidence: medium
+    references: [owren_1992]
+references:
+  sugiura_1998:
+    citation: "Sugiura, H. 1998. Matching of acoustic features during the vocal exchange of coo calls by Japanese macaques. Animal Behaviour 55:673-687."
+    doi: 10.1006/anbe.1997.0602
+  katsu_2016:
+    citation: "Katsu, N., Yamada, K., and Nakamichi, M. 2016. Function of grunts, girneys and coo calls of Japanese macaques (Macaca fuscata) in relation to call usage, age and dominance relationships. Behaviour 153:125-142."
+    doi: 10.1163/1568539X-00003330
+  blount_1985:
+    citation: "Blount, B.G. 1985. Girney vocalizations among Japanese macaque females: context and function. Primates 26:424-435."
+    doi: 10.1007/BF02382457
+  owren_1992:
+    citation: "Owren, M.J., Dieter, J.A., Seyfarth, R.M., and Cheney, D.L. 1992. Food calls produced by adult female rhesus and Japanese macaques, their normally raised offspring, and offspring cross-fostered between species. Behaviour 120:218-231."
+    url: https://brill.com/view/journals/beh/120/3-4/article-p218_5.xml
+  green_1981:
+    citation: "Green, S.M. 1981. Sex differences and age gradations in vocalizations of Japanese and lion-tailed monkeys. Integrative and Comparative Biology 21:165-183."
+    url: https://academic.oup.com/icb/article-pdf/21/1/165/311084/21-1-165.pdf
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for Japanese macaque using classic macaque coo, grunt, scream, and girney categories.
+  - timestamp: "2026-06-11T11:09:02Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added gecker, bark, and copulation call coverage plus stable species-focused references in a speed-oriented completeness pass.

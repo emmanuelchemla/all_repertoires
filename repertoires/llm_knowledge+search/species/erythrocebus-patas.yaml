@@ -9,6 +9,159 @@ taxonomy:
   genus: Erythrocebus
   species: patas
 calls:
+- name: bark-grunt
+  alternative_names:
+  - bark grunt
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - short
+  - multi_component
+  - abrupt
+  acoustic_description: A deep two-note alarm call with a bark-like first element and grunt-like second element.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Given by males to mammalian predators and treated as the sex-specific counterpart to female and juvenile mammalian alarm calls.
+  confidence: high
+  references:
+  - enstam_isbell_2002
+- name: nyow
+  alternative_names:
+  - nyow alarm
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    - infant
+    sexes:
+    - female
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - abrupt
+  - repetitive
+  acoustic_description: A high-pitched staccato alarm call, typically sharper and more piercing than chutters.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used especially against large mammalian threats such as baboons, dogs, and large carnivores.
+  confidence: high
+  references:
+  - enstam_isbell_2002
+- name: loud chutter
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    - infant
+    sexes:
+    - female
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - abrupt
+  - noisy
+  - short
+  - repetitive
+  acoustic_description: A rapid harsh call series softer than nyows but clearly more agitated than routine social calls.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Given to smaller mammalian predators such as jackals and domestic dogs.
+  confidence: high
+  references:
+  - enstam_isbell_2002
+- name: cough
+  alternative_names:
+  - cough alarm
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    - infant
+    sexes:
+    - female
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - abrupt
+  - quiet
+  - repetitive
+  acoustic_description: A softer, shorter alarm call than loud chutter, given as clipped repeated notes.
+  semantic_keywords:
+  - alarm
+  - predator
+  - aggression
+  semantic_description: Used when a small mammalian predator is very near or within the group and can accompany active defense.
+  confidence: high
+  references:
+  - enstam_isbell_2002
+- name: quiet chutter
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    - infant
+    sexes:
+    - female
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - abrupt
+  - repetitive
+  - quiet
+  acoustic_description: A quieter chutter series, less forceful than the mammalian-predator alarm variants.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced in the presence of snakes and used as the principal reptile alarm in the cited field study.
+  confidence: high
+  references:
+  - enstam_isbell_2002
+- name: gecker
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - abrupt
+  - repetitive
+  acoustic_description: A short repeated alarm call acoustically distinct from chutters and nyows.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Given to raptors and treated as the avian alarm call in the best-supported field account.
+  confidence: high
+  references:
+  - enstam_isbell_2002
+  - olson_chism_1981
 - name: grunt
   acoustic_keywords:
   - low_frequency
@@ -16,27 +169,13 @@ calls:
   - tonal
   - repetitive
   - graded
-  acoustic_description: A short low-pitched call with relatively simple structure, often repeated.
+  acoustic_description: A short low social call with relatively simple structure, typically softer and less abrupt than alarm calls.
   semantic_keywords:
   - contact
   - affiliation
   - group_coordination
   semantic_description: Used in routine group social interactions and benign approaches.
   confidence: medium
-- name: bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A sharp harsh call with abrupt onset and stronger noise than grunts.
-  semantic_keywords:
-  - alarm
-  - predator
-  - attention
-  semantic_description: Used in alerting the group to disturbance or danger.
-  confidence: high
 - name: scream
   acoustic_keywords:
   - high_frequency
@@ -51,35 +190,13 @@ calls:
   - attention
   semantic_description: Produced in acute conflict or danger.
   confidence: medium
-- name: contact call
-  acoustic_keywords:
-  - short
-  - tonal
-  - quiet
-  - repetitive
-  - high_frequency
-  acoustic_description: A softer shorter call used in nearby communication.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - affiliation
-  semantic_description: Included as a broad local cohesion call category.
-  confidence: low
-- name: wahoo
-  acoustic_keywords:
-  - multi_component
-  - loud
-  - long
-  - tonal
-  - broadband
-  acoustic_description: A loud display-like call with compound structure repeated in bouts, more conspicuous than simple barks.
-  semantic_keywords:
-  - display
-  - alarm
-  - attention
-  - threat
-  semantic_description: Associated with high-arousal long-range communication, especially by adult males.
-  confidence: low
+references:
+  enstam_isbell_2002:
+    citation: "Enstam, K. L. and Isbell, L. A. 2002. Comparison of responses to alarm calls by patas monkeys and vervet monkeys in relation to habitat structure. American Journal of Physical Anthropology 119:300-308."
+    url: https://laisbell.faculty.ucdavis.edu/wp-content/uploads/sites/741/2022/04/enstam_and_isbell_2002_ajpa.pdf
+    doi: 10.1002/ajpa.10152
+  olson_chism_1981:
+    citation: Olson, D. K. and Chism, J. 1981. An introductory study of the vocalizations of patas monkeys (Erythrocebus patas). Folia Primatologica.
 provenance:
 - timestamp: '2026-06-10T21:15:00+02:00'
   model: GPT-5 Codex
@@ -89,3 +206,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Rebuilt the repertoire around the well-described sex- and predator-specific patas alarm call system and removed unsupported loud-call placeholders.

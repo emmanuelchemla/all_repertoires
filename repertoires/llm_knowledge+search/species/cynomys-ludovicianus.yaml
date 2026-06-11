@@ -9,83 +9,147 @@ taxonomy:
   genus: Cynomys
   species: ludovicianus
 calls:
-- name: jump-yip display call
-  acoustic_keywords:
-  - short
-  - tonal
-  - repetitive
-  - loud
-  - multi_component
-  acoustic_description: A conspicuous vocal display paired with the characteristic jump-yip posture and often repeated by nearby individuals.
-  semantic_keywords:
-  - display
-  - group_coordination
-  - territorial
-  - attention
-  semantic_description: Used in social display, group coordination, and colony-level signaling.
-  confidence: high
-- name: alarm bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A sharp short alarm call with abrupt onset and strong spectral energy.
-  semantic_keywords:
-  - alarm
-  - predator
-  - attention
-  semantic_description: Produced in response to threats and central to predator warning.
-  confidence: high
-- name: contact chirp
-  acoustic_keywords:
-  - short
-  - tonal
-  - quiet
-  - repetitive
-  - high_frequency
-  acoustic_description: A softer and shorter tonal call than the major alarm barks.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - group_coordination
-  semantic_description: Used in local social communication among nearby colony members.
-  confidence: medium
-- name: begging call
-  acoustic_keywords:
-  - high_frequency
-  - repetitive
-  - loud
-  - short
-  - graded
-  acoustic_description: A higher-pitched repeated call produced persistently by young.
-  semantic_keywords:
-  - begging
-  - caregiving
-  - attention
-  semantic_description: Used by juveniles to solicit care or provisioning.
-  confidence: medium
-- name: snarl bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - repetitive
-  acoustic_description: A harsher, more aggressive short call than the ordinary jump-yip display.
-  semantic_keywords:
-  - threat
-  - alarm
-  - attention
-  semantic_description: Used in close-range confrontation or heightened disturbance.
-  confidence: low
+  - name: jump-yip display call
+    alternative_names:
+      - jump-yip
+      - territorial jump-yip
+    acoustic_keywords:
+      - short
+      - tonal
+      - repetitive
+      - loud
+      - multi_component
+    acoustic_description: A conspicuous high-pitched display call produced with the characteristic upright jump-yip posture and often echoed contagiously by nearby colony members.
+    semantic_keywords:
+      - display
+      - group_coordination
+      - territorial
+      - attention
+    semantic_description: Used in colony-wide social display and coordination, often after disturbance or while monitoring neighbors' vigilance.
+    confidence: high
+    references:
+      - hare_etal_2014
+      - hoogland_project
+  - name: alarm bark
+    alternative_names:
+      - alarm call
+      - predator bark
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - loud
+    acoustic_description: Sharp short alarm calls with abrupt onset and strong spectral energy, given from mounds or near burrow entrances.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced in response to predators and other threats and central to predator-warning communication.
+    confidence: high
+    references:
+      - slobodchikoff_etal_2009
+      - conneil_etal_2019
+  - name: contact chirp
+    acoustic_keywords:
+      - short
+      - tonal
+      - quiet
+      - repetitive
+      - high_frequency
+    acoustic_description: Softer shorter tonal calls than the major alarm barks, often exchanged at close range.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Used in local social communication among nearby coterie or colony members.
+    confidence: medium
+    references:
+      - hoogland_project
+      - smith_etal_1977
+  - name: juvenile begging call
+    alternative_names:
+      - infant chirp
+      - pup begging call
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Higher-pitched repeated calls produced persistently by young and acoustically lighter than adult alarm barks.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Used by pups or recently emerged juveniles to solicit attention and care from close kin.
+    confidence: medium
+    references:
+      - hoogland_project
+  - name: mating call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - repetitive
+      - loud
+    acoustic_description: A conspicuous adult male vocalization distinguished from ordinary alarm and display calls and associated with breeding interactions.
+    semantic_keywords:
+      - courtship
+      - mating
+      - attention
+      - display
+    semantic_description: Produced by breeding males in mating contexts rather than general alarm or colony coordination.
+    confidence: medium
+    references:
+      - animal_diversity_web
+references:
+  animal_diversity_web:
+    citation: Animal Diversity Web. Black-tailed prairie dog (Cynomys ludovicianus) account.
+    url: https://animaldiversity.org/accounts/Cynomys_ludovicianus/
+  conneil_etal_2019:
+    citation: "Connell, B.L., Vokey, J.R., and Blumstein, D.T. 2019. Black-tailed prairie dog, Cynomys ludovicianus, jump-yip calls enhance foraging in a sentinel species. Animal Behaviour 148:87-95."
+    url: https://www.ars.usda.gov/ARSUserFiles/49263/32.%20Connell_etal_2019_AnimalBehavior.pdf
+  hare_etal_2014:
+    citation: "Hare, J.F., Campbell, K.L., and Senkiw, R.W. 2014. Catch the wave: prairie dogs assess neighbours' awareness using contagious displays. Proceedings of the Royal Society B 281:20132153."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3896008/
+    doi: 10.1098/rspb.2013.2153
+  hoogland_project:
+    citation: Hoogland, J.L. The Prairie Dog Project. Vocalizations.
+    url: https://www.prairiedoghoogland.com/vocalizations
+  slobodchikoff_etal_2009:
+    citation: "Slobodchikoff, C.N., Paseka, A., and Verdolin, J.L. 2009. Prairie dog alarm calls encode labels about predator colors. Animal Cognition 12:435-439."
+    url: https://www.academia.edu/144044964/Prairie_dog_alarm_calls_encode_labels_about_predator_colors
+    doi: 10.1007/s10071-008-0203-y
+  smith_etal_1977:
+    citation: "Smith, W.J., Smith, S.L., Oppenheimer, E.C., and Devilla, M.E. 1977. Vocalizations of the black-tailed prairie dog, Cynomys ludovicianus. Animal Behaviour 25(1):152-164."
+    url: https://pubmed.ncbi.nlm.nih.gov/855948/
+    doi: 10.1016/0003-3472(77)90071-3
 provenance:
-- timestamp: '2026-06-10T21:00:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for black-tailed prairie dog emphasizing the well-known alarm and jump-yip display repertoire.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for black-tailed prairie dog emphasizing the well-known alarm and jump-yip display repertoire.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Replaced the weakest placeholder aggression content with a more standard prairie-dog set centered on jump-yips, predator alarm barks, close social chirps, juvenile begging, and a breeding-context male call.

@@ -9,32 +9,96 @@ taxonomy:
   genus: Theropithecus
   species: gelada
 calls:
-  - name: moan
-    acoustic_keywords: [low_frequency, tonal, long, harmonic, repetitive]
-    acoustic_description: A low, smooth, sustained call with clear tonal structure.
+  - name: exhale grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A brief low-pitched grunt produced on exhalation, with a simple tonal to mildly noisy structure.
     semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in routine social contact and low-arousal within-group interaction.
+    semantic_description: Used in routine close-range social contact and as a common element in affiliative exchanges.
     confidence: high
-  - name: wobble vocalization
+    references: [gustison_2012, gustison_2016]
+  - name: exhale moan
+    alternative_names: [moan]
+    acoustic_keywords: [low_frequency, tonal, long, harmonic, repetitive]
+    acoustic_description: A longer smooth low-frequency call with clear harmonic structure and sustained energy.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in low-arousal social contact and often incorporated into longer affiliative vocal sequences.
+    confidence: high
+    references: [gustison_2012, gustison_2016]
+  - name: inhale grunt
+    acoustic_keywords: [short, tonal, abrupt, repetitive, graded]
+    acoustic_description: A short inspiratory grunt with clipped structure and a distinct inhaled sound quality.
+    semantic_keywords: [affiliation, attention, combinatorial]
+    semantic_description: Typically appears inside elaborate social sequences rather than as a dominant standalone long-range call.
+    confidence: high
+    references: [gustison_2012, gustison_2016]
+  - name: inhale moan
+    acoustic_keywords: [tonal, long, frequency_modulated, harmonic, graded]
+    acoustic_description: A sustained inhaled call with tonal harmonic energy and more drawn-out contour than inhale grunts.
+    semantic_keywords: [affiliation, attention, combinatorial]
+    semantic_description: Used as part of socially rich affiliative sequences, especially in leader-male interactions with females.
+    confidence: high
+    references: [gustison_2012, gustison_2016]
+  - name: wobble
+    alternative_names: [wobble vocalization]
     acoustic_keywords: [multi_component, tonal, harmonic, repetitive, frequency_modulated]
-    acoustic_description: A more complex rhythmic vocalization than simple moans, often with repeated patterned structure.
+    acoustic_description: A rhythmically modulated call with rapid pitch variation and a more elaborate harmonic pattern than simple moans or grunts.
     semantic_keywords: [affiliation, display, identity, combinatorial]
-    semantic_description: Used in socially rich affiliative exchanges and contributes to the species' notable vocal complexity.
+    semantic_description: A characteristic component of elaborate affiliative display sequences, especially in male-female interactions.
     confidence: high
+    references: [gustison_2012, gustison_2016]
+  - name: yawn vocalization
+    alternative_names: [vocal yawn, yawn]
+    acoustic_keywords: [multi_component, long, frequency_modulated, loud, graded]
+    acoustic_description: A long conspicuous call with wide mouth opening, broad dynamic change, and a more expansive structure than moans or wobbles.
+    semantic_keywords: [display, affiliation, attention, combinatorial]
+    semantic_description: Often occurs in elaborate social sequences and conspicuous social displays, particularly by leader males.
+    confidence: high
+    references: [gustison_2012, gustison_2016]
+  - name: pre-copulation call
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A brief repeated sexual call with a relatively high-pitched, aroused structure.
+    semantic_keywords: [courtship, mating, attention]
+    semantic_description: Produced immediately before mating during sexual interactions.
+    confidence: high
+    references: [gustison_2012, caselli_2024]
+  - name: end-copulation call
+    acoustic_keywords: [high_frequency, tonal, short, abrupt, graded]
+    acoustic_description: A short call given at the end of copulation, typically more clipped than longer affiliative sequence elements.
+    semantic_keywords: [mating, attention]
+    semantic_description: Emitted at the termination of copulation.
+    confidence: medium
+    references: [caselli_2024]
   - name: scream
     acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A loud harsh call with strong noisy energy and marked arousal.
+    acoustic_description: Loud harsh calls with strong noisy energy and marked arousal.
     semantic_keywords: [distress, aggression, attention]
-    semantic_description: Produced in conflict and acute social tension.
+    semantic_description: Produced in conflict, harassment, and acute social tension.
     confidence: medium
   - name: bark
     acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A short abrupt call with harsher structure than affiliative vocalizations.
+    acoustic_description: A short abrupt harsh call with broader spectral energy than affiliative calls.
     semantic_keywords: [alarm, threat, attention]
     semantic_description: Used in alerting and high-arousal situations.
     confidence: medium
+references:
+  gustison_2012:
+    citation: "Gustison, M.L., le Roux, A., and Bergman, T.J. 2012. Derived vocalizations of geladas (Theropithecus gelada) and the evolution of vocal complexity in primates. Philosophical Transactions of the Royal Society B 367:1847-1859."
+    doi: 10.1098/rstb.2011.0218
+  gustison_2016:
+    citation: "Gustison, M.L., Semple, S., Ferrer-i-Cancho, R., and Bergman, T.J. 2016. Gelada vocal sequences follow Menzerath's linguistic law. Proceedings of the National Academy of Sciences 113:E2750-E2758."
+    doi: 10.1073/pnas.1522072113
+  female_response_2016:
+    citation: "Gustison, M.L., le Roux, A., and Bergman, T.J. 2016. Vocal complexity influences female responses to gelada male calls. Scientific Reports 6:19680."
+    doi: 10.1038/srep19680
+  caselli_2024:
+    citation: "Caselli, M., Palagi, E., Bandoli, F., and Demuru, E. 2024. Multimodal communication and mating in wild geladas. Behavioral Ecology and Sociobiology."
+    url: https://link.springer.com/article/10.1007/s00265-024-03461-1
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for gelada emphasizing the well-known complex affiliative repertoire plus major arousal calls.
+  - timestamp: "2026-06-11T11:09:02Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Expanded the repertoire around well-described derived affiliative and mating-related vocal classes using stable gelada sources.

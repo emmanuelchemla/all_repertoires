@@ -19,13 +19,13 @@ calls:
       - broadband
       - multi_component
       - loud
-    acoustic_description: Harsh, rapidly repeated chattering sequences with noisy broadband structure and variable phrase length.
+    acoustic_description: Harsh rapidly repeated chattering sequences with noisy broadband structure and variable phrase length.
     semantic_keywords:
       - alarm
       - territorial
       - attention
       - group_coordination
-    semantic_description: A principal conspicuous call used across disturbance, alarm, and territorial-defense contexts, with duration and rate varying by situation.
+    semantic_description: Principal conspicuous call used in disturbance, alarm, and territorial-defense contexts.
     confidence: high
     references:
       - szipl_etal_2024
@@ -44,35 +44,35 @@ calls:
       - contact
       - attention
       - territorial
-    semantic_description: Used in everyday social signalling and alerting, and often embedded in interactions that escalate into louder territorial or alarm chatter.
+    semantic_description: Used in everyday social signaling and alerting, and often precedes louder territorial or alarm chatter.
     confidence: medium
     references:
-      - allaboutbirds_blackbilled
       - wildechoes_magpie
+      - xenocanto_magpie
   - name: song
     alternative_names:
       - warble
-      - quiet subsong-like warble
+      - quiet warble
     acoustic_keywords:
       - tonal
       - multi_component
       - quiet
       - frequency_modulated
       - long
-    acoustic_description: Softer, more variable sequences combining whistles, warbles, clicks, and imitative-sounding elements, often quieter than conspicuous chatter.
+    acoustic_description: Softer variable sequences combining whistles, warbles, clicks, and imitative-sounding elements.
     semantic_keywords:
       - display
       - courtship
       - affiliation
       - identity
-    semantic_description: Used in lower-intensity social and display contexts, including pair-bond and courtship-related interactions.
+    semantic_description: Used in lower-intensity social and display contexts, including pair-bond and courtship-related interaction.
     confidence: medium
     references:
       - wildechoes_magpie
       - xenocanto_magpie
-  - name: juvenile begging call
+  - name: begging call
     alternative_names:
-      - begging call
+      - juvenile begging call
       - nestling solicitation
     scope:
       life_stages:
@@ -86,28 +86,49 @@ calls:
       - high_frequency
       - short
       - loud
-    acoustic_description: Repeated juvenile calls that are thinner and more insistent than adult chatter, often delivered in rapid succession.
+    acoustic_description: Thin repeated juvenile calls that are more insistent and higher pitched than adult chatter.
     semantic_keywords:
       - begging
       - caregiving
       - attention
-    semantic_description: Produced by dependent young to solicit feeding and parental attention at the nest or shortly after fledging.
+    semantic_description: Produced by dependent young to solicit feeding and parental attention.
     confidence: medium
+    references:
+      - xenocanto_magpie
+  - name: food-associated chatter
+    alternative_names:
+      - food chatter
+    acoustic_keywords:
+      - noisy
+      - repetitive
+      - multi_component
+      - graded
+      - loud
+    acoustic_description: Excited chatter-like series similar to alarm chatter but often less abrupt and more variable in pacing.
+    semantic_keywords:
+      - food
+      - recruitment
+      - attention
+    semantic_description: Used around food or other salient resources where nearby conspecific attention is behaviorally relevant.
+    confidence: low
+    references:
+      - xenocanto_magpie
 references:
-  allaboutbirds_blackbilled:
-    citation: Cornell Lab of Ornithology. Black-billed Magpie sounds overview, used here as a closely related Pica reference for broad call labels.
-    url: https://www.allaboutbirds.org/guide/Black-billed_Magpie/sounds
   szipl_etal_2024:
-    citation: "Szipl, G., Sillaber, I., Kosztolányi, A., and Wascher, C.A.F. 2024. The duration of alarm- and territorial defence calls alters receiver behaviour in magpies."
+    citation: "Szipl, G., Sillaber, I., Kosztolányi, A., and Wascher, C. A. F. 2024. The duration of alarm- and territorial defence calls alters receiver behaviour in magpies."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12267378/
   wildechoes_magpie:
     citation: Wild Echoes. Magpie (Pica pica) vocalizations overview.
     url: https://www.wildechoes.org/species/crows-magpies-jays/magpie
   xenocanto_magpie:
     citation: Xeno-canto. Eurasian Magpie recordings, including alarm call, song, and other calls.
-    url: https://xeno-canto.org/species/pica-pica
+    url: https://xeno-canto.org/species/Pica-pica
 provenance:
   - timestamp: "2026-06-10T21:05:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft for Eurasian magpie, emphasizing chatter, harsh calls, softer song-like warbles, and juvenile begging while keeping labels broad.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass clarified the main Eurasian Magpie chatter, harsh, song-like, juvenile begging, and food-associated classes and tightened stable reference support.

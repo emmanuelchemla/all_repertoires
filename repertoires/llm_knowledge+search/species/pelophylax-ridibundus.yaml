@@ -9,100 +9,76 @@ taxonomy:
   genus: Pelophylax
   species: ridibundus
 calls:
-- name: advertisement call
-  acoustic_keywords:
-  - tonal
-  - repetitive
-  - loud
-  - long
-  - harmonic
-  acoustic_description: A repeated croaking breeding call with stable rhythmic structure and strong resonance.
-  semantic_keywords:
-  - courtship
-  - mating
-  - attention
-  semantic_description: Used by males to attract females at breeding aggregations.
-  confidence: high
-  references:
-  - marsh_frog_general
-- name: territorial call
-  acoustic_keywords:
-  - abrupt
-  - repetitive
-  - noisy
-  - loud
-  - graded
-  acoustic_description: A more aggressive call than the advertisement call, often harsher and more abrupt.
-  semantic_keywords:
-  - territorial
-  - aggression
-  - attention
-  semantic_description: Used in male-male competition at calling sites.
-  confidence: medium
-  references:
-  - marsh_frog_general
-- name: release call
-  acoustic_keywords:
-  - short
-  - abrupt
-  - high_frequency
-  - repetitive
-  - noisy
-  acoustic_description: A brief high-intensity call emitted during unwanted clasping.
-  semantic_keywords:
-  - submission
-  - attention
-  - mating
-  semantic_description: Signals the need to terminate inappropriate amplexus or close contact.
-  confidence: medium
-  references:
-  - marsh_frog_general
-- name: encounter call
-  acoustic_keywords:
-  - abrupt
-  - repetitive
-  - noisy
-  - loud
-  - graded
-  acoustic_description: A shorter more aggressive call than the main breeding advertisement, often harsher and more abrupt.
-  semantic_keywords:
-  - territorial
-  - aggression
-  - attention
-  semantic_description: Used in male-male competition at calling sites.
-  confidence: medium
-  references:
-  - marsh_frog_general
-- name: chuckle call
-  acoustic_keywords:
-  - repetitive
-  - noisy
-  - short
-  - graded
-  - broadband
-  acoustic_description: A shorter, rougher repeated call than the main advertisement croak, associated with social arousal.
-  semantic_keywords:
-  - territorial
-  - attention
-  - aggression
-  semantic_description: Used in local interactions among nearby calling males and in heightened chorus activity.
-  confidence: low
-  references:
-  - marsh_frog_general
+  - name: advertisement call
+    alternative_names: [mating call, laugh-like call]
+    acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
+    acoustic_description: A repeated croaking breeding call with stable rhythmic structure and strong resonance.
+    semantic_keywords: [courtship, mating, attention]
+    semantic_description: Used by males to attract females at breeding aggregations.
+    confidence: high
+    references: [li_hending_2024, ridibundus_call_study]
+  - name: territorial call
+    acoustic_keywords: [abrupt, repetitive, noisy, loud, graded]
+    acoustic_description: A harsher and more abrupt call than the advertisement call, often produced in short repeated bursts.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in male-male competition and spacing around calling sites.
+    confidence: high
+    references: [li_hending_2024]
+  - name: encounter call
+    acoustic_keywords: [abrupt, repetitive, noisy, loud, graded]
+    acoustic_description: A shorter locally directed aggressive call than the main breeding advertisement, often produced during close social interactions.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in close male-male encounters at calling sites.
+    confidence: medium
+    references: [li_hending_2024]
+  - name: chuckle call
+    alternative_names: [laughter call]
+    acoustic_keywords: [repetitive, noisy, short, graded, broadband]
+    acoustic_description: A shorter rough repeated call than the main advertisement croak, associated with locally elevated arousal.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in local interactions among nearby calling males and in heightened chorus activity.
+    confidence: medium
+    references: [li_hending_2024]
+  - name: release call
+    acoustic_keywords: [short, abrupt, high_frequency, repetitive, noisy]
+    acoustic_description: A brief high-intensity call emitted during unwanted clasping.
+    semantic_keywords: [submission, attention, mating]
+    semantic_description: Signals the need to terminate inappropriate amplexus or close contact.
+    confidence: high
+    references: [fedorova_shabanov_2023]
+  - name: distress call
+    acoustic_keywords: [high_frequency, short, abrupt, loud, noisy]
+    acoustic_description: A sudden short high call acoustically distinct from the low resonant breeding repertoire.
+    semantic_keywords: [distress, alarm, attention]
+    semantic_description: Used in acute disturbance or handling situations.
+    confidence: low
+    references: [li_hending_2024]
 references:
-  marsh_frog_general:
-    citation: "General ranid and marsh frog calling accounts describing advertisement, territorial, release, and local aggressive call variants in Pelophylax ridibundus."
-    url: https://musicofnature.com/calls-of-frogs-and-toads-of-the-northeast/
+  fedorova_shabanov_2023:
+    citation: "Fedorova, A. and Shabanov, D. 2023. Differences in release calls of the hybrid water frog Pelophylax esculentus and its parental species Pelophylax ridibundus in Ukraine."
+    url: https://www.researchgate.net/publication/365384620_Differences_in_release_calls_of_the_hybrid_water_frog_Pelophylax_esculentus_and_its_parental_species_Pelophylax_ridibundus_Anura_Ranidae_in_Ukraine
+    doi: 10.1007/s11756-022-01256-8
+  li_hending_2024:
+    citation: "Li, C. and Hending, D. 2024. The vocal repertoire of marsh frogs (Pelophylax ridibundus) on a Hungarian Danube island and implications for future research and conservation."
+    url: https://ora.ox.ac.uk/objects/uuid:d37a2b72-fce8-49a9-9c64-af85325b5240
+    doi: 10.31219/osf.io/kzqgy
+  ridibundus_call_study:
+    citation: "Lukanov, S., et al. 2014. Effects of environmental factors on mating call characteristics of Pelophylax ridibundus."
+    url: https://www.acta-zoologica-bulgarica.eu/downloads/acta-zoologica-bulgarica/2014/66-2-209-216.pdf
 provenance:
-- timestamp: '2026-06-10T22:00:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for marsh frog using standard ranid breeding call categories.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
-- timestamp: '2026-06-11T00:55:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Added references and an additional local aggressive-call category from independent marsh frog and ranid calling sources.
+  - timestamp: '2026-06-10T22:00:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for marsh frog using standard ranid breeding call categories.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T00:55:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Added references and an additional local aggressive-call category from independent marsh frog and ranid calling sources.
+  - timestamp: '2026-06-11T12:25:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision strengthened the repertoire with marsh-frog-specific release and broader repertoire references while keeping uncertain distress calling low confidence.

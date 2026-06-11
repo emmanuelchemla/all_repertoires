@@ -9,90 +9,114 @@ taxonomy:
   genus: Corvus
   species: monedula
 calls:
-- name: tchak contact call
-  acoustic_keywords:
-  - short
-  - abrupt
-  - tonal
-  - repetitive
-  - loud
-  acoustic_description: A frequent short contact call with a sharp onset and relatively simple structure.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - identity
-  semantic_description: Used in flocking and foraging contexts to maintain social contact and caller recognition.
-  confidence: high
-  references:
-  - jackdaw_contact
-- name: scold call
-  acoustic_keywords:
-  - noisy
-  - broadband
-  - abrupt
-  - repetitive
-  - loud
-  acoustic_description: A harsher and more rapidly repeated call type than the ordinary contact call.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Produced in anti-predator or disturbance situations and often recruits group responses.
-  confidence: high
-  references:
-  - jackdaw_contact
-- name: chatter
-  acoustic_keywords:
-  - short
-  - repetitive
-  - multi_component
-  - noisy
-  - quiet
-  acoustic_description: A more local sequence of conversational short notes with variable fine structure.
-  semantic_keywords:
-  - affiliation
-  - contact
-  - group_coordination
-  semantic_description: Used in routine social interaction at close range.
-  confidence: medium
-- name: begging call
-  acoustic_keywords:
-  - high_frequency
-  - repetitive
-  - loud
-  - short
-  - graded
-  acoustic_description: A repeated call with higher pitch and persistent delivery relative to adult contact calls.
-  semantic_keywords:
-  - begging
-  - caregiving
-  - attention
-  semantic_description: Produced by dependent young to solicit provisioning and social attention.
-  confidence: medium
-- name: flight call
-  acoustic_keywords:
-  - short
-  - abrupt
-  - tonal
-  - repetitive
-  - loud
-  acoustic_description: A brief contact-oriented call given in movement and flocking contexts.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - attention
-  semantic_description: Helps maintain cohesion during flight and coordinated movement.
-  confidence: medium
+  - name: tchak contact call
+    alternative_names:
+      - contact call
+      - chak
+    acoustic_keywords:
+      - short
+      - abrupt
+      - tonal
+      - repetitive
+      - loud
+    acoustic_description: Frequent sharp short notes with a relatively simple spectro-temporal form and abrupt onset.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: Core flocking and foraging call used to maintain social contact and individual recognition.
+    confidence: high
+    references:
+      - jackdaw_contact
+  - name: flight call
+    acoustic_keywords:
+      - short
+      - abrupt
+      - tonal
+      - repetitive
+      - loud
+    acoustic_description: Brief contact-oriented notes similar to the common call but usually delivered during coordinated movement.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Helps maintain cohesion during flight and group departures.
+    confidence: medium
+    references:
+      - jackdaw_contact
+  - name: scold call
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - abrupt
+      - repetitive
+      - loud
+    acoustic_description: Harsher, more rapidly repeated call type than the ordinary contact call.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+      - recruitment
+    semantic_description: Produced in anti-predator and disturbance situations and often elicits group response.
+    confidence: high
+    references:
+      - jackdaw_cornell
+  - name: chatter
+    acoustic_keywords:
+      - short
+      - repetitive
+      - multi_component
+      - noisy
+      - quiet
+    acoustic_description: Variable local sequence of short notes with conversational pacing and mixed fine structure.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - group_coordination
+    semantic_description: Used in routine close-range social interaction within pairs and flocks.
+    confidence: medium
+    references:
+      - jackdaw_cornell
+  - name: begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Higher-pitched persistent solicitation calls relative to adult contact notes.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Produced by dependent young to solicit provisioning and attendance.
+    confidence: medium
+    references:
+      - jackdaw_cornell
 references:
   jackdaw_contact:
-    citation: Madden, J.R., et al. 2025. Variability and individuality in the contact calls of jackdaws (Corvus monedula).
+    citation: "Madden, J. R., et al. 2025. Variability and individuality in the contact calls of jackdaws (Corvus monedula)."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12705776/
+  jackdaw_cornell:
+    citation: Cornell Lab of Ornithology. Western Jackdaw sounds.
+    url: https://www.allaboutbirds.org/guide/Western_Jackdaw/sounds
 provenance:
-- timestamp: '2026-06-10T20:45:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for western jackdaw emphasizing the well-supported contact and scold call system.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-10T20:45:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for western jackdaw emphasizing the well-supported contact and scold call system.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass clarified the expected Western Jackdaw contact, flight, alarm, chatter, and juvenile begging classes with stable external references.

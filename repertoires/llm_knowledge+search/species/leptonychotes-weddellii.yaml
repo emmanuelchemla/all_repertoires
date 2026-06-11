@@ -9,82 +9,89 @@ taxonomy:
   genus: Leptonychotes
   species: weddellii
 calls:
-- name: trill
-  acoustic_keywords:
-  - tonal
-  - harmonic
-  - repetitive
-  - long
-  - frequency_modulated
-  acoustic_description: A tonal call with repeated rapidly modulated structure and clear harmonic content.
-  semantic_keywords:
-  - contact
-  - display
-  - identity
-  semantic_description: Used in underwater social communication and display.
-  confidence: medium
-- name: chirp
-  acoustic_keywords:
-  - high_frequency
-  - short
-  - tonal
-  - repetitive
-  - graded
-  acoustic_description: A shorter higher-pitched call than trills, often occurring in series.
-  semantic_keywords:
-  - contact
-  - attention
-  - affiliation
-  semantic_description: Used in local social communication.
-  confidence: medium
-- name: growl
-  acoustic_keywords:
-  - low_frequency
-  - noisy
-  - broadband
-  - long
-  - graded
-  acoustic_description: A rough low call with noisier structure and more threat-like quality.
-  semantic_keywords:
-  - threat
-  - aggression
-  - attention
-  semantic_description: Associated with conflict or aroused close-range encounters.
-  confidence: medium
-- name: whistle
-  acoustic_keywords:
-  - tonal
-  - harmonic
-  - long
-  - frequency_modulated
-  - loud
-  acoustic_description: A sustained narrowband call with stronger tonality and smoother contour than growls.
-  semantic_keywords:
-  - contact
-  - identity
-  - group_coordination
-  semantic_description: Included as a broad long-range social call type in the underwater repertoire.
-  confidence: low
-- name: hoot
-  acoustic_keywords:
-  - low_frequency
-  - tonal
-  - long
-  - harmonic
-  - repetitive
-  acoustic_description: A lower, more sustained underwater call than brief chirps, with clearer tonal structure.
-  semantic_keywords:
-  - contact
-  - display
-  - identity
-  semantic_description: Used in underwater social communication and advertisement.
-  confidence: low
+  - name: low trill
+    acoustic_keywords: [tonal, harmonic, repetitive, long, frequency_modulated]
+    acoustic_description: A long downward-sweeping trill with strong tonal structure and repeated fine modulation, typically in a lower frequency band than high trills.
+    semantic_keywords: [display, identity, territorial]
+    semantic_description: Prominent underwater display signal, especially associated with breeding-season advertisement.
+    confidence: high
+    references: [mirceta_2004, abgrall_2003]
+  - name: high trill
+    acoustic_keywords: [high_frequency, tonal, repetitive, long, frequency_modulated]
+    acoustic_description: A long trill with similar repeated modulated structure to the low trill but concentrated in a much higher frequency band, sometimes extending into ultrasonic range.
+    semantic_keywords: [display, identity, territorial]
+    semantic_description: Used in underwater display and advertisement, likely overlapping functionally with lower trills.
+    confidence: high
+    references: [mirceta_2004, opzeeland_2021]
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A shorter higher-pitched call than trills, often occurring in repeated series with decreasing intervals.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in local social communication.
+    confidence: high
+    references: [mirceta_2004]
+  - name: multiple whistle
+    acoustic_keywords: [tonal, harmonic, repetitive, long, multi_component]
+    acoustic_description: A series of discrete upswept whistle elements forming a structured sequence, often followed by a contrasting terminal component.
+    semantic_keywords: [contact, identity, group_coordination]
+    semantic_description: Used in underwater social communication and likely helps maintain spacing or caller recognition.
+    confidence: high
+    references: [mirceta_2004]
+  - name: single whistle
+    acoustic_keywords: [tonal, harmonic, short, frequency_modulated, loud]
+    acoustic_description: A brief single upswept whistle with clearer isolated contour than the multi-element whistle series.
+    semantic_keywords: [contact, attention, identity]
+    semantic_description: Used as a simpler local signal within the broader underwater social repertoire.
+    confidence: medium
+    references: [mirceta_2004]
+  - name: growl
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A rough lower-frequency call with noisier structure and more threat-like quality than whistles or trills.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Associated with conflict or aroused close-range encounters.
+    confidence: high
+    references: [mirceta_2004]
+  - name: whoop
+    acoustic_keywords: [low_frequency, tonal, long, frequency_modulated, multi_component]
+    acoustic_description: A two-element tonal call with a long low-frequency component ending in a slowly rising upswept component.
+    semantic_keywords: [display, attention, identity]
+    semantic_description: Used in underwater advertisement and conspicuous social signalling.
+    confidence: medium
+    references: [mirceta_2004]
+  - name: chug
+    acoustic_keywords: [abrupt, low_frequency, short, multi_component, pulsed]
+    acoustic_description: A short two-part call beginning with an abrupt downsweep followed by a brief lower-frequency tone.
+    semantic_keywords: [attention, group_coordination]
+    semantic_description: Used in nearby social signalling and likely in rapid attention-getting contexts.
+    confidence: medium
+    references: [mirceta_2004]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, pulsed, repetitive, graded]
+    acoustic_description: A series of discrete low-frequency grunts delivered at fairly regular intervals.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in local underwater social communication.
+    confidence: medium
+    references: [mirceta_2004]
+references:
+  abgrall_2003:
+    citation: "Abgrall, P., McMahon, C.R., and Harcourt, R.G. 2003. Variation of Weddell seal underwater vocalizations over mesogeographic ranges. Aquatic Mammals 29:268-276."
+    url: https://www.aquaticmammalsjournal.org/wp-content/uploads/2010/10/29-02_Abgrall.pdf
+  mirceta_2004:
+    citation: "Mirceta, S., Signoret, J.-P., and Storch, D. 2004. Underwater calls of Weddell seals in the Weddell Sea, Antarctica. Polar Biology 27:634-643."
+    url: https://epic.awi.de/11031/1/Mir2004a.pdf
+  opzeeland_2021:
+    citation: "van Opzeeland, I., Klinck, H., and Goetz, K. 2021. Weddell seals produce ultrasonic vocalizations. Journal of the Acoustical Society of America 148:3784."
+    url: https://pubs.aip.org/asa/jasa/article/148/6/3784/1056458/Weddell-seals-produce-ultrasonic-vocalizations
 provenance:
-- timestamp: '2026-06-10T21:15:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for Weddell seal using major underwater social signal categories with conservative confidence.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:15:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for Weddell seal using major underwater social signal categories with conservative confidence.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T10:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Rebuilt around the classic eight-call Weddell seal underwater repertoire and added explicit high-trill coverage tied to ultrasonic work.

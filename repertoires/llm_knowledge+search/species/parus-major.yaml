@@ -9,127 +9,152 @@ taxonomy:
   genus: Parus
   species: major
 calls:
-- name: song
-  alternative_names:
-  - advertising song
-  - teacher-teacher song
-  scope:
-    life_stages:
-    - adult
-    sexes:
-    - male
-    population_specific: false
-    note: ''
-  acoustic_keywords:
-  - tonal
-  - repetitive
-  - loud
-  - short
-  acoustic_description: Repeated whistled phrases, often built from a small set of clear tonal notes delivered in stereotyped, rhythmically repeated motifs.
-  semantic_keywords:
-  - territorial
-  - courtship
-  - mating
-  - identity
-  semantic_description: Principal adult male advertisement used in territory defense and mate attraction, with local and individual variation in phrase form.
-  confidence: high
-  references:
-  - gompertz_1961
-  - mcgregor_krebs_1982
-- name: seet call
-  alternative_names:
-  - thin alarm call
-  - seeet
-  acoustic_keywords:
-  - high_frequency
-  - tonal
-  - short
-  - quiet
-  acoustic_description: Thin, high-frequency, short notes with relatively narrow-band structure, often hard for humans to localize.
-  semantic_keywords:
-  - alarm
-  - predator
-  - attention
-  semantic_description: Commonly associated with aerial or urgent alarm situations where a subtle warning to nearby birds is advantageous.
-  confidence: high
-  references:
-  - hatti_1985
-- name: churr mobbing call
-  alternative_names:
-  - scold call
-  - mobbing churr
-  acoustic_keywords:
-  - broadband
-  - repetitive
-  - noisy
-  - loud
-  acoustic_description: Harsh, rapidly repeated, broadband notes with a rasping or churring quality.
-  semantic_keywords:
-  - alarm
-  - predator
-  - recruitment
-  - aggression
-  semantic_description: Given during mobbing and close-range response to perched predators or other threats, often helping recruit conspecifics and heterospecifics.
-  confidence: high
-  references:
-  - krams_2001
-  - hatti_1985
-- name: contact call
-  alternative_names:
-  - soft call
-  - cohesion call
-  acoustic_keywords:
-  - short
-  - tonal
-  - quiet
-  - repetitive
-  acoustic_description: Soft, short notes exchanged at close range, less intense and less harsh than mobbing calls.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - affiliation
-  semantic_description: Used during routine flocking, foraging, and close social coordination between nearby individuals.
-  confidence: medium
-  references:
-  - gosler_1993
-- name: recruitment mobbing call
-  acoustic_keywords:
-  - short
-  - repetitive
-  - multi_component
-  - noisy
-  - loud
-  acoustic_description: A more excited, denser sequence of repeated notes than ordinary contact calling, often in extended bouts.
-  semantic_keywords:
-  - recruitment
-  - alarm
-  - group_coordination
-  - attention
-  - combinatorial
-  semantic_description: Used to recruit flock members during mobbing and collective anti-predator response.
-  confidence: medium
+  - name: song
+    alternative_names:
+      - advertising song
+      - teacher-teacher song
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ''
+    acoustic_keywords:
+      - tonal
+      - repetitive
+      - loud
+      - short
+    acoustic_description: Repeated whistled phrases built from a small set of clear tonal notes arranged in stereotyped motifs.
+    semantic_keywords:
+      - territorial
+      - courtship
+      - mating
+      - identity
+    semantic_description: Principal adult male advertisement used in territory defense and mate attraction, with local and individual phrase variation.
+    confidence: high
+    references:
+      - gompertz_1961
+      - mcgregor_krebs_1982
+  - name: seet call
+    alternative_names:
+      - thin alarm call
+      - seeet
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - quiet
+    acoustic_description: Thin high-frequency short notes with relatively narrow-band structure and little harshness.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Commonly associated with aerial or otherwise urgent alarm situations where a subtle warning is advantageous.
+    confidence: high
+    references:
+      - hatti_1985
+  - name: churr mobbing call
+    alternative_names:
+      - scold call
+      - mobbing churr
+    acoustic_keywords:
+      - broadband
+      - repetitive
+      - noisy
+      - loud
+    acoustic_description: Harsh rapidly repeated broadband notes with a rasping churring quality.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - aggression
+    semantic_description: Given during mobbing and close response to perched predators or other threats, often recruiting other birds.
+    confidence: high
+    references:
+      - hatti_1985
+      - gosler_1993
+  - name: contact call
+    alternative_names:
+      - soft call
+      - cohesion call
+    acoustic_keywords:
+      - short
+      - tonal
+      - quiet
+      - repetitive
+    acoustic_description: Soft short notes exchanged at close range, less intense and less harsh than mobbing calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Used during routine flocking, foraging, and close social coordination.
+    confidence: medium
+    references:
+      - gosler_1993
+  - name: recruitment mobbing sequence
+    alternative_names:
+      - recruitment mobbing call
+    acoustic_keywords:
+      - short
+      - repetitive
+      - multi_component
+      - noisy
+      - loud
+    acoustic_description: Denser excited note sequences than ordinary contact calls, often incorporating repeated harsh elements.
+    semantic_keywords:
+      - recruitment
+      - alarm
+      - group_coordination
+      - attention
+      - combinatorial
+    semantic_description: Used to recruit flock members during collective anti-predator response.
+    confidence: medium
+    references:
+      - hatti_1985
+  - name: begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Repeated thin solicitation calls, usually more insistent and higher pitched than adult contact notes.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Produced by nestlings and fledglings to solicit provisioning.
+    confidence: medium
+    references:
+      - gosler_1993
 references:
   gompertz_1961:
     citation: Gompertz, T. 1961. The vocabulary of the great tit. British Birds 54:369-394.
   gosler_1993:
     citation: Gosler, A. 1993. The Great Tit. Hamlyn.
   hatti_1985:
-    citation: Hailman, J.P., Ficken, M.S., and Ficken, R.W. 1985. The 'chick-a-dee' calls of Parus atricapillus, P. carolinensis, and P. major. Auk 102(3):506-524.
-  krams_2001:
-    citation: Krams, I. 2001. Communication in crested tits and the risk of predation. Animal Behaviour 61(6):1065-1068.
-    doi: 10.1006/anbe.2000.1680
+    citation: "Hailman, J. P., Ficken, M. S., and Ficken, R. W. 1985. The 'chick-a-dee' calls of Parus atricapillus, P. carolinensis, and P. major. Auk 102(3):506-524."
   mcgregor_krebs_1982:
-    citation: 'McGregor, P.K. and Krebs, J.R. 1982. Song types in a population of great tits (Parus major): their distribution, abundance and acquisition by individuals. Behaviour 79(2-4):126-152.'
+    citation: "McGregor, P. K. and Krebs, J. R. 1982. Song types in a population of great tits (Parus major): their distribution, abundance and acquisition by individuals. Behaviour 79(2-4):126-152."
     doi: 10.1163/156853982X00210
-  iucn_2018:
-    citation: BirdLife International. 2018. Parus major. The IUCN Red List of Threatened Species 2018 e.T103879156A132046371.
-    url: https://www.iucnredlist.org/species/103879156/132046371
 provenance:
-- timestamp: '2026-06-10T19:10:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Initial LLM knowledge plus web-search draft emphasizing well-established song, alarm, mobbing, and contact categories without over-splitting local variants.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-10T19:10:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft emphasizing well-established song, alarm, mobbing, and contact categories without over-splitting local variants.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass clarified the expected Great Tit song, alarm, mobbing, contact, recruitment, and juvenile begging classes while keeping references broad and stable.

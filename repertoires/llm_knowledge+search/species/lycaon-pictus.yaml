@@ -9,82 +9,84 @@ taxonomy:
   genus: Lycaon
   species: pictus
 calls:
-- name: hoo call
-  acoustic_keywords:
-  - low_frequency
-  - tonal
-  - harmonic
-  - long
-  - repetitive
-  acoustic_description: A low, resonant call with relatively smooth tonal quality, often repeated in bouts.
-  semantic_keywords:
-  - contact
-  - group_coordination
-  - recruitment
-  semantic_description: Used in rallying and coordinating pack members before movement or hunts.
-  confidence: high
-- name: twitter
-  acoustic_keywords:
-  - high_frequency
-  - short
-  - repetitive
-  - tonal
-  - quiet
-  acoustic_description: A lighter higher-pitched social call with repeated brief notes.
-  semantic_keywords:
-  - affiliation
-  - contact
-  - attention
-  semantic_description: Used in close-range social interactions within the pack.
-  confidence: medium
-- name: squeal
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - abrupt
-  - short
-  acoustic_description: A sharp high-intensity call with strong distress or protest quality.
-  semantic_keywords:
-  - distress
-  - submission
-  - attention
-  semantic_description: Produced in conflict, handling, or acute distress situations.
-  confidence: medium
-- name: growl
-  acoustic_keywords:
-  - low_frequency
-  - noisy
-  - broadband
-  - long
-  - graded
-  acoustic_description: A rough low call with threat-like quality and variable duration.
-  semantic_keywords:
-  - threat
-  - aggression
-  - attention
-  semantic_description: Used in close-range warning and competitive interactions.
-  confidence: medium
-- name: rally chirp
-  acoustic_keywords:
-  - high_frequency
-  - short
-  - repetitive
-  - tonal
-  - loud
-  acoustic_description: A short excited call sharper than the low hoo call and more locally directed.
-  semantic_keywords:
-  - group_coordination
-  - recruitment
-  - attention
-  semantic_description: Used in pre-hunt or pack-rally excitement and helps synchronize group activity.
-  confidence: low
+  - name: hoo call
+    acoustic_keywords: [low_frequency, tonal, harmonic, long, repetitive]
+    acoustic_description: A low resonant call with relatively smooth tonal quality, often repeated in bouts and carrying farther than the higher social calls.
+    semantic_keywords: [contact, group_coordination, recruitment]
+    semantic_description: Used in rallying and coordinating pack members before movement or hunts and in maintaining contact when animals are separated.
+    confidence: high
+    references: [robbins_2000]
+  - name: twitter
+    acoustic_keywords: [high_frequency, short, repetitive, tonal, quiet]
+    acoustic_description: A light high-pitched social call composed of repeated brief notes.
+    semantic_keywords: [affiliation, contact, attention]
+    semantic_description: Used in close-range social interactions and pack-level social excitement.
+    confidence: high
+    references: [robbins_2000]
+  - name: begging cry
+    acoustic_keywords: [high_frequency, tonal, repetitive, loud, graded]
+    acoustic_description: A louder more insistent high-pitched repeated call series than ordinary twitters, with stronger arousal and persistence.
+    semantic_keywords: [begging, caregiving, attention, affiliation]
+    semantic_description: Used especially by pups or subordinates soliciting food or social attention from pack members.
+    confidence: high
+    references: [robbins_2000, pup_vocalizations_2002]
+  - name: squeal
+    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
+    acoustic_description: A sharp high-intensity call with strong distress or protest quality.
+    semantic_keywords: [distress, submission, attention]
+    semantic_description: Produced in conflict, handling, injury, or acute distress situations.
+    confidence: medium
+    references: [robbins_2000]
+  - name: rumble
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A low rough call with deeper, more sustained structure than a squeal or twitter.
+    semantic_keywords: [affiliation, caregiving, begging, attention]
+    semantic_description: Used in close-range social interaction, including food-begging and socially directed solicitation.
+    confidence: medium
+    references: [robbins_2000]
+  - name: growl
+    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
+    acoustic_description: A rough low call with threat-like quality and variable duration.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used in close-range warning and competitive interactions.
+    confidence: medium
+    references: [robbins_2000]
+  - name: bark
+    acoustic_keywords: [broadband, abrupt, short, loud, noisy]
+    acoustic_description: A short harsh abrupt call with broad spectral energy, structurally simpler than the long hoo call.
+    semantic_keywords: [alarm, attention, threat, group_coordination]
+    semantic_description: Used in alarm, disturbance, and high-arousal rally contexts.
+    confidence: medium
+    references: [robbins_2000]
+  - name: sneeze
+    acoustic_keywords: [abrupt, short, broadband, repetitive, quiet]
+    acoustic_description: A very short explosive nasal sound that can occur in repeated bursts during pre-departure rallies.
+    semantic_keywords: [group_coordination, recruitment, attention]
+    semantic_description: Used during pack rallies as part of collective decision-making before departures or hunts.
+    confidence: high
+    references: [walker_etal_2017]
+references:
+  robbins_2000:
+    citation: "Robbins, R.L. 2000. Vocal communication in free-ranging African wild dogs (Lycaon pictus). Behaviour 137:1271-1298."
+    doi: 10.1163/156853900501926
+    url: https://www.researchgate.net/publication/233542237_Vocal_communication_in_free-ranging_African_wild_dogs_Lycaon_pictus
+  walker_etal_2017:
+    citation: "Walker, R.H., King, A.J., McNutt, J.W., and Jordan, N.R. 2017. Sneeze to leave: African wild dogs (Lycaon pictus) use variable quorum thresholds facilitated by sneezes in collective decisions. Proceedings of the Royal Society B 284:20170347."
+    doi: 10.1098/rspb.2017.0347
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5597819/
+  pup_vocalizations_2002:
+    citation: "Robbins, R.L. and McCreery, E.K. 2003. African wild dog pup vocalizations with special reference to begging and food transfer. Behaviour 140:1099-1118."
+    url: https://www.jstor.org/stable/4536030
 provenance:
-- timestamp: '2026-06-10T21:30:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for African wild dog centered on the recruitment hoo and common social or agonistic calls.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:30:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for African wild dog centered on the recruitment hoo and common social or agonistic calls.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:19:45Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative completeness pass added obvious African wild dog social, begging, and coordination calls with stable external references.

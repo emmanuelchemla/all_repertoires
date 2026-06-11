@@ -10,31 +10,54 @@ taxonomy:
   species: fuscicollis
 calls:
   - name: long call
+    alternative_names: [combination long call]
     acoustic_keywords: [long, multi_component, harmonic, frequency_modulated, loud]
-    acoustic_description: A long-distance call composed of multiple whistle-like or chirp-like elements in sequence.
+    acoustic_description: A long-distance call composed of multiple whistle-like and chirp-like elements in sequence.
     semantic_keywords: [contact, group_coordination, identity, territorial]
-    semantic_description: Used in long-range spacing and coordination between group members.
+    semantic_description: Used in long-range spacing and coordination between separated group members or neighboring groups.
     confidence: high
+    references: [snowdon_hodun_1981, tamarin_overview]
+  - name: whistle
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A sustained narrowband element with smoother contour and longer duration than a chirp.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in distance contact and caller recognition and often contributes to extended long-call bouts.
+    confidence: medium
+    references: [snowdon_hodun_1981]
   - name: chirp
     acoustic_keywords: [short, high_frequency, tonal, repetitive, quiet]
-    acoustic_description: A brief high note often used as a building block in broader long-call structure.
+    acoustic_description: A brief high note, often functioning as a short standalone signal or structural element within longer sequences.
     semantic_keywords: [contact, attention, affiliation]
     semantic_description: Used in local social communication.
     confidence: medium
-  - name: whistle
-    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
-    acoustic_description: A more sustained narrowband element than a chirp, often part of longer call bouts.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Used for distance contact and caller recognition.
-    confidence: medium
+    references: [snowdon_hodun_1981]
   - name: alarm call
     acoustic_keywords: [abrupt, noisy, broadband, short, repetitive]
     acoustic_description: A conspicuous abrupt call type harsher than contact signals.
     semantic_keywords: [alarm, predator, attention]
     semantic_description: Produced in threatening situations requiring rapid group attention.
     confidence: medium
+    references: [tamarin_overview]
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
+    acoustic_description: A high-arousal call with strong noisy energy and greater duration than brief alarm notes.
+    semantic_keywords: [distress, aggression, attention]
+    semantic_description: Used in capture, severe conflict, or intense disturbance.
+    confidence: low
+    references: [tamarin_overview]
+references:
+  snowdon_hodun_1981:
+    citation: "Snowdon, C.T. and Hodun, A. 1981. Acoustic adaptations in pygmy marmoset and tamarin long calls."
+    url: https://pubmed.ncbi.nlm.nih.gov/7310911/
+  tamarin_overview:
+    citation: "Animal Diversity Web. Saguinus fuscicollis account and callitrichid overview material."
+    url: https://animaldiversity.org/accounts/Saguinus_fuscicollis/
 provenance:
   - timestamp: "2026-06-10T21:30:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for saddle-back tamarin centered on long-distance contact and alarm categories.
+  - timestamp: "2026-06-11T12:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision expanded major tamarin call classes and added stable external references only.

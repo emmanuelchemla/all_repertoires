@@ -9,82 +9,133 @@ taxonomy:
   genus: Corvus
   species: corax
 calls:
-- name: croak
-  acoustic_keywords:
-  - low_frequency
-  - noisy
-  - short
-  - repetitive
-  - loud
-  acoustic_description: A harsh resonant call with rough low spectral emphasis and abrupt onset.
-  semantic_keywords:
-  - contact
-  - identity
-  - attention
-  semantic_description: Used widely in social communication and long-range awareness.
-  confidence: high
-- name: knock call
-  acoustic_keywords:
-  - abrupt
-  - short
-  - broadband
-  - pulsed
-  - repetitive
-  acoustic_description: A percussive knock-like call distinct from croaks and longer display sounds.
-  semantic_keywords:
-  - display
-  - courtship
-  - attention
-  semantic_description: Used in pair-bond and display-related contexts.
-  confidence: medium
-- name: scold call
-  acoustic_keywords:
-  - noisy
-  - broadband
-  - abrupt
-  - repetitive
-  - loud
-  acoustic_description: A harsher repeated call louder and more agitated than routine croaks.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Produced in mobbing and disturbance situations.
-  confidence: medium
-- name: gurgle
-  acoustic_keywords:
-  - multi_component
-  - tonal
-  - noisy
-  - repetitive
-  - long
-  acoustic_description: A more complex vocal sequence with mixed rough and tonal components.
-  semantic_keywords:
-  - affiliation
-  - display
-  - identity
-  semantic_description: Used in close social interaction and display.
-  confidence: medium
-- name: juvenile begging call
-  acoustic_keywords:
-  - high_frequency
-  - repetitive
-  - loud
-  - short
-  - graded
-  acoustic_description: A repeated higher-pitched solicitation call produced by dependent young.
-  semantic_keywords:
-  - begging
-  - caregiving
-  - attention
-  semantic_description: Used by juveniles to solicit feeding and care.
-  confidence: medium
+  - name: croak
+    alternative_names:
+      - quork
+      - common call
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - repetitive
+      - loud
+    acoustic_description: Deep rough croaks with low-frequency emphasis and abrupt onset, delivered singly or in repeated series.
+    semantic_keywords:
+      - contact
+      - identity
+      - attention
+      - spacing
+    semantic_description: Principal general-purpose social signal used for long-range contact, awareness, and social spacing.
+    confidence: high
+    references:
+      - raven_cornell
+  - name: scold call
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - abrupt
+      - repetitive
+      - loud
+    acoustic_description: Harsher and more rapidly repeated notes than routine croaks, with an agitated quality.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+      - recruitment
+    semantic_description: Used in disturbance and mobbing contexts and can draw the attention of other ravens.
+    confidence: medium
+    references:
+      - raven_cornell
+  - name: knock call
+    acoustic_keywords:
+      - abrupt
+      - short
+      - broadband
+      - pulsed
+      - repetitive
+    acoustic_description: Percussive knock-like notes distinct from croaks and from longer display sequences.
+    semantic_keywords:
+      - display
+      - courtship
+      - attention
+    semantic_description: Used in pair-bond and other conspicuous display contexts.
+    confidence: medium
+    references:
+      - raven_cornell
+  - name: gurgle
+    acoustic_keywords:
+      - multi_component
+      - tonal
+      - noisy
+      - repetitive
+      - long
+    acoustic_description: Complex rolling sequence that mixes rough and more tonal elements into longer phrases.
+    semantic_keywords:
+      - affiliation
+      - display
+      - courtship
+      - identity
+    semantic_description: Heard in close social interaction, pair-bond communication, and other affiliative display contexts.
+    confidence: medium
+    references:
+      - raven_cornell
+  - name: warble song
+    alternative_names:
+      - song
+      - whisper song
+    acoustic_keywords:
+      - tonal
+      - multi_component
+      - frequency_modulated
+      - long
+      - quiet
+    acoustic_description: Softer variable strings of whistles, croaks, and other elements arranged into extended sequences.
+    semantic_keywords:
+      - display
+      - courtship
+      - affiliation
+      - identity
+    semantic_description: Used in low-intensity social display, especially by paired birds at close range.
+    confidence: medium
+    references:
+      - raven_cornell
+  - name: juvenile begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Repeated higher-pitched solicitation calls, thinner and more insistent than adult croaks.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Produced by dependent young to solicit feeding and social attention from adults.
+    confidence: medium
+    references:
+      - raven_cornell
+references:
+  raven_cornell:
+    citation: Cornell Lab of Ornithology. Common Raven sounds.
+    url: https://www.allaboutbirds.org/guide/Common_Raven/sounds
 provenance:
-- timestamp: '2026-06-10T21:30:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for common raven using widely recognized croak, knock, and scold classes.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-10T21:30:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for common raven using widely recognized croak, knock, and scold classes.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T13:16:20+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative improvement pass clarified the main raven contact, alarm, pair-display, song-like, and juvenile solicitation classes with stable external sound references.

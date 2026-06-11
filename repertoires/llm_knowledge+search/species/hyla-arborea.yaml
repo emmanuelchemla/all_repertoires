@@ -10,44 +10,43 @@ taxonomy:
   species: arborea
 calls:
   - name: advertisement call
+    alternative_names: [mating call, short call]
     acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
     acoustic_description: A repeated breeding-season call with stable tonal structure and stereotyped pulse pattern.
     semantic_keywords: [courtship, mating, attention]
     semantic_description: Used by males to attract females in breeding choruses.
     confidence: high
-    references:
-      - hyla_arborea_ad
+    references: [richardson_etal_1995, friedl_klump_2002]
   - name: encounter call
     acoustic_keywords: [abrupt, repetitive, tonal, loud, graded]
     acoustic_description: A shorter more forceful call than the advertisement call, directed to nearby rivals.
     semantic_keywords: [territorial, aggression, attention]
     semantic_description: Used in close-range male-male interactions around calling sites.
+    confidence: high
+    references: [friedl_klump_2002, schneider_1971]
+  - name: aggressive call
+    acoustic_keywords: [abrupt, repetitive, noisy, loud, graded]
+    acoustic_description: A harsher and more forceful local call than the advertisement call, used in escalated male interactions.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Used in male-male competition and territorial escalation around calling sites.
     confidence: medium
-    references:
-      - hyla_general
+    references: [friedl_klump_2002, schneider_1971]
   - name: release call
     acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
     acoustic_description: A brief call produced during unwanted physical contact or clasping.
     semantic_keywords: [submission, attention, mating]
     semantic_description: Signals inappropriate amplexus and prompts release.
     confidence: medium
-    references:
-      - hyla_general
-  - name: aggressive call
-    acoustic_keywords: [abrupt, repetitive, noisy, loud, graded]
-    acoustic_description: A harsher and more forceful local call than the advertisement call, used in escalated male interactions.
-    semantic_keywords: [territorial, aggression, attention]
-    semantic_description: Used in male-male competition and territorial escalation around calling sites.
-    confidence: low
-    references:
-      - hyla_general
 references:
-  hyla_arborea_ad:
-    citation: "Richardson, C., et al. The advertisement call of the European treefrog, Hyla arborea: a multi-level study of variation."
+  friedl_klump_2002:
+    citation: "Friedl, T.W.P. and Klump, G.M. 2002. The Vocal Behaviour of Male European Treefrogs (Hyla arborea): Implications for Inter- and Intrasexual Selection."
+    url: https://www.jstor.org/stable/4535915
+  richardson_etal_1995:
+    citation: "Richardson, C., Lengagne, T., and Joly, P. 1995. The advertisement call of the European treefrog, Hyla arborea: a multi-level study of variation."
     url: https://www.researchgate.net/publication/236971818_The_advertisement_call_of_the_European_treefrogs_Hyla_arborea_a_multi-level_study_of_variation
-  hyla_general:
-    citation: "General treefrog bioacoustic and behavioral sources for advertisement, encounter, and release calls in Hyla arborea."
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11212616/
+  schneider_1971:
+    citation: "Schneider, H. 1971. Territorial behavior and vocal response in male Hyla arborea savignyi."
+    url: https://cris.haifa.ac.il/en/publications/territorial-behavior-and-vocal-response-in-male-hyla-arborea-savi/
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
@@ -57,3 +56,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added references and an additional aggressive-call category from independent treefrog bioacoustic sources.
+  - timestamp: "2026-06-11T12:25:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision strengthened encounter and territorial support from classic Hyla arborea behavioral sources.

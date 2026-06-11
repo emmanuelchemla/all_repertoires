@@ -9,32 +9,114 @@ taxonomy:
   genus: Saccopteryx
   species: bilineata
 calls:
-  - name: territorial song
-    acoustic_keywords: [multi_component, tonal, noisy, repetitive, long]
-    acoustic_description: A prolonged, structured social vocalization made of repeated syllable types with mixed tonal and noisy elements.
-    semantic_keywords: [territorial, courtship, display, identity]
-    semantic_description: Used by males in territory defense and sexual display.
-    confidence: high
-  - name: isolation call
-    acoustic_keywords: [high_frequency, tonal, long, repetitive, loud]
-    acoustic_description: A stronger and more persistent call than routine social notes, often given by separated young.
-    semantic_keywords: [begging, caregiving, contact, attention]
-    semantic_description: Elicits maternal retrieval or care.
-    confidence: high
-  - name: contact call
-    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
-    acoustic_description: A lower-amplitude social call with simpler structure than the territorial song.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in routine roost social communication.
-    confidence: medium
-  - name: aggression call
-    acoustic_keywords: [noisy, broadband, abrupt, short, repetitive]
-    acoustic_description: A harsher short call with more broadband structure than affiliative signals.
-    semantic_keywords: [aggression, threat, attention]
-    semantic_description: Used in close-range social conflict or displacement.
-    confidence: medium
+- name: territorial song
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - noisy
+  - repetitive
+  - long
+  acoustic_description: A prolonged, structured social vocalization made of repeated
+    syllable types with mixed tonal and noisy elements.
+  semantic_keywords:
+  - territorial
+  - courtship
+  - display
+  - identity
+  semantic_description: Used by males in territory defense and sexual display.
+  confidence: high
+- name: isolation call
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - long
+  - repetitive
+  - loud
+  acoustic_description: A stronger and more persistent call than routine social notes,
+    often given by separated young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - contact
+  - attention
+  semantic_description: Elicits maternal retrieval or care.
+  confidence: high
+- name: contact call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  - graded
+  acoustic_description: A lower-amplitude social call with simpler structure than
+    the territorial song.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in routine roost social communication.
+  confidence: medium
+- name: aggression call
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - abrupt
+  - short
+  - repetitive
+  acoustic_description: A harsher short call with more broadband structure than affiliative
+    signals.
+  semantic_keywords:
+  - aggression
+  - threat
+  - attention
+  semantic_description: Used in close-range social conflict or displacement.
+  confidence: medium
+- name: courtship song
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - repetitive
+  - long
+  - frequency_modulated
+  acoustic_description: A structured vocal display sequence richer and more elaborate
+    than simple contact calls, with repeated phrase components.
+  semantic_keywords:
+  - courtship
+  - mating
+  - display
+  - identity
+  semantic_description: Used by males during sexual display and mate attraction within
+    their territory.
+  confidence: medium
+- name: pup attraction call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A repeated short call used in mother-pup interactions and
+    softer than aggression calls.
+  semantic_keywords:
+  - caregiving
+  - contact
+  - attention
+  semantic_description: Produced by mothers to attract or guide pups in roosting contexts.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T21:45:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for greater sac-winged bat emphasizing its well-known male song system and social calls.
+- timestamp: '2026-06-10T21:45:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for greater sac-winged bat emphasizing its well-known
+    male song system and social calls.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

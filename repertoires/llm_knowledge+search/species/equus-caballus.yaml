@@ -9,97 +9,135 @@ taxonomy:
   genus: Equus
   species: caballus
 calls:
-  - name: whinny
-    alternative_names:
-      - neigh
-    acoustic_keywords:
-      - long
-      - loud
-      - multi_component
-      - harmonic
-      - frequency_modulated
-    acoustic_description: A prolonged call combining low-frequency voiced energy with a higher whistle-like component, usually strongly modulated across the call.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - identity
-      - attention
-    semantic_description: Used to locate, regain, or maintain contact with conspecifics at distance and carries individually informative cues.
-    confidence: high
-    references:
-      - lemasson_2009
-      - briefer_2012
-  - name: nicker
-    acoustic_keywords:
-      - low_frequency
-      - quiet
-      - tonal
-      - short
-      - harmonic
-    acoustic_description: A soft, low-pitched, brief call with relatively smooth harmonic structure and much lower amplitude than a whinny.
-    semantic_keywords:
-      - affiliation
-      - contact
-      - caregiving
-    semantic_description: Common in friendly close-range interactions, including maternal, greeting, and anticipatory social contexts.
-    confidence: high
-    references:
-      - briefer_2012
-  - name: squeal
-    acoustic_keywords:
-      - high_frequency
-      - loud
-      - noisy
-      - abrupt
-      - short
-    acoustic_description: A sharp, high-pitched, intense call with abrupt onset and a harsher spectral quality than affiliative calls.
-    semantic_keywords:
-      - threat
-      - aggression
-      - submission
-      - attention
-    semantic_description: Produced in agonistic interactions, defensive reactions, or social tension, especially during close-range disputes.
-    confidence: high
-    references:
-      - briefer_2012
-  - name: snort
-    acoustic_keywords:
-      - broadband
-      - abrupt
-      - short
-      - pulsed
-    acoustic_description: A short explosive exhalation with broad spectral energy and little tonal structure.
-    semantic_keywords:
-      - attention
-      - alarm
-      - group_coordination
-    semantic_description: Often associated with elevated attention or arousal and may alert nearby horses to novelty or changed conditions.
-    confidence: medium
-    references:
-      - briefer_2012
-  - name: blow
-    acoustic_keywords:
-      - broadband
-      - quiet
-      - short
-      - pulsed
-    acoustic_description: A shorter and softer expiratory sound than a snort, with broad spectral energy and limited harmonic structure.
-    semantic_keywords:
-      - attention
-      - contact
-    semantic_description: Used in attentive inspection and low-to-moderate arousal situations, often during investigation of nearby stimuli.
-    confidence: medium
-    references:
-      - briefer_2012
+- name: whinny
+  alternative_names:
+  - neigh
+  acoustic_keywords:
+  - long
+  - loud
+  - multi_component
+  - harmonic
+  - frequency_modulated
+  acoustic_description: A prolonged call combining low-frequency voiced energy with
+    a higher whistle-like component, usually strongly modulated across the call.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  - attention
+  semantic_description: Used to locate, regain, or maintain contact with conspecifics
+    at distance and carries individually informative cues.
+  confidence: high
+  references:
+  - lemasson_2009
+  - briefer_2012
+- name: nicker
+  acoustic_keywords:
+  - low_frequency
+  - quiet
+  - tonal
+  - short
+  - harmonic
+  acoustic_description: A soft, low-pitched, brief call with relatively smooth harmonic
+    structure and much lower amplitude than a whinny.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - caregiving
+  semantic_description: Common in friendly close-range interactions, including maternal,
+    greeting, and anticipatory social contexts.
+  confidence: high
+  references:
+  - briefer_2012
+- name: squeal
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - abrupt
+  - short
+  acoustic_description: A sharp, high-pitched, intense call with abrupt onset and
+    a harsher spectral quality than affiliative calls.
+  semantic_keywords:
+  - threat
+  - aggression
+  - submission
+  - attention
+  semantic_description: Produced in agonistic interactions, defensive reactions, or
+    social tension, especially during close-range disputes.
+  confidence: high
+  references:
+  - briefer_2012
+- name: snort
+  acoustic_keywords:
+  - broadband
+  - abrupt
+  - short
+  - pulsed
+  acoustic_description: A short explosive exhalation with broad spectral energy and
+    little tonal structure.
+  semantic_keywords:
+  - attention
+  - alarm
+  - group_coordination
+  semantic_description: Often associated with elevated attention or arousal and may
+    alert nearby horses to novelty or changed conditions.
+  confidence: medium
+  references:
+  - briefer_2012
+- name: blow
+  acoustic_keywords:
+  - broadband
+  - quiet
+  - short
+  - pulsed
+  acoustic_description: A shorter and softer expiratory sound than a snort, with broad
+    spectral energy and limited harmonic structure.
+  semantic_keywords:
+  - attention
+  - contact
+  semantic_description: Used in attentive inspection and low-to-moderate arousal situations,
+    often during investigation of nearby stimuli.
+  confidence: medium
+  references:
+  - briefer_2012
+- name: groan
+  acoustic_keywords:
+  - low_frequency
+  - long
+  - graded
+  - tonal
+  - quiet
+  acoustic_description: A low sustained vocalization softer and less modulated than
+    a whinny, often with strained or breathy quality.
+  semantic_keywords:
+  - distress
+  - attention
+  - submission
+  semantic_description: Produced in discomfort, frustration, or close-range negative
+    social interactions.
+  confidence: medium
+  references:
+  - lemasson_2009
 references:
   briefer_2012:
-    citation: "Briefer, E.F. 2012. Acoustic communication in the domestic horse (Equus caballus). Journal of Veterinary Behavior 7:218-228."
+    citation: Briefer, E.F. 2012. Acoustic communication in the domestic horse (Equus
+      caballus). Journal of Veterinary Behavior 7:218-228.
     url: https://www.researchgate.net/publication/251692110_Acoustic_communication_in_the_domestic_horse_Equus_caballus
   lemasson_2009:
-    citation: "Lemasson, A., Boutin, A., Boivin, S., Blois-Heulin, C., and Hausberger, M. 2009. Horse (Equus caballus) whinnies: a source of social information. Animal Cognition 12:693-704."
+    citation: 'Lemasson, A., Boutin, A., Boivin, S., Blois-Heulin, C., and Hausberger,
+      M. 2009. Horse (Equus caballus) whinnies: a source of social information. Animal
+      Cognition 12:693-704.'
     doi: 10.1007/s10071-009-0229-9
 provenance:
-  - timestamp: "2026-06-10T20:00:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Initial LLM knowledge plus web-search draft for horse vocal repertoire emphasizing well-established social call classes and conservative treatment of non-vocal expiratory sounds.
+- timestamp: '2026-06-10T20:00:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Initial LLM knowledge plus web-search draft for horse vocal repertoire emphasizing
+    well-established social call classes and conservative treatment of non-vocal expiratory
+    sounds.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

@@ -16,12 +16,14 @@ calls:
   - noisy
   - abrupt
   - repetitive
-  acoustic_description: A loud harsh contact call with strong high-frequency energy and repeated delivery.
+  acoustic_description: A loud harsh contact call with strong high-frequency energy
+    and repeated delivery.
   semantic_keywords:
   - contact
   - group_coordination
   - identity
-  semantic_description: Used in flock cohesion and long-range contact among mobile group members.
+  semantic_description: Used in flock cohesion and long-range contact among mobile
+    group members.
   confidence: high
 - name: chatter
   acoustic_keywords:
@@ -30,7 +32,8 @@ calls:
   - multi_component
   - noisy
   - quiet
-  acoustic_description: A rapid local sequence of brief notes with more variable structure than the main contact screech.
+  acoustic_description: A rapid local sequence of brief notes with more variable structure
+    than the main contact screech.
   semantic_keywords:
   - affiliation
   - contact
@@ -44,7 +47,8 @@ calls:
   - noisy
   - abrupt
   - short
-  acoustic_description: A harsher and more urgent abrupt call than ordinary social chatter.
+  acoustic_description: A harsher and more urgent abrupt call than ordinary social
+    chatter.
   semantic_keywords:
   - alarm
   - threat
@@ -72,20 +76,45 @@ calls:
   - noisy
   - tonal
   - long
-  acoustic_description: A more coordinated and extended social sequence than simple local chatter, involving repeated phrase-like exchanges.
+  acoustic_description: A more coordinated and extended social sequence than simple
+    local chatter, involving repeated phrase-like exchanges.
   semantic_keywords:
   - affiliation
   - display
   - group_coordination
   - identity
-  semantic_description: Used in close pair or flock social display and coordinated interaction.
+  semantic_description: Used in close pair or flock social display and coordinated
+    interaction.
   confidence: low
+- name: flight call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - short
+  - repetitive
+  acoustic_description: A loud repeated screech-like call given in rapid sequences
+    during group flight.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used to coordinate airborne flock movements and maintain contact
+    between fast-moving group members.
+  confidence: medium
 provenance:
 - timestamp: '2026-06-10T21:30:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for orange-fronted parakeet emphasizing flock contact and alarm calls.
+  notes: Broad exploratory draft for orange-fronted parakeet emphasizing flock contact
+    and alarm calls.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

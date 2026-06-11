@@ -9,85 +9,58 @@ taxonomy:
   genus: Indri
   species: indri
 calls:
-- name: song bout
-  acoustic_keywords:
-  - long
-  - loud
-  - repetitive
-  - multi_component
-  - harmonic
-  acoustic_description: A prolonged, often group-coordinated song composed of repeated phrase patterns and strong harmonic structure.
-  semantic_keywords:
-  - territorial
-  - group_coordination
-  - affiliation
-  - display
-  - identity
-  semantic_description: Used in territorial advertisement, pair or group cohesion, and long-range social display.
-  confidence: high
-- name: roar
-  acoustic_keywords:
-  - loud
-  - long
-  - noisy
-  - broadband
-  - repetitive
-  acoustic_description: A forceful, harsh vocal element with stronger noisy energy than the more tonal song sections.
-  semantic_keywords:
-  - territorial
-  - threat
-  - attention
-  - display
-  semantic_description: Contributes to high-arousal long-range display and territorial calling.
-  confidence: medium
-- name: kiss
-  acoustic_keywords:
-  - short
-  - abrupt
-  - quiet
-  - pulsed
-  - repetitive
-  acoustic_description: A brief percussive or click-like call element with abrupt onset.
-  semantic_keywords:
-  - contact
-  - attention
-  - group_coordination
-  semantic_description: Used in close-range coordination and local social attention.
-  confidence: medium
-- name: wheeze
-  acoustic_keywords:
-  - noisy
-  - broadband
-  - short
-  - abrupt
-  - graded
-  acoustic_description: A harsh breathy call with less tonality than full song elements.
-  semantic_keywords:
-  - attention
-  - threat
-  - distress
-  semantic_description: Included as a local arousal-related call used outside the main song bout.
-  confidence: low
-- name: kiss call
-  acoustic_keywords:
-  - short
-  - abrupt
-  - quiet
-  - pulsed
-  - repetitive
-  acoustic_description: A brief percussive or click-like local call distinct from the main song bout.
-  semantic_keywords:
-  - contact
-  - attention
-  - group_coordination
-  semantic_description: Used in close-range coordination and local social attention.
-  confidence: medium
+  - name: song bout
+    acoustic_keywords: [long, loud, repetitive, multi_component, harmonic]
+    acoustic_description: A prolonged often group-coordinated song composed of repeated phrase patterns, strong harmonic structure, and alternation among several phrase types.
+    semantic_keywords: [territorial, group_coordination, affiliation, display, identity]
+    semantic_description: Used in territorial advertisement, pair or family cohesion, and long-range social display.
+    confidence: high
+    references: [giacoma_2010, pollock_1986]
+  - name: descending phrase
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, repetitive]
+    acoustic_description: A stereotyped tonal phrase with clear harmonic energy and a descending frequency contour, commonly embedded in the broader song.
+    semantic_keywords: [territorial, identity, display]
+    semantic_description: A recurring song unit that likely contributes to caller or group distinctiveness within long-range advertisement.
+    confidence: medium
+    references: [giacoma_2010]
+  - name: roar
+    acoustic_keywords: [loud, long, noisy, broadband, repetitive]
+    acoustic_description: A forceful harsh vocal element with stronger noisy energy than the more tonal song sections.
+    semantic_keywords: [territorial, threat, attention, display]
+    semantic_description: Contributes to high-arousal long-range display and territorial calling.
+    confidence: medium
+    references: [pollock_1986]
+  - name: kiss
+    acoustic_keywords: [short, abrupt, quiet, pulsed, repetitive]
+    acoustic_description: A brief percussive click-like or smacking local call with abrupt onset and little tonal structure.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Used in close-range coordination and local social attention outside the long song bouts.
+    confidence: medium
+    references: [pollock_1986]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, pulsed, graded, quiet]
+    acoustic_description: A short low call with simple rough or pulsed structure and less carrying power than roars or song phrases.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in nearby routine social interactions and low-arousal coordination.
+    confidence: low
+    references: [pollock_1986]
+references:
+  giacoma_2010:
+    citation: "Giacoma, C., Sorrentino, V., Rabarivola, C., and Gamba, M. 2010. Sex differences in the song of Indri indri. International Journal of Primatology 31:539-551."
+    doi: 10.1007/s10764-010-9412-8
+  pollock_1986:
+    citation: "Pollock, J.I. 1986. The song of the Indris (Indri indri; Primates: Lemuroidea): natural history, form and function. International Journal of Primatology 7:225-267."
+    doi: 10.1007/BF02736394
 provenance:
-- timestamp: '2026-06-10T20:45:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for indri centered on the species' well-known song system and supporting local call classes.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T20:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for indri centered on the species' well-known song system and supporting local call classes.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T10:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Replaced the duplicate kiss entries with a cleaner song-centred inventory and added classic indri song references.

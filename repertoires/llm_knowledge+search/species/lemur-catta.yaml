@@ -10,136 +10,85 @@ taxonomy:
   species: catta
 calls:
   - name: purr
-    acoustic_keywords:
-      - low_frequency
-      - tonal
-      - quiet
-      - repetitive
-      - harmonic
-    acoustic_description: A soft, low-amplitude, rhythmic vocalization with relatively even tonal pulses and little harsh noise.
-    semantic_keywords:
-      - affiliation
-      - contact
-      - caregiving
+    acoustic_keywords: [low_frequency, tonal, quiet, repetitive, harmonic]
+    acoustic_description: A soft low-amplitude rhythmic vocalization with relatively even tonal pulses and little harsh noise.
+    semantic_keywords: [affiliation, contact, caregiving]
     semantic_description: Used in close social contact and low-arousal affiliative situations, and may signal nonaggressive intent.
     confidence: high
-    references:
-      - macedonia_1993
-      - bolt_2014
+    references: [macedonia_1993, bolt_2014]
   - name: meow
-    acoustic_keywords:
-      - tonal
-      - harmonic
-      - frequency_modulated
-      - long
-      - loud
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
     acoustic_description: A clearer and more prolonged tonal call than the purr, often with marked pitch modulation and strong harmonic structure.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - attention
+    semantic_keywords: [contact, group_coordination, attention]
     semantic_description: Used to maintain contact and coordinate group spacing, especially when individuals are separated over moderate distance.
+    confidence: high
+    references: [macedonia_1993]
+  - name: moan
+    acoustic_keywords: [low_frequency, tonal, long, harmonic, quiet]
+    acoustic_description: A sustained lower-pitched tonal call with smoother and more plaintive structure than the meow.
+    semantic_keywords: [contact, caregiving, begging]
+    semantic_description: Common in close social interactions involving solicitation, dependent young, or approach to social partners.
     confidence: medium
-    references:
-      - macedonia_1993
+    references: [macedonia_1993]
   - name: howl
-    acoustic_keywords:
-      - long
-      - loud
-      - harmonic
-      - repetitive
-      - multi_component
-    acoustic_description: A loud, prolonged call or call series with sustained tonal energy, often more forceful and far-carrying than routine contact calls.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - territorial
-      - display
+    acoustic_keywords: [long, loud, harmonic, repetitive, multi_component]
+    acoustic_description: A loud prolonged call or call series with sustained tonal energy, often more forceful and far-carrying than routine contact calls.
+    semantic_keywords: [contact, group_coordination, territorial, display]
     semantic_description: Functions in long-range spacing, group assembly, and social display.
     confidence: medium
-    references:
-      - macedonia_1993
-      - bolt_2017
+    references: [macedonia_1993, bolt_2017]
   - name: yip
-    acoustic_keywords:
-      - high_frequency
-      - abrupt
-      - short
-      - tonal
-      - repetitive
-    acoustic_description: A short, sharp, high-pitched call with abrupt onset and a more urgent quality than soft contact calls.
-    semantic_keywords:
-      - submission
-      - distress
-      - attention
-    semantic_description: Common in agonistic interactions and mild fear contexts, often signaling deference or social unease.
+    acoustic_keywords: [high_frequency, abrupt, short, tonal, repetitive]
+    acoustic_description: A short sharp high-pitched call with abrupt onset and a more urgent quality than soft contact calls.
+    semantic_keywords: [submission, distress, attention]
+    semantic_description: Common in agonistic interactions and mild fear contexts, often signalling deference or social unease.
     confidence: high
-    references:
-      - macedonia_1993
-      - gould_1999
+    references: [macedonia_1993, gould_1999]
   - name: cackle
-    acoustic_keywords:
-      - broadband
-      - noisy
-      - repetitive
-      - abrupt
-      - short
-    acoustic_description: A harsh, repeated call series with noisy structure and a defensive, rattling quality.
-    semantic_keywords:
-      - threat
-      - aggression
-      - attention
+    acoustic_keywords: [broadband, noisy, repetitive, abrupt, short]
+    acoustic_description: A harsh repeated call series with noisy structure and a defensive rattling quality.
+    semantic_keywords: [threat, aggression, attention]
     semantic_description: Produced in defensive or escalated agonistic situations and may reflect readiness to resist or retaliate.
     confidence: high
-    references:
-      - macedonia_1993
-      - gould_1999
+    references: [macedonia_1993, gould_1999]
   - name: twitter
-    acoustic_keywords:
-      - high_frequency
-      - tonal
-      - short
-      - repetitive
-      - graded
-    acoustic_description: A rapid series of short high notes with a lighter, more tonal structure than harsher aggressive calls.
-    semantic_keywords:
-      - submission
-      - attention
-      - distress
-    semantic_description: Associated with fearful but assertive social interactions and used in agonistic exchanges where individuals remain engaged.
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A rapid series of short high notes with a lighter more tonal structure than harsher aggressive calls.
+    semantic_keywords: [submission, attention, distress]
+    semantic_description: Associated with fearful but socially engaged interactions and used in agonistic exchanges where individuals remain near each other.
     confidence: medium
-    references:
-      - gould_1999
+    references: [gould_1999]
+  - name: wail
+    acoustic_keywords: [high_frequency, loud, long, noisy, graded]
+    acoustic_description: A louder more prolonged distress call than the yip, with rising or wavering high-frequency energy.
+    semantic_keywords: [distress, caregiving, attention]
+    semantic_description: Produced during stronger distress, separation, or handling, especially in situations likely to recruit social support or care.
+    confidence: medium
+    references: [macedonia_1993]
   - name: plosive bark
-    acoustic_keywords:
-      - broadband
-      - abrupt
-      - loud
-      - short
-      - noisy
-    acoustic_description: A loud, explosive, broad-spectrum bark with abrupt onset and little tonal continuity.
-    semantic_keywords:
-      - alarm
-      - threat
-      - attention
+    acoustic_keywords: [broadband, abrupt, loud, short, noisy]
+    acoustic_description: A loud explosive broad-spectrum bark with abrupt onset and little tonal continuity.
+    semantic_keywords: [alarm, threat, attention]
     semantic_description: A high-intensity threat or alarm signal produced during serious disturbance, conflict, or sudden danger.
     confidence: high
-    references:
-      - macedonia_1993
-      - gould_1999
+    references: [macedonia_1993, gould_1999]
 references:
-  macedonia_1993:
-    citation: "Macedonia, J.M. 1993. The vocal repertoire of the ringtailed lemur (Lemur catta). Folia Primatologica 61:186-217."
-    url: https://doi.org/10.1159/000156749
-    doi: 10.1159/000156749
-  gould_1999:
-    citation: "Gould, L. and Sauther, M.L. 2007. Agonistic vocalization behaviour in the ring-tailed lemur. Folia Primatologica."
   bolt_2014:
     citation: "Bolt, L.M. 2014. Male-specific use of the purr in the ring-tailed lemur (Lemur catta). Folia Primatologica 85:201-214."
   bolt_2017:
     citation: "Bolt, L.M. 2017. Contact calling behaviour in the male ring-tailed lemur (Lemur catta)."
+  gould_1999:
+    citation: "Gould, L. and Sauther, M.L. 2007. Agonistic vocalization behaviour in the ring-tailed lemur. Folia Primatologica."
+  macedonia_1993:
+    citation: "Macedonia, J.M. 1993. The vocal repertoire of the ring-tailed lemur (Lemur catta). Folia Primatologica 61:186-217."
+    url: https://doi.org/10.1159/000156749
+    doi: 10.1159/000156749
 provenance:
   - timestamp: "2026-06-10T19:35:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Initial LLM knowledge plus web-search draft for ring-tailed lemur using broad, recognizable call classes from classic repertoire descriptions and later behavioral studies.
+  - timestamp: "2026-06-11T10:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added obvious missing ring-tailed lemur contact and distress classes while keeping the draft anchored to the classic Macedonia repertoire paper.

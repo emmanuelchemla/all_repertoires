@@ -9,32 +9,115 @@ taxonomy:
   genus: Pheugopedius
   species: euophrys
 calls:
-  - name: duet song
-    acoustic_keywords: [multi_component, tonal, harmonic, repetitive, long]
-    acoustic_description: A tightly coordinated song in which pair members alternate or overlap phrase components with strong temporal precision.
-    semantic_keywords: [territorial, affiliation, group_coordination, display, identity]
-    semantic_description: Used in pair-bond maintenance and territorial advertisement.
-    confidence: high
-  - name: solo song
-    acoustic_keywords: [tonal, harmonic, repetitive, long, frequency_modulated]
-    acoustic_description: An extended song delivered by a single bird with repeated phrase structure.
-    semantic_keywords: [courtship, territorial, display, identity]
-    semantic_description: Used in advertisement and territorial contexts outside full duets.
-    confidence: medium
-  - name: contact chatter
-    acoustic_keywords: [short, repetitive, multi_component, tonal, quiet]
-    acoustic_description: A local sequence of brief social notes with less formal structure than song.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in close-range social interaction and movement coordination.
-    confidence: medium
-  - name: alarm call
-    acoustic_keywords: [abrupt, short, noisy, repetitive, loud]
-    acoustic_description: A shorter harsher call than routine songs and chatters.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Produced in disturbance and danger contexts.
-    confidence: medium
+- name: duet song
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - harmonic
+  - repetitive
+  - long
+  acoustic_description: A tightly coordinated song in which pair members alternate
+    or overlap phrase components with strong temporal precision.
+  semantic_keywords:
+  - territorial
+  - affiliation
+  - group_coordination
+  - display
+  - identity
+  semantic_description: Used in pair-bond maintenance and territorial advertisement.
+  confidence: high
+- name: solo song
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - repetitive
+  - long
+  - frequency_modulated
+  acoustic_description: An extended song delivered by a single bird with repeated
+    phrase structure.
+  semantic_keywords:
+  - courtship
+  - territorial
+  - display
+  - identity
+  semantic_description: Used in advertisement and territorial contexts outside full
+    duets.
+  confidence: medium
+- name: contact chatter
+  acoustic_keywords:
+  - short
+  - repetitive
+  - multi_component
+  - tonal
+  - quiet
+  acoustic_description: A local sequence of brief social notes with less formal structure
+    than song.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in close-range social interaction and movement coordination.
+  confidence: medium
+- name: alarm call
+  acoustic_keywords:
+  - abrupt
+  - short
+  - noisy
+  - repetitive
+  - loud
+  acoustic_description: A shorter harsher call than routine songs and chatters.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Produced in disturbance and danger contexts.
+  confidence: medium
+- name: scold call
+  acoustic_keywords:
+  - noisy
+  - short
+  - repetitive
+  - abrupt
+  - loud
+  acoustic_description: A harsh repetitive call with rougher structure than ordinary
+    contact chatter and less organization than song.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Used in mobbing, agitation, and defensive responses to nearby
+    disturbance.
+  confidence: medium
+- name: begging call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - loud
+  - graded
+  acoustic_description: A repeated thin solicitation call given by dependent young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by nestlings or fledglings to solicit provisioning and
+    care.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for plain-tailed wren emphasizing the highly coordinated duet repertoire.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for plain-tailed wren emphasizing the highly coordinated
+    duet repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

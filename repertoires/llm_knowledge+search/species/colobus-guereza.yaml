@@ -21,14 +21,14 @@ calls:
   - alarm
   - predator
   - attention
-  semantic_description: Used in anti-predator contexts, especially as part of responses to aerial or terrestrial threats, and contributes to predator-specific call sequences.
+  semantic_description: Used in anti-predator contexts, especially as part of responses to aerial or terrestrial threats.
   confidence: high
   references:
-  - schel_zuberbuhler_2009
+  - schel_etal_2009
   - arnold_zuberbuhler_2006
-- name: roaring phrase
+- name: roar
   alternative_names:
-  - roar
+  - roaring phrase
   - roaring sequence
   acoustic_keywords:
   - loud
@@ -36,16 +36,35 @@ calls:
   - noisy
   - repetitive
   - multi_component
-  acoustic_description: A loud, acoustically variable phrase of roaring elements that can be repeated in bouts and combined with snorts.
+  acoustic_description: A loud, acoustically variable phrase of roaring elements repeated in bouts and often combined with snorts.
   semantic_keywords:
   - alarm
   - predator
   - territorial
   - display
-  semantic_description: Produced in long-distance anti-predator and display contexts; sequence structure varies with context, including eagle and leopard encounters and non-predator predawn calling.
+  semantic_description: Produced in long-distance anti-predator and display contexts; phrase timing varies across eagle, leopard, and non-predator dawn calling.
   confidence: high
   references:
-  - schel_zuberbuhler_2009
+  - schel_etal_2009
+  - arnold_zuberbuhler_2006
+- name: snort-roar sequence
+  alternative_names:
+  - alarm sequence
+  acoustic_keywords:
+  - multi_component
+  - loud
+  - noisy
+  - repetitive
+  acoustic_description: A structured long-distance sequence that combines abrupt snorts with later roaring phrases.
+  semantic_keywords:
+  - alarm
+  - predator
+  - combinatorial
+  - attention
+  semantic_description: Sequence structure shifts with predator context and is one of the best-supported functionally distinct features of guereza alarm communication.
+  confidence: high
+  references:
+  - schel_etal_2009
   - arnold_zuberbuhler_2006
 - name: predawn roar
   acoustic_keywords:
@@ -53,7 +72,7 @@ calls:
   - long
   - noisy
   - repetitive
-  acoustic_description: A long-distance roaring bout similar in basic structure to alarm roars but typically with longer initial phrases and slower early repetition.
+  acoustic_description: A long-distance roaring bout similar in basic structure to alarm roars but typically slower and more extended at onset.
   semantic_keywords:
   - territorial
   - spacing
@@ -62,39 +81,25 @@ calls:
   semantic_description: Given outside immediate predator encounters, especially around dawn, likely for spacing, territory advertisement, and male presence display.
   confidence: medium
   references:
-  - schel_zuberbuhler_2009
+  - arnold_zuberbuhler_2006
 - name: contact call
   acoustic_keywords:
   - short
+  - quiet
   - tonal
-  - quiet
   - repetitive
-  acoustic_description: A quieter, short-range call type reported less prominently than the species' better-studied loud alarms and roars.
+  acoustic_description: A quieter short-range call type reported much less prominently than the species' long-distance snort and roar system.
   semantic_keywords:
   - contact
   - group_coordination
-  semantic_description: Included conservatively as a likely low-amplitude social call used in ordinary within-group coordination, though the literature sampled here emphasizes long-distance alarm calls.
-  confidence: low
-- name: tongue click
-  acoustic_keywords:
-  - abrupt
-  - short
-  - pulsed
-  - quiet
-  - repetitive
-  acoustic_description: A brief click-like sound distinct from the louder snorts and roaring phrases.
-  semantic_keywords:
-  - contact
-  - attention
-  - group_coordination
-  semantic_description: Used in close-range local coordination and attention-getting.
+  semantic_description: Included conservatively as a likely local cohesion call used during routine within-group coordination, although the best-known literature focuses on long-distance calling.
   confidence: low
 references:
-  schel_zuberbuhler_2009:
-    citation: Schel, A.M., Tranquilli, S., and Zuberbuhler, K. 2009. The alarm call system of two species of black-and-white colobus monkeys, Colobus polykomos and Colobus guereza. Journal of Comparative Psychology 123:136-150.
-    url: https://pubmed.ncbi.nlm.nih.gov/19450021/
   arnold_zuberbuhler_2006:
-    citation: 'Arnold, K. and Zuberbuhler, K. 2006. Predator and non-predator long-distance calls in guereza colobus monkeys: context-specific differences in call sequences. Animal Behaviour.'
+    citation: "Arnold, K. and Zuberbuhler, K. 2006. Predator and non-predator long-distance calls in guereza colobus monkeys: context-specific differences in call sequences. Animal Behaviour."
+  schel_etal_2009:
+    citation: "Schel, A. M., Tranquilli, S., and Zuberbuhler, K. 2009. The alarm call system of two species of black-and-white colobus monkeys, Colobus polykomos and Colobus guereza. Journal of Comparative Psychology 123:136-150."
+    url: https://pubmed.ncbi.nlm.nih.gov/19450021/
 provenance:
 - timestamp: '2026-06-10T20:00:00+02:00'
   model: GPT-5 Codex
@@ -104,3 +109,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Revised the guereza file around the best-supported alarm classes and explicitly separated the snort-roar sequence from the broader roar display category.

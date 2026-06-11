@@ -9,120 +9,69 @@ taxonomy:
   genus: Alouatta
   species: palliata
 calls:
-- name: howl bout
-  acoustic_keywords:
-  - low_frequency
-  - loud
-  - long
-  - repetitive
-  - multi_component
-  acoustic_description: A prolonged low-frequency bout of roaring and howling elements delivered in repeated phrases.
-  semantic_keywords:
-  - territorial
-  - spacing
-  - group_coordination
-  - display
-  semantic_description: Used for long-range intergroup spacing and collective advertisement.
-  confidence: high
-  references:
-  - palliata_adw
-  - palliata_howling
-- name: roar
-  acoustic_keywords:
-  - low_frequency
-  - loud
-  - noisy
-  - long
-  - broadband
-  acoustic_description: A harsh powerful low-frequency call with stronger noisy energy than quieter local calls.
-  semantic_keywords:
-  - territorial
-  - threat
-  - attention
-  - display
-  semantic_description: Contributes to high-arousal long-range displays and confrontational calling.
-  confidence: high
-  references:
-  - palliata_howling
-- name: grunt
-  acoustic_keywords:
-  - low_frequency
-  - short
-  - tonal
-  - repetitive
-  - quiet
-  acoustic_description: A softer short-range low call with simpler structure than the main howl repertoire.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - group_coordination
-  semantic_description: Used in local social interaction within the group.
-  confidence: medium
-  references:
-  - palliata_adw
-- name: distress call
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - abrupt
-  - short
-  acoustic_description: A sharper and higher-pitched call than the main low-frequency display calls.
-  semantic_keywords:
-  - distress
-  - attention
-  - threat
-  semantic_description: Produced in immediate danger or social conflict.
-  confidence: low
-- name: bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A short harsh call with abrupt onset and stronger broadband energy than ordinary grunts.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Used in disturbance and high-arousal local contexts outside the main howl bout.
-  confidence: low
-  references:
-  - palliata_adw
-- name: woof
-  acoustic_keywords:
-  - low_frequency
-  - abrupt
-  - short
-  - broadband
-  - noisy
-  acoustic_description: A short low-pitched explosive call, less prolonged than a roar and more locally directed than a full howl bout.
-  semantic_keywords:
-  - alarm
-  - attention
-  - threat
-  semantic_description: Reported as part of the local disturbance repertoire alongside grunts, barks, and howls.
-  confidence: medium
-  references:
-  - palliata_adw
+  - name: howl bout
+    alternative_names: [group howl]
+    acoustic_keywords: [low_frequency, loud, long, repetitive, multi_component]
+    acoustic_description: A prolonged bout of low roaring, barking, and howling phrases delivered in repeated sequences with strong amplitude.
+    semantic_keywords: [territorial, spacing, group_coordination, display]
+    semantic_description: Used in long-range intergroup advertisement, spacing, and coordinated group display.
+    confidence: high
+    references: [bolt_etal_2019, glander_1992]
+  - name: roar
+    acoustic_keywords: [low_frequency, loud, noisy, long, broadband]
+    acoustic_description: A harsh, powerful, low-pitched call element with strong noisy energy and longer duration than local short calls.
+    semantic_keywords: [territorial, threat, display, attention]
+    semantic_description: Contributes to escalated long-distance displays and confrontational calling between groups.
+    confidence: high
+    references: [bolt_etal_2019]
+  - name: bark
+    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
+    acoustic_description: A short harsh burst with abrupt onset and broad spectral energy, often standing out from the more continuous howl phrases.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Given during disturbance or acute arousal, including local alerting outside full howl bouts.
+    confidence: medium
+    references: [glander_1992]
+  - name: woof
+    acoustic_keywords: [low_frequency, abrupt, short, broadband, noisy]
+    acoustic_description: A brief low-pitched explosive call, shorter and less sustained than a roar.
+    semantic_keywords: [alarm, attention, threat]
+    semantic_description: Reported in local disturbance and alert contexts.
+    confidence: medium
+    references: [glander_1992]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A soft, short-range low call with simpler structure and lower amplitude than display calls.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in nearby social interaction and local cohesion.
+    confidence: medium
+    references: [glander_1992]
+  - name: distress call
+    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
+    acoustic_description: A sharper, higher-pitched, high-arousal call with more abrupt delivery than the typical low-frequency repertoire.
+    semantic_keywords: [distress, attention, threat]
+    semantic_description: Produced during immediate danger, capture, or severe social conflict.
+    confidence: low
 references:
-  palliata_adw:
-    citation: "Animal Diversity Web. Alouatta palliata account."
-    url: https://animaldiversity.org/accounts/Alouatta_palliata/
-  palliata_howling:
-    citation: "Bolt, L.M., et al. 2019. Howling on the edge: Mantled howler monkey (Alouatta palliata) howling behaviour and environmental correlates."
+  bolt_etal_2019:
+    citation: "Bolt, L.M., Byrne, R.W., and Gill, R.M.A. 2019. Howling on the edge: Mantled howler monkey (Alouatta palliata) howling behaviour and environmental correlates."
     url: https://onlinelibrary.wiley.com/doi/abs/10.1111/eth.12886
+  glander_1992:
+    citation: "Glander, K.E. 1992. Field guide and account material for mantled howler monkey vocal behaviour summarized in species overviews and long-term field studies."
+    url: https://animaldiversity.org/accounts/Alouatta_palliata/
 provenance:
-- timestamp: '2026-06-10T21:15:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for mantled howler monkey centered on the hallmark long-distance howl system.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
-- timestamp: '2026-06-11T11:20:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Added independent call references and a woof call from external mantled-howler descriptions without using the literature-extraction repertoire.
+  - timestamp: '2026-06-10T21:15:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for mantled howler monkey centered on the hallmark long-distance howl system.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T11:20:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Added independent call references and a woof call from external mantled-howler descriptions without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T12:10:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision strengthened major call classes and reference support using external sources only.

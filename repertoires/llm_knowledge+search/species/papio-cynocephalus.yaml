@@ -9,85 +9,91 @@ taxonomy:
   genus: Papio
   species: cynocephalus
 calls:
-- name: grunt
-  acoustic_keywords:
-  - low_frequency
-  - short
-  - tonal
-  - repetitive
-  - graded
-  acoustic_description: A short low call with relatively smooth structure, often repeated in social interaction.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - group_coordination
-  - attention
-  semantic_description: Used in routine social communication and to signal benign intent.
-  confidence: high
-- name: bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A sharp forceful call with abrupt onset and harsher quality than grunts.
-  semantic_keywords:
-  - alarm
-  - attention
-  - threat
-  semantic_description: Produced in alert or disturbance contexts.
-  confidence: high
-- name: wahoo
-  acoustic_keywords:
-  - multi_component
-  - loud
-  - long
-  - tonal
-  - broadband
-  acoustic_description: A loud display-like call with compound structure repeated in bouts.
-  semantic_keywords:
-  - display
-  - threat
-  - alarm
-  - attention
-  semantic_description: Associated with adult male display and high-arousal long-range communication.
-  confidence: high
-- name: scream
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - long
-  - graded
-  acoustic_description: A high-arousal call with strong noisy energy and variable contour.
-  semantic_keywords:
-  - distress
-  - aggression
-  - submission
-  - attention
-  semantic_description: Produced in conflicts and victim responses.
-  confidence: high
-- name: copulation call
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - short
-  - repetitive
-  - graded
-  acoustic_description: A conspicuous arousal-related call distinct from routine grunts and barks.
-  semantic_keywords:
-  - mating
-  - attention
-  - affiliation
-  semantic_description: Associated with sexual or post-copulatory social interaction.
-  confidence: low
+  - name: grunt
+    acoustic_keywords: [low_frequency, tonal, short, repetitive, graded]
+    acoustic_description: Short low-frequency calls with relatively smooth tonal structure and graded variation across bouts.
+    semantic_keywords: [contact, affiliation, group_coordination, attention]
+    semantic_description: Used in routine social contact, approaches, reconciliation, and low-arousal coordination with nearby partners.
+    confidence: high
+    references: [hammerschmidt_fischer_2019]
+  - name: clear bark
+    alternative_names: [contact bark]
+    acoustic_keywords: [broadband, abrupt, short, loud, graded]
+    acoustic_description: Loud abrupt barks that are less harsh and noisy than overt alarm bark variants.
+    semantic_keywords: [contact, group_coordination, spacing, attention]
+    semantic_description: Often used to maintain contact or regulate spacing when visual contact is poor or individuals are moving apart.
+    confidence: medium
+    references: [hammerschmidt_fischer_2019, guinea_baboon_repertoire_2013]
+  - name: harsh bark
+    alternative_names: [alarm bark]
+    acoustic_keywords: [broadband, noisy, abrupt, short, loud]
+    acoustic_description: Forceful harsh barks with abrupt onset and stronger noisy energy than contact-like bark variants.
+    semantic_keywords: [alarm, predator, threat, attention]
+    semantic_description: Given in dangerous or highly tense situations, especially when rapidly alerting others.
+    confidence: high
+    references: [hammerschmidt_fischer_2019]
+  - name: wahoo
+    acoustic_keywords: [multi_component, loud, long, tonal, broadband]
+    acoustic_description: A long-distance two-part loud call, typically beginning with a harsher element and ending in a lower more resonant syllable, often repeated in bouts.
+    semantic_keywords: [display, threat, alarm, attention]
+    semantic_description: Produced mainly by adult males during aroused display and some alarm situations, broadcasting presence and condition over distance.
+    confidence: high
+    references: [hammerschmidt_fischer_2019, fischer_2002]
+  - name: roar grunt
+    alternative_names: [roar-grunt]
+    acoustic_keywords: [low_frequency, noisy, multi_component, loud, graded]
+    acoustic_description: A rough low-pitched call with mixed roaring and grunt-like elements and broader spectral energy than simple grunts.
+    semantic_keywords: [threat, display, spacing, attention]
+    semantic_description: Used in aggressive or intimidating contexts where callers advertise arousal and displace others.
+    confidence: medium
+    references: [hammerschmidt_fischer_2019, guinea_baboon_repertoire_2013]
+  - name: scream
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: High-pitched noisy calls with large variation in contour and duration depending on arousal.
+    semantic_keywords: [distress, aggression, submission, attention]
+    semantic_description: Produced by victims and other highly aroused individuals in intense conflicts and chases.
+    confidence: high
+    references: [hammerschmidt_fischer_2019]
+  - name: yak
+    acoustic_keywords: [noisy, abrupt, short, repetitive, loud]
+    acoustic_description: Rough clipped calls harsher than grunts and usually shorter and simpler than loud-call displays.
+    semantic_keywords: [alarm, threat, spacing, attention]
+    semantic_description: Associated with disturbance and social agitation; probably functions as a conspicuous high-arousal call outside routine contact situations.
+    confidence: medium
+    references: [baboon_proto_2017]
+  - name: copulation call
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A repeated sexual call series with a more rhythmic, aroused structure than ordinary social grunts.
+    semantic_keywords: [mating, attention, affiliation]
+    semantic_description: Given around mating and sexual interactions; in yellow baboons these calls are a classic focus of studies on female sexual signalling.
+    confidence: high
+    references: [semple_2002, hammerschmidt_fischer_2019]
+references:
+  hammerschmidt_fischer_2019:
+    citation: "Hammerschmidt, K. and Fischer, J. 2019. Baboon vocal repertoires and the evolution of primate vocal diversity. Journal of Human Evolution 126:1-13."
+    doi: 10.1016/j.jhevol.2018.10.010
+  fischer_2002:
+    citation: "Fischer, J., Kitchen, D.M., Seyfarth, R.M., and Cheney, D.L. 2002. Baboon loud calls advertise male quality: acoustic features and relation to rank, age, and exhaustion. Behavioral Ecology and Sociobiology 53:140-148."
+    url: https://link.springer.com/article/10.1007/s00265-002-0559-4
+  semple_2002:
+    citation: "Semple, S. 2002. Individuality and male discrimination of female copulation calls in yellow baboons. Animal Behaviour 64:907-914."
+    doi: 10.1006/anbe.2002.2004
+  baboon_proto_2017:
+    citation: "Boe, L.-J., Berthommier, F., Legou, T., Captier, G., Kemp, C., Sawallis, T.R., Becker, Y., Rey, A., Fagot, J., and Badin, P. 2017. Evidence of a vocalic proto-system in the baboon (Papio papio) suggests pre-hominin speech precursors. PLoS ONE 12:e0169321."
+    doi: 10.1371/journal.pone.0169321
+  guinea_baboon_repertoire_2013:
+    citation: "Maciej, P., Ndao, I., Hammerschmidt, K., and Fischer, J. 2013. Vocal communication in a complex multi-level society: constrained acoustic structure and flexible call usage in Guinea baboons. Frontiers in Zoology 10:58."
+    doi: 10.1186/1742-9994-10-58
 provenance:
-- timestamp: '2026-06-10T21:45:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for yellow baboon using standard baboon call classes.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T21:45:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for yellow baboon using standard baboon call classes.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:09:02Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added obvious major baboon call classes and stable top-level references in a speed-focused completeness pass based on external sources.

@@ -9,34 +9,103 @@ taxonomy:
   genus: Mandrillus
   species: sphinx
 calls:
-- name: grunt
+- name: contact grunt
   acoustic_keywords:
   - low_frequency
   - short
   - tonal
-  - repetitive
+  - quiet
   - graded
-  acoustic_description: A short low-pitched call with relatively simple tonal structure.
+  acoustic_description: A soft low-pitched grunt audible only over a few meters.
   semantic_keywords:
   - contact
   - affiliation
   - group_coordination
-  semantic_description: Used in routine social communication and benign approaches.
-  confidence: medium
-- name: crowing call
+  semantic_description: Used in short-distance social coordination, especially while foraging, during approach, and around local changes in activity.
+  confidence: high
+  references:
+  - feistner_1989
+- name: threat grunt
   acoustic_keywords:
-  - loud
-  - long
-  - tonal
-  - frequency_modulated
+  - low_frequency
+  - short
+  - abrupt
   - repetitive
-  acoustic_description: A conspicuous far-carrying call with more prolonged structure than ordinary grunts.
+  acoustic_description: A short intense grunt typically embedded in forceful agonistic display.
   semantic_keywords:
-  - display
+  - threat
+  - aggression
   - attention
-  - territorial
-  semantic_description: Used in long-range social advertisement and display.
+  semantic_description: Used in aggressive interactions, commonly together with head-bobbing and displacement behavior.
+  confidence: high
+  references:
+  - feistner_1989
+- name: warning grunt
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - quiet
+  acoustic_description: A very low-pitched grunt distinct from the more forceful threat grunt.
+  semantic_keywords:
+  - threat
+  - mating
+  - attention
+  semantic_description: Given by the mate-guarding alpha male toward rivals near an estrous female.
   confidence: medium
+  references:
+  - feistner_1989
+- name: squeak
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  acoustic_description: A short high-pitched call, simpler and briefer than a scream.
+  semantic_keywords:
+  - distress
+  - caregiving
+  - attention
+  semantic_description: Produced by youngsters during sudden fright or mild fear and rapidly attracts maternal attention.
+  confidence: high
+  references:
+  - feistner_1989
+- name: incite scream
+  scope:
+    life_stages:
+    - juvenile
+    - adult
+    sexes:
+    - female
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - long
+  - noisy
+  acoustic_description: A call similar to a squeak but more prolonged and higher-arousal in delivery.
+  semantic_keywords:
+  - recruitment
+  - aggression
+  - attention
+  semantic_description: Used in triadic interactions to enlist support from another individual against a third party.
+  confidence: high
+  references:
+  - feistner_1989
 - name: scream
   acoustic_keywords:
   - high_frequency
@@ -44,41 +113,120 @@ calls:
   - noisy
   - long
   - abrupt
-  acoustic_description: A loud harsh arousal call with strong noisy energy.
+  acoustic_description: A loud shrill vocalization with strong noisy energy.
   semantic_keywords:
   - distress
   - aggression
   - attention
-  semantic_description: Produced in conflict and acute social tension.
-  confidence: medium
-- name: bark
+  semantic_description: Produced in fear, attack, escape, and severe social conflict.
+  confidence: high
+  references:
+  - feistner_1989
+- name: alarm bark
+  alternative_names:
+  - two-syllable alarm bark
   acoustic_keywords:
   - abrupt
-  - broadband
-  - noisy
   - short
+  - broadband
   - loud
-  acoustic_description: A short harsh call with abrupt onset and broad spectral structure.
+  acoustic_description: A short sharp two-syllable bark-like warning call.
   semantic_keywords:
   - alarm
-  - threat
+  - predator
   - attention
-  semantic_description: Used in disturbance and alert contexts.
-  confidence: medium
-- name: copulation call
+  semantic_description: Given to disturbance and possible predators, eliciting immediate vigilance and movement responses.
+  confidence: high
+  references:
+  - feistner_1989
+  - kudo_1987
+- name: yak
   acoustic_keywords:
-  - high_frequency
-  - loud
   - short
   - repetitive
-  - graded
-  acoustic_description: A conspicuous arousal-related call distinct from routine grunts or alarm barks.
+  - tonal
+  acoustic_description: Repeated mid-pitch notes, often delivered in quick series.
   semantic_keywords:
-  - mating
+  - contact
+  - group_coordination
   - attention
+  semantic_description: Especially associated with monitoring and greeting movement by the alpha male or arrivals of salient individuals.
+  confidence: medium
+  references:
+  - feistner_1989
+- name: pant-grunt
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - repetitive
+  - pulsed
+  acoustic_description: A repeated panting series similar to yaks but lower in pitch.
+  semantic_keywords:
+  - submission
   - affiliation
-  semantic_description: Associated with sexual or post-copulatory social interaction.
-  confidence: low
+  - attention
+  semantic_description: Used in greeting and tense social interactions, often by subadults and adults other than the alpha male.
+  confidence: medium
+  references:
+  - feistner_1989
+- name: crow
+  acoustic_keywords:
+  - loud
+  - long
+  - tonal
+  - repetitive
+  acoustic_description: A trilled long-distance crowing call used at greater range than grunts and yaks.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Used between separated individuals or subgroups and functions as a cohesion or lost call in dispersed groups.
+  confidence: high
+  references:
+  - feistner_1989
+  - kudo_1987
+- name: two-phase grunt
+  alternative_names:
+  - 2PG
+  - oomp-oomp
+  acoustic_keywords:
+  - low_frequency
+  - multi_component
+  - repetitive
+  - loud
+  acoustic_description: A low-pitched breathy two-syllable grunt characteristic of dominant mature males.
+  semantic_keywords:
+  - group_coordination
+  - display
+  - attention
+  semantic_description: Closely tied to group movement and cohesion, especially at the beginning and end of travel.
+  confidence: high
+  references:
+  - feistner_1989
+  - kudo_1987
+- name: roar
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - long
+  - noisy
+  acoustic_description: A loud long-distance male call deeper and more forceful than the two-phase grunt.
+  semantic_keywords:
+  - display
+  - threat
+  - attention
+  semantic_description: Produced by males in relatively high-arousal display contexts such as storms, loud disturbances, or male chases.
+  confidence: high
+  references:
+  - feistner_1989
+references:
+  feistner_1989:
+    citation: Feistner, A. T. C. 1989. Social development and ecology of mandrills Mandrillus sphinx in a Gabonese rain forest. PhD thesis, University of Stirling.
+    url: https://dspace.stir.ac.uk/bitstream/1893/2114/4/Feistner-1989-Thesis.pdf
+  kudo_1987:
+    citation: "Kudo, H. 1987. The study of vocal communication of wild mandrills in Cameroon in relation to their social structure. Primates 28:289-308."
+  kingdon_2013:
+    citation: "Kingdon, J., Happold, D., Butynski, T., Hoffmann, M., Happold, M., and Kalina, J. 2013. Mammals of Africa. Volume II: Primates. Bloomsbury Publishing."
 provenance:
 - timestamp: '2026-06-10T21:45:00+02:00'
   model: GPT-5 Codex
@@ -88,3 +236,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T11:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Replaced generic entries with the named mandrill vocal classes summarized by Feistner and linked the best-supported calls to their documented contexts.

@@ -16,7 +16,8 @@ calls:
   - repetitive
   - long
   - multi_component
-  acoustic_description: A learned whistle-rich song with repeated patterned phrases and clear tonal structure.
+  acoustic_description: A learned whistle-rich song with repeated patterned phrases
+    and clear tonal structure.
   semantic_keywords:
   - courtship
   - mating
@@ -31,7 +32,8 @@ calls:
   - harmonic
   - repetitive
   - loud
-  acoustic_description: A brief clear call with stable tonal structure used repeatedly in flock communication.
+  acoustic_description: A brief clear call with stable tonal structure used repeatedly
+    in flock communication.
   semantic_keywords:
   - contact
   - group_coordination
@@ -45,7 +47,8 @@ calls:
   - multi_component
   - tonal
   - quiet
-  acoustic_description: A rapid local sequence of social notes with less formal structure than song.
+  acoustic_description: A rapid local sequence of social notes with less formal structure
+    than song.
   semantic_keywords:
   - affiliation
   - contact
@@ -59,7 +62,8 @@ calls:
   - noisy
   - abrupt
   - short
-  acoustic_description: A harsh higher-intensity call with abrupt onset and strong high-frequency energy.
+  acoustic_description: A harsh higher-intensity call with abrupt onset and strong
+    high-frequency energy.
   semantic_keywords:
   - alarm
   - threat
@@ -73,19 +77,59 @@ calls:
   - loud
   - short
   - graded
-  acoustic_description: A persistent higher-pitched solicitation call than routine adult contact whistles.
+  acoustic_description: A persistent higher-pitched solicitation call than routine
+    adult contact whistles.
   semantic_keywords:
   - begging
   - caregiving
   - attention
   semantic_description: Used by dependent young to obtain feeding and parental attention.
   confidence: medium
+- name: hiss
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - abrupt
+  - short
+  - quiet
+  acoustic_description: A short harsh exhaled sound with broadband structure and little
+    tonality.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Used in defensive contexts, especially when birds are approached
+    too closely or guarding space.
+  confidence: medium
+- name: flight call
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  - loud
+  acoustic_description: A short carrying call given in repeated series during takeoff
+    and flight.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used to maintain contact and coordinate movement between birds
+    in flight.
+  confidence: medium
 provenance:
 - timestamp: '2026-06-10T22:00:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for cockatiel emphasizing major song, contact, and alarm call classes.
+  notes: Broad exploratory draft for cockatiel emphasizing major song, contact, and
+    alarm call classes.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

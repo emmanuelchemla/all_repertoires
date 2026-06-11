@@ -16,7 +16,8 @@ calls:
   - repetitive
   - long
   - loud
-  acoustic_description: A clear phrase-structured song with repeated motifs and tonal syllables.
+  acoustic_description: A clear phrase-structured song with repeated motifs and tonal
+    syllables.
   semantic_keywords:
   - territorial
   - courtship
@@ -77,12 +78,14 @@ calls:
   - short
   - repetitive
   - loud
-  acoustic_description: A shorter and more urgent call than routine contact notes, with strong attention-capturing quality.
+  acoustic_description: A shorter and more urgent call than routine contact notes,
+    with strong attention-capturing quality.
   semantic_keywords:
   - alarm
   - predator
   - attention
-  semantic_description: Used in direct aerial threat contexts and can recruit rapid vigilance or cover-seeking.
+  semantic_description: Used in direct aerial threat contexts and can recruit rapid
+    vigilance or cover-seeking.
   confidence: medium
   references:
   - fairywren_aerial
@@ -93,38 +96,75 @@ calls:
   - short
   - abrupt
   - tonal
-  acoustic_description: A high-frequency down-sweeping call, shorter and more discrete than full alarm song and structurally close to other rapid anti-predator warning notes.
+  acoustic_description: A high-frequency down-sweeping call, shorter and more discrete
+    than full alarm song and structurally close to other rapid anti-predator warning
+    notes.
   semantic_keywords:
   - alarm
   - predator
   - attention
-  semantic_description: Used as an active nest-warning signal, especially when a threat is close to the nest.
+  semantic_description: Used as an active nest-warning signal, especially when a threat
+    is close to the nest.
   confidence: high
   references:
   - fairywren_seet
+- name: purr call
+  acoustic_keywords:
+  - quiet
+  - short
+  - repetitive
+  - tonal
+  - graded
+  acoustic_description: A soft low-amplitude series of short notes less urgent than
+    alarm calls and less elaborate than song.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - attention
+  semantic_description: Used in close-range pair or family interaction under low-arousal
+    social conditions.
+  confidence: medium
+  references:
+  - cockburn_2013
 references:
   fairywren_song:
-    citation: "Frontiers in Ecology and Evolution. Superb Fairy-Wren (Malurus cyaneus) sons and daughters: sex differences in song and song learning."
+    citation: 'Frontiers in Ecology and Evolution. Superb Fairy-Wren (Malurus cyaneus)
+      sons and daughters: sex differences in song and song learning.'
     url: https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2016.00009/full
   fairywren_alarm_song:
-    citation: "Colombelli-Negrel, D., Robertson, J., and Kleindorfer, S. 2011. Risky revelations: Superb Fairy-wrens Malurus cyaneus respond more strongly to their mate's alarm song."
+    citation: 'Colombelli-Negrel, D., Robertson, J., and Kleindorfer, S. 2011. Risky
+      revelations: Superb Fairy-wrens Malurus cyaneus respond more strongly to their
+      mate''s alarm song.'
     url: https://www.academia.edu/53048261/Risky_revelations_Superb_Fairy_wrens_Malurus_cyaneus_respond_more_strongly_to_their_mate_s_alarm_song
   fairywren_aerial:
-    citation: "Magrath, R.D., Pitcher, B.J., and Gardner, J.L. 2007. A mutual understanding? Interspecific responses by birds to each other's aerial alarm calls."
+    citation: Magrath, R.D., Pitcher, B.J., and Gardner, J.L. 2007. A mutual understanding?
+      Interspecific responses by birds to each other's aerial alarm calls.
     url: https://academic.oup.com/beheco/article/18/5/944/201629
   fairywren_seet:
-    citation: "Feeney, W.E., et al. 2025. The 'seet' danger call: an active nest warning in superb fairy-wrens."
+    citation: 'Feeney, W.E., et al. 2025. The ''seet'' danger call: an active nest
+      warning in superb fairy-wrens.'
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12646797/
+  cockburn_2013:
+    citation: Cockburn, A. and colleagues. Superb Fairywren vocal communication and
+      social behavior studies.
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for superb fairywren using broad song, contact, and alarm categories.
+  notes: Broad exploratory draft for superb fairywren using broad song, contact, and
+    alarm categories.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
 - timestamp: '2026-06-11T11:35:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Added independently supported seet danger-call and source grounding for song and alarm categories without using the literature-extraction repertoire.
+  notes: Added independently supported seet danger-call and source grounding for song
+    and alarm categories without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

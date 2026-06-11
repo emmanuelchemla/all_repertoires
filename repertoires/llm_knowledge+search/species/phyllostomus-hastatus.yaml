@@ -9,32 +9,111 @@ taxonomy:
   genus: Phyllostomus
   species: hastatus
 calls:
-  - name: screech call
-    acoustic_keywords: [high_frequency, noisy, abrupt, short, repetitive]
-    acoustic_description: A harsh short social call with abrupt onset and strong noisy energy.
-    semantic_keywords: [aggression, attention, contact]
-    semantic_description: Used in close-range social negotiation and conflict.
-    confidence: high
-  - name: group contact call
-    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
-    acoustic_description: A lower-amplitude social call with simpler structure than harsh screeches.
-    semantic_keywords: [contact, affiliation, group_coordination, identity]
-    semantic_description: Used in routine within-roost communication and maintaining group cohesion.
-    confidence: medium
-  - name: isolation call
-    acoustic_keywords: [high_frequency, tonal, long, repetitive, loud]
-    acoustic_description: A more persistent and higher-amplitude call than ordinary social notes.
-    semantic_keywords: [begging, caregiving, contact, attention]
-    semantic_description: Produced by separated young or isolated individuals to elicit care or reunion.
-    confidence: medium
-  - name: food-recruitment screech
-    acoustic_keywords: [noisy, repetitive, abrupt, loud, short]
-    acoustic_description: A conspicuous harsher call type used in active social contexts around resources.
-    semantic_keywords: [food, recruitment, group_coordination, attention]
-    semantic_description: Included as a broad recruitment-like category for this socially coordinated bat species.
-    confidence: low
+- name: screech call
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - abrupt
+  - short
+  - repetitive
+  acoustic_description: A harsh short social call with abrupt onset and strong noisy
+    energy.
+  semantic_keywords:
+  - aggression
+  - attention
+  - contact
+  semantic_description: Used in close-range social negotiation and conflict.
+  confidence: high
+- name: group contact call
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  - graded
+  acoustic_description: A lower-amplitude social call with simpler structure than
+    harsh screeches.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  - identity
+  semantic_description: Used in routine within-roost communication and maintaining
+    group cohesion.
+  confidence: medium
+- name: isolation call
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - long
+  - repetitive
+  - loud
+  acoustic_description: A more persistent and higher-amplitude call than ordinary
+    social notes.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - contact
+  - attention
+  semantic_description: Produced by separated young or isolated individuals to elicit
+    care or reunion.
+  confidence: medium
+- name: food-recruitment screech
+  acoustic_keywords:
+  - noisy
+  - repetitive
+  - abrupt
+  - loud
+  - short
+  acoustic_description: A conspicuous harsher call type used in active social contexts
+    around resources.
+  semantic_keywords:
+  - food
+  - recruitment
+  - group_coordination
+  - attention
+  semantic_description: Included as a broad recruitment-like category for this socially
+    coordinated bat species.
+  confidence: low
+- name: maternal directive call
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  - graded
+  acoustic_description: A repeated social call used in close-range mother-young interactions
+    and less harsh than screech calls.
+  semantic_keywords:
+  - caregiving
+  - attention
+  - contact
+  semantic_description: Used by mothers to manage offspring movement or maintain close
+    coordination.
+  confidence: medium
+- name: squabble call
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - short
+  - repetitive
+  - abrupt
+  acoustic_description: A harsh repeated call produced during noisy conflict or competition,
+    especially around roosting or social interactions.
+  semantic_keywords:
+  - aggression
+  - threat
+  - attention
+  semantic_description: Given in disputes among group members in close quarters.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for greater spear-nosed bat emphasizing social screeches and group contact calls.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for greater spear-nosed bat emphasizing social screeches
+    and group contact calls.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

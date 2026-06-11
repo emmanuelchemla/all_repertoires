@@ -15,26 +15,45 @@ calls:
     semantic_keywords: [contact, affiliation, group_coordination]
     semantic_description: Used in routine within-group social contact.
     confidence: medium
+    references: [newman_1985]
   - name: peep
     acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
     acoustic_description: A brief high-pitched tonal note with lighter structure than alarm calls.
     semantic_keywords: [contact, attention, affiliation]
     semantic_description: Used in local social communication and cohesion.
     confidence: medium
+    references: [newman_1985]
   - name: twitter
     acoustic_keywords: [high_frequency, repetitive, tonal, short, graded]
-    acoustic_description: A rapid sequence of high notes with more continuous repetition than single peeps.
+    acoustic_description: A rapid sequence of high notes with more continuous repetition than a single peep.
     semantic_keywords: [contact, group_coordination, attention]
     semantic_description: Used in active social and movement contexts.
     confidence: medium
+    references: [newman_1985]
+  - name: cackle
+    acoustic_keywords: [short, repetitive, noisy, graded, multi_component]
+    acoustic_description: A repeated bursty call series with rougher quality than peeps and more segmented structure than a scream.
+    semantic_keywords: [alarm, attention, threat]
+    semantic_description: Used in disturbance and heightened arousal.
+    confidence: low
+    references: [newman_1985]
   - name: scream
     acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A loud high-arousal call with noisy spectral structure.
+    acoustic_description: A loud high-arousal call with noisy spectral structure and strong amplitude.
     semantic_keywords: [distress, alarm, attention]
-    semantic_description: Produced in danger or severe social conflict.
+    semantic_description: Produced in danger, capture, or severe social conflict.
     confidence: medium
+    references: [newman_1985]
+references:
+  newman_1985:
+    citation: "Newman, J.D. 1985. Squirrel monkey communication. In: Rosenblum, L.A. and Coe, C.L. Handbook of Squirrel Monkey Research."
+    url: https://pubmed.ncbi.nlm.nih.gov/3931840/
 provenance:
   - timestamp: "2026-06-10T21:15:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for common squirrel monkey using standard small-call social categories and distress calls.
+  - timestamp: "2026-06-11T12:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision added a major arousal call class and external reference support using only current-file and web-derived information.

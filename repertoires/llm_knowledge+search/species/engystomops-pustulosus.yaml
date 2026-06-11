@@ -9,116 +9,75 @@ taxonomy:
   genus: Engystomops
   species: pustulosus
 calls:
-- name: whine advertisement call
-  alternative_names:
-  - whine
-  - simple call
-  scope:
-    life_stages:
-    - adult
-    sexes:
-    - male
-    population_specific: false
-    note: ''
-  acoustic_keywords:
-  - frequency_modulated
-  - tonal
-  - long
-  acoustic_description: A relatively long, downward-sweeping tonal signal with strong frequency modulation, forming the core of the male advertisement call.
-  semantic_keywords:
-  - courtship
-  - mating
-  - attention
-  semantic_description: Basic mate-attraction signal produced by calling males at breeding sites and sufficient on its own to function as an advertisement call.
-  confidence: high
-  references:
-  - amphibiaweb_tungara
-  - ryan_2006
-- name: whine-chuck complex call
-  alternative_names:
-  - complex advertisement call
-  - whine plus chuck
-  scope:
-    life_stages:
-    - adult
-    sexes:
-    - male
-    population_specific: false
-    note: ''
-  acoustic_keywords:
-  - multi_component
-  - frequency_modulated
-  - tonal
-  - broadband
-  - pulsed
-  acoustic_description: Compound call built from a whine followed by one or more short, pulsed chuck elements that add conspicuous broadband energy.
-  semantic_keywords:
-  - courtship
-  - mating
-  - display
-  - attention
-  - combinatorial
-  semantic_description: Enhanced sexual display call that is typically more attractive to females than a whine alone but may also increase detection by eavesdropping predators.
-  confidence: high
-  references:
-  - amphibiaweb_tungara
-  - ryan_2006
-  - rand_2021
-- name: chuck
-  alternative_names:
-  - chuck element
-  scope:
-    life_stages:
-    - adult
-    sexes:
-    - male
-    population_specific: false
-    note: ''
-  acoustic_keywords:
-  - short
-  - pulsed
-  - broadband
-  - abrupt
-  acoustic_description: Short, pulse-like broadband element with sharp onset, added after the whine rather than typically given as an independent advertisement call.
-  semantic_keywords:
-  - courtship
-  - display
-  - combinatorial
-  semantic_description: Included as a repertoire element because it is the key optional component that transforms the simple call into the more elaborate complex mating display.
-  confidence: medium
-  references:
-  - ryan_2006
-- name: release call
-  acoustic_keywords:
-  - short
-  - abrupt
-  - noisy
-  - repetitive
-  - high_frequency
-  acoustic_description: A brief call produced during unwanted clasping or close physical interference.
-  semantic_keywords:
-  - submission
-  - attention
-  - mating
-  semantic_description: Used to terminate inappropriate amplexus or close contact.
-  confidence: medium
+  - name: whine advertisement call
+    alternative_names: [whine, simple call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ''
+    acoustic_keywords: [frequency_modulated, tonal, long]
+    acoustic_description: A relatively long downward-sweeping tonal signal with strong frequency modulation, forming the core of the male advertisement call.
+    semantic_keywords: [courtship, mating, attention]
+    semantic_description: Basic mate-attraction signal produced by calling males at breeding sites and sufficient on its own to function as an advertisement call.
+    confidence: high
+    references: [amphibiaweb_tungara, ryan_guerra_2006]
+  - name: whine-chuck complex call
+    alternative_names: [complex advertisement call, whine plus chuck]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ''
+    acoustic_keywords: [multi_component, frequency_modulated, tonal, broadband, pulsed]
+    acoustic_description: A compound call built from a whine followed by one or more short pulsed chuck elements that add conspicuous broadband energy.
+    semantic_keywords: [courtship, mating, display, attention, combinatorial]
+    semantic_description: Enhanced sexual display call that is typically more attractive to females than a whine alone but can also increase detection by eavesdropping predators.
+    confidence: high
+    references: [amphibiaweb_tungara, ryan_guerra_2006, rand_ryan_2021]
+  - name: chuck
+    alternative_names: [chuck element]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ''
+    acoustic_keywords: [short, pulsed, broadband, abrupt]
+    acoustic_description: A short pulse-like broadband element with sharp onset, added after the whine rather than typically given as an independent advertisement call.
+    semantic_keywords: [courtship, display, combinatorial]
+    semantic_description: Included because it is the key optional component that transforms the simple call into the more elaborate complex mating display.
+    confidence: medium
+    references: [ryan_guerra_2006, gridi_etal_2019]
+  - name: release call
+    acoustic_keywords: [short, abrupt, noisy, repetitive, high_frequency]
+    acoustic_description: A brief protest call produced during unwanted clasping or close physical interference.
+    semantic_keywords: [submission, attention, mating]
+    semantic_description: Used to terminate inappropriate amplexus or close contact.
+    confidence: low
 references:
   amphibiaweb_tungara:
-    citation: AmphibiaWeb. Engystomops pustulosus species account.
+    citation: "AmphibiaWeb. Engystomops pustulosus species account."
     url: https://amphibiaweb.org/species/3414
-  rand_2021:
-    citation: "Rand, A.S. and Ryan, M.J. 2021. Exceptional calling activity of t\xFAngara frogs (Engystomops pustulosus) in Panama. Journal of Herpetology 55(1):53-60."
+  gridi_etal_2019:
+    citation: "Gridi-Papp, M., et al. 2019. The arylabialis muscle of the tungara frog (Engystomops pustulosus): novel laryngeal control of call complexity."
+    url: https://pubmed.ncbi.nlm.nih.gov/31569298/
+  rand_ryan_2021:
+    citation: "Rand, A.S. and Ryan, M.J. 2021. Exceptional calling activity of túngara frogs (Engystomops pustulosus) in Panama."
     url: https://www.jstor.org/stable/27099364
-  ryan_2006:
-    citation: "Ryan, M.J. and Guerra, M.A. 2006. Animal communication: complex call production in the t\xFAngara frog. Nature 440:1044-1047."
+  ryan_guerra_2006:
+    citation: "Ryan, M.J. and Guerra, M.A. 2006. Animal communication: complex call production in the túngara frog."
     url: https://pubmed.ncbi.nlm.nih.gov/16672962/
     doi: 10.1038/4401044a
 provenance:
-- timestamp: '2026-06-10T19:50:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Initial LLM knowledge plus web-search draft focusing on the simple whine and complex whine-chuck advertisement system with explicit caution about chuck as a standalone element.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-10T19:50:00+02:00'
+    model: GPT-5 Codex
+    action: generated
+    notes: Initial LLM knowledge plus web-search draft focusing on the simple whine and complex whine-chuck advertisement system with explicit caution about chuck as a standalone element.
+  - timestamp: '2026-06-11T00:40:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: '2026-06-11T12:25:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative fast-pass revision strengthened support for the chuck element and kept release calling explicitly low confidence.

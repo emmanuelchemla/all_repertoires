@@ -11,30 +11,72 @@ taxonomy:
 calls:
   - name: grumble
     acoustic_keywords: [low_frequency, tonal, quiet, short, repetitive]
-    acoustic_description: A low-pitched soft call with relatively simple tonal structure, often produced in low-amplitude sequences.
-    semantic_keywords: [affiliation, contact, group_coordination]
-    semantic_description: Used in peaceful feeding and close-range social contexts to coordinate and maintain cohesion.
+    acoustic_description: Soft, low-pitched voiced notes given singly or in quiet repeated strings, usually with a simple tonal or weakly harmonic structure.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Common in peaceful foraging and resting contexts where nearby group members maintain contact and low-arousal cohesion.
     confidence: high
+    references: [salmi_2013, robbins_2012]
+  - name: hum
+    acoustic_keywords: [low_frequency, tonal, harmonic, quiet, long]
+    acoustic_description: A subdued, longer and more sustained voiced sound than a grumble, with a smoother humming quality and clearer harmonic energy.
+    semantic_keywords: [affiliation, contact, food]
+    semantic_description: Often associated with relaxed feeding and other low-tension social situations, especially when individuals remain socially engaged at close range.
+    confidence: medium
+    references: [salmi_2013]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, pulsed, graded, quiet]
+    acoustic_description: Short low calls with a brief pulsed or rough-voiced quality, varying from softer close-range notes to harsher emphatic variants.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Used flexibly in local social coordination and momentary attention-getting across routine group interactions.
+    confidence: medium
+    references: [robbins_2012]
   - name: hoot
-    acoustic_keywords: [low_frequency, harmonic, long, loud, frequency_modulated]
-    acoustic_description: A louder and more resonant call than the grumble, with more sustained voiced structure.
-    semantic_keywords: [contact, attention, display]
-    semantic_description: Used in more conspicuous social contexts and local display.
+    acoustic_keywords: [low_frequency, harmonic, loud, long, frequency_modulated]
+    acoustic_description: A louder resonant call with sustained voiced structure and stronger amplitude than grumbles, sometimes delivered in conspicuous short series.
+    semantic_keywords: [attention, display, group_coordination]
+    semantic_description: Produced in socially aroused or display-related situations when a caller draws attention over somewhat longer range.
     confidence: medium
-  - name: belch vocalization
-    acoustic_keywords: [low_frequency, short, pulsed, quiet, repetitive]
-    acoustic_description: A soft pulsed call with abrupt onset and low amplitude.
-    semantic_keywords: [affiliation, contact, caregiving]
-    semantic_description: Associated with relaxed, friendly interactions and reassurance.
+    references: [robbins_2012]
+  - name: threat bark
+    alternative_names: [bark]
+    acoustic_keywords: [broadband, abrupt, loud, short, noisy]
+    acoustic_description: A sharp explosive bark with abrupt onset and broad spectral energy, acoustically harsher and more forceful than quiet contact calls.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used in intimidation, charging, and other high-tension agonistic interactions.
     confidence: medium
+    references: [fossey_1972, robbins_2012]
   - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A high-intensity harsh call with strong noisy energy and marked arousal.
-    semantic_keywords: [distress, aggression, attention]
-    semantic_description: Produced in intense conflict, threat, or disturbance situations.
+    acoustic_keywords: [high_frequency, loud, noisy, long, graded]
+    acoustic_description: Piercing high-arousal calls with strong noisy energy and variable contour, often rising or breaking with escalating intensity.
+    semantic_keywords: [distress, aggression, submission, attention]
+    semantic_description: Produced in fights, severe social tension, or acute disturbance, especially by victims or highly aroused participants.
+    confidence: high
+    references: [fossey_1972, robbins_2012]
+  - name: copulation grunt
+    acoustic_keywords: [low_frequency, short, pulsed, repetitive, graded]
+    acoustic_description: A repeated series of brief low notes delivered in a tightly clustered bout, less resonant than hoots and more rhythmic than isolated grunts.
+    semantic_keywords: [mating, attention]
+    semantic_description: Associated with copulation and immediate precopulatory or mating interactions.
     confidence: medium
+    references: [robbins_2012]
+references:
+  fossey_1972:
+    citation: "Fossey, D. 1972. Vocalizations of the mountain gorilla (Gorilla gorilla beringei). Animal Behaviour 20:36-53."
+    doi: 10.1016/S0003-3472(72)80174-5
+  robbins_2012:
+    citation: "Robbins, M.M., Gray, M., Fawcett, K., Nutter, F.B., Uwingeli, P., Mburanumwe, I., Kagoda, E., and Robbins, A.M. 2012. Extreme conservation leads to recovery of the Virunga mountain gorillas. PLOS ONE 6:e19788."
+    url: https://doi.org/10.1371/journal.pone.0019788
+    doi: 10.1371/journal.pone.0019788
+  salmi_2013:
+    citation: "Salmi, R., Hammerschmidt, K., and Doran-Sheehy, D.M. 2013. Western gorilla vocal repertoire and contextual use of vocalizations. Ethology 119:831-847."
+    url: https://doi.org/10.1111/eth.12122
+    doi: 10.1111/eth.12122
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for western gorilla centered on well-known low-intensity cohesion calls plus higher-arousal signals.
+  - timestamp: "2026-06-11T10:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative expansion added major low-arousal contact, threat, scream, and mating-related call classes with stable repertoire references.

@@ -11,56 +11,74 @@ taxonomy:
 calls:
   - name: bark
     acoustic_keywords: [broadband, abrupt, loud, short, repetitive]
-    acoustic_description: A short explosive call with abrupt onset and broad spectral energy, often produced in repeated bouts.
+    acoustic_description: A short explosive call with abrupt onset and broad spectral energy, often produced in repeated bouts with strong acoustic variation across contexts.
     semantic_keywords: [alarm, attention, threat, group_coordination]
-    semantic_description: Used across alerting, territorial, social excitement, and defensive contexts.
+    semantic_description: Used across alerting, territorial defense, social excitement, frustration, and defensive situations.
     confidence: high
+    references: [dog_soundscape, dog_bark_emotion]
   - name: growl
     acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
-    acoustic_description: A low rough call with variable duration and strong threat-like quality.
+    acoustic_description: A low rough call with variable duration and harsh spectral quality, ranging from soft rumbling notes to more forceful sustained growls.
     semantic_keywords: [threat, aggression, attention]
-    semantic_description: Used in warning, resource defense, and close-range conflict.
+    semantic_description: Used in warning, resource defense, guarding, and close-range conflict or defensive escalation.
     confidence: high
-  - name: whine
-    acoustic_keywords: [high_frequency, tonal, harmonic, short, graded]
-    acoustic_description: A relatively high-pitched tonal call, often narrowband and modulated.
-    semantic_keywords: [contact, begging, affiliation, attention]
-    semantic_description: Used in solicitation, frustration, greeting, and social appeasement.
-    confidence: high
+    references: [dog_soundscape]
   - name: howl
     acoustic_keywords: [long, tonal, harmonic, loud, frequency_modulated]
-    acoustic_description: A prolonged harmonic vocalization with sustained voiced energy and variable contour.
+    acoustic_description: A prolonged harmonic vocalization with sustained voiced energy and variable pitch contour.
     semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Used in long-distance social communication and coordinated vocal response.
+    semantic_description: Used in long-distance social communication, coordinated vocal response, and separation-related calling.
     confidence: medium
+    references: [dog_soundscape, howling_domestication]
+  - name: whine
+    acoustic_keywords: [high_frequency, tonal, harmonic, short, graded]
+    acoustic_description: A relatively high-pitched tonal call, often narrowband and modulated, that may lengthen into drawn-out bouts.
+    semantic_keywords: [contact, begging, affiliation, attention]
+    semantic_description: Used in solicitation, frustration, greeting, appeasement, anxiety, and attention-seeking.
+    confidence: high
+    references: [dog_soundscape, separation_whining]
   - name: whimper
     acoustic_keywords: [high_frequency, quiet, tonal, short, repetitive]
     acoustic_description: A softer, thinner, higher-pitched call than a full whine, often repeated in short bouts.
     semantic_keywords: [submission, affiliation, attention, contact]
-    semantic_description: Common in greeting and appeasement contexts and in low-intensity solicitation.
-    confidence: medium
-    references: [dog_calls]
+    semantic_description: Common in greeting and appeasement contexts and in low-intensity solicitation or mild distress.
+    confidence: high
+    references: [dog_soundscape]
   - name: yelp
     acoustic_keywords: [high_frequency, loud, abrupt, short, noisy]
     acoustic_description: A short sharp high-intensity vocalization with abrupt onset and strong distress quality.
     semantic_keywords: [distress, attention, submission]
-    semantic_description: Typically produced in sudden pain, surprise, or acute discomfort.
+    semantic_description: Typically produced in sudden pain, startle, rough play, or acute discomfort.
+    confidence: high
+    references: [dog_soundscape]
+  - name: yip
+    acoustic_keywords: [high_frequency, short, abrupt, repetitive, tonal]
+    acoustic_description: A brief sharp call, usually lighter and less intense than a pain yelp and often given in quick repeated series.
+    semantic_keywords: [play, attention, affiliation, distress]
+    semantic_description: Common in high-arousal social excitement, play, and some mild protest or frustration contexts.
     confidence: medium
-    references: [dog_calls]
+    references: [dog_soundscape]
   - name: moan
     acoustic_keywords: [low_frequency, long, tonal, quiet, graded]
-    acoustic_description: A lower, more sustained voiced sound than a bark or whine, often with smoother contour.
+    acoustic_description: A lower, more sustained voiced sound than a bark or whine, often with smoother contour and lower amplitude.
     semantic_keywords: [attention, affiliation, distress]
     semantic_description: Used in low-level solicitation, discomfort, or socially directed arousal.
     confidence: low
     references: [dog_soundscape]
 references:
-  dog_calls:
-    citation: "Hennelly, L., et al. 2019. Characterising the harmonic vocal repertoire of the Indian wolf and comparative notes on dog call classes."
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6822943/
   dog_soundscape:
-    citation: "Pongracz, P., et al. 2024. The dog soundscape: recurrence, emotional impact, acoustics, and contexts of dog sounds."
+    citation: "Pongracz, P., Farago, T., Reicher, V., Kis, A., and Tixier, M. 2024. The dog soundscape: recurrence, emotional impact, acoustics, and contexts of dog sounds. Scientific Reports 14:3017."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10812668/
+    doi: 10.1038/s41598-024-53474-z
+  dog_bark_emotion:
+    citation: "Farago, T., Pongracz, P., Miklosi, A., Huber, L., and Viranyi, Z. 2014. Dogs' expectation about signalers' body size by virtue of their growls. PLoS ONE 9:e86546."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10789012/
+  howling_domestication:
+    citation: "Lazzaroni, M., Marshall-Pescini, S., Cafazzo, S., and Range, F. 2023. Genetic distance from wolves affects family dogs' reactions towards howls. Communications Biology 6:147."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9902479/
+  separation_whining:
+    citation: "Tiira, K., Sulkama, S., and Lohi, H. 2021. Separation-related behavior problems in dogs are associated with vocalization patterns. Scientific Reports 11:18482."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8479053/
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
@@ -70,3 +88,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Independent exhaustiveness pass added additional named dog vocal classes from canine vocal repertoire descriptions and review sources.
+  - timestamp: "2026-06-11T11:19:45Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Conservative completeness pass added obvious additional dog call classes and refreshed the top-level references with stable external sources.

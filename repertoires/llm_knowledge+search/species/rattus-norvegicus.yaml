@@ -10,31 +10,96 @@ taxonomy:
   species: norvegicus
 calls:
   - name: 22-kHz call
-    acoustic_keywords: [high_frequency, tonal, long, quiet, harmonic]
-    acoustic_description: A long-duration ultrasonic call with relatively stable tonal structure around the 22 kHz range.
-    semantic_keywords: [distress, threat, attention]
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - quiet
+      - harmonic
+    acoustic_description: A long-duration ultrasonic call with relatively stable tonal structure around the 22-kHz range.
+    semantic_keywords:
+      - distress
+      - threat
+      - attention
     semantic_description: Produced in aversive, fearful, or defensive situations and associated with negative affect.
     confidence: high
+    references:
+      - brudzynski_2021
+      - wrobel_2023
   - name: 50-kHz call
-    acoustic_keywords: [high_frequency, tonal, short, repetitive, harmonic]
-    acoustic_description: A shorter ultrasonic call or call series around the 50 kHz range, often frequency modulated.
-    semantic_keywords: [affiliation, play, attention]
-    semantic_description: Associated with positive social interactions, play, and appetitive or reward-related states.
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - repetitive
+      - harmonic
+    acoustic_description: A shorter ultrasonic call or call series around the 50-kHz range, often frequency modulated and emitted in diverse syllable types.
+    semantic_keywords:
+      - affiliation
+      - play
+      - attention
+    semantic_description: Associated with positive social interactions, play, approach, and appetitive or reward-related states.
     confidence: high
+    references:
+      - brudzynski_2021
+  - name: pup isolation call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - repetitive
+      - loud
+    acoustic_description: Repeated ultrasonic calls from isolated pups, typically higher in frequency than adult 22-kHz distress calls.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - contact
+      - attention
+    semantic_description: Produced by pups when separated from the litter or chilled and likely helps recruit maternal attention.
+    confidence: high
+    references:
+      - blumberg_alberts_1990
   - name: audible squeak
-    acoustic_keywords: [high_frequency, abrupt, loud, noisy, short]
+    acoustic_keywords:
+      - high_frequency
+      - abrupt
+      - loud
+      - noisy
+      - short
     acoustic_description: A brief audible high-pitched call with abrupt onset and harsh quality.
-    semantic_keywords: [distress, submission, attention]
+    semantic_keywords:
+      - distress
+      - submission
+      - attention
     semantic_description: Produced during handling, pain, or acute social conflict.
     confidence: medium
-  - name: bruxing-associated call
-    acoustic_keywords: [quiet, pulsed, short, graded, low_frequency]
-    acoustic_description: A softer low-amplitude sound associated with close-range social or self-directed states, acoustically less stereotyped than ultrasonic calls.
-    semantic_keywords: [affiliation, caregiving, attention]
-    semantic_description: Included conservatively as a low-intensity social sound around relaxed or tactile interactions.
-    confidence: low
+    references:
+      - brudzynski_2021
+references:
+  blumberg_alberts_1990:
+    citation: "Blumberg, M.S. and Alberts, J.R. 1990. Ultrasonic vocalizations by rat pups in the cold: an acoustic by-product of laryngeal braking? Behavioral Neuroscience 104(5):808-817."
+    url: https://blumberg.lab.uiowa.edu/sites/blumberg.lab.uiowa.edu/files/2022-11/Blumberg.Behav%20Neurosci.1990.pdf
+  brudzynski_2021:
+    citation: Brudzynski, S.M. 2021. Biological functions of rat ultrasonic vocalizations, arousal mechanisms, and call initiation. Brain Sciences 11(5):605.
+    url: https://www.mdpi.com/2076-3425/11/5/605
+    doi: 10.3390/brainsci11050605
+  wrobel_2023:
+    citation: Wrobel, P.S., Chwiej, J., and Nikiforuk, A. 2023. Playback of rat 22-kHz ultrasonic vocalizations as a translational tool for studying negative affective states. Brain Sciences 13(10):1417.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10591797/
+    doi: 10.3390/brainsci13101417
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for brown rat emphasizing the standard 22-kHz and 50-kHz vocal systems and a few audible call categories.
+  - timestamp: "2026-06-11T11:35:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Replaced the weak bruxing placeholder with the better-established rat pup isolation class and added stable review references for the classic 22-kHz and 50-kHz systems.

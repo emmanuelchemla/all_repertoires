@@ -9,82 +9,119 @@ taxonomy:
   genus: Cercopithecus
   species: mona
 calls:
-- name: boom
-  acoustic_keywords:
-  - low_frequency
-  - loud
-  - short
-  - pulsed
-  - repetitive
-  acoustic_description: A low pulsed call with strong amplitude and relatively simple structure.
-  semantic_keywords:
-  - alarm
-  - attention
-  - group_coordination
-  semantic_description: Used in conspicuous long-range signaling and alerting.
-  confidence: medium
-- name: bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Produced in disturbance and danger contexts.
-  confidence: medium
-- name: contact call
-  acoustic_keywords:
-  - short
-  - tonal
-  - quiet
-  - repetitive
-  - graded
-  acoustic_description: A softer short-range call than barks, with less harsh structure.
-  semantic_keywords:
-  - contact
-  - affiliation
-  - group_coordination
-  semantic_description: Used in ordinary local social communication.
-  confidence: low
-- name: scream
-  acoustic_keywords:
-  - high_frequency
-  - loud
-  - noisy
-  - long
-  - abrupt
-  acoustic_description: A high-intensity noisy call with strong arousal.
-  semantic_keywords:
-  - distress
-  - aggression
-  - attention
-  semantic_description: Produced in severe conflict or immediate danger.
-  confidence: low
-- name: alarm bark
-  acoustic_keywords:
-  - abrupt
-  - broadband
-  - noisy
-  - short
-  - loud
-  acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy, more forceful than routine local calls.
-  semantic_keywords:
-  - alarm
-  - threat
-  - attention
-  semantic_description: Produced in disturbance and danger contexts.
-  confidence: medium
+  - name: boom
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - short
+      - pulsed
+      - repetitive
+    acoustic_description: Low-frequency pulsed calls with a simple booming quality and strong amplitude, usually produced in short bouts.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - attention
+      - identity
+    semantic_description: Used mainly by adult males in long-range spacing, rank advertisement, and conspicuous group-level signalling.
+    confidence: medium
+    references:
+      - animal_diversity_web
+  - name: hack call
+    alternative_names:
+      - hack
+      - male hack call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - loud
+    acoustic_description: Abrupt harsh calls with noisy broadband energy, sharper than booms and suited to conspicuous detection.
+    semantic_keywords:
+      - territorial
+      - threat
+      - attention
+    semantic_description: Used by males in rank- and territory-related signalling and in high-arousal disturbance contexts.
+    confidence: medium
+    references:
+      - animal_diversity_web
+  - name: sneeze alarm call
+    alternative_names:
+      - sneeze
+      - alarm sneeze
+    acoustic_keywords:
+      - abrupt
+      - short
+      - noisy
+      - repetitive
+      - broadband
+    acoustic_description: Short abrupt calls with a sneeze-like quality, more clipped and percussive than moans.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced in disturbance and danger contexts as the main alarm-like call type described for the species.
+    confidence: medium
+    references:
+      - animal_diversity_web
+  - name: moan
+    acoustic_keywords:
+      - low_frequency
+      - long
+      - tonal
+      - graded
+      - loud
+    acoustic_description: Drawn-out expressive calls with a moaning quality, longer and smoother than the abrupt sneeze-like alarms.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Used in conspicuous social communication and long-range contact.
+    confidence: medium
+    references:
+      - animal_diversity_web
+  - name: scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - graded
+    acoustic_description: High-arousal noisy calls with sustained duration and strong amplitude.
+    semantic_keywords:
+      - distress
+      - aggression
+      - attention
+    semantic_description: Produced in severe conflict, capture, or intense distress.
+    confidence: low
+references:
+  animal_diversity_web:
+    citation: Animal Diversity Web. Mona monkey (Cercopithecus mona) account.
+    url: https://animaldiversity.org/accounts/Cercopithecus_mona/
 provenance:
-- timestamp: '2026-06-10T22:00:00+02:00'
-  model: GPT-5 Codex
-  action: generated
-  notes: Broad exploratory draft for mona monkey using conservative guenon alarm and local social categories.
-- timestamp: '2026-06-11T00:40:00+02:00'
-  model: GPT-5 Codex
-  action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-10T22:00:00+02:00"
+    model: GPT-5 Codex
+    action: generated
+    notes: Broad exploratory draft for mona monkey using conservative guenon alarm and local social categories.
+  - timestamp: "2026-06-11T00:40:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  - timestamp: "2026-06-11T11:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Replaced duplicate generic bark entries with the more clearly described boom, hack, sneeze-alarm, and moan classes from stable species-account sources.

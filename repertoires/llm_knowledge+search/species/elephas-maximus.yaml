@@ -16,13 +16,15 @@ calls:
   - harmonic
   - tonal
   - loud
-  acoustic_description: A low-frequency, often infrasonic call with sustained harmonic structure and long duration.
+  acoustic_description: A low-frequency, often infrasonic call with sustained harmonic
+    structure and long duration.
   semantic_keywords:
   - contact
   - group_coordination
   - affiliation
   - identity
-  semantic_description: Used for long-range social contact, cohesion, and coordination among family members.
+  semantic_description: Used for long-range social contact, cohesion, and coordination
+    among family members.
   confidence: high
 - name: trumpet
   acoustic_keywords:
@@ -31,13 +33,15 @@ calls:
   - harmonic
   - abrupt
   - long
-  acoustic_description: A loud resonant call with strong upper harmonics and conspicuous onset.
+  acoustic_description: A loud resonant call with strong upper harmonics and conspicuous
+    onset.
   semantic_keywords:
   - attention
   - display
   - distress
   - threat
-  semantic_description: Produced in intense arousal including excitement, alarm, aggression, or distress.
+  semantic_description: Produced in intense arousal including excitement, alarm, aggression,
+    or distress.
   confidence: high
 - name: roar
   acoustic_keywords:
@@ -46,7 +50,8 @@ calls:
   - long
   - broadband
   - graded
-  acoustic_description: A harsh high-amplitude call with more broadband energy than a rumble.
+  acoustic_description: A harsh high-amplitude call with more broadband energy than
+    a rumble.
   semantic_keywords:
   - threat
   - aggression
@@ -60,13 +65,15 @@ calls:
   - tonal
   - loud
   - repetitive
-  acoustic_description: A shorter higher-pitched call than trumpet or rumble, with a clearer tonal quality.
+  acoustic_description: A shorter higher-pitched call than trumpet or rumble, with
+    a clearer tonal quality.
   semantic_keywords:
   - caregiving
   - begging
   - attention
   - distress
-  semantic_description: Common in calf and close social interactions requiring immediate attention.
+  semantic_description: Common in calf and close social interactions requiring immediate
+    attention.
   confidence: medium
 - name: snort
   acoustic_keywords:
@@ -75,19 +82,66 @@ calls:
   - short
   - pulsed
   - loud
-  acoustic_description: A short expulsive sound with broad spectral energy and abrupt onset.
+  acoustic_description: A short expulsive sound with broad spectral energy and abrupt
+    onset.
   semantic_keywords:
   - attention
   - threat
   - alarm
   semantic_description: Used in immediate vigilance and short-range alerting.
   confidence: medium
+- name: calf scream
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - long
+  - noisy
+  - graded
+  acoustic_description: A high-intensity shrill call with strong noisy energy and
+    high amplitude, unlike the lower-frequency adult rumble.
+  semantic_keywords:
+  - distress
+  - caregiving
+  - attention
+  semantic_description: Produced by calves in acute distress, separation, or handling
+    contexts to recruit aid from nearby adults.
+  confidence: medium
+- name: greeting rumble
+  acoustic_keywords:
+  - low_frequency
+  - long
+  - harmonic
+  - frequency_modulated
+  - quiet
+  acoustic_description: A lower-amplitude rumble with smoother contour than a trumpet
+    and richer harmonic structure than a snort.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - group_coordination
+  semantic_description: Used in reunion and affiliative greeting contexts to maintain
+    social bonds and coordinate group interactions.
+  confidence: medium
 provenance:
 - timestamp: '2026-06-10T21:00:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for Asian elephant using core low-frequency rumbles and major arousal-related call classes.
+  notes: Broad exploratory draft for Asian elephant using core low-frequency rumbles
+    and major arousal-related call classes.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

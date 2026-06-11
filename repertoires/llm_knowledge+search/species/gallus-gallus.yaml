@@ -16,7 +16,8 @@ calls:
   - long
   - repetitive
   - tonal
-  acoustic_description: A stereotyped far-carrying call with clear harmonic structure and repeated syllabic pattern.
+  acoustic_description: A stereotyped far-carrying call with clear harmonic structure
+    and repeated syllabic pattern.
   semantic_keywords:
   - territorial
   - display
@@ -37,7 +38,8 @@ calls:
   - recruitment
   - affiliation
   - attention
-  semantic_description: Used to recruit conspecifics, especially mates or offspring, to food.
+  semantic_description: Used to recruit conspecifics, especially mates or offspring,
+    to food.
   confidence: high
 - name: aerial alarm call
   acoustic_keywords:
@@ -46,12 +48,14 @@ calls:
   - abrupt
   - repetitive
   - loud
-  acoustic_description: A short urgent call with rapid delivery and strong attention-capturing quality.
+  acoustic_description: A short urgent call with rapid delivery and strong attention-capturing
+    quality.
   semantic_keywords:
   - alarm
   - predator
   - attention
-  semantic_description: Produced especially for aerial threats and elicits specific anti-predator responses.
+  semantic_description: Produced especially for aerial threats and elicits specific
+    anti-predator responses.
   confidence: high
 - name: ground alarm call
   acoustic_keywords:
@@ -65,7 +69,8 @@ calls:
   - alarm
   - predator
   - attention
-  semantic_description: Produced in response to terrestrial predators or disturbance on the ground.
+  semantic_description: Produced in response to terrestrial predators or disturbance
+    on the ground.
   confidence: high
 - name: distress call
   acoustic_keywords:
@@ -74,19 +79,65 @@ calls:
   - abrupt
   - short
   - noisy
-  acoustic_description: A sharp urgent high-intensity vocalization distinct from routine food or crow calls.
+  acoustic_description: A sharp urgent high-intensity vocalization distinct from routine
+    food or crow calls.
   semantic_keywords:
   - distress
   - attention
   - predator
   semantic_description: Produced during capture, acute danger, or intense social conflict.
   confidence: medium
+- name: maternal cluck
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - repetitive
+  - tonal
+  - quiet
+  acoustic_description: A repeated clucking call with short tonal notes given in regular
+    series.
+  semantic_keywords:
+  - caregiving
+  - group_coordination
+  - attention
+  semantic_description: Used by hens to maintain cohesion with chicks and regulate
+    local movement and feeding.
+  confidence: high
+- name: food chuckle
+  acoustic_keywords:
+  - short
+  - repetitive
+  - quiet
+  - tonal
+  - graded
+  acoustic_description: A repetitive low-intensity call series associated with food
+    discovery, distinct from alarm calls and the loud crow.
+  semantic_keywords:
+  - food
+  - recruitment
+  - attention
+  semantic_description: Used to attract nearby conspecifics, especially chicks or
+    hens, to a food item.
+  confidence: high
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
   action: generated
-  notes: Broad exploratory draft for red junglefowl emphasizing crow, food, and predator-specific alarm calls.
+  notes: Broad exploratory draft for red junglefowl emphasizing crow, food, and predator-specific
+    alarm calls.
 - timestamp: '2026-06-11T00:40:00+02:00'
   model: GPT-5 Codex
   action: updated
-  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+  notes: Independent exhaustiveness pass added additional externally informed call
+    classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

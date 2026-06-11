@@ -9,54 +9,141 @@ taxonomy:
   genus: Amazona
   species: auropalliata
 calls:
-  - name: contact call
-    acoustic_keywords: [high_frequency, loud, noisy, abrupt, repetitive]
-    acoustic_description: A loud harsh flock call with repeated delivery and strong high-frequency energy.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Used in flock cohesion and long-range social contact, often carrying group-specific information.
-    confidence: high
-  - name: chatter
-    acoustic_keywords: [short, repetitive, multi_component, noisy, quiet]
-    acoustic_description: A rapid local sequence of social notes with more variable structure than the main contact call.
-    semantic_keywords: [affiliation, contact, group_coordination]
-    semantic_description: Used in close-range social interaction and routine flock activity.
-    confidence: medium
-  - name: alarm screech
-    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
-    acoustic_description: A harsher and more urgent abrupt call than ordinary social chatter.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Produced in disturbance and danger contexts.
-    confidence: medium
-  - name: begging call
-    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
-    acoustic_description: A persistent solicitation call given by dependent young.
-    semantic_keywords: [begging, caregiving, attention]
-    semantic_description: Used by juveniles to obtain feeding and parental attention.
-    confidence: medium
-  - name: duet warble
-    acoustic_keywords: [multi_component, tonal, harmonic, repetitive, long]
-    acoustic_description: A faster, more note-diverse paired vocal sequence than the main contact call, with coordinated phrase structure.
-    semantic_keywords: [territorial, affiliation, group_coordination, display, combinatorial]
-    semantic_description: Used by mated pairs in coordinated territorial and pair-bond displays, including counter-duetting with neighbors.
-    confidence: medium
-    references: [amazon_duet]
-  - name: pair display call
-    acoustic_keywords: [loud, frequency_modulated, tonal, repetitive, multi_component]
-    acoustic_description: A coordinated social display call type broader than a single contact note and less jumbled than local chatter.
-    semantic_keywords: [display, affiliation, territorial, identity]
-    semantic_description: Used in pair-bond advertisement and coordinated social or nest-area display.
-    confidence: low
-    references: [amazon_duet]
+- name: contact call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - abrupt
+  - repetitive
+  acoustic_description: A loud harsh flock call with repeated delivery and strong
+    high-frequency energy.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Used in flock cohesion and long-range social contact, often
+    carrying group-specific information.
+  confidence: high
+- name: chatter
+  acoustic_keywords:
+  - short
+  - repetitive
+  - multi_component
+  - noisy
+  - quiet
+  acoustic_description: A rapid local sequence of social notes with more variable
+    structure than the main contact call.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - group_coordination
+  semantic_description: Used in close-range social interaction and routine flock activity.
+  confidence: medium
+- name: alarm screech
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - abrupt
+  - short
+  acoustic_description: A harsher and more urgent abrupt call than ordinary social
+    chatter.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Produced in disturbance and danger contexts.
+  confidence: medium
+- name: begging call
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - loud
+  - short
+  - graded
+  acoustic_description: A persistent solicitation call given by dependent young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by juveniles to obtain feeding and parental attention.
+  confidence: medium
+- name: duet warble
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - harmonic
+  - repetitive
+  - long
+  acoustic_description: A faster, more note-diverse paired vocal sequence than the
+    main contact call, with coordinated phrase structure.
+  semantic_keywords:
+  - territorial
+  - affiliation
+  - group_coordination
+  - display
+  - combinatorial
+  semantic_description: Used by mated pairs in coordinated territorial and pair-bond
+    displays, including counter-duetting with neighbors.
+  confidence: medium
+  references:
+  - amazon_duet
+- name: pair display call
+  acoustic_keywords:
+  - loud
+  - frequency_modulated
+  - tonal
+  - repetitive
+  - multi_component
+  acoustic_description: A coordinated social display call type broader than a single
+    contact note and less jumbled than local chatter.
+  semantic_keywords:
+  - display
+  - affiliation
+  - territorial
+  - identity
+  semantic_description: Used in pair-bond advertisement and coordinated social or
+    nest-area display.
+  confidence: low
+  references:
+  - amazon_duet
+- name: flight call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - short
+  - repetitive
+  acoustic_description: A loud repeated screech-like call given during group flight,
+    less varied than close-range chatter.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used to coordinate flock movements and maintain contact while
+    airborne or departing roosts.
+  confidence: medium
+  references:
+  - amazon_duet
 references:
   amazon_duet:
-    citation: "Dahlin, C.R. and Wright, T.F. Studies of duetting and coordinated territorial vocal behavior in yellow-naped amazons."
+    citation: Dahlin, C.R. and Wright, T.F. Studies of duetting and coordinated territorial
+      vocal behavior in yellow-naped amazons.
     url: https://www.frontiersin.org/journals/bird-science/articles/10.3389/fbirs.2023.1266420/full
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for yellow-naped amazon emphasizing flock contact and alarm calls.
-  - timestamp: "2026-06-11T00:15:00+02:00"
-    model: GPT-5 Codex
-    action: updated
-    notes: Independent exhaustiveness pass added pair-based vocal display categories from yellow-naped amazon dialect and duet literature.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for yellow-naped amazon emphasizing flock contact
+    and alarm calls.
+- timestamp: '2026-06-11T00:15:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added pair-based vocal display categories
+    from yellow-naped amazon dialect and duet literature.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

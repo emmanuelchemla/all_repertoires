@@ -9,63 +9,157 @@ taxonomy:
   genus: Lonchura
   species: striata domestica
 calls:
-  - name: song
-    acoustic_keywords: [multi_component, tonal, harmonic, repetitive, long]
-    acoustic_description: A learned, phrase-structured song made of repeated syllable sequences with rich variation.
-    semantic_keywords: [courtship, mating, display, identity]
-    semantic_description: Produced mainly by males in courtship and sexual display.
-    confidence: high
-    references:
-      - bengalese_song
-  - name: distance call
-    acoustic_keywords: [tonal, harmonic, frequency_modulated, short, loud]
-    acoustic_description: A brief but salient tonal contact call with clear harmonic structure.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Used in pair or flock contact, especially when individuals are separated.
-    confidence: medium
-    references:
-      - bengalese_distance
-  - name: chatter
-    acoustic_keywords: [short, repetitive, tonal, quiet, multi_component]
-    acoustic_description: A local conversational sequence of short notes with less formal structure than full song.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in routine close-range social interaction.
-    confidence: medium
-  - name: begging call
-    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
-    acoustic_description: A repeated high-pitched solicitation call typical of dependent young.
-    semantic_keywords: [begging, caregiving, attention]
-    semantic_description: Produced by juveniles to solicit food and care.
-    confidence: medium
-    references:
-      - bengalese_begging
-  - name: distress call
-    acoustic_keywords: [high_frequency, loud, abrupt, short, noisy]
-    acoustic_description: A short sharp vocalization, harsher and more urgent than the ordinary distance call.
-    semantic_keywords: [distress, attention, alarm]
-    semantic_description: Used in acute disturbance or handling-like contexts and distinguished from routine contact calls in Bengalese-finch call studies.
-    confidence: low
-    references:
-      - bengalese_context
+- name: song
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - harmonic
+  - repetitive
+  - long
+  acoustic_description: A learned, phrase-structured song made of repeated syllable
+    sequences with rich variation.
+  semantic_keywords:
+  - courtship
+  - mating
+  - display
+  - identity
+  semantic_description: Produced mainly by males in courtship and sexual display.
+  confidence: high
+  references:
+  - bengalese_song
+- name: distance call
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - frequency_modulated
+  - short
+  - loud
+  acoustic_description: A brief but salient tonal contact call with clear harmonic
+    structure.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Used in pair or flock contact, especially when individuals
+    are separated.
+  confidence: medium
+  references:
+  - bengalese_distance
+- name: chatter
+  acoustic_keywords:
+  - short
+  - repetitive
+  - tonal
+  - quiet
+  - multi_component
+  acoustic_description: A local conversational sequence of short notes with less formal
+    structure than full song.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in routine close-range social interaction.
+  confidence: medium
+- name: begging call
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - loud
+  - short
+  - graded
+  acoustic_description: A repeated high-pitched solicitation call typical of dependent
+    young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Produced by juveniles to solicit food and care.
+  confidence: medium
+  references:
+  - bengalese_begging
+- name: distress call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - abrupt
+  - short
+  - noisy
+  acoustic_description: A short sharp vocalization, harsher and more urgent than the
+    ordinary distance call.
+  semantic_keywords:
+  - distress
+  - attention
+  - alarm
+  semantic_description: Used in acute disturbance or handling-like contexts and distinguished
+    from routine contact calls in Bengalese-finch call studies.
+  confidence: low
+  references:
+  - bengalese_context
+- name: tet call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  acoustic_description: A brief simple social call shorter and less carrying than
+    the main distance call.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  semantic_description: Used in close-range pair or flock coordination under low arousal.
+  confidence: medium
+  references:
+  - bengalese_review
+- name: stack call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  acoustic_description: A compact short call type distinct from the distance call
+    in contour and local social deployment.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - attention
+  semantic_description: Used in routine close social interactions among pair-bonded
+    or flocked birds.
+  confidence: medium
+  references:
+  - bengalese_review
 references:
   bengalese_song:
-    citation: "Woolley, S.M.N. and Rubel, E.W. 1997. Bengalese finches depend upon auditory feedback for the maintenance of adult song."
+    citation: Woolley, S.M.N. and Rubel, E.W. 1997. Bengalese finches depend upon
+      auditory feedback for the maintenance of adult song.
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6568371/
   bengalese_distance:
-    citation: "Tobari, Y., et al. 1995. Effect of Tracheosyringeal Nerve Section on Sexually Dimorphic Distance Calls in Bengalese Finches."
+    citation: Tobari, Y., et al. 1995. Effect of Tracheosyringeal Nerve Section on
+      Sexually Dimorphic Distance Calls in Bengalese Finches.
     url: https://bioone.org/journals/zoological-science/volume-12/issue-6/zsj.12.801/Effect-of-Tracheosyringeal-Nerve-Section-on-Sexually-Dimorphic-Distance-Calls/10.2108/zsj.12.801.full
   bengalese_begging:
-    citation: "Villain, A. 2016. Acoustic communication in female songbirds: functions, flexibility and evolution."
+    citation: 'Villain, A. 2016. Acoustic communication in female songbirds: functions,
+      flexibility and evolution.'
     url: https://theses.hal.science/tel-01443990/document
   bengalese_context:
-    citation: "Osada, K. and Okumura, H. Context-Dependent Call Variation in the Male Bengalese Finch."
+    citation: Osada, K. and Okumura, H. Context-Dependent Call Variation in the Male
+      Bengalese Finch.
     url: https://www.semanticscholar.org/paper/Context-Dependent-Call-Variation-in-the-Male-Finch-Osada-Okumura/0c057b2cc0b6703ee5212cc785866cccfac1670e
+  bengalese_review:
+    citation: Okanoya, K. and colleagues. Reviews of Bengalese finch vocal communication
+      and domestication.
 provenance:
-  - timestamp: "2026-06-10T21:00:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for Bengalese finch using major song, contact, and begging call categories.
-  - timestamp: "2026-06-11T11:35:00+02:00"
-    model: GPT-5 Codex
-    action: updated
-    notes: Added independently sourced reference support and a conservative distress-call category for Bengalese finch without using the literature-extraction repertoire.
+- timestamp: '2026-06-10T21:00:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for Bengalese finch using major song, contact, and
+    begging call categories.
+- timestamp: '2026-06-11T11:35:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added independently sourced reference support and a conservative distress-call
+    category for Bengalese finch without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.

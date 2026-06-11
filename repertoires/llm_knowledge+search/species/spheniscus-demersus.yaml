@@ -9,33 +9,118 @@ taxonomy:
   genus: Spheniscus
   species: demersus
 calls:
-  - name: ecstatic display song
-    acoustic_keywords: [long, loud, repetitive, multi_component, harmonic]
-    acoustic_description: A prolonged display sequence combining repeated syllables into a conspicuous rhythmic bout.
-    semantic_keywords: [territorial, display, mating, attention]
-    semantic_description: Used in sexual and territorial display, especially by breeding adults at colony sites.
-    confidence: high
-  - name: bray call
-    alternative_names: [donkey call]
-    acoustic_keywords: [loud, long, harmonic, frequency_modulated, repetitive]
-    acoustic_description: A far-carrying, donkey-like vocalization with strong harmonic structure and repeated syllabic pattern.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Used for partner or colony contact and long-range social advertisement.
-    confidence: high
-  - name: contact call
-    acoustic_keywords: [short, tonal, harmonic, repetitive, quiet]
-    acoustic_description: A shorter, softer call than the main display signals, with simple harmonic structure.
-    semantic_keywords: [contact, affiliation, caregiving]
-    semantic_description: Used in close-range pair, parent-offspring, and neighbor interactions.
-    confidence: medium
-  - name: threat call
-    acoustic_keywords: [abrupt, noisy, broadband, short, repetitive]
-    acoustic_description: A sharp, harsh call with abrupt delivery and a noisier structure than contact calls.
-    semantic_keywords: [threat, aggression, attention]
-    semantic_description: Produced in nest defense, agonistic encounters, or close-range colony disputes.
-    confidence: medium
+- name: ecstatic display song
+  acoustic_keywords:
+  - long
+  - loud
+  - repetitive
+  - multi_component
+  - harmonic
+  acoustic_description: A prolonged display sequence combining repeated syllables
+    into a conspicuous rhythmic bout.
+  semantic_keywords:
+  - territorial
+  - display
+  - mating
+  - attention
+  semantic_description: Used in sexual and territorial display, especially by breeding
+    adults at colony sites.
+  confidence: high
+- name: bray call
+  alternative_names:
+  - donkey call
+  acoustic_keywords:
+  - loud
+  - long
+  - harmonic
+  - frequency_modulated
+  - repetitive
+  acoustic_description: A far-carrying, donkey-like vocalization with strong harmonic
+    structure and repeated syllabic pattern.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Used for partner or colony contact and long-range social advertisement.
+  confidence: high
+- name: contact call
+  acoustic_keywords:
+  - short
+  - tonal
+  - harmonic
+  - repetitive
+  - quiet
+  acoustic_description: A shorter, softer call than the main display signals, with
+    simple harmonic structure.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - caregiving
+  semantic_description: Used in close-range pair, parent-offspring, and neighbor interactions.
+  confidence: medium
+- name: threat call
+  acoustic_keywords:
+  - abrupt
+  - noisy
+  - broadband
+  - short
+  - repetitive
+  acoustic_description: A sharp, harsh call with abrupt delivery and a noisier structure
+    than contact calls.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Produced in nest defense, agonistic encounters, or close-range
+    colony disputes.
+  confidence: medium
+- name: begging call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - repetitive
+  - short
+  - graded
+  acoustic_description: A repeated juvenile solicitation call thinner and more urgent
+    than adult contact or display calls.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Produced by chicks or juveniles to solicit feeding and parental
+    attention.
+  confidence: medium
+- name: contact trill
+  acoustic_keywords:
+  - tonal
+  - repetitive
+  - short
+  - harmonic
+  - quiet
+  acoustic_description: A softer repeated contact call with more regular tonal structure
+    than the louder bray call.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - identity
+  semantic_description: Used in close-range partner or parent-young recognition and
+    local cohesion.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T20:45:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for African penguin using standard colony display and contact call categories.
+- timestamp: '2026-06-10T20:45:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for African penguin using standard colony display
+    and contact call categories.
+- timestamp: '2026-06-11T15:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Coordinator audit expanded or confirmed major call classes and added references
+    where feasible without using other repertoire databases in the repo.
