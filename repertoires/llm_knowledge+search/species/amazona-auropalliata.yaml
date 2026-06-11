@@ -33,8 +33,30 @@ calls:
     semantic_keywords: [begging, caregiving, attention]
     semantic_description: Used by juveniles to obtain feeding and parental attention.
     confidence: medium
+  - name: duet warble
+    acoustic_keywords: [multi_component, tonal, harmonic, repetitive, long]
+    acoustic_description: A faster, more note-diverse paired vocal sequence than the main contact call, with coordinated phrase structure.
+    semantic_keywords: [territorial, affiliation, group_coordination, display, combinatorial]
+    semantic_description: Used by mated pairs in coordinated territorial and pair-bond displays, including counter-duetting with neighbors.
+    confidence: medium
+    references: [amazon_duet]
+  - name: pair display call
+    acoustic_keywords: [loud, frequency_modulated, tonal, repetitive, multi_component]
+    acoustic_description: A coordinated social display call type broader than a single contact note and less jumbled than local chatter.
+    semantic_keywords: [display, affiliation, territorial, identity]
+    semantic_description: Used in pair-bond advertisement and coordinated social or nest-area display.
+    confidence: low
+    references: [amazon_duet]
+references:
+  amazon_duet:
+    citation: "Dahlin, C.R. and Wright, T.F. Studies of duetting and coordinated territorial vocal behavior in yellow-naped amazons."
+    url: https://www.frontiersin.org/journals/bird-science/articles/10.3389/fbirs.2023.1266420/full
 provenance:
   - timestamp: "2026-06-10T22:30:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for yellow-naped amazon emphasizing flock contact and alarm calls.
+  - timestamp: "2026-06-11T00:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added pair-based vocal display categories from yellow-naped amazon dialect and duet literature.

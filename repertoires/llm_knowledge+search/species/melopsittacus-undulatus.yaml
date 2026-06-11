@@ -33,8 +33,30 @@ calls:
     semantic_keywords: [alarm, threat, attention]
     semantic_description: Produced in disturbance or distress contexts requiring rapid attention from conspecifics.
     confidence: medium
+  - name: begging call
+    acoustic_keywords: [high_frequency, repetitive, tonal, long, loud]
+    acoustic_description: Repeated higher-pitched tonal calls produced by young birds in persistent bouts.
+    semantic_keywords: [begging, caregiving, food]
+    semantic_description: Used by nestlings or juveniles to solicit feeding and parental care.
+    confidence: medium
+    references: [budgerigar_vocal]
+  - name: distress call
+    acoustic_keywords: [high_frequency, loud, abrupt, short, noisy]
+    acoustic_description: A short, loud, abrupt call harsher than ordinary contact calls and associated with strong arousal.
+    semantic_keywords: [alarm, distress, attention]
+    semantic_description: Produced during disturbance, handling, or acute threat.
+    confidence: medium
+    references: [budgerigar_vocal]
+references:
+  budgerigar_vocal:
+    citation: "Brockway, B.F. 1964. Ethological studies of the budgerigar and later comparative work on contact calls and warble song."
+    url: https://doi.org/10.1163/156853964X00118
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for budgerigar emphasizing major social and courtship vocal classes.
+  - timestamp: "2026-06-11T00:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added juvenile and distress-related budgerigar vocal classes from species-specific vocal behavior sources.

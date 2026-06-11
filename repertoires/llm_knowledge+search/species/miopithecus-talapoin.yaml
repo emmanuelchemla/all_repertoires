@@ -9,32 +9,82 @@ taxonomy:
   genus: Miopithecus
   species: talapoin
 calls:
-  - name: grunt
-    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
-    acoustic_description: A short low social call with relatively simple tonal structure.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in routine social communication and benign approaches.
-    confidence: medium
-  - name: chirp
-    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
-    acoustic_description: A brief high-pitched tonal call used in local communication.
-    semantic_keywords: [contact, attention, affiliation]
-    semantic_description: Used in short-range social coordination and group cohesion.
-    confidence: medium
-  - name: bark
-    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Produced in disturbance and danger contexts.
-    confidence: medium
-  - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A high-intensity noisy call with strong arousal.
-    semantic_keywords: [distress, aggression, attention]
-    semantic_description: Produced in severe conflict or immediate danger.
-    confidence: low
+- name: grunt
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - tonal
+  - repetitive
+  - graded
+  acoustic_description: A short low social call with relatively simple tonal structure.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in routine social communication and benign approaches.
+  confidence: medium
+- name: chirp
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A brief high-pitched tonal call used in local communication.
+  semantic_keywords:
+  - contact
+  - attention
+  - affiliation
+  semantic_description: Used in short-range social coordination and group cohesion.
+  confidence: medium
+- name: bark
+  acoustic_keywords:
+  - abrupt
+  - broadband
+  - noisy
+  - short
+  - loud
+  acoustic_description: A sharp harsh call with abrupt onset and broad spectral energy.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Produced in disturbance and danger contexts.
+  confidence: medium
+- name: scream
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - long
+  - abrupt
+  acoustic_description: A high-intensity noisy call with strong arousal.
+  semantic_keywords:
+  - distress
+  - aggression
+  - attention
+  semantic_description: Produced in severe conflict or immediate danger.
+  confidence: low
+- name: twitter
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  - graded
+  acoustic_description: A rapid sequence of high notes with lighter tonal quality than barks or screams.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used in active social and movement contexts.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for talapoin monkey using conservative cercopithecid social and alarm categories.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for talapoin monkey using conservative cercopithecid social and alarm categories.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

@@ -9,32 +9,82 @@ taxonomy:
   genus: Mandrillus
   species: sphinx
 calls:
-  - name: grunt
-    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
-    acoustic_description: A short low-pitched call with relatively simple tonal structure.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in routine social communication and benign approaches.
-    confidence: medium
-  - name: crowing call
-    acoustic_keywords: [loud, long, tonal, frequency_modulated, repetitive]
-    acoustic_description: A conspicuous far-carrying call with more prolonged structure than ordinary grunts.
-    semantic_keywords: [display, attention, territorial]
-    semantic_description: Used in long-range social advertisement and display.
-    confidence: medium
-  - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
-    acoustic_description: A loud harsh arousal call with strong noisy energy.
-    semantic_keywords: [distress, aggression, attention]
-    semantic_description: Produced in conflict and acute social tension.
-    confidence: medium
-  - name: bark
-    acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A short harsh call with abrupt onset and broad spectral structure.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Used in disturbance and alert contexts.
-    confidence: medium
+- name: grunt
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - tonal
+  - repetitive
+  - graded
+  acoustic_description: A short low-pitched call with relatively simple tonal structure.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in routine social communication and benign approaches.
+  confidence: medium
+- name: crowing call
+  acoustic_keywords:
+  - loud
+  - long
+  - tonal
+  - frequency_modulated
+  - repetitive
+  acoustic_description: A conspicuous far-carrying call with more prolonged structure than ordinary grunts.
+  semantic_keywords:
+  - display
+  - attention
+  - territorial
+  semantic_description: Used in long-range social advertisement and display.
+  confidence: medium
+- name: scream
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - long
+  - abrupt
+  acoustic_description: A loud harsh arousal call with strong noisy energy.
+  semantic_keywords:
+  - distress
+  - aggression
+  - attention
+  semantic_description: Produced in conflict and acute social tension.
+  confidence: medium
+- name: bark
+  acoustic_keywords:
+  - abrupt
+  - broadband
+  - noisy
+  - short
+  - loud
+  acoustic_description: A short harsh call with abrupt onset and broad spectral structure.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Used in disturbance and alert contexts.
+  confidence: medium
+- name: copulation call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - short
+  - repetitive
+  - graded
+  acoustic_description: A conspicuous arousal-related call distinct from routine grunts or alarm barks.
+  semantic_keywords:
+  - mating
+  - attention
+  - affiliation
+  semantic_description: Associated with sexual or post-copulatory social interaction.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T21:45:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for mandrill using conservative cercopithecid social and display call classes.
+- timestamp: '2026-06-10T21:45:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for mandrill using conservative cercopithecid social and display call classes.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

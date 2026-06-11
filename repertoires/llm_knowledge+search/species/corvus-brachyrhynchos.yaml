@@ -33,8 +33,33 @@ calls:
     semantic_keywords: [begging, caregiving, attention]
     semantic_description: Used by juveniles to solicit food and care.
     confidence: medium
+  - name: knock call
+    acoustic_keywords: [abrupt, short, broadband, pulsed, quiet]
+    acoustic_description: A single sharp note or percussive bill-produced sound distinct from vocal caws.
+    semantic_keywords: [attention, display]
+    semantic_description: Used in close social interaction and attention-getting, and sometimes as a less conspicuous social signal.
+    confidence: low
+    references: [crow_sounds]
+  - name: rattle-knock call
+    acoustic_keywords: [repetitive, abrupt, noisy, short, multi_component]
+    acoustic_description: A more complex rough rattle or knock-like sequence distinct from simple caws.
+    semantic_keywords: [affiliation, display, identity]
+    semantic_description: Used in close social display, including pair or family-group interaction.
+    confidence: medium
+    references: [crow_overview]
+references:
+  crow_sounds:
+    citation: "Cornell Lab of Ornithology. American Crow sounds."
+    url: https://www.allaboutbirds.org/guide/American_Crow/sounds
+  crow_overview:
+    citation: "Corvid Research blog overview of major American crow call classes."
+    url: https://corvidresearch.blog/tag/crow-vocalizations/
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for American crow using major caw, scold, and social call classes.
+  - timestamp: "2026-06-11T00:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional independently described American crow social call classes.

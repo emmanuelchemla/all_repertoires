@@ -37,12 +37,55 @@ calls:
     semantic_description: Produced in vigilance or disturbance contexts.
     confidence: medium
     references: [jacchus_structure]
+  - name: trill-phee
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, multi_component]
+    acoustic_description: A compound call combining a short trill-like introduction with a longer phee-like tonal segment.
+    semantic_keywords: [contact, group_coordination, identity]
+    semantic_description: Used in medium- to long-range social coordination and appears to bridge close-range and long-range contact functions.
+    confidence: high
+    references: [jacchus_repertoire_analysis]
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
+    acoustic_description: A brief high-pitched note with cleaner tonal structure than twitter calls.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Used in short-range social interaction and local attention-getting.
+    confidence: medium
+    references: [jacchus_repertoire_analysis]
+  - name: egg call
+    alternative_names: [ekk call]
+    acoustic_keywords: [abrupt, noisy, broadband, short, repetitive]
+    acoustic_description: A harsher abrupt call with more noisy structure than the main contact calls.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Associated with vigilance and disturbance, often in higher-arousal contexts than ordinary contact calling.
+    confidence: medium
+    references: [jacchus_repertoire_analysis]
+  - name: peep
+    acoustic_keywords: [high_frequency, short, tonal, quiet, graded]
+    acoustic_description: A very short, high-pitched tonal note simpler than twitter or chirp sequences.
+    semantic_keywords: [contact, affiliation, attention]
+    semantic_description: Used in local low-intensity social interaction.
+    confidence: low
+    references: [jacchus_repertoire_analysis]
+  - name: ock call
+    acoustic_keywords: [abrupt, broadband, short, noisy, loud]
+    acoustic_description: A short, rough, abrupt call with stronger broadband energy than phee or trill calls.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Used in more forceful or aroused local social situations.
+    confidence: low
+    references: [jacchus_repertoire_analysis]
 references:
   jacchus_structure:
     citation: "Bezerra, B.M. and Souto, A. 2008. Structure and usage of the vocal repertoire of Callithrix jacchus."
     url: https://www.academia.edu/3190201/Structure_and_Usage_of_the_Vocal_Repertoire_of_Callithrix_jacchus
+  jacchus_repertoire_analysis:
+    citation: "Miller, C.T., Mandel, K., and Wang, X. 2010. The communicative content of the common marmoset vocal repertoire and its structure."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4644241/
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
     action: generated
     notes: Broad exploratory draft for common marmoset anchored on the standard phee, trill, twitter, and tsik call system.
+  - timestamp: "2026-06-11T00:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Independent exhaustiveness pass added additional repertoire classes from species-specific vocal repertoire analyses without using the literature-extraction database.

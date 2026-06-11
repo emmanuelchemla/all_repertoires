@@ -9,32 +9,84 @@ taxonomy:
   genus: Desmodus
   species: rotundus
 calls:
-  - name: contact call
-    acoustic_keywords: [high_frequency, tonal, short, repetitive, quiet]
-    acoustic_description: A short social call used in close colony interactions, with relatively simple structure.
-    semantic_keywords: [contact, affiliation, identity]
-    semantic_description: Used in routine social interactions among roostmates.
-    confidence: medium
-  - name: isolation call
-    acoustic_keywords: [high_frequency, loud, repetitive, long, tonal]
-    acoustic_description: A stronger higher-amplitude call than routine contact signals, often delivered persistently.
-    semantic_keywords: [begging, caregiving, contact, attention]
-    semantic_description: Produced by separated or dependent individuals to elicit care or reunion.
-    confidence: medium
-  - name: aggression call
-    acoustic_keywords: [noisy, broadband, abrupt, short, repetitive]
-    acoustic_description: A harsher short call with abrupt onset and broader spectral structure than contact calls.
-    semantic_keywords: [aggression, threat, attention]
-    semantic_description: Associated with conflict over food sharing, perch space, or social rank.
-    confidence: high
-  - name: food-begging call
-    acoustic_keywords: [high_frequency, repetitive, short, graded, tonal]
-    acoustic_description: A repeated solicitation call given in feeding-related social contexts.
-    semantic_keywords: [begging, food, affiliation, attention]
-    semantic_description: Used to solicit regurgitated blood meals or social tolerance from group members.
-    confidence: medium
+- name: contact call
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - short
+  - repetitive
+  - quiet
+  acoustic_description: A short social call used in close colony interactions, with relatively simple structure.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - identity
+  semantic_description: Used in routine social interactions among roostmates.
+  confidence: medium
+- name: isolation call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - repetitive
+  - long
+  - tonal
+  acoustic_description: A stronger higher-amplitude call than routine contact signals, often delivered persistently.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - contact
+  - attention
+  semantic_description: Produced by separated or dependent individuals to elicit care or reunion.
+  confidence: medium
+- name: aggression call
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - abrupt
+  - short
+  - repetitive
+  acoustic_description: A harsher short call with abrupt onset and broader spectral structure than contact calls.
+  semantic_keywords:
+  - aggression
+  - threat
+  - attention
+  semantic_description: Associated with conflict over food sharing, perch space, or social rank.
+  confidence: high
+- name: food-begging call
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - short
+  - graded
+  - tonal
+  acoustic_description: A repeated solicitation call given in feeding-related social contexts.
+  semantic_keywords:
+  - begging
+  - food
+  - affiliation
+  - attention
+  semantic_description: Used to solicit regurgitated blood meals or social tolerance from group members.
+  confidence: medium
+- name: appeasement call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  - graded
+  acoustic_description: A softer social call than aggressive vocalizations, with relatively simple structure.
+  semantic_keywords:
+  - affiliation
+  - submission
+  - attention
+  semantic_description: Used to reduce tension or solicit tolerance in close social interactions.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T21:15:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for common vampire bat emphasizing social contact, isolation, and feeding-related calls.
+- timestamp: '2026-06-10T21:15:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for common vampire bat emphasizing social contact, isolation, and feeding-related calls.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

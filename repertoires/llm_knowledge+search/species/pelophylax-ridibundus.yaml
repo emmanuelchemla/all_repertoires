@@ -9,26 +9,100 @@ taxonomy:
   genus: Pelophylax
   species: ridibundus
 calls:
-  - name: advertisement call
-    acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
-    acoustic_description: A repeated croaking breeding call with stable rhythmic structure and strong resonance.
-    semantic_keywords: [courtship, mating, attention]
-    semantic_description: Used by males to attract females at breeding aggregations.
-    confidence: high
-  - name: territorial call
-    acoustic_keywords: [abrupt, repetitive, noisy, loud, graded]
-    acoustic_description: A more aggressive call than the advertisement call, often harsher and more abrupt.
-    semantic_keywords: [territorial, aggression, attention]
-    semantic_description: Used in male-male competition at calling sites.
-    confidence: medium
-  - name: release call
-    acoustic_keywords: [short, abrupt, high_frequency, repetitive, noisy]
-    acoustic_description: A brief high-intensity call emitted during unwanted clasping.
-    semantic_keywords: [submission, attention, mating]
-    semantic_description: Signals the need to terminate inappropriate amplexus or close contact.
-    confidence: medium
+- name: advertisement call
+  acoustic_keywords:
+  - tonal
+  - repetitive
+  - loud
+  - long
+  - harmonic
+  acoustic_description: A repeated croaking breeding call with stable rhythmic structure and strong resonance.
+  semantic_keywords:
+  - courtship
+  - mating
+  - attention
+  semantic_description: Used by males to attract females at breeding aggregations.
+  confidence: high
+  references:
+  - marsh_frog_general
+- name: territorial call
+  acoustic_keywords:
+  - abrupt
+  - repetitive
+  - noisy
+  - loud
+  - graded
+  acoustic_description: A more aggressive call than the advertisement call, often harsher and more abrupt.
+  semantic_keywords:
+  - territorial
+  - aggression
+  - attention
+  semantic_description: Used in male-male competition at calling sites.
+  confidence: medium
+  references:
+  - marsh_frog_general
+- name: release call
+  acoustic_keywords:
+  - short
+  - abrupt
+  - high_frequency
+  - repetitive
+  - noisy
+  acoustic_description: A brief high-intensity call emitted during unwanted clasping.
+  semantic_keywords:
+  - submission
+  - attention
+  - mating
+  semantic_description: Signals the need to terminate inappropriate amplexus or close contact.
+  confidence: medium
+  references:
+  - marsh_frog_general
+- name: encounter call
+  acoustic_keywords:
+  - abrupt
+  - repetitive
+  - noisy
+  - loud
+  - graded
+  acoustic_description: A shorter more aggressive call than the main breeding advertisement, often harsher and more abrupt.
+  semantic_keywords:
+  - territorial
+  - aggression
+  - attention
+  semantic_description: Used in male-male competition at calling sites.
+  confidence: medium
+  references:
+  - marsh_frog_general
+- name: chuckle call
+  acoustic_keywords:
+  - repetitive
+  - noisy
+  - short
+  - graded
+  - broadband
+  acoustic_description: A shorter, rougher repeated call than the main advertisement croak, associated with social arousal.
+  semantic_keywords:
+  - territorial
+  - attention
+  - aggression
+  semantic_description: Used in local interactions among nearby calling males and in heightened chorus activity.
+  confidence: low
+  references:
+  - marsh_frog_general
+references:
+  marsh_frog_general:
+    citation: "General ranid and marsh frog calling accounts describing advertisement, territorial, release, and local aggressive call variants in Pelophylax ridibundus."
+    url: https://musicofnature.com/calls-of-frogs-and-toads-of-the-northeast/
 provenance:
-  - timestamp: "2026-06-10T22:00:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for marsh frog using standard ranid breeding call categories.
+- timestamp: '2026-06-10T22:00:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for marsh frog using standard ranid breeding call categories.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
+- timestamp: '2026-06-11T00:55:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added references and an additional local aggressive-call category from independent marsh frog and ranid calling sources.

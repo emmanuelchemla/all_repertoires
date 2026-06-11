@@ -9,32 +9,82 @@ taxonomy:
   genus: Corvus
   species: corax
 calls:
-  - name: croak
-    acoustic_keywords: [low_frequency, noisy, short, repetitive, loud]
-    acoustic_description: A harsh resonant call with rough low spectral emphasis and abrupt onset.
-    semantic_keywords: [contact, identity, attention]
-    semantic_description: Used widely in social communication and long-range awareness.
-    confidence: high
-  - name: knock call
-    acoustic_keywords: [abrupt, short, broadband, pulsed, repetitive]
-    acoustic_description: A percussive knock-like call distinct from croaks and longer display sounds.
-    semantic_keywords: [display, courtship, attention]
-    semantic_description: Used in pair-bond and display-related contexts.
-    confidence: medium
-  - name: scold call
-    acoustic_keywords: [noisy, broadband, abrupt, repetitive, loud]
-    acoustic_description: A harsher repeated call louder and more agitated than routine croaks.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Produced in mobbing and disturbance situations.
-    confidence: medium
-  - name: gurgle
-    acoustic_keywords: [multi_component, tonal, noisy, repetitive, long]
-    acoustic_description: A more complex vocal sequence with mixed rough and tonal components.
-    semantic_keywords: [affiliation, display, identity]
-    semantic_description: Used in close social interaction and display.
-    confidence: medium
+- name: croak
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - short
+  - repetitive
+  - loud
+  acoustic_description: A harsh resonant call with rough low spectral emphasis and abrupt onset.
+  semantic_keywords:
+  - contact
+  - identity
+  - attention
+  semantic_description: Used widely in social communication and long-range awareness.
+  confidence: high
+- name: knock call
+  acoustic_keywords:
+  - abrupt
+  - short
+  - broadband
+  - pulsed
+  - repetitive
+  acoustic_description: A percussive knock-like call distinct from croaks and longer display sounds.
+  semantic_keywords:
+  - display
+  - courtship
+  - attention
+  semantic_description: Used in pair-bond and display-related contexts.
+  confidence: medium
+- name: scold call
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - abrupt
+  - repetitive
+  - loud
+  acoustic_description: A harsher repeated call louder and more agitated than routine croaks.
+  semantic_keywords:
+  - alarm
+  - threat
+  - attention
+  semantic_description: Produced in mobbing and disturbance situations.
+  confidence: medium
+- name: gurgle
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - noisy
+  - repetitive
+  - long
+  acoustic_description: A more complex vocal sequence with mixed rough and tonal components.
+  semantic_keywords:
+  - affiliation
+  - display
+  - identity
+  semantic_description: Used in close social interaction and display.
+  confidence: medium
+- name: juvenile begging call
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - loud
+  - short
+  - graded
+  acoustic_description: A repeated higher-pitched solicitation call produced by dependent young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by juveniles to solicit feeding and care.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T21:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for common raven using widely recognized croak, knock, and scold classes.
+- timestamp: '2026-06-10T21:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for common raven using widely recognized croak, knock, and scold classes.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

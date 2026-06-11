@@ -9,32 +9,83 @@ taxonomy:
   genus: Cercopithecus
   species: campbelli
 calls:
-  - name: boom
-    acoustic_keywords: [low_frequency, loud, short, pulsed, repetitive]
-    acoustic_description: A low-frequency pulsed call with high amplitude and simple structure.
-    semantic_keywords: [alarm, attention, group_coordination]
-    semantic_description: Used in conspicuous long-range signaling and as a contextual prelude to other calls.
-    confidence: high
-  - name: krak call
-    acoustic_keywords: [abrupt, noisy, broadband, short, loud]
-    acoustic_description: A short harsh alarm call with abrupt onset and strong noisy structure.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Associated especially with leopard-related or general terrestrial threat contexts.
-    confidence: high
-  - name: hok call
-    acoustic_keywords: [abrupt, noisy, broadband, short, loud]
-    acoustic_description: A sharp harsh call similar in broad structure to krak calls but used in different threat contexts.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Associated especially with eagle-related or aerial threat contexts.
-    confidence: high
-  - name: contact call
-    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
-    acoustic_description: A softer short-range call than alarm calls, with less harsh structure.
-    semantic_keywords: [contact, affiliation, group_coordination]
-    semantic_description: Used in ordinary local social communication.
-    confidence: low
+- name: boom
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - short
+  - pulsed
+  - repetitive
+  acoustic_description: A low-frequency pulsed call with high amplitude and simple structure.
+  semantic_keywords:
+  - alarm
+  - attention
+  - group_coordination
+  semantic_description: Used in conspicuous long-range signaling and as a contextual prelude to other calls.
+  confidence: high
+- name: krak call
+  acoustic_keywords:
+  - abrupt
+  - noisy
+  - broadband
+  - short
+  - loud
+  acoustic_description: A short harsh alarm call with abrupt onset and strong noisy structure.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Associated especially with leopard-related or general terrestrial threat contexts.
+  confidence: high
+- name: hok call
+  acoustic_keywords:
+  - abrupt
+  - noisy
+  - broadband
+  - short
+  - loud
+  acoustic_description: A sharp harsh call similar in broad structure to krak calls but used in different threat contexts.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Associated especially with eagle-related or aerial threat contexts.
+  confidence: high
+- name: contact call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  - graded
+  acoustic_description: A softer short-range call than alarm calls, with less harsh structure.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in ordinary local social communication.
+  confidence: low
+- name: krak-oo
+  acoustic_keywords:
+  - abrupt
+  - noisy
+  - short
+  - repetitive
+  - multi_component
+  acoustic_description: A compound alarm call with a harsh krak-like onset and an appended oo-like suffix.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  - combinatorial
+  semantic_description: Used in lower-intensity or more generalized alert contexts than the most urgent unsuffixed alarm calls.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T22:00:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for Campbell's monkey centered on its well-known alarm call system.
+- timestamp: '2026-06-10T22:00:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for Campbell's monkey centered on its well-known alarm call system.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

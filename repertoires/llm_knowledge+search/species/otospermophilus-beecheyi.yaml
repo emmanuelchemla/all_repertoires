@@ -9,32 +9,83 @@ taxonomy:
   genus: Otospermophilus
   species: beecheyi
 calls:
-  - name: whistle alarm call
-    acoustic_keywords: [high_frequency, tonal, long, loud, frequency_modulated]
-    acoustic_description: A sustained alarm whistle with clear tonal structure and relatively long duration.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Used especially in response to aerial threats and to alert nearby squirrels.
-    confidence: high
-  - name: chatter alarm call
-    acoustic_keywords: [repetitive, abrupt, noisy, short, broadband]
-    acoustic_description: A rapid series of short harsher notes with less tonality than the whistle call.
-    semantic_keywords: [alarm, predator, threat, attention]
-    semantic_description: Often associated with terrestrial predators or closer-range high-risk situations.
-    confidence: high
-  - name: trill
-    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
-    acoustic_description: A lower-amplitude repeated call simpler than the major alarm calls.
-    semantic_keywords: [contact, group_coordination, attention]
-    semantic_description: Used in lower-arousal social contexts and local communication.
-    confidence: medium
-  - name: distress squeal
-    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
-    acoustic_description: A harsh high-pitched call with abrupt onset and strong distress quality.
-    semantic_keywords: [distress, attention, predator]
-    semantic_description: Produced during capture or acute danger.
-    confidence: medium
+- name: whistle alarm call
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - long
+  - loud
+  - frequency_modulated
+  acoustic_description: A sustained alarm whistle with clear tonal structure and relatively long duration.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used especially in response to aerial threats and to alert nearby squirrels.
+  confidence: high
+- name: chatter alarm call
+  acoustic_keywords:
+  - repetitive
+  - abrupt
+  - noisy
+  - short
+  - broadband
+  acoustic_description: A rapid series of short harsher notes with less tonality than the whistle call.
+  semantic_keywords:
+  - alarm
+  - predator
+  - threat
+  - attention
+  semantic_description: Often associated with terrestrial predators or closer-range high-risk situations.
+  confidence: high
+- name: trill
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  - graded
+  acoustic_description: A lower-amplitude repeated call simpler than the major alarm calls.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used in lower-arousal social contexts and local communication.
+  confidence: medium
+- name: distress squeal
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - abrupt
+  - short
+  acoustic_description: A harsh high-pitched call with abrupt onset and strong distress quality.
+  semantic_keywords:
+  - distress
+  - attention
+  - predator
+  semantic_description: Produced during capture or acute danger.
+  confidence: medium
+- name: growl-chatter
+  acoustic_keywords:
+  - repetitive
+  - noisy
+  - broadband
+  - short
+  - abrupt
+  acoustic_description: A harsher close-range call with repeated rough elements, more aggressive than local trills.
+  semantic_keywords:
+  - threat
+  - alarm
+  - attention
+  semantic_description: Used in close-range confrontation or heightened disturbance.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T21:00:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for California ground squirrel emphasizing the classic whistle versus chatter alarm system.
+- timestamp: '2026-06-10T21:00:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for California ground squirrel emphasizing the classic whistle versus chatter alarm system.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

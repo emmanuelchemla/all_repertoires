@@ -9,32 +9,82 @@ taxonomy:
   genus: Heterocephalus
   species: glaber
 calls:
-  - name: chirp
-    acoustic_keywords: [high_frequency, short, tonal, repetitive, quiet]
-    acoustic_description: A brief high-pitched social call with relatively simple tonal structure.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Used in colony contact and local interaction.
-    confidence: medium
-  - name: grunt
-    acoustic_keywords: [low_frequency, short, repetitive, quiet, graded]
-    acoustic_description: A low short call with simple structure and lower amplitude than alarm-like sounds.
-    semantic_keywords: [contact, affiliation, attention]
-    semantic_description: Used in ordinary colony social behavior and close-range coordination.
-    confidence: medium
-  - name: squeak
-    acoustic_keywords: [high_frequency, loud, abrupt, noisy, short]
-    acoustic_description: A sharper and higher-intensity call than routine chirps or grunts.
-    semantic_keywords: [distress, submission, attention]
-    semantic_description: Produced in acute conflict or discomfort.
-    confidence: medium
-  - name: alarm call
-    acoustic_keywords: [abrupt, repetitive, broadband, short, loud]
-    acoustic_description: A conspicuous abrupt call type distinct from routine contact vocalizations.
-    semantic_keywords: [alarm, attention, threat]
-    semantic_description: Used to alert colony members to immediate disturbance.
-    confidence: low
+- name: chirp
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A brief high-pitched social call with relatively simple tonal structure.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Used in colony contact and local interaction.
+  confidence: medium
+- name: grunt
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - repetitive
+  - quiet
+  - graded
+  acoustic_description: A low short call with simple structure and lower amplitude than alarm-like sounds.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - attention
+  semantic_description: Used in ordinary colony social behavior and close-range coordination.
+  confidence: medium
+- name: squeak
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - abrupt
+  - noisy
+  - short
+  acoustic_description: A sharper and higher-intensity call than routine chirps or grunts.
+  semantic_keywords:
+  - distress
+  - submission
+  - attention
+  semantic_description: Produced in acute conflict or discomfort.
+  confidence: medium
+- name: alarm call
+  acoustic_keywords:
+  - abrupt
+  - repetitive
+  - broadband
+  - short
+  - loud
+  acoustic_description: A conspicuous abrupt call type distinct from routine contact vocalizations.
+  semantic_keywords:
+  - alarm
+  - attention
+  - threat
+  semantic_description: Used to alert colony members to immediate disturbance.
+  confidence: low
+- name: signature call
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - graded
+  acoustic_description: A short individually recognizable contact vocalization embedded within the colony social repertoire.
+  semantic_keywords:
+  - identity
+  - contact
+  - group_coordination
+  semantic_description: Used in colony-member recognition and routine social contact.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T21:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for naked mole-rat using broad colony social and distress call categories.
+- timestamp: '2026-06-10T21:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for naked mole-rat using broad colony social and distress call categories.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

@@ -9,32 +9,84 @@ taxonomy:
   genus: Gallus
   species: gallus
 calls:
-  - name: crow
-    acoustic_keywords: [loud, harmonic, long, repetitive, tonal]
-    acoustic_description: A stereotyped far-carrying call with clear harmonic structure and repeated syllabic pattern.
-    semantic_keywords: [territorial, display, identity, attention]
-    semantic_description: Used by males in long-range advertisement and status display.
-    confidence: high
-  - name: food call
-    acoustic_keywords: [short, repetitive, tonal, quiet, graded]
-    acoustic_description: A relatively soft repeated call given in feeding contexts.
-    semantic_keywords: [food, recruitment, affiliation, attention]
-    semantic_description: Used to recruit conspecifics, especially mates or offspring, to food.
-    confidence: high
-  - name: aerial alarm call
-    acoustic_keywords: [high_frequency, short, abrupt, repetitive, loud]
-    acoustic_description: A short urgent call with rapid delivery and strong attention-capturing quality.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Produced especially for aerial threats and elicits specific anti-predator responses.
-    confidence: high
-  - name: ground alarm call
-    acoustic_keywords: [abrupt, noisy, broadband, short, repetitive]
-    acoustic_description: A harsher alarm call distinct from aerial alarm structure.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Produced in response to terrestrial predators or disturbance on the ground.
-    confidence: high
+- name: crow
+  acoustic_keywords:
+  - loud
+  - harmonic
+  - long
+  - repetitive
+  - tonal
+  acoustic_description: A stereotyped far-carrying call with clear harmonic structure and repeated syllabic pattern.
+  semantic_keywords:
+  - territorial
+  - display
+  - identity
+  - attention
+  semantic_description: Used by males in long-range advertisement and status display.
+  confidence: high
+- name: food call
+  acoustic_keywords:
+  - short
+  - repetitive
+  - tonal
+  - quiet
+  - graded
+  acoustic_description: A relatively soft repeated call given in feeding contexts.
+  semantic_keywords:
+  - food
+  - recruitment
+  - affiliation
+  - attention
+  semantic_description: Used to recruit conspecifics, especially mates or offspring, to food.
+  confidence: high
+- name: aerial alarm call
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - abrupt
+  - repetitive
+  - loud
+  acoustic_description: A short urgent call with rapid delivery and strong attention-capturing quality.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced especially for aerial threats and elicits specific anti-predator responses.
+  confidence: high
+- name: ground alarm call
+  acoustic_keywords:
+  - abrupt
+  - noisy
+  - broadband
+  - short
+  - repetitive
+  acoustic_description: A harsher alarm call distinct from aerial alarm structure.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced in response to terrestrial predators or disturbance on the ground.
+  confidence: high
+- name: distress call
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - abrupt
+  - short
+  - noisy
+  acoustic_description: A sharp urgent high-intensity vocalization distinct from routine food or crow calls.
+  semantic_keywords:
+  - distress
+  - attention
+  - predator
+  semantic_description: Produced during capture, acute danger, or intense social conflict.
+  confidence: medium
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for red junglefowl emphasizing crow, food, and predator-specific alarm calls.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for red junglefowl emphasizing crow, food, and predator-specific alarm calls.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

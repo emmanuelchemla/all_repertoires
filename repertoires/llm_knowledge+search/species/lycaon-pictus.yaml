@@ -9,32 +9,82 @@ taxonomy:
   genus: Lycaon
   species: pictus
 calls:
-  - name: hoo call
-    acoustic_keywords: [low_frequency, tonal, harmonic, long, repetitive]
-    acoustic_description: A low, resonant call with relatively smooth tonal quality, often repeated in bouts.
-    semantic_keywords: [contact, group_coordination, recruitment]
-    semantic_description: Used in rallying and coordinating pack members before movement or hunts.
-    confidence: high
-  - name: twitter
-    acoustic_keywords: [high_frequency, short, repetitive, tonal, quiet]
-    acoustic_description: A lighter higher-pitched social call with repeated brief notes.
-    semantic_keywords: [affiliation, contact, attention]
-    semantic_description: Used in close-range social interactions within the pack.
-    confidence: medium
-  - name: squeal
-    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
-    acoustic_description: A sharp high-intensity call with strong distress or protest quality.
-    semantic_keywords: [distress, submission, attention]
-    semantic_description: Produced in conflict, handling, or acute distress situations.
-    confidence: medium
-  - name: growl
-    acoustic_keywords: [low_frequency, noisy, broadband, long, graded]
-    acoustic_description: A rough low call with threat-like quality and variable duration.
-    semantic_keywords: [threat, aggression, attention]
-    semantic_description: Used in close-range warning and competitive interactions.
-    confidence: medium
+- name: hoo call
+  acoustic_keywords:
+  - low_frequency
+  - tonal
+  - harmonic
+  - long
+  - repetitive
+  acoustic_description: A low, resonant call with relatively smooth tonal quality, often repeated in bouts.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - recruitment
+  semantic_description: Used in rallying and coordinating pack members before movement or hunts.
+  confidence: high
+- name: twitter
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  - quiet
+  acoustic_description: A lighter higher-pitched social call with repeated brief notes.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - attention
+  semantic_description: Used in close-range social interactions within the pack.
+  confidence: medium
+- name: squeal
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - abrupt
+  - short
+  acoustic_description: A sharp high-intensity call with strong distress or protest quality.
+  semantic_keywords:
+  - distress
+  - submission
+  - attention
+  semantic_description: Produced in conflict, handling, or acute distress situations.
+  confidence: medium
+- name: growl
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - broadband
+  - long
+  - graded
+  acoustic_description: A rough low call with threat-like quality and variable duration.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Used in close-range warning and competitive interactions.
+  confidence: medium
+- name: rally chirp
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  - loud
+  acoustic_description: A short excited call sharper than the low hoo call and more locally directed.
+  semantic_keywords:
+  - group_coordination
+  - recruitment
+  - attention
+  semantic_description: Used in pre-hunt or pack-rally excitement and helps synchronize group activity.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T21:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for African wild dog centered on the recruitment hoo and common social or agonistic calls.
+- timestamp: '2026-06-10T21:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for African wild dog centered on the recruitment hoo and common social or agonistic calls.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

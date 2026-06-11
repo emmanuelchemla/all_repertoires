@@ -9,32 +9,82 @@ taxonomy:
   genus: Marmota
   species: flaviventris
 calls:
-  - name: whistle alarm call
-    acoustic_keywords: [high_frequency, tonal, long, loud, frequency_modulated]
-    acoustic_description: A sustained whistle with clear tonal structure and strong amplitude.
-    semantic_keywords: [alarm, predator, attention]
-    semantic_description: Used to warn group members of predators and other dangers.
-    confidence: high
-  - name: trill
-    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
-    acoustic_description: A lower-amplitude repeated call with simpler structure than the main alarm whistle.
-    semantic_keywords: [contact, group_coordination, affiliation]
-    semantic_description: Used in routine local communication among nearby individuals.
-    confidence: medium
-  - name: scream
-    acoustic_keywords: [high_frequency, loud, noisy, abrupt, short]
-    acoustic_description: A harsh abrupt call with stronger distress quality than the main alarm whistle.
-    semantic_keywords: [distress, predator, attention]
-    semantic_description: Produced in capture or acute danger situations.
-    confidence: medium
-  - name: chatter
-    acoustic_keywords: [repetitive, abrupt, noisy, short, broadband]
-    acoustic_description: A rapid series of short harsher notes than the whistle alarm.
-    semantic_keywords: [threat, alarm, attention]
-    semantic_description: Associated with close-range agitation or threat.
-    confidence: low
+- name: whistle alarm call
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - long
+  - loud
+  - frequency_modulated
+  acoustic_description: A sustained whistle with clear tonal structure and strong amplitude.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used to warn group members of predators and other dangers.
+  confidence: high
+- name: trill
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  - graded
+  acoustic_description: A lower-amplitude repeated call with simpler structure than the main alarm whistle.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Used in routine local communication among nearby individuals.
+  confidence: medium
+- name: scream
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - abrupt
+  - short
+  acoustic_description: A harsh abrupt call with stronger distress quality than the main alarm whistle.
+  semantic_keywords:
+  - distress
+  - predator
+  - attention
+  semantic_description: Produced in capture or acute danger situations.
+  confidence: medium
+- name: chatter
+  acoustic_keywords:
+  - repetitive
+  - abrupt
+  - noisy
+  - short
+  - broadband
+  acoustic_description: A rapid series of short harsher notes than the whistle alarm.
+  semantic_keywords:
+  - threat
+  - alarm
+  - attention
+  semantic_description: Associated with close-range agitation or threat.
+  confidence: low
+- name: teeth chatter call
+  acoustic_keywords:
+  - repetitive
+  - abrupt
+  - noisy
+  - short
+  - broadband
+  acoustic_description: A rapid sequence of harsh elements used at close range and more aggressive than the main alarm whistle.
+  semantic_keywords:
+  - threat
+  - attention
+  - alarm
+  semantic_description: Used in agitation or close-range confrontational contexts.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T21:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for yellow-bellied marmot emphasizing alarm whistles and local social calls.
+- timestamp: '2026-06-10T21:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for yellow-bellied marmot emphasizing alarm whistles and local social calls.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

@@ -9,32 +9,83 @@ taxonomy:
   genus: Molothrus
   species: ater
 calls:
-  - name: song-spread display song
-    acoustic_keywords: [tonal, harmonic, multi_component, long, loud]
-    acoustic_description: A patterned display song with repeated phrase structure and strong tonal or buzzy components.
-    semantic_keywords: [courtship, mating, display, identity]
-    semantic_description: Used by males in sexual display and courtship.
-    confidence: high
-  - name: chatter
-    acoustic_keywords: [short, repetitive, noisy, multi_component, loud]
-    acoustic_description: A rapid sequence of short notes with more local and variable structure than display song.
-    semantic_keywords: [affiliation, contact, attention]
-    semantic_description: Used in ordinary social interaction and female responsiveness contexts.
-    confidence: medium
-  - name: flight whistle
-    acoustic_keywords: [tonal, harmonic, short, frequency_modulated, loud]
-    acoustic_description: A brief tonal call used during movement and contact.
-    semantic_keywords: [contact, group_coordination, identity]
-    semantic_description: Helps maintain flock awareness and short-range coordination.
-    confidence: medium
-  - name: begging call
-    acoustic_keywords: [high_frequency, repetitive, loud, short, graded]
-    acoustic_description: A persistent solicitation call produced by young.
-    semantic_keywords: [begging, caregiving, attention]
-    semantic_description: Used by nestlings or fledglings to solicit provisioning.
-    confidence: medium
+- name: song-spread display song
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - multi_component
+  - long
+  - loud
+  acoustic_description: A patterned display song with repeated phrase structure and strong tonal or buzzy components.
+  semantic_keywords:
+  - courtship
+  - mating
+  - display
+  - identity
+  semantic_description: Used by males in sexual display and courtship.
+  confidence: high
+- name: chatter
+  acoustic_keywords:
+  - short
+  - repetitive
+  - noisy
+  - multi_component
+  - loud
+  acoustic_description: A rapid sequence of short notes with more local and variable structure than display song.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - attention
+  semantic_description: Used in ordinary social interaction and female responsiveness contexts.
+  confidence: medium
+- name: flight whistle
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - short
+  - frequency_modulated
+  - loud
+  acoustic_description: A brief tonal call used during movement and contact.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Helps maintain flock awareness and short-range coordination.
+  confidence: medium
+- name: begging call
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - loud
+  - short
+  - graded
+  acoustic_description: A persistent solicitation call produced by young.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Used by nestlings or fledglings to solicit provisioning.
+  confidence: medium
+- name: rattle call
+  acoustic_keywords:
+  - repetitive
+  - noisy
+  - short
+  - multi_component
+  - loud
+  acoustic_description: A rapid sequence of rough short notes distinct from display song and ordinary chatter.
+  semantic_keywords:
+  - display
+  - attention
+  - affiliation
+  semantic_description: Used in socially active display or close flock interaction.
+  confidence: low
 provenance:
-  - timestamp: "2026-06-10T22:30:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Broad exploratory draft for brown-headed cowbird emphasizing male display song and common social calls.
+- timestamp: '2026-06-10T22:30:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Broad exploratory draft for brown-headed cowbird emphasizing male display song and common social calls.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.

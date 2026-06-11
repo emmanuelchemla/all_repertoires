@@ -9,115 +9,133 @@ taxonomy:
   genus: Cercopithecus
   species: diana
 calls:
-  - name: leopard alarm call
-    alternative_names:
-      - leopard alarm
-      - male leopard call
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - loud
-      - broadband
-      - abrupt
-      - short
-      - repetitive
-    acoustic_description: Loud, harsh alarm notes produced in repeated bouts and optimized for long-range transmission through forest habitat.
-    semantic_keywords:
-      - alarm
-      - predator
-      - group_coordination
-      - identity
-    semantic_description: Given mainly by adult males to terrestrial predators such as leopards, alerting both group members and neighboring males.
-    confidence: high
-    references:
-      - zuberbuhler_2000
-      - candiotti_etal_2015
-  - name: eagle alarm call
-    alternative_names:
-      - eagle alarm
-      - male eagle call
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - male
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - loud
-      - tonal
-      - frequency_modulated
-      - short
-      - repetitive
-    acoustic_description: Loud alarm calls with acoustic structure distinct from leopard alarms, often sounding clearer and more frequency-modulated.
-    semantic_keywords:
-      - alarm
-      - predator
-      - group_coordination
-      - identity
-    semantic_description: Produced mainly in response to crowned eagle danger and used in long-distance warning and intergroup information transfer.
-    confidence: high
-    references:
-      - zuberbuhler_2000
-      - candiotti_etal_2015
-  - name: female alarm response call
-    alternative_names:
-      - female reply call
-      - female alarm call
-    scope:
-      life_stages:
-        - adult
-      sexes:
-        - female
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - short
-      - tonal
-      - repetitive
-      - quiet
-    acoustic_description: Shorter-range calls given by females, less far-carrying than the adult male loud alarms.
-    semantic_keywords:
-      - alarm
-      - predator
-      - group_coordination
-      - attention
-    semantic_description: Females respond vocally to male predator alarms and local danger, contributing to within-group coordination even though the long-range signal system is male-dominated.
-    confidence: medium
-    references:
-      - zuberbuhler_2000
-  - name: contact call
-    alternative_names:
-      - social contact call
-    acoustic_keywords:
-      - short
-      - tonal
-      - quiet
-      - repetitive
-    acoustic_description: Soft, short-range calls with simpler structure than alarm calls.
-    semantic_keywords:
-      - contact
-      - group_coordination
-      - affiliation
-    semantic_description: Used in routine within-group spacing and social cohesion outside immediate alarm contexts.
-    confidence: low
+- name: leopard alarm call
+  alternative_names:
+  - leopard alarm
+  - male leopard call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - loud
+  - broadband
+  - abrupt
+  - short
+  - repetitive
+  acoustic_description: Loud, harsh alarm notes produced in repeated bouts and optimized for long-range transmission through forest habitat.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  - identity
+  semantic_description: Given mainly by adult males to terrestrial predators such as leopards, alerting both group members and neighboring males.
+  confidence: high
+  references:
+  - zuberbuhler_2000
+  - candiotti_etal_2015
+- name: eagle alarm call
+  alternative_names:
+  - eagle alarm
+  - male eagle call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - loud
+  - tonal
+  - frequency_modulated
+  - short
+  - repetitive
+  acoustic_description: Loud alarm calls with acoustic structure distinct from leopard alarms, often sounding clearer and more frequency-modulated.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  - identity
+  semantic_description: Produced mainly in response to crowned eagle danger and used in long-distance warning and intergroup information transfer.
+  confidence: high
+  references:
+  - zuberbuhler_2000
+  - candiotti_etal_2015
+- name: female alarm response call
+  alternative_names:
+  - female reply call
+  - female alarm call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: Shorter-range calls given by females, less far-carrying than the adult male loud alarms.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  - attention
+  semantic_description: Females respond vocally to male predator alarms and local danger, contributing to within-group coordination even though the long-range signal system is male-dominated.
+  confidence: medium
+  references:
+  - zuberbuhler_2000
+- name: contact call
+  alternative_names:
+  - social contact call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  acoustic_description: Soft, short-range calls with simpler structure than alarm calls.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Used in routine within-group spacing and social cohesion outside immediate alarm contexts.
+  confidence: low
+- name: male leopard alarm call
+  acoustic_keywords:
+  - abrupt
+  - noisy
+  - broadband
+  - short
+  - loud
+  acoustic_description: A harsh loud alarm call used by adult males in terrestrial predator contexts, distinct from routine long-distance advertising phrases.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used in response to leopard or major terrestrial predator threat and contributes to mixed-species alarm communication.
+  confidence: medium
 references:
   candiotti_etal_2015:
-    citation: "Candiotti, A., Mundry, R., Zuberbühler, K., and Slocombe, K.E. 2015. Social familiarity affects Diana monkey (Cercopithecus diana diana) alarm call responses in habitat-specific ways. Royal Society Open Science 2:150639."
+    citation: "Candiotti, A., Mundry, R., Zuberb\xFChler, K., and Slocombe, K.E. 2015. Social familiarity affects Diana monkey (Cercopithecus diana diana) alarm call responses in habitat-specific ways. Royal Society Open Science 2:150639."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4785987/
     doi: 10.1098/rsos.150639
   zuberbuhler_2000:
-    citation: Zuberbühler, K. 2000. Predator-specific alarm calls in Campbell's monkeys, Diana monkeys, and putty-nosed monkeys. Behaviour 137(1):1-27.
+    citation: "Zuberb\xFChler, K. 2000. Predator-specific alarm calls in Campbell's monkeys, Diana monkeys, and putty-nosed monkeys. Behaviour 137(1):1-27."
   iucn_2019:
-    citation: Oates, J.F. and Gonedelé Bi, S. 2019. Cercopithecus diana. The IUCN Red List of Threatened Species 2019 e.T4216A17947498.
+    citation: "Oates, J.F. and Gonedel\xE9 Bi, S. 2019. Cercopithecus diana. The IUCN Red List of Threatened Species 2019 e.T4216A17947498."
     url: https://www.iucnredlist.org/species/4216/17947498
 provenance:
-  - timestamp: "2026-06-10T19:45:00+02:00"
-    model: GPT-5 Codex
-    action: generated
-    notes: Initial LLM knowledge plus web-search draft centered on the predator-specific male alarm system with cautious treatment of female and contact calls.
+- timestamp: '2026-06-10T19:45:00+02:00'
+  model: GPT-5 Codex
+  action: generated
+  notes: Initial LLM knowledge plus web-search draft centered on the predator-specific male alarm system with cautious treatment of female and contact calls.
+- timestamp: '2026-06-11T00:40:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Independent exhaustiveness pass added additional externally informed call classes without using the literature-extraction repertoire.
