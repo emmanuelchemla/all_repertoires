@@ -1,0 +1,253 @@
+scientific_name: Aotus azarae
+common_name: Azara's owl monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Aotidae
+  genus: Aotus
+  species: azarae
+
+calls:
+  - name: hoot
+    alternative_names:
+      - loud call
+      - resonant hoot
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - loud
+      - low_frequency
+      - long
+    acoustic_description: >
+      A resonant, low-pitched tonal call produced via an inflatable throat sac.
+      Typically a sustained note or short series of notes in the 190–600 Hz range.
+      Females tend to produce longer, more harmonic hoots with lower Shannon entropy;
+      males produce somewhat shorter, slightly gruffer hoots with higher dominant
+      frequency and greater spectral entropy, indicating sexual dimorphism.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - courtship
+      - mating
+    semantic_description: >
+      The primary loud call of Azara's owl monkey, used in inter-group spacing,
+      territorial advertisement, and mate-attraction contexts. Both sexes produce
+      hoots; sex-specific differences in structure suggest a role in sexual selection.
+    confidence: high
+    references: [rivas_etal_2019]
+
+  - name: low trill
+    alternative_names:
+      - twitter-trill
+      - trill
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male, unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - repetitive
+      - quiet
+      - short
+    acoustic_description: >
+      A rapid series of frequency-modulated tonal pulses, producing a fast trilling
+      quality. Relatively quiet and short, spanning roughly 500–1500 Hz. Described
+      as a "twitter-trill" in older captive studies (Andrew 1963). Softer and
+      more rapid than the hoot.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: >
+      Used as a soft contact or cohesion call within the family group, maintaining
+      proximity during foraging bouts or travel. Trills have also been reported as
+      distress signals in infants and juveniles when separated from caregivers.
+    confidence: medium
+    references: [moynihan_1964]
+
+  - name: gulp
+    alternative_names:
+      - resonant grunt
+    scope:
+      life_stages: [adult]
+      sexes: [female, male, unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - harmonic
+      - short
+      - abrupt
+    acoustic_description: >
+      A short, resonant note with harmonic structure, often described as a
+      low "gulp" or resonant grunt. Brief duration (< 0.2 s), with energy
+      concentrated at low frequencies (200–600 Hz). Has some tonal quality
+      but with audible breathiness.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: >
+      A short-range social call used during close-proximity interactions within the
+      family group. Likely functions in affiliation and low-urgency coordination.
+      Identified by Moynihan (1964) in captive owl monkeys as one of the core
+      short-range call types.
+    confidence: medium
+    references: [moynihan_1964]
+
+  - name: grunt complex
+    alternative_names:
+      - gruff grunt
+      - grunt
+    scope:
+      life_stages: [adult]
+      sexes: [female, male, unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - broadband
+    acoustic_description: >
+      A short, low-pitched, broad-spectrum vocalization with noisy, gruff quality.
+      Duration typically under 0.3 s, energy concentrated below 1000 Hz with
+      harmonic-free noisy components. Described as "gruff" in some accounts.
+      The sneeze grunt variant consists of double or triple staccato aspirated
+      clicks superimposed on the gruff grunt structure.
+    semantic_keywords:
+      - alarm
+      - threat
+      - attention
+    semantic_description: >
+      Produced in mildly alarming situations or as an attention signal within
+      the group. The sneeze-grunt variant described by Moynihan (1964) may
+      specifically signal impending danger to group members. Also recorded
+      during mild agonistic encounters.
+    confidence: medium
+    references: [moynihan_1964]
+
+  - name: moan
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male, unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - long
+      - frequency_modulated
+      - quiet
+      - low_frequency
+    acoustic_description: >
+      A sustained, low-pitched tonal call with gradual frequency modulation,
+      producing a moan-like quality. Duration is relatively long (0.3–1 s or
+      more), with smooth pitch contour, typically below 1000 Hz. Softer than
+      the hoot and lacking the same resonant quality.
+    semantic_keywords:
+      - distress
+      - contact
+      - submission
+    semantic_description: >
+      Associated with mild distress, separation, or submission contexts.
+      Reported in both adults and juveniles in captive and semi-wild settings.
+      May function as a solicitation or contact-seeking call when an individual
+      is isolated or stressed.
+    confidence: medium
+    references: [moynihan_1964]
+
+  - name: scream
+    alternative_names:
+      - shriek
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male, unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - loud
+      - short
+      - abrupt
+    acoustic_description: >
+      A loud, high-pitched, broadband call with noisy spectral structure, covering
+      a wide frequency range (often 1000–8000 Hz or above). Brief to moderate
+      duration, typically abrupt onset, with strong amplitude. Lacks clear harmonic
+      patterning.
+    semantic_keywords:
+      - distress
+      - alarm
+      - aggression
+    semantic_description: >
+      Produced in high-intensity distress, intense fear, or aggressive escalation
+      contexts. May be emitted during predator encounters, inter-group conflicts,
+      or physical injury. One of the highest-urgency calls in the repertoire.
+    confidence: medium
+    references: [moynihan_1964]
+
+  - name: sneeze grunt
+    alternative_names:
+      - alarm grunt
+      - staccato grunt
+    scope:
+      life_stages: [adult]
+      sexes: [female, male, unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - short
+      - pulsed
+      - abrupt
+      - broadband
+    acoustic_description: >
+      Double or triple staccato aspirated pulses ("clicks"), acoustically described
+      as a sneeze superimposed on a gruff grunt. Brief duration per pulse (~0.05–0.1 s),
+      broadband and noisy, with rapid repetition in two or three bursts. Energy
+      spread across low to mid frequencies.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: >
+      A specific alarm signal described by Moynihan (1964) to alert group members
+      to impending danger, potentially from predators. The distinctive pulsed
+      structure may help discriminate this alarm from the general grunt complex.
+      Attributed to the Aotus genus broadly and plausible in A. azarae.
+    confidence: low
+    references: [moynihan_1964]
+
+references:
+  rivas_etal_2019:
+    citation: >
+      Rivas, B. A., Zunino, G. E., & Fernandez-Duque, E. (2019). Sexual dimorphism in
+      the loud calls of Azara's owl monkeys (Aotus azarae): evidence of sexual selection?
+      Primates, 61(1), 143–152.
+    doi: 10.1007/s10329-019-00773-6
+  moynihan_1964:
+    citation: >
+      Moynihan, M. (1964). Some behavior patterns of platyrrhine monkeys.
+      I. The night monkey (Aotus trivirgatus). Smithsonian Miscellaneous Collections,
+      146(5), 1–84.
+
+provenance:
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Created from LLM knowledge synthesis and web search. Core call types (hoot,
+      low trill, gulp, grunt complex, moan, scream) from Moynihan (1964) Aotus genus
+      framework; hoot sexual dimorphism confirmed in Aotus azarae wild population by
+      Rivas et al. (2019). Sneeze grunt included at low confidence as genus-level
+      attribution. Seven call types total.

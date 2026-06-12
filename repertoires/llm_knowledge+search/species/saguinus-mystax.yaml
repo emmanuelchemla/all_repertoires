@@ -1,0 +1,315 @@
+scientific_name: Saguinus mystax
+common_name: Moustached tamarin
+
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Saguinus
+  species: mystax
+
+calls:
+  - name: long call
+    alternative_names:
+      - loud call
+      - isolation call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - long
+      - multi_component
+      - loud
+    acoustic_description: >
+      A multi-phrase vocalization often introduced by a chirp, trill, or whine
+      syllable followed by one to three distinct phrases in a fixed sequential
+      order. Frequency-modulated, high-pitched, and relatively long in duration.
+      Individual differences in call structure are detectable, and the call
+      retains species-specific acoustic features distinguishing it from sympatric
+      tamarins.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+      - spacing
+    semantic_description: >
+      Produced primarily when an individual becomes separated from its troop.
+      Elicits troop-specific responses: troop members reply and converge on the
+      caller far more often than members of other troops. Serves to re-establish
+      group cohesion and encodes individual identity information.
+    confidence: high
+    references: [snowdon_hodun_1985, kirchhof_etal_2006]
+
+  - name: aerial alarm call
+    alternative_names:
+      - raptor alarm call
+      - aerial predator alarm
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - abrupt
+      - short
+      - loud
+    acoustic_description: >
+      Short, high-frequency tonal call with abrupt onset, acoustically distinct
+      from the terrestrial alarm call. The specific frequency contour and duration
+      encode information that listeners use to orient upward in response to playback.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Produced in response to aerial predators (raptors). Listeners reliably look
+      upward and move toward lower vegetation following playback. Functionally
+      referential: encodes predator-type information, not merely arousal level.
+    confidence: high
+    references: [kirchhof_etal_2006]
+
+  - name: terrestrial alarm call
+    alternative_names:
+      - terrestrial predator alarm
+      - snake alarm call
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - short
+      - loud
+    acoustic_description: >
+      Acoustically distinct from the aerial alarm call; typically broader
+      spectral content and different frequency contour. Listeners orient
+      downward after playback, suggesting the acoustic structure reliably
+      differentiates this from the aerial alarm call.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Produced in response to terrestrial predators such as snakes or
+      felids. Listeners look downward and may approach or mob the predator
+      after hearing this call. Functionally referential, with acoustic
+      features encoding predator class.
+    confidence: high
+    references: [kirchhof_etal_2006]
+
+  - name: chirp
+    alternative_names:
+      - chip
+      - contact chirp
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - short
+      - abrupt
+    acoustic_description: >
+      Brief, upward or arc-shaped frequency-modulated note, typically lasting
+      tens of milliseconds. Often functions as a building block in longer
+      vocalizations such as the long call introductory phrase. Pure or
+      near-pure tonal quality.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: >
+      Multipurpose short-range contact call; also used as introductory syllable
+      of the long call and in alarm and food-call contexts. Maintains proximity
+      among group members during foraging and travel.
+    confidence: medium
+    references: [snowdon_hodun_1985]
+
+  - name: trill
+    alternative_names:
+      - twitter
+      - rapid trill
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - repetitive
+      - frequency_modulated
+      - short
+    acoustic_description: >
+      Rapid series of short frequency-modulated notes delivered in quick
+      succession, producing a trilled or twittered percept. Individual notes
+      are tonal; their rapid repetition gives a buzzing or trilled quality.
+      Duration is brief to moderate.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: >
+      Used during close-range affiliative interactions and as an introductory
+      phrase component of the long call. Also produced during mild arousal or
+      as a soft contact call within cohesive groups.
+    confidence: medium
+
+  - name: whine
+    alternative_names:
+      - whin
+      - plaintive call
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - frequency_modulated
+      - graded
+    acoustic_description: >
+      Sustained, rising or falling pure-tone call of moderate to long duration.
+      Often frequency-modulated with a drawn-out contour. Can function as a
+      phrase in the long-call sequence or as a standalone plaintive vocalization.
+    semantic_keywords:
+      - contact
+      - distress
+      - begging
+    semantic_description: >
+      Produced during mild distress or separation anxiety, particularly by
+      infants and juveniles soliciting care or contact. Also occurs as an
+      introductory component of the long call. Graded with arousal level.
+    confidence: medium
+
+  - name: squeal
+    alternative_names:
+      - scream
+      - distress call
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - loud
+      - abrupt
+    acoustic_description: >
+      High-amplitude, broadband, harsh vocalization with rapid onset. Noisy
+      spectral content spanning a broad frequency range. Duration can range from
+      a brief burst to a prolonged cry depending on intensity of eliciting stimulus.
+    semantic_keywords:
+      - distress
+      - alarm
+      - submission
+    semantic_description: >
+      Produced during intense fear, pain, physical restraint, or aggressive
+      attack. Elicits rapid approach and support from group members. Infants
+      produce it when separated or handled; adults in extreme agonistic encounters.
+    confidence: medium
+
+  - name: food call
+    alternative_names:
+      - food-associated call
+      - recruitment call
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - repetitive
+    acoustic_description: >
+      Series of short, tonal notes or chirps produced in rapid succession at
+      high frequency. Acoustically similar to general chirp calls but produced
+      in shorter, more repetitive bouts linked to food discovery or feeding context.
+    semantic_keywords:
+      - food
+      - recruitment
+      - group_coordination
+    semantic_description: >
+      Produced when an individual discovers a food patch, particularly
+      concentrated or high-quality food sources. Recruits group members to the
+      food site and facilitates coordinated foraging. Well-documented in closely
+      related Saguinus species; attributed to S. mystax by analogy and general
+      tamarin behavioral ecology.
+    confidence: low
+
+  - name: mobbing call
+    alternative_names:
+      - predator harassment call
+      - agonistic alarm
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - repetitive
+      - abrupt
+    acoustic_description: >
+      Loud, harsh, repetitive calls produced in bursts. Broad spectral content,
+      noisy character, high amplitude. Often accompanied by rapid locomotion
+      toward the predator and other non-vocal threat displays.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+      - aggression
+    semantic_description: >
+      Produced during active mobbing of a stationary or slow-moving predator
+      (documented for boa constrictors and raptors in callitrichids including
+      S. mystax). Groups converge on the predator and produce calls
+      repetitively while harassing it, potentially driving it away.
+    confidence: medium
+    references: [kirchhof_etal_2006]
+
+references:
+  snowdon_hodun_1985:
+    citation: >
+      Snowdon, C. T., & Hodun, A. (1985). Troop-specific responses to long calls
+      of isolated tamarins (Saguinus mystax). American Journal of Primatology,
+      8(3), 205–213.
+    doi: 10.1002/ajp.1350080303
+  kirchhof_etal_2006:
+    citation: >
+      Kirchhof, J., & Hammerschmidt, K. (2006). Functionally referential alarm calls
+      in tamarins (Saguinus fuscicollis and Saguinus mystax) – Evidence from playback
+      experiments. Ethology, 112(4), 346–354.
+    doi: 10.1111/j.1439-0310.2006.01165.x
+
+provenance:
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Generated from LLM knowledge plus web search. Key sources: Snowdon & Hodun
+      1985 (long calls, troop responses), Kirchhof & Hammerschmidt 2006
+      (referential alarm calls). Chirp, trill, whine, and squeal inferred from
+      well-documented Saguinus/callitrichid literature. Food call included at
+      low confidence by analogy with congeners. Mobbing call supported by
+      documented boa constrictor attack and group defence in S. mystax.

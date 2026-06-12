@@ -1,0 +1,326 @@
+scientific_name: Nestor notabilis
+common_name: Kea
+
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Psittaciformes
+  family: Nestoridae
+  genus: Nestor
+  species: notabilis
+
+calls:
+  - name: screech
+    alternative_names:
+      - kee-ah call
+      - contact screech
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - short
+    acoustic_description: >
+      A rising then falling two-note screech, often transcribed as "kee-ah". Non-oscillating,
+      relatively tonal, moderately high in frequency (~1–5 kHz range), short duration. The
+      spectrogram shows a characteristic upward then downward frequency sweep. Individually
+      variable and encodes sex and age information.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: >
+      The primary long-distance contact call of adult kea. Functions to locate conspecifics
+      and assemble temporary foraging or social groups. Kea respond to screech calls with
+      further screech, screech-trill, or trill calls, indicating it anchors broad group
+      coordination. The species' common name derives from this call.
+    confidence: high
+    references: [zandberg_etal_2012]
+
+  - name: screech-trill
+    alternative_names:
+      - hybrid screech
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - frequency_modulated
+      - tonal
+      - multi_component
+    acoustic_description: >
+      A hybrid call combining the screech onset with an oscillating trill component appended
+      at the end. Multi-component structure with both non-oscillating and oscillating segments;
+      higher frequency and more complex than either the screech or trill in isolation.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: >
+      Appears to bridge the screech contact call and the trill alarm call contexts; kea
+      respond to screech calls with screech-trills as well as with trills. Likely functions
+      in contexts requiring both group assembly and heightened attention, such as approach to a
+      potential threat while maintaining group cohesion.
+    confidence: medium
+    references: [zandberg_etal_2012]
+
+  - name: trill
+    alternative_names:
+      - alarm trill
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - frequency_modulated
+      - repetitive
+      - tonal
+    acoustic_description: >
+      A rapid, oscillating series of frequency-modulated notes delivered in quick succession,
+      giving a rolling or trilling quality. Higher repetition rate than the chatter; frequency
+      sweeps within each pulse produce a pulsed yet tonal overall sound. Duration variable;
+      can be sustained for several seconds.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: >
+      Described as the primary alarm call in wild kea. Produced in response to predators or
+      other threats. Receivers respond to trill playback with vigilance and often give screech
+      or screech-trill calls back, indicating it broadcasts threat information across a group.
+    confidence: high
+    references: [zandberg_etal_2012]
+
+  - name: warble
+    alternative_names:
+      - play call
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - long
+      - graded
+      - multi_component
+    acoustic_description: >
+      A melodious, richly frequency-modulated series of syllables with varying pitch contours,
+      giving a musical or warbling quality. Longer and more complex than the mew; graded in
+      structure with continuous variation in frequency modulation and timing. Relatively soft
+      compared to screech and trill.
+    semantic_keywords:
+      - play
+      - affiliation
+      - contact
+    semantic_description: >
+      The dedicated play call of kea. Produced during social play interactions; the most
+      likely response to a warble is another warble. Research on positive emotional contagion
+      in kea showed that the warble can spread playful motivation through a group. Also
+      documented as an affiliative signal between familiar individuals.
+    confidence: high
+    references: [zandberg_etal_2012, rj_2017]
+
+  - name: mew
+    alternative_names:
+      - mew call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - short
+      - frequency_modulated
+      - quiet
+    acoustic_description: >
+      A soft, cat-like mewing sound; relatively short, tonal, with gentle frequency modulation.
+      Typically low amplitude compared to the screech. Spectrogram shows a simple arc-shaped
+      frequency contour. Non-oscillating, analogous in structure to the screech but quieter
+      and with a different frequency profile.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: >
+      Used in close-range contact and affiliative interactions between individuals. Kea
+      preferentially respond to mew calls with further mew calls, suggesting it operates
+      within a distinct short-range social register separate from the long-distance screech.
+      Common in stable sub-groups.
+    confidence: high
+    references: [zandberg_etal_2012]
+
+  - name: chatter
+    alternative_names:
+      - chattering call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - repetitive
+      - short
+      - pulsed
+    acoustic_description: >
+      A rapid burst of broadband, noisy, pulsed syllables delivered in quick succession;
+      more irregular and noisier than the trill, with less tonal structure. The spectrogram
+      shows broadband energy in each pulse with relatively little frequency sweep. Short
+      overall duration or repeated in rapid bouts.
+    semantic_keywords:
+      - aggression
+      - threat
+      - display
+    semantic_description: >
+      Produced in agonistic contexts, particularly during competitive interactions over food
+      or social rank. Associated with threat displays and dominant–subordinate encounters.
+      May also occur during excited exploratory behaviour involving novel objects, consistent
+      with kea's neophilic tendencies.
+    confidence: medium
+    references: [zandberg_etal_2012]
+
+  - name: whistle
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - high_frequency
+      - long
+      - frequency_modulated
+      - quiet
+    acoustic_description: >
+      A pure, sustained tonal whistle with slow, continuous frequency modulation. Higher in
+      tonality and purity than the warble; less complex in syllable structure. Duration
+      typically moderate to long relative to other call types. Spectrogram shows a smooth,
+      continuous frequency trace.
+    semantic_keywords:
+      - contact
+      - identity
+      - courtship
+    semantic_description: >
+      Produced in quiet, close-proximity contexts and occasionally during pair bonding
+      interactions. May encode individual identity similarly to other kea call types.
+      Exact behavioural context is less thoroughly documented than for screech, trill, and
+      warble; likely an affiliative and identity signal in calm social settings.
+    confidence: medium
+    references: [zandberg_etal_2012]
+
+  - name: nestling food-begging call
+    alternative_names:
+      - nestling begging call
+      - nestling peep
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - tonal
+      - frequency_modulated
+      - short
+    acoustic_description: >
+      High-pitched, repetitive short peeps or soft trills produced by nestlings. Duration,
+      peak frequency, bandwidth, and frequency modulation all change with nestling age.
+      Early calls are simpler and softer; calls become more structured and louder as nestlings
+      develop. Individually discriminable from hatching.
+    semantic_keywords:
+      - begging
+      - distress
+      - caregiving
+    semantic_description: >
+      Produced by nestlings to solicit food from parents. Rate and intensity increase with
+      hunger level. The calls are individually unique, allowing parents to identify their own
+      offspring. Four distinct nestling call types have been described, two present at
+      hatching and two emerging in the second week; some appear to be nest-only signals not
+      retained in the adult repertoire.
+    confidence: high
+    references: [gajdon_etal_2020_nestling]
+
+  - name: maternal nest call
+    alternative_names:
+      - in-nest call
+      - nest-specific call
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - broadband
+      - noisy
+      - short
+    acoustic_description: >
+      Low-amplitude, high-entropy (noisy, broadband) calls produced by brooding females
+      inside the nest. Acoustically distinct from all named outdoor call types, which are
+      loud and tonal. The high entropy makes the call rapidly dissipate in the environment
+      and difficult to locate by external listeners.
+    semantic_keywords:
+      - caregiving
+      - contact
+      - distress
+    semantic_description: >
+      Produced exclusively by females inside the nest cavity during brooding and nestling
+      care. Functions include stimulating embryos during hatching and guiding nestlings to
+      the mother's beak during feeding. The quiet, unlocatable acoustic structure is
+      interpreted as an anti-predator adaptation that allows mother–offspring communication
+      without revealing nest location.
+    confidence: high
+    references: [wein_etal_2020]
+
+references:
+  zandberg_etal_2012:
+    citation: >
+      Zandberg L, Lachlan RF, Slater PJB, ten Cate C (2012). Vocal repertoire of the
+      New Zealand kea parrot Nestor notabilis. Current Zoology 58(5): 727–740.
+    doi: 10.1093/czoolo/58.5.727
+    url: https://academic.oup.com/cz/article/58/5/727/1798752
+  wein_etal_2020:
+    citation: >
+      Wein A, Schwing R, Kamareddine L, Huber L, Gajdon GK (2020). Kea Nestor notabilis
+      mothers produce nest-specific calls with low amplitude and high entropy. Ibis 162(2):
+      489–501.
+    doi: 10.1111/ibi.12753
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/ibi.12753
+  gajdon_etal_2020_nestling:
+    citation: >
+      Gajdon GK, Schwing R, Wein A, Huber L (2020). Vocal development in nestling kea
+      parrots (Nestor notabilis). Animal Behaviour 159: 51–62.
+    url: https://www.researchgate.net/publication/338610274_Vocal_development_in_nestling_kea_parrots_Nestor_notabilis
+  rj_2017:
+    citation: >
+      Reber SA, Janisch J, Fujita K, Janisch B, Bugnyar T, Fitch WT (2017). Positive
+      emotional contagion in a New Zealand parrot. Current Biology 27(6): R213–R214.
+    doi: 10.1016/j.cub.2017.02.020
+
+provenance:
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Generated from LLM knowledge plus web search. Primary source is Zandberg et al. 2012
+      (Current Zoology), which identified 7 adult call types (screech, screech-trill, trill,
+      chatter, warble, mew, whistle). Nestling begging calls drawn from Gajdon et al. 2020;
+      maternal nest call from Wein et al. 2020. Total 9 call types covering adult and
+      early-life stages.

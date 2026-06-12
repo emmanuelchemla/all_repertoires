@@ -10,24 +10,38 @@ taxonomy:
   species: phoeniceus
 calls:
 - name: conk-la-ree song
+  alternative_names:
+  - territorial song
+  - song
   acoustic_keywords:
   - multi_component
   - tonal
   - harmonic
   - loud
   - long
-  acoustic_description: A stereotyped territorial song with a recognizable introductory
-    phrase and buzzy trailing component.
+  acoustic_description: A stereotyped 0.7–1.5 s song with a recognizable introductory
+    note and a long buzzy or gurgling trailing component; spectrogram shows distinct
+    introductory element and a complex harmonic stack in the terminal portion.
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
   semantic_keywords:
   - territorial
   - courtship
   - mating
   - display
   - identity
-  semantic_description: Used by males in territory advertisement and mate attraction.
+  semantic_description: Used by males in territory advertisement and mate attraction;
+    males maintain repertoires of several song types and vary delivery for neighbour
+    recognition and territory defence.
   confidence: high
   references:
   - yasukawa_2018
+  - yasukawa_searcy_1995
 - name: check call
   acoustic_keywords:
   - short
@@ -75,24 +89,222 @@ calls:
   - attention
   semantic_description: Used by females in local communication around breeding activities.
   confidence: medium
-- name: song
+- name: cheer call
+  alternative_names:
+  - hawk alarm call
+  - whistled alarm
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - high_frequency
+  - frequency_modulated
+  - long
+  - loud
+  acoustic_description: A clear, high-pitched, frequency-modulated whistle; the
+    highest-pitched and thinnest versions are produced in response to accipiters
+    and other high-threat raptors; lower-pitched variants occur in lower-threat
+    contexts; rendered phonetically as "cheer."
+  semantic_keywords:
+  - alarm
+  - predator
+  semantic_description: Produced by males in response to approaching predators,
+    especially raptors; highly variable in pitch and intensity with the sharpest
+    versions elicited by the most dangerous aerial predators such as accipiters.
+  confidence: high
+  references:
+  - yasukawa_2018
+
+- name: seet call
+  alternative_names:
+  - thin alarm call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - high_frequency
+  - short
+  - quiet
+  acoustic_description: A short, very thin, high-frequency tonal whistle; simpler
+    and briefer than the cheer call; rendered as "seet."
+  semantic_keywords:
+  - alarm
+  - predator
+  semantic_description: Produced by males primarily in predator contexts; accounts
+    for roughly 4% of male calls; likely functions as a hard-to-localise aerial
+    predator signal.
+  confidence: high
+  references:
+  - yasukawa_2018
+
+- name: peet call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - high_frequency
+  - short
+  acoustic_description: A short, clear, tonal whistle slightly lower and fuller
+    than the seet call; rendered as "peet."
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced by males in a variety of contexts including the
+    approach of predators; accounts for roughly 1% of male calls.
+  confidence: medium
+  references:
+  - yasukawa_2018
+
+- name: growl
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - noisy
+  - broadband
+  - short
+  acoustic_description: A low, rough, broadband vocalisation with an irregular
+    amplitude envelope; clearly distinct from the tonal whistle calls; rendered
+    phonetically as a growl or raspy note.
+  semantic_keywords:
+  - threat
+  - aggression
+  - territorial
+  semantic_description: Produced by males in agonistic and threat contexts; accounts
+    for roughly 3% of male calls; likely signals close-range aggressive motivation.
+  confidence: medium
+  references:
+  - yasukawa_2018
+
+- name: female chit call
+  alternative_names:
+  - chit
+  - nest chit
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - abrupt
+  - noisy
+  - repetitive
+  acoustic_description: A short, sharp, somewhat noisy note given singly or in
+    series; rendered as "chit" or in series as "chit-chit-chit"; distinct from
+    the broader chatter by its more discrete note structure and specific nest-
+    associated delivery.
+  semantic_keywords:
+  - caregiving
+  - alarm
+  - attention
+  - identity
+  semantic_description: Produced by females during nest arrivals, departures, and
+    while incubating; the most common female call in nest-associated contexts;
+    studied as a signal with both mate-attraction and predation-risk costs.
+  confidence: high
+  references:
+  - beletsky_1992
+
+- name: female scream
+  alternative_names:
+  - distress scream
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - loud
+  - broadband
+  - noisy
+  - abrupt
+  acoustic_description: A sharp, loud, broadband screech or scream; short duration
+    with rapid onset; more intense and higher-amplitude than ordinary chatter notes.
+  semantic_keywords:
+  - distress
+  - alarm
+  - threat
+  semantic_description: Produced by females in contexts of direct threat, capture,
+    or extreme disturbance; also reported in intense intraspecific aggression.
+  confidence: medium
+
+- name: ti-ti-ti call
+  alternative_names:
+  - pre-mating call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  acoustic_description: A rapid series of short, thin, high-pitched tonal notes
+    delivered in quick succession; rendered phonetically as "ti-ti-ti."
+  semantic_keywords:
+  - courtship
+  - mating
+  - affiliation
+  semantic_description: Reported as a pre-mating call produced by both sexes in
+    close-range courtship and solicitation contexts.
+  confidence: low
+- name: female song
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
   acoustic_keywords:
   - multi_component
   - tonal
-  - harmonic
-  - loud
   - long
-  acoustic_description: A stereotyped song phrase with introductory notes and a more
-    complex trailing component than simple check calls or chatters.
+  - quiet
+  acoustic_description: A multi-note song produced by females; less stereotyped and
+    lower amplitude than the male territorial song; structure varies among individuals.
   semantic_keywords:
   - territorial
-  - courtship
-  - mating
-  - display
   - identity
-  semantic_description: Used by males for territory advertisement and mate attraction
-    beyond the most canonical song label already in the file.
+  - courtship
+  - display
+  semantic_description: Produced by females during breeding season; female song has
+    been studied in the context of mate preference assessment and individual identity
+    signalling; females sing while crouching in display posture.
   confidence: medium
+  references:
+  - yasukawa_2018
+
 - name: flight call
   acoustic_keywords:
   - high_frequency
@@ -151,7 +363,27 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-12T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: >
+    Added 7 new call types (cheer call, seet call, peet call, growl, female chit
+    call, female scream, ti-ti-ti call) based on LLM knowledge and web search
+    synthesis to reach 14 total. Merged duplicate 'song' into 'conk-la-ree song'
+    alternative_names. Added beletsky_1992 and yasukawa_searcy_1995 references.
 references:
   yasukawa_2018:
-    citation: Yasukawa, K. and Searcy, W.A. 2018. Red-winged Blackbird (Agelaius phoeniceus),
-      Birds of the World.
+    citation: >
+      Yasukawa, K. and Searcy, W.A. 2018. Red-winged Blackbird (Agelaius phoeniceus),
+      version 1.0. In Birds of the World (P. G. Rodewald, Ed.). Cornell Lab of
+      Ornithology, Ithaca, NY, USA.
+  yasukawa_searcy_1995:
+    citation: >
+      Yasukawa, K. and Searcy, W.A. 1995. Red-winged Blackbird (Agelaius phoeniceus).
+      In The Birds of North America, No. 184 (A. Poole and F. Gill, Eds.).
+      The Academy of Natural Sciences, Philadelphia.
+  beletsky_1992:
+    citation: >
+      Beletsky, L.D. 1992. The costs and benefits of a vocal signal: the nest-associated
+      'Chit' of the female red-winged blackbird (Agelaius phoeniceus). Animal
+      Behaviour 44: 983–988.

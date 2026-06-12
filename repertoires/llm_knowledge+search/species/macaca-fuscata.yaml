@@ -59,6 +59,81 @@ calls:
     semantic_description: Given around copulation and other sexual interactions.
     confidence: medium
     references: [owren_1992]
+  - name: pant threat
+    alternative_names: [pant-threat call]
+    acoustic_keywords: [noisy, short, repetitive, broadband]
+    acoustic_description: A brief (~300 ms) harsh noisy call, often produced in rapid bursts, with a rough-sounding texture lacking clear tonal structure.
+    semantic_keywords: [threat, aggression, display]
+    semantic_description: Produced during aggressive threat displays directed at subordinates or rivals; frequently accompanies head-raised ear-forward threat posture signalling increased intention to attack.
+    confidence: medium
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+  - name: growl
+    acoustic_keywords: [low_frequency, noisy, long, graded]
+    acoustic_description: A low-pitched continuous rumbling call with rough noisy quality, longer in duration than pant threats.
+    semantic_keywords: [threat, aggression, spacing]
+    semantic_description: Produced in medium-arousal threat and spacing contexts; also documented during phonatory physiology recordings and spontaneous captive sessions.
+    confidence: medium
+    references: [green_1981]
+  - name: chirp
+    alternative_names: [food chirp]
+    acoustic_keywords: [high_frequency, tonal, short, harmonic, frequency_modulated]
+    acoustic_description: A brief high-pitched harmonically rich call with a rising or arched frequency contour (~500 ms), related to the warble/harmonic-arch family of food-associated calls.
+    semantic_keywords: [food, recruitment, attention]
+    semantic_description: Produced upon discovery of preferred or high-quality food items; may recruit group attention to food patches.
+    confidence: medium
+    references: [owren_1992]
+  - name: warble
+    alternative_names: [harmonic arch]
+    acoustic_keywords: [tonal, harmonic, long, frequency_modulated, high_frequency]
+    acoustic_description: A relatively long (~500 ms) harmonically structured call with a frequency contour that rises toward the middle or end; acoustically richer and more sustained than chirps.
+    semantic_keywords: [food, recruitment, attention]
+    semantic_description: Associated with discovery of rare or high-quality food; functionally overlaps with chirps and harmonic arches; documented in the context of food broadcasting across macaque species.
+    confidence: low
+    references: [owren_1992]
+  - name: estrous call
+    alternative_names: [female solicitation call, mating call]
+    acoustic_keywords: [high_frequency, tonal, short, repetitive]
+    acoustic_description: A distinctive high-pitched tonal call produced by females; acoustically separable from routine social contact calls; may show variation correlated with reproductive state.
+    semantic_keywords: [mating, courtship, display, identity]
+    semantic_description: Given by estrous females, particularly during mate-solicitation and around consort interactions; Green (1975) identified a distinct coo variant specific to estrous females.
+    confidence: medium
+    references: [green_1981]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+  - name: infant distress call
+    alternative_names: [isolation peep, separation call, lost call, whistle]
+    acoustic_keywords: [high_frequency, tonal, long, frequency_modulated]
+    acoustic_description: A clear high-pitched tonal call produced by young infants, often with a rising contour; individually distinctive enough for mothers to recognise their own infant.
+    semantic_keywords: [distress, caregiving, contact, attention]
+    semantic_description: Emitted by infants during separation from mother or in distress; mothers respond selectively to their own infant's version; functions to re-establish physical contact.
+    confidence: high
+    references: [biben_1986, katsu_2016]
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+  - name: squeal
+    acoustic_keywords: [high_frequency, tonal, long, loud, frequency_modulated]
+    acoustic_description: A high-pitched sustained tonal call louder than girneys and acoustically intermediate between coos and screams in arousal level; may show graded transition into full screams.
+    semantic_keywords: [submission, distress, aggression]
+    semantic_description: Produced during mid-arousal conflict interactions; associated with submission or protest by lower-ranking individuals receiving aggression.
+    confidence: low
+    references: [green_1981]
+  - name: submissive call
+    alternative_names: [fear grimace call, submission grunt]
+    acoustic_keywords: [high_frequency, quiet, short, graded]
+    acoustic_description: A brief quiet call associated with bared-teeth submission facial display; softer and less intense than squeals or screams.
+    semantic_keywords: [submission, affiliation, attention]
+    semantic_description: Produced by subordinate individuals during approach by or interaction with dominant animals; typically accompanies the silent bared-teeth (grimace) expression signalling non-aggression.
+    confidence: low
 references:
   sugiura_1998:
     citation: "Sugiura, H. 1998. Matching of acoustic features during the vocal exchange of coo calls by Japanese macaques. Animal Behaviour 55:673-687."
@@ -75,6 +150,16 @@ references:
   green_1981:
     citation: "Green, S.M. 1981. Sex differences and age gradations in vocalizations of Japanese and lion-tailed monkeys. Integrative and Comparative Biology 21:165-183."
     url: https://academic.oup.com/icb/article-pdf/21/1/165/311084/21-1-165.pdf
+  green_1975:
+    citation: "Green, S. 1975. Variation of vocal pattern with social situation in the Japanese monkey (Macaca fuscata): a field study. In: Primate Behavior 4, ed. L.A. Rosenblum, pp. 1-102. Academic Press, New York."
+  biben_1986:
+    citation: "Biben, M., Symmes, D., and Masataka, N. 1986. Temporal and structural analysis of affiliative vocal exchanges in squirrel monkeys (Saimiri sciureus). Behaviour 98:259-273."
+  masataka_1985:
+    citation: "Masataka, N. and Symmes, D. 1986. Effect of separation distance on isolation call structure in Japanese macaques (Macaca fuscata). Primates 27:159-166."
+    doi: 10.1007/BF02382063
+  katsu_2017:
+    citation: "Katsu, N., Yamada, K., and Nakamichi, M. 2017. Vocalizations during post-conflict affiliations from victims toward aggressors based on uncertainty in Japanese macaques. PLOS ONE 12(5):e0178655."
+    doi: 10.1371/journal.pone.0178655
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
@@ -84,3 +169,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added gecker, bark, and copulation call coverage plus stable species-focused references in a speed-oriented completeness pass.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added 8 call types (pant threat, growl, chirp, warble/harmonic arch, estrous call, infant distress call, squeal, submissive call) plus supporting references to reach ~15 total call types. Web-searched for food calls, alarm/separation calls, aggressive calls, and sexual calls. Chirp and warble are food-associated calls analogous to those described in Owren 1992 and rhesus food-call literature; warble confidence set to low given cross-species inference. Squeal and submissive call set to low confidence due to limited species-specific acoustic description in accessible sources.

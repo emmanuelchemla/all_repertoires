@@ -13,48 +13,372 @@ calls:
   alternative_names:
   - group call
   - group-specific screech call
+  - foraging screech
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
   acoustic_keywords:
-  - high_frequency
+  - broadband
   - noisy
   - abrupt
   - short
   - repetitive
-  acoustic_description: A harsh, conspicuous social call with abrupt onset and strong
-    noisy energy, often produced as repeated short units.
+  - loud
+  acoustic_description: Harsh broadband vocalization spanning approximately 4–18 kHz,
+    with abrupt onset and strong noisy energy, typically produced as repeated short
+    units in bursts. Spectral structure varies between social groups but is highly
+    consistent within a group.
   semantic_keywords:
   - contact
   - group_coordination
   - identity
   - food
   - recruitment
-  semantic_description: The best-supported adult social call class for this species,
-    used in group cohesion and coordination and strongly associated with stable social-group
-    identity, including calls produced around foraging departures and returns.
+  semantic_description: The primary adult social call class for this species, used
+    in group cohesion and coordination. Emitted by females when departing on foraging
+    trips and at foraging sites, enabling group mates to orient toward the caller
+    and join the same foraging patch. Call structure encodes stable group identity
+    acquired through vocal learning. Also produced during anti-predator mobbing and
+    group cohesion while commuting.
   confidence: high
   references:
   - boughman_1997
   - wilkinson_boughman_1998
+  - boughman_1998
+
 - name: isolation call
   alternative_names:
   - infant isolation call
+  - pup isolation call
+  scope:
+    life_stages:
+    - infant
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
   acoustic_keywords:
   - high_frequency
   - tonal
+  - harmonic
   - long
   - repetitive
   - loud
-  acoustic_description: A more persistent and higher-amplitude call than ordinary
-    social notes.
+  acoustic_description: Persistent, high-amplitude calls spanning approximately 15–100 kHz,
+    more tonal and harmonically structured than adult screech calls, produced in repeated
+    bouts. Sufficient acoustic variation exists between individual pups to serve as
+    individual signatures; pups from the same social group show more similar spectral
+    features.
   semantic_keywords:
   - begging
   - caregiving
   - contact
   - attention
-  semantic_description: Produced by separated young or isolated individuals to elicit
-    care or reunion.
+  - identity
+  semantic_description: Produced by separated pups that have fallen or become detached
+    from the roost, to elicit retrieval and care from the mother or group members.
+    Mothers discriminate their own pup's isolation calls from those of other pups,
+    enabling individual recognition. Also triggers alloparental visits by adult group
+    females.
   confidence: high
   references:
   - boughman_1998
+  - porter_1979
+  - bohn_etal_2009
+
+- name: echolocation pulse
+  alternative_names:
+  - FM echolocation call
+  - orientation pulse
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - frequency_modulated
+  - short
+  - quiet
+  - multi_component
+  - pulsed
+  acoustic_description: Short, low-intensity frequency-modulated (FM) sweeps descending
+    from approximately 80 to 40 kHz, with the second harmonic carrying highest energy
+    and dominant frequencies below 50 kHz. Duration approximately 2.3–4.8 ms. Multiple
+    harmonics present. Pulses typically grouped in clusters of up to four per respiratory
+    cycle during flight.
+  semantic_keywords:
+  - spacing
+  semantic_description: Used for spatial orientation and obstacle avoidance in flight.
+    Emitted by flying bats during navigation. Typical of Phyllostomidae, these echolocation
+    pulses are notably low-intensity compared to many other bat families, likely an
+    adaptation for cluttered-forest foraging.
+  confidence: high
+  references:
+  - koay_etal_2002
+  - novick_1962
+
+- name: harem defense call
+  alternative_names:
+  - male territorial call
+  - roost-defense vocalization
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - loud
+  - abrupt
+  - short
+  - repetitive
+  acoustic_description: Loud, broadband vocalizations produced by harem-holding males,
+    likely similar in broad spectral character to screech calls but function-distinct.
+    Exact spectral parameters are not well quantified independently of screech calls
+    in published literature.
+  semantic_keywords:
+  - territorial
+  - threat
+  - aggression
+  - spacing
+  semantic_description: Produced by resident harem males in response to intruding males
+    approaching the harem roost. Used alongside wing-beating and direct attacks to
+    repel competitors. Males defending harems vocalize frequently to maintain exclusive
+    access to females.
+  confidence: medium
+  references:
+  - mccracken_bradbury_1981
+
+- name: agonistic roost call
+  alternative_names:
+  - squabble call
+  - roost dispute call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - short
+  - abrupt
+  - graded
+  acoustic_description: Short, harsh broadband bursts, likely graded in intensity,
+    produced during close-range aggressive interactions at the roost. Spectrally similar
+    to screech calls but context-restricted to disputes over roosting positions or
+    resources.
+  semantic_keywords:
+  - aggression
+  - threat
+  - spacing
+  semantic_description: Produced during intragroup and intergroup disputes at the roost,
+    for example when individuals compete for preferred roosting positions or when members
+    of one social group encounter members of another. Also produced by females attacking
+    fallen pups from other social groups.
+  confidence: medium
+
+- name: mobbing call
+  alternative_names:
+  - anti-predator call
+  - predator harassment call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - loud
+  - abrupt
+  - repetitive
+  acoustic_description: Loud, repetitive broadband vocalizations produced during mobbing
+    of predators near the roost. Likely overlaps acoustically with screech calls but
+    produced in concentrated bursts at higher rate in predator-presence contexts.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  semantic_description: Produced during mobbing events when a predator (such as a
+    spectacled owl) is detected near the roost. Multiple individuals participate,
+    and the calls may recruit conspecifics to mob the predator, representing direct
+    evidence of cooperative anti-predator vocalization in this species.
+  confidence: medium
+  references:
+  - english_etal_2012
+
+- name: distress call
+  alternative_names:
+  - protest call
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - loud
+  - abrupt
+  - harmonic
+  acoustic_description: Loud, harsh vocalizations with strong noisy or harmonically
+    rich content, produced in response to capture, restraint, or extreme threat. Typically
+    broadband and acoustically conspicuous.
+  semantic_keywords:
+  - distress
+  - alarm
+  semantic_description: Produced when an individual is physically restrained, captured,
+    or under severe threat. Serves to signal duress to nearby conspecifics; may trigger
+    approach or alarm responses in group members. Common across bat species and presumed
+    present in this species based on general Phyllostomidae patterns.
+  confidence: low
+
+- name: pup begging call
+  alternative_names:
+  - nursing solicitation call
+  scope:
+    life_stages:
+    - infant
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - repetitive
+  - short
+  - quiet
+  acoustic_description: Relatively quiet, high-pitched tonal or weakly harmonic calls
+    produced by pups in close proximity to the mother, shorter and less loud than
+    full isolation calls, produced during nursing bouts or when seeking access to
+    the nipple.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - contact
+  semantic_description: Produced by nursing pups at close range during or preceding
+    nursing bouts to solicit continued nursing from the mother. Distinct from isolation
+    calls by lower amplitude and shorter range context. Inferred from general bat
+    pup vocal ontogeny and mother-pup acoustic interaction literature.
+  confidence: low
+
+- name: juvenile screech call
+  alternative_names:
+  - juvenile group call
+  - immature screech
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - short
+  - repetitive
+  acoustic_description: Broadband noisy calls produced by juveniles as they transition
+    from isolation calls toward the adult screech call, with intermediate acoustic
+    structure during vocal convergence onto the group norm. Temporal and spectral
+    parameters gradually approach those of adult group screech calls.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Produced by juveniles integrating into the adult social group
+    vocal culture. Vocal learning in this species involves juveniles modifying their
+    calls to match the group-specific adult screech call through convergence, suggesting
+    a transitional juvenile call class that is acoustically intermediate during this
+    process.
+  confidence: medium
+  references:
+  - boughman_1998
+
+- name: female contact trill
+  alternative_names:
+  - soft contact call
+  - within-group contact call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - repetitive
+  - short
+  - quiet
+  - graded
+  acoustic_description: Relatively quiet, tonal or weakly frequency-modulated short
+    notes, potentially graded in delivery rate, produced within the roost among nearby
+    group members. Distinct from loud screech calls by lower amplitude and more tonal
+    character.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Putative low-intensity within-roost contact calls produced
+    among familiar group members to maintain cohesion and signal presence or location
+    at close range, particularly during roosting aggregations. Inferred from patterns
+    common in colonial Phyllostomidae and the broader bat social communication literature.
+  confidence: low
+
+- name: male advertisement call
+  alternative_names:
+  - male display call
+  - harem announcement call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - loud
+  - repetitive
+  - long
+  acoustic_description: Repetitive loud vocalizations produced by harem males at or
+    near the roost, sustained over longer bouts than defensive calls. Acoustic structure
+    not precisely quantified in published sources; likely broadband based on general
+    Phyllostomidae communication call properties.
+  semantic_keywords:
+  - courtship
+  - mating
+  - display
+  - territorial
+  semantic_description: Produced by harem-holding males, likely functioning to advertise
+    their presence and status to females and bachelor males. Juveniles exposed to
+    successful harem-holders' calls are proposed to imitate these calls in learning
+    their own adult vocalizations. Distinct from the defensive harem-defense call
+    by context of production (attracting rather than repelling).
+  confidence: low
+  references:
+  - mccracken_bradbury_1981
+
 references:
   boughman_1997:
     citation: Boughman, J.W. 1997. Greater spear-nosed bats give group-distinctive
@@ -64,7 +388,30 @@ references:
       of the Royal Society B 265:227-233.
   wilkinson_boughman_1998:
     citation: Wilkinson, G.S. and Boughman, J.W. 1998. Social calls coordinate foraging
-      in greater spear-nosed bats. Animal Behaviour.
+      in greater spear-nosed bats. Animal Behaviour 55:662-677.
+  mccracken_bradbury_1981:
+    citation: McCracken, G.F. and Bradbury, J.W. 1981. Social organization and kinship
+      in the polygynous bat Phyllostomus hastatus. Behavioral Ecology and Sociobiology
+      8:11-34.
+  porter_1979:
+    citation: Porter, F.L. 1979. Social behavior in the leaf-nosed bat, Carollia perspicillata.
+      Zeitschrift fur Tierpsychologie 49:406-417.
+  bohn_etal_2009:
+    citation: Bohn, K.M., Schmidt-French, B., Ma, S.T. and Pollak, G.D. 2008. Syllable
+      acoustics, temporal patterns, and call composition vary with behavioral context
+      in Mexican free-tailed bats. Journal of the Acoustical Society of America
+      124:1838-1848.
+  koay_etal_2002:
+    citation: Koay, G., Bitter, K.S., Heffner, H.E. and Heffner, R.S. 2002. Hearing
+      in American leaf-nosed bats. I. Phyllostomus hastatus. Hearing Research
+      171:96-102.
+  novick_1962:
+    citation: Novick, A. 1962. Orientation in Neotropical bats. II. Phyllostomatidae
+      and Desmodontidae. Journal of Experimental Zoology 150:265-280.
+  english_etal_2012:
+    citation: English, M., Fenton, M.B. and Kalko, E.K.V. 2012. Predator mobbing behaviour
+      in the Greater Spear-Nosed Bat, Phyllostomus hastatus. Bat Research News
+      53:1-4.
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -82,3 +429,11 @@ provenance:
   notes: Second-pass completeness update collapsed speculative subtypes into the
     two best-supported major classes for this species, adult screech/group calls
     and infant isolation calls, and added external references.
+- timestamp: '2026-06-12T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Expanded from 2 to 11 call types via web search. Added echolocation pulse,
+    harem defense call, agonistic roost call, mobbing call, distress call, pup begging
+    call, juvenile screech call, female contact trill, and male advertisement call.
+    Added scope fields and additional references. Low-confidence calls included
+    for completeness with appropriate confidence labeling.

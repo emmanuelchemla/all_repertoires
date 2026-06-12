@@ -82,11 +82,160 @@ calls:
     semantic_description: Produced in acute defensive or escalated close-range conflict.
     confidence: medium
     references: [feline_vocal]
+  - name: mew
+    alternative_names: [kitten distress call, neonatal cry]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, short, loud, frequency_modulated]
+    acoustic_description: A high-pitched thin voiced call, shorter and more plaintive than an adult meow, often rising in pitch; amplitude increases with arousal.
+    semantic_keywords: [distress, begging, caregiving, contact]
+    semantic_description: Produced by kittens in isolation or cold to recruit maternal care; juveniles may retain it for food-begging; adults occasionally use an attenuated form in distress.
+    confidence: high
+    references: [feline_vocal, martin_1978]
+  - name: solicitation purr
+    alternative_names: [embedded-cry purr, urgent purr]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, pulsed, repetitive, harmonic, multi_component]
+    acoustic_description: A purr with an embedded higher-frequency tonal or cry-like component near 380 Hz that rises above the surrounding low-frequency pulsed purr; the inner component is spectrally prominent and gives the sound an urgent quality.
+    semantic_keywords: [begging, attention, food, affiliation]
+    semantic_description: Used specifically in feeding-solicitation contexts toward human owners; the embedded component is thought to exploit caregiving responses by mimicking infant cries.
+    confidence: high
+    references: [mccomb_2009]
+  - name: chirp
+    alternative_names: [bird chirp, tweet, tweedle]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, short, tonal, abrupt, multi_component]
+    acoustic_description: A very brief, sharp, high-pitched voiced element resembling a bird note; often produced singly or in short series; distinct from the rolled trill.
+    semantic_keywords: [attention, display, food, contact]
+    semantic_description: Produced during predatory observation of birds or other prey items; also reported in some social greeting or solicitation sequences.
+    confidence: medium
+    references: [schotz_2015]
+  - name: squeak
+    alternative_names: [raspy mew]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, short, noisy, tonal]
+    acoustic_description: A brief high-pitched mew-like call with a raspy or nasal quality; intermediate between a clean mew and a noisy chirp.
+    semantic_keywords: [contact, attention, distress]
+    semantic_description: Produced in mild frustration, greeting, or low-intensity solicitation; also reported in excited or play contexts.
+    confidence: medium
+    references: [schotz_2015]
+  - name: howl
+    alternative_names: [long howl]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, tonal, frequency_modulated, harmonic]
+    acoustic_description: A loud sustained tonal call, longer than a yowl with slower frequency modulation; often produced in long repeated bouts with harmonic structure.
+    semantic_keywords: [distress, mating, spacing, threat]
+    semantic_description: Produced in territorial challenge, profound distress, or reproductive advertisement; can overlap with yowl but tends to be more repetitively patterned.
+    confidence: medium
+    references: [bradshaw_2012]
+  - name: wail
+    alternative_names: [anger wail]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, noisy, harmonic, frequency_modulated]
+    acoustic_description: A loud, harsh, rising-falling call blending tonal and noisy components; rougher in quality than a howl with more irregular spectral energy.
+    semantic_keywords: [aggression, distress, threat, mating]
+    semantic_description: Produced in escalated intercat conflict and high-arousal agonistic encounters; also reported as part of the female reproductive sequence.
+    confidence: medium
+    references: [bradshaw_2012]
+  - name: scream
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, abrupt, broadband, noisy]
+    acoustic_description: A sudden sharp high-intensity broadband outcry; very brief and acoustically distinct from sustained howls or wails; high amplitude across a wide spectral range.
+    semantic_keywords: [distress, alarm, aggression, mating]
+    semantic_description: Produced in acute pain, extreme fear, or during and immediately after copulation; the post-copulatory scream of the female is especially well documented.
+    confidence: high
+    references: [bradshaw_2012]
+  - name: copulatory cry
+    alternative_names: [mating call, post-copulatory call]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, abrupt, tonal, short]
+    acoustic_description: A sharp, intense, rising-pitched voiced call often blending tonal onset with noisy offset; shorter than a full scream but similarly high-amplitude.
+    semantic_keywords: [mating, distress, alarm]
+    semantic_description: Emitted by females at the moment of intromission or immediately after, likely reflecting discomfort from penile spines; marks the end of copulatory contact.
+    confidence: high
+    references: [bradshaw_2012]
+  - name: trill-meow
+    alternative_names: [chirrup-meow, murmur-meow]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, harmonic, short, frequency_modulated, multi_component]
+    acoustic_description: A combined vocalization beginning with a trill or chirrup onset that transitions into a meow-like vowel phrase; a two-part call with a closed-to-open mouth transition.
+    semantic_keywords: [affiliation, attention, contact, begging]
+    semantic_description: Used in friendly greeting combined with a request or solicitation component; more emphasis on affiliation than a pure meow but more demanding than a plain trill.
+    confidence: medium
+    references: [schotz_2015]
+  - name: gargle
+    alternative_names: [gurgle]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, broadband, short, graded]
+    acoustic_description: A short rough guttural call with irregular pulsed noisy energy at low frequencies; more broken and irregular than a growl.
+    semantic_keywords: [threat, aggression, submission]
+    semantic_description: Reported in defensive conflict contexts and sometimes during extreme fear; may function as a pre-attack or submission signal in close-range encounters.
+    confidence: low
+    references: [schotz_2015]
+  - name: warble
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, harmonic, long, graded, quiet]
+    acoustic_description: A slowly undulating melodic vocalization with multiple smooth frequency sweeps; softer and more sinuous than a meow or yowl.
+    semantic_keywords: [affiliation, courtship, contact, attention]
+    semantic_description: Occasionally reported in playful or courtship interaction and in human-directed social contact; boundaries with extended meow variants are not firmly established.
+    confidence: low
 references:
   feline_vocal:
     citation: "Schotz, S. and van de Weijer, J. 2020. Feline vocal communication. Journal of Veterinary Science 21:e18."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7000907/
     doi: 10.4142/jvs.2020.21.e18
+  martin_1978:
+    citation: "Martin, P. 1978. Ontogeny of play and locomotor behaviour in kittens. Animal Behaviour 26:1–21."
+  mccomb_2009:
+    citation: "McComb, K., Taylor, A.M., Wilson, C., and Charlton, B.D. 2009. The cry embedded within the purr. Current Biology 19:R507–R508."
+    doi: 10.1016/j.cub.2009.05.033
+  schotz_2015:
+    citation: "Schotz, S. 2015. Melodic intonation, phonation and phonetics of domestic cat vocalisations. Proceedings of Fonetik 2015, Lund, Sweden."
+  bradshaw_2012:
+    citation: "Bradshaw, J.W.S. 2012. Cat Sense: How the New Feline Science Can Make You a Better Friend to Your Pet. Basic Books, New York."
 provenance:
   - timestamp: "2026-06-10T22:30:00+02:00"
     model: GPT-5 Codex
@@ -100,3 +249,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative completeness pass added obvious additional domestic cat call classes while keeping the repertoire anchored to a single stable review source.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Exhaustiveness expansion pass adding 11 call types (mew, solicitation purr, chirp, squeak, howl, wail, scream, copulatory cry, trill-meow, gargle, warble) to reach 21 total. New references added for McComb 2009, Schotz 2015, Bradshaw 2012, and Martin 1978. Confidence set per evidence strength; warble and gargle marked low.

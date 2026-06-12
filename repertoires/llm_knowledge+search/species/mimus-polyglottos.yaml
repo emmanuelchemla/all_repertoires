@@ -142,6 +142,227 @@ calls:
   confidence: medium
   references:
   - farnsworth_2020
+- name: nest relief call
+  alternative_names:
+  - pre-flight nest call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - quiet
+  acoustic_description: Low-amplitude, relatively high-pitched brief call given by
+    males from a nearby shrub or tree before flying to the nest site; acoustically
+    distinct from the louder hew call.
+  semantic_keywords:
+  - caregiving
+  - contact
+  - group_coordination
+  semantic_description: Given by males during the first half of the nestling period
+    when the female is likely to be brooding; signals imminent return to the nest
+    and coordinates nest-attendance transitions between mates.
+  confidence: high
+  references:
+  - vassar_mockingbird
+  - antioco_etal_2020
+- name: check call
+  alternative_names:
+  - chuck call
+  - call note
+  - flight call
+  acoustic_keywords:
+  - short
+  - abrupt
+  - broadband
+  - loud
+  acoustic_description: A sharp, abrasive single-note call rendered as "check" or
+    "chuck"; brief and broadband in structure, carrying well over distance.
+  semantic_keywords:
+  - alarm
+  - attention
+  - contact
+  semantic_description: General-purpose call note given in flight, during disturbance,
+    or as a mild alert; used by both sexes across a range of low-to-moderate arousal
+    contexts.
+  confidence: high
+  references:
+  - allaboutbirds_mockingbird
+  - birdwatchinghq_mockingbird
+- name: nocturnal song
+  alternative_names:
+  - night song
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - multi_component
+  - repetitive
+  - tonal
+  - noisy
+  - long
+  acoustic_description: Acoustically similar to daytime advertising song—long, phrase-repetitive,
+    mimicry-rich bouts—but delivered at night, often in prolonged uninterrupted sessions.
+  semantic_keywords:
+  - courtship
+  - mating
+  - territorial
+  semantic_description: Primarily produced by unmated males seeking a mate; peaks
+    near the full moon or under artificial light; absent during fall; believed to
+    function as mate-attraction advertisement when females may be more receptive at
+    night.
+  confidence: high
+  references:
+  - allaboutbirds_mockingbird
+- name: female song
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - multi_component
+  - repetitive
+  - tonal
+  - long
+  acoustic_description: Song produced by females is structurally similar to male advertising
+    song—phrase-repeated, mimicry-containing bouts—but typically quieter, shorter
+    in duration, and with a smaller repertoire than males.
+  semantic_keywords:
+  - territorial
+  - spacing
+  - identity
+  semantic_description: Females sing primarily on their own fall territories when
+    defending food resources; less frequent and shorter than male song, and distinct
+    in seasonal timing from male breeding song.
+  confidence: medium
+  references:
+  - derrickson_1987
+- name: subsong
+  alternative_names:
+  - whisper song
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - multi_component
+  - tonal
+  - noisy
+  - long
+  acoustic_description: Very low-amplitude, rambling, internally variable song performed
+    at reduced volume; contains mimicry and novel combinations of elements, often
+    delivered from cover.
+  semantic_keywords:
+  - play
+  - mating
+  - identity
+  semantic_description: Produced outside peak breeding contexts, during transitions
+    between seasonal singing states, or by juveniles during song-learning; thought
+    to reflect a low-arousal or rehearsal state rather than active territorial or
+    courtship advertisement.
+  confidence: medium
+  references:
+  - earbirding_subsong
+- name: juvenile plastic song
+  alternative_names:
+  - early song
+  - babbling
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - noisy
+  - quiet
+  - long
+  acoustic_description: Rambling, variable sequences produced by young birds during
+    song acquisition; phrases are irregular, poorly formed, and lack the clean repetition
+    structure of adult song; includes both imitated and novel elements in unstable
+    arrangement.
+  semantic_keywords:
+  - play
+  - identity
+  semantic_description: Produced during the sensitive period of vocal learning as
+    juveniles acquire and consolidate their song repertoire; not directed at conspecifics
+    in a territorial or courtship context; represents an exploratory vocal state.
+  confidence: medium
+  references:
+  - derrickson_1987
+- name: wing-flash display
+  alternative_names:
+  - wing-flash sound
+  - mechanical wing sound
+  acoustic_keywords:
+  - short
+  - abrupt
+  - broadband
+  - noisy
+  acoustic_description: Mechanical sound produced by the jerky partial or full opening
+    of wings during the wing-flash display; a brief rustling or whirring broadband
+    transient rather than a true vocalization.
+  semantic_keywords:
+  - threat
+  - display
+  - territorial
+  semantic_description: Produced during the stereotyped wing-flash display directed
+    at conspecifics or other species in territorial and threat contexts; hypothesized
+    to startle insects or signal dominance; the acoustic component accompanies the
+    visual white-patch signal.
+  confidence: medium
+  references:
+  - birdful_mockingbird
+- name: distress call
+  alternative_names:
+  - captured-bird call
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - loud
+  - short
+  - abrupt
+  acoustic_description: Loud, harsh, broadband vocalizations produced when a bird
+    is seized or restrained; acoustically rougher and more urgent than alarm churr,
+    with high amplitude and broad spectral spread.
+  semantic_keywords:
+  - distress
+  - alarm
+  - predator
+  semantic_description: Produced when a bird is caught by a predator or handled;
+    can attract other conspecifics and neighboring birds to mob the predator; distinct
+    from the softer alarm churr given at a distance from the threat.
+  confidence: low
+  references:
+  - antioco_etal_2020
 references:
   allaboutbirds_mockingbird:
     citation: Cornell Lab of Ornithology. Northern Mockingbird overview and song discussion.
@@ -163,6 +384,15 @@ references:
   farnsworth_2020:
     citation: Farnsworth, G. and colleagues. Northern Mockingbird (Mimus polyglottos),
       Birds of the World.
+  birdwatchinghq_mockingbird:
+    citation: Bird Watching HQ. Northern Mockingbird Calls (Learn 3 Common Sounds).
+    url: https://birdwatchinghq.com/northern-mockingbird-calls/
+  birdful_mockingbird:
+    citation: Birdful. What kind of noise does a Northern Mockingbird make?
+    url: https://www.birdful.org/what-kind-of-noise-does-a-northern-mockingbird-make/
+  earbirding_subsong:
+    citation: Earbirding. Subsong vs. Whisper Song. Nathan Pieplow.
+    url: http://earbirding.com/blog/archives/2910
 provenance:
 - timestamp: '2026-06-10T20:20:00+02:00'
   model: GPT-5 Codex
@@ -178,3 +408,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Second-pass completeness sweep separated the softer mate-exchanged hew from the louder mobbing hew because Cornell explicitly distinguishes the two contexts.
+- timestamp: '2026-06-12T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 8 call types to reach 14 total - nest relief call, check/chuck call, nocturnal song, female song, subsong/whisper song, juvenile plastic song, wing-flash display sound, and distress call. Added 3 new references. All additions based on web search plus LLM synthesis with conservative confidence levels.
