@@ -10,47 +10,451 @@ taxonomy:
   species: pygmaeus
 calls:
   - name: long call
-    acoustic_keywords: [low_frequency, loud, long, repetitive, multi_component]
-    acoustic_description: A prolonged far-carrying sequence of low-frequency pulses and roars, often built from several phrase types and separated by short pauses.
-    semantic_keywords: [territorial, spacing, display, identity, attention]
-    semantic_description: Produced especially by flanged males for long-range advertisement, social spacing, and display toward rivals and potential mates.
+    alternative_names: [flanged male long call, loud call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, repetitive, multi_component, pulsed, frequency_modulated]
+    acoustic_description: A prolonged far-carrying sequence composed of an introductory phase of soft bubbly grumbles, a climax of high-amplitude frequency-modulated bark-like roar pulses, and a let-down phase of lower-amplitude low-frequency sighs. Total duration ranges from ~15 seconds to 4 minutes. Fundamental frequency of climax pulses typically below 500 Hz but spectrally rich and carries > 1 km.
+    semantic_keywords: [territorial, spacing, display, identity, attention, courtship]
+    semantic_description: Produced by flanged adult males for long-range advertisement, social spacing toward rival males, and attraction of receptive females. Call rate and structure encode individual identity.
     confidence: high
-    references: [delgado_2017, mackinnon_1974]
-  - name: kiss squeak
-    acoustic_keywords: [high_frequency, abrupt, short, repetitive, noisy]
-    acoustic_description: A short high-intensity call produced by suction-like mouth action, usually sharp, brief, and sometimes repeated in rapid series.
+    references: [delgado_2017, mackinnon_1974, lameira_etal_2024_peerj]
+
+  - name: long call introductory grumbles
+    alternative_names: [build-up grumbles, pre-climax grumbles, grumble sub-pulses]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, pulsed, repetitive, quiet, short, noisy]
+    acoustic_description: Rapid series of staccato grumble-like elements at approximately 185 Hz that form the opening build-up phase of the long call before intensity rises to climax; individual elements are brief and low-amplitude.
+    semantic_keywords: [display, attention, territorial]
+    semantic_description: Constitute the onset of the long call sequence, often audible only at close range; signal the beginning of a male display episode.
+    confidence: high
+    references: [lameira_etal_2024_peerj, delgado_2017]
+
+  - name: long call roar pulses
+    alternative_names: [climax pulses, resonating pulses, long call climax]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, pulsed, repetitive, frequency_modulated, harmonic]
+    acoustic_description: The high-amplitude climax component of the long call consisting of loud frequency-modulated pulses or roars, enhanced by resonance in the cheekpads and laryngeal air sac; the loudest and most far-carrying element.
+    semantic_keywords: [territorial, spacing, display, identity]
+    semantic_description: The main advertisement signal of the long call; carries individual identity information and travels up to 1 km through forest.
+    confidence: high
+    references: [lameira_etal_2024_peerj, delgado_2017, mackinnon_1974]
+
+  - name: long call let-down sighs
+    alternative_names: [let-down pulses, long call ending, post-climax sighs]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, quiet, long, repetitive, noisy]
+    acoustic_description: A trailing series of lower-amplitude and lower-frequency sighs or soft pulses that follow the climax roar pulses; typically decreasing in intensity and forming the terminal phase of the full long call.
+    semantic_keywords: [display, territorial, spacing]
+    semantic_description: Forms the closing phase of the flanged male long call; the gradual fade signals the end of the advertisement bout.
+    confidence: high
+    references: [lameira_etal_2024_peerj, delgado_2017]
+
+  - name: kiss squeak unaided
+    alternative_names: [unmodified kiss squeak, bare kiss squeak]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, abrupt, short, noisy]
+    acoustic_description: A brief sharp suction-produced sound made by pressing lips together and sharply inhaling; high peak frequency and broadband noise burst; very short duration (< 0.2 s).
     semantic_keywords: [alarm, threat, attention]
-    semantic_description: Used in disturbance, fear, or aversive contexts and often accompanies efforts to deter threats or appear larger.
+    semantic_description: Used when encountering disturbance, potential threat, or aversive stimulus; can be repeated in rapid series to intensify the signal.
     confidence: high
     references: [hardus_2009, vanschaik_1986]
+
+  - name: kiss squeak with hand
+    alternative_names: [hand-modified kiss squeak, hand-assisted kiss squeak]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, abrupt, short, noisy, frequency_modulated]
+    acoustic_description: A kiss squeak produced while cupping one or both hands in front of the lips, which lowers maximum frequency and modifies spectral shape relative to the unaided version while leaving duration similar.
+    semantic_keywords: [alarm, threat, display]
+    semantic_description: Used in disturbance contexts, where hand-placement lowers perceived frequency so the caller sounds larger; considered an instrumental gesture-call.
+    confidence: high
+    references: [hardus_2009]
+
+  - name: kiss squeak with leaves
+    alternative_names: [leaf-modified kiss squeak, leaf kiss squeak]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: true
+      note: Leaf use reported as a cultural innovation that differs in occurrence across Bornean and Sumatran populations.
+    acoustic_keywords: [high_frequency, abrupt, short, noisy, frequency_modulated]
+    acoustic_description: A kiss squeak produced while holding a bunch of detached leaves in front of the lips; lower-frequency and more damped than the unaided version due to the leaf resonator, while duration and timing remain similar.
+    semantic_keywords: [alarm, threat, display]
+    semantic_description: Functionally similar to the hand-modified kiss squeak; the leaf tool further lowers perceived frequency to deceptively inflate apparent body size during predator or rival encounters.
+    confidence: high
+    references: [hardus_2009]
+
   - name: grumph
+    alternative_names: [grumf, grunt-grumble]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
     acoustic_keywords: [low_frequency, short, noisy, abrupt, graded]
-    acoustic_description: A short low rough call with harsher structure and less carrying power than the long call.
+    acoustic_description: A short, low-pitched rough vocalization with irregular noisy spectral structure and less carrying power than the long call; typically 0.1–0.5 s; produced singly or in series.
     semantic_keywords: [affiliation, contact, attention]
-    semantic_description: Used in close-range social interaction and low-level arousal contexts, including benign nearby engagement.
+    semantic_description: Used in close-range social contexts including benign social engagement, low arousal interactions, and as a flexible low-level contact signal.
     confidence: medium
     references: [delgado_2017]
+
+  - name: grumble
+    alternative_names: [rolling grumble, staccato grumble]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, pulsed, repetitive, short, noisy]
+    acoustic_description: Rapid strings of staccato low-pitched elements at approximately 185 Hz, each element ~0.05 s, evoking the sound of a starting engine; produced in quick succession.
+    semantic_keywords: [threat, aggression, display, attention]
+    semantic_description: Produced by flanged males in disturbance and pre-combat contexts, often combined with chomps in a biphonic compound call; also forms the build-up of the long call.
+    confidence: high
+    references: [lameira_etal_2023_pnas_nexus, delgado_2017]
+
+  - name: chomp
+    alternative_names: [chomping call, bubbly chomp]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, short, abrupt, noisy, pulsed]
+    acoustic_description: A bubbly, ascending sound element covering approximately 300–600 Hz over ~0.2 s, produced by articulatory lip and jaw movement without laryngeal voicing; consonant-like in mechanism.
+    semantic_keywords: [threat, aggression, display]
+    semantic_description: Produced by flanged males in disturbance and pre-combat situations; can be combined simultaneously with grumbles to form a biphonic compound call.
+    confidence: high
+    references: [lameira_etal_2023_pnas_nexus]
+
+  - name: chomps plus grumbles
+    alternative_names: [biphonic chomp-grumble, compound disturbance call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, noisy, pulsed, multi_component, low_frequency]
+    acoustic_description: A simultaneous combination of voiced grumble elements (~185 Hz staccato strings) and unvoiced chomp elements (ascending 300–600 Hz bursts), produced concurrently using two independent vocal source mechanisms analogous to beatboxing.
+    semantic_keywords: [threat, aggression, display]
+    semantic_description: Produced by flanged males during confrontation and pre-combat encounters; the biphonic combination appears to intensify the signal beyond either component alone.
+    confidence: high
+    references: [lameira_etal_2023_pnas_nexus]
+
   - name: rolling call
+    alternative_names: [rolling grumph series, intermediate long call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
     acoustic_keywords: [low_frequency, pulsed, repetitive, long, loud]
-    acoustic_description: A repeated series of low pulses delivered in an even rhythmic pattern, less elaborate than a full long call but more extended than isolated grumphs.
+    acoustic_description: A rhythmic series of low repeated pulses delivered at an even tempo, less structurally elaborate than a full long call; lacks the pronounced climax crescendo and let-down phases.
     semantic_keywords: [display, attention, spacing]
-    semantic_description: Used in locally aroused display contexts and short-range advertisement, especially by males.
+    semantic_description: Used by males in locally aroused display contexts and for moderate-range advertisement; often shorter and less structured than a full long call.
     confidence: medium
     references: [delgado_2017, mackinnon_1974]
-  - name: raspberry
-    acoustic_keywords: [broadband, noisy, short, abrupt, repetitive]
-    acoustic_description: A noisy sputtering oral sound with broad spectral energy and a brief percussive quality.
-    semantic_keywords: [attention, play, affiliation]
-    semantic_description: Used in nearby social engagement, including playful or socially directed interactions, though context boundaries vary.
+
+  - name: bark
+    alternative_names: [alarm bark, short bark]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, abrupt, short, loud, noisy]
+    acoustic_description: A sharp loud broadband burst of short duration, similar to a dog bark in structure; abrupt onset and offset with noisy spectral character.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Used during disturbance, sudden encounters with threats, or agitation; can precede or accompany kiss squeaks and other alarm signals.
+    confidence: medium
+    references: [hardus_etal_2009_geographic, mackinnon_1974]
+
+  - name: gorkum
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, short, noisy, multi_component, abrupt, pulsed]
+    acoustic_description: A compound call consisting of a kiss squeak immediately followed by a rapid series of grumph-like elements; the combination produces a distinctive kiss-then-rattle sequence.
+    semantic_keywords: [alarm, threat, aggression]
+    semantic_description: Produced in disturbance and threat contexts; the gorkum represents a more elaborate alarm or protest signal than a simple kiss squeak.
+    confidence: medium
+    references: [hardus_etal_2009_geographic]
+
+  - name: contact uff
+    alternative_names: [uff call, soft contact call]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, quiet, short, tonal, abrupt]
+    acoustic_description: A brief soft exhalation-based call with a dull low-frequency quality; short duration and low amplitude, audible only at close range.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used to maintain close-range contact with nearby conspecifics, particularly within a social party or between mother and offspring during quiet travel.
+    confidence: medium
+    references: [hardus_etal_2009_geographic]
+
+  - name: ahoor call
+    alternative_names: [ah-hoo, hooting call]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, short, quiet, high_frequency]
+    acoustic_description: A soft tonal hooting call with a rising or falling frequency contour; moderate duration, not particularly loud.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used in low-arousal social contexts for close-range contact and group coordination; may also function as an affiliative signal between familiar individuals.
     confidence: low
-    references: [delgado_2017]
+    references: [hardus_etal_2009_geographic]
+
+  - name: lork call
+    alternative_names: [female long call, female long-range call]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, repetitive, pulsed]
+    acoustic_description: A sequence of repeated low-frequency pulses produced by adult females; shares structural similarities with the male long call but is generally softer, shorter, and less acoustically complex; lacks the prominent cheekpad resonance of the flanged male call.
+    semantic_keywords: [spacing, attention, contact, identity]
+    semantic_description: Function is debated; may serve for spacing, contact, or kin communication over moderate distances; not universally reported across all populations.
+    confidence: low
+    references: [hardus_etal_2009_geographic]
+
+  - name: fast long call
+    alternative_names: [rapid long call, abbreviated long call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, pulsed, repetitive, short]
+    acoustic_description: A shorter, faster version of the full long call produced by unflanged or immature males; lacks the elaborate build-up and let-down phases of flanged male calls and is of shorter overall duration.
+    semantic_keywords: [display, spacing, identity]
+    semantic_description: Produced mainly by unflanged adult males in display contexts; may serve similar advertisement functions as the flanged male long call but with reduced signal complexity.
+    confidence: low
+    references: [hardus_etal_2009_geographic]
+
   - name: scream
+    alternative_names: [distress scream, fear scream]
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
     acoustic_keywords: [high_frequency, loud, noisy, long, graded]
-    acoustic_description: A loud harsh call with strong noisy energy and high arousal, often prolonged or repeated in escalating bouts.
+    acoustic_description: A loud harsh call with strong noisy broadband energy, often prolonged or produced in rapidly repeated bouts; high-frequency components prominent; may escalate in intensity.
     semantic_keywords: [distress, aggression, attention]
-    semantic_description: Produced in acute conflict, capture risk, attacks, or other immediate danger.
+    semantic_description: Produced in acute conflict, capture attempts, injury, or imminent threat; also emitted by infants and juveniles in distress.
     confidence: medium
     references: [mackinnon_1974, delgado_2017]
+
+  - name: bared-teeth scream
+    alternative_names: [silent bared teeth scream, submission scream]
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, short, abrupt]
+    acoustic_description: A high-pitched screaming call produced with lips retracted to expose teeth; often harsh and noisy across a broad frequency range; shorter and more staccato than the extended fear scream.
+    semantic_keywords: [submission, threat, distress]
+    semantic_description: Given in subordinate or fearful contexts toward dominant individuals; associated with submissive facial expression (bared-teeth face).
+    confidence: medium
+    references: [hardus_etal_2009_geographic]
+
+  - name: frustration scream
+    alternative_names: [tantrum scream]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, repetitive, long]
+    acoustic_description: A loud, high-pitched, and sustained scream or cry produced in repeated bursts; similar to but contextually distinguishable from the fear scream; may grade into crying and whimpering.
+    semantic_keywords: [distress, begging, attention]
+    semantic_description: Produced mainly by infants and juveniles when denied access to food, physical contact with the mother, or when demands go unmet; can constitute extended tantrum bouts.
+    confidence: medium
+    references: [hardus_etal_2009_geographic]
+
+  - name: whimper
+    alternative_names: [infant whimper, soft cry]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, quiet, short, tonal, graded, repetitive]
+    acoustic_description: A soft, high-pitched, and relatively tonal cry of moderate duration; quieter and lower in arousal level than a full scream; may be repeated at intervals.
+    semantic_keywords: [distress, begging, caregiving, contact]
+    semantic_description: Produced by infants and young juveniles to solicit care, food, or physical contact from their mother; a low-intensity distress or begging signal.
+    confidence: high
+    references: [mackinnon_1974]
+
+  - name: soft hoot
+    alternative_names: [soft whimper, hoo call]
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, quiet, short, high_frequency, frequency_modulated]
+    acoustic_description: A gentle, relatively tonal hoo-like call of brief to moderate duration and low amplitude; softer and more tonal than the grumph.
+    semantic_keywords: [contact, affiliation, caregiving]
+    semantic_description: Used as a low-arousal contact signal between closely associated individuals, including mother–infant pairs during quiet social situations.
+    confidence: medium
+    references: [hardus_etal_2009_geographic]
+
+  - name: grunt
+    alternative_names: [soft grunt, feeding grunt]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, quiet, short, noisy, abrupt]
+    acoustic_description: A brief low-pitched guttural sound of low amplitude; unremarkable spectral structure; less raucous than a grumph.
+    semantic_keywords: [food, affiliation, contact]
+    semantic_description: Produced during feeding and resting in low-arousal settings; may function as a contentment or food-presence signal, or serve general affiliative contact.
+    confidence: medium
+    references: [hardus_etal_2009_geographic, mackinnon_1974]
+
+  - name: play ooh
+    alternative_names: [play vocalization, laugh-like call, play pant]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, noisy, repetitive, short, pulsed]
+    acoustic_description: A series of short, pulsed exhalation-based sounds during play, loosely analogous to a laugh; each element brief and breathy with relatively high frequency; rhythmically repeated during active play bouts.
+    semantic_keywords: [play, affiliation]
+    semantic_description: Produced during physical play between infants and juveniles; serves as a play signal indicating non-aggression and readiness to continue play.
+    confidence: medium
+    references: [hardus_etal_2009_geographic]
+
+  - name: raspberry
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, noisy, short, abrupt, repetitive]
+    acoustic_description: A noisy sputtering labial sound with broad spectral energy; brief and percussive; produced by lip vibration during forced exhalation.
+    semantic_keywords: [attention, play, affiliation]
+    semantic_description: Used in nearby social engagement including playful or socially directed interactions; context boundaries with other short-range signals are graded.
+    confidence: low
+    references: [delgado_2017]
+
+  - name: mating squeal
+    alternative_names: [copulation squeal, mating call, estrus call]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, short, repetitive]
+    acoustic_description: A loud high-pitched squealing vocalization of short to moderate duration produced during copulation or in mating contexts; noisy and tonally variable.
+    semantic_keywords: [mating, courtship]
+    semantic_description: Emitted by females during or around copulation; described as fear squeaks in some studies but produced in copulatory contexts; may encode information about female reproductive state.
+    confidence: low
+    references: [hardus_etal_2009_geographic, mackinnon_1974]
+
+  - name: ahh vocalization
+    alternative_names: [ahh call, exhalation call]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, quiet, short, frequency_modulated, graded]
+    acoustic_description: A brief voiced exhalation with a relatively tonal quality and low amplitude; short and non-repetitive; graded in structure with neighboring call types.
+    semantic_keywords: [affiliation, contact, attention]
+    semantic_description: Produced in low-arousal close-range social interactions; exact function not fully established but appears in affiliative or attention-drawing contexts.
+    confidence: low
+    references: [hardus_etal_2009_geographic]
+
+  - name: crying and screaming
+    alternative_names: [infant cry, distress cry]
+    scope:
+      life_stages: [infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, long, repetitive, graded]
+    acoustic_description: Prolonged bouts of high-pitched crying alternating with or grading into screams; sustained high-amplitude output with irregular frequency modulation; typical of intense infant distress.
+    semantic_keywords: [distress, begging, caregiving, attention]
+    semantic_description: Produced by infants experiencing separation from mother, hunger, injury, or other acute distress; can grade across whimper, frustration scream, and full scream depending on intensity.
+    confidence: high
+    references: [hardus_etal_2009_geographic]
+
+  - name: throat wobble
+    alternative_names: [throat warble, gurgle]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, frequency_modulated, short, quiet, graded]
+    acoustic_description: A low-pitched gurgling or warbling sound produced with throat movement; modulated in frequency and amplitude at low intensity; brief to moderate duration.
+    semantic_keywords: [display, affiliation, attention]
+    semantic_description: Reported in close-range male display and social contexts; precise function not fully established; may grade with grumph and grunt.
+    confidence: low
+    references: [delgado_2017]
+
+  - name: nest smacks
+    alternative_names: [nest-smacking, percussive nest sound]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, abrupt, short, loud, repetitive]
+    acoustic_description: Percussive broadband sounds produced by slapping or hitting vegetation and nest materials; sharp transient impacts with broadband noise.
+    semantic_keywords: [display, attention, alarm]
+    semantic_description: Produced in arousal or disturbance contexts; a non-vocal mechanical sound used to augment visual and acoustic display.
+    confidence: low
+    references: [hardus_etal_2009_geographic]
+
+  - name: roar
+    alternative_names: [climax roar, display roar]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, noisy, long, frequency_modulated]
+    acoustic_description: A loud sustained roaring sound with strong low-frequency energy and significant harmonic content; enhanced by the laryngeal air sac and cheekpad resonators; forms the climax phase of the long call.
+    semantic_keywords: [territorial, display, spacing, identity]
+    semantic_description: Produced by flanged males at peak intensity during long calls; the most acoustically striking component of male display.
+    confidence: high
+    references: [mackinnon_1974, delgado_2017]
+
 references:
   delgado_2017:
     citation: "Delgado, R.A. 2017. Orangutan vocal behavior. In Orangutans: Geographic Variation in Behavioral Ecology and Conservation, pp. 95-116."
@@ -58,11 +462,21 @@ references:
     citation: "Hardus, M.E., Lameira, A.R., Van Schaik, C.P., and Wich, S.A. 2009. Tool use in wild orang-utans modifies sound production: A functionally deceptive innovation? Proceedings of the Royal Society B 276:3689-3694."
     url: https://doi.org/10.1098/rspb.2009.1027
     doi: 10.1098/rspb.2009.1027
+  hardus_etal_2009_geographic:
+    citation: "Hardus, M.E., Lameira, A.R., Singleton, I., Morrough-Bernard, H.C., Knott, C.D., Ancrenaz, M., Utami Atmoko, S.S., and Wich, S.A. 2009. A description of the orangutan's vocal and sound repertoire, with a focus on geographic variation. In Orangutans: Geographic Variation in Behavioral Ecology and Conservation, eds. Wich, S.A. et al., Oxford University Press."
   mackinnon_1974:
     citation: "MacKinnon, J. 1974. The behaviour and ecology of wild orang-utans (Pongo pygmaeus). Animal Behaviour 22:3-74."
     doi: 10.1016/S0003-3472(74)80054-0
   vanschaik_1986:
     citation: "van Schaik, C.P. 1986. The functional significance of orangutan facial expressions and vocalizations. In Primate Ontogeny, Cognition and Social Behaviour, pp. 383-390."
+  lameira_etal_2024_peerj:
+    citation: "Lameira, A.R. et al. 2024. Vocal complexity in the long calls of Bornean orangutans. PeerJ 12:e17320."
+    url: https://peerj.com/articles/17320/
+    doi: 10.7717/peerj.17320
+  lameira_etal_2023_pnas_nexus:
+    citation: "Lameira, A.R. et al. 2023. Wild orangutans can simultaneously use two independent vocal sound sources similarly to songbirds and human beatboxers. PNAS Nexus 2(6):pgad182."
+    url: https://academic.oup.com/pnasnexus/article/2/6/pgad182/7202377
+    doi: 10.1093/pnasnexus/pgad182
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
@@ -72,3 +486,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded the orangutan draft with additional commonly recognized short-range and display call classes and stable classic references.
+  - timestamp: "2026-06-12T16:15:00+02:00"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: "Major expansion from 6 to 32 call types. Added long call sub-components (introductory grumbles, roar pulses, let-down sighs), kiss squeak variants (hand-modified, leaf-modified), grumble, chomp, biphonic chomps+grumbles compound call, lork call, fast long call, bark, gorkum, contact uff, ahoor call, bared-teeth scream, frustration scream, whimper, soft hoot, grunt, play ooh, mating squeal, ahh vocalization, crying and screaming, throat wobble, nest smacks, and roar. Added references for Lameira et al. 2024 PeerJ and Lameira et al. 2023 PNAS Nexus. Candidates excluded: grinding (mechanical tooth-grinding, not a vocalization sensu stricto), complex calls (too broad/heterogeneous a category to list as a discrete call type)."

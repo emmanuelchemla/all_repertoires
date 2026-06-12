@@ -1,0 +1,556 @@
+scientific_name: Gymnorhina tibicen
+common_name: Australian Magpie
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Artamidae
+  genus: Gymnorhina
+  species: tibicen
+
+calls:
+  - name: carolling
+    alternative_names:
+      - carol
+      - territorial carol
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - long
+      - harmonic
+    acoustic_description: >
+      Loud, rich, melodious phrases pitched between approximately 6 and 8 kHz with
+      4–5 distinct elements and slurring transitions between notes. Frequency-modulated
+      with complex harmonic structure. Phrases can be sustained for many seconds;
+      overall impression is powerful and musical.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - identity
+      - group_coordination
+    semantic_description: >
+      Produced by pairs or groups to advertise and defend territories year-round.
+      Dominant male or female typically initiates the first notes; others join
+      in coordinated group display that reinforces group cohesion and signals
+      territory boundaries to neighbouring groups.
+    confidence: high
+    references: [kaplan_2004, roper_2003]
+
+  - name: subsong
+    alternative_names:
+      - warble
+      - soft warble
+      - quiet warble
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - tonal
+      - frequency_modulated
+      - long
+      - harmonic
+      - multi_component
+    acoustic_description: >
+      Soft, undulating, continuous musical phrase pitched at approximately 1–4 kHz
+      with predominantly pure tones and some complex harmonics. Low amplitude; does
+      not carry far. Individual bouts can last up to 70 minutes.
+    semantic_keywords:
+      - affiliation
+      - play
+      - display
+    semantic_description: >
+      Produced when a bird is alone or in relaxed social settings; not directed
+      at rivals or predators. Considered analogous to practice or rehearsal song;
+      also produced in contexts suggesting general well-being or low arousal.
+    confidence: high
+    references: [kaplan_2004]
+
+  - name: dawn song
+    alternative_names:
+      - pre-dawn carol
+      - dusk song
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - loud
+    acoustic_description: >
+      A short, repetitive version of the carolling phrase sung in chorus just before
+      dawn and again at twilight; individually similar in spectral structure to
+      full carolling but phrases are briefer and repeated in rapid succession.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - display
+    semantic_description: >
+      Sung by the group as a coordinated chorus at dawn and dusk, primarily in
+      winter and spring. Thought to reinforce territorial boundaries at the
+      transition between night and day when neighbouring groups may be assessing
+      each other's presence.
+    confidence: high
+    references: [kaplan_2004, roper_2003]
+
+  - name: group chorus
+    alternative_names:
+      - chorus carol
+      - communal song
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - multi_component
+      - harmonic
+      - tonal
+      - long
+    acoustic_description: >
+      Overlapping carolling phrases produced simultaneously by multiple group members,
+      creating a rich layered soundscape. Individual contributions remain tonally
+      similar to solo carol but the combined output is louder and more spectrally
+      dense.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - identity
+      - affiliation
+    semantic_description: >
+      Produced in response to intrusions by rival groups or unfamiliar conspecifics;
+      also used to reinforce group cohesion. Contains information about group
+      identity and size that can be assessed by neighbouring groups.
+    confidence: high
+    references: [kaplan_2004, pitcher_etal_2014]
+
+  - name: aerial alarm call
+    alternative_names:
+      - raptor alarm
+      - eagle alarm
+      - aerial predator alarm
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - multi_component
+      - loud
+      - frequency_modulated
+    acoustic_description: >
+      Complex, tonal call of more than two syllables; overall high-pitched with
+      rapid frequency modulation between elements. Distinctly different in structure
+      from ground-predator alarm; elicited most consistently by large raptors
+      such as eagles.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+    semantic_description: >
+      Functionally referential signal specific to overhead aerial predators,
+      especially eagles. Elicits scanning behaviour and crouching or shelter-seeking
+      in group members. Distinguished from other alarm types by receivers, who
+      respond differently to it than to ground-predator alarms.
+    confidence: high
+    references: [kaplan_rogers_2002, marler_etal_2013]
+
+  - name: ground predator alarm call
+    alternative_names:
+      - mobbing call
+      - snake alarm
+      - ground alarm
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - loud
+      - short
+      - repetitive
+    acoustic_description: >
+      Harsh, staccato squawk; broadband and noisy with abrupt onset and offset.
+      Shorter duration than aerial alarm elements. Often repeated rapidly in series
+      when the threat remains present.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+      - recruitment
+    semantic_description: >
+      Produced in response to terrestrial predators (snakes, cats, dogs, raptors
+      on the ground). Recruits group members to mob the predator; elicits approach
+      and mobbing behaviour rather than the flight/hiding response typical of
+      aerial alarms.
+    confidence: high
+    references: [kaplan_rogers_2002]
+
+  - name: general alert call
+    alternative_names:
+      - alert note
+      - generic alarm
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - tonal
+      - high_frequency
+    acoustic_description: >
+      Brief, single high-pitched note of short duration. Acoustically simpler than
+      the referential aerial or ground alarm calls; may precede more specific alarm
+      sequences or occur in ambiguous threat contexts.
+    semantic_keywords:
+      - alarm
+      - attention
+    semantic_description: >
+      Used as a general alert when a potential but unspecified threat is detected.
+      Triggers increased vigilance in group members without eliciting the specific
+      avoidance or mobbing response of referential alarm calls.
+    confidence: medium
+    references: [kaplan_rogers_2002]
+
+  - name: aggressive call
+    alternative_names:
+      - threat call
+      - agonistic call
+      - attack call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - abrupt
+      - short
+    acoustic_description: >
+      Harsh, loud broadband squawk or series of squawks with noisy, atonal
+      quality. May include bill snapping. Abrupt in onset and often repeated
+      during or immediately before physical attack.
+    semantic_keywords:
+      - aggression
+      - threat
+      - territorial
+    semantic_description: >
+      Directed at intruding conspecifics or humans approaching a nest. Common
+      during swooping behaviour in the breeding season. Also used in intragroup
+      dominance interactions to displace subordinates from food or perches.
+    confidence: high
+    references: [kaplan_2004]
+
+  - name: contact call
+    alternative_names:
+      - location call
+      - soft contact note
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - tonal
+      - quiet
+      - graded
+    acoustic_description: >
+      Short, relatively pure-toned note of moderate pitch; softer than alarm or
+      aggressive calls. May be graded in intensity depending on distance from
+      group members.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: >
+      Produced to maintain contact with group members within the territory when
+      visual contact is intermittent. Allows individuals to track the location
+      of conspecifics during foraging without triggering territorial or alarm
+      responses.
+    confidence: medium
+    references: [kaplan_2004]
+
+  - name: juvenile begging call
+    alternative_names:
+      - fledgling food call
+      - begging whine
+    scope:
+      life_stages: [juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - tonal
+      - loud
+      - graded
+    acoustic_description: >
+      Repeated, short, high-pitched call with slightly whining or nasal tonal
+      quality. Graded in rate and intensity; higher repetition rates associated
+      with greater hunger or proximity of a parent.
+    semantic_keywords:
+      - begging
+      - food
+      - caregiving
+    semantic_description: >
+      Produced by fledglings and juveniles to solicit food from parents or other
+      group members. Elicits regurgitation or prey-delivery behaviour in adults.
+      Continues beyond nutritional independence in some individuals, gradually
+      decreasing in frequency as juveniles become more self-sufficient.
+    confidence: high
+    references: [kaplan_2004]
+
+  - name: mimicry
+    alternative_names:
+      - vocal mimicry
+      - heterospecific imitation
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - multi_component
+      - frequency_modulated
+      - tonal
+      - long
+    acoustic_description: >
+      Acoustically variable, closely matching the source species or sound;
+      may include songs and calls of other birds, mammal sounds, and
+      anthropogenic sounds. Incorporated into and around song phrases; spectral
+      and temporal parameters reflect the imitated source rather than a fixed
+      magpie-typical structure.
+    semantic_keywords:
+      - display
+      - identity
+      - territorial
+    semantic_description: >
+      Australian Magpies are accomplished vocal mimics capable of incorporating
+      sounds from dozens of species and environmental sounds into their song.
+      Function debated: hypotheses include mate attraction, individual identity
+      signals, and territory advertisement. Mimicry content varies among
+      individuals and groups.
+    confidence: high
+    references: [kaplan_2004, hall_etal_2015]
+
+  - name: soft territorial song
+    alternative_names:
+      - quiet territorial call
+      - territorial whisper song
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - tonal
+      - frequency_modulated
+      - multi_component
+    acoustic_description: >
+      A quieter, less elaborate version of the full territorial carol; spectral
+      structure similar but amplitude and phrase length reduced. Directed toward
+      specific locations such as territorial boundaries or specific rival
+      individuals.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - threat
+    semantic_description: >
+      Produced at territorial boundaries during low-level disputes, or when a
+      bird is aware of but not yet alarmed by a neighbouring group. Functions
+      as a lower-cost signal of territorial presence before escalating to full
+      carol or aggressive call.
+    confidence: medium
+    references: [kaplan_2004]
+
+  - name: combinatorial call sequence
+    alternative_names:
+      - call combination
+      - non-song call combination
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: true
+      note: >
+        Multi-level combinatoriality most thoroughly documented in Western Australian
+        subspecies (G. t. dorsalis); likely present across subspecies but systematic
+        cross-population data are limited.
+    acoustic_keywords:
+      - multi_component
+      - graded
+      - repetitive
+    acoustic_description: >
+      Four acoustically distinct segments (labelled A, B, C, D in published work)
+      recombined into a larger set of calls, which are in turn combined into call
+      sequences. Individual segments range from tonal to noisy; combined output
+      is multi-component and variable in spectral structure depending on segment
+      ordering.
+    semantic_keywords:
+      - combinatorial
+      - group_coordination
+      - territorial
+      - alarm
+    semantic_description: >
+      Non-song calls that exhibit two levels of combinatoriality: individual
+      acoustic segments are combined into discrete call types, which are further
+      combined into call sequences. Used across a range of social contexts
+      including territory defence, intragroup competition, antipredator behaviour,
+      and recruitment. Production is linked to the composition of the immediate
+      social environment.
+    confidence: medium
+    references: [engesser_etal_2023, gill_etal_2024]
+
+  - name: juvenile territorial song
+    alternative_names:
+      - immature song
+      - subadult carol
+    scope:
+      life_stages: [juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - multi_component
+      - quiet
+    acoustic_description: >
+      Acoustically similar to adult carolling but less precise in frequency
+      contour and phrase structure; shows developmental errors and rehearsal-like
+      variability. Gradually converges on adult form over the first one to two
+      years of life.
+    semantic_keywords:
+      - territorial
+      - identity
+      - play
+    semantic_description: >
+      Produced by juveniles as they acquire the full territorial repertoire
+      through vocal learning. Evidence suggests juveniles face social constraints
+      on where and when they can sing in the presence of dominant adults,
+      particularly regarding calls directed at neighbours versus strangers.
+    confidence: medium
+    references: [kaplan_2018]
+
+  - name: distress call
+    alternative_names:
+      - distress scream
+      - capture call
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - broadband
+      - noisy
+      - abrupt
+      - high_frequency
+    acoustic_description: >
+      Loud, harsh, high-pitched scream with broadband noisy quality. Produced
+      with high intensity; clearly distinguishable from alarm or aggressive calls
+      by greater amplitude and more continuous structure.
+    semantic_keywords:
+      - distress
+      - alarm
+      - recruitment
+    semantic_description: >
+      Produced when a bird is captured or physically attacked. Recruits nearby
+      group members who may mob the attacker. Distinct from alarm calls in that
+      it signals active physical distress rather than the presence of a
+      potential threat.
+    confidence: medium
+    references: [kaplan_2004]
+
+references:
+  kaplan_2004:
+    citation: >
+      Kaplan, G. (2004). Australian Magpie: Biology and Behaviour of an Unusual Songbird.
+      CSIRO Publishing, Collingwood, Victoria.
+    url: https://books.google.com/books/about/Australian_Magpie.html?id=ap6gjCjr5lMC
+  kaplan_rogers_2002:
+    citation: >
+      Kaplan, G. & Rogers, L. J. (2002). Alarm calls of the Australian magpie
+      (Gymnorhina tibicen): predators elicit complex vocal responses and mobbing
+      behaviour. The Open Ornithology Journal, 2, 7–16.
+    url: https://benthamopen.com/ABSTRACT/TOOENIJ-2-7
+  roper_2003:
+    citation: >
+      Roper, A. (2003). Vocalisations of the Australian Magpie (Gymnorhina tibicen).
+      Unpublished report, University of Melbourne.
+    url: https://cpb-ap-se2.wpmucdn.com/blogs.unimelb.edu.au/dist/6/184/files/2016/09/32_Roper-2jssl9e.pdf
+  pitcher_etal_2014:
+    citation: >
+      Pitcher, B. J., Agent, A., & Magrath, R. D. (2014). Information content in
+      chorus songs of the group-living Australian Magpie (Cracticus tibicen dorsalis)
+      in Western Australia. University of Western Australia Research Repository.
+    url: https://research-repository.uwa.edu.au/en/publications/information-content-in-chorus-songs-of-the-group-living-australia
+  hall_etal_2015:
+    citation: >
+      Hall, M. L., Kingma, S. A., & Peters, A. (2015). Song structure and function
+      of mimicry in the Australian magpie compared to the lyrebird. ResearchGate
+      preprint.
+    url: https://www.researchgate.net/publication/285252297_Song_structure_and_function_of_mimicry_in_the_Australian_magpie_compared_to_the_lyrebird
+  engesser_etal_2023:
+    citation: >
+      Engesser, S., Townsend, S. W., & Bailey, N. W. (2023). Multi-level
+      combinatoriality in magpie non-song vocalizations. Journal of the Royal
+      Society Interface, 20(199), 20220679.
+    doi: 10.1098/rsif.2022.0679
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9890321/
+  gill_etal_2024:
+    citation: >
+      Gill, L. F., et al. (2024). Call combination production is linked to the
+      social environment in Western Australian magpies (Gymnorhina tibicen
+      dorsalis). PubMed.
+    url: https://pubmed.ncbi.nlm.nih.gov/38768205/
+  marler_etal_2013:
+    citation: >
+      Marler, P., et al. (2013). Stability of referential signalling across time
+      and locations: testing alarm calls of Australian magpies (Gymnorhina tibicen)
+      in urban and rural Australia and in Fiji. PeerJ, 1, e112.
+    doi: 10.7717/peerj.112
+    url: https://peerj.com/articles/112/
+  kaplan_2018:
+    citation: >
+      Kaplan, G. (2018). Development of meaningful vocal signals in a juvenile
+      territorial songbird (Gymnorhina tibicen) and the dilemma of vocal taboos
+      concerning neighbours and strangers. PubMed.
+    url: https://pubmed.ncbi.nlm.nih.gov/30513676/
+
+provenance:
+  - timestamp: "2026-06-12T16:45:00+02:00"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Created from LLM knowledge supplemented by web search. Key sources include
+      Kaplan (2004) monograph, Kaplan & Rogers (2002) alarm call study, and
+      Engesser et al. (2023) combinatoriality study. Fifteen call types covering
+      song, alarm, social, juvenile, and combinatorial categories.

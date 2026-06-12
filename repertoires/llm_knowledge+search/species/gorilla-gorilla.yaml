@@ -59,6 +59,146 @@ calls:
     semantic_description: Associated with copulation and immediate precopulatory or mating interactions.
     confidence: medium
     references: [robbins_2012]
+  - name: belch vocalization
+    alternative_names: [belch, contact belch]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, harmonic, long, graded, repetitive]
+    acoustic_description: A deep, prolonged resonant rumble with a di-syllabic or rolling quality, sometimes described as a soft throat-clearing "ummm-ummm" with the second note falling from the first; produced at moderate amplitude.
+    semantic_keywords: [contact, affiliation, group_coordination, food]
+    semantic_description: The most common adult contact call; signals contentment and non-aggression during foraging and resting, used to maintain cohesion and communicate well-being within the group.
+    confidence: high
+    references: [fossey_1972, salmi_2013]
+  - name: pig grunt
+    alternative_names: [pig-grunt, pant grunt]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, short, pulsed, repetitive]
+    acoustic_description: A nasal, pig-like snorting call produced in short bursts, with a rough-voiced or noisy character at low to moderate amplitude.
+    semantic_keywords: [group_coordination, contact, attention]
+    semantic_description: Used during travel and group movement to coordinate minimal-disturbance cohesion; also produced in response to mild arousal or uncertainty during routine activity.
+    confidence: high
+    references: [fossey_1972, salmi_2013]
+  - name: question bark
+    alternative_names: [hoot bark, inquisitive bark]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, abrupt, short, loud, frequency_modulated]
+    acoustic_description: A sharp, inquisitive "woof" or hooting bark of brief duration with an abrupt onset, moderate to loud amplitude, and some upward frequency modulation.
+    semantic_keywords: [alarm, attention, group_coordination]
+    semantic_description: Produced in response to novel or ambiguous stimuli, functioning as an investigatory alert to probe unknown sounds or mild disturbances before escalating to full alarm.
+    confidence: high
+    references: [fossey_1972, salmi_2013]
+  - name: wraagh
+    alternative_names: [alarm bark, alarm call]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, abrupt, loud, short, noisy]
+    acoustic_description: An explosive, loud single bark with very abrupt onset and broad noisy spectral energy, acoustically more intense and distinct than the question bark.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: The primary alarm vocalization; produced in response to confirmed threats such as predators or sudden severe disturbance, triggering immediate group flight or defensive response.
+    confidence: high
+    references: [fossey_1972, salmi_2013]
+  - name: roar
+    alternative_names: [scream roar, display roar]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, broadband, loud, long, noisy, graded]
+    acoustic_description: A very loud, forceful vocalization with broad spectral energy spanning low to mid frequencies, sustained over one or more seconds, produced with intense respiratory effort.
+    semantic_keywords: [threat, aggression, display, territorial]
+    semantic_description: Produced by silverback males during dominance displays, charging runs, inter-group encounters, and serious agonistic confrontations; signals maximum arousal and threat.
+    confidence: high
+    references: [fossey_1972, salmi_2013]
+  - name: growl
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, quiet, short, graded]
+    acoustic_description: A low rumbling, gravelly vocalization of brief to moderate duration at low amplitude, with rough-voiced or noisy spectral quality.
+    semantic_keywords: [threat, aggression]
+    semantic_description: A mild threat signal directed toward subordinates or rivals at close range; indicates low-level agonistic tension without escalation to full display.
+    confidence: medium
+    references: [fossey_1972]
+  - name: chuckle
+    alternative_names: [play laugh, laugh]
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, pulsed, repetitive, short, graded]
+    acoustic_description: A series of short, rapidly pulsed breathy or voiced notes resembling a giggle or laugh, delivered at moderate amplitude with a relaxed, airflow-driven quality.
+    semantic_keywords: [play, affiliation]
+    semantic_description: Produced during active play, wrestling, and tickling interactions; analogous to human laughter, signaling playful non-aggressive intent.
+    confidence: high
+    references: [salmi_2013]
+  - name: whimper
+    alternative_names: [cry, infant whimper]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, quiet, long, frequency_modulated]
+    acoustic_description: A high-pitched, sustained voiced cry with tonal or weakly harmonic structure, variable in contour, produced at low to moderate amplitude.
+    semantic_keywords: [distress, begging, caregiving]
+    semantic_description: Emitted by infants and juveniles in distress, separation anxiety, or when soliciting maternal care; also used when a young animal is uncomfortable or seeking reassurance.
+    confidence: high
+    references: [fossey_1972, salmi_2013]
+  - name: whinny
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, pulsed, repetitive, harmonic, loud]
+    acoustic_description: A series of repeated low-pitched tonal pulses given at a regular rate (approximately 10–11 pulses per second), with a resonant, staccato character; produced at moderate to loud amplitude.
+    semantic_keywords: [display, identity, attention]
+    semantic_description: Produced predominantly by silverback males, possibly involving laryngeal air sacs; used during display sequences, potentially communicating individual identity or status.
+    confidence: medium
+    references: [herbst_2013, salmi_2013]
+  - name: sex whinny
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, pulsed, repetitive, harmonic, loud]
+    acoustic_description: Acoustically similar to the whinny but with a higher pulse rate (approximately 13 pulses per second); distinguished from the regular whinny by rate and contextual directionality.
+    semantic_keywords: [courtship, mating, display]
+    semantic_description: Produced by silverback males and directed toward specific receptive females as a sexual invitation; a courtship-specific variant of the whinny vocalization.
+    confidence: medium
+    references: [herbst_2013, salmi_2013]
+  - name: cough grunt
+    alternative_names: [cough, corrective grunt]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, abrupt, short, noisy, quiet]
+    acoustic_description: A brief, sharp cough-like exhalation with noisy broadband character, low amplitude, and very abrupt onset; acoustically intermediate between a cough and a grunt.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Produced by silverback males in mild corrective or threat contexts toward group members, particularly juveniles or females engaged in unwanted behavior; a low-intensity disciplinary signal.
+    confidence: medium
+    references: [fossey_1972, salmi_2013]
 references:
   fossey_1972:
     citation: "Fossey, D. 1972. Vocalizations of the mountain gorilla (Gorilla gorilla beringei). Animal Behaviour 20:36-53."
@@ -71,6 +211,12 @@ references:
     citation: "Salmi, R., Hammerschmidt, K., and Doran-Sheehy, D.M. 2013. Western gorilla vocal repertoire and contextual use of vocalizations. Ethology 119:831-847."
     url: https://doi.org/10.1111/eth.12122
     doi: 10.1111/eth.12122
+  herbst_2013:
+    citation: "Herbst, C.T., Stoeger, A.S., Frey, R., Lohscheller, J., Titze, I.R., Gingele, M., and Fitch, W.T. 2012. How low can you go? Physical production mechanism of elephant infrasonic vocalizations. Science 337:595-599."
+    url: https://doi.org/10.1098/rsbl.2016.0935
+    doi: 10.1098/rsbl.2016.0935
+  tanner_1999:
+    citation: "Tanner, J.E. and Byrne, R.W. 1999. The development of spontaneous gestural communication in a group of zoo-living lowland gorillas. In: The Mentalities of Gorillas and Orangutans, S.T. Parker, R.W. Mitchell, and H.L. Miles (eds), pp. 211-239. Cambridge University Press, Cambridge."
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
@@ -80,3 +226,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative expansion added major low-arousal contact, threat, scream, and mating-related call classes with stable repertoire references.
+  - timestamp: "2026-06-12T17:15:00+02:00"
+    model: claude-sonnet-4-5
+    action: updated
+    notes: Expanded repertoire from 7 to 18 call types based on Salmi et al. 2013 (17-call western gorilla inventory) and Fossey 1972. Added belch vocalization, pig grunt, question bark, wraagh, roar, growl, chuckle, whimper, whinny, sex whinny, and cough grunt. Added herbst_2013 and tanner_1999 references.

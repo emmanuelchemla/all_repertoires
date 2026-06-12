@@ -1,0 +1,520 @@
+scientific_name: Octodon degus
+common_name: Degu
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Rodentia
+  family: Octodontidae
+  genus: Octodon
+  species: degus
+
+calls:
+  - name: wheep
+    alternative_names:
+      - alarm whistle
+      - warning call
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - short
+      - broadband
+      - high_frequency
+      - abrupt
+    acoustic_description: >-
+      A loud, broad-spectrum call of average duration ~0.1 s with a frequency
+      range of approximately 4.2–14.9 kHz. Typically consists of a brief,
+      abrupt burst spanning broad frequency bands rather than a pure tone.
+      Often repeated twice in succession followed by periods of silence.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: >-
+      Produced in response to environmental threats or perceived predators.
+      Alerts group members to stop activities and remain vigilant. Functions as
+      an anti-predator alarm signal within the colony; adult alarm wheeps
+      elicit stronger vigilance responses than juvenile wheeps.
+    confidence: high
+    references: [long_2007, ramirez_etal_2016]
+
+  - name: loud whistle
+    alternative_names:
+      - pup isolation call
+      - care-eliciting whistle
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - long
+      - tonal
+      - high_frequency
+      - multi_component
+      - harmonic
+    acoustic_description: >-
+      A very loud, long whistle produced one to five times in a row, sometimes
+      interspersed with softer whistles. Frequency spans approximately
+      2.8–61.6 kHz with most energy in the ~10 kHz region, demonstrating
+      ultrasonic harmonic components. Duration and spectral features vary
+      with pup age and behavioral context.
+    semantic_keywords:
+      - distress
+      - begging
+      - contact
+    semantic_description: >-
+      Emitted by pups (0–6 weeks) when separated from the family group or
+      when alone outside the nest. Functions to elicit caregiving responses
+      from adults. Also produced when pups are playing outside the nest.
+    confidence: high
+    references: [long_2007, plachez_etal_2016]
+
+  - name: low whistle
+    alternative_names:
+      - soft pup whistle
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - short
+      - tonal
+      - low_frequency
+    acoustic_description: >-
+      A soft, brief whistle of average duration ~0.094 s with a frequency
+      range of approximately 1.1–3.4 kHz. Consists typically of an
+      unmodulated or weakly modulated fundamental frequency. Considerably
+      softer and lower in frequency than the loud whistle.
+    semantic_keywords:
+      - contact
+      - begging
+    semantic_description: >-
+      Exclusive to pups. Produced in lower-urgency separation or contact
+      contexts, possibly when pups are in close proximity to caregivers but
+      still seeking attention or reassurance.
+    confidence: medium
+    references: [long_2007]
+
+  - name: mothering call
+    alternative_names:
+      - maternal call
+      - nursing call
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - multi_component
+      - frequency_modulated
+      - tonal
+      - repetitive
+    acoustic_description: >-
+      A complex vocalization combining trill and warble elements, resulting in
+      a frequency-modulated, multi-component call. Typically of moderate
+      duration with rapid frequency fluctuations. Audible to humans and
+      distinguishable from other female calls by its combined trill-warble
+      structure.
+    semantic_keywords:
+      - caregiving
+      - affiliation
+      - contact
+    semantic_description: >-
+      Produced exclusively by females—both lactating and non-lactating—during
+      nursing, grooming, or cleaning of pups. Stimulates and reinforces
+      suckling behaviour. Pups learn to recognize and prefer this call during
+      the first two postnatal weeks. Muted mothers produce pups with reduced
+      weight gain, demonstrating the functional importance of this call.
+    confidence: high
+    references: [braun_etal_1997, long_2007, poeggel_braun_1996]
+
+  - name: warble
+    alternative_names:
+      - warbling call
+      - friendly warble
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - tonal
+      - long
+      - repetitive
+      - graded
+    acoustic_description: >-
+      A melodic, frequency-modulated call with rapid upward and downward
+      frequency sweeps producing a characteristic warbling or undulating
+      contour. Moderate to long duration. Often emitted in bouts during social
+      interactions and combines with trills in the mothering call.
+    semantic_keywords:
+      - affiliation
+      - play
+      - contact
+      - group_coordination
+    semantic_description: >-
+      Produced during playful and affiliative social interactions among adults
+      and adolescents. Commonly accompanies grooming behaviour. Forms part of
+      the composite mothering call when produced by lactating females toward
+      pups.
+    confidence: high
+    references: [long_2007]
+
+  - name: trill
+    alternative_names:
+      - chittering trill
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - pulsed
+      - tonal
+      - short
+      - high_frequency
+    acoustic_description: >-
+      A rapid series of short, pulsed tonal elements delivered at high
+      repetition rate, producing a characteristic trilling sound. Individual
+      pulses are brief and relatively uniform in frequency. May be high-pitched
+      and audible across moderate distances.
+    semantic_keywords:
+      - affiliation
+      - play
+      - contact
+    semantic_description: >-
+      Produced in affiliative and playful contexts. Along with the warble,
+      forms the composite mothering call when produced by females attending
+      pups. Also emitted during friendly social encounters.
+    confidence: high
+    references: [long_2007]
+
+  - name: chitter
+    alternative_names:
+      - chittering
+      - play chitter
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - pulsed
+      - broadband
+      - short
+      - loud
+    acoustic_description: >-
+      A series of rapid, broadband pulsed sounds produced in quick succession,
+      giving a chattering or chittering quality. Individual elements are brief
+      and somewhat noisy. Audible volume indicates arousal during the
+      interaction.
+    semantic_keywords:
+      - play
+      - affiliation
+      - display
+    semantic_description: >-
+      Emitted during active play with companions, signalling enjoyment and
+      positive arousal. Produced when degus are engaged in social play, often
+      accompanied by chasing or wrestling behaviour. Functions to advertise
+      playful intent.
+    confidence: medium
+    references: [long_2007]
+
+  - name: pip
+    alternative_names:
+      - soft pip
+      - greeting pip
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - short
+      - abrupt
+      - tonal
+    acoustic_description: >-
+      A very brief, soft, abrupt tonal element of average duration ~0.048 s.
+      Low amplitude and high-pitched relative to the body of other degu calls.
+      Often produced as isolated single elements rather than in rapid series.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - caregiving
+    semantic_description: >-
+      Produced by males and females across age classes. Most commonly
+      associated with pup care and grooming contexts, functioning as a
+      greeting signal and encouraging social bonding. Emitted in close-contact
+      affiliative encounters.
+    confidence: medium
+    references: [long_2007]
+
+  - name: whine
+    alternative_names:
+      - drawn-out whine
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - long
+      - tonal
+      - frequency_modulated
+      - low_frequency
+    acoustic_description: >-
+      A soft, drawn-out vocalization of average duration ~0.288 s with a
+      frequency range of approximately 1.8–6.5 kHz. Typically consists of an
+      unmodulated or gently descending fundamental frequency. Lower amplitude
+      than alarm calls.
+    semantic_keywords:
+      - submission
+      - distress
+      - threat
+    semantic_description: >-
+      A warning or agonistic signal indicating discomfort or low-level threat.
+      Emitted when degus are unhappy with a social partner or feel mildly
+      threatened. Part of a graded agonistic repertoire alongside groans and
+      grunts, signalling escalating conflict risk.
+    confidence: high
+    references: [long_2007]
+
+  - name: groan
+    alternative_names:
+      - agonistic groan
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - low_frequency
+      - long
+      - broadband
+    acoustic_description: >-
+      A rough, low-frequency broadband sound of moderate to long duration.
+      More noisy and less tonal than the whine, with a grating or rumbling
+      quality. May be produced at moderate amplitude.
+    semantic_keywords:
+      - threat
+      - aggression
+      - submission
+    semantic_description: >-
+      Part of the agonistic call series, typically escalating beyond whine
+      level. Emitted during social conflicts to warn conspecifics and signal
+      displeasure. Often accompanies increased proximity conflict or resource
+      competition.
+    confidence: medium
+    references: [long_2007]
+
+  - name: grunt
+    alternative_names:
+      - agonistic grunt
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - short
+      - abrupt
+      - low_frequency
+      - broadband
+    acoustic_description: >-
+      A brief, abrupt, broadband low-frequency sound with a harsh or percussive
+      quality. Short duration and noisy spectral structure distinguish it from
+      the smoother whine. May be produced in bursts.
+    semantic_keywords:
+      - aggression
+      - threat
+      - territorial
+    semantic_description: >-
+      Produced during agonistic encounters to repel conspecifics. Associated
+      with direct aggressive confrontations and territorial disputes.
+      Often paired with teeth snapping or postural threat displays. Part of an
+      escalating agonistic sequence.
+    confidence: high
+    references: [long_2007]
+
+  - name: chirp
+    alternative_names:
+      - contact chirp
+      - reunion chirp
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - abrupt
+      - repetitive
+    acoustic_description: >-
+      A brief, high-pitched tonal element centred around approximately 4 kHz.
+      Typically emitted three times in succession, often mixed with other
+      vocalization types such as whines, groans, and tweets. Abrupt onset and
+      offset.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: >-
+      Used in contact and reunion contexts; infant reunion calls are
+      characterised by 4 kHz chirping components. Produced during social
+      interactions often mixed into composite vocal sequences. Functions in
+      maintaining group cohesion and individual recognition.
+    confidence: medium
+    references: [long_2007, poeggel_braun_1996]
+
+  - name: tweet
+    alternative_names:
+      - soft tweet
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - quiet
+    acoustic_description: >-
+      A brief, soft, high-pitched tonal element acoustically similar to the
+      chirp but distinguished by lower amplitude and slightly different
+      spectral characteristics. Often occurs within mixed vocal sequences.
+    semantic_keywords:
+      - contact
+      - affiliation
+    semantic_description: >-
+      Produced in low-intensity social interactions and contact situations.
+      Often mixed with chirps, whines, and groans in multi-component vocal
+      bouts. Boundary with chirp is uncertain; included separately because
+      the literature names them distinctly.
+    confidence: low
+    references: [long_2007]
+
+  - name: teeth snap
+    alternative_names:
+      - teeth grinding
+      - chattering teeth
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - abrupt
+      - short
+      - broadband
+      - pulsed
+    acoustic_description: >-
+      A rapid, percussive broadband sound produced by snapping or chattering
+      the teeth together. Broad spectral composition with sharp transients.
+      May be accompanied by other agonistic vocalizations. Distinct from
+      vocal-tract sounds but functions communicatively.
+    semantic_keywords:
+      - aggression
+      - threat
+      - display
+    semantic_description: >-
+      Produced during agonistic confrontations, especially rapid aggressive
+      teeth snapping directed at a conspecific. Often accompanies growling and
+      whining and signals high-intensity aggression or defensive threat.
+    confidence: medium
+    references: [long_2007]
+
+  - name: ultrasonic pup call
+    alternative_names:
+      - ultrasonic isolation call
+      - USV pup call
+    scope:
+      life_stages: [infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - quiet
+      - short
+      - harmonic
+      - tonal
+    acoustic_description: >-
+      A high-frequency component extending well above the audible range;
+      harmonics of care-eliciting calls have been recorded up to 61.6 kHz.
+      Most energy concentrated around ~10 kHz, but with ultrasonic harmonics.
+      Acoustic features (duration, frequency) vary with pup age and
+      social context.
+    semantic_keywords:
+      - distress
+      - begging
+      - contact
+      - caregiving
+    semantic_description: >-
+      Emitted by isolated or distressed neonatal pups to elicit caregiving
+      responses from the mother or other group members. Represents the first
+      documented instance of ultrasonic frequency production by the species.
+      May allow mother-pup individual recognition through litter-specific
+      acoustic features.
+    confidence: medium
+    references: [plachez_etal_2016]
+
+references:
+  long_2007:
+    citation: >-
+      Long, C. V. (2007). Vocalisations of the degu Octodon degus, a social
+      caviomorph rodent. Bioacoustics, 16(3), 223–244.
+    doi: 10.1080/09524622.2007.9753579
+  braun_etal_1997:
+    citation: >-
+      Braun, K., Lange, E., Metzger, M., & Poeggel, G. (1999). Influence of
+      parental deprivation on the behavioral development in Octodon degus:
+      modulation by maternal vocalizations. Comparative Biochemistry and
+      Physiology Part A: Molecular & Integrative Physiology, 124(3), 395–408.
+    doi: 10.1016/S1095-6433(99)00130-6
+  poeggel_braun_1996:
+    citation: >-
+      Poeggel, G., & Braun, K. (1996). Early auditory filial learning in degus
+      (Octodon degus): behavioral and autoradiographic studies. Brain Research,
+      743(1–2), 162–170.
+    doi: 10.1016/S0006-8993(96)01036-3
+  ramirez_etal_2016:
+    citation: >-
+      Ramírez-Castillo, E., Ebensperger, L. A., & Bhatt, D. L. (2016). Alarm
+      call discrimination in a social rodent: adult but not juvenile degu
+      calls induce high vigilance. Animal Behaviour, 96, 1–9.
+    doi: 10.1016/j.anbehav.2014.07.027
+  plachez_etal_2016:
+    citation: >-
+      Plachez, G., Gahr, M., & Okobi, D. (2016). Pups of the degu (Octodon
+      degus) include ultrasonic frequencies in care-eliciting calls. PLoS ONE.
+    url: https://www.researchgate.net/publication/289394730_Pups_of_the_degu_octodon_degus_include_ultrasonic_frequencies_in_care-eliciting_calls
+
+provenance:
+  - timestamp: "2026-06-12T16:45:00+02:00"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >-
+      Created from LLM knowledge and web search. Primary source is Long (2007)
+      identifying 15 vocalization categories from 3535 recordings. Additional
+      sources include Poeggel & Braun (1996), Braun et al. (1999), Ramirez-
+      Castillo et al. (2016), and ultrasonic pup call research. Call names
+      use Long (2007) terminology where available.
