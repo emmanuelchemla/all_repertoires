@@ -24,13 +24,6 @@ calls:
     semantic_description: A prominent female display element in pair-song performance.
     confidence: high
     references: [geissmann_2002, fan_2011]
-  - name: male coda
-    acoustic_keywords: [short, repetitive, tonal, harmonic, abrupt]
-    acoustic_description: A sequence of shorter phrase endings or terminal notes that contrasts with the longer female great-call structure.
-    semantic_keywords: [group_coordination, display, identity]
-    semantic_description: Contributes to coordinated duet structure and pair-level song identity.
-    confidence: high
-    references: [geissmann_2002, fan_2011]
   - name: male solo song
     acoustic_keywords: [long, loud, repetitive, harmonic, multi_component]
     acoustic_description: A long loud song produced by a single male with repeated phrase patterns related to duet material but lacking the female great-call section.
@@ -51,6 +44,21 @@ calls:
     semantic_keywords: [attention, alarm, threat]
     semantic_description: Used in high-arousal local contexts outside the core song bout.
     confidence: low
+  - name: staccato note sequence
+    acoustic_keywords: [short, repetitive, abrupt, tonal, harmonic]
+    acoustic_description: A rapid series of short notes with strong rhythmic regularity and less internal modulation than the more elaborate male phrase endings.
+    semantic_keywords: [territorial, display, identity]
+    semantic_description: Treated here as a distinct male song element because Nomascus descriptions separate staccato notes from the multi-modulated phrase and use them in duet or solo advertisement.
+    confidence: medium
+    references: [geissmann_2002, ruppell_2004]
+  - name: multi-modulated phrase
+    alternative_names: [male coda]
+    acoustic_keywords: [long, tonal, frequency_modulated, harmonic, repetitive]
+    acoustic_description: A conspicuous male phrase with repeated notes and marked within-note modulation, more elaborate than the short staccato sequence.
+    semantic_keywords: [territorial, display, identity]
+    semantic_description: Functions as a major male contribution to duet and solo song displays; retained as distinct because Nomascus sources repeatedly describe it separately from staccato notes.
+    confidence: high
+    references: [fan_2011, ruppell_2004]
 references:
   fan_2011:
     citation: "Fan, P.F., Xiao, W., Huo, S., Bao, Y., and Jiang, X. 2011. Singing behaviour of black crested gibbons (Nomascus concolor jingdongensis) in Mt. Wuliang, central Yunnan, China. Folia Primatologica 82:190-199."
@@ -58,6 +66,9 @@ references:
   geissmann_2002:
     citation: "Geissmann, T. 2002. Duet-splitting and the evolution of gibbon songs. Biological Reviews 77:57-76."
     doi: 10.1017/S1464793101005826
+  ruppell_2004:
+    citation: "Ruppell, A. 2004. Vocal diversity and taxonomy of Nomascus in Cambodia. Diploma thesis / summary source on Nomascus song structure."
+    url: https://www.gibbons.de/main/theses/pdf_files/2007ruppell.pdf
 provenance:
   - timestamp: "2026-06-10T22:30:00+02:00"
     model: GPT-5 Codex
@@ -67,3 +78,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded around established concolor song organization, separating female and male song roles while keeping uncertain non-song local calls conservative.
+  - timestamp: "2026-06-11T14:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide high-recall review split the male song contribution into staccato note sequence and multi-modulated phrase, which are commonly described separately in Nomascus song-structure sources.

@@ -73,6 +73,23 @@ calls:
   confidence: low
   references:
   - kingdon_2013
+- name: grunt
+  alternative_names:
+  - progression grunt
+  - contact grunt
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  acoustic_description: Quiet low-pitched calls with a simpler contour than chirps and much less amplitude than male booms or hacks.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Included as a plausible short-range progression and cohesion call because broader guenon overviews describe grunt-type signals in crowned guenons during routine movement.
+  confidence: low
 - name: scream
   acoustic_keywords:
   - high_frequency
@@ -108,3 +125,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Conservative revision emphasized the best-supported male boom and hack classes and trimmed the repertoire to broad call types that remain plausible without overclaiming.
+- timestamp: '2026-06-11T14:10:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added a low-confidence grunt/progression call to improve recall for routine social-cohesion calling in crowned guenons.

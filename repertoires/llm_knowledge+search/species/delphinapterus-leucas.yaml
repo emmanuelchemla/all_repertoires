@@ -54,6 +54,14 @@ calls:
     semantic_description: Used in active social interactions and high-arousal group communication.
     confidence: medium
     references: [noyes_2019]
+  - name: noisy call
+    alternative_names: [harsh call]
+    acoustic_keywords: [noisy, broadband, abrupt, short, graded]
+    acoustic_description: A rough, spectrally diffuse vocalization lacking the stable narrowband contour of whistles and the regular repetition of pulse trains.
+    semantic_keywords: [attention, group_coordination, distress]
+    semantic_description: Included as a broad harsh-call category because beluga repertoires often distinguish noisy social sounds from whistles, pulsed calls, and mixed calls.
+    confidence: medium
+    references: [chmelnitsky_2012, noyes_2019]
 references:
   ames_2020:
     citation: "Ames, A.E., Vergara, V., Kuczaj, S.A., and Killebrew, D. 2020. Trajectories of vocal repertoire development in beluga whale calves: Insights from studies a decade apart. Aquatic Mammals 46:397-419."
@@ -61,6 +69,8 @@ references:
   brewer_2023:
     citation: "Brewer, A., Castellote, M., and Wade, P. 2023. Communication in Cook Inlet beluga whales: Describing the vocal repertoire and caller identity. NOAA Technical Memorandum."
     url: https://repository.library.noaa.gov/view/noaa/56147/noaa_56147_DS1.pdf
+  chmelnitsky_2012:
+    citation: "Chmelnitsky, E.G. and Ferguson, S.H. 2012. Beluga whale, Delphinapterus leucas, vocalizations from the Churchill River, Manitoba, Canada. Journal of the Acoustical Society of America 131:4821-4835."
   noyes_2019:
     citation: "Noyes, A., Friedlaender, A., and Sayigh, L. 2019. Investigating individual distinctiveness in the calls of wild belugas. Journal of the Acoustical Society of America."
   roy_2021:
@@ -78,3 +88,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Rebuilt around the modern whistle-pulsed-combined beluga framework and added a conservative high-frequency burst-pulse class with stable references.
+  - timestamp: "2026-06-11T18:30:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a broad noisy-call class to improve recall for beluga repertoire summaries that explicitly separate noisy vocalizations from whistles, pulsed calls, and mixed calls.

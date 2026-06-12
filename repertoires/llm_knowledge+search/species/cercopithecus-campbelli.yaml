@@ -113,6 +113,66 @@ calls:
     confidence: high
     references:
       - ouattara_etal_2009
+  - name: rapid repetitive ascending call
+    alternative_names:
+      - RRA
+      - rapid repetitive ascending alarm call
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - abrupt
+      - tonal
+      - short
+    acoustic_description: Rapid sequences of short ascending notes, produced faster and at higher pitch than the low male boom or harsh krak and hok classes.
+    semantic_keywords:
+      - alarm
+      - attention
+      - group_coordination
+    semantic_description: Included as a female-biased alarm or startle class reported in the social-call literature, used in dangerous or suddenly arousing situations at shorter range than the adult male loud-call system.
+    confidence: medium
+    references:
+      - lemasson_hausberger_2011
+  - name: short harmonic contact call
+    alternative_names:
+      - SH
+      - female contact call
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - short
+      - quiet
+      - graded
+    acoustic_description: Soft low-pitched harmonic calls with smoother contour than alarm calls and simpler structure than arched combined calls.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+      - identity
+    semantic_description: Used mainly in female social communication and local cohesion, forming part of the close-range repertoire rather than the male external-event repertoire.
+    confidence: medium
+    references:
+      - lemasson_hausberger_2011
+  - name: arched contact call
+    alternative_names:
+      - CHb
+      - CHf
+      - combined harmonic arch call
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - short
+      - quiet
+      - multi_component
+    acoustic_description: A short harmonic contact element merged with a broken or full arch-shaped frequency contour, making it more modulated than the simple short harmonic call.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - attention
+      - identity
+    semantic_description: Treated here as a broad female social-call class used in affiliation, contact seeking, and socially targeted exchanges; the split between broken and full arches is left merged because the present goal is high-recall repertoire coverage.
+    confidence: medium
+    references:
+      - lemasson_hausberger_2011
   - name: contact call
     acoustic_keywords:
       - short
@@ -139,6 +199,9 @@ references:
   ouattara_etal_2009:
     citation: Ouattara, K., Lemasson, A., and Zuberbuhler, K. 2009. Campbell's monkeys concatenate vocalizations into context-specific call sequences. Proceedings of the National Academy of Sciences 106(51):22026-22031.
     doi: 10.1073/pnas.0908118106
+  lemasson_hausberger_2011:
+    citation: Lemasson, A. and Hausberger, M. 2011. Acoustic variability and social significance of calls in female Campbell's monkeys (Cercopithecus campbelli campbelli). Journal of the Acoustical Society of America 129(5):3341-3352.
+    doi: 10.1121/1.3569704
   zuberbuhler_2001:
     citation: Zuberbuhler, K. 2001. Predator-specific alarm calls in Campbell's monkeys, Diana monkeys, and putty-nosed monkeys. Behaviour 137(1):1-27.
   zuberbuhler_2002:
@@ -156,3 +219,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Rebuilt the repertoire around the established male loud-call system, including the major unsuffixed and suffixed call classes and a conservative social contact category.
+  - timestamp: "2026-06-11T14:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added female-biased rapid repetitive ascending, short harmonic, and arched contact call classes from the social-call literature to improve recall beyond the male loud-call system.

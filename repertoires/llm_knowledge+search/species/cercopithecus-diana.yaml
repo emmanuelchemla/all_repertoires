@@ -126,6 +126,46 @@ calls:
     confidence: low
     references:
       - uster_zuberbuhler_2001
+  - name: LA combination
+    alternative_names:
+      - L-A call
+      - positive arch combination
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - short
+      - multi_component
+    acoustic_description: A structured two-part social utterance combining an L introduction with an arched A element, producing a compact multi-unit call more elaborate than a simple clear call.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+      - combinatorial
+    semantic_description: Reported from female social calling and associated more with positive or cohesion-related situations such as exchanges, foraging, and group spread, so it is included here as a distinct combinatorial class.
+    confidence: medium
+    references:
+      - candiotti_2012
+  - name: RA combination
+    alternative_names:
+      - R-A call
+      - negative arch combination
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - short
+      - multi_component
+    acoustic_description: A multi-unit social call in which an R introduction precedes an arched A element, making it structurally parallel to LA combinations but contextually distinct.
+    semantic_keywords:
+      - contact
+      - attention
+      - distress
+      - combinatorial
+    semantic_description: Included as a distinct female social-call combination because field observations link it more to negative or isolated situations than LA combinations, even though the boundary between female social call combinations remains somewhat graded.
+    confidence: medium
+    references:
+      - candiotti_2012
   - name: bark
     acoustic_keywords:
       - abrupt
@@ -157,6 +197,9 @@ calls:
     semantic_description: Produced in severe social conflict, capture, or intense distress.
     confidence: medium
 references:
+  candiotti_2012:
+    citation: Candiotti, A., Zuberbuhler, K., and Lemasson, A. 2012. Context-related call combinations in female Diana monkeys. Animal Cognition 15(3):327-339.
+    url: https://libra.unine.ch/server/api/core/bitstreams/3b225a4b-4e4b-49c3-85ad-00337771c51c/content
   candiotti_etal_2015:
     citation: Candiotti, A., Mundry, R., Zuberbuhler, K., and Slocombe, K.E. 2015. Social familiarity affects Diana monkey (Cercopithecus diana diana) alarm call responses in habitat-specific ways. Royal Society Open Science 2:150639.
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4785987/
@@ -186,3 +229,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Second completeness pass renamed the core social call as clear call/contact call and added source-backed trill and bark classes for the female/subadult vocal repertoire.
+  - timestamp: "2026-06-11T14:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added LA and RA female social call combinations from context-specific call-combination work to improve recall for Diana monkey combinatorial social calling.

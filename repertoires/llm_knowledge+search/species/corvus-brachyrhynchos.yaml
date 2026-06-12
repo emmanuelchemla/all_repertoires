@@ -124,6 +124,26 @@ calls:
     confidence: low
     references:
       - crow_blog
+  - name: subsong
+    alternative_names:
+      - rambling song
+      - quiet song
+    acoustic_keywords:
+      - quiet
+      - multi_component
+      - noisy
+      - tonal
+      - long
+    acoustic_description: Low-amplitude rambling sequences that mix hoarse or grating coos, caws, rattles, and clicks into improvised strings much longer than a single caw bout.
+    semantic_keywords:
+      - display
+      - affiliation
+      - identity
+      - attention
+    semantic_description: Used in low-intensity close social display and courtship-like interaction rather than in ordinary long-range flock contact.
+    confidence: medium
+    references:
+      - crow_cornell
 references:
   crow_cornell:
     citation: Cornell Lab of Ornithology. American Crow sounds.
@@ -144,3 +164,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the expected American crow caw, scold, social display, juvenile begging, and food-associated call classes with stable overview references.
+  - timestamp: '2026-06-11T16:55:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 15 recall pass added Cornell-supported quiet subsong as a distinct low-amplitude social display class.

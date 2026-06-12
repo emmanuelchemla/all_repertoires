@@ -129,6 +129,30 @@ calls:
   semantic_description: Used in reunion and affiliative greeting contexts to maintain
     social bonds and coordinate group interactions.
   confidence: medium
+- name: bark
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - abrupt
+  - loud
+  - short
+  acoustic_description: A short harsh call with a strong abrupt onset and broader spectral spread than a rumble, lacking the ringing harmonic quality of a trumpet.
+  semantic_keywords:
+  - alarm
+  - attention
+  - threat
+  semantic_description: Included as a broad alarmed or forceful social call because Asian elephant repertoire work explicitly lists bark-like calls alongside rumbles, roars, squeals, and trumpets.
+  confidence: medium
+  references:
+  - glaeser_2009
+  - stoeger_2021
+references:
+  glaeser_2009:
+    citation: "Glaeser, S.S. 2009. Analysis and Classification of Sounds Produced by Asian Elephants (Elephas maximus). PhD dissertation, Portland State University."
+    doi: 10.15760/etd.5951
+  stoeger_2021:
+    citation: "Stoeger, A.S., et al. 2021. A novel theory of Asian elephant high-frequency squeak production. BMC Biology 19:103."
+    url: https://link.springer.com/article/10.1186/s12915-021-01026-z
 provenance:
 - timestamp: '2026-06-10T21:00:00+02:00'
   model: GPT-5 Codex
@@ -145,3 +169,7 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T18:30:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added a bark class and supporting references so the Asian elephant file better reflects broad repertoire inventories that list bark-like calls separately from rumbles, trumpets, and roars.

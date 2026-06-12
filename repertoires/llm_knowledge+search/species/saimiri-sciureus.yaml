@@ -22,6 +22,19 @@ calls:
     semantic_description: Produced by isolated infants and used to recruit maternal attention, retrieval, and recognition.
     confidence: high
     references: [snowdon_etal_1985, lieblich_etal_1980]
+  - name: caregiver call
+    alternative_names: [prenurse call, nurse call, end-nurse call]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, tonal, harmonic, quiet]
+    acoustic_description: A brief low-frequency call, often harmonic and softer than alarm peeps or yaps, with subtle contextual variation across nursing phases.
+    semantic_keywords: [caregiving, contact, attention, identity]
+    semantic_description: Addressed by mothers or other caregivers to dependent infants before nursing, during nursing, or at nursing termination to coordinate reunion and infant handling.
+    confidence: high
+    references: [boinski_mitchell_1995]
   - name: chuck
     acoustic_keywords: [short, tonal, repetitive, quiet, graded]
     acoustic_description: A short local call with simple structure, often repeated in low-arousal interaction.
@@ -65,6 +78,13 @@ calls:
     semantic_description: Used in structured vocal exchanges, especially in close affiliative interactions and mother-infant contexts.
     confidence: medium
     references: [biben_etal_1986]
+  - name: kecker
+    acoustic_keywords: [loud, noisy, repetitive, abrupt, multi_component]
+    acoustic_description: A loud, rough, rapidly repeated harsh call, more forceful and lower-pitched than peeps and more segmented than a sustained scream.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Reported especially from adult males during quarrels and other intense social disturbances.
+    confidence: low
+    references: [newman_1985, fitch_hauser_2003]
   - name: cackle
     acoustic_keywords: [short, repetitive, noisy, graded, multi_component]
     acoustic_description: A repeated bursty call series with rougher quality than peeps and more segmented structure than a scream.
@@ -96,6 +116,13 @@ references:
   newman_1985:
     citation: "Newman, J.D. 1985. Squirrel monkey communication. In: Rosenblum, L.A. and Coe, C.L. Handbook of Squirrel Monkey Research."
     url: https://pubmed.ncbi.nlm.nih.gov/3931840/
+  boinski_mitchell_1995:
+    citation: "Boinski, S. and Mitchell, C.L. 1995. Wild squirrel monkey (Saimiri sciureus) 'caregiver' calls: Contexts and acoustic structure. American Journal of Primatology 35(2):129-137."
+    url: https://pubmed.ncbi.nlm.nih.gov/31924065/
+    doi: 10.1002/ajp.1350350205
+  fitch_hauser_2003:
+    citation: "Fitch, W.T. and Hauser, M.D. 2003. Laryngeal biomechanics and vocal communication in the squirrel monkey. Journal of the Acoustical Society of America 113(4):2114-2126."
+    url: https://pubs.aip.org/asa/jasa/article/113/4/2114/549197/Laryngeal-biomechanics-and-vocal-communication-in
   snowdon_etal_1985:
     citation: "Snowdon, C.T., Brown, C.H., and Petersen, M.R. 1985. Primate communication. Cambridge University Press."
     url: https://books.google.com/books?id=jkDc8a-w65IC
@@ -112,3 +139,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added isolation peep, alarm peep, and err-chuck as missing major squirrel-monkey call classes and tightened cackle semantics to avoid conflating it with the peep-based alarm system.
+  - timestamp: "2026-06-11T13:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide recall pass added caregiver call and a low-confidence kecker class from external sources, with new provenance and references only for this assigned file.

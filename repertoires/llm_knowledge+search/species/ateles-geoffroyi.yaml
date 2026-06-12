@@ -16,6 +16,13 @@ calls:
     semantic_description: Used for long-distance contact among dispersed subgroup members.
     confidence: high
     references: [chapman_weary_1990, ordonezgomez_etal_2018]
+  - name: tee-tee
+    acoustic_keywords: [short, tonal, high_frequency, repetitive, quiet]
+    acoustic_description: A very brief, frequent, higher-pitched contact note, shorter and less modulated than a whinny.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used in routine subgroup contact and short-range coordination.
+    confidence: medium
+    references: [eisenberg_1976]
   - name: neigh
     alternative_names: [long whinny]
     acoustic_keywords: [high_frequency, tonal, long, frequency_modulated, loud]
@@ -30,20 +37,51 @@ calls:
     semantic_keywords: [alarm, threat, attention]
     semantic_description: Produced in disturbance or high-arousal situations.
     confidence: medium
-    references: [ateles_overview]
+    references: [ateles_overview, eisenberg_1976]
+  - name: cough
+    acoustic_keywords: [short, abrupt, low_frequency, noisy, quiet]
+    acoustic_description: A brief warning-like call structurally resembling a single bark syllable but usually quieter and shorter.
+    semantic_keywords: [attention, threat]
+    semantic_description: Reported from conflict or warning situations, though apparently rare.
+    confidence: low
+    references: [eisenberg_1976]
+  - name: ook-ook
+    alternative_names: [ak-ak]
+    acoustic_keywords: [low_frequency, short, repetitive, tonal, graded]
+    acoustic_description: A soft, repeated low call given in rhythmic bouts, grading into harsher ak-ak forms as arousal rises.
+    semantic_keywords: [play, affiliation, attention]
+    semantic_description: Associated with play fighting, grappling, and other close interactive bouts that can escalate.
+    confidence: medium
+    references: [eisenberg_1976]
+  - name: growl-roar
+    acoustic_keywords: [low_frequency, noisy, loud, long, graded]
+    acoustic_description: A low harsh aggressive call that may begin as a growl and intensify into a louder roar.
+    semantic_keywords: [aggression, threat, display]
+    semantic_description: Produced in aggressive play termination, chases, and confrontations with other animals.
+    confidence: medium
+    references: [eisenberg_1976]
   - name: scream
     acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
     acoustic_description: A high-arousal noisy call with strong intensity and variable contour.
     semantic_keywords: [distress, aggression, attention]
     semantic_description: Used in severe social conflict, handling, or immediate danger.
     confidence: medium
-    references: [ateles_overview]
+    references: [ateles_overview, eisenberg_1976]
   - name: grunt
     acoustic_keywords: [low_frequency, short, tonal, repetitive, quiet]
     acoustic_description: A soft short-range call with simpler structure and lower amplitude than the long-distance whinny.
     semantic_keywords: [contact, affiliation, group_coordination]
     semantic_description: Used in local social communication within subgroups.
     confidence: low
+    references: [eisenberg_1976]
+  - name: long call
+    alternative_names: [whoop, caw]
+    acoustic_keywords: [loud, long, frequency_modulated, multi_component, noisy]
+    acoustic_description: A prolonged multi-syllabic call, often undulating and less tonally pure than a whinny, sometimes delivered in repeated phrases.
+    semantic_keywords: [contact, group_coordination, spacing, display]
+    semantic_description: Produced especially by adult males under high arousal and in long-distance coordination or separation-related contexts.
+    confidence: medium
+    references: [eisenberg_1976]
 references:
   chapman_weary_1990:
     citation: "Chapman, C.A. and Weary, D.M. 1990. The 'Whinny' of Spider Monkeys: Individual Recognition before Situational Meaning. Ethology 86:89-100."
@@ -51,6 +89,9 @@ references:
   ordonezgomez_etal_2018:
     citation: "Ordonez-Gomez, J.D., Dias, P.A.D., and Rangel-Negrin, A. 2018. Acoustic variation of spider monkeys' contact calls (whinnies) is related to distance between vocalizing individuals and immediate caller behavior."
     url: https://www.researchgate.net/publication/323951512_Acoustic_variation_of_spider_monkeys%27_contact_calls_whinnies_is_related_to_distance_between_vocalizing_individuals_and_immediate_caller_behavior
+  eisenberg_1976:
+    citation: "Eisenberg, J.F. 1976. Communication mechanisms and social integration in the black spider monkey, Ateles fusciceps robustus, and related species. Smithsonian Contributions to Zoology 213."
+    url: https://repository.si.edu/bitstream/handle/10088/5168/SCtZ-0213-Lo_res.pdf?isAllowed=y&sequence=2
   ateles_overview:
     citation: "Animal Diversity Web. Ateles geoffroyi account."
     url: https://animaldiversity.org/accounts/Ateles_geoffroyi/
@@ -71,3 +112,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision strengthened major call classes and reference support using external sources only.
+  - timestamp: '2026-06-11T13:20:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide recall pass added likely missing spider-monkey short-range, aggressive-play, warning, and long-distance call classes from external Ateles sources only.

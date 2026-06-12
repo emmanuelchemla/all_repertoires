@@ -122,6 +122,42 @@ calls:
   confidence: medium
   references:
   - vocal_repertoire_2018
+- name: whine call
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - frequency_modulated
+  - quiet
+  - long
+  acoustic_description: A soft harmonic call with a slowly modulated pitch, relatively long duration, and low-frequency spectral emphasis that gives it a distinctly whining quality.
+  semantic_keywords:
+  - affiliation
+  - courtship
+  - mating
+  - caregiving
+  semantic_description: Produced during early pair bonding, around nesting activities, and sometimes in copulation contexts, often as part of close-range duets near the nest.
+  confidence: high
+  references:
+  - vocal_repertoire_2018
+- name: wsst call
+  alternative_names:
+  - aggressive hiss call
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - abrupt
+  - short
+  - low_frequency
+  acoustic_description: A brief very noisy hiss-like call with broad bandwidth and unusually low-frequency formants compared with the harmonic contact calls.
+  semantic_keywords:
+  - aggression
+  - threat
+  - spacing
+  - attention
+  semantic_description: Used in aggressive supplanting and short-range conflict, especially near nests during nest-building or brooding.
+  confidence: high
+  references:
+  - vocal_repertoire_2018
 references:
   elie_2015:
     citation: Elie, J.E. and Theunissen, F.E. 2015. Patterns of call communication
@@ -149,3 +185,7 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:55:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Worker 15 recall pass added the named whine and wsst categories from the zebra finch repertoire paper while keeping ark and kackle merged under nest call.

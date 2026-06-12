@@ -94,6 +94,55 @@ calls:
     semantic_description: Produced in competitive or socially tense contexts as part of display and contest behaviour.
     confidence: high
     references: [wegdell_2025]
+  - name: pout moan
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, harmonic, long, graded, quiet]
+    acoustic_description: A drawn-out moaning call often paired with a protruded pout face, typically softer and lower than screams and less abrupt than barks.
+    semantic_keywords: [distress, begging, caregiving, submission, attention]
+    semantic_description: Mostly associated with immature bonobos in negative or needy situations such as agonistic upset, solicitation, or attempts to recruit care and tolerance from nearby partners.
+    confidence: medium
+    references: [wegdell_2025, clay_2015]
+  - name: hiccup
+    acoustic_keywords: [short, repetitive, pulsed, abrupt, graded]
+    acoustic_description: A rapid series of brief hiccup-like notes with pulsed rhythm and short repeated units rather than a sustained tonal contour.
+    semantic_keywords: [attention, food, play]
+    semantic_description: A rare call type reported in qualitative bonobo repertoires, plausibly linked to excited close-range situations such as feeding or social arousal, but with weak published contextual detail.
+    confidence: low
+    references: [wegdell_2025, berthet_2023]
+  - name: whine whistle
+    alternative_names: [whining whistle, whine whistles]
+    acoustic_keywords: [high_frequency, tonal, harmonic, long, frequency_modulated, graded]
+    acoustic_description: A long, high-pitched whistle with a more plaintive or whining contour than the simpler whistle class, often showing stronger modulation across the note.
+    semantic_keywords: [contact, distress, attention, group_coordination]
+    semantic_description: Reported as a distinct label in earlier bonobo repertoires, likely used in socially directed coordination or need-related signalling, but its boundary from whistles is uncertain.
+    confidence: low
+    references: [berthet_2023]
+  - name: scream whistle
+    alternative_names: [whistle scream]
+    acoustic_keywords: [high_frequency, tonal, noisy, long, loud, multi_component]
+    acoustic_description: A whistle-like call with an added screaming component, combining narrowband tonal energy with harsher noisy or chaotic elements.
+    semantic_keywords: [distress, alarm, attention, submission]
+    semantic_description: A rare high-arousal call label from earlier bonobo repertoires, plausibly given in strongly negative or urgent situations where tonal whistles grade into screams.
+    confidence: low
+    references: [berthet_2023]
+  - name: croak
+    acoustic_keywords: [low_frequency, noisy, short, abrupt, graded]
+    acoustic_description: A rough, croaking vocalization described as a rare discrete type with harsher and less tonal quality than hoots or whistles.
+    semantic_keywords: [attention, threat, alarm]
+    semantic_description: Mentioned as a rare bonobo call type in earlier qualitative repertoire work, but published contextual and acoustic detail remain sparse.
+    confidence: low
+    references: [wegdell_2025]
+  - name: moan
+    acoustic_keywords: [low_frequency, tonal, long, graded, quiet]
+    acoustic_description: A low, prolonged moaning vocalization with smoother tonal structure and less urgency than screams.
+    semantic_keywords: [distress, affiliation, contact, attention]
+    semantic_description: Reported as a very rare bonobo call type in qualitative work; likely used in close-range affective situations, but its functional boundary from pout moans and other soft calls is unclear.
+    confidence: low
+    references: [wegdell_2025]
 references:
   wegdell_2025:
     citation: "Wegdell, F., Schamberg, I., Berthet, M., Rothacher, Y., Dellwo, V., Surbeck, M., et al. 2025. An updated vocal repertoire of wild adult bonobos (Pan paniscus). PLOS ONE 20:e0330250."
@@ -103,6 +152,14 @@ references:
     citation: "Demuru, E., Ferrari, P.F., and Palagi, E. 2019. Social bonding drives vocal exchanges in bonobos. Scientific Reports 9:18287."
     url: https://doi.org/10.1038/s41598-018-36024-9
     doi: 10.1038/s41598-018-36024-9
+  clay_2015:
+    citation: "Clay, Z., Archbold, J., and Zuberbuhler, K. 2015. Functional flexibility in wild bonobo vocal behaviour. PeerJ 3:e1124."
+    url: https://doi.org/10.7717/peerj.1124
+    doi: 10.7717/peerj.1124
+  berthet_2023:
+    citation: "Berthet, M., Locatello, F., Dufourq, E., et al. 2023. Improving the workflow to crack Small, Unbalanced, Noisy, but Genuine (SUNG) datasets in bioacoustics: The case of bonobo calls. PLOS Computational Biology 19:e1010325."
+    url: https://doi.org/10.1371/journal.pcbi.1010325
+    doi: 10.1371/journal.pcbi.1010325
 provenance:
   - timestamp: "2026-06-10T19:35:00+02:00"
     model: GPT-5 Codex
@@ -112,3 +169,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Tightened to the adult repertoire framework from the 2025 bonobo repertoire paper and added bark as an obvious major omitted class.
+  - timestamp: "2026-06-11T11:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Expanded recall beyond the adult-only 2025 repertoire by adding rare and immature-associated call classes still named in broader bonobo literature, while keeping bark-like variants merged because newer work explicitly collapses them into high hoots.

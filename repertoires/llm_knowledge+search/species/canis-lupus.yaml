@@ -73,6 +73,27 @@ calls:
     semantic_description: Produced in sudden pain, rough social contact, or acute alarm.
     confidence: medium
     references: [livingwithwolves]
+  - name: yip
+    acoustic_keywords: [high_frequency, short, abrupt, repetitive, tonal]
+    acoustic_description: A brief sharp high-pitched call, typically lighter and less intense than a full yelp and often emitted in quick excited series.
+    semantic_keywords: [play, affiliation, attention, contact]
+    semantic_description: Used in socially excited interactions, short-range contact, and some playful or juvenile contexts.
+    confidence: medium
+    references: [livingwithwolves]
+  - name: snarl
+    acoustic_keywords: [low_frequency, noisy, broadband, abrupt, graded]
+    acoustic_description: A harsh rough threat vocalization often shorter and more explosive than a sustained growl, and commonly coupled with conspicuous facial threat display.
+    semantic_keywords: [threat, aggression, spacing]
+    semantic_description: Used in close-range defensive or aggressive encounters when a wolf is actively warning another individual to keep distance.
+    confidence: medium
+    references: [livingwithwolves, nova_howl]
+  - name: moan
+    acoustic_keywords: [low_frequency, tonal, long, quiet, graded]
+    acoustic_description: A low softer voiced sound with smoother contour and lower intensity than a howl, often sounding drawn out or plaintive.
+    semantic_keywords: [contact, affiliation, distress]
+    semantic_description: Plausibly used in close social contexts and mild distress, but descriptions are less standardized than for howls or growls.
+    confidence: low
+    references: [nova_howl]
 references:
   hennelly_2019:
     citation: "Hennelly, L., Habib, B., Root-Gutteridge, H., Palacios, V., and Passilongo, D. 2019. Characterising the harmonic vocal repertoire of the Indian wolf (Canis lupus pallipes). PLOS ONE 14:e0216182."
@@ -88,6 +109,9 @@ references:
   livingwithwolves:
     citation: "Living with Wolves. The language of wolves."
     url: https://www.livingwithwolves.org/about-wolves/language/
+  nova_howl:
+    citation: "Harrington, F.H. PBS NOVA Online. What's in a howl?"
+    url: https://www.pbs.org/wgbh/nova/wolves/howl.html
 provenance:
   - timestamp: "2026-06-10T19:20:00+02:00"
     model: GPT-5 Codex
@@ -97,3 +121,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative completeness pass added obvious close-range gray wolf calls and refreshed references while keeping species-specific claims cautious.
+  - timestamp: "2026-06-11T12:05:00Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 10 recall review added plausible missing short-range wolf calls including yip, snarl, and a tentative moan entry from broad wolf communication sources.

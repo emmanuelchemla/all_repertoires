@@ -90,6 +90,33 @@ calls:
   confidence: medium
   references:
   - budgerigar_vocal
+- name: juvenile babbling
+  alternative_names:
+  - subsong-like babbling
+  - juvenile vocal practice
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - multi_component
+  - repetitive
+  - graded
+  acoustic_description: A variable stream of immature syllables with unstable sequencing
+    and softer delivery than crystallized contact calls or adult warble song.
+  semantic_keywords:
+  - play
+  - identity
+  - attention
+  semantic_description: Produced during vocal development as practice that precedes
+    stable adult-like learned vocal patterns.
+  confidence: high
+  references:
+  - tu_etal_2011
 - name: distress call
   acoustic_keywords:
   - high_frequency
@@ -128,6 +155,11 @@ references:
     citation: Brockway, B.F. 1964. Ethological studies of the budgerigar and later
       comparative work on contact calls and warble song.
     url: https://doi.org/10.1163/156853964X00118
+  tu_etal_2011:
+    citation: 'Tu, H.-W., Osmanski, M.S., and Dooling, R.J. 2011. Learned vocalizations
+      in budgerigars (Melopsittacus undulatus): The relationship between contact calls
+      and warble song. Journal of the Acoustical Society of America 129(4):2289-2299.'
+    url: https://pubs.aip.org/asa/jasa/article/129/4/2289/903807/Learned-vocalizations-in-budgerigars-Melopsittacus
 provenance:
 - timestamp: '2026-06-10T20:45:00+02:00'
   model: GPT-5 Codex
@@ -144,3 +176,8 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Worker 12 recall pass added an explicit juvenile babbling class so developmental
+    learned vocal practice is not collapsed into begging or adult song.

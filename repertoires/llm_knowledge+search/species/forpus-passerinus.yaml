@@ -141,6 +141,27 @@ calls:
   confidence: medium
   references:
   - smith_1979
+- name: flight display call
+  alternative_names:
+  - flight call
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  - loud
+  acoustic_description: A short high-pitched call or brief series given in flight,
+    carrying farther than close-range chatter and simpler than signature-contact exchanges.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - display
+  - attention
+  semantic_description: Used during flight and aerial display to maintain cohesion
+    and advertise movement to mates or nearby flock members.
+  confidence: medium
+  references:
+  - xenocanto_parrotlet
 references:
   berg_etal_2011:
     citation: Berg, K.S., Delgado, S., Okawa, R., Beissinger, S.R., and Bradbury,
@@ -185,3 +206,8 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Worker 12 recall pass added a flight-display call class flagged by species
+    recording labels, while keeping signature and developmental categories unchanged.

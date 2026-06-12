@@ -112,6 +112,46 @@ calls:
     confidence: medium
     references:
       - bluejay_cornell
+  - name: gurgle call
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - noisy
+      - multi_component
+      - repetitive
+    acoustic_description: Rolling gurgling phrases that blend rougher and more tonal elements and sound lower and more liquid than whistles or jeers.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - display
+      - attention
+    semantic_description: Used in close social communication and display; treated here as a distinct common call class because Cornell explicitly separates gurgling sounds from whistles and jeers.
+    confidence: medium
+    references:
+      - bluejay_cornell
+  - name: juvenile begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Thin repeated juvenile calls that are simpler and more nasal than adult whistles, rattles, or quiet song.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Produced by dependent young to solicit feeding and parental attention.
+    confidence: medium
+    references:
+      - bluejay_cornell
 references:
   bluejay_cornell:
     citation: Cornell Lab of Ornithology. Blue Jay sounds.
@@ -129,3 +169,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the expected Blue Jay alarm, display, whistle, quiet song, and mimicry classes with stable top-level references.
+  - timestamp: '2026-06-11T16:55:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 15 recall pass added Cornell-supported gurgling and juvenile solicitation classes that remained missing from the Blue Jay draft.

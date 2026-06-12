@@ -46,6 +46,13 @@ calls:
     semantic_description: Used in highly aroused social contexts and abrupt interactions.
     confidence: low
     references: [wellard_2015]
+  - name: excitement call
+    acoustic_keywords: [pulsed, repetitive, frequency_modulated, multi_component, loud]
+    acoustic_description: A rapidly modulated social call with accelerated contour changes and more agitated structure than routine stereotyped pulsed calls.
+    semantic_keywords: [attention, display, group_coordination]
+    semantic_description: Included as a broad high-arousal social class because some killer-whale repertoires distinguish sped-up or excitement-associated variants produced during intense interactions.
+    confidence: low
+    references: [ford_1989, wellard_2015]
 references:
   ford_1989:
     citation: "Ford, J.K.B. 1989. Acoustic behaviour of resident killer whales (Orcinus orca) off Vancouver Island, British Columbia. Canadian Journal of Zoology 67:727-745."
@@ -71,3 +78,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Reframed the orca file around discrete pulsed calls, biphonic calls, whistles, and clicks using broad categories stable across populations.
+  - timestamp: "2026-06-11T18:30:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a low-confidence excitement-call class to improve recall for repertoires that separate high-arousal sped-up pulsed calls from ordinary discrete calls.

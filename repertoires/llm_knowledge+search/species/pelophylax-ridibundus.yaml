@@ -9,50 +9,74 @@ taxonomy:
   genus: Pelophylax
   species: ridibundus
 calls:
-  - name: advertisement call
-    alternative_names: [mating call, laugh-like call]
-    acoustic_keywords: [tonal, repetitive, loud, long, harmonic]
-    acoustic_description: A repeated croaking breeding call with stable rhythmic structure and strong resonance.
+  - name: laughing call
+    alternative_names: [advertisement call, mating call, laugh-like call]
+    acoustic_keywords: [tonal, repetitive, loud, short, harmonic]
+    acoustic_description: A repeated laugh-like series of very short resonant call units delivered in groups, produced with the side vocal sacs and forming the main breeding advertisement.
     semantic_keywords: [courtship, mating, attention]
-    semantic_description: Used by males to attract females at breeding aggregations.
+    semantic_description: Used by males to attract females during breeding choruses; the 2024 marsh frog repertoire study treats this call type as analogous to earlier mating-call descriptions.
     confidence: high
-    references: [li_hending_2024, ridibundus_call_study]
-  - name: territorial call
-    acoustic_keywords: [abrupt, repetitive, noisy, loud, graded]
-    acoustic_description: A harsher and more abrupt call than the advertisement call, often produced in short repeated bursts.
-    semantic_keywords: [territorial, aggression, attention]
-    semantic_description: Used in male-male competition and spacing around calling sites.
+    references: [li_hending_2024, lukanov_etal_2011, ridibundus_call_study]
+  - name: chirping call
+    alternative_names: [warning call]
+    acoustic_keywords: [high_frequency, short, abrupt, noisy]
+    acoustic_description: A high-pitched chirping vocalization, acoustically distinct from the lower resonant breeding calls and reported as the highest-frequency call type in the recent repertoire study.
+    semantic_keywords: [alarm, threat, attention]
+    semantic_description: Associated with warning-like contexts and often followed by rapid displacement of the caller.
+    confidence: medium
+    references: [li_hending_2024, lukanov_etal_2011]
+  - name: normal high-frequency descending woah call
+    alternative_names: [territorial call]
+    acoustic_keywords: [frequency_modulated, long, repetitive, loud, tonal]
+    acoustic_description: A high-frequency descending woah-like call with longer intervals between repeated units than in the laugh-like advertisement call.
+    semantic_keywords: [territorial, spacing, attention]
+    semantic_description: Used in territorial interactions and commonly appears in call sequences between release-like and lower-frequency aggressive call types.
     confidence: high
-    references: [li_hending_2024]
-  - name: encounter call
-    acoustic_keywords: [abrupt, repetitive, noisy, loud, graded]
-    acoustic_description: A shorter locally directed aggressive call than the main breeding advertisement, often produced during close social interactions.
-    semantic_keywords: [territorial, aggression, attention]
-    semantic_description: Used in close male-male encounters at calling sites.
-    confidence: medium
-    references: [li_hending_2024]
-  - name: chuckle call
-    alternative_names: [laughter call]
-    acoustic_keywords: [repetitive, noisy, short, graded, broadband]
-    acoustic_description: A shorter rough repeated call than the main advertisement croak, associated with locally elevated arousal.
-    semantic_keywords: [territorial, aggression, attention]
-    semantic_description: Used in local interactions among nearby calling males and in heightened chorus activity.
-    confidence: medium
-    references: [li_hending_2024]
-  - name: release call
-    acoustic_keywords: [short, abrupt, high_frequency, repetitive, noisy]
-    acoustic_description: A brief high-intensity call emitted during unwanted clasping.
+    references: [li_hending_2024, lukanov_etal_2011]
+  - name: medium-frequency ascending woah call
+    alternative_names: [release call]
+    acoustic_keywords: [frequency_modulated, short, abrupt, noisy, repetitive]
+    acoustic_description: An ascending woah-like call at intermediate frequency, produced with central vocal-sac inflation and acoustically separated from the lower advertisement repertoire.
     semantic_keywords: [submission, attention, mating]
-    semantic_description: Signals the need to terminate inappropriate amplexus or close contact.
-    confidence: high
-    references: [fedorova_shabanov_2023]
+    semantic_description: Treated in the recent repertoire study as corresponding most closely to earlier release-call descriptions, though the authors note that function may vary geographically.
+    confidence: medium
+    references: [li_hending_2024, fedorova_shabanov_2023, lukanov_etal_2011]
+  - name: fine low-frequency ascending woah call
+    alternative_names: [aggressive call]
+    acoustic_keywords: [low_frequency, frequency_modulated, long, tonal, graded]
+    acoustic_description: A lower-frequency ascending woah call with finer structure than the rough variant, usually occurring toward the end of multi-call sequences.
+    semantic_keywords: [aggression, territorial, spacing]
+    semantic_description: Interpreted as the closest match to the aggressive call of earlier repertoire descriptions.
+    confidence: medium
+    references: [li_hending_2024, lukanov_etal_2011]
+  - name: rough low-frequency ascending woah call
+    acoustic_keywords: [low_frequency, frequency_modulated, short, noisy, repetitive]
+    acoustic_description: A rougher low-frequency ascending woah call composed of multiple short units and reported as the lowest-frequency call type in the 2024 study.
+    semantic_keywords: [aggression, territorial, attention]
+    semantic_description: Included as a distinct call class because the recent marsh frog repertoire study separated it quantitatively from the fine low-frequency ascending woah call, although its exact functional boundary remains uncertain.
+    confidence: medium
+    references: [li_hending_2024]
+  - name: breck call
+    acoustic_keywords: [short, abrupt, broadband, noisy]
+    acoustic_description: A brief breck-like call that can mix or transition with medium-frequency ascending woah calls in observed call sequences.
+    semantic_keywords: [attention, aggression]
+    semantic_description: Reported as a distinct call type in the recent Hungarian repertoire study, but its specific social function remains unresolved.
+    confidence: low
+    references: [li_hending_2024]
+  - name: disrupted high-frequency descending woah call
+    acoustic_keywords: [frequency_modulated, long, noisy, repetitive, graded]
+    acoustic_description: A prolonged disrupted variant of the high-frequency descending woah call, quantitatively identified as the longest-duration marsh frog call type in the 2024 study.
+    semantic_keywords: [territorial, aggression, attention]
+    semantic_description: Included as a distinct call class because the recent repertoire study recovered it separately from the normal descending woah call; it appears in escalated or mixed social sequences.
+    confidence: medium
+    references: [li_hending_2024]
   - name: distress call
     acoustic_keywords: [high_frequency, short, abrupt, loud, noisy]
     acoustic_description: A sudden short high call acoustically distinct from the low resonant breeding repertoire.
     semantic_keywords: [distress, alarm, attention]
-    semantic_description: Used in acute disturbance or handling situations.
+    semantic_description: Reported in the earlier Bulgarian marsh frog repertoire, but not recovered in the 2024 Hungarian recordings; retained here as a plausible but geographically or contextually sparse class.
     confidence: low
-    references: [li_hending_2024]
+    references: [lukanov_etal_2011]
 references:
   fedorova_shabanov_2023:
     citation: "Fedorova, A. and Shabanov, D. 2023. Differences in release calls of the hybrid water frog Pelophylax esculentus and its parental species Pelophylax ridibundus in Ukraine."
@@ -62,6 +86,8 @@ references:
     citation: "Li, C. and Hending, D. 2024. The vocal repertoire of marsh frogs (Pelophylax ridibundus) on a Hungarian Danube island and implications for future research and conservation."
     url: https://ora.ox.ac.uk/objects/uuid:d37a2b72-fce8-49a9-9c64-af85325b5240
     doi: 10.31219/osf.io/kzqgy
+  lukanov_etal_2011:
+    citation: "Lukanov, S., Tzankov, N., and Naumov, B. 2011. Marsh frog Pelophylax ridibundus vocal repertoire from Bulgaria, including aggressive, distress, mating, release, territorial, and warning call types."
   ridibundus_call_study:
     citation: "Lukanov, S., et al. 2014. Effects of environmental factors on mating call characteristics of Pelophylax ridibundus."
     url: https://www.acta-zoologica-bulgarica.eu/downloads/acta-zoologica-bulgarica/2014/66-2-209-216.pdf
@@ -82,3 +108,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision strengthened the repertoire with marsh-frog-specific release and broader repertoire references while keeping uncertain distress calling low confidence.
+  - timestamp: '2026-06-11T14:20:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide review pass re-expanded the marsh frog repertoire around the 2024 eight-call classification, adding chirping, rough low-frequency ascending woah, breck, and disrupted descending woah classes and remapping older functional labels as aliases where the newer study supported that alignment.

@@ -149,6 +149,25 @@ calls:
   confidence: medium
   references:
   - nolan_2020
+- name: quiet song
+  alternative_names:
+  - soft song
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - multi_component
+  - quiet
+  - long
+  acoustic_description: A lower-amplitude series of whistles, trills, and warbles with looser phrase structure than the loud stereotyped trill song.
+  semantic_keywords:
+  - affiliation
+  - courtship
+  - display
+  - identity
+  semantic_description: Produced at close range by both sexes in low-intensity social or pair contexts rather than in long-range territorial advertisement.
+  confidence: medium
+  references:
+  - junco_cornell
 references:
   junco_cornell:
     citation: Cornell Lab of Ornithology. Dark-eyed Junco sounds.
@@ -177,3 +196,7 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:55:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Worker 15 recall pass added the quieter close-range soft song distinguished by Cornell from the main loud trill song.

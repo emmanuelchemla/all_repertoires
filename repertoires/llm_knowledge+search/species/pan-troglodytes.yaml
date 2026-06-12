@@ -31,6 +31,14 @@ calls:
     semantic_description: Produced mainly when discovering or feeding on food, often attracting or informing nearby group members and varying with feeding context.
     confidence: high
     references: [slocombe_zuberbuhler_2005, slocombe_zuberbuhler_2006, girardbuttoz_2022]
+  - name: grunt
+    alternative_names: [soft grunt]
+    acoustic_keywords: [low_frequency, short, pulsed, graded, quiet]
+    acoustic_description: A brief low grunt or short series of grunts, typically less harsh and less prolonged than classic rough-grunt bouts and lacking the inhaled rhythm of pant grunts.
+    semantic_keywords: [affiliation, attention, food]
+    semantic_description: A broad low-arousal grunt class used at close range in contexts including mild greeting, approach, and some feeding situations; boundaries with rough grunts are likely graded rather than sharp.
+    confidence: low
+    references: [girardbuttoz_iscience_2022, girardbuttoz_2022]
   - name: hoo
     alternative_names: [contact hoo]
     acoustic_keywords: [low_frequency, tonal, quiet, short, repetitive]
@@ -39,6 +47,14 @@ calls:
     semantic_description: Used in close- to medium-range coordination, including maintaining contact, approaching others, and low-arousal social or travel contexts.
     confidence: medium
     references: [crockford_2019, girardbuttoz_2022]
+  - name: panted hoo
+    alternative_names: [pant hoo, panted hoot]
+    acoustic_keywords: [low_frequency, tonal, quiet, repetitive, pulsed]
+    acoustic_description: A repeated hoo series separated by audible inhalations, giving a rhythmic panting quality without the full multistage structure of a complete pant hoot.
+    semantic_keywords: [contact, group_coordination, affiliation, identity]
+    semantic_description: Used especially in inter-party calling, fusion, and greeting-related coordination, and can also appear as a component of longer greeting hoot sequences.
+    confidence: medium
+    references: [girardbuttoz_iscience_2022, girardbuttoz_2022]
   - name: alarm hoo
     acoustic_keywords: [low_frequency, tonal, quiet, repetitive, abrupt]
     acoustic_description: A subdued hoo variant given in short discrete notes, generally softer and less conspicuous than screams or barks.
@@ -60,6 +76,13 @@ calls:
     semantic_description: Common in intense displays and highly aroused social encounters where callers sustain aggressive or dominance-related signalling.
     confidence: medium
     references: [girardbuttoz_2022, goodall_1986]
+  - name: pant
+    acoustic_keywords: [quiet, short, repetitive, pulsed, graded]
+    acoustic_description: A sequence of short audible inhaled and exhaled panting elements with little tonal structure, often heard as breathy rhythmic pants.
+    semantic_keywords: [group_coordination, affiliation, attention]
+    semantic_description: A rare standalone unit in the wild repertoire, often associated with extended multicomponent calling and likely overlapping with excited social coordination or display-related contexts.
+    confidence: low
+    references: [girardbuttoz_2022]
   - name: waa bark
     alternative_names: [wraaa call]
     acoustic_keywords: [loud, broadband, long, frequency_modulated, noisy]
@@ -75,6 +98,22 @@ calls:
     semantic_description: Common in fights, chases, severe social tension, and victim responses, where it broadcasts distress or intense arousal to nearby listeners.
     confidence: high
     references: [crockford_2019, girardbuttoz_2022]
+  - name: pant scream
+    alternative_names: [panted scream]
+    acoustic_keywords: [high_frequency, loud, noisy, repetitive, pulsed]
+    acoustic_description: A scream series interspersed with voiced inhalations, producing a broken panting rhythm layered onto a loud high-pitched harsh call.
+    semantic_keywords: [distress, aggression, display, attention]
+    semantic_description: Occurs in highly aroused sequences and display-like bouts, including as a recognized unit in full-repertoire sequence analyses and as part of some pant-hoot-like climactic signalling.
+    confidence: medium
+    references: [girardbuttoz_2022]
+  - name: pant roar
+    alternative_names: [panted roar]
+    acoustic_keywords: [low_frequency, noisy, long, pulsed, loud]
+    acoustic_description: A low harsh roar-like call produced with interspersed panting, typically sounding rougher and more breath-driven than a simple bark or grunt.
+    semantic_keywords: [display, attention, group_coordination]
+    semantic_description: A rare vocal unit recognized in full-repertoire analyses, often associated with the let-down portion of complex long-call sequences rather than common standalone everyday calling.
+    confidence: low
+    references: [girardbuttoz_2022]
   - name: whimper
     acoustic_keywords: [high_frequency, tonal, quiet, short, repetitive]
     acoustic_description: Soft high-pitched plaintive notes, often repeated and less intense than full screams.
@@ -105,6 +144,10 @@ references:
     doi: 10.1038/s42003-022-03350-8
   goodall_1986:
     citation: "Goodall, J. 1986. The Chimpanzees of Gombe: Patterns of Behavior. Harvard University Press."
+  girardbuttoz_iscience_2022:
+    citation: "Girard-Buttoz, C., Crockford, C., Bortolato, T., Biro, D., and Wittig, R.M. 2022. Population-specific call order in chimpanzee greeting vocal sequences. iScience 25:104851."
+    url: https://doi.org/10.1016/j.isci.2022.104851
+    doi: 10.1016/j.isci.2022.104851
   laporte_zuberbuhler_2010:
     citation: "Laporte, M.N.C. and Zuberbuhler, K. 2010. Vocal greeting behaviour in wild chimpanzee females. Animal Behaviour 80:467-473."
     doi: 10.1016/j.anbehav.2010.06.005
@@ -125,3 +168,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added pant bark as an obvious major display call and lightly tightened labels around established chimpanzee call classes.
+  - timestamp: "2026-06-11T10:55:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: "Expanded recall for the chimpanzee repertoire by adding broader grunt plus missing panted or rare standalone units supported by sequence-level repertoire studies: panted hoo, pant, pant scream, and pant roar."

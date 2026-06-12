@@ -55,6 +55,13 @@ calls:
     semantic_description: Used in close-range tension or warning before stronger aggressive escalation.
     confidence: medium
     references: [project_coyote_howls]
+  - name: woof
+    acoustic_keywords: [low_frequency, broadband, abrupt, short, quiet]
+    acoustic_description: A short low-intensity bark-like call, typically fuller and more voiced than a huff but less forceful than a typical bark.
+    semantic_keywords: [attention, threat, spacing]
+    semantic_description: Plausibly used as a low-level warning or contact-at-a-distance call in mildly aroused situations, though the boundary from huff and bark is not always described consistently.
+    confidence: low
+    references: [coyote_11_calls, project_coyote_howls]
   - name: growl
     acoustic_keywords: [low_frequency, broadband, quiet, abrupt, noisy]
     acoustic_description: Low rough broadband vocalization usually produced at close range and often at lower amplitude than howls.
@@ -91,6 +98,9 @@ references:
   project_coyote_howls:
     citation: "Bekoff, M. and Fox, C.H. 2018. Coyotes howl to chat with their neighbors. Project Coyote."
     url: https://projectcoyote.org/wp-content/uploads/2018/08/SFChronicle_Coyote-Howl-Chat_BekoffFoxOpEd.pdf
+  coyote_11_calls:
+    citation: "Coyote Yipps. 2017. Coyote voicings: howls, yips, barks, and more."
+    url: https://coyoteyipps.com/coyote-voicings/
   iucn_2018:
     citation: "Sillero-Zubiri, C. 2018. Canis latrans. The IUCN Red List of Threatened Species 2018 e.T3745A103893556."
     url: https://www.iucnredlist.org/species/3745/103893556
@@ -103,3 +113,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative completeness pass added obvious coyote group, warning, and greeting call classes from stable external sources.
+  - timestamp: "2026-06-11T12:05:00Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 10 recall review added a tentative woof class from secondary coyote repertoire summaries while keeping fuzzier candidate splits merged.

@@ -45,6 +45,63 @@ calls:
     semantic_description: Used in capture, severe conflict, or intense disturbance.
     confidence: low
     references: [tamarin_overview]
+  - name: trill contact call
+    alternative_names: [contact trill, trilling call]
+    acoustic_keywords: [short, tonal, repetitive, quiet, frequency_modulated]
+    acoustic_description: A series of short modulated notes quieter and shorter-ranged than the long call and typically given in repeated close-range bouts.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Used to maintain nearby group cohesion and routine short-distance social contact.
+    confidence: medium
+    references: [moody_menzel_1976, tamarin_contact_gallery]
+  - name: aerial alarm call
+    alternative_names: [aerial predator alarm, high-pitched whistle alarm]
+    acoustic_keywords: [high_frequency, tonal, short, abrupt, loud]
+    acoustic_description: A thin, high-pitched alarm signal with a more whistle-like structure than the harsher terrestrial-alert calls.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced to aerial predators and associated with upward scanning and movement to safer lower cover.
+    confidence: high
+    references: [kirchhof_hammerschmidt_2006, callitrichid_guidelines_2022]
+  - name: terrestrial alarm call
+    alternative_names: [ground predator alarm]
+    acoustic_keywords: [broadband, noisy, short, repetitive, abrupt]
+    acoustic_description: A harsher series of short abrupt notes with more broadband energy than the aerial alarm signal.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced to terrestrial threats and associated with downward orientation, vigilance, and threat-focused recruitment.
+    confidence: high
+    references: [kirchhof_hammerschmidt_2006]
+  - name: aggressive whistle
+    alternative_names: [hostile whistle]
+    acoustic_keywords: [high_frequency, tonal, long, loud, abrupt]
+    acoustic_description: A long, clear, high-pitched whistle with a more forceful delivery than ordinary distance-contact whistles.
+    semantic_keywords: [aggression, threat, spacing]
+    semantic_description: Reported in hostile or confrontational settings rather than neutral spacing contact.
+    confidence: medium
+    references: [moody_menzel_1976, moynihan_1970]
+  - name: infant distress call
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, long, tonal, loud, graded]
+    acoustic_description: A prolonged infant-biased cry or distress call with higher pitch and longer duration than nearby adult contact trills.
+    semantic_keywords: [distress, begging, caregiving]
+    semantic_description: Used by infants to solicit carrying, retrieval, or other caregiver attention.
+    confidence: medium
+    references: [moody_menzel_1976]
+  - name: adult response to infant calls
+    alternative_names: [adult infant-directed call]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, tonal, quiet, repetitive, graded]
+    acoustic_description: A softer adult call type described in association with ongoing infant calling, distinct from loud spacing and alarm signals.
+    semantic_keywords: [caregiving, affiliation, attention]
+    semantic_description: Produced by adults while attending to or coordinating around calling infants.
+    confidence: low
+    references: [moody_menzel_1976]
 references:
   snowdon_hodun_1981:
     citation: "Snowdon, C.T. and Hodun, A. 1981. Acoustic adaptations in pygmy marmoset and tamarin long calls."
@@ -52,6 +109,23 @@ references:
   tamarin_overview:
     citation: "Animal Diversity Web. Saguinus fuscicollis account and callitrichid overview material."
     url: https://animaldiversity.org/accounts/Saguinus_fuscicollis/
+  moody_menzel_1976:
+    citation: "Moody, M.I. and Menzel, E.W. Jr. 1976. Vocalizations and their Behavioral Contexts in the Tamarin Saguinus fuscicollis. Folia Primatologica 25(2-3):73-94."
+    url: https://pubmed.ncbi.nlm.nih.gov/817994/
+    doi: 10.1159/000155708
+  kirchhof_hammerschmidt_2006:
+    citation: "Kirchhof, J. and Hammerschmidt, K. 2006. Functionally Referential Alarm Calls in Tamarins (Saguinus fuscicollis and Saguinus mystax) - Evidence from Playback Experiments. Ethology 112:346-354."
+    url: https://onlinelibrary.wiley.com/doi/10.1111/j.1439-0310.2006.01165.x
+    doi: 10.1111/j.1439-0310.2006.01165.x
+  moynihan_1970:
+    citation: "Moynihan, M. 1970. Some Behavior Patterns of Platyrrhine Monkeys II. Saguinus geoffroyi and Some Other Tamarins. Smithsonian Contributions to Zoology 28."
+    url: https://repository.si.edu/bitstream/handle/10088/5131/SCtZ-0028-Hi_res.pdf
+  tamarin_contact_gallery:
+    citation: "Volodins Bioacoustic Group. Mammals sound gallery entry for Saguinus fuscicollis contact trilling calls."
+    url: https://www.bioacoustica.org/gallery/mammals_eng.html
+  callitrichid_guidelines_2022:
+    citation: "EAZA Best Practice Guidelines: Callitrichidae. 2022 edition 3.2."
+    url: https://media.eaza.net/uploads/EAZA_Best_Practice_Guidelines_Callitrichids_V14_DOI_3d9cd601a2.pdf
 provenance:
   - timestamp: "2026-06-10T21:30:00+02:00"
     model: GPT-5 Codex
@@ -61,3 +135,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision expanded major tamarin call classes and added stable external references only.
+  - timestamp: "2026-06-11T13:15:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: High-recall external-source pass expanded saddle-back tamarin coverage with contact, predator-specific alarm, hostile whistle, and infant-related classes while keeping uncertain adult-infant signaling low confidence.

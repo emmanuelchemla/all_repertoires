@@ -103,6 +103,42 @@ calls:
   semantic_description: Used in reunions and close affiliative greeting contexts to
     maintain social bonds.
   confidence: medium
+- name: bark
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - abrupt
+  - loud
+  - short
+  acoustic_description: A short explosive harsh call with a sharper onset than a roar and much less sustained tonal structure than a rumble or trumpet.
+  semantic_keywords:
+  - alarm
+  - attention
+  - threat
+  semantic_description: Included because African elephant ethograms explicitly list bark-like calls among the common higher-frequency vocal categories used in disturbance and forceful social contexts.
+  confidence: medium
+  references:
+  - elephantvoices
+- name: cry
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - long
+  - graded
+  - loud
+  acoustic_description: A plaintive, high-arousal call with a strained noisy quality and longer duration than a bark.
+  semantic_keywords:
+  - distress
+  - caregiving
+  - attention
+  semantic_description: Included as a broad distress-oriented class because African elephant vocal summaries often distinguish cries from barks, roars, snorts, and trumpets.
+  confidence: medium
+  references:
+  - elephantvoices
+references:
+  elephantvoices:
+    citation: "ElephantVoices. Acoustic communication and Elephant Ethogram resources for African elephants."
+    url: https://www.elephantvoices.org/elephant-communication/acoustic-communication.html
 provenance:
 - timestamp: '2026-06-10T21:15:00+02:00'
   model: GPT-5 Codex
@@ -114,3 +150,7 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T18:30:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added bark and cry classes plus ElephantVoices references so the African savanna elephant file better captures named higher-frequency call categories outside the core rumble system.

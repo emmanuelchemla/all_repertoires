@@ -19,8 +19,22 @@ calls:
   - name: twitter
     acoustic_keywords: [high_frequency, tonal, repetitive, short, graded]
     acoustic_description: A rapid series of high-pitched notes with lighter tonal quality than barks or screams.
-    semantic_keywords: [contact, affiliation, attention]
-    semantic_description: Used in ordinary social interaction and short-range communication.
+    semantic_keywords: [distress, begging, aggression, attention]
+    semantic_description: Mostly used by infants and juveniles in tantrums, nursing refusal, and escalated close social tension; this matches the screamy-trill or twitter usage described for the species.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: peep
+    acoustic_keywords: [short, tonal, high_frequency, quiet, abrupt]
+    acoustic_description: A short tonal note, slightly higher-pitched and shorter than a food-associated call, often ending in a slight upsweep.
+    semantic_keywords: [affiliation, contact, attention]
+    semantic_description: Used in close affiliative and appeasement contexts, including grooming-related approaches and low-tension social contact.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: intense peep
+    acoustic_keywords: [short, tonal, high_frequency, loud, abrupt]
+    acoustic_description: A forceful urgent peep-like call, shorter and more emphatic than ordinary peeps or food-associated calls.
+    semantic_keywords: [attention, threat, group_coordination]
+    semantic_description: Emitted in inspection or investigatory contexts to recruit others toward a suspicious stimulus or socially tense focal point.
     confidence: high
     references: [groslouis_etal_2008]
   - name: bark
@@ -45,6 +59,80 @@ calls:
     semantic_description: Produced when valuable food is found and can influence the attention or approach of nearby group members.
     confidence: high
     references: [groslouis_2004, groslouis_etal_2008]
+  - name: gargle
+    acoustic_keywords: [low_frequency, noisy, repetitive, short, graded]
+    acoustic_description: A low-frequency guttural call given in bouts, with rough atonal quality and more aroused delivery than a simple peep.
+    semantic_keywords: [affiliation, attention, display]
+    semantic_description: Produced during following, grooming, and other affiliative approaches, often when the caller is socially aroused.
+    confidence: high
+    references: [groslouis_etal_2008, duchesneau_etal_2023]
+  - name: twargle
+    acoustic_keywords: [multi_component, repetitive, tonal, noisy, graded]
+    acoustic_description: A hybrid call combining gargle-like guttural elements with a descending trill component.
+    semantic_keywords: [affiliation, caregiving, attention]
+    semantic_description: Common in infant and mother-infant affiliative interaction and used as a socially directed bond-testing or contact-promoting call.
+    confidence: high
+    references: [groslouis_etal_2008, duchesneau_etal_2023]
+  - name: mild vocal threat
+    alternative_names: [heh]
+    acoustic_keywords: [short, low_frequency, noisy, abrupt, quiet]
+    acoustic_description: A brief slightly atonal squeaky threat note, usually given singly and interspersed with silent open-mouth threats.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Used in low-level aggression toward conspecifics and occasionally toward mildly disturbing external stimuli.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: intense vocal threat
+    alternative_names: [chortle]
+    acoustic_keywords: [noisy, repetitive, loud, abrupt, multi_component]
+    acoustic_description: A high-amplitude sequence of atonal plosive elements, typically produced in short bouts of several closely spaced calls.
+    semantic_keywords: [aggression, threat, territorial, attention]
+    semantic_description: Common in intergroup encounters, escalated intragroup tension, and some predator responses.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: bray
+    acoustic_keywords: [short, abrupt, low_frequency, noisy, loud]
+    acoustic_description: A short plosive call with a sharp onset and descending pitch.
+    semantic_keywords: [territorial, threat, attention]
+    semantic_description: Produced mainly by adult males as a lead-in to intense vocal threats during intergroup encounters.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: cough
+    acoustic_keywords: [short, abrupt, noisy, quiet, low_frequency]
+    acoustic_description: A brief harsh plosive call of relatively low amplitude.
+    semantic_keywords: [threat, attention]
+    semantic_description: Rarely produced, mainly by adult males in tense vigilant states shortly before an aggressive approach or display.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: coo
+    acoustic_keywords: [low_frequency, tonal, long, quiet, graded]
+    acoustic_description: A low-frequency, usually single-syllable tonal call of relatively long duration that can grade toward lost calls.
+    semantic_keywords: [caregiving, contact, distress]
+    semantic_description: Given mostly by infants when separated from their mothers to recruit reunion and carrying.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: lost call
+    alternative_names: [arrawh]
+    acoustic_keywords: [low_frequency, noisy, loud, long, repetitive]
+    acoustic_description: A low-frequency atonal call, often produced in bouts of one to three loud elements and carrying farther than local social calls.
+    semantic_keywords: [contact, group_coordination, identity, attention]
+    semantic_description: Used when separated from the group or when trying to re-establish contact over distance.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: squeak
+    alternative_names: [warble]
+    acoustic_keywords: [tonal, frequency_modulated, short, repetitive, graded]
+    acoustic_description: A highly frequency-modulated tonal call with pulsatile elements.
+    semantic_keywords: [courtship, mating, affiliation]
+    semantic_description: Used in courtship dances, stalking displays before sexual interactions, copulation, and some tension-reduction sociosexual exchanges.
+    confidence: high
+    references: [groslouis_etal_2008]
+  - name: wheeze
+    acoustic_keywords: [high_frequency, tonal, long, loud, graded]
+    acoustic_description: A relatively long high-pitched call, often embedded in conspicuous dance-like display sequences.
+    semantic_keywords: [courtship, mating, display, aggression]
+    semantic_description: Linked to sociosexual display, especially during periods of social tension, competition, or instability.
+    confidence: high
+    references: [groslouis_etal_2008]
   - name: aerial predator alarm
     acoustic_keywords: [high_frequency, abrupt, short, repetitive, loud]
     acoustic_description: A shorter sharper alarm call than routine contact trills, delivered with strong urgency.
@@ -67,6 +155,10 @@ references:
   groslouis_2004:
     citation: "Gros-Louis, J. 2004. The function of food-associated calls in white-faced capuchin monkeys, Cebus capucinus, from the perspective of the signaller. Animal Behaviour 67:431-440."
     url: https://www.sciencedirect.com/science/article/abs/pii/S000334720300161X
+  duchesneau_etal_2023:
+    citation: "Duchesneau, A., Edelberg, D.G., and Perry, S.E. 2023. Gargle and twargle vocalizations in Cebus capucinus may function to test and maintain bonds. Behaviour 160(12-13):1237-1270."
+    url: https://escholarship.org/content/qt8781s65x/qt8781s65x.pdf
+    doi: 10.1163/1568539X-bja10273
 provenance:
   - timestamp: '2026-06-10T20:45:00+02:00'
     model: GPT-5 Codex
@@ -80,3 +172,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative fast-pass revision added major capuchin call classes and stable references using external sources only.
+  - timestamp: '2026-06-11T13:20:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide recall pass added major missing white-faced capuchin affiliative, threat, distance, and sociosexual call classes from external repertoire sources and corrected twitter semantics toward screamy-trill usage.

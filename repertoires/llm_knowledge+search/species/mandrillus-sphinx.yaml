@@ -61,6 +61,66 @@ calls:
   confidence: medium
   references:
   - feistner_1989
+- name: play pant
+  alternative_names:
+  - play panting
+  acoustic_keywords:
+  - short
+  - repetitive
+  - pulsed
+  - quiet
+  acoustic_description: A soft staccato panting sequence heard as short repeated exhaled pulses during active play.
+  semantic_keywords:
+  - play
+  - affiliation
+  - attention
+  semantic_description: Produced during social play, especially rough-and-tumble or gnaw-wrestling bouts, and may partly reflect exertion rather than a sharply discrete call type.
+  confidence: low
+  references:
+  - feistner_1989
+- name: gek
+  alternative_names:
+  - gecker
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - abrupt
+  - repetitive
+  acoustic_description: A repeated short sharp distress call given in rapid series by infants and young juveniles.
+  semantic_keywords:
+  - distress
+  - begging
+  - caregiving
+  semantic_description: Used when a caretaker moves away, during rejection or weaning conflict, and in other separation-related distress that typically elicits retrieval or renewed contact.
+  confidence: high
+  references:
+  - feistner_1989
+- name: moan
+  alternative_names:
+  - girney
+  acoustic_keywords:
+  - low_frequency
+  - long
+  - tonal
+  - quiet
+  - graded
+  acoustic_description: A low continuous moaning or grumbling sound, more sustained and less sharply segmented than a gek or squeak.
+  semantic_keywords:
+  - distress
+  - begging
+  - caregiving
+  semantic_description: Signals reluctance, mild distress, or protest, often from infants or juveniles following a departing mother or caretaker.
+  confidence: high
+  references:
+  - feistner_1989
 - name: squeak
   scope:
     life_stages:
@@ -219,6 +279,46 @@ calls:
   confidence: high
   references:
   - feistner_1989
+- name: yell
+  alternative_names:
+  - female roar
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - long
+  - noisy
+  acoustic_description: A loud long-distance call resembling a roar but delivered at distinctly higher pitch.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Given mainly by adult females during intense chases of subadult or adult males.
+  confidence: medium
+  references:
+  - feistner_1989
+- name: tooth grind
+  alternative_names:
+  - teeth grinding
+  acoustic_keywords:
+  - broadband
+  - repetitive
+  - abrupt
+  acoustic_description: An audible grinding or snapping noise produced by the teeth rather than a voiced call.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Heard in tense or angry situations, especially from the alpha male under confinement, and likely functions as an agonistic warning or arousal signal.
+  confidence: medium
+  references:
+  - feistner_1989
 references:
   feistner_1989:
     citation: Feistner, A. T. C. 1989. Social development and ecology of mandrills Mandrillus sphinx in a Gabonese rain forest. PhD thesis, University of Stirling.
@@ -240,3 +340,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Replaced generic entries with the named mandrill vocal classes summarized by Feistner and linked the best-supported calls to their documented contexts.
+- timestamp: '2026-06-11T12:05:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added named call classes from Feistner's mandrill repertoire table and descriptions, including low-confidence inclusion of play pant as a possibly exertion-linked vocalization.

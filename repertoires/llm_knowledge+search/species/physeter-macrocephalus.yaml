@@ -45,6 +45,14 @@ calls:
     semantic_description: Rare but repeatedly reported in social contexts, especially around adult males and communication-rich sequences.
     confidence: medium
     references: [pace_2021]
+  - name: rapid click train
+    alternative_names: [fast click]
+    acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
+    acoustic_description: A click train faster than usual clicks but not as tightly compressed as the terminal creaks of prey capture, producing an intermediate rapid rhythm.
+    semantic_keywords: [attention, group_coordination, display]
+    semantic_description: Included conservatively because sperm-whale repertoire overviews sometimes distinguish rapid or fast click patterns from usual clicks, slow clicks, codas, and creaks.
+    confidence: low
+    references: [pace_2021]
 references:
   gordon_1987:
     citation: "Gordon, J.C.D. 1987. The behaviour and ecology of sperm whales off Sri Lanka. PhD thesis, University of Cambridge."
@@ -68,3 +76,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded the sperm whale file by separating codas, usual click trains, slow clicks, and creaks, while retaining trumpets as a rarer but repeatedly reported class.
+  - timestamp: "2026-06-11T18:30:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a low-confidence rapid-click class to capture repertoire summaries that separate fast click patterns from usual clicks and prey-capture creaks.
