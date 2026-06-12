@@ -68,6 +68,84 @@ calls:
     semantic_description: Given around copulation and associated sexual interactions, potentially influencing nearby social partners as well as the mating male.
     confidence: medium
     references: [hammerschmidt_fischer_2019, baboon_proto_2017]
+  - name: shrill bark
+    alternative_names: [alarm shrill, sharp bark]
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, broadband, abrupt, short, loud]
+    acoustic_description: High-pitched, sharp, brief barks with broadband spectral energy, acoustically distinct from the lower, harsher male alarm bark and the two-phase wahoo.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced by females, juveniles, and subadults in response to sudden startling stimuli or predator detection; adult males use the wahoo/harsh bark instead.
+    confidence: high
+    references: [animaldiversity_papio_anubis, hammerschmidt_fischer_2019]
+  - name: grating roar
+    alternative_names: [roar, post-conflict roar]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, loud, long, broadband]
+    acoustic_description: Deep, resonating, structurally rough roar with strong low-frequency energy; longer and more sustained than a single wahoo unit and acoustically harsher than roar grunts.
+    semantic_keywords: [display, threat, aggression, spacing]
+    semantic_description: Given by dominant adult males after fights and during night-time disturbances; functions to signal competitive status and deter rivals or reassert dominance after conflict.
+    confidence: high
+    references: [animaldiversity_papio_anubis, fischer_2002]
+  - name: threat grunt
+    alternative_names: [aggressive grunt]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, short, graded]
+    acoustic_description: Low-pitched, rough grunts with more noisy, harsh qualities than affiliative grunts; structurally intermediate between a soft grunt and a more overt bark.
+    semantic_keywords: [threat, aggression, spacing]
+    semantic_description: Produced by adult males as a graded threat signal during competitive interactions; escalation in harshness signals increasing arousal and intent to aggress.
+    confidence: medium
+    references: [animaldiversity_papio_anubis, hammerschmidt_fischer_2019]
+  - name: squeal
+    alternative_names: [whimper, fear squeal]
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, short, graded, quiet]
+    acoustic_description: High-pitched, relatively tonal, short calls ranging from soft whimpers to louder squeals; graded in intensity and pitch with arousal level.
+    semantic_keywords: [submission, distress, aggression, attention]
+    semantic_description: Produced by subordinate individuals under social pressure or mild attack; signals submission or fear to reduce further aggression from the attacker.
+    confidence: high
+    references: [hammerschmidt_fischer_2019]
+  - name: moan
+    alternative_names: [infant moan, contact moan]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, long, quiet, graded]
+    acoustic_description: Low, sustained tonal calls with smooth frequency contour; softer and more drawn-out than infant screams, often delivered singly.
+    semantic_keywords: [distress, contact, begging, caregiving]
+    semantic_description: Produced by infants and young juveniles when separated from or not in contact with the mother; signals need for proximity and elicits maternal retrieval or attention.
+    confidence: medium
+    references: [guinea_baboon_repertoire_2013, hammerschmidt_fischer_2019]
+  - name: lip-smack
+    alternative_names: [lip smack, affiliative lip-smack]
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, repetitive, quiet, pulsed]
+    acoustic_description: Rapid repetitive mouth clicks produced by tongue and lip movements; rhythmically pulsed, low-amplitude, and highly repetitive with little tonal or noisy vocal component.
+    semantic_keywords: [affiliation, contact, submission, attention]
+    semantic_description: Produced during greetings, grooming, and friendly social approaches; signals benign, non-threatening intent and facilitates close social contact across all age and sex classes.
+    confidence: high
+    references: [roberts_2014, hammerschmidt_fischer_2019]
 references:
   hammerschmidt_fischer_2019:
     citation: "Hammerschmidt, K. and Fischer, J. 2019. Baboon vocal repertoires and the evolution of primate vocal diversity. Journal of Human Evolution 126:1-13."
@@ -84,6 +162,9 @@ references:
   guinea_baboon_repertoire_2013:
     citation: "Maciej, P., Ndao, I., Hammerschmidt, K., and Fischer, J. 2013. Vocal communication in a complex multi-level society: constrained acoustic structure and flexible call usage in Guinea baboons. Frontiers in Zoology 10:58."
     doi: 10.1186/1742-9994-10-58
+  animaldiversity_papio_anubis:
+    citation: "Animal Diversity Web. Papio anubis (anubis baboon). University of Michigan Museum of Zoology."
+    url: https://animaldiversity.org/accounts/Papio_anubis/
 provenance:
   - timestamp: "2026-06-10T21:00:00+02:00"
     model: GPT-5 Codex
@@ -97,3 +178,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added obvious major baboon call classes and stable top-level references in a speed-focused completeness pass based on external sources.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: "Completeness expansion pass: added 6 call types (shrill bark, grating roar, threat grunt, squeal, moan, lip-smack) to reach 14 total; added animaldiversity_papio_anubis reference."

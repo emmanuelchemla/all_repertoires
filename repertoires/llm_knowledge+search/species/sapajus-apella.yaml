@@ -69,6 +69,97 @@ calls:
     semantic_description: Likely used to regain contact with separated group members, consistent with other capuchins and later Sapajus repertoire work.
     confidence: low
     references: [robinson_1982, sapajus_repertoire_2021]
+  - name: contact note
+    alternative_names: [close call, spacing note]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, tonal, quiet, graded]
+    acoustic_description: A brief soft tonal note, often given singly or in loose sequences; structurally simple with relatively stable fundamental frequency and short duration.
+    semantic_keywords: [contact, group_coordination, spacing]
+    semantic_description: The most frequently produced call in the repertoire, used to regulate within-group spacing and maintain cohesion during movement and foraging.
+    confidence: medium
+    references: [sapajus_repertoire_2021]
+  - name: infant babbling
+    alternative_names: [babble, nhan]
+    scope:
+      life_stages: [infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, repetitive, graded, quiet]
+    acoustic_description: Rapid sequences of short high-pitched tonal notes with variable frequency modulation; structurally more variable and less stereotyped than adult contact notes.
+    semantic_keywords: [contact, affiliation, caregiving, distress]
+    semantic_description: Produced exclusively by infants in social and proximity-maintenance contexts; may escalate in distress situations when separated from the mother.
+    confidence: medium
+    references: [sapajus_repertoire_2021]
+  - name: sirena
+    alternative_names: [siren call, long contact call]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, long, loud, harmonic]
+    acoustic_description: A sustained tonal call with prominent frequency sweep, rising or rising-falling contour, and harmonic structure; more complex and longer-duration than the contact note.
+    semantic_keywords: [contact, group_coordination, spacing, identity]
+    semantic_description: A distinctive contact call used in longer-range within-group communication; categorized as a separate contact call type in Sapajus libidinosus repertoire studies and likely present in S. apella.
+    confidence: low
+    references: [sapajus_repertoire_2021]
+  - name: foraging call
+    alternative_names: [chihui, grgr, patinado]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, tonal, repetitive, quiet, graded]
+    acoustic_description: A class of soft repeated tonal calls produced during foraging; the chihui is a contact note followed by one to three higher-pitched notes, while the grgr is a more rapid short series; structurally intermediate between a contact note and a food call.
+    semantic_keywords: [food, contact, group_coordination, recruitment]
+    semantic_description: Produced by animals actively foraging or feeding; serves to maintain group coordination during food search and may signal food-patch presence to nearby group members.
+    confidence: medium
+    references: [sapajus_repertoire_2021]
+  - name: aggressive staccato
+    alternative_names: [ascending rapid staccato, cough-cough, pip]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, abrupt, noisy, repetitive, pulsed, loud]
+    acoustic_description: A series of rapid abrupt pulsed notes with rising frequency or intensity; can range from short cough-like units (cough-cough) to rapid pip sequences and full ascending staccato bouts.
+    semantic_keywords: [aggression, threat, display]
+    semantic_description: Produced in moderate-to-high-intensity aggressive interactions; used in direct threats toward conspecifics and agonistic displays; distinct from the brief mild-threat heh call.
+    confidence: medium
+    references: [sapajus_repertoire_2021]
+  - name: aerial alarm call
+    alternative_names: [raptor alarm, aerial threat call]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, short, abrupt, loud]
+    acoustic_description: A short high-pitched tonal or semi-tonal call acoustically distinct from the terrestrial alarm bark; tends to be higher in frequency and sharper in onset than ground-predator barks.
+    semantic_keywords: [alarm, predator, attention, group_coordination]
+    semantic_description: Produced specifically in response to aerial predators (raptors) and sometimes humans; distinct from barks given to terrestrial threats; elicits upward scanning and flight-to-cover responses in listeners.
+    confidence: medium
+    references: [wheeler_2010, dibitetti_2003]
+  - name: sexual display call
+    alternative_names: [chuck, raspy oestrous call, copulation call]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, short, graded]
+    acoustic_description: A low, somewhat raspy short vocalization; in males described as a chuck with noisy broadband quality; females may produce a raspier version during oestrus or copulation; graded in intensity.
+    semantic_keywords: [courtship, mating, display, identity]
+    semantic_description: Produced in reproductive contexts including mate attraction, copulation, and sexual displays; linked to solicitation and assessment of reproductive state.
+    confidence: low
+    references: [sapajus_repertoire_2021]
 references:
   sapajus_repertoire_2021:
     citation: "de la Torre, S. and Snowdon, C.T. 2021. The Vocal Repertoire of the Bearded Capuchin (Cebidae: Sapajus libidinosus): An Update and Reassessment."
@@ -85,6 +176,9 @@ references:
   robinson_1982:
     citation: "Robinson, J.G. 1982. Vocal systems regulating within-group spacing. In: Snowdon, C.T., Brown, C.H., and Petersen, M.R. Primate Communication."
     url: https://books.google.com/books?id=jkDc8a-w65IC
+  wheeler_2010:
+    citation: "Wheeler, B.C. 2010. Production and perception of situationally variable alarm calls in wild tufted capuchin monkeys (Cebus apella nigritus). Behavioral Ecology and Sociobiology 64:989-1000."
+    url: https://link.springer.com/article/10.1007/s00265-010-0914-3
 provenance:
   - timestamp: "2026-06-10T21:00:00+02:00"
     model: GPT-5 Codex
@@ -98,3 +192,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Repo-wide recall pass added plausible Sapajus apella missing call classes and stronger food-call references, using low confidence where evidence came from broader capuchin or close-relative sources.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Expanded from 8 to 15 call types by adding contact note, infant babbling, sirena, foraging call, aggressive staccato, aerial alarm call, and sexual display call; added wheeler_2010 reference; call types sourced from web-search-confirmed Sapajus libidinosus and Cebus apella nigritus literature with confidence set to low or medium for cross-species transfers.
