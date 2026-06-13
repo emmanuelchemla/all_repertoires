@@ -131,6 +131,38 @@ calls:
   confidence: high
   references:
   - delacour_1954
+- name: lost call
+  alternative_names:
+  - separation call
+  - distance call
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - loud
+  - multi_component
+  - repetitive
+  acoustic_description: A stereotyped three-syllable or multi-note honking sequence,
+    with descending frequency contour across syllables and strong harmonic content;
+    acoustically distinct from single-note contact honks.
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ""
+  semantic_keywords:
+  - contact
+  - distress
+  - identity
+  - attention
+  semantic_description: Produced by an individual that has become separated from its
+    mate or social group; functions to re-establish contact and is individually recognizable,
+    allowing recipients to identify the caller.
+  confidence: high
+  references:
+  - anser_lost_call
+  - lorenz_1988
 references:
   anser_cornell:
     citation: Cornell Lab of Ornithology. Graylag Goose sounds.
@@ -146,6 +178,15 @@ references:
     url: https://animalia.bio/greylag-goose
   delacour_1954:
     citation: Delacour, J. 1954. The Waterfowl of the World. Volume 1.
+  anser_lost_call:
+    citation: >-
+      Frigerio, D. et al. 2022. Vocal recognition of distance calls in a group-living
+      basal bird: the greylag goose, Anser anser. Animal Behaviour 185, 95-104.
+    url: https://www.sciencedirect.com/science/article/pii/S0003347222000045
+  lorenz_1988:
+    citation: >-
+      Lorenz, K. 1988. Here Am I — Where Are You? The Behavior of the Greylag Goose.
+      Harcourt Brace Jovanovich.
 provenance:
 - timestamp: '2026-06-10T22:15:00+02:00'
   model: GPT-5 Codex
@@ -167,3 +208,8 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added lost call (separation/distance call) as 8th call type, with references
+    to Frigerio et al. 2022 and Lorenz 1988; no other repo repertoire files used.

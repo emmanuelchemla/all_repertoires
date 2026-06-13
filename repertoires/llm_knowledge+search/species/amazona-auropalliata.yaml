@@ -184,11 +184,45 @@ calls:
   confidence: medium
   references:
   - amazon_duet
+- name: squeal
+  alternative_names:
+  - chase squeal
+  - aggressive squeal
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - short
+  - abrupt
+  acoustic_description: A sharp high-pitched squeal-like call, acoustically distinct
+    from the ordinary contact screech, delivered in short abrupt bursts.
+  semantic_keywords:
+  - aggression
+  - threat
+  - alarm
+  semantic_description: Observed specifically in contexts of aggressive chases, typically
+    produced by birds being pursued or engaged in direct agonistic encounters; rarely
+    heard outside aggressive interactions.
+  confidence: medium
+  references:
+  - wright_2001
 references:
   amazon_duet:
     citation: Dahlin, C.R. and Wright, T.F. Studies of duetting and coordinated territorial
       vocal behavior in yellow-naped amazons.
     url: https://www.frontiersin.org/journals/bird-science/articles/10.3389/fbirs.2023.1266420/full
+  wright_2001:
+    citation: 'Wright, T.F. (2001). Pair Duets in the Yellow-Naped Amazon (Psittaciformes:
+      Amazona auropalliata): Responses to Playbacks of Different Dialects. Ethology
+      107(2): 111-126.'
+    url: https://onlinelibrary.wiley.com/doi/10.1046/j.1439-0310.2001.00632.x
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -211,3 +245,8 @@ provenance:
   notes: Worker 12 recall pass added sex-specific solo territorial/display note classes
     supported by yellow-naped amazon duet literature and preserved broad treatment
     of other flock calls.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added squeal call type (aggressive chase context) documented in Wright 2001
+    dialect playback study; added wright_2001 reference.

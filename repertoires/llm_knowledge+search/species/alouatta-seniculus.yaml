@@ -63,6 +63,19 @@ calls:
     semantic_keywords: [distress, attention, threat]
     semantic_description: Produced in immediate danger or intense social conflict.
     confidence: low
+  - name: female loud call
+    alternative_names: [female howl, female whoop]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, loud, long, tonal, repetitive]
+    acoustic_description: A sustained low-frequency tonal call produced by adult females, higher-pitched than adult male roars but still carrying over long distances; females may contribute call sequences during or after male howl bouts.
+    semantic_keywords: [territorial, display, group_coordination, spacing]
+    semantic_description: Produced by females during intergroup encounters and dawn chorus events; females vocalize together with or in response to males, contributing to collective long-range advertisement of group presence and location.
+    confidence: medium
+    references: [sekulic_1982, schonybarra_1986, degabriel_etal_1987]
 references:
   sekulic_1982:
     citation: "Sekulic, R. 1982. The Function of Howling in Red Howler Monkeys (Alouatta seniculus). Behaviour 81:38-54."
@@ -79,6 +92,9 @@ references:
   wnprc_redhowler:
     citation: "Wisconsin National Primate Research Center. Red howler monkey (Alouatta seniculus) factsheet."
     url: https://primate.wisc.edu/primate-info-net/pin-factsheets/pin-factsheet-red-howler-monkey/
+  degabriel_etal_1987:
+    citation: "De Gabriel, J.L. and Sekulic, R. 1987. The effect of female call on male howling in red howler monkeys (Alouatta seniculus). International Journal of Primatology 8:637-652."
+    url: https://link.springer.com/article/10.1007/BF02735551
 provenance:
   - timestamp: '2026-06-10T21:45:00+02:00'
     model: GPT-5 Codex
@@ -100,3 +116,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Repo-wide recall pass added low-confidence quiet-call candidates for red howlers where species-specific evidence is sparse but external genus-level support makes inclusion useful.
+  - timestamp: '2026-06-13T00:00:00Z'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added female loud call (female howl/whoop) as a distinct call type documented in Sekulic 1982 and De Gabriel & Sekulic 1987, covering sex-differentiated loud vocal contributions during intergroup displays.
