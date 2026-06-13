@@ -105,6 +105,14 @@ calls:
     semantic_description: Emitted by males during the breeding season when approaching females to mate and therefore best treated as a courtship or appeasement display.
     confidence: medium
     references: [gamba_2005]
+  - name: pulsed squawk
+    alternative_names: [squawk]
+    acoustic_keywords: [loud, pulsed, noisy, broadband, repetitive, short]
+    acoustic_description: A series of rapid, discrete noisy pulses or squawking bursts with broadband energy, distinct from the more sustained roar-shriek and shorter than the abrupt roar sequence; each pulse is brief with a rough, staccato quality.
+    semantic_keywords: [alarm, predator, group_coordination, attention]
+    semantic_description: Emitted specifically in response to ground or mammalian predators (in contrast to abrupt roars used for aerial predators); functions to alert group members and trigger rapid aggregation in high-arousal antipredator contexts.
+    confidence: medium
+    references: [pereira_1988]
 references:
   batist_2023:
     citation: "Batist, J., Baden, A.L., Tecot, S.R., and Erb, J. 2023. Bioacoustic characterization of the black-and-white ruffed lemur (Varecia variegata) vocal repertoire. Folia Primatologica."
@@ -128,3 +136,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Repo-wide high-recall review added the obvious moderate-amplitude ruffed lemur classes abrupt roar, bray, wail, and appeasement call from classic repertoire descriptions and phonetic summaries.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added pulsed squawk as the ground-predator-specific alarm call, documented in antipredator studies of Varecia variegata at Duke University Primate Center and referenced in Pereira et al. 1988, bringing total to 13 call types.
