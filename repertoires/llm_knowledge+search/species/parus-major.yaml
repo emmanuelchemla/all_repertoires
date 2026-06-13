@@ -135,6 +135,115 @@ calls:
     confidence: medium
     references:
       - gosler_1993
+  - name: tink call
+    alternative_names:
+      - chink call
+      - metallic alarm call
+      - tinking call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ''
+    acoustic_keywords:
+      - short
+      - tonal
+      - loud
+      - abrupt
+    acoustic_description: Loud, sharp, metallic single note with a ringing or chinking quality, often given in rapid series during prolonged interactions.
+    semantic_keywords:
+      - alarm
+      - territorial
+      - aggression
+      - identity
+    semantic_description: Used almost exclusively by adult males in alarm, territory defense (often during prolonged "tinking duels" with rivals at territory boundaries), and inter-male aggression; also given during winter flocking.
+    confidence: high
+    references:
+      - gosler_1993
+      - birdsoftheworld_gretit
+  - name: D call
+    alternative_names:
+      - chick-ich call
+      - harsh alarm call
+      - chach call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ''
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - repetitive
+      - abrupt
+      - short
+    acoustic_description: Repeated harsh short notes transcribed as "chich-ich-ich-ich" or "chach-ach-ach", typically preceded by one or more thin tsee or tink notes; duration and inter-note intervals vary with threat level.
+    semantic_keywords:
+      - alarm
+      - predator
+      - aggression
+    semantic_description: Given in response to predators near the nest or during high-threat alarm contexts; call rate and element number increase with predator threat level (e.g., sparrowhawk vs. tawny owl).
+    confidence: high
+    references:
+      - templeton_etal_2005
+      - birdsoftheworld_gretit
+  - name: subsong
+    alternative_names:
+      - whisper song
+      - warble
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ''
+    acoustic_keywords:
+      - quiet
+      - frequency_modulated
+      - multi_component
+      - tonal
+      - long
+    acoustic_description: Soft, rambling warbled sequence of variable notes, nearly inaudible except at close range, lacking the stereotyped repetition of full song.
+    semantic_keywords:
+      - courtship
+      - affiliation
+      - display
+    semantic_description: Produced by both sexes, typically from within foliage, often in late winter through early breeding season; associated with low-intensity social or pre-breeding contexts.
+    confidence: medium
+    references:
+      - gosler_1993
+  - name: pit call
+    alternative_names:
+      - spick call
+      - chit call
+      - squink call
+      - contact note
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ''
+    acoustic_keywords:
+      - short
+      - abrupt
+      - quiet
+      - tonal
+    acoustic_description: Soft, brief, relatively pure single note, variously transcribed as "pit", "spick", or "chit"; often given singly or loosely spaced.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - attention
+    semantic_description: Given during foraging and low-intensity social interactions; may function as a contact note between flock members or as an introductory element before longer call sequences.
+    confidence: medium
+    references:
+      - birdsoftheworld_gretit
 references:
   gompertz_1961:
     citation: Gompertz, T. 1961. The vocabulary of the great tit. British Birds 54:369-394.
@@ -145,6 +254,12 @@ references:
   mcgregor_krebs_1982:
     citation: "McGregor, P. K. and Krebs, J. R. 1982. Song types in a population of great tits (Parus major): their distribution, abundance and acquisition by individuals. Behaviour 79(2-4):126-152."
     doi: 10.1163/156853982X00210
+  templeton_etal_2005:
+    citation: "Templeton, C. N., Greene, E., and Davis, K. 2005. Allometry of alarm calls: black-capped chickadees encode information about predator size. Science 308(5730):1934-1937."
+    doi: 10.1126/science.1108841
+  birdsoftheworld_gretit:
+    citation: "Billerman, S. M. et al. (Eds). 2022. Great Tit (Parus major), version 2.0. In Birds of the World. Cornell Lab of Ornithology, Ithaca, NY."
+    url: https://birdsoftheworld.org/bow/species/gretit1/cur/sounds
 provenance:
   - timestamp: '2026-06-10T19:10:00+02:00'
     model: GPT-5 Codex
@@ -158,3 +273,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the expected Great Tit song, alarm, mobbing, contact, recruitment, and juvenile begging classes while keeping references broad and stable.
+  - timestamp: '2026-06-13T00:00:00Z'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Expanded repertoire from 6 to 10 call types by adding tink call, D call, subsong, and pit call based on web search and Birds of the World account; added two new references.
