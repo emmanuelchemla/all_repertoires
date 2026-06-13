@@ -68,6 +68,78 @@ calls:
     semantic_description: Given around mating and sexual interactions; in yellow baboons these calls are a classic focus of studies on female sexual signalling.
     confidence: high
     references: [semple_2002, hammerschmidt_fischer_2019]
+  - name: shrill bark
+    alternative_names: [shrill alarm bark, fear bark]
+    scope:
+      life_stages: [juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, broadband, abrupt, short, loud]
+    acoustic_description: A single sharp high-pitched bark with sudden onset and broadband energy, higher and more piercing in quality than the harsh bark.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Given by non-adult-male troop members in response to sudden, immediate danger or disturbance; prompts flight and retreat in recipients.
+    confidence: high
+    references: [hammerschmidt_fischer_2019]
+  - name: move grunt
+    alternative_names: [progression grunt, travel grunt]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, short, graded]
+    acoustic_description: A soft relatively tonal grunt acoustically similar to social grunt variants but produced before departures; may be slightly longer with a more stable fundamental.
+    semantic_keywords: [group_coordination, contact, recruitment]
+    semantic_description: Produced before and during troop movements, especially before crossing open areas; functionally distinct from social grunts and may serve to coordinate travel direction.
+    confidence: high
+    references: [rendall_etal_1999]
+  - name: infant approach grunt
+    alternative_names: [infant grunt, approach grunt]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, short, quiet, graded]
+    acoustic_description: A soft tonal grunt directed toward mothers before and during attempts to inspect or handle their infants; acoustically similar to move grunts but separable in context.
+    semantic_keywords: [affiliation, contact, caregiving, attention]
+    semantic_description: Given when approaching a mother and attempting to touch or handle her newborn infant; reduces maternal tension and facilitates infant access.
+    confidence: high
+    references: [rendall_etal_1999]
+  - name: reconciliation grunt
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+    acoustic_keywords: [low_frequency, tonal, short, quiet, graded]
+    acoustic_description: Soft tonal grunt(s) acoustically similar to other grunt subtypes; context of use is the primary differentiator from other grunt variants.
+    semantic_keywords: [affiliation, submission, contact, group_coordination]
+    semantic_description: Produced by aggressors (especially dominant females) toward recent conflict victims; receiving these grunts increases victim tolerance and approach rate, suggesting a reconciliatory function.
+    confidence: medium
+    references: [cheney_etal_1995, rendall_etal_1999]
+  - name: cough bark
+    alternative_names: [cough-geck, cough grunt]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+    acoustic_keywords: [broadband, noisy, abrupt, short, loud, multi_component]
+    acoustic_description: A short harsh call with a cough-like quality, combining a guttural pulse with a bark-like element; intermediate in structure between a bark and a grunt.
+    semantic_keywords: [alarm, predator, attention, threat]
+    semantic_description: Produced when aerial threats or unfamiliar humans are spotted at low altitude or short distance; reported across Papio species as a class of moderate-urgency alarm distinct from the shrill bark.
+    confidence: medium
+  - name: infant distress call
+    alternative_names: [ick, ick-ooer, infant scream]
+    scope:
+      life_stages: [infant]
+      sexes: [female, male]
+      population_specific: false
+    acoustic_keywords: [high_frequency, noisy, long, multi_component, graded]
+    acoustic_description: High-pitched noisy calls by infants; may be a simple squeal or a two-phase ick-ooer with a sharp onset element followed by a more tonal descending component; graded with arousal level.
+    semantic_keywords: [distress, begging, caregiving, attention]
+    semantic_description: Given by distressed or separated infants to attract caregiver attention; elicits retrieval and comfort behaviour from the mother and may alert other troop members.
+    confidence: medium
 references:
   hammerschmidt_fischer_2019:
     citation: "Hammerschmidt, K. and Fischer, J. 2019. Baboon vocal repertoires and the evolution of primate vocal diversity. Journal of Human Evolution 126:1-13."
@@ -84,6 +156,12 @@ references:
   guinea_baboon_repertoire_2013:
     citation: "Maciej, P., Ndao, I., Hammerschmidt, K., and Fischer, J. 2013. Vocal communication in a complex multi-level society: constrained acoustic structure and flexible call usage in Guinea baboons. Frontiers in Zoology 10:58."
     doi: 10.1186/1742-9994-10-58
+  rendall_etal_1999:
+    citation: "Rendall, D., Cheney, D.L., and Seyfarth, R.M. 1999. The meaning and function of grunt variants in baboons. Animal Behaviour 57:583-592."
+    url: https://www.sas.upenn.edu/~seyfarth/Publications/Rendall%20et%20al.%201999.pdf
+  cheney_etal_1995:
+    citation: "Cheney, D.L., Seyfarth, R.M., Silk, J.B. 1995. The role of grunts in reconciling opponents and facilitating interactions among adult female baboons. Animal Behaviour 50:249-257."
+    doi: 10.1006/anbe.1995.0237
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
@@ -97,3 +175,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added obvious major baboon call classes and stable top-level references in a speed-focused completeness pass based on external sources.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added 6 call types (shrill bark, move grunt, infant approach grunt, reconciliation grunt, cough bark, infant distress call) to reach 14 total; added rendall_etal_1999 and cheney_etal_1995 references; based on web search plus model knowledge of Papio literature.

@@ -119,6 +119,108 @@ calls:
   semantic_description: Produced in severe attack, panic, or high-conflict situations
     as an acute distress signal.
   confidence: medium
+- name: fast whoop
+  alternative_names:
+  - rapid whoop
+  acoustic_keywords:
+  - loud
+  - harmonic
+  - frequency_modulated
+  - repetitive
+  - high_frequency
+  acoustic_description: Similar in structure to the whoop but produced at higher pitch
+    and with shorter inter-note intervals; a more compressed, rapid bout of tonal
+    frequency-modulated notes.
+  semantic_keywords:
+  - group_coordination
+  - aggression
+  - recruitment
+  semantic_description: Produced just before a coordinated attack on lions or rival
+    hyenas over a kill; used within the clan to rally clan members into immediate
+    collective action.
+  confidence: medium
+- name: groan
+  alternative_names:
+  - greeting groan
+  - den groan
+  acoustic_keywords:
+  - low_frequency
+  - tonal
+  - short
+  - quiet
+  - harmonic
+  acoustic_description: A low, smooth tonal call with a rounded "ooo" quality, softer
+    and more harmonic than a growl and shorter than a whoop.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - caregiving
+  semantic_description: Used in friendly close-range greetings among clan members
+    and by adults greeting cubs at the den; distinct from the agonistic growl.
+  confidence: medium
+- name: yell
+  alternative_names:
+  - defensive yell
+  semantic_keywords:
+  - submission
+  - distress
+  - alarm
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - abrupt
+  - broadband
+  acoustic_description: A sharp, loud, harsh broadband call of brief to moderate duration,
+    higher in pitch than a growl and more abrupt than a scream.
+  semantic_description: Produced when a hyena submits to a dominant individual or
+    flees from danger; a defensive distress signal in high-threat encounters.
+  confidence: medium
+- name: squitter
+  alternative_names:
+  - cub squeal
+  - nursing squeal
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - repetitive
+  - short
+  - loud
+  acoustic_description: A harsh grating squeal repeated in rapid succession; high
+    pitched with strong noisy components, similar to a squeak but more strident.
+  semantic_keywords:
+  - begging
+  - caregiving
+  - distress
+  semantic_description: Produced primarily by cubs demanding to nurse from the mother;
+    also used by juveniles and occasionally adults after reuniting with a clan member.
+  confidence: medium
+- name: alarm rumble
+  alternative_names:
+  - alarm call
+  acoustic_keywords:
+  - low_frequency
+  - tonal
+  - short
+  - graded
+  acoustic_description: A low rumbling call of moderate intensity, lower and less
+    strident than a growl; graded toward grunts at low arousal and toward louder
+    calls at higher arousal.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  semantic_description: Used to signal approaching danger such as rival clans or
+    predators; alerts nearby group members to a potential threat.
+  confidence: low
+references:
+  theunissen_2008:
+    citation: "Theunissen FE et al. (2008). Vocalizations of the Spotted Hyena (Crocuta
+      crocuta): Eliciting Acoustic Variation in Groans. Journal of the Acoustical
+      Society of America, 123(5 Supplement)."
+  east_etal_2022:
+    citation: "East ML, Hofer H, et al. (2022). Long-distance vocalizations of spotted
+      hyenas contain individual, but not group, signatures. PubMed Central PMC9297016."
 provenance:
 - timestamp: '2026-06-10T22:15:00+02:00'
   model: GPT-5 Codex
@@ -135,3 +237,8 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 5 call types (fast whoop, groan, yell, squitter, alarm rumble) via
+    web search to reach 12 total; added references section with two stable citations.
