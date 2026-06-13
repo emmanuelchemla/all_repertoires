@@ -133,6 +133,111 @@ calls:
     confidence: medium
     references:
       - japanese_tit_cornell
+  - name: chicka call
+    alternative_names:
+      - non-snake predator alarm
+      - mobbing call
+    acoustic_keywords:
+      - short
+      - repetitive
+      - multi_component
+      - noisy
+      - loud
+    acoustic_description: Variable repeated multi-note sequences combining note types; number and note composition vary with predator identity, with more notes used for more dangerous non-snake predators such as marten versus crow.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - group_coordination
+    semantic_description: Produced in response to avian and mammalian nest predators (e.g. jungle crow, Japanese marten) but not to snakes; note composition encodes predator type and elicits predator-searching behavior in listeners.
+    confidence: high
+    references:
+      - suzuki_2014
+      - suzuki_etal_2016
+  - name: ABC note sequence
+    alternative_names:
+      - scan-for-danger call
+      - ABC alarm notes
+    acoustic_keywords:
+      - short
+      - multi_component
+      - tonal
+      - noisy
+      - repetitive
+    acoustic_description: A series of distinct note types (labeled A, B, C in the literature) that together form the alarm component of the chickadee-like call; individual note elements are brief with mixed tonal and broadband qualities.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - combinatorial
+    semantic_description: The alarm scan component of the compositional call system; listeners hearing ABC notes alone increase vigilance and scan for danger rather than approaching; combines with D notes to yield complex mobbing instructions.
+    confidence: high
+    references:
+      - suzuki_etal_2016
+      - suzuki_etal_2018
+  - name: cuckoo-specific alarm call
+    alternative_names:
+      - cuckoo mobbing call
+    acoustic_keywords:
+      - short
+      - multi_component
+      - repetitive
+      - noisy
+    acoustic_description: Alarm call given in response to the Common Cuckoo; note string composition (C- and D-category notes) differs from responses to raptors, reflecting different threat context.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - recruitment
+    semantic_description: Produced when adults encounter a Common Cuckoo brood parasite near the nest; combinations of C and D note strings differ from other predator-response calls and appear to carry different functions for receivers.
+    confidence: medium
+    references:
+      - suzuki_2017_cuckoo
+  - name: aerial alarm call
+    alternative_names:
+      - seet call
+      - high-pitched alarm
+      - thin alarm
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - quiet
+      - frequency_modulated
+    acoustic_description: High-pitched, thin, and brief tonal notes with little harmonic structure; acoustically difficult to localize, similar in structure to the aerial alarm calls documented across tit species.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced in response to aerial predators (e.g. sparrowhawk); the high pitch and thin structure make the call acoustically cryptic and hard for a predator overhead to localize.
+    confidence: medium
+    references:
+      - suzuki_2014
+  - name: nest-defense call
+    alternative_names:
+      - aggression call
+      - intruder call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - short
+      - loud
+      - repetitive
+      - broadband
+    acoustic_description: Harsh, broadband short notes delivered rapidly when defending a nest cavity against intruders; harsher and less structured than the contact or recruitment notes.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+      - alarm
+    semantic_description: Produced by adults close to the nest cavity during direct defense against conspecific or heterospecific intruders; associated with physical approach and posturing toward the threat.
+    confidence: low
 references:
   japanese_tit_cornell:
     citation: Cornell Lab of Ornithology. Japanese Tit sounds.
@@ -146,6 +251,15 @@ references:
   suzuki_etal_2018:
     citation: "Suzuki, T. N., Wheatcroft, D., and Griesser, M. 2018. Calls combine to produce adaptive behavior in Japanese tits."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5824424/
+  suzuki_2017_cuckoo:
+    citation: "Suzuki, T. N. 2017. Function of note strings in Japanese Tit alarm calls to the Common Cuckoo: a playback experiment. Avian Research."
+    doi: 10.1186/s40657-017-0080-7
+  ha_2020:
+    citation: "Ha, R. R., et al. 2020. Experimental study of alarm calls of the oriental tit (Parus minor) toward different predators and reactions they induce in nestlings. Ethology."
+    doi: 10.1111/eth.13012
+  ding_etal_2022:
+    citation: "Ding, Z., et al. 2022. Geographic Variation in Note Types of Alarm Calls in Japanese Tits (Parus minor). Animals."
+    doi: 10.3390/ani12182342
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
@@ -155,3 +269,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass added the well-known Japanese Tit jar alarm and D recruitment classes, broadened song and begging coverage, and anchored the file with stable external references.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Expanded from 6 to 11 call types by adding chicka call (non-snake predator mobbing), ABC note sequence (scan-for-danger alarm component), cuckoo-specific alarm call, aerial alarm call (seet), and a fifth nest-defense call; added references for cuckoo alarm (Suzuki 2017), Ha 2020, and Ding et al. 2022 geographic variation study.

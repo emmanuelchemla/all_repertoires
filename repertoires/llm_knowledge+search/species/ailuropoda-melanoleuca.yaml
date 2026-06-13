@@ -126,6 +126,114 @@ calls:
   semantic_description: Produced by cubs when isolated from the mother or when soliciting
     retrieval and care.
   confidence: medium
+- name: squeal
+  alternative_names:
+  - submission squeal
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - loud
+  - short
+  - frequency_modulated
+  acoustic_description: A high-pitched tonal call with rapid frequency modulation,
+    higher and more intense than a bleat or chirp.
+  semantic_keywords:
+  - submission
+  - distress
+  - aggression
+  semantic_description: Produced by subordinate individuals during or after agonistic
+    encounters, signalling submission or discomfort; also reported in high-arousal
+    contexts such as mating introductions.
+  confidence: high
+  references:
+  - swaisgood_etal_2018
+- name: copulation call
+  alternative_names:
+  - mating call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - harmonic
+  - repetitive
+  - multi_component
+  - loud
+  acoustic_description: A stereotyped multi-note call with harmonic structure produced
+    by males during intromission; acoustically distinct from bleats and moans produced
+    before copulation.
+  semantic_keywords:
+  - mating
+  - courtship
+  - display
+  semantic_description: Produced by males specifically during copulation; differentiates
+    successful breeding encounters acoustically and may provide females with information
+    about male identity or motivation.
+  confidence: high
+  references:
+  - swaisgood_etal_2018
+- name: roar
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - broadband
+  - noisy
+  - long
+  acoustic_description: A prolonged, forceful low-frequency call with broad spectral
+    energy; louder and more sustained than a bark or growl.
+  semantic_keywords:
+  - threat
+  - aggression
+  - alarm
+  semantic_description: Produced in high-intensity agonistic contexts and during
+    escalated confrontations; less common than barks or growls but reported in both
+    captive and wild individuals.
+  confidence: medium
+  references:
+  - swaisgood_etal_2018
+- name: squawk
+  alternative_names:
+  - squall
+  - croak
+  scope:
+    life_stages:
+    - infant
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - high_frequency
+  - short
+  - repetitive
+  acoustic_description: A harsh broadband call produced by neonates; the squawk is
+    rough-sounding, the squall is higher-pitched and more tonal, and the croak is
+    pulsed — merged here as a graded infant-distress complex.
+  semantic_keywords:
+  - distress
+  - begging
+  - caregiving
+  semantic_description: Emitted by neonatal and very young cubs; encompasses harsh
+    squawks, high-pitched squalls, and pulsed croaks described in systematic studies
+    of the infant repertoire.
+  confidence: high
+  references:
+  - baotic_etal_2014
+references:
+  swaisgood_etal_2018:
+    citation: "Swaisgood RR, Owen MA, Czekala NM, Dickman CR, Laue M, Zhou X (2018)\
+      \ Vocal behaviour predicts mating success in giant pandas. Royal Society Open\
+      \ Science 5: 181323."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6227945/
+  baotic_etal_2014:
+    citation: "Baotic A, Stoeger AS, Li D, Charlton BD (2014) The vocal repertoire\
+      \ of infant giant pandas (Ailuropoda melanoleuca). Bioacoustics 23(1): 61–75."
+    url: https://www.tandfonline.com/doi/full/10.1080/09524622.2013.798744
 provenance:
 - timestamp: '2026-06-10T21:15:00+02:00'
   model: GPT-5 Codex
@@ -142,3 +250,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added squeal, copulation call, roar, and squawk/squall/croak infant complex
+    to reach 11 call types. Added references for Swaisgood et al. 2018 and Baotic
+    et al. 2014.

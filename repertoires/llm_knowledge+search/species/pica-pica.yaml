@@ -131,6 +131,135 @@ calls:
     confidence: low
     references:
       - xenocanto_magpie
+  - name: soft whistle
+    alternative_names:
+      - nestling whistle
+      - tonal whistle
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - high_frequency
+      - quiet
+      - short
+    acoustic_description: Pure, relatively tonal, high-pitched short whistled notes; earliest calls produced by hatchlings before harsh structures develop around day 16-18.
+    semantic_keywords:
+      - contact
+      - begging
+      - attention
+    semantic_description: Produced by very young nestlings in contact and low-intensity begging contexts; precedes development of noisier adult-like vocalizations.
+    confidence: medium
+    references:
+      - redondo_1990
+      - springer_ontogeny
+  - name: begging scream
+    alternative_names:
+      - begging shriek
+      - nestling scream
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - loud
+      - broadband
+      - high_frequency
+      - abrupt
+    acoustic_description: Loud, harsh, broadband screaming calls with noisy frequency structure; more intense and higher-pitched than the begging trill, produced during high-arousal solicitation.
+    semantic_keywords:
+      - begging
+      - distress
+      - caregiving
+    semantic_description: High-intensity food solicitation call produced by nestlings and fledglings at peak begging effort; escalates beyond ordinary begging trill level.
+    confidence: medium
+    references:
+      - redondo_1990
+      - springer_ontogeny
+  - name: distress call
+    alternative_names:
+      - distress scream
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - noisy
+      - broadband
+      - abrupt
+      - high_frequency
+    acoustic_description: Harsh, loud, broadband call of high intensity; broader spectral spread and higher urgency quality than standard alarm chatter.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+    semantic_description: Produced in high-danger or capture situations, recognized both in nestlings facing nest-predator encounters and in adults. Distinct from general territorial chatter by higher urgency and intensity.
+    confidence: medium
+    references:
+      - redondo_1990
+      - springer_ontogeny
+  - name: mobbing call
+    alternative_names:
+      - mobbing chatter
+      - anti-predator chatter
+    acoustic_keywords:
+      - noisy
+      - repetitive
+      - loud
+      - broadband
+      - abrupt
+    acoustic_description: Sustained rapid series of harsh, loud chak-chak notes directed toward a predator or threatening object; structurally similar to alarm chatter but typically maintained at close range with persistent repetition.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+      - recruitment
+    semantic_description: Directed at stationary or nearby predators (cats, raptors, foxes) to harass and recruit other individuals; studied with playback experiments distinguishing predator-directed mobbing from territorial chatter.
+    confidence: high
+    references:
+      - bekoff_1995
+      - szipl_etal_2024
+  - name: pair-coordinated call
+    alternative_names:
+      - duet chatter
+      - coordinated territorial call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - repetitive
+      - loud
+      - multi_component
+    acoustic_description: Chatter calls produced by mated pairs in coordinated fashion, either overlapping or alternating, during territorial interactions with intruder pairs.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - spacing
+      - affiliation
+    semantic_description: Coordinated calling between pair members during territorial encounters with rival pairs; Eurasian magpies respond differently to intruder pairs that overlap versus alternate their calls, suggesting this coordination carries social information.
+    confidence: medium
+    references:
+      - kuspiel_2024
 references:
   cornell_magpie:
     citation: Cornell Lab of Ornithology. Eurasian Magpie sounds.
@@ -144,6 +273,18 @@ references:
   xenocanto_magpie:
     citation: Xeno-canto. Eurasian Magpie recordings, including alarm call, song, and other calls.
     url: https://xeno-canto.org/species/Pica-pica
+  redondo_1990:
+    citation: "Redondo, T. 1990. Structural variations in the begging calls of nestling magpies (Pica pica) and their role in the development of adult voice. Ethology 84: 307-330."
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1439-0310.1990.tb00805.x
+  springer_ontogeny:
+    citation: "Early stages of vocal ontogeny in the magpie (Pica pica). Journal of Ornithology."
+    url: https://link.springer.com/article/10.1007/BF01647274
+  bekoff_1995:
+    citation: "Bekoff, M. 1995. Predators, risks and context for mobbing and alarm calls in Black-billed Magpies (Pica pica). Animal Behaviour."
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0003347205809017
+  kuspiel_2024:
+    citation: "Kuspiel, M. et al. 2024. Pair-Coordinated Calling: Eurasian Magpies Respond Differently to Simulated Intruder Pairs That Overlap or Alternate Their Calls. Ethology."
+    url: https://onlinelibrary.wiley.com/doi/10.1111/eth.13515
 provenance:
   - timestamp: "2026-06-10T21:05:00+02:00"
     model: GPT-5 Codex
@@ -157,3 +298,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Second-pass completeness sweep added a separate loud squawk class because Cornell explicitly distinguishes it from the common harsh rattle and soft song.
+  - timestamp: '2026-06-13T00:00:00Z'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: "Expansion pass added five call types to reach 11 total: soft whistle and begging scream (nestling ontogeny, from Redondo 1990 and Springer ontogeny study), distress call (nestling + adult, distinct from territorial chatter), mobbing call (anti-predator directed chatter, Bekoff 1995), and pair-coordinated call (duet territorial calling, Kuspiel et al. 2024). Added four new references."
