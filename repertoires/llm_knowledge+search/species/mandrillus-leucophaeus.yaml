@@ -147,6 +147,39 @@ calls:
   references:
   - feistner_1989
   - gartlan_1970
+- name: yak
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - abrupt
+  - loud
+  acoustic_description: A sharp high-pitched staccato call, higher in frequency than the contact grunt or threat grunt; typically single or repeated in short bouts.
+  semantic_keywords:
+  - threat
+  - aggression
+  - attention
+  semantic_description: Produced in agonistic encounters and male threat displays; recognized as a distinct short-distance call in the closely related mandrill and inferred for the drill based on sister-taxon similarity.
+  confidence: low
+  references:
+  - kudo_1987
+- name: girney
+  alternative_names:
+  - affiliative grunt
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - quiet
+  - tonal
+  - graded
+  acoustic_description: A soft, low-amplitude, slightly grating or nasal grunt, shorter and quieter than the contact grunt, often produced in quick succession during close social contact.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - submission
+  semantic_description: A soft affiliative vocalization used to ease social interactions between individuals, particularly during grooming, greetings, and approach between unfamiliar or unrelated group members; well-documented across cercopithecines including mandrills and inferred for drills.
+  confidence: low
+  references:
+  - kudo_1987
 references:
   eaza_2025:
     citation: Vidakovits, I., Fienig, E., and Corlay, M. 2025. EAZA Best Practice Guidelines for the Mandrill (Mandrillus sphinx) and Drill (Mandrillus leucophaeus).
@@ -156,6 +189,9 @@ references:
     url: https://dspace.stir.ac.uk/bitstream/1893/2114/4/Feistner-1989-Thesis.pdf
   gartlan_1970:
     citation: Gartlan, J. S. 1970. Socio-ecology and individual behavior of the drill, Mandrillus leucophaeus, in Cameroon. PhD thesis, Yale University.
+  kudo_1987:
+    citation: "Kudo, H. 1987. The study of vocal communication of wild mandrills in Cameroon in relation to their social structure. Primates 28(3): 289–308."
+    url: https://link.springer.com/article/10.1007/BF02381013
 provenance:
 - timestamp: '2026-06-10T22:15:00+02:00'
   model: GPT-5 Codex
@@ -169,3 +205,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Replaced generic placeholders with a more explicit Mandrillus-style drill repertoire while keeping confidence conservative where the drill-specific literature remains sparse or old.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added yak and girney call types (confidence low) inferred from sister-taxon mandrill literature (Kudo 1987) to reach target of 10 call types; added kudo_1987 reference.
