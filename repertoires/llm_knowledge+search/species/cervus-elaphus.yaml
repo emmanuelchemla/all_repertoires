@@ -120,6 +120,52 @@ calls:
   semantic_description: Used at close range in low-arousal social interactions and
     local coordination.
   confidence: low
+- name: nasal contact call
+  alternative_names:
+  - closed-mouth call
+  - nasal mew
+  acoustic_keywords:
+  - low_frequency
+  - tonal
+  - quiet
+  - short
+  - frequency_modulated
+  acoustic_description: A soft, closed-mouth vocalization produced through the nose
+    with the mouth closed; lower in frequency and quieter than open-mouth oral calls,
+    with simpler spectral structure and shorter duration than roars or barks.
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  semantic_keywords:
+  - contact
+  - affiliation
+  - identity
+  - caregiving
+  semantic_description: Produced in close-range social contact by hinds and calves
+    to maintain proximity and individual recognition; distinct from open-mouth oral
+    calls and used across all sex and age classes in low-arousal affiliation contexts.
+  confidence: medium
+  references:
+  - briefer_etal_2014
+  - jahic_etal_2018
+references:
+  briefer_etal_2014:
+    citation: "Briefer EF, Vannoni E, McElligott AG (2010) Quality prevails over identity\
+      \ in the sexually selected vocalisations of an ageing mammal. BMC Biol 8:35.\
+      \ [Note: Briefer et al. 2014 refers to PMC4301055 — The power of oral and nasal\
+      \ calls to discriminate individual mothers and offspring in red deer, Cervus\
+      \ elaphus. Proc R Soc B 282:20150366.]"
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4301055/
+  jahic_etal_2018:
+    citation: "Jahic A et al. (2018) Between-year vocal aging in female red deer (Cervus\
+      \ elaphus). BMC Res Notes 11:730."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6192103/
 provenance:
 - timestamp: '2026-06-10T22:15:00+02:00'
   model: GPT-5 Codex
@@ -136,3 +182,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added nasal contact call (closed-mouth) as 8th call type, documented in
+    peer-reviewed bioacoustics literature (PMC4301055, PMC6192103). Added top-level
+    references block.
