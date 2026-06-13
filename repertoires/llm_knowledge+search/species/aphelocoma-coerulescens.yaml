@@ -135,6 +135,51 @@ calls:
     confidence: medium
     references:
       - scrubjay_cornell
+  - name: aerial predator alarm call
+    alternative_names:
+      - hawk alarm
+      - thin alarm
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - quiet
+    acoustic_description: Thin, high-pitched shrill note with narrow spectral energy and low amplitude, acoustically distinct from the harsher broadband ground-predator scold.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Given specifically in response to aerial predators such as raptors; elicits immediate dive-for-cover response in group members. Functionally and acoustically distinct from ground-predator alarm calls.
+    confidence: high
+    references:
+      - capek_rattle
+      - dichotomous_1991
+  - name: song
+    alternative_names:
+      - warble
+      - trill song
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - high_frequency
+      - multi_component
+    acoustic_description: Series of trills and high warbled notes strung together in a loose, varied sequence; softer and more melodic than alarm or contact calls.
+    semantic_keywords:
+      - territorial
+      - courtship
+      - display
+    semantic_description: Produced primarily by males in the context of territorial advertisement and possibly mate attraction; less stereotyped than song in many other passerines.
+    confidence: medium
+    references:
+      - scrubjay_cornell
 references:
   scrubjay_cornell:
     citation: Cornell Lab of Ornithology. Florida Scrub-Jay sounds.
@@ -142,6 +187,12 @@ references:
   scrubjay_hiccup:
     citation: "Stith, B. M., et al. 2023. Territory and population attributes affect Florida scrub-jay fecundity."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9841125/
+  capek_rattle:
+    citation: "Capek, R. Bioacoustics and Regional Differences of Florida Scrub-Jay Rattle Call. St. Norbert College Collaborative Presentations."
+    url: https://digitalcommons.snc.edu/collaborative_presentations/65/
+  dichotomous_1991:
+    citation: "Nystrom, K. G. K. 1991. Analysis of complex variation: dichotomous sorting of predator-elicited calls of the Florida Scrub Jay. Bioacoustics 3(4): 257–283."
+    url: https://www.tandfonline.com/doi/abs/10.1080/09524622.1991.9753191
 provenance:
   - timestamp: '2026-06-10T21:30:00+02:00'
     model: GPT-5 Codex
@@ -159,3 +210,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the main Florida scrub-jay alarm, contact, aggression, mobbing, and juvenile solicitation classes and refreshed stable references.
+  - timestamp: '2026-06-13T00:00:00Z'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added aerial predator alarm call (hawk-specific thin shrill, dichotomous with ground-predator alarm) and song/warble; added two new references (Capek rattle bioacoustics and Nystrom 1991 dichotomous sorting). Total calls brought to 9.

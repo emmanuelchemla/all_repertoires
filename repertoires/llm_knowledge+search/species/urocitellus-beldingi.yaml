@@ -78,6 +78,82 @@ calls:
       - predator
     semantic_description: Produced in capture or acute danger situations.
     confidence: medium
+  - name: post-copulatory trill
+    alternative_names:
+      - mating trill
+      - copulation call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - tonal
+      - multi_component
+      - frequency_modulated
+    acoustic_description: A multiple-note trill acoustically distinct from anti-predator trills; individually distinctive in structure, allowing individual recognition.
+    semantic_keywords:
+      - mating
+      - courtship
+      - identity
+      - display
+    semantic_description: Produced by males immediately following copulation, possibly advertising dominance status or mating success to conspecifics.
+    confidence: high
+    references:
+      - leger_etal_1984
+  - name: agonistic trill
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - tonal
+      - graded
+      - frequency_modulated
+    acoustic_description: Multiple-note trill produced during social conflict; acoustically more variable than both anti-predator and post-copulatory trills, suggesting a graded or context-variable signal.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+    semantic_description: Produced during agonistic encounters between conspecifics; less stereotyped than alarm or mating trills.
+    confidence: medium
+    references:
+      - leger_etal_1984
+  - name: juvenile squeak
+    alternative_names:
+      - pup squeak
+      - infant squeak
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - quiet
+    acoustic_description: Short, high-pitched tonal calls produced by young before or shortly after emergence above ground.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - contact
+      - distress
+    semantic_description: Produced by young juveniles, eliciting maternal attention; ceases at approximately 3-4 weeks after above-ground emergence as young become independent.
+    confidence: medium
+    references:
+      - mateo_devt
+      - leger_etal_1984
 references:
   exploresound:
     citation: Explore Sound. Ground squirrels have voices that are similar to those of their relatives.
@@ -91,6 +167,12 @@ references:
   mcrae_2020:
     citation: "McRae, T.R. and Green, S.M. 2020. A review of squirrel alarm-calling behavior: what we know and what we do not know. Animal Behavior and Cognition 7(2):168-191."
     url: https://www.animalbehaviorandcognition.org/uploads/journals/27/AB_C_2020_Vol7%282%29_McRae.pdf
+  mateo_devt:
+    citation: "Mateo, J.M. 1996. The development of alarm-call response behaviour in free-living juvenile Belding's ground squirrels. Animal Behaviour 52(3):489-505."
+    url: https://www.sciencedirect.com/science/article/pii/S0003347296904467
+  diggins_2021:
+    citation: "Diggins, C.A. 2021. Behaviors associated with vocal communication of squirrels. Ecosphere 12(2):e03572."
+    url: https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3572
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
@@ -100,3 +182,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Rebuilt the repertoire around the better-supported whistle, trill or churr, and chirp alarm classes and removed the unsupported generic contact placeholder.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added post-copulatory trill, agonistic trill, and juvenile squeak based on Leger et al. 1984 and Mateo 1996; added three new references.
