@@ -158,6 +158,48 @@ calls:
   confidence: high
   references:
   - vocal_repertoire_2018
+- name: distress call
+  acoustic_keywords:
+  - loud
+  - long
+  - harmonic
+  - frequency_modulated
+  - multi_component
+  acoustic_description: A loud, long harmonic call with marked frequency modulation and high amplitude; typically more intense and sustained than contact calls, sometimes with a series of components that rise and fall in pitch.
+  semantic_keywords:
+  - distress
+  - alarm
+  - attention
+  semantic_description: Produced when birds are physically restrained, isolated in aversive conditions, or experience acute stress; functions to attract conspecific attention and potentially elicit rescue behavior.
+  confidence: high
+  references:
+  - elie_2015
+  - vocal_repertoire_2018
+- name: long tonal call
+  alternative_names:
+  - juvenile distance call
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - long
+  - frequency_modulated
+  acoustic_description: A long, tonal, harmonically rich call with gradual frequency modulation; structurally simpler than adult distance calls but serving a similar contact function in chicks.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Produced by chicks and juveniles as a precursor to the adult distance call; used for long-range contact with parents or flock members before adult call structure is fully crystallized.
+  confidence: medium
+  references:
+  - elie_2015
+  - vocal_repertoire_2018
 references:
   elie_2015:
     citation: Elie, J.E. and Theunissen, F.E. 2015. Patterns of call communication
@@ -189,3 +231,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Worker 15 recall pass added the named whine and wsst categories from the zebra finch repertoire paper while keeping ark and kackle merged under nest call.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added distress call and long tonal call (juvenile distance call precursor) to reach 10 total call types, based on Elie & Theunissen 11-category repertoire classification.

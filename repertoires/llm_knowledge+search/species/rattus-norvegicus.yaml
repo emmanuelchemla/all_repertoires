@@ -82,6 +82,47 @@ calls:
     confidence: medium
     references:
       - brudzynski_2021
+  - name: 44-kHz call
+    alternative_names:
+      - intermediate-frequency USV
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - harmonic
+    acoustic_description: Long-duration (>150 ms) ultrasonic call with relatively constant frequency in the 35–50 kHz range, spectrographically similar to 22-kHz calls but at a higher centre frequency. Often emitted in bouts.
+    semantic_keywords:
+      - distress
+      - alarm
+      - attention
+    semantic_description: Produced during prolonged or intensified aversive states such as extended fear conditioning. Associated with freezing behaviour; elicits intermediate-to-aversive affective responses in conspecifics.
+    confidence: low
+    references:
+      - olszynski_etal_2024
+  - name: bruxism
+    alternative_names:
+      - teeth grinding
+      - bruxing
+    acoustic_keywords:
+      - low_frequency
+      - repetitive
+      - pulsed
+      - quiet
+    acoustic_description: Rhythmic grinding or rasping sound produced by lateral movement of the incisors; typically soft and low-pitched relative to vocalisations, sometimes accompanied by eye boggling.
+    semantic_keywords:
+      - affiliation
+      - distress
+    semantic_description: "Produced in two contrasting contexts: quiet contentment and relaxation (often paired with eye boggling), and also stress, pain, or discomfort. Context and accompanying behaviour distinguish the two valences."
+    confidence: medium
+    references:
+      - petmd_boggling
 references:
   blumberg_alberts_1990:
     citation: "Blumberg, M.S. and Alberts, J.R. 1990. Ultrasonic vocalizations by rat pups in the cold: an acoustic by-product of laryngeal braking? Behavioral Neuroscience 104(5):808-817."
@@ -94,6 +135,13 @@ references:
     citation: Wrobel, P.S., Chwiej, J., and Nikiforuk, A. 2023. Playback of rat 22-kHz ultrasonic vocalizations as a translational tool for studying negative affective states. Brain Sciences 13(10):1417.
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10591797/
     doi: 10.3390/brainsci13101417
+  olszynski_etal_2024:
+    citation: "Olszyński, K.H., Polowy, R., Guzowski, C., Śliwińska, M.A., and Filipkowski, R.K. 2024. Male rats emit aversive 44-kHz ultrasonic vocalizations during prolonged Pavlovian fear conditioning. eLife 12:RP88810."
+    url: https://elifesciences.org/articles/88810
+    doi: 10.7554/eLife.88810
+  petmd_boggling:
+    citation: "PetMD editorial staff. 2023. What is Rat Boggling? PetMD."
+    url: https://www.petmd.com/exotic/what-is-rat-boggling
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
@@ -103,3 +151,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Replaced the weak bruxing placeholder with the better-established rat pup isolation class and added stable review references for the classic 22-kHz and 50-kHz systems.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added two call types to reach target of 6 — 44-kHz call (low confidence, recently described aversive USV from Olszyński et al. 2024) and bruxism (medium confidence, well-known audible signal with dual valence). Added corresponding references.

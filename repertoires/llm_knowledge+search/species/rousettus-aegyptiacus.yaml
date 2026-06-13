@@ -136,6 +136,66 @@ calls:
   confidence: low
   references:
   - prat_etal_2017
+- name: mating-protest call
+  alternative_names:
+  - copulation protest call
+  - mating refusal call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - noisy
+  - high_frequency
+  - short
+  - abrupt
+  - repetitive
+  acoustic_description: A rapid series of short harsh notes, acoustically distinguishable
+    from food-contest squabbles by a higher-pitched noisy quality; emitted in tight
+    bursts during unwanted contact.
+  semantic_keywords:
+  - mating
+  - aggression
+  - submission
+  semantic_description: Produced mainly by females in response to unwanted or premature
+    mating attempts; one of the four behaviorally annotated vocal contexts identified
+    in the Prat et al. 2016 dataset.
+  confidence: medium
+  references:
+  - prat_etal_2016
+- name: roost-position jostling call
+  alternative_names:
+  - sleeping-cluster call
+  - positional squabble call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - short
+  - abrupt
+  - graded
+  acoustic_description: A graded series of short noisy pulses with variable intensity,
+    acoustically similar to food-contest squabbles but produced in contexts of close
+    roosting contact rather than resource competition.
+  semantic_keywords:
+  - spacing
+  - territorial
+  - group_coordination
+  semantic_description: Emitted when bats jostle for position within their sleeping
+    cluster; identified as a distinct behavioral context in the Prat et al. 2016
+    annotated corpus of Egyptian fruit bat vocalizations.
+  confidence: medium
+  references:
+  - prat_etal_2016
 references:
   prat_etal_2016:
     citation: "Prat, Y., Taub, M., and Yovel, Y. 2016. Everyday bat vocalizations contain information about emitter, addressee, context, and behavior. Scientific Reports 6:39419."
@@ -162,3 +222,10 @@ provenance:
   notes: Added the clearly annotated seclusion-distress class, grounded the mating
     and click categories in the Egyptian fruit bat vocal dataset, and attached
     explicit references.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added mating-protest call and roost-position jostling call to cover the
+    two remaining behaviorally annotated vocal contexts from Prat et al. 2016 (mating
+    protest and sleeping-cluster positional jostling), raising total call count
+    from 7 to 9.
