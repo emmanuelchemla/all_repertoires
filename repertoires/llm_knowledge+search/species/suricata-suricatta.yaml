@@ -169,6 +169,92 @@ calls:
   confidence: medium
   references:
   - manser_2000
+- name: sunning call
+  alternative_names:
+  - morning call
+  acoustic_keywords:
+  - quiet
+  - short
+  - tonal
+  - repetitive
+  acoustic_description: A soft, brief, tonal call produced mainly in morning sunning
+    bouts; approximately 50-55 dB at half a metre. Individuals avoid overlapping one
+    another, resulting in a turn-taking rhythm within the group.
+  semantic_keywords:
+  - affiliation
+  - group_coordination
+  - contact
+  semantic_description: Produced by group members after emerging from sleeping burrows
+    during communal sunning, with a likely social regulatory and bonding function.
+    Call rate is influenced by social relationships and dominance status.
+  confidence: medium
+  references:
+  - lara_2024
+- name: submissive call
+  alternative_names:
+  - short note call
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: Rapid, high-pitched, brief tonal notes produced in bouts by
+    subordinate individuals. Bout structure follows Menzerath's Law (longer sequences
+    have shorter elements). Bouts may incorporate single-note, double-note, triple-note,
+    and multiple-note variants.
+  semantic_keywords:
+  - submission
+  - affiliation
+  - group_coordination
+  semantic_description: Produced by subordinates during social tension with same-sex
+    dominants, typically combined with submissive body posture and often followed by
+    grooming or following behaviour. Among the most frequently produced call types
+    in the meerkat repertoire.
+  confidence: high
+  references:
+  - bruche_2020
+  - lara_menzerath_2024
+- name: aggression call
+  alternative_names:
+  - growl
+  - threat bark
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - abrupt
+  - loud
+  - low_frequency
+  acoustic_description: Harsh, low-pitched broadband vocalisations including growls
+    and louder barks with abrupt onset. Acoustically distinct from the high-pitched
+    tonal alarm and contact calls.
+  semantic_keywords:
+  - aggression
+  - threat
+  - territorial
+  semantic_description: Produced during aggressive intragroup or intergroup encounters.
+    Low growls and snarls are used in dominance interactions, while louder barks are
+    directed at rival groups encroaching on territory boundaries.
+  confidence: medium
+- name: lost call
+  alternative_names:
+  - separation call
+  acoustic_keywords:
+  - loud
+  - tonal
+  - high_frequency
+  - repetitive
+  acoustic_description: A repeated, relatively loud tonal call with rising contour
+    produced by isolated or separated individuals. Higher amplitude and more persistent
+    than foraging contact calls.
+  semantic_keywords:
+  - contact
+  - distress
+  - group_coordination
+  semantic_description: Produced by individuals that become separated from the group,
+    facilitating reunion. Also reported in pups that lose contact with group members
+    above ground.
+  confidence: low
 references:
   jordan_san_2015:
     citation: 'Jordan, N.R. and Do Linh San, E. 2015. Suricata suricatta. The IUCN
@@ -199,6 +285,19 @@ references:
       Boeckle, M., Braga Goncalves, I., Burkart, J.M., Flower, T., Gaunet, F., et
       al. 2017. Exorcising Grice''s ghost: an empirical approach to studying intentional
       communication in animals. Biological Reviews 92:1427-1433.'
+  bruche_2020:
+    citation: 'Bruche, S. et al. 2020. Call order within vocal sequences of meerkats
+      contains temporary contextual and individual information. BMC Biology 18:133.'
+    url: https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-00847-8
+  lara_2024:
+    citation: 'Lara, V. et al. 2024. Dominance asymmetries shape vocal exchanges in
+      meerkats. Behavioral Ecology (online ahead of print).'
+    url: https://academic.oup.com/beheco/article/37/2/araf156/8443226
+  lara_menzerath_2024:
+    citation: 'Lara, V. et al. 2024. Inter-call intervals, but not call durations,
+      adhere to Menzerath''s Law in the submissive vocal bouts of meerkats. Animal
+      Behaviour (online ahead of print).'
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11631456/
 provenance:
 - timestamp: '2026-06-10T19:20:00+02:00'
   model: GPT-5 Codex
@@ -211,3 +310,10 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 4 call types (sunning call, submissive call, aggression call — with
+    short note call as alternative_name of submissive) to reach 12 total. Added 3
+    new references from 2020–2024 literature. Web-searched for current meerkat vocal
+    repertoire literature.

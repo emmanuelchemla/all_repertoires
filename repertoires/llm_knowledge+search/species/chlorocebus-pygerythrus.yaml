@@ -124,12 +124,96 @@ calls:
     confidence: medium
     references:
       - struhsaker_1967
+  - name: move grunt
+    alternative_names:
+      - movement grunt
+      - travel grunt
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - tonal
+      - quiet
+      - graded
+    acoustic_description: Short, low-amplitude tonal grunt acoustically overlapping with other grunt subtypes but produced in a distinct temporal context; soft and percussive.
+    semantic_keywords:
+      - group_coordination
+      - contact
+    semantic_description: Produced when a group is transitioning from rest to travel, often in the last few minutes of a rest period or immediately following the first movers; elicits answering grunts and facilitates coordinated group movement.
+    confidence: high
+    references:
+      - cheney_seyfarth_1990
+  - name: intergroup chutter
+    alternative_names:
+      - intergroup bark-chutter
+      - aggressive chutter
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - noisy
+      - broadband
+      - loud
+      - short
+    acoustic_description: Series of harsh repetitive noisy calls structurally similar to snake alarm chutters but produced in a different context; typically louder and more sustained than intragroup appeasement sounds.
+    semantic_keywords:
+      - aggression
+      - territorial
+      - threat
+    semantic_description: Produced during encounters with neighbouring groups and inter-group aggression; described as a component of intergroup conflict independent of predator detection.
+    confidence: medium
+    references:
+      - struhsaker_1967
+      - cheney_seyfarth_1990
+  - name: threat alarm bark
+    alternative_names:
+      - male bark
+      - intragroup threat bark
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - abrupt
+      - broadband
+      - noisy
+      - short
+    acoustic_description: A loud, abrupt bark produced by adult males; acoustically overlapping with predator alarm barks but produced in non-predatory agonistic contexts; structure may vary with signaller rank.
+    semantic_keywords:
+      - aggression
+      - threat
+      - display
+    semantic_description: Produced by adult males during intragroup and intergroup aggressive encounters and male-male competition; serves as an honest signal of male quality and competitive ability, distinct from the antipredator alarm bark.
+    confidence: medium
+    references:
+      - cheney_seyfarth_1990
+      - nautiyal_etal_2024
 references:
   cheney_seyfarth_1990:
     citation: Cheney, D.L. and Seyfarth, R.M. 1990. How Monkeys See the World. University of Chicago Press.
   seyfarth_cheney_marler_1980:
     citation: "Seyfarth, R.M., Cheney, D.L., and Marler, P. 1980. Monkey responses to three different alarm calls: evidence of predator classification and semantic communication. Science 210(4471):801-803."
     doi: 10.1126/science.7433999
+  nautiyal_etal_2024:
+    citation: "Nautiyal, H., et al. 2024. Loud call production in male vervet monkeys (Chlorocebus pygerythrus) varies with season and signaller rank. International Journal of Primatology."
+    doi: 10.1007/s10764-024-00475-x
   struhsaker_1967:
     citation: Struhsaker, T.T. 1967. Auditory communication among vervet monkeys (Cercopithecus aethiops). In S.A. Altmann, ed., Social Communication among Primates. University of Chicago Press.
 provenance:
@@ -145,3 +229,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Tightened the repertoire around classic predator alarms plus commonly described social and distress calls, and replaced the weak placeholder reference with specific classic sources.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added three call types to reach 10 total - move grunt (group coordination), intergroup chutter (aggressive intergroup context), and threat alarm bark (male agonistic display) - based on LLM knowledge plus web search of Cheney/Seyfarth literature and 2024 PMC study on male loud calls.
