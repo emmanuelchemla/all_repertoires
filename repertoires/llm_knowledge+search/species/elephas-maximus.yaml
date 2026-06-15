@@ -146,6 +146,140 @@ calls:
   references:
   - glaeser_2009
   - stoeger_2021
+- name: chirp
+  alternative_names:
+  - chirp-rumble (when combined with low-frequency component)
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - multi_component
+  acoustic_description: A brief tonal call in the ~200–500 Hz range, typically produced as a series of short notes. Distinguished from the trumpet by smaller amplitude and shorter duration, and from rumbles by higher fundamental frequency. Sometimes preceding or combined with a low-frequency rumble component to form a chirp-rumble.
+  semantic_keywords:
+  - alarm
+  - attention
+  - contact
+  semantic_description: Produced in contexts of mild alarm, confusion, social tension, or short-range contact. McKay (1973) identified it as one of three basic Asian elephant sounds; Glaeser (2009) included chirp as one of four fundamental call categories.
+  confidence: high
+  references:
+  - mckay_1973
+  - glaeser_2009
+- name: growl
+  acoustic_keywords:
+  - low_frequency
+  - quiet
+  - tonal
+  - short
+  - graded
+  acoustic_description: A soft, low-frequency vocalization with relatively quiet amplitude and limited carrying distance (<100 m). Resonates in the trunk and grades into rumbles at higher intensity. Less harmonically rich than a full rumble.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Used in close-range social interactions for gentle contact and coordination. McKay (1973) identified growl as a basic sound type distinct from the higher-intensity rumble, noting it as appropriate for short-range communication within a group.
+  confidence: medium
+  references:
+  - mckay_1973
+- name: musth rumble
+  alternative_names:
+  - musth chirp-rumble
+  - musth cry-rumble
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - multi_component
+  - harmonic
+  - long
+  - frequency_modulated
+  acoustic_description: A compound call with a brief higher-frequency segment (~250 Hz, ~0.25 s) followed by a longer low-frequency component (~60 Hz, ~0.75 s). Combines chirp-like onset with a deep rumble tail, producing a distinctive two-part temporal structure.
+  semantic_keywords:
+  - mating
+  - courtship
+  - display
+  - identity
+  semantic_description: Produced by males in musth, a period of elevated testosterone and heightened reproductive activity. Signals musth status to females and rival males; rare and context-specific.
+  confidence: medium
+  references:
+  - stoeger_2021
+- name: let's-go rumble
+  alternative_names:
+  - departure rumble
+  - movement initiation rumble
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - long
+  - harmonic
+  - tonal
+  acoustic_description: A long drawn-out low-frequency rumble distinguishable from generic contact rumbles by its extended, sustained quality and the characteristic body posture of the caller. Shares the harmonic structure of other rumbles but is unusually prolonged.
+  semantic_keywords:
+  - group_coordination
+  - contact
+  - recruitment
+  semantic_description: Produced before group movement to signal a departure proposal. Documented in both African and Asian elephants; the caller adopts a distinctive posture indicating directionality. Functionally a proposal call that solicits group consensus to move.
+  confidence: medium
+  references:
+  - stoeger_etal_2014
+- name: squeal
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - short
+  - tonal
+  - abrupt
+  acoustic_description: A brief high-pitched tonal call of higher amplitude than a chirp, shorter than a full trumpet, with a rapid onset. May grade into trumpets at maximum intensity. Spectrally overlaps with trumpet but lacks the long sustained resonance.
+  semantic_keywords:
+  - play
+  - distress
+  - attention
+  - submission
+  semantic_description: Produced in play contexts, excitement, or mild distress. Distinct from the sustained calf scream in being shorter and less noisy. Glaeser (2009) and related studies list squeal as a named call category alongside trumpets and roars.
+  confidence: medium
+  references:
+  - glaeser_2009
+- name: post-copulatory rumble
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - harmonic
+  - repetitive
+  - long
+  acoustic_description: A series of grunts or rumble pulses with strong harmonic overtones, repeated in sequences. Functionally distinct from generic contact rumbles by its post-mating timing and the repetitive multi-pulse sequence structure.
+  semantic_keywords:
+  - mating
+  - courtship
+  - group_coordination
+  - affiliation
+  semantic_description: Emitted by females after copulation as a post-copulatory sequence; can persist for up to ~30 minutes. May recruit group members or signal mate quality. Documented in both Asian and African elephants as a distinctive post-mating vocalization.
+  confidence: low
+  references:
+  - stoeger_etal_2014
 references:
   glaeser_2009:
     citation: "Glaeser, S.S. 2009. Analysis and Classification of Sounds Produced by Asian Elephants (Elephas maximus). PhD dissertation, Portland State University."
@@ -153,6 +287,11 @@ references:
   stoeger_2021:
     citation: "Stoeger, A.S., et al. 2021. A novel theory of Asian elephant high-frequency squeak production. BMC Biology 19:103."
     url: https://link.springer.com/article/10.1186/s12915-021-01026-z
+  mckay_1973:
+    citation: "McKay, G.M. 1973. Behavior and ecology of the Asiatic elephant in southeastern Ceylon. Smithsonian Contributions to Zoology 125:1-113."
+  stoeger_etal_2014:
+    citation: "Stoeger, A.S. & Baotic, A. 2014. Information content and acoustic structure of male African elephant social rumbles. Scientific Reports 4:6136."
+    url: https://www.nature.com/articles/srep06136
 provenance:
 - timestamp: '2026-06-10T21:00:00+02:00'
   model: GPT-5 Codex
@@ -173,3 +312,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Added a bark class and supporting references so the Asian elephant file better reflects broad repertoire inventories that list bark-like calls separately from rumbles, trumpets, and roars.
+- timestamp: '2026-06-12T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 6 call types (chirp, growl, musth rumble, let's-go rumble, squeal, post-copulatory rumble) via web-search-informed expansion to reach 14 total call entries. Added references for McKay 1973 and Stoeger & Baotic 2014.

@@ -120,19 +120,285 @@ calls:
   semantic_description: Used to maintain contact and coordinate movement in flocks.
   confidence: medium
 - name: alarm call
+  alternative_names:
+  - danger call
+  - warning call
   acoustic_keywords:
   - short
   - abrupt
   - noisy
   - repetitive
   - loud
-  acoustic_description: A harsher abrupt call distinct from song and rattle sequences.
+  acoustic_description: A harsher abrupt call distinct from song and rattle sequences,
+    typically broadband with steep onset.
   semantic_keywords:
   - alarm
   - attention
-  - threat
-  semantic_description: Produced in response to predators or sudden disturbance.
+  - predator
+  semantic_description: Produced in response to predators or sudden disturbance; causes
+    conspecifics to take flight or freeze.
   confidence: medium
+  references:
+  - feare_1984
+- name: distress call
+  alternative_names:
+  - fear squeal
+  - distress scream
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - frequency_modulated
+  - abrupt
+  acoustic_description: A high-pitched, harsh, penetrating scream with wide frequency
+    modulation and irregular rapid note sequences; acoustically distinct from the aggression
+    screams.
+  semantic_keywords:
+  - distress
+  - predator
+  - alarm
+  semantic_description: Given when a bird is seized or attacked by a predator; may
+    function to startle the predator and alert nearby conspecifics.
+  confidence: high
+  references:
+  - gaunt_1973
+  - feare_1984
+- name: attack call
+  alternative_names:
+  - chacker call
+  - aggression scream
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - repetitive
+  - loud
+  - short
+  acoustic_description: A harsh chattering scream often transcribed as "chackerchackerchacker";
+    rapid repetition of noisy, broadband pulses.
+  semantic_keywords:
+  - aggression
+  - threat
+  semantic_description: Produced during direct physical encounters with conspecifics,
+    typically accompanied by wing-flapping and bill gaping.
+  confidence: high
+  references:
+  - feare_1984
+- name: threat call
+  alternative_names:
+  - threat scream
+  - snarl call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - pulsed
+  - loud
+  - short
+  acoustic_description: A high-pitched trill or scream used at close range during
+    agonistic encounters; shorter and more tonal than the attack call.
+  semantic_keywords:
+  - threat
+  - aggression
+  - spacing
+  semantic_description: Used during intraspecific encounters to threaten rivals at
+    close range, often accompanied by wing-waving; distinct from the full attack call.
+  confidence: medium
+  references:
+  - feare_1984
+- name: mobbing call
+  alternative_names:
+  - metallic chip
+  - mob call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - abrupt
+  - tonal
+  - high_frequency
+  - repetitive
+  acoustic_description: A sharp metallic chip note, repeated persistently; higher-pitched
+    and more discrete than the alarm call.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  - group_coordination
+  semantic_description: Given repeatedly when mobbing avian predators, when alighting
+    into an established group, or at roost entries; recruits conspecifics to mob a
+    predator.
+  confidence: medium
+  references:
+  - feare_1984
+- name: copulation call
+  alternative_names:
+  - mating call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - quiet
+  - tonal
+  - high_frequency
+  acoustic_description: A brief, relatively quiet call of moderate pitch emitted by
+    the female during or immediately following copulation; poorly characterized acoustically
+    in the literature.
+  semantic_keywords:
+  - mating
+  - courtship
+  semantic_description: Produced by females during copulation; exact function unclear
+    but likely signals receptivity or pair-bonding context.
+  confidence: low
+  references:
+  - feare_1984
+- name: nestling begging call
+  alternative_names:
+  - begging call
+  - nestling food call
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - repetitive
+  - noisy
+  - loud
+  - frequency_modulated
+  acoustic_description: Persistent, high-pitched, broad-bandwidth calls with noisy
+    texture; minimum frequency shifts upward in response to background noise. Juveniles
+    produce a more drawn-out version of this call.
+  semantic_keywords:
+  - begging
+  - food
+  - caregiving
+  semantic_description: Produced by nestlings and recently fledged juveniles to solicit
+    food from parents; intensity increases with hunger level.
+  confidence: high
+  references:
+  - tyack_2021
+- name: subsong
+  alternative_names:
+  - juvenile practice song
+  - plastic song
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - multi_component
+  - long
+  - noisy
+  - tonal
+  - frequency_modulated
+  acoustic_description: A low-amplitude, highly variable and disorganized vocalization
+    resembling a murmured version of adult warbling song; basic note groupings into
+    motifs are present from the start but structure is initially very variable, crystallizing
+    gradually over several months.
+  semantic_keywords:
+  - play
+  - identity
+  - display
+  semantic_description: A motor-rehearsal phase of vocal learning in young males starting
+    around 3 months of age; not directed at specific receivers; precedes crystallization
+    of the adult warbling song and whistled song.
+  confidence: high
+  references:
+  - hausberger_etal_1988
+- name: roost assembly call
+  alternative_names:
+  - pre-roost call
+  - flock gathering call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - repetitive
+  - loud
+  - multi_component
+  - short
+  acoustic_description: A mix of chatter and short calls produced by individuals in
+    pre-roost aggregations; collectively creates a persistent roar or hum from the
+    flock. Individual-level calls are similar to flock contact and chatter notes.
+  semantic_keywords:
+  - group_coordination
+  - contact
+  - recruitment
+  semantic_description: Produced by starlings assembling at staging areas before roosting;
+    thought to facilitate coordination of when and where to enter the roost.
+  confidence: low
+  references:
+  - feare_1984
+- name: purring call
+  alternative_names:
+  - prurrp call
+  - soft contact call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - tonal
+  - quiet
+  - pulsed
+  acoustic_description: A soft rolling purring note, sometimes transcribed as "prurrp";
+    lower-pitched and softer than the flight call.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Frequently given when a bird takes flight or is handled; also
+    used as a close-range contact signal among flock members.
+  confidence: medium
+  references:
+  - feare_1984
 references:
   cornell_starling:
     citation: Cornell Lab of Ornithology. European Starling sounds.
@@ -140,6 +406,20 @@ references:
   vassar_starling:
     citation: Vassar College Sensory Ecology. European Starling song.
     url: https://pages.vassar.edu/sensoryecology/european-starling-song/
+  feare_1984:
+    citation: "Feare, C. (1984). The Starling. Oxford University Press, Oxford."
+  gaunt_1973:
+    citation: "Gaunt, A. S. (1973). Pressure and air flow during distress calls of
+      the starling, Sturnus vulgaris. Journal of Experimental Zoology, 183(2), 241–261."
+    doi: 10.1002/jez.1401830212
+  tyack_2021:
+    citation: "Tyack, A. J., et al. (2022). Nestling European Starlings (Sturnus
+      vulgaris) adjust their begging calls in noise. Bioacoustics, 31(5), 523–537."
+    doi: 10.1080/09524622.2021.2008495
+  hausberger_etal_1988:
+    citation: "Hausberger, M., et al. (1988). Song ontogenesis in starlings Sturnus
+      vulgaris: are song and subsong continuous? Bioacoustics, 8(1), 1–13."
+    url: https://univ-rennes.hal.science/hal-01319778v1
 provenance:
 - timestamp: '2026-06-10T20:30:00+02:00'
   model: GPT-5 Codex
@@ -151,3 +431,11 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-12T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 9 call types (distress call, attack call, threat call, mobbing call,
+    copulation call, nestling begging call, subsong, purring call, plus expanded alarm
+    call) based on LLM knowledge and web search synthesis; added 4 new references
+    (Feare 1984, Gaunt 1973, Tyack et al 2022, Hausberger et al 1988); total calls
+    raised from 7 to 16.

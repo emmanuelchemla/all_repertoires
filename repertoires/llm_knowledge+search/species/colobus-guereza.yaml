@@ -94,12 +94,41 @@ calls:
   - group_coordination
   semantic_description: Included conservatively as a likely local cohesion call used during routine within-group coordination, although the best-known literature focuses on long-distance calling.
   confidence: low
+- name: caw
+  alternative_names:
+  - cawing call
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    - adult
+    sexes:
+    - female
+    - unknown
+    population_specific: false
+    note: ""
+  acoustic_keywords:
+  - short
+  - noisy
+  - abrupt
+  acoustic_description: A harsh, caw-like vocalization with a noisy spectrum, short duration, and abrupt onset, acoustically resembling the caw of a corvid; produced by adult females, juveniles, and infants.
+  semantic_keywords:
+  - distress
+  - alarm
+  - threat
+  semantic_description: Produced in contexts of mild distress or low-level threat, distinct from the more acute squeaks and screams used in severe distress; documented in behavioral observations across Ugandan populations.
+  confidence: medium
+  references:
+  - marler_1972
 references:
   arnold_zuberbuhler_2006:
     citation: "Arnold, K. and Zuberbuhler, K. 2006. Predator and non-predator long-distance calls in guereza colobus monkeys: context-specific differences in call sequences. Animal Behaviour."
   schel_etal_2009:
     citation: "Schel, A. M., Tranquilli, S., and Zuberbuhler, K. 2009. The alarm call system of two species of black-and-white colobus monkeys, Colobus polykomos and Colobus guereza. Journal of Comparative Psychology 123:136-150."
     url: https://pubmed.ncbi.nlm.nih.gov/19450021/
+  marler_1972:
+    citation: "Marler, P. 1972. Vocalizations of East African monkeys. II. Black and white colobus. Behaviour 42:175-197."
+    url: https://brill.com/view/journals/beh/42/3-4/article-p175_1.xml
 provenance:
 - timestamp: '2026-06-10T20:00:00+02:00'
   model: GPT-5 Codex
@@ -113,3 +142,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Revised the guereza file around the best-supported alarm classes and explicitly separated the snort-roar sequence from the broader roar display category.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added caw call type (mild distress vocalization by females, juveniles, and infants) from Marler 1972 behavioral study; added marler_1972 reference entry.

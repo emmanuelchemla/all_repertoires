@@ -127,6 +127,35 @@ calls:
   confidence: medium
   references:
   - bengalese_review
+- name: alarm call
+  alternative_names:
+  - predator alarm
+  - alert call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ""
+  acoustic_keywords:
+  - loud
+  - abrupt
+  - short
+  - high_frequency
+  acoustic_description: A sharp, loud, brief call produced at high intensity; acoustically
+    distinct from the softer contact calls and more urgent than routine distance calls.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced in response to aerial predators or sudden disturbance
+    near the nest; louder and sharper than routine contact or distress vocalizations,
+    triggering flock vigilance or flight.
+  confidence: medium
+  references:
+  - bengalese_context
+  - nfss_vocalizations
 references:
   bengalese_song:
     citation: Woolley, S.M.N. and Rubel, E.W. 1997. Bengalese finches depend upon
@@ -147,6 +176,9 @@ references:
   bengalese_review:
     citation: Okanoya, K. and colleagues. Reviews of Bengalese finch vocal communication
       and domestication.
+  nfss_vocalizations:
+    citation: National Finch & Softbill Society. Recording Vocalizations of Finches.
+    url: http://nfss.org/education/articles/recording-vocalizations-of-finches/
 provenance:
 - timestamp: '2026-06-10T21:00:00+02:00'
   model: GPT-5 Codex
@@ -163,3 +195,8 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added alarm call (call 8) based on web search confirming distinct predator/disturbance
+    alarm call category in Bengalese finch; added nfss_vocalizations reference.

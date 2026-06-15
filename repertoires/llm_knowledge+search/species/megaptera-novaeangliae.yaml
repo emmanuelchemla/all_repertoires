@@ -66,7 +66,212 @@ calls:
     semantic_keywords: [food, recruitment, group_coordination]
     semantic_description: Reported on feeding grounds where it is associated with coordinated prey-related behaviour and may help organize group feeding.
     confidence: medium
-    references: [dosits]
+    references: [dosits, fournet_2018]
+  - name: ratchet
+    alternative_names: [rcht]
+    acoustic_keywords: [pulsed, repetitive, broadband, short]
+    acoustic_description: A rapidly pulsed call composed of closely spaced discrete pulses giving a mechanical rattling or buzzing quality; relatively short overall duration and broadband spectral spread.
+    semantic_keywords: [display, attention, group_coordination]
+    semantic_description: Occurs in song as a stereotyped unit class and also in non-song social contexts; may function in aggressive or competitive displays.
+    confidence: medium
+    references: [fournet_2018, salish_catalogue]
+  - name: snort
+    acoustic_keywords: [broadband, abrupt, short, noisy]
+    acoustic_description: A brief, explosively abrupt call with wide spectral energy and rough, noisy character; sometimes described as a single sharp impulse or burst.
+    semantic_keywords: [attention, aggression, group_coordination]
+    semantic_description: Produced in social interactions including competitive and feeding contexts; one of the more common non-song social call types in documented repertoire studies.
+    confidence: high
+    references: [dunlop_2007, fournet_2015, fournet_2018]
+  - name: chirp
+    acoustic_keywords: [high_frequency, short, tonal, frequency_modulated, abrupt]
+    acoustic_description: A short, high-pitched tonal call with a rapid frequency sweep, resembling a bird-like chirp; brief duration and relatively high fundamental frequency.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Appears both as a song unit element and as a social call, associated with close-range interactions and contact signalling.
+    confidence: medium
+    references: [fournet_2018, salish_catalogue]
+  - name: ascending moan
+    alternative_names: [upsweep moan]
+    acoustic_keywords: [low_frequency, tonal, long, frequency_modulated, harmonic]
+    acoustic_description: A sustained low-frequency tonal call whose fundamental frequency rises continuously over the call duration; smooth contour with harmonics often present.
+    semantic_keywords: [contact, mating, display]
+    semantic_description: A common song unit class and social call variant; ascending frequency contour may convey arousal state or serve as a long-range contact signal.
+    confidence: high
+    references: [au_2006, salish_catalogue]
+  - name: descending moan
+    alternative_names: [downsweep moan]
+    acoustic_keywords: [low_frequency, tonal, long, frequency_modulated, harmonic]
+    acoustic_description: A sustained low-frequency tonal call whose fundamental frequency falls continuously over the call duration; mirror image of the ascending moan in spectral contour.
+    semantic_keywords: [contact, display, mating]
+    semantic_description: Widely documented song unit class; descending calls may signal identity or coordinate with conspecifics at range.
+    confidence: high
+    references: [au_2006, salish_catalogue]
+  - name: ascending shriek
+    alternative_names: [ascending squeal]
+    acoustic_keywords: [high_frequency, tonal, frequency_modulated, long, loud]
+    acoustic_description: A strongly frequency-modulated high-pitched tonal call sweeping steeply upward in frequency; higher-pitched and more intense than an ascending moan.
+    semantic_keywords: [display, mating, attention]
+    semantic_description: Documented as a recurring song unit in multiple populations; its elevated pitch and rapid sweep may maximize broadcast range in the breeding context.
+    confidence: medium
+    references: [au_2006, salish_catalogue]
+  - name: descending shriek
+    alternative_names: [descending squeal]
+    acoustic_keywords: [high_frequency, tonal, frequency_modulated, long, loud]
+    acoustic_description: A strongly frequency-modulated high-pitched tonal call sweeping steeply downward in frequency; complements the ascending shriek as its mirror form.
+    semantic_keywords: [display, mating, attention]
+    semantic_description: Documented as a song unit class; steep descending sweeps may occur in song phrases or as punctuation between themes.
+    confidence: medium
+    references: [au_2006, salish_catalogue]
+  - name: trumpet
+    acoustic_keywords: [low_frequency, loud, abrupt, tonal, multi_component]
+    acoustic_description: A loud, blaring tonal call with a horn-like onset; measured source levels up to ~185 dB re 1 µPa; often broad bandwidth with strong harmonics and sometimes combined with other unit types.
+    semantic_keywords: [display, attention, aggression, group_coordination]
+    semantic_description: Produced in competitive group contexts and during energetic social interactions; its extreme loudness suggests use as a long-range dominance or competitive signal.
+    confidence: medium
+    references: [fournet_2015, fournet_2018]
+  - name: growl
+    alternative_names: [guttural call]
+    acoustic_keywords: [low_frequency, noisy, broadband, short, pulsed]
+    acoustic_description: A low-frequency, rough and noisy call with irregular pulse structure or broadband noise; spectrogram shows descending or flat contour with energy concentrated below 1 kHz.
+    semantic_keywords: [aggression, threat, group_coordination]
+    semantic_description: Associated with competitive groups and agonistic interactions; the harsh, rough quality may signal competitive motivation or dominance.
+    confidence: medium
+    references: [fournet_2015, fournet_2018]
+  - name: grumble
+    acoustic_keywords: [low_frequency, long, noisy, broadband, harmonic]
+    acoustic_description: An extended low-frequency call with a rough, noisy quality and near-infrasonic fundamental; longer duration than a growl, with irregular amplitude envelope.
+    semantic_keywords: [aggression, threat, identity]
+    semantic_description: Produced more often by groups containing adult males; its low frequency and long duration may signal body size and competitive status over long distances.
+    confidence: medium
+    references: [dunlop_wop_grumble]
+  - name: wop
+    acoustic_keywords: [tonal, frequency_modulated, short, low_frequency]
+    acoustic_description: A short tonal call with a characteristic frequency modulation pattern; typically brief duration and occupying a relatively low frequency band, sometimes described as a pulsed or semi-tonal unit.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: One of the most studied humpback social calls; produced by both sexes and associated with within-group and between-group coordination during migration and on breeding grounds.
+    confidence: high
+    references: [dunlop_wop_grumble, dunlop_2007]
+  - name: bop
+    acoustic_keywords: [short, pulsed, broadband, abrupt]
+    acoustic_description: A very short, impulsive broadband call with an abrupt onset; similar to a thwop but typically more compact and with slightly different spectral characteristics.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: One of the most frequently recorded call types in social bouts; occurs in paired sequences and in mixed bouts alongside snorts and other short calls.
+    confidence: medium
+    references: [dunlop_bouts]
+  - name: yap
+    acoustic_keywords: [short, high_frequency, abrupt, tonal]
+    acoustic_description: A brief, higher-frequency impulsive call with a sharp onset; higher in pitch than a bop and sometimes with a slight upward frequency inflection.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Among the more frequently recorded calls in social bout studies; produced in energetically active social contexts.
+    confidence: medium
+    references: [dunlop_bouts]
+  - name: yelp
+    acoustic_keywords: [high_frequency, short, tonal, frequency_modulated]
+    acoustic_description: A short high-frequency call with a frequency sweep, intermediate between a chirp and a cry in character; often described as higher-pitched than a bop or wop.
+    semantic_keywords: [contact, attention, distress]
+    semantic_description: Documented among the most common social call types in bout-analysis studies; context suggests attention-getting or distress function.
+    confidence: medium
+    references: [dunlop_bouts]
+  - name: purr
+    acoustic_keywords: [low_frequency, long, tonal, repetitive, quiet]
+    acoustic_description: A soft, sustained low-frequency call with a smooth or gently fluctuating amplitude envelope; relatively low intensity compared to wops or trumpets.
+    semantic_keywords: [affiliation, contact, caregiving]
+    semantic_description: Occurs in paired social bouts, particularly in affiliative or close-range contexts; may function in maintaining proximity between individuals.
+    confidence: low
+    references: [dunlop_bouts]
+  - name: roar
+    acoustic_keywords: [low_frequency, loud, broadband, noisy, long]
+    acoustic_description: A sustained, rough, loud broadband call with noisy spectral energy distributed across a wide frequency range; more extended and intense than a growl.
+    semantic_keywords: [aggression, display, group_coordination]
+    semantic_description: Produced in competitive and high-arousal social contexts; its loud, sustained character may function as a dominance signal.
+    confidence: low
+    references: [dunlop_bouts]
+  - name: bark
+    acoustic_keywords: [short, broadband, abrupt, loud, noisy]
+    acoustic_description: A single brief, explosive broadband call with a sharp impulsive onset and rapid decay; louder and harsher than a bop.
+    semantic_keywords: [aggression, attention, threat]
+    semantic_description: Reported in competitive social contexts; its abrupt, impulsive character resembles an alarm-like startle function or threat signal.
+    confidence: low
+    references: [dunlop_bouts]
+  - name: mother-calf contact call
+    alternative_names: [calf contact call, whup contact call]
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, quiet, short, graded]
+    acoustic_description: Low-intensity tonal calls exchanged between mother and calf; includes whup-like calls and softer variants; quieter than competitive group calls, with graded modulation.
+    semantic_keywords: [contact, caregiving, affiliation, distress]
+    semantic_description: Used to maintain acoustic contact and reduce separation risk between mother and dependent calf; pairs call more frequently rather than more loudly when separated, suggesting acoustic crypsis to avoid attracting males.
+    confidence: high
+    references: [li_2022, sainte_marie_2022]
+  - name: bubble-net feeding call
+    alternative_names: [bubble net call, lunge-feeding coordination call]
+    acoustic_keywords: [low_frequency, long, tonal, repetitive, loud]
+    acoustic_description: A loud, sustained, repetitive low-frequency call produced during cooperative bubble-net feeding; structurally similar to the general feeding call but associated specifically with the cooperative bubble-netting event.
+    semantic_keywords: [food, recruitment, group_coordination]
+    semantic_description: Produced by cooperating whales to synchronize the timing of bubble release and lunge ascent during group prey corralling; coordinates the feeding group.
+    confidence: medium
+    references: [dosits, fournet_2018]
+  - name: competitive group call
+    alternative_names: [escort call, competitive sound]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, broadband, multi_component, noisy, frequency_modulated]
+    acoustic_description: A heterogeneous class of loud, energetically produced calls combining broadband noisy and tonal-frequency-modulated elements; higher-pitched and more variable than typical contact calls.
+    semantic_keywords: [aggression, display, courtship, mating]
+    semantic_description: Produced by males in competitive escort groups competing for access to a female; the most acoustically intense social context in the humpback repertoire.
+    confidence: high
+    references: [frontiers_2020, dunlop_2007]
+  - name: pectoral slap sound
+    alternative_names: [flipper slap, flippering sound]
+    acoustic_keywords: [broadband, abrupt, loud, short]
+    acoustic_description: An impulsive broadband sound generated by one or both pectoral fins striking the water surface; characterized by sharp onset and rapid spectral decay audible underwater.
+    semantic_keywords: [display, attention, group_coordination, threat]
+    semantic_description: Produced during surface-active behaviors; believed to function in social communication as a display of size or strength, particularly by males during competitive contexts.
+    confidence: medium
+    references: [noaa_impulsive]
+  - name: lobtail sound
+    alternative_names: [fluke slap sound, tail slap]
+    acoustic_keywords: [broadband, abrupt, loud, short]
+    acoustic_description: A loud impulsive broadband sound produced by the flukes striking the water surface; audible underwater for hundreds of metres with a sharp crack-like onset.
+    semantic_keywords: [display, attention, group_coordination, threat]
+    semantic_description: Associated with aggressive and competitive contexts; functions as a communication signal that can be detected at distance underwater, particularly relevant during high-arousal social encounters.
+    confidence: medium
+    references: [noaa_impulsive]
+  - name: breach sound
+    alternative_names: [breaching sound]
+    acoustic_keywords: [broadband, loud, abrupt, multi_component]
+    acoustic_description: A powerful broadband impulsive sound produced when the whale's body re-enters the water after a full or partial breach; among the loudest non-vocal cetacean sounds, audible at great distances.
+    semantic_keywords: [display, attention, group_coordination, mating]
+    semantic_description: Breaching is thought to serve multiple communicative functions including long-range signalling, display to rivals and potential mates, and possibly parasite removal; the associated sound is part of the signal.
+    confidence: medium
+    references: [noaa_impulsive, allen_2021]
+  - name: underwater blow
+    alternative_names: [submerged blow, blow sound]
+    acoustic_keywords: [broadband, short, abrupt, noisy]
+    acoustic_description: A broadband transient sound produced by exhalation underwater; irregular spectral character with significant low-frequency energy generated by turbulent airflow.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Audible to nearby whales and may inadvertently or deliberately signal presence or arousal state; documented in competitive group contexts as an associated acoustic event.
+    confidence: low
+    references: [dunlop_2007]
+  - name: creak
+    acoustic_keywords: [broadband, multi_component, repetitive, pulsed, frequency_modulated]
+    acoustic_description: A composite call made up of two successive non-overlapping sounds without a silent gap; shows the widest frequency bandwidth among documented call types; irregular pulsed or frequency-modulated character.
+    semantic_keywords: [contact, group_coordination, display]
+    semantic_description: Documented in call repertoire studies as a distinctive composite unit; relatively rare but consistently identified across populations and decades.
+    confidence: low
+    references: [fournet_2018]
+  - name: buzz
+    acoustic_keywords: [high_frequency, repetitive, pulsed, short, noisy]
+    acoustic_description: A rapid train of closely spaced pulses producing a buzzing, tonal-noisy quality; higher in frequency than a ratchet and faster in pulse rate.
+    semantic_keywords: [display, attention, group_coordination]
+    semantic_description: Appears as a song unit element and in social contexts; rapid pulse train may signal high arousal or be used in punctuating song sequences.
+    confidence: low
+    references: [salish_catalogue, fournet_2018]
 references:
   dosits:
     citation: "Discovery of Sound in the Sea. Humpback whale audio gallery."
@@ -83,6 +288,36 @@ references:
   social_calls_2024:
     citation: "Sharpe, F.A., et al. 2024. Humpback whale social calls in southern New South Wales. Marine Mammal Science 40:e13138."
     url: https://onlinelibrary.wiley.com/doi/10.1111/mms.13138
+  fournet_2015:
+    citation: "Fournet, M.E.H., et al. 2015. Repertoire and classification of non-song calls in Southeast Alaskan humpback whales (Megaptera novaeangliae). Journal of the Acoustical Society of America 137:1–10."
+    url: https://pubs.aip.org/asa/jasa/article/137/1/1/768266
+  fournet_2018:
+    citation: "Fournet, M.E.H., et al. 2018. Some things never change: multi-decadal stability in humpback whale calling repertoire on Southeast Alaskan foraging grounds. Scientific Reports 8:13186."
+    url: https://www.nature.com/articles/s41598-018-31527-x
+  au_2006:
+    citation: "Au, W.W.L., Pack, A.A., Lammers, M.O., Herman, L.M., Deakos, M.H., and Andrews, K. 2006. Acoustic properties of humpback whale songs. Journal of the Acoustical Society of America 120:1103–1110."
+    url: https://oceanwidescience.org/PDF/Au%20et%20al.%202006.pdf
+  dunlop_wop_grumble:
+    citation: "Dunlop, R.A. 2016. Changes in vocal parameters with social context in humpback whales: considering the effect of bystanders. Royal Society Open Science 3:160529."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4859862/
+  dunlop_bouts:
+    citation: "Dunlop, R.A., et al. 2015. Non-song social call bouts of migrating humpback whales. Journal of the Acoustical Society of America 137:3042–3053."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4474945/
+  li_2022:
+    citation: "Li, P.F., et al. 2022. Humpback whale adult females and calves balance acoustic contact with vocal crypsis during periods of increased separation. Royal Society Open Science 9:210786."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8826064/
+  sainte_marie_2022:
+    citation: "Vu, E.T., et al. 2022. Social calls in humpback whale mother-calf groups off Sainte Marie breeding ground (Madagascar, Indian Ocean). PLOS ONE 17:e0272732."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9390327/
+  salish_catalogue:
+    citation: "Orcasound. Salish Sea Humpback Vocalization Catalogue (online resource)."
+    url: https://www.orcasound.net/portfolio/humpback-catalogue/
+  noaa_impulsive:
+    citation: "NOAA. Impulsive sounds produced by humpback whale surface behaviors (technical report)."
+    url: https://repository.library.noaa.gov/view/noaa/64422/noaa_64422_DS1.pdf
+  allen_2021:
+    citation: "Allen, J.A., et al. 2021. Whale breaching says it loud and clear. Royal Society Open Science 8:200955."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7065906/
 provenance:
   - timestamp: "2026-06-10T20:15:00+02:00"
     model: GPT-5 Codex
@@ -96,3 +331,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added a broad feeding-call class and normalized whoop/whup naming to improve recall across humpback social-call and feeding-ground summaries.
+  - timestamp: "2026-06-12T16:15:00+02:00"
+    model: claude-sonnet-4-5
+    action: updated
+    notes: Major expansion from 8 to 34 call types. Added song unit variants (ascending/descending moan, ascending/descending shriek, ratchet, chirp, trumpet, growl, creak, buzz), social call types documented in bout analysis studies (snort, wop, bop, yap, yelp, purr, roar, bark, grumble), specialized functional contexts (mother-calf contact call, bubble-net feeding call, competitive group call), and percussion/surface-generated sounds (pectoral slap sound, lobtail sound, breach sound, underwater blow). Added 11 new reference entries from primary literature.

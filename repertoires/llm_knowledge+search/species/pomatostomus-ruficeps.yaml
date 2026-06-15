@@ -87,6 +87,8 @@ calls:
     by group members.
   confidence: medium
 - name: scold call
+  alternative_names:
+  - mobbing call
   acoustic_keywords:
   - short
   - noisy
@@ -102,6 +104,149 @@ calls:
   semantic_description: Used in disturbance and mobbing contexts to direct group attention
     to a nearby threat.
   confidence: medium
+- name: aerial alarm call
+  acoustic_keywords:
+  - short
+  - abrupt
+  - loud
+  - tonal
+  acoustic_description: A sharp, brief high-pitched note distinct from the terrestrial
+    alarm and scold; often a single clean element with rapid onset.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced in response to aerial predators such as raptors;
+    elicits immediate group freeze or take-cover response.
+  confidence: high
+  references:
+  - crane_etal_2016
+- name: alert call
+  alternative_names:
+  - soft alarm
+  - vigilance call
+  acoustic_keywords:
+  - short
+  - quiet
+  - tonal
+  - abrupt
+  acoustic_description: A subdued, brief note softer than the aerial alarm; may be
+    repeated at low rate as an ongoing low-level warning.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Used when a potential threat is detected but not yet at close
+    range; keeps group members in a heightened vigilance state without triggering
+    full alarm scatter.
+  confidence: medium
+  references:
+  - crane_etal_2016
+- name: prompt call
+  alternative_names:
+  - nest provisioning call
+  - BAB call
+  acoustic_keywords:
+  - multi_component
+  - tonal
+  - short
+  - abrupt
+  acoustic_description: A multi-element call composed of two outer B elements flanking
+    a central A element (BAB sequence); acoustically distinct from the flight call
+    (AB) despite sharing the same building blocks.
+  semantic_keywords:
+  - caregiving
+  - begging
+  - attention
+  semantic_description: Produced by adults entering the breeding nest during food
+    provisioning; stimulates nestling begging and coordinated nest-entry behaviour.
+  confidence: high
+  references:
+  - engesser_etal_2015
+  - engesser_etal_2019
+- name: piping call
+  alternative_names:
+  - maternal contact call
+  - pipe call
+  acoustic_keywords:
+  - tonal
+  - repetitive
+  - long
+  - multi_component
+  acoustic_description: A series of clear whistled pipe elements, often combined with
+    a leading peow or begging element to form peow-pipe or beg-pipe sequences; relatively
+    pure tonal structure with moderate duration per element.
+  semantic_keywords:
+  - contact
+  - caregiving
+  - group_coordination
+  semantic_description: Used by females (mothers and helpers) as a maternal contact
+    call; the form can be modified combinatorially with additional elements, showing
+    syntax-like structure in nestling-directed communication.
+  confidence: high
+  references:
+  - engesser_etal_2019
+  - mine_etal_2022
+- name: long-distance contact call
+  alternative_names:
+  - peow call
+  - far call
+  acoustic_keywords:
+  - loud
+  - tonal
+  - frequency_modulated
+  - long
+  acoustic_description: A loud, drawn-out whistled note with a characteristic downward
+    frequency sweep (peow quality); carries further than close-range contact notes.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - spacing
+  semantic_description: Used to maintain contact with group members at distances beyond
+    the range of short-range chatter; helps reunite separated individuals or locate
+    the group.
+  confidence: high
+  references:
+  - crane_etal_2016
+- name: distress call
+  acoustic_keywords:
+  - loud
+  - broadband
+  - noisy
+  - high_frequency
+  - abrupt
+  acoustic_description: An intense broadband harsh call; noisier and more broadband
+    than other alarm vocalizations.
+  semantic_keywords:
+  - distress
+  - alarm
+  - recruitment
+  semantic_description: Produced when a group member is captured or under direct physical
+    threat; elicits immediate approach and mobbing response from nearby conspecifics.
+  confidence: medium
+  references:
+  - crane_etal_2016
+references:
+  crane_etal_2016:
+    citation: 'Crane, J. M. S., Pick, J. L., Tribe, A. J., Vincze, E., Hatchwell,
+      B. J., & Russell, A. F. (2016). Diversity and function of vocalisations in
+      the cooperatively breeding Chestnut-crowned Babbler. Emu, 116(3), 241–253.'
+    doi: 10.1071/MU15048
+  engesser_etal_2015:
+    citation: 'Engesser, S., Crane, J. M. S., Stirling, J. L., Andrew, J. R., &
+      Townsend, S. W. (2015). Experimental evidence for phonemic contrasts in a nonhuman
+      vocal system. PLOS Biology, 13(6), e1002171.'
+    doi: 10.1371/journal.pbio.1002171
+  engesser_etal_2019:
+    citation: 'Engesser, S., Andrews Owens, J. L., Lameira, A. R., & Townsend, S.
+      W. (2019). Chestnut-crowned babbler calls are composed of meaningless shared
+      building blocks. PNAS, 116(39), 19579–19584.'
+    doi: 10.1073/pnas.1819513116
+  mine_etal_2022:
+    citation: 'Mine, J. G., Engesser, S., & Townsend, S. W. (2022). Syntax-like
+      structures in maternal contact calls of Chestnut-crowned Babblers (Pomatostomus
+      ruficeps). International Journal of Primatology, 43(6), 957–974.'
+    doi: 10.1007/s10764-022-00332-9
 provenance:
 - timestamp: '2026-06-10T21:00:00+02:00'
   model: GPT-5 Codex
@@ -113,3 +258,11 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 6 new call types (aerial alarm, alert, prompt/BAB, piping/maternal
+    contact, long-distance contact/peow, distress) based on web search of primary
+    literature (Crane et al. 2016, Engesser et al. 2015 & 2019, Mine et al. 2022).
+    Added references section. Added mobbing-call synonym to scold call. Total calls
+    now 12.

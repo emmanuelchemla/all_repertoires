@@ -188,6 +188,189 @@ calls:
     references:
       - pepper_1991
       - naked_mole_rat_chapter
+  - name: loud chirp
+    alternative_names:
+      - alarm chirp
+      - long-range chirp
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - loud
+      - repetitive
+    acoustic_description: A louder variant of the soft chirp with higher amplitude, capable of traveling farther through tunnels (estimated up to 15 m at suprathreshold intensities). Shares the brief tonal structure of the soft chirp but is clearly audible at greater distances.
+    semantic_keywords:
+      - alarm
+      - attention
+      - group_coordination
+    semantic_description: Produced in response to more urgent or distant disturbances; functions as a long-range alerting call that complements the short-range soft chirp and alarm shriek.
+    confidence: medium
+    references:
+      - appel_etal_2018
+      - barker_etal_2021
+  - name: twitter
+    alternative_names:
+      - trill
+      - chirrup
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - frequency_modulated
+      - short
+      - quiet
+      - multi_component
+    acoustic_description: A rapid series of brief frequency-modulated notes producing a twittering or trilling percept; higher-pitched and more rapid than the discrete soft chirp, often blending into a continuous acoustic stream.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Produced in close social interactions; noted as one of the named call types from early observations of continuously vocalizing colony members in tunnel systems.
+    confidence: low
+    references:
+      - pepper_1991
+      - naked_mole_rat_chapter
+  - name: squeal
+    alternative_names:
+      - pain squeal
+      - distress squeal
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - long
+      - noisy
+      - frequency_modulated
+    acoustic_description: A prolonged, high-pitched, often frequency-modulated call louder and more sustained than the brief squeak; harsh spectral quality with notable amplitude.
+    semantic_keywords:
+      - distress
+      - alarm
+      - attention
+    semantic_description: Produced in intense distress, acute pain, or severe social conflict; more extreme in urgency than the squeak and likely recruits stronger colony responses.
+    confidence: medium
+    references:
+      - pepper_1991
+  - name: tooth chatter
+    alternative_names:
+      - teeth chattering
+      - incisors chatter
+    acoustic_keywords:
+      - broadband
+      - repetitive
+      - pulsed
+      - short
+      - low_frequency
+    acoustic_description: A pulsed rattling sound produced by rapid incisor contact; broadband and percussive in quality, distinct from purely laryngeal calls.
+    semantic_keywords:
+      - threat
+      - aggression
+    semantic_description: A close-range threat signal used in agonistic interactions, dominance contests, and defense; the prominent incisors of naked mole-rats make this a plausible threat display mechanism reported for bathyergid rodents.
+    confidence: low
+    references:
+      - pepper_1991
+  - name: queen toilet call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ''
+    acoustic_keywords:
+      - tonal
+      - repetitive
+      - quiet
+      - short
+    acoustic_description: A distinctive call series produced by the queen in the communal toilet chamber context; specific spectro-temporal details are not well-documented in the literature, described anecdotally as a brief song-like sequence.
+    semantic_keywords:
+      - group_coordination
+      - contact
+      - identity
+    semantic_description: A rare call attributed to the queen in the communal toilet chamber; function is not yet fully understood but may serve a group-coordination or identity-signaling role in the colony.
+    confidence: low
+    references:
+      - naked_mole_rat_chapter
+  - name: pup isolation call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ''
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - repetitive
+      - loud
+    acoustic_description: A high-pitched brief call produced by isolated or separated pups; higher frequency and more intense than routine contact calls, possibly with ultrasonic components reaching above 10 kHz.
+    semantic_keywords:
+      - distress
+      - caregiving
+      - attention
+      - contact
+    semantic_description: Produced when pups are separated from the group or from caregivers; distinct from the generalized pup begging call in being driven by isolation rather than nutritional solicitation.
+    confidence: low
+    references:
+      - pepper_1991
+  - name: inter-colony agonistic call
+    alternative_names:
+      - stranger call
+      - colony-rejection call
+    acoustic_keywords:
+      - loud
+      - abrupt
+      - broadband
+      - short
+      - noisy
+    acoustic_description: A harsh loud brief call produced when encountering unfamiliar individuals; characterized by broadband spectral content and abrupt onset distinct from routine colony contact calls.
+    semantic_keywords:
+      - threat
+      - aggression
+      - alarm
+      - territorial
+    semantic_description: Produced during encounters with individuals from foreign colonies; naked mole-rats discriminate colony membership via soft chirp dialect, and unfamiliar individuals trigger agonistic vocal and physical responses.
+    confidence: medium
+    references:
+      - barker_etal_2021
+      - appel_etal_2018
+  - name: whine
+    alternative_names:
+      - submission whine
+      - subordinate whine
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - quiet
+      - frequency_modulated
+      - graded
+    acoustic_description: A sustained tonal call with a falling or variable frequency contour; higher-pitched and more drawn-out than a grunt, with relatively low amplitude.
+    semantic_keywords:
+      - submission
+      - distress
+      - contact
+    semantic_description: Produced by subordinates in yielding or deferential encounters; part of the graded acoustic repertoire associated with social rank signaling in the eusocial colony.
+    confidence: low
+    references:
+      - pepper_1991
+  - name: shoving vocalization
+    alternative_names:
+      - passing grunt
+      - tunnel-passing call
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - quiet
+      - noisy
+      - graded
+    acoustic_description: A brief low-amplitude grunt-like sound produced during the stereotyped shoving behavior when colony members pass each other in narrow tunnels; likely a graded acoustic signal blending with physical contact.
+    semantic_keywords:
+      - group_coordination
+      - submission
+      - contact
+    semantic_description: Associated with the ritualized shoving interactions that facilitate movement coordination in narrow tunnel passageways; may convey rank or passage-request information among colony members.
+    confidence: low
+    references:
+      - pepper_1991
 references:
   appel_etal_2018:
     citation: Appel, J., Alipour, M., and Lewin, G.R. 2018. Auditory-vocal coupling in the naked mole-rat, a mammal with poor eyesight. Current Biology 28(20):3362-3369.e4.
@@ -205,6 +388,10 @@ references:
   naked_mole_rat_chapter:
     citation: Chapter review summary of naked mole-rat vocalizations noting alarm, food recruitment, mating, toilet-assembly, and pup-specific calls.
     url: https://www.researchgate.net/publication/318230632_9_Vocalizations_of_the_Naked_Mole-Rat
+  barker_etal_2021_chapter:
+    citation: Barker, A.J., Koch, U., Lewin, G.R., and Pyott, S.J. 2021. Hearing and Vocalizations in the Naked Mole-Rat. In The Extraordinary Biology of the Naked Mole-Rat (pp. 157-196). Springer, Cham.
+    url: https://link.springer.com/chapter/10.1007/978-3-030-65943-1_6
+    doi: 10.1007/978-3-030-65943-1_6
 provenance:
   - timestamp: "2026-06-10T21:30:00+02:00"
     model: GPT-5 Codex
@@ -227,3 +414,7 @@ provenance:
     action: updated
     notes: Added low-confidence but explicitly reported recruitment, toilet-assembly,
       and mating categories to improve recall for the broad naked mole-rat repertoire.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Expanded repertoire from 9 to 18 call types by adding loud chirp, twitter/trill, squeal, tooth chatter, queen toilet call, pup isolation call, inter-colony agonistic call, and shoving vocalization based on web search synthesis of Pepper 1991, Barker et al. 2021, and secondary sources confirming 17-25 distinct call types.

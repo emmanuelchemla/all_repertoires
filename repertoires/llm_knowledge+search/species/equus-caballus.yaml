@@ -119,6 +119,52 @@ calls:
   confidence: medium
   references:
   - lemasson_2009
+- name: roar
+  acoustic_keywords:
+  - low_frequency
+  - loud
+  - noisy
+  - broadband
+  - short
+  acoustic_description: A low-pitched, loud, rough exhalatory vocalization with broadband
+    spectral energy and little harmonic structure; acoustically distinct from the more
+    tonal whinny.
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ""
+  semantic_keywords:
+  - threat
+  - aggression
+  - territorial
+  - mating
+  semantic_description: Produced primarily by stallions in high-intensity agonistic
+    contexts, such as rival encounters or when asserting dominance; also reported
+    during courtship with mares.
+  confidence: low
+  references:
+  - briefer_2012
+- name: snore
+  acoustic_keywords:
+  - broadband
+  - quiet
+  - long
+  - pulsed
+  acoustic_description: A soft, sustained nasal sound produced during slow exhalation
+    through the nostrils; lower amplitude and more continuous than a snort, with
+    irregular low-frequency energy.
+  semantic_keywords:
+  - contact
+  - affiliation
+  semantic_description: Associated with relaxed or resting states; sometimes produced
+    during dozing or sleep, and also observed in calm, positive-affect situations
+    such as grooming or quiet grazing.
+  confidence: low
+  references:
+  - briefer_2012
 references:
   briefer_2012:
     citation: Briefer, E.F. 2012. Acoustic communication in the domestic horse (Equus
@@ -141,3 +187,8 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added roar (stallion agonistic) and snore (relaxed/sleep state) to reach
+    8 call types; both assigned confidence low given limited primary acoustic data.

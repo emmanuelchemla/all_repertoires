@@ -136,6 +136,34 @@ calls:
   semantic_description: Used to maintain contact and coordinate movement between birds
     in flight.
   confidence: medium
+- name: beak grinding
+  alternative_names:
+  - beak chewing
+  - mandible grinding
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - repetitive
+  - pulsed
+  - short
+  acoustic_description: A soft low-amplitude rhythmic scraping or grinding produced
+    by the mandibles rubbing together; similar to a faint scratchy or pencil-sharpening
+    sound, with a slightly pulsed repetitive texture and no clear tonality.
+  semantic_keywords:
+  - affiliation
+  - contact
+  semantic_description: Produced during drowsy relaxation, typically just before or
+    during sleep onset; a reliable indicator of contentment and low arousal, often
+    given after social grooming or while settled close to a partner or familiar human.
+  confidence: medium
 references:
   lievin_bazin_etal_2018:
     citation: Lievin-Bazin, A., Pineaux, M., Clerc, O., Gahr, M., von Bayern, A.M.P.,
@@ -164,3 +192,8 @@ provenance:
   action: updated
   notes: Worker 12 recall pass separated an explicit distress call from broader alarm
     screeching using cockatiel playback literature.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added beak grinding as 9th call type based on LLM knowledge and web search
+    synthesis; widely documented as a distinct relaxation/contentment signal in cockatiels.

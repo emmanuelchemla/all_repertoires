@@ -145,6 +145,132 @@ calls:
     confidence: medium
     references:
       - allaboutbirds_carolina
+  - name: lisping tee
+    alternative_names:
+      - tee call
+      - flight tee
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - frequency_modulated
+    acoustic_description: A brief note with a strong descending frequency sweep (chevron contour), producing a lisping or high thin quality; typically given as a single note.
+    semantic_keywords:
+      - contact
+      - group_coordination
+    semantic_description: Given mostly in flight, likely functioning as an in-flight contact or cohesion signal among flock members.
+    confidence: medium
+    references:
+      - smith_1972
+      - birdsoftheworld_carchi
+  - name: tseet call
+    alternative_names:
+      - see call
+      - high see variant
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - abrupt
+    acoustic_description: Very short pure-tone notes (typically < 50 ms) at high frequency (5–9 kHz), often chevron-shaped but variable; given singly and well spaced from other vocalizations.
+    semantic_keywords:
+      - contact
+      - attention
+    semantic_description: Produced by individuals in a variety of low-urgency contexts; exact function not fully resolved but likely serves general contact or attention signaling.
+    confidence: medium
+    references:
+      - smith_1972
+  - name: chip call
+    alternative_names:
+      - chip note
+      - sharp chip
+    acoustic_keywords:
+      - broadband
+      - abrupt
+      - short
+      - loud
+    acoustic_description: A short, sharp broadband note given in series of 3–6 at high amplitude; acoustically distinct from the drawn-out notes of the chick-a-dee complex.
+    semantic_keywords:
+      - alarm
+      - attention
+      - contact
+    semantic_description: Associated with mild alertness and general arousal; may be used to draw attention or signal disturbance without a full chick-a-dee alarm sequence.
+    confidence: medium
+    references:
+      - smith_1972
+      - birdsoftheworld_carchi
+  - name: soft dee
+    alternative_names:
+      - quiet dee
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - quiet
+      - short
+      - repetitive
+    acoustic_description: Soft, low-amplitude dee-type notes produced quietly near the nest, lacking the full intensity of the typical chick-a-dee call complex.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - caregiving
+    semantic_description: Given by males near the nest cavity; thought to function in pair coordination and low-disturbance communication at close range during the nesting period.
+    confidence: medium
+    references:
+      - birdsoftheworld_carchi
+  - name: broken dee
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - short
+      - repetitive
+      - graded
+    acoustic_description: Irregular, broken dee-like notes produced by nestlings; acoustically less structured than the adult dee notes of the chick-a-dee call.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - contact
+    semantic_description: Produced by nestlings in the nest cavity; likely functions to signal presence and elicit parental provisioning.
+    confidence: low
+    references:
+      - birdsoftheworld_carchi
+  - name: variable see or gargle pre-copulation call
+    alternative_names:
+      - copulation gargle
+      - pre-copulatory see
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - frequency_modulated
+      - noisy
+      - short
+      - graded
+    acoustic_description: A variable mix of see-type and gargle elements, acoustically intermediate between the clean high see alarm and the full agonistic gargle; produced in close proximity between pair members.
+    semantic_keywords:
+      - courtship
+      - mating
+      - affiliation
+    semantic_description: Produced near the nest cavity in the context preceding copulation; likely functions as a close-range pair bonding or solicitation signal.
+    confidence: low
+    references:
+      - birdsoftheworld_carchi
+      - smith_1972
 references:
   allaboutbirds_carolina:
     citation: Cornell Lab of Ornithology. Carolina Chickadee sounds and vocalization overview.
@@ -158,6 +284,11 @@ references:
   soha_2010:
     citation: "Soha, J. A. and Marler, P. 2010. A species-specific acoustic cue for selective song learning in the parental tutor song of the Carolina chickadee. Animal Behaviour 80(2):187-198."
     doi: 10.1016/j.anbehav.2010.04.025
+  smith_1972:
+    citation: "Smith, S. T. 1972. Communication and other social behavior in Parus carolinensis. Publications of the Nuttall Ornithological Club 11:1-125."
+  birdsoftheworld_carchi:
+    citation: "Birds of the World (Cornell Lab of Ornithology). Poecile carolinensis — Sounds and Vocal Behavior."
+    url: https://birdsoftheworld.org/bow/species/carchi/cur/sounds
 provenance:
   - timestamp: "2026-06-10T19:20:00+02:00"
     model: GPT-5 Codex
@@ -171,3 +302,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Second-pass completeness sweep added the nest hiss defensive sound described for incubating females while leaving the broader call system unsplit.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Third-pass expansion adding 6 call types (lisping tee, tseet call, chip call, soft dee, broken dee, variable see/gargle pre-copulation call) from Smith 1972 monograph and Birds of the World account to reach 12 total call types.

@@ -141,6 +141,33 @@ calls:
   confidence: medium
   references:
   - smith_1979
+- name: courtship murmur
+  alternative_names:
+  - affiliative soft call
+  - allopreening murmur
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - tonal
+  - short
+  - graded
+  acoustic_description: Soft, low-amplitude tonal notes or brief murmured phrases delivered
+    at close range; quieter and less structured than contact calls and lacking the
+    harsh quality of agonistic chatter.
+  semantic_keywords:
+  - courtship
+  - affiliation
+  - mating
+  semantic_description: Produced during intimate pair interactions including allopreening,
+    allofeeding, and pre-copulatory courtship; reinforces pair bond at close quarters.
+  confidence: medium
 - name: flight display call
   alternative_names:
   - flight call
@@ -211,3 +238,8 @@ provenance:
   action: updated
   notes: Worker 12 recall pass added a flight-display call class flagged by species
     recording labels, while keeping signature and developmental categories unchanged.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Recall-expansion pass added courtship murmur call class (soft affiliative
+    vocalizations during allopreening and pair-bonding) to bring total to 8 call types.

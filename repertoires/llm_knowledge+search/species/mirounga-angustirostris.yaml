@@ -86,6 +86,19 @@ calls:
     semantic_description: Produced by pups during acute disturbance, injury risk, or forceful social contact, drawing maternal or nearby adult attention.
     confidence: high
     references: [leboeuf_peterson_1969]
+  - name: juvenile male threat call
+    alternative_names: [subadult male clap, adolescent threat vocalization, pubertal clap threat]
+    scope:
+      life_stages: [juvenile]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, pulsed, repetitive, loud, graded]
+    acoustic_description: Broadband pulsed bursts resembling the adult clap threat but higher-pitched, more variable in rate and syllable structure, and lacking the deep resonance of the fully developed proboscis. Individual syllables are delivered at variable rates and may mix syllable types within a single bout.
+    semantic_keywords: [threat, aggression, display, spacing]
+    semantic_description: Produced by juvenile and subadult males during agonistic encounters, serving a parallel function to the adult clap threat but reflecting incomplete development of the vocal apparatus and dominance status.
+    confidence: medium
+    references: [leboeuf_peterson_1969, casey_et_al_2021]
 references:
   bartholomew_collins_1965:
     citation: "Bartholomew, G.A. and Collias, N.E. 1965. The role of vocalization in the social behavior of the northern elephant seal. Animal Behaviour 13:7-14."
@@ -98,6 +111,9 @@ references:
   southall_2003:
     citation: "Southall, B.L., Southall, J.A., and Babushina, E.S. 2003. Acoustic communication ranges for northern elephant seals. Aquatic Mammals 29:202-213."
     url: https://www.aquaticmammalsjournal.org/wp-content/uploads/2010/10/29-02_Southall.pdf
+  casey_et_al_2021:
+    citation: "Casey, C., Charrier, I., Mathevon, N., and Reichmuth, C. 2021. Rival assessment among northern elephant seals: evidence of associative learning during male-male contests. Aquatic Mammals 47(5):499-514."
+    doi: 10.1578/AM.47.5.2021.499
 provenance:
   - timestamp: "2026-06-10T19:05:00+02:00"
     model: GPT-5 Codex
@@ -107,3 +123,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added the obvious female threat category and tightened the colony social repertoire around the best-established elephant seal call classes.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added juvenile male threat call to reach 7 call types; added casey_et_al_2021 reference for pubertal vocal development.

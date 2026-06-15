@@ -115,6 +115,64 @@ calls:
   semantic_description: Produced when birds are aroused or reacting to disturbance
     near foraging or breeding sites.
   confidence: low
+- name: single-syllable call
+  alternative_names:
+  - single note call
+  - SS call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - short
+  - high_frequency
+  acoustic_description: A single pure-tone note with fundamental frequency between
+    2 and 8 kHz; males typically have one or two types in their repertoire.
+  semantic_keywords:
+  - contact
+  - identity
+  - group_coordination
+  semantic_description: Given by males primarily when conspecifics are nearby; functions
+    overlap with flight whistles but occur more in close-range social contexts.
+  confidence: medium
+  references:
+  - west_etal_1981
+- name: alarm whistle
+  alternative_names:
+  - startled whistle
+  - flush whistle
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - short
+  - abrupt
+  - loud
+  - high_frequency
+  acoustic_description: A shrill tonal whistle, typically brief and abrupt, produced
+    when a bird takes flight upon disturbance; may be followed by short lower-frequency
+    syllables.
+  semantic_keywords:
+  - alarm
+  - predator
+  - group_coordination
+  semantic_description: Emitted when birds are startled and flush, alerting nearby
+    flock members to potential danger.
+  confidence: medium
+references:
+  west_etal_1981:
+    citation: "West MJ, King AP, Eastzer DH (1981) Validating the female bioassay of
+      cowbird song: relating differences in song potency to mating success. Animal Behaviour
+      29:490-501."
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -131,3 +189,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added single-syllable call (male close-range pure-tone call) and alarm whistle
+    (tonal flush call on disturbance) to reach 9 total call types; added west_etal_1981
+    reference for single-syllable call documentation.

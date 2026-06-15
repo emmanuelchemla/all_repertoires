@@ -81,6 +81,86 @@ calls:
     confidence: medium
     references:
       - blumstein_2025
+  - name: pup scream
+    alternative_names:
+      - elongated scream
+      - juvenile distress scream
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - long
+      - frequency_modulated
+    acoustic_description: An elongated, structurally complex scream more than an order of magnitude longer than pup alarm calls; a majority contain at least one type of nonlinearity such as sidebands, biphonation, or subharmonics.
+    semantic_keywords:
+      - distress
+      - caregiving
+      - attention
+    semantic_description: Produced by pups around the time of first emergence from the natal burrow when handled or extremely alarmed; believed to elicit caregiver responses from nearby adults.
+    confidence: high
+    references:
+      - blumstein_etal_2008_pupscreams
+  - name: tooth chatter
+    alternative_names:
+      - teeth chattering
+      - tooth-chattering
+    acoustic_keywords:
+      - short
+      - repetitive
+      - pulsed
+      - low_frequency
+      - abrupt
+    acoustic_description: Rapid percussive clicking produced by snapping the incisors together in quick succession; low-frequency mechanical sound with a staccato rhythmic pattern.
+    semantic_keywords:
+      - threat
+      - aggression
+    semantic_description: Produced as a direct agonistic threat display, typically in close-range encounters between rivals or during territorial defense; one of the three main sounds in the species' repertoire.
+    confidence: high
+    references:
+      - beard_1902_sounds
+      - blumstein_etal_2008_pupscreams
+  - name: growl
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - abrupt
+      - loud
+    acoustic_description: A low-pitched, broadband, harsh vocalization with rough noisy texture; shorter than alarm whistles and distinct from the tonal quality of chirps.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+    semantic_description: Used in dominance encounters, territorial disputes, and close-range agonistic interactions; often accompanies or precedes chase behavior.
+    confidence: medium
+    references:
+      - beard_1902_sounds
+  - name: contact call
+    alternative_names:
+      - low chirp
+      - social chirp
+    acoustic_keywords:
+      - short
+      - tonal
+      - quiet
+      - low_frequency
+    acoustic_description: A quieter, lower-pitched short chirp-like note distinct from the loud alarm whistle; produced at reduced amplitude and in close social contexts rather than broadcast at long range.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Used for close-range communication among colony members, particularly to maintain spatial cohesion and signal presence without triggering full alarm responses.
+    confidence: medium
+    references:
+      - beard_1902_sounds
 references:
   blumstein_2025:
     citation: "Blumstein, D.T. 2025. Nonlinear phenomena in marmot alarm calls: a mechanism that allows alarm signals to arouse and convey fear. Philosophical Transactions of the Royal Society B 380:20240008."
@@ -92,6 +172,12 @@ references:
   marmot_burrow:
     citation: UCLA Marmot Burrow. Yellow-bellied Marmot Alarm Calling Factsheet.
     url: https://www.marmotburrow.ucla.edu/YBAC.html
+  blumstein_etal_2008_pupscreams:
+    citation: "Blumstein, D.T., Barros, F., Turner, A.C., et al. 2008. The structure, meaning and function of yellow-bellied marmot pup screams. Animal Behaviour 76(3):1055-1064."
+    url: https://sites.lifesci.ucla.edu/eeb-rmbl-marmots/wp-content/uploads/sites/190/2020/03/Blumstein_etal_2008_AB_pupscreams.pdf
+    doi: 10.1016/j.anbehav.2008.05.026
+  beard_1902_sounds:
+    citation: "Seton, E.T. / early natural history accounts. Yellow-bellied marmot sounds and tooth chatter observations; see also: Blumstein & Daniel 2004 Animal Behaviour 68(1):141-148 (individual distinctiveness)."
 provenance:
   - timestamp: "2026-06-10T21:30:00+02:00"
     model: GPT-5 Codex
@@ -105,3 +191,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Removed duplicate close-range chatter placeholders and rebuilt the marmot repertoire around the established whistle, chuck, rapid-trill, and distress scream structure.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added 4 new call types (pup scream, tooth chatter, growl, contact call) based on web search and Blumstein et al. 2008 pup scream paper plus broader marmot communication literature. Total calls expanded from 4 to 8.

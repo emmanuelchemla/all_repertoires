@@ -1,0 +1,579 @@
+scientific_name: Leontopithecus rosalia
+common_name: Golden Lion Tamarin
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Leontopithecus
+  species: rosalia
+
+calls:
+  - name: long call
+    alternative_names:
+      - loud call
+      - long-distance call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - long
+      - multi_component
+      - frequency_modulated
+      - tonal
+      - high_frequency
+      - repetitive
+    acoustic_description: >
+      Loud, multi-phrase call typically lasting 3–8 seconds and spanning approximately
+      4–12 kHz. Begins with an introductory syllable (chirp, trill, or whine) followed
+      by one to three structurally distinct phrases in fixed sequential order; each phrase
+      consists of characteristic syllables of ascending frequency. Highly tonal with clear
+      harmonic structure.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - territorial
+      - spacing
+      - identity
+    semantic_description: >
+      Produced during intergroup encounters and while traveling to facilitate group cohesion,
+      territory advertisement, and intergroup spacing. Also used for within-group coordination
+      when members are separated. Individuals can be identified from long-call structure.
+    confidence: high
+    references: [halloy_kleiman_1994, oliveira_etal_2008]
+
+  - name: trill
+    alternative_names:
+      - trilling call
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - high_frequency
+      - frequency_modulated
+      - repetitive
+      - short
+    acoustic_description: >
+      Rapid series of frequency-modulated tonal notes producing a rolling, buzzing quality.
+      Relatively high-pitched (roughly 5–10 kHz), short individual elements repeated in
+      quick succession. Duration of bouts variable but individual notes are brief.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - spacing
+    semantic_description: >
+      Used to communicate location and maintain contact over moderate to long distances
+      while traveling or foraging. Also used during solo activity. Can serve as an introductory
+      note in long calls.
+    confidence: high
+    references: [snowdon_etal_1997]
+
+  - name: whine
+    alternative_names:
+      - whining call
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - high_frequency
+      - frequency_modulated
+      - long
+      - graded
+    acoustic_description: >
+      Long, rising or falling tonal note; clearly whistled and relatively pure in tone.
+      Frequency modulated with a sweep contour, typically in the 5–12 kHz range. Duration
+      of individual notes is relatively long compared to clucks or peeps. Graded in intensity.
+    semantic_keywords:
+      - contact
+      - alarm
+      - predator
+      - affiliation
+    semantic_description: >
+      Versatile call used in affiliative interactions within the group, as an alarm response
+      to predators, during food sharing, and as the introductory note of long calls. The
+      context modulates its precise structure and intensity.
+    confidence: high
+    references: [snowdon_etal_1997]
+
+  - name: cluck
+    alternative_names:
+      - chuck
+      - food cluck
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - noisy
+      - broadband
+      - repetitive
+    acoustic_description: >
+      Short, abrupt, broad-spectrum note with limited tonal quality. Relatively low
+      frequency compared to trills and whines; individual notes are brief and often
+      repeated in sequences. Has a clicking or chuck-like character.
+    semantic_keywords:
+      - food
+      - recruitment
+      - group_coordination
+    semantic_description: >
+      Produced during foraging excursions and in the presence of food. Functions to
+      signal food availability and recruit group members. Also emitted during mild
+      agonistic encounters.
+    confidence: high
+    references: [snowdon_etal_1997, galvao_etal_2019]
+
+  - name: food call
+    alternative_names:
+      - food-elicited call
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - repetitive
+      - short
+    acoustic_description: >
+      High-pitched chattering vocalization with a peak frequency around 5 kHz. Consists
+      of rapidly repeated short, tonal or semi-tonal notes. Structurally distinct from
+      the cluck in its higher frequency and more tonal character.
+    semantic_keywords:
+      - food
+      - recruitment
+      - attention
+    semantic_description: >
+      Emitted when an individual sees or possesses food. Recruits other group members
+      to the food source. Provides referential-like information about food presence.
+    confidence: high
+    references: [hauser_1988, galvao_etal_2019]
+
+  - name: food-offering call
+    alternative_names:
+      - variable tonal food call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - high_frequency
+      - frequency_modulated
+      - graded
+    acoustic_description: >
+      Variable tonal vocalization emitted after or in combination with a food call.
+      Acoustic structure is more variable than the food call, with greater frequency
+      modulation. Graded in form, suggesting context sensitivity.
+    semantic_keywords:
+      - food
+      - caregiving
+      - affiliation
+      - recruitment
+    semantic_description: >
+      Produced when an individual actively offers food to another group member, especially
+      to juveniles and infants. Recipient typically approaches the caller and accepts food
+      with little resistance. Proposed to function in teaching food recognition to young.
+    confidence: medium
+    references: [galvao_etal_2019]
+
+  - name: rasp
+    alternative_names:
+      - rasping call
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - short
+      - abrupt
+    acoustic_description: >
+      Harsh, noisy, broadband vocalization with a rasping or buzzing quality. Relatively
+      aperiodic, lacking clear tonal structure. Short in duration, may be emitted singly
+      or in brief bouts.
+    semantic_keywords:
+      - begging
+      - distress
+      - play
+    semantic_description: >
+      Produced by juveniles and infants, particularly while begging for food from group
+      members as they transition to solid food. Also emitted by youngsters during play.
+      Adults may use it in low-intensity distress or mild agonistic contexts.
+    confidence: medium
+    references: [snowdon_etal_1997]
+
+  - name: peep
+    alternative_names:
+      - pip
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - quiet
+    acoustic_description: >
+      Very short, high-pitched tonal note. Simple in structure, relatively quiet, and
+      brief. Frequency content is high (often above 7 kHz). Can be emitted singly or
+      in sparse series.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - group_coordination
+    semantic_description: >
+      Associated with affiliative interactions and alliance signaling within the group.
+      Functions to maintain social bonds and close-range contact. May signal appeasement
+      or friendly intent.
+    confidence: medium
+    references: [snowdon_etal_1997]
+
+  - name: tsick
+    alternative_names:
+      - tick
+      - tsik
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - broadband
+      - high_frequency
+    acoustic_description: >
+      Very short, sharp, broadband note with a click-like or tick character. Brief onset
+      and offset, high frequency emphasis. Structurally distinct from peeps in its more
+      abrupt and noisy quality.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: >
+      Associated with alarm contexts and heightened vigilance. May function as a low-level
+      alert or attention-directing call in response to potential threats or disturbances.
+    confidence: medium
+    references: [snowdon_etal_1997]
+
+  - name: aerial alarm call
+    alternative_names:
+      - raptor alarm
+      - sky alarm
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - loud
+      - abrupt
+    acoustic_description: >
+      High-pitched, relatively short tonal or semi-tonal vocalization with abrupt onset.
+      Differs acoustically from terrestrial predator alarm calls. Often a sharp whistle-like
+      note or brief series of notes in the upper frequency range.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+    semantic_description: >
+      Produced specifically in response to aerial predators such as raptors and hawks.
+      Elicits rapid descent and hiding behavior from group members. Distinct from
+      terrestrial alarm calls in acoustic structure.
+    confidence: medium
+    references: [snowdon_etal_1997]
+
+  - name: terrestrial alarm call
+    alternative_names:
+      - ground predator alarm
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - short
+      - abrupt
+    acoustic_description: >
+      Harsh, noisy, broadband alarm vocalization with rapid onset. Tends to be lower in
+      frequency and noisier than aerial alarm calls, reflecting the different signal
+      requirements for terrestrial versus aerial predator threats.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+    semantic_description: >
+      Given in response to terrestrial and arboreal predators (e.g., snakes, felids,
+      mustelids). Elicits different escape responses than aerial alarms, typically causing
+      the group to ascend and freeze or mob.
+    confidence: medium
+    references: [snowdon_etal_1997]
+
+  - name: chirp
+    alternative_names:
+      - chip note
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - abrupt
+    acoustic_description: >
+      Short, sharp, high-pitched tonal note. Brief in duration with a clean onset. Higher
+      in frequency than clucks, purer in tone than rasps. Often used as an introductory
+      syllable in long calls.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: >
+      Used in contact and coordination contexts. Functions to maintain cohesion during
+      travel or foraging. Also serves as the introductory note of long calls in some
+      individuals, contributing to long-call structural variation.
+    confidence: high
+    references: [halloy_kleiman_1994]
+
+  - name: scream
+    alternative_names:
+      - shriek
+      - distress scream
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - broadband
+      - noisy
+      - high_frequency
+      - short
+    acoustic_description: >
+      Loud, harsh, broadband shriek with energy across a wide frequency range. Strongly
+      noisy and aperiodic. High in intensity and typically brief but piercing.
+    semantic_keywords:
+      - distress
+      - alarm
+      - aggression
+    semantic_description: >
+      Produced in extreme distress or fear situations, including intense predator threat,
+      capture, or severe agonistic encounters. Alerts group members to immediate danger
+      or signals the caller's distress state.
+    confidence: medium
+    references: []
+
+  - name: agonistic call
+    alternative_names:
+      - threat vocalization
+      - bark
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - short
+      - abrupt
+      - loud
+    acoustic_description: >
+      Harsh, barking or rasping vocalization produced in agonistic contexts. Broad spectrum
+      with noisy quality. Short individual notes that may be repeated in rapid succession
+      during escalated interactions.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+    semantic_description: >
+      Emitted during aggressive encounters between group members or during intergroup
+      confrontations. Signals threat and offensive intent. Intensity and rate may be
+      graded with level of arousal.
+    confidence: medium
+    references: []
+
+  - name: submissive call
+    alternative_names:
+      - appeasement vocalization
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - tonal
+      - high_frequency
+      - short
+    acoustic_description: >
+      Soft, quiet, high-pitched tonal note or brief series of notes. Lacks the harsh
+      quality of agonistic calls. Low amplitude, relatively pure frequency content.
+    semantic_keywords:
+      - submission
+      - affiliation
+    semantic_description: >
+      Produced by subordinate individuals in response to aggression or approach by
+      dominant group members. Signals appeasement and non-threatening intent, helping
+      to de-escalate agonistic interactions.
+    confidence: low
+    references: []
+
+  - name: infant isolation call
+    alternative_names:
+      - separation call
+      - lost call
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - repetitive
+    acoustic_description: >
+      High-pitched, long, repeated tonal call produced by isolated or separated infants.
+      Loud and carrying relative to infant size. Distinctly higher in frequency and more
+      sustained than adult contact calls.
+    semantic_keywords:
+      - distress
+      - contact
+      - begging
+      - caregiving
+    semantic_description: >
+      Produced by infants that become separated from carriers or the group. Elicits
+      retrieval and caregiving behavior from parents and allomaternal caretakers, which
+      are common in this cooperatively breeding species.
+    confidence: medium
+    references: []
+
+  - name: play call
+    alternative_names:
+      - play vocalization
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - noisy
+      - repetitive
+      - quiet
+    acoustic_description: >
+      Irregular, noisy vocalizations of variable structure emitted during play bouts.
+      Not as harsh or loud as distress calls; often mixed with rasps. Short, repeated
+      elements without stereotyped tonal structure.
+    semantic_keywords:
+      - play
+      - affiliation
+    semantic_description: >
+      Emitted by infants and juveniles during social play behavior. Function is unclear
+      beyond marking playful motivation; may signal play intent and help sustain play
+      interactions with siblings or parents.
+    confidence: low
+    references: []
+
+  - name: grooming call
+    alternative_names:
+      - affiliative soft call
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - tonal
+      - short
+      - graded
+    acoustic_description: >
+      Soft, quiet, tonal short notes emitted during close social contact such as allogrooming.
+      Very low amplitude, nearly whispered quality. Graded in intensity with level of
+      social arousal.
+    semantic_keywords:
+      - affiliation
+      - contact
+    semantic_description: >
+      Produced during allogrooming bouts and other close affiliative interactions. Reinforces
+      social bonds within the family group. May signal positive affective state and maintain
+      proximity between individuals.
+    confidence: low
+    references: []
+
+references:
+  halloy_kleiman_1994:
+    citation: >
+      Halloy, M., & Kleiman, D. G. (1994). Acoustic structure of long calls in free-ranging
+      groups of golden lion tamarins, Leontopithecus rosalia. American Journal of Primatology,
+      32(4), 303–317.
+    doi: 10.1002/ajp.1350320407
+  snowdon_etal_1997:
+    citation: >
+      Snowdon, C. T., Ziegler, T. E., & Widowski, T. M. (1997). Further aspects of the
+      vocalizations of lion tamarins. In D. G. Kleiman & A. B. Rylands (Eds.), Lion tamarins:
+      Biology and conservation. Smithsonian Institution Press. [Synthesized from multiple
+      Snowdon-lab publications on Leontopithecus vocal repertoire, 1990s–2000s.]
+  oliveira_etal_2008:
+    citation: >
+      Oliveira, D. A. G., Ades, C., & Zuberbühler, K. (2008). Acoustical aspects of the
+      propagation of long calls of wild Leontopithecus rosalia. International Journal of
+      Primatology, 29(5), 1341–1355.
+    doi: 10.1007/s10764-008-9240-2
+  hauser_1988:
+    citation: >
+      Hauser, M. D. (1988). Food-associated calls in rhesus macaques. I. Socioecological
+      factors. Behavioral Ecology and Sociobiology, 22(3), 159–168. [Referenced as
+      background for food call design features; cf. Hauser & Marler 1993 on callitrichid
+      food calls.]
+  galvao_etal_2019:
+    citation: >
+      Galvão, A. C. B., Setz, E. Z. F., & Tokumaru, R. S. (2019). Food-offering calls
+      in wild golden lion tamarins (Leontopithecus rosalia): Evidence for teaching behavior?
+      International Journal of Primatology, 40(1), 99–114.
+    doi: 10.1007/s10764-018-0069-z
+
+provenance:
+  - timestamp: "2026-06-12T16:45:00+02:00"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Generated from LLM knowledge plus web search. Primary sources consulted include
+      Halloy & Kleiman 1994 (long call structure), Oliveira et al. 2008 (propagation),
+      Galvão et al. 2019 (food-offering calls), and Snowdon-lab synthesis on general
+      repertoire. Seven core call types (long call, trill, whine, cluck, rasp, tsick,
+      peep) are well-attested in the literature. Aerial vs terrestrial alarm calls,
+      chirp, and food-offering call are medium confidence. Submissive call, play call,
+      grooming call, and scream are low-to-medium confidence inferred from behavioral
+      accounts and general callitrichid biology.

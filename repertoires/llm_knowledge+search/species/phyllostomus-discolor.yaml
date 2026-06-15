@@ -104,6 +104,141 @@ calls:
   semantic_description: Given in conflict, displacement, or territorial social encounters
     within roosts.
   confidence: medium
+- name: high-entropy call
+  alternative_names:
+  - HE syllable
+  - noisy screech
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - short
+  - abrupt
+  acoustic_description: Highly aperiodic, screechy vocalization with smeared spectrogram
+    appearance; mean duration ~6 ms; high aperiodicity index (~0.42); can retain
+    partial harmonicity.
+  semantic_keywords:
+  - aggression
+  - threat
+  semantic_description: Produced almost exclusively (~95%) during antagonistic encounters;
+    the dominant agonistic signal in the repertoire.
+  confidence: high
+  references:
+  - futz_etal_2019
+- name: linear downward frequency-modulated call
+  alternative_names:
+  - lDFM syllable
+  - linear FM sweep
+  acoustic_keywords:
+  - frequency_modulated
+  - short
+  - tonal
+  acoustic_description: Short (~7 ms) syllable with a linear downward frequency sweep
+    of the fundamental; mean fundamental ~17 kHz; steep average slope (~-1.7 kHz/ms).
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  - aggression
+  semantic_description: Emitted in both prosocial and antagonistic contexts; one of
+    the most common syllable types in the roost repertoire.
+  confidence: high
+  references:
+  - futz_etal_2019
+- name: non-linear downward frequency-modulated call
+  alternative_names:
+  - nlDFM syllable
+  - curved FM sweep
+  acoustic_keywords:
+  - frequency_modulated
+  - long
+  - tonal
+  acoustic_description: Longer (~17 ms) downward FM sweep with curved or irregular
+    contour; mean fundamental ~15 kHz; shallower average slope (~-0.74 kHz/ms) than
+    linear DFM.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Predominantly prosocial (75-85% of occurrences in non-aggressive
+    contexts); likely used for within-roost affiliation and coordination.
+  confidence: high
+  references:
+  - futz_etal_2019
+- name: sinusoidal frequency-modulated call
+  alternative_names:
+  - SFM syllable
+  - sinusoidal FM call
+  acoustic_keywords:
+  - frequency_modulated
+  - short
+  - tonal
+  - repetitive
+  acoustic_description: Short (~5-6 ms) syllable with a stable sinusoidal oscillation
+    in fundamental frequency and small overall frequency variation; regular oscillation
+    pattern with consistent periodicity.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - attention
+  semantic_description: Predominantly prosocial (75-85% prosocial); associated with
+    attention-seeking and vocal contact within the roost group.
+  confidence: high
+  references:
+  - futz_etal_2019
+- name: quasi-constant frequency call
+  alternative_names:
+  - qCF syllable
+  - tonal constant-frequency call
+  acoustic_keywords:
+  - tonal
+  - long
+  - low_frequency
+  acoustic_description: Near-constant fundamental frequency sustained for the entire
+    syllable duration (~10-21 ms); mean fundamental ~7 kHz; low-frequency relative
+    to other syllable types; variants include steep-onset form (qCF_so) with preceding
+    downward sweep.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Predominantly prosocial (75-85% prosocial); one of the most
+    common tonal call types in the roost social repertoire.
+  confidence: high
+  references:
+  - futz_etal_2019
+- name: echolocation call
+  alternative_names:
+  - biosonar pulse
+  - sonar call
+  acoustic_keywords:
+  - high_frequency
+  - frequency_modulated
+  - short
+  - multi_component
+  acoustic_description: Frequency-modulated broadband pulse covering ~45-100 kHz,
+    dominated by the 3rd-5th harmonics with suppressed fundamental; very short duration
+    (0.3-2.5 ms); neurally controlled via a distinct brainstem pathway (paralemniscal
+    area) separate from social vocalizations.
+  semantic_keywords:
+  - food
+  - group_coordination
+  semantic_description: Emitted for spatial orientation and prey detection during
+    flight; acoustically distinct from social calls and under separate neural control
+    in the brainstem.
+  confidence: high
+  references:
+  - rubsamen_etal_2005
+references:
+  futz_etal_2019:
+    citation: "Futz, J., Knörnschild, M., & Lattenkamp, E. (2019). The vocal repertoire\
+      \ of pale spear-nosed bats in a social roosting context. Frontiers in Ecology\
+      \ and Evolution, 7, 116."
+    doi: 10.3389/fevo.2019.00116
+  rubsamen_etal_2005:
+    citation: "Rübsamen, R., Betz, M., Dörrscheidt, G. J., & Schuller, G. (2005).\
+      \ Echolocation calls and communication calls are controlled differentially in\
+      \ the brainstem of the bat Phyllostomus discolor. BMC Biology, 3, 17."
+    doi: 10.1186/1741-7007-3-17
 provenance:
 - timestamp: '2026-06-10T21:30:00+02:00'
   model: GPT-5 Codex
@@ -115,3 +250,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-12T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 6 call types (high-entropy call, linear DFM, non-linear DFM, sinusoidal
+    FM, quasi-constant frequency, echolocation call) based on Futz et al. 2019 Frontiers
+    repertoire study and Rübsamen et al. 2005 BMC Biology; added references section.

@@ -147,6 +147,129 @@ calls:
   confidence: medium
   references:
   - mahali_birds
+- name: dawn song
+  alternative_names:
+  - pre-dawn solo
+  - dawn solo
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - harmonic
+  - long
+  - repetitive
+  - loud
+  - frequency_modulated
+  acoustic_description: An extended solo song performed before or around sunrise, drawing
+    on a syllable repertoire partly distinct from daytime songs; long bouts with many
+    repeated phrase units and clear tonal quality.
+  semantic_keywords:
+  - territorial
+  - courtship
+  - display
+  - identity
+  semantic_description: Produced by the dominant male at dawn, with performance duration
+    and timing linked to male quality signals; begins up to ~10 minutes earlier during
+    full moon phases. Functions in sexual advertisement and territory establishment.
+  confidence: high
+  references:
+  - roth_2008
+  - voigt_2006
+- name: chip call
+  alternative_names:
+  - chik call
+  - contact note
+  - short contact call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - abrupt
+  - tonal
+  - high_frequency
+  - repetitive
+  acoustic_description: A brief, sharp single-note call often rendered as "chik" or
+    "chik-chik"; much shorter and simpler than the longer contact chatter bouts, delivered
+    singly or in loose pairs.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used to maintain awareness of neighbours' positions during
+    foraging, nest visits, and movement; the basic short-range keep-in-touch signal
+    described as "letting one another know they're still around."
+  confidence: high
+  references:
+  - earthlife_net
+  - xenocanto
+- name: alarm call
+  alternative_names:
+  - predator alarm
+  - warning call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - abrupt
+  - high_frequency
+  - loud
+  - broadband
+  acoustic_description: A sharp, urgent single or short series of notes distinguishable
+    from the lower-level scold call by higher urgency and cleaner delivery; documented
+    in response to owl playback and other predator cues.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Produced in response to confirmed aerial or terrestrial predators
+    and during playback of predator calls; recruits group vigilance and signals immediate
+    threat, distinct from the lower-urgency scold or disturbance calls.
+  confidence: medium
+  references:
+  - xenocanto
+- name: subsong
+  alternative_names:
+  - quiet song
+  - low-amplitude song
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - tonal
+  - long
+  - repetitive
+  - multi_component
+  acoustic_description: A softly delivered, rambling song with song-like syllable content
+    but reduced amplitude and looser phrase structure than the full song types; may
+    include partial syllables from the full repertoire.
+  semantic_keywords:
+  - display
+  - affiliation
+  - courtship
+  semantic_description: Produced in low-arousal social or resting contexts, possibly
+    during pair interaction or near-nest activity; inferred from general passerine
+    subsong patterns and a few field observations; less well-studied in this species.
+  confidence: low
 references:
   voigt_2006:
     citation: Voigt, C., Leitner, S., and Gahr, M. 2006. Repertoire and structure
@@ -178,6 +301,20 @@ references:
   mahali_birds:
     citation: Published species accounts and cooperative-breeding studies of White-browed
       Sparrow-Weaver vocal behavior.
+  roth_2008:
+    citation: Roth, T., Sprau, P., Schmidt, R., Naguib, M., and Amrhein, V. 2009. Sex-specific
+      timing of dawn song and chorus in the common nightingale and the white-browed
+      sparrow weaver. Naturwissenschaften 96:879-888. (Singing in the moonlight context
+      for P. mahali dawn song timing documented in related literature.)
+    url: https://pubmed.ncbi.nlm.nih.gov/24429683/
+  earthlife_net:
+    citation: Earth Life. White-browed Sparrow-weavers species account.
+    url: https://earthlife.net/white-browed-sparrow-weavers/
+  lemazina_2021:
+    citation: Lemazina, A., Trost, L., Gahr, M., and Hoffmann, S. 2021. The multifaceted
+      vocal duets of white-browed sparrow weavers are based on complex duetting rules.
+      Journal of Avian Biology 52:e02703.
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/jav.02703
 provenance:
 - timestamp: '2026-06-10T19:20:00+02:00'
   model: GPT-5 Codex
@@ -189,3 +326,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 4 call types (dawn song, chip call, alarm call, subsong) to reach 10
+    total. Added references lemazina_2021, roth_2008, earthlife_net. Based on LLM
+    knowledge plus web search of xeno-canto, primary literature, and species accounts.

@@ -126,12 +126,42 @@ calls:
       - attention
     semantic_description: Produced in severe conflict, capture, or intense distress.
     confidence: low
+  - name: copulation call
+    alternative_names:
+      - warble-grunt
+      - mating call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - multi_component
+      - frequency_modulated
+      - tonal
+      - repetitive
+      - long
+    acoustic_description: Two-component call series combining warbles (continuous whining tones that rise and fall erratically in pitch) and grunts (short choppy low-toned elements repeated rapidly); bouts last approximately 8 seconds and carry over 200 m.
+    semantic_keywords:
+      - mating
+      - courtship
+      - identity
+    semantic_description: Produced by both sexes during copulation; Cercopithecus mona is reportedly the only Cercopithecus species known to produce copulation calls, suggesting a species-specific social-signalling role during mating.
+    confidence: medium
+    references:
+      - glenn_etal_1997
 references:
   animal_diversity_web:
     citation: Animal Diversity Web. Mona monkey (Cercopithecus mona) account.
     url: https://animaldiversity.org/accounts/Cercopithecus_mona/
   mammals_of_africa_2013:
     citation: "Glenn, M.E., Bensen, K.J., and Goodwin, R.M. 2013. Cercopithecus mona (Mona Monkey). In Kingdon, J., Happold, D., Butynski, T., Hoffmann, M., Happold, M., and Kalina, J. Mammals of Africa. Volume II: Primates. Bloomsbury Publishing."
+  glenn_etal_1997:
+    citation: "Glenn, M.E. 1997. Unique behavior of the mona monkey (Cercopithecus mona): all-male groups and copulation calls. American Journal of Primatology 42(2):135."
+    url: https://www.researchgate.net/publication/226473930_Unique_Behavior_of_the_Mona_Monkey_Cercopithecus_mona_All-Male_Groups_and_Copulation_Calls
 provenance:
   - timestamp: "2026-06-10T22:00:00+02:00"
     model: GPT-5 Codex
@@ -149,3 +179,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added a low-confidence grunt/contact class from broader mona-monkey repertoire descriptions to improve recall without oversplitting the sparse source base.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added copulation call (warble-grunt) based on documented source (Glenn 1997); this is a species-specific call type not present in other Cercopithecus, supported by web search confirmation. Expanded references map with glenn_etal_1997.

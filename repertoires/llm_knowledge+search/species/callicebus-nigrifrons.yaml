@@ -1,0 +1,307 @@
+scientific_name: Callicebus nigrifrons
+common_name: Black-fronted titi monkey
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Pitheciidae
+  genus: Callicebus
+  species: nigrifrons
+
+calls:
+  - name: alarm call A
+    alternative_names:
+      - A-call
+      - aerial alarm
+      - canopy alarm
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - frequency_modulated
+      - abrupt
+    acoustic_description: >
+      Brief, high-pitched call with a distinct upward or complex frequency contour.
+      Short duration (well under one second), tonal to slightly noisy, produced
+      at the start of predator-response sequences.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Primarily given in response to aerial predators (raptors) and to threats
+      detected within the canopy, including predatory capuchin monkeys. Initiates
+      alarm call sequences and encodes information about predator location (canopy/aerial).
+    confidence: high
+    references: [cesar_etal_2012, cesar_etal_2013]
+
+  - name: alarm call B
+    alternative_names:
+      - B-call
+      - terrestrial alarm
+      - ground alarm
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - frequency_modulated
+      - abrupt
+    acoustic_description: >
+      Brief, high-pitched call with a distinct frequency contour differing from
+      call A (typically a downsweep or flat contour). Similar duration to call A
+      but acoustically discriminable by frequency trajectory.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Given primarily in response to disturbances on the ground, including both
+      predatory and non-predatory terrestrial threats. Used in later parts of
+      alarm sequences as well. Encodes predator-location information (ground).
+    confidence: high
+    references: [cesar_etal_2012, cesar_etal_2013]
+
+  - name: alarm call C
+    alternative_names:
+      - C-call
+      - high unmodulated alarm
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+    acoustic_description: >
+      High-pitched, largely unmodulated (flat frequency contour) brief call.
+      Acoustically distinct from calls A and B by its lack of strong frequency
+      modulation.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Recorded in later parts of alarm call sequences in response to predatory
+      threats. Exact referential content less well characterized than calls A and
+      B; may serve as a generalized elevated-arousal alarm signal late in a
+      response bout.
+    confidence: medium
+    references: [cesar_etal_2012]
+
+  - name: loud call / duet
+    alternative_names:
+      - morning loud call
+      - territorial duet
+      - pair duet
+      - gobble
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - long
+      - repetitive
+      - multi_component
+      - harmonic
+      - frequency_modulated
+    acoustic_description: >
+      Extended, high-amplitude, low-frequency sequences built from a finite set
+      of syllable types (including pump-like and moan-like elements) combined
+      into phrases and then into long call bouts that can last up to two hours.
+      Carries over long distances due to low fundamental frequency and high
+      amplitude. Mated pairs coordinate acoustically to produce interleaved
+      or overlapping sequences.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - identity
+      - group_coordination
+      - display
+    semantic_description: >
+      Produced primarily in the morning by mated pairs in coordinated duets.
+      Emitted spontaneously and in response to calls from neighboring pairs;
+      functions in territorial defense, pair-bond maintenance, and advertisement
+      of group identity and location. Context includes within-group and
+      between-group communication.
+    confidence: high
+    references: [cesar_etal_2014, vieira_etal_2018]
+
+  - name: pump
+    alternative_names:
+      - pump syllable
+      - gobble syllable
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - loud
+      - repetitive
+      - harmonic
+      - frequency_modulated
+    acoustic_description: >
+      Low-pitched, rhythmically repeated syllable type that forms a major
+      component of loud call sequences. Tonal to harmonic, with amplitude
+      modulation giving a pumping or gobbling quality.
+    semantic_keywords:
+      - territorial
+      - display
+      - group_coordination
+    semantic_description: >
+      A constituent syllable of the loud call / duet repertoire. Used in
+      territorial advertisement and group coordination contexts as part of
+      complex multi-syllable phrases.
+    confidence: medium
+    references: [cesar_etal_2014]
+
+  - name: trill
+    alternative_names:
+      - chirp trill
+      - contact trill
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - tonal
+      - frequency_modulated
+      - quiet
+    acoustic_description: >
+      Rapidly repeated, high-pitched tonal units forming a trilled sequence.
+      Short individual elements strung together at high repetition rate; moderate
+      frequency modulation within each element.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - distress
+      - begging
+    semantic_description: >
+      Used as a generalized proximity-seeking and contact call. In infants,
+      trills are elicited by separation from parents and function to solicit
+      caregiving. Adults also use trills in contact and affiliation contexts.
+    confidence: medium
+    references: [robinson_1979]
+
+  - name: chuck
+    alternative_names:
+      - chirrup
+      - chirrup-chuck
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - abrupt
+      - harmonic
+      - graded
+    acoustic_description: >
+      Low-pitched, brief, somewhat abrupt harmonic unit. Amplitude and spectral
+      appearance are variable (graded), giving either a chirrup-like or chuck-like
+      percept depending on intensity and context.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: >
+      Produced in within-group contexts as a short-range contact and attention
+      signal. Also appears as an element within longer call sequences. Historically
+      described as "chirrup" (Moynihan 1966, Robinson 1979) and "chuck" for the
+      louder variant.
+    confidence: medium
+    references: [robinson_1979]
+
+  - name: distress scream
+    alternative_names:
+      - scream
+      - distress call
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - loud
+      - abrupt
+    acoustic_description: >
+      Loud, broadband, noisy, often harsh vocalization of high frequency. Short
+      to moderate duration, may be repeated rapidly. Lacks the tonality of alarm
+      calls A–C.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+    semantic_description: >
+      Given in extreme distress situations, including capture, physical threat,
+      or intense predator confrontation. Infants produce distress-like buzzes and
+      screams when rejected for carrying or separated from the group.
+    confidence: medium
+    references: [robinson_1979]
+
+references:
+  cesar_etal_2012:
+    citation: >
+      Cäsar, C., Zuberbühler, K., Young, R. J., & Byrne, R. W. (2013).
+      The alarm call system of wild black-fronted titi monkeys, Callicebus nigrifrons.
+      Behavioral Ecology and Sociobiology, 67(2), 197–210.
+    doi: 10.1007/s00265-011-1313-0
+  cesar_etal_2013:
+    citation: >
+      Cäsar, C., Byrne, R. W., Young, R. J., & Zuberbühler, K. (2012).
+      Evidence for semantic communication in titi monkey alarm calls.
+      Animal Behaviour, 84(2), 405–411.
+    doi: 10.1016/j.anbehav.2012.05.010
+  cesar_etal_2014:
+    citation: >
+      Cäsar, C., Byrne, R. W., Hoppitt, W., Young, R. J., & Zuberbühler, K. (2014).
+      Vocal behavior of black-fronted titi monkeys (Callicebus nigrifrons): Acoustic
+      properties and behavioral contexts of loud calls.
+      American Journal of Primatology, 76(8), 788–800.
+    doi: 10.1002/ajp.22270
+  vieira_etal_2018:
+    citation: >
+      Vieira, M. F., et al. (2018). Mining noise affects loud call structures and
+      emission patterns of wild black-fronted titi monkeys.
+      Primates, 59(1), 89–99.
+    doi: 10.1007/s10329-017-0629-4
+  robinson_1979:
+    citation: >
+      Robinson, J. G. (1979). An analysis of the organization of vocal communication
+      in the titi monkey Callicebus moloch.
+      Zeitschrift für Tierpsychologie, 49(4), 381–405.
+    doi: 10.1111/j.1439-0310.1979.tb00300.x
+
+provenance:
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Created from LLM knowledge plus web search. Primary sources include Cäsar et al.
+      2013 (alarm call system), Cäsar et al. 2014 (loud calls), and Robinson 1979
+      (Callicebus moloch comparative baseline for softer call types). Call types A, B,
+      and the loud call/duet have high confidence from species-specific literature;
+      call C, pump, trill, chuck, and distress scream have medium confidence based on
+      published descriptions and comparative genus knowledge.

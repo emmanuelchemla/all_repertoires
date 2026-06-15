@@ -91,6 +91,35 @@ calls:
       - predator
     semantic_description: Produced during capture or acute danger.
     confidence: medium
+  - name: pup isolation call
+    alternative_names:
+      - neonatal call
+      - separation call
+      - infant contact call
+    scope:
+      life_stages:
+        - infant
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - repetitive
+      - quiet
+    acoustic_description: High-pitched, relatively tonal short calls produced in bouts; reported variants include discomfort, separation, and food-solicitation calls differing in rate and amplitude but sharing a high-frequency tonal quality.
+    semantic_keywords:
+      - contact
+      - begging
+      - distress
+      - caregiving
+    semantic_description: Produced by pups and juveniles in the burrow and near its entrance to maintain proximity with the mother, solicit nursing, or signal discomfort; begins within the first days of life and continues through early development.
+    confidence: medium
+    references:
+      - owings_virginia_1978
 references:
   kirk_2019:
     citation: Kirk, D.A. 2019. Sound communication in the California ground squirrel. Master's thesis, California State University, Fullerton.
@@ -116,3 +145,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Reworked the repertoire around the expert-expected whistle, chat, and chatter alarm system and added a conservative agonistic grunt category.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added pup isolation call (neonatal/infant vocalizations) based on web search confirming documented discomfort, separation, and food-solicitation calls in juveniles.

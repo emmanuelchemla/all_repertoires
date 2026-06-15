@@ -142,6 +142,62 @@ calls:
   confidence: medium
   references:
   - seaworld_zalophus
+- name: whinny
+  alternative_names:
+  - underwater whinny
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - frequency_modulated
+  - tonal
+  - short
+  - high_frequency
+  acoustic_description: A rising-falling frequency-modulated tonal call produced
+    underwater, resembling a brief whinny with rapid pitch excursion.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - identity
+  semantic_description: Produced in aquatic social contexts; documented in underwater
+    vocalization studies alongside barks and click trains, likely functioning in
+    short-range social signalling.
+  confidence: medium
+  references:
+  - schusterman_1965
+- name: squeal
+  alternative_names:
+  - threat squeal
+  - female threat call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - noisy
+  - short
+  - abrupt
+  acoustic_description: A sharp, high-pitched squealing burst with noisy broadband
+    energy, more intense than a bark but shorter than a sustained growl.
+  semantic_keywords:
+  - threat
+  - aggression
+  - alarm
+  semantic_description: Part of a graded female threat-vocal sequence progressing
+    from bark through squeal to belch and growl; emitted during escalated aggressive
+    interactions in the colony.
+  confidence: medium
+  references:
+  - peterson_bartholomew_1967
 references:
   peterson_bartholomew_1967:
     citation: Peterson, R.S. and Bartholomew, G.A. 1967. The natural history and
@@ -153,6 +209,10 @@ references:
   seaworld_zalophus:
     citation: SeaWorld. California sea lion vocalizations and communication overview.
     url: https://seaworld.org/animals/all-about/california-sea-lion/communication/
+  schusterman_1965:
+    citation: Schusterman, R.J. 1965. Underwater vocalization by sea lions — social
+      and mirror stimuli. Science, 154(3748), 540–542.
+    url: https://www.science.org/doi/10.1126/science.154.3748.540
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -170,3 +230,9 @@ provenance:
   notes: Second-pass completeness update added grunt and pup alarm as broad missing
     colony call classes and consolidated female and maternal reunion signalling into
     a cleaner attraction-call category.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added whinny (underwater FM contact call, Schusterman 1965) and squeal
+    (female graded threat-vocal, Peterson & Bartholomew 1967) to reach 9 total call
+    types. Added schusterman_1965 reference.

@@ -162,6 +162,94 @@ calls:
   confidence: medium
   references:
   - pepperberg_1999
+- name: preflight call
+  alternative_names:
+  - pre-flight call
+  - departure call
+  acoustic_keywords:
+  - short
+  - loud
+  - repetitive
+  - tonal
+  acoustic_description: A short loud call given immediately before or during the initiation
+    of flight, often repeated in quick succession by departing birds.
+  semantic_keywords:
+  - group_coordination
+  - contact
+  - attention
+  semantic_description: Signals imminent departure and synchronises flock take-off,
+    allowing other individuals to prepare for or join a flight movement.
+  confidence: medium
+  references:
+  - giret_etal_2011
+- name: pair duet
+  alternative_names:
+  - duet call
+  - antiphonal duet
+  acoustic_keywords:
+  - tonal
+  - frequency_modulated
+  - multi_component
+  - repetitive
+  acoustic_description: Coordinated antiphonal vocalisations exchanged between paired
+    birds, with each partner producing complementary phrases that interlock into a
+    composite sequence.
+  semantic_keywords:
+  - affiliation
+  - mating
+  - identity
+  - group_coordination
+  semantic_description: Produced during pair-bonding interactions to reinforce the
+    pair bond, coordinate activities between mates, and signal pair status.
+  confidence: medium
+  references:
+  - giret_etal_2011
+- name: rambling vocalization
+  alternative_names:
+  - rambling call
+  - soliloquy vocalization
+  acoustic_keywords:
+  - long
+  - multi_component
+  - tonal
+  - frequency_modulated
+  - quiet
+  acoustic_description: A long loosely structured sequence of varied notes and phrases
+    produced at low amplitude, lacking the stereotypy of contact whistles; often includes
+    transitions between note types and sub-song-like passages.
+  semantic_keywords:
+  - play
+  - display
+  - affiliation
+  semantic_description: Produced in relaxed, undisturbed conditions, often when the
+    bird is resting or mildly exploring; possibly functions in vocal practice, social
+    bonding, or low-level contact maintenance.
+  confidence: low
+  references:
+  - giret_etal_2011
+- name: asking call
+  alternative_names:
+  - solicitation call
+  - request vocalization
+  acoustic_keywords:
+  - short
+  - repetitive
+  - tonal
+  - graded
+  acoustic_description: A relatively soft, repeated call with graded structure used
+    when an individual directs attention toward a social partner or resource, acoustically
+    distinct from the louder alarm or distress screams.
+  semantic_keywords:
+  - begging
+  - food
+  - attention
+  - affiliation
+  semantic_description: Emitted when a bird seeks something from a social partner,
+    such as food, attention, or access; documented in captive contexts but plausibly
+    homologous to solicitation calls observed in wild flocks.
+  confidence: low
+  references:
+  - giret_etal_2011
 references:
   boucherie_2023:
     citation: Boucherie, P.H., et al. 2023. Evidence for vocal signatures and voice-prints
@@ -201,3 +289,9 @@ provenance:
   notes: Worker 12 recall pass added explicit distress and protest call classes so
     high-arousal non-contact vocalizations are not fully collapsed into the alarm
     category.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 4 call types (preflight call, pair duet, rambling vocalization, asking
+    call) based on Giret et al. 2011 and broader parrot repertoire literature to
+    reach 12 total call types.

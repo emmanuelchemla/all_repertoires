@@ -77,6 +77,19 @@ calls:
     semantic_description: Used in conspicuous disturbance, mobbing, or high-arousal alerting situations.
     confidence: low
     references: [cleveland_snowdon_1982, primate_vocalizations_archive]
+  - name: mobbing call
+    alternative_names: [predator mobbing vocalization]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [repetitive, abrupt, broadband, loud, short]
+    acoustic_description: A harsh repetitive call produced in rapid bouts during active mobbing of a predator; acoustically distinct from single alarm notes in its sustained repetitive patterning and heightened intensity.
+    semantic_keywords: [alarm, predator, aggression, group_coordination]
+    semantic_description: Produced when tamarins actively approach and harass a potential predator; recruits group members to participate in joint mobbing and may suppress predator attack.
+    confidence: medium
+    references: [campbell_snowdon_2007]
 references:
   cleveland_snowdon_1982:
     citation: "Cleveland, J. and Snowdon, C.T. 1982. The Complex Vocal Repertoire of the Adult Cotton-top Tamarin (Saguinus oedipus oedipus). Zeitschrift fur Tierpsychologie 58:231-270."
@@ -102,6 +115,9 @@ references:
   primate_vocalizations_archive:
     citation: "Primate Info Net. Primate vocalizations archive listing for Saguinus oedipus examples including bark bout and mobbing calls."
     url: https://primate.wisc.edu/primate-info-net/av-resources/primate-vocalizations/
+  campbell_snowdon_2007:
+    citation: "Campbell, M.W. and Snowdon, C.T. 2007. Vocal Response of Captive-reared Saguinus oedipus During Mobbing. International Journal of Primatology 28:257-270."
+    url: https://www.emory.edu/LIVING_LINKS/publications/articles/Campbell_Snowdon_2007.pdf
 provenance:
   - timestamp: "2026-06-10T20:30:00+02:00"
     model: GPT-5 Codex
@@ -115,3 +131,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: High-recall external-source pass added plausible missing cotton-top tamarin classes, especially combinatorial and food-associated signals, while leaving uncertain short-range call boundaries at low confidence.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added mobbing call as 10th call type based on Campbell & Snowdon 2007; added campbell_snowdon_2007 reference.

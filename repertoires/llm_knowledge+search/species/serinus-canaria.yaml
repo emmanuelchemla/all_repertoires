@@ -146,6 +146,69 @@ calls:
   confidence: medium
   references:
   - voigt_2007
+- name: subsong
+  alternative_names:
+  - plastic song
+  - juvenile song
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - frequency_modulated
+  - long
+  - multi_component
+  - graded
+  acoustic_description: Soft, poorly structured, variable vocalization with loosely
+    organised syllables and frequent hesitations; louder and more stereotyped plastic-song
+    phase follows before crystallisation into adult song.
+  semantic_keywords:
+  - display
+  semantic_description: Produced by juvenile males during sensorimotor vocal learning;
+    represents practice vocalisation prior to crystallisation of adult song.
+  confidence: high
+  references:
+  - brainard_doupe_2002
+- name: aggressive call
+  alternative_names:
+  - threat call
+  - territorial call
+  acoustic_keywords:
+  - short
+  - abrupt
+  - broadband
+  - loud
+  acoustic_description: Short, harsh or raspy notes that are acoustically distinct
+    from the tonal contact twitter; more broadband and abrupt in structure.
+  semantic_keywords:
+  - aggression
+  - threat
+  - territorial
+  semantic_description: Given during close-range aggressive encounters such as competition
+    for perch sites, food resources, or territory boundaries; overlapping song by
+    a rival male can also function as an aggressive signal.
+  confidence: low
+  references:
+  - biorxiv_singing_2025
+- name: distress call
+  acoustic_keywords:
+  - loud
+  - high_frequency
+  - repetitive
+  - abrupt
+  acoustic_description: Loud, urgent, high-pitched notes repeated at rapid rate;
+    distinct from the quieter routine contact twitter.
+  semantic_keywords:
+  - distress
+  - alarm
+  - attention
+  semantic_description: Produced when a bird is handled, restrained, or under acute
+    stress; may alert conspecifics to immediate danger or physical distress.
+  confidence: low
 references:
   birdfinding_canary:
     citation: Birdfinding.info. Atlantic Canary voice summary with linked field recordings.
@@ -172,6 +235,15 @@ references:
     citation: Xeno-canto. Atlantic Canary (Serinus canaria) recordings, including
       song, call, flight call, and alarm-labelled cuts.
     url: https://xeno-canto.org/species/Serinus-canaria
+  biorxiv_singing_2025:
+    citation: "Canaries differentially modulate solo and overlapping singing during\
+      \ the transition to the breeding season. bioRxiv 2025.01.09.632199."
+    url: https://www.biorxiv.org/content/10.1101/2025.01.09.632199
+  brainard_doupe_2002:
+    citation: Brainard, M.S. and Doupe, A.J. 2002. What songbirds teach us about
+      learning. Nature 417:351-358.
+    url: https://pubmed.ncbi.nlm.nih.gov/12015616/
+    doi: 10.1038/417351a
   voigt_2007:
     citation: Voigt, C. and Leitner, S. 2007. Ontogeny and social modulation of canary
       vocal behavior.
@@ -190,3 +262,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Second-pass completeness sweep added a broad low-confidence alarm-call class supported by field-recording archives while avoiding finer unsupported splits.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added subsong/plastic song (juvenile learning vocalization, high confidence), aggressive/threat call (low confidence, supported by overlapping-song literature), and distress call (low confidence, broadly documented in canary literature) to reach 9 total call types.

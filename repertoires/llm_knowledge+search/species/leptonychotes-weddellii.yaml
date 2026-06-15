@@ -72,6 +72,427 @@ calls:
     semantic_description: Used in local underwater social communication.
     confidence: medium
     references: [mirceta_2004]
+
+  - name: low frequency roar
+    alternative_names: [LR, low roar]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, broadband, long, loud]
+    acoustic_description: A broad-bandwidth low-frequency roaring sound, the lowest in pitch of the three roar variants, with rough noisy character and sustained duration.
+    semantic_keywords: [display, territorial, identity]
+    semantic_description: Male underwater territorial display during breeding season; part of the three-tier roar series used for agonistic advertisement.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: middle frequency roar
+    alternative_names: [MR, mid roar]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [noisy, broadband, long, loud, frequency_modulated]
+    acoustic_description: A broad-bandwidth roaring sound in the mid-frequency range, intermediate between the low and high roar types in spectral placement.
+    semantic_keywords: [display, territorial, identity]
+    semantic_description: Male underwater territorial display during breeding season, functionally similar to the other roar types.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: high frequency roar
+    alternative_names: [HR, high roar]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, noisy, broadband, long, loud]
+    acoustic_description: A broad-bandwidth roaring sound concentrated in a higher frequency range than the low and middle roars; still noisy in character with sustained duration.
+    semantic_keywords: [display, territorial, identity]
+    semantic_description: Male underwater territorial display, forming part of the three-tier roar series described by Thomas & Kuechle 1982.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: trill with constant-frequency start
+    alternative_names: [CT, constant-frequency trill]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, harmonic, long, frequency_modulated, multi_component]
+    acoustic_description: A narrow-bandwidth trill preceded by a constant-frequency introductory segment; the constant-frequency start distinguishes it from plain trills which begin immediately with frequency modulation.
+    semantic_keywords: [display, territorial, identity]
+    semantic_description: Underwater display signal; a recognised variant of the trill class in the Thomas & Kuechle taxonomy.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: whistle descending
+    alternative_names: [WD, descending whistle]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, short, frequency_modulated, high_frequency]
+    acoustic_description: A brief sinusoidal whistle with a clearly descending frequency contour, lasting less than 2 seconds; cleaner and more tonal than roars.
+    semantic_keywords: [contact, identity, display]
+    semantic_description: Underwater social communication signal; used in close-range and mid-range interaction.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: whistle ascending
+    alternative_names: [WA, ascending whistle]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, short, frequency_modulated, high_frequency]
+    acoustic_description: A brief sinusoidal whistle with a clearly ascending frequency contour; mirror image in direction to the descending whistle type.
+    semantic_keywords: [contact, identity, attention]
+    semantic_description: Underwater social communication signal; both sexes produce ascending whistles, though males have larger repertoires.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: whistle ascending grunt
+    alternative_names: [WAG, ascending whistle-grunt]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [multi_component, tonal, pulsed, frequency_modulated, repetitive]
+    acoustic_description: A compound two-element call consisting of a brief ascending whistle followed immediately by a guttural glug or grunt; the two elements alternate in a regular pattern and the coupling is tight enough to be treated as a single call type.
+    semantic_keywords: [display, identity, attention]
+    semantic_description: Underwater display signal; the combined structure may encode additional information compared with the constituent elements alone.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: mew
+    alternative_names: [M, mew call]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, long, multi_component]
+    acoustic_description: A two-phase call with an abrupt sharp frequency descent at the start followed by a long constant-frequency tonal ending; the transition from steep sweep to stable tone distinguishes it from the chug (which has a brief rather than long constant-frequency ending).
+    semantic_keywords: [contact, attention, identity]
+    semantic_description: Used in underwater social communication; named for its resemblance to a cat's mew when played back at reduced speed.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: guttural glug
+    alternative_names: [G, grunt-glug, glug]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, noisy, abrupt, pulsed]
+    acoustic_description: A brief descending-frequency call lower in pitch than the chug, with a guttural quality; very short duration and a sharp descending contour with irregular noisy structure.
+    semantic_keywords: [contact, attention, aggression]
+    semantic_description: Used in underwater close-range signalling; also appears as the terminal element of the whistle-ascending-grunt compound call.
+    confidence: high
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: tone
+    alternative_names: [O, constant-frequency tone]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, long, harmonic]
+    acoustic_description: A sustained, predominantly constant-frequency sinusoidal call with minimal frequency modulation; the simplest tonal call type in the repertoire, often narrow in bandwidth.
+    semantic_keywords: [display, territorial, identity]
+    semantic_description: Underwater display signal; functions as a simple tonal advertisement or spacing signal.
+    confidence: medium
+    references: [thomas_kuechle_1982]
+
+  - name: buzz
+    alternative_names: [low-frequency buzz, LFB]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, pulsed, short, broadband]
+    acoustic_description: A short harsh low-frequency call with rapid amplitude modulation giving a buzzing quality; broader bandwidth than trills and with little tonal purity.
+    semantic_keywords: [display, aggression, attention]
+    semantic_description: Produced underwater in agonistic and display contexts; documented in multiple Weddell seal acoustic studies.
+    confidence: medium
+    references: [opzeeland_2021]
+
+  - name: jaw clap
+    alternative_names: [jaw snap, click]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [abrupt, broadband, short, loud]
+    acoustic_description: A brief impulsive broadband transient produced by rapid closure of the jaws; not a true laryngeal vocalization but a mechanically produced acoustic signal, creating a sharp click-like percussive sound.
+    semantic_keywords: [threat, aggression, territorial]
+    semantic_description: Produced in close-range agonistic encounters, typically by males defending underwater territories; classified as an accessory sound rather than a vocalization sensu stricto in some taxonomies.
+    confidence: medium
+    references: [thomas_kuechle_1982, terhune_2006]
+
+  - name: ultrasonic chirp
+    alternative_names: [ultrasonic C, high-frequency chirp]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, short, frequency_modulated, tonal]
+    acoustic_description: A brief frequency-modulated chirp with center frequency at or above 20 kHz; descending chirps have been documented with onset frequencies reaching ~50 kHz, placing the entire element in the ultrasonic range.
+    semantic_keywords: [display, identity]
+    semantic_description: Produced underwater in recurrent stereotyped call-type patterns; behavioral function unknown but hypothesized to relate to short-range communication or echolocation.
+    confidence: medium
+    references: [opzeeland_2021]
+
+  - name: ultrasonic whistle
+    alternative_names: [ultrasonic W, high-frequency whistle]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, long, frequency_modulated]
+    acoustic_description: A whistle-like tonal element with fundamental frequency at or above 20 kHz; one whistle element has been recorded reaching 44.2 kHz. Harmonic overtones can extend above 200 kHz.
+    semantic_keywords: [display, identity]
+    semantic_description: Produced in recurrent stereotyped patterns; function not yet established, but may serve short-range signalling functions inaudible to most predators.
+    confidence: medium
+    references: [opzeeland_2021]
+
+  - name: ultrasonic trill
+    alternative_names: [ultrasonic T, high-frequency trill]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, frequency_modulated, tonal, long]
+    acoustic_description: A frequency-modulated trill with fundamental frequency exceeding 20 kHz; structurally similar to audible trills but shifted entirely into the ultrasonic range.
+    semantic_keywords: [display, identity]
+    semantic_description: Detected in two years of continuous recordings at McMurdo Sound; function unknown but analogous context to audible trills suggests display or territorial signalling.
+    confidence: low
+    references: [opzeeland_2021]
+
+  - name: U-shaped whistle
+    alternative_names: [U-whistle, descending-ascending whistle]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, multi_component, harmonic]
+    acoustic_description: "A whistle with a U-shaped frequency contour: descending and then ascending to produce a concave frequency trace on a spectrogram; the bottom of the U may be relatively brief or sustained."
+    semantic_keywords: [display, identity, contact]
+    semantic_description: Documented as a distinct whistle subtype in broadband recordings; may serve similar functions to other whistle variants.
+    confidence: medium
+    references: [opzeeland_2021]
+
+  - name: descending chirp
+    alternative_names: [downsweep chirp, falling chirp]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, short, tonal, high_frequency]
+    acoustic_description: A short frequency-modulated element with a steeply descending contour; typically brief (tens of milliseconds) and can occur at audible or ultrasonic frequencies, with some elements beginning near 50 kHz.
+    semantic_keywords: [contact, display, identity]
+    semantic_description: Produced singly or in sequences as part of multi-element call types; documented in both audible and ultrasonic frequency ranges.
+    confidence: medium
+    references: [opzeeland_2021, thomas_kuechle_1982]
+
+  - name: pup primary call
+    alternative_names: [infant primary vocalization, pup bleat]
+    scope:
+      life_stages: [infant]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, tonal, graded]
+    acoustic_description: A brief in-air vocalization with mean maximum frequency around 386 Hz and mean minimum around 217 Hz; relatively simple tonal call with some frequency modulation; individually variable enough for maternal recognition after approximately 2 weeks of age.
+    semantic_keywords: [contact, begging, distress, identity]
+    semantic_description: Produced at the surface by pups to maintain proximity with the mother and to signal nutritional need; used for mother-pup recognition.
+    confidence: high
+    references: [collins_2006, opzeeland_2012]
+
+  - name: mother contact call
+    alternative_names: [maternal contact vocalization, cow contact call]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, short, frequency_modulated, graded]
+    acoustic_description: An in-air tonal call produced by nursing females toward their pups; acoustic structure includes fundamental frequency and harmonic components in the low-to-mid audio range; geographic variation in fundamental frequency parameters has been documented between populations.
+    semantic_keywords: [contact, caregiving, identity]
+    semantic_description: Produced at the surface to maintain the mother-pup bond; shown to vary geographically between McMurdo Sound and Vestfold Hills populations.
+    confidence: high
+    references: [terhune_burton_2008, collins_2006]
+
+  - name: in-air whistle
+    alternative_names: [aerial whistle, closed-mouth high whistle]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, long, loud]
+    acoustic_description: A high-pitched in-air tonal call exceeding 5 kHz produced by adults and pups; can be produced with mouth and nostrils closed, suggesting laryngeal or nasal resonance origin; among the highest-pitched elements of the in-air call repertoire.
+    semantic_keywords: [contact, attention, identity]
+    semantic_description: Part of the in-air multi-element call sequence; adults and both sexes produce at least 8 in-air call types, of which this is the highest-frequency representative.
+    confidence: high
+    references: [terhune_burton_1999]
+
+  - name: in-air low grunt
+    alternative_names: [aerial grunt, surface grunt, closed-mouth grunt]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, pulsed, abrupt]
+    acoustic_description: A brief in-air low-frequency grunt below approximately 0.2 kHz; the lowest-pitched in-air call type, produced with mouth and nostrils closed; contrasts sharply in frequency with in-air whistles.
+    semantic_keywords: [contact, attention, affiliation]
+    semantic_description: Part of the in-air multi-element call sequence; up to 6 call types can be strung together in highly variable sequences.
+    confidence: high
+    references: [terhune_burton_1999]
+
+  - name: in-air trill
+    alternative_names: [aerial trill, surface trill]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, repetitive, frequency_modulated, long]
+    acoustic_description: An in-air frequency-modulated trill analogous to the underwater trill types but produced in air; similar repeated modulation structure but likely at different frequencies given the different medium.
+    semantic_keywords: [contact, display, identity]
+    semantic_description: Documented as one of the 8+ in-air call types; structurally similar to underwater trills and included in the variable multi-element in-air call sequences.
+    confidence: medium
+    references: [terhune_burton_1999]
+
+  - name: warble
+    alternative_names: [underwater warble, modulated warble]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [frequency_modulated, tonal, long, harmonic, graded]
+    acoustic_description: A slowly frequency-modulated tonal call with a warbling or undulating frequency contour; slower and broader in modulation pattern than trills; intermediate between a trill and a simple whistle in temporal structure.
+    semantic_keywords: [display, courtship, identity]
+    semantic_description: Produced underwater by males during breeding season; part of the extended display repertoire; may overlap with some trill subtypes in the Thomas & Kuechle taxonomy.
+    confidence: low
+    references: [thomas_kuechle_1982]
+
+  - name: knock
+    alternative_names: [acoustic knock, transient knock]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [abrupt, broadband, short, pulsed]
+    acoustic_description: A brief broadband impulsive transient with abrupt onset and rapid decay, acoustically similar to a knocking sound; distinct from jaw claps in that it may originate from laryngeal or sinus mechanisms rather than jaw mechanics.
+    semantic_keywords: [territorial, threat, aggression]
+    semantic_description: Produced underwater in territorial and agonistic contexts; classified in some accounts as an accessory sound accompanying display sequences.
+    confidence: low
+    references: [thomas_kuechle_1982]
+
+  - name: click
+    alternative_names: [single click, impulse click]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [abrupt, broadband, short, pulsed]
+    acoustic_description: A single brief wideband impulse shorter than a knock; may occur as isolated events or in loose series; distinguished from jaw claps by mechanical origin and from trills by the absence of frequency modulation.
+    semantic_keywords: [contact, attention]
+    semantic_description: Produced underwater; function not well established, possibly short-range attention or spacing signal; included in the 34-type Thomas & Kuechle classification as an accessory-type sound.
+    confidence: low
+    references: [thomas_kuechle_1982]
+
+  - name: ascending scream
+    alternative_names: [ascending glissando, rising scream]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, frequency_modulated, long, tonal]
+    acoustic_description: A loud ascending tonal call with a steeply rising frequency contour spanning a broad frequency range; more extreme in sweep rate and amplitude than the ascending whistle; screaming quality at playback.
+    semantic_keywords: [display, territorial, courtship]
+    semantic_description: Produced by males in underwater territorial display and possibly courtship; extreme ascending contour may signal arousal or dominance.
+    confidence: low
+    references: [thomas_kuechle_1982]
+
+  - name: descending whine
+    alternative_names: [whine, falling whine, descending moan]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, long, graded, low_frequency]
+    acoustic_description: A prolonged descending tonal call with a slow gradual frequency decline; longer and smoother than the whistle-descending type; moaning quality with relatively low frequency content.
+    semantic_keywords: [contact, submission, distress]
+    semantic_description: Produced underwater in social contexts; may convey submissive or distress-like signals, particularly in subordinate males or females in close-range social situations.
+    confidence: low
+    references: [thomas_kuechle_1982]
+
+  - name: coo
+    alternative_names: [soft coo, tonal coo]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, quiet, short, harmonic, low_frequency]
+    acoustic_description: A short soft low-to-mid frequency tonal call with a rounded cooing quality; relatively pure tone with limited harmonic structure; quiet compared to display calls.
+    semantic_keywords: [affiliation, caregiving, contact]
+    semantic_description: Produced in close social contact contexts, particularly by females near pups or in affiliative adult interactions; analogous to soft affiliative calls documented in other phocids.
+    confidence: low
+    references: [thomas_kuechle_1982]
+
+  - name: multiple-element call sequence
+    alternative_names: [song sequence, multi-element call, stereotyped song]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [multi_component, repetitive, long, frequency_modulated, tonal]
+    acoustic_description: A structured sequence of multiple heterogeneous call elements (trills, whistles, chirps, grunts) combined in a stereotyped order; can last many seconds to minutes; individual males produce recognizable stereotyped multi-element sequences described as "songs".
+    semantic_keywords: [display, territorial, courtship, identity]
+    semantic_description: Male Weddell seals produce individually stereotyped multi-element call sequences (songs) used for underwater territorial advertisement and courtship during breeding season; seven distinct male song types have been described at some sites.
+    confidence: high
+    references: [terhune_2006, abgrall_2003]
+
+  - name: what-chunk
+    alternative_names: [what chunk call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [multi_component, frequency_modulated, short, tonal, pulsed]
+    acoustic_description: A two-part compound call consisting of a high-frequency ascending "what" element followed immediately by a low-frequency abrupt "chunk" element; the acoustic contrast between the two components is striking.
+    semantic_keywords: [display, territorial, identity]
+    semantic_description: A named call type in the descriptive catalog of Weddell seal vocalizations used in underwater territorial display sequences.
+    confidence: medium
+    references: [thomas_kuechle_1982]
+
 references:
   abgrall_2003:
     citation: "Abgrall, P., McMahon, C.R., and Harcourt, R.G. 2003. Variation of Weddell seal underwater vocalizations over mesogeographic ranges. Aquatic Mammals 29:268-276."
@@ -82,6 +503,24 @@ references:
   opzeeland_2021:
     citation: "van Opzeeland, I., Klinck, H., and Goetz, K. 2021. Weddell seals produce ultrasonic vocalizations. Journal of the Acoustical Society of America 148:3784."
     url: https://pubs.aip.org/asa/jasa/article/148/6/3784/1056458/Weddell-seals-produce-ultrasonic-vocalizations
+  thomas_kuechle_1982:
+    citation: "Thomas, J.A. and Kuechle, V.B. 1982. Quantitative analysis of Weddell seal (Leptonychotes weddelli) underwater vocalizations at McMurdo Sound, Antarctica. Journal of the Acoustical Society of America 72:1730-1738."
+    url: https://pubmed.ncbi.nlm.nih.gov/7153422/
+  terhune_2006:
+    citation: "Terhune, J.M. 2006. Stereotyped calling patterns of a male Weddell seal (Leptonychotes weddellii). Aquatic Mammals 32:162-169."
+    url: https://www.aquaticmammalsjournal.org/wp-content/uploads/2010/10/32-2_Terhune.pdf
+  terhune_burton_1999:
+    citation: "Terhune, J.M. and Burton, H. 1999. Weddell seal in-air call sequences made with closed mouths. Polar Biology 22:24-30."
+    url: https://link.springer.com/article/10.1007/BF00234973
+  terhune_burton_2008:
+    citation: "Terhune, J.M., Jacobs, S.R., Burton, H., and Bengston, J. 2008. Geographic variation of Weddell seal (Leptonychotes weddellii) airborne mother-pup vocalisations. Polar Biology 31:615-622."
+    url: https://link.springer.com/article/10.1007/s00300-007-0297-8
+  collins_2006:
+    citation: "Collins, K.T., Rogers, T.L., Terhune, J.M., McGreevy, P.D., Wheatley, K.E., and Harcourt, R.G. 2006. Vocal individuality of in-air Weddell seal (Leptonychotes weddellii) pup 'primary' calls. Marine Mammal Science 22:933-951."
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1748-7692.2006.00074.x
+  opzeeland_2012:
+    citation: "van Opzeeland, I. and Van Parijs, S.M. 2012. Individual variation in pup vocalizations and absence of behavioral signs of maternal vocal recognition in Weddell seals (Leptonychotes weddellii). Marine Mammal Science 28:158-172."
+    url: https://onlinelibrary.wiley.com/doi/10.1111/j.1748-7692.2011.00505.x
 provenance:
   - timestamp: "2026-06-10T21:15:00+02:00"
     model: GPT-5 Codex
@@ -95,3 +534,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Rebuilt around the classic eight-call Weddell seal underwater repertoire and added explicit high-trill coverage tied to ultrasonic work.
+  - timestamp: "2026-06-12T16:15:00+02:00"
+    model: claude-sonnet-4-5
+    action: updated
+    notes: "Major expansion pass targeting ~34 call types. Added the full Thomas & Kuechle 1982 roar triplet (LR, MR, HR), trill-with-constant-frequency-start, whistle-descending, whistle-ascending, whistle-ascending-grunt, mew, guttural glug, tone, buzz, jaw clap, ultrasonic chirp/whistle/trill, U-shaped whistle, descending chirp, warble, knock, click, ascending scream, descending whine, coo, multiple-element call sequence, and what-chunk. In-air call types (pup primary call, mother contact call, in-air whistle, in-air low grunt, in-air trill) added from Terhune & Burton 1999 and Collins 2006. New references added: Thomas & Kuechle 1982, Terhune 2006, Terhune & Burton 1999, Terhune et al. 2008, Collins 2006, van Opzeeland & Van Parijs 2012."

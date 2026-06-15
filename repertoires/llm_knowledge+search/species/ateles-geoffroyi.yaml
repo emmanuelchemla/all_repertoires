@@ -82,6 +82,43 @@ calls:
     semantic_description: Produced especially by adult males under high arousal and in long-distance coordination or separation-related contexts.
     confidence: medium
     references: [eisenberg_1976]
+  - name: high-whinny
+    alternative_names: [short whinny]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, short, frequency_modulated, loud]
+    acoustic_description: A shorter, higher-pitched variant of the whinny with elevated fundamental frequency; spectrally similar to the standard whinny but briefer and at a higher pitch.
+    semantic_keywords: [contact, group_coordination]
+    semantic_description: Produced during contact-seeking contexts when an individual is within or near a subgroup, as opposed to the lower-pitched whinny typical of more isolated callers. Listeners respond more slowly to high-whinnies than to low-frequency whinnies.
+    confidence: high
+    references: [ordonezgomez_etal_2015, fuentes_etal_2023]
+  - name: chitter
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, repetitive, high_frequency, noisy, abrupt]
+    acoustic_description: A rapid series of brief staccato notes with broadband energy, given in quick succession at high arousal.
+    semantic_keywords: [aggression, threat, alarm]
+    semantic_description: Produced in agonistic and high-arousal contexts including aggressive encounters; classified alongside barks as a signal whose primary communicative goal is aggressive rather than contact-seeking.
+    confidence: high
+    references: [fuentes_etal_2023]
+  - name: squeal
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, tonal, loud, abrupt, short]
+    acoustic_description: A sharp, high-pitched tonal or near-tonal call of short-to-moderate duration with abrupt onset.
+    semantic_keywords: [distress, submission, attention]
+    semantic_description: Produced in contexts of distress, social conflict, or during interactions with other individuals; reported for the species in overview accounts alongside screams and squeaks.
+    confidence: medium
+    references: [animaldiversity_ateles_geoffroyi]
 references:
   chapman_weary_1990:
     citation: "Chapman, C.A. and Weary, D.M. 1990. The 'Whinny' of Spider Monkeys: Individual Recognition before Situational Meaning. Ethology 86:89-100."
@@ -95,6 +132,15 @@ references:
   ateles_overview:
     citation: "Animal Diversity Web. Ateles geoffroyi account."
     url: https://animaldiversity.org/accounts/Ateles_geoffroyi/
+  animaldiversity_ateles_geoffroyi:
+    citation: "Animal Diversity Web. Ateles geoffroyi (Geoffroy's spider monkey). University of Michigan Museum of Zoology."
+    url: https://animaldiversity.org/accounts/Ateles_geoffroyi/
+  ordonezgomez_etal_2015:
+    citation: "Ordonez-Gomez, J.D., Santillan-Doherty, A.M., and Rangel-Negrin, A. 2015. Influence of subgroup composition on spider monkey contact call usage. Primates 56:351-359."
+    url: https://link.springer.com/article/10.1007/s10329-015-0476-0
+  fuentes_etal_2023:
+    citation: "Fuentes, B.E., Santillan-Doherty, A.M., and Ramos-Fernandez, G. 2023. The acoustic structure of spider monkey (Ateles geoffroyi) calls is related both to caller goal and arousal. American Journal of Primatology 85:e23508."
+    url: https://onlinelibrary.wiley.com/doi/full/10.1002/ajp.23508
 provenance:
   - timestamp: '2026-06-10T22:15:00+02:00'
     model: GPT-5 Codex
@@ -116,3 +162,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Repo-wide recall pass added likely missing spider-monkey short-range, aggressive-play, warning, and long-distance call classes from external Ateles sources only.
+  - timestamp: '2026-06-13T00:00:00Z'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added high-whinny (documented contact-call variant with elevated F0), chitter (agonistic call class co-occurring with barks per Fuentes et al. 2023), and squeal (distress/submission call noted in overview accounts) to reach 13 call types. Added references for Fuentes et al. 2023 and Ordonez-Gomez et al. 2015.
