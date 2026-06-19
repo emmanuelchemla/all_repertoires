@@ -1,7 +1,7 @@
 """Reusable data and analysis primitives for repertoire explorer apps."""
 
 from .datasets import CanonicalDataset, load_all_repertoires_json, load_apes_csv
-from .paths import DATABASE_PATH, HUMAN_DATABASE_PATH
+from .paths import DATABASE_PATH, EMBEDDING_CACHE_PATH, HUMAN_DATABASE_PATH
 from .similarity import SimilaritySpec, compute_similarity_matrix
 from .summaries import summarize_dataset, summarize_similarity
 
