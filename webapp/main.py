@@ -300,9 +300,9 @@ def run_dash_app(
     semantic_umap2d = _reduce_umap_static(semantic_embeds, 2, seed=42)
     semantic_umap3d = _reduce_umap_static(semantic_embeds, 3, seed=42)
 
-    app = Dash(__name__)
+    app = Dash(__name__, assets_folder=str(Path(__file__).parent / "assets"))
 
-    # Styling: CSS lives in ./assets/style.css (Dash auto-loads assets).
+    # Styling: CSS and static files live in webapp/assets/.
     # Prefer className hooks over inline style dicts.
 
     # Store user selection (species allowlist). Empty means "all species".

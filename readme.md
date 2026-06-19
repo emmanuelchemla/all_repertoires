@@ -51,7 +51,7 @@ The dashboard is served at `http://127.0.0.1:8050` by default.
 
 ## Structure
 
-- `webapp/`: Dash app, display helpers, app text, and data-loading wrappers for UI use.
+- `webapp/`: Dash app, display helpers, static assets, app text, and data-loading wrappers for UI use.
 - `analyses/`: runnable analysis entry points and analysis-specific helpers.
 - `src/repertoire_explorer/`: reusable data/similarity/summary code shared by analyses and the webapp.
 - `paper/` and `paper_code/`: paper assets and figure/table scripts.
