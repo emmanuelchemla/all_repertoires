@@ -1,0 +1,25 @@
+[project]
+name = "all-repertoires"
+version = "0.1.0"
+description = "Tools, analyses, and webapps for cross-species vocal repertoire datasets."
+readme = "readme.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dash",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "plotly",
+    "scikit-learn",
+    "sentence-transformers",
+    "umap-learn",
+]
+
+[project.optional-dependencies]
+repertoires = [
+    "pyyaml",
+    "streamlit",
+]
+
+[tool.uv]
+package = false

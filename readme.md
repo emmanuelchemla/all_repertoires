@@ -22,14 +22,30 @@ Start with chimps
 Install dependencies:
 
 ```bash
-python -m pip install -r requirements.txt
+uv sync
+```
+
+This project pins Python 3.11 for `uv` via `.python-version`.
+
+Optional dependencies for the legacy Streamlit repertoire explorer:
+
+```bash
+uv sync --extra repertoires
 ```
 
 Run the webapp:
 
 ```bash
-python -m webapp.main
+uv run python -m webapp.main
 ```
+
+Run the generic analysis entry point:
+
+```bash
+uv run python analyses/repertoire_analysis.py --dataset all_repertoires
+```
+
+The legacy `requirements.txt` is kept as an export/compatibility file, but `pyproject.toml` is the canonical dependency list.
 
 The dashboard is served at `http://127.0.0.1:8050` by default.
 
