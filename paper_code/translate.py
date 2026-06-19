@@ -16,7 +16,11 @@ import numpy as np
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-DB_PATH = ROOT / "database.json"
+try:
+    from paper_code.paths import DATABASE_PATH
+except ModuleNotFoundError:
+    from paths import DATABASE_PATH
+DB_PATH = DATABASE_PATH
 EMB_PATH = Path(__file__).parent / "embeddings.npz"
 
 

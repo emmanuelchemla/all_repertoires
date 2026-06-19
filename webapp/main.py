@@ -5,6 +5,7 @@ import html as pyhtml
 import numpy as np
 from pathlib import Path
 import re
+import sys
 import plotly.graph_objects as go
 from sentence_transformers import SentenceTransformer
 from typing import Dict, List, Tuple
@@ -12,8 +13,13 @@ from umap import UMAP
 from dash import Dash, dcc, html, Input, Output, ALL, ctx
 from plotly.colors import qualitative as qualitative
 
-from app.content import NAV_CONTENT, TODO_ITEMS
-from app.utils import (
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from webapp.content import NAV_CONTENT, TODO_ITEMS
+from webapp.utils import (
     build_taxonomy_sunburst,
     embed_texts,
     filter_calls,
@@ -21,6 +27,7 @@ from app.utils import (
     reduce_umap,
     species_common_name,
 )
+from repertoire_explorer.paths import DATABASE_PATH, EMBEDDING_CACHE_PATH
 
 
 def section_text(section_id: str, field: str) -> str:
@@ -28,9 +35,9 @@ def section_text(section_id: str, field: str) -> str:
 
 
 def run_dash_app(
-    json_path: Path | str = "database.json",
+    json_path: Path | str = DATABASE_PATH,
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2",
-    cache: Path | str = ".embedding_cache.json",
+    cache: Path | str = EMBEDDING_CACHE_PATH,
     host: str = "0.0.0.0",
     port: int = 8050,
     n_components: int = 2,

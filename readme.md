@@ -1,6 +1,7 @@
 # All repertoires in the world
 
-`database.json` contains an LLM generated list of species with their repertoires
+`repertoires/compiled/database.json` contains an LLM-generated list of species with their repertoires.
+`repertoires/compiled/database_humans.json` contains the compiled human vocalization comparison database.
 
 First prompt was:
 
@@ -18,4 +19,24 @@ give me a json with all the calls of a species. The json should contain
 Start with chimps
 ```
 
-`python main.py` generates a dashboard to explore the resulting database
+Install dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Run the webapp:
+
+```bash
+python -m webapp.main
+```
+
+The dashboard is served at `http://127.0.0.1:8050` by default.
+
+## Structure
+
+- `webapp/`: Dash app, display helpers, app text, and data-loading wrappers for UI use.
+- `analyses/`: runnable analysis entry points and analysis-specific helpers.
+- `src/repertoire_explorer/`: reusable data/similarity/summary code shared by analyses and the webapp.
+- `paper/` and `paper_code/`: paper assets and figure/table scripts.
+- `repertoires/`: source repertoire material.

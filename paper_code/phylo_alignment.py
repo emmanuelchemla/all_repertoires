@@ -22,6 +22,10 @@ from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
+try:
+    from paper_code.paths import DATABASE_PATH
+except ModuleNotFoundError:
+    from paths import DATABASE_PATH
 sys.path.insert(0, str(ROOT))
 
 import matplotlib
@@ -33,7 +37,7 @@ import pandas as pd
 import statsmodels.formula.api as smf
 from scipy.stats import pearsonr, spearmanr
 
-DB_PATH = ROOT / "database.json"
+DB_PATH = DATABASE_PATH
 OUT_DIR = ROOT / "plots"
 TIMETREE_PAIR_PATH = OUT_DIR / "timetree_divergence_pairs.csv"
 MIN_PAIRS = 6
