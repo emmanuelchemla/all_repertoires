@@ -10,9 +10,9 @@ Layout rules:
      per-group regression lines, r/p in legend
 """
 
-import json, sys
+import argparse
+import sys
 from pathlib import Path
-from collections import Counter
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
@@ -24,7 +24,8 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.gridspec import GridSpec
 from scipy import stats
-from umap import UMAP
+
+from paper_code.data_sources import DATA_SOURCES, load_calls, load_embedding_artifacts, load_mantel_results
 
 # ------------------------------------------------------------------ #
 # Colour schemes
@@ -32,11 +33,17 @@ from umap import UMAP
 
 SEM_CATEGORY = {
     "alarm": "danger",      "predator": "danger",   "threat": "danger",
-    "distress": "distress", "infant": "distress",
+    "distress": "distress", "infant": "distress", "begging": "distress",
+    "caregiving": "distress",
     "contact": "cohesion",  "coordination": "cohesion",
-    "long_distance": "cohesion", "affiliative": "cohesion",
+    "group_coordination": "cohesion", "long_distance": "cohesion",
+    "affiliative": "cohesion", "affiliation": "cohesion",
+    "spacing": "cohesion",
     "aggression": "social", "display": "social",    "sex": "social",
+    "mating": "social", "courtship": "social",
     "dominance": "social",  "submission": "social", "territory": "social",
+    "territorial": "social", "identity": "social", "attention": "social",
+    "play": "social", "combinatorial": "social",
     "food": "foraging",     "recruitment": "foraging",
 }
 CAT_COLORS = {
@@ -54,25 +61,8 @@ TAXON_COLORS = {
     "across families":  "#9467bd",
 }
 
-# ------------------------------------------------------------------ #
-# Data loading
-# ------------------------------------------------------------------ #
-
-def load():
-    with open(ROOT / "database.json") as f:
-        db = json.load(f)
-    calls = []
-    for s in db["species"]:
-        for c in s.get("calls", []):
-            calls.append({**c,
-                          "species": s["species_name"],
-                          "family":  s.get("family", ""),
-                          "class":   s.get("class", "")})
-    return calls
-
-
 def primary_category(call):
-    for kw in call.get("ontology_keywords", []):
+    for kw in call.get("semantic_keywords", []) or call.get("ontology_keywords", []):
         if kw in SEM_CATEGORY:
             return SEM_CATEGORY[kw]
     return "other"
@@ -83,6 +73,8 @@ def primary_category(call):
 # ------------------------------------------------------------------ #
 
 def compute_umap(emb, seed=42):
+    from umap import UMAP
+
     reducer = UMAP(n_components=2, random_state=seed, n_neighbors=15, min_dist=0.2)
     return reducer.fit_transform(emb)
 
@@ -217,14 +209,22 @@ def save_panel(fig, path):
     print(f"Saved → {path}")
 
 
-def main():
-    with open(ROOT / "paper_code" / "mantel_results.json") as f:
-        mantel_stats = json.load(f)
+def parse_args():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-source", choices=DATA_SOURCES, default="old")
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "plots")
+    return parser.parse_args()
 
-    calls  = load()
-    ac_emb = np.load(ROOT / "paper_code" / "ac_emb.npy")
-    se_emb = np.load(ROOT / "paper_code" / "se_emb.npy")
-    print(f"{len(calls)} calls")
+
+def main():
+    args = parse_args()
+    out_dir = args.output_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    calls = load_calls(args.data_source)
+    mantel_stats = load_mantel_results(args.data_source)
+    ac_emb, se_emb = load_embedding_artifacts(args.data_source, len(calls))
+    print(f"{len(calls)} calls from {args.data_source!r} data")
 
     print("Semantic UMAP …")
     se_coords = compute_umap(se_emb)
@@ -235,20 +235,20 @@ def main():
     fig_A, ax_A = plt.subplots(figsize=(PANEL_SIZE, PANEL_SIZE))
     fig_A.subplots_adjust(left=LEFT, right=RIGHT, top=TOP, bottom=BOTTOM)
     draw_umap(ax_A, se_coords, calls, "(A)  Semantic space (UMAP)", add_legend=True)
-    save_panel(fig_A, ROOT / "plots" / "fig2A_semantic_umap.pdf")
+    save_panel(fig_A, out_dir / "fig2A_semantic_umap.pdf")
 
     # ---- Panel B ----
     fig_B, ax_B = plt.subplots(figsize=(PANEL_SIZE, PANEL_SIZE))
     fig_B.subplots_adjust(left=LEFT, right=RIGHT, top=TOP, bottom=BOTTOM)
     draw_umap(ax_B, ac_coords, calls, "(B)  Acoustic space (UMAP)")
-    save_panel(fig_B, ROOT / "plots" / "fig2B_acoustic_umap.pdf")
+    save_panel(fig_B, out_dir / "fig2B_acoustic_umap.pdf")
 
     # ---- Panel C ----
     print("Mantel scatter …")
     fig_C, ax_C = plt.subplots(figsize=(PANEL_SIZE, PANEL_SIZE))
     fig_C.subplots_adjust(left=LEFT, right=RIGHT, top=TOP, bottom=BOTTOM)
     draw_mantel(ax_C, ac_emb, se_emb, calls, mantel_stats, n_per_group=1000)
-    save_panel(fig_C, ROOT / "plots" / "fig2C_mantel.pdf")
+    save_panel(fig_C, out_dir / "fig2C_mantel.pdf")
 
     # ---- combined PNG (for quick preview) ----
     fig = plt.figure(figsize=(15, 5.2))
@@ -264,7 +264,7 @@ def main():
                ncol=6, fontsize=8, framealpha=0.8,
                title="Semantic category", title_fontsize=8)
     draw_mantel(ax_C2, ac_emb, se_emb, calls, mantel_stats, n_per_group=1000)
-    save_panel(fig, ROOT / "plots" / "fig2_embeddings.png")
+    save_panel(fig, out_dir / "fig2_embeddings.png")
 
 
 if __name__ == "__main__":

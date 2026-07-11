@@ -8,7 +8,7 @@ Display as a symmetric heatmap sorted by taxonomic class, with hierarchical clus
 Output: plots/fig_supp_mantel_matrix.pdf
 """
 
-import json
+import argparse
 import sys
 from pathlib import Path
 
@@ -23,6 +23,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from scipy.cluster.hierarchy import linkage, leaves_list
 
+from paper_code.data_sources import DATA_SOURCES, load_calls, load_embedding_artifacts
+
 # ------------------------------------------------------------------ #
 # Constants
 # ------------------------------------------------------------------ #
@@ -34,28 +36,7 @@ CLASS_COLORS = {
     "Mammalia": "#4C72B0",
 }
 MIN_PAIRS = 6  # skip species pairs with fewer cross-species pairs than this
-
-
-# ------------------------------------------------------------------ #
-# Data helpers
-# ------------------------------------------------------------------ #
-
-
-def load():
-    with open(ROOT / "database.json") as f:
-        db = json.load(f)
-    calls = []
-    for s in db["species"]:
-        for c in s.get("calls", []):
-            calls.append(
-                {
-                    **c,
-                    "species": s["species_name"],
-                    "family": s.get("family", ""),
-                    "class": s.get("class", ""),
-                }
-            )
-    return calls
+MIN_CALLS_PER_SPECIES = 6  # drop species with fewer calls than this
 
 
 def normalize(e):
@@ -83,9 +64,18 @@ def compute_pairwise_r(calls, Sa, Ss):
     sp_names = np.array([c["species"] for c in calls])
     sp_classes = {c["species"]: c["class"] for c in calls}
 
+    # Drop species with too few calls
+    from collections import Counter
+    call_counts = Counter(sp_names)
+    eligible = {s for s, n in call_counts.items() if n >= MIN_CALLS_PER_SPECIES}
+    dropped = set(call_counts) - eligible
+    if dropped:
+        print(f"  Dropped {len(dropped)} species with <{MIN_CALLS_PER_SPECIES} calls: "
+              + ", ".join(sorted(dropped)[:5]) + ("…" if len(dropped) > 5 else ""))
+
     # Sorted species list: by (class_order, species_name)
     all_species = sorted(
-        set(sp_names),
+        eligible,
         key=lambda s: (CLASS_ORDER.get(sp_classes.get(s, ""), 9), s),
     )
     n_sp = len(all_species)
@@ -200,12 +190,21 @@ def class_spans(classes):
 # ------------------------------------------------------------------ #
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-source", choices=DATA_SOURCES, default="old")
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "plots")
+    return parser.parse_args()
+
+
 def main():
+    args = parse_args()
+    out_dir = args.output_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
     print("Loading calls and embeddings …")
-    calls = load()
-    ac_emb = np.load(ROOT / "paper_code" / "ac_emb.npy")
-    se_emb = np.load(ROOT / "paper_code" / "se_emb.npy")
-    print(f"  {len(calls)} calls, {len({c['species'] for c in calls})} species")
+    calls = load_calls(args.data_source)
+    ac_emb, se_emb = load_embedding_artifacts(args.data_source, len(calls))
+    print(f"  {len(calls)} calls, {len({c['species'] for c in calls})} species, source={args.data_source}")
 
     # L2-normalise and compute cosine similarity matrices
     ac = normalize(ac_emb.astype(float))
@@ -364,7 +363,7 @@ def main():
     # ---------------------------------------------------------------- #
     # Save
     # ---------------------------------------------------------------- #
-    out = ROOT / "plots" / "fig_supp_mantel_matrix.pdf"
+    out = out_dir / "fig_supp_mantel_matrix.pdf"
     fig.savefig(out, dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved → {out}")

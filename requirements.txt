@@ -2,5 +2,6 @@ dash
 matplotlib
 numpy
 plotly
+PyYAML
 sentence-transformers
 umap-learn

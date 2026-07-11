@@ -1,0 +1,1474 @@
+{
+  "African savanna elephant (Loxodonta africana)||rumble": {
+    "acoustic": "Low-frequency harmonic call with infrasonic fundamentals, graded in duration and modulation.",
+    "semantic": "Long-distance contact, group coordination, affiliation, and reproductive advertisement."
+  },
+  "African savanna elephant (Loxodonta africana)||roar": {
+    "acoustic": "Loud, higher-frequency laryngeal call, noisy to tonal, strongly graded with arousal.",
+    "semantic": "High-arousal distress, protest, aggression, or defense; recruits family to dependent young."
+  },
+  "African savanna elephant (Loxodonta africana)||trumpet": {
+    "acoustic": "Loud trunk-produced call with broadband harmonics and strong modulation.",
+    "semantic": "Intense excitement, threat display, charging, defensive bunching, and play."
+  },
+  "African savanna elephant (Loxodonta africana)||snort": {
+    "acoustic": "Short, sharp, broadband trunk exhalation, abrupt and signal-like.",
+    "semantic": "Alerting and low-level threat display when surprised or confronting potential danger."
+  },
+  "African savanna elephant (Loxodonta africana)||bark": {
+    "acoustic": "Short, abrupt, noisy broadband call, often graded with a rumble component.",
+    "semantic": "Protest, distress, and agonistic or defensive situations, including suckling conflict."
+  },
+  "African savanna elephant (Loxodonta africana)||grunt": {
+    "acoustic": "Short, low, quiet laryngeal call, softer than roars or rumbles.",
+    "semantic": "Close mother-infant contact and low-arousal interaction in very young calves."
+  },
+  "African savanna elephant (Loxodonta africana)||rev": {
+    "acoustic": "Brief tonal harmonic call with buzz-like quality, higher F0 than rumbles, often precedes one.",
+    "semantic": "Function unresolved; possibly close-range social attention or learned production."
+  },
+  "African savanna elephant (Loxodonta africana)||croak": {
+    "acoustic": "Rare pulsatile call of repeated low, rough pulses, longer than a rev.",
+    "semantic": "Poorly established function; reported in close-range activity, possibly idiosyncratic."
+  },
+  "African savanna elephant (Loxodonta africana)||chuff": {
+    "acoustic": "Short, noisy exhalatory sound, possibly wheeze- or sneeze-like.",
+    "semantic": "Communicative status uncertain; may be a respiratory byproduct rather than a call."
+  },
+  "American bullfrog (Lithobates catesbeianus)||advertisement call": {
+    "acoustic": "Loud, low-frequency multicroak with harmonic structure and ~100 Hz periodicity.",
+    "semantic": "Male chorus call attracting females and mediating territorial spacing among neighbors."
+  },
+  "American bullfrog (Lithobates catesbeianus)||male territorial call": {
+    "acoustic": "Short, abrupt low-frequency bonk; spectrally similar to advertisement call but curt.",
+    "semantic": "Male-male aggressive signal during close-range territorial defense and intruder approach."
+  },
+  "American bullfrog (Lithobates catesbeianus)||female territorial call": {
+    "acoustic": "Broad-spectrum call with ~30 Hz modulation and upward glissando to ~90 Hz.",
+    "semantic": "Female signal alerting conspecifics to occupancy and trespass of defended area."
+  },
+  "American bullfrog (Lithobates catesbeianus)||shared territorial call": {
+    "acoustic": "Broad-spectrum, harmonically structured call with low-frequency temporal modulation.",
+    "semantic": "Given by both sexes to signal territory occupancy and trespass."
+  },
+  "American bullfrog (Lithobates catesbeianus)||release call": {
+    "acoustic": "Repeated harmonic vocalization with similar spectral structure in both sexes.",
+    "semantic": "Emitted when wrongly clasped, prompting the amplexing male to release."
+  },
+  "American bullfrog (Lithobates catesbeianus)||warning call": {
+    "acoustic": "Spectrally and temporally complex call distinct from mating and territorial types.",
+    "semantic": "Startle/escape alert given by both sexes around leaps into or out of water."
+  },
+  "American bullfrog (Lithobates catesbeianus)||distress call": {
+    "acoustic": "Loud, high-pitched open-mouth call with many harmonics and varied frequency contours.",
+    "semantic": "Anti-predator defensive scream after capture or noxious handling by both sexes."
+  },
+  "Asian elephant (Elephas maximus)||growl": {
+    "acoustic": "Long, soft, low-frequency harmonic call with level contours and little energy above 500 Hz.",
+    "semantic": "Close-range contact and spacing during movement, grazing, and group coordination."
+  },
+  "Asian elephant (Elephas maximus)||rumble": {
+    "acoustic": "Low-frequency harmonic call, often infrasonic, long duration with variable modulation.",
+    "semantic": "Long- and short-range contact, assembly, and group coordination within and between herds."
+  },
+  "Asian elephant (Elephas maximus)||squeak": {
+    "acoustic": "Brief, strongly modulated high-frequency tonal call given in rapid bouts.",
+    "semantic": "Disturbance, fear, or excitement; accompanies bunching and orientation to threat."
+  },
+  "Asian elephant (Elephas maximus)||trumpet": {
+    "acoustic": "Loud, harmonic, high-frequency trunk call with variable modulation and occasional double-voicing.",
+    "semantic": "High-arousal threat display, charging, defense, and play."
+  },
+  "Asian elephant (Elephas maximus)||roar": {
+    "acoustic": "Loud, noisy, aperiodic broadband call overlapping trumpet/squeak frequencies but unpatterned.",
+    "semantic": "High-arousal events: disturbance, distress, aggression, play, and group arrivals."
+  },
+  "Asian elephant (Elephas maximus)||longroar": {
+    "acoustic": "Extended noisy aperiodic call with resonances and partial harmonics, in bouts or choruses.",
+    "semantic": "Long-distance contact during separation, searching, and distress."
+  },
+  "Asian elephant (Elephas maximus)||bark": {
+    "acoustic": "Short, broadband, non-repeated aperiodic call.",
+    "semantic": "Aggressive or coordinating signal during movement, often directed at calves."
+  },
+  "Asian elephant (Elephas maximus)||squeal": {
+    "acoustic": "High-frequency tonal call longer than squeak with strong frequency modulation.",
+    "semantic": "Rare high-arousal disturbance signal expressing fear or excitement."
+  },
+  "Asian elephant (Elephas maximus)||bark-rumble": {
+    "acoustic": "Short aperiodic bark segment followed by a low-frequency rumble segment.",
+    "semantic": "High-attention coordination during movement, searching, and calf nursing requests."
+  },
+  "Asian elephant (Elephas maximus)||roar-rumble": {
+    "acoustic": "Noisy roar-like segment followed by a lower-frequency rumble-like segment.",
+    "semantic": "Coordination and contact during movement, searching, and calf-related interactions."
+  },
+  "Asian elephant (Elephas maximus)||longroar-rumble": {
+    "acoustic": "Long noisy roar segment joined to a falling low-frequency rumble segment.",
+    "semantic": "Long-distance contact and coordination during separation, movement, and distress."
+  },
+  "Asian elephant (Elephas maximus)||croak-rumble": {
+    "acoustic": "Brief croak-like onset under 1 s followed by a low-frequency rumble or growl segment.",
+    "semantic": "Chorused social coordination in rapid multi-caller bouts."
+  },
+  "Asian elephant (Elephas maximus)||chirp-rumble": {
+    "acoustic": "Rare brief tonal chirp segment followed by a longer low-frequency rumble segment.",
+    "semantic": "Close social contact among female companions, attracting approaching calves."
+  },
+  "Asian elephant (Elephas maximus)||musth chirp-rumble": {
+    "acoustic": "Soft low-hundreds-Hz onset followed by near-infrasonic segment, in long-interval bouts.",
+    "semantic": "Male musth signal during contests with rivals and guarding of estrous females."
+  },
+  "Banded Mongoose (Mungos mungo)||close call": {
+    "acoustic": "Short, quiet, two-part harmonic call with identity and activity segments.",
+    "semantic": "Foraging contact call maintaining cohesion and signaling individual identity and activity."
+  },
+  "Banded Mongoose (Mungos mungo)||aerial alarm call": {
+    "acoustic": "Short, high-frequency, frequency-modulated call distinct from terrestrial alarms.",
+    "semantic": "Aerial predator alarm eliciting escape responses scaled to urgency."
+  },
+  "Banded Mongoose (Mungos mungo)||terrestrial alarm call": {
+    "acoustic": "Short, broadband, noisy alarm distinct from aerial alarms; varies with urgency.",
+    "semantic": "Ground predator alarm eliciting vigilance and ground-appropriate escape."
+  },
+  "Banded Mongoose (Mungos mungo)||recruitment call": {
+    "acoustic": "Repetitive, broadband call distinct from aerial and terrestrial alarms.",
+    "semantic": "Recruits group members to approach and mob a localised terrestrial threat."
+  },
+  "Banded Mongoose (Mungos mungo)||lead call": {
+    "acoustic": "Loud, repetitive call associated with group departures.",
+    "semantic": "Initiates group movement away from foraging or sleeping sites."
+  },
+  "Banded Mongoose (Mungos mungo)||pup begging call": {
+    "acoustic": "Repetitive, high-frequency call given by dependent pups, graded with hunger.",
+    "semantic": "Solicits food and care from escort adult; supports mutual pup-escort recognition."
+  },
+  "Banded Mongoose (Mungos mungo)||aggression call": {
+    "acoustic": "Loud, broadband, noisy vocalisation given during agonistic interactions.",
+    "semantic": "Agonistic call used in within-group conflicts and inter-group territorial encounters."
+  },
+  "Black-tailed prairie dog (Cynomys ludovicianus)||anti-predator bark": {
+    "acoustic": "Short, loud harmonic bark with frequency modulation, repeated in long bouts.",
+    "semantic": "Predator alarm eliciting vigilance and retreat to burrows."
+  },
+  "Black-tailed prairie dog (Cynomys ludovicianus)||jump-yip": {
+    "acoustic": "Loud two-note tonal call with upward inflection, given during upright display.",
+    "semantic": "Contagious territorial display and all-clear signal coordinating the colony."
+  },
+  "Black-tailed prairie dog (Cynomys ludovicianus)||snarl": {
+    "acoustic": "Short, low-frequency, noisy broadband call given at close range.",
+    "semantic": "Close-range agonistic threat during aggressive encounters."
+  },
+  "Black-tailed prairie dog (Cynomys ludovicianus)||tooth chatter": {
+    "acoustic": "Rapid pulsed mechanical chattering produced by the teeth, not voiced.",
+    "semantic": "Low-intensity close-range threat in agonistic interactions."
+  },
+  "Black-tailed prairie dog (Cynomys ludovicianus)||fear scream": {
+    "acoustic": "Long, loud, high-frequency noisy scream with irregular broadband structure.",
+    "semantic": "Distress call during capture, fighting, or handling."
+  },
+  "Black-tailed prairie dog (Cynomys ludovicianus)||chuckle": {
+    "acoustic": "Quiet, low-frequency pulsed sound produced during locomotion or quiet contact.",
+    "semantic": "Short-range affiliative contact during foraging and group movement."
+  },
+  "Bonobo (Pan paniscus)||high hoot": {
+    "acoustic": "Short high-frequency tonal call with inverted-U contour, sometimes noisy onset.",
+    "semantic": "Long-distance contact and attention signal advertising caller location between parties."
+  },
+  "Bonobo (Pan paniscus)||scream": {
+    "acoustic": "Long, high-frequency broadband noisy call with flat contour.",
+    "semantic": "High-arousal distress call in aggression, conflict, or alarm episodes."
+  },
+  "Bonobo (Pan paniscus)||grunt": {
+    "acoustic": "Very short, low-frequency noisy call, weakly structured, often breathy.",
+    "semantic": "Close-range attention signal during grooming, feeding, resting, and travel."
+  },
+  "Bonobo (Pan paniscus)||peep": {
+    "acoustic": "Short tonal mid- to high-frequency call, flat contour, few harmonics, low noise.",
+    "semantic": "Flexible coordination and attention signal across feeding, travel, rest, and alarm."
+  },
+  "Bonobo (Pan paniscus)||laughter": {
+    "acoustic": "Short, mid-frequency, noisy atonal call with unshaped structure.",
+    "semantic": "Play and positive social arousal in close-range affiliative interactions."
+  },
+  "Bonobo (Pan paniscus)||low hoot": {
+    "acoustic": "Short low-frequency call, unshaped contour, variable tonality, fairly noisy.",
+    "semantic": "High-arousal social coordination, including night-nest building."
+  },
+  "Bonobo (Pan paniscus)||whistle": {
+    "acoustic": "Long tonal call, low but high-pitched, mostly flat with small squiggles, little noise.",
+    "semantic": "Spatial cohesion call keeping dispersed group members together."
+  },
+  "Bonobo (Pan paniscus)||contest hoot": {
+    "acoustic": "Short low-frequency tonal hoot with inverted-U contour, often in multi-phase bouts.",
+    "semantic": "Male social challenge asserting status, can provoke chase or occur in play."
+  },
+  "Bonobo (Pan paniscus)||pant grunt": {
+    "acoustic": "Very short tonal call with upward slope, medium noise, relatively high frequency.",
+    "semantic": "Subordination or greeting signal from lower- to higher-ranking individuals."
+  },
+  "Bonobo (Pan paniscus)||yelp": {
+    "acoustic": "Short low-frequency tonal call with downward slope and low noise.",
+    "semantic": "Imperative coordination call recruiting audience, linked to less-preferred foods."
+  },
+  "Bonobo (Pan paniscus)||peep yelp": {
+    "acoustic": "Short low-frequency tonal call, variable inverted-U or upward contour, low noise.",
+    "semantic": "Coordination in encounters, nesting, and travel; graded food-associated sequences."
+  },
+  "California sea lion (Zalophus californianus)||male bark": {
+    "acoustic": "Loud, repeated low-pitched barks in rhythmic series with harmonic, frequency-modulated structure.",
+    "semantic": "Territorial threat, boundary display, and courtship by breeding males."
+  },
+  "California sea lion (Zalophus californianus)||female bark": {
+    "acoustic": "Higher-pitched bark-like airborne call, distinct from harsher close-range squeals and growls.",
+    "semantic": "Mild threat by females in pup defense and close social conflicts."
+  },
+  "California sea lion (Zalophus californianus)||pup-attraction call": {
+    "acoustic": "Loud, directional, bawling airborne call with individually distinctive structure.",
+    "semantic": "Mother call to locate and recognize pup during reunions after separation."
+  },
+  "California sea lion (Zalophus californianus)||mother-response call": {
+    "acoustic": "Airborne pup call resembling female attraction call, with marked individual variation.",
+    "semantic": "Pup reply during mother-pup reunions enabling mutual location and recognition."
+  },
+  "California sea lion (Zalophus californianus)||bleat": {
+    "acoustic": "Early pup bleat, gradually modified toward bark-like form during development.",
+    "semantic": "Pup alarm and distress signal before repertoire shifts to barks."
+  },
+  "California sea lion (Zalophus californianus)||growl": {
+    "acoustic": "Harsh, noisy close-range aggressive call.",
+    "semantic": "Female vigorous short-range aggression, more intense than mild bark threats."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||boom": {
+    "acoustic": "Low-pitched, unmodulated loud call from vocal sac, given in pairs before call sequences.",
+    "semantic": "Nonpredatory context marker; prefix that reduces predator specificity of following alarm calls."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||krak": {
+    "acoustic": "Short, loud tonal call with descending main frequency band in low kilohertz range.",
+    "semantic": "Specific, high-urgency terrestrial-predator alarm, typically to leopards."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||krak-oo": {
+    "acoustic": "Descending krak stem followed by stable oo suffix, forming a multi-component call.",
+    "semantic": "General alert to disturbances; suffix weakens the leopard-specific reading of krak."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||hok": {
+    "acoustic": "Short, flat tonal call with little modulation in the low kilohertz range.",
+    "semantic": "Aerial predator alarm, primarily to crowned eagles and eagle-related cues."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||hok-oo": {
+    "acoustic": "Flat tonal hok stem followed by stable oo suffix; multi-component loud call.",
+    "semantic": "Canopy disturbance and threat call to eagles, neighbors, and arboreal events."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||wak-oo": {
+    "acoustic": "Rising tonal wak stem in low kilohertz followed by obligatory oo suffix.",
+    "semantic": "Alarm to canopy disturbances including eagles and other flying animals."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||RRA trill": {
+    "acoustic": "Variable trill of repeated, rapidly ascending pulses with context-linked variants.",
+    "semantic": "Female alarm to predatory and nonpredatory disturbances."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||simple harmonic contact call": {
+    "acoustic": "Low-pitched harmonic contact call given as a single simple unit.",
+    "semantic": "Female contact call favored under high predation risk to limit identity cues."
+  },
+  "Campbell's monkey (Cercopithecus campbelli)||combined harmonic contact call": {
+    "acoustic": "Low-pitched harmonic unit merged with a high-pitched arched unit (front or back form).",
+    "semantic": "Identity-rich female contact call for mixed-species and key social exchanges."
+  },
+  "Carolina chickadee (Poecile carolinensis)||T-slink": {
+    "acoustic": "Rapid high notes followed by 2-8 flat or chevron-shaped clear slink elements.",
+    "semantic": "Mild threat and spacing in close encounters, mobbing, and pair disputes."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Click-rasp": {
+    "acoustic": "Stuttering short notes leading into a noisy rasp with rapid frequency oscillation.",
+    "semantic": "Strong agonistic display in close confrontations; parid gargle analogue."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Chip": {
+    "acoustic": "Loud robin-like harmonic chevron chip, often in short series of 3-6 notes.",
+    "semantic": "Strong threat in disputes, patrols, and predator mobbing."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Song": {
+    "acoustic": "Clear whistled fee-bee-fee-bay alternating high and low tonal notes.",
+    "semantic": "Male territorial advertisement and countersinging in breeding season."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Song Variant": {
+    "acoustic": "Song-like whistles with irregular or absent high-low alternation.",
+    "semantic": "Thwarted or modified song motivation during patrol and countersinging."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Faint Song": {
+    "acoustic": "Quiet, shorter song-like tonal notes, sometimes with slight quaver.",
+    "semantic": "Close-range affiliation near mates, nests, and young."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Faint Song Variant": {
+    "acoustic": "Quiet song-like notes with irregular or incomplete high-low structure.",
+    "semantic": "Modified affiliation signal in pair-bond and family contexts."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Variable See": {
+    "acoustic": "Rapid high chevron see notes above 8 kHz, terminating in T-slink.",
+    "semantic": "Breeding-related conflict signal during courtship, copulation, and patrol."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Broken Dee": {
+    "acoustic": "Dee-like harmonic chevrons with irregular frequency fluctuations and subdivisions.",
+    "semantic": "Begging by young and females, and adult feeding approaches."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Lisping Tee": {
+    "acoustic": "Chevron notes with long descending arms, in pairs or triplets, lisping quality.",
+    "semantic": "Close association and coordination during flight between mates or flock."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Soft Dee": {
+    "acoustic": "Quiet narrow rounded dee chevrons with resonance harmonics, well spaced.",
+    "semantic": "Close affiliation near nests, mates, and feeding stations."
+  },
+  "Carolina chickadee (Poecile carolinensis)||High See": {
+    "acoustic": "High, clear, flattened chevron in upper frequency range, longer than High Tee.",
+    "semantic": "Aerial predator alarm and vigilance signal eliciting attention."
+  },
+  "Carolina chickadee (Poecile carolinensis)||High Tee": {
+    "acoustic": "Short clear high chevron note, alone or as chick-a-dee introductory element.",
+    "semantic": "Attention and alarm during flight, perch changes, and tense contexts."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Chick": {
+    "acoustic": "Narrow pointed chevron with harmonics, mid-position in chick-a-dee sequences.",
+    "semantic": "Combinatorial element coding social and predator context in chick-a-dee calls."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Dee": {
+    "acoustic": "Series of broad flat harmonic chevrons forming terminal dee of chick-a-dee calls.",
+    "semantic": "Flock coordination, food recruitment, and predator-threat coding."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Loud Tee": {
+    "acoustic": "Loud skewed chevron with strong ascending arm and harmonics, in short series.",
+    "semantic": "Sudden escape-biased warning during foraging, nest guarding, and hawk encounters."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Tseet": {
+    "acoustic": "Very brief high-pitched chevron note, single or well spaced.",
+    "semantic": "Common contact and coordination call during foraging and movement."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Squeal": {
+    "acoustic": "Loud high elongated chevron with long descending arm, dropping in frequency.",
+    "semantic": "Distress from restrained birds; attracts conspecifics and other species."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Scream": {
+    "acoustic": "Harsh loud broadband distress call grading from squeals into noisy forms.",
+    "semantic": "Distress and defensive threat from restrained birds; draws mobbing."
+  },
+  "Carolina chickadee (Poecile carolinensis)||Hiss": {
+    "acoustic": "Nearly formless broadband white-noise-like hiss, noisiest distress form.",
+    "semantic": "Acute distress and defensive threat from restrained birds."
+  },
+  "Chimpanzee (Pan troglodytes)||grunt": {
+    "acoustic": "Short, low-frequency noisy call, variable contour, grading toward barks.",
+    "semantic": "Close-range social and feeding contact; coordinates and recruits nearby partners."
+  },
+  "Chimpanzee (Pan troglodytes)||panted grunt": {
+    "acoustic": "Repetitive panted series of low-frequency noisy grunt pulses with voiced inhalations.",
+    "semantic": "Directed greeting and submissive appeasement during approaches to higher-ranking individuals."
+  },
+  "Chimpanzee (Pan troglodytes)||hoo": {
+    "acoustic": "Short, low-frequency, highly tonal call with mostly flat contour; alarm variants louder.",
+    "semantic": "Quiet coordination during rest and travel; alert variant signals ambiguous threats."
+  },
+  "Chimpanzee (Pan troglodytes)||panted hoo": {
+    "acoustic": "Repetitive panted series of tonal hoo elements separated by short pant intervals.",
+    "semantic": "Build-up component of long-distance pant-hoots advertising presence and coordinating parties."
+  },
+  "Chimpanzee (Pan troglodytes)||bark": {
+    "acoustic": "Short, abrupt, noisy high-frequency call with dome-shaped contour; grades to grunts or screams.",
+    "semantic": "High-arousal alarm and agonistic call recruiting allies against threats or rivals."
+  },
+  "Chimpanzee (Pan troglodytes)||panted bark": {
+    "acoustic": "Panted series of noisy dome-shaped bark elements separated by short pant intervals.",
+    "semantic": "High-arousal climax unit in pant-hoot combinations driving display and coordination."
+  },
+  "Chimpanzee (Pan troglodytes)||pant": {
+    "acoustic": "Noisy breathy panted unit with low fundamental and flat contour, alone or as let-down.",
+    "semantic": "Affiliative and play-related signal; let-down component of long-distance display sequences."
+  },
+  "Chimpanzee (Pan troglodytes)||scream": {
+    "acoustic": "Loud, high-frequency, broadband noisy call with relatively flat midsection.",
+    "semantic": "Victim distress in agonistic interactions; recruits bystanders and signals severity."
+  },
+  "Chimpanzee (Pan troglodytes)||panted scream": {
+    "acoustic": "Repeated panted series of broadband high-frequency scream elements with short pant intervals.",
+    "semantic": "High-arousal climax unit in intense sequences contributing display and recruitment value."
+  },
+  "Chimpanzee (Pan troglodytes)||non-vocal sound": {
+    "acoustic": "Short noisy mechanical sound (lip smacks, raspberries) without tonal contour.",
+    "semantic": "Close-range affiliative signal associated with grooming and social attention."
+  },
+  "Chimpanzee (Pan troglodytes)||whimper": {
+    "acoustic": "Short, highly tonal mid-to-high frequency call with mostly flat contour.",
+    "semantic": "Close-range low-intensity distress and attention-seeking in social contexts."
+  },
+  "Chimpanzee (Pan troglodytes)||panted roar": {
+    "acoustic": "Rare noisy panted roar with low-frequency energy and sub-fundamental spectral bands.",
+    "semantic": "Rare let-down or terminal component of long-distance display and contact sequences."
+  },
+  "Common bottlenose dolphin (Tursiops truncatus)||signature whistle": {
+    "acoustic": "Narrowband tonal whistle with individually distinctive frequency-modulation contour, often looped.",
+    "semantic": "Broadcasts individual identity; maintains social contact among familiar individuals."
+  },
+  "Common bottlenose dolphin (Tursiops truncatus)||whistle": {
+    "acoustic": "Narrowband frequency-modulated tonal signal with varied contour shapes spanning several kHz.",
+    "semantic": "Social contact, group cohesion, and coordination during interaction."
+  },
+  "Common bottlenose dolphin (Tursiops truncatus)||burst-pulsed sound": {
+    "acoustic": "Broadband train of rapidly repeated pulses fused into a graded noisy sound.",
+    "semantic": "High-arousal social, agonistic, and foraging contexts."
+  },
+  "Common bottlenose dolphin (Tursiops truncatus)||bray call": {
+    "acoustic": "Rhythmic multi-unit sequence of repeated low-frequency bray elements in bouts.",
+    "semantic": "Foraging-associated signal, especially during fish prey capture; sometimes social."
+  },
+  "Common bottlenose dolphin (Tursiops truncatus)||squawk": {
+    "acoustic": "Short broadband pulsed sound with rapid pulse rate and noisy spectral structure.",
+    "semantic": "Occurs within feeding-associated pulsed call sequences."
+  },
+  "Common bottlenose dolphin (Tursiops truncatus)||creak": {
+    "acoustic": "Rapid broadband pulse train with very short inter-pulse intervals and creaking texture.",
+    "semantic": "Part of foraging-related pulsed acoustic sequences."
+  },
+  "Common bottlenose dolphin (Tursiops truncatus)||bang": {
+    "acoustic": "Isolated high-energy broadband pulse with abrupt onset and short duration.",
+    "semantic": "Associated with prey detection or startling prey during foraging."
+  },
+  "Common bottlenose dolphin (Tursiops truncatus)||echolocation click train": {
+    "acoustic": "Train of ultrashort high-frequency broadband clicks with variable inter-click intervals.",
+    "semantic": "Biosonar for navigation, prey search, approach, and capture (terminal buzz)."
+  },
+  "Common marmoset (Callithrix jacchus)||phee": {
+    "acoustic": "Long narrowband tonal call with sustained frequency-modulated pulses, often repeated in strings.",
+    "semantic": "Long-distance contact and antiphonal exchange; signals identity and territorial spacing."
+  },
+  "Common marmoset (Callithrix jacchus)||trill": {
+    "acoustic": "Short narrowband tonal call with sinusoidal frequency modulation in upper kHz range.",
+    "semantic": "Short-range contact and affiliative exchange between nearby individuals."
+  },
+  "Common marmoset (Callithrix jacchus)||twitter": {
+    "acoustic": "Phrased wideband call of regularly spaced upward FM sweeps.",
+    "semantic": "Social vocal exchanges and group coordination among nearby individuals."
+  },
+  "Common marmoset (Callithrix jacchus)||tsik": {
+    "acoustic": "Very short high-intensity broadband call with rapid frequency sweep, often repeated.",
+    "semantic": "Mobbing and alarm response to predators and threatening stimuli."
+  },
+  "Common marmoset (Callithrix jacchus)||egg": {
+    "acoustic": "Short harsh broadband call, often paired with tsiks in mobbing sequences.",
+    "semantic": "Alarm, threat, and mild distress contexts, frequently combined with tsiks."
+  },
+  "Common marmoset (Callithrix jacchus)||tsik-egg": {
+    "acoustic": "Compound call: tsik-like onset followed by egg-like elements at short intervals.",
+    "semantic": "Mobbing/predator alarm packaging tsik and egg elements combinatorially."
+  },
+  "Common marmoset (Callithrix jacchus)||trillphee": {
+    "acoustic": "Long tonal call beginning with sinusoidal FM trill, transitioning to sustained phee.",
+    "semantic": "Intermediate-range contact and coordination; interchangeable with trills and phees."
+  },
+  "Common marmoset (Callithrix jacchus)||chirp": {
+    "acoustic": "Short punctate tonal call with brief frequency-modulated contour.",
+    "semantic": "Short-range contact marking the start and end of vocal sequences."
+  },
+  "Common marmoset (Callithrix jacchus)||ock": {
+    "acoustic": "Short low-frequency noisy broadband call with energy below 2 kHz.",
+    "semantic": "Mobbing alarm directed at terrestrial or near-ground threats."
+  },
+  "Common raven (Corvus corax)||Caw": {
+    "acoustic": "Loud, low-pitched harmonic call with variable pitch and duration.",
+    "semantic": "Multi-context contact and attention call during soaring, roosting, and disputes."
+  },
+  "Common raven (Corvus corax)||Growl-like": {
+    "acoustic": "Loud, harsh, low-frequency pulsing growl.",
+    "semantic": "Close-range aggression over roost position."
+  },
+  "Common raven (Corvus corax)||Whine": {
+    "acoustic": "Soft harmonic call, mono- or multiharmonic, whine-like trace.",
+    "semantic": "Submission by subordinates retreating from dominants at roosts."
+  },
+  "Common raven (Corvus corax)||Rattle": {
+    "acoustic": "Loud, rapidly repeated broadband drum-like rattle.",
+    "semantic": "Courtship display by paired birds, mainly during breeding."
+  },
+  "Common raven (Corvus corax)||Staccato caw": {
+    "acoustic": "Short, sharp caw-like element, ~half duration of normal caw.",
+    "semantic": "Alarm to predators and disturbance at nests, roosts, and feeding sites."
+  },
+  "Common raven (Corvus corax)||Cluck": {
+    "acoustic": "Sputter-like staccato couplets, sometimes 4\u20139 clucks in series.",
+    "semantic": "Distress near nests and displacement from preferred roost positions."
+  },
+  "Common raven (Corvus corax)||Kow": {
+    "acoustic": "Very loud, high-pitched honking call with many high harmonics.",
+    "semantic": "Aggressive attack call against intruders near nests and roosts."
+  },
+  "Common raven (Corvus corax)||Bell-like": {
+    "acoustic": "Resonant tonal bell- or xylophone-like note, loud or soft variants.",
+    "semantic": "Courtship display by paired birds; rarely in male-male interactions."
+  },
+  "Common raven (Corvus corax)||Ku-uk-kuk": {
+    "acoustic": "Harsh staccato couplet or triplet of repeated elements.",
+    "semantic": "Aggression during chases near roosts and nests."
+  },
+  "Common raven (Corvus corax)||Haa call": {
+    "acoustic": "Far-reaching, highly harmonic long yell with individually distinctive structure.",
+    "semantic": "Food recruitment at defended or risky food; responses depend on caller identity."
+  },
+  "Common raven (Corvus corax)||Who call": {
+    "acoustic": "Short yell, briefer than haa and juvenile chii.",
+    "semantic": "Given by dominants landing or feeding at food sites."
+  },
+  "Common raven (Corvus corax)||Chii call": {
+    "acoustic": "Long juvenile yell, developmentally linked to begging vocalizations.",
+    "semantic": "Juvenile food-associated call tied to hunger and age class near feeding sites."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||isolation peep": {
+    "acoustic": "Long, narrowband tonal call with stable individual spectral signature.",
+    "semantic": "Contact call during visual separation; conveys caller identity across distance."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||chuck": {
+    "acoustic": "Short, stereotyped frequency-modulated call with harmonic sweep.",
+    "semantic": "Close-range affiliative exchange between bonded females during foraging."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||twitter": {
+    "acoustic": "Rapid series of short frequency-modulated tonal elements.",
+    "semantic": "High-arousal social signal during food sharing, movement and reunion."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||cackle": {
+    "acoustic": "Rapid series of short, noisy broadband pulses in extended bouts.",
+    "semantic": "Agonistic call during intra-group conflict and chasing."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||shriek": {
+    "acoustic": "Loud, high-pitched broadband call with abrupt onset and wide bandwidth.",
+    "semantic": "Aerial predator alarm and high-intensity disturbance eliciting escape."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||yap": {
+    "acoustic": "Short, repeated broadband barking call, lower-pitched than shriek.",
+    "semantic": "Alarm toward terrestrial threats and mobbing of ground-level intruders."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||growl": {
+    "acoustic": "Low-frequency, noisy broadband call with rough quality and long duration.",
+    "semantic": "Close-range threat during dominance and competitive encounters."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||purr": {
+    "acoustic": "Low-frequency, low-amplitude rhythmic pulsed call.",
+    "semantic": "Relaxed affiliative contact during huddling and infant interactions."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||caw": {
+    "acoustic": "Short, harsh broadband call with abrupt onset.",
+    "semantic": "Orienting response to novel stimuli and mild disturbance."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||groan": {
+    "acoustic": "Low-frequency noisy call below 1 kHz, strained and unpulsed.",
+    "semantic": "Submissive/defensive signal by subordinates receiving aggression."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||infant trill": {
+    "acoustic": "Short, high-frequency tonal call with rapid frequency modulation.",
+    "semantic": "Infant contact call during clinging, transfer and mild separation."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||trill peep": {
+    "acoustic": "Short narrowband tonal call with moderate frequency modulation.",
+    "semantic": "Short-range contact during approach and mild social excitement."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||pulsed call": {
+    "acoustic": "Long sequence of slow, regularly spaced low- to mid-frequency pulses.",
+    "semantic": "Male breeding-season display directed at females."
+  },
+  "Common squirrel monkey (Saimiri sciureus)||squeal": {
+    "acoustic": "Loud, high-pitched, strongly frequency-modulated tonal call.",
+    "semantic": "Infant distress call during separation or attack, eliciting maternal retrieval."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||normal long call": {
+    "acoustic": "Loud, multi-note frequency-modulated whistle sequence with individually distinctive structure.",
+    "semantic": "Long-distance contact and reunion between separated group members; intergroup spacing."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||quiet long call": {
+    "acoustic": "Reduced-amplitude multi-note whistle, fewer notes than normal long call.",
+    "semantic": "Close-range within-group contact and affiliative coordination."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||combination long call": {
+    "acoustic": "Long whistle notes combined with broadband chirp-like elements; heterogeneous structure.",
+    "semantic": "Higher-arousal spacing: mild alarm, intergroup encounters, territorial contexts."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||type A chirp": {
+    "acoustic": "Short, high-frequency tonal chirp with stereotyped frequency-modulated contour.",
+    "semantic": "General disturbance alarm eliciting orientation and vigilance."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||type B chirp": {
+    "acoustic": "Short, high-frequency tonal chirp differing from type A in peak frequency and FM pattern.",
+    "semantic": "Mild vigilance and low-intensity arousal; draws group attention."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||type C chirp": {
+    "acoustic": "Short, high-frequency tonal chirp with distinct frequency contour and timing.",
+    "semantic": "Food-associated call recruiting and coordinating group members at food sources."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||type D chirp": {
+    "acoustic": "Short, high-frequency chirp with FM features distinct from A, B, and C variants.",
+    "semantic": "Close-range coordination and attention-orienting during travel and routine activity."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||type E chirp": {
+    "acoustic": "Short, high-frequency chirp subtype with characteristic frequency contour and duration.",
+    "semantic": "Routine within-group contact during travel and feeding."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||type F chirp": {
+    "acoustic": "Short, high-frequency tonal chirp defined by its FM parameters and duration.",
+    "semantic": "Close-range social contact and brief attention-orienting interactions."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||initially rising whistle": {
+    "acoustic": "Long, narrowband tonal whistle with rising onset then stable frequency.",
+    "semantic": "Aerial/distant predator alarm prompting concealment and scanning."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||inverted U whistle": {
+    "acoustic": "Long, narrowband whistle with rising-then-falling inverted-U frequency contour.",
+    "semantic": "Social contact and mild vigilance during group travel and attention shifts."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||trill": {
+    "acoustic": "High-frequency tonal call with rapid sinusoidal frequency modulation.",
+    "semantic": "Close-range affiliative contact during social interactions and proximity."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||twitter": {
+    "acoustic": "Rapid burst phrase of short, high-frequency frequency-modulated elements.",
+    "semantic": "Within-group coordination and affiliative exchange during movement."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||squeak": {
+    "acoustic": "Very short, high-pitched, high-amplitude tonal call with abrupt onset.",
+    "semantic": "Distress call during capture or close predator encounter; high-arousal signal."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||chatter": {
+    "acoustic": "Rapid series of short broadband noisy elements with irregular spectral structure.",
+    "semantic": "Agonistic threat and aggression in intra- and intergroup confrontations."
+  },
+  "Cotton-top Tamarin (Saguinus oedipus)||chuck": {
+    "acoustic": "Short, low- to mid-frequency broadband noisy call with abrupt onset.",
+    "semantic": "Low-intensity within-group contact during close-range social and feeding contexts."
+  },
+  "Diana monkey (Cercopithecus diana)||male general long-distance call": {
+    "acoustic": "Loud multi-syllable long-range call, ~7 discrete syllables.",
+    "semantic": "Male advertisement and intergroup spacing in non-predation contexts."
+  },
+  "Diana monkey (Cercopithecus diana)||male leopard alarm call": {
+    "acoustic": "Loud long-distance alarm, few syllables (~3), acoustically distinct from eagle variant.",
+    "semantic": "Male alarm to leopards; warns group and signals detection to ambush predator."
+  },
+  "Diana monkey (Cercopithecus diana)||male eagle alarm call": {
+    "acoustic": "Loud long-distance alarm with many syllables (~8), distinct from leopard variant.",
+    "semantic": "Male alarm to crowned eagles; recruits group response to aerial predator."
+  },
+  "Diana monkey (Cercopithecus diana)||Brrr": {
+    "acoustic": "Short, pulsed, rough-sounding repetitive sequence.",
+    "semantic": "Female threat call during aggressive or socially negative events."
+  },
+  "Diana monkey (Cercopithecus diana)||R": {
+    "acoustic": "Short repetitive unit, distinct from arched and trill units.",
+    "semantic": "Signals socially negative or dangerous events; alerts receivers."
+  },
+  "Diana monkey (Cercopithecus diana)||L": {
+    "acoustic": "Low-pitched trill-based unit.",
+    "semantic": "Neutral-context contact call supporting group cohesion."
+  },
+  "Diana monkey (Cercopithecus diana)||H": {
+    "acoustic": "High-pitched trill-based unit, distinct from L and arched calls.",
+    "semantic": "Relaxed or positive social contact signaling affiliation."
+  },
+  "Diana monkey (Cercopithecus diana)||Af": {
+    "acoustic": "Full arched tonal contour with rising-falling frequency, individually distinctive.",
+    "semantic": "Female contact call encoding identity for social and spatial cohesion."
+  },
+  "Diana monkey (Cercopithecus diana)||Ab": {
+    "acoustic": "Broken-arch tonal call lacking full Af contour.",
+    "semantic": "Female contact call carrying caller identity during group coordination."
+  },
+  "Diana monkey (Cercopithecus diana)||Alk": {
+    "acoustic": "Arched call with truncated low frequencies and sharp upper contour.",
+    "semantic": "Female alarm call signaling predator presence."
+  },
+  "Diana monkey (Cercopithecus diana)||W": {
+    "acoustic": "Compound arched unit: short high arch followed by Alk-like truncated arch.",
+    "semantic": "Female alarm call signaling predator presence."
+  },
+  "Diana monkey (Cercopithecus diana)||L-Af": {
+    "acoustic": "Two-unit call: low trill L followed by full arched Af.",
+    "semantic": "Neutral contact combination conveying context plus caller identity."
+  },
+  "Diana monkey (Cercopithecus diana)||L-Ab": {
+    "acoustic": "Two-unit call: low trill L followed by broken arched Ab.",
+    "semantic": "Neutral contact combination encoding context and caller identity."
+  },
+  "Diana monkey (Cercopithecus diana)||H-Af": {
+    "acoustic": "Two-unit call: high trill H followed by full arched Af.",
+    "semantic": "Positive/relaxed social contact combination encoding caller identity."
+  },
+  "Diana monkey (Cercopithecus diana)||H-Ab": {
+    "acoustic": "Two-unit call: high trill H followed by broken arched Ab.",
+    "semantic": "Positive/relaxed social contact combination encoding caller identity."
+  },
+  "Diana monkey (Cercopithecus diana)||R-Af": {
+    "acoustic": "Two-unit call: short R unit followed by full arched Af.",
+    "semantic": "Alarm/threat combination conveying danger context plus caller identity."
+  },
+  "Diana monkey (Cercopithecus diana)||R-Ab": {
+    "acoustic": "Two-unit call: R unit followed by broken arched Ab.",
+    "semantic": "Alarm/threat combination encoding danger context and caller identity."
+  },
+  "Diana monkey (Cercopithecus diana)||R-Alk": {
+    "acoustic": "Two-unit alarm: R unit followed by truncated arched Alk.",
+    "semantic": "Female alarm combination signaling predator with caller identity."
+  },
+  "Diana monkey (Cercopithecus diana)||R-W": {
+    "acoustic": "Two-unit alarm: R unit followed by compound arched W.",
+    "semantic": "Female alarm combination signaling predator with caller identity."
+  },
+  "Eurasian Magpie (Pica pica)||Chatter": {
+    "acoustic": "Loud, harsh, broadband rattling trill of rapid staccato syllables in variable-length series.",
+    "semantic": "Mobbing of predators and territorial challenge to conspecific intruders near the nest."
+  },
+  "Eurasian Magpie (Pica pica)||Cheeuch": {
+    "acoustic": "Loud, tonal, upward-inflected shriek-like single note with harmonic structure.",
+    "semantic": "Pair contact, female food-solicitation and greeting between mates near the nest."
+  },
+  "Eurasian Magpie (Pica pica)||Tchurch": {
+    "acoustic": "Throaty, explosive, low-frequency broadband call given singly or in short couplets.",
+    "semantic": "Agonistic threat during close conflicts over food, perches or territory."
+  },
+  "Eurasian Magpie (Pica pica)||Babble song": {
+    "acoustic": "Long, soft, rambling warbles, whistles and gurgles, often with mimicry, in extended bouts.",
+    "semantic": "Pair-bond maintenance and mate attraction in relaxed social contexts."
+  },
+  "Eurasian Magpie (Pica pica)||Husky call": {
+    "acoustic": "Prolonged, low-pitched, breathy, noisy call of moderate to low amplitude.",
+    "semantic": "Female-specific call attracting the male to the nest during nest building."
+  },
+  "Eurasian Magpie (Pica pica)||Begging trill": {
+    "acoustic": "Repeated tonal pulsed trill with pure spectral structure from young nestlings.",
+    "semantic": "Hatchling food solicitation, modulated by hunger and brood size."
+  },
+  "Eurasian Magpie (Pica pica)||Begging scream": {
+    "acoustic": "Loud, harsh, broadband frequency-modulated scream developing from the begging trill.",
+    "semantic": "Older nestling and fledgling food solicitation; tracks hunger and predation risk."
+  },
+  "Eurasian Magpie (Pica pica)||Soft whistle": {
+    "acoustic": "Soft, brief, high-pitched pure-tonal whistle clearly separable from begging trill.",
+    "semantic": "Low-arousal nestling signal of good condition biasing parental provisioning."
+  },
+  "Eurasian Magpie (Pica pica)||Nestling alarm call": {
+    "acoustic": "Loud, short, broadband call resembling a cruder adult chatter syllable, easily localised.",
+    "semantic": "Nestling/fledgling predator alarm attracting parents to defend the brood."
+  },
+  "Eurasian Magpie (Pica pica)||Distress call": {
+    "acoustic": "Very loud, harsh, broadband frequency-modulated call given in long bouts.",
+    "semantic": "Acute distress when handled or captured; recruits parents for nest defence."
+  },
+  "Eurasian Magpie (Pica pica)||Brief contact note": {
+    "acoustic": "Very brief, quiet, quasi-tonal note with simple structure, singly or in short series.",
+    "semantic": "Fledgling brood cohesion during exploration and play under poor visibility."
+  },
+  "European starling (Sturnus vulgaris)||whistle theme": {
+    "acoustic": "Loud, long, pure-tone harmonic whistle motif opening song bouts.",
+    "semantic": "Male territorial advertising and song matching; signals individual identity."
+  },
+  "European starling (Sturnus vulgaris)||variable warble motif": {
+    "acoustic": "Long, highly variable warble of repeated note motifs, often including mimicry.",
+    "semantic": "Central courtship display; longer warble repertoires attract mates."
+  },
+  "European starling (Sturnus vulgaris)||click motif": {
+    "acoustic": "Pulsed, broadband rattle of rapidly repeated short clicks; species-typical.",
+    "semantic": "Bridges warble to closing motifs in male courtship song scaffold."
+  },
+  "European starling (Sturnus vulgaris)||high-frequency motif": {
+    "acoustic": "Rapid trill of short, high-pitched tonal notes closing the song bout.",
+    "semantic": "Terminal courtship display element marking end of male song bout."
+  },
+  "European starling (Sturnus vulgaris)||distress call": {
+    "acoustic": "Loud, harsh, broadband scream with strong harmonics and rapid frequency modulation.",
+    "semantic": "Given when seized by predator; recruits conspecifics and triggers mobbing."
+  },
+  "European starling (Sturnus vulgaris)||alarm call": {
+    "acoustic": "Short, sharp metallic chip, given singly or in rapid series.",
+    "semantic": "Predator detection signal eliciting vigilance, flight, or mobbing."
+  },
+  "European starling (Sturnus vulgaris)||flight call": {
+    "acoustic": "Soft, low-pitched purring prurrp note repeated at low rate.",
+    "semantic": "Flock contact call maintaining cohesion in flight and foraging groups."
+  },
+  "European starling (Sturnus vulgaris)||threat call": {
+    "acoustic": "Loud, harsh, pulsed broadband rattling chatter with wing-flap display.",
+    "semantic": "Close-range aggressive signal in disputes over nests, roosts, and food."
+  },
+  "European starling (Sturnus vulgaris)||begging call": {
+    "acoustic": "Repeated noisy-harmonic calls near 3 kHz in long series.",
+    "semantic": "Nestling food solicitation; intensity tracks hunger and parental presence."
+  },
+  "Gelada (Theropithecus gelada)||exhaled grunt": {
+    "acoustic": "Short (~0.3s) exhaled tonal call with formant structure; graded toward longer moans.",
+    "semantic": "Close-range affiliative contact maintaining cohesion within multilevel society."
+  },
+  "Gelada (Theropithecus gelada)||inhaled grunt": {
+    "acoustic": "Short ingressive grunt with f0 and formants similar to exhaled grunt.",
+    "semantic": "Close-range affiliation during approaches, grooming, and post-conflict exchanges."
+  },
+  "Gelada (Theropithecus gelada)||exhaled moan": {
+    "acoustic": "Elongated exhaled grunt-like call, several seconds long, on long end of grunt-moan continuum.",
+    "semantic": "Male affiliative call to females during approaches and grooming; attracts attention."
+  },
+  "Gelada (Theropithecus gelada)||inhaled moan": {
+    "acoustic": "Long ingressive moan with low mean f0 and first formant.",
+    "semantic": "Male close-range affiliative call elaborating sequences directed to females."
+  },
+  "Gelada (Theropithecus gelada)||wobble": {
+    "acoustic": "Cyclic, strongly modulated call with rhythmic speech-like pulses and broad formant bandwidths.",
+    "semantic": "Male courtship-affiliative call eliciting female orientation and proximity."
+  },
+  "Gelada (Theropithecus gelada)||vocalized yawn": {
+    "acoustic": "Long vocalized yawn with high f0/F1 and broad formant modulation.",
+    "semantic": "Male affiliative display elaborating courtship sequences to females."
+  },
+  "Gelada (Theropithecus gelada)||pre-copulation call": {
+    "acoustic": "Female tonal call sequence with variable length, classified by f0 contour.",
+    "semantic": "Female solicitation before copulation; longer bouts predict longer matings."
+  },
+  "Gelada (Theropithecus gelada)||copulation call": {
+    "acoustic": "Sequenced calls during copulation, classified from spectrograms and f0 contours.",
+    "semantic": "Male and female mating vocalizations coordinating multimodal sexual communication."
+  },
+  "Gelada (Theropithecus gelada)||end-copulation call": {
+    "acoustic": "Distinct female call at copulation's end, separable by f0-based classification.",
+    "semantic": "Female marker of copulation completion, restricted to mating context."
+  },
+  "Gray wolf (Canis lupus)||howl": {
+    "acoustic": "Long, loud, tonal harmonic call with low-mid fundamental and slow frequency modulation.",
+    "semantic": "Long-distance contact, pack assembly, territorial advertisement, and spacing between packs."
+  },
+  "Gray wolf (Canis lupus)||whine": {
+    "acoustic": "High-pitched, soft, frequency-modulated tonal harmonic call.",
+    "semantic": "Close-range appeasement, greeting, care solicitation, and mild distress."
+  },
+  "Gray wolf (Canis lupus)||whimper": {
+    "acoustic": "Short, soft, high-pitched tonal harmonic call with frequency modulation.",
+    "semantic": "Close-range affiliative greeting, appeasement, and pup-adult contact."
+  },
+  "Gray wolf (Canis lupus)||yelp": {
+    "acoustic": "Short, abrupt, high-pitched harmonic call with steep contour.",
+    "semantic": "Sudden close-range distress, pain, fear, or submissive reaction."
+  },
+  "Gray wolf (Canis lupus)||growl": {
+    "acoustic": "Low, rough, broadband noisy call, sustained or pulsed.",
+    "semantic": "Close-range agonistic threat, dominance display, and food or resource defense."
+  },
+  "Gray wolf (Canis lupus)||snarl": {
+    "acoustic": "Rough, low-frequency, broadband call paired with open-mouth threat display.",
+    "semantic": "High-intensity close-range threat in dominance contests and escalated conflict."
+  },
+  "Gray wolf (Canis lupus)||woof": {
+    "acoustic": "Short, low, abrupt broadband sound, softer than a bark.",
+    "semantic": "Low-intensity close-range alert, often warning pack of disturbance near den or pups."
+  },
+  "Gray wolf (Canis lupus)||bark": {
+    "acoustic": "Short, explosive, low-pitched broadband call with abrupt onset and high amplitude.",
+    "semantic": "Defensive alarm at dens, pup defense, and close-range confrontation with intruders."
+  },
+  "Gray wolf (Canis lupus)||moan": {
+    "acoustic": "Low, soft, sustained tonal call, lower in frequency than whines.",
+    "semantic": "Close-range low-intensity social signal with appeasement or discomfort motivation."
+  },
+  "Gray wolf (Canis lupus)||whine-moan": {
+    "acoustic": "Soft tonal call intermediate between whine and moan, falling into lower contour.",
+    "semantic": "Close-range appeasement or ambivalent affiliative approach."
+  },
+  "Gray wolf (Canis lupus)||growl-moan": {
+    "acoustic": "Low, graded call mixing rough growl energy with softer moan-like contour.",
+    "semantic": "Close-range low-intensity agonistic signal with mixed aggressive and appeasing motivation."
+  },
+  "Gray wolf (Canis lupus)||squeak": {
+    "acoustic": "Brief, high-frequency, frequency-modulated tonal harmonic call.",
+    "semantic": "Close-range affiliative greeting and friendly contact, may encode caller identity."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||territorial song": {
+    "acoustic": "Stereotyped multi-element male song with trills, buzzes, and low-frequency harsh syllables.",
+    "semantic": "Territorial advertisement repelling rival males and attracting females at day roosts."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||courtship song": {
+    "acoustic": "Long, complex male song built from variable trills, noise bursts, and tonal elements.",
+    "semantic": "Male display toward females during multimodal courtship and mate attraction."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||bark": {
+    "acoustic": "Short, frequency-modulated call resembling an echolocation pulse but longer.",
+    "semantic": "Low-intensity alert or mild aggressive signal in roost interactions."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||chatter": {
+    "acoustic": "Rhythmic train of brief, modulated echolocation-like pulses lasting up to several seconds.",
+    "semantic": "Low-arousal roost communication by males, sometimes embedded in courtship song."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||whistle": {
+    "acoustic": "Loud, stereotyped tonal call with upward then downward frequency modulation.",
+    "semantic": "Male hover-display courtship signal directed at females."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||screech": {
+    "acoustic": "Long, broad-spectrum noisy call with variable harmonic structure.",
+    "semantic": "Agonistic signal in territorial conflicts and female response to male hover displays."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||isolation call": {
+    "acoustic": "Multisyllabic call with composite stereotyped elements encoding individual identity.",
+    "semantic": "Pup call eliciting maternal care; also used in affiliative or appeasement contexts."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||maternal directive call": {
+    "acoustic": "Series of short monosyllabic syllables with lower peak frequency than adult-directed calls.",
+    "semantic": "Mother-to-pup directive signal during care and ontogeny."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||distress call": {
+    "acoustic": "Loud, noisy, multi-syllable broadband buzz with tonal component.",
+    "semantic": "Emitted under extreme distress; attracts conspecifics for threat assessment or mobbing."
+  },
+  "Greater sac-winged bat (Saccopteryx bilineata)||echolocation call": {
+    "acoustic": "High-frequency ultrasonic pulse trains, sometimes frequency-alternating.",
+    "semantic": "Orientation and prey capture; may also encode sex and individual identity."
+  },
+  "Lion (Panthera leo)||roar": {
+    "acoustic": "Loud, low-frequency bout of moans, roars, and grunts with individually distinctive structure.",
+    "semantic": "Long-distance territorial advertisement, spacing, and assessment of caller identity and group size."
+  },
+  "Lion (Panthera leo)||intermediate roar": {
+    "acoustic": "Shorter, flatter-pitched roar element following full-throated roars within a bout.",
+    "semantic": "Component of long-distance roaring bouts for territorial and intra-pride communication."
+  },
+  "Lion (Panthera leo)||moan": {
+    "acoustic": "Soft, low-pitched, drawn-out call grading into louder roar elements.",
+    "semantic": "Opens roaring bouts and accompanies close social contact; territorial and spacing context."
+  },
+  "Lion (Panthera leo)||grunt": {
+    "acoustic": "Short, low, pulse-like call given singly, in series, or ending a roaring bout.",
+    "semantic": "Close-range social contact and terminal phase of long-distance territorial bouts."
+  },
+  "Lion (Panthera leo)||growl": {
+    "acoustic": "Low, rough, noisy broadband call, sustained or broken into growl-cough variants.",
+    "semantic": "Close-range threat and spacing signal during agonistic and feeding disputes."
+  },
+  "Lion (Panthera leo)||snarl": {
+    "acoustic": "Harsh, broadband call with abrupt noisy energy, sharper than a sustained growl.",
+    "semantic": "Close-range threat accompanying escalation or defensive spacing of conspecifics."
+  },
+  "Lion (Panthera leo)||hiss-spit": {
+    "acoustic": "Noisy broadband complex; sustained aperiodic hisses and short explosive spits.",
+    "semantic": "Defensive, high-arousal close-range signal deterring approach during conflict."
+  },
+  "Lion (Panthera leo)||mew": {
+    "acoustic": "High-pitched tonal call with clear harmonics and frequency modulation.",
+    "semantic": "Close-range contact and care, especially cub-mother and attention-seeking contexts."
+  },
+  "Lion (Panthera leo)||puff": {
+    "acoustic": "Soft, short, noisy exhaled sound, often repeated, lacking harsh intensity.",
+    "semantic": "Low-intensity affiliative greeting and peaceful close-range social contact."
+  },
+  "Lion (Panthera leo)||woof": {
+    "acoustic": "Short, abrupt, broadband bark-like call with a low, forceful onset.",
+    "semantic": "Alert response to nearby threat or disturbance; short-range warning signal."
+  },
+  "Mantled guereza (Colobus guereza)||roar": {
+    "acoustic": "Loud, low-pitched, long sequences of discrete phrases with inflated air sac.",
+    "semantic": "Long-distance intergroup spacing; also chorused at dawn and toward leopards or eagles."
+  },
+  "Mantled guereza (Colobus guereza)||snort": {
+    "acoustic": "Short, broadband explosive noise with sudden onset, energy below 4 kHz.",
+    "semantic": "Predator detection and low-level threat warning, often preceding roars."
+  },
+  "Mantled guereza (Colobus guereza)||purr": {
+    "acoustic": "Soft, low-pitched close-range call, audible only at short distance.",
+    "semantic": "Coordinates group departure and progression during movement."
+  },
+  "Mantled guereza (Colobus guereza)||caw": {
+    "acoustic": "Short, harsh, repeated call grading toward squeaks under higher arousal.",
+    "semantic": "Mild distress or low-level threat by females, juveniles, and infants."
+  },
+  "Mantled guereza (Colobus guereza)||squeak and scream": {
+    "acoustic": "Graded high-pitched, high-amplitude calls from short squeaks to long noisy screams.",
+    "semantic": "Acute distress and recruitment during agonism, infant handling, or severe disturbance."
+  },
+  "Mantled guereza (Colobus guereza)||tongue click": {
+    "acoustic": "Brief, broadband non-vocal transient from tongue against palate.",
+    "semantic": "Close-range mild aggressive signal in territorial and threat displays."
+  },
+  "Meerkat (Suricata suricatta)||close call": {
+    "acoustic": "Quiet, short, individually variable tonal call repeated during foraging.",
+    "semantic": "Maintains group cohesion and spatial coordination during foraging."
+  },
+  "Meerkat (Suricata suricatta)||moving call": {
+    "acoustic": "Conspicuous call, given singly or in chorus, distinct from close and lead calls.",
+    "semantic": "Quorum-like signal coordinating patch shifts and returns to burrows."
+  },
+  "Meerkat (Suricata suricatta)||aerial alarm call": {
+    "acoustic": "Short, loud call; harmonic at low urgency, noisier and abrupt at high urgency.",
+    "semantic": "Aerial predator alarm eliciting escape responses scaled by urgency."
+  },
+  "Meerkat (Suricata suricatta)||terrestrial alarm call": {
+    "acoustic": "Loud, short call with urgency-dependent noisiness and temporal patterning.",
+    "semantic": "Ground-predator alarm triggering vigilance and refuge-seeking behaviour."
+  },
+  "Meerkat (Suricata suricatta)||recruitment call": {
+    "acoustic": "Loud, repeated noisy elements with urgency-dependent structure.",
+    "semantic": "Recruits group members to inspect or mob localized threats like snakes."
+  },
+  "Meerkat (Suricata suricatta)||bark": {
+    "acoustic": "Broadband noisy call lacking harmonics, with multiple formants below 15 kHz.",
+    "semantic": "Predator-detection call encoding caller identity and predator context."
+  },
+  "Meerkat (Suricata suricatta)||single-note sentinel call": {
+    "acoustic": "Soft, short single tonal note repeated during sentinel bouts.",
+    "semantic": "All-clear signal reducing forager vigilance at low predation risk."
+  },
+  "Meerkat (Suricata suricatta)||double-note sentinel call": {
+    "acoustic": "Soft, individually distinctive call of two short tonal notes.",
+    "semantic": "All-clear sentinel signal calming foragers at low perceived risk."
+  },
+  "Meerkat (Suricata suricatta)||triple-note sentinel call": {
+    "acoustic": "Short sentinel call of three tonal notes in the graded sequence.",
+    "semantic": "Encodes subtle rise in perceived risk above the all-clear range."
+  },
+  "Meerkat (Suricata suricatta)||multiple-note sentinel call": {
+    "acoustic": "Cluster of more than three repeated short tonal notes.",
+    "semantic": "Signals elevated risk below warning-call threshold during guarding."
+  },
+  "Meerkat (Suricata suricatta)||di-drrr sentinel call": {
+    "acoustic": "Longer, modulated sentinel warning call distinct from note-counted calls.",
+    "semantic": "Warning signal raising vigilance and reducing foraging at elevated risk."
+  },
+  "Meerkat (Suricata suricatta)||wheek sentinel call": {
+    "acoustic": "Long, high, modulated warning call near the high-risk end of the gradation.",
+    "semantic": "High-risk warning increasing vigilance before predator-specific alarms."
+  },
+  "Meerkat (Suricata suricatta)||repeat begging call": {
+    "acoustic": "Repeated pup call given in long bouts while following foraging adults.",
+    "semantic": "Mobile pup begging; rate tracks hunger and drives adult provisioning."
+  },
+  "Meerkat (Suricata suricatta)||high-pitched begging call": {
+    "acoustic": "High-frequency, intense begging call given in vigorous bouts.",
+    "semantic": "Pup solicitation during direct feeding events; preferred by provisioning adults."
+  },
+  "Meerkat (Suricata suricatta)||sunning call": {
+    "acoustic": "Soft bouts of one to several short notes given during morning sunning.",
+    "semantic": "Turn-taking affiliative call supporting group bonding after burrow emergence."
+  },
+  "Olive baboon (Papio anubis)||basic grunt": {
+    "acoustic": "Low-frequency, harmonically structured short grunt, given singly or in bouts.",
+    "semantic": "Affiliative contact during feeding, travel, and close approaches; signals benign intent."
+  },
+  "Olive baboon (Papio anubis)||broken grunting": {
+    "acoustic": "Low-volume, rapid series of short, temporally segmented grunt elements.",
+    "semantic": "Low-intensity agonistic signal during tense encounters that may escalate."
+  },
+  "Olive baboon (Papio anubis)||pant-grunt": {
+    "acoustic": "Louder, pulsed two-phase grunt with inhaled and exhaled components in fast bouts.",
+    "semantic": "Higher-arousal agonistic call during escalated social conflict."
+  },
+  "Olive baboon (Papio anubis)||roargrunt": {
+    "acoustic": "Deep, resonant, sustained low-pitched male call grading toward roar-like sound.",
+    "semantic": "Adult male display and threat after fights or disturbances; signals identity and arousal."
+  },
+  "Olive baboon (Papio anubis)||cough-bark": {
+    "acoustic": "Short, abrupt, broadband cough-like bark, harsher than contact calls.",
+    "semantic": "Low-anxiety alarm alerting group to unfamiliar humans or aerial disturbance."
+  },
+  "Olive baboon (Papio anubis)||cough-geck": {
+    "acoustic": "Short, sharp, noisy cough-like geck, given singly or in brief series.",
+    "semantic": "Low-level alarm and orientation toward possible external disturbance."
+  },
+  "Olive baboon (Papio anubis)||wa-hoo": {
+    "acoustic": "Loud two-syllable call: sharp wa onset followed by lower hoo, repeated in bouts.",
+    "semantic": "Long-distance contact, male display, and alarm during predator or intergroup contexts."
+  },
+  "Olive baboon (Papio anubis)||shrill bark": {
+    "acoustic": "Loud, explosive high-frequency noisy bark with sharp onset.",
+    "semantic": "Sudden-threat alarm orienting group toward immediate danger."
+  },
+  "Olive baboon (Papio anubis)||scream": {
+    "acoustic": "Loud, high-pitched, harsh sustained call varying with arousal.",
+    "semantic": "Distress signal during pain, fear, or retreat in intense aggressive encounters."
+  },
+  "Olive baboon (Papio anubis)||moan": {
+    "acoustic": "Soft, tonal, frequency-modulated immature call, longer than a geck.",
+    "semantic": "Infant distress during separation, weaning, or tantrums; recruits caregiving."
+  },
+  "Olive baboon (Papio anubis)||basic geck": {
+    "acoustic": "Brief, sharp, noisy broadband geck with abrupt onset, singly or repeated.",
+    "semantic": "Immature distress and contact call during discomfort, fear, or separation."
+  },
+  "Olive baboon (Papio anubis)||panting": {
+    "acoustic": "Breathy, pulsed, repeated pant-like elements; low tonality.",
+    "semantic": "Nonaggressive play call during juvenile rough-and-tumble interactions."
+  },
+  "Olive baboon (Papio anubis)||copulation call": {
+    "acoustic": "Conspicuous female call sequence given during or after copulation.",
+    "semantic": "Post-mount female signal implicated in sperm competition and mate choice."
+  },
+  "Red junglefowl (Gallus gallus)||crowing": {
+    "acoustic": "Loud stereotyped male call with 3-4 harmonic note peaks and some harsh energy.",
+    "semantic": "Dawn territorial advertisement, dominance signaling, and mate attraction."
+  },
+  "Red junglefowl (Gallus gallus)||courtship food call": {
+    "acoustic": "Low-amplitude rapid series of brief kuk-like pulses, deepening during close display.",
+    "semantic": "Male signal near food attracting females, often preceding feeding or mating."
+  },
+  "Red junglefowl (Gallus gallus)||nest-site attraction call": {
+    "acoustic": "Rapid dense train of short low-pitched notes, similar to male food call.",
+    "semantic": "Male courtship call attracting hens to a potential nest site."
+  },
+  "Red junglefowl (Gallus gallus)||maternal food call": {
+    "acoustic": "Soft brief single low notes repeated rapidly and irregularly.",
+    "semantic": "Broody hen directing chicks to food items during foraging."
+  },
+  "Red junglefowl (Gallus gallus)||clucking": {
+    "acoustic": "Soft repeated paired low-frequency notes.",
+    "semantic": "Broody hen maintaining brood cohesion while leading chicks."
+  },
+  "Red junglefowl (Gallus gallus)||ground-predator cackling alarm": {
+    "acoustic": "Harsh broadband cackling series with abrupt cut-like notes and loud terminal elements.",
+    "semantic": "Mobbing/scolding alarm for ground or perched predators, alerting flock."
+  },
+  "Red junglefowl (Gallus gallus)||aerial-predator alarm scream": {
+    "acoustic": "Very loud harsh high-frequency scream with gradual onset.",
+    "semantic": "High-urgency aerial predator alarm prompting immediate escape or cover."
+  },
+  "Red junglefowl (Gallus gallus)||distress squawk": {
+    "acoustic": "Very loud long harsh broadband squawks with abrupt onset and broken harmonics.",
+    "semantic": "Adult capture/restraint distress, alerting nearby conspecifics to danger."
+  },
+  "Red junglefowl (Gallus gallus)||threat call": {
+    "acoustic": "Harsh low-frequency broadband call, can grade into roar-like sounds.",
+    "semantic": "Close-range aggressive/defensive signal in dominance and contest encounters."
+  },
+  "Red junglefowl (Gallus gallus)||chick distress call": {
+    "acoustic": "High-pitched repeated descending trills with irregular very-high-frequency elements.",
+    "semantic": "Chick separation, capture, or fear call eliciting parental retrieval."
+  },
+  "Red junglefowl (Gallus gallus)||chick pleasure call": {
+    "acoustic": "Soft repeated chevron-like notes with rising average frequency.",
+    "semantic": "Chick contact call during feeding, brooding, and secure mother contact."
+  },
+  "Rhesus macaque (Macaca mulatta)||coo": {
+    "acoustic": "Clear narrowband tonal call with harmonic structure and low-frequency energy.",
+    "semantic": "Contact call for group cohesion, mother-infant reunion, and low-quality food discovery."
+  },
+  "Rhesus macaque (Macaca mulatta)||grunt": {
+    "acoustic": "Low, atonal pulsed call with unstable fundamental and strong low-frequency bands.",
+    "semantic": "Close-range contact during grooming and at common or low-quality food sources."
+  },
+  "Rhesus macaque (Macaca mulatta)||warble": {
+    "acoustic": "Tonal harmonic food call with modulated frequency contour.",
+    "semantic": "Signals discovery of rare high-quality food, recruiting group members."
+  },
+  "Rhesus macaque (Macaca mulatta)||harmonic arch": {
+    "acoustic": "Tonal harmonic call with arch-shaped rising-falling frequency contour.",
+    "semantic": "High-quality food discovery call recruiting nearby conspecifics."
+  },
+  "Rhesus macaque (Macaca mulatta)||chirp": {
+    "acoustic": "Short, brief tonal call distinct from noisier harsh calls.",
+    "semantic": "High-quality food discovery call attracting group members."
+  },
+  "Rhesus macaque (Macaca mulatta)||bark": {
+    "acoustic": "Harsh, abrupt broadband call with noisy energy across frequencies.",
+    "semantic": "Close-range agonistic threat paired with aggressive facial display."
+  },
+  "Rhesus macaque (Macaca mulatta)||pant-threat": {
+    "acoustic": "Repeated breathy, weakly voiced harsh pulses, longer and less voiced than grunts.",
+    "semantic": "Aggressive threat from dominants toward subordinates during agonistic displays."
+  },
+  "Rhesus macaque (Macaca mulatta)||girney": {
+    "acoustic": "Soft tonal or warbling call produced in short repeated bouts.",
+    "semantic": "Affiliative close-range call with lipsmacking during friendly or appeasing contact."
+  },
+  "Rhesus macaque (Macaca mulatta)||noisy scream": {
+    "acoustic": "Loud broadband scream with noisy energy and little tonal structure.",
+    "semantic": "Victim recruitment scream during contact aggression from higher-ranking opponents."
+  },
+  "Rhesus macaque (Macaca mulatta)||arched scream": {
+    "acoustic": "Loud tonal scream with sharply rising-falling arch-shaped frequency contour.",
+    "semantic": "Recruitment scream encoding opponent and aggression type in agonistic encounters."
+  },
+  "Rhesus macaque (Macaca mulatta)||tonal scream": {
+    "acoustic": "Long tonal scream with clear low-frequency contour and narrow bandwidth.",
+    "semantic": "Recruitment scream in non-contact aggression from higher-ranking opponents."
+  },
+  "Rhesus macaque (Macaca mulatta)||pulsed scream": {
+    "acoustic": "Scream of short pulses ranging from noisy to tonal, less stable than tonal screams.",
+    "semantic": "Recruitment scream encoding opponent and aggression details in agonistic events."
+  },
+  "Rhesus macaque (Macaca mulatta)||undulating scream": {
+    "acoustic": "Long tonal scream with repeated up-down frequency modulation and harmonic bands.",
+    "semantic": "Recruitment scream in non-contact rank-difference agonistic encounters."
+  },
+  "Ring-tailed lemur (Lemur catta)||moan": {
+    "acoustic": "Tonal, harmonic contact call with graded frequency modulation and individual signatures.",
+    "semantic": "Low-arousal cohesion call maintaining contact during travel, foraging, and spacing."
+  },
+  "Ring-tailed lemur (Lemur catta)||chirp": {
+    "acoustic": "Brief, high-frequency tonal call produced in repeated bouts.",
+    "semantic": "Affiliative contact during group travel and coordinated movement."
+  },
+  "Ring-tailed lemur (Lemur catta)||wail": {
+    "acoustic": "Loud, high-frequency tonal call with strong frequency modulation.",
+    "semantic": "Moderate- to high-arousal contact during travel or separation risk."
+  },
+  "Ring-tailed lemur (Lemur catta)||howl": {
+    "acoustic": "Loud, long-distance male call with tonal harmonic structure and frequency modulation.",
+    "semantic": "Male advertisement and long-range contact signalling group location and spacing."
+  },
+  "Ring-tailed lemur (Lemur catta)||yip": {
+    "acoustic": "Short, high-pitched call with abrupt onset and graded intensity.",
+    "semantic": "Submissive or appeasement signal during close social tension with dominants."
+  },
+  "Ring-tailed lemur (Lemur catta)||rasp": {
+    "acoustic": "Harsh, noisy broadband alarm call.",
+    "semantic": "Aerial predator alarm eliciting raptor-specific escape behavior."
+  },
+  "Spotted hyena (Crocuta crocuta)||whoop": {
+    "acoustic": "Loud, long-distance tonal bouts of upward-sweeping units with individual signatures.",
+    "semantic": "Long-range contact, identity advertisement, and rallying clan support."
+  },
+  "Spotted hyena (Crocuta crocuta)||fast whoop": {
+    "acoustic": "Rapid, higher-pitched whoop bout with shorter intervals signaling high arousal.",
+    "semantic": "Recruits allies during high-arousal conflicts over kills or with rivals."
+  },
+  "Spotted hyena (Crocuta crocuta)||grunt": {
+    "acoustic": "Soft, low-pitched, rough close-range growling sound lasting several seconds.",
+    "semantic": "Low-level agonistic spacing signal toward approaching unwelcome hyenas."
+  },
+  "Spotted hyena (Crocuta crocuta)||groan": {
+    "acoustic": "Low, sustained, tonal ooo-like close-range call, rounder than the grunt.",
+    "semantic": "Affiliative greeting and adult-cub caregiving contact at close range."
+  },
+  "Spotted hyena (Crocuta crocuta)||low": {
+    "acoustic": "Low-pitched, sustained ooo-like graded arousal call, less bout-structured.",
+    "semantic": "Shared arousal signal during tense feeding or social conflicts."
+  },
+  "Spotted hyena (Crocuta crocuta)||giggle": {
+    "acoustic": "High-pitched staccato bouts of short notes encoding age, status, and identity.",
+    "semantic": "Distress and submission during feeding competition or being attacked."
+  },
+  "Spotted hyena (Crocuta crocuta)||yell": {
+    "acoustic": "Loud, sustained high-pitched call, more intense than giggle notes.",
+    "semantic": "Acute distress signal while being bitten in close-range aggression."
+  },
+  "Spotted hyena (Crocuta crocuta)||growl": {
+    "acoustic": "Loud, low, harsh broadband rattling call lasting several seconds.",
+    "semantic": "High-intensity defensive threat before or during retaliatory biting."
+  },
+  "Spotted hyena (Crocuta crocuta)||soft grunt-laugh": {
+    "acoustic": "Rapid, soft, low-pitched staccato grunt series with pulsed structure.",
+    "semantic": "Surprise fleeing from predators or attacking large prey at close range."
+  },
+  "Spotted hyena (Crocuta crocuta)||loud grunt-laugh": {
+    "acoustic": "Louder, extended bouts of repeated low-pitched grunt-like elements.",
+    "semantic": "Coordinated group threat during clashes with lions or rival clans."
+  },
+  "Spotted hyena (Crocuta crocuta)||whine": {
+    "acoustic": "Loud, high-pitched, drawn-out repeated squealing whine.",
+    "semantic": "Cub begging signal of need or frustration when following or denied food."
+  },
+  "Spotted hyena (Crocuta crocuta)||soft squeal": {
+    "acoustic": "Soft, smooth, high-pitched close-range squeal, quieter than the whine.",
+    "semantic": "Appeasing reunion greeting between clan mates after separation."
+  },
+  "Tufted capuchin (Sapajus apella)||contact note": {
+    "acoustic": "Short, low-amplitude broadband pulse with concave frequency contour.",
+    "semantic": "Within-group spacing signal maintaining acoustic contact during travel and foraging."
+  },
+  "Tufted capuchin (Sapajus apella)||gr-gr": {
+    "acoustic": "Rapid series of concatenated contact-like pulses perceived as a broken, pulsed bout.",
+    "semantic": "Food-associated call recruiting conspecifics to feeding sites."
+  },
+  "Tufted capuchin (Sapajus apella)||food-associated whistle series": {
+    "acoustic": "Series of tonal, frequency-modulated whistles forming a structured bout.",
+    "semantic": "Signals food discovery and elicits approach by conspecifics."
+  },
+  "Tufted capuchin (Sapajus apella)||long-distance whistle series": {
+    "acoustic": "Loud, long, tonal whistle series structured to propagate beyond the group.",
+    "semantic": "Long-distance coordination, between-group spacing, and reunion with the social group."
+  },
+  "Tufted capuchin (Sapajus apella)||bark": {
+    "acoustic": "Short, loud, broadband noisy call with sharp, abrupt structure.",
+    "semantic": "Functionally referential aerial-predator alarm eliciting antipredator responses."
+  },
+  "Tufted capuchin (Sapajus apella)||hiccup": {
+    "acoustic": "Short, abrupt broadband call, often repeated in series during sustained disturbance.",
+    "semantic": "Generalised disturbance/urgency call, often to terrestrial threats."
+  },
+  "Tufted capuchin (Sapajus apella)||peep": {
+    "acoustic": "Short, tonal, relatively high-frequency call.",
+    "semantic": "Preferentially produced to terrestrial threats; referentiality uncertain."
+  },
+  "Tufted capuchin (Sapajus apella)||wah-wah": {
+    "acoustic": "Repetitive harsh broadband pulses (~100 ms each) with energy between 0.9\u20133 kHz.",
+    "semantic": "Response to sudden loud low-frequency stimuli such as thunder or explosive noises."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||uh": {
+    "acoustic": "Short, low-intensity grunt-like alarm call.",
+    "semantic": "Alerts group to minor terrestrial threats, prompting inspection rather than escape."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||nyow": {
+    "acoustic": "Moderate-intensity, abrupt alarm call of intermediate amplitude.",
+    "semantic": "Given to sudden appearance of minor predators; elicits orientation or flight."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||chutter": {
+    "acoustic": "Staccato, broadband call with clusters of short high-frequency elements.",
+    "semantic": "Snake alarm eliciting ground inspection; also used in intergroup aggression."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||rraup": {
+    "acoustic": "Rough, low-frequency noisy alarm call with short elements.",
+    "semantic": "Aerial-predator alarm prompting upward looking or cover-seeking."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||chirp": {
+    "acoustic": "Short, sharp, loud alarm with long elements at medium frequency.",
+    "semantic": "Terrestrial ambush-predator alarm eliciting tree-climbing escape."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||bark": {
+    "acoustic": "Loud, gruff, repeated long-distance call by adult males.",
+    "semantic": "Male alarm to large predators and signal during intergroup aggression."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||wrr": {
+    "acoustic": "Harsh, low-frequency threat-grunt call.",
+    "semantic": "Agonistic threat signal in within- and between-group aggression."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||grunt": {
+    "acoustic": "Short ~125 ms aperiodic call, F0 ~240 Hz, with context-specific spectral peaks.",
+    "semantic": "Context-specific social call for approach, movement, and intergroup coordination."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||scream": {
+    "acoustic": "High-pitched, noisy, high-amplitude call varying with role and severity.",
+    "semantic": "Agonistic distress signal recruiting aid and inhibiting aggression."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||squeal": {
+    "acoustic": "Shrill, high-pitched graded defensive call.",
+    "semantic": "Defensive call by females and juveniles inhibiting attack or soliciting aid."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||woof-woof": {
+    "acoustic": "Deep, non-tonal, guttural repeated woof elements.",
+    "semantic": "Submissive display by subordinate males during dominance interactions."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||wa": {
+    "acoustic": "Continuous tonal exhalation paired with grimace.",
+    "semantic": "Submissive display vocalization by subordinate males."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||woof-wa": {
+    "acoustic": "Composite guttural woof followed by tonal wa exhalation.",
+    "semantic": "Submissive display by subordinate males in dominance encounters."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||aarr": {
+    "acoustic": "Long, graded aar-like call with mouth slightly open.",
+    "semantic": "Intergroup encounter call recruiting group members to contested areas."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||wawoo": {
+    "acoustic": "Infant-only multi-syllable wawoo call.",
+    "semantic": "Infant intergroup-encounter call paralleling adult territorial vocalizations."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||rraugh": {
+    "acoustic": "Rraugh-like call with mouth closed and teeth covered.",
+    "semantic": "Appeasement call by yearlings approaching older group members."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||lip smack and teeth chatter": {
+    "acoustic": "Nonphonated rapid lip and teeth movements audible only at close range.",
+    "semantic": "Close-range appeasement signal during grooming and social approach."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||purr": {
+    "acoustic": "Very quiet, low-frequency close-range purring.",
+    "semantic": "Affiliative play signal by juveniles during play-wrestling."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||infant distress call": {
+    "acoustic": "Loud, attention-getting rrr- and scream-like calls with individual signatures.",
+    "semantic": "Distress call recruiting mothers and helpers during separation or threat."
+  },
+  "Vervet monkey (Chlorocebus pygerythrus)||infant reunion call": {
+    "acoustic": "Quiet, short, non-tonal repeated eh-eh call.",
+    "semantic": "Mother-offspring reunion call supporting close-range affiliative contact."
+  },
+  "Weddell seal (Leptonychotes weddellii)||trill": {
+    "acoustic": "Long downward-sweeping frequency-modulated underwater tonal call.",
+    "semantic": "Male territorial advertisement and courtship at breeding holes."
+  },
+  "Weddell seal (Leptonychotes weddellii)||chirp": {
+    "acoustic": "Short broadband or steeply frequency-modulated underwater call, under one second.",
+    "semantic": "Close-range underwater contact and location cue during social and courtship encounters."
+  },
+  "Weddell seal (Leptonychotes weddellii)||mew": {
+    "acoustic": "Short low-amplitude underwater call with energy below ~1 kHz.",
+    "semantic": "Male close-range courtship and affiliative signal toward females."
+  },
+  "Weddell seal (Leptonychotes weddellii)||growl": {
+    "acoustic": "Long, loud, low-frequency broadband underwater call.",
+    "semantic": "Male advertisement and assessment signal toward rivals and females."
+  },
+  "Weddell seal (Leptonychotes weddellii)||knock": {
+    "acoustic": "Short abrupt high-amplitude broadband underwater pulse, alone or in series.",
+    "semantic": "Male territorial threat near defended breathing holes."
+  },
+  "Weddell seal (Leptonychotes weddellii)||cricket call": {
+    "acoustic": "Moderately long underwater call with repeated narrowband mid-kHz elements.",
+    "semantic": "Male breeding-season underwater display near breathing holes."
+  },
+  "Weddell seal (Leptonychotes weddellii)||whistle": {
+    "acoustic": "Narrowband frequency-modulated tonal underwater call, sometimes ultrasonic.",
+    "semantic": "Underwater social and courtship display during breeding season."
+  },
+  "Weddell seal (Leptonychotes weddellii)||jaw clap": {
+    "acoustic": "Very short broadband mechanical pulse from rapid jaw closure.",
+    "semantic": "Close-range underwater threat display during male territorial encounters."
+  },
+  "Weddell seal (Leptonychotes weddellii)||pup contact call": {
+    "acoustic": "Airborne low-to-mid frequency call with individually distinctive features.",
+    "semantic": "Maternal contact and individual recognition during mother-pup reunions."
+  },
+  "Weddell seal (Leptonychotes weddellii)||pup primary call": {
+    "acoustic": "Airborne harmonic pup call, longer and higher-pitched when aroused.",
+    "semantic": "Pup contact and maternal solicitation during lactation."
+  },
+  "Zebra finch (Taeniopygia guttata)||song": {
+    "acoustic": "Complex, learned multi-syllable motif sequence produced by males.",
+    "semantic": "Courtship, pair bonding, and close-range social display."
+  },
+  "Zebra finch (Taeniopygia guttata)||distance call": {
+    "acoustic": "Loud, long harmonic call; sex-specific structure carries individual identity.",
+    "semantic": "Long-range contact supporting mate, kin, and individual recognition."
+  },
+  "Zebra finch (Taeniopygia guttata)||tet call": {
+    "acoustic": "Very short, soft, frequency-modulated harmonic call given in series.",
+    "semantic": "Close-range contact during movement and nest interactions."
+  },
+  "Zebra finch (Taeniopygia guttata)||stack call": {
+    "acoustic": "Soft harmonic call, flatter and intermediate between tet and distance call.",
+    "semantic": "Antiphonal pair exchanges and coordination at take-off."
+  },
+  "Zebra finch (Taeniopygia guttata)||ark call": {
+    "acoustic": "Soft, long, harsh nest-associated call, often in paired units.",
+    "semantic": "Nest-site coordination and duetting between mates."
+  },
+  "Zebra finch (Taeniopygia guttata)||kackle call": {
+    "acoustic": "Short, raspy, loud noisy nest-associated call.",
+    "semantic": "Produced around nest sites, increasing during early nesting."
+  },
+  "Zebra finch (Taeniopygia guttata)||whine call": {
+    "acoustic": "Very soft, long, low-pitched harmonic call with double-voice structure.",
+    "semantic": "Quiet pair communication during nesting and reproduction."
+  },
+  "Zebra finch (Taeniopygia guttata)||wsst call": {
+    "acoustic": "Noisy, broadband, low-pitched hiss-like aggressive call.",
+    "semantic": "Signals aggressive intent before or during attacks near nests."
+  },
+  "Zebra finch (Taeniopygia guttata)||distress call": {
+    "acoustic": "Loud, noisy broadband call, more tonal than wsst with peaked envelope.",
+    "semantic": "Emitted by victims during or after conspecific attack."
+  },
+  "Zebra finch (Taeniopygia guttata)||thuk call": {
+    "acoustic": "Very short, soft, abrupt alarm-related call.",
+    "semantic": "Low-intensity alarm by parents that silences chick begging."
+  },
+  "Zebra finch (Taeniopygia guttata)||begging call": {
+    "acoustic": "Repeated high-pitched cheeps developing into loud broadband bouts.",
+    "semantic": "Food solicitation by dependent young from parents."
+  },
+  "Zebra finch (Taeniopygia guttata)||long tonal call": {
+    "acoustic": "Loud, long, harmonic juvenile call resembling adult distance call.",
+    "semantic": "Fledgling contact with parents and siblings; precursor to distance call."
+  },
+  "Zebra finch (Taeniopygia guttata)||copulation whine": {
+    "acoustic": "Soft, harmonic whine-like call recorded at copulation.",
+    "semantic": "Produced during copulation by paired birds."
+  },
+  "Zebra finch (Taeniopygia guttata)||incubation call": {
+    "acoustic": "Extremely soft, rhythmic, ~6-7 kHz frequency-modulated heat-linked call.",
+    "semantic": "Parental heat-associated cue at the nest affecting offspring development."
+  }
+}
