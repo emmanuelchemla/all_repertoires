@@ -14,6 +14,10 @@ from pathlib import Path
 from collections import Counter
 
 ROOT = Path(__file__).parent.parent
+try:
+    from paper_code.paths import DATABASE_PATH
+except ModuleNotFoundError:
+    from paths import DATABASE_PATH
 sys.path.insert(0, str(ROOT))
 
 import matplotlib
@@ -83,7 +87,7 @@ AC_CAT_COLORS = {
 # ------------------------------------------------------------------ #
 
 def load():
-    with open(ROOT / "database.json") as f:
+    with open(DATABASE_PATH) as f:
         db = json.load(f)
     species_list = db["species"]
     calls = []

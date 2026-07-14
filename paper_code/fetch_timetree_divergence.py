@@ -29,7 +29,11 @@ import pandas as pd
 
 
 ROOT = Path(__file__).parent.parent
-DB_PATH = ROOT / "database.json"
+try:
+    from paper_code.paths import DATABASE_PATH
+except ModuleNotFoundError:
+    from paths import DATABASE_PATH
+DB_PATH = DATABASE_PATH
 OUT_DIR = ROOT / "plots"
 CACHE_DIR = OUT_DIR / "timetree_cache"
 BASE_URL = "http://timetree.temple.edu/api"

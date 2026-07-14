@@ -15,7 +15,11 @@ from pathlib import Path
 from collections import Counter
 
 ROOT = Path(__file__).parent.parent
-DB_PATH = ROOT / "database.json"
+try:
+    from paper_code.paths import DATABASE_PATH
+except ModuleNotFoundError:
+    from paths import DATABASE_PATH
+DB_PATH = DATABASE_PATH
 PLOTS_DIR = ROOT / "plots"
 OUT_DIR = Path(__file__).parent
 PLOTS_DIR.mkdir(exist_ok=True)

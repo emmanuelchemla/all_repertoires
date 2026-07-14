@@ -6,6 +6,7 @@ from collections import Counter
 import json
 import re
 from pathlib import Path
+import sys
 from typing import Dict, Iterable, List, Sequence, Tuple
 
 import matplotlib.pyplot as plt
@@ -13,6 +14,13 @@ import numpy as np
 import plotly.graph_objects as go
 from sentence_transformers import SentenceTransformer
 from umap import UMAP
+
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from repertoire_explorer.datasets import load_all_repertoires_json
 
 
 def species_common_name(name: str) -> str:
@@ -23,36 +31,17 @@ def species_common_name(name: str) -> str:
 
 def load_calls(json_path: Path) -> List[Dict[str, object]]:
     """Flatten species -> calls into a list of call dicts."""
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    calls: List[Dict[str, object]] = []
-    for species_entry in data.get("species", []):
-        species_name = species_entry.get("species_name", "unknown")
-        taxonomy = species_entry.get("taxonomy", {}) or {}
-        tax_kingdom = taxonomy.get("kingdom", species_entry.get("kingdom", ""))
-        tax_phylum = taxonomy.get("phylum", species_entry.get("phylum", ""))
-        tax_class = taxonomy.get("class", species_entry.get("class", ""))
-        tax_order = taxonomy.get("order", species_entry.get("order", ""))
-        tax_family = taxonomy.get("family", species_entry.get("family", ""))
-        tax_genus = taxonomy.get("genus", species_entry.get("genus", ""))
-        for call in species_entry.get("calls", []):
-            calls.append(
-                {
-                    "species": species_name,
-                    "call_name": call.get("call_name", "unknown"),
-                    "acoustic_description": call.get("acoustic_description", ""),
-                    "semantic_description": call.get("semantic_description", ""),
-                    "ontology_keywords": call.get("ontology_keywords", []),
-                    "taxonomy": taxonomy,
-                    "kingdom": tax_kingdom,
-                    "phylum": tax_phylum,
-                    "class": tax_class,
-                    "order": tax_order,
-                    "family": tax_family,
-                    "genus": tax_genus,
-                }
-            )
+    dataset = load_all_repertoires_json(json_path)
+    calls = dataset.calls.to_dict(orient="records")
+    for call in calls:
+        call["taxonomy"] = {
+            "kingdom": call.get("kingdom", ""),
+            "phylum": call.get("phylum", ""),
+            "class": call.get("class", ""),
+            "order": call.get("order", ""),
+            "family": call.get("family", ""),
+            "genus": call.get("genus", ""),
+        }
     return calls
 
 
@@ -178,6 +167,7 @@ def load_cache(cache_path: Path, model: str) -> Dict[str, List[float]]:
 
 
 def save_cache(cache_path: Path, model: str, cache: Dict[str, List[float]]) -> None:
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
     cache_path.write_text(
         json.dumps({"model": model, "embeddings": cache}), encoding="utf-8"
     )

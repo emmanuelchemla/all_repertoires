@@ -25,6 +25,10 @@ import sys, json
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
+try:
+    from paper_code.paths import DATABASE_PATH, EMBEDDING_CACHE_PATH
+except ModuleNotFoundError:
+    from paths import DATABASE_PATH, EMBEDDING_CACHE_PATH
 sys.path.insert(0, str(ROOT))
 
 import numpy as np
@@ -32,11 +36,11 @@ from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import RidgeCV
 from sklearn.neural_network import MLPRegressor
 from sklearn.model_selection import KFold
-from app.utils import load_calls, embed_texts
+from webapp.utils import load_calls, embed_texts
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-CACHE_PATH = ROOT / ".embedding_cache.json"
-DB_PATH    = ROOT / "database.json"
+CACHE_PATH = EMBEDDING_CACHE_PATH
+DB_PATH = DATABASE_PATH
 OUT_PATH   = Path(__file__).parent / "prediction_results.json"
 
 SEED = 42

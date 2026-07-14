@@ -19,6 +19,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
+try:
+    from paper_code.paths import DATABASE_PATH
+except ModuleNotFoundError:
+    from paths import DATABASE_PATH
 sys.path.insert(0, str(ROOT))
 
 import numpy as np
@@ -75,7 +79,7 @@ CLASS_COLORS = {
 
 def load_animals():
     """Load animal calls with species metadata, in database.json order."""
-    with open(ROOT / "database.json") as f:
+    with open(DATABASE_PATH) as f:
         db = json.load(f)
     calls = []
     for s in db["species"]:

@@ -36,7 +36,7 @@ dist/
 *.egg-info/
 
 # Project outputs
-.embedding_cache.json
+cache/
 human_bursts/
 
 # Local agent/editor state

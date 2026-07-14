@@ -1,6 +1,6 @@
 """
 Compute Mantel test statistics for the paper.
-Reuses the embedding cache and load_calls from app/utils.py.
+Reuses the embedding cache and load_calls from webapp/utils.py.
 
 Run from the project root:
     python paper_code/mantel.py
@@ -9,16 +9,20 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
+try:
+    from paper_code.paths import DATABASE_PATH, EMBEDDING_CACHE_PATH
+except ModuleNotFoundError:
+    from paths import DATABASE_PATH, EMBEDDING_CACHE_PATH
 sys.path.insert(0, str(ROOT))
 
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from app.utils import load_calls, embed_texts
+from webapp.utils import load_calls, embed_texts
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-CACHE_PATH = ROOT / ".embedding_cache.json"
-DB_PATH = ROOT / "database.json"
+CACHE_PATH = EMBEDDING_CACHE_PATH
+DB_PATH = DATABASE_PATH
 N_PERM = 9999
 
 
