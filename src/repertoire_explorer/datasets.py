@@ -1,11 +1,12 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import json
 from pathlib import Path
 from typing import Iterable
 
 import pandas as pd
+import yaml
 
 
 CANONICAL_COLUMNS = [
@@ -35,6 +36,7 @@ class CanonicalDataset:
     name: str
     calls: pd.DataFrame
     source_path: Path
+    species_metadata: dict[str, dict[str, str]] = field(default_factory=dict)
 
     @property
     def species(self) -> list[str]:
@@ -61,6 +63,11 @@ class CanonicalDataset:
             name=" | ".join(label_parts),
             calls=_finalize_calls(df),
             source_path=self.source_path,
+            species_metadata={
+                name: metadata
+                for name, metadata in self.species_metadata.items()
+                if name in set(df["species"])
+            },
         )
 
 
@@ -149,3 +156,53 @@ def load_all_repertoires_json(path: Path | str, *, name: str = "all_repertoires"
                 }
             )
     return CanonicalDataset(name=name, calls=_finalize_calls(pd.DataFrame(rows)), source_path=path)
+
+
+def load_repertoire_yaml_directory(
+    path: Path | str,
+    *,
+    name: str = "llm_knowledge+search",
+) -> CanonicalDataset:
+    """Load species repertoire YAML files into the existing canonical table."""
+    path = Path(path)
+    rows: list[dict[str, object]] = []
+    species_metadata: dict[str, dict[str, str]] = {}
+    for yaml_path in sorted(path.glob("*.yaml")):
+        payload = yaml.safe_load(yaml_path.read_text(encoding="utf-8")) or {}
+        taxonomy = payload.get("taxonomy", {}) or {}
+        scientific_name = str(payload.get("scientific_name") or yaml_path.stem)
+        species_metadata[scientific_name] = {
+            "common_name": str(payload.get("common_name") or scientific_name),
+        }
+        tax = {
+            "kingdom": taxonomy.get("kingdom", ""),
+            "phylum": taxonomy.get("phylum", ""),
+            "class": taxonomy.get("class", ""),
+            "order": taxonomy.get("order", ""),
+            "family": taxonomy.get("family", ""),
+            "genus": taxonomy.get("genus", ""),
+        }
+        for call_index, call in enumerate(payload.get("calls", []) or []):
+            call_name = str(call.get("name") or "unknown")
+            references = call.get("references", []) or []
+            rows.append(
+                {
+                    "dataset": name,
+                    "call_id": f"{yaml_path.stem}|||{call_name}|||{call_index}",
+                    "species": scientific_name,
+                    "call_name": call_name,
+                    "semantic_description": call.get("semantic_description", ""),
+                    "acoustic_description": call.get("acoustic_description", ""),
+                    "semantic_keywords": call.get("semantic_keywords", []),
+                    "acoustic_keywords": call.get("acoustic_keywords", []),
+                    "ontology_keywords": call.get("semantic_keywords", []),
+                    "source": "; ".join(str(ref) for ref in references),
+                    **tax,
+                }
+            )
+    return CanonicalDataset(
+        name=name,
+        calls=_finalize_calls(pd.DataFrame(rows)),
+        source_path=path,
+        species_metadata=species_metadata,
+    )

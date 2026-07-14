@@ -21,6 +21,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from repertoire_explorer.datasets import load_all_repertoires_json
+from repertoire_explorer.animallex_analysis import compute_description_embeddings
 
 
 def species_common_name(name: str) -> str:
@@ -185,28 +186,15 @@ def embed_texts(
     encoder: SentenceTransformer,
     batch_size: int = 64,
 ) -> Tuple[np.ndarray, Dict[str, List[float]]]:
-    """Embed texts with SentenceTransformer, caching by exact text string."""
-    cache = load_cache(cache_path, model_name)
-    vectors: List[List[float]] = []
-    missing: List[str] = [t for t in texts if t not in cache]
-
-    for chunk in batch_iter(missing, batch_size):
-        if not chunk:
-            continue
-        embeds = encoder.encode(
-            chunk,
-            batch_size=batch_size,
-            convert_to_numpy=True,
-            normalize_embeddings=True,
-        )
-        for text, emb in zip(chunk, embeds):
-            cache[text] = emb.tolist()
-
-    for text in texts:
-        vectors.append(cache[text])
-
-    save_cache(cache_path, model_name, cache)
-    return np.array(vectors, dtype=np.float32), cache
+    """Compatibility wrapper around the shared embedding implementation."""
+    vectors = compute_description_embeddings(
+        texts,
+        model_name=model_name,
+        cache_path=cache_path,
+        encoder=encoder,
+        batch_size=batch_size,
+    )
+    return vectors, load_cache(cache_path, model_name)
 
 
 def reduce_umap(embeddings: np.ndarray, n_components: int = 2) -> np.ndarray:

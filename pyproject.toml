@@ -10,6 +10,7 @@ dependencies = [
     "numpy",
     "pandas",
     "plotly",
+    "pyyaml",
     "scikit-learn",
     "sentence-transformers",
     "umap-learn",
@@ -17,8 +18,12 @@ dependencies = [
 
 [project.optional-dependencies]
 repertoires = [
-    "pyyaml",
     "streamlit",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
 ]
 
 [tool.uv]

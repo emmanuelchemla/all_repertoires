@@ -36,8 +36,13 @@ uv sync --extra repertoires
 Run the webapp:
 
 ```bash
+uv run python analyses/build_animallex_release.py
 uv run python -m webapp.main
 ```
+
+The build command creates the shared AnimalLex analysis bundle used by both the
+Dash app and the paper figure renderers. Validate an existing bundle with the
+same analysis settings by adding `--validate-only`.
 
 Run the generic analysis entry point:
 

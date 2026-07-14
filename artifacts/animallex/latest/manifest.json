@@ -1,0 +1,20 @@
+{
+  "config": {
+    "analysis_version": "3",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "n_permutations": 999,
+    "pmi_alpha": 0.05,
+    "pmi_minimum": 4,
+    "random_seed": 42,
+    "scatter_sample_per_group": 1000,
+    "species_pair_minimum": 6
+  },
+  "dataset": "llm_knowledge+search",
+  "excluded_calls": 0,
+  "generated_at": "2026-07-14T12:14:42.863360+00:00",
+  "n_calls": 1507,
+  "n_species": 128,
+  "source": "repertoires/llm_knowledge+search/species",
+  "source_commit": "2b8e4f55186446650bcf3de08b52e64779de4247",
+  "source_hash": "5e25fc8c9d29733652288c4a792270a4682d5f9fb579be5519ea9accbd9c570c"
+}
