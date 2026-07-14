@@ -97,6 +97,44 @@ calls:
     confidence: medium
     references:
       - matsumoto_etal_2023
+  - name: wriggling call
+    alternative_names:
+      - wiggling call
+      - low-frequency pup call
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - short
+      - repetitive
+    acoustic_description: Low-frequency calls below approximately 10 kHz, produced by pups during suckling; acoustically distinct from the much higher-frequency ultrasonic isolation calls.
+    semantic_keywords:
+      - caregiving
+      - contact
+      - attention
+    semantic_description: Emitted by pups (primarily postnatal days 2–15) while pushing toward the mother's teats during suckling; triggers maternal licking, position changes, and nest-building behaviour. Context of production is mutually exclusive with ultrasonic isolation calls.
+    confidence: high
+    references:
+      - ehret_bernecker_1986
+  - name: female social group USV
+    alternative_names:
+      - female-female USV
+      - female interaction call
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - graded
+      - multi_component
+    acoustic_description: Ultrasonic syllables produced by females in stable social groups; call type composition and bout structure differ between peaceful and aggressive interaction contexts.
+    semantic_keywords:
+      - affiliation
+      - aggression
+      - contact
+      - group_coordination
+    semantic_description: Produced by female mice during direct social interactions within established groups; call type occurrence and time-frequency characteristics vary with peaceful versus aggressive social context.
+    confidence: medium
+    references:
+      - de_bernardis_etal_2025
 references:
   ehret_2005:
     citation: "Ehret, G. 2005. Infant rodent ultrasounds: a gate to the understanding of sound communication. Behavior Genetics 35(1):19-29."
@@ -112,6 +150,13 @@ references:
     citation: Zanghieri, M., Mocaer, E., Pautrat, A., and Granon, S. 2022. Rates of ultrasonic vocalizations are more strongly related than acoustic features to non-vocal behaviors in mouse pups. Frontiers in Behavioral Neuroscience 16:1015484.
     url: https://www.frontiersin.org/journals/behavioral-neuroscience/articles/10.3389/fnbeh.2022.1015484/full
     doi: 10.3389/fnbeh.2022.1015484
+  ehret_bernecker_1986:
+    citation: "Ehret, G. and Bernecker, C. 1986. Low-frequency sound communication by mouse pups (Mus musculus): wriggling calls release maternal behaviour. Animal Behaviour 34(3):821-830."
+    doi: 10.1016/S0003-3472(86)80067-7
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0003347286800677
+  de_bernardis_etal_2025:
+    citation: De Bernardis, V. et al. 2025. Female mice in established social groups use different ultrasonic vocalizations during peaceful and aggressive interactions. Behavioural Brain Research.
+    url: https://www.sciencedirect.com/science/article/pii/S0166432825004917
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
@@ -121,3 +166,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added stable references and expanded the repertoire to distinguish adult social and aggressive ultrasonic classes from the better-known courtship song and pup isolation system.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added wriggling call (low-frequency pup call during suckling, distinct from ultrasonic isolation call) and female social group USV (female-female interactions in stable groups). Added corresponding references ehret_bernecker_1986 and de_bernardis_etal_2025.

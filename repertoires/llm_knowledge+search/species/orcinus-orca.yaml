@@ -46,6 +46,156 @@ calls:
     semantic_description: Used in highly aroused social contexts and abrupt interactions.
     confidence: low
     references: [wellard_2015]
+  - name: excitement call
+    acoustic_keywords: [pulsed, repetitive, frequency_modulated, multi_component, loud]
+    acoustic_description: A rapidly modulated social call with accelerated contour changes and more agitated structure than routine stereotyped pulsed calls.
+    semantic_keywords: [attention, display, group_coordination]
+    semantic_description: Included as a broad high-arousal social class because some killer-whale repertoires distinguish sped-up or excitement-associated variants produced during intense interactions.
+    confidence: low
+    references: [ford_1989, wellard_2015]
+  - name: variable call
+    alternative_names: [non-stereotyped pulsed call, shared call]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [pulsed, broadband, multi_component, frequency_modulated, loud]
+    acoustic_description: A pulsed call without stereotyped structure; not consistently assignable to a pod or individual and variable in contour, duration, and number of components across productions.
+    semantic_keywords: [affiliation, group_coordination, display]
+    semantic_description: Produced at elevated rates during socializing and beach-rubbing activities; shared across pods and believed to function in social bonding rather than strict group identity.
+    confidence: high
+    references: [ford_1989]
+  - name: aberrant call
+    alternative_names: [modified discrete call, deviant call]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [pulsed, broadband, multi_component, frequency_modulated, noisy]
+    acoustic_description: A pulsed call structurally derived from a discrete type but with varying degrees of modification — altered contour, truncated components, added noise, or shifted pitch — making it recognizable as a variant of a discrete but not fully stereotyped.
+    semantic_keywords: [affiliation, group_coordination, display]
+    semantic_description: Increased during high-arousal social events and intergroup encounters; thought to represent partial or imprecise productions of discrete calls in socially complex contexts.
+    confidence: high
+    references: [ford_1989]
+  - name: stereotyped whistle
+    alternative_names: [pod whistle, clan whistle]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: true
+      note: Pod- and clan-level stereotyped whistle types are stable for at least 13 years and show group-level specificity in resident killer whales.
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, long, loud]
+    acoustic_description: A tonal frequency-modulated call with a consistent, reproducible contour assignable to a pod or clan; cleaner spectral structure and less variability than non-stereotyped whistles. Duration roughly 0.5–3 s with smooth upsweep or complex contour.
+    semantic_keywords: [identity, affiliation, group_coordination]
+    semantic_description: Contributes to pod and clan identity in addition to discrete calls; shared whistle types between acoustic clans may provide community-level recognition across matrilines.
+    confidence: high
+    references: [deecke_2005, riesch_2006]
+  - name: variable whistle
+    alternative_names: [non-stereotyped whistle, graded whistle]
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, frequency_modulated, long, graded, quiet]
+    acoustic_description: A tonal frequency-modulated call with an irregular or unrepeated contour; the majority (~70%) of recorded whistles fall into this variable category, with no consistent assignment to pod or individual.
+    semantic_keywords: [contact, affiliation, caregiving]
+    semantic_description: Used during close-range social interaction, possibly for individual-level contact and affiliation; may serve caregiver–calf communication in mother-offspring pairs.
+    confidence: medium
+    references: [riesch_2006]
+  - name: low-frequency herding call
+    alternative_names: [herring-herding call, prey-manipulation call, low-frequency pulsed call]
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: true
+      note: Documented specifically in Icelandic and Norwegian herring-eating killer whales; may not occur in fish-eating ecotypes preying on non-schooling species.
+    acoustic_keywords: [low_frequency, pulsed, repetitive, long, loud]
+    acoustic_description: An atypically low-frequency pulsed call with peak energy around 683 Hz (range ~0.1–2 kHz), long duration (mean ~3 s), and high source level (169–192 dB peak-to-peak re 1 µPa at 1 m); frequency content overlaps with herring swim-bladder resonance.
+    semantic_keywords: [food, recruitment, group_coordination]
+    semantic_description: Produced immediately before tail slaps during carousel feeding to compress herring into dense balls, exploiting prey sensitivity to low-frequency vibrations; functions as a cooperative prey-manipulation signal.
+    confidence: high
+    references: [simon_2006]
+  - name: echolocation buzz
+    alternative_names: [terminal buzz, click buzz, rapid click train]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, pulsed, repetitive, short, high_frequency, abrupt]
+    acoustic_description: An extremely rapid train of echolocation clicks with inter-click interval ≤10 ms; produced at the deepest phase of dives, with click rate accelerating to hundreds per second just before prey contact.
+    semantic_keywords: [food]
+    semantic_description: Used for close-range prey targeting immediately before or concurrent with salmon capture at depth; equivalent to the terminal buzz seen in other odontocetes.
+    confidence: high
+    references: [wright_etal_2021]
+  - name: prey-handling sound
+    alternative_names: [fish manipulation sound, crunching sound, tearing sound]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, noisy, short, abrupt]
+    acoustic_description: Irregular broadband transient sounds including crunching, tearing, and snapping produced during fish manipulation; distinct from click trains and social calls in their irregular, percussive spectrotemporal structure.
+    semantic_keywords: [food]
+    semantic_description: Produced during prey handling and consumption after capture; also associated with prey sharing among group members at shallow depth.
+    confidence: high
+    references: [wright_etal_2021]
+  - name: jaw clap
+    alternative_names: [jaw snap]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, abrupt, short, loud]
+    acoustic_description: A sharp broadband transient produced by rapid closure of the mandibles; short impulsive acoustic signature with broadband energy spanning multiple kHz.
+    semantic_keywords: [threat, aggression, attention]
+    semantic_description: Produced during agonistic or highly aroused interactions; serves as an acoustic signal of threat or dominance assertion and has been noted alongside herring herding.
+    confidence: medium
+    references: []
+  - name: low-frequency bellow
+    alternative_names: [low moan, low groan]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, harmonic, long, loud, graded]
+    acoustic_description: A deep, low-pitched tonal or near-tonal call with fundamental frequency typically below 1 kHz and harmonic stack; extended duration with smooth or slowly modulated contour.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: A broad low-frequency social call type reported alongside whistles and pulsed calls in descriptions of the full orca acoustic repertoire; exact functional context is less well characterized than discrete calls.
+    confidence: low
+    references: []
+  - name: call combination sequence
+    alternative_names: [call combination, multi-call sequence, concatenated calls]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: true
+      note: Best documented in Icelandic killer whales; specific two- and three-call combination motifs have been identified and appear non-random.
+    acoustic_keywords: [pulsed, repetitive, multi_component, loud, frequency_modulated]
+    acoustic_description: A structured temporal sequence of two or more distinct discrete call types produced in close succession or overlapping, forming a recognizable multi-call motif that recurs within a population.
+    semantic_keywords: [identity, group_coordination, combinatorial, affiliation]
+    semantic_description: Non-random combinations of call types produced in socially active contexts; combinatorial structure may encode additional social information beyond single-call identity signals.
+    confidence: medium
+    references: [filatova_etal_2023]
+  - name: tail slap
+    alternative_names: [lobtail, lob-tail, underwater tail slap]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [broadband, loud, abrupt, short]
+    acoustic_description: A loud, impulsive broadband percussive sound generated by the flukes striking the water surface or below; high-amplitude transient audible both above and below surface.
+    semantic_keywords: [food, threat, display, group_coordination]
+    semantic_description: Used to stun or disorient prey fish (particularly during carousel and herring-herding foraging), as well as in agonistic displays and social signaling during intense behavioral interactions.
+    confidence: high
+    references: [simon_2006]
 references:
   ford_1989:
     citation: "Ford, J.K.B. 1989. Acoustic behaviour of resident killer whales (Orcinus orca) off Vancouver Island, British Columbia. Canadian Journal of Zoology 67:727-745."
@@ -58,6 +208,19 @@ references:
   wellard_2015:
     citation: "Wellard, R., et al. 2015. Vocalisations of killer whales (Orcinus orca) in the Bremer Canyon, Western Australia. PLOS ONE 10:e0136535."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4564243/
+  deecke_2005:
+    citation: "Deecke, V.B., Ford, J.K.B., and Slater, P.J.B. 2005. The vocal behaviour of mammal-eating killer whales: communicating with costly calls. Animal Behaviour 69:395-405."
+  riesch_2006:
+    citation: "Riesch, R., Ford, J.K.B., and Thomsen, F. 2006. Stability and group specificity of stereotyped whistles in resident killer whales, Orcinus orca, off British Columbia. Animal Behaviour 71:79-91."
+  simon_2006:
+    citation: "Simon, M., et al. 2006. Icelandic killer whales Orcinus orca use a pulsed call suitable for manipulating the schooling behaviour of herring Clupea harengus. Bioacoustics 16:57-74."
+    url: https://www.bioacoustics.info/article/icelandic-killer-whales-orcinus-orca-use-pulsed-call-suitable-manipulating-schooling
+  wright_etal_2021:
+    citation: "Wright, B.M., et al. 2021. Behavioral context of echolocation and prey-handling sounds produced by killer whales (Orcinus orca) during pursuit and capture of Pacific salmon (Oncorhynchus spp.). Marine Mammal Science 38:105-124."
+    url: https://onlinelibrary.wiley.com/doi/10.1111/mms.12836
+  filatova_etal_2023:
+    citation: "Filatova, O.A., et al. 2023. Call combination patterns in Icelandic killer whales (Orcinus orca). Scientific Reports 13:21742."
+    url: https://www.nature.com/articles/s41598-023-48349-1
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
@@ -71,3 +234,12 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Reframed the orca file around discrete pulsed calls, biphonic calls, whistles, and clicks using broad categories stable across populations.
+  - timestamp: "2026-06-11T18:30:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a low-confidence excitement-call class to improve recall for repertoires that separate high-arousal sped-up pulsed calls from ordinary discrete calls.
+  - timestamp: "2026-06-12T17:15:00+02:00"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: >
+      Expanded from 6 to 17 call types via web search and LLM synthesis. Added: variable call, aberrant call, stereotyped whistle, variable whistle, low-frequency herding call, echolocation buzz, prey-handling sound, jaw clap, low-frequency bellow, call combination sequence, tail slap. Added 5 new references (Deecke 2005, Riesch 2006, Simon 2006, Wright et al. 2021, Filatova et al. 2023). Sources: Ford 1989 (call taxonomy), Riesch 2006 (whistles), Simon 2006 (herding call), Wright et al. 2021 (buzz + prey-handling), Selbmann 2023 (Icelandic repertoire), Filatova et al. 2023 (combinations).

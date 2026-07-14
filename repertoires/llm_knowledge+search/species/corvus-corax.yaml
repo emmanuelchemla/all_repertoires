@@ -141,10 +141,540 @@ calls:
     confidence: medium
     references:
       - raven_cornell
+
+  - name: food yell
+    alternative_names:
+      - haa call
+      - yell
+      - recruitment yell
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - broadband
+      - short
+      - graded
+    acoustic_description: Far-carrying harsh yelling calls, individually distinctive in duration and frequency structure, repeated in series at food sites.
+    semantic_keywords:
+      - food
+      - recruitment
+      - identity
+      - group_coordination
+    semantic_description: Emitted when a raven locates food it cannot immediately access; attracts conspecifics and may help overcome food defence by dominant birds or predators; individually distinctive.
+    confidence: high
+    references:
+      - heinrich_marzluff_1991
+      - raven_food_call_ncbi
+
+  - name: territorial advertisement call
+    alternative_names:
+      - undulating territorial call
+      - breeding call
+    acoustic_keywords:
+      - loud
+      - long
+      - frequency_modulated
+      - repetitive
+      - tonal
+    acoustic_description: Long (~1 s) undulating call with an upward inflection, always given as a repeated series of several identical notes.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - identity
+      - group_coordination
+    semantic_description: Given by resident adults (especially pairs) in the morning, particularly in or before the breeding season, to advertise territory ownership and deter intruders.
+    confidence: high
+    references:
+      - raven_yellowstone
+
+  - name: chase call
+    alternative_names:
+      - trespass call
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - abrupt
+      - repetitive
+      - loud
+    acoustic_description: Short, choppy, high-pitched calls given rapidly in bursts; sharper and higher than ordinary croaks.
+    semantic_keywords:
+      - threat
+      - aggression
+      - territorial
+      - alarm
+    semantic_description: Produced by birds being chased during trespass into defended territories of resident adult pairs; also given by chasers during pursuit.
+    confidence: high
+    references:
+      - raven_yellowstone
+
+  - name: comfort sound
+    alternative_names:
+      - soft contact murmur
+    acoustic_keywords:
+      - quiet
+      - tonal
+      - short
+      - multi_component
+    acoustic_description: Soft, low-amplitude melodic murmuring notes exchanged between closely associated individuals; gentle and non-harsh relative to other calls.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - caregiving
+    semantic_description: Given by nestlings after feeding and by paired adults during close social contact and allopreening; appears to reinforce bonding and signal contentment.
+    confidence: high
+    references:
+      - raven_cornell
+      - raven_birdnote
+
+  - name: defensive call
+    alternative_names:
+      - appeasement call
+      - submissive call
+    acoustic_keywords:
+      - high_frequency
+      - graded
+      - long
+      - loud
+      - frequency_modulated
+    acoustic_description: Higher-pitched and more extended vocalisation than typical croaks; fundamental frequency and amplitude increase with conflict intensity; acoustically graded.
+    semantic_keywords:
+      - submission
+      - threat
+      - aggression
+      - distress
+    semantic_description: Uttered by individuals under attack to appease the aggressor; emitted more during high-intensity contact aggression, especially when attacker outranks victim; defensive call rate increases with escalation.
+    confidence: high
+    references:
+      - agonistic_frontiers_2017
+
+  - name: growl
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - abrupt
+    acoustic_description: Low, rumbling, guttural sound; rough tonal quality distinct from clean croaks; shorter bursts than full croak series.
+    semantic_keywords:
+      - aggression
+      - threat
+      - display
+    semantic_description: Accompanies aggressive postures and close-range dominance displays; given by birds asserting rank or challenging rivals.
+    confidence: medium
+    references:
+      - raven_cornell
+      - conner_1985
+
+  - name: whine
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - quiet
+      - long
+    acoustic_description: A thin, drawn-out, rising or wavering tonal call with relatively smooth frequency contour.
+    semantic_keywords:
+      - submission
+      - distress
+      - begging
+    semantic_description: Common among subordinate birds in jostling aggregations (e.g., communal roosts or feeding groups) and in young ravens during submissive interactions; signals low social rank or anxiety.
+    confidence: medium
+    references:
+      - conner_1985
+
+  - name: scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - broadband
+      - abrupt
+    acoustic_description: Loud, high-pitched shriek; very broadband and harsh relative to standard calls; intense in amplitude.
+    semantic_keywords:
+      - distress
+      - alarm
+      - aggression
+    semantic_description: Emitted under extreme distress, injury, or very intense agonistic interactions; also reported in jostling communal roost arrivals.
+    confidence: medium
+    references:
+      - conner_1985
+
+  - name: honk
+    alternative_names:
+      - goose-like honk
+    acoustic_keywords:
+      - loud
+      - tonal
+      - short
+      - abrupt
+    acoustic_description: A nasal, relatively tonal call resembling a goose honk; less harsh than typical raven croaks.
+    semantic_keywords:
+      - group_coordination
+      - contact
+    semantic_description: Given during morning departure from communal roosts; likely a group coordination and departure signal.
+    confidence: medium
+    references:
+      - conner_1985
+
+  - name: rattle
+    alternative_names:
+      - female rattle
+      - wing-rattle call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - abrupt
+      - repetitive
+      - broadband
+      - short
+      - pulsed
+      - loud
+    acoustic_description: Rapid series of about 12 or more loud staccato knocking or rattling notes delivered within approximately 1 second; distinct from the slower paired knock call.
+    semantic_keywords:
+      - display
+      - territorial
+      - identity
+      - attention
+    semantic_description: Predominantly produced by dominant females; believed to function in individual identity signalling and territory advertisement.
+    confidence: medium
+    references:
+      - raven_cornell
+
+  - name: bell call
+    alternative_names:
+      - toot
+      - bell-like call
+    acoustic_keywords:
+      - tonal
+      - short
+      - high_frequency
+      - abrupt
+    acoustic_description: A clear, somewhat tonal call with a bell-like or toot-like quality; higher and more musical than typical croaks; often single notes.
+    semantic_keywords:
+      - contact
+      - identity
+    semantic_description: Among the miscellaneous calls of unknown or variable function documented in adults; may be regionally, locally, or individually distinct; exact function not established.
+    confidence: low
+    references:
+      - raven_cornell
+
+  - name: hiccup call
+    alternative_names:
+      - woo-woo call
+      - drip call
+    acoustic_keywords:
+      - short
+      - tonal
+      - abrupt
+      - quiet
+      - frequency_modulated
+    acoustic_description: Brief, often downward-inflected tonal note with an onomatopoeic hiccup or dripping quality; sometimes described as woo-woo.
+    semantic_keywords:
+      - contact
+      - affiliation
+    semantic_description: Documented among the diverse close-range and individually variable calls of adults; function poorly understood; may be affiliative or contact-related.
+    confidence: low
+    references:
+      - raven_cornell
+
+  - name: predator alarm call
+    alternative_names:
+      - aerial alarm
+      - hawk alarm
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - abrupt
+      - short
+      - repetitive
+    acoustic_description: Rapid, sharp, repeated calls; higher and more urgent in pitch than standard croaks; given in rapid succession.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - group_coordination
+    semantic_description: Emitted when aerial or terrestrial predators such as raptors are detected; prompts rapid flight or mobbing behaviour in nearby conspecifics.
+    confidence: high
+    references:
+      - raven_cornell
+
+  - name: mobbing call
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - loud
+      - repetitive
+      - short
+    acoustic_description: Harsh, insistent repeated calls given in rapid succession at a detected threat; similar to scold call but sustained and coordinated.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - threat
+    semantic_description: Given when mobbing predators or perceived threats; attracts other ravens to join in group harassment.
+    confidence: high
+    references:
+      - raven_cornell
+
+  - name: mimicry
+    alternative_names:
+      - vocal imitation
+      - learned call
+    acoustic_keywords:
+      - multi_component
+      - tonal
+      - frequency_modulated
+      - graded
+      - long
+    acoustic_description: Highly variable and acoustically complex reproductions of environmental sounds including conspecific calls, heterospecific bird calls, and human speech; spectral structure determined by copied model.
+    semantic_keywords:
+      - identity
+      - play
+      - display
+      - contact
+    semantic_description: Ravens readily learn and reproduce sounds from their environment; function includes possible identity signalling and social attraction; specific adaptive function of mimicry in this species remains debated.
+    confidence: high
+    references:
+      - mimicry_corvids_ncbi
+
+  - name: subsong
+    alternative_names:
+      - quiet warble
+      - whisper song variant
+    acoustic_keywords:
+      - quiet
+      - tonal
+      - multi_component
+      - long
+      - frequency_modulated
+    acoustic_description: Continuous low-amplitude medley of soft notes, clicks, gurgles, hisses, and melodic elements strung together with no strong inter-element breaks; quieter and more disorganised than warble song.
+    semantic_keywords:
+      - display
+      - affiliation
+      - play
+    semantic_description: Heard from individuals apparently rehearsing or improvising vocally at very low intensity; analogous to the subsong of other passerines; context includes rest, play, and pair proximity.
+    confidence: low
+    references:
+      - raven_yellowstone
+
+  - name: flight call
+    acoustic_keywords:
+      - short
+      - abrupt
+      - loud
+      - broadband
+      - repetitive
+    acoustic_description: Brief, standardised croaking notes given in flight; structurally similar to contact croak but typically shorter and less modulated.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - spacing
+    semantic_description: Emitted during flight to maintain contact with flock or partner; commonly heard when ravens fly between roost and foraging areas.
+    confidence: high
+    references:
+      - raven_cornell
+
+  - name: assembly call
+    alternative_names:
+      - roost assembly call
+      - gathering call
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - broadband
+      - noisy
+    acoustic_description: Series of harsh cawing or croaking calls given before or during aggregation at communal roosts or foraging sites; acoustically similar to contact calls but more sustained.
+    semantic_keywords:
+      - group_coordination
+      - recruitment
+      - contact
+    semantic_description: Produced when individuals converge at communal roost sites or large food sources; co-ordinates group arrival and helps maintain group cohesion.
+    confidence: medium
+    references:
+      - conner_1985
+
+  - name: distress call
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - noisy
+      - broadband
+      - repetitive
+    acoustic_description: High-amplitude, high-pitched repeated calls; harsh and urgent; structurally related to scream but more sustained.
+    semantic_keywords:
+      - distress
+      - alarm
+      - attention
+    semantic_description: Given by captured, injured, or severely threatened individuals; may attract conspecifics and deter attackers.
+    confidence: medium
+    references:
+      - raven_cornell
+
+  - name: chirring call
+    alternative_names:
+      - faint chirr
+      - submissive chirr
+    acoustic_keywords:
+      - quiet
+      - high_frequency
+      - pulsed
+      - repetitive
+      - short
+    acoustic_description: Faint, high-pitched, rapidly pulsed trill-like sound; softer and higher than adult vocalisations; similar to nestling begging in spectral quality.
+    semantic_keywords:
+      - submission
+      - begging
+      - affiliation
+    semantic_description: High-pitched food-begging calls of nestlings persist in older ravens as a submissive signal during dominance interactions; given by subordinates toward dominants.
+    confidence: medium
+    references:
+      - agonistic_frontiers_2017
+
+  - name: nestling call
+    alternative_names:
+      - infant call
+      - early nestling vocalisation
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - short
+      - loud
+      - graded
+    acoustic_description: Very high-pitched, simple, pulsed calls produced by recently hatched nestlings; structurally simpler than juvenile begging calls.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - distress
+    semantic_description: Produced by hatchlings and very young nestlings to solicit brooding and food from the incubating or attending parent.
+    confidence: medium
+    references:
+      - raven_cornell
+
+  - name: knocking call
+    alternative_names:
+      - toc toc
+      - wood-block knock
+    acoustic_keywords:
+      - abrupt
+      - short
+      - pulsed
+      - repetitive
+      - broadband
+      - loud
+    acoustic_description: Percussive toc-toc-toc knocking sounds resembling wood blocks struck together; very brief individual pulses with abrupt onset and offset; audible at long range.
+    semantic_keywords:
+      - territorial
+      - display
+      - contact
+      - identity
+    semantic_description: Mated pairs frequently give loud patterned knocking audible for several kilometres; likely functions in long-range territory defence and pair communication.
+    confidence: high
+    references:
+      - raven_cornell
+      - raven_yellowstone
+
+  - name: cluck
+    acoustic_keywords:
+      - abrupt
+      - short
+      - broadband
+      - pulsed
+    acoustic_description: Brief, staccato percussive note or series of notes; hen-like quality; sharper onset than typical croaks.
+    semantic_keywords:
+      - alarm
+      - attention
+    semantic_description: Reported to be given at the sight of a predator; also documented in staccato series in close-range interactions.
+    confidence: medium
+    references:
+      - conner_1985
+
+  - name: greeting call
+    alternative_names:
+      - pair greeting
+    acoustic_keywords:
+      - quiet
+      - multi_component
+      - tonal
+      - short
+    acoustic_description: A sequence of soft, melodic notes with variable structure; lower amplitude than alarm or contact calls; often mixed with soft gurgling elements.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - courtship
+      - identity
+    semantic_description: Given when paired individuals reunite or approach each other after separation; reinforces the pair bond and signals individual identity between mates.
+    confidence: medium
+    references:
+      - raven_yellowstone
+
+  - name: play call
+    acoustic_keywords:
+      - multi_component
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - graded
+    acoustic_description: Variable, often rapid, irregular sequences of calls; may include high-pitched notes, brief croaks, and other elements in unpredictable order.
+    semantic_keywords:
+      - play
+      - display
+      - affiliation
+    semantic_description: Produced during aerial games, object play, and social play bouts; distinguishable from agonistic or alarm calls by context and lower urgency.
+    confidence: low
+    references:
+      - raven_yellowstone
+
+  - name: bill snap
+    alternative_names:
+      - mandible clap
+    acoustic_keywords:
+      - abrupt
+      - short
+      - broadband
+    acoustic_description: Sharp percussive click produced by rapid closing of mandibles; brief transient with broadband spectrum; not a vocal sound.
+    semantic_keywords:
+      - threat
+      - aggression
+      - display
+    semantic_description: Mechanical non-vocal sound used in close-range threat and agonistic displays; sometimes associated with dominant individuals displacing subordinates.
+    confidence: medium
+    references:
+      - raven_cornell
+
 references:
   raven_cornell:
     citation: Cornell Lab of Ornithology. Common Raven sounds.
     url: https://www.allaboutbirds.org/guide/Common_Raven/sounds
+  heinrich_marzluff_1991:
+    citation: "Heinrich, B. & Marzluff, J. (1991). Do Common Ravens yell because they want to attract others? Behavioral Ecology and Sociobiology, 28(1), 13-21."
+  raven_food_call_ncbi:
+    citation: "Boeckle, M. & Bugnyar, T. (2012). Long-term memory and response to new individuals in ravens. PLOS ONE / Raven food call studies. PMC4289921."
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4289921/
+  conner_1985:
+    citation: "Conner, R. N. (1985). Vocalizations of Common Ravens in Virginia. The Condor, 87(3), 379-388."
+    url: https://sora.unm.edu/sites/default/files/journals/condor/v087n03/p0379-p0388.pdf
+  agonistic_frontiers_2017:
+    citation: "Boeckle, M., Schiestl, M., Frohnwieser, A. et al. (2017). Calls during agonistic interactions vary with arousal and raise audience attention in ravens. Frontiers in Zoology, 14, 57."
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5740903/
+  raven_yellowstone:
+    citation: "A Yellowstone Life. Speaking Raven — Learning the Subtleties of Raven Language."
+    url: https://www.ayellowstonelife.com/raven-language/
+  raven_birdnote:
+    citation: "BirdNote. Common Raven chatter and some comfort sounds. 2015."
+    url: https://www.birdnote.org/explore/sights-sounds/video/2015/02/common-raven-chatter-and-some-comfort-sounds
+  mimicry_corvids_ncbi:
+    citation: "Vocal mimicry in Corvids. PMC12575486."
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12575486/
 provenance:
   - timestamp: '2026-06-10T21:30:00+02:00'
     model: GPT-5 Codex
@@ -162,3 +692,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Second-pass completeness sweep added the distinct nest-disturbance rasp described by Cornell while leaving the broader alarm and display classes otherwise conservative.
+  - timestamp: '2026-06-12T16:15:00+02:00'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Major expansion pass added 26 call types to reach ~33 total, drawing on Cornell/AllAboutBirds, Conner 1985 (Virginia ravens), Heinrich & Marzluff 1991 (food yell), Boeckle et al. 2017 (agonistic defensive calls), Birds of the World/Yellowstone sources, and BirdNote. New entries cover food yell, territorial advertisement call, chase call, comfort sound, defensive/submissive call, growl, whine, scream, honk, rattle (female-biased), bell call, hiccup call, predator alarm call, mobbing call, mimicry, subsong, flight call, assembly call, distress call, chirring call, nestling call, knocking call, cluck, greeting call, play call, and bill snap.

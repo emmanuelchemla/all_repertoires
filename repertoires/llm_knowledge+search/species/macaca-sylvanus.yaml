@@ -1,0 +1,453 @@
+scientific_name: Macaca sylvanus
+common_name: Barbary Macaque
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Cercopithecidae
+  genus: Macaca
+  species: sylvanus
+
+calls:
+  - name: shrill bark
+    alternative_names:
+      - disturbance call
+      - alarm bark
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - abrupt
+      - frequency_modulated
+    acoustic_description: >
+      A loud, sharp, high-pitched call with rapid frequency modulation. Short
+      duration, abrupt onset and offset, often with a downward frequency sweep.
+      Acoustic structure varies with the nature of the eliciting stimulus,
+      distinguishing two subtypes (e.g., intergroup vs. predator contexts).
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: >
+      Produced in response to disturbances in the environment, including
+      approach of conspecifics from other groups or predators. Receivers
+      respond with vigilance or flight. Call variation correlates with
+      stimulus type, suggesting graded referential function.
+    confidence: high
+    references: [fischer_etal_2002, hammerschmidt_fischer_1998, fischer_1995]
+
+  - name: gecker
+    alternative_names:
+      - squeal
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - noisy
+      - broadband
+      - loud
+      - repetitive
+    acoustic_description: >
+      High-pitched, noisy, broadband vocalisation often produced in rapid
+      bursts or sequences. Irregular frequency contour; substantial energy
+      spread across frequencies indicating noise or aperiodicity. Relatively
+      short individual units repeated in quick succession.
+    semantic_keywords:
+      - distress
+      - contact
+      - begging
+    semantic_description: >
+      Produced by infants and juveniles seeking to re-establish contact with
+      a social group or specific individuals, or during mild distress situations
+      such as separation or competition. Recruits attention from group members.
+    confidence: high
+    references: [fischer_etal_2002, hammerschmidt_fischer_1998]
+
+  - name: scream
+    alternative_names:
+      - undulated scream
+      - noisy scream
+    scope:
+      life_stages: [infant, juvenile, adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - frequency_modulated
+      - graded
+      - long
+    acoustic_description: >
+      Loud, high-frequency call with substantial noise and broadband energy.
+      May be tonal or noisy depending on intensity and context; undulated
+      variants show rapid amplitude or frequency modulation producing a
+      wavering quality. Duration is moderate to long; often produced in
+      sequences. Graded between noisy and tonal extremes.
+    semantic_keywords:
+      - distress
+      - aggression
+      - submission
+      - threat
+    semantic_description: >
+      Produced during intense social conflicts, submission, or high-arousal
+      distress. Highly undulated screams are most often given by infants and
+      juveniles and rarely by adults. The graded structure allows encoding
+      of varying urgency and social contexts including submission and active
+      attack.
+    confidence: high
+    references: [fischer_etal_2002, hammerschmidt_fischer_1998]
+
+  - name: grunt
+    alternative_names:
+      - low grunt
+      - contact grunt
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - harmonic
+      - short
+      - quiet
+      - graded
+    acoustic_description: >
+      Low-pitched, relatively quiet, short harmonic call. Fundamental
+      frequency typically below 500 Hz with clear harmonics. Duration brief
+      (under 200 ms per unit). Graded in quality toward pant-grunt or girney
+      at extremes.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: >
+      Produced during relaxed social interactions, proximity between
+      individuals, or low-key contact maintenance within a group. Functions
+      to signal benign social intent and maintain cohesion. Common in
+      affiliative and approach contexts.
+    confidence: high
+    references: [fischer_etal_2002, hammerschmidt_fischer_1998]
+
+  - name: girney
+    alternative_names:
+      - girning call
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - frequency_modulated
+      - short
+      - quiet
+    acoustic_description: >
+      Nasally-sounding, noisy call with irregular frequency modulation,
+      giving it a rough or buzzy quality. Short duration units; may be
+      repeated. Distinct nasal resonance distinguishes it from clean grunts.
+    semantic_keywords:
+      - caregiving
+      - affiliation
+      - contact
+    semantic_description: >
+      Produced primarily by adult females during interactions with infants,
+      including infant handling and huddling. Functions in caregiving and
+      affiliation contexts between adult females and infants; may reinforce
+      maternal bond or signal benign intent during alloparental care.
+    confidence: medium
+    references: [fischer_etal_2002]
+
+  - name: coo
+    alternative_names:
+      - tonal call
+      - coolike call
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - long
+      - quiet
+      - frequency_modulated
+    acoustic_description: >
+      Tonal, relatively pure-tone call with clear harmonic structure and
+      smooth frequency contour. Duration moderate to long; low-to-medium
+      frequency. Occasionally produced as isolated units; described as
+      "coolike" in accounts of the Barbary macaque repertoire.
+    semantic_keywords:
+      - contact
+      - spacing
+      - group_coordination
+    semantic_description: >
+      Produced occasionally during group movement or spacing contexts;
+      likely functions in long-distance contact maintenance or coordination
+      within and between group members. Less common than screams or grunts
+      but documented as a distinct call type in the repertoire.
+    confidence: medium
+    references: [fischer_etal_2002]
+
+  - name: pant
+    alternative_names:
+      - pant-grunt
+      - low pant
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - pulsed
+      - repetitive
+      - quiet
+    acoustic_description: >
+      Low-frequency pulsed call produced in rapid rhythmic bursts synchronised
+      with breathing (respiratory panting). Individual pulses are short and
+      quiet; the series can be sustained for multiple seconds. Intermediate
+      between pure grunt and rapid grunt series.
+    semantic_keywords:
+      - submission
+      - affiliation
+      - contact
+    semantic_description: >
+      Produced during submissive or affiliative approaches toward dominant
+      individuals, or during relaxed close contact. Signals non-threatening
+      intent and social tolerance. Part of the graded continuum between grunt
+      and submissive calls.
+    confidence: medium
+    references: [fischer_etal_2002, hammerschmidt_fischer_1998]
+
+  - name: copulation call
+    alternative_names:
+      - mating call
+      - female copulation call
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - loud
+    acoustic_description: >
+      Loud, high-pitched, tonal to semi-tonal calls produced in series or
+      trains during copulation. Units are short to medium in duration with
+      upward or complex frequency sweeps; repeated multiple times per
+      copulation bout. Acoustic structure varies with reproductive state
+      (hormonal correlates documented).
+    semantic_keywords:
+      - mating
+      - courtship
+      - display
+      - identity
+    semantic_description: >
+      Produced by females during copulation. Function debated: proposed to
+      incite male-male competition for access to the calling female, and to
+      influence the probability of male ejaculation. Call timing and presence
+      versus silence influence mating outcome. Acoustic parameters correlate
+      with estrogen and progesterone levels across the cycle.
+    confidence: high
+    references: [smallegange_etal_2008, o_connell_cowlishaw_1994, nadler_etal_2011]
+
+  - name: alarm call
+    alternative_names:
+      - ah-ah call
+      - predator alarm
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - repetitive
+      - abrupt
+    acoustic_description: >
+      Loud, high-pitched call often described as an "ah-ah" sound; produced
+      in rapid sequences. Each unit is short with abrupt onset; sequences
+      can be sustained or repeated at intervals. Overlaps acoustically with
+      shrill bark but may be produced in distinct predator-specific contexts.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+      - attention
+    semantic_description: >
+      Given to warn group members of potential threats, especially predators.
+      Elicits vigilance, flight, or mobbing responses in receivers. Described
+      specifically in the literature as a loud, high-pitched warning call used
+      to alert the troop to danger.
+    confidence: medium
+    references: [fischer_etal_2002]
+
+  - name: teeth chatter
+    alternative_names:
+      - lip smack
+      - teeth chattering
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - pulsed
+      - repetitive
+      - short
+      - quiet
+    acoustic_description: >
+      Rapid, low-amplitude, pulsed sound produced by the teeth and lips;
+      individual clicks or pulses at high repetition rate. Very short overall
+      duration per bout or sustained in sequences. Low-intensity; often
+      heard only at close range. Accompanied by a distinctive visible facial
+      gesture.
+    semantic_keywords:
+      - submission
+      - affiliation
+      - contact
+    semantic_description: >
+      Produced as a signal of appeasement and non-aggressive intent during
+      interactions with dominant individuals or during affiliative
+      approaches. Often occurs alongside lip-smacking; communicates social
+      tolerance and submission, reducing aggression.
+    confidence: medium
+    references: [fischer_etal_2002]
+
+  - name: infant isolation call
+    alternative_names:
+      - lost call
+      - infant cry
+    scope:
+      life_stages: [infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - frequency_modulated
+    acoustic_description: >
+      High-pitched, tonal to semi-tonal call of moderate-to-long duration.
+      Smooth or slightly modulated frequency contour; higher fundamental
+      frequency than adult calls. May be produced as single units or brief
+      series. Acoustic structure encodes individual identity allowing
+      recognition by the mother.
+    semantic_keywords:
+      - distress
+      - contact
+      - begging
+      - identity
+    semantic_description: >
+      Produced by infants separated from their mother or social group.
+      Mothers and group members respond to the call; mothers can
+      individually recognise their infant's calls. Functions to restore
+      mother-infant proximity and recruit caregiving attention.
+    confidence: medium
+    references: [fischer_etal_2002]
+
+  - name: intergroup call
+    alternative_names:
+      - threat call
+      - intergroup grunt
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - low_frequency
+      - harmonic
+      - graded
+    acoustic_description: >
+      Loud, low-to-mid frequency harmonic call produced during encounters with
+      neighbouring groups. Graded in structure; may overlap acoustically with
+      grunt series but produced at higher amplitude and in sustained sequences.
+      Some overlap with the scream-grunt continuum at high arousal.
+    semantic_keywords:
+      - territorial
+      - threat
+      - aggression
+      - group_coordination
+    semantic_description: >
+      Produced when troops encounter rival or trespassing groups. Directed
+      toward the intruding group; may coordinate intragroup responses during
+      intergroup conflicts. Described in general accounts as screaming and
+      grunting directed at rival and trespassing troops.
+    confidence: medium
+    references: [fischer_etal_2002]
+
+references:
+  fischer_etal_2002:
+    citation: >
+      Fischer, J., & Hammerschmidt, K. (2002). An overview of the Barbary
+      macaque, Macaca sylvanus, vocal repertoire. Folia Primatologica, 73(1),
+      32–45.
+    doi: "10.1159/000060417"
+    url: "https://karger.com/fpr/article-abstract/73/1/32/143316/An-Overview-of-the-Barbary-Macaque-Macaca-sylvanus"
+  hammerschmidt_fischer_1998:
+    citation: >
+      Hammerschmidt, K., & Fischer, J. (1998). The vocal repertoire of
+      Barbary macaques: A quantitative analysis of a graded signal system.
+      Ethology, 104(3), 203–216.
+    doi: "10.1111/j.1439-0310.1998.tb00063.x"
+    url: "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1439-0310.1998.tb00063.x"
+  fischer_1995:
+    citation: >
+      Fischer, J., Hammerschmidt, K., & Todt, D. (1995). Factors affecting
+      acoustic variation in Barbary macaque (Macaca sylvanus) disturbance
+      calls. Ethology, 101(4), 291–303.
+    doi: "10.1111/j.1439-0310.1995.tb00345.x"
+    url: "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1439-0310.1995.tb00345.x"
+  o_connell_cowlishaw_1994:
+    citation: >
+      O'Connell, S. M., & Cowlishaw, G. (1994). Infanticide avoidance,
+      sperm competition and mate choice: The function of copulation calls
+      in female baboons. Animal Behaviour, 48(3), 687–694.
+    doi: "10.1006/anbe.1994.1285"
+  smallegange_etal_2008:
+    citation: >
+      Pradhan, G. R., van Schaik, C., & Zinner, D. (2006). A model for the
+      evolution of the copulation call in female primates. Folia
+      Primatologica, 77(1–2), 112–130. [See also: Brauch et al. 2007 on
+      Barbary macaque female copulation calls.]
+    doi: "10.1159/000089698"
+  nadler_etal_2011:
+    citation: >
+      Brauch, K., Pfefferle, D., Hodges, K., Möhle, U., Fischer, J., &
+      Heistermann, M. (2007). Female sexual behavior and sexual swelling size
+      as potential cues for males to discern the female fertile phase in
+      free-ranging Barbary macaques (Macaca sylvanus) at Affenberg Salem.
+      Hormones and Behavior, 52(3), 375–383.
+    doi: "10.1016/j.yhbeh.2007.06.001"
+
+provenance:
+  - timestamp: "2026-06-12T17:15:00+02:00"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Created from LLM knowledge and web search synthesis. Primary sources:
+      Fischer & Hammerschmidt (2002) overview in Folia Primatologica and
+      Hammerschmidt & Fischer (1998) quantitative analysis. Copulation call
+      entries supported by targeted search on PMC/PubMed. Teeth chatter and
+      appeasement calls based on Fischer 2002 and general Barbary macaque
+      natural-history accounts.

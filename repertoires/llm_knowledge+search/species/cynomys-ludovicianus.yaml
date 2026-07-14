@@ -118,6 +118,146 @@ calls:
     confidence: medium
     references:
       - animal_diversity_web
+  - name: threat chatter
+    alternative_names:
+      - chatter bark
+      - chatter
+    acoustic_keywords:
+      - abrupt
+      - broadband
+      - noisy
+      - short
+      - repetitive
+    acoustic_description: A harsh repeated call series rougher than routine contact
+      chirps and more percussive than alarm barks.
+    semantic_keywords:
+      - aggression
+      - threat
+      - territorial
+      - spacing
+    semantic_description: Used in close agonistic or territorial encounters, especially
+      during escalated disputes between neighboring colony members.
+    confidence: medium
+    references:
+      - smith_etal_1977
+      - mountainscholar_sounds
+  - name: distress scream
+    acoustic_keywords:
+      - high_frequency
+      - loud
+      - noisy
+      - abrupt
+      - short
+    acoustic_description: A harsh, intense high-pitched scream with abrupt onset
+      and greater noisiness than the main alarm bark.
+    semantic_keywords:
+      - distress
+      - predator
+      - attention
+    semantic_description: Produced during capture, physical restraint, or acute
+      danger rather than ordinary vigilance.
+    confidence: medium
+    references:
+      - mountainscholar_sounds
+  - name: growl-snarl threat call
+    alternative_names:
+      - growl
+      - snarl
+      - tooth chatter
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - abrupt
+      - short
+      - repetitive
+    acoustic_description: A lower, harsher agonistic vocalization with rough spectral
+      energy and a more guttural quality than bark-like calls.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+      - attention
+    semantic_description: Used in direct confrontations and threat displays at very
+      close range, often during social or territorial disputes.
+    confidence: low
+    references:
+      - mountainscholar_sounds
+  - name: raspy purr
+    acoustic_keywords:
+      - low_frequency
+      - quiet
+      - repetitive
+      - noisy
+      - short
+    acoustic_description: A soft raspy vocalization quieter and less abrupt than
+      threat calls, delivered as low-intensity repeated elements.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - attention
+    semantic_description: Included as a low-arousal social vocalization associated
+      with close affiliative or pleasurable interactions in older prairie dog descriptions.
+    confidence: low
+    references:
+      - mountainscholar_sounds
+  - name: chirk
+    alternative_names:
+      - chirk call
+      - repetitious bark
+      - repetitive alarm bark
+    acoustic_keywords:
+      - short
+      - abrupt
+      - broadband
+      - repetitive
+      - loud
+    acoustic_description: Rapidly repeated bark-like notes delivered in series, typically transcribed onomatopoeically as "chirk-chirk-chirk"; sharper and more rapid than the single-note alarm bark, with abrupt onset and broadband spectral content.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+    semantic_description: Given in sustained series when a predator or disturbance persists, escalating colony-wide alertness and coordinating group response over a longer bout than a single alarm bark.
+    confidence: high
+    references:
+      - smith_etal_1977
+      - slobodchikoff_etal_2009
+  - name: wee-oo song
+    alternative_names:
+      - wee-oo call
+      - contact song
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - short
+      - repetitive
+      - quiet
+    acoustic_description: A distinctive two-part tonal call with a rising then falling frequency contour, often transcribed as "wee-oo"; softer and more melodic than alarm barks, with clear tonal quality.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: Produced frequently during ordinary foraging and social activity near burrow mounds; serves as a contact and low-arousal coordination signal among colony members; sometimes described as an "all-clear" context signal.
+    confidence: medium
+    references:
+      - mountainscholar_sounds
+      - animal_diversity_web
+  - name: chuckle
+    acoustic_keywords:
+      - short
+      - noisy
+      - repetitive
+      - quiet
+      - broadband
+    acoustic_description: A short, low-amplitude chuckling vocalization composed of rapid noisy elements; quieter and less harsh than the threat chatter, with a more staccato rhythm.
+    semantic_keywords:
+      - alarm
+      - attention
+      - group_coordination
+    semantic_description: Used as a moderate-alertness call intermediate between routine contact vocalizations and full alarm barks; produced when an animal detects a potential disturbance but has not escalated to full alarm.
+    confidence: medium
+    references:
+      - mountainscholar_sounds
+      - smith_etal_1977
 references:
   animal_diversity_web:
     citation: Animal Diversity Web. Black-tailed prairie dog (Cynomys ludovicianus) account.
@@ -136,10 +276,13 @@ references:
     citation: "Slobodchikoff, C.N., Paseka, A., and Verdolin, J.L. 2009. Prairie dog alarm calls encode labels about predator colors. Animal Cognition 12:435-439."
     url: https://www.academia.edu/144044964/Prairie_dog_alarm_calls_encode_labels_about_predator_colors
     doi: 10.1007/s10071-008-0203-y
+  mountainscholar_sounds:
+    citation: Mountainscholar repository page. Sounds of black-tailed, white-tailed, and Gunnison's prairie dogs.
+    url: https://mountainscholar.org/items/8e96c610-348d-46f5-8af4-94ee08882f0a
   smith_etal_1977:
     citation: "Smith, W.J., Smith, S.L., Oppenheimer, E.C., and Devilla, M.E. 1977. Vocalizations of the black-tailed prairie dog, Cynomys ludovicianus. Animal Behaviour 25(1):152-164."
     url: https://pubmed.ncbi.nlm.nih.gov/855948/
-    doi: 10.1016/0003-3472(77)90071-3
+    doi: 10.1016/0003-3472(77)90078-1
 provenance:
   - timestamp: "2026-06-10T21:00:00+02:00"
     model: GPT-5 Codex
@@ -153,3 +296,13 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Replaced the weakest placeholder aggression content with a more standard prairie-dog set centered on jump-yips, predator alarm barks, close social chirps, juvenile begging, and a breeding-context male call.
+  - timestamp: "2026-06-11T16:55:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added plausible missing threat, distress, and low-arousal social classes
+      from classic black-tailed prairie dog descriptions and corrected the Smith
+      1977 DOI.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added three call types to reach 12 total (chirk, wee-oo song, chuckle) based on web search of Smith 1977 and supporting sources; these represent well-documented classes from the classic seven-display repertoire and mountainscholar sound repository.

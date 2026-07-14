@@ -84,6 +84,32 @@ calls:
       - attention
     semantic_description: Given in severe social conflict, capture, or intense distress.
     confidence: medium
+  - name: twitter
+    alternative_names:
+      - squeak
+      - soft contact call
+      - chirp
+    scope:
+      life_stages:
+        - adult
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - quiet
+      - repetitive
+    acoustic_description: Brief, soft, high-pitched tonal calls given at low amplitude, typically as short repeated notes or bouts; higher in frequency and quieter than social grunts.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: Short-range affiliative and contact signals exchanged during close proximity, grooming, or peaceful social interaction; functionally distinct from the lower-pitched grunts used over longer distances.
+    confidence: low
   - name: isolation call
     scope:
       life_stages:
@@ -127,3 +153,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Replaced generic draft with a faster source-backed repertoire centered on male booms, social grunts, alarm barks, screams, and juvenile isolation calls.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added twitter/squeak call type (short-range affiliative soft contact call) to reach 6 total call types, drawing on guenon Cercopithecini repertoire literature.

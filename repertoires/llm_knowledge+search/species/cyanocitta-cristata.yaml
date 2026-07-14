@@ -112,10 +112,166 @@ calls:
     confidence: medium
     references:
       - bluejay_cornell
+  - name: gurgle call
+    acoustic_keywords:
+      - low_frequency
+      - tonal
+      - noisy
+      - multi_component
+      - repetitive
+    acoustic_description: Rolling gurgling phrases that blend rougher and more tonal elements and sound lower and more liquid than whistles or jeers.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - display
+      - attention
+    semantic_description: Used in close social communication and display; treated here as a distinct common call class because Cornell explicitly separates gurgling sounds from whistles and jeers.
+    confidence: medium
+    references:
+      - bluejay_cornell
+  - name: juvenile begging call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - loud
+      - short
+      - graded
+    acoustic_description: Thin repeated juvenile calls that are simpler and more nasal than adult whistles, rattles, or quiet song.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Produced by dependent young to solicit feeding and parental attention.
+    confidence: medium
+    references:
+      - bluejay_cornell
+  - name: hawk mimicry call
+    alternative_names:
+      - hawk scream imitation
+      - raptor mimicry
+    acoustic_keywords:
+      - loud
+      - frequency_modulated
+      - tonal
+      - long
+    acoustic_description: Accurate imitation of raptor screams, most often Red-shouldered or Red-tailed Hawk; tonal with descending or arched frequency contour, considerably longer and more sustained than typical jeer.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - display
+    semantic_description: Produced when approaching a food source or when a raptor is detected; may serve as genuine alarm signal warning conspecifics of hawk presence, or as deceptive signal to clear feeders; function debated.
+    confidence: high
+    references:
+      - bluejay_cornell
+      - brewer_2022
+  - name: bell call
+    alternative_names:
+      - tull call
+      - queedly
+    acoustic_keywords:
+      - tonal
+      - harmonic
+      - short
+      - loud
+      - frequency_modulated
+    acoustic_description: Clear, bell-like single or double note with a clean tonal quality; often transcribed as a liquid "tull" or "queedly"; brighter and more discrete than the gurgle, less harsh than the jeer.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Used in close-range social interactions and as a contact signal within pairs or flocks; documented in the Blue Jay acoustic literature as a distinct named call class.
+    confidence: medium
+    references:
+      - brewer_2022
+  - name: croak call
+    alternative_names:
+      - alarm croak
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - abrupt
+    acoustic_description: Low, rough, guttural single note with a frog-like or crow-like quality; distinctly lower-pitched and harsher than typical jeer variants.
+    semantic_keywords:
+      - alarm
+      - predator
+      - threat
+    semantic_description: Reported as an alarm vocalization, particularly in response to aerial or ground-based predators; documented as a named discrete call type in observational accounts.
+    confidence: low
+    references:
+      - brewer_2022
+      - inaturalist_croak
+  - name: distress scream
+    alternative_names:
+      - capture scream
+      - squack call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - broadband
+      - noisy
+      - long
+    acoustic_description: Loud, prolonged, harsh screaming vocalization with broad spectral energy; more sustained and higher-pitched than a jeer, often described as a screech or squawk.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+    semantic_description: Produced when captured or severely threatened by a predator; given by nestlings or adults when physically restrained; functions to attract conspecifics or deter predator.
+    confidence: medium
+    references:
+      - brewer_2022
+  - name: swallowing call
+    alternative_names:
+      - food-receipt call
+    scope:
+      life_stages:
+        - juvenile
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - short
+      - multi_component
+      - repetitive
+    acoustic_description: Soft, brief vocalization produced as food passes down the throat; a modulation of the begging call caused by swallowing; low amplitude with irregular pulsed quality.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - food
+      - affiliation
+    semantic_description: Produced by females during courtship feeding by males, and by nestlings and fledglings when fed by parents; marks the moment of food receipt and reinforces provisioning interactions.
+    confidence: low
+    references:
+      - brewer_2022
 references:
   bluejay_cornell:
     citation: Cornell Lab of Ornithology. Blue Jay sounds.
     url: https://www.allaboutbirds.org/guide/Blue_Jay/sounds
+  brewer_2022:
+    citation: "Brewer, D. E. (2022). The vocal repertoire of Blue Jays (Cyanocitta cristata): Spectrographic snapshots and suggested nomenclature. The Wilson Journal of Ornithology, 134(2), 309–317."
+    url: https://bioone.org/journals/the-wilson-journal-of-ornithology/volume-134/issue-2/19-00027/The-vocal-repertoire-of-Blue-Jays-iCyanocitta-cristata-i/10.1676/19-00027.full
+  inaturalist_croak:
+    citation: "iNaturalist observation post: Blue Jay Croaks as Alarm Sounds."
+    url: https://www.inaturalist.org/posts/37540-blue-jay-croaks-as-alarm-sounds
 provenance:
   - timestamp: '2026-06-10T21:00:00+02:00'
     model: GPT-5 Codex
@@ -129,3 +285,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the expected Blue Jay alarm, display, whistle, quiet song, and mimicry classes with stable top-level references.
+  - timestamp: '2026-06-11T16:55:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 15 recall pass added Cornell-supported gurgling and juvenile solicitation classes that remained missing from the Blue Jay draft.
+  - timestamp: '2026-06-13T00:00:00Z'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Expansion pass added 5 call types (hawk mimicry call, bell call, croak call, distress scream, swallowing call) to reach 13 total; added brewer_2022 and inaturalist_croak references.

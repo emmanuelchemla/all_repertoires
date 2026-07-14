@@ -17,6 +17,7 @@ calls:
     confidence: high
     references: [robbins_2000]
   - name: twitter
+    alternative_names: [chirp]
     acoustic_keywords: [high_frequency, short, repetitive, tonal, quiet]
     acoustic_description: A light high-pitched social call composed of repeated brief notes.
     semantic_keywords: [affiliation, contact, attention]
@@ -58,6 +59,20 @@ calls:
     semantic_description: Used in alarm, disturbance, and high-arousal rally contexts.
     confidence: medium
     references: [robbins_2000]
+  - name: whine
+    acoustic_keywords: [high_frequency, tonal, harmonic, short, graded]
+    acoustic_description: A thin high-pitched tonal call that is less explosive than a squeal and usually less insistent than a begging cry.
+    semantic_keywords: [contact, affiliation, begging, submission]
+    semantic_description: Used in close-range social contact, appeasement, and some food-soliciting or dependent interactions.
+    confidence: medium
+    references: [robbins_2000]
+  - name: moan
+    acoustic_keywords: [low_frequency, tonal, long, quiet, graded]
+    acoustic_description: A low soft sustained call with smoother contour and less harshness than a growl or rumble.
+    semantic_keywords: [affiliation, begging, caregiving, contact]
+    semantic_description: Reported in some social and food-transfer contexts, but it appears relatively uncommon compared with hoo calls, twitters, or begging cries.
+    confidence: medium
+    references: [robbins_2000, pup_vocalizations_2002]
   - name: sneeze
     acoustic_keywords: [abrupt, short, broadband, repetitive, quiet]
     acoustic_description: A very short explosive nasal sound that can occur in repeated bursts during pre-departure rallies.
@@ -90,3 +105,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative completeness pass added obvious African wild dog social, begging, and coordination calls with stable external references.
+  - timestamp: "2026-06-11T12:05:00Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 10 recall review added whine and moan, merged chirp under twitter, and kept yelp-squeal style forms merged because the available sources often treat them jointly.

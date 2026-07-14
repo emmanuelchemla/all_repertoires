@@ -41,6 +41,26 @@ calls:
   - attention
   semantic_description: Elicits maternal retrieval or care.
   confidence: high
+- name: directive call
+  alternative_names:
+  - maternal directive call
+  acoustic_keywords:
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  - frequency_modulated
+  acoustic_description: A short, patterned maternal call softer than song phrases
+    and used responsively during mother-pup interactions.
+  semantic_keywords:
+  - caregiving
+  - contact
+  - attention
+  semantic_description: Produced by mothers in response to young pups, especially
+    when pups are attempting first flights or need guidance in the day roost.
+  confidence: medium
+  references:
+  - knoernschild_vonhelversen_2008
 - name: contact call
   alternative_names:
   - whistle
@@ -133,6 +153,32 @@ calls:
   confidence: medium
   references:
   - behr_vonhelversen_2004
+- name: pup babbling bout
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - multi_component
+  - repetitive
+  - long
+  - tonal
+  - noisy
+  acoustic_description: A prolonged bout made up of many syllable types from the
+    adult repertoire, mixing tonal and noisier elements in an extended practice
+    sequence.
+  semantic_keywords:
+  - display
+  - attention
+  semantic_description: Produced by pups during vocal ontogeny as broad developmental
+    practice and often embedded in social interactions with mothers and nearby adults.
+  confidence: medium
+  references:
+  - knoernschild_etal_2006
 - name: pup attraction call
   scope:
     life_stages:
@@ -161,9 +207,16 @@ references:
     citation: Behr, O. and von Helversen, O. 2004. Bat serenades - complex courtship
       songs of the sac-winged bat (Saccopteryx bilineata). Behavioral Ecology and
       Sociobiology 56:106-115.
+  knoernschild_etal_2006:
+    citation: "Knornschild, M., Nagy, M., Metz, M., Mayer, F., and von Helversen, O. 2006. Complex vocal imitation during ontogeny in a bat. Biology Letters 2(2):156-159."
+    url: https://royalsocietypublishing.org/doi/10.1098/rsbl.2005.0375
+    doi: 10.1098/rsbl.2005.0375
   knoernschild_etal_2013:
     citation: Knornschild, M., Feifel, M., and Kalko, E.K.V. 2013. Mother-offspring
       recognition in the bat Saccopteryx bilineata. Animal Behaviour.
+  knoernschild_vonhelversen_2008:
+    citation: "Knornschild, M. and von Helversen, O. 2008. Nonmutual vocal mother-pup recognition in the greater sac-winged bat. Animal Behaviour 76(3):1001-1009."
+    url: https://pubmed.ncbi.nlm.nih.gov/19727381/
 provenance:
 - timestamp: '2026-06-10T21:45:00+02:00'
   model: GPT-5 Codex
@@ -181,3 +234,8 @@ provenance:
   notes: Second-pass completeness update added named adult social call classes reported
     alongside song in the greater sac-winged bat, especially bark and chatter, and
     linked broad contact and aggression categories to whistle and screech labels.
+- timestamp: '2026-06-11T16:55:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added the missing maternal directive and pup babbling classes from species-specific
+    vocal repertoire sources and extended the reference list accordingly.

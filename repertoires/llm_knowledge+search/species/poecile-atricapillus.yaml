@@ -144,6 +144,198 @@ calls:
     confidence: medium
     references:
       - ficken_etal_1978
+  - name: tseet call
+    alternative_names:
+      - contact note
+      - contact call
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - abrupt
+    acoustic_description: Brief single-note call, typically a clean thin note with a descending frequency contour; structurally similar to the A note of the chick-a-dee call and highly individually variable in fine acoustic detail.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - identity
+    semantic_description: The most frequently produced vocalization, used year-round by both sexes to maintain contact with flock or pair partners and to broadcast location; encodes individual and sex identity information.
+    confidence: high
+    references:
+      - ficken_etal_1978
+      - sturdy_etal_2000
+  - name: flight note
+    alternative_names:
+      - restless note
+      - tsleet call
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - loud
+      - repetitive
+    acoustic_description: Similar in structure to the tseet contact call but louder and produced at a higher rate; a rapid series of short high notes delivered in quick succession.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - attention
+    semantic_description: Produced by an individual or flock immediately before taking flight or relocating; functions as a pre-departure signal facilitating flock movement coordination.
+    confidence: medium
+    references:
+      - ficken_etal_1978
+  - name: faint fee-bee
+    alternative_names:
+      - soft fee-bee
+      - whispered fee-bee
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - short
+      - quiet
+    acoustic_description: Structurally similar to the fee-bee song but at markedly reduced amplitude and with slightly shorter notes and intervals; both notes present but subdued.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - courtship
+    semantic_description: Produced by both sexes at close range, in contrast to the male-only full fee-bee; associated with affiliative or close-range pair interactions and is functionally distinct from territorial song.
+    confidence: medium
+    references:
+      - ficken_etal_1978
+  - name: broken dee
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - tonal
+      - repetitive
+    acoustic_description: A series of dee-like notes that are irregularly spaced or interrupted, softer and less structured than the dee notes of the full chick-a-dee call.
+    semantic_keywords:
+      - begging
+      - courtship
+      - affiliation
+    semantic_description: Produced by females during the breeding season, primarily as a mate-solicitation or food-begging signal directed at the male partner; analogous in context to fledgling begging.
+    confidence: medium
+    references:
+      - ficken_etal_1978
+  - name: snarl
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - abrupt
+      - loud
+      - short
+    acoustic_description: Intense harsh broadband burst, more extreme in noisiness and brevity than the gargle; often accompanied by physical contact.
+    semantic_keywords:
+      - aggression
+      - threat
+    semantic_description: Rare, highly agonistic call produced almost exclusively during direct physical fights between individuals; the most intense agonistic vocalization in the repertoire.
+    confidence: medium
+    references:
+      - ficken_etal_1978
+  - name: twitter
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - short
+      - multi_component
+      - abrupt
+    acoustic_description: A brief series of chattering notes with noisy broadband quality, intermediate between gargle and contact calls in complexity.
+    semantic_keywords:
+      - submission
+      - aggression
+      - affiliation
+      - caregiving
+    semantic_description: Rare call produced in sudden unexpected close encounters with conspecifics; may inhibit attack; also given by males when approaching a brooding female to deliver food.
+    confidence: medium
+    references:
+      - ficken_etal_1978
+  - name: squawk
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - loud
+      - abrupt
+      - short
+    acoustic_description: Loud harsh broadband exclamatory note produced by adults, distinct from the finer-structured gargle or snarl.
+    semantic_keywords:
+      - caregiving
+      - recruitment
+      - attention
+    semantic_description: Parental call produced at or near the nest during nestling provisioning; elicits gaping responses from nestlings and may coordinate nest visits.
+    confidence: low
+    references:
+      - ficken_etal_1978
+  - name: variable see
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - graded
+    acoustic_description: High thin see-like notes of variable length and pitch; acoustically related to the high zee alarm call but with more variable structure and lower urgency.
+    semantic_keywords:
+      - courtship
+      - mating
+      - display
+    semantic_description: Produced in sexual and courtship contexts, often co-occurring with gargle calls during pre-copulatory interactions and dawn chorus displays; believed to be primarily or more commonly produced by females.
+    confidence: low
+    references:
+      - ficken_etal_1978
+  - name: subsong
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - long
+      - quiet
+      - repetitive
+      - multi_component
+      - graded
+    acoustic_description: Low-amplitude rambling sequence of variable tonal elements, often containing recognizable fragments of fee-bee and other adult vocalizations interspersed with novel tonal notes; typically long and sometimes musical.
+    semantic_keywords:
+      - play
+      - display
+    semantic_description: Produced by newly fledged and recently independent juveniles; considered a vocal practice or rehearsal phase important in song development rather than serving a direct communicative function.
+    confidence: medium
+    references:
+      - ficken_etal_1978
+  - name: distress call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - loud
+      - noisy
+      - repetitive
+    acoustic_description: Loud broadband calls produced by young birds when seized or severely threatened; more intense and wide-band than ordinary alarm signals.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+    semantic_description: Produced by fledglings or captured juveniles when seized by a predator or under extreme duress; may attract adults and alarm nearby conspecifics.
+    confidence: low
+    references:
+      - ficken_etal_1978
 references:
   blackcapped_cornell:
     citation: Cornell Lab of Ornithology. Black-capped Chickadee sounds.
@@ -157,6 +349,9 @@ references:
   templeton_etal_2005:
     citation: "Templeton, C. N., Greene, E., and Davis, K. 2005. Allometry of alarm calls: black-capped chickadees encode information about predator size. Science 308(5730):1934-1937."
     doi: 10.1126/science.1108841
+  sturdy_etal_2000:
+    citation: "Sturdy, C. B., Phillmore, L. S., Sartor, J. J., and Weisman, R. G. 2000. Call-note discriminations in black-capped chickadees (Poecile atricapillus). Journal of Comparative Psychology 114(3):249-255."
+    doi: 10.1037/0735-7036.114.3.249
 provenance:
   - timestamp: "2026-06-10T20:10:00+02:00"
     model: GPT-5 Codex
@@ -170,3 +365,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Second-pass completeness sweep added the externally described nest hiss defensive sound while keeping broader named call boundaries conservative.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Expansion pass added 10 call types (tseet, flight note, faint fee-bee, broken dee, snarl, twitter, squawk, variable see, subsong, distress call) to reach 16 total, covering the full Ficken et al. 1978 adult and juvenile repertoire. Added sturdy_etal_2000 reference for tseet call identity encoding literature.

@@ -1,0 +1,517 @@
+scientific_name: Turdoides bicolor
+common_name: Southern Pied Babbler
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Leiothrichidae
+  genus: Turdoides
+  species: bicolor
+
+calls:
+  - name: alert call
+    alternative_names:
+      - close alarm call
+      - low-urgency alarm
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - high_frequency
+      - tonal
+    acoustic_description: >
+      A short, sharp, tonal note produced at close range. Typically a brief,
+      high-pitched unit delivered singly or in quick succession. Acoustically
+      distinct from the recruitment call, differing in note structure and
+      repetition pattern.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: >
+      Given by group members in response to a close, low-urgency threat or
+      predator detection. Functions to direct group attention to a potential
+      danger without triggering full group flight. Also combined with the
+      recruitment call into a mobbing sequence when terrestrial predators are
+      encountered.
+    confidence: high
+    references: [engesser_etal_2016]
+
+  - name: recruitment call
+    alternative_names:
+      - move call
+      - locomotion call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - frequency_modulated
+      - repetitive
+      - multi_component
+    acoustic_description: >
+      A structurally distinct call from the alert call, often frequency-modulated
+      with a characteristic contour. Delivered in series during group locomotion
+      or to coordinate movement. Can be distinguished from the alert call by
+      its temporal patterning and acoustic shape.
+    semantic_keywords:
+      - group_coordination
+      - recruitment
+      - contact
+    semantic_description: >
+      Used when recruiting group members during locomotion and group movement
+      between foraging areas. When combined with the alert call into a mobbing
+      sequence upon encountering terrestrial predators, it apparently signals
+      both the nature of the threat and the requested action (approach/mob).
+    confidence: high
+    references: [engesser_etal_2016]
+
+  - name: mobbing sequence
+    alternative_names:
+      - alert-recruitment combination
+      - compositional mobbing call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - multi_component
+      - repetitive
+      - loud
+    acoustic_description: >
+      A compound vocalization formed by combining the alert call and the
+      recruitment call in sequence. The sequence is acoustically distinguishable
+      from either component call alone and from control sequences, and
+      listeners show stronger behavioural responses to it than to individual
+      component calls.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - combinatorial
+    semantic_description: >
+      Produced specifically upon encountering a terrestrial predator.
+      Functions compositionally: the alert component communicates threat
+      information while the recruitment component solicits approach and
+      mobbing by other group members. Elicits stronger group response and
+      faster approach than either component alone.
+    confidence: high
+    references: [engesser_etal_2016]
+
+  - name: purr call
+    alternative_names:
+      - food-associated purr
+      - teaching purr
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - long
+      - repetitive
+      - pulsed
+      - tonal
+      - harmonic
+    acoustic_description: >
+      A sustained, repetitive, low-to-mid frequency purring vocalization
+      composed of approximately 17 repeated elements on average. Longer
+      and more extended than the cluck call. The high element-repetition rate
+      distinguishes it from the cluck (2–3 elements) with which it shares the
+      same basic sound type.
+    semantic_keywords:
+      - food
+      - caregiving
+      - begging
+    semantic_description: >
+      Produced by adults when drawing young offspring (nestlings and fledglings)
+      to a food source. Functions as a teaching signal: fledglings learn to
+      associate the purr with food and to approach and follow adults when they
+      hear it. Also used post-fledging to encourage movement across the territory
+      toward foraging patches.
+    confidence: high
+    references: [humphries_etal_2017, ridley_etal_2006]
+
+  - name: cluck call
+    alternative_names:
+      - group-move cluck
+      - short purr
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - repetitive
+      - pulsed
+      - tonal
+    acoustic_description: >
+      A truncated version of the purr, composed of 2–3 repeated elements of
+      the same basic sound type as the purr. Acoustically compact and brief.
+      The low element count distinguishes it from the full purr.
+    semantic_keywords:
+      - group_coordination
+      - contact
+    semantic_description: >
+      Functions to collectively signal an imminent change in foraging site,
+      coordinating group-level movement between patches. Not directed at
+      offspring specifically; used in adult-to-adult coordination during
+      foraging bouts.
+    confidence: high
+    references: [humphries_etal_2017]
+
+  - name: sentinel call (watchman's song)
+    alternative_names:
+      - watchman song
+      - sentry call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - long
+      - tonal
+      - loud
+    acoustic_description: >
+      A continuous, repetitive series of calls produced at a steady rate by
+      an individual acting as sentinel from an elevated perch. Delivered
+      persistently throughout a sentinel bout, providing a continuous acoustic
+      signal of the sentry's presence and vigilance state to foragers below.
+    semantic_keywords:
+      - group_coordination
+      - alarm
+      - predator
+      - identity
+    semantic_description: >
+      Produced by the designated sentinel during guard bouts, informing
+      foraging group members of the sentinel's presence, position, and the
+      current level of risk. Foragers increase use of exposed patches and
+      reduce personal vigilance in response to this call, increasing foraging
+      efficiency. Absence of the call signals elevated risk.
+    confidence: high
+    references: [radford_ridley_2008, bell_etal_2009]
+
+  - name: sentinel chuck call
+    alternative_names:
+      - fast-rate chuck
+      - concluding sentinel call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - repetitive
+      - high_frequency
+    acoustic_description: >
+      Short, rapid chuck notes produced at a fast rate. Acoustically compact
+      and staccato. Distinct from the slower, sustained watchman's song
+      produced during active sentinel bouts. Given in bursts at the end of
+      a sentinel guard session.
+    semantic_keywords:
+      - group_coordination
+      - alarm
+    semantic_description: >
+      Produced by sentinels as they conclude guard bouts. May function to
+      coordinate the handover of sentinel duties, minimizing time the group
+      is without an active sentinel. Alternatively may signal changes in
+      current risk level, modulating when the next sentinel bout begins.
+    confidence: medium
+    references: [bell_etal_2009]
+
+  - name: close call
+    alternative_names:
+      - spacing call
+      - soft contact call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - quiet
+      - tonal
+      - repetitive
+    acoustic_description: >
+      Short, low-amplitude calls produced frequently during foraging at
+      close range between group members. Soft and relatively inconspicuous,
+      typical of short-range contact calls in social species.
+    semantic_keywords:
+      - contact
+      - spacing
+      - group_coordination
+    semantic_description: >
+      Functions to regulate inter-individual spacing among foraging group
+      members, reducing competition for prey. Group members maintain spacing
+      and minimize aggressive encounters by responding to close calls from
+      nearby conspecifics. Among the most frequently heard vocalizations
+      during foraging bouts.
+    confidence: medium
+    references: [radford_ridley_2008]
+
+  - name: group chorus call
+    alternative_names:
+      - babbling chorus
+      - communal chorus
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - broadband
+      - noisy
+      - multi_component
+    acoustic_description: >
+      High-intensity, multi-individual babbling vocalization produced
+      collectively by the group. Noisy, broadband and overlapping, creating
+      a loud chorus. Individual variation exists in contribution to chorus.
+      Classified into distinct subtypes (v-shaped chatter, double note
+      ascending chatter, atonal chatter) that may serve different functions.
+    semantic_keywords:
+      - territorial
+      - group_coordination
+      - display
+      - identity
+    semantic_description: >
+      Produced during intergroup encounters and territorial border disputes.
+      Strongly territorial species engage in near-daily border defense,
+      and chorusing is a key component of this territorial display. Also
+      functions to reinforce group cohesion and signal group size/identity
+      to rival groups.
+    confidence: high
+    references: [radford_ridley_2007]
+
+  - name: fledgling begging call
+    alternative_names:
+      - juvenile begging call
+      - nestling begging call
+    scope:
+      life_stages: [juvenile, infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - long
+      - noisy
+    acoustic_description: >
+      Persistent, high-pitched, repetitive calls produced by nestlings and
+      fledglings when soliciting food from provisioning adults. Noisy and
+      broadband with a somewhat grating quality. Repeated frequently while
+      following adults.
+    semantic_keywords:
+      - begging
+      - food
+      - distress
+    semantic_description: >
+      Produced by nestlings at the nest and by fledglings following adult
+      group members during post-fledging dependence. Solicits food from
+      parents and alloparents. Begging intensity and rate may be modulated
+      by hunger level. Fledglings begging during second broods risk parental
+      aggression.
+    confidence: high
+    references: [ridley_etal_2006]
+
+  - name: aerial alarm call
+    alternative_names:
+      - hawk alarm
+      - raptor alarm
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - abrupt
+    acoustic_description: >
+      A high-pitched, tonal, short alarm call produced in response to aerial
+      predators such as raptors. Likely high-frequency and structurally
+      distinct from terrestrial alarm calls, consistent with convergent
+      evolution of aerial alarm call structure across bird species (thin,
+      hard-to-localize).
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Produced when aerial predators (raptors, hawks) are detected.
+      Fork-tailed drongos exploit pied babbler alarm calls by mimicking
+      them to steal food; both aerial and terrestrial alarm calls elicit
+      flight-to-cover responses in pied babblers. Evidence from drongo
+      mimicry studies confirms pied babblers produce distinct aerial alarm
+      responses.
+    confidence: medium
+    references: [flower_2011]
+
+  - name: terrestrial alarm call
+    alternative_names:
+      - ground predator alarm
+      - snake alarm
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - abrupt
+      - short
+    acoustic_description: >
+      A broadband, noisy short alarm vocalization acoustically distinct from
+      the aerial alarm call. Likely harsher and more broadband than aerial
+      alarms, consistent with functional differentiation seen in related
+      babblers (Turdoides squamiceps) where different predator classes elicit
+      structurally different alarm vocalizations.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Given in response to terrestrial predators such as snakes and mammalian
+      carnivores. Unlike the aerial alarm, tends to elicit approach and
+      mobbing behavior rather than flight to cover, especially when combined
+      with the recruitment call. Drongos also mimic terrestrial alarm calls
+      to steal food from foraging babblers.
+    confidence: medium
+    references: [flower_2011]
+
+  - name: threat or aggression call
+    alternative_names:
+      - agonistic call
+      - dominant aggression call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - short
+      - abrupt
+      - graded
+    acoustic_description: >
+      A harsh, broadband, relatively loud call produced during agonistic
+      interactions. May be graded in intensity proportional to the level of
+      social threat. Distinct from alarm calls by its interactional context
+      and lower pitch profile.
+    semantic_keywords:
+      - threat
+      - aggression
+    semantic_description: >
+      Produced in intragroup dominance interactions and boundary disputes.
+      Used by dominant individuals to assert priority and repel rivals or
+      subordinates in competition for food or breeding positions. Also
+      used during intergroup encounters at territorial boundaries.
+    confidence: low
+
+  - name: subordinate appeasement call
+    alternative_names:
+      - submission call
+      - subordinate contact call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - tonal
+      - short
+      - graded
+    acoustic_description: >
+      Soft, tonal, quiet calls produced by subordinate individuals during
+      or after agonistic encounters with dominant group members. Low amplitude
+      and non-threatening acoustic profile.
+    semantic_keywords:
+      - submission
+      - affiliation
+      - contact
+    semantic_description: >
+      Produced by subordinate individuals to signal low-threat intent or
+      to de-escalate agonistic interactions with dominant group members.
+      Pied babblers have a well-described dominance hierarchy within groups,
+      and subordinates engage in vocal appeasement behaviors to maintain
+      their position and access to shared resources.
+    confidence: low
+
+references:
+  engesser_etal_2016:
+    citation: >
+      Engesser, S., Ridley, A. R., & Townsend, S. W. (2016). Meaningful call
+      combinations and compositional processing in the southern pied babbler.
+      Proceedings of the National Academy of Sciences, 113(21), 5976-5981.
+    doi: 10.1073/pnas.1600970113
+
+  humphries_etal_2017:
+    citation: >
+      Humphries, D. J., Finch, F. M., Bell, M. B., & Ridley, A. R. (2017).
+      Element repetition rates encode functionally distinct information in
+      pied babbler 'clucks' and 'purrs'. Animal Cognition, 20(4), 603-608.
+    doi: 10.1007/s10071-017-1114-6
+
+  ridley_etal_2006:
+    citation: >
+      Ridley, A. R., Child, M. F., & Bell, M. B. V. (2006). Recruitment
+      calling: a novel form of extended parental care in an altricial species.
+      Current Biology, 16(17), R636-R637.
+    doi: 10.1016/j.cub.2006.07.053
+
+  radford_ridley_2007:
+    citation: >
+      Radford, A. N., & Ridley, A. R. (2007). Individuals in foraging groups
+      may use vocal cues when assessing their need for personal vigilance.
+      Biology Letters, 3(3), 249-252.
+
+  radford_ridley_2008:
+    citation: >
+      Radford, A. N., & Ridley, A. R. (2008). Close calling regulates spacing
+      between foraging competitors in the group-living pied babbler.
+      Animal Behaviour, 75(3), 519-527.
+
+  bell_etal_2009:
+    citation: >
+      Bell, M. B. V., Radford, A. N., Smith, R., Thompson, A. M., &
+      Ridley, A. R. (2009). Calling by concluding sentinels: coordinating
+      cooperation or revealing risk? PLOS ONE, 6(9), e25010.
+    doi: 10.1371/journal.pone.0025010
+
+  flower_2011:
+    citation: >
+      Flower, T. P. (2011). Fork-tailed drongos use deceptive mimicked alarm
+      calls to steal food. Proceedings of the Royal Society B: Biological
+      Sciences, 278(1711), 1548-1555.
+    doi: 10.1098/rspb.2010.1932
+
+provenance:
+  - timestamp: "2026-06-12T17:15:00+02:00"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Created from LLM knowledge synthesis and web search. Key sources include
+      Engesser et al. 2016 (PNAS; alert + recruitment + compositional mobbing calls),
+      Humphries et al. 2017 (Animal Cognition; cluck/purr encoding), Ridley et al. 2006
+      (recruitment/teaching purr), Bell et al. 2009 (sentinel chuck call), Radford &
+      Ridley 2008 (close calls, spacing), and Flower 2011 (alarm call types inferred
+      from drongo mimicry study). Threat/submission calls included at confidence: low
+      due to absence of named primary sources despite plausibility from social system.

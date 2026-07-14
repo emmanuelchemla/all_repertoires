@@ -124,6 +124,367 @@ calls:
     confidence: low
     references:
       - crow_blog
+  - name: subsong
+    alternative_names:
+      - rambling song
+      - quiet song
+    acoustic_keywords:
+      - quiet
+      - multi_component
+      - noisy
+      - tonal
+      - long
+    acoustic_description: Low-amplitude rambling sequences that mix hoarse or grating coos, caws, rattles, and clicks into improvised strings much longer than a single caw bout.
+    semantic_keywords:
+      - display
+      - affiliation
+      - identity
+      - attention
+    semantic_description: Used in low-intensity close social display and courtship-like interaction rather than in ordinary long-range flock contact.
+    confidence: medium
+    references:
+      - crow_cornell
+  - name: inflected alarm caw
+    alternative_names:
+      - ko call
+      - alert caw
+      - short alarm caw
+    acoustic_keywords:
+      - short
+      - abrupt
+      - noisy
+      - loud
+      - frequency_modulated
+    acoustic_description: Short (100–150 ms), sharp, explosive burst, less hoarse than an ordinary caw, with long and variable inter-caw intervals (roughly 325–500 ms); acoustically distinct from the ordinary caw series in its brevity, sharpness, and cadence.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: Given as an alert in response to aerial and terrestrial predators (hawks, owls, approaching humans); encodes individual and sex identity information within the alarm context.
+    confidence: high
+    references:
+      - yorzinski_vehrencamp_2006
+      - crow_pmc_2014
+
+  - name: assembly call
+    alternative_names:
+      - gathering call
+      - roost assembly call
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - noisy
+      - low_frequency
+      - graded
+    acoustic_description: Series of loud, harsh, low-pitched and variable caw-like notes with irregular timing and pitch variation, longer and more variable in structure than ordinary contact caws.
+    semantic_keywords:
+      - group_coordination
+      - recruitment
+      - contact
+    semantic_description: Given throughout the year to gather group members for roosting or communal activities; recorded at night during winter roost gatherings; one of the earliest functionally defined call categories in crow literature.
+    confidence: high
+    references:
+      - chamberlain_cornwell_1971
+
+  - name: distress call
+    alternative_names:
+      - squalling call
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - noisy
+      - long
+      - graded
+    acoustic_description: High-pitched, harsh, sustained screaming or squalling notes varying in duration and amplitude with the intensity of the situation; more frantic and higher pitched than scolding caws.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced when a crow is physically restrained or in direct mortal danger, such as when caught by a predator; graded with the intensity of distress; the highest-urgency call in the repertoire.
+    confidence: high
+    references:
+      - chamberlain_cornwell_1971
+
+  - name: moribund call
+    acoustic_keywords:
+      - noisy
+      - low_frequency
+      - quiet
+      - long
+    acoustic_description: Raucous, gurgling notes delivered less rapidly and loudly than squalling calls, with a hoarse, rattling, or dying quality.
+    semantic_keywords:
+      - distress
+    semantic_description: Produced by severely injured or dying crows; acoustically intermediate between a normal hoarse caw and a squalling distress call; much less commonly observed than squalling.
+    confidence: low
+    references:
+      - chamberlain_cornwell_1971
+
+  - name: threat call
+    alternative_names:
+      - agonistic call
+    acoustic_keywords:
+      - abrupt
+      - noisy
+      - short
+      - broadband
+    acoustic_description: Short, rough, grating notes or burst of harsh sound given at close range during aggressive confrontations; less structured than caws and often lower in pitch relative to alarm caws.
+    semantic_keywords:
+      - aggression
+      - threat
+      - territorial
+    semantic_description: Uttered by both dominant and subordinate crows during roosting-perch disputes and other close-range agonistic encounters; indicates aggressive intent.
+    confidence: medium
+    references:
+      - chamberlain_cornwell_1971
+
+  - name: dispersal call
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - noisy
+      - short
+    acoustic_description: Rapid, insistent caw series; acoustically overlaps with scolding caws but context differentiates function; may be faster-paced or with a distinct cadence that prompts departure rather than recruitment.
+    semantic_keywords:
+      - spacing
+      - alarm
+      - group_coordination
+    semantic_description: Encourages flock or group members to disperse or depart from an area; functionally opposite to the assembly call; recognized as a distinct functional category by early systematic studies.
+    confidence: low
+    references:
+      - chamberlain_cornwell_1971
+
+  - name: territorial caw
+    alternative_names:
+      - long caw
+      - double caw
+    acoustic_keywords:
+      - loud
+      - long
+      - repetitive
+      - noisy
+      - low_frequency
+    acoustic_description: Longer caw notes or stereotyped doublets (two caws in rapid succession) repeated in bouts; longer in duration and often lower and more resonant than ordinary contact caws; may be matched between territorial neighbours in countersinging.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - identity
+    semantic_description: Used in territorial advertisement and defence; "double caws" function as a call-to-arms alerting family members to territorial intruders; may participate in countersinging exchanges between neighbours.
+    confidence: high
+    references:
+      - crow_pmc_2014
+      - crow_cornell
+
+  - name: courtship song
+    alternative_names:
+      - soft courtship call
+      - pair-bond whisper song
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - male
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - multi_component
+      - tonal
+      - low_frequency
+      - long
+    acoustic_description: Quiet, rich mixture of soft cooing, rattling, and growling notes delivered at very close range; the male bows and partially spreads wings and tail while vocalising; acoustically softer and more melodic than subsong.
+    semantic_keywords:
+      - courtship
+      - mating
+      - affiliation
+      - display
+    semantic_description: Male display directed at female during pair formation and maintenance; accompanies bowing, wing-spreading, and mutual nuzzling; given only at close range to a potential or established mate.
+    confidence: medium
+    references:
+      - crow_cornell
+      - vassar_singing
+
+  - name: female food-begging call
+    alternative_names:
+      - aaag call
+      - courtship begging call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - noisy
+      - graded
+    acoustic_description: Nasal, persistent "aaag" notes similar to but rougher than juvenile begging; given by breeding females on and away from the nest; higher-pitched and more nasal than typical caws.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - courtship
+      - mating
+    semantic_description: Given exclusively by adult females, on the nest and away from it, to solicit food from the male during courtship feeding and incubation provisioning.
+    confidence: medium
+    references:
+      - chamberlain_cornwell_1971
+      - crow_cornell
+
+  - name: nestling call
+    alternative_names:
+      - nestling begging call
+      - churr call
+    scope:
+      life_stages:
+        - infant
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - noisy
+      - graded
+      - high_frequency
+      - multi_component
+    acoustic_description: Weak, varied vocalisations at the youngest nestling stage—churrs, chee-aps, wa-eeks, and squeaks—gradually increasing in amplitude; expand into a chorus when nestlings are fed; audible from below the nest tree by later nestling stages.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - attention
+    semantic_description: Solicitation calls from nestlings in the nest, stimulating parental feeding visits; volume and complexity increase with age and become louder as fledging approaches; acoustically distinct from older juvenile begging.
+    confidence: high
+    references:
+      - crow_cornell
+      - chamberlain_cornwell_1971
+
+  - name: fledgling gargle
+    alternative_names:
+      - fledgling subsong
+      - babbling call
+    scope:
+      life_stages:
+        - juvenile
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - noisy
+      - multi_component
+      - quiet
+      - long
+    acoustic_description: Guttural, unstructured, gargling or babbling sequences mixing gargles, barks, rattles, and unusual sounds without defined temporal organisation or spectral pattern; lacks the organised repetition of adult calls.
+    semantic_keywords:
+      - play
+      - identity
+    semantic_description: Produced by recently fledged juveniles approximately 2–5 weeks post-fledging; considered homologous to subsong in other oscines; may function in vocal learning and repertoire acquisition rather than direct social communication.
+    confidence: medium
+    references:
+      - vassar_singing
+      - crow_cornell
+
+  - name: coo
+    alternative_names:
+      - comfort call
+      - quiet coo
+    acoustic_keywords:
+      - tonal
+      - quiet
+      - short
+      - low_frequency
+    acoustic_description: Low-pitched, relatively pure-toned or mellow cooing note, very different from the harsh quality of caws; resembles a pigeon-like but rougher note at close listening range.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - courtship
+    semantic_description: Soft call used in close affiliative interaction between paired birds or flock members; part of the quiet repertoire exchanged between mates during pair-bond maintenance; also incorporated into subsong and courtship song sequences.
+    confidence: medium
+    references:
+      - crow_blog
+      - crow_cornell
+
+  - name: click
+    alternative_names:
+      - bill snap
+      - mechanical click
+    acoustic_keywords:
+      - abrupt
+      - short
+      - broadband
+      - quiet
+    acoustic_description: Sharp, percussive single or brief series of clicks; very short broadband burst with minimal tonal quality; can be mechanical (bill snap) or vocal in origin.
+    semantic_keywords:
+      - affiliation
+      - display
+      - attention
+    semantic_description: Occurs in close social and courtship contexts, often embedded within subsong or social interactions; may signal attention or mild interest in close-proximity encounters.
+    confidence: low
+    references:
+      - crow_blog
+
+  - name: growl
+    alternative_names:
+      - guttural growl
+    acoustic_keywords:
+      - low_frequency
+      - noisy
+      - short
+      - quiet
+    acoustic_description: Low, guttural, rough note or brief burst; distinctly low-pitched and rough compared to caws; short and relatively quiet.
+    semantic_keywords:
+      - threat
+      - aggression
+      - affiliation
+    semantic_description: Produced in close-range aggressive or social contexts; observed in both mild threat situations and affiliative pair interactions; part of the quiet close-range vocal repertoire.
+    confidence: low
+    references:
+      - crow_blog
+
+  - name: hawk alarm caw
+    alternative_names:
+      - aerial predator alarm
+    acoustic_keywords:
+      - loud
+      - short
+      - abrupt
+      - repetitive
+      - high_frequency
+    acoustic_description: Short, sharp, rapidly repeated caw-like calls directed upward; tonally sharper and delivered at faster repetition rates than ground-predator alarm; structurally distinguishable from typical scolding bouts.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - group_coordination
+    semantic_description: Given specifically in response to aerial predators (hawks, falcons, eagles) overhead; may carry information about predator type or urgency; distinct in context from ground-predator responses even if acoustic differences are graded.
+    confidence: medium
+    references:
+      - crow_pmc_2014
+      - yorzinski_vehrencamp_2006
+
+  - name: recruitment caw
+    alternative_names:
+      - mobbing recruitment call
+      - rallying call
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - noisy
+      - long
+    acoustic_description: Extended bouts of loud, rapid, insistent cawing; longer sequences and higher repetition rate than ordinary contact cawing; functionally distinct from assembly call in its urgency and association with active mobbing.
+    semantic_keywords:
+      - recruitment
+      - alarm
+      - group_coordination
+      - predator
+    semantic_description: Recruits conspecifics to mob a predator or join a group response to a threat; broadcast over longer range and longer duration than typical contact caws; can draw in crows from considerable distances.
+    confidence: high
+    references:
+      - crow_cornell
+      - crow_blog
+
 references:
   crow_cornell:
     citation: Cornell Lab of Ornithology. American Crow sounds.
@@ -131,6 +492,21 @@ references:
   crow_blog:
     citation: Corvid Research. Overview of major American crow vocalization classes.
     url: https://corvidresearch.blog/tag/crow-vocalizations/
+  chamberlain_cornwell_1971:
+    citation: "Chamberlain, D.R. and Cornwell, G.W. (1971). Selected vocalizations of the Common Crow. The Auk, 88(3), 613–634."
+    url: https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=19187&context=auk
+  yorzinski_vehrencamp_2006:
+    citation: "Yorzinski, J.L. and Vehrencamp, S.L. (2006). The Inflected Alarm Caw of the American Crow: Differences in Acoustic Structure Among Individuals and Sexes. The Condor, 108(3), 518–529."
+    url: https://academic.oup.com/condor/article/108/3/518/5563553
+  crow_pmc_2014:
+    citation: "Mates, E.A., Tarter, R.R., Ha, J.C., Clark, A.B. and McGowan, K.J. (2015). Acoustic profiling in a complexly social species, the American crow: caws encode information on caller sex, identity, and behavioural context. Animal Behaviour, 98, 1–11."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4237024/
+  vassar_singing:
+    citation: "Waite, I. and Etienne, C. Singing Behavior of the American Crow (Corvus brachyrhynchos). Vassar College Sensory Ecology."
+    url: https://pages.vassar.edu/sensoryecology/singing-behavior-of-the-american-crow-corvus-brachyrhynchos-ilana-waite-and-clairiola-etienne/
+  pendergraft_marzluff_2019:
+    citation: "Pendergraft, L.T. and Marzluff, J.M. (2019). Fussing over food: factors affecting the vocalizations American crows utter around food. Animal Behaviour, 150, 39–57."
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0003347219300363
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
@@ -144,3 +520,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative improvement pass clarified the expected American crow caw, scold, social display, juvenile begging, and food-associated call classes with stable overview references.
+  - timestamp: '2026-06-11T16:55:00+02:00'
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 15 recall pass added Cornell-supported quiet subsong as a distinct low-amplitude social display class.
+  - timestamp: '2026-06-12T16:45:00+02:00'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Exhaustiveness expansion pass added 16 call types (inflected alarm caw, assembly call, distress/squalling call, moribund call, threat call, dispersal call, territorial caw, courtship song, female food-begging/aaag call, nestling call, fledgling gargle, coo/comfort call, click, growl, hawk alarm caw, recruitment caw) drawing on Chamberlain & Cornwell 1971, Yorzinski & Vehrencamp 2006, Mates et al. 2015, Cornell Lab, Corvid Research blog, and Vassar singing study. Added 5 new references.

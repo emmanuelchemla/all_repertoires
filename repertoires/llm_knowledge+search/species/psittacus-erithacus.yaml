@@ -63,6 +63,45 @@ calls:
   confidence: medium
   references:
   - may_2004
+- name: distress scream
+  acoustic_keywords:
+  - loud
+  - high_frequency
+  - noisy
+  - abrupt
+  - short
+  acoustic_description: A very loud harsh scream with abrupt onset and little tonal
+    stability, acoustically more extreme than routine alarm or contact whistles.
+  semantic_keywords:
+  - distress
+  - alarm
+  - attention
+  semantic_description: Produced in acute danger, capture, or extreme arousal contexts
+    where birds signal immediate need and may recruit social attention.
+  confidence: medium
+  references:
+  - giret_etal_2011
+- name: protest call
+  alternative_names:
+  - protestation call
+  - agonistic protest vocalization
+  acoustic_keywords:
+  - noisy
+  - abrupt
+  - repetitive
+  - low_frequency
+  acoustic_description: A rougher, lower-pitched protest note or short series with
+    abrupt delivery and less clear harmonic structure than contact whistles.
+  semantic_keywords:
+  - aggression
+  - threat
+  - spacing
+  - attention
+  semantic_description: Used in agonistic or refusal contexts, including social conflict,
+    displacement, or resisting unwanted approach.
+  confidence: low
+  references:
+  - giret_etal_2011
 - name: mimicry sequence
   acoustic_keywords:
   - multi_component
@@ -123,6 +162,94 @@ calls:
   confidence: medium
   references:
   - pepperberg_1999
+- name: preflight call
+  alternative_names:
+  - pre-flight call
+  - departure call
+  acoustic_keywords:
+  - short
+  - loud
+  - repetitive
+  - tonal
+  acoustic_description: A short loud call given immediately before or during the initiation
+    of flight, often repeated in quick succession by departing birds.
+  semantic_keywords:
+  - group_coordination
+  - contact
+  - attention
+  semantic_description: Signals imminent departure and synchronises flock take-off,
+    allowing other individuals to prepare for or join a flight movement.
+  confidence: medium
+  references:
+  - giret_etal_2011
+- name: pair duet
+  alternative_names:
+  - duet call
+  - antiphonal duet
+  acoustic_keywords:
+  - tonal
+  - frequency_modulated
+  - multi_component
+  - repetitive
+  acoustic_description: Coordinated antiphonal vocalisations exchanged between paired
+    birds, with each partner producing complementary phrases that interlock into a
+    composite sequence.
+  semantic_keywords:
+  - affiliation
+  - mating
+  - identity
+  - group_coordination
+  semantic_description: Produced during pair-bonding interactions to reinforce the
+    pair bond, coordinate activities between mates, and signal pair status.
+  confidence: medium
+  references:
+  - giret_etal_2011
+- name: rambling vocalization
+  alternative_names:
+  - rambling call
+  - soliloquy vocalization
+  acoustic_keywords:
+  - long
+  - multi_component
+  - tonal
+  - frequency_modulated
+  - quiet
+  acoustic_description: A long loosely structured sequence of varied notes and phrases
+    produced at low amplitude, lacking the stereotypy of contact whistles; often includes
+    transitions between note types and sub-song-like passages.
+  semantic_keywords:
+  - play
+  - display
+  - affiliation
+  semantic_description: Produced in relaxed, undisturbed conditions, often when the
+    bird is resting or mildly exploring; possibly functions in vocal practice, social
+    bonding, or low-level contact maintenance.
+  confidence: low
+  references:
+  - giret_etal_2011
+- name: asking call
+  alternative_names:
+  - solicitation call
+  - request vocalization
+  acoustic_keywords:
+  - short
+  - repetitive
+  - tonal
+  - graded
+  acoustic_description: A relatively soft, repeated call with graded structure used
+    when an individual directs attention toward a social partner or resource, acoustically
+    distinct from the louder alarm or distress screams.
+  semantic_keywords:
+  - begging
+  - food
+  - attention
+  - affiliation
+  semantic_description: Emitted when a bird seeks something from a social partner,
+    such as food, attention, or access; documented in captive contexts but plausibly
+    homologous to solicitation calls observed in wild flocks.
+  confidence: low
+  references:
+  - giret_etal_2011
 references:
   boucherie_2023:
     citation: Boucherie, P.H., et al. 2023. Evidence for vocal signatures and voice-prints
@@ -136,6 +263,12 @@ references:
     citation: Bradbury, J.W., Cortopassi, K.A., and Clemmons, J.R. 2001. Vocal mimicry
       in wild African Grey Parrots Psittacus erithacus. Ibis.
     url: https://www.researchgate.net/publication/229631205_Vocal_Mimicry_in_Wild_African_Gray_Parrots_Psittacus-Erithacus
+  giret_etal_2011:
+    citation: Giret, N., Albert, A., Nagle, L., Kreutzer, M., and Bovet, D. 2011.
+      Context-related vocalizations in African Grey Parrots (Psittacus erithacus).
+      Acta Ethologica 15(1):39-46.
+    doi: 10.1007/s10211-011-0106-9
+    url: https://www.researchgate.net/publication/251311800_Context-Related_Vocalizations_in_African_Grey_Parrots_Psittacus_Erithacus
   pepperberg_1999:
     citation: 'Pepperberg, I.M. 1999. The Alex Studies: Cognitive and Communicative
       Abilities of Grey Parrots.'
@@ -150,3 +283,15 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Worker 12 recall pass added explicit distress and protest call classes so
+    high-arousal non-contact vocalizations are not fully collapsed into the alarm
+    category.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 4 call types (preflight call, pair duet, rambling vocalization, asking
+    call) based on Giret et al. 2011 and broader parrot repertoire literature to
+    reach 12 total call types.

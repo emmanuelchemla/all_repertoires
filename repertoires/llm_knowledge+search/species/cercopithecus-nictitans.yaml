@@ -160,6 +160,35 @@ calls:
   - affiliation
   semantic_description: Used in local social communication and short-range coordination, especially by nonadult or nonresident group members.
   confidence: low
+- name: distress squeak
+  alternative_names:
+  - squeak
+  - distress scream
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    - adult
+    sexes:
+    - female
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - abrupt
+  - short
+  - graded
+  acoustic_description: Acute high-pitched distress calls ranging from short squeaky notes to more intense scream-like variants, clearly harsher than ordinary contact chirps.
+  semantic_keywords:
+  - distress
+  - attention
+  - caregiving
+  semantic_description: Used by adult females, infants, and juveniles in acute distress or during attack, with the exact boundary between squeaks and screams left merged here to favor recall over oversplitting.
+  confidence: medium
+  references:
+  - gautier_hion_gautier_1977
 references:
   arnold_zuberbuhler_2006:
     citation: "Arnold, K. and Zuberbuhler, K. 2006. Language evolution: semantic combinations in primate calls. Nature 441:303."
@@ -170,6 +199,8 @@ references:
     doi: 10.1098/rsos.202135
   gautier_1973:
     citation: "Gautier, J.-P. 1973. Influence eventuelle de la vie en associations polyspecifiques sur l'apparition d'un type inhabituel d'emission sonore chez les males adultes de Cercopithecus nictitans. Mammalia 37:371-378."
+  gautier_hion_gautier_1977:
+    citation: "Gautier-Hion, A. and Gautier, J.-P. 1977. Communication in Old World monkeys. In How Animals Communicate, edited by T.A. Sebeok. Indiana University Press."
   lemasson_etal_2014:
     citation: "Lemasson, A., Zuberbuhler, K., and Hausberger, M. 2014. Pyow but not hack calls of the male putty-nosed monkey convey individual identity. Animal Behaviour 88:279-284."
     url: https://libra.unine.ch/server/api/core/bitstreams/34e2ad20-cba2-4c89-a492-fa08763ab007/content
@@ -191,3 +222,7 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Conservative source-backed revision added the population-sensitive boom class and tightened scope and function wording for the core putty-nosed monkey loud-call system.
+- timestamp: '2026-06-11T14:10:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added a merged distress squeak class for female and immature acute-distress calling, keeping squeak and scream labels together because the available source wording does not support a clean split.

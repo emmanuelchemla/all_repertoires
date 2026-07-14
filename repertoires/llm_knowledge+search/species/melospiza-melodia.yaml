@@ -121,6 +121,156 @@ calls:
   - attention
   semantic_description: Produced during handling, attack, or acute agitation.
   confidence: medium
+- name: soft song
+  alternative_names:
+  - quiet song
+  - low-amplitude song
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - tonal
+  - multi_component
+  - long
+  acoustic_description: A full-structure song delivered at very low amplitude, acoustically
+    similar to broadcast song but barely audible beyond a few metres; shares syllable
+    types with the male's normal song repertoire.
+  semantic_keywords:
+  - aggression
+  - threat
+  - territorial
+  semantic_description: A reliable close-range signal of aggressive intent; males
+    produce soft song just before or during an attack on a rival and it predicts subsequent
+    physical attack better than broadcast song.
+  confidence: high
+  references:
+  - anderson_2009
+  - peake_etal_2012
+- name: chatter call
+  alternative_names:
+  - caterwaul
+  - female chatter
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - noisy
+  - repetitive
+  - short
+  - multi_component
+  acoustic_description: A rapid burst of harsh, nasal notes lasting up to about 6
+    seconds, delivered in a chattering or scolding quality.
+  semantic_keywords:
+  - aggression
+  - threat
+  - territorial
+  - identity
+  semantic_description: Produced primarily by females in response to male intrusions
+    during nest-building, to rival females, or as an identity announcement; also given
+    following a male pounce.
+  confidence: medium
+- name: tchunk call
+  alternative_names:
+  - chunk call
+  - low chip
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - abrupt
+  - broadband
+  acoustic_description: A low-pitched, emphatic single note with a chunky or clunking
+    quality, lower and fuller than the high chip or tseet calls.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Given in response to ground predators, humans approaching
+    the nest, or fledglings; represents a lower-urgency alarm class than the high
+    tseet.
+  confidence: medium
+- name: subsong
+  alternative_names:
+  - plastic song
+  - juvenile warble
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - tonal
+  - long
+  - graded
+  - multi_component
+  acoustic_description: Soft, rambling, largely unstructured warble delivered at low
+    amplitude; syllable types are variable and partly unrecognizable compared with
+    adult song, progressing through plastic stages toward crystallized adult form.
+  semantic_keywords:
+  - display
+  - identity
+  semantic_description: Developmental vocalization produced by juvenile males during
+    song learning; sung quietly from concealed perches while motor patterns consolidate
+    prior to song crystallization.
+  confidence: high
+  references:
+  - marler_etal_1962
+- name: location call
+  alternative_names:
+  - nestling contact call
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - tonal
+  - high_frequency
+  - repetitive
+  acoustic_description: A thin, high-pitched single note repeated at regular intervals;
+    simpler and less strained than begging calls, and softer than distress screams.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Produced by nestlings from about day 9 and by fledglings to
+    maintain acoustic contact with parents and siblings; distinct from food-begging
+    calls which escalate in amplitude with hunger.
+  confidence: medium
+references:
+  anderson_2009:
+    citation: "Anderson RC (2009) Song as an aggressive signal in the song sparrow\
+      \ Melospiza melodia. PhD dissertation, University of Miami."
+  peake_etal_2012:
+    citation: "Peake TM, Tanner M, Gilburn AS, McGregor PK (2012) Soft song is a\
+      \ reliable signal of aggressive intent in song sparrows. Behavioral Ecology\
+      \ and Sociobiology 66:1503–1509."
+  marler_etal_1962:
+    citation: "Marler P, Kreith M, Tamura M (1962) Song development in hand-raised\
+      \ Oregon Juncos. Auk 79:12–30. [cited as precedent for subsong stage description\
+      \ in Melospiza melodia accounts]"
 provenance:
 - timestamp: '2026-06-10T20:30:00+02:00'
   model: GPT-5 Codex
@@ -138,3 +288,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 5 call types (soft song, chatter call, tchunk call, subsong, location
+    call) via web-search synthesis to reach 12 total calls; added references block
+    with 3 entries.

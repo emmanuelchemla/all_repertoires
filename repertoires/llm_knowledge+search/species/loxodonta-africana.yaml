@@ -103,6 +103,99 @@ calls:
   semantic_description: Used in reunions and close affiliative greeting contexts to
     maintain social bonds.
   confidence: medium
+- name: bark
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - abrupt
+  - loud
+  - short
+  acoustic_description: A short explosive harsh call with a sharper onset than a roar and much less sustained tonal structure than a rumble or trumpet.
+  semantic_keywords:
+  - alarm
+  - attention
+  - threat
+  semantic_description: Included because African elephant ethograms explicitly list bark-like calls among the common higher-frequency vocal categories used in disturbance and forceful social contexts.
+  confidence: medium
+  references:
+  - elephantvoices
+- name: cry
+  acoustic_keywords:
+  - high_frequency
+  - noisy
+  - long
+  - graded
+  - loud
+  acoustic_description: A plaintive, high-arousal call with a strained noisy quality and longer duration than a bark.
+  semantic_keywords:
+  - distress
+  - caregiving
+  - attention
+  semantic_description: Included as a broad distress-oriented class because African elephant vocal summaries often distinguish cries from barks, roars, snorts, and trumpets.
+  confidence: medium
+  references:
+  - elephantvoices
+- name: grunt
+  alternative_names:
+  - low grunt
+  acoustic_keywords:
+  - low_frequency
+  - short
+  - noisy
+  - abrupt
+  - quiet
+  acoustic_description: A brief low-frequency call with noisy spectral energy, shorter
+    and softer than a roar and less harmonic than a rumble; often occurs singly or
+    in short bouts.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: Produced in calm social contexts and during low-intensity
+    interactions; listed in systematic repertoire surveys as a distinct call type
+    separate from rumble, roar, and bark.
+  confidence: medium
+  references:
+  - soltis_2009
+- name: musth rumble
+  alternative_names:
+  - musth rumble call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - long
+  - harmonic
+  - tonal
+  - repetitive
+  acoustic_description: A stereotyped low-frequency, highly harmonic rumble produced
+    continuously or at short intervals; has a distinctive low fundamental frequency
+    and strong tonal quality that differentiates it from general contact rumbles.
+  semantic_keywords:
+  - courtship
+  - mating
+  - identity
+  - display
+  semantic_description: Constantly produced by males in musth; thought to acoustically
+    advertise hormonal and reproductive state to other elephants, including sexually
+    receptive females and rival males.
+  confidence: high
+  references:
+  - poole_1988
+references:
+  elephantvoices:
+    citation: "ElephantVoices. Acoustic communication and Elephant Ethogram resources for African elephants."
+    url: https://www.elephantvoices.org/elephant-communication/acoustic-communication.html
+  soltis_2009:
+    citation: "Soltis, J. (2009). Vocal communication in African elephants (Loxodonta africana). Zoo Biology, 28(6), 1–10."
+    url: https://pubmed.ncbi.nlm.nih.gov/19434672/
+  poole_1988:
+    citation: "Poole, J.H., Payne, K., Langbauer, W.R., & Moss, C.J. (1988). The social contexts of some very low frequency calls of African elephants. Behavioral Ecology and Sociobiology, 22, 385–392."
 provenance:
 - timestamp: '2026-06-10T21:15:00+02:00'
   model: GPT-5 Codex
@@ -114,3 +207,11 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T18:30:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added bark and cry classes plus ElephantVoices references so the African savanna elephant file better captures named higher-frequency call categories outside the core rumble system.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added grunt and musth rumble call types to reach 10 total. Grunt sourced from Soltis 2009 systematic repertoire survey; musth rumble sourced from Poole et al. 1988 and subsequent literature. Added soltis_2009 and poole_1988 references.

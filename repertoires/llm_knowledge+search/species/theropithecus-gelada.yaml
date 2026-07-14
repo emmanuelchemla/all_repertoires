@@ -53,33 +53,225 @@ calls:
     semantic_keywords: [display, affiliation, attention, combinatorial]
     semantic_description: Often occurs in elaborate social sequences and conspicuous social displays, particularly by leader males.
     confidence: high
-    references: [gustison_2012, gustison_2016]
+    references: [gustison_2012, gustison_2016, pedruzzi_2024]
   - name: pre-copulation call
     acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
     acoustic_description: A brief repeated sexual call with a relatively high-pitched, aroused structure.
     semantic_keywords: [courtship, mating, attention]
     semantic_description: Produced immediately before mating during sexual interactions.
     confidence: high
-    references: [gustison_2012, caselli_2024]
+    references: [gustison_2012, caselli_2024, moos_heilen_1990]
   - name: end-copulation call
     acoustic_keywords: [high_frequency, tonal, short, abrupt, graded]
     acoustic_description: A short call given at the end of copulation, typically more clipped than longer affiliative sequence elements.
     semantic_keywords: [mating, attention]
     semantic_description: Emitted at the termination of copulation.
     confidence: medium
-    references: [caselli_2024]
+    references: [caselli_2024, zanoli_2021]
+  - name: copulation call
+    alternative_names: [copula call]
+    acoustic_keywords: [high_frequency, tonal, repetitive, graded, multi_component]
+    acoustic_description: A variable-length sequence of repeated copulatory notes, usually given in rapid succession and more rhythmically repetitive than ordinary contact grunts.
+    semantic_keywords: [mating, courtship, attention]
+    semantic_description: Produced during copulation by males and sometimes by females as part of the mating interaction itself.
+    confidence: medium
+    references: [aich_1990, zanoli_2021]
+  - name: post-copulation call
+    alternative_names: [post-copulation close-call sequence, close call sequence]
+    acoustic_keywords: [multi_component, tonal, repetitive, graded]
+    acoustic_description: A post-mating vocal sequence assembled from softer affiliative close-call elements rather than a single stereotyped note.
+    semantic_keywords: [mating, affiliation, contact, combinatorial]
+    semantic_description: Given after copulation and used to prolong or smooth the affiliative interaction between partners after genital contact ends.
+    confidence: medium
+    references: [aich_1990, zanoli_2021]
   - name: scream
     acoustic_keywords: [high_frequency, loud, noisy, long, abrupt]
     acoustic_description: Loud harsh calls with strong noisy energy and marked arousal.
     semantic_keywords: [distress, aggression, attention]
     semantic_description: Produced in conflict, harassment, and acute social tension.
     confidence: medium
-  - name: bark
+    references: [pedruzzi_2025, aich_1990]
+  - name: alarm call
+    alternative_names: [alarm bark]
     acoustic_keywords: [abrupt, broadband, noisy, short, loud]
-    acoustic_description: A short abrupt harsh call with broader spectral energy than affiliative calls.
-    semantic_keywords: [alarm, threat, attention]
-    semantic_description: Used in alerting and high-arousal situations.
+    acoustic_description: A short harsh exhaled bark with broad noisy energy and little tonal structure.
+    semantic_keywords: [alarm, predator, attention, group_coordination]
+    semantic_description: Given in predator detection or sudden danger, functioning as an alert to nearby group members.
     confidence: medium
+    references: [aich_1990]
+  - name: fear bark
+    acoustic_keywords: [short, abrupt, noisy, broadband]
+    acoustic_description: A cough-like exhaled bark, typically brief and harsh, often with retracted lips.
+    semantic_keywords: [submission, threat, attention]
+    semantic_description: Produced by subordinate individuals toward higher-ranking animals in fearful or appeasing situations.
+    confidence: medium
+    references: [aich_1990]
+  - name: threat grunt
+    acoustic_keywords: [low_frequency, short, abrupt, tonal, graded]
+    acoustic_description: A clipped staccato exhaled grunt that is acoustically harsher and more abrupt than routine affiliative grunts.
+    semantic_keywords: [threat, aggression, spacing]
+    semantic_description: Used by dominant or assertive individuals during aggressive encounters and close-range intimidation.
+    confidence: low
+    references: [aich_1990]
+  - name: howl bark
+    alternative_names: [how bark]
+    acoustic_keywords: [high_frequency, noisy, loud, repetitive, multi_component]
+    acoustic_description: A high-pitched bark-whinny type call, louder and more elongated than a simple bark and often given in repeated bursts.
+    semantic_keywords: [aggression, display, attention, spacing]
+    semantic_description: Produced especially by non-leader or bachelor males during competitive chases and other high-arousal male-male confrontations.
+    confidence: medium
+    references: [aich_1990, benitez_2016]
+  - name: loud call
+    alternative_names: [bee-yow call, two-phase loud call]
+    acoustic_keywords: [high_frequency, loud, frequency_modulated, multi_component, repetitive, long]
+    acoustic_description: A conspicuous two-part loud call with a distinct two-syllable structure given in bouts of repeated calls during display events.
+    semantic_keywords: [display, aggression, spacing, attention]
+    semantic_description: Produced mainly by leader males during ritualized chase displays with rival males, where it advertises quality and competitive ability.
+    confidence: medium
+    references: [benitez_2016, aich_1990]
+  - name: roar-bark
+    alternative_names: [roar bark, challenge roar]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, noisy, broadband, abrupt, multi_component, low_frequency]
+    acoustic_description: A forceful call combining a sustained low roar component followed by or merged with a sharp bark element, loud and broadband with strong noisy energy.
+    semantic_keywords: [aggression, display, threat, spacing]
+    semantic_description: Produced by bachelor or follower males during competitive confrontations with harem-holding leader males; associated with branch-shaking and tree-climbing threat displays.
+    confidence: medium
+    references: [aich_1990, benitez_2016]
+  - name: high squeal
+    alternative_names: [squeal, harem-herding squeal]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, tonal, short, abrupt]
+    acoustic_description: A high-pitched, sharply produced squeal with tonal character, brief and piercing.
+    semantic_keywords: [aggression, threat, group_coordination]
+    semantic_description: Emitted by leader males while herding females and in competitive interactions; used to direct female movement and reinforce dominance.
+    confidence: medium
+    references: [aich_1990]
+  - name: nasal inhaled grunt
+    alternative_names: [nasal grunt]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, tonal, abrupt, graded]
+    acoustic_description: A short inspiratory grunt with a distinctly nasal resonance quality, acoustically separable from the oral inhale grunt by its nasal formant coloration.
+    semantic_keywords: [affiliation, contact, combinatorial]
+    semantic_description: Appears within male affiliative vocal sequences directed at females; documented as a distinct derived call type though often produced overlapping with other vocalizations.
+    confidence: low
+    references: [gustison_2012]
+  - name: vocalized lip-smack
+    alternative_names: [lip-smack vocalization, vocal lip-smack]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, repetitive, pulsed, tonal, quiet]
+    acoustic_description: A rhythmically pulsed vocalization produced during lip-smacking at 3–8 Hz, with voiced components superimposed on the orofacial rhythm; shares spectro-temporal patterning with human speech rhythm.
+    semantic_keywords: [affiliation, contact, attention]
+    semantic_description: Produced during close affiliative interactions; the voiced variant of the motor-vocal lip-smack that is the phylogenetic precursor of the more elaborate derived wobble calls.
+    confidence: high
+    references: [gustison_2012, bergman_2012_lipsmack]
+  - name: groan
+    alternative_names: [low groan]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, long, tonal, harmonic, quiet, graded]
+    acoustic_description: A low drawn-out call with a deep pitch and sustained harmonic structure, acoustically intermediate between a grunt and a moan but with a heavier, more resonant timbre.
+    semantic_keywords: [contact, affiliation, submission]
+    semantic_description: Produced in low-arousal close-contact situations and during appeasement interactions; part of the graded continuum of low-frequency affiliative calls.
+    confidence: medium
+    references: [aich_1990]
+  - name: travel grunt
+    alternative_names: [movement grunt, foraging grunt]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A soft short grunt acoustically similar to close-contact exhale grunts but produced at higher rates during group movement; individual acoustic structure shifts slightly with behavioral state.
+    semantic_keywords: [contact, group_coordination, spacing]
+    semantic_description: Emitted during foraging and travelling bouts; females' contact grunts differ acoustically across foraging, travelling, and social states, and travel-state grunts serve spatial cohesion at the band level.
+    confidence: medium
+    references: [painter_2024]
+  - name: female distress scream
+    alternative_names: [victim scream, female scream]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, long, broadband]
+    acoustic_description: A loud, sustained, broadly noisy scream with high fundamental frequency and significant energy across a wide frequency band, distinct from the shorter and harsher fear bark.
+    semantic_keywords: [distress, aggression, submission, attention]
+    semantic_description: Produced by female victims during or immediately after agonistic attacks; recognized by other group members and by males who may respond with affiliative vocalizations as appeasement.
+    confidence: high
+    references: [pedruzzi_2025, aich_1990]
+  - name: scream-grunt
+    alternative_names: [scream grunt sequence, distress-comfort sequence]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [multi_component, high_frequency, noisy, graded, abrupt]
+    acoustic_description: A compound vocal unit pairing an initial scream element (noisy, high-frequency, high arousal) with one or more following grunt elements (lower-frequency, tonal, lower arousal) within a rapid temporal window.
+    semantic_keywords: [distress, affiliation, submission, combinatorial]
+    semantic_description: "The scream-grunt series is the typical sequence following an agonistic interaction: a distress scream followed by a comforting grunt, which signals de-escalation. Sequences can also be reversed (grunt then scream) in ambivalent contexts."
+    confidence: medium
+    references: [pedruzzi_2025]
+  - name: high-intensity social yawn call
+    alternative_names: [YW3 vocalization, high-arousal yawn call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, long, frequency_modulated, multi_component, broadband]
+    acoustic_description: A vocalized yawn produced with wide gape and head movement, encompassing a large frequency bandwidth and often with audible noisy components; acoustically distinct from low-intensity social and non-social yawn vocalizations.
+    semantic_keywords: [display, threat, attention, affiliation]
+    semantic_description: Produced predominantly by high-ranking males during periods of elevated social tension; has a strong auditory component and is associated with scratching and anxiety signals; contagious through auditory channel.
+    confidence: high
+    references: [palagi_2009, pedruzzi_2024, francesconi_2025]
+  - name: appeasement grunt
+    alternative_names: [reassurance grunt, post-conflict grunt]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, tonal, quiet, graded]
+    acoustic_description: A soft, muted exhale grunt delivered in close proximity; lower amplitude and more subdued quality than routine affiliative contact grunts, sometimes structurally transitional between a grunt and a groan.
+    semantic_keywords: [submission, affiliation, contact]
+    semantic_description: Produced toward dominants or former aggressors in post-conflict contexts; functions as a reassurance or appeasement signal to reduce tension and facilitate reconciliation after agonistic interactions.
+    confidence: medium
+    references: [aich_1990, pedruzzi_2025]
+  - name: low-intensity social yawn call
+    alternative_names: [YW2 vocalization, low-arousal yawn call]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [long, frequency_modulated, multi_component, quiet, graded]
+    acoustic_description: A vocalized yawn with uncovered teeth but without the head movement and loud acoustic profile of the high-intensity variant; intermediate bandwidth and lower amplitude than YW3.
+    semantic_keywords: [affiliation, attention, display]
+    semantic_description: Produced in low-arousal social contexts; shows a distinct acoustic profile from both high-intensity social yawns and non-social yawns; triggers yawn contagion via auditory channel in bystanders.
+    confidence: medium
+    references: [palagi_2009, francesconi_2025]
 references:
   gustison_2012:
     citation: "Gustison, M.L., le Roux, A., and Bergman, T.J. 2012. Derived vocalizations of geladas (Theropithecus gelada) and the evolution of vocal complexity in primates. Philosophical Transactions of the Royal Society B 367:1847-1859."
@@ -93,6 +285,36 @@ references:
   caselli_2024:
     citation: "Caselli, M., Palagi, E., Bandoli, F., and Demuru, E. 2024. Multimodal communication and mating in wild geladas. Behavioral Ecology and Sociobiology."
     url: https://link.springer.com/article/10.1007/s00265-024-03461-1
+  aich_1990:
+    citation: "Aich, H., Moos-Heilen, R., and Zimmermann, E. 1990. Vocalizations of adult gelada baboons (Theropithecus gelada): acoustic structure and behavioural context. Folia Primatologica 55(3-4):109-132."
+    doi: 10.1159/000156508
+  moos_heilen_1990:
+    citation: "Moos-Heilen, R., and Sossinka, R. 1990. The influence of oestrus on the vocalization of female gelada baboons (Theropithecus gelada). Ethology 84(1):35-46."
+    url: https://onlinelibrary.wiley.com/doi/10.1111/j.1439-0310.1990.tb00783.x
+  benitez_2016:
+    citation: "Benitez, M.E., le Roux, A., Fischer, J., Beehner, J.C., and Bergman, T.J. 2016. Acoustic and temporal variation in gelada (Theropithecus gelada) loud calls advertise male quality. International Journal of Primatology 37:568-585."
+    doi: 10.1007/s10764-016-9922-0
+  zanoli_2021:
+    citation: "Zanoli, A., Gamba, M., Lemasson, A., Norscia, I., and Palagi, E. 2021. Inter-sexual multimodal communication during mating in wild geladas: the leading role of females. Current Zoology 68(5):570-580."
+    url: https://academic.oup.com/cz/article/68/5/570/6423982
+  pedruzzi_2024:
+    citation: "Pedruzzi, L., Francesconi, M., Palagi, E., and Lemasson, A. 2024. The sound of yawns makes geladas yawn. Scientific Reports 14(1):361."
+    doi: 10.1038/s41598-023-49797-5
+  pedruzzi_2025:
+    citation: "Pedruzzi, L., Francesconi, M., Galotti, A., Bogale, B.A., Palagi, E., and Lemasson, A. 2025. Wild gelada monkeys detect emotional and prosocial cues in vocal exchanges during aggression. PLOS One 20(5):e0323295."
+    doi: 10.1371/journal.pone.0323295
+  bergman_2012_lipsmack:
+    citation: "Bergman, T.J., Ho, L., and Beehner, J.C. 2013. Speech-like vocalized lip-smacking in geladas. Current Biology 23(7):R268-R269."
+    doi: 10.1016/j.cub.2013.02.038
+  painter_2024:
+    citation: "Painter, M.C., Gustison, M.L., Snyder-Mackler, N., Tinsley Johnson, E., le Roux, A., and Bergman, T.J. 2024. Acoustic variation and group level convergence of gelada, Theropithecus gelada, contact calls. Animal Behaviour 204:125-135."
+    doi: 10.1016/j.anbehav.2023.08.009
+  palagi_2009:
+    citation: "Palagi, E., Leone, A., Mancini, G., and Ferrari, P.F. 2009. Contagious yawning in gelada baboons as a possible expression of empathy. Proceedings of the National Academy of Sciences 106(46):19262-19267."
+    doi: 10.1073/pnas.0910891106
+  francesconi_2025:
+    citation: "Francesconi, M., Pedruzzi, L., Palagi, E., and Lemasson, A. 2025. Social engagement modulates wild monkeys' vocal expressions and the behavioral response to that of others. iScience 28(12):111491."
+    doi: 10.1016/j.isci.2025.111491
 provenance:
   - timestamp: "2026-06-10T21:45:00+02:00"
     model: GPT-5 Codex
@@ -102,3 +324,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded the repertoire around well-described derived affiliative and mating-related vocal classes using stable gelada sources.
+  - timestamp: "2026-06-11T12:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added plausible missing agonistic, loud-display, and mating-sequence call classes from adult repertoire and recent playback/mating studies, while splitting the former generic bark into alarm and submissive/aggressive subclasses.
+  - timestamp: "2026-06-12T17:15:00+02:00"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Expanded repertoire from 16 to 27 calls by adding roar-bark, high squeal, nasal inhaled grunt, vocalized lip-smack, groan, travel grunt, female distress scream, scream-grunt, high-intensity social yawn call, and low-intensity social yawn call. Added references for Bergman et al. 2013 (lip-smacking), Painter et al. 2024 (contact call convergence), Palagi et al. 2009 (yawn contagion), and Francesconi et al. 2025 (social engagement and yawn modulation).

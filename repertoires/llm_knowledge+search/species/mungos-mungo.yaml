@@ -165,6 +165,101 @@ calls:
   confidence: low
   references:
   - rasso_1986
+- name: aggression call
+  alternative_names:
+  - aggressive call
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - abrupt
+  - loud
+  - short
+  acoustic_description: A harsh, broadband burst distinguishable from the lower-intensity
+    threat call; more explosive in onset and higher in amplitude, consistent with
+    escalated agonistic arousal.
+  semantic_keywords:
+  - aggression
+  - threat
+  - spacing
+  semantic_description: Produced during overt aggressive encounters such as biting
+    or chasing, rather than the warning context of the threat call.
+  confidence: medium
+  references:
+  - rasso_1986
+- name: rally call
+  alternative_names:
+  - rally call A
+  - rally call B
+  acoustic_keywords:
+  - loud
+  - repetitive
+  - tonal
+  - frequency_modulated
+  - multi_component
+  acoustic_description: A loud, repeated call series; two acoustic variants (A and
+    B) have been described, differing in pitch contour and repetition rate but both
+    carrying a tonal-to-noisy quality and higher amplitude than routine forage calls.
+  semantic_keywords:
+  - group_coordination
+  - recruitment
+  - territorial
+  - alarm
+  semantic_description: Produced during inter-group encounters and territorial disputes
+    to rally group members; may also function during predator mobbing requiring
+    sustained coordinated response.
+  confidence: medium
+  references:
+  - rasso_1986
+- name: young call
+  alternative_names:
+  - pup call
+  - infant call
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - repetitive
+  - quiet
+  acoustic_description: A thin, relatively high-pitched short call produced by young
+    individuals; structurally simpler and higher in fundamental frequency than adult
+    close-forage calls, with limited acoustic gradation.
+  semantic_keywords:
+  - contact
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Produced by pups and juveniles in the natal context; maintains
+    proximity with escorts and solicits caregiving or food provisioning.
+  confidence: medium
+  references:
+  - rasso_1986
+- name: water call
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - repetitive
+  acoustic_description: A short, relatively soft call reported in the context of
+    water-finding or drinking; acoustically distinct enough from forage and movement
+    calls to be categorised separately in captive repertoire studies.
+  semantic_keywords:
+  - food
+  - group_coordination
+  - attention
+  semantic_description: Associated with proximity to water or drinking behaviour;
+    may alert group members to a resource location, though evidence is primarily
+    from captive observation.
+  confidence: low
+  references:
+  - rasso_1986
 references:
   jansen_2012:
     citation: Jansen, D.A.W.A.M. and Cant, M.A. 2013. Segmental concatenation of individual
@@ -184,6 +279,10 @@ references:
   banded_mongoose_calls:
     citation: Jansen, D.A.W.A.M. and Manser, M.B. Studies of banded mongoose close
       calls, movement calls, and recruitment.
+  rasso_1987:
+    citation: Rasa, O.A.E. 1987. A study of the vocal repertoire of the banded mongoose,
+      Mungos mungo (Gmelin). Monitore Zoologico Italiano, Supplemento 22(1).
+    url: https://www.tandfonline.com/doi/abs/10.1080/03749444.1987.10736734
 provenance:
 - timestamp: '2026-06-10T20:15:00+02:00'
   model: GPT-5 Codex
@@ -201,3 +300,9 @@ provenance:
   notes: Second-pass completeness update added broad distress, threat, and grooming
     call classes from externally described banded mongoose repertoire summaries while
     keeping close-call and recruitment structure intact.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added four call types (aggression call, rally call, young call, water call)
+    from Rasa 1987 captive repertoire study to reach 12-call target; added rasso_1987
+    reference entry.

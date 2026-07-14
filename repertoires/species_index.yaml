@@ -88,7 +88,6 @@ families:
   Delphinidae:
     - { scientific_name: Tursiops truncatus, common_name: Common Bottlenose Dolphin, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
     - { scientific_name: Orcinus orca, common_name: Killer Whale, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
-    - { scientific_name: Globicephala melas, common_name: Long-finned Pilot Whale, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }
 
   Monodontidae:
     - { scientific_name: Delphinapterus leucas, common_name: Beluga, semantic_knowledge: low, acoustic_knowledge: high, repertoire_scope: low, call_type_study_fit: exclude }

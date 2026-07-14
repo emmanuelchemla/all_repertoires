@@ -126,6 +126,128 @@ calls:
   confidence: medium
   references:
   - cockburn_2013
+- name: chit call
+  alternative_names:
+  - chit alarm
+  - chit note
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - abrupt
+  - short
+  - repetitive
+  - broadband
+  - loud
+  acoustic_description: A brief sharp monosyllabic note, typically repeated rapidly
+    in a series; broadband and click-like, with little tonal structure.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: The typical close-range alarm call given in response to terrestrial
+    or general disturbance. Distinct from the aerial alarm and seet call in being
+    shorter and structurally simpler.
+  confidence: high
+  references:
+  - langmore_1992
+- name: seep contact call
+  alternative_names:
+  - seep note
+  - high-pitched contact note
+  scope:
+    life_stages:
+    - adult
+    - juvenile
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - quiet
+  acoustic_description: A thin, high-pitched monosyllabic note, brief and relatively
+    pure in tone; similar in structure to contact notes used by many small passerines.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Short-range contact note used to maintain proximity among
+    group members while moving through dense vegetation.
+  confidence: medium
+- name: Type II song
+  alternative_names:
+  - predator-elicited song
+  - alarm song
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - long
+  - frequency_modulated
+  - repetitive
+  - loud
+  acoustic_description: A relatively long, structurally complex song-like trill emitted
+    as a single bout; more elaborate and sustained than the typical chit alarm call,
+    resembling normal song in spectral complexity but given in a distinct context.
+  semantic_keywords:
+  - alarm
+  - predator
+  - display
+  - identity
+  semantic_description: Produced by both sexes in response to loud calls of potential
+    predators (ravens, currawongs, hawks); function is debated — appears to serve
+    as an intraspecific display directed at group members rather than as a classical
+    anti-predator signal.
+  confidence: high
+  references:
+  - langmore_1992
+- name: incubation call
+  alternative_names:
+  - B-element call
+  - embryo tutoring call
+  - nest vocalization
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - short
+  - repetitive
+  - tonal
+  - frequency_modulated
+  acoustic_description: A soft two-element call produced at close range inside or
+    near the nest; the signature B element is a brief frequency-modulated note that
+    is structurally similar to the nestling begging call.
+  semantic_keywords:
+  - caregiving
+  - identity
+  - contact
+  semantic_description: Produced by incubating females directed toward eggs; embryos
+    learn the B-element as a vocal password used in begging calls after hatching,
+    allowing parents to distinguish own chicks from cuckoo parasites.
+  confidence: high
+  references:
+  - colombelli_negrel_2012
+  - kleindorfer_2024
 references:
   fairywren_song:
     citation: 'Frontiers in Ecology and Evolution. Superb Fairy-Wren (Malurus cyaneus)
@@ -147,6 +269,22 @@ references:
   cockburn_2013:
     citation: Cockburn, A. and colleagues. Superb Fairywren vocal communication and
       social behavior studies.
+  langmore_1992:
+    citation: 'Langmore, N.E. and Mulder, R.A. 1992. A Novel Context for Bird Song:
+      Predator Calls Prompt Male Singing in the Kleptogamous Superb Fairy-wren, Malurus
+      cyaneus. Ethology 90(2): 143-153.'
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1439-0310.1992.tb00828.x
+  colombelli_negrel_2012:
+    citation: 'Colombelli-Negrel, D., Hauber, M.E., Robertson, J., Sulloway, F.J.,
+      Hoi, H., Griggio, M., and Kleindorfer, S. 2012. Embryonic Learning of Vocal
+      Passwords in Superb Fairy-Wrens Reveals Intruder Cuckoo Nestlings. Current
+      Biology 22(22): 2155-2160.'
+    url: https://www.researchgate.net/publication/233394251_Embryonic_Learning_of_Vocal_Passwords_in_Superb_Fairy-Wrens_Reveals_Intruder_Cuckoo_Nestlings
+  kleindorfer_2024:
+    citation: 'Kleindorfer, S. et al. 2024. Nestling Begging Calls Resemble Maternal
+      Vocal Signatures When Mothers Call Slowly to Embryos. The American Naturalist
+      203(2).'
+    url: https://www.journals.uchicago.edu/doi/10.1086/728105
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -168,3 +306,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added 4 call types (chit call, seep contact call, Type II song, incubation
+    call) to reach 11 total; added references for Langmore 1992, Colombelli-Negrel
+    2012, and Kleindorfer 2024 via web search.

@@ -137,6 +137,123 @@ calls:
     confidence: medium
     references:
       - jackdaw_cornell
+  - name: kiaw call
+    alternative_names:
+      - kyow call
+      - kia call
+      - feeding guidance call
+      - flock guidance call
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - short
+      - loud
+    acoustic_description: A short, downward-inflected note, acoustically distinct from the flat tchak contact call; sometimes transcribed as "kiaw" or "kyow" with a falling pitch contour.
+    semantic_keywords:
+      - food
+      - group_coordination
+      - recruitment
+    semantic_description: Produced by adults, especially males, when offering food to mates or calling young to food; also described by Lorenz as a flock-guidance call used to direct conspecifics to feeding locations or homeward.
+    confidence: medium
+    references:
+      - lorenz_king_solomons_ring
+  - name: recruitment call
+    alternative_names:
+      - mobbing call
+      - antipredator recruitment call
+      - scolding recruitment call
+    acoustic_keywords:
+      - noisy
+      - broadband
+      - loud
+      - repetitive
+      - abrupt
+    acoustic_description: Harsh, rattling, rapidly repeated notes that are louder and more urgent in quality than ordinary contact calls; often described as a strident scolding rattle.
+    semantic_keywords:
+      - alarm
+      - predator
+      - recruitment
+      - group_coordination
+    semantic_description: Specifically initiates collective mobbing of predators; recruits conspecifics to the caller's location and induces them to produce their own calls. Caller identity and colony membership influence the magnitude of the group response.
+    confidence: high
+    references:
+      - auersperg_etal_2018
+      - naef_daenzer_2019
+  - name: distress call
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - long
+      - noisy
+      - frequency_modulated
+    acoustic_description: Prolonged, high-intensity, high-pitched call with a rough or raspy quality, acoustically more extreme than the scold or recruitment call.
+    semantic_keywords:
+      - distress
+      - alarm
+      - predator
+      - attention
+    semantic_description: Produced when a bird is physically restrained or under direct attack; classically studied in avoidance-conditioning experiments and reported to elicit strong conspecific responses including approach and mobbing.
+    confidence: high
+    references:
+      - curio_1973
+      - curio_1974
+  - name: copulation call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - unknown
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - noisy
+      - multi_component
+    acoustic_description: Loud, repeated rasping or harsh notes produced rapidly in sequence; sometimes transcribed as "räääh-räääh-räääh"; conspicuous relative to quiet social chatter.
+    semantic_keywords:
+      - mating
+      - courtship
+      - identity
+    semantic_description: Produced during or immediately surrounding copulation events; reported to function in partner recognition and possibly sperm competition signalling in a socially monogamous but extra-pair copulation context.
+    confidence: medium
+    references:
+      - jackdaw_pair_bond
+  - name: agonistic call
+    alternative_names:
+      - threat call
+      - annoyance call
+      - kiaow call
+    acoustic_keywords:
+      - loud
+      - abrupt
+      - noisy
+      - short
+    acoustic_description: A sharp, often single-note harsh call, sometimes transcribed as "kiaow"; louder and more clipped than ordinary contact calls.
+    semantic_keywords:
+      - aggression
+      - threat
+      - spacing
+      - territorial
+    semantic_description: Given when a bird is annoyed or displaced by a competitor at a feeding or perching site; used individually or collectively as a group-level signal of aggression, especially at contested resources.
+    confidence: medium
+    references:
+      - lorenz_king_solomons_ring
+  - name: roost aggregation call
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - noisy
+      - multi_component
+    acoustic_description: High-volume noisy calling bouts produced by large groups; mixture of contact and excited notes forming a collective cacophony at roost sites.
+    semantic_keywords:
+      - group_coordination
+      - contact
+      - display
+    semantic_description: Produced by flocks gathering at winter communal roosts, particularly at dawn and dusk departure and arrival flights; may coordinate group departure timing and reinforce social bonds within the roost.
+    confidence: low
+    references:
+      - anthropogenic_roost_2024
 references:
   jackdaw_contact:
     citation: "Madden, J. R., et al. 2025. Variability and individuality in the contact calls of jackdaws (Corvus monedula)."
@@ -147,6 +264,26 @@ references:
   jackdaw_foodcall:
     citation: "Madden, J. R., et al. 2014. Jackdaw nestlings can discriminate between conspecific calls but do not beg specifically to their parents' calls. Behavioral Ecology 25(3):565-574."
     url: https://academic.oup.com/beheco/article/25/3/565/513806
+  lorenz_king_solomons_ring:
+    citation: "Lorenz, K. 1952. King Solomon's Ring. Methuen, London. [Original German: Er redete mit dem Vieh, den Vögeln und den Fischen, 1949.]"
+  auersperg_etal_2018:
+    citation: "Ashton, B. J., et al. 2018. Caller characteristics influence recruitment to collective anti-predator events in jackdaws. Scientific Reports 8:7343."
+    url: https://www.nature.com/articles/s41598-018-25793-y
+  naef_daenzer_2019:
+    citation: "Greggor, A. L., et al. 2019. Evidence for individual discrimination and numerical assessment in collective antipredator behaviour in wild jackdaws (Corvus monedula). Animal Behaviour 157:125-134."
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6832194/
+  curio_1973:
+    citation: "Curio, E. 1973. Avoidance conditioning of jackdaws (Corvus monedula) to distress calls. Behaviour 47(1-2):1-13."
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0003347273800089
+  curio_1974:
+    citation: "Curio, E. 1974. Conditioning of jackdaws (Corvus monedula) to normal and modified distress calls. Behaviour 50(3-4):176-189."
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0003347274800199
+  jackdaw_pair_bond:
+    citation: "Gill, L. F., et al. 2020. Genetic monogamy despite frequent extrapair copulations in 'strictly monogamous' wild jackdaws. Behavioral Ecology 31(3):726-739."
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7191249/
+  anthropogenic_roost_2024:
+    citation: "Wascher, C. A. F., et al. 2024. Anthropogenic disturbance affects calling and collective behaviour in corvid roosts. Scientific Reports 14."
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11391286/
 provenance:
   - timestamp: '2026-06-10T20:45:00+02:00'
     model: GPT-5 Codex
@@ -164,3 +301,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Second-pass completeness sweep added a conservative soft song class and adult food call using external sound-page and provisioning-call evidence.
+  - timestamp: '2026-06-12T00:00:00Z'
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Expanded from 7 to 13 call types by adding kiaw/flock-guidance call, recruitment/mobbing call, distress call, copulation call, agonistic/threat call, and roost aggregation call; added 8 new references from primary literature and Lorenz.

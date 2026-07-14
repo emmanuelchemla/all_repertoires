@@ -65,6 +65,37 @@ calls:
     semantic_description: Used in low-level solicitation, discomfort, or socially directed arousal.
     confidence: low
     references: [dog_soundscape]
+  - name: grunt
+    acoustic_keywords: [low_frequency, short, broadband, abrupt, graded]
+    acoustic_description: A brief low rough voiced sound, often softer and more pulse-like than a growl and shorter than a moan.
+    semantic_keywords: [play, affiliation, attention, distress]
+    semantic_description: Used in some play, close social solicitation, exertion, and discomfort contexts, but its boundary from other low-intensity voiced sounds is not always sharp.
+    confidence: low
+    references: [dog_soundscape, canine_communication_overview]
+  - name: coo
+    alternative_names: [contentment vocalization]
+    acoustic_keywords: [high_frequency, quiet, tonal, short]
+    acoustic_description: A soft, smooth, relatively high-pitched tonal sound with gentle contour and low amplitude, shorter and softer than a whine or whimper.
+    semantic_keywords: [affiliation, contact, caregiving]
+    semantic_description: Expressed in relaxed social contact, particularly in mother-puppy interactions and adult greetings with familiar individuals; conveys contentment and affiliation.
+    confidence: medium
+    references: [cohen_fox_canid_vocalizations, canine_communication_overview]
+  - name: snarl
+    alternative_names: [bared-teeth vocalization]
+    acoustic_keywords: [low_frequency, noisy, broadband, short, abrupt]
+    acoustic_description: A harsh, guttural forced sound closely coupled with bared-teeth facial display, shorter and more percussive than a sustained growl, with rougher spectral quality.
+    semantic_keywords: [threat, aggression]
+    semantic_description: Produced in close-range aggressive encounters and resource guarding; communicates imminent bite readiness; typically accompanied by hard stare and facial threat signals.
+    confidence: medium
+    references: [cohen_fox_canid_vocalizations]
+  - name: cough
+    alternative_names: [alarm cough, woof]
+    acoustic_keywords: [broadband, noisy, abrupt, short, loud]
+    acoustic_description: A single forced expiratory burst with abrupt onset and broadband spectral energy, similar in form to a bark but typically produced as an isolated unit rather than in repetitive bouts.
+    semantic_keywords: [alarm, attention, threat]
+    semantic_description: Produced as an initial single-note alert in low-level arousal or mild alerting situations; often precedes full bark bouts and may function as a low-intensity alarm signal.
+    confidence: medium
+    references: [cohen_fox_canid_vocalizations, canine_communication_overview]
 references:
   dog_soundscape:
     citation: "Pongracz, P., Farago, T., Reicher, V., Kis, A., and Tixier, M. 2024. The dog soundscape: recurrence, emotional impact, acoustics, and contexts of dog sounds. Scientific Reports 14:3017."
@@ -79,6 +110,12 @@ references:
   separation_whining:
     citation: "Tiira, K., Sulkama, S., and Lohi, H. 2021. Separation-related behavior problems in dogs are associated with vocalization patterns. Scientific Reports 11:18482."
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8479053/
+  canine_communication_overview:
+    citation: "The Aggie Transcript. 2022. Vocal communication in the domestic dog."
+    url: https://aggietranscript.ucdavis.edu/articles/vocal-communication-domestic-dog
+  cohen_fox_canid_vocalizations:
+    citation: "Cohen, J.A. and Fox, M.W. 1976. Vocalizations in wild canids and possible effects of domestication. Behavioural Processes 1(1):77–92."
+    doi: 10.1016/0376-6357(76)90008-5
 provenance:
   - timestamp: "2026-06-10T22:15:00+02:00"
     model: GPT-5 Codex
@@ -92,3 +129,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Conservative completeness pass added obvious additional dog call classes and refreshed the top-level references with stable external sources.
+  - timestamp: "2026-06-11T12:05:00Z"
+    model: GPT-5 Codex
+    action: updated
+    notes: Worker 10 recall review added a tentative grunt class and kept other low-salience dog sounds merged where evidence for stable splits was weak.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Completeness pass added coo, snarl, and cough to reach 12 call types, drawing on Cohen & Fox 1976 twelve-type canid classification and web search. Added cohen_fox_canid_vocalizations reference.

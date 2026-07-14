@@ -1,0 +1,281 @@
+scientific_name: Procavia capensis
+common_name: Rock hyrax
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Hyracoidea
+  family: Procaviidae
+  genus: Procavia
+  species: capensis
+
+calls:
+  - name: advertisement song
+    alternative_names:
+      - male song
+      - territorial song
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - long
+      - multi_component
+      - frequency_modulated
+      - loud
+      - repetitive
+      - graded
+    acoustic_description: >
+      Long, complex vocal sequence composed of ~30 syllables drawn from a set of
+      five types (wail, chuck, snort, squeak, tweet) arranged in syntactically
+      structured order. Typically progresses from low-complexity syllables at
+      the start (wails, squeaks) toward higher-complexity harsh elements (snorts,
+      chucks) at the climax. Individual songs are highly variable and non-repetitive
+      across renditions; regional dialects documented. Duration ranges from tens
+      of seconds to several minutes.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - identity
+      - display
+      - mating
+    semantic_description: >
+      Produced spontaneously by dominant adult males, often at dawn or dusk, and
+      in response to conspecific male songs (counter-singing). Songs encode
+      information about singer body size, weight, condition, social status, and
+      hormonal state. Males respond more strongly to familiar neighbours than
+      strangers (nasty-neighbour effect), indicating a role in spacing. Also
+      functions as mate advertisement.
+    confidence: high
+    references: [demartsev_2012, kershenbaum_2012]
+
+  - name: wail syllable
+    alternative_names:
+      - introductory wail
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - frequency_modulated
+      - long
+      - loud
+    acoustic_description: >
+      Tonal, frequency-modulated syllable with a rising or falling pitch contour.
+      Relatively long duration compared to other song syllables; typically appears
+      near the beginning of male advertisement songs. Clear, whistle-like quality
+      with minimal harmonic noise.
+    semantic_keywords:
+      - territorial
+      - display
+      - attention
+    semantic_description: >
+      Component syllable of the male advertisement song; predominantly occurs
+      in the introductory phase of the song, possibly serving an alerting or
+      attention-getting function within the sequence.
+    confidence: high
+    references: [kershenbaum_2012]
+
+  - name: snort syllable
+    alternative_names:
+      - harsh snort
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+    acoustic_description: >
+      Harsh, broadband, noisy pulse with abrupt onset; short duration. Produced
+      predominantly by mature, dominant males. Occurs with elevated frequency
+      toward the climactic end of the song sequence, contributing to its harsh
+      quality.
+    semantic_keywords:
+      - territorial
+      - display
+      - threat
+    semantic_description: >
+      Climactic element within male advertisement song; its production is
+      restricted to mature dominant individuals and may signal dominance status
+      or high testosterone. Also associated with agonistic contexts outside song.
+    confidence: high
+    references: [demartsev_2016, kershenbaum_2012]
+
+  - name: alarm call
+    alternative_names:
+      - warning call
+      - alarm bark
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - repetitive
+      - short
+      - abrupt
+      - broadband
+    acoustic_description: >
+      Series of loud, repetitive, sharp pulses or barks produced in rapid
+      succession. Relatively broadband, abrupt-onset calls; often described as
+      harsh or screaming in quality. Repeated at a rapid rate that may vary with
+      predator proximity.
+    semantic_keywords:
+      - alarm
+      - predator
+      - group_coordination
+    semantic_description: >
+      Produced by sentinels and group members upon detection of aerial or
+      terrestrial predators. Triggers immediate flight-to-cover behavior in
+      nearby group members. Both sexes produce alarm calls; females have been
+      reported to produce affiliative variants as well.
+    confidence: high
+    references: [fourie_1977]
+
+  - name: pup scream
+    alternative_names:
+      - infant distress call
+      - juvenile scream
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - loud
+      - high_frequency
+      - broadband
+      - noisy
+      - short
+    acoustic_description: >
+      High-pitched, loud, broadband screaming call produced by young individuals.
+      Noisy quality with no clear tonal structure; short to moderate duration.
+      May be repeated rapidly when distress is acute.
+    semantic_keywords:
+      - distress
+      - begging
+      - caregiving
+      - attention
+    semantic_description: >
+      Emitted by pups and juveniles in imminent danger or when separated from
+      the group. Elicits strong responses from nearby adults and conspecifics;
+      documented to trigger male singing in experimental contexts, suggesting
+      it functions as a broad attention-grabbing signal as well as a distress
+      call to caregivers.
+    confidence: high
+    references: [demartsev_2011]
+
+  - name: contact grunt
+    alternative_names:
+      - low grunt
+      - affiliative grunt
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - low_frequency
+      - short
+      - quiet
+      - tonal
+      - graded
+    acoustic_description: >
+      Low-pitched, short, somewhat tonal grunt of moderate to low amplitude.
+      May be graded in intensity. Similar to a soft rumble or mutter; typically
+      produced at close range within the group.
+    semantic_keywords:
+      - contact
+      - affiliation
+      - group_coordination
+    semantic_description: >
+      Produced during close-range affiliative interactions, including huddling,
+      grooming, and resting contact. Maintains cohesion within the group at
+      close range. Reported as part of the broader repertoire alongside higher-
+      intensity vocalizations.
+    confidence: medium
+    references: [fourie_1977]
+
+  - name: shriek
+    alternative_names:
+      - scream
+      - agonistic shriek
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - loud
+      - short
+      - abrupt
+    acoustic_description: >
+      High-pitched, loud, broadband scream of short duration with abrupt onset.
+      Noisy quality; may show upward frequency sweep. Distinct from the pup
+      scream in context and from the alarm call by its eliciting situation.
+    semantic_keywords:
+      - distress
+      - aggression
+      - submission
+      - threat
+    semantic_description: >
+      Produced during intense agonistic encounters (chases, biting) and
+      occasionally during extreme disturbance by an external threat. Occurs in
+      both submissive and aggressive contexts; may reflect high arousal broadly.
+    confidence: medium
+    references: [fourie_1977]
+
+references:
+  fourie_1977:
+    citation: >
+      Fourie, P. B. (1977). Acoustic communication in the rock hyrax, Procavia
+      capensis. Zeitschrift für Tierpsychologie, 44(2), 194–219.
+    doi: 10.1111/j.1439-0310.1977.tb00993.x
+  kershenbaum_2012:
+    citation: >
+      Kershenbaum, A., Ilany, A., Blaustein, L., & Geffen, E. (2012). Syntactic
+      structure and geographical dialects in the songs of male rock hyraxes.
+      Proceedings of the Royal Society B: Biological Sciences, 279(1740), 2927–2935.
+    doi: 10.1098/rspb.2012.0322
+  demartsev_2012:
+    citation: >
+      Demartsev, V., Ilany, A., Barocas, A., Koren, L., Geffen, E., & Ilany, A.
+      (2012). Complex call in male rock hyrax (Procavia capensis): a multi-information
+      distributing channel. Behavioral Ecology and Sociobiology, 63(4), 581–590.
+    doi: 10.1007/s00265-008-0693-2
+  demartsev_2016:
+    citation: >
+      Demartsev, V., Strandburg-Peshkin, A., Rüber, M., Pinelli, G.,
+      Manser, M. B., & Geffen, E. (2016). Harsh vocal elements affect
+      counter-singing dynamics in male rock hyrax. Behavioral Ecology, 27(5),
+      1397–1405.
+    doi: 10.1093/beheco/arw069
+  demartsev_2011:
+    citation: >
+      Demartsev, V., Ilany, A., Koren, L., & Geffen, E. (2011). Do singing
+      rock hyraxes exploit conspecific calls to gain attention? PLOS ONE,
+      6(12), e28612.
+    doi: 10.1371/journal.pone.0028612
+
+provenance:
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Created from LLM knowledge and web search. Primary sources: Fourie (1977)
+      foundational repertoire study; Kershenbaum et al. (2012) song syntax and
+      dialects; Demartsev et al. (2012, 2016, 2011) male song structure and
+      social function. Wail and snort syllables documented as named call
+      sub-types within the advertisement song; contact grunt and shriek based
+      on Fourie (1977) classification with medium confidence.

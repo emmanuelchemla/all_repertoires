@@ -174,6 +174,58 @@ calls:
   confidence: medium
   references:
   - otter_vocal_2020
+- name: twitter
+  alternative_names:
+  - buzz
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - repetitive
+  - tonal
+  - frequency_modulated
+  - multi_component
+  acoustic_description: A rapid series of brief high-pitched notes with slight frequency
+    modulation, producing a buzzing or twittering quality; faster and more continuous
+    than a chirp sequence.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - play
+  - group_coordination
+  semantic_description: Used during excited social interactions, affiliative contact,
+    and play; one of the most frequently noted named call types alongside chirp and
+    whistle.
+  confidence: medium
+  references:
+  - aonyx_otter_sounds
+- name: huff
+  alternative_names:
+  - huffing call
+  - follow call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - abrupt
+  - broadband
+  - quiet
+  - pulsed
+  acoustic_description: A brief, low-amplitude forced-exhalation call with broadband
+    noisy character; produced singly or in short runs.
+  semantic_keywords:
+  - group_coordination
+  - caregiving
+  - contact
+  semantic_description: Reported as a parental call used to direct pups to follow;
+    also used in general close-range group movement coordination.
+  confidence: medium
+  references:
+  - aonyx_otter_sounds
 references:
   aonyx_jmammal:
     citation: Lemasson, A., et al. 2014. Vocal repertoire, individual acoustic distinctiveness,
@@ -217,3 +269,9 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added twitter (buzz) and huff (huffing/follow call) call types to reach 11
+    total; both named in multi-source literature and SeaWorld/zoo accounts describing
+    at least 12 vocalizations including twitter and huffing.

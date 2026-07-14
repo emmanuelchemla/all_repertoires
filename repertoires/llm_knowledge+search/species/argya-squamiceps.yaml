@@ -1,0 +1,301 @@
+scientific_name: Argya squamiceps
+common_name: Arabian Babbler
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Aves
+  order: Passeriformes
+  family: Leiothrichidae
+  genus: Argya
+  species: squamiceps
+
+calls:
+  - name: tzwick
+    alternative_names:
+      - tzwick call
+      - close-range alarm call
+      - high-urgency alarm
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - broadband
+      - loud
+    acoustic_description: >
+      A brief, sharp metallic-sounding note with broadband spectral content and abrupt onset.
+      Short duration (tens of milliseconds), high amplitude, produced singly or in rapid repetition
+      during close-range threat encounters.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Uttered as the primary alarm call when a predator is detected at close range. Foraging
+      birds that detect a predator nearby produce tzwicks, which prompt the group to stop
+      foraging, fly to elevated perches, and join in alarm calling. Associated with higher
+      perceived urgency compared to barks.
+    confidence: high
+    references: [sommer_todt_2012, ostreiher_2020]
+
+  - name: bark
+    alternative_names:
+      - bark call
+      - distant alarm call
+      - low-urgency alarm
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - abrupt
+      - noisy
+      - loud
+    acoustic_description: >
+      A short, harsh, bark-like note with noisy spectral structure. Louder and somewhat lower
+      in tonal quality than the tzwick, produced singly or in short bouts. Distinct from the
+      metallic tzwick in spectral character.
+    semantic_keywords:
+      - alarm
+      - predator
+    semantic_description: >
+      Produced primarily by sentinel birds that detect a potential predator at a distance.
+      Correlated with lower-urgency threat scenarios relative to the tzwick; sentinels begin
+      with barks when predators are far away, allowing foraging group members time to take
+      cover gradually.
+    confidence: high
+    references: [sommer_todt_2012]
+
+  - name: long trill
+    alternative_names:
+      - trill
+      - mobbing trill
+      - sustained alarm trill
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - long
+      - repetitive
+      - frequency_modulated
+      - tonal
+      - loud
+    acoustic_description: >
+      A sustained, rapidly-repeated trill of similar notes, lasting several seconds. Notes
+      are moderately tonal with some frequency modulation; the trill may grade in rate or
+      intensity. Acoustically distinct from both the tzwick and bark in its extended temporal
+      structure.
+    semantic_keywords:
+      - alarm
+      - predator
+      - aggression
+    semantic_description: >
+      Used predominantly during extended mobbing bouts, particularly in response to stationary
+      or roosting predators such as owls. Sentinels and mobbing birds sustain trills while
+      approaching or circling a perched predator, often coordinating with other group members.
+    confidence: high
+    references: [jansen_2021, sommer_todt_2012]
+
+  - name: chatter
+    alternative_names:
+      - babble
+      - social chatter
+      - group babble
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - noisy
+      - broadband
+      - multi_component
+      - loud
+    acoustic_description: >
+      Rapid, varied, multisyllabic chattering composed of multiple note types delivered in
+      quick succession. High amplitude, broad spectral coverage, often overlapping when
+      multiple individuals call simultaneously. The "babbling" quality that gives the species
+      its common name.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: >
+      The everyday social vocalisation used during group foraging, movement, and resting.
+      Maintains cohesion and contact among group members; often described as near-continuous
+      during active periods. Serves coordination of group activities including travel and
+      foraging.
+    confidence: high
+
+  - name: song
+    alternative_names:
+      - territorial song
+      - group chorus
+      - duet song
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - repetitive
+      - tonal
+      - frequency_modulated
+      - long
+      - loud
+      - harmonic
+    acoustic_description: >
+      A structured, melodic sequence of repeated motifs, sometimes delivered as coordinated
+      group choruses or antiphonal duets. Notes are relatively tonal with harmonic content
+      and clear frequency modulation. Bouts can be prolonged (tens of seconds to minutes)
+      when groups counter-sing across territory boundaries.
+    semantic_keywords:
+      - territorial
+      - spacing
+      - display
+      - group_coordination
+    semantic_description: >
+      Performed during territorial encounters and dawn choruses to advertise group presence
+      and defend territory boundaries. Dominant males play a primary role and may use
+      countersinging to maintain vocal contact with neighbouring groups. Also functions as
+      a social display within the group.
+    confidence: medium
+    references: [zahavi_1990]
+
+  - name: sentinel alarm call
+    alternative_names:
+      - sentinel call
+      - watch call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - short
+      - tonal
+      - high_frequency
+      - abrupt
+    acoustic_description: >
+      A short, relatively pure-toned note emitted from an elevated vantage point. Acoustically
+      somewhat distinct from full-intensity tzwicks and barks; may be softer or more
+      whistled in quality, allowing localisation by group members below.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+      - group_coordination
+    semantic_description: >
+      Produced by a sentinel bird perched conspicuously above the foraging group when a threat
+      is first detected at moderate to long range. Triggers immediate cessation of foraging
+      and coordinated anti-predator response in all group members. Dominant males are
+      disproportionately likely to serve sentinel duty.
+    confidence: medium
+    references: [wright_2001, ostreiher_2020]
+
+  - name: begging call
+    alternative_names:
+      - nestling begging
+      - juvenile food call
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - repetitive
+      - tonal
+      - loud
+      - short
+    acoustic_description: >
+      Rapidly repeated, high-pitched, relatively tonal short notes or squeaks delivered
+      persistently by nestlings and fledglings when food is brought to the nest or during
+      solicitation of allofeeding. Calls may increase in rate and amplitude when a
+      provisioner arrives.
+    semantic_keywords:
+      - begging
+      - caregiving
+      - food
+    semantic_description: >
+      Produced by nestlings and fledglings to solicit food from parents and alloparents.
+      Given the cooperative breeding system, calls are directed at multiple adult group
+      members who all participate in provisioning. Begging intensity may vary with hunger
+      level.
+    confidence: medium
+
+  - name: affiliation purr
+    alternative_names:
+      - soft contact call
+      - proximity call
+      - murmur
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - quiet
+      - short
+      - tonal
+      - graded
+    acoustic_description: >
+      Soft, low-amplitude, short tonal notes or murmurs delivered at close range between
+      interacting individuals. Barely audible beyond a few metres; quality is smooth and
+      relatively pure-toned or slightly buzzy.
+    semantic_keywords:
+      - affiliation
+      - contact
+      - identity
+    semantic_description: >
+      Exchanged during close-range affiliative interactions such as allopreening, huddling,
+      and mutual approach. May serve to signal non-aggressive intent and maintain pair or
+      group bonds. Less studied than the alarm calls but inferred from the species' rich
+      cooperative social life.
+    confidence: low
+
+references:
+  sommer_todt_2012:
+    citation: >
+      Sommer, C. & Todt, D. (2012). Urgency-related alarm calling in Arabian babblers,
+      Turdoides squamiceps: predator distance matters in the use of alarm call types.
+      Behaviour, 149(7), 755–773.
+    doi: 10.1163/156853912X648475
+  jansen_2021:
+    citation: >
+      Jansen, D. A. W. A. M. et al. (2024). Using acoustic cameras to study vocal mobbing
+      reveals the importance of learning in juvenile Arabian babblers. Frontiers in Bird
+      Science, 3, 1385017.
+    url: https://www.frontiersin.org/journals/bird-science/articles/10.3389/fbirs.2024.1385017/full
+  ostreiher_2020:
+    citation: >
+      Ostreiher, R. et al. (2020). The function of sentinel alarm calls in the Arabian babbler.
+      Journal of Avian Biology, 51, e02513.
+    doi: 10.1111/jav.02513
+  wright_2001:
+    citation: >
+      Wright, J. et al. (2001). Cooperative sentinel behaviour in the Arabian Babbler.
+      Animal Behaviour, 62(5), 973–982.
+  zahavi_1990:
+    citation: >
+      Zahavi, A. (1990). Arabian Babblers: the quest for social status in a cooperative
+      breeder. In P. B. Stacey & W. D. Koenig (eds.), Cooperative Breeding in Birds.
+      Cambridge University Press, Cambridge.
+
+provenance:
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Created from LLM knowledge and web search. Sources include Sommer & Todt 2012
+      (urgency alarm calls), Ostreiher 2020 (sentinel alarm function), Wright 2001
+      (cooperative sentinel behaviour), Jansen et al. 2024 (mobbing trills/juvenile
+      learning), and Zahavi 1990 (group song/territory). Affiliation purr is inferred
+      from cooperative social behaviour with low confidence.

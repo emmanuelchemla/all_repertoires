@@ -42,7 +42,30 @@ calls:
   semantic_description: Produced by isolated young or separated individuals to elicit
     contact or care.
   confidence: medium
-- name: courtship trill
+- name: seclusion-distress call
+  alternative_names:
+  - seclusion call
+  - distress call
+  acoustic_keywords:
+  - high_frequency
+  - long
+  - noisy
+  - frequency_modulated
+  - loud
+  acoustic_description: A longer, higher-arousal call than routine social notes,
+    often with a strained tonal-to-noisy quality and strong amplitude.
+  semantic_keywords:
+  - distress
+  - contact
+  - attention
+  semantic_description: Produced mainly by distressed adults when isolated from
+    nearby conspecifics or socially separated in the roost.
+  confidence: medium
+  references:
+  - prat_etal_2017
+- name: mating call
+  alternative_names:
+  - courtship trill
   acoustic_keywords:
   - tonal
   - repetitive
@@ -55,9 +78,11 @@ calls:
   - courtship
   - mating
   - display
-  semantic_description: Included as a reproductive social signal in mating-related
-    interactions.
+  semantic_description: Produced by males during mating and courtship interactions
+    as a reproductive social signal distinct from aggressive squabbles.
   confidence: medium
+  references:
+  - prat_etal_2017
 - name: click sequence
   acoustic_keywords:
   - pulsed
@@ -71,8 +96,11 @@ calls:
   - group_coordination
   - attention
   semantic_description: Used in active orientation and colony movement contexts in
-    addition to general biosonar function.
+    addition to general biosonar function, and often co-occurs with movement through
+    cluttered roost spaces.
   confidence: low
+  references:
+  - prat_etal_2017
 - name: aggression screech
   acoustic_keywords:
   - high_frequency
@@ -89,6 +117,8 @@ calls:
   semantic_description: Produced during escalated social conflict and close-range
     antagonistic encounters.
   confidence: medium
+  references:
+  - prat_etal_2016
 - name: maternal directive call
   acoustic_keywords:
   - short
@@ -104,6 +134,77 @@ calls:
   semantic_description: Used to coordinate mother-offspring interactions and maintain
     local contact in crowded roosts.
   confidence: low
+  references:
+  - prat_etal_2017
+- name: mating-protest call
+  alternative_names:
+  - copulation protest call
+  - mating refusal call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - noisy
+  - high_frequency
+  - short
+  - abrupt
+  - repetitive
+  acoustic_description: A rapid series of short harsh notes, acoustically distinguishable
+    from food-contest squabbles by a higher-pitched noisy quality; emitted in tight
+    bursts during unwanted contact.
+  semantic_keywords:
+  - mating
+  - aggression
+  - submission
+  semantic_description: Produced mainly by females in response to unwanted or premature
+    mating attempts; one of the four behaviorally annotated vocal contexts identified
+    in the Prat et al. 2016 dataset.
+  confidence: medium
+  references:
+  - prat_etal_2016
+- name: roost-position jostling call
+  alternative_names:
+  - sleeping-cluster call
+  - positional squabble call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - noisy
+  - short
+  - abrupt
+  - graded
+  acoustic_description: A graded series of short noisy pulses with variable intensity,
+    acoustically similar to food-contest squabbles but produced in contexts of close
+    roosting contact rather than resource competition.
+  semantic_keywords:
+  - spacing
+  - territorial
+  - group_coordination
+  semantic_description: Emitted when bats jostle for position within their sleeping
+    cluster; identified as a distinct behavioral context in the Prat et al. 2016
+    annotated corpus of Egyptian fruit bat vocalizations.
+  confidence: medium
+  references:
+  - prat_etal_2016
+references:
+  prat_etal_2016:
+    citation: "Prat, Y., Taub, M., and Yovel, Y. 2016. Everyday bat vocalizations contain information about emitter, addressee, context, and behavior. Scientific Reports 6:39419."
+    url: https://www.nature.com/articles/srep39419
+    doi: 10.1038/srep39419
+  prat_etal_2017:
+    citation: "Prat, Y., Taub, M., Pratt, E., and Yovel, Y. 2017. An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny. Scientific Data 4:170143."
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5625625/
+    doi: 10.1038/sdata.2017.143
 provenance:
 - timestamp: '2026-06-10T21:00:00+02:00'
   model: GPT-5 Codex
@@ -115,3 +216,16 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:55:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Added the clearly annotated seclusion-distress class, grounded the mating
+    and click categories in the Egyptian fruit bat vocal dataset, and attached
+    explicit references.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added mating-protest call and roost-position jostling call to cover the
+    two remaining behaviorally annotated vocal contexts from Prat et al. 2016 (mating
+    protest and sleeping-cluster positional jostling), raising total call count
+    from 7 to 9.

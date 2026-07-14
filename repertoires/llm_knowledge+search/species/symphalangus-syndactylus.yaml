@@ -56,6 +56,43 @@ calls:
     semantic_description: Used in local arousal or disturbance contexts when a full duet sequence is not produced.
     confidence: low
     references: [palombit_1992]
+  - name: wow
+    alternative_names: [wow note, open-mouth boom, open-mouth note]
+    scope:
+      life_stages: [adult]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [loud, tonal, high_frequency, short, abrupt]
+    acoustic_description: A resonant, higher-pitched note produced with the mouth open and throat sac inflated, contrasting with the closed-mouth deep boom; carries less far than the boom but is still loud and carries clear tonal structure.
+    semantic_keywords: [territorial, display, group_coordination]
+    semantic_description: Produced as a distinct note type within song bouts and territorial displays; pairs can produce either boom or wow notes in alternation or combination, contributing to the variety of the song phrase structure.
+    confidence: high
+    references: [geissmann_2000]
+  - name: hoo call
+    alternative_names: [hoo, soft hoo, contact hoo]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [male, female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [quiet, tonal, short, low_frequency]
+    acoustic_description: Soft, short, low-amplitude tonal note at relatively low frequency; acoustically inconspicuous compared to song elements; typically a single brief syllable.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Close-range contact vocalization used between group members during foraging, travel, and other non-song social contexts; analogous to the well-described hoo calls of other hylobatids; exact siamang-specific contexts await detailed study.
+    confidence: medium
+  - name: distress scream
+    alternative_names: [infant scream, separation call, squeal]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, frequency_modulated, short]
+    acoustic_description: High-pitched, often noisy scream or squeal with rapid frequency modulation; may be prolonged in series when distress is acute; higher in pitch and less structured than adult song screams.
+    semantic_keywords: [distress, begging, caregiving, contact]
+    semantic_description: Produced by infants and juveniles during separation from caregivers, handling, or distress; functions to elicit parental approach and caregiving responses.
+    confidence: medium
 references:
   geissmann_2000:
     citation: "Geissmann, T., Bohlen-Eyring, S., and Heuck, A. 2000. The male song of the siamang (Hylobates syndactylus). Contributions to Zoology 69(1-2):3-14."
@@ -72,3 +109,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Kept the strong song-centred structure and added a conservative non-bout bark class while retaining the best-established siamang song elements.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added three call types to reach target of 9 - wow note (open-mouth throat-sac note), hoo call (close-range contact), and distress scream (infant/juvenile). Sources include Geissmann 2000, web synthesis, and hylobatid comparative literature.

@@ -116,6 +116,41 @@ calls:
   confidence: medium
   references:
   - chilton_2020
+- name: whine call
+  acoustic_keywords:
+  - short
+  - frequency_modulated
+  - tonal
+  - quiet
+  - graded
+  acoustic_description: A softer modulated call with a whining contour, less abrupt than pink and less harsh than the rasping altercation vocalization.
+  semantic_keywords:
+  - attention
+  - group_coordination
+  - spacing
+  semantic_description: Included as a named shared-sex call from the non-song repertoire; available descriptions suggest it often signals imminent locomotion or movement-related social tension.
+  confidence: medium
+  references:
+  - baptista_king_1982
+- name: rasping altercation call
+  alternative_names:
+  - harsh rasping call
+  - altercation call
+  acoustic_keywords:
+  - noisy
+  - broadband
+  - abrupt
+  - repetitive
+  - loud
+  acoustic_description: A harsh rasping call rougher and noisier than pink or whine calls.
+  semantic_keywords:
+  - aggression
+  - threat
+  - attention
+  semantic_description: Used during altercations and other close-range antagonistic encounters.
+  confidence: medium
+  references:
+  - chilton_2020
 - name: begging call
   scope:
     life_stages:
@@ -140,7 +175,67 @@ calls:
   confidence: medium
   references:
   - chilton_2020
+- name: subsong
+  alternative_names:
+  - plastic song
+  - juvenile practice song
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - long
+  - repetitive
+  - frequency_modulated
+  - graded
+  acoustic_description: A soft, rambling, variable vocalization resembling an underdeveloped
+    or incomplete form of the adult song; notes are disorganized compared to crystallized
+    song, with variable pitch contours and less precise timing.
+  semantic_keywords:
+  - display
+  - identity
+  semantic_description: Produced by juveniles during the sensorimotor phase of song
+    learning; considered practice or babbling-like behavior occurring before plastic
+    song and final crystallized song are established.
+  confidence: high
+  references:
+  - konishi_1965
+  - marler_tamura_1964
+- name: seeet aerial alarm call
+  alternative_names:
+  - thin alarm call
+  - raptor alarm
+  - seet call
+  acoustic_keywords:
+  - high_frequency
+  - tonal
+  - long
+  - quiet
+  acoustic_description: A high-pitched, thin, sustained pure tone with a narrow frequency
+    spread, difficult to localize acoustically due to gradual onset and offset and
+    frequency above 7 kHz.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Given in response to aerial predators such as hawks; the acoustic
+    structure makes it hard for raptors to locate the caller, functioning as a cryptic
+    alarm signal to other flock or group members.
+  confidence: medium
+  references:
+  - shalter_1978
 references:
+  shalter_1978:
+    citation: Shalter, M.D. 1978. Localization of passerine seeet and mobbing calls
+      by goshawks and pygmy owls. Zeitschrift fur Tierpsychologie 46(3):260-267.
+    url: https://onlinelibrary.wiley.com/doi/10.1111/j.1439-0310.1978.tb01448.x
+  konishi_1965:
+    citation: Konishi, M. 1965. The role of auditory feedback in the control of vocalization
+      in the white-crowned sparrow. Zeitschrift fur Tierpsychologie 22(7):770-783.
   baptista_king_1982:
     citation: Baptista, L.F. and King, J.R. 1982. The non-song vocal repertoire of
       the White-crowned Sparrow. Condor 84(1):27-39.
@@ -173,3 +268,11 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:55:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Worker 15 recall pass added the named whine call from Baptista and King and a distinct Cornell-supported rasping altercation class.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added subsong (juvenile practice vocalization, well-documented developmental stage) and seeet aerial alarm call (high-pitched thin raptor alarm, referenced in Shalter 1978 for passerines including Zonotrichia). Added konishi_1965 and shalter_1978 to references. Total call count raised from 8 to 10.

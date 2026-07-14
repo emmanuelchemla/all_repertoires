@@ -66,6 +66,53 @@ calls:
     semantic_description: Included as a brief arousal-related call type used to draw attention in local interactions, though context boundaries remain uncertain.
     confidence: low
     references: [batist_2023]
+  - name: abrupt roar
+    acoustic_keywords: [loud, noisy, broadband, repetitive, abrupt]
+    acoustic_description: A rapid series of two to five short roar-like bursts with harsh noisy structure and abrupt delivery.
+    semantic_keywords: [alarm, territorial, attention]
+    semantic_description: Produced during sudden disturbance and sometimes in intergroup communication, especially by adult males in higher-arousal situations.
+    confidence: medium
+    references: [gamba_2005, pereira_1988]
+  - name: bray
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, harmonic, long, frequency_modulated, loud]
+    acoustic_description: A moderately loud call with clearer tonal structure than a roar and more sustained harmonic energy than brief chatter-like calls.
+    semantic_keywords: [mating, courtship, display, attention]
+    semantic_description: Reported mainly from males during the reproductive season and treated here as a mating-related display or advertisement call.
+    confidence: medium
+    references: [gamba_2005, pereira_1988]
+  - name: wail
+    acoustic_keywords: [loud, long, tonal, harmonic, graded]
+    acoustic_description: A sustained urgent call rich in harmonic overtones that may sound more tonal or noisy-tonal depending on delivery.
+    semantic_keywords: [group_coordination, distress, attention]
+    semantic_description: Associated with urgency for re-aggregation and often appears at the end of roar-shriek choruses, helping coordinate regrouping under arousal.
+    confidence: high
+    references: [gamba_2005, pereira_1988]
+  - name: appeasement call
+    alternative_names: [whine, assertion-courtship call]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, harmonic, noisy, graded, long]
+    acoustic_description: A clear-toned call overlaid with some noisy variability, acoustically smoother than a roar but more complex than a plain mew.
+    semantic_keywords: [courtship, mating, affiliation, attention]
+    semantic_description: Emitted by males during the breeding season when approaching females to mate and therefore best treated as a courtship or appeasement display.
+    confidence: medium
+    references: [gamba_2005]
+  - name: pulsed squawk
+    alternative_names: [squawk]
+    acoustic_keywords: [loud, pulsed, noisy, broadband, repetitive, short]
+    acoustic_description: A series of rapid, discrete noisy pulses or squawking bursts with broadband energy, distinct from the more sustained roar-shriek and shorter than the abrupt roar sequence; each pulse is brief with a rough, staccato quality.
+    semantic_keywords: [alarm, predator, group_coordination, attention]
+    semantic_description: Emitted specifically in response to ground or mammalian predators (in contrast to abrupt roars used for aerial predators); functions to alert group members and trigger rapid aggregation in high-arousal antipredator contexts.
+    confidence: medium
+    references: [pereira_1988]
 references:
   batist_2023:
     citation: "Batist, J., Baden, A.L., Tecot, S.R., and Erb, J. 2023. Bioacoustic characterization of the black-and-white ruffed lemur (Varecia variegata) vocal repertoire. Folia Primatologica."
@@ -85,3 +132,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Expanded the file toward the recent acoustic repertoire paper with obvious major additions including shriek and mew while keeping uncertain short calls low confidence.
+  - timestamp: "2026-06-11T14:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide high-recall review added the obvious moderate-amplitude ruffed lemur classes abrupt roar, bray, wail, and appeasement call from classic repertoire descriptions and phonetic summaries.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added pulsed squawk as the ground-predator-specific alarm call, documented in antipredator studies of Varecia variegata at Duke University Primate Center and referenced in Pereira et al. 1988, bringing total to 13 call types.

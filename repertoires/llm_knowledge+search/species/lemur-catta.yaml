@@ -72,9 +72,119 @@ calls:
     semantic_description: A high-intensity threat or alarm signal produced during serious disturbance, conflict, or sudden danger.
     confidence: high
     references: [macedonia_1993, gould_1999]
+  - name: chirp
+    acoustic_keywords: [high_frequency, tonal, short, repetitive, graded]
+    acoustic_description: A short bright note or brief series of notes, typically higher and lighter than meows or moans.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Used in group positioning, relocation, and travel-related coordination, especially as an affiliative contact signal during movement.
+    confidence: medium
+    references: [macedonia_1993, bolt_2020]
+  - name: chutter
+    acoustic_keywords: [noisy, broadband, repetitive, short, graded]
+    acoustic_description: A rough repeated close-range call series that is harsher and more sputtering than the twitter.
+    semantic_keywords: [submission, distress, attention]
+    semantic_description: Used in agonistic or fearful social interactions, often as a lower-intensity submissive or uneasy signal distinct from louder alarm barking.
+    confidence: medium
+    references: [macedonia_1993, gould_1999]
+  - name: squeal
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, tonal, abrupt, graded]
+    acoustic_description: A sharp high-pitched call with a piercing tonal quality and stronger amplitude than most routine contact calls.
+    semantic_keywords: [aggression, mating, display, attention]
+    semantic_description: A male-specific call used in both agonistic and sexual contexts, making it a socially conspicuous signal during rivalry and reproductive interactions.
+    confidence: high
+    references: [macedonia_1993, bolt_2013]
+  - name: hmm
+    acoustic_keywords: [low_frequency, tonal, quiet, short, repetitive]
+    acoustic_description: A soft low-amplitude nasal-sounding call, usually shorter and less modulated than the moan or meow.
+    semantic_keywords: [contact, group_coordination, affiliation]
+    semantic_description: Produced before slow group relocation or to maintain cohesion with nearby group members in low-arousal settings.
+    confidence: medium
+    references: [macedonia_1993, yoder_2010]
+  - name: huh
+    acoustic_keywords: [low_frequency, abrupt, short, tonal, quiet]
+    acoustic_description: A brief low-pitched note with a compact shape and less carrying power than meows, howls, or wails.
+    semantic_keywords: [contact, attention, group_coordination]
+    semantic_description: Included as a probable short-range movement or relocation signal mentioned in broader species accounts, though its boundary from other low-amplitude cohesion calls remains uncertain.
+    confidence: low
+    references: [yoder_2010]
+  - name: grunt
+    alternative_names: [repulsion call, staccato grunt]
+    acoustic_keywords: [low_frequency, noisy, abrupt, short, repetitive, pulsed]
+    acoustic_description: A low-pitched rough pulsed note delivered singly or as a staccato series; less broadband and explosively forceful than the plosive bark, with a guttural rasping quality at relatively moderate amplitude.
+    semantic_keywords: [threat, aggression, spacing, territorial]
+    semantic_description: A repulsion or spacing signal produced between two individuals; functions to increase inter-individual distance in mildly agonistic or competitive encounters, distinct from the louder alarm barking used in predator contexts.
+    confidence: medium
+    references: [macedonia_1993]
+  - name: gulp
+    alternative_names: [group alert call]
+    acoustic_keywords: [low_frequency, abrupt, short, tonal, quiet]
+    acoustic_description: A brief soft relatively low-pitched note with a gulping or swallowing quality, distinct from the louder plosive bark in amplitude and spectral breadth.
+    semantic_keywords: [alarm, predator, group_coordination]
+    semantic_description: A generalized group-alert vocalization produced upon detecting a potential predator or disturbance; appears to function as a low-urgency broadcast signal that puts group members on alert without specifying predator type or direction.
+    confidence: high
+    references: [bolt_etal_2015, macedonia_1993]
+  - name: rasp
+    alternative_names: [antiraptor call, aerial alarm call]
+    acoustic_keywords: [broadband, noisy, abrupt, short, repetitive]
+    acoustic_description: A harsh rasping broadband note, rougher and more sputtering than the plosive bark, often produced in rapid sequences with a scratchy textured quality.
+    semantic_keywords: [alarm, predator]
+    semantic_description: A referential aerial-predator alarm call produced selectively in response to raptors (hawks, eagles); directs group members to look upward and seek lower shelter in vegetation.
+    confidence: high
+    references: [bolt_etal_2015, macedonia_1993]
+  - name: shriek
+    alternative_names: [anti-aerial alarm shriek]
+    acoustic_keywords: [high_frequency, loud, tonal, abrupt, short, noisy]
+    acoustic_description: A loud high-pitched call with a piercing quality, higher and more intense in frequency than most contact or agonistic calls; may grade into noisy broadband components at peak intensity.
+    semantic_keywords: [alarm, predator]
+    semantic_description: An aerial-predator alarm call, also used in high-urgency disturbance contexts; may function both to warn group members and to signal to a detected raptor that it has been seen, potentially deterring attack.
+    confidence: high
+    references: [bolt_etal_2015, macedonia_1993]
+  - name: yap
+    alternative_names: [antipredator yap]
+    acoustic_keywords: [broadband, abrupt, loud, short, noisy, repetitive]
+    acoustic_description: A sharp staccato bark-like note, shorter and higher-pitched than the plosive bark but retaining a broad-spectrum noisy quality; often produced in rapid series.
+    semantic_keywords: [alarm, predator, group_coordination]
+    semantic_description: Produced during predator encounters; rates are elevated in populations facing higher predator pressure and functions as part of the alarm-mobbing complex alongside rasp and shriek.
+    confidence: medium
+    references: [bolt_etal_2015]
+  - name: click
+    alternative_names: [single click, location marker click]
+    acoustic_keywords: [broadband, abrupt, short, quiet, repetitive]
+    acoustic_description: A very brief broadband mechanical-sounding impulsive note produced as a single click or in loose irregular sequences; very short duration and low amplitude compared to alarm calls.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: A low-arousal location-marker call that advertises the caller's spatial position to nearby group members; used by all age classes except very young infants and functions to regulate close-range spacing during foraging and rest.
+    confidence: high
+    references: [bolt_etal_2015, macedonia_1993]
+  - name: close-mouth click series
+    alternative_names: [CMCS, click series]
+    acoustic_keywords: [broadband, abrupt, short, repetitive, pulsed]
+    acoustic_description: A rapid pulsed series of clicks produced with the mouth closed, generating a machine-gun-like repetitive pattern at moderate amplitude; faster and more continuous than single click sequences.
+    semantic_keywords: [contact, group_coordination, attention, alarm]
+    semantic_description: A moderate-arousal location-marker call; produced in situations of greater urgency or social tension than single clicks but without reaching the high-arousal contexts of open-mouth click series or alarm calls.
+    confidence: medium
+    references: [bolt_etal_2015]
+  - name: open-mouth click series
+    alternative_names: [OMCS, high-arousal click series]
+    acoustic_keywords: [broadband, loud, abrupt, repetitive, pulsed, noisy]
+    acoustic_description: A rapid series of clicks produced with the mouth open, louder and with broader spectral content than the CMCS; the high-arousal click series has a rougher harsher texture due to the open-mouth posture.
+    semantic_keywords: [alarm, attention, group_coordination, threat]
+    semantic_description: A high-arousal location-marker and alert call produced during significant disturbances; signals the caller's position under conditions of elevated fear or social tension, bridging location-marking and alarm functions.
+    confidence: medium
+    references: [bolt_etal_2015]
 references:
+  bolt_2013:
+    citation: "Bolt, L.M., Sauther, M.L., and Cuozzo, F.P. 2013. Squealing rate indicates dominance rank in the male ring-tailed lemur (Lemur catta). American Journal of Primatology 75:728-736."
+    url: https://bezamahafaly.yale.edu/files/2014/12/bolt-2013_2.pdf
   bolt_2014:
     citation: "Bolt, L.M. 2014. Male-specific use of the purr in the ring-tailed lemur (Lemur catta). Folia Primatologica 85:201-214."
+  bolt_2020:
+    citation: "Bolt, L.M. 2020. Affiliative contact calls during group travel: chirp and wail vocalization use in the male ring-tailed lemur (Lemur catta). Folia Primatologica."
+    url: https://protectedareas.mg/document/show/156952
   bolt_2017:
     citation: "Bolt, L.M. 2017. Contact calling behaviour in the male ring-tailed lemur (Lemur catta)."
   gould_1999:
@@ -83,6 +193,13 @@ references:
     citation: "Macedonia, J.M. 1993. The vocal repertoire of the ring-tailed lemur (Lemur catta). Folia Primatologica 61:186-217."
     url: https://doi.org/10.1159/000156749
     doi: 10.1159/000156749
+  yoder_2010:
+    citation: "Yoder, A.D., et al. 2010. Lemur catta (Primates: Lemuridae). Mammalian Species 42:58-74."
+    url: https://academic.oup.com/mspecies/article-pdf/42/854/58/8269093/42-854-58.pdf
+  bolt_etal_2015:
+    citation: "Bolt, L.M., Sauther, M.L., Cuozzo, F.P., and Antho Youssouf Jacky, I. 2015. Antipredator Vocalization Usage in the Male Ring-Tailed Lemur (Lemur catta). Folia Primatologica 86:124-136."
+    url: https://doi.org/10.1159/000369064
+    doi: 10.1159/000369064
 provenance:
   - timestamp: "2026-06-10T19:35:00+02:00"
     model: GPT-5 Codex
@@ -92,3 +209,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added obvious missing ring-tailed lemur contact and distress classes while keeping the draft anchored to the classic Macedonia repertoire paper.
+  - timestamp: "2026-06-11T14:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide high-recall review added omitted ring-tailed lemur contact and agonistic classes including chirp, chutter, squeal, hmm, and a low-confidence huh from broader species accounts.
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added 8 missing call types to reach 22 total — gulp, rasp, shriek, yap (antipredator calls from Bolt et al. 2015), single click, close-mouth click series (CMCS), and open-mouth click series (OMCS) — bringing coverage in line with the full Bolt 2015 18-call inventory plus classic Macedonia types.

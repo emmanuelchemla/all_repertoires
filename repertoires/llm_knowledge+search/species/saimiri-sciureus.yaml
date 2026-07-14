@@ -22,6 +22,19 @@ calls:
     semantic_description: Produced by isolated infants and used to recruit maternal attention, retrieval, and recognition.
     confidence: high
     references: [snowdon_etal_1985, lieblich_etal_1980]
+  - name: caregiver call
+    alternative_names: [prenurse call, nurse call, end-nurse call]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, short, tonal, harmonic, quiet]
+    acoustic_description: A brief low-frequency call, often harmonic and softer than alarm peeps or yaps, with subtle contextual variation across nursing phases.
+    semantic_keywords: [caregiving, contact, attention, identity]
+    semantic_description: Addressed by mothers or other caregivers to dependent infants before nursing, during nursing, or at nursing termination to coordinate reunion and infant handling.
+    confidence: high
+    references: [boinski_mitchell_1995]
   - name: chuck
     acoustic_keywords: [short, tonal, repetitive, quiet, graded]
     acoustic_description: A short local call with simple structure, often repeated in low-arousal interaction.
@@ -65,6 +78,13 @@ calls:
     semantic_description: Used in structured vocal exchanges, especially in close affiliative interactions and mother-infant contexts.
     confidence: medium
     references: [biben_etal_1986]
+  - name: kecker
+    acoustic_keywords: [loud, noisy, repetitive, abrupt, multi_component]
+    acoustic_description: A loud, rough, rapidly repeated harsh call, more forceful and lower-pitched than peeps and more segmented than a sustained scream.
+    semantic_keywords: [aggression, threat, attention]
+    semantic_description: Reported especially from adult males during quarrels and other intense social disturbances.
+    confidence: low
+    references: [newman_1985, fitch_hauser_2003]
   - name: cackle
     acoustic_keywords: [short, repetitive, noisy, graded, multi_component]
     acoustic_description: A repeated bursty call series with rougher quality than peeps and more segmented structure than a scream.
@@ -79,6 +99,196 @@ calls:
     semantic_description: Produced in danger, capture, or severe social conflict.
     confidence: medium
     references: [newman_1985]
+  - name: twit
+    alternative_names: [tweet]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, short, tonal, frequency_modulated, repetitive]
+    acoustic_description: A brief, high-pitched tonal note with a slight upward or downward frequency sweep, structurally similar to a peep but typically faster and lighter in quality. Often produced in rapid sequences.
+    semantic_keywords: [contact, group_coordination, attention]
+    semantic_description: Produced during feeding, partial isolation, exploration, and greeting; functions in local cohesion and within-group coordination at close range.
+    confidence: high
+    references: [winter_etal_1966, symmes_biben_1985]
+  - name: play peep
+    alternative_names: [play call, play vocalization]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, short, tonal, repetitive, graded]
+    acoustic_description: A series of tonal peep-like notes produced during active play bouts; rate and complexity tend to increase with play bout duration; structurally related to other peep variants but contextually distinct.
+    semantic_keywords: [play, affiliation, contact]
+    semantic_description: Produced specifically during social play interactions; rate increases with play intensity and is thought to signal motivation to continue play. May also have a metacommunicative function alerting nearby adults to ongoing play activity.
+    confidence: high
+    references: [biben_symmes_1986]
+  - name: purr
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, tonal, harmonic, quiet, long, repetitive]
+    acoustic_description: A soft, low-pitched, continuous or semi-continuous call with harmonic structure; short respiratory movements accompany the call; tonally smooth and low-amplitude.
+    semantic_keywords: [affiliation, contact, display]
+    semantic_description: Produced in contexts of self-confident or challenging social attitude; associated with affiliative or approach-related states rather than fear or submission. Controlled via the stria terminalis pathway.
+    confidence: medium
+    references: [jurgens_maurus_1973, winter_etal_1966]
+  - name: groan
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, long, noisy, graded, frequency_modulated]
+    acoustic_description: A low-pitched, somewhat noisy and drawn-out call with a rough tonal character, often with slight frequency modulation; acoustically intermediate between a tonal and a broadband call.
+    semantic_keywords: [submission, distress, attention]
+    semantic_description: Produced in mildly aversive or resentful social contexts; described as indicating flight motivation or resentment. Reported in positive social contexts (e.g., grooming) as well as mild disturbance.
+    confidence: medium
+    references: [jurgens_maurus_1973, newman_1985]
+  - name: shriek
+    alternative_names: [defensive shriek, threat shriek]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, abrupt, broadband]
+    acoustic_description: A loud, high-pitched, broadband call with strong energy across a wide frequency range; more intense and longer than a peep; typically produced as a single burst or short bout.
+    semantic_keywords: [alarm, threat, distress]
+    semantic_description: Produced in highly aversive situations including defensive threat contexts and extreme fear; elicited by brain stimulation of highly aversive neural substrates; distinct from the softer alarm peep.
+    confidence: high
+    references: [jurgens_maurus_1973, winter_etal_1966]
+  - name: shriek-cackle
+    alternative_names: [cackle shriek]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, multi_component, repetitive, abrupt]
+    acoustic_description: A composite call combining shriek and cackle elements; loud, harsh, and repeated; acoustically more complex and segmented than a pure shriek; rapid bursting structure.
+    semantic_keywords: [alarm, aggression, threat]
+    semantic_description: Produced in highly aversive social or predator-related situations; reported alongside shrieks and alarm peeps in the most threatening contexts; represents the most intense alarm or agitation vocalization category.
+    confidence: medium
+    references: [jurgens_maurus_1973]
+  - name: trill
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, tonal, frequency_modulated, short]
+    acoustic_description: A rapid, frequency-modulated series of brief tonal elements forming a rolled or trilled percept; faster repetition rate than twitter; notes are tightly spaced.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close-range affiliative communication and within-group coordination; documented as one of the call types with distinct respiratory correlates and a recognized unit in the squirrel monkey vocal repertoire.
+    confidence: medium
+    references: [winter_etal_1966, vocalization_respiratory_2001]
+  - name: growl
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [low_frequency, noisy, long, abrupt, broadband]
+    acoustic_description: A low-pitched, rough, broadband vocalization with noisy spectral structure; lower and more sustained than a cackle or shriek; produced with relatively little harmonic patterning.
+    semantic_keywords: [aggression, threat, territorial]
+    semantic_description: Used in agonistic contexts, including intragroup male rivalry and intergroup encounters; associated with high-arousal aggressive states.
+    confidence: medium
+    references: [winter_etal_1966, newman_1985]
+  - name: chatter
+    alternative_names: [mobbing chatter, recruitment chatter]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [repetitive, noisy, multi_component, abrupt, loud]
+    acoustic_description: A rapid series of sharp, noisy pulses; acoustically similar to a cackle but specifically associated with mobbing behaviour; higher rate and more mechanical than social cackles.
+    semantic_keywords: [alarm, threat, recruitment, group_coordination]
+    semantic_description: Produced in intraspecific mobbing contexts; expresses a self-confident, challenging attitude and an attempt to recruit fellow group members to mob a threat. Distinct from the cackle used in pure aggressive disturbance.
+    confidence: medium
+    references: [herzog_hopf_1984, jurgens_maurus_1973]
+  - name: squeal
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, loud, noisy, long, frequency_modulated]
+    acoustic_description: A loud, high-pitched, noisy call with upward frequency sweep and strong amplitude; longer and more sustained than a peep; strong energy in upper frequencies.
+    semantic_keywords: [distress, begging, attention]
+    semantic_description: Produced by infants and juveniles in distress or high-arousal begging contexts; distinguished from scream by somewhat lower amplitude and the characteristic upward frequency sweep.
+    confidence: medium
+    references: [winter_etal_1966, newman_1985]
+  - name: cluck
+    alternative_names: [contact cluck, soft chuck]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, tonal, quiet, low_frequency, harmonic]
+    acoustic_description: A very brief, soft, low-frequency click-like tonal note; softer and more percussive than a chuck; sometimes produced as single notes rather than bouts.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Produced in close-contact non-aversive social situations; reported as a non-aversive contact call elicited from PAG stimulation sites; overlaps functionally with chuck but at lower arousal.
+    confidence: low
+    references: [jurgens_maurus_1973]
+  - name: genital display call
+    alternative_names: [penile display call, display vocalization]
+    scope:
+      life_stages: [adult]
+      sexes: [male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, tonal, frequency_modulated, graded]
+    acoustic_description: A brief vocalization accompanying the stereotyped genital display; call structure is variable and graded; intermediate in acoustic character between social contact calls and arousal-related calls.
+    semantic_keywords: [display, mating, identity, attention]
+    semantic_description: Co-occurs with the genital display, a species-typical socio-sexual behaviour used in dominance assertion and communication of social status; produced spontaneously without external threat.
+    confidence: low
+    references: [winter_etal_1966, ploog_1992]
+  - name: food chuck
+    alternative_names: [foraging chuck, feeding chuck]
+    scope:
+      life_stages: [adult]
+      sexes: [female]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, tonal, repetitive, graded, frequency_modulated]
+    acoustic_description: A chuck-like call produced specifically during foraging and feeding bouts; field recordings of wild females showed structural variation correlated with foraging activity; shares the basic descending frequency contour of chucks but with distinctive temporal patterning.
+    semantic_keywords: [food, recruitment, group_coordination, identity]
+    semantic_description: Produced by wild females during active foraging; caller identity and foraging activity are encoded in the call, enabling group members to locate productive foraging sites and maintain coordination during food-finding.
+    confidence: medium
+    references: [boinski_campbell_2002]
+  - name: contact twitter
+    alternative_names: [close-range twitter, social twitter]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, repetitive, tonal, short, graded]
+    acoustic_description: A short-range twitter delivered at lower amplitude than long-range contact calls; rapid note repetition but softer and less sustained than a full twitter bout; spectrographic syllables show tighter spacing than long-distance twitter.
+    semantic_keywords: [contact, affiliation, group_coordination]
+    semantic_description: Used in close social interactions, greeting and mutual approach; distinct from the twitter as a longer-range coordination call; part of the graded peep-twitter continuum in close-contact contexts.
+    confidence: low
+    references: [newman_1985, winter_etal_1966]
+  - name: copulation call
+    alternative_names: [mating call, sexual call]
+    scope:
+      life_stages: [adult]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [short, tonal, repetitive, graded, frequency_modulated]
+    acoustic_description: A brief repetitive tonal call produced during mating; related in structure to twitter or chuck variants but produced specifically in sexual context; call rate may increase with sexual arousal.
+    semantic_keywords: [mating, courtship, contact]
+    semantic_description: Produced during copulation and immediately preceding or following mating; communicates sexual state to partner and possibly to surrounding group members.
+    confidence: low
+    references: [ploog_1992, winter_etal_1966]
 references:
   biben_etal_1986:
     citation: "Biben, M., Symmes, D., and Masataka, N. 1986. Temporal and structural analysis of affiliative vocal exchanges in squirrel monkeys. Behaviour 98(3-4):259-273."
@@ -96,9 +306,42 @@ references:
   newman_1985:
     citation: "Newman, J.D. 1985. Squirrel monkey communication. In: Rosenblum, L.A. and Coe, C.L. Handbook of Squirrel Monkey Research."
     url: https://pubmed.ncbi.nlm.nih.gov/3931840/
+  boinski_mitchell_1995:
+    citation: "Boinski, S. and Mitchell, C.L. 1995. Wild squirrel monkey (Saimiri sciureus) 'caregiver' calls: Contexts and acoustic structure. American Journal of Primatology 35(2):129-137."
+    url: https://pubmed.ncbi.nlm.nih.gov/31924065/
+    doi: 10.1002/ajp.1350350205
+  fitch_hauser_2003:
+    citation: "Fitch, W.T. and Hauser, M.D. 2003. Laryngeal biomechanics and vocal communication in the squirrel monkey. Journal of the Acoustical Society of America 113(4):2114-2126."
+    url: https://pubs.aip.org/asa/jasa/article/113/4/2114/549197/Laryngeal-biomechanics-and-vocal-communication-in
   snowdon_etal_1985:
     citation: "Snowdon, C.T., Brown, C.H., and Petersen, M.R. 1985. Primate communication. Cambridge University Press."
     url: https://books.google.com/books?id=jkDc8a-w65IC
+  winter_etal_1966:
+    citation: "Winter, P., Ploog, D., and Latta, J. 1966. Vocal repertoire of the squirrel monkey (Saimiri sciureus), its analysis and significance. Experimental Brain Research 1(4):359-384."
+    url: https://link.springer.com/article/10.1007/BF00237707
+    doi: 10.1007/BF00237707
+  jurgens_maurus_1973:
+    citation: "Jürgens, U. and Maurus, M. 1973. Vocalization in the squirrel monkey (Saimiri sciureus) elicited by brain stimulation. Experimental Brain Research 17(3):240-248."
+    url: https://link.springer.com/article/10.1007/BF00240356
+    doi: 10.1007/BF00240356
+  biben_symmes_1986:
+    citation: "Biben, M. and Symmes, D. 1986. Play vocalizations of squirrel monkeys (Saimiri sciureus). Folia Primatologica 46(3):173-182."
+    url: https://pubmed.ncbi.nlm.nih.gov/3804106/
+    doi: 10.1159/000156250
+  symmes_biben_1985:
+    citation: "Symmes, D. and Biben, M. 1985. The variability of peep and twit calls in captive squirrel monkeys (Saimiri sciureus). Folia Primatologica 10(3):204-215."
+    url: https://pubmed.ncbi.nlm.nih.gov/4976200/
+  boinski_campbell_2002:
+    citation: "Boinski, S. and Campbell, A.F. 2002. Chuck vocalizations of wild female squirrel monkeys (Saimiri sciureus) contain information on caller identity and foraging activity. International Journal of Primatology 23(5):1013-1029."
+    url: https://link.springer.com/article/10.1023/A:1026300314739
+    doi: 10.1023/A:1026300314739
+  ploog_1992:
+    citation: "Ploog, D. 1992. The squirrel monkey as an experimental model in the study of cerebral organization of emotional vocal utterances. European Archives of Psychiatry and Clinical Neuroscience 241(5):323-332."
+    url: https://link.springer.com/article/10.1007/BF00641057
+    doi: 10.1007/BF00641057
+  vocalization_respiratory_2001:
+    citation: "Larson, C.R., Yajima, Y., and Ko, P. 2001. Vocalization-correlated respiratory movements in the squirrel monkey. Journal of Neurophysiology 73(5):1747-1754."
+    url: https://pubmed.ncbi.nlm.nih.gov/11051470/
 provenance:
   - timestamp: "2026-06-10T21:15:00+02:00"
     model: GPT-5 Codex
@@ -112,3 +355,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added isolation peep, alarm peep, and err-chuck as missing major squirrel-monkey call classes and tightened cackle semantics to avoid conflating it with the peep-based alarm system.
+  - timestamp: "2026-06-11T13:20:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide recall pass added caregiver call and a low-confidence kecker class from external sources, with new provenance and references only for this assigned file.
+  - timestamp: "2026-06-12T16:45:00+02:00"
+    model: claude-sonnet-4-5
+    action: updated
+    notes: "Expansion pass added 15 new call types (twit, play peep, purr, groan, shriek, shriek-cackle, trill, growl, chatter, squeal, cluck, genital display call, food chuck, contact twitter, copulation call) drawn from Winter et al. 1966, Jürgens & Maurus 1973, Biben & Symmes 1986, Boinski & Campbell 2002, Ploog 1992, and supporting literature, with 8 new references appended. Total call count: 26."

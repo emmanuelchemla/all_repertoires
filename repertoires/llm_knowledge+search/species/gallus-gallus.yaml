@@ -125,6 +125,439 @@ calls:
   semantic_description: Used to attract nearby conspecifics, especially chicks or
     hens, to a food item.
   confidence: high
+- name: contentment trill
+  alternative_names:
+  - purr
+  - pleasure trill
+  acoustic_keywords:
+  - quiet
+  - tonal
+  - repetitive
+  - low_frequency
+  - short
+  acoustic_description: A soft, low, continuous or slightly pulsed murmuring sound
+    of one or two tones, resembling a cat's purr, with minimal frequency modulation.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - group_coordination
+  semantic_description: Produced during calm, comfortable circumstances such as resting,
+    settling with chicks, or foraging peacefully; signals positive emotional state
+    and social cohesion.
+  confidence: high
+- name: cluck
+  alternative_names:
+  - contact cluck
+  - foraging cluck
+  acoustic_keywords:
+  - short
+  - repetitive
+  - quiet
+  - tonal
+  - abrupt
+  acoustic_description: A single soft, brief, relatively low-pitched note repeated
+    at irregular intervals; each note is short and slightly percussive.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: Produced during ordinary activity such as foraging, moving,
+    and dust-bathing; serves as a continuous low-level contact signal within the flock.
+  confidence: high
+- name: tidbitting call
+  alternative_names:
+  - food tidbitting
+  - cock food call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - repetitive
+  - low_frequency
+  - quiet
+  - graded
+  acoustic_description: A series of rapid, low-pitched, soft clucking notes given
+    in quick succession, often combined with head-dipping display movements.
+  semantic_keywords:
+  - food
+  - courtship
+  - mating
+  - recruitment
+  semantic_description: Performed primarily by males to attract females to food items;
+    functions both as a food-referential signal and a courtship display; females prefer
+    males that tidbit frequently.
+  confidence: high
+- name: pre-laying call
+  alternative_names:
+  - nesting call
+  - nest-searching call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - repetitive
+  - long
+  - graded
+  - tonal
+  - quiet
+  acoustic_description: A series of soft, repetitive, low-to-medium pitched notes
+    given in extended bouts while a hen searches for or prepares a nesting site; varies
+    from soft gurgles to more insistent rhythmic clucking.
+  semantic_keywords:
+  - contact
+  - attention
+  - mating
+  semantic_description: Produced by hens in the period before egg-laying as they search
+    for a suitable nest site; may also attract males in feral populations attempting
+    to mate.
+  confidence: medium
+- name: post-laying cackle
+  alternative_names:
+  - egg song
+  - laying cackle
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - loud
+  - repetitive
+  - noisy
+  - multi_component
+  - abrupt
+  acoustic_description: A sequence of staccato clucks accelerating in tempo and culminating
+    in a loud, extended, upward-inflected terminal note; highly variable in duration
+    and intensity across individuals.
+  semantic_keywords:
+  - identity
+  - attention
+  - territorial
+  semantic_description: Produced by hens immediately after or around the time of egg-laying;
+    widely recognized as the 'egg song'; exact function debated but may signal reproductive
+    state or attract flock attention.
+  confidence: high
+- name: startled squawk
+  alternative_names:
+  - alarm squawk
+  - fright squawk
+  acoustic_keywords:
+  - loud
+  - short
+  - abrupt
+  - broadband
+  - noisy
+  acoustic_description: A sudden, sharp, loud, broadband burst, typically a single
+    note of high amplitude; acoustically distinct from the sustained aerial alarm call
+    series.
+  semantic_keywords:
+  - alarm
+  - distress
+  - attention
+  semantic_description: Produced reflexively when a bird is suddenly startled, pecked,
+    physically disturbed, or briefly scared; a short reactive call rather than a sustained
+    predator alarm.
+  confidence: high
+- name: broody growl
+  alternative_names:
+  - nest growl
+  - incubation growl
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - low_frequency
+  - quiet
+  - noisy
+  - short
+  - abrupt
+  acoustic_description: A low, guttural, brief rumbling or growling note, sometimes
+    escalating to a sharper hiss; produced with bill near-closed.
+  semantic_keywords:
+  - threat
+  - aggression
+  - territorial
+  semantic_description: Produced by incubating or brooding hens when their nest or
+    personal space is approached; serves as a warning prior to pecking; escalates
+    to hiss if intrusion continues.
+  confidence: high
+- name: broody hiss
+  alternative_names:
+  - nest hiss
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - broadband
+  - abrupt
+  - loud
+  - noisy
+  - short
+  acoustic_description: A sharp exhalatory hissing sound, broadband in frequency,
+    brief, often accompanying a forward lunge or bill strike.
+  semantic_keywords:
+  - threat
+  - aggression
+  semantic_description: Escalated defensive call produced by a broody hen when a perceived
+    threat persists after the initial growl; typically accompanies or precedes an
+    aggressive peck.
+  confidence: high
+- name: threat call
+  alternative_names:
+  - low threat call
+  - dominance call
+  acoustic_keywords:
+  - low_frequency
+  - quiet
+  - short
+  - abrupt
+  - graded
+  acoustic_description: A soft, low-pitched, brief vocalization, sometimes described
+    as a quiet growl or grunt, given prior to or during competitive interactions.
+  semantic_keywords:
+  - threat
+  - aggression
+  - spacing
+  semantic_description: Produced by either sex during low-level agonistic interactions
+    such as resource competition, dominance assertion, or spacing; precedes overt
+    pecking or chasing.
+  confidence: medium
+- name: chick peep
+  alternative_names:
+  - short peep
+  - contact peep
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - short
+  - tonal
+  - quiet
+  - abrupt
+  acoustic_description: A brief, high-pitched, clear tonal pip or chirp with a relatively
+    flat or slightly descending frequency contour and low energy.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - affiliation
+  semantic_description: The default low-level contact call of young chicks while in
+    a group, signaling social presence and proximity; more frequent when group size
+    is small.
+  confidence: high
+- name: chick distress call
+  alternative_names:
+  - juvenile distress call
+  - chick distress peep
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - high_frequency
+  - loud
+  - repetitive
+  - noisy
+  - long
+  acoustic_description: Prolonged, high-energy, high-pitched repeated calls with declining
+    frequency contour; significantly louder and more sustained than the contact peep;
+    high spectral entropy.
+  semantic_keywords:
+  - distress
+  - begging
+  - caregiving
+  - attention
+  semantic_description: Produced by chicks under stress including social isolation,
+    cold, capture, or fear; elicits brooding and food calling from hens; rate and
+    pattern encode degree of arousal and welfare state.
+  confidence: high
+- name: pleasure note
+  alternative_names:
+  - juvenile pleasure call
+  - warble
+  scope:
+    life_stages:
+    - infant
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - tonal
+  - quiet
+  - frequency_modulated
+  - graded
+  acoustic_description: A brief, soft, ascending-frequency note of low amplitude;
+    acoustically the inverse of the distress call in frequency contour; sometimes
+    grouped into longer warbling sequences.
+  semantic_keywords:
+  - affiliation
+  - contact
+  semantic_description: Produced by young chicks in comfortable, satiated, socially
+    integrated conditions; associated with positive affective states; more common
+    in larger groups.
+  confidence: medium
+- name: contact grunt
+  alternative_names:
+  - soft grunt
+  - proximity grunt
+  acoustic_keywords:
+  - short
+  - quiet
+  - low_frequency
+  - noisy
+  - abrupt
+  acoustic_description: A brief, low-pitched, soft guttural note with some noise component;
+    produced singly or in loose series during close-range interactions.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - group_coordination
+  semantic_description: A close-range contact signal used between flock members during
+    foraging, mutual preening, or other proximity interactions; distinct from the
+    cluck in being lower and more guttural.
+  confidence: medium
+- name: pre-roost assembly call
+  alternative_names:
+  - assembly call
+  acoustic_keywords:
+  - repetitive
+  - loud
+  - tonal
+  - multi_component
+  acoustic_description: A series of moderately loud, rhythmically repeated calls produced
+    as birds gather for roosting; louder and more insistent than ordinary foraging
+    clucks but less sharp than alarm calls.
+  semantic_keywords:
+  - group_coordination
+  - contact
+  - attention
+  semantic_description: Produced toward dusk as flock members orient toward the roost
+    site; believed to coordinate the group's movement and timing for roosting.
+  confidence: low
+- name: frustration whinny
+  alternative_names:
+  - whine
+  - moan
+  acoustic_keywords:
+  - frequency_modulated
+  - tonal
+  - graded
+  - short
+  - quiet
+  acoustic_description: A brief, plaintive, slightly descending tonal note, sometimes
+    wavering in pitch, resembling a soft moan or whine; quiet compared to distress
+    calls.
+  semantic_keywords:
+  - distress
+  - begging
+  - submission
+  semantic_description: Produced in mild conflict situations, incomplete motivation
+    states, or low-level frustration (e.g., blocked access to food or social partner);
+    described by Collias and Joos as the 'whine or moan of disturbance or frustration'.
+  confidence: medium
+- name: submissive squat vocalization
+  alternative_names:
+  - receptivity call
+  - mating squat call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - female
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - short
+  - quiet
+  - tonal
+  - abrupt
+  acoustic_description: A soft, brief single note or short series accompanying the
+    female's crouching or squatting posture during solicitation of mating; very low
+    amplitude.
+  semantic_keywords:
+  - mating
+  - submission
+  - courtship
+  semantic_description: Produced by receptive hens as they adopt the crouching solicitation
+    posture; indicates willingness to mate; accompanied by characteristic wing-lowering
+    display.
+  confidence: low
+- name: singing
+  alternative_names:
+  - rooster song
+  - low-intensity advertisement call
+  scope:
+    life_stages:
+    - adult
+    sexes:
+    - male
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - tonal
+  - repetitive
+  - quiet
+  - harmonic
+  - long
+  acoustic_description: A series of softly intoned, melodic, repetitive notes at moderate
+    pitch and low amplitude; quieter than the crow and lacking its far-carrying quality;
+    sometimes described as a subdued rambling vocalization.
+  semantic_keywords:
+  - territorial
+  - identity
+  - display
+  semantic_description: Produced by males in relaxed contexts, sometimes while foraging
+    or in periods between crowing bouts; noted by Collias and Joos as a distinct vocalization
+    category separate from crowing.
+  confidence: low
+references:
+  collias_joos_1953:
+    citation: "Collias, N. E. & Joos, M. (1953). The spectrographic analysis of sound signals of the domestic fowl. Behaviour, 5, 175–188."
+  woodgush_1954:
+    citation: "Wood-Gush, D. G. M. (1954). Observations on the behaviour of the domestic chicken. British Journal of Animal Behaviour, 2, 81–89."
+  harvey_etal_2002:
+    citation: "Harvey, N. D. et al. (2002). Vocal repertoire of the Red Junglefowl: a spectrographic classification and code of communication. The Condor, 89, 510–524."
+  evans_etal_1993:
+    citation: "Evans, C. S., Evans, L. & Marler, P. (1993). On the meaning of alarm calls: functional reference in an avian vocal system. Animal Behaviour, 46, 23–32."
+  shimmura_etal_2015:
+    citation: "Shimmura, T. et al. (2015). Auditory feedback facilitates learning of the alarm call and predator avoidance in Gallus gallus chicks. Ethology."
+  leliveld_etal_2013:
+    citation: "Leliveld, L. M. C., Langbein, J. & Puppe, B. (2013). Hens vary their vocal repertoire and structure when anticipating different types of reward. Animal Behaviour."
+  edgar_etal_2011:
+    citation: "Edgar, J. L. et al. (2011). Emotional contagion and its relevance to animal welfare. Animal Behaviour."
+  zimmerman_etal_2000:
+    citation: "Zimmerman, P. H. et al. (2000). Vocalisation in chicks (Gallus gallus dom.) during stepwise social isolation. Applied Animal Behaviour Science, 75, 331–346."
 provenance:
 - timestamp: '2026-06-10T22:30:00+02:00'
   model: GPT-5 Codex
@@ -141,3 +574,13 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-12T16:15:00+02:00'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: >
+    Expanded repertoire from 7 to 24 call types via web search and LLM knowledge synthesis.
+    Added contentment trill, cluck, tidbitting call, pre-laying call, post-laying cackle,
+    startled squawk, broody growl, broody hiss, threat call, chick peep, chick distress
+    call, pleasure note, contact grunt, pre-roost assembly call, frustration whinny,
+    submissive squat vocalization, and singing. Added reference block with key
+    Collias & Joos 1953, Evans et al. 1993, and supporting literature.

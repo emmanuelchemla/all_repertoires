@@ -80,6 +80,20 @@ calls:
     semantic_description: Used in tense, vigilance, and agonistic situations, including intragroup conflict and warning contexts.
     confidence: high
     references: [giacoma_2010, pollock_1986]
+  - name: wheezing grunt
+    acoustic_keywords: [low_frequency, noisy, pulsed, short, graded]
+    acoustic_description: A short low-amplitude call intermediate between a grunt and a wheeze, combining pulsed low-frequency energy with a breathier exhaled quality.
+    semantic_keywords: [threat, attention, group_coordination]
+    semantic_description: Included as a plausible mixed short-range arousal call reported in later repertoire-level comparisons; likely used in tense close-contact situations where grunt- and wheeze-like signals blend.
+    confidence: low
+    references: [valente_2022]
+  - name: songbit
+    acoustic_keywords: [tonal, harmonic, frequency_modulated, short, repetitive]
+    acoustic_description: A brief tonal unit extracted from the song system, shorter and more modular than a full song bout and retaining the harmonic phrase-like quality of song notes.
+    semantic_keywords: [identity, display, territorial]
+    semantic_description: Treated here as a distinct song-related call class because later indri repertoire summaries list it separately from the full song, although its boundary from embedded song phrases remains fuzzy.
+    confidence: low
+    references: [valente_2022]
 references:
   giacoma_2010:
     citation: "Giacoma, C., Sorrentino, V., Rabarivola, C., and Gamba, M. 2010. Sex differences in the song of Indri indri. International Journal of Primatology 31:539-551."
@@ -87,6 +101,10 @@ references:
   pollock_1986:
     citation: "Pollock, J.I. 1986. The song of the Indris (Indri indri; Primates: Lemuroidea): natural history, form and function. International Journal of Primatology 7:225-267."
     doi: 10.1007/BF02736394
+  valente_2022:
+    citation: "Valente, D., Torti, V., Gamba, M., and Giacoma, C. 2022. Comparative analysis of the vocal repertoires of the indri (Indri indri) and the diademed sifaka (Propithecus diadema). International Journal of Primatology 43:520-545."
+    url: https://iris.unito.it/bitstream/2318/1857639/3/Valente_et_al_2022.pdf
+    doi: 10.1007/s10764-022-00287-x
 provenance:
   - timestamp: "2026-06-10T20:45:00+02:00"
     model: GPT-5 Codex
@@ -104,3 +122,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Second completeness pass expanded the file to the source-backed adult repertoire by adding honk, hum, wheeze, and tonal agonistic calls and by tightening the alarm contexts of roar, kiss, and grunt.
+  - timestamp: "2026-06-11T14:05:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Repo-wide high-recall review added later-compared indri call classes songbit and wheezing grunt while keeping both low confidence because their boundaries from song phrases and mixed short-range calls remain uncertain.

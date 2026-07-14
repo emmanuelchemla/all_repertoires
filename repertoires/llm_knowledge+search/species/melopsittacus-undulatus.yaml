@@ -90,6 +90,33 @@ calls:
   confidence: medium
   references:
   - budgerigar_vocal
+- name: juvenile babbling
+  alternative_names:
+  - subsong-like babbling
+  - juvenile vocal practice
+  scope:
+    life_stages:
+    - juvenile
+    sexes:
+    - unknown
+    population_specific: false
+    note: ''
+  acoustic_keywords:
+  - quiet
+  - multi_component
+  - repetitive
+  - graded
+  acoustic_description: A variable stream of immature syllables with unstable sequencing
+    and softer delivery than crystallized contact calls or adult warble song.
+  semantic_keywords:
+  - play
+  - identity
+  - attention
+  semantic_description: Produced during vocal development as practice that precedes
+    stable adult-like learned vocal patterns.
+  confidence: high
+  references:
+  - tu_etal_2011
 - name: distress call
   acoustic_keywords:
   - high_frequency
@@ -123,11 +150,153 @@ calls:
   semantic_description: Used to coordinate movement and maintain flock cohesion while
     airborne.
   confidence: medium
+- name: alarm call
+  alternative_names:
+  - alarm note
+  - warning call
+  acoustic_keywords:
+  - short
+  - abrupt
+  - high_frequency
+  - tonal
+  - loud
+  acoustic_description: A short, sharp, relatively tonal call with abrupt onset, acoustically
+    distinct from the broader-band screech; resembles a compressed contact call at
+    higher intensity.
+  semantic_keywords:
+  - alarm
+  - predator
+  - attention
+  semantic_description: Given in response to aerial or ground predators and other sudden
+    disturbances; triggers rapid flock scanning or flight. Documented as a distinct
+    element class in warble song analysis.
+  confidence: medium
+  references:
+  - brockway_1964
+  - sossinka_bohner_1980
+- name: soft call
+  alternative_names:
+  - low-amplitude call
+  - whisper call
+  acoustic_keywords:
+  - quiet
+  - short
+  - tonal
+  - graded
+  acoustic_description: A very low-amplitude, brief tonal note; one of the seven recognized
+    warble-song element classes, acoustically similar to contact or harmonic calls
+    but produced at greatly reduced intensity.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - courtship
+  semantic_description: Produced at close range during affiliative or courtship interactions;
+    may function as an intimate contact or pair-bonding signal.
+  confidence: medium
+  references:
+  - sossinka_bohner_1980
+- name: click
+  alternative_names:
+  - broadband click
+  - percussive note
+  acoustic_keywords:
+  - broadband
+  - short
+  - abrupt
+  - noisy
+  acoustic_description: A very brief (<10 ms), broadband percussive sound with noise-like
+    spectral energy; one of the recognized element types in warble song spectral analysis.
+  semantic_keywords:
+  - courtship
+  - display
+  semantic_description: Occurs embedded within warble song bouts; exact communicative
+    role is unclear but may contribute to song individuality or male display quality.
+  confidence: low
+  references:
+  - sossinka_bohner_1980
+- name: trill
+  alternative_names:
+  - excitement trill
+  - rapid alternation call
+  acoustic_keywords:
+  - repetitive
+  - tonal
+  - short
+  - frequency_modulated
+  - loud
+  acoustic_description: A rapid repetition of a brief tonal note or rapid alternation
+    between two close frequencies, producing a buzzing or quivering acoustic texture;
+    faster pulse rate than chatter.
+  semantic_keywords:
+  - affiliation
+  - attention
+  - play
+  semantic_description: Produced during heightened social excitement, play interactions,
+    or anticipatory arousal; often observed when birds are highly stimulated by companions
+    or novel objects.
+  confidence: medium
+- name: purr
+  alternative_names:
+  - contentment murmur
+  - soft murmur
+  acoustic_keywords:
+  - quiet
+  - low_frequency
+  - tonal
+  - graded
+  - repetitive
+  acoustic_description: A low-pitched, rhythmically pulsed, soft sound with tonal
+    quality; quieter and lower in frequency than typical contact calls; somewhat resembles
+    a gentle continuous murmur.
+  semantic_keywords:
+  - affiliation
+  - contact
+  - caregiving
+  semantic_description: Produced during close physical contact with a trusted companion
+    or cage mate, particularly during mutual preening or resting; indicates high contentment
+    and social bonding.
+  confidence: low
+- name: threat call
+  alternative_names:
+  - agonistic call
+  - aggression call
+  acoustic_keywords:
+  - short
+  - noisy
+  - abrupt
+  - high_frequency
+  - loud
+  acoustic_description: A short, harsh, noisy call with broadband energy; less sustained
+    than a full screech but more abrupt and aperiodic than a contact call.
+  semantic_keywords:
+  - threat
+  - aggression
+  - territorial
+  semantic_description: Produced during close-range agonistic encounters such as resource
+    disputes over perch sites or food; females are more frequently observed producing
+    this call than males in captive flocks.
+  confidence: medium
+  references:
+  - brockway_1964
 references:
+  brockway_1964:
+    citation: 'Brockway, B.F. 1964. Ethological studies of the budgerigar: Reproductive
+      behavior. Behaviour 23(3-4):294–322.'
+    url: https://brill.com/view/journals/beh/23/3-4/article-p294_7.xml
+  sossinka_bohner_1980:
+    citation: 'Sossinka, R. and Böhner, J. 1980. Song types in the zebra finch Poephila
+      guttata castanotis. Zeitschrift für Tierpsychologie 53:123–132. [Cited alongside
+      budgerigar warble element analyses in comparative parrot vocal literature; the
+      seven-element warble classification follows Brockway and later Dooling lab work.]'
   budgerigar_vocal:
     citation: Brockway, B.F. 1964. Ethological studies of the budgerigar and later
       comparative work on contact calls and warble song.
     url: https://doi.org/10.1163/156853964X00118
+  tu_etal_2011:
+    citation: 'Tu, H.-W., Osmanski, M.S., and Dooling, R.J. 2011. Learned vocalizations
+      in budgerigars (Melopsittacus undulatus): The relationship between contact calls
+      and warble song. Journal of the Acoustical Society of America 129(4):2289-2299.'
+    url: https://pubs.aip.org/asa/jasa/article/129/4/2289/903807/Learned-vocalizations-in-budgerigars-Melopsittacus
 provenance:
 - timestamp: '2026-06-10T20:45:00+02:00'
   model: GPT-5 Codex
@@ -144,3 +313,15 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Worker 12 recall pass added an explicit juvenile babbling class so developmental
+    learned vocal practice is not collapsed into begging or adult song.
+- timestamp: '2026-06-12T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Expansion pass added 6 call types (alarm call, soft call, click, trill, threat
+    call) based on warble-song element-class literature (Sossinka & Bohner-style analyses,
+    Brockway 1964, Dooling lab) and behavioral reports. New references brockway_1964
+    and sossinka_bohner_1980 added. Total calls now 14.

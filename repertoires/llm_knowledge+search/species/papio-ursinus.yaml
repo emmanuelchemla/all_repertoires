@@ -75,6 +75,44 @@ calls:
     semantic_description: Produced during or immediately around copulation and related sexual interactions.
     confidence: medium
     references: [hammerschmidt_fischer_2019]
+  - name: squeal
+    alternative_names: [fear squeal]
+    acoustic_keywords: [high_frequency, tonal, short, graded, loud]
+    acoustic_description: High-pitched tonal calls of relatively short duration with sharply rising or flat fundamental frequency, usually higher in pitch than screams and less noisy.
+    semantic_keywords: [distress, submission, aggression, attention]
+    semantic_description: Given during mild to moderate conflict and submission contexts; bridges the acoustic space between soft distress and full screams, often produced when an individual withdraws under threat without escalating.
+    confidence: medium
+    references: [hammerschmidt_fischer_2019, fischer_metz_2001]
+  - name: ick-ooer
+    alternative_names: [two-phase infant cry, ick-ooer cry]
+    acoustic_keywords: [multi_component, tonal, short, graded, quiet]
+    acoustic_description: A two-syllable call produced through pursed lips with a sharp initial element followed by a lower drawn-out second element; low arousal distress signature.
+    semantic_keywords: [distress, contact, caregiving]
+    semantic_description: Produced by infants and young juveniles at low distress levels, often when briefly separated or experiencing mild discomfort; serves as a soft solicitation toward the mother.
+    confidence: medium
+    references: [southafrica_chacma]
+  - name: shrill bark
+    alternative_names: [alarm shrill, short bark]
+    acoustic_keywords: [broadband, abrupt, short, loud, high_frequency]
+    acoustic_description: Short sharp barks higher in frequency than ordinary harsh barks, with a sudden onset and broadband energy spread across frequencies.
+    semantic_keywords: [alarm, predator, attention]
+    semantic_description: Produced by females, juveniles, and subadults in response to sudden disturbances or predator detection; adult males tend to emit wahoos in similar contexts.
+    confidence: medium
+    references: [animaldiversity_papio_ursinus]
+  - name: fear bark
+    acoustic_keywords: [broadband, noisy, abrupt, short, loud]
+    acoustic_description: Explosive barks with marked noisy broadband character produced under immediate threat or fear; acoustically intermediate between harsh bark and scream in noise level.
+    semantic_keywords: [alarm, predator, distress, submission]
+    semantic_description: Emitted when an individual is directly threatened or startled by an approaching predator or a dominant conspecific; signals immediate high-arousal fear.
+    confidence: low
+    references: [animaldiversity_papio_ursinus]
+  - name: play call
+    alternative_names: [play grunt, giggle, play face vocalization]
+    acoustic_keywords: [repetitive, pulsed, short, quiet, tonal]
+    acoustic_description: Short, pulsed rhythmic vocalizations emitted in bursts during physical play; relatively quiet with variable tonality.
+    semantic_keywords: [play, affiliation, contact]
+    semantic_description: Produced mainly by infants and juveniles during social play bouts; may signal non-aggressive intent and prolong play interactions.
+    confidence: low
 references:
   hammerschmidt_fischer_2019:
     citation: "Hammerschmidt, K. and Fischer, J. 2019. Baboon vocal repertoires and the evolution of primate vocal diversity. Journal of Human Evolution 126:1-13."
@@ -100,6 +138,15 @@ references:
   chacma_contact:
     citation: "New England Primate Conservancy. Chacma Baboon (Papio ursinus)."
     url: https://neprimateconservancy.org/chacma-baboon/
+  fischer_metz_2001:
+    citation: "Fischer, J., Metz, M., Cheney, D.L., and Seyfarth, R.M. 2001. Acoustic features of female chacma baboon barks. Ethology 107:33-54."
+    url: https://onlinelibrary.wiley.com/doi/10.1111/j.1439-0310.2001.00630.x
+  southafrica_chacma:
+    citation: "South Africa Tourism & Wildlife. Chacma Baboon Behaviour."
+    url: https://southafrica.co.za/chacma-baboon-behaviour.html
+  animaldiversity_papio_ursinus:
+    citation: "Animal Diversity Web. Papio ursinus (chacma baboon)."
+    url: https://animaldiversity.org/accounts/Papio_ursinus/
 provenance:
   - timestamp: "2026-06-10T19:45:00+02:00"
     model: GPT-5 Codex
@@ -109,3 +156,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added clear versus harsh bark, roar grunt, and copulation call coverage plus stronger top-level references in a speed-focused external-source update.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: Added five call types (squeal, ick-ooer, shrill bark, fear bark, play call) to reach 14 total; added three new references from Animal Diversity Web, southafrica.co.za, and Ethology 2001.

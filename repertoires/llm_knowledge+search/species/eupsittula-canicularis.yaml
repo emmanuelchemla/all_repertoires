@@ -86,6 +86,43 @@ calls:
   semantic_description: Used in close pair or flock social display and coordinated
     interaction.
   confidence: low
+- name: keh-keh series
+  alternative_names:
+  - lower repeated call
+  acoustic_keywords:
+  - short
+  - repetitive
+  - noisy
+  - tonal
+  - loud
+  acoustic_description: A lower repeated series of clipped notes delivered as a brisk
+    `keh-keh-keh-keh-keh` sequence, less scratchy than the main screech.
+  semantic_keywords:
+  - contact
+  - group_coordination
+  - attention
+  semantic_description: Used during flock movement and active social exchanges as
+    a repeated coordination signal distinct from the harsher long-range screech.
+  confidence: medium
+  references:
+  - bradbury_etal_2001
+- name: whining call
+  alternative_names:
+  - whine call
+  acoustic_keywords:
+  - tonal
+  - long
+  - frequency_modulated
+  - loud
+  acoustic_description: An elongated whining note with a drawn-out contour and less
+    abrupt onset than the scratchy screech calls.
+  semantic_keywords:
+  - contact
+  - affiliation
+  - attention
+  semantic_description: Plausibly used in close social contact or solicitation contexts
+    where birds maintain attention without the urgency of alarm calls.
+  confidence: low
 - name: flight call
   acoustic_keywords:
   - high_frequency
@@ -102,6 +139,56 @@ calls:
   semantic_description: Used to coordinate airborne flock movements and maintain contact
     between fast-moving group members.
   confidence: medium
+  references:
+  - bradbury_etal_2001
+- name: warble
+  alternative_names:
+  - warble vocalization
+  - heterotypic multi-element call
+  acoustic_keywords:
+  - multi_component
+  - long
+  - frequency_modulated
+  - tonal
+  - quiet
+  - graded
+  acoustic_description: A complex sequence of diverse heterotypic elements (different
+    note types concatenated), producing a varied melodic run. Contrasts with the homotypic
+    'peach' call which repeats a single element type. Duration is longer than most
+    discrete calls and spectral content varies across elements within the sequence.
+  semantic_keywords:
+  - courtship
+  - affiliation
+  - display
+  - identity
+  semantic_description: Produced in close-range social and pair-bonding contexts;
+    used in aggressive interactions between pairs and in social decisions. Warble repertoire
+    size and length may signal individual quality and are used by conspecifics when
+    making social choices.
+  confidence: medium
+  references:
+  - bradbury_etal_2001
+  - dahlin_etal_2006
+  - dahlin_etal_2017
+references:
+  bradbury_etal_2001:
+    citation: Bradbury, J.W., Cortopassi, K.A., Clemmons, J.R., and Kroodsma, D.
+      2001. Geographical variation in the contact calls of Orange-fronted Parakeets.
+      Auk 118(4):958-972.
+    doi: 10.1093/auk/118.4.958
+    url: https://www.researchgate.net/publication/335658475_Geographical_Variation_in_the_Contact_Calls_of_Orange-Fronted_Parakeets
+  dahlin_etal_2006:
+    citation: Dahlin, C.R., Young, A.M., Cordier, T., and Bradbury, J.W. 2006. Contact
+      call diversity in wild Orange-fronted Parakeet pairs, Aratinga canicularis.
+      Animal Behaviour 72(5):1141-1152.
+    doi: 10.1016/j.anbehav.2006.03.010
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0003347206000303
+  dahlin_etal_2017:
+    citation: Dahlin, C.R., Balsby, T.J.S., Dabelsteen, T., and Bradbury, J.W. 2017.
+      Function of vocalization length and warble repertoire size in orange-fronted
+      conures. Animal Behaviour 133:81-90.
+    doi: 10.1016/j.anbehav.2017.09.007
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0003347217303597
 provenance:
 - timestamp: '2026-06-10T21:30:00+02:00'
   model: GPT-5 Codex
@@ -118,3 +205,15 @@ provenance:
   action: updated
   notes: Coordinator audit expanded or confirmed major call classes and added references
     where feasible without using other repertoire databases in the repo.
+- timestamp: '2026-06-11T16:20:00+02:00'
+  model: GPT-5 Codex
+  action: updated
+  notes: Worker 12 recall pass added a repeated keh-keh coordination series and a
+    lower-confidence whining call based on species vocal descriptions and contact-call
+    literature.
+- timestamp: '2026-06-13T00:00:00Z'
+  model: claude-sonnet-4-6
+  action: updated
+  notes: Added warble call type (heterotypic multi-element vocalization) documented
+    in Dahlin et al. 2006 and 2017 studies; added two new references for warble and
+    contact call diversity literature.

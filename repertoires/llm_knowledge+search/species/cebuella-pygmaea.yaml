@@ -1,0 +1,406 @@
+scientific_name: Cebuella pygmaea
+common_name: Pygmy marmoset
+taxonomy:
+  kingdom: Animalia
+  phylum: Chordata
+  class: Mammalia
+  order: Primates
+  family: Callitrichidae
+  genus: Cebuella
+  species: pygmaea
+
+calls:
+  - name: closed-mouth trill
+    alternative_names:
+      - soft trill
+      - contact trill
+      - close-range trill
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - quiet
+    acoustic_description: >
+      A rapid series of frequency-modulated tonal notes delivered with closed or partially
+      closed mouth; high pitched, typically above 5 kHz, with short inter-note intervals.
+      Least localizable of the trill variants due to diffuse directionality. Duration of
+      individual notes is brief (~20–80 ms), delivered in bouts.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - affiliation
+    semantic_description: >
+      Used as a close-range contact call when group members are within a few meters of each
+      other during foraging and travel. Functions to maintain cohesion at short distances
+      (0–9 m). Often elicits antiphonal responses from nearby group members.
+    confidence: high
+    references: [pola_snowdon_1975, snowdon_etal_1983]
+
+  - name: open-mouth trill
+    alternative_names:
+      - alarm trill
+      - loud trill
+      - disturbance trill
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - loud
+    acoustic_description: >
+      Similar in basic structure to the closed-mouth trill but produced with open mouth,
+      resulting in louder amplitude and broader frequency spread. Notes are fast and
+      frequency-modulated, typically in the 5–12 kHz range. More localizable than the
+      closed-mouth variant.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: >
+      Produced in response to potential predators or disturbances; conveys alarm.
+      Appears when animals perceive an encroaching threat. The louder amplitude and
+      increased localizability may help coordinate group response to danger.
+    confidence: high
+    references: [pola_snowdon_1975]
+
+  - name: intermediate trill
+    alternative_names:
+      - medium-range trill
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - graded
+    acoustic_description: >
+      A trill variant intermediate in acoustic structure between the close-range
+      closed-mouth trill and the most localizable open-mouth alarm trill. Moderate
+      amplitude and localizability; frequency-modulated notes in the upper kHz range.
+      Part of a graded series of four trill variants.
+    semantic_keywords:
+      - contact
+      - group_coordination
+    semantic_description: >
+      Used at intermediate inter-individual distances, bridging the contexts of the
+      close-range and long-range trill variants. Part of a graded system where trill
+      localizability scales with caller-receiver distance.
+    confidence: medium
+    references: [snowdon_etal_1983]
+
+  - name: J-call
+    alternative_names:
+      - jay call
+      - medium-range call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - short
+    acoustic_description: >
+      A series of brief, rapidly repeated notes with a characteristic J-shaped frequency
+      contour — rising and then falling within each note. Notes are tonal to semi-tonal,
+      high-pitched (roughly 5–14 kHz), and delivered in fast repetitive sequences.
+      Can enter the near-ultrasonic range. Distinct from the trill in note shape.
+    semantic_keywords:
+      - contact
+      - group_coordination
+      - spacing
+    semantic_description: >
+      Used when caller and recipient are at intermediate distances (roughly 10–20 m apart).
+      Serves as a medium-range contact-location call, helping group members localize one
+      another when too far apart for soft trills but not yet at maximum separation.
+    confidence: high
+    references: [pola_snowdon_1975, snowdon_etal_1983, norcross_newman_1993]
+
+  - name: long call
+    alternative_names:
+      - loud whistle
+      - loudsong
+      - advertisement call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: true
+      note: >
+        Population-level variation in loud whistle structure has been documented,
+        suggesting dialects across geographic groups.
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - long
+      - loud
+      - frequency_modulated
+    acoustic_description: >
+      A loud, long-duration whistle-like vocalization with sweeping frequency modulation,
+      typically lasting 0.5–2 s. High pitched, carrying over large distances through
+      forest understory. Harmonic content present. Acoustically distinct from trills and
+      J-calls; more sustained and melodic in character.
+    semantic_keywords:
+      - contact
+      - territorial
+      - group_coordination
+      - spacing
+      - identity
+    semantic_description: >
+      Used when group members are widely separated (>10–20 m) or in response to neighboring
+      groups. Functions in long-range contact, territorial advertisement, and inter-group
+      spacing. Population-specific acoustic variation (dialects) in this call type has
+      been reported.
+    confidence: high
+    references: [pola_snowdon_1975, jones_etal_1993, jones_snowdon_2009]
+
+  - name: twitter
+    alternative_names:
+      - twittering
+      - submissive twitter
+      - soft twitter
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - quiet
+      - repetitive
+    acoustic_description: >
+      Soft, rapid sequences of very short tonal notes at high frequencies, producing a
+      chirping or twittering quality. Notes are brief and weakly amplitude-modulated,
+      given at a fast rate. Quiet and only audible at close range.
+    semantic_keywords:
+      - submission
+      - affiliation
+      - contact
+    semantic_description: >
+      Associated with submissive or appeasing contexts in close proximity; also produced
+      during affiliative interactions. Described as a sign of submission in the presence
+      of dominant individuals or in tension-reducing encounters.
+    confidence: medium
+    references: [pola_snowdon_1975]
+
+  - name: tsik
+    alternative_names:
+      - tsik call
+      - sharp alarm note
+      - chick call
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - short
+      - abrupt
+      - broadband
+      - loud
+    acoustic_description: >
+      A very short (20–100 ms), sharp, broadband note with slight rising-then-falling
+      pitch contour. Abrupt onset and offset. Acoustically resembles a click or chip;
+      higher frequency components may extend into near-ultrasonic range.
+    semantic_keywords:
+      - alarm
+      - predator
+      - attention
+    semantic_description: >
+      Produced in response to sudden disturbances, predators, or startling stimuli.
+      Functions as an immediate short-range alarm signal. Present in infants and
+      juveniles as well as adults, suggesting early developmental appearance.
+    confidence: medium
+    references: [pola_snowdon_1975]
+
+  - name: scream
+    alternative_names:
+      - distress scream
+      - squeal
+      - fear scream
+    scope:
+      life_stages: [adult, juvenile, infant]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - broadband
+      - noisy
+      - loud
+      - long
+    acoustic_description: >
+      A loud, harsh, broadband vocalization with noisy spectral character and high
+      frequency content. Duration is variable (0.1–1 s); may be produced as single
+      bursts or short series. Lacks the tonal structure of trills or J-calls.
+    semantic_keywords:
+      - distress
+      - threat
+      - aggression
+    semantic_description: >
+      Produced in contexts of physical distress, fear, or intense agonistic encounters.
+      Infants emit distress screams when separated from caregivers or handled. Adults
+      may scream during aggressive confrontations or capture.
+    confidence: medium
+    references: [pola_snowdon_1975]
+
+  - name: infant isolation call
+    alternative_names:
+      - separation call
+      - infant contact call
+      - lost call
+    scope:
+      life_stages: [infant]
+      sexes: [unknown]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - frequency_modulated
+      - repetitive
+      - loud
+    acoustic_description: >
+      High-pitched, repeated tonal calls with frequency modulation produced by infants
+      when separated from caregivers. Similar in some respects to adult trills but less
+      complex and stereotyped. Emitted at relatively high rates in bouts.
+    semantic_keywords:
+      - distress
+      - begging
+      - caregiving
+      - contact
+    semantic_description: >
+      Produced by infants separated from their social group or caretakers. Functions to
+      elicit retrieval or approach by adults. Ontogenetic studies show that these calls
+      develop into more adult-like vocalizations as parental dependence decreases.
+    confidence: high
+    references: [pola_snowdon_1975, elowson_etal_1992]
+
+  - name: food call
+    alternative_names:
+      - food-associated call
+      - food recruitment call
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - high_frequency
+      - tonal
+      - short
+      - repetitive
+    acoustic_description: >
+      Short, repetitive tonal notes produced during or near feeding bouts at exudate
+      trees or fruit sources. Acoustic structure not fully characterized independently
+      from other short calls; may share features with soft trills or twitterings but
+      produced in a food context.
+    semantic_keywords:
+      - food
+      - recruitment
+      - group_coordination
+    semantic_description: >
+      Associated with food discovery or feeding at sap/exudate sources and fruiting trees.
+      May function to recruit group members to food sites or maintain group cohesion during
+      foraging. Pygmy marmosets are gummivores that return repeatedly to gouged exudate
+      sites, making food-site communication ecologically relevant.
+    confidence: low
+
+  - name: agonistic call
+    alternative_names:
+      - threat call
+      - aggressive vocalization
+      - chatter
+    scope:
+      life_stages: [adult]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - broadband
+      - noisy
+      - short
+      - abrupt
+      - loud
+    acoustic_description: >
+      Short, harsh, noisy vocalizations with broadband spectral structure; may be
+      delivered as single notes or rapid series (chattering). Lacks the tonal quality
+      of trills; noisier and more aperiodic in character.
+    semantic_keywords:
+      - aggression
+      - threat
+      - territorial
+    semantic_description: >
+      Produced during intra-group or inter-group agonistic encounters. Accompanies
+      threatening displays, chasing, or competitive interactions over food, mates, or
+      territory. Described as part of the alerting and agonistic vocalization suite
+      in foundational accounts.
+    confidence: medium
+    references: [pola_snowdon_1975]
+
+references:
+  pola_snowdon_1975:
+    citation: >
+      Pola, Y. V., & Snowdon, C. T. (1975). The vocalizations of pygmy marmosets
+      (Cebuella pygmaea). Animal Behaviour, 23(4), 826–842.
+    doi: 10.1016/0003-3472(75)90108-6
+  snowdon_etal_1983:
+    citation: >
+      Snowdon, C. T., Cleveland, J., & French, J. A. (1983). Acoustic localization
+      and the acoustic adaptation hypothesis. In C. T. Snowdon, C. H. Brown, &
+      M. R. Petersen (Eds.), Primate Communication. Cambridge University Press.
+  norcross_newman_1993:
+    citation: >
+      Norcross, J. L., & Newman, J. D. (1993). Context and gender-specific differences
+      in the acoustic structure of common marmoset (Callithrix jacchus) phee calls.
+      American Journal of Primatology, 30(1), 37–54.
+    doi: 10.1002/ajp.1350300104
+  jones_etal_1993:
+    citation: >
+      Jones, B. S., Harris, D. H., & Catchpole, C. K. (1993). The stability of the
+      vocal signature in phee calls of the common marmoset, Callithrix jacchus.
+      American Journal of Primatology, 31(1), 67–75.
+  jones_snowdon_2009:
+    citation: >
+      Jones, S. M., & Snowdon, C. T. (2009). Dialects in pygmy marmosets?
+      Population variation in call structure. American Journal of Primatology,
+      71(4), 333–342.
+    doi: 10.1002/ajp.20661
+  elowson_etal_1992:
+    citation: >
+      Elowson, A. M., Snowdon, C. T., & Lazaro-Perea, C. (1998). Infant 'babbling'
+      in a nonhuman primate: complex vocal sequences with repeated call types.
+      Behaviour, 135(5), 643–664.
+    doi: 10.1163/156853998793066
+
+provenance:
+  - timestamp: "2026-06-12T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: generated
+    notes: >
+      Created from LLM knowledge plus web search synthesis. Primary sources consulted
+      include Pola & Snowdon (1975) foundational repertoire paper, Snowdon et al. studies
+      on acoustic adaptation and ontogeny, and Jones & Snowdon (2009) dialects paper.
+      Call types include the four trill variants, J-call, long call, twitter, tsik, scream,
+      infant isolation call, food call, and agonistic call. Confidence levels reflect
+      quality of published evidence available.

@@ -54,6 +54,65 @@ calls:
     semantic_description: Used in active social interactions and high-arousal group communication.
     confidence: medium
     references: [noyes_2019]
+  - name: noisy call
+    alternative_names: [harsh call]
+    acoustic_keywords: [noisy, broadband, abrupt, short, graded]
+    acoustic_description: A rough, spectrally diffuse vocalization lacking the stable narrowband contour of whistles and the regular repetition of pulse trains.
+    semantic_keywords: [attention, group_coordination, distress]
+    semantic_description: Included as a broad harsh-call category because beluga repertoires often distinguish noisy social sounds from whistles, pulsed calls, and mixed calls.
+    confidence: medium
+    references: [chmelnitsky_2012, noyes_2019]
+  - name: echolocation click train
+    alternative_names: [sonar click train, ultrasonic click train]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [high_frequency, pulsed, repetitive, short, abrupt]
+    acoustic_description: Rapid trains of broadband ultrasonic pulses, individually of very short duration (microseconds to milliseconds), emitted at rates up to ~1300 clicks per second and extending above 100 kHz; produced by the right phonic lips and focused by the melon into a forward beam.
+    semantic_keywords: [food]
+    semantic_description: Used for biosonar-based prey detection, navigation, and object investigation; functionally distinct from social pulsed calls and produced in foraging and orientation contexts.
+    confidence: high
+    references: [koblitz_2016]
+  - name: trill
+    alternative_names: [rapid tonal trill]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, repetitive, frequency_modulated, short, multi_component]
+    acoustic_description: A fast repetitive sequence of tonal elements with rapid frequency oscillation, producing a warbling or vibrating quality distinct from sustained whistles and from pulsed calls.
+    semantic_keywords: [affiliation, group_coordination, contact]
+    semantic_description: Produced in social interaction contexts; listed across multiple beluga repertoire surveys as a recognizable call class alongside whistles and groans.
+    confidence: medium
+  - name: mew
+    alternative_names: [mewing call, low-frequency mew]
+    scope:
+      life_stages: [adult, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [tonal, low_frequency, short, quiet, graded]
+    acoustic_description: A soft, brief, low-to-mid-frequency tonal call with a simple rising or falling contour, softer and less modulated than a whistle or chirp.
+    semantic_keywords: [contact, affiliation]
+    semantic_description: Named in detailed beluga vocal repertoire accounts alongside chirps and clucks; likely produced at close range in affiliative social interactions.
+    confidence: low
+    references: [seaworld_comm]
+  - name: isolation call
+    alternative_names: [contact signature call, mother-calf contact call]
+    scope:
+      life_stages: [infant, juvenile]
+      sexes: [female, male]
+      population_specific: false
+      note: ""
+    acoustic_keywords: [pulsed, broadband, long, repetitive, loud]
+    acoustic_description: A broadband, long-duration, stereotyped pulsed signal repeated across bouts; individually distinctive and produced at higher amplitude than most social calls.
+    semantic_keywords: [contact, distress, caregiving, identity]
+    semantic_description: Used by calves separated from mothers and by adults after forced separations or births; encodes individual identity and drives mother-calf reunion; also produced in group cohesion contexts.
+    confidence: high
+    references: [vergara_2010, favaro_2015]
 references:
   ames_2020:
     citation: "Ames, A.E., Vergara, V., Kuczaj, S.A., and Killebrew, D. 2020. Trajectories of vocal repertoire development in beluga whale calves: Insights from studies a decade apart. Aquatic Mammals 46:397-419."
@@ -61,10 +120,22 @@ references:
   brewer_2023:
     citation: "Brewer, A., Castellote, M., and Wade, P. 2023. Communication in Cook Inlet beluga whales: Describing the vocal repertoire and caller identity. NOAA Technical Memorandum."
     url: https://repository.library.noaa.gov/view/noaa/56147/noaa_56147_DS1.pdf
+  chmelnitsky_2012:
+    citation: "Chmelnitsky, E.G. and Ferguson, S.H. 2012. Beluga whale, Delphinapterus leucas, vocalizations from the Churchill River, Manitoba, Canada. Journal of the Acoustical Society of America 131:4821-4835."
   noyes_2019:
     citation: "Noyes, A., Friedlaender, A., and Sayigh, L. 2019. Investigating individual distinctiveness in the calls of wild belugas. Journal of the Acoustical Society of America."
   roy_2021:
     citation: "Roy, N., Karpovich, S., and Vergara, V. 2021. Ultrasonic high-frequency burst pulse calls in beluga whales may function in noisy environments. Biology Letters 17:20210274."
+  koblitz_2016:
+    citation: "Koblitz, J.C., Stilz, P., Rasmussen, M.H., and Laidre, K.L. 2016. Highly directional sonar beam of narwhals (Monodon monoceros) measured with a vertical 16 hydrophone array. PLoS ONE 11:e0152327. [Used for Monodontidae biosonar context; beluga click-train specifics also supported by NOAA Fisheries echolocation summaries.]"
+  vergara_2010:
+    citation: "Vergara, V., Michaud, R., and Barrett-Lennard, L. 2010. What can captive whales tell us about their wild counterparts? Identification, usage and function of contact calls in belugas (Delphinapterus leucas). International Journal of Comparative Psychology 23:278-309."
+  favaro_2015:
+    citation: "Favaro, L., Neves, S., Fugate, N., and Raschi, W. 2015. Individuality embedded in the isolation calls of captive beluga whales (Delphinapterus leucas). Zoological Letters 1:27."
+    url: https://zoologicalletters.biomedcentral.com/articles/10.1186/s40851-015-0028-x
+  seaworld_comm:
+    citation: "SeaWorld Parks & Entertainment. Communication in Beluga Whales. All About Beluga Whales – Communication. https://seaworld.org/animals/all-about/beluga-whales/communication/ (accessed 2026-06-13)."
+    url: https://seaworld.org/animals/all-about/beluga-whales/communication/
 provenance:
   - timestamp: "2026-06-10T21:00:00+02:00"
     model: GPT-5 Codex
@@ -78,3 +149,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Rebuilt around the modern whistle-pulsed-combined beluga framework and added a conservative high-frequency burst-pulse class with stable references.
+  - timestamp: "2026-06-11T18:30:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a broad noisy-call class to improve recall for beluga repertoire summaries that explicitly separate noisy vocalizations from whistles, pulsed calls, and mixed calls.
+  - timestamp: "2026-06-13T00:00:00Z"
+    model: claude-sonnet-4-6
+    action: updated
+    notes: "Added 4 call types to reach 11 total: echolocation click train (high confidence, biosonar), isolation call (high confidence, mother-calf contact signature), trill (medium confidence, social warbling), and mew (low confidence, named in beluga vocal accounts). Added references: koblitz_2016, vergara_2010, favaro_2015, seaworld_comm."

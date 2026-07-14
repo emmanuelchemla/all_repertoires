@@ -131,6 +131,32 @@ calls:
     confidence: high
     references:
       - animal_diversity_web
+  - name: copulation call
+    alternative_names:
+      - female copulation call
+      - mating call
+    scope:
+      life_stages:
+        - adult
+      sexes:
+        - female
+      population_specific: false
+      note: ""
+    acoustic_keywords:
+      - tonal
+      - short
+      - repetitive
+      - graded
+      - loud
+    acoustic_description: An attention-getting adult female call given around mating, likely more insistent than quiet contact grunts but less harsh than barks or screams.
+    semantic_keywords:
+      - mating
+      - courtship
+      - attention
+    semantic_description: Females reportedly produce copulation calls to solicit or accompany mating, with adult males sometimes replying vocally.
+    confidence: medium
+    references:
+      - neprimate_conservancy_2023
   - name: scream
     acoustic_keywords:
       - high_frequency
@@ -183,3 +209,7 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Second completeness pass added the comparative-repertoire threat call and a conservative warning bark class while keeping the contact-centered structure intact.
+  - timestamp: "2026-06-11T14:10:00+02:00"
+    model: GPT-5 Codex
+    action: updated
+    notes: Added a source-backed adult female copulation call to cover mating-context vocal behavior absent from earlier contact and alarm centered drafts.
