@@ -5,6 +5,7 @@ from urllib.parse import parse_qs, urlencode
 
 from dash import Dash, Input, Output, State, dcc, html, no_update
 
+from .charts import coverage_chart
 from .data import BUNDLE_PATH, load_animallex_bundle
 from .pages import (
     analysis_page,
@@ -124,6 +125,23 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         return options, f"{len(options):,} of {total:,} species"
 
     @app.callback(
+        Output("semantic-coverage-chart", "figure"),
+        Output("acoustic-coverage-chart", "figure"),
+        Input("coverage-group", "value"),
+        Input("coverage-threshold", "value"),
+    )
+    def update_coverage(group_key: str, threshold: float):
+        if bundle is None or not group_key or threshold is None:
+            return no_update, no_update
+        group = bundle.analysis["coverage"]["groups"][group_key]
+        thresholds = bundle.analysis["coverage"]["thresholds"]
+        selected_threshold = round(float(threshold), 2)
+        return (
+            coverage_chart(group, "semantic", selected_threshold, thresholds),
+            coverage_chart(group, "acoustic", selected_threshold, thresholds),
+        )
+
+    @app.callback(
         Output("species-matrix-detail", "children"),
         Input("species-matrix-chart", "clickData"),
         prevent_initial_call=True,
@@ -144,11 +162,12 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
     )
     def pmi_detail(click_data):
         point = click_data["points"][0]
-        joint_count, p_value, q_value = point["customdata"]
+        joint_count, expected_count, p_value, q_value = point["customdata"]
         return (
             f"{point['y']} and {point['x']}: PMI = {point['z']:.2f} bits "
             f"from {int(joint_count):,} matching calls. "
-            f"p = {p_value:.3g}, FDR q = {q_value:.3g}."
+            f"The within-species shuffle expected {expected_count:.2f} calls. "
+            f"Permutation p = {p_value:.3g}, FDR q = {q_value:.3g}."
         )
 
     return app

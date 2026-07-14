@@ -2,6 +2,7 @@
 
 from .animallex_analysis import (
     AnalysisConfig,
+    compute_cross_species_coverage,
     compute_description_embeddings,
     compute_form_meaning_alignment,
     compute_keyword_pmi,
@@ -32,6 +33,7 @@ __all__ = [
     "SimilaritySpec",
     "compute_similarity_matrix",
     "compute_description_embeddings",
+    "compute_cross_species_coverage",
     "compute_form_meaning_alignment",
     "compute_keyword_pmi",
     "compute_overview",

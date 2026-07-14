@@ -117,7 +117,6 @@ def species_counts_chart(rows: list[dict[str, Any]]) -> go.Figure:
             )
         )
     fig.update_layout(
-        title="Calls per species",
         barmode="overlay",
         legend=dict(title="Taxonomic group", orientation="h", yanchor="top", y=-0.03),
     )
@@ -169,10 +168,63 @@ def form_meaning_chart(
                 hoverinfo="skip",
             )
         )
-    fig.update_layout(title="Form to meaning correlation", legend_title="Relationship")
+    fig.update_layout(legend_title="Relationship")
     fig.update_xaxes(title="Acoustic distance", range=[0, 1], gridcolor="#e5ecee")
     fig.update_yaxes(title="Semantic distance", range=[0, 1], gridcolor="#e5ecee")
     return _base_layout(fig, height=620)
+
+
+def coverage_chart(
+    group: dict[str, Any], dimension: str, threshold: float, thresholds: list[float]
+) -> go.Figure:
+    threshold_index = thresholds.index(round(float(threshold), 2))
+    percentages = group[dimension]["percent_calls"][threshold_index]
+    counts = group[dimension]["n_calls"][threshold_index]
+    species_percentages = [25, 50, 75, 100]
+    color = COLORS[1] if dimension == "semantic" else COLORS[0]
+    fig = go.Figure(
+        go.Bar(
+            x=species_percentages,
+            y=percentages,
+            marker_color=color,
+            customdata=[
+                [
+                    group["minimum_species"][index],
+                    counts[index],
+                    group["n_calls"],
+                    group["n_species"],
+                ]
+                for index in range(len(species_percentages))
+            ],
+            text=[f"{value:.1f}%" for value in percentages],
+            textposition="outside",
+            cliponaxis=False,
+            hovertemplate=(
+                "%{y:.1f}% of calls (%{customdata[1]:,} of %{customdata[2]:,})"
+                "<br>Represented in at least %{x}% of species"
+                "<br>%{customdata[0]} of %{customdata[3]} species"
+                "<extra></extra>"
+            ),
+        )
+    )
+    fig.update_layout(
+        title=f"{dimension.title()} coverage",
+        showlegend=False,
+    )
+    fig.update_xaxes(
+        title="% of species represented",
+        tickvals=[25, 50, 75, 100],
+        ticktext=["25%", "50%", "75%", "100%"],
+        range=[12.5, 112.5],
+        gridcolor="#e5ecee",
+    )
+    fig.update_yaxes(
+        title="Calls",
+        ticksuffix="%",
+        range=[0, 108],
+        gridcolor="#e5ecee",
+    )
+    return _base_layout(fig, height=440)
 
 
 def species_matrix_chart(
@@ -197,7 +249,6 @@ def species_matrix_chart(
             ),
         )
     )
-    fig.update_layout(title="Species pair acoustic and semantic correlation")
     fig.update_xaxes(tickangle=55, tickfont=dict(size=8))
     fig.update_yaxes(tickfont=dict(size=8), autorange="reversed")
     return _base_layout(fig, height=900)
@@ -208,6 +259,7 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
         [
             [
                 result["joint_counts"][i][j],
+                result["expected_counts"][i][j],
                 result["p_values"][i][j],
                 result["q_values"][i][j],
             ]
@@ -227,12 +279,13 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
             hovertemplate=(
                 "%{y} × %{x}<br>PMI = %{z:.2f} bits"
                 "<br>%{customdata[0]:,} matching calls"
-                "<br>p = %{customdata[1]:.3g}<br>FDR q = %{customdata[2]:.3g}"
+                "<br>%{customdata[1]:.2f} expected after within-species shuffling"
+                "<br>permutation p = %{customdata[2]:.3g}"
+                "<br>FDR q = %{customdata[3]:.3g}"
                 "<extra></extra>"
             ),
         )
     )
-    fig.update_layout(title="Acoustic and semantic keyword association")
     fig.update_xaxes(tickangle=45)
     fig.update_yaxes(autorange="reversed")
     return _base_layout(fig, height=650)

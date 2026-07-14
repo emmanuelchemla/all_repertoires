@@ -8,7 +8,7 @@ from typing import Any
 import json
 import numpy as np
 from scipy.cluster.hierarchy import leaves_list, linkage
-from scipy.stats import fisher_exact, linregress
+from scipy.stats import linregress
 
 from .datasets import CanonicalDataset
 
@@ -16,6 +16,22 @@ from .datasets import CanonicalDataset
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 RELATIONSHIP_GROUPS = ("within species", "same family", "different families")
 CLASS_ORDER = {"Amphibia": 0, "Aves": 1, "Mammalia": 2}
+COVERAGE_SPECIES_PERCENTAGES = (25, 50, 75, 100)
+TAXONOMIC_GROUP_ORDER = (
+    "Apes and gibbons",
+    "Old World monkeys",
+    "Other primates",
+    "Carnivorans",
+    "Rodents",
+    "Bats",
+    "Ungulates",
+    "Other mammals",
+    "Songbirds",
+    "Parrots",
+    "Other birds",
+    "Frogs",
+    "Other animals",
+)
 
 SEMANTIC_GROUPS = {
     "social cohesion": {"contact", "group_coordination", "affiliation"},
@@ -40,7 +56,7 @@ ACOUSTIC_GROUPS = {
 
 @dataclass(frozen=True)
 class AnalysisConfig:
-    analysis_version: str = "3"
+    analysis_version: str = "5"
     embedding_model: str = EMBEDDING_MODEL
     random_seed: int = 42
     n_permutations: int = 9999
@@ -48,6 +64,8 @@ class AnalysisConfig:
     species_pair_minimum: int = 6
     pmi_minimum: int = 4
     pmi_alpha: float = 0.05
+    coverage_threshold_step: float = 0.01
+    coverage_default_threshold: float = 0.6
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -106,26 +124,7 @@ def compute_overview(dataset: CanonicalDataset) -> dict[str, Any]:
                 ),
             }
         )
-    group_order = {
-        group: index
-        for index, group in enumerate(
-            [
-                "Apes and gibbons",
-                "Old World monkeys",
-                "Other primates",
-                "Carnivorans",
-                "Rodents",
-                "Bats",
-                "Ungulates",
-                "Other mammals",
-                "Songbirds",
-                "Parrots",
-                "Other birds",
-                "Frogs",
-                "Other animals",
-            ]
-        )
-    }
+    group_order = {group: index for index, group in enumerate(TAXONOMIC_GROUP_ORDER)}
     call_count_distribution = Counter(row["n_calls"] for row in species_rows)
     return {
         "n_calls": int(len(calls)),
@@ -352,6 +351,107 @@ def compute_species_pair_correlations(
     }
 
 
+def _coverage_for_similarity(
+    similarity: np.ndarray,
+    source_indices: np.ndarray,
+    target_species_indices: list[np.ndarray],
+    thresholds: list[float],
+) -> dict[str, list[list[float]] | list[list[int]]]:
+    best_by_species = np.column_stack(
+        [
+            similarity[np.ix_(source_indices, indices)].max(axis=1)
+            for indices in target_species_indices
+        ]
+    )
+    for column, indices in enumerate(target_species_indices):
+        best_by_species[np.isin(source_indices, indices), column] = 1.0
+    n_calls = len(source_indices)
+    n_species = len(target_species_indices)
+    count_rows: list[list[int]] = []
+    percent_rows: list[list[float]] = []
+    for threshold in thresholds:
+        represented_species = np.count_nonzero(best_by_species >= threshold, axis=1)
+        counts = []
+        percentages = []
+        for species_percent in COVERAGE_SPECIES_PERCENTAGES:
+            minimum_species = int(np.ceil(species_percent * n_species / 100))
+            matching_calls = int(np.count_nonzero(represented_species >= minimum_species))
+            counts.append(matching_calls)
+            percentages.append(100 * matching_calls / n_calls)
+        count_rows.append(counts)
+        percent_rows.append(percentages)
+    return {"n_calls": count_rows, "percent_calls": percent_rows}
+
+
+def compute_cross_species_coverage(
+    dataset: CanonicalDataset,
+    acoustic_similarity: np.ndarray,
+    semantic_similarity: np.ndarray,
+    *,
+    thresholds: list[float] | np.ndarray | None = None,
+    default_threshold: float = 0.6,
+) -> dict[str, Any]:
+    """Compute stored coverage curves for all calls and broad taxonomic groups."""
+    if thresholds is None:
+        thresholds = np.round(np.arange(0, 1.001, 0.01), 2)
+    threshold_values = sorted({float(value) for value in thresholds})
+    if not threshold_values or threshold_values[0] < 0 or threshold_values[-1] > 1:
+        raise ValueError("coverage thresholds must be between 0 and 1")
+
+    calls = dataset.calls
+    species_values = calls["species"].astype(str).to_numpy()
+    species = sorted(set(species_values))
+    call_indices_by_species = {
+        value: np.flatnonzero(species_values == value) for value in species
+    }
+    group_by_species: dict[str, str] = {}
+    for value in species:
+        row = calls.iloc[call_indices_by_species[value][0]]
+        group_by_species[value] = _taxonomic_group(
+            str(row.get("class", "")),
+            str(row.get("order", "")),
+            str(row.get("family", "")),
+        )
+
+    group_members: list[tuple[str, str, list[str]]] = [
+        ("all", "All AnimalLex", species)
+    ]
+    for group in TAXONOMIC_GROUP_ORDER:
+        members = [value for value in species if group_by_species[value] == group]
+        if len(members) >= 2:
+            group_members.append((group.lower().replace(" ", "_"), group, members))
+
+    groups: dict[str, Any] = {}
+    for key, label, members in group_members:
+        source_indices = np.concatenate([call_indices_by_species[value] for value in members])
+        target_indices = [call_indices_by_species[value] for value in members]
+        groups[key] = {
+            "label": label,
+            "n_species": len(members),
+            "n_calls": len(source_indices),
+            "minimum_species": [
+                int(np.ceil(percent * len(members) / 100))
+                for percent in COVERAGE_SPECIES_PERCENTAGES
+            ],
+            "semantic": _coverage_for_similarity(
+                semantic_similarity, source_indices, target_indices, threshold_values
+            ),
+            "acoustic": _coverage_for_similarity(
+                acoustic_similarity, source_indices, target_indices, threshold_values
+            ),
+        }
+    if float(default_threshold) not in threshold_values:
+        raise ValueError("default_threshold must be included in thresholds")
+    return {
+        "default_group": "all",
+        "default_threshold": float(default_threshold),
+        "thresholds": threshold_values,
+        "species_percentages": list(COVERAGE_SPECIES_PERCENTAGES),
+        "source_species_included": True,
+        "groups": groups,
+    }
+
+
 def compute_pairwise_r(
     calls: list[dict[str, Any]],
     acoustic_similarity: np.ndarray,
@@ -383,33 +483,78 @@ def compute_keyword_pmi(
     *,
     minimum_calls: int = 4,
     alpha: float = 0.05,
+    n_permutations: int = 9999,
+    random_seed: int = 42,
+    permutation_batch_size: int = 128,
 ) -> dict[str, Any]:
+    if n_permutations < 1:
+        raise ValueError("n_permutations must be at least 1")
     acoustic_counts = Counter(k for values in dataset.calls["acoustic_keywords"] for k in values)
     semantic_counts = Counter(k for values in dataset.calls["semantic_keywords"] for k in values)
     acoustic = sorted(key for key, count in acoustic_counts.items() if count >= minimum_calls)
     semantic = sorted(key for key, count in semantic_counts.items() if count >= minimum_calls)
     n = len(dataset.calls)
-    matrix = np.zeros((len(acoustic), len(semantic)), dtype=float)
-    joint = np.zeros_like(matrix, dtype=int)
-    p_values = np.ones_like(matrix, dtype=float)
+    acoustic_presence = np.asarray(
+        [
+            [keyword in values for keyword in acoustic]
+            for values in dataset.calls["acoustic_keywords"]
+        ],
+        dtype=np.int16,
+    )
+    semantic_presence = np.asarray(
+        [
+            [keyword in values for keyword in semantic]
+            for values in dataset.calls["semantic_keywords"]
+        ],
+        dtype=np.int16,
+    )
+    joint = acoustic_presence.T @ semantic_presence
+    matrix = np.zeros(joint.shape, dtype=float)
+
+    species_values = dataset.calls["species"].astype(str).to_numpy()
+    species_groups = [
+        np.flatnonzero(species_values == species)
+        for species in sorted(set(species_values))
+    ]
+    expected = np.zeros(joint.shape, dtype=float)
+    for indices in species_groups:
+        expected += np.outer(
+            acoustic_presence[indices].sum(axis=0),
+            semantic_presence[indices].sum(axis=0),
+        ) / len(indices)
+
+    observed_deviation = np.abs(joint - expected)
+    extreme_counts = np.zeros(joint.shape, dtype=np.int64)
+    rng = np.random.default_rng(random_seed)
+    completed = 0
+    while completed < n_permutations:
+        batch_size = min(permutation_batch_size, n_permutations - completed)
+        permuted_joint = np.zeros((batch_size, *joint.shape), dtype=np.int32)
+        for indices in species_groups:
+            group_acoustic = acoustic_presence[indices]
+            group_semantic = semantic_presence[indices]
+            if len(indices) == 1:
+                contribution = group_acoustic.T @ group_semantic
+                permuted_joint += contribution
+                continue
+            permutations = np.argsort(
+                rng.random((batch_size, len(indices))), axis=1
+            )
+            shuffled_acoustic = group_acoustic[permutations]
+            permuted_joint += (
+                shuffled_acoustic.transpose(0, 2, 1) @ group_semantic
+            )
+        extreme_counts += np.count_nonzero(
+            np.abs(permuted_joint - expected) >= observed_deviation - 1e-12,
+            axis=0,
+        )
+        completed += batch_size
+    p_values = (extreme_counts + 1) / (n_permutations + 1)
+
     matches: dict[str, list[str]] = {}
     for i, ac_keyword in enumerate(acoustic):
         for j, sem_keyword in enumerate(semantic):
-            mask = dataset.calls.apply(
-                lambda row: ac_keyword in row["acoustic_keywords"]
-                and sem_keyword in row["semantic_keywords"],
-                axis=1,
-            )
-            joint[i, j] = int(mask.sum())
-            acoustic_only = acoustic_counts[ac_keyword] - joint[i, j]
-            semantic_only = semantic_counts[sem_keyword] - joint[i, j]
-            neither = n - joint[i, j] - acoustic_only - semantic_only
-            p_values[i, j] = float(
-                fisher_exact(
-                    [[joint[i, j], acoustic_only], [semantic_only, neither]],
-                    alternative="two-sided",
-                ).pvalue
-            )
+            mask = (acoustic_presence[:, i] & semantic_presence[:, j]).astype(bool)
             if joint[i, j]:
                 matrix[i, j] = np.log2(
                     (joint[i, j] / n)
@@ -430,11 +575,19 @@ def compute_keyword_pmi(
         "semantic_keywords": semantic,
         "matrix": matrix.tolist(),
         "joint_counts": joint.tolist(),
+        "expected_counts": expected.tolist(),
         "p_values": p_values.tolist(),
         "q_values": q_values.tolist(),
         "significant": significant.tolist(),
         "alpha": alpha,
-        "significance_test": "two-sided Fisher exact test",
+        "significance_test": "two-sided within-species permutation test",
+        "permutation_unit": "complete acoustic keyword sets",
+        "n_permutations": n_permutations,
+        "random_seed": random_seed,
+        "null_model": (
+            "Acoustic keyword sets are shuffled among calls within each species; "
+            "semantic keyword sets remain fixed."
+        ),
         "multiple_testing_correction": "Benjamini-Hochberg FDR",
         "acoustic_counts": [acoustic_counts[key] for key in acoustic],
         "semantic_counts": [semantic_counts[key] for key in semantic],

@@ -93,6 +93,16 @@ nav a:hover { color: var(--accent); }
 
 section { margin-top: 38px; }
 
+.coverage-controls {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(360px, 1.3fr);
+  gap: 32px;
+  align-items: end;
+  margin-top: 22px;
+}
+.coverage-threshold-field { padding: 0 18px 8px; }
+.coverage-grid { margin-top: 18px; }
+
 .methods {
   max-width: 760px;
   margin: 24px 0;
@@ -191,6 +201,8 @@ section { margin-top: 38px; }
   .site-header { grid-template-columns: 1fr auto; gap: 12px; }
   nav { grid-column: 1 / -1; grid-row: 2; gap: 18px; }
   .chart-grid { grid-template-columns: 1fr; }
+  .coverage-controls { grid-template-columns: 1fr; }
+  .coverage-threshold-field { padding: 0 12px 8px; }
   .explore-page { grid-template-columns: 1fr; }
   .species-sidebar {
     position: static;

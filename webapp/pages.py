@@ -8,6 +8,7 @@ from repertoire_explorer import AnimalLexBundle
 
 from .charts import (
     call_count_distribution_chart,
+    coverage_chart,
     form_meaning_chart,
     keyword_frequency_chart,
     pmi_chart,
@@ -75,27 +76,39 @@ def overview_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
             _research_details(bundle, mode),
             html.Section(
                 [
-                    dcc.Graph(
-                        figure=keyword_frequency_chart(
-                            result["semantic_keywords"], "Semantic functions", limit=18
-                        ),
-                        config=GRAPH_CONFIG,
+                    html.H2("Keyword frequencies"),
+                    html.Div(
+                        [
+                            dcc.Graph(
+                                figure=keyword_frequency_chart(
+                                    result["semantic_keywords"],
+                                    "Semantic functions",
+                                    limit=18,
+                                ),
+                                config=GRAPH_CONFIG,
+                            ),
+                            dcc.Graph(
+                                figure=keyword_frequency_chart(
+                                    result["acoustic_keywords"],
+                                    "Acoustic features",
+                                    limit=18,
+                                ),
+                                config=GRAPH_CONFIG,
+                            ),
+                        ],
+                        className="chart-grid",
                     ),
-                    dcc.Graph(
-                        figure=keyword_frequency_chart(
-                            result["acoustic_keywords"], "Acoustic features", limit=18
-                        ),
-                        config=GRAPH_CONFIG,
-                    ),
-                ],
-                className="chart-grid",
+                ]
             ),
             html.Section(
-                dcc.Graph(
-                    id="species-counts-chart",
-                    figure=species_counts_chart(result["species_counts"]),
-                    config=GRAPH_CONFIG,
-                )
+                [
+                    html.H2("Calls per species"),
+                    dcc.Graph(
+                        id="species-counts-chart",
+                        figure=species_counts_chart(result["species_counts"]),
+                        config=GRAPH_CONFIG,
+                    ),
+                ]
             ),
         ],
         className="page",
@@ -248,11 +261,16 @@ def species_display_labels(bundle: AnimalLexBundle) -> dict[str, str]:
 
 
 def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
+    coverage = bundle.analysis["coverage"]
+    default_group = coverage["default_group"]
+    default_threshold = coverage["default_threshold"]
+    coverage_groups = coverage["groups"]
     return html.Main(
         [
             _research_details(bundle, mode),
             html.Section(
                 [
+                    html.H2("Form to meaning correlation"),
                     dcc.Graph(
                         id="form-meaning-chart",
                         figure=form_meaning_chart(
@@ -264,6 +282,89 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
             ),
             html.Section(
                 [
+                    html.H2("Cross species call coverage"),
+                    html.Div(
+                        [
+                            html.Div(
+                                [
+                                    html.Label(
+                                        "Taxonomic group", htmlFor="coverage-group"
+                                    ),
+                                    dcc.Dropdown(
+                                        id="coverage-group",
+                                        options=[
+                                            {
+                                                "label": (
+                                                    f"{group['label']} "
+                                                    f"({group['n_species']} species)"
+                                                ),
+                                                "value": key,
+                                            }
+                                            for key, group in coverage_groups.items()
+                                        ],
+                                        value=default_group,
+                                        clearable=False,
+                                    ),
+                                ],
+                                className="field",
+                            ),
+                            html.Div(
+                                [
+                                    html.Label(
+                                        "Similarity threshold",
+                                        htmlFor="coverage-threshold",
+                                    ),
+                                    dcc.Slider(
+                                        id="coverage-threshold",
+                                        min=0,
+                                        max=1,
+                                        step=0.01,
+                                        value=default_threshold,
+                                        marks={
+                                            value: f"{value:.1f}"
+                                            for value in [0, 0.2, 0.4, 0.6, 0.8, 1]
+                                        },
+                                        tooltip={
+                                            "placement": "bottom",
+                                            "always_visible": True,
+                                        },
+                                    ),
+                                ],
+                                className="field coverage-threshold-field",
+                            ),
+                        ],
+                        className="coverage-controls",
+                    ),
+                    html.Div(
+                        [
+                            dcc.Graph(
+                                id="semantic-coverage-chart",
+                                figure=coverage_chart(
+                                    coverage_groups[default_group],
+                                    "semantic",
+                                    default_threshold,
+                                    coverage["thresholds"],
+                                ),
+                                config=GRAPH_CONFIG,
+                            ),
+                            dcc.Graph(
+                                id="acoustic-coverage-chart",
+                                figure=coverage_chart(
+                                    coverage_groups[default_group],
+                                    "acoustic",
+                                    default_threshold,
+                                    coverage["thresholds"],
+                                ),
+                                config=GRAPH_CONFIG,
+                            ),
+                        ],
+                        className="chart-grid coverage-grid",
+                    ),
+                ]
+            ),
+            html.Section(
+                [
+                    html.H2("Species pair acoustic and semantic correlation"),
                     dcc.Graph(
                         id="species-matrix-chart",
                         figure=species_matrix_chart(
@@ -276,6 +377,7 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
             ),
             html.Section(
                 [
+                    html.H2("Acoustic and semantic keyword association"),
                     dcc.Graph(
                         id="pmi-chart",
                         figure=pmi_chart(bundle.analysis["pmi"]),

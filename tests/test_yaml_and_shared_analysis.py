@@ -3,9 +3,11 @@ from __future__ import annotations
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 
 from repertoire_explorer import (
     AnalysisConfig,
+    compute_cross_species_coverage,
     compute_form_meaning_alignment,
     compute_keyword_pmi,
     compute_overview,
@@ -13,6 +15,7 @@ from repertoire_explorer import (
     similarity_matrix,
 )
 from repertoire_explorer.datasets import CANONICAL_COLUMNS
+from repertoire_explorer.datasets import CanonicalDataset
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,7 +37,7 @@ def test_overview_and_pmi_use_explicit_keywords() -> None:
     dataset = load_repertoire_yaml_directory(SOURCE)
 
     overview = compute_overview(dataset)
-    pmi = compute_keyword_pmi(dataset, minimum_calls=4)
+    pmi = compute_keyword_pmi(dataset, minimum_calls=4, n_permutations=19)
 
     assert overview["n_calls"] == 1507
     assert overview["semantic_keywords"][0]["keyword"] == "attention"
@@ -53,6 +56,72 @@ def test_overview_and_pmi_use_explicit_keywords() -> None:
         np.asarray(pmi["significant"]), np.asarray(pmi["q_values"]) < 0.05
     )
     assert np.all(np.asarray(pmi["q_values"]) >= np.asarray(pmi["p_values"]) - 1e-12)
+
+
+def test_pmi_permutations_control_for_species() -> None:
+    calls = pd.DataFrame(
+        {
+            "call_id": [f"call-{index}" for index in range(8)],
+            "species": ["Species A"] * 4 + ["Species B"] * 4,
+            "acoustic_keywords": [["loud"]] * 4 + [[] for _ in range(4)],
+            "semantic_keywords": [["alarm"]] * 4 + [[] for _ in range(4)],
+        }
+    )
+    dataset = CanonicalDataset("test", calls, Path("test"))
+
+    result = compute_keyword_pmi(
+        dataset,
+        minimum_calls=1,
+        n_permutations=31,
+        random_seed=7,
+    )
+
+    assert result["joint_counts"] == [[4]]
+    assert result["expected_counts"] == [[4.0]]
+    assert result["p_values"] == [[1.0]]
+    assert result["significant"] == [[False]]
+    assert result["significance_test"] == "two-sided within-species permutation test"
+    assert result["permutation_unit"] == "complete acoustic keyword sets"
+
+
+def test_cross_species_coverage_uses_percentage_thresholds() -> None:
+    calls = pd.DataFrame(
+        {
+            "call_id": [f"call-{index}" for index in range(4)],
+            "species": ["Species A", "Species B", "Species C", "Species D"],
+            "class": ["Mammalia"] * 4,
+            "order": ["Test order"] * 4,
+            "family": ["Test family"] * 4,
+        }
+    )
+    dataset = CanonicalDataset("test", calls, Path("test"))
+    semantic = np.eye(4)
+    semantic[0, 1] = semantic[1, 0] = 0.9
+    acoustic = np.eye(4)
+
+    result = compute_cross_species_coverage(
+        dataset,
+        acoustic,
+        semantic,
+        thresholds=[0.8],
+        default_threshold=0.8,
+    )
+
+    group = result["groups"]["all"]
+    assert group["n_species"] == 4
+    assert result["species_percentages"] == [25, 50, 75, 100]
+    assert group["semantic"]["percent_calls"][0] == [
+        100.0,
+        50.0,
+        0.0,
+        0.0,
+    ]
+    assert group["acoustic"]["percent_calls"][0] == [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+    ]
 
 
 def test_form_meaning_sampling_is_deterministic() -> None:

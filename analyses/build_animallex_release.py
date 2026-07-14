@@ -15,6 +15,7 @@ if str(SRC) not in sys.path:
 
 from repertoire_explorer import (
     AnalysisConfig,
+    compute_cross_species_coverage,
     compute_description_embeddings,
     compute_form_meaning_alignment,
     compute_keyword_pmi,
@@ -88,6 +89,18 @@ def main() -> None:
     semantic_similarity = similarity_matrix(semantic_embeddings)
     analysis = {
         "overview": compute_overview(dataset),
+        "coverage": compute_cross_species_coverage(
+            dataset,
+            acoustic_similarity,
+            semantic_similarity,
+            thresholds=[
+                round(index * config.coverage_threshold_step, 2)
+                for index in range(
+                    int(round(1 / config.coverage_threshold_step)) + 1
+                )
+            ],
+            default_threshold=config.coverage_default_threshold,
+        ),
         "form_meaning": compute_form_meaning_alignment(
             dataset, acoustic_embeddings, semantic_embeddings, config
         ),
@@ -101,6 +114,8 @@ def main() -> None:
             dataset,
             minimum_calls=config.pmi_minimum,
             alpha=config.pmi_alpha,
+            n_permutations=config.n_permutations,
+            random_seed=config.random_seed,
         ),
     }
     manifest = {
