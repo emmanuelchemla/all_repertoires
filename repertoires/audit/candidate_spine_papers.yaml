@@ -1,0 +1,31 @@
+generated_at: '2026-05-15T10:47:54.977070+00:00'
+species:
+  pongo-pygmaeus: []
+  cercopithecus-neglectus:
+  - title: 'Social complexity parallels vocal complexity: a comparison of three non-human
+      primate species'
+    year: 2013
+    doi: https://doi.org/10.3389/fpsyg.2013.00390
+    cited_by_count: 131
+    openalex_id: https://openalex.org/W2129874283
+    source: Frontiers in Psychology
+  globicephala-melas: []
+  saccopteryx-bilineata: []
+  corvus-brachyrhynchos:
+  - title: Species taxa of North American birds; a contribution to comparative systematics
+    year: 1970
+    doi: https://doi.org/10.5962/bhl.title.155019
+    cited_by_count: 121
+    openalex_id: https://openalex.org/W2328246841
+    source: null
+  leptonychotes-weddellii: []
+  forpus-passerinus:
+  - title: Breeding Behavior of the Green-Rumped Parrotlet
+    year: 1992
+    doi: https://doi.org/10.5281/zenodo.15934355
+    cited_by_count: 76
+    openalex_id: https://openalex.org/W2428350755
+    source: Digital Commons - University of South Florida (University of South Florida)
+  hyla-arborea: []
+  phyllostomus-discolor: []
+  rousettus-aegyptiacus: []
