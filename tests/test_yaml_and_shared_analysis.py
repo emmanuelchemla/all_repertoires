@@ -7,6 +7,7 @@ import pandas as pd
 
 from repertoire_explorer import (
     AnalysisConfig,
+    compute_acoustic_semantic_prediction,
     compute_cross_species_coverage,
     compute_form_meaning_alignment,
     compute_keyword_pmi,
@@ -137,3 +138,42 @@ def test_form_meaning_sampling_is_deterministic() -> None:
 
     assert first == second
     np.testing.assert_allclose(similarity_matrix(embeddings), similarity_matrix(embeddings).T)
+
+
+def test_prediction_uses_three_deterministic_holdout_schemes() -> None:
+    rng = np.random.default_rng(11)
+    embeddings = rng.normal(size=(30, 8))
+    semantic = embeddings + rng.normal(scale=0.05, size=embeddings.shape)
+    calls = pd.DataFrame(
+        {
+            "call_id": [f"call-{index}" for index in range(30)],
+            "species": [f"Species {index // 5}" for index in range(30)],
+            "family": [f"Family {index // 10}" for index in range(30)],
+        }
+    )
+    dataset = CanonicalDataset("test", calls, Path("test"))
+    config = AnalysisConfig(
+        prediction_folds=3,
+        prediction_ridge_alpha=1.0,
+        prediction_bootstrap_samples=100,
+    )
+
+    first = compute_acoustic_semantic_prediction(dataset, embeddings, semantic, config)
+    second = compute_acoustic_semantic_prediction(dataset, embeddings, semantic, config)
+
+    assert first == second
+    assert [condition["key"] for condition in first["conditions"]] == [
+        "held_out_calls",
+        "held_out_species",
+        "held_out_families",
+    ]
+    assert all(condition["n_folds"] == 3 for condition in first["conditions"])
+    assert first["models"] == {
+        "random": "Random pairing",
+        "retrieval": "Acoustic nearest neighbor",
+        "ridge": "Linear ridge",
+    }
+    for condition in first["conditions"]:
+        result = first["results"][condition["key"]]["ridge"]["cosine"]
+        assert len(result["fold_values"]) == 3
+        assert result["ci_low"] <= result["ci_high"]

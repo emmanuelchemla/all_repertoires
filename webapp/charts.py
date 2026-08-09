@@ -4,6 +4,7 @@ from typing import Any
 
 import numpy as np
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 
 COLORS = [
@@ -186,8 +187,8 @@ def form_meaning_chart(
         p_text = "p < 0.001" if p_value < 0.001 else f"p = {p_value:.3f}"
         fig.add_trace(
             go.Scattergl(
-                x=[row["acoustic_distance"] for row in sample],
-                y=[row["semantic_distance"] for row in sample],
+                x=[1 - row["acoustic_distance"] for row in sample],
+                y=[1 - row["semantic_distance"] for row in sample],
                 mode="markers",
                 name=(
                     f"{group}, r = {values['r']:.2f}, {p_text}, "
@@ -202,7 +203,7 @@ def form_meaning_chart(
                     for row in sample
                 ],
                 hovertemplate=(
-                    "Acoustic distance %{x:.3f}<br>Semantic distance %{y:.3f}"
+                    "Acoustic similarity %{x:.3f}<br>Semantic similarity %{y:.3f}"
                     "<br>%{customdata[0]}<br>%{customdata[1]}<extra></extra>"
                 ),
             )
@@ -210,7 +211,10 @@ def form_meaning_chart(
         fig.add_trace(
             go.Scatter(
                 x=[0, 1],
-                y=[values["intercept"], values["intercept"] + values["slope"]],
+                y=[
+                    1 - values["intercept"] - values["slope"],
+                    1 - values["intercept"],
+                ],
                 mode="lines",
                 line=dict(color=COLORS[index], width=2),
                 showlegend=False,
@@ -218,9 +222,78 @@ def form_meaning_chart(
             )
         )
     fig.update_layout(legend_title="Relationship")
-    fig.update_xaxes(title="Acoustic distance", range=[0, 1], gridcolor="#e5ecee")
-    fig.update_yaxes(title="Semantic distance", range=[0, 1], gridcolor="#e5ecee")
+    fig.update_xaxes(title="Acoustic similarity", range=[0, 1], gridcolor="#e5ecee")
+    fig.update_yaxes(title="Semantic similarity", range=[0, 1], gridcolor="#e5ecee")
     return _base_layout(fig, height=620)
+
+
+def prediction_chart(result: dict[str, Any]) -> go.Figure:
+    fig = make_subplots(
+        rows=1,
+        cols=2,
+        subplot_titles=("Cosine similarity ↑", "Mean reciprocal rank ↑"),
+        horizontal_spacing=0.12,
+    )
+    conditions = result["conditions"]
+    condition_keys = [condition["key"] for condition in conditions]
+    condition_labels = [condition["label"] for condition in conditions]
+    model_colors = {
+        "random": "#9aa9ad",
+        "retrieval": "#e88d14",
+        "ridge": "#15616d",
+    }
+    for column, metric in enumerate(("cosine", "mrr"), start=1):
+        metric_highs: list[float] = []
+        for model, model_label in result["models"].items():
+            rows = [result["results"][key][model][metric] for key in condition_keys]
+            means = [row["mean"] for row in rows]
+            lows = [row["ci_low"] for row in rows]
+            highs = [row["ci_high"] for row in rows]
+            metric_highs.extend(highs)
+            fig.add_trace(
+                go.Bar(
+                    x=condition_labels,
+                    y=means,
+                    name=model_label,
+                    legendgroup=model,
+                    showlegend=column == 1,
+                    marker_color=model_colors[model],
+                    error_y=dict(
+                        type="data",
+                        symmetric=False,
+                        array=[high - mean for high, mean in zip(highs, means)],
+                        arrayminus=[mean - low for mean, low in zip(means, lows)],
+                        color="#334e55",
+                        thickness=1.2,
+                        width=4,
+                    ),
+                    customdata=np.column_stack(
+                        [lows, highs, [condition["n_folds"] for condition in conditions]]
+                    ),
+                    hovertemplate=(
+                        "%{x}<br>" + model_label + f"<br>{result['metrics'][metric]} = "
+                        "%{y:.3f}<br>95% CI %{customdata[0]:.3f}–%{customdata[1]:.3f}"
+                        "<br>%{customdata[2]:.0f} outer folds<extra></extra>"
+                    ),
+                ),
+                row=1,
+                col=column,
+            )
+        padded_max = max(metric_highs, default=0.0) * 1.12
+        axis_max = min(1.0, max(0.1, np.ceil(padded_max / 0.05) * 0.05))
+        fig.update_yaxes(
+            range=[0, axis_max], gridcolor="#e5ecee", row=1, col=column
+        )
+        fig.update_xaxes(tickangle=0, row=1, col=column)
+    fig.update_layout(
+        barmode="group",
+        bargap=0.2,
+        bargroupgap=0.06,
+        legend=dict(orientation="h", yanchor="top", y=-0.17, xanchor="center", x=0.5),
+    )
+    fig = _base_layout(fig, height=500)
+    fig.update_layout(margin=dict(l=55, r=25, t=70, b=115))
+    return fig
 
 
 def coverage_chart(

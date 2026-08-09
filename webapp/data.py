@@ -4,6 +4,8 @@ from dataclasses import replace
 from pathlib import Path
 import sys
 
+import numpy as np
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
@@ -34,5 +36,22 @@ def bundle_for_confidence(
     else:
         analysis = bundle.analysis["confidence_views"][key]
     accepted = CONFIDENCE_VALUES[key]
-    calls = [call for call in bundle.calls if call.get("confidence") in accepted]
-    return replace(bundle, calls=calls, analysis=analysis)
+    selected_indices = [
+        index
+        for index, call in enumerate(bundle.calls)
+        if call.get("confidence") in accepted
+    ]
+    calls = [bundle.calls[index] for index in selected_indices]
+    return replace(
+        bundle,
+        calls=calls,
+        analysis=analysis,
+        acoustic_embeddings=bundle.acoustic_embeddings[selected_indices],
+        semantic_embeddings=bundle.semantic_embeddings[selected_indices],
+        acoustic_similarity=bundle.acoustic_similarity[
+            np.ix_(selected_indices, selected_indices)
+        ],
+        semantic_similarity=bundle.semantic_similarity[
+            np.ix_(selected_indices, selected_indices)
+        ],
+    )

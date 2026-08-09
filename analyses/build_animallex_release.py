@@ -16,7 +16,9 @@ if str(SRC) not in sys.path:
 
 from repertoire_explorer import (
     AnalysisConfig,
+    compute_acoustic_semantic_prediction,
     compute_cross_species_coverage,
+    compute_cross_species_motifs,
     compute_description_embeddings,
     compute_form_meaning_alignment,
     compute_keyword_pmi,
@@ -61,7 +63,13 @@ def compute_analysis_view(
             thresholds=thresholds,
             default_threshold=config.coverage_default_threshold,
         ),
+        "motifs": compute_cross_species_motifs(
+            dataset, acoustic_similarity, semantic_similarity, config
+        ),
         "form_meaning": compute_form_meaning_alignment(
+            dataset, acoustic_embeddings, semantic_embeddings, config
+        ),
+        "prediction": compute_acoustic_semantic_prediction(
             dataset, acoustic_embeddings, semantic_embeddings, config
         ),
         "species_matrix": compute_species_pair_correlations(

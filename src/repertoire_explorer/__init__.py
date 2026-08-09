@@ -2,7 +2,9 @@
 
 from .animallex_analysis import (
     AnalysisConfig,
+    compute_acoustic_semantic_prediction,
     compute_cross_species_coverage,
+    compute_cross_species_motifs,
     compute_description_embeddings,
     compute_form_meaning_alignment,
     compute_keyword_pmi,
@@ -32,8 +34,10 @@ __all__ = [
     "HUMAN_DATABASE_PATH",
     "SimilaritySpec",
     "compute_similarity_matrix",
+    "compute_acoustic_semantic_prediction",
     "compute_description_embeddings",
     "compute_cross_species_coverage",
+    "compute_cross_species_motifs",
     "compute_form_meaning_alignment",
     "compute_keyword_pmi",
     "compute_overview",

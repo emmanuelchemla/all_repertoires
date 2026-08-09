@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 from dataclasses import asdict, dataclass
+from itertools import combinations
 from pathlib import Path
 from typing import Any
 
@@ -9,6 +10,7 @@ import json
 import numpy as np
 from scipy.cluster.hierarchy import leaves_list, linkage
 from scipy.stats import linregress
+from sklearn.linear_model import Ridge
 
 from .datasets import CanonicalDataset
 
@@ -56,7 +58,7 @@ ACOUSTIC_GROUPS = {
 
 @dataclass(frozen=True)
 class AnalysisConfig:
-    analysis_version: str = "8"
+    analysis_version: str = "11"
     embedding_model: str = EMBEDDING_MODEL
     random_seed: int = 42
     n_permutations: int = 999
@@ -66,6 +68,18 @@ class AnalysisConfig:
     pmi_alpha: float = 0.05
     coverage_threshold_step: float = 0.01
     coverage_default_threshold: float = 0.6
+    prediction_folds: int = 10
+    prediction_ridge_alpha: float = 10.0
+    prediction_bootstrap_samples: int = 2000
+    motif_minimum_species: int = 4
+    motif_minimum_families: int = 1
+    motif_minimum_orders: int = 1
+    motif_acoustic_similarity: float = 0.65
+    motif_semantic_similarity: float = 0.65
+    motif_overlap_jaccard: float = 1.1
+    motif_max_per_signature: int = 10_000
+    motif_max_results: int = 10_000
+    motif_exclude_low_confidence: bool = False
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -211,6 +225,237 @@ def similarity_matrix(embeddings: np.ndarray) -> np.ndarray:
     return normalized @ normalized.T
 
 
+MOTIF_UNINFORMATIVE_SEMANTIC_KEYWORDS = {"attention"}
+
+
+def _maximal_cliques(adjacency: list[set[int]]) -> list[list[int]]:
+    """Enumerate maximal cliques with a deterministic Bron--Kerbosch search."""
+    cliques: list[list[int]] = []
+
+    def visit(current: set[int], candidates: set[int], excluded: set[int]) -> None:
+        if not candidates and not excluded:
+            cliques.append(sorted(current))
+            return
+        pivot_pool = candidates | excluded
+        pivot = (
+            max(pivot_pool, key=lambda value: (len(candidates & adjacency[value]), -value))
+            if pivot_pool
+            else None
+        )
+        remaining = candidates - (adjacency[pivot] if pivot is not None else set())
+        for vertex in sorted(remaining):
+            visit(
+                current | {vertex},
+                candidates & adjacency[vertex],
+                excluded & adjacency[vertex],
+            )
+            candidates.remove(vertex)
+            excluded.add(vertex)
+
+    visit(set(), set(range(len(adjacency))), set())
+    return cliques
+
+
+def compute_cross_species_motifs(
+    dataset: CanonicalDataset,
+    acoustic_similarity: np.ndarray,
+    semantic_similarity: np.ndarray,
+    config: AnalysisConfig,
+) -> dict[str, Any]:
+    """Find curated reciprocal cross-species matches in both embedding spaces.
+
+    An edge joins calls from two species only when each call is the other's
+    within-species top-1 acoustic and semantic match. Similarity floors are
+    applied before maximal cliques are enumerated, so every pair in a reported
+    motif clears both thresholds.
+    """
+    calls = dataset.calls.reset_index(drop=True)
+    n_calls = len(calls)
+    if acoustic_similarity.shape != (n_calls, n_calls):
+        raise ValueError("acoustic_similarity must match the number of calls")
+    if semantic_similarity.shape != (n_calls, n_calls):
+        raise ValueError("semantic_similarity must match the number of calls")
+
+    species_values = calls["species"].astype(str).to_numpy()
+    species = sorted(set(species_values))
+    species_indices = {
+        value: np.flatnonzero(species_values == value) for value in species
+    }
+    adjacency = [set() for _ in range(n_calls)]
+    edge_values: dict[tuple[int, int], tuple[float, float]] = {}
+    for source_offset, source in enumerate(species):
+        source_indices = species_indices[source]
+        for target in species[source_offset + 1 :]:
+            target_indices = species_indices[target]
+            for target_index in target_indices:
+                acoustic_source = int(
+                    source_indices[
+                        np.argmax(acoustic_similarity[target_index, source_indices])
+                    ]
+                )
+                semantic_source = int(
+                    source_indices[
+                        np.argmax(semantic_similarity[target_index, source_indices])
+                    ]
+                )
+                if acoustic_source != semantic_source:
+                    continue
+                acoustic_target = int(
+                    target_indices[
+                        np.argmax(acoustic_similarity[acoustic_source, target_indices])
+                    ]
+                )
+                semantic_target = int(
+                    target_indices[
+                        np.argmax(semantic_similarity[acoustic_source, target_indices])
+                    ]
+                )
+                if acoustic_target != target_index or semantic_target != target_index:
+                    continue
+                acoustic_value = float(
+                    acoustic_similarity[acoustic_source, target_index]
+                )
+                semantic_value = float(
+                    semantic_similarity[acoustic_source, target_index]
+                )
+                if (
+                    acoustic_value < config.motif_acoustic_similarity
+                    or semantic_value < config.motif_semantic_similarity
+                ):
+                    continue
+                left, right = sorted((acoustic_source, int(target_index)))
+                adjacency[left].add(right)
+                adjacency[right].add(left)
+                edge_values[(left, right)] = (acoustic_value, semantic_value)
+
+    eligible: list[dict[str, Any]] = []
+    for clique in _maximal_cliques(adjacency):
+        if len(clique) < config.motif_minimum_species:
+            continue
+        rows = calls.iloc[clique]
+        if rows["family"].astype(str).nunique() < config.motif_minimum_families:
+            continue
+        if rows["order"].astype(str).nunique() < config.motif_minimum_orders:
+            continue
+        if config.motif_exclude_low_confidence and "low" in set(rows["confidence"]):
+            continue
+        shared_semantic = set.intersection(
+            *(set(values) for values in rows["semantic_keywords"])
+        ) - MOTIF_UNINFORMATIVE_SEMANTIC_KEYWORDS
+        shared_acoustic = set.intersection(
+            *(set(values) for values in rows["acoustic_keywords"])
+        )
+        pairs = [tuple(sorted(pair)) for pair in combinations(clique, 2)]
+        acoustic_values = [edge_values[pair][0] for pair in pairs]
+        semantic_values = [edge_values[pair][1] for pair in pairs]
+        joint_values = [
+            (acoustic_value + semantic_value) / 2
+            for acoustic_value, semantic_value in zip(
+                acoustic_values, semantic_values
+            )
+        ]
+        signature = tuple(sorted(shared_semantic))
+        eligible.append(
+            {
+                "indices": set(clique),
+                "signature": signature,
+                "n_species": len(clique),
+                "n_classes": int(rows["class"].astype(str).nunique()),
+                "n_orders": int(rows["order"].astype(str).nunique()),
+                "n_families": int(rows["family"].astype(str).nunique()),
+                "minimum_acoustic_similarity": min(acoustic_values),
+                "minimum_semantic_similarity": min(semantic_values),
+                "mean_joint_similarity": float(np.mean(joint_values)),
+                "shared_semantic_keywords": list(signature),
+                "shared_acoustic_keywords": sorted(shared_acoustic),
+                "members": [
+                    {
+                        "call_id": str(row["call_id"]),
+                        "species": str(row["species"]),
+                        "common_name": str(
+                            dataset.species_metadata.get(str(row["species"]), {}).get(
+                                "common_name", row["species"]
+                            )
+                        ),
+                        "call_name": str(row["call_name"]),
+                        "class": str(row["class"]),
+                        "order": str(row["order"]),
+                        "family": str(row["family"]),
+                        "confidence": str(row["confidence"]),
+                        "acoustic_keywords": list(row["acoustic_keywords"]),
+                        "semantic_keywords": list(row["semantic_keywords"]),
+                        "acoustic_description": str(row["acoustic_description"]),
+                        "semantic_description": str(row["semantic_description"]),
+                    }
+                    for _, row in rows.sort_values(
+                        ["class", "order", "family", "species", "call_name"]
+                    ).iterrows()
+                ],
+            }
+        )
+
+    eligible.sort(
+        key=lambda motif: (
+            -min(
+                motif["minimum_acoustic_similarity"],
+                motif["minimum_semantic_similarity"],
+            ),
+            -motif["mean_joint_similarity"],
+            -motif["n_classes"],
+            -motif["n_orders"],
+            -motif["n_families"],
+            -motif["n_species"],
+            motif["signature"],
+            tuple(member["call_id"] for member in motif["members"]),
+        )
+    )
+    selected: list[dict[str, Any]] = []
+    signature_counts: Counter[tuple[str, ...]] = Counter()
+    for motif in eligible:
+        if signature_counts[motif["signature"]] >= config.motif_max_per_signature:
+            continue
+        if any(
+            len(motif["indices"] & other["indices"])
+            / len(motif["indices"] | other["indices"])
+            >= config.motif_overlap_jaccard
+            for other in selected
+        ):
+            continue
+        signature_counts[motif["signature"]] += 1
+        selected.append(motif)
+        if len(selected) >= config.motif_max_results:
+            break
+
+    motifs = []
+    for index, motif in enumerate(selected, start=1):
+        motif = dict(motif)
+        motif.pop("indices")
+        motif.pop("signature")
+        motif["motif_id"] = f"motif-{index}"
+        motifs.append(motif)
+    return {
+        "criteria": {
+            "minimum_species": config.motif_minimum_species,
+            "minimum_families": config.motif_minimum_families,
+            "minimum_orders": config.motif_minimum_orders,
+            "minimum_acoustic_similarity": config.motif_acoustic_similarity,
+            "minimum_semantic_similarity": config.motif_semantic_similarity,
+            "excluded_semantic_keywords": sorted(
+                MOTIF_UNINFORMATIVE_SEMANTIC_KEYWORDS
+            ),
+            "exclude_low_confidence": config.motif_exclude_low_confidence,
+            "overlap_jaccard": config.motif_overlap_jaccard,
+            "maximum_per_semantic_signature": config.motif_max_per_signature,
+            "maximum_results": config.motif_max_results,
+        },
+        "n_thresholded_edges": len(edge_values),
+        "n_eligible_before_deduplication": len(eligible),
+        "n_motifs": len(motifs),
+        "ranking_metric": "minimum of the acoustic and semantic pairwise minima",
+        "motifs": motifs,
+    }
+
+
 def mantel(
     acoustic_distance: np.ndarray,
     semantic_distance: np.ndarray,
@@ -341,6 +586,187 @@ def compute_form_meaning_alignment(
         "significance_test": "one-sided Mantel test with blocked label permutations",
         "permutation_unit": "semantic call identities shuffled within species",
         "n_permutations": config.n_permutations,
+    }
+
+
+def _normalize_rows(values: np.ndarray) -> np.ndarray:
+    values = np.asarray(values, dtype=float)
+    norms = np.linalg.norm(values, axis=1, keepdims=True)
+    norms[norms == 0] = 1
+    return values / norms
+
+
+def _random_call_folds(n_calls: int, n_folds: int, seed: int) -> list[np.ndarray]:
+    rng = np.random.default_rng(seed)
+    return [fold for fold in np.array_split(rng.permutation(n_calls), n_folds) if len(fold)]
+
+
+def _balanced_group_folds(
+    groups: np.ndarray, n_folds: int, seed: int
+) -> list[np.ndarray]:
+    """Assign complete groups to folds while approximately balancing call counts."""
+    group_values, counts = np.unique(groups.astype(str), return_counts=True)
+    rng = np.random.default_rng(seed)
+    tie_breakers = rng.random(len(group_values))
+    order = np.lexsort((tie_breakers, -counts))
+    fold_groups: list[list[str]] = [[] for _ in range(n_folds)]
+    fold_sizes = np.zeros(n_folds, dtype=int)
+    for index in order:
+        target = int(np.argmin(fold_sizes))
+        fold_groups[target].append(str(group_values[index]))
+        fold_sizes[target] += int(counts[index])
+    return [
+        np.flatnonzero(np.isin(groups.astype(str), values))
+        for values in fold_groups
+        if values
+    ]
+
+
+def _prediction_metrics(predicted: np.ndarray, truth: np.ndarray) -> dict[str, float]:
+    predicted = _normalize_rows(predicted)
+    truth = _normalize_rows(truth)
+    cosine = float(np.mean(np.sum(predicted * truth, axis=1)))
+    scores = predicted @ truth.T
+    true_scores = np.diag(scores)
+    ranks = 1 + np.count_nonzero(scores > true_scores[:, None] + 1e-12, axis=1)
+    return {"cosine": cosine, "mrr": float(np.mean(1 / ranks))}
+
+
+def _bootstrap_interval(
+    values: list[float], *, n_samples: int, seed: int
+) -> tuple[float, float]:
+    array = np.asarray(values, dtype=float)
+    if len(array) < 2:
+        value = float(array[0])
+        return value, value
+    rng = np.random.default_rng(seed)
+    indices = rng.integers(0, len(array), size=(n_samples, len(array)))
+    means = array[indices].mean(axis=1)
+    low, high = np.quantile(means, [0.025, 0.975])
+    return float(low), float(high)
+
+
+def compute_acoustic_semantic_prediction(
+    dataset: CanonicalDataset,
+    acoustic_embeddings: np.ndarray,
+    semantic_embeddings: np.ndarray,
+    config: AnalysisConfig,
+) -> dict[str, Any]:
+    """Evaluate acoustic-text to semantic-text prediction under three holdouts."""
+    acoustic = _normalize_rows(acoustic_embeddings)
+    semantic = _normalize_rows(semantic_embeddings)
+    n_calls = len(dataset.calls)
+    n_folds = min(config.prediction_folds, n_calls)
+    species = dataset.calls["species"].astype(str).to_numpy()
+    families = dataset.calls["family"].astype(str).to_numpy()
+    conditions = [
+        (
+            "held_out_calls",
+            "Held-out calls",
+            _random_call_folds(n_calls, n_folds, config.random_seed),
+            "Calls are randomly assigned to folds; species may occur in train and test.",
+        ),
+        (
+            "held_out_species",
+            "Held-out species",
+            _balanced_group_folds(
+                species, min(config.prediction_folds, len(set(species))), config.random_seed
+            ),
+            "Every test species is absent from its training fold.",
+        ),
+        (
+            "held_out_families",
+            "Held-out families",
+            _balanced_group_folds(
+                families,
+                min(config.prediction_folds, len(set(families))),
+                config.random_seed,
+            ),
+            "Every test family is absent from its training fold.",
+        ),
+    ]
+    model_labels = {
+        "random": "Random pairing",
+        "retrieval": "Acoustic nearest neighbor",
+        "ridge": "Linear ridge",
+    }
+    metric_labels = {"cosine": "Cosine similarity", "mrr": "Mean reciprocal rank"}
+    results: dict[str, dict[str, dict[str, Any]]] = {}
+    condition_metadata = []
+    all_indices = np.arange(n_calls)
+    for condition_offset, (key, label, test_folds, description) in enumerate(conditions):
+        condition_metadata.append(
+            {
+                "key": key,
+                "label": label,
+                "description": description,
+                "n_folds": len(test_folds),
+            }
+        )
+        fold_results = {
+            model: {metric: [] for metric in metric_labels} for model in model_labels
+        }
+        for fold_offset, test_indices in enumerate(test_folds):
+            train_indices = np.setdiff1d(all_indices, test_indices, assume_unique=True)
+            if len(test_indices) < 2 or len(train_indices) < 2:
+                continue
+            acoustic_train = acoustic[train_indices]
+            semantic_train = semantic[train_indices]
+            acoustic_test = acoustic[test_indices]
+            semantic_test = semantic[test_indices]
+            fold_rng = np.random.default_rng(
+                config.random_seed + 1000 * condition_offset + fold_offset
+            )
+            predictions = {
+                "random": semantic_test[fold_rng.permutation(len(test_indices))],
+                "retrieval": semantic_train[
+                    np.argmax(acoustic_test @ acoustic_train.T, axis=1)
+                ],
+            }
+            ridge = Ridge(alpha=config.prediction_ridge_alpha, solver="cholesky")
+            ridge.fit(acoustic_train, semantic_train)
+            predictions["ridge"] = ridge.predict(acoustic_test)
+            for model, predicted in predictions.items():
+                metrics = _prediction_metrics(predicted, semantic_test)
+                for metric, value in metrics.items():
+                    fold_results[model][metric].append(value)
+
+        results[key] = {}
+        for model_offset, model in enumerate(model_labels):
+            results[key][model] = {}
+            for metric_offset, metric in enumerate(metric_labels):
+                values = fold_results[model][metric]
+                low, high = _bootstrap_interval(
+                    values,
+                    n_samples=config.prediction_bootstrap_samples,
+                    seed=(
+                        config.random_seed
+                        + 10_000 * condition_offset
+                        + 100 * model_offset
+                        + metric_offset
+                    ),
+                )
+                results[key][model][metric] = {
+                    "mean": float(np.mean(values)),
+                    "ci_low": low,
+                    "ci_high": high,
+                    "fold_values": values,
+                }
+    return {
+        "conditions": condition_metadata,
+        "models": model_labels,
+        "metrics": metric_labels,
+        "results": results,
+        "n_calls": n_calls,
+        "n_species": int(len(set(species))),
+        "n_families": int(len(set(families))),
+        "n_folds": config.prediction_folds,
+        "ridge_alpha": config.prediction_ridge_alpha,
+        "uncertainty": "95% percentile bootstrap confidence interval across outer folds",
+        "bootstrap_samples": config.prediction_bootstrap_samples,
+        "candidate_pool": "Calls in the test fold for each split",
+        "input": "sentence embedding of the acoustic text description",
+        "target": "sentence embedding of the semantic text description",
     }
 
 

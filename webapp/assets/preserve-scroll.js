@@ -6,7 +6,9 @@
     const scrollY = window.scrollY;
     const headerHeight =
       document.querySelector(".site-header")?.getBoundingClientRect().height || 0;
-    const sections = Array.from(pageContent.querySelectorAll("main > section"));
+    const sections = Array.from(
+      pageContent.querySelectorAll("main section[data-analysis-section]")
+    );
     const focusY = headerHeight + (window.innerHeight - headerHeight) * 0.45;
     let sectionIndex = sections.findIndex((section) => {
       const bounds = section.getBoundingClientRect();
@@ -31,7 +33,9 @@
   }
 
   function restorePosition(pageContent, position) {
-    const sections = Array.from(pageContent.querySelectorAll("main > section"));
+    const sections = Array.from(
+      pageContent.querySelectorAll("main section[data-analysis-section]")
+    );
     const section = sections[position.sectionIndex];
     let targetY = position.scrollY;
 

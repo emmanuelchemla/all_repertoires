@@ -5,13 +5,21 @@ from pathlib import Path
 import pytest
 
 from repertoire_explorer import load_bundle, validate_bundle
-from webapp.charts import coverage_chart, form_meaning_chart, pmi_chart, species_matrix_chart
+from webapp.charts import (
+    coverage_chart,
+    form_meaning_chart,
+    pmi_chart,
+    prediction_chart,
+    species_matrix_chart,
+)
 from webapp.data import bundle_for_confidence
 from webapp.main import create_app
 from webapp.pages import (
+    analysis_page,
     call_display_labels,
     species_display_labels,
     species_options,
+    translations_page,
 )
 
 
@@ -40,6 +48,12 @@ def test_generated_bundle_is_current_and_complete() -> None:
     assert bundle.analysis["form_meaning"]["permutation_unit"] == (
         "semantic call identities shuffled within species"
     )
+    assert len(bundle.analysis["prediction"]["conditions"]) == 3
+    assert len(bundle.analysis["confidence_views"]["medium_plus"]["prediction"]["conditions"]) == 3
+    assert len(bundle.analysis["confidence_views"]["high"]["prediction"]["conditions"]) == 3
+    assert bundle.analysis["motifs"]["n_motifs"] == 73
+    assert bundle.analysis["confidence_views"]["medium_plus"]["motifs"]["n_motifs"] == 64
+    assert bundle.analysis["confidence_views"]["high"]["motifs"]["n_motifs"] == 6
     assert bundle.acoustic_similarity.shape == (1507, 1507)
     assert bundle.semantic_similarity.shape == (1507, 1507)
 
@@ -54,6 +68,7 @@ def test_dash_app_starts_from_generated_bundle() -> None:
     assert client.get("/overview").status_code == 200
     assert client.get("/explore?species=Pan%20paniscus").status_code == 200
     assert client.get("/analysis").status_code == 200
+    assert client.get("/translations").status_code == 200
     assert "page-content" in client.get("/_dash-layout").get_data(as_text=True)
     assert "confidence-select" in client.get("/_dash-layout").get_data(as_text=True)
 
@@ -62,7 +77,7 @@ def test_confidence_changes_preserve_the_current_section() -> None:
     script = (ROOT / "webapp" / "assets" / "preserve-scroll.js").read_text()
 
     assert '#confidence-select' in script
-    assert 'querySelectorAll("main > section")' in script
+    assert 'querySelectorAll("main section[data-analysis-section]")' in script
     assert '"click"' in script
     assert "MutationObserver" in script
     assert "window.scrollTo" in script
@@ -78,6 +93,118 @@ def test_confidence_view_filters_calls_and_analysis_together() -> None:
     assert {call["confidence"] for call in medium.calls} == {"medium", "high"}
     assert len(high.calls) == high.analysis["overview"]["n_calls"] == 561
     assert {call["confidence"] for call in high.calls} == {"high"}
+    assert medium.acoustic_similarity.shape == (1305, 1305)
+    assert high.acoustic_similarity.shape == (561, 561)
+    assert high.semantic_similarity.shape == (561, 561)
+    assert medium.analysis["prediction"]["n_calls"] == 1305
+    assert high.analysis["prediction"]["n_calls"] == 561
+    high_family_ridge = high.analysis["prediction"]["results"]["held_out_families"][
+        "ridge"
+    ]["cosine"]["mean"]
+    all_family_ridge = bundle.analysis["prediction"]["results"][
+        "held_out_families"
+    ]["ridge"]["cosine"]["mean"]
+    assert high_family_ridge != all_family_ridge
+
+
+def test_analysis_page_has_prediction_chart_and_section_navigation() -> None:
+    bundle = load_bundle(BUNDLE)
+    page = analysis_page(bundle, "public")
+    toc, content = page.children
+
+    assert page.className == "analysis-page"
+    assert toc.className == "analysis-toc"
+    assert [link.href for link in toc.children[1].children] == [
+        "#form-meaning",
+        "#prediction",
+        "#cross-species-overlap",
+        "#species-matrix",
+        "#keyword-association",
+    ]
+    sections = [child for child in content.children if getattr(child, "id", None)]
+    assert [section.id for section in sections] == [
+        "form-meaning",
+        "prediction",
+        "cross-species-overlap",
+        "species-matrix",
+        "keyword-association",
+    ]
+
+
+def test_translations_page_has_compact_ranked_motif_carousel() -> None:
+    bundle = load_bundle(BUNDLE)
+    result = bundle.analysis["motifs"]
+    page = translations_page(bundle, "public")
+    controls = next(
+        child for child in page.children if getattr(child, "className", None) == "motif-controls"
+    )
+    stage = next(child for child in page.children if getattr(child, "id", None) == "motif-carousel-stage")
+
+    assert page.className == "page translations-page"
+    assert [control.children[1].id for control in controls.children] == [
+        "motif-acoustic-threshold",
+        "motif-semantic-threshold",
+        "motif-minimum-species",
+    ]
+    assert all(control.children[1].allow_direct_input is False for control in controls.children)
+    assert stage.children.className == "motif-card motif-carousel-card"
+    assert result["n_motifs"] == 73
+    assert result["criteria"] == {
+        "minimum_species": 4,
+        "minimum_families": 1,
+        "minimum_orders": 1,
+        "minimum_acoustic_similarity": 0.65,
+        "minimum_semantic_similarity": 0.65,
+        "excluded_semantic_keywords": ["attention"],
+        "exclude_low_confidence": False,
+        "overlap_jaccard": 1.1,
+        "maximum_per_semantic_signature": 10_000,
+        "maximum_results": 10_000,
+    }
+    assert all(motif["n_species"] >= 4 for motif in result["motifs"])
+    assert all(
+        motif["minimum_acoustic_similarity"] >= 0.65
+        and motif["minimum_semantic_similarity"] >= 0.65
+        for motif in result["motifs"]
+    )
+    bottlenecks = [
+        min(motif["minimum_acoustic_similarity"], motif["minimum_semantic_similarity"])
+        for motif in result["motifs"]
+    ]
+    assert bottlenecks == sorted(bottlenecks, reverse=True)
+    assert all(
+        "acoustic_keywords" in member and "semantic_keywords" in member
+        for motif in result["motifs"]
+        for member in motif["members"]
+    )
+
+
+def test_prediction_chart_shows_models_splits_and_uncertainty() -> None:
+    bundle = load_bundle(BUNDLE)
+    result = bundle.analysis["prediction"]
+    figure = prediction_chart(result)
+
+    assert len(figure.data) == 6
+    assert {trace.name for trace in figure.data} == set(result["models"].values())
+    assert all(trace.error_y.array is not None for trace in figure.data)
+    labels = [condition["label"] for condition in result["conditions"]]
+    assert all(list(trace.x) == labels for trace in figure.data)
+    assert [annotation.text for annotation in figure.layout.annotations] == [
+        "Cosine similarity ↑",
+        "Mean reciprocal rank ↑",
+    ]
+    assert 0 < figure.layout.yaxis.range[1] < 1
+    assert 0 < figure.layout.yaxis2.range[1] < 1
+    assert figure.layout.yaxis.range[1] > max(
+        result["results"][condition["key"]][model]["cosine"]["ci_high"]
+        for condition in result["conditions"]
+        for model in result["models"]
+    )
+    assert figure.layout.yaxis2.range[1] > max(
+        result["results"][condition["key"]][model]["mrr"]["ci_high"]
+        for condition in result["conditions"]
+        for model in result["models"]
+    )
 
 
 def test_explore_species_search_uses_common_and_scientific_names() -> None:
@@ -102,6 +229,16 @@ def test_form_meaning_tooltips_use_readable_call_labels() -> None:
     assert marker_trace.name.endswith(f"n = {first_group['n_pairs']:,}")
     assert all("|||" not in label for pair in marker_trace.customdata for label in pair)
     assert all("(" in label and label.endswith(")") for pair in marker_trace.customdata for label in pair)
+    assert figure.layout.xaxis.title.text == "Acoustic similarity"
+    assert figure.layout.yaxis.title.text == "Semantic similarity"
+    assert "Acoustic similarity" in marker_trace.hovertemplate
+    assert "Semantic similarity" in marker_trace.hovertemplate
+    assert marker_trace.x[0] == pytest.approx(
+        1 - first_group["sample"][0]["acoustic_distance"]
+    )
+    assert marker_trace.y[0] == pytest.approx(
+        1 - first_group["sample"][0]["semantic_distance"]
+    )
 
 
 def test_pmi_chart_exposes_significance_values() -> None:
