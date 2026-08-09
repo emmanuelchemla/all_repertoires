@@ -50,6 +50,18 @@ an existing bundle with the same analysis settings by adding `--validate-only`
 uv run python analyses/build_animallex_release.py --full
 ```
 
+Regenerate the paper's static figures and LaTeX result macros from that same
+bundle with:
+
+```bash
+uv run python paper_code/bundle_render.py
+```
+
+The paper renderer deliberately consumes the bundle's unfiltered root analysis
+(`all calls`), matching the web app when its confidence control is set to
+`All calls`. Do not edit `paper/generated_results.tex` or the files under
+`paper/figures/generated/` by hand.
+
 Run the generic analysis entry point:
 
 ```bash

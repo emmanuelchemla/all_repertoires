@@ -133,7 +133,13 @@ def call_count_distribution_chart(rows: list[dict[str, Any]]) -> go.Figure:
     )
     fig.update_layout(title="Distribution of repertoire sizes", showlegend=False, bargap=0.04)
     fig.update_xaxes(title="Calls per species", rangemode="tozero", gridcolor="#e5ecee")
-    fig.update_yaxes(title="Species", rangemode="tozero", dtick=1, gridcolor="#e5ecee")
+    fig.update_yaxes(
+        title="Species",
+        rangemode="tozero",
+        nticks=7,
+        tickformat=",d",
+        gridcolor="#e5ecee",
+    )
     return _base_layout(fig, height=250)
 
 
@@ -221,10 +227,25 @@ def form_meaning_chart(
                 hoverinfo="skip",
             )
         )
-    fig.update_layout(legend_title="Relationship")
+    fig.update_layout(
+        legend=dict(
+            orientation="v",
+            x=0.018,
+            y=0.982,
+            xanchor="left",
+            yanchor="top",
+            bgcolor="rgba(255, 255, 252, 0.78)",
+            bordercolor="rgba(91, 112, 119, 0.48)",
+            borderwidth=0.7,
+            font=dict(size=10, color="#203940"),
+            itemsizing="constant",
+        )
+    )
     fig.update_xaxes(title="Acoustic similarity", range=[0, 1], gridcolor="#e5ecee")
     fig.update_yaxes(title="Semantic similarity", range=[0, 1], gridcolor="#e5ecee")
-    return _base_layout(fig, height=620)
+    fig = _base_layout(fig, height=620)
+    fig.update_layout(margin=dict(l=65, r=30, t=35, b=65))
+    return fig
 
 
 def prediction_chart(result: dict[str, Any]) -> go.Figure:
@@ -460,6 +481,8 @@ def species_matrix_chart(
 
 
 def pmi_chart(result: dict[str, Any]) -> go.Figure:
+    heatmap_x0 = 0.22
+    heatmap_width = 1 - heatmap_x0
     acoustic_keywords = result["acoustic_keywords"]
     semantic_keywords = result["semantic_keywords"]
     acoustic_group_by_keyword = {
@@ -527,10 +550,12 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
                 end += 1
             color = KEYWORD_GROUP_COLORS[group]
             if axis == "x":
+                x0 = heatmap_x0 + heatmap_width * start / len(keywords)
+                x1 = heatmap_x0 + heatmap_width * end / len(keywords)
                 fig.add_shape(
                     type="rect",
-                    x0=start / len(keywords),
-                    x1=end / len(keywords),
+                    x0=x0,
+                    x1=x1,
                     y0=1.012,
                     y1=1.028,
                     xref="paper",
@@ -539,7 +564,7 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
                     line_width=0,
                 )
                 fig.add_annotation(
-                    x=(start + end) / (2 * len(keywords)),
+                    x=(x0 + x1) / 2,
                     y=1.045,
                     xref="paper",
                     yref="paper",
@@ -555,8 +580,8 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
                 y1 = 1 - start / len(keywords)
                 fig.add_shape(
                     type="rect",
-                    x0=-0.225,
-                    x1=-0.212,
+                    x0=0.035,
+                    x1=0.045,
                     y0=y0,
                     y1=y1,
                     xref="paper",
@@ -565,7 +590,7 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
                     line_width=0,
                 )
                 fig.add_annotation(
-                    x=-0.242,
+                    x=0.025,
                     y=(y0 + y1) / 2,
                     xref="paper",
                     yref="paper",
@@ -576,8 +601,10 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
                     yanchor="middle",
                 )
             start = end
-    fig.update_xaxes(tickangle=45, title="Semantic keywords")
-    fig.update_yaxes(autorange="reversed")
+    fig.update_xaxes(
+        domain=[heatmap_x0, 1], tickangle=45, title="Semantic keywords"
+    )
+    fig.update_yaxes(autorange="reversed", tickfont=dict(size=10))
     fig = _base_layout(fig, height=760)
-    fig.update_layout(margin=dict(l=320, r=90, t=170, b=145))
+    fig.update_layout(margin=dict(l=60, r=85, t=170, b=145))
     return fig

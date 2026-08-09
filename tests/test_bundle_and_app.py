@@ -4,8 +4,10 @@ from pathlib import Path
 
 import pytest
 
+from paper_code.bundle_render import render_results_tex
 from repertoire_explorer import load_bundle, validate_bundle
 from webapp.charts import (
+    call_count_distribution_chart,
     coverage_chart,
     form_meaning_chart,
     pmi_chart,
@@ -26,6 +28,19 @@ from webapp.pages import (
 ROOT = Path(__file__).resolve().parents[1]
 BUNDLE = ROOT / "artifacts" / "animallex" / "latest"
 SOURCE = ROOT / "repertoires" / "llm_knowledge+search" / "species"
+
+
+def test_call_count_histogram_limits_y_axis_tick_density() -> None:
+    figure = call_count_distribution_chart(
+        [
+            {"n_calls": n_calls, "n_species": n_species}
+            for n_calls, n_species in [(1, 11), (2, 21), (3, 27)]
+        ]
+    )
+
+    assert figure.layout.yaxis.nticks == 7
+    assert figure.layout.yaxis.dtick is None
+    assert figure.layout.yaxis.tickformat == ",d"
 
 
 def test_generated_bundle_is_current_and_complete() -> None:
@@ -59,6 +74,26 @@ def test_generated_bundle_is_current_and_complete() -> None:
 
     with pytest.raises(ValueError, match="settings changed"):
         validate_bundle(BUNDLE, SOURCE, expected_config={"analysis_version": "different"})
+
+
+def test_paper_assets_use_the_unfiltered_webapp_bundle(tmp_path: Path) -> None:
+    bundle = load_bundle(BUNDLE)
+    output = tmp_path / "generated_results.tex"
+
+    render_results_tex(bundle, output)
+
+    generated = output.read_text()
+    manuscript = (ROOT / "paper" / "main.tex").read_text().split(
+        r"\end{document}", maxsplit=1
+    )[0]
+    assert r"\newcommand{\ncalls}{1{,}507\xspace}" in generated
+    assert r"\newcommand{\nspecies}{128\xspace}" in generated
+    assert r"\newcommand{\nmotifs}{73\xspace}" in generated
+    assert r"\input{generated_results.tex}" in manuscript
+    assert "figures/generated/form_meaning.pdf" in manuscript
+    assert "figures/generated/prediction.pdf" in manuscript
+    assert "TODO: Select curated examples from web app" in manuscript
+    assert "UMAP" not in manuscript
 
 
 def test_dash_app_starts_from_generated_bundle() -> None:
@@ -231,6 +266,14 @@ def test_form_meaning_tooltips_use_readable_call_labels() -> None:
     assert all("(" in label and label.endswith(")") for pair in marker_trace.customdata for label in pair)
     assert figure.layout.xaxis.title.text == "Acoustic similarity"
     assert figure.layout.yaxis.title.text == "Semantic similarity"
+    assert 0 < figure.layout.legend.x < 0.05
+    assert 0.95 < figure.layout.legend.y < 1
+    assert figure.layout.legend.xanchor == "left"
+    assert figure.layout.legend.yanchor == "top"
+    assert figure.layout.legend.bgcolor == "rgba(255, 255, 252, 0.78)"
+    assert 0 < figure.layout.legend.borderwidth < 1
+    assert figure.layout.legend.title.text is None
+    assert figure.layout.margin.t < 50
     assert "Acoustic similarity" in marker_trace.hovertemplate
     assert "Semantic similarity" in marker_trace.hovertemplate
     assert marker_trace.x[0] == pytest.approx(
@@ -253,6 +296,8 @@ def test_pmi_chart_exposes_significance_values() -> None:
     assert "PMI =" in trace.hovertemplate
     assert "expected after global shuffling" in trace.hovertemplate
     assert trace.colorbar.title.text == "PMI (bits)"
+    assert figure.layout.margin.l <= 100
+    assert figure.layout.margin.r <= 100
 
 
 def test_pmi_chart_groups_keywords_without_changing_cells() -> None:
@@ -272,8 +317,9 @@ def test_pmi_chart_groups_keywords_without_changing_cells() -> None:
         "Frequency",
     }
     assert len(figure.layout.shapes) == 15
-    assert figure.layout.margin.l == 320
-    assert min(shape.x0 for shape in figure.layout.shapes) < -0.2
+    assert figure.layout.margin.l == 60
+    assert min(shape.x0 for shape in figure.layout.shapes) > 0
+    assert figure.layout.xaxis.domain[0] == pytest.approx(0.22)
 
     acoustic_index = result["acoustic_keywords"].index("frequency_modulated")
     semantic_index = result["semantic_keywords"].index("affiliation")
