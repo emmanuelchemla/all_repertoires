@@ -6,6 +6,7 @@ import pytest
 
 from repertoire_explorer import load_bundle, validate_bundle
 from webapp.charts import coverage_chart, form_meaning_chart, pmi_chart, species_matrix_chart
+from webapp.data import bundle_for_confidence
 from webapp.main import create_app
 from webapp.pages import (
     call_display_labels,
@@ -29,6 +30,13 @@ def test_generated_bundle_is_current_and_complete() -> None:
     assert bundle.analysis["coverage"]["default_group"] == "all"
     assert bundle.manifest["config"]["n_permutations"] == 999
     assert bundle.manifest["build_mode"] == "iteration"
+    assert bundle.manifest["confidence_counts"] == {
+        "high": 561,
+        "medium": 744,
+        "low": 202,
+    }
+    assert bundle.analysis["confidence_views"]["medium_plus"]["overview"]["n_calls"] == 1305
+    assert bundle.analysis["confidence_views"]["high"]["overview"]["n_calls"] == 561
     assert bundle.analysis["form_meaning"]["permutation_unit"] == (
         "semantic call identities shuffled within species"
     )
@@ -47,6 +55,29 @@ def test_dash_app_starts_from_generated_bundle() -> None:
     assert client.get("/explore?species=Pan%20paniscus").status_code == 200
     assert client.get("/analysis").status_code == 200
     assert "page-content" in client.get("/_dash-layout").get_data(as_text=True)
+    assert "confidence-select" in client.get("/_dash-layout").get_data(as_text=True)
+
+
+def test_confidence_changes_preserve_the_current_section() -> None:
+    script = (ROOT / "webapp" / "assets" / "preserve-scroll.js").read_text()
+
+    assert '#confidence-select' in script
+    assert 'querySelectorAll("main > section")' in script
+    assert '"click"' in script
+    assert "MutationObserver" in script
+    assert "window.scrollTo" in script
+
+
+def test_confidence_view_filters_calls_and_analysis_together() -> None:
+    bundle = load_bundle(BUNDLE)
+
+    medium = bundle_for_confidence(bundle, "medium_plus")
+    high = bundle_for_confidence(bundle, "high")
+
+    assert len(medium.calls) == medium.analysis["overview"]["n_calls"] == 1305
+    assert {call["confidence"] for call in medium.calls} == {"medium", "high"}
+    assert len(high.calls) == high.analysis["overview"]["n_calls"] == 561
+    assert {call["confidence"] for call in high.calls} == {"high"}
 
 
 def test_explore_species_search_uses_common_and_scientific_names() -> None:
@@ -65,8 +96,10 @@ def test_form_meaning_tooltips_use_readable_call_labels() -> None:
     labels = call_display_labels(bundle)
     figure = form_meaning_chart(bundle.analysis["form_meaning"], labels)
     marker_trace = next(trace for trace in figure.data if trace.mode == "markers")
+    first_group = next(iter(bundle.analysis["form_meaning"]["groups"].values()))
 
     assert marker_trace.customdata
+    assert marker_trace.name.endswith(f"n = {first_group['n_pairs']:,}")
     assert all("|||" not in label for pair in marker_trace.customdata for label in pair)
     assert all("(" in label and label.endswith(")") for pair in marker_trace.customdata for label in pair)
 
@@ -80,7 +113,34 @@ def test_pmi_chart_exposes_significance_values() -> None:
     assert trace.text is None
     assert "permutation p" in trace.hovertemplate
     assert "FDR q" in trace.hovertemplate
-    assert "within-species log" in trace.hovertemplate
+    assert "PMI =" in trace.hovertemplate
+    assert "expected after global shuffling" in trace.hovertemplate
+    assert trace.colorbar.title.text == "PMI (bits)"
+
+
+def test_pmi_chart_groups_keywords_without_changing_cells() -> None:
+    bundle = load_bundle(BUNDLE)
+    result = bundle.analysis["pmi"]
+    figure = pmi_chart(result)
+    trace = figure.data[0]
+
+    assert list(trace.x[:3]) == ["affiliation", "contact", "group coordination"]
+    assert list(trace.y[:3]) == [
+        "frequency modulated",
+        "high frequency",
+        "low frequency",
+    ]
+    assert {annotation.text for annotation in figure.layout.annotations} >= {
+        "Social Cohesion",
+        "Frequency",
+    }
+    assert len(figure.layout.shapes) == 15
+    assert figure.layout.margin.l == 320
+    assert min(shape.x0 for shape in figure.layout.shapes) < -0.2
+
+    acoustic_index = result["acoustic_keywords"].index("frequency_modulated")
+    semantic_index = result["semantic_keywords"].index("affiliation")
+    assert trace.z[0][0] == result["matrix"][acoustic_index][semantic_index]
 
 
 def test_species_matrix_uses_common_names_and_matching_color_direction() -> None:

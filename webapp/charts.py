@@ -28,6 +28,46 @@ CLASS_COLORS = {
     "Mammalia": "#6a4c93",
 }
 
+KEYWORD_GROUP_COLORS = {
+    "frequency": "#287f8b",
+    "spectral": "#725a9a",
+    "temporal": "#d47b29",
+    "amplitude": "#b65358",
+    "variation": "#607d8b",
+    "social cohesion": "#267f75",
+    "agonistic": "#b94f55",
+    "danger": "#dc7735",
+    "distress and care": "#9a6280",
+    "reproduction": "#c0658a",
+    "resources": "#9a7626",
+    "territorial spacing": "#628247",
+    "identity and attention": "#477a9f",
+    "metacommunicative": "#76629b",
+    "combinatorial": "#66747c",
+}
+
+# Keep these display groupings local to the chart so the web app can start before
+# the analysis package is added to its import path.
+ACOUSTIC_GROUPS = {
+    "frequency": {"high_frequency", "low_frequency", "frequency_modulated"},
+    "spectral": {"tonal", "broadband", "noisy", "harmonic"},
+    "temporal": {"short", "long", "abrupt", "repetitive", "pulsed", "multi_component"},
+    "amplitude": {"loud", "quiet"},
+    "variation": {"graded"},
+}
+SEMANTIC_GROUPS = {
+    "social cohesion": {"contact", "group_coordination", "affiliation"},
+    "agonistic": {"threat", "aggression", "submission"},
+    "danger": {"alarm", "predator"},
+    "distress and care": {"distress", "begging", "caregiving"},
+    "reproduction": {"courtship", "mating"},
+    "resources": {"food", "recruitment"},
+    "territorial spacing": {"territorial", "spacing"},
+    "identity and attention": {"identity", "attention"},
+    "metacommunicative": {"play", "display"},
+    "combinatorial": {"combinatorial"},
+}
+
 
 def _base_layout(fig: go.Figure, *, height: int = 440) -> go.Figure:
     fig.update_layout(
@@ -149,7 +189,10 @@ def form_meaning_chart(
                 x=[row["acoustic_distance"] for row in sample],
                 y=[row["semantic_distance"] for row in sample],
                 mode="markers",
-                name=f"{group}, r = {values['r']:.2f}, {p_text}",
+                name=(
+                    f"{group}, r = {values['r']:.2f}, {p_text}, "
+                    f"n = {values['n_pairs']:,}"
+                ),
                 marker=dict(color=COLORS[index], size=6, opacity=0.34, symbol=symbols[index]),
                 customdata=[
                     [
@@ -344,6 +387,30 @@ def species_matrix_chart(
 
 
 def pmi_chart(result: dict[str, Any]) -> go.Figure:
+    acoustic_keywords = result["acoustic_keywords"]
+    semantic_keywords = result["semantic_keywords"]
+    acoustic_group_by_keyword = {
+        keyword: group for group, keywords in ACOUSTIC_GROUPS.items() for keyword in keywords
+    }
+    semantic_group_by_keyword = {
+        keyword: group for group, keywords in SEMANTIC_GROUPS.items() for keyword in keywords
+    }
+    acoustic_order = sorted(
+        range(len(acoustic_keywords)),
+        key=lambda index: (
+            list(ACOUSTIC_GROUPS).index(acoustic_group_by_keyword[acoustic_keywords[index]]),
+            acoustic_keywords[index],
+        ),
+    )
+    semantic_order = sorted(
+        range(len(semantic_keywords)),
+        key=lambda index: (
+            list(SEMANTIC_GROUPS).index(semantic_group_by_keyword[semantic_keywords[index]]),
+            semantic_keywords[index],
+        ),
+    )
+    ordered_acoustic = [acoustic_keywords[index] for index in acoustic_order]
+    ordered_semantic = [semantic_keywords[index] for index in semantic_order]
     customdata = [
         [
             [
@@ -352,29 +419,92 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
                 result["p_values"][i][j],
                 result["q_values"][i][j],
             ]
-            for j in range(len(result["semantic_keywords"]))
+            for j in semantic_order
         ]
-        for i in range(len(result["acoustic_keywords"]))
+        for i in acoustic_order
     ]
     fig = go.Figure(
         go.Heatmap(
-            z=result["matrix"],
-            x=[value.replace("_", " ") for value in result["semantic_keywords"]],
-            y=[value.replace("_", " ") for value in result["acoustic_keywords"]],
+            z=np.asarray(result["matrix"])[np.ix_(acoustic_order, semantic_order)],
+            x=[value.replace("_", " ") for value in ordered_semantic],
+            y=[value.replace("_", " ") for value in ordered_acoustic],
             customdata=customdata,
             colorscale="RdBu_r",
             zmid=0,
-            colorbar=dict(title="Within-species log₂ O/E"),
+            colorbar=dict(title="PMI (bits)"),
             hovertemplate=(
-                "%{y} × %{x}<br>within-species log₂(O/E) = %{z:.2f}"
+                "%{y} × %{x}<br>PMI = %{z:.2f} bits"
                 "<br>%{customdata[0]:,} matching calls"
-                "<br>%{customdata[1]:.2f} expected after within-species shuffling"
+                "<br>%{customdata[1]:.2f} expected after global shuffling"
                 "<br>permutation p = %{customdata[2]:.3g}"
                 "<br>FDR q = %{customdata[3]:.3g}"
                 "<extra></extra>"
             ),
         )
     )
-    fig.update_xaxes(tickangle=45)
+    for axis, keywords, group_by_keyword in (
+        ("x", ordered_semantic, semantic_group_by_keyword),
+        ("y", ordered_acoustic, acoustic_group_by_keyword),
+    ):
+        start = 0
+        while start < len(keywords):
+            group = group_by_keyword[keywords[start]]
+            end = start + 1
+            while end < len(keywords) and group_by_keyword[keywords[end]] == group:
+                end += 1
+            color = KEYWORD_GROUP_COLORS[group]
+            if axis == "x":
+                fig.add_shape(
+                    type="rect",
+                    x0=start / len(keywords),
+                    x1=end / len(keywords),
+                    y0=1.012,
+                    y1=1.028,
+                    xref="paper",
+                    yref="paper",
+                    fillcolor=color,
+                    line_width=0,
+                )
+                fig.add_annotation(
+                    x=(start + end) / (2 * len(keywords)),
+                    y=1.045,
+                    xref="paper",
+                    yref="paper",
+                    text=group.title(),
+                    textangle=-90,
+                    showarrow=False,
+                    font=dict(color=color, size=10),
+                    xanchor="center",
+                    yanchor="bottom",
+                )
+            else:
+                y0 = 1 - end / len(keywords)
+                y1 = 1 - start / len(keywords)
+                fig.add_shape(
+                    type="rect",
+                    x0=-0.225,
+                    x1=-0.212,
+                    y0=y0,
+                    y1=y1,
+                    xref="paper",
+                    yref="paper",
+                    fillcolor=color,
+                    line_width=0,
+                )
+                fig.add_annotation(
+                    x=-0.242,
+                    y=(y0 + y1) / 2,
+                    xref="paper",
+                    yref="paper",
+                    text=group.title(),
+                    showarrow=False,
+                    font=dict(color=color, size=10),
+                    xanchor="right",
+                    yanchor="middle",
+                )
+            start = end
+    fig.update_xaxes(tickangle=45, title="Semantic keywords")
     fig.update_yaxes(autorange="reversed")
-    return _base_layout(fig, height=650)
+    fig = _base_layout(fig, height=760)
+    fig.update_layout(margin=dict(l=320, r=90, t=170, b=145))
+    return fig

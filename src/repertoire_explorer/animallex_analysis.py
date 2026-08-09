@@ -56,7 +56,7 @@ ACOUSTIC_GROUPS = {
 
 @dataclass(frozen=True)
 class AnalysisConfig:
-    analysis_version: str = "6"
+    analysis_version: str = "8"
     embedding_model: str = EMBEDDING_MODEL
     random_seed: int = 42
     n_permutations: int = 999
@@ -563,19 +563,9 @@ def compute_keyword_pmi(
         dtype=np.int16,
     )
     joint = acoustic_presence.T @ semantic_presence
-    global_pmi = np.zeros(joint.shape, dtype=float)
-
-    species_values = dataset.calls["species"].astype(str).to_numpy()
-    species_groups = [
-        np.flatnonzero(species_values == species)
-        for species in sorted(set(species_values))
-    ]
-    expected = np.zeros(joint.shape, dtype=float)
-    for indices in species_groups:
-        expected += np.outer(
-            acoustic_presence[indices].sum(axis=0),
-            semantic_presence[indices].sum(axis=0),
-        ) / len(indices)
+    expected = np.outer(
+        acoustic_presence.sum(axis=0), semantic_presence.sum(axis=0)
+    ) / n
 
     observed_deviation = np.abs(joint - expected)
     extreme_counts = np.zeros(joint.shape, dtype=np.int64)
@@ -583,21 +573,9 @@ def compute_keyword_pmi(
     completed = 0
     while completed < n_permutations:
         batch_size = min(permutation_batch_size, n_permutations - completed)
-        permuted_joint = np.zeros((batch_size, *joint.shape), dtype=np.int32)
-        for indices in species_groups:
-            group_acoustic = acoustic_presence[indices]
-            group_semantic = semantic_presence[indices]
-            if len(indices) == 1:
-                contribution = group_acoustic.T @ group_semantic
-                permuted_joint += contribution
-                continue
-            permutations = np.argsort(
-                rng.random((batch_size, len(indices))), axis=1
-            )
-            shuffled_acoustic = group_acoustic[permutations]
-            permuted_joint += (
-                shuffled_acoustic.transpose(0, 2, 1) @ group_semantic
-            )
+        permutations = np.argsort(rng.random((batch_size, n)), axis=1)
+        shuffled_acoustic = acoustic_presence[permutations]
+        permuted_joint = shuffled_acoustic.transpose(0, 2, 1) @ semantic_presence
         extreme_counts += np.count_nonzero(
             np.abs(permuted_joint - expected) >= observed_deviation - 1e-12,
             axis=0,
@@ -605,22 +583,17 @@ def compute_keyword_pmi(
         completed += batch_size
     p_values = (extreme_counts + 1) / (n_permutations + 1)
 
-    # The effect size must use the same species-conditioned expectation as the
-    # permutation test. Keep global PMI separately for diagnostics/backward
-    # comparison, but display log2(observed / within-species expected).
+    # Standard PMI in bits, written as log2(observed / globally expected count).
+    # This expectation matches the global permutation null used above.
     matrix = np.full(joint.shape, np.nan, dtype=float)
     positive = (joint > 0) & (expected > 0)
     matrix[positive] = np.log2(joint[positive] / expected[positive])
 
     matches: dict[str, list[str]] = {}
-    for i, ac_keyword in enumerate(acoustic):
-        for j, sem_keyword in enumerate(semantic):
+    for i in range(len(acoustic)):
+        for j in range(len(semantic)):
             mask = (acoustic_presence[:, i] & semantic_presence[:, j]).astype(bool)
             if joint[i, j]:
-                global_pmi[i, j] = np.log2(
-                    (joint[i, j] / n)
-                    / ((acoustic_counts[ac_keyword] / n) * (semantic_counts[sem_keyword] / n))
-                )
                 matches[f"{i}:{j}"] = dataset.calls.loc[mask, "call_id"].astype(str).tolist()
     flat_p = p_values.ravel()
     order = np.argsort(flat_p)
@@ -635,20 +608,20 @@ def compute_keyword_pmi(
         "acoustic_keywords": acoustic,
         "semantic_keywords": semantic,
         "matrix": matrix.tolist(),
-        "global_pmi_matrix": global_pmi.tolist(),
+        "global_pmi_matrix": matrix.tolist(),
         "joint_counts": joint.tolist(),
         "expected_counts": expected.tolist(),
         "p_values": p_values.tolist(),
         "q_values": q_values.tolist(),
         "significant": significant.tolist(),
         "alpha": alpha,
-        "significance_test": "two-sided within-species permutation test",
-        "effect_size": "log2 observed / within-species expected co-occurrences",
-        "permutation_unit": "complete acoustic keyword sets",
+        "significance_test": "two-sided global permutation test",
+        "effect_size": "pointwise mutual information (bits)",
+        "permutation_unit": "complete acoustic keyword sets shuffled across all calls",
         "n_permutations": n_permutations,
         "random_seed": random_seed,
         "null_model": (
-            "Acoustic keyword sets are shuffled among calls within each species; "
+            "Acoustic keyword sets are shuffled among all calls; "
             "semantic keyword sets remain fixed."
         ),
         "multiple_testing_correction": "Benjamini-Hochberg FDR",

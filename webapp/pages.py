@@ -213,6 +213,7 @@ def repertoire_table(calls: list[dict[str, Any]]) -> dash_table.DataTable:
             "acoustic_keywords": ", ".join(call["acoustic_keywords"]),
             "semantic": call["semantic_description"],
             "semantic_keywords": ", ".join(call["semantic_keywords"]),
+            "confidence": str(call.get("confidence", "")).title(),
         }
         for call in calls
     ]
@@ -224,6 +225,7 @@ def repertoire_table(calls: list[dict[str, Any]]) -> dash_table.DataTable:
             {"name": "Acoustic keywords", "id": "acoustic_keywords"},
             {"name": "Semantic description", "id": "semantic"},
             {"name": "Semantic keywords", "id": "semantic_keywords"},
+            {"name": "Confidence", "id": "confidence"},
         ],
         page_size=25,
         sort_action="native",
@@ -237,9 +239,45 @@ def repertoire_table(calls: list[dict[str, Any]]) -> dash_table.DataTable:
             "padding": "12px",
             "fontFamily": "Inter, system-ui, sans-serif",
         },
+        style_cell_conditional=[
+            {
+                "if": {"column_id": "call_name"},
+                "minWidth": "108px",
+                "width": "108px",
+                "maxWidth": "160px",
+            },
+            {
+                "if": {"column_id": "confidence"},
+                "minWidth": "104px",
+                "width": "104px",
+                "maxWidth": "104px",
+                "textAlign": "center",
+                "paddingLeft": "8px",
+                "paddingRight": "8px",
+                "fontSize": "13px",
+            },
+        ],
         style_header={"fontWeight": "600", "backgroundColor": "#eaf2f2"},
         style_data_conditional=[
-            {"if": {"row_index": "odd"}, "backgroundColor": "#f8fbfb"}
+            {"if": {"row_index": "odd"}, "backgroundColor": "#f8fbfb"},
+            {
+                "if": {"filter_query": '{confidence} = "Low"', "column_id": "confidence"},
+                "backgroundColor": "#fdebea",
+                "color": "#8a3834",
+                "fontWeight": "600",
+            },
+            {
+                "if": {"filter_query": '{confidence} = "Medium"', "column_id": "confidence"},
+                "backgroundColor": "#fff4d6",
+                "color": "#765812",
+                "fontWeight": "600",
+            },
+            {
+                "if": {"filter_query": '{confidence} = "High"', "column_id": "confidence"},
+                "backgroundColor": "#e8f4ec",
+                "color": "#2f6b43",
+                "fontWeight": "600",
+            },
         ],
     )
 
@@ -374,13 +412,7 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
                         ),
                         config=GRAPH_CONFIG,
                     ),
-                    html.P(
-                        "Colored axis bands and diagonal outlines identify taxonomic "
-                        "classes; species are clustered within each class.",
-                        className="lede",
-                    ),
                     html.Div(
-                        "Select a matrix cell for details.",
                         id="species-matrix-detail",
                         className="selection-detail",
                     ),
@@ -388,13 +420,13 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
             ),
             html.Section(
                 [
-                    html.H2("Within-species acoustic and semantic keyword association"),
+                    html.H2("Acoustic and semantic keyword association"),
                     dcc.Graph(
                         id="pmi-chart",
                         figure=pmi_chart(bundle.analysis["pmi"]),
                         config=GRAPH_CONFIG,
                     ),
-                    html.Div("Select a heatmap cell for details.", id="pmi-detail", className="selection-detail"),
+                    html.Div(id="pmi-detail", className="selection-detail"),
                 ]
             ),
         ],

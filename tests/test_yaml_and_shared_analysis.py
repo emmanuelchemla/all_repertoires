@@ -29,6 +29,7 @@ def test_yaml_loader_uses_existing_canonical_schema() -> None:
     assert len(dataset.calls) == 1507
     assert dataset.calls["species"].nunique() == 128
     assert dataset.calls["call_id"].is_unique
+    assert set(dataset.calls["confidence"]) == {"low", "medium", "high"}
     assert dataset.calls["species"].str.contains(" ").all()
     assert dataset.species_metadata["Pan paniscus"]["common_name"] == "Bonobo"
 
@@ -58,7 +59,7 @@ def test_overview_and_pmi_use_explicit_keywords() -> None:
     assert np.all(np.asarray(pmi["q_values"]) >= np.asarray(pmi["p_values"]) - 1e-12)
 
 
-def test_pmi_permutations_control_for_species() -> None:
+def test_pmi_uses_global_marginals_and_global_permutations() -> None:
     calls = pd.DataFrame(
         {
             "call_id": [f"call-{index}" for index in range(8)],
@@ -77,13 +78,15 @@ def test_pmi_permutations_control_for_species() -> None:
     )
 
     assert result["joint_counts"] == [[4]]
-    assert result["expected_counts"] == [[4.0]]
-    assert result["p_values"] == [[1.0]]
-    assert result["matrix"] == [[0.0]]
+    assert result["expected_counts"] == [[2.0]]
+    assert result["matrix"] == [[1.0]]
     assert result["global_pmi_matrix"] == [[1.0]]
-    assert result["significant"] == [[False]]
-    assert result["significance_test"] == "two-sided within-species permutation test"
-    assert result["permutation_unit"] == "complete acoustic keyword sets"
+    assert result["p_values"] == [[0.125]]
+    assert result["significance_test"] == "two-sided global permutation test"
+    assert result["permutation_unit"] == (
+        "complete acoustic keyword sets shuffled across all calls"
+    )
+    assert "among all calls" in result["null_model"]
 
 
 def test_cross_species_coverage_uses_percentage_thresholds() -> None:

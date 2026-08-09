@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 import json
+import numpy as np
 from pathlib import Path
 import subprocess
 import sys
@@ -33,6 +34,50 @@ DEFAULT_SOURCE = ROOT / "repertoires" / "llm_knowledge+search" / "species"
 DEFAULT_OUTPUT = ROOT / "artifacts" / "animallex" / "latest"
 DEFAULT_CACHE = ROOT / "cache" / "animallex_embedding_cache.json"
 FULL_PERMUTATIONS = 9999
+CONFIDENCE_FILTERS = {
+    "medium_plus": {"medium", "high"},
+    "high": {"high"},
+}
+
+
+def compute_analysis_view(
+    dataset,
+    acoustic_embeddings,
+    semantic_embeddings,
+    acoustic_similarity,
+    semantic_similarity,
+    config: AnalysisConfig,
+):
+    thresholds = [
+        round(index * config.coverage_threshold_step, 2)
+        for index in range(int(round(1 / config.coverage_threshold_step)) + 1)
+    ]
+    return {
+        "overview": compute_overview(dataset),
+        "coverage": compute_cross_species_coverage(
+            dataset,
+            acoustic_similarity,
+            semantic_similarity,
+            thresholds=thresholds,
+            default_threshold=config.coverage_default_threshold,
+        ),
+        "form_meaning": compute_form_meaning_alignment(
+            dataset, acoustic_embeddings, semantic_embeddings, config
+        ),
+        "species_matrix": compute_species_pair_correlations(
+            dataset,
+            acoustic_similarity,
+            semantic_similarity,
+            minimum_pairs=config.species_pair_minimum,
+        ),
+        "pmi": compute_keyword_pmi(
+            dataset,
+            minimum_calls=config.pmi_minimum,
+            alpha=config.pmi_alpha,
+            n_permutations=config.n_permutations,
+            random_seed=config.random_seed,
+        ),
+    }
 
 
 def parse_args() -> argparse.Namespace:
@@ -107,37 +152,33 @@ def main() -> None:
     )
     acoustic_similarity = similarity_matrix(acoustic_embeddings)
     semantic_similarity = similarity_matrix(semantic_embeddings)
-    analysis = {
-        "overview": compute_overview(dataset),
-        "coverage": compute_cross_species_coverage(
-            dataset,
-            acoustic_similarity,
-            semantic_similarity,
-            thresholds=[
-                round(index * config.coverage_threshold_step, 2)
-                for index in range(
-                    int(round(1 / config.coverage_threshold_step)) + 1
-                )
-            ],
-            default_threshold=config.coverage_default_threshold,
-        ),
-        "form_meaning": compute_form_meaning_alignment(
-            dataset, acoustic_embeddings, semantic_embeddings, config
-        ),
-        "species_matrix": compute_species_pair_correlations(
-            dataset,
-            acoustic_similarity,
-            semantic_similarity,
-            minimum_pairs=config.species_pair_minimum,
-        ),
-        "pmi": compute_keyword_pmi(
-            dataset,
-            minimum_calls=config.pmi_minimum,
-            alpha=config.pmi_alpha,
-            n_permutations=config.n_permutations,
-            random_seed=config.random_seed,
-        ),
-    }
+    analysis = compute_analysis_view(
+        dataset,
+        acoustic_embeddings,
+        semantic_embeddings,
+        acoustic_similarity,
+        semantic_similarity,
+        config,
+    )
+    confidence_views = {}
+    for key, accepted_values in CONFIDENCE_FILTERS.items():
+        selected = dataset.calls["confidence"].isin(accepted_values).to_numpy()
+        selected_indices = selected.nonzero()[0]
+        filtered_dataset = type(dataset)(
+            dataset.name,
+            dataset.calls.loc[selected].reset_index(drop=True),
+            dataset.source_path,
+            dataset.species_metadata,
+        )
+        confidence_views[key] = compute_analysis_view(
+            filtered_dataset,
+            acoustic_embeddings[selected],
+            semantic_embeddings[selected],
+            acoustic_similarity[np.ix_(selected_indices, selected_indices)],
+            semantic_similarity[np.ix_(selected_indices, selected_indices)],
+            config,
+        )
+    analysis["confidence_views"] = confidence_views
     manifest = {
         "dataset": dataset.name,
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -146,6 +187,10 @@ def main() -> None:
         "source_commit": git_commit(),
         "n_calls": int(len(dataset.calls)),
         "n_species": int(dataset.calls["species"].nunique()),
+        "confidence_counts": {
+            value: int((dataset.calls["confidence"] == value).sum())
+            for value in ("high", "medium", "low")
+        },
         "excluded_calls": int(excluded),
         "build_mode": "full" if args.full else "iteration",
         "config": config.to_dict(),

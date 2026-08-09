@@ -6,7 +6,7 @@ from urllib.parse import parse_qs, urlencode
 from dash import Dash, Input, Output, State, dcc, html, no_update
 
 from .charts import coverage_chart
-from .data import BUNDLE_PATH, load_animallex_bundle
+from .data import BUNDLE_PATH, bundle_for_confidence, load_animallex_bundle
 from .pages import (
     analysis_page,
     explore_page,
@@ -41,17 +41,41 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
                             dcc.Link("Analysis", href="/analysis"),
                         ]
                     ),
-                    dcc.RadioItems(
-                        id="mode-select",
-                        options=[
-                            {"label": "Public", "value": "public"},
-                            {"label": "Research", "value": "research"},
+                    html.Div(
+                        [
+                            html.Div(
+                                [
+                                    html.Span("Confidence", className="control-label"),
+                                    dcc.RadioItems(
+                                        id="confidence-select",
+                                        options=[
+                                            {"label": "All", "value": "all"},
+                                            {"label": "Medium+", "value": "medium_plus"},
+                                            {"label": "High", "value": "high"},
+                                        ],
+                                        value="all",
+                                        inline=True,
+                                        persistence=True,
+                                        persistence_type="local",
+                                        className="confidence-select",
+                                    ),
+                                ],
+                                className="confidence-control",
+                            ),
+                            dcc.RadioItems(
+                                id="mode-select",
+                                options=[
+                                    {"label": "Public", "value": "public"},
+                                    {"label": "Research", "value": "research"},
+                                ],
+                                value="public",
+                                inline=True,
+                                persistence=True,
+                                persistence_type="local",
+                                className="mode-select",
+                            ),
                         ],
-                        value="public",
-                        inline=True,
-                        persistence=True,
-                        persistence_type="local",
-                        className="mode-select",
+                        className="header-controls",
                     ),
                 ],
                 className="site-header",
@@ -65,18 +89,25 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         Output("page-content", "children"),
         Input("url", "pathname"),
         Input("mode-select", "value"),
+        Input("confidence-select", "value"),
         State("url", "search"),
     )
-    def render_page(pathname: str | None, mode: str, search: str | None):
+    def render_page(
+        pathname: str | None,
+        mode: str,
+        confidence_filter: str,
+        search: str | None,
+    ):
         if bundle is None:
             return missing_bundle_page()
+        view = bundle_for_confidence(bundle, confidence_filter)
         path = pathname or "/overview"
         if path == "/explore":
             selected = (_query(search).get("species") or [None])[0]
-            return explore_page(bundle, selected)
+            return explore_page(view, selected)
         if path == "/analysis":
-            return analysis_page(bundle, mode or "public")
-        return overview_page(bundle, mode or "public")
+            return analysis_page(view, mode or "public")
+        return overview_page(view, mode or "public")
 
     @app.callback(
         Output("explore-table", "children"),
@@ -84,12 +115,19 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         Output("url", "search"),
         Input("species-select", "value"),
         Input("call-filter", "value"),
+        Input("confidence-select", "value"),
         State("url", "search"),
     )
-    def update_explore(species: str, filter_value: str | None, current_search: str | None):
+    def update_explore(
+        species: str,
+        filter_value: str | None,
+        confidence_filter: str,
+        current_search: str | None,
+    ):
         if bundle is None or not species:
             return no_update, no_update, no_update
-        calls = [call for call in bundle.calls if call["species"] == species]
+        view = bundle_for_confidence(bundle, confidence_filter)
+        calls = [call for call in view.calls if call["species"] == species]
         query = (filter_value or "").strip().lower()
         if query:
             calls = [
@@ -100,9 +138,12 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
                 or any(query in keyword.lower() for keyword in call["semantic_keywords"])
             ]
         overview_row = next(
-            row
-            for row in bundle.analysis["overview"]["species_counts"]
-            if row["species"] == species
+            (
+                row
+                for row in view.analysis["overview"]["species_counts"]
+                if row["species"] == species
+            ),
+            {"common_name": species},
         )
         common_name = overview_row.get("common_name") or species
         summary = f"{common_name} ({species}). {len(calls):,} calls shown."
@@ -115,13 +156,19 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         Output("species-select", "options"),
         Output("species-search-count", "children"),
         Input("species-search", "value"),
+        Input("confidence-select", "value"),
         State("species-select", "value"),
     )
-    def filter_species_list(search: str | None, selected_species: str | None):
+    def filter_species_list(
+        search: str | None,
+        confidence_filter: str,
+        selected_species: str | None,
+    ):
         if bundle is None:
             return no_update, no_update
-        options = species_options(bundle, search, selected_species)
-        total = len(bundle.analysis["overview"]["species_counts"])
+        view = bundle_for_confidence(bundle, confidence_filter)
+        options = species_options(view, search, selected_species)
+        total = len(view.analysis["overview"]["species_counts"])
         return options, f"{len(options):,} of {total:,} species"
 
     @app.callback(
@@ -129,12 +176,18 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         Output("acoustic-coverage-chart", "figure"),
         Input("coverage-group", "value"),
         Input("coverage-threshold", "value"),
+        Input("confidence-select", "value"),
     )
-    def update_coverage(group_key: str, threshold: float):
+    def update_coverage(
+        group_key: str, threshold: float, confidence_filter: str
+    ):
         if bundle is None or not group_key or threshold is None:
             return no_update, no_update
-        group = bundle.analysis["coverage"]["groups"][group_key]
-        thresholds = bundle.analysis["coverage"]["thresholds"]
+        view = bundle_for_confidence(bundle, confidence_filter)
+        group = view.analysis["coverage"]["groups"].get(group_key)
+        if group is None:
+            group = view.analysis["coverage"]["groups"]["all"]
+        thresholds = view.analysis["coverage"]["thresholds"]
         selected_threshold = round(float(threshold), 2)
         return (
             coverage_chart(group, "semantic", selected_threshold, thresholds),
@@ -164,10 +217,9 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         point = click_data["points"][0]
         joint_count, expected_count, p_value, q_value = point["customdata"]
         return (
-            f"{point['y']} and {point['x']}: within-species log2(O/E) = "
-            f"{point['z']:.2f}. "
+            f"{point['y']} and {point['x']}: PMI = {point['z']:.2f} bits, "
             f"from {int(joint_count):,} matching calls. "
-            f"The within-species shuffle expected {expected_count:.2f} calls. "
+            f"The global shuffle expected {expected_count:.2f} calls. "
             f"Permutation p = {p_value:.3g}, FDR q = {q_value:.3g}."
         )
 

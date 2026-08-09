@@ -19,6 +19,7 @@ CANONICAL_COLUMNS = [
     "semantic_keywords",
     "acoustic_keywords",
     "ontology_keywords",
+    "confidence",
     "kingdom",
     "phylum",
     "class",
@@ -97,6 +98,7 @@ def _finalize_calls(df: pd.DataFrame) -> pd.DataFrame:
     df["call_name"] = df["call_name"].fillna("").astype(str)
     df["semantic_description"] = df["semantic_description"].fillna("").astype(str)
     df["acoustic_description"] = df["acoustic_description"].fillna("").astype(str)
+    df["confidence"] = df["confidence"].fillna("").astype(str).str.lower()
     if "call_id" not in df or (df["call_id"].fillna("").astype(str) == "").any():
         df["call_id"] = [
             f"{row.species}|||{row.call_name}|||{i}"
@@ -196,6 +198,7 @@ def load_repertoire_yaml_directory(
                     "semantic_keywords": call.get("semantic_keywords", []),
                     "acoustic_keywords": call.get("acoustic_keywords", []),
                     "ontology_keywords": call.get("semantic_keywords", []),
+                    "confidence": call.get("confidence", ""),
                     "source": "; ".join(str(ref) for ref in references),
                     **tax,
                 }

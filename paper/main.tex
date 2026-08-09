@@ -227,7 +227,7 @@ For each subset of calls (all pairs; within-species pairs; within-family pairs; 
 
 \paragraph{PMI analysis}
 
-Acoustic keywords were extracted from free-text acoustic descriptions by matching a fixed lexicon of 20 spectro-temporal terms (e.g., \textit{tonal}, \textit{broadband}, \textit{high-frequency}). Semantic keywords were taken directly from the ontology keyword field. For each acoustic--semantic keyword pair $(a, s)$, PMI was estimated as $\log_2 \hat{p}(a,s) - \log_2 \hat{p}(a) - \log_2 \hat{p}(s)$, where probabilities were estimated from call frequencies. Pairs with fewer than three co-occurrences were excluded.
+Acoustic keywords were extracted from free-text acoustic descriptions by matching a fixed lexicon of 20 spectro-temporal terms (e.g., \textit{tonal}, \textit{broadband}, \textit{high-frequency}). Semantic keywords were taken directly from the ontology keyword field. Keywords occurring in fewer than four calls were excluded. For each acoustic--semantic keyword pair $(a, s)$, PMI was estimated as $\log_2 \hat{p}(a,s) - \log_2 \hat{p}(a) - \log_2 \hat{p}(s)$, where probabilities were estimated from call frequencies across the full database. Significance was assessed with a two-sided permutation test that shuffled complete acoustic-keyword sets among all calls while holding semantic-keyword sets fixed. We controlled the false-discovery rate across all tested cells using the Benjamini--Hochberg procedure.
 
 \paragraph{Acoustic-to-semantic prediction}
 
