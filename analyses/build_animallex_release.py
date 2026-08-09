@@ -32,6 +32,7 @@ from repertoire_explorer import (
 DEFAULT_SOURCE = ROOT / "repertoires" / "llm_knowledge+search" / "species"
 DEFAULT_OUTPUT = ROOT / "artifacts" / "animallex" / "latest"
 DEFAULT_CACHE = ROOT / "cache" / "animallex_embedding_cache.json"
+FULL_PERMUTATIONS = 9999
 
 
 def parse_args() -> argparse.Namespace:
@@ -39,7 +40,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--cache", type=Path, default=DEFAULT_CACHE)
-    parser.add_argument("--permutations", type=int, default=9999)
+    permutation_group = parser.add_mutually_exclusive_group()
+    permutation_group.add_argument(
+        "--permutations",
+        type=int,
+        help="Override the iteration-mode permutation count (default: 999).",
+    )
+    permutation_group.add_argument(
+        "--full",
+        action="store_true",
+        help="Build publication results with 9,999 permutations.",
+    )
     parser.add_argument("--validate-only", action="store_true")
     return parser.parse_args()
 
@@ -57,7 +68,16 @@ def git_commit() -> str:
 
 def main() -> None:
     args = parse_args()
-    config = AnalysisConfig(n_permutations=args.permutations)
+    n_permutations = (
+        FULL_PERMUTATIONS
+        if args.full
+        else (
+            args.permutations
+            if args.permutations is not None
+            else AnalysisConfig().n_permutations
+        )
+    )
+    config = AnalysisConfig(n_permutations=n_permutations)
     if args.validate_only:
         validate_bundle(args.output, args.source, expected_config=config.to_dict())
         print(f"Bundle is current: {args.output}")
@@ -127,6 +147,7 @@ def main() -> None:
         "n_calls": int(len(dataset.calls)),
         "n_species": int(dataset.calls["species"].nunique()),
         "excluded_calls": int(excluded),
+        "build_mode": "full" if args.full else "iteration",
         "config": config.to_dict(),
     }
     write_bundle(

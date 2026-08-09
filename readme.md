@@ -41,8 +41,14 @@ uv run python -m webapp.main
 ```
 
 The build command creates the shared AnimalLex analysis bundle used by both the
-Dash app and the paper figure renderers. Validate an existing bundle with the
-same analysis settings by adding `--validate-only`.
+Dash app and the paper figure renderers. It uses 999 permutations for fast
+iteration. Use `--full` for publication results with 9,999 permutations. Validate
+an existing bundle with the same analysis settings by adding `--validate-only`
+(and `--full` when validating a full bundle).
+
+```bash
+uv run python analyses/build_animallex_release.py --full
+```
 
 Run the generic analysis entry point:
 

@@ -27,6 +27,11 @@ def test_generated_bundle_is_current_and_complete() -> None:
     assert bundle.manifest["n_calls"] == 1507
     assert bundle.analysis["overview"]["n_calls"] == 1507
     assert bundle.analysis["coverage"]["default_group"] == "all"
+    assert bundle.manifest["config"]["n_permutations"] == 999
+    assert bundle.manifest["build_mode"] == "iteration"
+    assert bundle.analysis["form_meaning"]["permutation_unit"] == (
+        "semantic call identities shuffled within species"
+    )
     assert bundle.acoustic_similarity.shape == (1507, 1507)
     assert bundle.semantic_similarity.shape == (1507, 1507)
 
@@ -75,6 +80,7 @@ def test_pmi_chart_exposes_significance_values() -> None:
     assert trace.text is None
     assert "permutation p" in trace.hovertemplate
     assert "FDR q" in trace.hovertemplate
+    assert "within-species log" in trace.hovertemplate
 
 
 def test_species_matrix_uses_common_names_and_matching_color_direction() -> None:
@@ -88,6 +94,18 @@ def test_species_matrix_uses_common_names_and_matching_color_direction() -> None
     assert "Pan paniscus" not in trace.x
     assert trace.colorscale[0][1] == "rgb(5,48,97)"
     assert trace.colorscale[-1][1] == "rgb(103,0,31)"
+    assert len(figure.layout.shapes) > 0
+
+    classes = bundle.analysis["species_matrix"]["classes"]
+    assert len(figure.layout.shapes) == 9
+    assert {annotation.text for annotation in figure.layout.annotations} == {
+        "Amphibia",
+        "Aves",
+        "Mammalia",
+    }
+    for class_name in set(classes):
+        positions = [index for index, value in enumerate(classes) if value == class_name]
+        assert positions == list(range(min(positions), max(positions) + 1))
 
 
 def test_coverage_chart_uses_species_percent_on_x_axis() -> None:
@@ -101,9 +119,10 @@ def test_coverage_chart_uses_species_percent_on_x_axis() -> None:
     trace = figure.data[0]
 
     assert list(trace.x) == [25, 50, 75, 100]
-    assert figure.layout.xaxis.title.text == "% of species represented"
+    assert figure.layout.xaxis.title.text == "% of eligible target species represented"
     assert list(figure.layout.xaxis.ticktext) == ["25%", "50%", "75%", "100%"]
     assert figure.layout.yaxis.ticksuffix == "%"
+    assert group["n_target_species"] == group["n_species"] - 1
 
 
 def test_dash_app_has_a_clear_missing_bundle_state(tmp_path: Path) -> None:

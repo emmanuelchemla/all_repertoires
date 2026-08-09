@@ -1,10 +1,11 @@
 {
+  "build_mode": "iteration",
   "config": {
-    "analysis_version": "5",
+    "analysis_version": "6",
     "coverage_default_threshold": 0.6,
     "coverage_threshold_step": 0.01,
     "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
-    "n_permutations": 9999,
+    "n_permutations": 999,
     "pmi_alpha": 0.05,
     "pmi_minimum": 4,
     "random_seed": 42,
@@ -13,10 +14,10 @@
   },
   "dataset": "llm_knowledge+search",
   "excluded_calls": 0,
-  "generated_at": "2026-07-14T13:04:30.894076+00:00",
+  "generated_at": "2026-08-09T11:14:14.028238+00:00",
   "n_calls": 1507,
   "n_species": 128,
   "source": "repertoires/llm_knowledge+search/species",
-  "source_commit": "970373f004512de47726c45733f1247a0ead977b",
+  "source_commit": "84571e85678113b90cf1eb8ba02413b9965b1256",
   "source_hash": "5e25fc8c9d29733652288c4a792270a4682d5f9fb579be5519ea9accbd9c570c"
 }

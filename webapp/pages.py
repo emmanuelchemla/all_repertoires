@@ -29,6 +29,8 @@ def _research_details(bundle: AnimalLexBundle, mode: str) -> Any:
             html.Summary("Methods and release details"),
             html.Dl(
                 [
+                    html.Dt("Build mode"),
+                    html.Dd(bundle.manifest.get("build_mode", "unknown")),
                     html.Dt("Embedding model"),
                     html.Dd(config["embedding_model"]),
                     html.Dt("Permutation count"),
@@ -282,7 +284,7 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
             ),
             html.Section(
                 [
-                    html.H2("Cross species call coverage"),
+                    html.H2("Cross species semantic and acoustic overlap"),
                     html.Div(
                         [
                             html.Div(
@@ -311,7 +313,7 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
                             html.Div(
                                 [
                                     html.Label(
-                                        "Similarity threshold",
+                                        "Embedding similarity threshold",
                                         htmlFor="coverage-threshold",
                                     ),
                                     dcc.Slider(
@@ -372,12 +374,21 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
                         ),
                         config=GRAPH_CONFIG,
                     ),
-                    html.Div("Select a matrix cell for details.", id="species-matrix-detail", className="selection-detail"),
+                    html.P(
+                        "Colored axis bands and diagonal outlines identify taxonomic "
+                        "classes; species are clustered within each class.",
+                        className="lede",
+                    ),
+                    html.Div(
+                        "Select a matrix cell for details.",
+                        id="species-matrix-detail",
+                        className="selection-detail",
+                    ),
                 ]
             ),
             html.Section(
                 [
-                    html.H2("Acoustic and semantic keyword association"),
+                    html.H2("Within-species acoustic and semantic keyword association"),
                     dcc.Graph(
                         id="pmi-chart",
                         figure=pmi_chart(bundle.analysis["pmi"]),

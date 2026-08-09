@@ -164,7 +164,8 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         point = click_data["points"][0]
         joint_count, expected_count, p_value, q_value = point["customdata"]
         return (
-            f"{point['y']} and {point['x']}: PMI = {point['z']:.2f} bits "
+            f"{point['y']} and {point['x']}: within-species log2(O/E) = "
+            f"{point['z']:.2f}. "
             f"from {int(joint_count):,} matching calls. "
             f"The within-species shuffle expected {expected_count:.2f} calls. "
             f"Permutation p = {p_value:.3g}, FDR q = {q_value:.3g}."

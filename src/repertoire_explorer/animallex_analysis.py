@@ -56,10 +56,10 @@ ACOUSTIC_GROUPS = {
 
 @dataclass(frozen=True)
 class AnalysisConfig:
-    analysis_version: str = "5"
+    analysis_version: str = "6"
     embedding_model: str = EMBEDDING_MODEL
     random_seed: int = 42
-    n_permutations: int = 9999
+    n_permutations: int = 999
     scatter_sample_per_group: int = 1000
     species_pair_minimum: int = 6
     pmi_minimum: int = 4
@@ -212,19 +212,56 @@ def similarity_matrix(embeddings: np.ndarray) -> np.ndarray:
 
 
 def mantel(
-    acoustic_values: np.ndarray,
-    semantic_values: np.ndarray,
+    acoustic_distance: np.ndarray,
+    semantic_distance: np.ndarray,
     *,
+    pair_indices: tuple[np.ndarray, np.ndarray] | None = None,
+    permutation_blocks: list[np.ndarray] | None = None,
     n_perm: int = 9999,
     seed: int = 42,
 ) -> tuple[float, float]:
-    """Preserve the permutation behavior used by the current paper code."""
+    """Mantel test using simultaneous row/column label permutations.
+
+    ``permutation_blocks`` constrains label shuffling to exchangeable groups. For
+    AnimalLex those groups are species, which preserves species composition and
+    repertoire sizes while breaking call-level acoustic/semantic correspondence.
+    """
+    acoustic_distance = np.asarray(acoustic_distance, dtype=float)
+    semantic_distance = np.asarray(semantic_distance, dtype=float)
+    if (
+        acoustic_distance.ndim != 2
+        or acoustic_distance.shape[0] != acoustic_distance.shape[1]
+    ):
+        raise ValueError("acoustic_distance must be a square matrix")
+    if semantic_distance.shape != acoustic_distance.shape:
+        raise ValueError(
+            "semantic_distance must have the same shape as acoustic_distance"
+        )
+    n = acoustic_distance.shape[0]
+    if pair_indices is None:
+        left, right = np.triu_indices(n, k=1)
+    else:
+        left, right = pair_indices
+        left = np.asarray(left, dtype=int)
+        right = np.asarray(right, dtype=int)
+    if len(left) < 2:
+        return float("nan"), float("nan")
+    blocks = permutation_blocks or [np.arange(n)]
+    covered = np.concatenate(blocks) if blocks else np.array([], dtype=int)
+    if len(covered) != n or not np.array_equal(np.sort(covered), np.arange(n)):
+        raise ValueError("permutation_blocks must partition all matrix rows")
+
+    acoustic_values = acoustic_distance[left, right]
+    semantic_values = semantic_distance[left, right]
     rng = np.random.default_rng(seed)
     observed = float(np.corrcoef(acoustic_values, semantic_values)[0, 1])
     count = 0
+    permutation = np.arange(n)
     for _ in range(n_perm):
-        permutation = rng.permutation(len(semantic_values))
-        permuted = float(np.corrcoef(acoustic_values, semantic_values[permutation])[0, 1])
+        for block in blocks:
+            permutation[block] = rng.permutation(block)
+        permuted_values = semantic_distance[permutation[left], permutation[right]]
+        permuted = float(np.corrcoef(acoustic_values, permuted_values)[0, 1])
         if permuted >= observed:
             count += 1
     return observed, (count + 1) / (n_perm + 1)
@@ -238,6 +275,8 @@ def compute_form_meaning_alignment(
 ) -> dict[str, Any]:
     ac_similarity = similarity_matrix(acoustic_embeddings)
     sem_similarity = similarity_matrix(semantic_embeddings)
+    ac_distance_matrix = 1 - ac_similarity
+    sem_distance_matrix = 1 - sem_similarity
     n = len(dataset.calls)
     left, right = np.triu_indices(n, k=1)
     species = dataset.calls["species"].astype(str).to_numpy()
@@ -247,8 +286,11 @@ def compute_form_meaning_alignment(
         "within species",
         np.where(families[left] == families[right], "same family", "different families"),
     )
-    ac_distance = 1 - ac_similarity[left, right]
-    sem_distance = 1 - sem_similarity[left, right]
+    ac_distance = ac_distance_matrix[left, right]
+    sem_distance = sem_distance_matrix[left, right]
+    permutation_blocks = [
+        np.flatnonzero(species == value) for value in sorted(set(species))
+    ]
     rng = np.random.default_rng(config.random_seed)
     groups: dict[str, Any] = {}
     for offset, group in enumerate(RELATIONSHIP_GROUPS):
@@ -269,8 +311,10 @@ def compute_form_meaning_alignment(
             replace=False,
         )
         r_value, p_value = mantel(
-            ac_distance[indices],
-            sem_distance[indices],
+            ac_distance_matrix,
+            sem_distance_matrix,
+            pair_indices=(left[indices], right[indices]),
+            permutation_blocks=permutation_blocks,
             n_perm=config.n_permutations,
             seed=config.random_seed + offset,
         )
@@ -292,12 +336,16 @@ def compute_form_meaning_alignment(
                 for index in sample
             ],
         }
-    return {"groups": groups}
+    return {
+        "groups": groups,
+        "significance_test": "one-sided Mantel test with blocked label permutations",
+        "permutation_unit": "semantic call identities shuffled within species",
+        "n_permutations": config.n_permutations,
+    }
 
 
-def _reorder_within_classes(
-    species: list[str], matrix: np.ndarray, classes: list[str]
-) -> list[int]:
+def _reorder_within_classes(matrix: np.ndarray, classes: list[str]) -> list[int]:
+    """Keep class blocks contiguous while clustering species inside each block."""
     order: list[int] = []
     start = 0
     while start < len(classes):
@@ -325,7 +373,10 @@ def compute_species_pair_correlations(
     classes_by_species = calls.groupby("species")["class"].first().to_dict()
     species = sorted(
         dataset.species,
-        key=lambda value: (CLASS_ORDER.get(str(classes_by_species.get(value, "")), 9), value),
+        key=lambda value: (
+            CLASS_ORDER.get(str(classes_by_species.get(value, "")), 9),
+            value,
+        ),
     )
     indices = {
         value: np.flatnonzero(calls["species"].astype(str).to_numpy() == value)
@@ -342,7 +393,7 @@ def compute_species_pair_correlations(
             if len(ac_values) >= minimum_pairs and np.std(ac_values) and np.std(sem_values):
                 matrix[i, j] = matrix[j, i] = np.corrcoef(ac_values, sem_values)[0, 1]
     classes = [str(classes_by_species.get(value, "")) for value in species]
-    order = _reorder_within_classes(species, matrix, classes)
+    order = _reorder_within_classes(matrix, classes)
     return {
         "species": [species[index] for index in order],
         "classes": [classes[index] for index in order],
@@ -363,10 +414,12 @@ def _coverage_for_similarity(
             for indices in target_species_indices
         ]
     )
+    # A call must be represented by another species. Exclude every call's own
+    # species rather than counting the diagonal/self-repertoire match as 1.0.
     for column, indices in enumerate(target_species_indices):
-        best_by_species[np.isin(source_indices, indices), column] = 1.0
+        best_by_species[np.isin(source_indices, indices), column] = -np.inf
     n_calls = len(source_indices)
-    n_species = len(target_species_indices)
+    n_species = len(target_species_indices) - 1
     count_rows: list[list[int]] = []
     percent_rows: list[list[float]] = []
     for threshold in thresholds:
@@ -428,9 +481,10 @@ def compute_cross_species_coverage(
         groups[key] = {
             "label": label,
             "n_species": len(members),
+            "n_target_species": len(members) - 1,
             "n_calls": len(source_indices),
             "minimum_species": [
-                int(np.ceil(percent * len(members) / 100))
+                int(np.ceil(percent * (len(members) - 1) / 100))
                 for percent in COVERAGE_SPECIES_PERCENTAGES
             ],
             "semantic": _coverage_for_similarity(
@@ -447,7 +501,7 @@ def compute_cross_species_coverage(
         "default_threshold": float(default_threshold),
         "thresholds": threshold_values,
         "species_percentages": list(COVERAGE_SPECIES_PERCENTAGES),
-        "source_species_included": True,
+        "source_species_included": False,
         "groups": groups,
     }
 
@@ -509,7 +563,7 @@ def compute_keyword_pmi(
         dtype=np.int16,
     )
     joint = acoustic_presence.T @ semantic_presence
-    matrix = np.zeros(joint.shape, dtype=float)
+    global_pmi = np.zeros(joint.shape, dtype=float)
 
     species_values = dataset.calls["species"].astype(str).to_numpy()
     species_groups = [
@@ -551,12 +605,19 @@ def compute_keyword_pmi(
         completed += batch_size
     p_values = (extreme_counts + 1) / (n_permutations + 1)
 
+    # The effect size must use the same species-conditioned expectation as the
+    # permutation test. Keep global PMI separately for diagnostics/backward
+    # comparison, but display log2(observed / within-species expected).
+    matrix = np.full(joint.shape, np.nan, dtype=float)
+    positive = (joint > 0) & (expected > 0)
+    matrix[positive] = np.log2(joint[positive] / expected[positive])
+
     matches: dict[str, list[str]] = {}
     for i, ac_keyword in enumerate(acoustic):
         for j, sem_keyword in enumerate(semantic):
             mask = (acoustic_presence[:, i] & semantic_presence[:, j]).astype(bool)
             if joint[i, j]:
-                matrix[i, j] = np.log2(
+                global_pmi[i, j] = np.log2(
                     (joint[i, j] / n)
                     / ((acoustic_counts[ac_keyword] / n) * (semantic_counts[sem_keyword] / n))
                 )
@@ -574,6 +635,7 @@ def compute_keyword_pmi(
         "acoustic_keywords": acoustic,
         "semantic_keywords": semantic,
         "matrix": matrix.tolist(),
+        "global_pmi_matrix": global_pmi.tolist(),
         "joint_counts": joint.tolist(),
         "expected_counts": expected.tolist(),
         "p_values": p_values.tolist(),
@@ -581,6 +643,7 @@ def compute_keyword_pmi(
         "significant": significant.tolist(),
         "alpha": alpha,
         "significance_test": "two-sided within-species permutation test",
+        "effect_size": "log2 observed / within-species expected co-occurrences",
         "permutation_unit": "complete acoustic keyword sets",
         "n_permutations": n_permutations,
         "random_seed": random_seed,

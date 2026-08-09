@@ -22,6 +22,12 @@ COLORS = [
     "#6b705c",
 ]
 
+CLASS_COLORS = {
+    "Amphibia": "#2a9d8f",
+    "Aves": "#e88d14",
+    "Mammalia": "#6a4c93",
+}
+
 
 def _base_layout(fig: go.Figure, *, height: int = 440) -> go.Figure:
     fig.update_layout(
@@ -192,7 +198,7 @@ def coverage_chart(
                     group["minimum_species"][index],
                     counts[index],
                     group["n_calls"],
-                    group["n_species"],
+                    group["n_target_species"],
                 ]
                 for index in range(len(species_percentages))
             ],
@@ -202,17 +208,17 @@ def coverage_chart(
             hovertemplate=(
                 "%{y:.1f}% of calls (%{customdata[1]:,} of %{customdata[2]:,})"
                 "<br>Represented in at least %{x}% of species"
-                "<br>%{customdata[0]} of %{customdata[3]} species"
+                "<br>%{customdata[0]} of %{customdata[3]} eligible target species"
                 "<extra></extra>"
             ),
         )
     )
     fig.update_layout(
-        title=f"{dimension.title()} coverage",
+        title=f"{dimension.title()} overlap",
         showlegend=False,
     )
     fig.update_xaxes(
-        title="% of species represented",
+        title="% of eligible target species represented",
         tickvals=[25, 50, 75, 100],
         ticktext=["25%", "50%", "75%", "100%"],
         range=[12.5, 112.5],
@@ -249,9 +255,92 @@ def species_matrix_chart(
             ),
         )
     )
-    fig.update_xaxes(tickangle=55, tickfont=dict(size=8))
-    fig.update_yaxes(tickfont=dict(size=8), autorange="reversed")
-    return _base_layout(fig, height=900)
+    fig = _base_layout(fig, height=980)
+    fig.update_layout(margin=dict(l=32, r=24, t=94, b=170))
+    fig.update_xaxes(
+        domain=[0.22, 1],
+        tickangle=55,
+        tickfont=dict(size=8),
+        automargin=False,
+    )
+    fig.update_yaxes(
+        domain=[0, 0.94],
+        tickfont=dict(size=8),
+        autorange="reversed",
+        automargin=False,
+    )
+    classes = result.get("classes", [])
+    n_species = len(classes)
+    start = 0
+    while start < len(classes):
+        end = start + 1
+        while end < len(classes) and classes[end] == classes[start]:
+            end += 1
+        if classes[start] and end - start >= 2:
+            class_name = classes[start]
+            color = CLASS_COLORS.get(class_name, COLORS[0])
+            fig.add_shape(
+                type="rect",
+                x0=start - 0.5,
+                x1=end - 0.5,
+                y0=start - 0.5,
+                y1=end - 0.5,
+                line=dict(color=color, width=2.4),
+                fillcolor="rgba(0, 0, 0, 0)",
+                layer="above",
+            )
+            x0 = 0.22 + 0.78 * start / n_species
+            x1 = 0.22 + 0.78 * end / n_species
+            y0 = 0.94 * (1 - end / n_species)
+            y1 = 0.94 * (1 - start / n_species)
+            fig.add_shape(
+                type="rect",
+                xref="paper",
+                yref="paper",
+                x0=x0,
+                x1=x1,
+                y0=0.955,
+                y1=0.969,
+                line=dict(width=0),
+                fillcolor=color,
+                layer="above",
+            )
+            fig.add_shape(
+                type="rect",
+                xref="paper",
+                yref="paper",
+                x0=0.045,
+                x1=0.057,
+                y0=y0,
+                y1=y1,
+                line=dict(width=0),
+                fillcolor=color,
+                layer="above",
+            )
+            fig.add_annotation(
+                x=(x0 + x1) / 2,
+                y=0.982,
+                xref="paper",
+                yref="paper",
+                text=class_name,
+                showarrow=False,
+                font=dict(color=color, size=11),
+                xanchor="center",
+                yanchor="bottom",
+            )
+            fig.add_annotation(
+                x=0.037,
+                y=(y0 + y1) / 2,
+                xref="paper",
+                yref="paper",
+                text=class_name,
+                showarrow=False,
+                font=dict(color=color, size=11),
+                xanchor="right",
+                yanchor="middle",
+            )
+        start = end
+    return fig
 
 
 def pmi_chart(result: dict[str, Any]) -> go.Figure:
@@ -275,9 +364,9 @@ def pmi_chart(result: dict[str, Any]) -> go.Figure:
             customdata=customdata,
             colorscale="RdBu_r",
             zmid=0,
-            colorbar=dict(title="PMI bits"),
+            colorbar=dict(title="Within-species log₂ O/E"),
             hovertemplate=(
-                "%{y} × %{x}<br>PMI = %{z:.2f} bits"
+                "%{y} × %{x}<br>within-species log₂(O/E) = %{z:.2f}"
                 "<br>%{customdata[0]:,} matching calls"
                 "<br>%{customdata[1]:.2f} expected after within-species shuffling"
                 "<br>permutation p = %{customdata[2]:.3g}"

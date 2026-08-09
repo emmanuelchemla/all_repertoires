@@ -25,12 +25,26 @@ def test_similarity_matrix_regression() -> None:
 
 
 def test_mantel_regression() -> None:
-    acoustic = np.array([0.1, 0.4, 0.7, 0.8, 0.3, 0.9])
-    semantic = np.array([0.2, 0.5, 0.65, 0.7, 0.4, 0.95])
+    acoustic = np.array(
+        [
+            [0.0, 0.1, 0.4, 0.7],
+            [0.1, 0.0, 0.8, 0.3],
+            [0.4, 0.8, 0.0, 0.9],
+            [0.7, 0.3, 0.9, 0.0],
+        ]
+    )
+    semantic = np.array(
+        [
+            [0.0, 0.2, 0.5, 0.65],
+            [0.2, 0.0, 0.7, 0.4],
+            [0.5, 0.7, 0.0, 0.95],
+            [0.65, 0.4, 0.95, 0.0],
+        ]
+    )
 
     result = mantel(acoustic, semantic, n_perm=25, seed=7)
 
-    np.testing.assert_allclose(result, (0.9709191848, 0.0384615385), atol=1e-9)
+    np.testing.assert_allclose(result, (0.9709191848, 0.1538461538), atol=1e-9)
 
 
 def test_species_pair_correlation_regression() -> None:

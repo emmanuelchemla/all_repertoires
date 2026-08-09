@@ -79,6 +79,8 @@ def test_pmi_permutations_control_for_species() -> None:
     assert result["joint_counts"] == [[4]]
     assert result["expected_counts"] == [[4.0]]
     assert result["p_values"] == [[1.0]]
+    assert result["matrix"] == [[0.0]]
+    assert result["global_pmi_matrix"] == [[1.0]]
     assert result["significant"] == [[False]]
     assert result["significance_test"] == "two-sided within-species permutation test"
     assert result["permutation_unit"] == "complete acoustic keyword sets"
@@ -110,14 +112,11 @@ def test_cross_species_coverage_uses_percentage_thresholds() -> None:
     group = result["groups"]["all"]
     assert group["n_species"] == 4
     assert result["species_percentages"] == [25, 50, 75, 100]
-    assert group["semantic"]["percent_calls"][0] == [
-        100.0,
-        50.0,
-        0.0,
-        0.0,
-    ]
+    assert result["source_species_included"] is False
+    assert group["n_target_species"] == 3
+    assert group["semantic"]["percent_calls"][0] == [50.0, 0.0, 0.0, 0.0]
     assert group["acoustic"]["percent_calls"][0] == [
-        100.0,
+        0.0,
         0.0,
         0.0,
         0.0,
