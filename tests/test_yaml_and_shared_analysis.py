@@ -10,9 +10,11 @@ from repertoire_explorer import (
     compute_acoustic_semantic_prediction,
     compute_cross_species_coverage,
     compute_form_meaning_alignment,
+    compute_keyword_form_meaning_alignment,
     compute_keyword_pmi,
     compute_overview,
     load_repertoire_yaml_directory,
+    set_similarity_matrix,
     similarity_matrix,
 )
 from repertoire_explorer.datasets import CANONICAL_COLUMNS
@@ -27,12 +29,22 @@ def test_yaml_loader_uses_existing_canonical_schema() -> None:
     dataset = load_repertoire_yaml_directory(SOURCE)
 
     assert dataset.calls.columns.tolist() == CANONICAL_COLUMNS
-    assert len(dataset.calls) == 1507
+    assert len(dataset.calls) == 1477
     assert dataset.calls["species"].nunique() == 128
     assert dataset.calls["call_id"].is_unique
     assert set(dataset.calls["confidence"]) == {"low", "medium", "high"}
+    assert set(dataset.calls["species_fit"]) == {"include", "caution", "exclude"}
     assert dataset.calls["species"].str.contains(" ").all()
     assert dataset.species_metadata["Pan paniscus"]["common_name"] == "Bonobo"
+
+
+def test_signals_are_vocal() -> None:
+    dataset = load_repertoire_yaml_directory(SOURCE)
+
+    assert not dataset.calls["call_name"].str.contains("echolocation", case=False).any()
+    assert not dataset.calls["acoustic_description"].str.contains(
+        "not a vocal|rather than a true vocal", case=False
+    ).any()
 
 
 def test_overview_and_pmi_use_explicit_keywords() -> None:
@@ -41,7 +53,7 @@ def test_overview_and_pmi_use_explicit_keywords() -> None:
     overview = compute_overview(dataset)
     pmi = compute_keyword_pmi(dataset, minimum_calls=4, n_permutations=19)
 
-    assert overview["n_calls"] == 1507
+    assert overview["n_calls"] == 1477
     assert overview["semantic_keywords"][0]["keyword"] == "attention"
     assert overview["semantic_keywords"][0]["percent_calls"] == (
         100 * overview["semantic_keywords"][0]["count"] / overview["n_calls"]
@@ -138,6 +150,32 @@ def test_form_meaning_sampling_is_deterministic() -> None:
 
     assert first == second
     np.testing.assert_allclose(similarity_matrix(embeddings), similarity_matrix(embeddings).T)
+
+
+def test_keyword_form_meaning_uses_jaccard_set_similarity() -> None:
+    similarities = set_similarity_matrix(
+        [["tonal", "short"], ["tonal", "long"], [], []]
+    )
+
+    np.testing.assert_allclose(
+        similarities,
+        [
+            [1.0, 1 / 3, 0.0, 0.0],
+            [1 / 3, 1.0, 0.0, 0.0],
+            [0.0, 0.0, 1.0, 1.0],
+            [0.0, 0.0, 1.0, 1.0],
+        ],
+    )
+
+    dataset = load_repertoire_yaml_directory(SOURCE)
+    dataset = type(dataset)(
+        dataset.name, dataset.calls.iloc[:12].copy(), dataset.source_path
+    )
+    result = compute_keyword_form_meaning_alignment(
+        dataset, AnalysisConfig(n_permutations=3, scatter_sample_per_group=4)
+    )
+
+    assert result["similarity_method"] == "Jaccard similarity of keyword sets"
 
 
 def test_prediction_uses_three_deterministic_holdout_schemes() -> None:

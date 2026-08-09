@@ -266,3 +266,11 @@ provenance:
     literature (Crane et al. 2016, Engesser et al. 2015 & 2019, Mine et al. 2022).
     Added references section. Added mobbing-call synonym to scold call. Total calls
     now 12.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:14+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

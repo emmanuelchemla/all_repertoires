@@ -363,3 +363,11 @@ provenance:
     model: claude-sonnet-4-5
     action: updated
     notes: "Expansion pass added 15 new call types (twit, play peep, purr, groan, shriek, shriek-cackle, trill, growl, chatter, squeal, cluck, genital display call, food chuck, contact twitter, copulation call) drawn from Winter et al. 1966, Jürgens & Maurus 1973, Biben & Symmes 1986, Boinski & Campbell 2002, Ploog 1992, and supporting literature, with 8 new references appended. Total call count: 26."
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

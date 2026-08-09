@@ -277,3 +277,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Expanded repertoire from 6 to 10 call types by adding tink call, D call, subsong, and pit call based on web search and Birds of the World account; added two new references.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

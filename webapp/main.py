@@ -7,8 +7,8 @@ from urllib.parse import parse_qs, urlencode
 from dash import Dash, Input, Output, State, ctx, dcc, html, no_update
 import pandas as pd
 
-from .charts import coverage_chart
-from .data import BUNDLE_PATH, bundle_for_confidence, load_animallex_bundle
+from .charts import coverage_chart, form_meaning_chart
+from .data import BUNDLE_PATH, bundle_for_filters, load_animallex_bundle
 
 from repertoire_explorer import (
     AnalysisConfig,
@@ -17,6 +17,7 @@ from repertoire_explorer import (
 )
 from .pages import (
     analysis_page,
+    call_display_labels,
     explore_page,
     missing_bundle_page,
     motif_carousel_card,
@@ -69,6 +70,28 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
                         [
                             html.Div(
                                 [
+                                    html.Span("Species fit", className="control-label"),
+                                    dcc.RadioItems(
+                                        id="species-fit-select",
+                                        options=[
+                                            {"label": "Include", "value": "include"},
+                                            {
+                                                "label": "+ Caution",
+                                                "value": "include_caution",
+                                            },
+                                            {"label": "All", "value": "all"},
+                                        ],
+                                        value="include",
+                                        inline=True,
+                                        persistence=True,
+                                        persistence_type="local",
+                                        className="filter-select",
+                                    ),
+                                ],
+                                className="filter-control",
+                            ),
+                            html.Div(
+                                [
                                     html.Span("Confidence", className="control-label"),
                                     dcc.RadioItems(
                                         id="confidence-select",
@@ -81,10 +104,10 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
                                         inline=True,
                                         persistence=True,
                                         persistence_type="local",
-                                        className="confidence-select",
+                                        className="filter-select",
                                     ),
                                 ],
-                                className="confidence-control",
+                                className="filter-control",
                             ),
                             dcc.RadioItems(
                                 id="mode-select",
@@ -113,18 +136,20 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         Output("page-content", "children"),
         Input("url", "pathname"),
         Input("mode-select", "value"),
+        Input("species-fit-select", "value"),
         Input("confidence-select", "value"),
         State("url", "search"),
     )
     def render_page(
         pathname: str | None,
         mode: str,
+        species_fit_filter: str,
         confidence_filter: str,
         search: str | None,
     ):
         if bundle is None:
             return missing_bundle_page()
-        view = bundle_for_confidence(bundle, confidence_filter)
+        view = bundle_for_filters(bundle, species_fit_filter, confidence_filter)
         path = pathname or "/overview"
         if path == "/explore":
             selected = (_query(search).get("species") or [None])[0]
@@ -136,12 +161,35 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         return overview_page(view, mode or "public")
 
     @app.callback(
+        Output("form-meaning-chart", "figure"),
+        Input("form-meaning-basis", "value", allow_optional=True),
+        State("confidence-select", "value"),
+        State("species-fit-select", "value"),
+        prevent_initial_call=True,
+    )
+    def update_form_meaning(
+        basis: str | None,
+        confidence_filter: str,
+        species_fit_filter: str,
+    ):
+        if bundle is None or basis is None:
+            return no_update
+        view = bundle_for_filters(bundle, species_fit_filter, confidence_filter)
+        result_key = (
+            "form_meaning_keywords" if basis == "keywords" else "form_meaning"
+        )
+        return form_meaning_chart(
+            view.analysis[result_key], call_display_labels(view)
+        )
+
+    @app.callback(
         Output("explore-table", "children"),
         Output("explore-summary", "children"),
         Output("url", "search"),
         Input("species-select", "value", allow_optional=True),
         Input("call-filter", "value", allow_optional=True),
         State("confidence-select", "value"),
+        State("species-fit-select", "value"),
         State("url", "search"),
         prevent_initial_call=True,
     )
@@ -149,11 +197,12 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         species: str,
         filter_value: str | None,
         confidence_filter: str,
+        species_fit_filter: str,
         current_search: str | None,
     ):
         if bundle is None or not species:
             return no_update, no_update, no_update
-        view = bundle_for_confidence(bundle, confidence_filter)
+        view = bundle_for_filters(bundle, species_fit_filter, confidence_filter)
         calls = [call for call in view.calls if call["species"] == species]
         query = (filter_value or "").strip().lower()
         if query:
@@ -184,17 +233,19 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         Output("species-search-count", "children"),
         Input("species-search", "value", allow_optional=True),
         State("confidence-select", "value"),
+        State("species-fit-select", "value"),
         State("species-select", "value", allow_optional=True),
         prevent_initial_call=True,
     )
     def filter_species_list(
         search: str | None,
         confidence_filter: str,
+        species_fit_filter: str,
         selected_species: str | None,
     ):
         if bundle is None:
             return no_update, no_update
-        view = bundle_for_confidence(bundle, confidence_filter)
+        view = bundle_for_filters(bundle, species_fit_filter, confidence_filter)
         options = species_options(view, search, selected_species)
         total = len(view.analysis["overview"]["species_counts"])
         return options, f"{len(options):,} of {total:,} species"
@@ -205,14 +256,18 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         Input("coverage-group", "value", allow_optional=True),
         Input("coverage-threshold", "value", allow_optional=True),
         State("confidence-select", "value"),
+        State("species-fit-select", "value"),
         prevent_initial_call=True,
     )
     def update_coverage(
-        group_key: str, threshold: float, confidence_filter: str
+        group_key: str,
+        threshold: float,
+        confidence_filter: str,
+        species_fit_filter: str,
     ):
         if bundle is None or not group_key or threshold is None:
             return no_update, no_update
-        view = bundle_for_confidence(bundle, confidence_filter)
+        view = bundle_for_filters(bundle, species_fit_filter, confidence_filter)
         group = view.analysis["coverage"]["groups"].get(group_key)
         if group is None:
             group = view.analysis["coverage"]["groups"]["all"]
@@ -229,6 +284,7 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         Input("motif-semantic-threshold", "value", allow_optional=True),
         Input("motif-minimum-species", "value", allow_optional=True),
         Input("confidence-select", "value"),
+        Input("species-fit-select", "value"),
         prevent_initial_call=True,
     )
     def update_motif_results(
@@ -236,6 +292,7 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
         semantic_threshold: float | None,
         minimum_species: int | None,
         confidence_filter: str,
+        species_fit_filter: str,
     ):
         if (
             bundle is None
@@ -244,7 +301,7 @@ def create_app(bundle_path: Path | str = BUNDLE_PATH) -> Dash:
             or minimum_species is None
         ):
             return no_update
-        view = bundle_for_confidence(bundle, confidence_filter)
+        view = bundle_for_filters(bundle, species_fit_filter, confidence_filter)
         config = replace(
             AnalysisConfig(**bundle.manifest["config"]),
             motif_acoustic_similarity=float(acoustic_threshold),

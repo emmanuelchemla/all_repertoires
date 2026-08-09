@@ -58,7 +58,7 @@ ACOUSTIC_GROUPS = {
 
 @dataclass(frozen=True)
 class AnalysisConfig:
-    analysis_version: str = "11"
+    analysis_version: str = "12"
     embedding_model: str = EMBEDDING_MODEL
     random_seed: int = 42
     n_permutations: int = 999
@@ -223,6 +223,27 @@ def similarity_matrix(embeddings: np.ndarray) -> np.ndarray:
     norms[norms == 0] = 1
     normalized = embeddings / norms
     return normalized @ normalized.T
+
+
+def set_similarity_matrix(keyword_sets: list[list[str]]) -> np.ndarray:
+    """Return pairwise Jaccard similarity for a sequence of keyword sets."""
+    normalized = [set(values) for values in keyword_sets]
+    vocabulary = sorted(set().union(*normalized)) if normalized else []
+    if not vocabulary:
+        return np.ones((len(normalized), len(normalized)), dtype=np.float32)
+    positions = {keyword: index for index, keyword in enumerate(vocabulary)}
+    incidence = np.zeros((len(normalized), len(vocabulary)), dtype=np.float32)
+    for row, values in enumerate(normalized):
+        incidence[row, [positions[value] for value in values]] = 1
+    intersections = incidence @ incidence.T
+    sizes = incidence.sum(axis=1)
+    unions = sizes[:, None] + sizes[None, :] - intersections
+    return np.divide(
+        intersections,
+        unions,
+        out=np.ones_like(intersections),
+        where=unions != 0,
+    )
 
 
 MOTIF_UNINFORMATIVE_SEMANTIC_KEYWORDS = {"attention"}
@@ -520,6 +541,37 @@ def compute_form_meaning_alignment(
 ) -> dict[str, Any]:
     ac_similarity = similarity_matrix(acoustic_embeddings)
     sem_similarity = similarity_matrix(semantic_embeddings)
+    result = _compute_form_meaning_from_similarity(
+        dataset, ac_similarity, sem_similarity, config
+    )
+    result["similarity_method"] = "cosine similarity of description embeddings"
+    return result
+
+
+def compute_keyword_form_meaning_alignment(
+    dataset: CanonicalDataset,
+    config: AnalysisConfig,
+) -> dict[str, Any]:
+    """Compute form-to-meaning alignment from acoustic and semantic keyword sets."""
+    ac_similarity = set_similarity_matrix(
+        dataset.calls["acoustic_keywords"].tolist()
+    )
+    sem_similarity = set_similarity_matrix(
+        dataset.calls["semantic_keywords"].tolist()
+    )
+    result = _compute_form_meaning_from_similarity(
+        dataset, ac_similarity, sem_similarity, config
+    )
+    result["similarity_method"] = "Jaccard similarity of keyword sets"
+    return result
+
+
+def _compute_form_meaning_from_similarity(
+    dataset: CanonicalDataset,
+    ac_similarity: np.ndarray,
+    sem_similarity: np.ndarray,
+    config: AnalysisConfig,
+) -> dict[str, Any]:
     ac_distance_matrix = 1 - ac_similarity
     sem_distance_matrix = 1 - sem_similarity
     n = len(dataset.calls)

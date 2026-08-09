@@ -1,12 +1,12 @@
 {
   "build_mode": "iteration",
   "confidence_counts": {
-    "high": 561,
-    "low": 202,
-    "medium": 744
+    "high": 548,
+    "low": 196,
+    "medium": 733
   },
   "config": {
-    "analysis_version": "11",
+    "analysis_version": "12",
     "coverage_default_threshold": 0.6,
     "coverage_threshold_step": 0.01,
     "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
@@ -31,10 +31,15 @@
   },
   "dataset": "llm_knowledge+search",
   "excluded_calls": 0,
-  "generated_at": "2026-08-09T13:32:15.924551+00:00",
-  "n_calls": 1507,
+  "generated_at": "2026-08-09T15:18:15.960888+00:00",
+  "n_calls": 1477,
   "n_species": 128,
   "source": "repertoires/llm_knowledge+search/species",
-  "source_commit": "542b655bb3e236daabf2ff309e2aed7ab0d5a776",
-  "source_hash": "5e25fc8c9d29733652288c4a792270a4682d5f9fb579be5519ea9accbd9c570c"
+  "source_commit": "265fafbf1aa23ba0bd470957873fc4221a43e734",
+  "source_hash": "9990a8710d780f22363661ea7b5e0d24a588ed601a459aa5ec22d714f1549496",
+  "species_fit_counts": {
+    "caution": 102,
+    "exclude": 64,
+    "include": 1311
+  }
 }

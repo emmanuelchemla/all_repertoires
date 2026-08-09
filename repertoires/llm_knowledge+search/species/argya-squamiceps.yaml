@@ -299,3 +299,11 @@ provenance:
       (cooperative sentinel behaviour), Jansen et al. 2024 (mobbing trills/juvenile
       learning), and Zahavi 1990 (group song/territory). Affiliation purr is inferred
       from cooperative social behaviour with low confidence.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:12+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

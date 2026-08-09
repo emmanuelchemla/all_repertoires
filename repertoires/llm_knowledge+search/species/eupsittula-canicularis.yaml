@@ -217,3 +217,11 @@ provenance:
   notes: Added warble call type (heterotypic multi-element vocalization) documented
     in Dahlin et al. 2006 and 2017 studies; added two new references for warble and
     contact call diversity literature.
+- timestamp: "2026-08-09T14:52:29+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

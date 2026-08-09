@@ -213,3 +213,11 @@ provenance:
   action: updated
   notes: Added lost call (separation/distance call) as 8th call type, with references
     to Frigerio et al. 2022 and Lorenz 1988; no other repo repertoire files used.
+- timestamp: "2026-08-09T14:52:29+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:12+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

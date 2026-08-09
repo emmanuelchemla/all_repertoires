@@ -306,3 +306,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Added three call types to reach 12 total (chirk, wee-oo song, chuckle) based on web search of Smith 1977 and supporting sources; these represent well-documented classes from the classic seven-display repertoire and mountainscholar sound repository.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

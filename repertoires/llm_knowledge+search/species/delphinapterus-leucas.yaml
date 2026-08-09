@@ -62,19 +62,6 @@ calls:
     semantic_description: Included as a broad harsh-call category because beluga repertoires often distinguish noisy social sounds from whistles, pulsed calls, and mixed calls.
     confidence: medium
     references: [chmelnitsky_2012, noyes_2019]
-  - name: echolocation click train
-    alternative_names: [sonar click train, ultrasonic click train]
-    scope:
-      life_stages: [adult, juvenile]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [high_frequency, pulsed, repetitive, short, abrupt]
-    acoustic_description: Rapid trains of broadband ultrasonic pulses, individually of very short duration (microseconds to milliseconds), emitted at rates up to ~1300 clicks per second and extending above 100 kHz; produced by the right phonic lips and focused by the melon into a forward beam.
-    semantic_keywords: [food]
-    semantic_description: Used for biosonar-based prey detection, navigation, and object investigation; functionally distinct from social pulsed calls and produced in foraging and orientation contexts.
-    confidence: high
-    references: [koblitz_2016]
   - name: trill
     alternative_names: [rapid tonal trill]
     scope:
@@ -157,3 +144,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: "Added 4 call types to reach 11 total: echolocation click train (high confidence, biosonar), isolation call (high confidence, mother-calf contact signature), trill (medium confidence, social warbling), and mew (low confidence, named in beluga vocal accounts). Added references: koblitz_2016, vergara_2010, favaro_2015, seaworld_comm."
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

@@ -123,39 +123,6 @@ calls:
   semantic_description: Given by bats attempting to solicit regurgitated food or affiliative
     attention from roostmates.
   confidence: low
-- name: echolocation pulse
-  alternative_names:
-  - biosonar pulse
-  - orientation call
-  acoustic_keywords:
-  - high_frequency
-  - short
-  - frequency_modulated
-  - harmonic
-  - multi_component
-  - quiet
-  acoustic_description: A multiharmonic pulse with a brief quasi-constant frequency
-    (QCF) component at the onset followed by a downward frequency-modulated (FM) sweep;
-    dominant energy across 35–85 kHz; long relative duration (~5.5 ms) for a bat of
-    this size; emitted singly or in groups of 2–3 pulses at ~29 Hz repetition rate;
-    low amplitude ("whispering bat" strategy).
-  semantic_keywords:
-  - contact
-  - group_coordination
-  semantic_description: Used for spatial orientation and obstacle avoidance during
-    flight; also believed to assist in locating hosts and navigating roosting environments;
-    low-amplitude design reduces detection by prey.
-  scope:
-    life_stages:
-    - adult
-    - juvenile
-    sexes:
-    - unknown
-    population_specific: false
-    note: ''
-  confidence: high
-  references:
-  - medina_etal_2017
 references:
   medina_etal_2017:
     citation: "Medina-Fitoria A, Soto-Werschitz A, Charre-Medellin JF, Herrera-Montalvo
@@ -183,3 +150,11 @@ provenance:
   action: updated
   notes: Added echolocation pulse call type (multiharmonic QCF+FM design, 35-85 kHz)
     to reach 8 calls; added references section with Medina-Fitoria et al. 2017 citation.
+- timestamp: "2026-08-09T14:52:29+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

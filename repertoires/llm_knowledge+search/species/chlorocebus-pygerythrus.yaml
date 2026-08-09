@@ -233,3 +233,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Added three call types to reach 10 total - move grunt (group coordination), intergroup chutter (aggressive intergroup context), and threat alarm bark (male agonistic display) - based on LLM knowledge plus web search of Cheney/Seyfarth literature and 2024 PMC study on male loud calls.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

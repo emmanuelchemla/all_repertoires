@@ -57,9 +57,10 @@ bundle with:
 uv run python paper_code/bundle_render.py
 ```
 
-The paper renderer deliberately consumes the bundle's unfiltered root analysis
-(`all calls`), matching the web app when its confidence control is set to
-`All calls`. Do not edit `paper/generated_results.tex` or the files under
+The paper renderer consumes the bundle's `include` species-fit view, matching
+the web app's default species-fit setting, with all confidence levels retained.
+The app can additionally show `include + caution` or all indexed species. Do not
+edit `paper/generated_results.tex` or the files under
 `paper/figures/generated/` by hand.
 
 Run the generic analysis entry point:

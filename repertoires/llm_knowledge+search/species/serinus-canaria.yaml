@@ -266,3 +266,11 @@ provenance:
   model: claude-sonnet-4-6
   action: updated
   notes: Added subsong/plastic song (juvenile learning vocalization, high confidence), aggressive/threat call (low confidence, supported by overlapping-song literature), and distress call (low confidence, broadly documented in canary literature) to reach 9 total call types.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:14+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

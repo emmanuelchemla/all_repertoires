@@ -427,20 +427,6 @@ calls:
     confidence: low
     references: [delgado_2017]
 
-  - name: nest smacks
-    alternative_names: [nest-smacking, percussive nest sound]
-    scope:
-      life_stages: [adult, juvenile]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [broadband, abrupt, short, loud, repetitive]
-    acoustic_description: Percussive broadband sounds produced by slapping or hitting vegetation and nest materials; sharp transient impacts with broadband noise.
-    semantic_keywords: [display, attention, alarm]
-    semantic_description: Produced in arousal or disturbance contexts; a non-vocal mechanical sound used to augment visual and acoustic display.
-    confidence: low
-    references: [hardus_etal_2009_geographic]
-
   - name: roar
     alternative_names: [climax roar, display roar]
     scope:
@@ -490,3 +476,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: "Major expansion from 6 to 32 call types. Added long call sub-components (introductory grumbles, roar pulses, let-down sighs), kiss squeak variants (hand-modified, leaf-modified), grumble, chomp, biphonic chomps+grumbles compound call, lork call, fast long call, bark, gorkum, contact uff, ahoor call, bared-teeth scream, frustration scream, whimper, soft hoot, grunt, play ooh, mating squeal, ahh vocalization, crying and screaming, throat wobble, nest smacks, and roar. Added references for Lameira et al. 2024 PeerJ and Lameira et al. 2023 PNAS Nexus. Candidates excluded: grinding (mechanical tooth-grinding, not a vocalization sensu stricto), complex calls (too broad/heterogeneous a category to list as a discrete call type)."
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

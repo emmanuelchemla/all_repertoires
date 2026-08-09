@@ -176,3 +176,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Repo-wide recall pass added major missing white-faced capuchin affiliative, threat, distance, and sociosexual call classes from external repertoire sources and corrected twitter semantics toward screamy-trill usage.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

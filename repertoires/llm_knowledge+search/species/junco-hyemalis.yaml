@@ -200,3 +200,11 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Worker 15 recall pass added the quieter close-range soft song distinguished by Cornell from the main loud trill song.
+- timestamp: "2026-08-09T14:52:29+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

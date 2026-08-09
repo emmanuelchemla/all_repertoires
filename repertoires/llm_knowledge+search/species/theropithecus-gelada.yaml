@@ -332,3 +332,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Expanded repertoire from 16 to 27 calls by adding roar-bark, high squeal, nasal inhaled grunt, vocalized lip-smack, groan, travel grunt, female distress scream, scream-grunt, high-intensity social yawn call, and low-intensity social yawn call. Added references for Bergman et al. 2013 (lip-smacking), Painter et al. 2024 (contact call convergence), Palagi et al. 2009 (yawn contagion), and Francesconi et al. 2025 (social engagement and yawn modulation).
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

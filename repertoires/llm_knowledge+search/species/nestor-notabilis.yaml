@@ -324,3 +324,11 @@ provenance:
       chatter, warble, mew, whistle). Nestling begging calls drawn from Gajdon et al. 2020;
       maternal nest call from Wein et al. 2020. Total 9 call types covering adult and
       early-life stages.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

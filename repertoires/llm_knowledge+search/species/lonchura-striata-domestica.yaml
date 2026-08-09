@@ -200,3 +200,11 @@ provenance:
   action: updated
   notes: Added alarm call (call 8) based on web search confirming distinct predator/disturbance
     alarm call category in Bengalese finch; added nfss_vocalizations reference.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

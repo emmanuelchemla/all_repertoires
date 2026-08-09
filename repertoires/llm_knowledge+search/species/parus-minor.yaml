@@ -273,3 +273,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Expanded from 6 to 11 call types by adding chicka call (non-snake predator mobbing), ABC note sequence (scan-for-danger alarm component), cuckoo-specific alarm call, aerial alarm call (seet), and a fifth nest-defense call; added references for cuckoo alarm (Suzuki 2017), Ha 2020, and Ding et al. 2022 geographic variation study.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

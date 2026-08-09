@@ -29,6 +29,16 @@ venv/
 .mypy_cache/
 .pytest_cache/
 *.log
+*.fdb_latexmk
+*.fls
+
+# Machine-local analysis caches and scratch renders
+.embedding_cache.json
+.hf-cache/
+.mpl-cache/
+.numba_cache/
+analysis/.embedding_cache.npz
+tmp/
 
 # Build / distribution
 build/

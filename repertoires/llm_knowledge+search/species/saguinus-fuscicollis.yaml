@@ -139,3 +139,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: High-recall external-source pass expanded saddle-back tamarin coverage with contact, predator-specific alarm, hostile whistle, and infant-related classes while keeping uncertain adult-infant signaling low confidence.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

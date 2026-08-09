@@ -29,7 +29,12 @@ def draw_mantel_result(ax, result):
             continue
         x = np.array([row["acoustic_distance"] for row in values["sample"]])
         y = np.array([row["semantic_distance"] for row in values["sample"]])
-        p_text = "p < 0.001" if values["p"] < 0.001 else f"p = {values['p']:.3f}"
+        if values["p"] < 0.001:
+            p_text = "p < 0.001"
+        elif values["p"] <= 0.001:
+            p_text = "p ≤ 0.001"
+        else:
+            p_text = f"p = {values['p']:.3f}"
         ax.scatter(x, y, color=COLORS[group], s=5, alpha=0.28, linewidths=0)
         ax.plot(
             [0, 1],

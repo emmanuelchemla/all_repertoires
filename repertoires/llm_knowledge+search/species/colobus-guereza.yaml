@@ -146,3 +146,11 @@ provenance:
   model: claude-sonnet-4-6
   action: updated
   notes: Added caw call type (mild distress vocalization by females, juveniles, and infants) from Marler 1972 behavioral study; added marler_1972 reference entry.
+- timestamp: "2026-08-09T14:52:29+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

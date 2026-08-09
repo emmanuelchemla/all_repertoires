@@ -20,6 +20,7 @@ CANONICAL_COLUMNS = [
     "acoustic_keywords",
     "ontology_keywords",
     "confidence",
+    "species_fit",
     "kingdom",
     "phylum",
     "class",
@@ -164,9 +165,24 @@ def load_repertoire_yaml_directory(
     path: Path | str,
     *,
     name: str = "llm_knowledge+search",
+    species_index_path: Path | str | None = None,
 ) -> CanonicalDataset:
     """Load species repertoire YAML files into the existing canonical table."""
     path = Path(path)
+    if species_index_path is None:
+        candidate = path.parents[1] / "species_index.yaml"
+        species_index_path = candidate if candidate.exists() else None
+    species_fit: dict[str, str] = {}
+    if species_index_path is not None:
+        index_payload = yaml.safe_load(
+            Path(species_index_path).read_text(encoding="utf-8")
+        ) or {}
+        for entries in (index_payload.get("families") or {}).values():
+            for entry in entries or []:
+                scientific_name = str(entry.get("scientific_name") or "")
+                fit = str(entry.get("call_type_study_fit") or "")
+                if scientific_name and fit:
+                    species_fit[scientific_name] = fit
     rows: list[dict[str, object]] = []
     species_metadata: dict[str, dict[str, str]] = {}
     for yaml_path in sorted(path.glob("*.yaml")):
@@ -175,6 +191,7 @@ def load_repertoire_yaml_directory(
         scientific_name = str(payload.get("scientific_name") or yaml_path.stem)
         species_metadata[scientific_name] = {
             "common_name": str(payload.get("common_name") or scientific_name),
+            "species_fit": species_fit.get(scientific_name, "include"),
         }
         tax = {
             "kingdom": taxonomy.get("kingdom", ""),
@@ -199,6 +216,7 @@ def load_repertoire_yaml_directory(
                     "acoustic_keywords": call.get("acoustic_keywords", []),
                     "ontology_keywords": call.get("semantic_keywords", []),
                     "confidence": call.get("confidence", ""),
+                    "species_fit": species_fit.get(scientific_name, "include"),
                     "source": "; ".join(str(ref) for ref in references),
                     **tax,
                 }

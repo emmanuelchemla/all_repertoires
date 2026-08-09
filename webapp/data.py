@@ -21,6 +21,11 @@ CONFIDENCE_VALUES = {
     "medium_plus": {"medium", "high"},
     "high": {"high"},
 }
+SPECIES_FIT_VALUES = {
+    "include": {"include"},
+    "include_caution": {"include", "caution"},
+    "all": {"include", "caution", "exclude"},
+}
 
 
 def load_animallex_bundle(path: Path | str = BUNDLE_PATH) -> AnimalLexBundle:
@@ -30,16 +35,38 @@ def load_animallex_bundle(path: Path | str = BUNDLE_PATH) -> AnimalLexBundle:
 def bundle_for_confidence(
     bundle: AnimalLexBundle, confidence_filter: str | None
 ) -> AnimalLexBundle:
+    return bundle_for_filters(bundle, "all", confidence_filter)
+
+
+def bundle_for_species_fit(
+    bundle: AnimalLexBundle, species_fit_filter: str | None
+) -> AnimalLexBundle:
+    return bundle_for_filters(bundle, species_fit_filter, "all")
+
+
+def bundle_for_filters(
+    bundle: AnimalLexBundle,
+    species_fit_filter: str | None,
+    confidence_filter: str | None,
+) -> AnimalLexBundle:
+    fit_key = species_fit_filter if species_fit_filter in SPECIES_FIT_VALUES else "include"
     key = confidence_filter if confidence_filter in CONFIDENCE_VALUES else "all"
+    base_analysis = (
+        bundle.analysis
+        if fit_key == "all"
+        else bundle.analysis["species_fit_views"][fit_key]
+    )
     if key == "all":
-        analysis = bundle.analysis
+        analysis = base_analysis
     else:
-        analysis = bundle.analysis["confidence_views"][key]
+        analysis = base_analysis["confidence_views"][key]
     accepted = CONFIDENCE_VALUES[key]
+    accepted_fit = SPECIES_FIT_VALUES[fit_key]
     selected_indices = [
         index
         for index, call in enumerate(bundle.calls)
         if call.get("confidence") in accepted
+        and call.get("species_fit", "include") in accepted_fit
     ]
     calls = [bundle.calls[index] for index in selected_indices]
     return replace(

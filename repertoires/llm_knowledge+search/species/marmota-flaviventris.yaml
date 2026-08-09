@@ -108,25 +108,6 @@ calls:
     confidence: high
     references:
       - blumstein_etal_2008_pupscreams
-  - name: tooth chatter
-    alternative_names:
-      - teeth chattering
-      - tooth-chattering
-    acoustic_keywords:
-      - short
-      - repetitive
-      - pulsed
-      - low_frequency
-      - abrupt
-    acoustic_description: Rapid percussive clicking produced by snapping the incisors together in quick succession; low-frequency mechanical sound with a staccato rhythmic pattern.
-    semantic_keywords:
-      - threat
-      - aggression
-    semantic_description: Produced as a direct agonistic threat display, typically in close-range encounters between rivals or during territorial defense; one of the three main sounds in the species' repertoire.
-    confidence: high
-    references:
-      - beard_1902_sounds
-      - blumstein_etal_2008_pupscreams
   - name: growl
     acoustic_keywords:
       - low_frequency
@@ -195,3 +176,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Added 4 new call types (pup scream, tooth chatter, growl, contact call) based on web search and Blumstein et al. 2008 pup scream paper plus broader marmot communication literature. Total calls expanded from 4 to 8.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

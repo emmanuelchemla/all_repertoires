@@ -235,3 +235,11 @@ provenance:
   model: claude-sonnet-4-6
   action: updated
   notes: Added distress call and long tonal call (juvenile distance call precursor) to reach 10 total call types, based on Elie & Theunissen 11-category repertoire classification.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:14+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

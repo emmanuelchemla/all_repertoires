@@ -206,28 +206,6 @@ calls:
   confidence: high
   references:
   - futz_etal_2019
-- name: echolocation call
-  alternative_names:
-  - biosonar pulse
-  - sonar call
-  acoustic_keywords:
-  - high_frequency
-  - frequency_modulated
-  - short
-  - multi_component
-  acoustic_description: Frequency-modulated broadband pulse covering ~45-100 kHz,
-    dominated by the 3rd-5th harmonics with suppressed fundamental; very short duration
-    (0.3-2.5 ms); neurally controlled via a distinct brainstem pathway (paralemniscal
-    area) separate from social vocalizations.
-  semantic_keywords:
-  - food
-  - group_coordination
-  semantic_description: Emitted for spatial orientation and prey detection during
-    flight; acoustically distinct from social calls and under separate neural control
-    in the brainstem.
-  confidence: high
-  references:
-  - rubsamen_etal_2005
 references:
   futz_etal_2019:
     citation: "Futz, J., Knörnschild, M., & Lattenkamp, E. (2019). The vocal repertoire\
@@ -256,3 +234,11 @@ provenance:
   notes: Added 6 call types (high-entropy call, linear DFM, non-linear DFM, sinusoidal
     FM, quasi-constant frequency, echolocation call) based on Futz et al. 2019 Frontiers
     repertoire study and Rübsamen et al. 2005 BMC Biology; added references section.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

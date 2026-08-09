@@ -205,3 +205,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added source-backed grunt plus lower-confidence growl and gecker classes to improve recall for the female and juvenile social-distress repertoire.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

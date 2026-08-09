@@ -411,37 +411,6 @@ calls:
     confidence: low
     references: [long_2007]
 
-  - name: teeth snap
-    alternative_names:
-      - teeth grinding
-      - chattering teeth
-    scope:
-      life_stages: [adult, juvenile]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - noisy
-      - abrupt
-      - short
-      - broadband
-      - pulsed
-    acoustic_description: >-
-      A rapid, percussive broadband sound produced by snapping or chattering
-      the teeth together. Broad spectral composition with sharp transients.
-      May be accompanied by other agonistic vocalizations. Distinct from
-      vocal-tract sounds but functions communicatively.
-    semantic_keywords:
-      - aggression
-      - threat
-      - display
-    semantic_description: >-
-      Produced during agonistic confrontations, especially rapid aggressive
-      teeth snapping directed at a conspecific. Often accompanies growling and
-      whining and signals high-intensity aggression or defensive threat.
-    confidence: medium
-    references: [long_2007]
-
   - name: ultrasonic pup call
     alternative_names:
       - ultrasonic isolation call
@@ -518,3 +487,11 @@ provenance:
       sources include Poeggel & Braun (1996), Braun et al. (1999), Ramirez-
       Castillo et al. (2016), and ultrasonic pup call research. Call names
       use Long (2007) terminology where available.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

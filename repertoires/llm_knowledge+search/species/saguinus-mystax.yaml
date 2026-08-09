@@ -313,3 +313,11 @@ provenance:
       well-documented Saguinus/callitrichid literature. Food call included at
       low confidence by analogy with congeners. Mobbing call supported by
       documented boa constrictor attack and group defence in S. mystax.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

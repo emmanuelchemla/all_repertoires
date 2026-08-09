@@ -176,7 +176,12 @@ def draw_mantel(ax, ac_emb, se_emb, calls, mantel_stats, n_per_group=800, seed=4
         ax.plot(xl, intercept + slope * xl, color=color, lw=1.6, zorder=3)
         ms    = mantel_stats[MANTEL_KEYS[grp]]
         r_m, p_m = ms["r"], ms["p"]
-        p_str = "$p<0.001$" if p_m < 0.001 else f"$p={p_m:.3f}$"
+        if p_m < 0.001:
+            p_str = "$p<0.001$"
+        elif p_m <= 0.001:
+            p_str = r"$p\leq 0.001$"
+        else:
+            p_str = f"$p={p_m:.3f}$"
         ax.plot([], [], color=color, lw=2.2,
                 label=f"{grp}  ($r={r_m:.2f}$, {p_str})")
 

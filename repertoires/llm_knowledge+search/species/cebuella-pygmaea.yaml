@@ -404,3 +404,11 @@ provenance:
       Call types include the four trill variants, J-call, long call, twitter, tsik, scream,
       infant isolation call, food call, and agonistic call. Confidence levels reflect
       quality of published evidence available.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:12+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

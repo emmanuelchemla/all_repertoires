@@ -7,12 +7,14 @@ from .animallex_analysis import (
     compute_cross_species_motifs,
     compute_description_embeddings,
     compute_form_meaning_alignment,
+    compute_keyword_form_meaning_alignment,
     compute_keyword_pmi,
     compute_overview,
     compute_pairwise_r,
     compute_species_pair_correlations,
     mantel,
     similarity_matrix,
+    set_similarity_matrix,
 )
 from .bundle import AnimalLexBundle, load_bundle, source_hash, validate_bundle, write_bundle
 from .datasets import (
@@ -39,6 +41,7 @@ __all__ = [
     "compute_cross_species_coverage",
     "compute_cross_species_motifs",
     "compute_form_meaning_alignment",
+    "compute_keyword_form_meaning_alignment",
     "compute_keyword_pmi",
     "compute_overview",
     "compute_pairwise_r",
@@ -49,6 +52,7 @@ __all__ = [
     "load_repertoire_yaml_directory",
     "mantel",
     "similarity_matrix",
+    "set_similarity_matrix",
     "source_hash",
     "summarize_dataset",
     "summarize_similarity",

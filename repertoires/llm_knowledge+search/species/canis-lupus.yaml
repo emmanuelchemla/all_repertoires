@@ -125,3 +125,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Worker 10 recall review added plausible missing short-range wolf calls including yip, snarl, and a tentative moan entry from broad wolf communication sources.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:12+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

@@ -251,3 +251,11 @@ provenance:
       framework; hoot sexual dimorphism confirmed in Aotus azarae wild population by
       Rivas et al. (2019). Sneeze grunt included at low confidence as genus-level
       attribution. Seven call types total.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:12+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

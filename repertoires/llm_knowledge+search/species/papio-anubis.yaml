@@ -182,3 +182,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: "Completeness expansion pass: added 6 call types (shrill bark, grating roar, threat grunt, squeal, moan, lip-smack) to reach 14 total; added animaldiversity_papio_anubis reference."
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

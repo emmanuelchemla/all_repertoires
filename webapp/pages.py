@@ -582,7 +582,27 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
     sections = [
         html.Section(
             [
-                html.H2("Form to meaning correlation"),
+                html.Div(
+                    [
+                        html.H2("Form to meaning correlation"),
+                        dcc.RadioItems(
+                            id="form-meaning-basis",
+                            options=[
+                                {"label": "Descriptions", "value": "descriptions"},
+                                {"label": "Keywords", "value": "keywords"},
+                            ],
+                            value="descriptions",
+                            inline=True,
+                            className="filter-select analysis-method-select",
+                        ),
+                    ],
+                    className="analysis-section-heading",
+                ),
+                html.P(
+                    "Descriptions use cosine similarity of text embeddings; keywords "
+                    "use Jaccard set similarity.",
+                    className="analysis-method-note",
+                ),
                 dcc.Graph(
                     id="form-meaning-chart",
                     figure=form_meaning_chart(

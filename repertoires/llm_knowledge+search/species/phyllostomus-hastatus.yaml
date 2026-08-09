@@ -90,41 +90,6 @@ calls:
   - porter_1979
   - bohn_etal_2009
 
-- name: echolocation pulse
-  alternative_names:
-  - FM echolocation call
-  - orientation pulse
-  scope:
-    life_stages:
-    - adult
-    - juvenile
-    sexes:
-    - unknown
-    population_specific: false
-    note: ''
-  acoustic_keywords:
-  - high_frequency
-  - frequency_modulated
-  - short
-  - quiet
-  - multi_component
-  - pulsed
-  acoustic_description: Short, low-intensity frequency-modulated (FM) sweeps descending
-    from approximately 80 to 40 kHz, with the second harmonic carrying highest energy
-    and dominant frequencies below 50 kHz. Duration approximately 2.3–4.8 ms. Multiple
-    harmonics present. Pulses typically grouped in clusters of up to four per respiratory
-    cycle during flight.
-  semantic_keywords:
-  - spacing
-  semantic_description: Used for spatial orientation and obstacle avoidance in flight.
-    Emitted by flying bats during navigation. Typical of Phyllostomidae, these echolocation
-    pulses are notably low-intensity compared to many other bat families, likely an
-    adaptation for cluttered-forest foraging.
-  confidence: high
-  references:
-  - koay_etal_2002
-  - novick_1962
-
 - name: harem defense call
   alternative_names:
   - male territorial call
@@ -437,3 +402,11 @@ provenance:
     call, juvenile screech call, female contact trill, and male advertisement call.
     Added scope fields and additional references. Low-confidence calls included
     for completeness with appropriate confidence labeling.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

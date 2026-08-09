@@ -310,29 +310,6 @@ calls:
   confidence: medium
   references:
   - derrickson_1987
-- name: wing-flash display
-  alternative_names:
-  - wing-flash sound
-  - mechanical wing sound
-  acoustic_keywords:
-  - short
-  - abrupt
-  - broadband
-  - noisy
-  acoustic_description: Mechanical sound produced by the jerky partial or full opening
-    of wings during the wing-flash display; a brief rustling or whirring broadband
-    transient rather than a true vocalization.
-  semantic_keywords:
-  - threat
-  - display
-  - territorial
-  semantic_description: Produced during the stereotyped wing-flash display directed
-    at conspecifics or other species in territorial and threat contexts; hypothesized
-    to startle insects or signal dominance; the acoustic component accompanies the
-    visual white-patch signal.
-  confidence: medium
-  references:
-  - birdful_mockingbird
 - name: distress call
   alternative_names:
   - captured-bird call
@@ -412,3 +389,11 @@ provenance:
   model: claude-sonnet-4-6
   action: updated
   notes: Added 8 call types to reach 14 total - nest relief call, check/chuck call, nocturnal song, female song, subsong/whisper song, juvenile plastic song, wing-flash display sound, and distress call. Added 3 new references. All additions based on web search plus LLM synthesis with conservative confidence levels.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

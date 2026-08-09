@@ -17,13 +17,6 @@ calls:
     semantic_description: Used in social communication and strongly associated with identity at individual, unit, and vocal clan scales.
     confidence: high
     references: [rendell_whitehead_2003, jacobs_2024]
-  - name: usual click train
-    acoustic_keywords: [pulsed, repetitive, broadband, long, loud]
-    acoustic_description: A slower regularly spaced series of broadband clicks lacking the tightly patterned short motifs of codas.
-    semantic_keywords: [contact, attention, group_coordination]
-    semantic_description: Used during movement, diving, and general acoustic orientation, and can also provide social information to nearby whales.
-    confidence: high
-    references: [watwood_2006]
   - name: slow click
     acoustic_keywords: [pulsed, repetitive, broadband, long, loud]
     acoustic_description: A series of powerful clicks with longer inter-click intervals than usual clicks, producing a slower rhythm.
@@ -31,27 +24,12 @@ calls:
     semantic_description: Associated especially with adult male display and long-range social advertisement.
     confidence: high
     references: [miller_2004, gordon_1987]
-  - name: creak
-    acoustic_keywords: [pulsed, repetitive, abrupt, short, broadband]
-    acoustic_description: A rapid click train with decreasing intervals, distinct from social codas in tempo and context.
-    semantic_keywords: [food, attention]
-    semantic_description: Typically associated with prey capture and close-range foraging rather than social signalling.
-    confidence: high
-    references: [watwood_2006]
   - name: trumpet
     acoustic_keywords: [tonal, harmonic, long, frequency_modulated, loud]
     acoustic_description: A rarer non-click call type with a sustained modulated tonal quality, clearly distinct from ordinary click patterns.
     semantic_keywords: [display, attention, identity]
     semantic_description: Rare but repeatedly reported in social contexts, especially around adult males and communication-rich sequences.
     confidence: medium
-    references: [pace_2021]
-  - name: rapid click train
-    alternative_names: [fast click]
-    acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
-    acoustic_description: A click train faster than usual clicks but not as tightly compressed as the terminal creaks of prey capture, producing an intermediate rapid rhythm.
-    semantic_keywords: [attention, group_coordination, display]
-    semantic_description: Included conservatively because sperm-whale repertoire overviews sometimes distinguish rapid or fast click patterns from usual clicks, slow clicks, codas, and creaks.
-    confidence: low
     references: [pace_2021]
 references:
   gordon_1987:
@@ -80,3 +58,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added a low-confidence rapid-click class to capture repertoire summaries that separate fast click patterns from usual clicks and prey-capture creaks.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Removed explicit echolocation/non-vocal records and removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

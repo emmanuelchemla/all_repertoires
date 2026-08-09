@@ -155,3 +155,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Added two call types to reach target of 6 — 44-kHz call (low confidence, recently described aversive USV from Olszyński et al. 2024) and bruxism (medium confidence, well-known audible signal with dual valence). Added corresponding references.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

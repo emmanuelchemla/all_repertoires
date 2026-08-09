@@ -112,6 +112,7 @@ calls:
       life_stages: [adult]
       sexes: [female, male]
       population_specific: false
+      note: ""
     acoustic_keywords: [low_frequency, tonal, short, quiet, graded]
     acoustic_description: Soft tonal grunt(s) acoustically similar to other grunt subtypes; context of use is the primary differentiator from other grunt variants.
     semantic_keywords: [affiliation, submission, contact, group_coordination]
@@ -124,6 +125,7 @@ calls:
       life_stages: [adult, juvenile]
       sexes: [female, male]
       population_specific: false
+      note: ""
     acoustic_keywords: [broadband, noisy, abrupt, short, loud, multi_component]
     acoustic_description: A short harsh call with a cough-like quality, combining a guttural pulse with a bark-like element; intermediate in structure between a bark and a grunt.
     semantic_keywords: [alarm, predator, attention, threat]
@@ -135,6 +137,7 @@ calls:
       life_stages: [infant]
       sexes: [female, male]
       population_specific: false
+      note: ""
     acoustic_keywords: [high_frequency, noisy, long, multi_component, graded]
     acoustic_description: High-pitched noisy calls by infants; may be a simple squeal or a two-phase ick-ooer with a sharp onset element followed by a more tonal descending component; graded with arousal level.
     semantic_keywords: [distress, begging, caregiving, attention]
@@ -179,3 +182,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Added 6 call types (shrill bark, move grunt, infant approach grunt, reconciliation grunt, cough bark, infant distress call) to reach 14 total; added rendall_etal_1999 and cheney_etal_1995 references; based on web search plus model knowledge of Papio literature.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

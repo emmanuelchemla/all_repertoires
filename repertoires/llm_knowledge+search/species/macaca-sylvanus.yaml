@@ -298,38 +298,6 @@ calls:
     confidence: medium
     references: [fischer_etal_2002]
 
-  - name: teeth chatter
-    alternative_names:
-      - lip smack
-      - teeth chattering
-    scope:
-      life_stages: [adult, juvenile]
-      sexes: [female, male]
-      population_specific: false
-      note: ""
-    acoustic_keywords:
-      - pulsed
-      - repetitive
-      - short
-      - quiet
-    acoustic_description: >
-      Rapid, low-amplitude, pulsed sound produced by the teeth and lips;
-      individual clicks or pulses at high repetition rate. Very short overall
-      duration per bout or sustained in sequences. Low-intensity; often
-      heard only at close range. Accompanied by a distinctive visible facial
-      gesture.
-    semantic_keywords:
-      - submission
-      - affiliation
-      - contact
-    semantic_description: >
-      Produced as a signal of appeasement and non-aggressive intent during
-      interactions with dominant individuals or during affiliative
-      approaches. Often occurs alongside lip-smacking; communicates social
-      tolerance and submission, reducing aggression.
-    confidence: medium
-    references: [fischer_etal_2002]
-
   - name: infant isolation call
     alternative_names:
       - lost call
@@ -451,3 +419,11 @@ provenance:
       entries supported by targeted search on PMC/PubMed. Teeth chatter and
       appeasement calls based on Fischer 2002 and general Barbary macaque
       natural-history accounts.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

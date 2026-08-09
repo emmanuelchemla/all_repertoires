@@ -303,22 +303,6 @@ calls:
   confidence: medium
   references:
   - feistner_1989
-- name: tooth grind
-  alternative_names:
-  - teeth grinding
-  acoustic_keywords:
-  - broadband
-  - repetitive
-  - abrupt
-  acoustic_description: An audible grinding or snapping noise produced by the teeth rather than a voiced call.
-  semantic_keywords:
-  - threat
-  - aggression
-  - attention
-  semantic_description: Heard in tense or angry situations, especially from the alpha male under confinement, and likely functions as an agonistic warning or arousal signal.
-  confidence: medium
-  references:
-  - feistner_1989
 references:
   feistner_1989:
     citation: Feistner, A. T. C. 1989. Social development and ecology of mandrills Mandrillus sphinx in a Gabonese rain forest. PhD thesis, University of Stirling.
@@ -344,3 +328,11 @@ provenance:
   model: GPT-5 Codex
   action: updated
   notes: Added named call classes from Feistner's mandrill repertoire table and descriptions, including low-confidence inclusion of play pant as a possibly exertion-linked vocalization.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

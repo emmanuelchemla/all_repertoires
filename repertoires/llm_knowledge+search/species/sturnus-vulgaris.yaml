@@ -439,3 +439,11 @@ provenance:
     call) based on LLM knowledge and web search synthesis; added 4 new references
     (Feare 1984, Gaunt 1973, Tyack et al 2022, Hausberger et al 1988); total calls
     raised from 7 to 16.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:14+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

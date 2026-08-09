@@ -55,7 +55,10 @@
     "click",
     (event) => {
       const target = event.target;
-      if (!(target instanceof Element) || !target.closest("#confidence-select")) {
+      if (
+        !(target instanceof Element) ||
+        !target.closest("#confidence-select, #species-fit-select")
+      ) {
         return;
       }
 

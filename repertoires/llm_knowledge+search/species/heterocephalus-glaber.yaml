@@ -248,24 +248,6 @@ calls:
     confidence: medium
     references:
       - pepper_1991
-  - name: tooth chatter
-    alternative_names:
-      - teeth chattering
-      - incisors chatter
-    acoustic_keywords:
-      - broadband
-      - repetitive
-      - pulsed
-      - short
-      - low_frequency
-    acoustic_description: A pulsed rattling sound produced by rapid incisor contact; broadband and percussive in quality, distinct from purely laryngeal calls.
-    semantic_keywords:
-      - threat
-      - aggression
-    semantic_description: A close-range threat signal used in agonistic interactions, dominance contests, and defense; the prominent incisors of naked mole-rats make this a plausible threat display mechanism reported for bathyergid rodents.
-    confidence: low
-    references:
-      - pepper_1991
   - name: queen toilet call
     scope:
       life_stages:
@@ -418,3 +400,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Expanded repertoire from 9 to 18 call types by adding loud chirp, twitter/trill, squeal, tooth chatter, queen toilet call, pup isolation call, inter-colony agonistic call, and shoving vocalization based on web search synthesis of Pepper 1991, Barker et al. 2021, and secondary sources confirming 17-25 distinct call types.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

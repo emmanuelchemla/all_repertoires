@@ -120,3 +120,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Added female loud call (female howl/whoop) as a distinct call type documented in Sekulic 1982 and De Gabriel & Sekulic 1987, covering sex-differentiated loud vocal contributions during intergroup displays.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:12+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

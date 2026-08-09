@@ -65,22 +65,6 @@ calls:
     confidence: high
     references:
       - raven_cornell
-  - name: knock call
-    acoustic_keywords:
-      - abrupt
-      - short
-      - broadband
-      - pulsed
-      - repetitive
-    acoustic_description: Percussive knock-like notes distinct from croaks and from longer display sequences.
-    semantic_keywords:
-      - display
-      - courtship
-      - attention
-    semantic_description: Used in pair-bond and other conspicuous display contexts.
-    confidence: medium
-    references:
-      - raven_cornell
   - name: gurgle
     acoustic_keywords:
       - multi_component
@@ -634,23 +618,6 @@ calls:
     references:
       - raven_yellowstone
 
-  - name: bill snap
-    alternative_names:
-      - mandible clap
-    acoustic_keywords:
-      - abrupt
-      - short
-      - broadband
-    acoustic_description: Sharp percussive click produced by rapid closing of mandibles; brief transient with broadband spectrum; not a vocal sound.
-    semantic_keywords:
-      - threat
-      - aggression
-      - display
-    semantic_description: Mechanical non-vocal sound used in close-range threat and agonistic displays; sometimes associated with dominant individuals displacing subordinates.
-    confidence: medium
-    references:
-      - raven_cornell
-
 references:
   raven_cornell:
     citation: Cornell Lab of Ornithology. Common Raven sounds.
@@ -696,3 +663,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Major expansion pass added 26 call types to reach ~33 total, drawing on Cornell/AllAboutBirds, Conner 1985 (Virginia ravens), Heinrich & Marzluff 1991 (food yell), Boeckle et al. 2017 (agonistic defensive calls), Birds of the World/Yellowstone sources, and BirdNote. New entries cover food yell, territorial advertisement call, chase call, comfort sound, defensive/submissive call, growl, whine, scream, honk, rattle (female-biased), bell call, hiccup call, predator alarm call, mobbing call, mimicry, subsong, flight call, assembly call, distress call, chirring call, nestling call, knocking call, cluck, greeting call, play call, and bill snap.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

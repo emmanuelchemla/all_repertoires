@@ -223,3 +223,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added female-biased rapid repetitive ascending, short harmonic, and arched contact call classes from the social-call literature to improve recall beyond the male loud-call system.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

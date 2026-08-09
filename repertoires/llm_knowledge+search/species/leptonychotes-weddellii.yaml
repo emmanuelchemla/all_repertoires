@@ -227,20 +227,6 @@ calls:
     confidence: medium
     references: [opzeeland_2021]
 
-  - name: jaw clap
-    alternative_names: [jaw snap, click]
-    scope:
-      life_stages: [adult]
-      sexes: [male]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [abrupt, broadband, short, loud]
-    acoustic_description: A brief impulsive broadband transient produced by rapid closure of the jaws; not a true laryngeal vocalization but a mechanically produced acoustic signal, creating a sharp click-like percussive sound.
-    semantic_keywords: [threat, aggression, territorial]
-    semantic_description: Produced in close-range agonistic encounters, typically by males defending underwater territories; classified as an accessory sound rather than a vocalization sensu stricto in some taxonomies.
-    confidence: medium
-    references: [thomas_kuechle_1982, terhune_2006]
-
   - name: ultrasonic chirp
     alternative_names: [ultrasonic C, high-frequency chirp]
     scope:
@@ -409,20 +395,6 @@ calls:
     confidence: low
     references: [thomas_kuechle_1982]
 
-  - name: click
-    alternative_names: [single click, impulse click]
-    scope:
-      life_stages: [adult]
-      sexes: [unknown]
-      population_specific: false
-      note: ""
-    acoustic_keywords: [abrupt, broadband, short, pulsed]
-    acoustic_description: A single brief wideband impulse shorter than a knock; may occur as isolated events or in loose series; distinguished from jaw claps by mechanical origin and from trills by the absence of frequency modulation.
-    semantic_keywords: [contact, attention]
-    semantic_description: Produced underwater; function not well established, possibly short-range attention or spacing signal; included in the 34-type Thomas & Kuechle classification as an accessory-type sound.
-    confidence: low
-    references: [thomas_kuechle_1982]
-
   - name: ascending scream
     alternative_names: [ascending glissando, rising scream]
     scope:
@@ -538,3 +510,11 @@ provenance:
     model: claude-sonnet-4-5
     action: updated
     notes: "Major expansion pass targeting ~34 call types. Added the full Thomas & Kuechle 1982 roar triplet (LR, MR, HR), trill-with-constant-frequency-start, whistle-descending, whistle-ascending, whistle-ascending-grunt, mew, guttural glug, tone, buzz, jaw clap, ultrasonic chirp/whistle/trill, U-shaped whistle, descending chirp, warble, knock, click, ascending scream, descending whine, coo, multiple-element call sequence, and what-chunk. In-air call types (pup primary call, mother contact call, in-air whistle, in-air low grunt, in-air trill) added from Terhune & Burton 1999 and Collins 2006. New references added: Thomas & Kuechle 1982, Terhune 2006, Terhune & Burton 1999, Terhune et al. 2008, Collins 2006, van Opzeeland & Van Parijs 2012."
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

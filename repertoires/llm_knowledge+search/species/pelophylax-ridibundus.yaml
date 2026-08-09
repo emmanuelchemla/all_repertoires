@@ -112,3 +112,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Repo-wide review pass re-expanded the marsh frog repertoire around the 2024 eight-call classification, adding chirping, rough low-frequency ascending woah, breck, and disrupted descending woah classes and remapping older functional labels as aliases where the newer study supported that alignment.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

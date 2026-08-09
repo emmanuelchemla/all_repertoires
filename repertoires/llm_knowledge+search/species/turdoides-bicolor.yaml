@@ -515,3 +515,11 @@ provenance:
       Ridley 2008 (close calls, spacing), and Flower 2011 (alarm call types inferred
       from drongo mimicry study). Threat/submission calls included at confidence: low
       due to absence of named primary sources despite plausibility from social system.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

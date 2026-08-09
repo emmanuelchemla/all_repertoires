@@ -243,3 +243,11 @@ provenance:
   action: updated
   notes: Recall-expansion pass added courtship murmur call class (soft affiliative
     vocalizations during allopreening and pair-bonding) to bring total to 8 call types.
+- timestamp: "2026-08-09T14:52:29+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

@@ -83,24 +83,6 @@ calls:
   confidence: medium
   references:
   - prat_etal_2017
-- name: click sequence
-  acoustic_keywords:
-  - pulsed
-  - repetitive
-  - abrupt
-  - short
-  - broadband
-  acoustic_description: A repeated sequence of click-like pulses distinct from the
-    voiced social repertoire.
-  semantic_keywords:
-  - group_coordination
-  - attention
-  semantic_description: Used in active orientation and colony movement contexts in
-    addition to general biosonar function, and often co-occurs with movement through
-    cluttered roost spaces.
-  confidence: low
-  references:
-  - prat_etal_2017
 - name: aggression screech
   acoustic_keywords:
   - high_frequency
@@ -229,3 +211,11 @@ provenance:
     two remaining behaviorally annotated vocal contexts from Prat et al. 2016 (mating
     protest and sleeping-cluster positional jostling), raising total call count
     from 7 to 9.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:14+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

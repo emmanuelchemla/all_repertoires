@@ -306,3 +306,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Third-pass expansion adding 6 call types (lisping tee, tseet call, chip call, soft dee, broken dee, variable see/gargle pre-copulation call) from Smith 1972 monograph and Birds of the World account to reach 12 total call types.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

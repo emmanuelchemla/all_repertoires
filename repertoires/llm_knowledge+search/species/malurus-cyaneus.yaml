@@ -312,3 +312,11 @@ provenance:
   notes: Added 4 call types (chit call, seep contact call, Type II song, incubation
     call) to reach 11 total; added references for Langmore 1992, Colombelli-Negrel
     2012, and Kleindorfer 2024 via web search.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

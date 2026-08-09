@@ -332,3 +332,11 @@ provenance:
   notes: Added 4 call types (dawn song, chip call, alarm call, subsong) to reach 10
     total. Added references lemazina_2021, roth_2008, earthlife_net. Based on LLM
     knowledge plus web search of xeno-canto, primary literature, and species accounts.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:14+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

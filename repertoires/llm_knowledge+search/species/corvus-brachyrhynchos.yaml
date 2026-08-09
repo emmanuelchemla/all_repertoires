@@ -406,25 +406,6 @@ calls:
       - crow_blog
       - crow_cornell
 
-  - name: click
-    alternative_names:
-      - bill snap
-      - mechanical click
-    acoustic_keywords:
-      - abrupt
-      - short
-      - broadband
-      - quiet
-    acoustic_description: Sharp, percussive single or brief series of clicks; very short broadband burst with minimal tonal quality; can be mechanical (bill snap) or vocal in origin.
-    semantic_keywords:
-      - affiliation
-      - display
-      - attention
-    semantic_description: Occurs in close social and courtship contexts, often embedded within subsong or social interactions; may signal attention or mild interest in close-proximity encounters.
-    confidence: low
-    references:
-      - crow_blog
-
   - name: growl
     alternative_names:
       - guttural growl
@@ -528,3 +509,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Exhaustiveness expansion pass added 16 call types (inflected alarm caw, assembly call, distress/squalling call, moribund call, threat call, dispersal call, territorial caw, courtship song, female food-begging/aaag call, nestling call, fledgling gargle, coo/comfort call, click, growl, hawk alarm caw, recruitment caw) drawing on Chamberlain & Cornwell 1971, Yorzinski & Vehrencamp 2006, Mates et al. 2015, Cornell Lab, Corvid Research blog, and Vassar singing study. Added 5 new references.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:13+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

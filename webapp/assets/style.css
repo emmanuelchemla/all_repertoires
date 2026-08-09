@@ -49,21 +49,21 @@ nav a { color: var(--muted); font-weight: 500; text-decoration: none; }
 nav a:hover { color: var(--accent); }
 
 .header-controls { display: flex; align-items: center; gap: 22px; }
-.confidence-control { display: flex; align-items: center; gap: 9px; }
+.filter-control { display: flex; align-items: center; gap: 9px; }
 .control-label {
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.confidence-select {
+.filter-select {
   display: inline-flex;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 7px;
   background: var(--surface);
 }
-.confidence-select label {
+.filter-select label {
   position: relative;
   margin: 0;
   padding: 6px 9px;
@@ -72,14 +72,14 @@ nav a:hover { color: var(--accent); }
   font-size: 0.78rem;
   font-weight: 500;
 }
-.confidence-select label + label { border-left: 1px solid var(--line); }
-.confidence-select input {
+.filter-select label + label { border-left: 1px solid var(--line); }
+.filter-select input {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
   opacity: 0;
 }
-.confidence-select label:has(input:checked) {
+.filter-select label:has(input:checked) {
   background: var(--accent-soft);
   color: var(--accent);
 }
@@ -142,6 +142,19 @@ nav a:hover { color: var(--accent); }
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.55;
+}
+.analysis-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.analysis-section-heading h2 { margin: 0; }
+.analysis-method-select { flex: 0 0 auto; }
+.analysis-method-note {
+  margin: 8px 0 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .lede {
@@ -465,7 +478,8 @@ section { margin-top: 38px; }
   .motif-member-keywords { grid-column: 2; }
   .motif-carousel-toolbar { align-items: flex-start; }
   .header-controls { gap: 12px; }
-  .confidence-control { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .filter-control { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .analysis-section-heading { align-items: flex-start; flex-direction: column; }
   .stats { flex-wrap: wrap; }
   .stat { flex: 1; }
 }

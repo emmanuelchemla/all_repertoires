@@ -39,21 +39,6 @@ calls:
     semantic_description: Often associated with foraging and coordinated social behaviour, especially in populations where bray sequences are common.
     confidence: medium
     references: [diazlopez_2022, jones_2019]
-  - name: echolocation click train
-    acoustic_keywords: [pulsed, repetitive, broadband, short, abrupt]
-    acoustic_description: A train of brief broadband clicks lacking sustained tonality.
-    semantic_keywords: [food, attention, group_coordination]
-    semantic_description: Primarily used in biosonar but socially informative during foraging and movement.
-    confidence: high
-    references: [jones_2019]
-  - name: terminal buzz
-    alternative_names: [buzz]
-    acoustic_keywords: [pulsed, repetitive, broadband, abrupt, short]
-    acoustic_description: A very rapid click sequence with greatly shortened inter-click intervals compared with ordinary echolocation trains.
-    semantic_keywords: [food, attention]
-    semantic_description: Used at close range during prey pursuit and capture.
-    confidence: high
-    references: [jones_2019]
   - name: victory squeal
     acoustic_keywords: [high_frequency, noisy, frequency_modulated, long, pulsed]
     acoustic_description: A high-pitched squeal-like burst or mixed signal given immediately after prey capture, often with a variable rough or pulsed quality.
@@ -106,3 +91,11 @@ provenance:
     model: GPT-5 Codex
     action: updated
     notes: Added broad gulp, grunt, and squeak classes because bottlenose repertoire reviews and bray-call work repeatedly name these elements rather than treating them only as undifferentiated burst-pulsed sound.
+  - timestamp: "2026-08-09T14:52:30+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:14+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

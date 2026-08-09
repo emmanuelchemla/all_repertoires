@@ -137,3 +137,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Completeness pass added coo, snarl, and cough to reach 12 call types, drawing on Cohen & Fox 1976 twelve-type canid classification and web search. Added cohen_fox_canid_vocalizations reference.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:12+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

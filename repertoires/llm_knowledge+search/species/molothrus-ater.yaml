@@ -195,3 +195,11 @@ provenance:
   notes: Added single-syllable call (male close-range pure-tone call) and alarm whistle
     (tonal flush call on disturbance) to reach 9 total call types; added west_etal_1981
     reference for single-syllable call documentation.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

@@ -28,6 +28,10 @@ def source_hash(source_dir: Path | str) -> str:
     for path in sorted(source_dir.glob("*.yaml")):
         digest.update(path.name.encode("utf-8"))
         digest.update(path.read_bytes())
+    species_index = source_dir.parents[1] / "species_index.yaml"
+    if species_index.exists():
+        digest.update(species_index.name.encode("utf-8"))
+        digest.update(species_index.read_bytes())
     return digest.hexdigest()
 
 

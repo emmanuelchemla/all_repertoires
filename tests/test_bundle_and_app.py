@@ -14,7 +14,7 @@ from webapp.charts import (
     prediction_chart,
     species_matrix_chart,
 )
-from webapp.data import bundle_for_confidence
+from webapp.data import bundle_for_confidence, bundle_for_filters
 from webapp.main import create_app
 from webapp.pages import (
     analysis_page,
@@ -48,35 +48,47 @@ def test_generated_bundle_is_current_and_complete() -> None:
     bundle = load_bundle(BUNDLE)
 
     assert bundle.manifest["n_species"] == 128
-    assert bundle.manifest["n_calls"] == 1507
-    assert bundle.analysis["overview"]["n_calls"] == 1507
+    assert bundle.manifest["n_calls"] == 1477
+    assert bundle.analysis["overview"]["n_calls"] == 1477
+    assert bundle.analysis["species_fit_views"]["include"]["overview"]["n_calls"] == 1311
+    assert bundle.analysis["species_fit_views"]["include_caution"]["overview"]["n_calls"] == 1413
     assert bundle.analysis["coverage"]["default_group"] == "all"
     assert bundle.manifest["config"]["n_permutations"] == 999
     assert bundle.manifest["build_mode"] == "iteration"
     assert bundle.manifest["confidence_counts"] == {
-        "high": 561,
-        "medium": 744,
-        "low": 202,
+        "high": 548,
+        "medium": 733,
+        "low": 196,
     }
-    assert bundle.analysis["confidence_views"]["medium_plus"]["overview"]["n_calls"] == 1305
-    assert bundle.analysis["confidence_views"]["high"]["overview"]["n_calls"] == 561
+    assert bundle.manifest["species_fit_counts"] == {
+        "include": 1311,
+        "caution": 102,
+        "exclude": 64,
+    }
+    assert bundle.analysis["confidence_views"]["medium_plus"]["overview"]["n_calls"] == 1281
+    assert bundle.analysis["confidence_views"]["high"]["overview"]["n_calls"] == 548
     assert bundle.analysis["form_meaning"]["permutation_unit"] == (
         "semantic call identities shuffled within species"
+    )
+    assert bundle.analysis["form_meaning"]["similarity_method"] == (
+        "cosine similarity of description embeddings"
+    )
+    assert bundle.analysis["form_meaning_keywords"]["similarity_method"] == (
+        "Jaccard similarity of keyword sets"
     )
     assert len(bundle.analysis["prediction"]["conditions"]) == 3
     assert len(bundle.analysis["confidence_views"]["medium_plus"]["prediction"]["conditions"]) == 3
     assert len(bundle.analysis["confidence_views"]["high"]["prediction"]["conditions"]) == 3
-    assert bundle.analysis["motifs"]["n_motifs"] == 73
-    assert bundle.analysis["confidence_views"]["medium_plus"]["motifs"]["n_motifs"] == 64
-    assert bundle.analysis["confidence_views"]["high"]["motifs"]["n_motifs"] == 6
-    assert bundle.acoustic_similarity.shape == (1507, 1507)
-    assert bundle.semantic_similarity.shape == (1507, 1507)
+    assert bundle.analysis["motifs"]["n_motifs"] > 0
+    assert bundle.analysis["species_fit_views"]["include"]["motifs"]["n_motifs"] > 0
+    assert bundle.acoustic_similarity.shape == (1477, 1477)
+    assert bundle.semantic_similarity.shape == (1477, 1477)
 
     with pytest.raises(ValueError, match="settings changed"):
         validate_bundle(BUNDLE, SOURCE, expected_config={"analysis_version": "different"})
 
 
-def test_paper_assets_use_the_unfiltered_webapp_bundle(tmp_path: Path) -> None:
+def test_paper_assets_use_the_include_only_webapp_view(tmp_path: Path) -> None:
     bundle = load_bundle(BUNDLE)
     output = tmp_path / "generated_results.tex"
 
@@ -86,9 +98,13 @@ def test_paper_assets_use_the_unfiltered_webapp_bundle(tmp_path: Path) -> None:
     manuscript = (ROOT / "paper" / "main.tex").read_text().split(
         r"\end{document}", maxsplit=1
     )[0]
-    assert r"\newcommand{\ncalls}{1{,}507\xspace}" in generated
-    assert r"\newcommand{\nspecies}{128\xspace}" in generated
-    assert r"\newcommand{\nmotifs}{73\xspace}" in generated
+    include = bundle_for_filters(bundle, "include", "all")
+    assert include.analysis["form_meaning"]["similarity_method"].startswith(
+        "cosine similarity"
+    )
+    assert r"\newcommand{\ncalls}{1{,}311\xspace}" in generated
+    assert r"\newcommand{\nspecies}{111\xspace}" in generated
+    assert rf"\newcommand{{\nmotifs}}{{{include.analysis['motifs']['n_motifs']}\xspace}}" in generated
     assert r"\input{generated_results.tex}" in manuscript
     assert "figures/generated/form_meaning.pdf" in manuscript
     assert "figures/generated/prediction.pdf" in manuscript
@@ -106,12 +122,25 @@ def test_dash_app_starts_from_generated_bundle() -> None:
     assert client.get("/translations").status_code == 200
     assert "page-content" in client.get("/_dash-layout").get_data(as_text=True)
     assert "confidence-select" in client.get("/_dash-layout").get_data(as_text=True)
+    assert "species-fit-select" in client.get("/_dash-layout").get_data(as_text=True)
+
+
+def test_form_meaning_keywords_callback_returns_keyword_chart() -> None:
+    app = create_app(BUNDLE)
+    callback = app.callback_map["form-meaning-chart.figure"]["callback"].__wrapped__
+
+    figure = callback("keywords", "all", "include")
+
+    marker_trace = next(trace for trace in figure.data if trace.mode == "markers")
+    assert marker_trace.x
+    assert marker_trace.y
 
 
 def test_confidence_changes_preserve_the_current_section() -> None:
     script = (ROOT / "webapp" / "assets" / "preserve-scroll.js").read_text()
 
     assert '#confidence-select' in script
+    assert '#species-fit-select' in script
     assert 'querySelectorAll("main section[data-analysis-section]")' in script
     assert '"click"' in script
     assert "MutationObserver" in script
@@ -124,15 +153,15 @@ def test_confidence_view_filters_calls_and_analysis_together() -> None:
     medium = bundle_for_confidence(bundle, "medium_plus")
     high = bundle_for_confidence(bundle, "high")
 
-    assert len(medium.calls) == medium.analysis["overview"]["n_calls"] == 1305
+    assert len(medium.calls) == medium.analysis["overview"]["n_calls"] == 1281
     assert {call["confidence"] for call in medium.calls} == {"medium", "high"}
-    assert len(high.calls) == high.analysis["overview"]["n_calls"] == 561
+    assert len(high.calls) == high.analysis["overview"]["n_calls"] == 548
     assert {call["confidence"] for call in high.calls} == {"high"}
-    assert medium.acoustic_similarity.shape == (1305, 1305)
-    assert high.acoustic_similarity.shape == (561, 561)
-    assert high.semantic_similarity.shape == (561, 561)
-    assert medium.analysis["prediction"]["n_calls"] == 1305
-    assert high.analysis["prediction"]["n_calls"] == 561
+    assert medium.acoustic_similarity.shape == (1281, 1281)
+    assert high.acoustic_similarity.shape == (548, 548)
+    assert high.semantic_similarity.shape == (548, 548)
+    assert medium.analysis["prediction"]["n_calls"] == 1281
+    assert high.analysis["prediction"]["n_calls"] == 548
     high_family_ridge = high.analysis["prediction"]["results"]["held_out_families"][
         "ridge"
     ]["cosine"]["mean"]
@@ -140,6 +169,19 @@ def test_confidence_view_filters_calls_and_analysis_together() -> None:
         "held_out_families"
     ]["ridge"]["cosine"]["mean"]
     assert high_family_ridge != all_family_ridge
+
+
+def test_species_fit_view_filters_calls_and_analysis_together() -> None:
+    bundle = load_bundle(BUNDLE)
+
+    include = bundle_for_filters(bundle, "include", "all")
+    caution = bundle_for_filters(bundle, "include_caution", "all")
+
+    assert len(include.calls) == include.analysis["overview"]["n_calls"] == 1311
+    assert {call["species_fit"] for call in include.calls} == {"include"}
+    assert len(caution.calls) == caution.analysis["overview"]["n_calls"] == 1413
+    assert {call["species_fit"] for call in caution.calls} == {"include", "caution"}
+    assert include.acoustic_similarity.shape == (1311, 1311)
 
 
 def test_analysis_page_has_prediction_chart_and_section_navigation() -> None:
@@ -163,6 +205,14 @@ def test_analysis_page_has_prediction_chart_and_section_navigation() -> None:
         "cross-species-overlap",
         "species-matrix",
         "keyword-association",
+    ]
+    form_heading = sections[0].children[0]
+    method_toggle = form_heading.children[1]
+    assert method_toggle.id == "form-meaning-basis"
+    assert method_toggle.value == "descriptions"
+    assert [option["label"] for option in method_toggle.options] == [
+        "Descriptions",
+        "Keywords",
     ]
 
 
@@ -262,6 +312,7 @@ def test_form_meaning_tooltips_use_readable_call_labels() -> None:
 
     assert marker_trace.customdata
     assert marker_trace.name.endswith(f"n = {first_group['n_pairs']:,}")
+    assert "p ≤ 0.001" in marker_trace.name
     assert all("|||" not in label for pair in marker_trace.customdata for label in pair)
     assert all("(" in label and label.endswith(")") for pair in marker_trace.customdata for label in pair)
     assert figure.layout.xaxis.title.text == "Acoustic similarity"

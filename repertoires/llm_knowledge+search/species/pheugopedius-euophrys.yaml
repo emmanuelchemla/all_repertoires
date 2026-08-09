@@ -148,3 +148,11 @@ provenance:
   notes: Added whisper song (confidence low) to reach 7 call types; web search confirmed
     focus on duet repertoire with no direct citation for soft song in this species,
     so inferred from Troglodytidae family pattern.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

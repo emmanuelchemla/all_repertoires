@@ -209,3 +209,11 @@ provenance:
   model: claude-sonnet-4-6
   action: updated
   notes: Added yak and girney call types (confidence low) inferred from sister-taxon mandrill literature (Kudo 1987) to reach target of 10 call types; added kudo_1987 reference.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

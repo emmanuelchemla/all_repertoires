@@ -166,3 +166,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Added high-whinny (documented contact-call variant with elevated F0), chitter (agonistic call class co-occurring with barks per Fuentes et al. 2023), and squeal (distress/submission call noted in overview accounts) to reach 13 call types. Added references for Fuentes et al. 2023 and Ordonez-Gomez et al. 2015.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:12+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

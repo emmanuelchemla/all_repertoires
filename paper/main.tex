@@ -96,7 +96,7 @@ Here we test for a biological code at scale by assembling \dbname, a database of
 		\textbf{(A)}~The 18 most frequent semantic ontology keywords across all \ncalls calls, grouped by communicative function.
 		\textbf{(B)}~The 18 most frequent acoustic features across the same calls, grouped by feature type.
 		\textbf{(C)}~Distribution of documented repertoire sizes across \nspecies species.
-		All panels are static exports of the figures displayed in the web application's unfiltered view.
+		All panels are static exports of the figures displayed in the web application's default include-only species-fit view, retaining all call-confidence levels.
 	}
 	\label{fig:dataset}
 \end{figure}
@@ -161,7 +161,7 @@ To decompose the signal into interpretable units, we computed pointwise mutual i
 		Cosine similarity measures agreement between predicted and true semantic embeddings; mean reciprocal rank (MRR) measures retrieval of the true call among candidates.
 		The random baseline shuffles acoustic--semantic pairings within each test set.
 		Acoustic nearest-neighbour retrieval returns the semantic embedding of the nearest training call.
-		Bars and 95\% bootstrap intervals are identical to the web application's unfiltered prediction figure.
+		Bars and 95\% bootstrap intervals are identical to the web application's default include-only prediction figure.
 	}
 	\label{fig:prediction}
 \end{figure}
@@ -187,7 +187,7 @@ We trained models to predict semantic embeddings from acoustic embeddings under 
 
 AnimalLex allows best guess translations across the animal kingdom. Given a call from species~A, we retrieve the call in species~B whose semantic embedding is nearest---a lexical translation from one repertoire to another. When both species are represented in \dbname with full semantic annotations, the mapping is performed in semantic space by retrieval. Given the form-to-meaning structure identified above, translational attempts are also possible on the basis of acoustic annotations only---as will routinely be the case for poorly studied taxa---the acoustic-to-semantic predictor from the previous section supplies a best-guess semantic embedding from acoustic features alone, enabling translation even across the boundary of documented knowledge.
 
-This two-mode pipeline (retrieval for annotated calls; prediction for unannotated ones) makes \dbname a living resource: every new species added expands the reach of translation, and the predictor provides a scaffold for annotating the next. The web application (\url{https://emmanuel-dev.tail3ea00b.ts.net/}) exposes the complete motif results and allows users to inspect correspondences interactively (see Appendix~\ref{sec:supp_webapp}). At the default acoustic and semantic thresholds of \motifacousticthreshold and \motifsemanticthreshold, respectively, the unfiltered analysis returns \nmotifs motifs. Figure~\ref{fig:landmarks} is intentionally reserved for a small manually selected subset whose provenance will remain the web application's full result set.
+This two-mode pipeline (retrieval for annotated calls; prediction for unannotated ones) makes \dbname a living resource: every new species added expands the reach of translation, and the predictor provides a scaffold for annotating the next. The web application (\url{https://emmanuel-dev.tail3ea00b.ts.net/}) exposes the complete motif results and allows users to inspect correspondences interactively (see Appendix~\ref{sec:supp_webapp}). At the default acoustic and semantic thresholds of \motifacousticthreshold and \motifsemanticthreshold, respectively, the include-only analysis returns \nmotifs motifs. Figure~\ref{fig:landmarks} is intentionally reserved for a small manually selected subset whose provenance will remain the web application's full result set.
 
 A natural extension is to learn the translation \emph{directly in acoustic space}, bypassing the semantic intermediate. Two species that are phylogenetically close should have nearly aligned acoustic spaces---similar vocal anatomies, shared evolutionary pressures, conserved call repertoires---and their repertoires should be mappable by a small rotation. Phylogenetically distant species may require a larger transformation. This suggests learning a family of species-pair rotations $R_{AB}$ (Procrustes-style, constrained to be orthogonal) regularised by phylogenetic distance: $\|R_{AB} - \mathbf{I}\|_F \leq \lambda \cdot d_{\mathrm{phylo}}(A,B)$, where $d_{\mathrm{phylo}}$ is branch length in a dated phylogeny and $\lambda$ controls how much divergence is allowed per unit evolutionary distance. Such a model would be fully audio-grounded, require no semantic labels, and could scale to the thousands of species for which recordings but no annotations exist. We leave this to future work, but note that the form-to-meaning results above provide the theoretical justification: because acoustic and semantic spaces are aligned, a rotation in acoustic space is also, approximately, a rotation in semantic space.
 
@@ -204,7 +204,7 @@ Despite these limitations, the demonstration that form-to-meaning structure is l
 \section{Methods}
 
 \paragraph{Database construction}
-\dbname was assembled by prompting a large language model with a structured schema specifying six required fields per call: (1) call name, (2) free-text acoustic description (spectro-temporal features, amplitude envelope, call-internal structure), (3) free-text semantic description (communicative function, behavioral context, receiver responses), (4) ontology keywords drawn from a fixed controlled vocabulary, (5) subjective confidence (high, medium, or low), and (6) references. The present manuscript reports the web application's \emph{all calls} view: no call is excluded on the basis of confidence. Confidence-filtered views remain available in the application for sensitivity checks.
+\dbname was assembled by prompting a large language model with a structured schema specifying six required fields per call: (1) call name, (2) free-text acoustic description (spectro-temporal features, amplitude envelope, call-internal structure), (3) free-text semantic description (communicative function, behavioral context, receiver responses), (4) ontology keywords drawn from a fixed controlled vocabulary, (5) subjective confidence (high, medium, or low), and (6) references. The present manuscript reports the web application's default species-fit view, restricted to species marked \emph{include}, while retaining all call-confidence levels. The application additionally exposes \emph{include + caution} and all-species views, alongside confidence-filtered sensitivity views.
 
 \paragraph{Embeddings}
 
@@ -216,7 +216,7 @@ For each subset of calls (within species, same-family cross-species, and differe
 
 \paragraph{PMI analysis}
 
-Acoustic and semantic keywords were taken from the structured annotation fields. Keywords occurring in fewer than four calls were excluded. For each acoustic--semantic keyword pair $(a, s)$, PMI was estimated as $\log_2 \hat{p}(a,s) - \log_2 \hat{p}(a) - \log_2 \hat{p}(s)$, where probabilities were estimated from call frequencies across the full database. Significance was assessed by shuffling complete acoustic-keyword sets among all calls while holding semantic-keyword sets fixed, using \npermutations permutations. We controlled the false-discovery rate across all tested cells using the Benjamini--Hochberg procedure.
+Acoustic and semantic keywords were taken from the structured annotation fields. Keywords occurring in fewer than four calls were excluded. For each acoustic--semantic keyword pair $(a, s)$, PMI was estimated as $\log_2 \hat{p}(a,s) - \log_2 \hat{p}(a) - \log_2 \hat{p}(s)$, where probabilities were estimated from call frequencies across the include-only analysis dataset. Significance was assessed by shuffling complete acoustic-keyword sets among all included calls while holding semantic-keyword sets fixed, using \npermutations permutations. We controlled the false-discovery rate across all tested cells using the Benjamini--Hochberg procedure.
 
 \paragraph{Acoustic-to-semantic prediction}
 
@@ -264,7 +264,7 @@ We thank the researchers whose detailed ethological and bioacoustic studies form
 \section{Web application}
 \label{sec:supp_webapp}
 
-We release an interactive Dash web application at \url{https://emmanuel-dev.tail3ea00b.ts.net/}. It supports repertoire browsing; confidence-specific views; form-to-meaning, prediction, cross-species overlap, species-matrix, and keyword-association analyses; and exploration of acoustic--semantic motifs. The manuscript figures are static exports of the application's plotting functions, and all reported manuscript values are generated from the same analysis bundle. Unless stated otherwise, both use the unfiltered \emph{all calls} view.
+We release an interactive Dash web application at \url{https://emmanuel-dev.tail3ea00b.ts.net/}. It supports repertoire browsing; species-fit and confidence-specific views; form-to-meaning, prediction, cross-species overlap, species-matrix, and keyword-association analyses; and exploration of acoustic--semantic motifs. The manuscript figures are static exports of the application's plotting functions, and all reported manuscript values are generated from the same analysis bundle. Unless stated otherwise, both use the default \emph{include} species-fit view with all call-confidence levels.
 
 \end{document}
 

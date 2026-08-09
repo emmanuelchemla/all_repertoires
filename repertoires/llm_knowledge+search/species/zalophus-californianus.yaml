@@ -236,3 +236,11 @@ provenance:
   notes: Added whinny (underwater FM contact call, Schusterman 1965) and squeal
     (female graded threat-vocal, Peterson & Bartholomew 1967) to reach 9 total call
     types. Added schusterman_1965 reference.
+- timestamp: "2026-08-09T14:52:30+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:14+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

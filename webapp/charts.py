@@ -190,7 +190,12 @@ def form_meaning_chart(
         if not sample:
             continue
         p_value = values["p"]
-        p_text = "p < 0.001" if p_value < 0.001 else f"p = {p_value:.3f}"
+        if p_value < 0.001:
+            p_text = "p < 0.001"
+        elif p_value <= 0.001:
+            p_text = "p ≤ 0.001"
+        else:
+            p_text = f"p = {p_value:.3f}"
         fig.add_trace(
             go.Scattergl(
                 x=[1 - row["acoustic_distance"] for row in sample],

@@ -214,3 +214,11 @@ provenance:
     model: claude-sonnet-4-6
     action: updated
     notes: Added aerial predator alarm call (hawk-specific thin shrill, dichotomous with ground-predator alarm) and song/warble; added two new references (Capek rattle bioacoustics and Nystrom 1991 dichotomous sorting). Total calls brought to 9.
+  - timestamp: "2026-08-09T14:52:29+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "removed semantic/context leakage from acoustic descriptions."
+  - timestamp: "2026-08-09T15:12:12+00:00"
+    model: "GPT-5 Codex"
+    action: updated
+    notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."

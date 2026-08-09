@@ -316,3 +316,11 @@ provenance:
   model: claude-sonnet-4-6
   action: updated
   notes: Added 6 call types (chirp, growl, musth rumble, let's-go rumble, squeal, post-copulatory rumble) via web-search-informed expansion to reach 14 total call entries. Added references for McKay 1973 and Stoeger & Baotic 2014.
+- timestamp: "2026-08-09T14:52:29+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "removed semantic/context leakage from acoustic descriptions."
+- timestamp: "2026-08-09T15:12:13+00:00"
+  model: "GPT-5 Codex"
+  action: updated
+  notes: "Restored original acoustic descriptions; semantic/context leakage cleanup deferred."
