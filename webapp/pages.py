@@ -616,7 +616,7 @@ def analysis_page(bundle: AnimalLexBundle, mode: str) -> html.Main:
         ),
         html.Section(
             [
-                html.H2("Acoustic-to-semantic prediction across held-out taxa"),
+                html.H2("Acoustic-to-semantic prediction"),
                 html.P(
                     "Models use each call's acoustic text embedding to predict the "
                     "semantic text embedding of that same call.",
